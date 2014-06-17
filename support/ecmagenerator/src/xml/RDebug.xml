@@ -10,7 +10,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="prefix"
-        hasDefault="true" default="RDEFAULT_QString"
+        hasDefault="true" default="RDEFAULT_QSTRING"
         isConst="true" />
       </variant>
     </method>
@@ -31,6 +31,13 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="int" isPureVirtual="false">
         <arg type="int" typeName="int" name="id" isConst="false" />
         <arg type="QString &amp;" typeName="QString" name="msg"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="hexDump" cppName="hexDump" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="str"
         isConst="true" />
       </variant>
     </method>

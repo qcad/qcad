@@ -32,6 +32,12 @@ dir="./core" filename="RPainterPathExporter.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RRay.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RXLine.h"</cpp:file></cpp:include>
   <class>class 
   <macro>
     <name>QCADCORE_EXPORT</name>

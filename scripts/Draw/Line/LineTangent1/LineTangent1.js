@@ -35,6 +35,8 @@ function LineTangent1(guiAction) {
     this.pos1 = undefined;
     // click point when choosing arc, circle or ellipse:
     this.pos2 = undefined;
+
+    this.setUiOptions("../Line.ui");
 }
 
 LineTangent1.prototype = new Line();
@@ -196,7 +198,7 @@ LineTangent1.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
-    op.addObject(new RLineEntity(doc, new RLineData(tangent)));
+    op.addObject(this.createLineEntity(doc, tangent.getStartPoint(), tangent.getEndPoint()));
     return op;
 };
 

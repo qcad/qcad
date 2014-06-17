@@ -199,9 +199,9 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RS
     if (v.isValid()) return v;
     v = tryCast<RLine>(engine, cppValue);
     if (v.isValid()) return v;
-    v = tryCast<RXLine>(engine, cppValue);
-    if (v.isValid()) return v;
     v = tryCast<RRay>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RXLine>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RArc>(engine, cppValue);
     if (v.isValid()) return v;
@@ -224,9 +224,9 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, RShape* cppValue)
     if (v.isValid()) return v;
     v = tryCast<RLine>(engine, cppValue);
     if (v.isValid()) return v;
-    v = tryCast<RXLine>(engine, cppValue);
-    if (v.isValid()) return v;
     v = tryCast<RRay>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RXLine>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RArc>(engine, cppValue);
     if (v.isValid()) return v;
@@ -269,9 +269,9 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
 
     v = tryCast<RLineEntity>(engine, cppValue);
     if (v.isValid()) return v;
-    v = tryCast<RXLineEntity>(engine, cppValue);
-    if (v.isValid()) return v;
     v = tryCast<RRayEntity>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RXLineEntity>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RArcEntity>(engine, cppValue);
     if (v.isValid()) return v;
@@ -353,9 +353,9 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, REntity* cppValue
     if (v.isValid()) return v;
     v = tryCast<RLineEntity>(engine, cppValue);
     if (v.isValid()) return v;
-    v = tryCast<RXLineEntity>(engine, cppValue);
-    if (v.isValid()) return v;
     v = tryCast<RRayEntity>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RXLineEntity>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RPointEntity>(engine, cppValue);
     if (v.isValid()) return v;
@@ -406,9 +406,9 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
     if (v.isValid()) return v;
     v = tryCast<RLineData>(engine, cppValue);
     if (v.isValid()) return v;
-    v = tryCast<RXLineData>(engine, cppValue);
-    if (v.isValid()) return v;
     v = tryCast<RRayData>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RXLineData>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RPointData>(engine, cppValue);
     if (v.isValid()) return v;
@@ -513,15 +513,15 @@ void REcmaHelper::fromScriptValue(QScriptEngine* engine, QScriptValue scriptValu
                 cppValue.append(p);
             }
 
-            else if (v.canConvert<RXLine>()) {
-                RXLine obj = v.value<RXLine>();
-                QSharedPointer<RXLine> p(obj.clone());
-                cppValue.append(p);
-            }
-
             else if (v.canConvert<RRay>()) {
                 RRay obj = v.value<RRay>();
                 QSharedPointer<RRay> p(obj.clone());
+                cppValue.append(p);
+            }
+
+            else if (v.canConvert<RXLine>()) {
+                RXLine obj = v.value<RXLine>();
+                QSharedPointer<RXLine> p(obj.clone());
                 cppValue.append(p);
             }
 
@@ -585,14 +585,14 @@ QVariant REcmaHelper::toVariant(const QSharedPointer<RShape>& cppValue) {
         }
     }
     {
-        QSharedPointer<RXLine> shape = cppValue.dynamicCast<RXLine>();
+        QSharedPointer<RRay> shape = cppValue.dynamicCast<RRay>();
         if (!shape.isNull()) {
             v.setValue(shape);
             return v;
         }
     }
     {
-        QSharedPointer<RRay> shape = cppValue.dynamicCast<RRay>();
+        QSharedPointer<RXLine> shape = cppValue.dynamicCast<RXLine>();
         if (!shape.isNull()) {
             v.setValue(shape);
             return v;

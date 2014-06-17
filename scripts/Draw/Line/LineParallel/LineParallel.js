@@ -100,7 +100,7 @@ LineParallel.prototype.pickEntity = function(event, preview) {
     case LineParallel.State.ChoosingEntity:
         var shape = entity.getClosestShape(pos);
 
-        if (isLineShape(shape) ||
+        if (isLineBasedShape(shape) ||
             isArcShape(shape) ||
             isCircleShape(shape)) {
 
@@ -150,15 +150,7 @@ LineParallel.prototype.getOperation = function(preview) {
 
     var op = new RAddObjectsOperation();
     for (var i=0; i<parallels.length; ++i) {
-        if (isLineShape(parallels[i])) {
-            op.addObject(new RLineEntity(this.getDocument(), new RLineData(parallels[i])));
-        }
-        else if (isArcShape(parallels[i])) {
-            op.addObject(new RArcEntity(this.getDocument(), new RArcData(parallels[i])));
-        }
-        else if (isCircleShape(parallels[i])) {
-            op.addObject(new RCircleEntity(this.getDocument(), new RCircleData(parallels[i])));
-        }
+        op.addObject(shapeToEntity(this.getDocument(), parallels[i]));
     }
     return op;
 };

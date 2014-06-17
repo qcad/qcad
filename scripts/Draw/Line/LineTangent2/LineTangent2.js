@@ -41,6 +41,8 @@ function LineTangent2(guiAction) {
     this.shape2 = undefined;
     // click position when choosing second entity:
     this.pos2 = undefined;
+
+    this.setUiOptions("../Line.ui");
 }
 
 LineTangent2.prototype = new Line();
@@ -222,7 +224,7 @@ LineTangent2.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
-    op.addObject(new RLineEntity(doc, new RLineData(tangent)));
+    op.addObject(this.createLineEntity(doc, tangent.getStartPoint(), tangent.getEndPoint()));
     return op;
 };
 

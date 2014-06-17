@@ -31,8 +31,8 @@ RRayData::RRayData(RDocument* document, const RRayData& data)
     }
 }
 
-RRayData::RRayData(const RLine& line) :
-    RRay(line) {
+RRayData::RRayData(const RRay &ray) :
+    RRay(ray) {
 }
 
 RRayData::RRayData(const RVector& basePoint, const RVector& dir) :

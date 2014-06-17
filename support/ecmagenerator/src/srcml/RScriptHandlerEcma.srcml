@@ -1168,6 +1168,27 @@ dir="./scripting/ecmaapi" filename="RScriptHandlerEcma.h">
   <function_decl>
   <type>
     <name>static</name>
+    <name>QScriptValue</name>
+  </type>
+  <name>ecmaQFileClose</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>QScriptContext</name>*</type>
+      <name>context</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>QScriptEngine</name>*</type>
+      <name>engine</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
     <name>bool</name>
   </type>
   <name>eventFilter</name>

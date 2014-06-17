@@ -10,7 +10,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
       <variant>
-        <arg type="RLine &amp;" typeName="RLine" name="line"
+        <arg type="RRay &amp;" typeName="RRay" name="ray"
         isConst="true" />
       </variant>
       <variant>

@@ -119,6 +119,6 @@ void RBlock::print(QDebug dbg) const {
     dbg.nospace() << ", name: " << getName()
             << ", origin: " << getOrigin()
             << ", frozen: " << isFrozen()
-            << ", anonymouse: " << isAnonymous()
+            << ", anonymous: " << isAnonymous()
             << ")";
 }

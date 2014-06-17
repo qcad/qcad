@@ -1579,6 +1579,12 @@ function shapeToEntity(document, shape) {
     else if (isLineShape(shape)) {
         return new RLineEntity(document, new RLineData(shape));
     }
+    else if (isRayShape(shape)) {
+        return new RRayEntity(document, new RRayData(shape));
+    }
+    else if (isXLineShape(shape)) {
+        return new RXLineEntity(document, new RXLineData(shape));
+    }
     else if (isArcShape(shape)) {
         return new RArcEntity(document, new RArcData(shape));
     }

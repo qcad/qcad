@@ -402,6 +402,9 @@ void RObject::removeCustomProperty(const QString& title, const QString& key) {
         return;
     }
     customProperties[title].remove(key);
+    if (customProperties[title].isEmpty()) {
+        customProperties.remove(title);
+    }
 }
 
 QStringList RObject::getCustomPropertyTitles() const {

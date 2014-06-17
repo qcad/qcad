@@ -78,10 +78,10 @@ dir="./core" filename="RDebug.h">
   <cpp:directive>endif</cpp:directive></cpp:endif>
   <cpp:ifndef>#
   <cpp:directive>ifndef</cpp:directive>
-  <name>RDEFAULT_QString</name></cpp:ifndef>
+  <name>RDEFAULT_QSTRING</name></cpp:ifndef>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>RDEFAULT_QString</name>
+  <name>RDEFAULT_QSTRING</name>
   <name>QString</name>()</cpp:define>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
@@ -121,7 +121,7 @@ dir="./core" filename="RDebug.h">
     <name>prefix</name>=
     <init>
       <expr>
-        <name>RDEFAULT_QString</name>
+        <name>RDEFAULT_QSTRING</name>
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
@@ -204,7 +204,22 @@ dir="./core" filename="RDebug.h">
         </argument>)</argument_list>
       </call>
     </expr>;</return>}</block>
-  </function></public>
+  </function>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>hexDump</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>str</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>
   <private>private: 
   <cpp:ifdef>#
   <cpp:directive>ifdef</cpp:directive>

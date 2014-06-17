@@ -1241,7 +1241,8 @@ dir="./core" filename="RStorage.h">
     <name>Lineweight</name></name>
   </type>
   <name>getCurrentLineweight</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>

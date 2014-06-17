@@ -175,26 +175,26 @@
                         context->argument(
                         0
                         ).isNull()
-                ) /* type: RLine */
+                ) /* type: RRay */
             
     ){
     // prepare arguments:
     
                     // argument isCopyable and has default constructor and isSimpleClass 
-                    RLine*
+                    RRay*
                     ap0 =
                     qscriptvalue_cast<
-                    RLine*
+                    RRay*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RRayData: Argument 0 is not of type RLine.",
+                           return REcmaHelper::throwError("RRayData: Argument 0 is not of type RRay.",
                                context);                    
                     }
-                    RLine 
+                    RRay 
                     a0 = 
                     *ap0;
                 

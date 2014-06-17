@@ -229,7 +229,7 @@ ShapeAlgorithms.getOffsetShapes = function(shape, distance, number, sidePosition
     var ret = [];
     var i, n;
 
-    if (isLineShape(shape)) {
+    if (isLineBasedShape(shape)) {
         var sides = [];
         if (isVector(sidePosition)) {
             sides.push(shape.getSideOfPoint(sidePosition));

@@ -81,8 +81,8 @@ dir="./entity" filename="RRayData.h">
     <decl>
       <type>
       <name>const</name>
-      <name>RLine</name>&amp;</type>
-      <name>line</name>
+      <name>RRay</name>&amp;</type>
+      <name>ray</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl>
   <constructor_decl>

@@ -41,7 +41,7 @@ protected:
 
 public:
     RRayData();
-    RRayData(const RLine& line);
+    RRayData(const RRay& ray);
     RRayData(const RVector& basePoint, const RVector& dir);
 
     RRay getRay() {

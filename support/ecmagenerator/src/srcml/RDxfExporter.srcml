@@ -42,6 +42,12 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RFileExporter.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RRay.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RXLine.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RArcEntity</name>;</class_decl>
   <class_decl>class 

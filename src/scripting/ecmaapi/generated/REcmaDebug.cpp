@@ -63,6 +63,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, stopTimer, "stopTimer");
             
+            REcmaHelper::registerFunction(&engine, &ctor, hexDump, "hexDump");
+            
 
     // static properties:
     
@@ -368,6 +370,51 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDebug::stopTimer", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDebug::hexDump
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDebug::hexDump", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDebug::hexDump";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RDebug::
+       hexDump(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.hexDump().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDebug::hexDump", context, engine);
             return result;
         }
          QScriptValue REcmaDebug::toString
