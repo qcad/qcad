@@ -365,7 +365,9 @@ LibraryBrowser.initTagsTab = function() {
     var palette = tagsBrowser.palette;
     palette.setBrush(QPalette.Base, new QColor(0,0,0,0));
     webPage.palette = palette;
-    tagsBrowser.setAttribute(Qt.WA_OpaquePaintEvent, false);
+    if (!RSettings.isQt(5)) {
+        tagsBrowser.setAttribute(Qt.WA_OpaquePaintEvent, false);
+    }
     tagsBrowser.linkClicked.connect(LibraryBrowser, "linkClicked");
 
     var itemView =formWidget.findChild("TagsListView");
