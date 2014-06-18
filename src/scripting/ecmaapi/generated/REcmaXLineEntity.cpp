@@ -1305,26 +1305,26 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RLine */
+        ) /* type: RXLine */
     
     ){
     // prepare arguments:
     
                     // argument isCopyable and has default constructor and isSimpleClass 
-                    RLine*
+                    RXLine*
                     ap0 =
                     qscriptvalue_cast<
-                    RLine*
+                    RXLine*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RXLineEntity: Argument 0 is not of type RLine.",
+                           return REcmaHelper::throwError("RXLineEntity: Argument 0 is not of type RXLine.",
                                context);                    
                     }
-                    RLine 
+                    RXLine 
                     a0 = 
                     *ap0;
                 

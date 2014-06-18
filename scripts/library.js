@@ -1616,6 +1616,37 @@ function shapeToEntity(document, shape) {
     return undefined;
 }
 
+function trimStartPoint(shape, p) {
+    shape.trimStartPoint(p);
+    if (isXLineShape(shape)) {
+        return xLineToRay(shape);
+    }
+    else {
+        return shape;
+    }
+}
+
+function trimEndPoint(shape, p) {
+    shape.trimEndPoint(p);
+    if (isXLineShape(shape)) {
+        return xLineToRay(shape);
+    }
+    else if (isRayShape(shape)) {
+        return rayToLine(shape);
+    }
+    else {
+        return shape;
+    }
+}
+
+function xLineToRay(xline) {
+    return new RRay(xline.getBasePoint(), xline.getDirectionVector());
+};
+
+function rayToLine(ray) {
+    return new RLine(ray.getBasePoint(), ray.getSecondPoint());
+};
+
 /**
  * Insert CAD fonts at the top into the given font combo box.
  */

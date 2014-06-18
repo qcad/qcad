@@ -52,9 +52,9 @@ RRayEntity::RRayEntity(RDocument* document, const RRayData& data,
 RRayEntity::~RRayEntity() {
 }
 
-void RRayEntity::setShape(const RLine& l) {
-    data.setBasePoint(l.getStartPoint());
-    data.setSecondPoint(l.getEndPoint());
+void RRayEntity::setShape(const RRay& r) {
+    data.setBasePoint(r.getBasePoint());
+    data.setSecondPoint(r.getSecondPoint());
 }
 
 void RRayEntity::init() {

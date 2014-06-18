@@ -83,7 +83,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="setShape" cppName="setShape" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLine &amp;" typeName="RLine" name="l"
+        <arg type="RRay &amp;" typeName="RRay" name="r"
         isConst="true" />
       </variant>
     </method>

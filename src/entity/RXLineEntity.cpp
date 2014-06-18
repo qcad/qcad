@@ -52,9 +52,9 @@ RXLineEntity::RXLineEntity(RDocument* document, const RXLineData& data,
 RXLineEntity::~RXLineEntity() {
 }
 
-void RXLineEntity::setShape(const RLine& l) {
-    data.setBasePoint(l.getStartPoint());
-    data.setSecondPoint(l.getEndPoint());
+void RXLineEntity::setShape(const RXLine& l) {
+    data.setBasePoint(l.getBasePoint());
+    data.setSecondPoint(l.getSecondPoint());
 }
 
 void RXLineEntity::init() {

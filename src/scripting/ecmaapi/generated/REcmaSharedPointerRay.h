@@ -57,6 +57,9 @@
         trimEndPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPointsWithDistanceToEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -18,6 +18,7 @@
  */
 
 include("../ModifyCorner.js");
+include("scripts/ShapeAlgorithms.js");
 
 function Bevel(guiAction) {
     ModifyCorner.call(this, guiAction);
@@ -71,8 +72,9 @@ Bevel.prototype.getOperation = function(preview) {
  */
 Bevel.bevel = function(op, entity1, pos1, entity2, pos2, trim, distance1, distance2, preview) {
     if (!isEntity(entity1) || !isValidVector(pos1) ||
-            !isEntity(entity2) || !isValidVector(pos2) ||
-            !isBoolean(trim)) {
+        !isEntity(entity2) || !isValidVector(pos2) ||
+        !isBoolean(trim)) {
+
         return false;
     }
 
@@ -104,7 +106,7 @@ Bevel.bevel = function(op, entity1, pos1, entity2, pos2, trim, distance1, distan
     var segments = undefined;
     var shapeIndex1 = undefined;
     var shapeIndex2 = undefined;
-    if (entity1.getId()==entity2.getId() && isPolylineEntity(entity1)) {
+    if (entity1.getId()===entity2.getId() && isPolylineEntity(entity1)) {
         polyline = entity1.getData().castToShape();
         segments = polyline.getExploded();
         var minDistance1 = undefined;
@@ -159,50 +161,80 @@ Bevel.bevel = function(op, entity1, pos1, entity2, pos2, trim, distance1, distan
     var trimmed2 = shape2.clone();
 
     // trim shapes to intersection:
-    var start1 = false;
-    var is = pos2.getClosest(sol);
-    var ending1 = trimmed1.getTrimEnd(pos1, is);
-    switch (ending1) {
-    case RS.EndingStart:
-        trimmed1.trimStartPoint(is);
-        start1 = true;
-        break;
-    case RS.EndingEnd:
-        trimmed1.trimEndPoint(is);
-        start1 = false;
-        break;
-    default:
-        break;
+    var start1 = RS.FromAny;
+    var is = pos1.getClosest(sol);
+    var ending1 = RS.EndingNone;
+    if (isFunction(trimmed1.getTrimEnd)) {
+        ending1 = trimmed1.getTrimEnd(pos1, is);
+        switch (ending1) {
+        case RS.EndingStart:
+            trimmed1 = trimStartPoint(trimmed1, is);
+            start1 = RS.FromStart;
+            break;
+        case RS.EndingEnd:
+            trimmed1 = trimEndPoint(trimmed1, is);
+            if (isRayShape(trimmed1)) {
+                start1 = RS.FromStart;
+                ending1 = RS.EndingStart;
+            }
+            else {
+                start1 = RS.FromEnd;
+            }
+            break;
+        default:
+            break;
+        }
     }
 
-    var start2 = false;
-    is = pos1.getClosest(sol);
-    ending2 = trimmed2.getTrimEnd(pos2, is);
-    switch (ending2) {
-    case RS.EndingStart:
-        trimmed2.trimStartPoint(is);
-        start2 = true;
-        break;
-    case RS.EndingEnd:
-        trimmed2.trimEndPoint(is);
-        start2 = false;
-        break;
-    default:
-        break;
+    var start2 = RS.FromAny;
+    is = pos2.getClosest(sol);
+    var ending2 = RS.EndingNone;
+    if (isFunction(trimmed2.getTrimEnd)) {
+        ending2 = trimmed2.getTrimEnd(pos2, is);
+        switch (ending2) {
+        case RS.EndingStart:
+            trimmed2 = trimStartPoint(trimmed2, is);
+            start2 = RS.FromStart;
+            break;
+        case RS.EndingEnd:
+            trimmed2 = trimEndPoint(trimmed2, is);
+            if (isRayShape(trimmed2)) {
+                start2 = RS.FromStart;
+                ending2 = RS.EndingStart;
+            }
+            else {
+                start2 = RS.FromEnd;
+            }
+
+            break;
+        default:
+            break;
+        }
     }
 
     // find definitive bevel points:
-    var bp1 = trimmed1.getPointsWithDistanceToEnd(distance1, start1 ? RS.FromStart : RS.FromEnd);
-    if (bp1.length!=1) {
-        return false;
+    var t1 = trimmed1;
+    if (isCircleShape(trimmed1)) {
+        t1 = ShapeAlgorithms.circleToArc(trimmed1, t1.getCenter().getAngleTo(is));
+        start1 = RS.FromAny;
     }
-    bp1 = bp1[0];
+    var t2 = trimmed2;
+    if (isCircleShape(trimmed2)) {
+        t2 = ShapeAlgorithms.circleToArc(trimmed2, t2.getCenter().getAngleTo(is));
+        start2 = RS.FromAny;
+    }
 
-    var bp2 = trimmed2.getPointsWithDistanceToEnd(distance2, start2 ? RS.FromStart : RS.FromEnd);
-    if (bp2.length!=1) {
+    var bp1 = t1.getPointsWithDistanceToEnd(distance1, start1);
+    if (bp1.length===0) {
         return false;
     }
-    bp2 = bp2[0];
+    bp1 = pos2.getClosest(bp1);
+
+    var bp2 = t2.getPointsWithDistanceToEnd(distance2, start2);
+    if (bp2.length===0) {
+        return false;
+    }
+    bp2 = pos2.getClosest(bp2);
 
     // final trim:
     if (trim===true) {
@@ -266,16 +298,14 @@ Bevel.bevel = function(op, entity1, pos1, entity2, pos2, trim, distance1, distan
         // add new trimmed entities:
         else {
             if (isFunction(entity1.setShape)) {
-                entity1.setShape(trimmed1);
-                op.addObject(entity1, false);
+                Bevel.modifyEntity(op, entity1, trimmed1);
             }
             else {
                 EAction.handleUserWarning(qsTr("First entity cannot be trimmed."));
             }
 
             if (isFunction(entity2.setShape)) {
-                entity2.setShape(trimmed2);
-                op.addObject(entity2, false);
+                Bevel.modifyEntity(op, entity2, trimmed2);
             }
             else {
                 EAction.handleUserWarning(qsTr("Second entity cannot be trimmed."));
@@ -290,6 +320,21 @@ Bevel.bevel = function(op, entity1, pos1, entity2, pos2, trim, distance1, distan
     }
 
     return true;
+};
+
+Bevel.modifyEntity = function(op, entity, shape) {
+    if ((isXLineEntity(entity) && isRayShape(shape)) ||
+        (isRayEntity(entity) && isLineShape(shape))) {
+
+        var e = shapeToEntity(entity.getDocument(), shape);
+        e.copyAttributesFrom(entity);
+        op.deleteObject(entity);
+        op.addObject(e, false);
+        return;
+    }
+
+    entity.setShape(shape);
+    op.addObject(entity, false);
 };
 
 Bevel.prototype.slotLength1Changed = function(value) {

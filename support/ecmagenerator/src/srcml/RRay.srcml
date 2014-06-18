@@ -154,6 +154,36 @@ dir="./core/math" filename="RRay.h">
   <function_decl>
   <type>
     <name>virtual</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RVector</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getPointsWithDistanceToEnd</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>distance</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RS</name>::
+        <name>From</name></name>
+      </type>
+      <name>from</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
     <name>bool</name>
   </type>
   <name>reverse</name>

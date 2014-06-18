@@ -456,7 +456,7 @@ dir="./entity" filename="RXLineEntity.h">
     <decl>
       <type>
       <name>const</name>
-      <name>RLine</name>&amp;</type>
+      <name>RXLine</name>&amp;</type>
       <name>l</name>
     </decl>
   </param>)</parameter_list>;</function_decl>

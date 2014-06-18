@@ -84,6 +84,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, trimEndPoint, "trimEndPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, getPointsWithDistanceToEnd, "getPointsWithDistanceToEnd");
+            
             REcmaHelper::registerFunction(&engine, proto, reverse, "reverse");
             
             REcmaHelper::registerFunction(&engine, proto, getClippedLine, "getClippedLine");
@@ -569,6 +571,79 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerRay::trimEndPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerRay::getPointsWithDistanceToEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerRay::getPointsWithDistanceToEnd", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerRay::getPointsWithDistanceToEnd";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRay* self = 
+                        getSelf("getPointsWithDistanceToEnd", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RS::From */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::From
+                    a1 =
+                    (RS::From)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getPointsWithDistanceToEnd(a0
+        ,
+    a1);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRay.getPointsWithDistanceToEnd().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerRay::getPointsWithDistanceToEnd", context, engine);
             return result;
         }
          QScriptValue

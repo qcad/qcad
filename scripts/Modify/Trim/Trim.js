@@ -417,10 +417,11 @@ Trim.trim = function(op, limitingEntity, limitingShape, limitingPos, trimEntity,
 Trim.trimXLine = function(op, trimEntity, trimmed) {
     op.deleteObject(trimEntity);
     op.addObject(
-        new RRayEntity(
-            trimEntity.getDocument(),
-            new RRayData(trimmed.getBasePoint(), trimmed.getDirectionVector())
-        ),
+        shapeToEntity(trimEntity.getDocument(), xLineToRay(trimmed.castToShape())),
+//        new RRayEntity(
+//            trimEntity.getDocument(),
+//            new RRayData(trimmed.getBasePoint(), trimmed.getDirectionVector())
+//        ),
         false
     );
 };
@@ -428,10 +429,11 @@ Trim.trimXLine = function(op, trimEntity, trimmed) {
 Trim.trimRay = function(op, trimEntity, trimmed) {
     op.deleteObject(trimEntity);
     op.addObject(
-        new RLineEntity(
-            trimEntity.getDocument(),
-            new RLineData(trimmed.getBasePoint(), trimmed.getSecondPoint())
-            ),
+        shapeToEntity(trimEntity.getDocument(), rayToLine(trimmed.castToShape())),
+//        new RLineEntity(
+//            trimEntity.getDocument(),
+//            new RLineData(trimmed.getBasePoint(), trimmed.getSecondPoint())
+//            ),
         false
     );
 };

@@ -1510,10 +1510,14 @@ ShapeAlgorithms.splineToLineOrArc = function(spline, tolerance) {
 };
 
 /**
- * Converts the given circle into an arc with start angle 0 and end angle 2*PI.
+ * Converts the given circle into an arc with the given start angle or 0.
  */
-ShapeAlgorithms.circleToArc = function(circle) {
-    return new RArc(circle.getCenter(), circle.getRadius(), 0.0, 2*Math.PI, false);
+ShapeAlgorithms.circleToArc = function(circle, startAngle) {
+    if (isNull(startAngle)) {
+        startAngle = 0.0;
+    }
+
+    return new RArc(circle.getCenter(), circle.getRadius(), startAngle, startAngle + 2*Math.PI, false);
 };
 
 /**

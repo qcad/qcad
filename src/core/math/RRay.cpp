@@ -72,6 +72,20 @@ void RRay::trimEndPoint(const RVector& p) {
     directionVector = p - basePoint;
 }
 
+QList<RVector> RRay::getPointsWithDistanceToEnd(double distance, RS::From from) const {
+    QList<RVector> ret;
+    double a1 = getAngle();
+
+    RVector dv;
+    dv.setPolar(distance, a1);
+
+    if (from==RS::FromStart || from==RS::FromAny) {
+        ret.append(basePoint + dv);
+    }
+
+    return ret;
+}
+
 void RRay::print(QDebug dbg) const {
 //    dbg.nospace() << "RRay("
 //        << startPoint.x << "," << startPoint.y << " - "

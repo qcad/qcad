@@ -52,10 +52,12 @@ public:
     }
 
     virtual void trimEndPoint(const RVector& p);
+    virtual QList<RVector> getPointsWithDistanceToEnd(double distance, RS::From from) const;
 
     virtual bool reverse();
     virtual RLine getClippedLine(const RBox& box) const;
     virtual RVector getVectorTo(const RVector& point, bool limited = true) const;
+
 
 protected:
     virtual void print(QDebug dbg) const;

@@ -456,8 +456,8 @@ dir="./entity" filename="RRayEntity.h">
     <decl>
       <type>
       <name>const</name>
-      <name>RLine</name>&amp;</type>
-      <name>l</name>
+      <name>RRay</name>&amp;</type>
+      <name>r</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function>

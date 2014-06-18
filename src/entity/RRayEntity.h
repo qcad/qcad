@@ -96,7 +96,7 @@ public:
         return data;
     }
 
-    void setShape(const RLine& l);
+    void setShape(const RRay& r);
 
     void setBasePoint(const RVector& p) {
         data.setBasePoint(p);
