@@ -170,6 +170,10 @@ RLine RXLine::getClippedLine(const RBox& box) const {
     QList<RVector> sol;
     for (int i=0; i<ips.length(); i++) {
         if (pl.isOnShape(ips[i])) {
+            RVector p = ips[i].getClosest(sol);
+            if (p.equalsFuzzy(ips[i])) {
+                continue;
+            }
             sol.append(ips[i]);
         }
     }
