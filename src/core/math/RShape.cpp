@@ -723,12 +723,12 @@ QList<RVector> RShape::getIntersectionPointsLE(const RLine& line1,
     }
 
     if (res1.isValid()) {
-        if (!limited1 || (line1.isOnShape(res1) && ellipse2.isOnShape(res1))) {
+        if ((!limited1 || line1.isOnShape(res1)) && (!limited2 || ellipse2.isOnShape(res1))) {
             res.append(res1);
         }
     }
     if (res2.isValid()) {
-        if (!limited2 || (line1.isOnShape(res2) && ellipse2.isOnShape(res2))) {
+        if ((!limited1 || line1.isOnShape(res2)) && (!limited2 || ellipse2.isOnShape(res2))) {
             res.append(res2);
         }
     }

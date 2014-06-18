@@ -94,7 +94,7 @@ BreakOut.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case BreakOut.State.ChoosingEntity:
-        var cond = isLineEntity(entity) ||
+        var cond = isLineBasedEntity(entity) ||
             isArcEntity(entity) ||
             isCircleEntity(entity) ||
             isEllipseEntity(entity) ||
@@ -120,7 +120,7 @@ BreakOut.prototype.pickEntity = function(event, preview) {
         this.pos = pos;
 
         if (preview) {
-            //this.updatePreview();
+            this.updatePreview();
         }
         else {
             var op = this.getOperation(false);
@@ -135,6 +135,11 @@ BreakOut.prototype.pickEntity = function(event, preview) {
 BreakOut.prototype.getOperation = function(preview) {
     if (isNull(this.pos) || isNull(this.entity)) {
         return undefined;
+    }
+
+    if (preview) {
+        // no preview of operation:
+        return;
     }
 
     var shape = this.entity.getClosestShape(this.pos);
@@ -154,8 +159,15 @@ BreakOut.prototype.getOperation = function(preview) {
         otherEntityIds = document.queryIntersectedEntitiesXY(document.getBoundingBox().growXY(1.0e-2), true);
     }
     else {
-        otherEntityIds = document.queryIntersectedEntitiesXY(shape.getBoundingBox().growXY(1.0e-2));
+        if (isXLineShape(shape) || isRayShape(shape)) {
+            otherEntityIds = document.queryAllEntities();
+        }
+        else {
+            otherEntityIds = document.queryIntersectedEntitiesXY(shape.getBoundingBox().growXY(1.0e-2));
+        }
     }
+
+    qDebug("otherEntityIds: ", otherEntityIds);
 
     for (var i=0; i<otherEntityIds.length; i++) {
         if (otherEntityIds[i]===this.entity.getId()) {
@@ -163,11 +175,6 @@ BreakOut.prototype.getOperation = function(preview) {
         }
 
         var otherEntity = document.queryEntity(otherEntityIds[i]);
-
-        // entity bounding box does not intersect with shape:
-        if (!this.extend && !otherEntity.getBoundingBox().intersectsWith(shape.data(), false)) {
-            continue;
-        }
 
         // TODO: if shape is arc, circle, ellipse or ellipse arc:
         // entities with full bounding box outside full circle or full ellipse
@@ -179,7 +186,6 @@ BreakOut.prototype.getOperation = function(preview) {
         }
     }
 
-    //var newSegments = ShapeAlgorithms.autoTrim(shape, otherShapes, this.pos, this.removeSegment);
     var newSegments = ShapeAlgorithms.autoTrim(shape, otherShapes, this.pos, this.extend);
 
     //qDebug("newSegments: ", newSegments);
