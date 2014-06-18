@@ -1621,6 +1621,45 @@ ShapeAlgorithms.splitAt = function(shape, points) {
         return ret;
     }
 
+    if (isXLineShape(shape)) {
+        points = RVector.getSortedByDistance(points, shape.getBasePoint().operator_subtract(shape.getDirectionVector().operator_multiply(1e9)));
+
+        ret.push(new RRay(points[0], shape.getDirectionVector().getNegated()));
+
+        for (i=0; i<points.length-1; i++) {
+            if (points[i].equalsFuzzy(points[i+1])) {
+                continue;
+            }
+
+            ret.push(new RLine(points[i], points[i+1]));
+        }
+
+        ret.push(new RRay(points[points.length-1], shape.getDirectionVector()));
+
+        return ret;
+    }
+
+    if (isRayShape(shape)) {
+        startPoint = shape.getBasePoint();
+        points = RVector.getSortedByDistance(points, startPoint);
+
+        if (!startPoint.equalsFuzzy(points[0])) {
+            points.unshift(startPoint);
+        }
+
+        for (i=0; i<points.length-1; i++) {
+            if (points[i].equalsFuzzy(points[i+1])) {
+                continue;
+            }
+
+            ret.push(new RLine(points[i], points[i+1]));
+        }
+
+        ret.push(new RRay(points[points.length-1], shape.getDirectionVector()));
+
+        return ret;
+    }
+
     if (isSplineShape(shape) && RSpline.hasProxy()) {
         startPoint = shape.getStartPoint();
         endPoint = shape.getEndPoint();
