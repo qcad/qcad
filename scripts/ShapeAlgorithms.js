@@ -1735,7 +1735,7 @@ ShapeAlgorithms.splitAt = function(shape, points) {
         startPoint = shape.getStartPoint();
         endPoint = shape.getEndPoint();
 
-        points = RVector.getSortedByAngle(points, center, shape.getStartAngle());
+        points = RVector.getSortedByAngle(points, center, center.getAngleTo(startPoint));
 
         if (!startPoint.equalsFuzzy(points[0])) {
             points.unshift(startPoint);
