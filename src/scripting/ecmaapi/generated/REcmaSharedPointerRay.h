@@ -54,6 +54,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        trimEndPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

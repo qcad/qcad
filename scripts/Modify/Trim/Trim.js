@@ -116,7 +116,7 @@ Trim.prototype.pickEntity = function(event, preview) {
 
         var shape = entity.getClosestShape(pos);
 
-        if (!isLineShape(shape) &&
+        if (!isLineBasedShape(shape) &&
             !isArcShape(shape) &&
             !isCircleShape(shape) &&
             !isEllipseShape(shape) &&
@@ -153,7 +153,7 @@ Trim.prototype.pickEntity = function(event, preview) {
             return;
         }
 
-        if (!isLineEntity(entity) &&
+        if (!isLineBasedEntity(entity) &&
             !isArcEntity(entity) &&
             !isCircleEntity(entity) &&
             !isEllipseEntity(entity) &&
@@ -199,6 +199,11 @@ Trim.prototype.getOperation = function(preview) {
     var op = new RMixedOperation();
 
     var success = Trim.trim(op, this.limitingEntity, this.limitingShape, this.limitingPos, this.trimEntity, this.trimPos, this.trimBoth, preview);
+
+    if (!preview) {
+        this.limitingEntity = undefined;
+        this.trimEntity = undefined;
+    }
 
     if (!success && !preview) {
         EAction.handleUserWarning(qsTr("The two entities don't intersect, or are currently not supported for trimming."));
@@ -252,8 +257,6 @@ Trim.trim = function(op, limitingEntity, limitingShape, limitingPos, trimEntity,
     if (sol.length===0) {
         return false;
     }
-
-    //debugger;
 
     var trimmed1;
     var trimmed2;
@@ -335,12 +338,11 @@ Trim.trim = function(op, limitingEntity, limitingShape, limitingPos, trimEntity,
     }
 
     // trim trim entity:
-    var ending = trimmed1.getTrimEnd(trimPos, is);
+    var ending1, ending2;
 
-    //var trimmedShape1 = trimmed1.castToShape();
-    //qDebug("trimmed1: ", trimmedShape1);
+    ending1 = trimmed1.getTrimEnd(trimPos, is);
 
-    switch (ending) {
+    switch (ending1) {
     case RS.EndingStart:
         //trimmedShape1.trimStartPoint(is);
         trimmed1.trimStartPoint(is);
@@ -359,14 +361,11 @@ Trim.trim = function(op, limitingEntity, limitingShape, limitingPos, trimEntity,
         break;
     }
 
-    //trimmedShape1 = trimmed1.castToShape();
-    //qDebug("trimmed1 (after): ", trimmedShape1);
-
     // trim limiting entity if possible (not possible for splines):
     if (trimBoth && isFunction(trimmed2.getTrimEnd)) {
-        ending = trimmed2.getTrimEnd(limitingPos, is);
+        ending2 = trimmed2.getTrimEnd(limitingPos, is);
 
-        switch (ending) {
+        switch (ending2) {
         case RS.EndingStart:
             trimmed2.trimStartPoint(is);
             if (isCircleEntity(limitingEntity) || isFullEllipseEntity(limitingEntity)) {
@@ -384,18 +383,55 @@ Trim.trim = function(op, limitingEntity, limitingShape, limitingPos, trimEntity,
         }
     }
 
-    op.addObject(trimmed1, false);
-    if (isCircleEntity(trimEntity) || isFullEllipseEntity(trimEntity)) {
-        op.deleteObject(trimEntity);
+    if (isXLineEntity(trimmed1)) {
+        Trim.trimXLine(op, trimEntity, trimmed1);
+    }
+    else if (isRayEntity(trimmed1) && ending1===RS.EndingEnd) {
+        Trim.trimRay(op, trimEntity, trimmed1);
+    }
+    else {
+        op.addObject(trimmed1, false);
+        if (isCircleEntity(trimEntity) || isFullEllipseEntity(trimEntity)) {
+            op.deleteObject(trimEntity);
+        }
     }
 
     if (trimBoth) {
-        op.addObject(trimmed2, false);
-        if (isCircleEntity(limitingEntity)) {
-            op.deleteObject(limitingEntity);
+        if (isXLineEntity(trimmed2)) {
+            Trim.trimXLine(op, limitingEntity, trimmed2);
+        }
+        else if (isRayEntity(trimmed2) && ending2===RS.EndingEnd) {
+            Trim.trimRay(op, limitingEntity, trimmed2);
+        }
+        else {
+            op.addObject(trimmed2, false);
+            if (isCircleEntity(limitingEntity)) {
+                op.deleteObject(limitingEntity);
+            }
         }
     }
 
     return true;
 };
 
+Trim.trimXLine = function(op, trimEntity, trimmed) {
+    op.deleteObject(trimEntity);
+    op.addObject(
+        new RRayEntity(
+            trimEntity.getDocument(),
+            new RRayData(trimmed.getBasePoint(), trimmed.getDirectionVector())
+        ),
+        false
+    );
+};
+
+Trim.trimRay = function(op, trimEntity, trimmed) {
+    op.deleteObject(trimEntity);
+    op.addObject(
+        new RLineEntity(
+            trimEntity.getDocument(),
+            new RLineData(trimmed.getBasePoint(), trimmed.getSecondPoint())
+            ),
+        false
+    );
+};

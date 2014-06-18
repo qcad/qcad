@@ -41,6 +41,8 @@ function LineOrthogonalTangent(guiAction) {
     this.shape2 = undefined;
     // click position when choosing second entity:
     this.pos2 = undefined;
+
+    this.setUiOptions("../Line.ui");
 }
 
 LineOrthogonalTangent.prototype = new Line();
@@ -111,7 +113,7 @@ LineOrthogonalTangent.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case LineOrthogonalTangent.State.ChoosingEntity1:
-        if (isLineShape(shape)) {
+        if (isLineBasedShape(shape)) {
             this.entity1 = entity;
             this.shape1 = shape;
             this.pos1 = pos;
@@ -220,12 +222,12 @@ LineOrthogonalTangent.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    var e = shapeToEntity(doc, tangent);
+    var e = this.createLineEntity(doc, tangent.getEndPoint(), tangent.getStartPoint());
     if (isNull(e)) {
         return undefined;
     }
 
-    return new RAddObjectsOperation(e);
+    return new RAddObjectOperation(e);
 };
 
 LineOrthogonalTangent.prototype.getTangent = function() {

@@ -68,6 +68,10 @@ RLine RRay::getClippedLine(const RBox& box) const {
     return ret;
 }
 
+void RRay::trimEndPoint(const RVector& p) {
+    directionVector = p - basePoint;
+}
+
 void RRay::print(QDebug dbg) const {
 //    dbg.nospace() << "RRay("
 //        << startPoint.x << "," << startPoint.y << " - "

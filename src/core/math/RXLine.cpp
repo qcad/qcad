@@ -98,11 +98,12 @@ RVector RXLine::getEndPoint() const {
 }
 
 void RXLine::trimStartPoint(const RVector& p) {
-    Q_UNUSED(p)
+    basePoint = p;
 }
 
 void RXLine::trimEndPoint(const RVector& p) {
-    Q_UNUSED(p)
+    basePoint = p;
+    directionVector = -directionVector;
 }
 
 RS::Ending RXLine::getTrimEnd(const RVector& coord, const RVector& trimPoint) {

@@ -349,6 +349,15 @@ function isLineEntity(obj) {
 }
 
 /**
+ * Checks if the given object is a line, xline or ray entity.
+ *
+ * \return true if the given object is a line based entity (RLineEntity, RXLineEntity, RRayEntity).
+ */
+function isLineBasedEntity(obj) {
+    return isLineEntity(obj) || isXLineEntity(obj) || isRayEntity(obj);
+}
+
+/**
  * Checks if the given object is an xline entity.
  *
  * \return true if the given object is an xline entity (RXLineEntity).

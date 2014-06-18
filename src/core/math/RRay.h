@@ -51,6 +51,8 @@ public:
         return new RRay(*this);
     }
 
+    virtual void trimEndPoint(const RVector& p);
+
     virtual bool reverse();
     virtual RLine getClippedLine(const RBox& box) const;
     virtual RVector getVectorTo(const RVector& point, bool limited = true) const;
