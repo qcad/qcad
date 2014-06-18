@@ -209,8 +209,8 @@ bool RXLine::scale(const RVector& scaleFactors, const RVector& center) {
 }
 
 bool RXLine::mirror(const RLine& axis) {
-    basePoint.mirror(axis);
     RVector sp = getSecondPoint();
+    basePoint.mirror(axis);
     sp.mirror(axis);
     setSecondPoint(sp);
     return true;
