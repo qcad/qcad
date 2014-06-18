@@ -183,6 +183,21 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
     }
 };
 
+ModifyCorner.modifyEntity = function(op, entity, shape) {
+    if ((isXLineEntity(entity) && isRayShape(shape)) ||
+        (isRayEntity(entity) && isLineShape(shape))) {
+
+        var e = shapeToEntity(entity.getDocument(), shape);
+        e.copyAttributesFrom(entity);
+        op.deleteObject(entity);
+        op.addObject(e, false);
+        return;
+    }
+
+    entity.setShape(shape);
+    op.addObject(entity, false);
+};
+
 ModifyCorner.prototype.getHighlightedEntities = function() {
     var ret = [];
     if (isEntity(this.entity1)) {

@@ -203,10 +203,12 @@ Round.round = function(op, entity1, pos1, entity2, pos2, trim, radius, preview) 
         ending1 = trimmed1.getTrimEnd(pos1, is2);
         switch (ending1) {
         case RS.EndingStart:
-            trimmed1.trimStartPoint(p1);
+            //trimmed1.trimStartPoint(p1);
+            trimmed1 = trimStartPoint(trimmed1, p1);
             break;
         case RS.EndingEnd:
-            trimmed1.trimEndPoint(p1);
+            //trimmed1.trimEndPoint(p1);
+            trimmed1 = trimEndPoint(trimmed1, p1);
             break;
         default:
             break;
@@ -216,10 +218,12 @@ Round.round = function(op, entity1, pos1, entity2, pos2, trim, radius, preview) 
         ending2 = trimmed2.getTrimEnd(pos2, is2);
         switch (ending2) {
         case RS.EndingStart:
-            trimmed2.trimStartPoint(p2);
+            //trimmed2.trimStartPoint(p2);
+            trimmed2 = trimStartPoint(trimmed2, p2);
             break;
         case RS.EndingEnd:
-            trimmed2.trimEndPoint(p2);
+            //trimmed2.trimEndPoint(p2);
+            trimmed2 = trimEndPoint(trimmed2, p2);
             break;
         default:
             break;
@@ -263,8 +267,9 @@ Round.round = function(op, entity1, pos1, entity2, pos2, trim, radius, preview) 
         // add new trimmed entities:
         else {
             if (isFunction(entity1.setShape)) {
-                entity1.setShape(trimmed1);
-                op.addObject(entity1, false);
+                ModifyCorner.modifyEntity(op, entity1, trimmed1);
+                //entity1.setShape(trimmed1);
+                //op.addObject(entity1, false);
             }
             else {
                 if (!preview) {
@@ -273,8 +278,9 @@ Round.round = function(op, entity1, pos1, entity2, pos2, trim, radius, preview) 
             }
 
             if (isFunction(entity2.setShape)) {
-                entity2.setShape(trimmed2);
-                op.addObject(entity2, false);
+                ModifyCorner.modifyEntity(op, entity2, trimmed2);
+                //entity2.setShape(trimmed2);
+                //op.addObject(entity2, false);
             }
             else {
                 if (!preview) {

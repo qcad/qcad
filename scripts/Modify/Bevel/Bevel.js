@@ -298,17 +298,21 @@ Bevel.bevel = function(op, entity1, pos1, entity2, pos2, trim, distance1, distan
         // add new trimmed entities:
         else {
             if (isFunction(entity1.setShape)) {
-                Bevel.modifyEntity(op, entity1, trimmed1);
+                ModifyCorner.modifyEntity(op, entity1, trimmed1);
             }
             else {
-                EAction.handleUserWarning(qsTr("First entity cannot be trimmed."));
+                if (!preview) {
+                    EAction.handleUserWarning(qsTr("First entity cannot be trimmed."));
+                }
             }
 
             if (isFunction(entity2.setShape)) {
-                Bevel.modifyEntity(op, entity2, trimmed2);
+                ModifyCorner.modifyEntity(op, entity2, trimmed2);
             }
             else {
-                EAction.handleUserWarning(qsTr("Second entity cannot be trimmed."));
+                if (!preview) {
+                    EAction.handleUserWarning(qsTr("Second entity cannot be trimmed."));
+                }
             }
         }
     }
@@ -320,21 +324,6 @@ Bevel.bevel = function(op, entity1, pos1, entity2, pos2, trim, distance1, distan
     }
 
     return true;
-};
-
-Bevel.modifyEntity = function(op, entity, shape) {
-    if ((isXLineEntity(entity) && isRayShape(shape)) ||
-        (isRayEntity(entity) && isLineShape(shape))) {
-
-        var e = shapeToEntity(entity.getDocument(), shape);
-        e.copyAttributesFrom(entity);
-        op.deleteObject(entity);
-        op.addObject(e, false);
-        return;
-    }
-
-    entity.setShape(shape);
-    op.addObject(entity, false);
 };
 
 Bevel.prototype.slotLength1Changed = function(value) {
