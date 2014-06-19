@@ -158,7 +158,7 @@ Circle3T.prototype.pickEntity = function(event, preview) {
         if (!isNull(entity)) {
             shape = entity.getClosestShape(pos);
 
-            if (!isLineShape(shape) &&
+            if (!isLineBasedShape(shape) &&
                 !isArcShape(shape) &&
                 !isCircleShape(shape)) {
 

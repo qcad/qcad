@@ -343,8 +343,6 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
 
     var res = ShapeAlgorithms.getClosestIntersectionPoints(shape, otherShapes, position, !extend, extend);
 
-    qDebug("res: ", res);
-
     var cutPos1 = undefined;
     var cutPos2 = undefined;
 
@@ -352,6 +350,11 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
         cutPos1 = res[0];
         cutPos2 = res[1];
     }
+
+    return ShapeAlgorithms.autoTrimManual(shape, cutPos1, cutPos2, position);
+};
+
+ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
 
     if (!isCircleShape(shape) && !isFullEllipseShape(shape) &&
         !isXLineShape(shape) && !isRayShape(shape)) {
@@ -399,26 +402,18 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
         rest1 = undefined;
         rest2 = undefined;
 
-//        var ang = shape.getDirection1();
-//        var angSeg = cutPos1.getAngleTo(cutPos2);
+        if (!RMath.isSameDirection(cutPos2.getAngleTo(cutPos1), shape.getDirection1(), 0.01)) {
+            var dummy = cutPos1;
+            cutPos1 = cutPos2;
+            cutPos2 = dummy;
+        }
 
-//        if (Math.abs(RMath.getAngleDifference180(ang, angSeg))<0.1) {
-//            qDebug("case1");
-//            if (isValidVector(cutPos1)) {
-//                rest1 = new RRay(cutPos1, RVector.createPolar(1.0, shape.getDirection2()));
-//            }
-//            if (isValidVector(cutPos2)) {
-//                rest2 = new RRay(cutPos2, RVector.createPolar(1.0, shape.getDirection1()));
-//            }
-//        }
-//        else {
-            if (isValidVector(cutPos2)) {
-                rest1 = new RRay(cutPos2, RVector.createPolar(1.0, shape.getDirection2()));
-            }
-            if (isValidVector(cutPos1)) {
-                rest2 = new RRay(cutPos1, RVector.createPolar(1.0, shape.getDirection1()));
-            }
-//        }
+        if (isValidVector(cutPos2)) {
+            rest1 = new RRay(cutPos2, RVector.createPolar(1.0, shape.getDirection2()));
+        }
+        if (isValidVector(cutPos1)) {
+            rest2 = new RRay(cutPos1, RVector.createPolar(1.0, shape.getDirection1()));
+        }
 
         if (isValidVector(cutPos1) && isValidVector(cutPos2)) {
             segment = new RLine();
@@ -431,6 +426,12 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
     else if (isRayShape(shape)) {
         rest1 = undefined;
         rest2 = undefined;
+
+        if (!RMath.isSameDirection(cutPos2.getAngleTo(cutPos1), shape.getDirection1(), 0.01)) {
+            var dummy = cutPos1;
+            cutPos1 = cutPos2;
+            cutPos2 = dummy;
+        }
 
         if (isValidVector(cutPos2)) {
             rest1 = new RLine(shape.getBasePoint(), cutPos2);
@@ -504,13 +505,15 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
                         angle2, angle1,
                         false);
 
-            var cursorAngle = shape.getCenter().getAngleTo(position);
+            if (!isNull(position)) {
+                var cursorAngle = shape.getCenter().getAngleTo(position);
 
-            if (RMath.isAngleBetween(cursorAngle, angle1, angle2, false)) {
-                rest1.setStartAngle(angle2);
-                rest1.setEndAngle(angle1);
-                segment.setStartAngle(angle1);
-                segment.setEndAngle(angle2);
+                if (RMath.isAngleBetween(cursorAngle, angle1, angle2, false)) {
+                    rest1.setStartAngle(angle2);
+                    rest1.setEndAngle(angle1);
+                    segment.setStartAngle(angle1);
+                    segment.setEndAngle(angle2);
+                }
             }
 
             var angleLength1 = rest1.getAngleLength(true);
@@ -545,13 +548,15 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
                         angle2, angle1,
                         false);
 
-            var cursorAngle = shape.getParamTo(position);
+            if (!isNull(position)) {
+                var cursorAngle = shape.getParamTo(position);
 
-            if (RMath.isAngleBetween(cursorAngle, angle1, angle2, false)) {
-                rest1.setStartParam(angle2);
-                rest1.setEndParam(angle1);
-                segment.setStartParam(angle1);
-                segment.setEndParam(angle2);
+                if (RMath.isAngleBetween(cursorAngle, angle1, angle2, false)) {
+                    rest1.setStartParam(angle2);
+                    rest1.setEndParam(angle1);
+                    segment.setStartParam(angle1);
+                    segment.setEndParam(angle2);
+                }
             }
 
             var angleLength1 = rest1.getAngleLength();

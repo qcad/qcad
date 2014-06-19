@@ -304,7 +304,7 @@ Projection.prototype.isFlip = function() {
  * \return Array of new projected shapes.
  */
 Projection.prototype.projectShape = function(shape, preview, trim) {
-    var p, i, k, s, ret;
+    var p, p2, i, k, s, ret;
 
     if (isNull(trim)) {
         trim = true;
@@ -351,6 +351,9 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
 
             return ret;
         }
+        if (isXLineShape(shape) || isRayShape(shape)) {
+            return [];
+        }
     }
 
     if (isPointShape(shape)) {
@@ -368,6 +371,18 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
         p = shape.getEndPoint();
         this.project(p);
         shape.setEndPoint(p);
+        return [ shape ];
+    }
+
+    if (isXLineShape(shape) || isRayShape(shape)) {
+        p = shape.getBasePoint();
+        this.project(p);
+
+        p2 = shape.getSecondPoint();
+        this.project(p2);
+
+        shape.setBasePoint(p);
+        shape.setSecondPoint(p2);
         return [ shape ];
     }
 

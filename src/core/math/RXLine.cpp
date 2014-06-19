@@ -98,11 +98,13 @@ RVector RXLine::getEndPoint() const {
 }
 
 void RXLine::trimStartPoint(const RVector& p) {
-    basePoint = p;
+    RVector tp = getClosestPointOnShape(p, false);
+    basePoint = tp;
 }
 
 void RXLine::trimEndPoint(const RVector& p) {
-    basePoint = p;
+    RVector tp = getClosestPointOnShape(p, false);
+    basePoint = tp;
     directionVector = -directionVector;
 }
 

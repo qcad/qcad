@@ -1647,6 +1647,22 @@ function rayToLine(ray) {
     return new RLine(ray.getBasePoint(), ray.getSecondPoint());
 };
 
+function modifyEntity(op, entity, shape) {
+    if ((isXLineEntity(entity) && isRayShape(shape)) ||
+        (isRayEntity(entity) && isLineShape(shape))) {
+
+        var e = shapeToEntity(entity.getDocument(), shape);
+        e.copyAttributesFrom(entity);
+        op.deleteObject(entity);
+        op.addObject(e, false);
+        return;
+    }
+
+    entity.setShape(shape);
+    op.addObject(entity, false);
+};
+
+
 /**
  * Insert CAD fonts at the top into the given font combo box.
  */

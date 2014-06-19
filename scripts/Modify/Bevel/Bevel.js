@@ -298,7 +298,7 @@ Bevel.bevel = function(op, entity1, pos1, entity2, pos2, trim, distance1, distan
         // add new trimmed entities:
         else {
             if (isFunction(entity1.setShape)) {
-                ModifyCorner.modifyEntity(op, entity1, trimmed1);
+                modifyEntity(op, entity1, trimmed1);
             }
             else {
                 if (!preview) {
@@ -307,7 +307,7 @@ Bevel.bevel = function(op, entity1, pos1, entity2, pos2, trim, distance1, distan
             }
 
             if (isFunction(entity2.setShape)) {
-                ModifyCorner.modifyEntity(op, entity2, trimmed2);
+                modifyEntity(op, entity2, trimmed2);
             }
             else {
                 if (!preview) {

@@ -53,7 +53,7 @@ Apollonius.getSolutions = function(shape1, shape2, shape3) {
             points.push(s);
             continue;
         }
-        if (isLineShape(s)) {
+        if (isLineBasedShape(s)) {
             lines.push(s);
             continue;
         }
@@ -181,9 +181,9 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
         var inversionCircle = new RCircle(commonIP, 10);
         var shapesInverse = Apollonius.getInverseShapes([circle1, circle2, circle3], inversionCircle);
 
-        if (isLineShape(shapesInverse[0]) &&
-            isLineShape(shapesInverse[1]) &&
-            isLineShape(shapesInverse[2])) {
+        if (isLineBasedShape(shapesInverse[0]) &&
+            isLineBasedShape(shapesInverse[1]) &&
+            isLineBasedShape(shapesInverse[2])) {
 
             var circlesTouching = Apollonius.getSolutions(shapesInverse);
             ret = Apollonius.getInverseShapes(circlesTouching, inversionCircle);
@@ -501,8 +501,8 @@ Apollonius.removeDuplicates = function(shapes) {
 };
 
 Apollonius.compareShapes = function(shape1, shape2) {
-    if (isLineShape(shape1)) {
-        if (!isLineShape(shape2)) {
+    if (isLineBasedShape(shape1)) {
+        if (!isLineBasedShape(shape2)) {
             return false;
         }
 
@@ -558,11 +558,11 @@ Apollonius.shapesTouch = function(shape1, shape2) {
             return RMath.fuzzyCompare(shape2.getDistanceTo(shape1.position, false), 0.0);
         }
     }
-    else if (isLineShape(shape1)) {
+    else if (isLineBasedShape(shape1)) {
         if (isPointShape(shape2)) {
             return Apollonius.shapesTouch(shape2, shape1);
         }
-        else if (isLineShape(shape2)) {
+        else if (isLineBasedShape(shape2)) {
             return false;
         }
         else if (isCircleShape(shape2)) {
@@ -573,7 +573,7 @@ Apollonius.shapesTouch = function(shape1, shape2) {
         if (isPointShape(shape2)) {
             return Apollonius.shapesTouch(shape2, shape1);
         }
-        else if (isLineShape(shape2)) {
+        else if (isLineBasedShape(shape2)) {
             return Apollonius.shapesTouch(shape2, shape1);
         }
         else if (isCircleShape(shape2)) {
@@ -776,9 +776,9 @@ Apollonius.getRadicalAxis = function(c1, c2, length) {
  * \return Solutions for circles (<=4) that are tangetial to the three given lines.
  */
 Apollonius.getSolutionsLLL = function(line1, line2, line3) {
-    if (!isLineShape(line1) ||
-        !isLineShape(line2) ||
-        !isLineShape(line3)) {
+    if (!isLineBasedShape(line1) ||
+        !isLineBasedShape(line2) ||
+        !isLineBasedShape(line3)) {
 
         return [];
     }
@@ -916,7 +916,7 @@ Apollonius.getSolutionsPPC = function(point1, point2, circle) {
 Apollonius.getSolutionsPPL = function(point1, point2, line) {
     if (!isPointShape(point1) ||
         !isPointShape(point2) ||
-        !isLineShape(line)) {
+        !isLineBasedShape(line)) {
 
         return [];
     }
@@ -945,8 +945,8 @@ Apollonius.getSolutionsPPL = function(point1, point2, line) {
  * and the given point.
  */
 Apollonius.getSolutionsLLP = function(line1, line2, point) {
-    if (!isLineShape(line1) ||
-        !isLineShape(line2) ||
+    if (!isLineBasedShape(line1) ||
+        !isLineBasedShape(line2) ||
         !isPointShape(point)) {
 
         return [];
@@ -966,8 +966,8 @@ Apollonius.getSolutionsLLP = function(line1, line2, point) {
  * and the given circle.
  */
 Apollonius.getSolutionsLLC = function(line1, line2, circle) {
-    if (!isLineShape(line1) ||
-        !isLineShape(line2) ||
+    if (!isLineBasedShape(line1) ||
+        !isLineBasedShape(line2) ||
         !isCircleShape(circle)) {
 
         return [];
@@ -1042,7 +1042,7 @@ Apollonius.getSolutionsLLC = function(line1, line2, circle) {
  * two given circles.
  */
 Apollonius.getSolutionsLCC = function(line, circle1, circle2) {
-    if (!isLineShape(line) ||
+    if (!isLineBasedShape(line) ||
         !isCircleShape(circle1) ||
         !isCircleShape(circle2)) {
 
@@ -1134,7 +1134,7 @@ Apollonius.getSolutionsLCC = function(line, circle1, circle2) {
  */
 Apollonius.getSolutionsPLC = function(point, line, circle) {
     if (!isPointShape(point) ||
-        !isLineShape(line) ||
+        !isLineBasedShape(line) ||
         !isCircleShape(circle)) {
 
         return [];
@@ -1163,8 +1163,8 @@ Apollonius.getSolutionsPLC = function(point, line, circle) {
  */
 Apollonius.getSolutionsPLL = function(point, line1, line2) {
     if (!isPointShape(point) ||
-        !isLineShape(line1) ||
-        !isLineShape(line2)) {
+        !isLineBasedShape(line1) ||
+        !isLineBasedShape(line2)) {
 
         return [];
     }
@@ -1264,7 +1264,7 @@ Apollonius.getInverseShape = function(shape, inversionCircle) {
         return new RPoint(new RVector(x, y));
     }
 
-    if (isLineShape(shape)) {
+    if (isLineBasedShape(shape)) {
         var center = inversionCircle.center;
 
         if (shape.isOnShape(center, false)) {
@@ -1451,7 +1451,7 @@ Apollonius.getTangentsThroughPoint = function(circle, p) {
 };
 
 Apollonius.getParallelLinesWithDistance = function(line, distance) {
-    if (!isLineShape(line)) {
+    if (!isLineBasedShape(line)) {
         return [];
     }
 
@@ -1505,8 +1505,8 @@ Apollonius.getCommonIntersectionPoint = function(c1, c2, c3) {
  * lines are parallel.
  */
 Apollonius.getAngleBisectors = function(line1, line2) {
-    if (!isLineShape(line1) ||
-        !isLineShape(line2)) {
+    if (!isLineBasedShape(line1) ||
+        !isLineBasedShape(line2)) {
 
         return [];
     }
@@ -1527,7 +1527,7 @@ Apollonius.getAngleBisectors = function(line1, line2) {
 };
 
 Apollonius.getVerticalToPoint = function(line, p) {
-    if (!isLineShape(line)) {
+    if (!isLineBasedShape(line)) {
         return undefined;
     }
 

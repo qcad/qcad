@@ -18,6 +18,7 @@
  */
 
 include("../Modify.js");
+include("scripts/ShapeAlgorithms.js");
 
 function BreakOutManual(guiAction) {
     Modify.call(this, guiAction);
@@ -120,11 +121,10 @@ BreakOutManual.prototype.pickEntity = function(event, preview) {
     }
 
     this.entity = entity;
-    di.highlightEntity(this.entity.getId());
 
     switch (this.state) {
     case BreakOutManual.State.SettingShape:
-        var cond = isLineEntity(entity) ||
+        var cond = isLineBasedEntity(entity) ||
             isArcEntity(entity) ||
             isCircleEntity(entity) ||
             isEllipseEntity(entity) ||
@@ -141,6 +141,9 @@ BreakOutManual.prototype.pickEntity = function(event, preview) {
             }
             break;
         }
+        else {
+            di.highlightEntity(this.entity.getId());
+        }
 
         if (!EAction.assertEditable(entity, preview)) {
             break;
@@ -151,6 +154,7 @@ BreakOutManual.prototype.pickEntity = function(event, preview) {
         }
         break;
     case BreakOutManual.State.SelectCircleEllipsePart:
+        di.highlightEntity(this.entity.getId());
         if (!preview) {
             if (this.entity.getDrawOrder() === this.cedo1 || this.entity.getDrawOrder() === this.cedo2) {
                 var op = new RDeleteObjectOperation(this.entity);
@@ -238,7 +242,8 @@ BreakOutManual.prototype.pickCoordinate = function(event, preview) {
 };
 
 BreakOutManual.prototype.getOperation = function(preview) {
-    var newSegments = BreakOutManual.autoTrim(this.shape, this.point2, this.point4);
+    //var newSegments = BreakOutManual.autoTrim(this.shape, this.point2, this.point4);
+    var newSegments = ShapeAlgorithms.autoTrimManual(this.shape, this.point2, this.point4);
 
     if (isNull(newSegments)) {
         return undefined;
@@ -293,217 +298,4 @@ BreakOutManual.prototype.getOperation = function(preview) {
 
 BreakOutManual.prototype.slotRemoveSegmentChanged = function(value) {
     this.removeSegment = value;
-};
-
-
-/**
- * Breaks the closest segment in shape between two break points
- *
- * \return Array of three new shapes which each might be undefined if its
- * length would otherwise be 0.
- * The first shape is the rest at the start of the shape.
- * The second shape is the rest at the end of the shape.
- * The third shape is the segment self in its new shape.
- */
-BreakOutManual.autoTrim = function(shape, brkpt1, brkpt2) {
-    var cutPos1 = brkpt1;
-    var cutPos2 = brkpt2;
-
-    if (!isCircleShape(shape) && !isFullEllipseShape(shape)) {
-        if (!isValidVector(cutPos1) || !isValidVector(cutPos2)) {
-            // full circle or ellipse requires two intersection points:
-            return undefined;
-        }
-    }
-
-    var rest1 = undefined;
-    var rest2 = undefined;
-    var segment = undefined;
-
-    // lines:
-    if (isLineShape(shape)) {
-        rest1 = shape.clone();
-        rest2 = shape.clone();
-
-        if (shape.getStartPoint().getDistanceTo(cutPos1) <
-            shape.getStartPoint().getDistanceTo(cutPos2)) {
-            rest1.trimEndPoint(cutPos1);
-            rest2.trimStartPoint(cutPos2);
-        }
-        else {
-            rest1.trimEndPoint(cutPos2);
-            rest2.trimStartPoint(cutPos1);
-        }
-
-        segment = shape.clone();
-        segment.setStartPoint(cutPos1);
-        segment.setEndPoint(cutPos2);
-
-        if (rest1.getLength()<RS.PointTolerance) {
-            rest1 = undefined;
-        }
-
-        if (rest2.getLength()<RS.PointTolerance) {
-            rest2 = undefined;
-        }
-    }
-
-    // arcs / ellipse arcs:
-    else if (isArcShape(shape) || isEllipseArcShape(shape)) {
-        rest1 = shape.clone();
-        rest2 = shape.clone();
-
-        rest1.trimEndPoint(cutPos1);
-        rest2.trimStartPoint(cutPos2);
-
-        segment = shape.clone();
-        segment.trimStartPoint(cutPos1);
-        segment.trimEndPoint(cutPos2);
-
-        var angleLength1 = rest1.getAngleLength(true);
-        var angleLength2 = rest2.getAngleLength(true);
-
-        if (angleLength1+angleLength2 > shape.getAngleLength()) {
-            rest1.trimEndPoint(cutPos2);
-            rest2.trimStartPoint(cutPos1);
-
-            segment.trimStartPoint(cutPos2);
-            segment.trimEndPoint(cutPos1);
-
-            angleLength1 = rest1.getAngleLength(true);
-            angleLength2 = rest2.getAngleLength(true);
-        }
-
-        if (angleLength1<1.0e-5) {
-            rest1 = undefined;
-        }
-
-        if (angleLength2<1.0e-5) {
-            rest2 = undefined;
-        }
-    }
-
-    // circles:
-    else if (isCircleShape(shape)) {
-        if (!isValidVector(cutPos1) || !isValidVector(cutPos2)) {
-            rest1 = undefined;
-            rest2 = undefined;
-        }
-        else {
-            var angle1 = shape.getCenter().getAngleTo(cutPos1);
-            var angle2 = shape.getCenter().getAngleTo(cutPos2);
-
-            if (angle1 === angle2) {
-                rest1 = undefined;
-            } else {
-                rest1 = new RArc(
-                        shape.getCenter(),
-                        shape.getRadius(),
-                        angle1, angle2,
-                        false);
-            }
-            rest2 = undefined;
-
-            segment = new RArc(
-                        shape.getCenter(),
-                        shape.getRadius(),
-                        angle2, angle1,
-                        false);
-
-            if (!isNull(rest1)) {
-                angleLength1 = rest1.getAngleLength();
-
-                if (angleLength1<RS.AngleTolerance) {
-                    rest1 = undefined;
-                }
-            }
-        }
-    }
-    // full ellipses:
-    else if (isFullEllipseShape(shape)) {
-        if (!isValidVector(cutPos1) || !isValidVector(cutPos2)) {
-            rest1 = undefined;
-            rest2 = undefined;
-        }
-        else {
-            angle1 = shape.getParamTo(cutPos1);
-            angle2 = shape.getParamTo(cutPos2);
-
-            if (angle1 === angle2) {
-                rest1 = undefined;
-            } else {
-            rest1 = new REllipse(
-                        shape.getCenter(),
-                        shape.getMajorPoint(),
-                        shape.getRatio(),
-                        angle1, angle2,
-                        false);
-            }
-            rest2 = undefined;
-
-            segment = new REllipse(
-                        shape.getCenter(),
-                        shape.getMajorPoint(),
-                        shape.getRatio(),
-                        angle2, angle1,
-                        false);
-
-            if (!isNull(rest1)) {
-                angleLength1 = rest1.getAngleLength();
-
-                if (angleLength1<RS.AngleTolerance) {
-                    rest1 = undefined;
-                }
-            }
-        }
-    }
-    // spline:
-    else if (isSplineShape(shape)) {
-        rest1 = shape.clone();
-        rest2 = shape.clone();
-        segment = shape.clone();
-
-        var tAtCutPos1 = shape.getTAtPoint(cutPos1);
-        var tAtCutPos2 = shape.getTAtPoint(cutPos2);
-
-        if (shape.getStartPoint().equalsFuzzy(shape.getEndPoint())) {
-            if (RMath.fuzzyCompare(tAtCutPos1, shape.getTMax())) {
-                tAtCutPos1 = shape.getTMin();
-            }
-        }
-
-        if (tAtCutPos1 < tAtCutPos2) {
-            rest1.trimEndPoint(cutPos1);
-            segment.trimStartPoint(cutPos1);
-            segment.trimEndPoint(cutPos2);
-            rest2.trimStartPoint(cutPos2);
-        }
-        else {
-            rest1.trimEndPoint(cutPos2);
-            segment.trimStartPoint(cutPos2);
-            segment.trimEndPoint(cutPos1);
-            rest2.trimStartPoint(cutPos1);
-        }
-
-        if (!segment.isValid() || segment.getLength()<RS.PointTolerance) {
-            segment = undefined;
-        }
-
-        if (!rest1.isValid() || rest1.getLength()<RS.PointTolerance) {
-            rest1 = undefined;
-        }
-
-        if (!rest2.isValid() || rest2.getLength()<RS.PointTolerance) {
-            rest2 = undefined;
-        }
-    }
-
-    var ret = [];
-
-    // add new rest entities:
-    ret.push(rest1);
-    ret.push(rest2);
-    ret.push(segment);
-
-    return ret;
 };

@@ -267,7 +267,7 @@ Round.round = function(op, entity1, pos1, entity2, pos2, trim, radius, preview) 
         // add new trimmed entities:
         else {
             if (isFunction(entity1.setShape)) {
-                ModifyCorner.modifyEntity(op, entity1, trimmed1);
+                modifyEntity(op, entity1, trimmed1);
                 //entity1.setShape(trimmed1);
                 //op.addObject(entity1, false);
             }
@@ -278,7 +278,7 @@ Round.round = function(op, entity1, pos1, entity2, pos2, trim, radius, preview) 
             }
 
             if (isFunction(entity2.setShape)) {
-                ModifyCorner.modifyEntity(op, entity2, trimmed2);
+                modifyEntity(op, entity2, trimmed2);
                 //entity2.setShape(trimmed2);
                 //op.addObject(entity2, false);
             }

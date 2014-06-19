@@ -129,7 +129,7 @@ PointPole.prototype.pickEntity = function(event, preview) {
         break;
 
     case PointPole.State.ChoosingShape2:
-        if (!isLineShape(shape)) {
+        if (!isLineBasedShape(shape)) {
 
             if (!preview) {
                 EAction.warnNotLine();

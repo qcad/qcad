@@ -137,7 +137,7 @@ DimAngular.prototype.pickEntity = function(event, preview) {
     case DimAngular.State.SettingFirstEntity:
         shape = entity.getClosestShape(pos);
 
-        if (isLineShape(shape)) {
+        if (isLineBasedShape(shape)) {
             this.firstEntity = entity;
             this.firstShape = shape;
             if (preview) {
@@ -167,7 +167,7 @@ DimAngular.prototype.pickEntity = function(event, preview) {
     case DimAngular.State.SettingSecondEntity:
         shape = entity.getClosestShape(pos);
 
-        if (isLineShape(shape)) {
+        if (isLineBasedShape(shape)) {
             this.secondEntity = entity;
             this.secondShape = shape;
             if (preview) {
@@ -209,17 +209,17 @@ DimAngular.prototype.pickCoordinate = function(event, preview) {
 };
 
 DimAngular.prototype.getOperation = function(preview) {
-    if (!isLineShape(this.firstShape) && !isArcShape(this.firstShape)) {
+    if (!isLineBasedShape(this.firstShape) && !isArcShape(this.firstShape)) {
         return undefined;
     }
 
-    if (isLineShape(this.firstShape) && !isLineShape(this.secondShape)) {
+    if (isLineBasedShape(this.firstShape) && !isLineBasedShape(this.secondShape)) {
         return undefined;
     }
 
     var di = this.getDocumentInterface();
 
-    if (isLineShape(this.firstShape)) {
+    if (isLineBasedShape(this.firstShape)) {
         //this.data.setExtensionLine1Start(this.firstShape.getStartPoint());
         //this.data.setExtensionLine1End(this.firstShape.getStartPoint());
 

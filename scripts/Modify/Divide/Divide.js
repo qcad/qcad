@@ -122,7 +122,7 @@ Divide.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case Divide.State.ChoosingEntity:
-        if (isLineEntity(entity) ||
+        if (isLineBasedEntity(entity) ||
             isArcEntity(entity) ||
             isCircleEntity(entity) ||
             isEllipseEntity(entity) ||
@@ -274,16 +274,17 @@ Divide.prototype.getOperation = function(preview) {
         var shape1 = this.shape.clone();
         var shape2 = this.shape.clone();
 
-        shape1.trimEndPoint(this.pos);
+        shape1 = trimEndPoint(shape1, this.pos);
         this.cutPos = shape1.getEndPoint();
-        shape2.trimStartPoint(this.pos);
+        shape2 = trimStartPoint(shape2, this.pos);
 
         // modify chosen entity into first part:
-        this.entity.setShape(shape1);
-        op.addObject(this.entity, false);
+        modifyEntity(op, this.entity.data(), shape1);
+        //this.entity.setShape(shape1);
+        //op.addObject(this.entity, false);
 
         // add second part as new entity:
-        if (isLineShape(shape2) || isArcShape(shape2) ||
+        if (isLineBasedShape(shape2) || isArcShape(shape2) ||
             isEllipseShape(shape2) || isSplineShape(shape2)) {
 
             e = shapeToEntity(this.entity.getDocument(), shape2);

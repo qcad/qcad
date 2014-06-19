@@ -103,7 +103,7 @@ InfoAngle.prototype.pickEntity = function(event, preview) {
     case InfoAngle.State.SettingFirstShape:
         shape = entity.getClosestShape(pos);
 
-        if (isLineShape(shape)) {
+        if (isLineBasedShape(shape)) {
             if (!preview) {
                 this.entity1 = entity;
                 this.shape1 = shape;
@@ -129,7 +129,7 @@ InfoAngle.prototype.pickEntity = function(event, preview) {
         di.highlightEntity(this.entity1.getId());
         shape = entity.getClosestShape(pos);
 
-        if (isLineShape(shape)) {
+        if (isLineBasedShape(shape)) {
             this.entity2 = entity;
             this.shape2 = shape;
             this.point2 = this.shape2.getClosestPointOnShape(pos);
