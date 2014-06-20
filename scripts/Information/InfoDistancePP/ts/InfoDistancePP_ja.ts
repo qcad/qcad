@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>InfoDistancePP</name>
     <message>
@@ -26,12 +25,12 @@
     <message>
         <location line="+4"/>
         <source>Delta X:</source>
-        <translation></translation>
+        <translation>X 軸方向の差分:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta Y:</source>
-        <translation></translation>
+        <translation>Y 軸方向の差分:</translation>
     </message>
     <message>
         <location line="+1"/>

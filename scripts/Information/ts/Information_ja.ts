@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>Information</name>
     <message>
@@ -21,12 +20,12 @@
     <message>
         <location filename="../Information.ui" line="+17"/>
         <source>Add measurement to drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>テキストの高さ:</translation>
     </message>
 </context>
 </TS>

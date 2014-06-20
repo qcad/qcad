@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ja">
 <context>
@@ -321,12 +320,12 @@
     <message>
         <location line="+85"/>
         <source>Top Center</source>
-        <translation></translation>
+        <translation>上 中央</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Base Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+32"/>
@@ -336,12 +335,12 @@
     <message>
         <location line="+35"/>
         <source>Base Center</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+32"/>
         <source>Base Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+128"/>
@@ -371,12 +370,12 @@
     <message>
         <location line="-96"/>
         <source>Bottom Left</source>
-        <translation></translation>
+        <translation>下 左</translation>
     </message>
     <message>
         <location line="+291"/>
         <source>Bottom Right</source>
-        <translation></translation>
+        <translation>下 右</translation>
     </message>
     <message>
         <location line="+152"/>
@@ -386,7 +385,7 @@
     <message>
         <location line="+13"/>
         <source>OK</source>
-        <translation></translation>
+        <translation>OK</translation>
     </message>
 </context>
 </TS>
