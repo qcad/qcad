@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -247,33 +247,33 @@
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>中央</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>右</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation>揃える</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>中</translation>
     </message>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>フィット</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>上</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -283,7 +283,7 @@
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>下</translation>
     </message>
 </context>
 <context>
@@ -319,7 +319,7 @@
     <message>
         <location filename="../library.js" line="+661"/>
         <source>Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>エンティティ</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -399,12 +399,12 @@
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>寸法</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>次元</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -519,22 +519,22 @@
     <message>
         <location line="+2"/>
         <source>Infinite Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>無限の線</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Infinite Line</source>
-        <translation type="unfinished"></translation>
+        <translation>無限の線</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation type="unfinished"></translation>
+        <translation>光線</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>光線</translation>
     </message>
     <message>
         <location line="+2"/>

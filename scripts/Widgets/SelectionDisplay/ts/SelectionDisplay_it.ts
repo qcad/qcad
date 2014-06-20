@@ -11,13 +11,32 @@
     </message>
     <message>
         <location line="+23"/>
+        <source>%1 %2 on Layer &apos;%3&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 %2 on %3 Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 Entities on Layer &apos;%2&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 Entities on %2 Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Entities</source>
         <translatorcomment>--google--
 Crea un blocco nuovo dalle entità esistenti
 Crea un blocco nuovo dalle entità esistenti
 
 Deseleziona Tutti gli Oggetti</translatorcomment>
-        <translation>Entità</translation>
+        <translation type="vanished">Entità</translation>
     </message>
     <message>
         <source> on </source>
@@ -28,26 +47,23 @@ Il punto di taglio non è sull&apos;oggetto.</translatorcomment>
         <translation type="obsolete">su</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>on</source>
-        <translation>su</translation>
+        <translation type="vanished">su</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Layer &apos;%1&apos;</source>
         <translatorcomment>--google--
 Layer &apos;%1&apos; convertito con successo 
 Conversione non riuscita per il layer &apos;%1&apos;</translatorcomment>
-        <translation>Strato &apos;%1&apos;</translation>
+        <translation type="vanished">Strato &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>%1 Layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>%1 Layers</translation>
+        <translation type="vanished">%1 Layers</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Selected entities:
 %1.</source>
         <translatorcomment>--google--</translatorcomment>

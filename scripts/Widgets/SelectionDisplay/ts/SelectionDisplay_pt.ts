@@ -11,11 +11,30 @@
     </message>
     <message>
         <location line="+23"/>
+        <source>%1 %2 on Layer &apos;%3&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 %2 on %3 Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 Entities on Layer &apos;%2&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 Entities on %2 Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Entities</source>
         <translatorcomment>--google--
 Crie um novo carimbo a partir de entidades existentes
 Desselecione todas as Entidades</translatorcomment>
-        <translation>Entidades</translation>
+        <translation type="vanished">Entidades</translation>
     </message>
     <message>
         <source> on </source>
@@ -26,24 +45,21 @@ Ponto de corte não está na entidade.</translatorcomment>
         <translation type="obsolete">em</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>on</source>
-        <translation>em</translation>
+        <translation type="vanished">em</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Layer &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Camada &apos;%1&apos;</translation>
+        <translation type="vanished">Camada &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>%1 Layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>%1 Camadas</translation>
+        <translation type="vanished">%1 Camadas</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Selected entities:
 %1.</source>
         <translatorcomment>--google--</translatorcomment>

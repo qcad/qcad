@@ -6,12 +6,12 @@
     <message>
         <location filename="../BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>画像表示</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>振るまい</translation>
     </message>
 </context>
 <context>

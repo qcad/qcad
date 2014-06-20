@@ -11,13 +11,32 @@
     </message>
     <message>
         <location line="+23"/>
+        <source>%1 %2 on Layer &apos;%3&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 %2 on %3 Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 Entities on Layer &apos;%2&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 Entities on %2 Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Entities</source>
         <translatorcomment>--google--
 Crea un nuevo bloque de entidades existentes
 Quita la selección a todas las entidades
 Deselecciona todas las entidades
 Deseleccionar en&amp;tidades cruzadas</translatorcomment>
-        <translation>Entidades</translation>
+        <translation type="vanished">Entidades</translation>
     </message>
     <message>
         <source> on </source>
@@ -28,26 +47,23 @@ El punto de corte no esta en la entidad.</translatorcomment>
         <translation type="obsolete">en</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>on</source>
-        <translation>en</translation>
+        <translation type="vanished">en</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Layer &apos;%1&apos;</source>
         <translatorcomment>--google--
 Capa &apos;%1&apos; transformada con éxito
 No se pudo transformar la capa &apos;%1&apos;</translatorcomment>
-        <translation>Capa &apos;%1&apos;</translation>
+        <translation type="vanished">Capa &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>%1 Layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>%1 Capas</translation>
+        <translation type="vanished">%1 Capas</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Selected entities:
 %1.</source>
         <translatorcomment>--google--</translatorcomment>

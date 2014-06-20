@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>Scale</name>
     <message>
@@ -59,7 +59,7 @@
     <message>
         <location line="+23"/>
         <source>Proportional</source>
-        <translation type="unfinished"></translation>
+        <translation>比例</translation>
     </message>
     <message>
         <location line="+26"/>

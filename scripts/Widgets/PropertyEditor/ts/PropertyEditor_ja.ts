@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -29,17 +29,17 @@
     <message>
         <location line="+4"/>
         <source>:</source>
-        <translation></translation>
+        <translation>:</translation>
     </message>
     <message>
         <location line="+137"/>
         <source>No Selection</source>
-        <translation></translation>
+        <translation>選択なし</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Geometry</source>
-        <translation></translation>
+        <translation>ジオメトリ</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -49,12 +49,12 @@
     <message>
         <location line="+17"/>
         <source>Custom</source>
-        <translation></translation>
+        <translation>カスタム</translation>
     </message>
     <message>
         <location line="+148"/>
         <source>Index</source>
-        <translation></translation>
+        <translation>目次</translation>
     </message>
     <message>
         <location line="+59"/>
@@ -125,7 +125,7 @@
     <message>
         <location line="+20"/>
         <source>Handle:</source>
-        <translation></translation>
+        <translation>扱い:</translation>
     </message>
 </context>
 </TS>

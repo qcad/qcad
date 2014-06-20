@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>IsoProject</name>
     <message>
         <location filename="../IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation></translation>
+        <translation>上</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Bottom</source>
-        <translation></translation>
+        <translation>下</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Left</source>
-        <translation></translation>
+        <translation>左</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -26,7 +26,7 @@
     <message>
         <location line="+24"/>
         <source>Right</source>
-        <translation></translation>
+        <translation>右</translation>
     </message>
     <message>
         <location line="+17"/>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>BreakOutManual</name>
     <message>
         <location filename="../BreakOutManual.js" line="+78"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished"></translation>
+        <translation>線分、弧、円または楕円の切片を選択してください</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -18,7 +18,7 @@
         <location line="+8"/>
         <location line="+7"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>完了</translation>
     </message>
     <message>
         <location line="-10"/>
@@ -33,7 +33,7 @@
     <message>
         <location filename="../BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>セグメントを削除</translation>
     </message>
     <message>
         <location filename="../BreakOutManualInit.js" line="+2"/>

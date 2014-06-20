@@ -11,12 +11,31 @@
     </message>
     <message>
         <location line="+23"/>
+        <source>%1 %2 on Layer &apos;%3&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 %2 on %3 Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 Entities on Layer &apos;%2&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 Entities on %2 Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Entities</source>
         <translatorcomment>--google--
 Crée un nouveau bloc à partir des entités existantes
 Désélectionne toutes les entités
 Désélectionne&amp;r entités coupées</translatorcomment>
-        <translation>entités</translation>
+        <translation type="vanished">entités</translation>
     </message>
     <message>
         <source> on </source>
@@ -27,24 +46,21 @@ Indiquer le premier point de cassure sur une polyligne</translatorcomment>
         <translation type="obsolete">sur</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>on</source>
-        <translation>sur</translation>
+        <translation type="vanished">sur</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Layer &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>calque &apos;%1&apos;</translation>
+        <translation type="vanished">calque &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>%1 Layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>%1 calques</translation>
+        <translation type="vanished">%1 calques</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Selected entities:
 %1.</source>
         <translatorcomment>--google--</translatorcomment>

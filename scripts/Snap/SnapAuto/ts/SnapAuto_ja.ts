@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>AutoSnap</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation type="unfinished"></translation>
+        <translation>交点</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -31,12 +31,12 @@
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation>垂直</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference points</source>
-        <translation type="unfinished"></translation>
+        <translation>参照点</translation>
     </message>
     <message>
         <location line="+10"/>

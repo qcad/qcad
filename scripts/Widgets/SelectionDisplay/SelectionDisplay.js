@@ -44,10 +44,10 @@ SelectionDisplay.prototype.selectionChanged = function(documentInterface) {
     }
 
     // create one of the following text strings:
-    // 1 line on layer "3"
-    // x lines on layer "3"
-    // x mixed entities on layer "3"
-    // x mixed entities on y layers
+    // 1/n line(s) on layer "X"
+    // n lines on m layers
+    // n entities on layer "X"
+    // n entities on m layers
 
     var doc = documentInterface.getDocument();
     var entities = doc.querySelectedEntities();
@@ -57,7 +57,6 @@ SelectionDisplay.prototype.selectionChanged = function(documentInterface) {
         return;
     }
 
-    var str = entities.length + " ";
     var typesSingular = [];
     var layers = [];
     var pt = new RPropertyTypeId(0);
@@ -73,16 +72,22 @@ SelectionDisplay.prototype.selectionChanged = function(documentInterface) {
     typesSingular = typesSingular.unique();
     layers = layers.unique();
     
+    var str;
     if (typesSingular.length == 1) {
-        str += entityTypeToString(typesSingular[0], count>1);
+        var typeStr = entityTypeToString(typesSingular[0], count>1);
+        if (layers.length == 1 ) {
+            str = qsTr("%1 %2 on Layer '%3'").arg(entities.length).arg(typeStr).arg(layers[0]);
+        }
+        else {
+            str = qsTr("%1 %2 on %3 Layers").arg(entities.length).arg(typeStr).arg(layers.length);
+        }
     } else {
-        str += qsTr("Entities");
-    }
-    str += " " + qsTr("on") + " ";
-    if (layers.length == 1 ) {
-        str += qsTr("Layer '%1'").arg(layers[0]);
-    } else {
-        str += qsTr("%1 Layers").arg(layers.length);
+        if (layers.length == 1 ) {
+            str = qsTr("%1 Entities on Layer '%2'").arg(entities.length).arg(layers[0]);
+        }
+        else {
+            str = qsTr("%1 Entities on %2 Layers").arg(entities.length).arg(layers.length);
+        }
     }
 
     selectionText.text = qsTr("Selected entities:\n%1.").arg(str);

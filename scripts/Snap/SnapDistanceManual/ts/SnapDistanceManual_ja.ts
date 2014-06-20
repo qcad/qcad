@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>SnapDistanceManual</name>
     <message>
@@ -26,22 +26,22 @@
     <message>
         <location filename="../SnapDistanceManual.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>合わせる距離:</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>距離</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Percentage</source>
-        <translation type="unfinished"></translation>
+        <translation>パーセンテージ</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation type="unfinished"></translation>
+        <translation>分数</translation>
     </message>
 </context>
 </TS>

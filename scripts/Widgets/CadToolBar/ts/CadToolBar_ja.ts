@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>CadToolBar</name>
     <message>
@@ -31,7 +31,7 @@
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation></translation>
+        <translation>ピクセル</translation>
     </message>
     <message>
         <location line="+9"/>

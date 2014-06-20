@@ -11,36 +11,52 @@
     </message>
     <message>
         <location line="+23"/>
+        <source>%1 %2 on Layer &apos;%3&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 %2 on %3 Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 Entities on Layer &apos;%2&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 Entities on %2 Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Entities</source>
         <translatorcomment>--google--
 Utwórz nowy blok z istniejących obiektów
 Tworzy nowy blok z istniejących obiektów
 &amp;Debuguj obiekty</translatorcomment>
-        <translation type="unfinished">Podmioty</translation>
+        <translation type="obsolete">Podmioty</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>on</source>
         <translatorcomment>--google--
 Aktywuj linię poleceń
 Aktywuj linię &amp;poleceń
 Wymi&amp;ar</translatorcomment>
-        <translation type="unfinished">na</translation>
+        <translation type="obsolete">na</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Layer &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Warstwa&apos;&amp;#39;</translation>
+        <translation type="obsolete">Warstwa&apos;&amp;#39;</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>%1 Layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Warstwy</translation>
+        <translation type="obsolete">Warstwy</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Selected entities:
 %1.</source>
         <translatorcomment>--google--</translatorcomment>
