@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>GridSettings</name>
     <message>
@@ -34,7 +33,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation type="unfinished"></translation>
+        <translation>ビューポート 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -70,7 +69,7 @@
         <location line="+116"/>
         <location line="+30"/>
         <source>Y:</source>
-        <translation></translation>
+        <translation>Y:</translation>
     </message>
     <message>
         <location line="-512"/>
@@ -82,7 +81,7 @@
         <location line="+62"/>
         <location line="+63"/>
         <source>X:</source>
-        <translation></translation>
+        <translation>X:</translation>
     </message>
     <message>
         <location line="-462"/>
@@ -95,17 +94,17 @@
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation type="unfinished"></translation>
+        <translation>ビューポート 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation type="unfinished"></translation>
+        <translation>ビューポート 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation type="unfinished"></translation>
+        <translation>ビューポート 4</translation>
     </message>
 </context>
 </TS>

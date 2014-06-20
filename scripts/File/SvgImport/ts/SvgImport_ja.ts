@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>SvgImport</name>
     <message>
@@ -36,7 +35,7 @@
     <message>
         <location line="+57"/>
         <source>Pixels / Inch</source>
-        <translation type="unfinished"></translation>
+        <translation>ピクセル·パー·インチ</translation>
     </message>
 </context>
 </TS>

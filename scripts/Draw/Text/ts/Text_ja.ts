@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>Dialog</name>
     <message>
@@ -182,7 +181,7 @@
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation type="unfinished"></translation>
+        <translation>ノーブレークスペース</translation>
     </message>
     <message>
         <location filename="../TextDialog/TextDialog.ui" line="+14"/>
@@ -251,12 +250,12 @@
     <message>
         <location line="+115"/>
         <source>Ctrl+B</source>
-        <translation></translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Ctrl+I</source>
-        <translation></translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -271,22 +270,22 @@
     <message>
         <location line="+23"/>
         <source>Attribute Details</source>
-        <translation type="unfinished"></translation>
+        <translation>属性の詳細</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Tag:</source>
-        <translation type="unfinished"></translation>
+        <translation>タグ:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation type="unfinished"></translation>
+        <translation>プロンプト:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>値:</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -321,62 +320,62 @@
     <message>
         <location line="+85"/>
         <source>Top Center</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+64"/>
         <source>Base Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+32"/>
         <source>Top Left</source>
-        <translation></translation>
+        <translation>左上</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Base Center</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+32"/>
         <source>Base Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+128"/>
         <source>Top Right</source>
-        <translation></translation>
+        <translation>右上</translation>
     </message>
     <message>
         <location line="-323"/>
         <source>Bottom Center</source>
-        <translation></translation>
+        <translation>下 中央</translation>
     </message>
     <message>
         <location line="+291"/>
         <source>Middle Left</source>
-        <translation></translation>
+        <translation>左中央</translation>
     </message>
     <message>
         <location line="-64"/>
         <source>Middle Center</source>
-        <translation></translation>
+        <translation>中心</translation>
     </message>
     <message>
         <location line="-163"/>
         <source>Middle Right</source>
-        <translation></translation>
+        <translation>右中央</translation>
     </message>
     <message>
         <location line="-96"/>
         <source>Bottom Left</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+291"/>
         <source>Bottom Right</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+152"/>
@@ -386,7 +385,7 @@
     <message>
         <location line="+13"/>
         <source>OK</source>
-        <translation></translation>
+        <translation/>
     </message>
 </context>
 </TS>

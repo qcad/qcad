@@ -132,7 +132,6 @@ ArcCPA.prototype.pickCoordinate = function(event, preview) {
             this.updatePreview();
         }
         else {
-            di.setRelativeZero(event.getModelPosition());
             this.setState(ArcCPA.State.SettingAngle1);
         }
         break;

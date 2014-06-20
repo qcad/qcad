@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>ReadmeDialog</name>
     <message>
         <location filename="../ShowReadmeDialog.ui" line="+14"/>
         <source>Readme</source>
-        <translation></translation>
+        <translation>Readme</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>Don&apos;t show this dialog at startup</source>
+        <source>Don't show this dialog at startup</source>
         <translation>スタートアップ時にこのダイアログを表示しない</translation>
     </message>
 </context>
@@ -18,8 +17,8 @@
     <name>ShowReadme</name>
     <message>
         <location filename="../ShowReadme.js" line="+46"/>
-        <source>File &apos;%1&apos; doesn&apos;t exist.</source>
-        <translation>ファイル&apos;%1&apos;は存在しません。</translation>
+        <source>File '%1' doesn't exist.</source>
+        <translation>ファイル'%1'は存在しません。</translation>
     </message>
     <message>
         <location filename="../ShowReadmeInit.js" line="+2"/>

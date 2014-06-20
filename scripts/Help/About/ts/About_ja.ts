@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>About</name>
     <message>
@@ -94,7 +93,7 @@
     <message>
         <location filename="../AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
-        <translation></translation>
+        <translation/>
     </message>
 </context>
 <context>
@@ -106,7 +105,7 @@
     <message>
         <location filename="../AboutDialog.ui" line="+81"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+16"/>
@@ -114,7 +113,7 @@
         <location line="+25"/>
         <location line="+25"/>
         <source>about:blank</source>
-        <translation></translation>
+        <translation>about:blank</translation>
     </message>
     <message>
         <location line="-41"/>
@@ -129,7 +128,7 @@
     <message>
         <location line="+25"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>システム</translation>
     </message>
     <message>
         <location line="-75"/>

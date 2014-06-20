@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>Line</name>
     <message>
@@ -21,17 +20,17 @@
     <message>
         <location filename="../Line.ui" line="+17"/>
         <source>Line Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+23"/>
         <source>Infinite Line</source>
-        <translation type="unfinished"></translation>
+        <translation>無限の線</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>光線</translation>
     </message>
 </context>
 </TS>

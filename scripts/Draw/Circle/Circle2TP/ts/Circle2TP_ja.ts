@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>Circle2TP</name>
     <message>
@@ -27,7 +26,7 @@
         <location line="+135"/>
         <location line="+44"/>
         <source>No solution</source>
-        <translation></translation>
+        <translation>解決法がありません</translation>
     </message>
     <message>
         <location filename="../Circle2TPInit.js" line="+2"/>
