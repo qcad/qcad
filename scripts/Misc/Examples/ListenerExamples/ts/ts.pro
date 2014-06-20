@@ -1,4 +1,4 @@
 NAME = ListenerExamples
 TSDIR = .
-include(../../../../translations.pri)
+include(../../../translations.pri)
 SOURCES = ../ListenerExamples.js

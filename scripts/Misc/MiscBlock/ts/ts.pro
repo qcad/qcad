@@ -1,4 +1,4 @@
 NAME = MiscBlock
 TSDIR = .
-include(../../../translations.pri)
+include(../../translations.pri)
 SOURCES = ../MiscBlock.js

@@ -1,4 +1,4 @@
 NAME = QtExamples
 TSDIR = .
-include(../../../../translations.pri)
+include(../../../translations.pri)
 SOURCES = ../QtExamples.js

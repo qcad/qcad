@@ -1,4 +1,4 @@
 NAME = MathExamples
 TSDIR = .
-include(../../../../translations.pri)
+include(../../../translations.pri)
 SOURCES = ../MathExamples.js

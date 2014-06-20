@@ -1,5 +1,5 @@
 NAME = CommandLineTools
 TSDIR = .
-include(../../../../translations.pri)
+include(../../../translations.pri)
 SOURCES = ../CommandLineTools.js
 OTHER_FILES += ../CommandLineTools.dox

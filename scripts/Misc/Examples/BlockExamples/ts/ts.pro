@@ -1,4 +1,4 @@
 NAME = BlockExamples
 TSDIR = .
-include(../../../../translations.pri)
+include(../../../translations.pri)
 SOURCES = ../BlockExamples.js

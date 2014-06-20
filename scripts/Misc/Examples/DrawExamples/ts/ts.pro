@@ -1,4 +1,4 @@
 NAME = DrawExamples
 TSDIR = .
-include(../../../../translations.pri)
+include(../../../translations.pri)
 SOURCES = ../DrawExamples.js

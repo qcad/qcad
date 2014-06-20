@@ -1,4 +1,4 @@
 NAME = LayerExamples
 TSDIR = .
-include(../../../../translations.pri)
+include(../../../translations.pri)
 SOURCES = ../LayerExamples.js
