@@ -28,17 +28,17 @@
         <translation>&amp;Abschrägen</translation>
     </message>
     <message>
-        <location filename="../Bevel.js" line="+53"/>
+        <location filename="../Bevel.js" line="+54"/>
         <source>The two entities cannot be bevelled.</source>
         <translation>Die zwei Objekte können nicht abgeschrägt werden.</translation>
     </message>
     <message>
-        <location line="+220"/>
+        <location line="+251"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Erstes Objekt kann nicht getrimmt werden.</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Zweites Objekt kann nicht getrimmt werden.</translation>
     </message>

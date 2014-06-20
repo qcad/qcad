@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+125"/>
+        <location line="+131"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation type="unfinished"></translation>
     </message>

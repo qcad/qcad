@@ -4,19 +4,19 @@
 <context>
     <name>Bevel</name>
     <message>
-        <location filename="../Bevel.js" line="+53"/>
+        <location filename="../Bevel.js" line="+54"/>
         <source>The two entities cannot be bevelled.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>As duas entidades não podem ser chanfradas.</translation>
     </message>
     <message>
-        <location line="+220"/>
+        <location line="+251"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Primeira entidade não pode ser aparada.</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Second entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Segunda entidade não pode ser aparada.</translation>

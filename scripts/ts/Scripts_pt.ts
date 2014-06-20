@@ -183,7 +183,7 @@ Ferramentas CAD</translatorcomment>
         <translation>Raio caiu abaixo de 0,0, após %1 arcos concêntricos.</translation>
     </message>
     <message>
-        <location line="+427"/>
+        <location line="+467"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -444,7 +444,7 @@ Carregando plugins...</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+652"/>
+        <location filename="../library.js" line="+661"/>
         <source>Entity</source>
         <translation>Entidade</translation>
     </message>

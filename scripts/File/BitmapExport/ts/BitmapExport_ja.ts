@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ja">
 <context>
@@ -14,13 +15,13 @@
     </message>
     <message>
         <location line="+126"/>
-        <source>Error while generating Bitmap file '%1': %2</source>
-        <translation>ビットマップファイルの生成中にエラー '%1': %2</translation>
+        <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
+        <translation>ビットマップファイルの生成中にエラー &apos;%1&apos;: %2</translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>Bitmap file has been exported to '%1'</source>
-        <translation>ビットマップファイルはエクスポートされました '%1'</translation>
+        <source>Bitmap file has been exported to &apos;%1&apos;</source>
+        <translation>ビットマップファイルはエクスポートされました &apos;%1&apos;</translation>
     </message>
     <message>
         <location filename="../BitmapExportDialog.ui" line="+14"/>

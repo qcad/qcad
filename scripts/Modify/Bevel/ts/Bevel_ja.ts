@@ -4,17 +4,17 @@
 <context>
     <name>Bevel</name>
     <message>
-        <location filename="../Bevel.js" line="+53"/>
+        <location filename="../Bevel.js" line="+54"/>
         <source>The two entities cannot be bevelled.</source>
         <translation>２つのエンティティは面取りできません。</translation>
     </message>
     <message>
-        <location line="+220"/>
+        <location line="+251"/>
         <source>First entity cannot be trimmed.</source>
         <translation>１つ目のエンティティはトリムできません。</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>２つ目のエンティティはトリムできません。</translation>
     </message>

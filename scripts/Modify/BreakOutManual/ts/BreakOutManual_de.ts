@@ -4,7 +4,7 @@
 <context>
     <name>BreakOutManual</name>
     <message>
-        <location filename="../BreakOutManual.js" line="+77"/>
+        <location filename="../BreakOutManual.js" line="+78"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
         <translation>Linie, Bogen, Kreis oder Ellipse zum Aufbrechen wählen</translation>
     </message>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ja">
 <context>
@@ -20,7 +21,7 @@
     <message>
         <location filename="../Line.ui" line="+17"/>
         <source>Line Segment</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>

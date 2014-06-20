@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ja">
 <context>
@@ -5,12 +6,12 @@
     <message>
         <location filename="../BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Behavior</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -28,7 +29,7 @@
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -4,7 +4,7 @@
 <context>
     <name>LineOrthogonalTangent</name>
     <message>
-        <location filename="../LineOrthogonalTangent.js" line="+68"/>
+        <location filename="../LineOrthogonalTangent.js" line="+70"/>
         <source>Choose line</source>
         <translation>Linie wählen</translation>
     </message>
