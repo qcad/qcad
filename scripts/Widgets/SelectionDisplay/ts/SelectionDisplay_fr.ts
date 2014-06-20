@@ -12,22 +12,22 @@
     <message>
         <location line="+23"/>
         <source>%1 %2 on Layer &apos;%3&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2 sur calque &apos;%3&apos;</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 %2 on %3 Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2 sur %3 calques</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 Entities on Layer &apos;%2&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 entités sur calque &apos;%2&apos;</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 Entities on %2 Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 entités sur %2 calques</translation>
     </message>
     <message>
         <source>Entities</source>
