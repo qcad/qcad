@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>REntity</name>
     <message>
@@ -71,7 +70,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>X</source>
-        <translation></translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -125,7 +124,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Y</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+1"/>
@@ -178,7 +177,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Z</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+1"/>
@@ -395,7 +394,7 @@
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -555,28 +554,28 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-9"/>
@@ -605,12 +604,12 @@
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Knot</source>
-        <translation type="unfinished"></translation>
+        <translation>結び目</translation>
     </message>
     <message>
         <location filename="../src/entity/RTextBasedEntity.cpp" line="-3"/>
@@ -624,12 +623,12 @@
     <message>
         <location line="+4"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>テキスト</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation type="unfinished"></translation>
+        <translation>プレーンテキスト</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -639,12 +638,12 @@
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation type="unfinished"></translation>
+        <translation>テキストの高さ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -681,12 +680,12 @@
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+82"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+81"/>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>タグ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation type="unfinished"></translation>
+        <translation>プロンプト</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
@@ -696,7 +695,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Base Point</source>
-        <translation type="unfinished"></translation>
+        <translation>基点</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -706,7 +705,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
@@ -716,7 +715,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction Vector</source>
-        <translation type="unfinished"></translation>
+        <translation>方向ベクトル</translation>
     </message>
 </context>
 </TS>

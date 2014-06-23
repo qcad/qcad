@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>SnapCoordinate</name>
     <message>
@@ -11,7 +10,7 @@
     <message>
         <location filename="../SnapCoordinate.ui" line="+17"/>
         <source>&amp;x:</source>
-        <translation></translation>
+        <translation>&amp;x:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -21,7 +20,7 @@
     <message>
         <location line="+13"/>
         <source>&amp;y:</source>
-        <translation></translation>
+        <translation>&amp;y:</translation>
     </message>
     <message>
         <location line="+16"/>

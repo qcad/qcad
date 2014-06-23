@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ja">
 <context>
@@ -11,12 +10,12 @@
     <message>
         <location line="+12"/>
         <source>Name:</source>
-        <translation></translation>
+        <translation>名前:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>値:</translation>
     </message>
 </context>
 <context>
@@ -24,7 +23,7 @@
     <message>
         <location filename="../PropertyEditor.js" line="+190"/>
         <source>*VARIES*</source>
-        <translation></translation>
+        <translation>*VARIES*</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -44,7 +43,7 @@
     <message>
         <location line="+14"/>
         <source>Dependent Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+17"/>
@@ -59,17 +58,17 @@
     <message>
         <location line="+59"/>
         <source>Remove this property from selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+31"/>
         <source>All</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+605"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>ウィジェット</translation>
     </message>
     <message>
         <source>Add Custom Property</source>
@@ -78,12 +77,12 @@
     <message>
         <location line="-584"/>
         <source>Add custom property to selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+136"/>
         <source>Auto</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+121"/>
@@ -93,12 +92,12 @@
     <message>
         <location line="+32"/>
         <source>Yes</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+1"/>
         <source>No</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+294"/>
@@ -110,12 +109,12 @@
     <message>
         <location filename="../PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+31"/>
         <source>General</source>
-        <translation></translation>
+        <translation>全般</translation>
     </message>
     <message>
         <location line="+163"/>

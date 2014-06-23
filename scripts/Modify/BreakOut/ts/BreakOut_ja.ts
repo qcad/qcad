@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>BreakOut</name>
     <message>
@@ -11,12 +10,12 @@
     <message>
         <location line="+4"/>
         <source>Choose line, arc, circle, ellipse or spline segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation type="unfinished">線分、弧、円または楕円の切片を選択してください</translation>
+        <translation>線分、弧、円または楕円の切片を選択してください</translation>
     </message>
     <message>
         <location filename="../BreakOut.ui" line="+17"/>

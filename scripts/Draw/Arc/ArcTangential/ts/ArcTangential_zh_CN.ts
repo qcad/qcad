@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN">
 <context>
@@ -26,7 +25,7 @@
     <message>
         <location line="+5"/>
         <source>Draw arc tangential to base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>在基础实体上画弧切线</translation>
     </message>
 </context>
 </TS>

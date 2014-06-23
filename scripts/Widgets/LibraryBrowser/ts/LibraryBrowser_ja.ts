@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>LibraryBrowser</name>
     <message>
@@ -83,7 +82,7 @@
     <message>
         <location line="+654"/>
         <source>Page %1 of %2</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+219"/>
@@ -297,7 +296,7 @@ shown in search results:</source>
     <message>
         <location line="+33"/>
         <source>about:blank</source>
-        <translation></translation>
+        <translation>about:blank</translation>
     </message>
     <message>
         <location line="+106"/>
@@ -312,7 +311,7 @@ shown in search results:</source>
     <message>
         <location line="+7"/>
         <source>0</source>
-        <translation></translation>
+        <translation>0</translation>
     </message>
 </context>
 </TS>

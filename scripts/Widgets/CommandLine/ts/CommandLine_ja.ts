@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>CommandLine</name>
     <message>
@@ -16,23 +15,23 @@
         <translation>コマンドライン</translation>
     </message>
     <message>
-        <source>Invalid coordinate &apos;%1&apos;.</source>
-        <translation type="obsolete">無効な座標 &apos;%1&apos;.</translation>
+        <source>Invalid coordinate '%1'.</source>
+        <translation type="obsolete">無効な座標 '%1'.</translation>
     </message>
     <message>
         <location line="+140"/>
-        <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
-        <translation>不明なコマンドまたは無効な座標もしくは値: &apos;%1&apos;</translation>
+        <source>Unknown command or invalid coordinate or value: '%1'</source>
+        <translation>不明なコマンドまたは無効な座標もしくは値: '%1'</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Numbers may be entered as: &apos;%1&apos;</source>
-        <translation>数値が&apos;%1&apos;として入力されました</translation>
+        <source>Numbers may be entered as: '%1'</source>
+        <translation>数値が'%1'として入力されました</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
-        <translation>座標が&apos;%1&apos; (絶対座標) or &apos;%2&apos; (相対座標) or &apos;%3&apos; (極座標) or &apos;%4&apos; (相対極座標)として入力されました</translation>
+        <source>Coordinates may be entered as: '%1' (absolute) or '%2' (relative) or '%3' (polar) or '%4' (relative polar)</source>
+        <translation>座標が'%1' (絶対座標) or '%2' (相対座標) or '%3' (極座標) or '%4' (相対極座標)として入力されました</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -51,12 +50,12 @@
     <message>
         <location line="-273"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>ウィジェット</translation>
     </message>
     <message>
         <location line="+169"/>
-        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
-        <translation type="unfinished"></translation>
+        <source>Invalid coordinate or distance '%1'.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+109"/>
@@ -86,7 +85,7 @@
     <message>
         <location line="+3"/>
         <source>: </source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

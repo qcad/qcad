@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>Form</name>
     <message>
@@ -64,7 +63,7 @@
     <message>
         <location filename="../Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation type="unfinished">４:イコール</translation>
+        <translation>４:イコール</translation>
     </message>
 </context>
 <context>
@@ -72,7 +71,7 @@
     <message>
         <location filename="../Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation type="unfinished">４:左</translation>
+        <translation>４:左</translation>
     </message>
 </context>
 <context>
@@ -80,7 +79,7 @@
     <message>
         <location filename="../Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation type="unfinished">４:右</translation>
+        <translation>４:右</translation>
     </message>
 </context>
 <context>
@@ -128,7 +127,7 @@
     <message>
         <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation type="unfinished">２:垂直</translation>
+        <translation>２:垂直</translation>
     </message>
 </context>
 <context>
@@ -176,7 +175,7 @@
     <message>
         <location filename="../Viewport.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">グリッド間隔＜メタグリッド間隔</translation>
+        <translation>グリッド間隔＜メタグリッド間隔</translation>
     </message>
 </context>
 <context>
@@ -184,7 +183,7 @@
     <message>
         <location filename="../ViewportGl.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">グリッド間隔＜メタグリッド間隔</translation>
+        <translation>グリッド間隔＜メタグリッド間隔</translation>
     </message>
 </context>
 </TS>
