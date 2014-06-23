@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ja">
 <context>
@@ -94,7 +93,7 @@
     <message>
         <location filename="../AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
-        <translation></translation>
+        <translation>&amp;A ソフトウェアについて...</translation>
     </message>
 </context>
 <context>
@@ -106,7 +105,7 @@
     <message>
         <location filename="../AboutDialog.ui" line="+81"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>ソフトウェアについて</translation>
     </message>
     <message>
         <location line="+16"/>

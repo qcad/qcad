@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -66,7 +65,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Surveyor&apos;s units</source>
+        <source>Surveyor's units</source>
         <translation>測量</translation>
     </message>
     <message>
@@ -76,7 +75,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
+        <source>The drawing unit must be 'Inch' to display dimension labels in formats 'Architectural' or 'Engineering'. Format changed to 'Decimal'.</source>
         <translation>寸法ラベルを’建築’または’エンジニアリング’フォーマットで表示するには、図面単位は’インチ’でなければなりません。フォーマットは’小数’に変更されました。</translation>
     </message>
     <message>
@@ -117,7 +116,7 @@
     <message>
         <location line="+95"/>
         <source>Size scale factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>倍率サイズ:</translation>
     </message>
     <message>
         <location line="+38"/>

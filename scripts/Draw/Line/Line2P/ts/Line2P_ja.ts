@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>Line2P</name>
     <message>
@@ -31,12 +30,12 @@
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>セグメントをやり直し</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>長さや角度を制限</translation>
     </message>
     <message>
         <location filename="../Line2PInit.js" line="+2"/>

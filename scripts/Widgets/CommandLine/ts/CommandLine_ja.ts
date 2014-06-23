@@ -55,7 +55,7 @@
     <message>
         <location line="+169"/>
         <source>Invalid coordinate or distance '%1'.</source>
-        <translation type="unfinished"/>
+        <translation>無効な座標または距離 '%1'.</translation>
     </message>
     <message>
         <location line="+109"/>
@@ -85,7 +85,7 @@
     <message>
         <location line="+3"/>
         <source>: </source>
-        <translation/>
+        <translation>:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

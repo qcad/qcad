@@ -43,7 +43,7 @@
     <message>
         <location line="+14"/>
         <source>Dependent Entities</source>
-        <translation type="unfinished"/>
+        <translation>依存エンティティ</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -58,12 +58,12 @@
     <message>
         <location line="+59"/>
         <source>Remove this property from selected objects</source>
-        <translation type="unfinished"/>
+        <translation>選択したオブジェクトからこのプロパティを削除</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>All</source>
-        <translation/>
+        <translation>全て</translation>
     </message>
     <message>
         <location line="+605"/>
@@ -77,12 +77,12 @@
     <message>
         <location line="-584"/>
         <source>Add custom property to selected objects</source>
-        <translation type="unfinished"/>
+        <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
     <message>
         <location line="+136"/>
         <source>Auto</source>
-        <translation/>
+        <translation>自動</translation>
     </message>
     <message>
         <location line="+121"/>
@@ -92,12 +92,12 @@
     <message>
         <location line="+32"/>
         <source>Yes</source>
-        <translation/>
+        <translation>はい</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No</source>
-        <translation/>
+        <translation>いいえ</translation>
     </message>
     <message>
         <location line="+294"/>
@@ -109,7 +109,7 @@
     <message>
         <location filename="../PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation/>
+        <translation>選択:</translation>
     </message>
     <message>
         <location line="+31"/>

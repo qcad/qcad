@@ -10,7 +10,7 @@
     <message>
         <location line="+4"/>
         <source>Choose line, arc, circle, ellipse or spline segment</source>
-        <translation type="unfinished"/>
+        <translation>線分,弧,円,楕円またはスプラインを選択してください</translation>
     </message>
     <message>
         <location line="+3"/>

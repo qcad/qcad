@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ja">
 <context>
@@ -11,7 +10,7 @@
     <message>
         <location line="+8"/>
         <source>First break point</source>
-        <translation type="unfinished"></translation>
+        <translation>最初のブレークポイント</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -23,12 +22,12 @@
     <message>
         <location line="-10"/>
         <source>Second break point</source>
-        <translation type="unfinished"></translation>
+        <translation>第2のブレークポイント</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Click the part of the circle or ellipse to remove</source>
-        <translation type="unfinished"></translation>
+        <translation>削除するには円や楕円の一部をクリックしてください</translation>
     </message>
     <message>
         <location filename="../BreakOutManual.ui" line="+17"/>
@@ -38,7 +37,7 @@
     <message>
         <location filename="../BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;B 手動切片除去</translation>
     </message>
 </context>
 </TS>

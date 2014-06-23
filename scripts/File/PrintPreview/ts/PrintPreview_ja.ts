@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>PrintPreview</name>
     <message>
@@ -31,7 +30,7 @@
     <message>
         <location line="+3"/>
         <source>Export failed (cannot open file for writing): %1</source>
-        <translation type="unfinished"></translation>
+        <translation>エキスポート失敗(書き込み不可): %1</translation>
     </message>
     <message>
         <location filename="../PrintPreview.ui" line="+17"/>

@@ -21,7 +21,7 @@
     <message>
         <location filename="../RestrictAngleLengthInit.js" line="+2"/>
         <source>Restrict &amp;Angle or Length</source>
-        <translation type="unfinished"/>
+        <translation>&amp;A 角度や長さを制限</translation>
     </message>
 </context>
 </TS>

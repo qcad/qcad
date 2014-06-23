@@ -82,7 +82,7 @@
     <message>
         <location line="+654"/>
         <source>Page %1 of %2</source>
-        <translation/>
+        <translation>ページ %1 / %2</translation>
     </message>
     <message>
         <location line="+219"/>

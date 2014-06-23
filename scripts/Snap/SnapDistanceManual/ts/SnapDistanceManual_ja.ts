@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ja">
 <context>
@@ -6,22 +5,22 @@
     <message>
         <location filename="../SnapDistanceManual.js" line="+31"/>
         <source>Specify first point to measure distance from</source>
-        <translation type="unfinished"></translation>
+        <translation>距離計測のための最初の点を指定してください</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>第2の点</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;D 手動距離設定</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Snap distance between 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation>2点間のスナップ距離</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManual.ui" line="+17"/>

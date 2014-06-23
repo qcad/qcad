@@ -223,19 +223,19 @@
         <location line="-2"/>
         <location line="+3"/>
         <source>X</source>
-        <translation/>
+        <translation>X</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+3"/>
         <source>Y</source>
-        <translation/>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+3"/>
         <source>Z</source>
-        <translation/>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -296,17 +296,17 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Boundary</source>
-        <translation type="unfinished"/>
+        <translation>境界</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Left</source>
-        <translation type="unfinished"/>
+        <translation>左</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"/>
+        <translation>下端</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -528,47 +528,47 @@
     <message>
         <location line="+1"/>
         <source>0.25mm (ISO)</source>
-        <translation/>
+        <translation>0.25mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.30mm</source>
-        <translation/>
+        <translation>0.30mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.35mm (ISO)</source>
-        <translation/>
+        <translation>0.35mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.40mm</source>
-        <translation/>
+        <translation>0.40mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.50mm (ISO)</source>
-        <translation/>
+        <translation>0.50mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.53mm</source>
-        <translation/>
+        <translation>0.53mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.60mm</source>
-        <translation/>
+        <translation>0.60mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.70mm (ISO)</source>
-        <translation/>
+        <translation>0.70mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.80mm</source>
-        <translation/>
+        <translation>0.80mm</translation>
     </message>
     <message>
         <location line="+1"/>

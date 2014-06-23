@@ -30,7 +30,7 @@
     <message>
         <location line="+6"/>
         <source>Move entity to desired location</source>
-        <translation type="unfinished"/>
+        <translation>希望の位置にエンティティを移動</translation>
     </message>
 </context>
 <context>
@@ -119,7 +119,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation type="unfinished"/>
+        <translation>エンティティは線分,弧,円,楕円またはスプラインではありません</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -241,7 +241,7 @@
     <message>
         <location line="+93"/>
         <source>Left</source>
-        <translation type="unfinished"/>
+        <translation>左</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -277,7 +277,7 @@
     <message>
         <location line="+2"/>
         <source>Base</source>
-        <translation type="unfinished"/>
+        <translation>ベース</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -348,12 +348,12 @@
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation type="unfinished"/>
+        <translation>ブロック参照と属性</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation type="unfinished"/>
+        <translation>ブロック参照と属性</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -578,7 +578,7 @@
     <message>
         <location line="+2"/>
         <source>Text based</source>
-        <translation type="unfinished"/>
+        <translation>テキストベース</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -124,7 +124,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Y</source>
-        <translation/>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -177,7 +177,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Z</source>
-        <translation/>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -394,7 +394,7 @@
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation type="unfinished"/>
+        <translation>自動ラベル</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -554,28 +554,28 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation/>
+        <translation>点 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation/>
+        <translation>点 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation/>
+        <translation>点 3</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation/>
+        <translation>点 4</translation>
     </message>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-9"/>
@@ -604,7 +604,7 @@
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation type="unfinished"/>
+        <translation>節点ベクトル</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -643,7 +643,7 @@
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation type="unfinished"/>
+        <translation>テキスト角度</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -705,7 +705,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation type="unfinished"/>
+        <translation>第2点</translation>
     </message>
     <message>
         <location line="+2"/>

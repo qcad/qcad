@@ -20,12 +20,12 @@
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation type="unfinished"/>
+        <translation>中央点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Center points</source>
-        <translation type="unfinished"/>
+        <translation>中心点</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -40,17 +40,17 @@
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation type="unfinished"/>
+        <translation>グリッド点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation type="unfinished"/>
+        <translation>エンティティ上の点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation type="unfinished"/>
+        <translation>自由位置</translation>
     </message>
 </context>
 <context>

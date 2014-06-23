@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ja">
 <context>
@@ -21,7 +20,7 @@
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation></translation>
+        <translation>左背面</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -31,7 +30,7 @@
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation></translation>
+        <translation>右背面</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -45,7 +44,7 @@
     </message>
     <message>
         <location line="+18"/>
-        <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
+        <source>Scale projection to original size ('isometric drawing')</source>
         <translation>オリジナルサイズに対する拡縮投影（等角投影図面）</translation>
     </message>
     <message>

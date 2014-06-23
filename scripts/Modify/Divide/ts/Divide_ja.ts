@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>Divide</name>
     <message>
@@ -10,12 +9,12 @@
     <message>
         <location filename="../Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation type="unfinished"></translation>
+        <translation>線分,弧,円,楕円またはスプラインを選択してください</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>線分,弧,円または楕円を選択してください</translation>
     </message>
     <message>
         <location line="+11"/>

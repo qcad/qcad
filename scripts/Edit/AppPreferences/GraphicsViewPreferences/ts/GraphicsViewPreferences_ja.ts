@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -81,22 +80,22 @@
     <message>
         <location line="+36"/>
         <source>Linetypes</source>
-        <translation type="unfinished"></translation>
+        <translation>ラインタイプ</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation type="unfinished"></translation>
+        <translation>線の太さのパターン·スケール 0.00mm:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Automatically use screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Auto switch linetypes</source>
-        <translation type="unfinished"></translation>
+        <translation>ラインタイプの自動切り替え</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -111,12 +110,12 @@
     <message>
         <location line="+58"/>
         <source>Text height display threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>テキスト高さの表示しきい値 (px):</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation>この角度以下の弧を直線で表示 (度):</translation>
     </message>
     <message>
         <source>Text height display threshold:</source>
