@@ -178,6 +178,8 @@ Line2P.prototype.slotClose = function() {
         this.point2 = this.pointList[0];
         this.getDocumentInterface().applyOperation(this.getOperation(false));
         this.pointList.push(this.point2);
+        var di = this.getDocumentInterface();
+        di.setRelativeZero(this.point2);
         this.setState(Line2P.State.SettingFirstPoint);
     }
     
