@@ -92,6 +92,13 @@ protected:
         RTransaction& transaction
     ) const;
 
+    QSharedPointer<RLayer> copyLayer(
+        RLayer::Id layerId,
+        RDocument& src, RDocument& dest,
+        bool overwriteLayers,
+        RTransaction& transaction
+    ) const;
+
 private:
     mutable QMap<QString, QSharedPointer<RLayer> > copiedLayers;
     mutable QMap<QString, QSharedPointer<RBlock> > copiedBlocks;

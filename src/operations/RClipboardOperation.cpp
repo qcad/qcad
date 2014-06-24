@@ -221,7 +221,7 @@ void RClipboardOperation::copy(
     }
 
     // copying of entire block complete, insert block reference now since
-    // we now have the boudning box for the spatial index:
+    // we now have the bounding box for the spatial index:
     if (!refp.isNull()) {
         bool useCurrentAttributes = true;
         if (!layerName.isEmpty()) {
@@ -453,13 +453,38 @@ QSharedPointer<RLayer> RClipboardOperation::copyEntityLayer(
     bool overwriteLayers,
     RTransaction& transaction) const {
 
+    // copy parent layers:
+    QString layerName = entity.getLayerName();
+    if (layerName.contains(" ... ")) {
+        QStringList l = layerName.split(" ... ");
+        l.removeLast();
+        while (!l.isEmpty()) {
+            QString parentLayerName = l.join(" ... ");
+            QSharedPointer<RLayer> parentLayer = src.queryLayer(parentLayerName);
+            if (parentLayer.isNull()) {
+                break;
+            }
+            copyLayer(parentLayer->getId(), src, dest, overwriteLayers, transaction);
+            l.removeLast();
+        }
+    }
+
+    return copyLayer(entity.getLayerId(), src, dest, overwriteLayers, transaction);
+}
+
+QSharedPointer<RLayer> RClipboardOperation::copyLayer(
+        RLayer::Id layerId,
+        RDocument& src, RDocument& dest,
+        bool overwriteLayers,
+        RTransaction& transaction) const {
+
     // add layer the entity is on, if the layer exists it is overwritten
     // if overwriteLayers is true:
     QSharedPointer<RLayer> srcLayer =
-        src.queryLayer(entity.getLayerId());
+            src.queryLayer(layerId);
     if (srcLayer.isNull()) {
-        qWarning("RClipboardOperation::copyToDocument: "
-            "layer of entity is NULL.");
+        qWarning("RClipboardOperation::copyLayer: "
+                 "layer is NULL.");
         return QSharedPointer<RLayer>();
     }
     QString srcLayerName = srcLayer->getName();
