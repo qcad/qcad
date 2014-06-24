@@ -407,6 +407,11 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             continue;
         }
 
+        // ignore labels, widget actions:
+        if (isOfType(c, QLabel) || isOfType(c, QWidgetAction)) {
+            continue;
+        }
+
         // skip children from other groups in this widget (for options toolbar):
         // but not if used from a test [map != undefined]
         if (isNull(map) && typeof (c["SettingsGroup"]) != "undefined"
