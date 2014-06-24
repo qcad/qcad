@@ -3,7 +3,9 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/CloseFile.js");
     action.setIcon(basePath + "/CloseFile.svg");
-    action.setDefaultShortcut(new QKeySequence(QKeySequence.Close));
+    if (RS.getSystemId()!=="linux") {
+        action.setDefaultShortcut(new QKeySequence(QKeySequence.Close));
+    }
     action.setDefaultCommands(["close"]);
     action.setSortOrder(1200);
     action.setNoState();
