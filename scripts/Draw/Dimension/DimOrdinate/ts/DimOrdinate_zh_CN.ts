@@ -10,12 +10,12 @@
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation type="unfinished"/>
+        <translation>注释引线的端点</translation>
     </message>
     <message>
         <location filename="../DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation type="unfinished"/>
+        <translation>纵坐标X/Y(&amp;O)</translation>
     </message>
     <message>
         <location line="+5"/>
