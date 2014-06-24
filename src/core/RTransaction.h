@@ -258,7 +258,7 @@ protected:
     /**
      * List of IDs of all block references that need to be updated.
      */
-    QList<RObject::Id> affectedBlockReferenceIds;
+    QSet<RObject::Id> affectedBlockReferenceIds;
 
     /**
      * Map of properties that are changed by this transaction. For every

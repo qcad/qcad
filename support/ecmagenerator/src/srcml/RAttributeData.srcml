@@ -259,6 +259,25 @@ dir="./entity" filename="RAttributeData.h">
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>RColor</name>
+    </type>
+    <name>getColor</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RTextBasedData</name>::
+        <name>getColor</name></name>
+        <argument_list>()</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
   <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>

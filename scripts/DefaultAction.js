@@ -309,7 +309,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             var range = view.mapDistanceFromView(this.rangePixels);
 
             var entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
-            //qDebug(entityId);
+            //qDebug("entity id: ", entityId);
             if (entityId !== -1) {
                 if (add && this.document.isSelected(entityId)) {
                     this.deselectEntity(entityId);
@@ -388,7 +388,7 @@ DefaultAction.prototype.mouseDoubleClickEvent = function(event) {
             return;
         }
 
-        this.entityDoubleClicked(entityId);
+        this.entityDoubleClicked(entityId, event);
     }
 };
 
@@ -596,7 +596,7 @@ DefaultAction.prototype.selectEntity = function(entityId, add) {
 /**
  * Called when the user selects a single entity.
  */
-DefaultAction.prototype.entityDoubleClicked = function(entityId) {
+DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
     if (isNull(this.document) || isNull(this.di)) {
         return;
     }
@@ -613,6 +613,34 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId) {
         }
     }
     else if (isBlockReferenceEntity(entity)) {
+        // in block text editing with double-click:
+        var blockId = entity.getReferencedBlockId();
+        var block = this.document.queryBlock(blockId);
+        if (!isNull(block)) {
+            var view = event.getGraphicsView();
+            var range = view.mapDistanceFromView(this.rangePixels);
+            // cursor, mapped to block coordinates:
+            var pBlock = entity.mapToBlock(event.getModelPosition());
+            var box = new RBox(
+                pBlock.operator_subtract(new RVector(range,range)),
+                pBlock.operator_add(new RVector(range,range))
+            );
+            var res = this.document.queryIntersectedEntitiesXY(box, true, false, blockId);
+            var entityInBlockId;
+            if (res.length===1) {
+                entityInBlockId = res[0];
+            }
+            else {
+                entityInBlockId = this.document.queryClosestXY(res, pBlock, range*2, false);
+            }
+            var entityInBlock = this.document.queryEntity(entityInBlockId);
+            if (!isNull(entityInBlock) && isTextBasedEntity(entityInBlock) && getInBlockTextEdit(entityInBlock)) {
+                include("scripts/Modify/EditText/EditText.js");
+                EditText.editText(entityInBlock);
+                return;
+            }
+        }
+
         if (RSettings.getBoolValue("GraphicsView/DoubleClickEditBlock", false)===true) {
             include("scripts/Block/Block.js");
             Block.editBlock(this.di, entity.getReferencedBlockName());

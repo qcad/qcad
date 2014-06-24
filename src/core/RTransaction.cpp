@@ -209,7 +209,7 @@ void RTransaction::redo(RDocument* document) {
                     // entity of the block might have changed (in block drag and drop):
                     if (entity->getType()==RS::EntityBlockRef) {
                         //entity->update();
-                        affectedBlockReferenceIds.append(objId);
+                        affectedBlockReferenceIds.insert(objId);
                     }
                     //qDebug() << "si: add: " << *entity;
                     document->addToSpatialIndex(entity);
@@ -292,7 +292,7 @@ void RTransaction::undo(RDocument* document) {
                     // entity of the block might have changed (in block drag and drop):
                     if (entity->getType()==RS::EntityBlockRef) {
                         //entity->update();
-                        affectedBlockReferenceIds.append(objId);
+                        affectedBlockReferenceIds.insert(objId);
                     }
                     document->addToSpatialIndex(entity);
                 }
@@ -374,9 +374,7 @@ void RTransaction::end(RDocument* document) {
 }
 
 void RTransaction::updateAffectedBlockReferences() {
-    // update spatial index entries of block references which reference
-    // overwritten blocks:
-    QList<RObject::Id>::iterator it;
+    QSet<RObject::Id>::iterator it;
     for (it=affectedBlockReferenceIds.begin(); it!=affectedBlockReferenceIds.end(); ++it) {
         QSharedPointer<REntity> entity = storage->queryEntityDirect(*it);
         if (entity.isNull()) {
@@ -438,7 +436,7 @@ bool RTransaction::overwriteBlock(QSharedPointer<RBlock> block) {
             if (!e.isNull() && !e->isUndone()) {
                 e->setReferencedBlockId(block->getId());
                 addObject(e, false);
-                affectedBlockReferenceIds.append(*it);
+                affectedBlockReferenceIds.insert(*it);
             }
         }
     }
@@ -703,11 +701,13 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     }
 
     bool ret = true;
+
     // object is a new object or an existing object that has changed:
     if (object->getId()==RObject::INVALID_ID || objectHasChanged ||
         // always add block to linked storage to make sure that
         // block entities are found in linked storage:
         (objectIsBlock && storageIsLinked)) {
+
         // new object:
         if (object->getId()==RObject::INVALID_ID) {
             onlyChanges = false;
@@ -736,6 +736,12 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
                         QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
                         if (blockRef.isNull() || blockRef->getReferencedBlockId()!=RObject::INVALID_ID) {
                             object->getDocument()->addToSpatialIndex(entity);
+                        }
+
+                        // update block references if entity has been changed inside a block
+                        // that is not the current block (in block editing):
+                        if (entity->getBlockId()!=storage->getCurrentBlockId()) {
+                            affectedBlockReferenceIds.unite(storage->queryBlockReferences(entity->getBlockId()));
                         }
                     }
                 }

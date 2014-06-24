@@ -1780,6 +1780,17 @@ function getInBlockEasyDragAndDrop(entity) {
     return entity.getCustomProperty("QCAD", "InBlockEasyDragAndDrop", "0")==="1";
 }
 
+/**
+ * Enable / disable in block text editing for the given entity.
+ */
+function setInBlockTextEdit(entity, v) {
+    return entity.setCustomProperty("QCAD", "InBlockTextEdit", v ? "1" : "0");
+}
+
+function getInBlockTextEdit(entity) {
+    return entity.getCustomProperty("QCAD", "InBlockTextEdit", "0")==="1";
+}
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {
