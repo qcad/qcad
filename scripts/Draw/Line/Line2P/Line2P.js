@@ -38,8 +38,6 @@ function Line2P(guiAction) {
     this.point1 = undefined;
     this.point2 = undefined;
 
-    this.cmd = "";
-
     this.setUiOptions(["../Line.ui", "Line2P.ui"]);
 }
 
@@ -107,6 +105,24 @@ Line2P.prototype.escapeEvent = function() {
         this.setState(Line2P.State.SettingFirstPoint);
         this.updateButtonStates();
         break;
+    }
+};
+
+Line2P.prototype.keyPressEvent = function(event) {
+    var di = this.getDocumentInterface();
+
+    if ((event.key() === Qt.Key_Enter.valueOf()) || (event.key() === Qt.Key_Return.valueOf())) {
+        if (this.state === Line2P.State.SettingFirstPoint) {
+            this.point1 = di.getLastPosition();
+            di.setRelativeZero(this.point1);
+            this.setState(Line2P.State.SettingNextPoint);
+            di.clearPreview();
+            di.previewOperation(this.getOperation(true));
+        } else {
+            EAction.prototype.keyPressEvent(event);
+        }
+    } else {
+        EAction.prototype.keyPressEvent(event);
     }
 };
 
@@ -304,7 +320,6 @@ Line2P.prototype.commandEvent = function(event) {
 
     var cmd = event.getCommand();
     cmd = cmd.toLowerCase();
-    this.cmd = cmd;
 
     str = "close";
     if (str.startsWith(cmd)) {

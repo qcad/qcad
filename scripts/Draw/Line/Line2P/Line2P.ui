@@ -26,6 +26,9 @@
       <iconset>
        <normaloff>CloseSequence.svg</normaloff>CloseSequence.svg</iconset>
      </property>
+     <property name="shortcut">
+      <string>,, C</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -50,6 +53,9 @@
       <iconset>
        <normaloff>UndoSegment.svg</normaloff>UndoSegment.svg</iconset>
      </property>
+     <property name="shortcut">
+      <string>,, U</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -66,6 +72,9 @@
      <property name="icon">
       <iconset>
        <normaloff>RedoSegment.svg</normaloff>RedoSegment.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, R</string>
      </property>
     </widget>
    </item>

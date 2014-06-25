@@ -48,6 +48,7 @@ function EAction(guiAction) {
     this.splitUiOptions = false;
     this.additionalOptionsToolBars = undefined;
     this.optionsToolBarEnabled = true;
+    this.relativeZeroPos = undefined;
 }
 
 EAction.prototype = new RActionAdapter();
@@ -245,6 +246,12 @@ EAction.prototype.resumeEvent = function() {
     if (!isNull(this.state)) {
         this.setState(this.state);
     }
+
+    // restore relative zero position when returning from another command:
+    var di = this.getDocumentInterface();
+    if (!isNull(di) && isValidVector(this.relativeZeroPos)) {
+        di.setRelativeZero(this.relativeZeroPos);
+    }
 };
 
 /**
@@ -261,6 +268,12 @@ EAction.prototype.suspendEvent = function() {
     }
 
     this.hideUiOptions();
+
+    // store relative zero position:
+    var di = this.getDocumentInterface();
+    if (!isNull(di)) {
+        this.relativeZeroPos = di.getRelativeZero();
+    }
 };
 
 /**

@@ -62,7 +62,7 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
     defaultAction(NULL),
     currentSnap(NULL),
     currentSnapRestriction(NULL),
-    relativeZero(RVector::invalid),
+    relativeZero(RVector(0,0)),
     relativeZeroLocked(false),
     cursorPosition(RVector::invalid),
     suspended(false),

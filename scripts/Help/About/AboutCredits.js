@@ -15,18 +15,21 @@ var credits =
                               "Misc > Drawing > Centerline Cross,<br>" +
                               "Misc > Drawing > Line from 2 Points (LX)<br>" +
                               "Edit > Drawing Preferences > General > Point Display<br>" +
-                              "Modify > Break out Manual"
+                              "Modify > Break out Manual<br>" +
+                              "Significant contributions to:<br>" +
+                              "Draw > Line > Line from 2 Points"
                               ],
         [ "Tamas Tevesz",     "Port to FreeBSD,<br>" +
                               "various improvements and fixes." ],
     ],
     [
         "Translations",
-        [ "Tanaka Hidemune",  "Japanese translation and user reference manual." ],
-        [ "Miha ('miharix')",  "Slovenian translation." ],
+        [ "Tanaka Hidemune",   "Japanese (ja) translation and user reference manual." ],
+        [ "Miha ('miharix')",  "Slovenian (sl) translation." ],
+        [ "Wang Zhen Zhe",     "Chinese (zh_CN) translation." ],
     ],
     [
-        "Testing, feedback and minor fixes",
+        "Testing, Feedback and Minor Fixes",
         [ "Clive Tubb ('clive')", "" ],
         [ "Harald Huesges ('Husky')", "" ],
         [ "and many others", "" ],
