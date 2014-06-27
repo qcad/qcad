@@ -252,6 +252,7 @@ EAction.prototype.resumeEvent = function() {
     if (!isNull(di) && isValidVector(this.relativeZeroPos)) {
         di.setRelativeZero(this.relativeZeroPos);
     }
+    this.relativeZeroPos = undefined;
 };
 
 /**
