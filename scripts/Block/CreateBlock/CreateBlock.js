@@ -73,7 +73,7 @@ CreateBlock.prototype.coordinateEvent = function(event) {
     op.addObject(block);
     var blockId = storage.getMaxObjectId();
 
-    for (i=0; i<ids.length; i++) {
+    for (var i=0; i<ids.length; i++) {
         var id = ids[i];
         var entity = document.queryEntity(id);
         if (isNull(entity)) {

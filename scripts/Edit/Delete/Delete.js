@@ -21,7 +21,7 @@ include("../Edit.js");
 
 /**
  * \class Delete
- * \brief Deleted all selected entities of the current document.
+ * \brief Deletes all selected entities of the current document.
  * \ingroup ecma_edit
  */
 function Delete(guiAction) {
