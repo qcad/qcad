@@ -623,9 +623,6 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             return false;
         }
 
-        qDebug() << "\n\nold:\n" << *oldObject;
-        qDebug() << "\n\nnew:\n" << *object;
-
         // iterate through all properties of the original object
         // and store the property changes (if any) in this transaction:
         QSet<RPropertyTypeId> propertyTypeIds;
@@ -665,8 +662,6 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
                 object->getProperty(pid);
             QPair<QVariant, RPropertyAttributes> oldProperty =
                 oldObject->getProperty(pid);
-
-            //qDebug() << "recording property change for property"
 
             // don't record changes in redundant properties (e.g. angle for lines):
             if (newProperty.second.isRedundant()) {
