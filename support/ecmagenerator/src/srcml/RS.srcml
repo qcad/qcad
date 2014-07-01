@@ -248,6 +248,10 @@ dir="./core" filename="RS.h">
   </expr>, 
   <comment type="block">/**&lt; Text */</comment>
   <expr>
+    <name>EntityTrace</name>
+  </expr>, 
+  <comment type="block">/**&lt; Trace */</comment>
+  <expr>
     <name>EntityDimension</name>
   </expr>, 
   <comment type="block">/**&lt; Any Dimension */</comment>

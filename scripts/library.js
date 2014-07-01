@@ -412,6 +412,15 @@ function isSolidEntity(obj) {
 }
 
 /**
+ * Checks if the given object is a trace entity.
+ *
+ * \return true if the given object is a trace entity (RTraceEntity).
+ */
+function isTraceEntity(obj) {
+    return isOfType(obj, RTraceEntity) || isOfType(obj, RTraceEntityPointer);
+}
+
+/**
  * Checks if the given object is a spline entity.
  *
  * \return true if the given object is a spline entity (RSplineEntity).
@@ -707,6 +716,8 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("Polylines") : qsTr("Polyline");
     case RS.EntitySolid:
         return plural ? qsTr("Solids") : qsTr("Solid");
+    case RS.EntityTrace:
+        return plural ? qsTr("Traces") : qsTr("Trace");
     case RS.EntitySpline:
         return plural ? qsTr("Splines") : qsTr("Spline");
     case RS.EntityTextBased:
@@ -763,6 +774,12 @@ function getEntityTypeProperties(type) {
         return RPolylineEntity.getStaticPropertyTypeIds();
     case RS.EntitySolid:
         return RSolidEntity.getStaticPropertyTypeIds();
+    case RS.EntityTrace:
+        return RTraceEntity.getStaticPropertyTypeIds();
+    case RS.EntityRay:
+        return RRayEntity.getStaticPropertyTypeIds();
+    case RS.EntityXLine:
+        return RXLineEntity.getStaticPropertyTypeIds();
     case RS.EntitySpline:
         return RSplineEntity.getStaticPropertyTypeIds();
     case RS.EntityTextBased:

@@ -49,6 +49,8 @@ SOURCES = \
     RTextData.cpp \
     RTextEntity.cpp \
     RTextRenderer.cpp \
+    RTraceData.cpp \
+    RTraceEntity.cpp \
     RXLineData.cpp \
     RXLineEntity.cpp
 
@@ -102,6 +104,8 @@ HEADERS = \
     RTextData.h \
     RTextEntity.h \
     RTextRenderer.h \
+    RTraceData.h \
+    RTraceEntity.h \
     RXLineData.h \
     RXLineEntity.h
 

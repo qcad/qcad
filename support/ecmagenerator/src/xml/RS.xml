@@ -33,6 +33,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Entity3dFace" />
       <value name="EntityTextBased" />
       <value name="EntityText" />
+      <value name="EntityTrace" />
       <value name="EntityDimension" />
       <value name="EntityDimLinear" />
       <value name="EntityDimAligned" />

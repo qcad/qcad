@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RTraceData"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RSolidData" specifier="public" />
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RVector &amp;" typeName="RVector" name="p1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="p2"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="p3"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="p4"
+        isConst="true" />
+      </variant>
+    </constructor>
+  </class>
+</unit>

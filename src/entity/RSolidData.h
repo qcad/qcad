@@ -43,7 +43,7 @@ protected:
     RSolidData(RDocument* document, const RSolidData& data);
 
 public:
-    RSolidData();
+    RSolidData(RDocument* document = NULL);
     RSolidData(const RTriangle& triangle);
     RSolidData(const RVector& p1, const RVector& p2, const RVector& p3);
     RSolidData(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4);

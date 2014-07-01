@@ -895,7 +895,7 @@ dir="./core" filename="RTransaction.h">
   <decl_stmt>
   <decl>
     <type>
-      <name>QList
+      <name>QSet
       <argument_list>&lt;
       <argument>
         <name>

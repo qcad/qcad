@@ -91,6 +91,7 @@ public:
         Entity3dFace,       /**< 3d Face */
         EntityTextBased,    /**< Any text based entity (text, attribute def, attribute) */
         EntityText,         /**< Text */
+        EntityTrace,        /**< Trace */
         EntityDimension,    /**< Any Dimension */
         EntityDimLinear,    /**< Any linear dimension */
         EntityDimAligned,   /**< Linear aligned Dimension */

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -17,25 +17,25 @@
  * along with QCAD.
  */
 
-#ifndef RSOLIDENTITY_H
-#define RSOLIDENTITY_H
+#ifndef RTRACEENTITY_H
+#define RTRACEENTITY_H
 
 #include "entity_global.h"
 
 #include "REntity.h"
-#include "RSolidData.h"
+#include "RTraceData.h"
 
 class RDocument;
 class RExporter;
 
 /**
- * Solid entity.
+ * Trace entity.
  *
  * \scriptable
  * \sharedPointerSupport
  * \ingroup entity
  */
-class QCADENTITY_EXPORT RSolidEntity: public REntity {
+class QCADENTITY_EXPORT RTraceEntity: public REntity {
 
 public:
     static RPropertyTypeId PropertyCustom;
@@ -64,22 +64,22 @@ public:
     static RPropertyTypeId PropertyLength;
 
 public:
-    RSolidEntity(RDocument* document, const RSolidData& data,
+    RTraceEntity(RDocument* document, const RTraceData& data,
         RObject::Id objectId = RObject::INVALID_ID);
-    virtual ~RSolidEntity();
+    virtual ~RTraceEntity();
 
     static void init();
 
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RSolidEntity));
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RTraceEntity));
     }
 
-    virtual RSolidEntity* clone() const {
-        return new RSolidEntity(*this);
+    virtual RTraceEntity* clone() const {
+        return new RTraceEntity(*this);
     }
 
     virtual RS::EntityType getType() const {
-        return RS::EntitySolid;
+        return RS::EntityTrace;
     }
 
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
@@ -90,11 +90,11 @@ public:
 
     virtual void exportEntity(RExporter& e, bool preview=false) const;
 
-    virtual RSolidData& getData() {
+    virtual RTraceData& getData() {
         return data;
     }
 
-    virtual const RSolidData& getData() const {
+    virtual const RTraceData& getData() const {
         return data;
     }
 
@@ -146,11 +146,11 @@ protected:
     virtual void print(QDebug dbg) const;
 
 protected:
-    RSolidData data;
+    RTraceData data;
 };
 
-Q_DECLARE_METATYPE(RSolidEntity*)
-Q_DECLARE_METATYPE(QSharedPointer<RSolidEntity>)
-Q_DECLARE_METATYPE(QSharedPointer<RSolidEntity>*)
+Q_DECLARE_METATYPE(RTraceEntity*)
+Q_DECLARE_METATYPE(QSharedPointer<RTraceEntity>)
+Q_DECLARE_METATYPE(QSharedPointer<RTraceEntity>*)
 
 #endif

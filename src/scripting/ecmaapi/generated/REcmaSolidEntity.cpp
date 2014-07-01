@@ -207,10 +207,6 @@
                 qScriptValueFromValue(&engine, RSolidEntity::PropertyPoint4Z),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
-            ctor.setProperty("PropertyAngle",
-                qScriptValueFromValue(&engine, RSolidEntity::PropertyAngle),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
             ctor.setProperty("PropertyLength",
                 qScriptValueFromValue(&engine, RSolidEntity::PropertyLength),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

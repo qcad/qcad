@@ -229,6 +229,7 @@ HEADERS += \
     $$PWD/REcmaSharedPointerTextData.h \
     $$PWD/REcmaSharedPointerTextEntity.h \
     $$PWD/REcmaSharedPointerTextLabel.h \
+    $$PWD/REcmaSharedPointerTraceEntity.h \
     $$PWD/REcmaSharedPointerTriangle.h \
     $$PWD/REcmaSharedPointerUcs.h \
     $$PWD/REcmaSharedPointerView.h \
@@ -292,6 +293,8 @@ HEADERS += \
     $$PWD/REcmaTextLabel.h \
     $$PWD/REcmaTextRenderer.h \
     $$PWD/REcmaThread.h \
+    $$PWD/REcmaTraceData.h \
+    $$PWD/REcmaTraceEntity.h \
     $$PWD/REcmaTransaction.h \
     $$PWD/REcmaTransactionEvent.h \
     $$PWD/REcmaTransactionListener.h \
@@ -544,6 +547,7 @@ SOURCES += \
     $$PWD/REcmaSharedPointerTextData.cpp \
     $$PWD/REcmaSharedPointerTextEntity.cpp \
     $$PWD/REcmaSharedPointerTextLabel.cpp \
+    $$PWD/REcmaSharedPointerTraceEntity.cpp \
     $$PWD/REcmaSharedPointerTriangle.cpp \
     $$PWD/REcmaSharedPointerUcs.cpp \
     $$PWD/REcmaSharedPointerView.cpp \
@@ -607,6 +611,8 @@ SOURCES += \
     $$PWD/REcmaTextLabel.cpp \
     $$PWD/REcmaTextRenderer.cpp \
     $$PWD/REcmaThread.cpp \
+    $$PWD/REcmaTraceData.cpp \
+    $$PWD/REcmaTraceEntity.cpp \
     $$PWD/REcmaTransaction.cpp \
     $$PWD/REcmaTransactionEvent.cpp \
     $$PWD/REcmaTransactionListener.cpp \

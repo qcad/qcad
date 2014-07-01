@@ -69,6 +69,7 @@
 #include "RSolidEntity.h"
 #include "RSplineEntity.h"
 #include "RTextEntity.h"
+#include "RTraceEntity.h"
 #include "RXLineEntity.h"
 
 
@@ -213,6 +214,7 @@ int main(int argc, char *argv[]) {
     RPointEntity::init();
     RPolylineEntity::init();
     RSolidEntity::init();
+    RTraceEntity::init();
     RSplineEntity::init();
     RXLineEntity::init();
     RRayEntity::init();

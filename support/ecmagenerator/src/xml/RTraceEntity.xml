@@ -3,7 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class_decl name="RExporter" />
-  <class name="RSolidEntity"
+  <class name="RTraceEntity"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="true" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
@@ -12,7 +12,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant>
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />
-        <arg type="RSolidData &amp;" typeName="RSolidData"
+        <arg type="RTraceData &amp;" typeName="RTraceData"
         name="data" isConst="true" />
         <arg type="RObject::Id" typeName="RObject::Id"
         name="objectId" hasDefault="true"
@@ -31,7 +31,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RSolidEntity *" isPureVirtual="false" />
+      <variant returnType="RTraceEntity *" isPureVirtual="false" />
     </method>
     <method name="getType" cppName="getType" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -76,9 +76,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="getData" cppName="getData" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RSolidData &amp;"
+      <variant returnType="RTraceData &amp;"
       isPureVirtual="false" />
-      <variant returnType="const RSolidData &amp;"
+      <variant returnType="const RTraceData &amp;"
       isPureVirtual="false" />
     </method>
     <method name="getVertexAt" cppName="getVertexAt"

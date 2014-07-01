@@ -209,6 +209,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("EntityTrace",
+    QScriptValue(RS::EntityTrace),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityDimension",
     QScriptValue(RS::EntityDimension),
     QScriptValue::ReadOnly);

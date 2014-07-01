@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <unit xmlns="http://www.sdml.info/srcML/src"
 xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./entity" filename="RSolidEntity.h">
-  <comment type="block">/** * Copyright (c) 2011-2013 by Andrew
+dir="./entity" filename="RTraceEntity.h">
+  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
   Mustun. All rights reserved. * * This file is part of the QCAD
   project. * * QCAD is free software: you can redistribute it
   and/or modify * it under the terms of the GNU General Public
@@ -16,10 +16,10 @@ dir="./entity" filename="RSolidEntity.h">
   License * along with QCAD. */</comment>
   <cpp:ifndef>#
   <cpp:directive>ifndef</cpp:directive>
-  <name>RSOLIDENTITY_H</name></cpp:ifndef>
+  <name>RTRACEENTITY_H</name></cpp:ifndef>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>RSOLIDENTITY_H</name></cpp:define>
+  <name>RTRACEENTITY_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"entity_global.h"</cpp:file></cpp:include>
@@ -28,18 +28,18 @@ dir="./entity" filename="RSolidEntity.h">
   <cpp:file>"REntity.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RSolidData.h"</cpp:file></cpp:include>
+  <cpp:file>"RTraceData.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RDocument</name>;</class_decl>
   <class_decl>class 
   <name>RExporter</name>;</class_decl>
-  <comment type="block">/** * Solid entity. * * \scriptable *
+  <comment type="block">/** * Trace entity. * * \scriptable *
   \sharedPointerSupport * \ingroup entity */</comment>
   <class>class 
   <macro>
     <name>QCADENTITY_EXPORT</name>
   </macro>
-  <name>RSolidEntity</name>
+  <name>RTraceEntity</name>
   <super>: 
   <specifier>public</specifier>
   <name>REntity</name></super>
@@ -224,7 +224,7 @@ dir="./entity" filename="RSolidEntity.h">
   </decl>;</decl_stmt></public>
   <public>public: 
   <constructor_decl>
-  <name>RSolidEntity</name>
+  <name>RTraceEntity</name>
   <parameter_list>(
   <param>
     <decl>
@@ -237,7 +237,7 @@ dir="./entity" filename="RSolidEntity.h">
     <decl>
       <type>
       <name>const</name>
-      <name>RSolidData</name>&amp;</type>
+      <name>RTraceData</name>&amp;</type>
       <name>data</name>
     </decl>
   </param>, 
@@ -259,7 +259,7 @@ dir="./entity" filename="RSolidEntity.h">
   </param>)</parameter_list>;</constructor_decl>
   <destructor_decl>
   <specifier>virtual</specifier>
-  <name>~RSolidEntity</name>
+  <name>~RTraceEntity</name>
   <parameter_list>()</parameter_list>;</destructor_decl>
   <function_decl>
   <type>
@@ -294,7 +294,7 @@ dir="./entity" filename="RSolidEntity.h">
               <argument_list>(
               <argument>
                 <expr>
-                  <name>RSolidEntity</name>
+                  <name>RTraceEntity</name>
                 </expr>
               </argument>)</argument_list>
             </call>
@@ -306,7 +306,7 @@ dir="./entity" filename="RSolidEntity.h">
   <function>
     <type>
     <name>virtual</name>
-    <name>RSolidEntity</name>*</type>
+    <name>RTraceEntity</name>*</type>
     <name>clone</name>
     <parameter_list>()</parameter_list>
     <specifier>const</specifier>
@@ -314,7 +314,7 @@ dir="./entity" filename="RSolidEntity.h">
     <return>return 
     <expr>new 
     <call>
-      <name>RSolidEntity</name>
+      <name>RTraceEntity</name>
       <argument_list>(
       <argument>
         <expr>*
@@ -337,7 +337,7 @@ dir="./entity" filename="RSolidEntity.h">
     <expr>
       <name>
       <name>RS</name>::
-      <name>EntitySolid</name></name>
+      <name>EntityTrace</name></name>
     </expr>;</return>}</block>
   </function>
   <function_decl>
@@ -447,7 +447,7 @@ dir="./entity" filename="RSolidEntity.h">
   <function>
     <type>
     <name>virtual</name>
-    <name>RSolidData</name>&amp;</type>
+    <name>RTraceData</name>&amp;</type>
     <name>getData</name>
     <parameter_list>()</parameter_list>
     <block>{ 
@@ -460,7 +460,7 @@ dir="./entity" filename="RSolidEntity.h">
     <type>
     <name>virtual</name>
     <name>const</name>
-    <name>RSolidData</name>&amp;</type>
+    <name>RTraceData</name>&amp;</type>
     <name>getData</name>
     <parameter_list>()</parameter_list>
     <specifier>const</specifier>
@@ -730,26 +730,26 @@ dir="./entity" filename="RSolidEntity.h">
   <decl_stmt>
   <decl>
     <type>
-      <name>RSolidData</name>
+      <name>RTraceData</name>
     </type>
     <name>data</name>
   </decl>;</decl_stmt></protected>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
-    <argument>RSolidEntity*</argument>)</argument_list>
+    <argument>RTraceEntity*</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>
-    QSharedPointer&lt;RSolidEntity&gt;</argument>)</argument_list>
+    QSharedPointer&lt;RTraceEntity&gt;</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>
-    QSharedPointer&lt;RSolidEntity&gt;*</argument>)</argument_list>
+    QSharedPointer&lt;RTraceEntity&gt;*</argument>)</argument_list>
   </macro>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>

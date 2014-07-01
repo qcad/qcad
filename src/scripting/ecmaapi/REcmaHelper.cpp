@@ -53,6 +53,7 @@
 #include "RSolidEntity.h"
 #include "RSplineEntity.h"
 #include "RTextEntity.h"
+#include "RTraceEntity.h"
 #include "RXLineEntity.h"
 
 #include "REcmaHelper.h"
@@ -312,6 +313,8 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
     if (v.isValid()) return v;
     v = tryCast<RSolidEntity>(engine, cppValue);
     if (v.isValid()) return v;
+    v = tryCast<RTraceEntity>(engine, cppValue);
+    if (v.isValid()) return v;
     v = tryCast<RSplineEntity>(engine, cppValue);
     if (v.isValid()) return v;
 
@@ -362,6 +365,8 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, REntity* cppValue
     v = tryCast<RPolylineEntity>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RSolidEntity>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RTraceEntity>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RSplineEntity>(engine, cppValue);
     if (v.isValid()) return v;
@@ -415,6 +420,8 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
     v = tryCast<RPolylineData>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RSolidData>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RTraceData>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RSplineData>(engine, cppValue);
     if (v.isValid()) return v;

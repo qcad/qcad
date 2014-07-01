@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -16,72 +16,72 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RSolidEntity.h"
+#include "RTraceEntity.h"
 #include "RExporter.h"
 #include "RLine.h"
 
-RPropertyTypeId RSolidEntity::PropertyCustom;
-RPropertyTypeId RSolidEntity::PropertyHandle;
-RPropertyTypeId RSolidEntity::PropertyType;
-RPropertyTypeId RSolidEntity::PropertyBlock;
-RPropertyTypeId RSolidEntity::PropertyLayer;
-RPropertyTypeId RSolidEntity::PropertyLinetype;
-RPropertyTypeId RSolidEntity::PropertyLineweight;
-RPropertyTypeId RSolidEntity::PropertyColor;
-RPropertyTypeId RSolidEntity::PropertyDrawOrder;
+RPropertyTypeId RTraceEntity::PropertyCustom;
+RPropertyTypeId RTraceEntity::PropertyHandle;
+RPropertyTypeId RTraceEntity::PropertyType;
+RPropertyTypeId RTraceEntity::PropertyBlock;
+RPropertyTypeId RTraceEntity::PropertyLayer;
+RPropertyTypeId RTraceEntity::PropertyLinetype;
+RPropertyTypeId RTraceEntity::PropertyLineweight;
+RPropertyTypeId RTraceEntity::PropertyColor;
+RPropertyTypeId RTraceEntity::PropertyDrawOrder;
 
-RPropertyTypeId RSolidEntity::PropertyPoint1X;
-RPropertyTypeId RSolidEntity::PropertyPoint1Y;
-RPropertyTypeId RSolidEntity::PropertyPoint1Z;
-RPropertyTypeId RSolidEntity::PropertyPoint2X;
-RPropertyTypeId RSolidEntity::PropertyPoint2Y;
-RPropertyTypeId RSolidEntity::PropertyPoint2Z;
-RPropertyTypeId RSolidEntity::PropertyPoint3X;
-RPropertyTypeId RSolidEntity::PropertyPoint3Y;
-RPropertyTypeId RSolidEntity::PropertyPoint3Z;
-RPropertyTypeId RSolidEntity::PropertyPoint4X;
-RPropertyTypeId RSolidEntity::PropertyPoint4Y;
-RPropertyTypeId RSolidEntity::PropertyPoint4Z;
+RPropertyTypeId RTraceEntity::PropertyPoint1X;
+RPropertyTypeId RTraceEntity::PropertyPoint1Y;
+RPropertyTypeId RTraceEntity::PropertyPoint1Z;
+RPropertyTypeId RTraceEntity::PropertyPoint2X;
+RPropertyTypeId RTraceEntity::PropertyPoint2Y;
+RPropertyTypeId RTraceEntity::PropertyPoint2Z;
+RPropertyTypeId RTraceEntity::PropertyPoint3X;
+RPropertyTypeId RTraceEntity::PropertyPoint3Y;
+RPropertyTypeId RTraceEntity::PropertyPoint3Z;
+RPropertyTypeId RTraceEntity::PropertyPoint4X;
+RPropertyTypeId RTraceEntity::PropertyPoint4Y;
+RPropertyTypeId RTraceEntity::PropertyPoint4Z;
 
-RPropertyTypeId RSolidEntity::PropertyLength;
+RPropertyTypeId RTraceEntity::PropertyLength;
 
 
-RSolidEntity::RSolidEntity(RDocument* document, const RSolidData& data,
+RTraceEntity::RTraceEntity(RDocument* document, const RTraceData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
 }
 
-RSolidEntity::~RSolidEntity() {
+RTraceEntity::~RTraceEntity() {
 }
 
-void RSolidEntity::init() {
-    RSolidEntity::PropertyCustom.generateId(typeid(RSolidEntity), RObject::PropertyCustom);
-    RSolidEntity::PropertyHandle.generateId(typeid(RSolidEntity), RObject::PropertyHandle);
-    RSolidEntity::PropertyType.generateId(typeid(RSolidEntity), REntity::PropertyType);
-    RSolidEntity::PropertyBlock.generateId(typeid(RSolidEntity), REntity::PropertyBlock);
-    RSolidEntity::PropertyLayer.generateId(typeid(RSolidEntity), REntity::PropertyLayer);
-    RSolidEntity::PropertyLinetype.generateId(typeid(RSolidEntity), REntity::PropertyLinetype);
-    RSolidEntity::PropertyLineweight.generateId(typeid(RSolidEntity), REntity::PropertyLineweight);
-    RSolidEntity::PropertyColor.generateId(typeid(RSolidEntity), REntity::PropertyColor);
-    RSolidEntity::PropertyDrawOrder.generateId(typeid(RSolidEntity), REntity::PropertyDrawOrder);
+void RTraceEntity::init() {
+    RTraceEntity::PropertyCustom.generateId(typeid(RTraceEntity), RObject::PropertyCustom);
+    RTraceEntity::PropertyHandle.generateId(typeid(RTraceEntity), RObject::PropertyHandle);
+    RTraceEntity::PropertyType.generateId(typeid(RTraceEntity), REntity::PropertyType);
+    RTraceEntity::PropertyBlock.generateId(typeid(RTraceEntity), REntity::PropertyBlock);
+    RTraceEntity::PropertyLayer.generateId(typeid(RTraceEntity), REntity::PropertyLayer);
+    RTraceEntity::PropertyLinetype.generateId(typeid(RTraceEntity), REntity::PropertyLinetype);
+    RTraceEntity::PropertyLineweight.generateId(typeid(RTraceEntity), REntity::PropertyLineweight);
+    RTraceEntity::PropertyColor.generateId(typeid(RTraceEntity), REntity::PropertyColor);
+    RTraceEntity::PropertyDrawOrder.generateId(typeid(RTraceEntity), REntity::PropertyDrawOrder);
 
-    RSolidEntity::PropertyPoint1X.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RSolidEntity::PropertyPoint1Y.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RSolidEntity::PropertyPoint1Z.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RSolidEntity::PropertyPoint2X.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RSolidEntity::PropertyPoint2Y.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RSolidEntity::PropertyPoint2Z.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RSolidEntity::PropertyPoint3X.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RSolidEntity::PropertyPoint3Y.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RSolidEntity::PropertyPoint3Z.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RSolidEntity::PropertyPoint4X.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RSolidEntity::PropertyPoint4Y.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RSolidEntity::PropertyPoint4Z.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RTraceEntity::PropertyPoint1X.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RTraceEntity::PropertyPoint1Y.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RTraceEntity::PropertyPoint1Z.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RTraceEntity::PropertyPoint2X.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RTraceEntity::PropertyPoint2Y.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RTraceEntity::PropertyPoint2Z.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RTraceEntity::PropertyPoint3X.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RTraceEntity::PropertyPoint3Y.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RTraceEntity::PropertyPoint3Z.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RTraceEntity::PropertyPoint4X.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RTraceEntity::PropertyPoint4Y.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RTraceEntity::PropertyPoint4Z.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "Z"));
 
-    RSolidEntity::PropertyLength.generateId(typeid(RSolidEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RTraceEntity::PropertyLength.generateId(typeid(RTraceEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
 }
 
-bool RSolidEntity::setProperty(RPropertyTypeId propertyTypeId,
+bool RTraceEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
     bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
@@ -149,7 +149,7 @@ bool RSolidEntity::setProperty(RPropertyTypeId propertyTypeId,
     return ret;
 }
 
-QPair<QVariant, RPropertyAttributes> RSolidEntity::getProperty(
+QPair<QVariant, RPropertyAttributes> RTraceEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable,
         bool noAttributes) {
     if (propertyTypeId == PropertyPoint1X) {
@@ -191,7 +191,7 @@ QPair<QVariant, RPropertyAttributes> RSolidEntity::getProperty(
 }
 
 
-void RSolidEntity::exportEntity(RExporter& e, bool preview) const {
+void RTraceEntity::exportEntity(RExporter& e, bool preview) const {
     Q_UNUSED(preview);
 
     // note that order of fourth and third vertex is swapped:
@@ -207,16 +207,12 @@ void RSolidEntity::exportEntity(RExporter& e, bool preview) const {
     e.exportPolyline(pl);
 }
 
-void RSolidEntity::print(QDebug dbg) const {
-    dbg.nospace() << "RSolidEntity(";
+void RTraceEntity::print(QDebug dbg) const {
+    dbg.nospace() << "RTraceEntity(";
     REntity::print(dbg);
     dbg.nospace() << ", p1: " << getData().getVertexAt(0)
                   << ", p2: " << getData().getVertexAt(1)
-                  << ", p3: " << getData().getVertexAt(2);
-
-    if (getData().countVertices()>3) {
-        dbg.nospace() << ", p4: " << getData().getVertexAt(3);
-    }
-
+                  << ", p3: " << getData().getVertexAt(2)
+                  << ", p4: " << getData().getVertexAt(3);
     dbg.nospace() << ")";
 }
