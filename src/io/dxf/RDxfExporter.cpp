@@ -49,6 +49,7 @@
 #include "RSplineEntity.h"
 #include "RStorage.h"
 #include "RTextEntity.h"
+#include "RTraceEntity.h"
 
 RDxfExporter::RDxfExporter(RDocument& document,
     RMessageHandler* messageHandler,
@@ -271,7 +272,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
     for (int i=0; i<blockNames.size(); ++i) {
         qDebug() << "writing block: " << blockNames[i];
-        if (blockNames[i].startsWith("*")) {
+        if (blockNames[i].startsWith("*") && !blockNames[i].startsWith("*X")) {
             continue;
         }
         QSharedPointer<RBlock> block = document->queryBlock(blockNames[i]);
@@ -1509,6 +1510,24 @@ void RDxfExporter::writeSolid(const RSolidEntity& sol) {
                      c4.x, c4.y, c4.z,
                      0),
         attributes);
+}
+
+/**
+ * Writes the given trace entity to the file.
+ */
+void RDxfExporter::writeTrace(const RTraceEntity& t) {
+    RVector c1 = t.getVertexAt(0);
+    RVector c2 = t.getVertexAt(1);
+    RVector c3 = t.getVertexAt(2);
+    RVector c4 = t.getVertexAt(3);
+
+    dxf.writeTrace(*dw,
+                   DL_TraceData(c1.x, c1.y, c1.z,
+                                c2.x, c2.y, c2.z,
+                                c3.x, c3.y, c3.z,
+                                c4.x, c4.y, c4.z,
+                                0),
+                   attributes);
 }
 
 /**

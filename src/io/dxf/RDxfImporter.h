@@ -91,6 +91,7 @@ private:
     virtual void addKnot(const DL_KnotData& data);
     virtual void addInsert(const DL_InsertData& data);
     virtual void addSolid(const DL_SolidData& data);
+    virtual void addTrace(const DL_TraceData& data);
     virtual void addTextStyle(const DL_StyleData& data);
     virtual void addMTextChunk(const std::string& text);
     virtual void addMText(const DL_MTextData& data);

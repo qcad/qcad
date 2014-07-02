@@ -243,6 +243,9 @@ public:
     void writeSolid(DL_WriterA& dw,
                    const DL_SolidData& data,
                    const DL_Attributes& attrib);
+    void writeTrace(DL_WriterA& dw,
+                    const DL_TraceData& data,
+                    const DL_Attributes& attrib);
     void write3dFace(DL_WriterA& dw,
                    const DL_3dFaceData& data,
                    const DL_Attributes& attrib);

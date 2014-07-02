@@ -57,6 +57,7 @@
 #include "RStorage.h"
 #include "RTextEntity.h"
 #include "RTextRenderer.h"
+#include "RTraceEntity.h"
 #include "RVector.h"
 #include "RView.h"
 #include "RXLineEntity.h"
@@ -594,6 +595,18 @@ void RDxfImporter::addSolid(const DL_SolidData& data) {
     }
 
     QSharedPointer<RSolidEntity> entity(new RSolidEntity(document, d));
+    importEntity(entity);
+}
+
+void RDxfImporter::addTrace(const DL_TraceData& data) {
+    RVector v1(data.x[0], data.y[0], data.z[0]);
+    RVector v2(data.x[1], data.y[1], data.z[1]);
+    RVector v3(data.x[2], data.y[2], data.z[2]);
+    RVector v4(data.x[3], data.y[3], data.z[3]);
+
+    QSharedPointer<RTraceEntity> entity(
+        new RTraceEntity(document, RTraceData(v1, v2, v3, v4))
+    );
     importEntity(entity);
 }
 

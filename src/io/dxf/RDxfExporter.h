@@ -46,6 +46,7 @@ class RPolylineEntity;
 class RProgressHandler;
 class RSolidEntity;
 class RSplineEntity;
+class RTraceEntity;
 class RTextEntity;
 
 
@@ -88,6 +89,7 @@ public:
     void writeHatch(const RHatchEntity& h);
     void writeImage(const RImageEntity& img);
     void writeSolid(const RSolidEntity& sol);
+    void writeTrace(const RTraceEntity& t);
 
     void writeBlockReference(const RBlockReferenceEntity& br);
 
