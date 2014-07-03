@@ -133,3 +133,8 @@ function testArgument(args, shortFlag, longFlag) {
 
     return false;
 }
+
+function printArgument(name, prop) {
+    var spc = new Array(20 - name.length).join(" ");
+    print(" ", name, spc, ":", prop);
+}
