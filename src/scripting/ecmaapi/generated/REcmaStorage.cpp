@@ -167,6 +167,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getUnit, "getUnit");
             
+            REcmaHelper::registerFunction(&engine, proto, setDimensionFont, "setDimensionFont");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimensionFont, "getDimensionFont");
+            
             REcmaHelper::registerFunction(&engine, proto, setLinetypeScale, "setLinetypeScale");
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypeScale, "getLinetypeScale");
@@ -3680,6 +3684,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::getUnit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::setDimensionFont
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::setDimensionFont", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::setDimensionFont";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("setDimensionFont", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimensionFont(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.setDimensionFont().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::setDimensionFont", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getDimensionFont
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getDimensionFont", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getDimensionFont";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getDimensionFont", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getDimensionFont();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getDimensionFont().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getDimensionFont", context, engine);
             return result;
         }
          QScriptValue

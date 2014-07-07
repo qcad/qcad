@@ -419,6 +419,8 @@ void RDimensionData::initTextData() const {
 
     QString label = getMeasurement();
 
+    // TODO: fontName property takes precedence
+
     textData = RTextData(RVector(0,0),    // position
                          RVector(0,0),    // alignment point
                          dimtxt,              // text height
@@ -428,11 +430,13 @@ void RDimensionData::initTextData() const {
                          RS::Exact, 1.0,
                          label,
                          //fontName,
-                         "Standard",
+                         (document==NULL || document->getDimensionFont().isEmpty()) ? "Standard" : document->getDimensionFont(),
                          false, false,
                          0.0,
                          false           // not simple (diameter signs, stacked text, ...)
                          );
+
+    //qDebug() << "textData: " << textData;
 
     dirty = true;
 }

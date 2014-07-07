@@ -1116,6 +1116,44 @@ dir="./entity" filename="RTextBasedData.h">
     <type>
       <name>void</name>
     </type>
+    <name>setXScale</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>double</name>
+        </type>
+        <name>xScale</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>this</name>-&gt;
+    <name>xScale</name>= 
+    <name>xScale</name></expr>;</expr_stmt>
+    <constructor_decl>
+    <name>update</name>
+    <parameter_list>
+    ()</parameter_list>;</constructor_decl>}</block>
+  </function>
+  <function>
+    <type>
+      <name>double</name>
+    </type>
+    <name>getXScale</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>xScale</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
     <name>setSimple</name>
     <parameter_list>(
     <param>
@@ -1756,6 +1794,13 @@ dir="./entity" filename="RTextBasedData.h">
       <name>double</name>
     </type>
     <name>angle</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>xScale</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

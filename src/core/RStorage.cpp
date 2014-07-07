@@ -147,6 +147,14 @@ RS::Unit RStorage::getUnit() const {
     return (RS::Unit)getVariable("UnitSettings/Unit").toInt();
 }
 
+void RStorage::setDimensionFont(const QString& f) {
+    setVariable("DimensionSettings/Font", f);
+}
+
+QString RStorage::getDimensionFont() const {
+    return getVariable("DimensionSettings/Font").toString();
+}
+
 void RStorage::setLinetypeScale(double v) {
     setVariable("LinetypeSettings/Scale", v);
 }
@@ -179,6 +187,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
     }
     dbg.nospace() << "current view ID: " << s.getCurrentViewId() << "\n";
     dbg.nospace() << "drawing unit: " << s.getUnit() << "\n";
+    dbg.nospace() << "dimension font: " << s.getDimensionFont() << "\n";
     dbg.nospace() << "bounding box: " << s.getBoundingBox() << "\n";
 
     {

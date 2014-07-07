@@ -39,6 +39,7 @@ RPropertyTypeId RDimLinearEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimLinearEntity::PropertyLinearFactor;
 RPropertyTypeId RDimLinearEntity::PropertyAutoTextPos;
+RPropertyTypeId RDimLinearEntity::PropertyFontName;
 
 RPropertyTypeId RDimLinearEntity::PropertyDimensionLinePosX;
 RPropertyTypeId RDimLinearEntity::PropertyDimensionLinePosY;
@@ -78,6 +79,7 @@ void RDimLinearEntity::init() {
 
     RDimLinearEntity::PropertyLinearFactor.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyLinearFactor);
     RDimLinearEntity::PropertyAutoTextPos.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyAutoTextPos);
+    RDimLinearEntity::PropertyFontName.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyFontName);
 
     RDimLinearEntity::PropertyDimensionLinePosX.generateId(typeid(RDimLinearEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimLinearEntity::PropertyDimensionLinePosY.generateId(typeid(RDimLinearEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "Y"));

@@ -103,6 +103,12 @@
         setRichText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         mixWith
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

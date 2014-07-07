@@ -154,6 +154,9 @@ public:
     virtual void setUnit(RS::Unit unit);
     virtual RS::Unit getUnit() const;
 
+    virtual void setDimensionFont(const QString& f);
+    virtual QString getDimensionFont() const;
+
     virtual void setLinetypeScale(double v);
     virtual double getLinetypeScale() const;
 
@@ -173,6 +176,7 @@ protected:
     QMap<QString, QString> variableCaseMap;
     QHash<RS::KnownVariable, QVariant> knownVariables;
     RS::Unit unit;
+    QString dimensionFont;
     double linetypeScale;
 };
 

@@ -135,6 +135,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyAutoTextPos" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyFontName" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyCenterPointX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyCenterPointY" type="RPropertyTypeId"

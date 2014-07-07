@@ -2351,6 +2351,27 @@ dir="./core" filename="RDocument.h">
   <type>
     <name>void</name>
   </type>
+  <name>setDimensionFont</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>f</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QString</name>
+  </type>
+  <name>getDimensionFont</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>setLinetypeScale</name>
   <parameter_list>(
   <param>

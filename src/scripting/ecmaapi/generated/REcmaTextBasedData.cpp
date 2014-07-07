@@ -160,6 +160,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
             
+            REcmaHelper::registerFunction(&engine, proto, setXScale, "setXScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, getXScale, "getXScale");
+            
             REcmaHelper::registerFunction(&engine, proto, setSimple, "setSimple");
             
             REcmaHelper::registerFunction(&engine, proto, isSimple, "isSimple");
@@ -3248,6 +3252,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextBasedData::getAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedData::setXScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::setXScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::setXScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("setXScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setXScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setXScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::setXScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedData::getXScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::getXScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::getXScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("getXScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getXScale();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getXScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::getXScale", context, engine);
             return result;
         }
          QScriptValue

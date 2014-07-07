@@ -306,6 +306,9 @@ public:
     virtual void setUnit(RS::Unit unit);
     virtual RS::Unit getUnit() const;
 
+    virtual void setDimensionFont(const QString& f);
+    virtual QString getDimensionFont() const;
+
     virtual void setLinetypeScale(double v);
     virtual double getLinetypeScale() const;
 

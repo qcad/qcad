@@ -51,6 +51,7 @@ public:
     static RPropertyTypeId PropertyDrawOrder;
 
     static RPropertyTypeId PropertyAngle;
+    static RPropertyTypeId PropertyXScale;
     static RPropertyTypeId PropertyBold;
     static RPropertyTypeId PropertyFontName;
     static RPropertyTypeId PropertyHAlign;

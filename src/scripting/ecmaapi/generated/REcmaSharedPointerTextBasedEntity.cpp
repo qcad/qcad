@@ -142,6 +142,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
             
+            REcmaHelper::registerFunction(&engine, proto, setXScale, "setXScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, getXScale, "getXScale");
+            
             REcmaHelper::registerFunction(&engine, proto, setSimple, "setSimple");
             
             REcmaHelper::registerFunction(&engine, proto, isSimple, "isSimple");
@@ -240,6 +244,10 @@
             
             ctor.setProperty("PropertyAngle",
                 qScriptValueFromValue(&engine, RTextBasedEntity::PropertyAngle),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyXScale",
+                qScriptValueFromValue(&engine, RTextBasedEntity::PropertyXScale),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyBold",
@@ -2629,6 +2637,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedEntity::getAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTextBasedEntity::setXScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedEntity::setXScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedEntity::setXScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedEntity* self = 
+                        getSelf("setXScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setXScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedEntity.setXScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedEntity::setXScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTextBasedEntity::getXScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedEntity::getXScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedEntity::getXScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedEntity* self = 
+                        getSelf("getXScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getXScale();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedEntity.getXScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedEntity::getXScale", context, engine);
             return result;
         }
          QScriptValue

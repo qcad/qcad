@@ -38,6 +38,7 @@ RPropertyTypeId RTextBasedEntity::PropertyPlainText;
 RPropertyTypeId RTextBasedEntity::PropertyFontName;
 RPropertyTypeId RTextBasedEntity::PropertyHeight;
 RPropertyTypeId RTextBasedEntity::PropertyAngle;
+RPropertyTypeId RTextBasedEntity::PropertyXScale;
 RPropertyTypeId RTextBasedEntity::PropertyBold;
 RPropertyTypeId RTextBasedEntity::PropertyItalic;
 RPropertyTypeId RTextBasedEntity::PropertyLineSpacingFactor;
@@ -72,6 +73,7 @@ void RTextBasedEntity::init() {
     RTextBasedEntity::PropertyFontName.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Font Name"));
     RTextBasedEntity::PropertyHeight.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Text Height"));
     RTextBasedEntity::PropertyAngle.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Text Angle"));
+    RTextBasedEntity::PropertyXScale.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "X Scale"));
     RTextBasedEntity::PropertyBold.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Bold"));
     RTextBasedEntity::PropertyItalic.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Italic"));
     RTextBasedEntity::PropertyLineSpacingFactor.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Line Spacing"));
@@ -91,6 +93,7 @@ bool RTextBasedEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().fontName, value, PropertyFontName == propertyTypeId);
     ret = ret || RObject::setMember(getData().textHeight, value, PropertyHeight == propertyTypeId);
     ret = ret || RObject::setMember(getData().angle, value, PropertyAngle == propertyTypeId);
+    ret = ret || RObject::setMember(getData().xScale, value, PropertyXScale == propertyTypeId);
     ret = ret || RObject::setMember(getData().bold, value, PropertyBold == propertyTypeId);
     ret = ret || RObject::setMember(getData().italic, value, PropertyItalic == propertyTypeId);
     ret = ret || RObject::setMember(getData().lineSpacingFactor, value, PropertyLineSpacingFactor == propertyTypeId);
@@ -127,6 +130,8 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
     } else if (propertyTypeId == PropertyAngle) {
         return qMakePair(QVariant(getData().angle), RPropertyAttributes(
             RPropertyAttributes::Angle));
+    } else if (propertyTypeId == PropertyXScale) {
+        return qMakePair(QVariant(getData().xScale), RPropertyAttributes());
     } else if (propertyTypeId == PropertyBold) {
         return qMakePair(QVariant(getData().bold), RPropertyAttributes());
     } else if (propertyTypeId == PropertyItalic) {

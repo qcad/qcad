@@ -90,6 +90,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setRichText, "setRichText");
             
+            REcmaHelper::registerFunction(&engine, proto, isStyle, "isStyle");
+            
+            REcmaHelper::registerFunction(&engine, proto, setStyle, "setStyle");
+            
             REcmaHelper::registerFunction(&engine, proto, mixWith, "mixWith");
             
             REcmaHelper::registerFunction(&engine, proto, isMixed, "isMixed");
@@ -1428,6 +1432,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::setRichText", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::isStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::isStyle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::isStyle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("isStyle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isStyle();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.isStyle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::isStyle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::setStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::setStyle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::setStyle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("setStyle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setStyle(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.setStyle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::setStyle", context, engine);
             return result;
         }
          QScriptValue

@@ -213,8 +213,14 @@ dir="./entity" filename="RDimensionEntity.h">
     </type>
     <name>PropertyAutoTextPos</name>
   </decl>;</decl_stmt>
-  <comment type="line">//static RPropertyTypeId
-  PropertyFontName;</comment>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
+    <name>PropertyFontName</name>
+  </decl>;</decl_stmt>
   <comment type="line">//static RPropertyTypeId
   PropertyHeight;</comment>
   <comment type="line">//static RPropertyTypeId

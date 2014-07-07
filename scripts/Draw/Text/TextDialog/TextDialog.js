@@ -246,7 +246,7 @@ TextDialog.prototype.show =  function(textDataIn) {
     if (!isNull(textDataIn)) {
         cbSimpleText.checked = textDataIn.isSimple();
         this.initialColor = textDataIn.getColor();
-        this.activateFont(comboMainFont, textDataIn.getFontName());
+        activateFont(comboMainFont, textDataIn.getFontName());
         checkMainBold.checked = textDataIn.isBold();
         checkMainItalic.checked = textDataIn.isItalic();
         editMainHeight.setValue(textDataIn.getTextHeight());
@@ -913,7 +913,7 @@ TextDialog.prototype.currentCharFormatChanged = function(format) {
  * Called when user changes the current font or the font under the cursor changed.
  */
 TextDialog.prototype.fontChanged = function(font) {
-    this.activateFont(this.comboFont, font.family());
+    activateFont(this.comboFont, font.family());
 
     this.comboSize.blockSignals(true);
     this.comboSize.setEditText("%1".arg(font.pointSizeF() / this.fontHeightFactor));
@@ -1011,10 +1011,10 @@ TextDialog.prototype.updateRichText = function(force) {
     }
 };
 
-TextDialog.prototype.activateFont = function(fontComboBox, fontName) {
-    var index = fontComboBox.findText(fontName, Qt.MatchFixedString);
-    fontComboBox.setCurrentIndex(index);
-};
+//TextDialog.prototype.activateFont = function(fontComboBox, fontName) {
+//    var index = fontComboBox.findText(fontName, Qt.MatchFixedString);
+//    fontComboBox.setCurrentIndex(index);
+//};
 
 TextDialog.prototype.getSpecialCharsMap = function() {
     if (isNull(TextDialog.specialChars)) {

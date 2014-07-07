@@ -18,6 +18,7 @@
  */
 #include "RDimensionEntity.h"
 #include "RExporter.h"
+#include "RPluginLoader.h"
 
 RPropertyTypeId RDimensionEntity::PropertyCustom;
 RPropertyTypeId RDimensionEntity::PropertyHandle;
@@ -40,7 +41,7 @@ RPropertyTypeId RDimensionEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimensionEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimensionEntity::PropertyLinearFactor;
 RPropertyTypeId RDimensionEntity::PropertyAutoTextPos;
-//RPropertyTypeId RDimensionEntity::PropertyFontName;
+RPropertyTypeId RDimensionEntity::PropertyFontName;
 //RPropertyTypeId RDimensionEntity::PropertyHeight;
 //RPropertyTypeId RDimensionEntity::PropertyAngle;
 //RPropertyTypeId RDimensionEntity::PropertyLineSpacingFactor;
@@ -78,7 +79,7 @@ void RDimensionEntity::init() {
     RDimensionEntity::PropertyMiddleOfTextX.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimensionEntity::PropertyMiddleOfTextY.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RDimensionEntity::PropertyMiddleOfTextZ.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "Z"));
-//    RDimensionEntity::PropertyFontName.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Font Name"));
+//    RDimensionEntity::PropertyFontName.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Font"));
 //    RDimensionEntity::PropertyHeight.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
 //    RDimensionEntity::PropertyAngle.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
 //    RDimensionEntity::PropertyLineSpacingFactor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Line Spacing"));
@@ -121,7 +122,9 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().lowerTolerance, value, PropertyLowerTolerance == propertyTypeId);
     ret = ret || RObject::setMember(getData().linearFactor, value, PropertyLinearFactor == propertyTypeId);
     ret = ret || RObject::setMember(getData().autoTextPos, value, PropertyAutoTextPos == propertyTypeId);
-//    ret = ret || RObject::setMember(getData().fontName, value, PropertyFontName == propertyTypeId);
+//    if (RPluginLoader::hasPlugin("DWG")) {
+//        ret = ret || RObject::setMember(getData().fontName, value, PropertyFontName == propertyTypeId);
+//    }
 //    ret = ret || RObject::setMember(getData().textHeight, value, PropertyHeight == propertyTypeId);
 //    ret = ret || RObject::setMember(getData().angle, value, PropertyAngle == propertyTypeId);
 //    ret = ret || RObject::setMember(getData().lineSpacingFactor, value, PropertyLineSpacingFactor == propertyTypeId);
@@ -197,10 +200,11 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
         return qMakePair(QVariant(getData().autoTextPos), RPropertyAttributes(RPropertyAttributes::Invisible));
     }
 
-    /*else if (propertyTypeId == PropertyFontName) {
-        return qMakePair(QVariant(getData().fontName),
-            RPropertyAttributes(RPropertyAttributes::Style));
-    } else if (propertyTypeId == PropertyHeight) {
+//    else if (propertyTypeId == PropertyFontName) {
+//        return qMakePair(QVariant(getData().fontName),
+//            RPropertyAttributes(RPropertyAttributes::Style));
+//    }
+    /*else if (propertyTypeId == PropertyHeight) {
         return qMakePair(QVariant(getData().textHeight), RPropertyAttributes());
     } else if (propertyTypeId == PropertyAngle) {
         return qMakePair(QVariant(getData().angle), RPropertyAttributes(
@@ -250,6 +254,7 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview) const {
     // export text label:
     RTextData& textData = getData().getTextData();
     //qDebug() << "export dim: angle: " << textData.getAngle();
+    e.setBrush(brush);
     e.exportPainterPathSource(textData);
 
     e.setBrush(Qt::NoBrush);

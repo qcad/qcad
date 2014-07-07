@@ -969,7 +969,8 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
     var attributes = this.getPropertyAttributes(propertyTypeId);
 
     if (isNull(control)) {
-        if (propertyTypeId.getId()===RTextEntity.PropertyFontName.getId()) {
+        //if (propertyTypeId.getId()===RTextEntity.PropertyFontName.getId()) {
+        if (attributes.isStyle()) {
 //            control = new QComboBox(this.geometryGroup);
             control = new QFontComboBox(this.geometryGroup);
             //control.sizeAdjustPolicy = QComboBox.AdjustToContentsOnFirstShow;

@@ -271,7 +271,22 @@ dir="./core" filename="RPluginLoader.h">
     <name>QString</name>
   </type>
   <name>getPluginsPath</name>
-  <parameter_list>()</parameter_list>;</function_decl></public>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>bool</name>
+  </type>
+  <name>hasPlugin</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>name</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>
   <private>private: 
   <decl_stmt>
   <decl>

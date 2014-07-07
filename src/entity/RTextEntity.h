@@ -59,6 +59,7 @@ public:
     static RPropertyTypeId PropertyFontName;
     static RPropertyTypeId PropertyHeight;
     static RPropertyTypeId PropertyAngle;
+    static RPropertyTypeId PropertyXScale;
     static RPropertyTypeId PropertyBold;
     static RPropertyTypeId PropertyItalic;
     static RPropertyTypeId PropertyLineSpacingFactor;

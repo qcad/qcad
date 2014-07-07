@@ -73,6 +73,7 @@ QString RTextRenderer::rxPlusMinus = "%%[pP]";
 QString RTextRenderer::escPlusMinus = "%%p";
 QString RTextRenderer::rxDiameter = "%%[cC]";
 QString RTextRenderer::escDiameter = "%%c";
+QString RTextRenderer::rxUnderlined = "%%[uU]";
 QString RTextRenderer::rxUnicode = "\\\\[Uu]\\+([0-9a-fA-F]{4})";
 
 QString RTextRenderer::rxAll = "("
@@ -101,6 +102,7 @@ QString RTextRenderer::rxAll = "("
     + RTextRenderer::rxDegree + "|"
     + RTextRenderer::rxPlusMinus + "|"
     + RTextRenderer::rxDiameter + "|"
+    + RTextRenderer::rxUnderlined + "|"
     + RTextRenderer::rxUnicode
     + ")";
 
@@ -146,6 +148,8 @@ void RTextRenderer::renderSimple() {
     text.replace(QRegExp(RTextRenderer::rxPlusMinus), RTextRenderer::chPlusMinus);
     // diameter:
     text.replace(QRegExp(RTextRenderer::rxDiameter), RTextRenderer::chDiameter);
+    // underlined:
+    text.replace(QRegExp(RTextRenderer::rxUnderlined), "");
     // unicode:
     text = RDxfServices::parseUnicode(text);
 //    QRegExp reg;
@@ -202,11 +206,11 @@ void RTextRenderer::renderSimple() {
                 horizontalAdvanceNoSpacing,
                 ascent, descent);
 
-    width = horizontalAdvanceNoSpacing * textHeight;
+    width = horizontalAdvanceNoSpacing * textHeight * textData.getXScale();
 
     // transform to scale text from 1.0 to current text height:
     QTransform sizeTransform;
-    sizeTransform.scale(textHeight, textHeight);
+    sizeTransform.scale(textHeight * textData.getXScale(), textHeight);
 
     // transform paths of text:
     boundingBox = RBox();
@@ -835,6 +839,12 @@ void RTextRenderer::render() {
         reg.setPattern(rxDiameter);
         if (reg.exactMatch(formatting)) {
             textBlock += chDiameter;
+            continue;
+        }
+
+        // underlined:
+        reg.setPattern(rxUnderlined);
+        if (reg.exactMatch(formatting)) {
             continue;
         }
 

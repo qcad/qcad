@@ -36,6 +36,7 @@ RPropertyTypeId RDimOrdinateEntity::PropertyText;
 RPropertyTypeId RDimOrdinateEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimOrdinateEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimOrdinateEntity::PropertyMeasuredValue;
+RPropertyTypeId RDimOrdinateEntity::PropertyFontName;
 
 RPropertyTypeId RDimOrdinateEntity::PropertyOriginX;
 RPropertyTypeId RDimOrdinateEntity::PropertyOriginY;
@@ -77,6 +78,7 @@ void RDimOrdinateEntity::init() {
     RDimOrdinateEntity::PropertyUpperTolerance.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyUpperTolerance);
     RDimOrdinateEntity::PropertyLowerTolerance.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyLowerTolerance);
     RDimOrdinateEntity::PropertyMeasuredValue.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyMeasuredValue);
+    RDimOrdinateEntity::PropertyFontName.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyFontName);
 
     RDimOrdinateEntity::PropertyOriginX.generateId(typeid(RDimOrdinateEntity), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimOrdinateEntity::PropertyOriginY.generateId(typeid(RDimOrdinateEntity), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "Y"));

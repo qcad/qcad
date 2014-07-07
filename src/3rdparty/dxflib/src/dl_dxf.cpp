@@ -4296,7 +4296,7 @@ void DL_Dxf::writeUcs(DL_WriterA& dw) {
  * Note that this method currently only writes a faked DIMSTYLE section
  * to make the file readable by Aut*cad.
  */
-void DL_Dxf::writeDimStyle(DL_WriterA& dw, 
+void DL_Dxf::writeDimStyle(DL_WriterA& dw,
                     double dimasz, double dimexe, double dimexo,
                     double dimgap, double dimtxt) {
 

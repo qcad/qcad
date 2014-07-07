@@ -203,6 +203,14 @@ dir="./entity" filename="RTextEntity.h">
       <name>static</name>
       <name>RPropertyTypeId</name>
     </type>
+    <name>PropertyXScale</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
     <name>PropertyBold</name>
   </decl>;</decl_stmt>
   <decl_stmt>

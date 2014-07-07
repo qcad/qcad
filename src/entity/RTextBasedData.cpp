@@ -46,6 +46,7 @@ RTextBasedData::RTextBasedData(RDocument *document)
    bold(false),
    italic(false),
    angle(0.0),
+   xScale(1.0),
    simple(false),
    height(RNANDOUBLE), width(RNANDOUBLE), dirty(true), gotDraft(false) {
 }
@@ -101,6 +102,7 @@ RTextBasedData::RTextBasedData(const RVector& position,
       bold(bold),
       italic(italic),
       angle(angle),
+      xScale(1.0),
       simple(simple),
       height(RNANDOUBLE), width(RNANDOUBLE),
       dirty(true), gotDraft(false) {
@@ -878,6 +880,7 @@ QString RTextBasedData::toRichText(const QString& escapedText, const QFont& main
 QDebug operator<<(QDebug dbg, const RTextBasedData& t) {
     dbg.nospace() << "RTextBasedData("
                   << "text: " << t.text
+                  << ", font: " << t.fontName
                   << ", position: " << t.position
                   << ", alignmnet point: " << t.alignmentPoint
                   << ", angle: " << RMath::rad2deg(t.angle)

@@ -62,7 +62,7 @@ public:
 
     static RPropertyTypeId PropertyLinearFactor;
     static RPropertyTypeId PropertyAutoTextPos;
-    //static RPropertyTypeId PropertyFontName;
+    static RPropertyTypeId PropertyFontName;
     //static RPropertyTypeId PropertyHeight;
     //static RPropertyTypeId PropertyAngle;
     //static RPropertyTypeId PropertyLineSpacingFactor;

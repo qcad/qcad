@@ -185,3 +185,14 @@ QString RPluginLoader::getPluginsPath() {
     }
     return pluginsDir.absolutePath();
 }
+
+bool RPluginLoader::hasPlugin(const QString& name) {
+    for (int i=0; i<countPlugins(); i++) {
+        RPluginInfo pluginInfo = getPluginInfo(i);
+        QString n = pluginInfo.get("Name", "").toString();
+        if (n==name) {
+            return true;
+        }
+    }
+    return false;
+}

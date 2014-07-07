@@ -222,6 +222,15 @@ public:
         return angle;
     }
 
+    void setXScale(double xScale) {
+        this->xScale = xScale;
+        update();
+    }
+
+    double getXScale() const {
+        return xScale;
+    }
+
     void setSimple(bool on) {
         simple = on;
         update();
@@ -295,6 +304,7 @@ protected:
     bool bold;
     bool italic;
     double angle;
+    double xScale;
     bool simple;
 
     mutable double height;

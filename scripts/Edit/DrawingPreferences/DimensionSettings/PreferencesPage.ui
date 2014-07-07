@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>592</width>
-    <height>605</height>
+    <width>666</width>
+    <height>750</height>
    </rect>
   </property>
   <property name="widgetResizable">
@@ -18,8 +18,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>590</width>
-     <height>603</height>
+     <width>2752</width>
+     <height>733</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -295,12 +295,31 @@
      </widget>
     </item>
     <item>
+     <widget class="QGroupBox" name="FontGroup">
+      <property name="title">
+       <string>Font</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>Dimension label font:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFontComboBox" name="DimensionFont"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
      <widget class="QGroupBox" name="gbDimensionFormat">
       <property name="title">
        <string>Label Format</string>
       </property>
       <layout class="QGridLayout" name="_4">
-       <item row="0" column="0">
+       <item row="1" column="0">
         <widget class="QGroupBox" name="gbLength">
          <property name="title">
           <string>Linear Dimensions</string>
@@ -360,7 +379,7 @@
          </layout>
         </widget>
        </item>
-       <item row="0" column="1">
+       <item row="1" column="1">
         <widget class="QGroupBox" name="gbAngle">
          <property name="title">
           <string>Angular Dimensions</string>
@@ -420,7 +439,7 @@
          </layout>
         </widget>
        </item>
-       <item row="1" column="0">
+       <item row="2" column="0">
         <widget class="QGroupBox" name="gbLengthPreview">
          <property name="title">
           <string>Preview</string>
@@ -439,7 +458,7 @@
          </layout>
         </widget>
        </item>
-       <item row="1" column="1">
+       <item row="2" column="1">
         <widget class="QGroupBox" name="gbAnglePreview">
          <property name="title">
           <string>Preview</string>

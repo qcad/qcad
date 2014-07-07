@@ -59,6 +59,7 @@ public:
     static RPropertyTypeId PropertyFontName;
     static RPropertyTypeId PropertyHeight;
     static RPropertyTypeId PropertyAngle;
+    static RPropertyTypeId PropertyXScale;
     static RPropertyTypeId PropertyBold;
     static RPropertyTypeId PropertyItalic;
     static RPropertyTypeId PropertyLineSpacingFactor;
@@ -204,6 +205,14 @@ public:
 
     double getAngle() const {
         return getData().getAngle();
+    }
+
+    void setXScale(double xScale) {
+        getData().setXScale(xScale);
+    }
+
+    double getXScale() const {
+        return getData().getXScale();
     }
 
     void setSimple(bool on) {

@@ -1200,7 +1200,6 @@ RLineweight::Lineweight RMemoryStorage::getMaxLineweight() const {
 }
 
 void RMemoryStorage::setUnit(RS::Unit unit) {
-    //RStorage::setUnit(unit);
     this->unit = unit;
 
     setModified(true);
@@ -1208,6 +1207,15 @@ void RMemoryStorage::setUnit(RS::Unit unit) {
 
 RS::Unit RMemoryStorage::getUnit() const {
     return unit;
+}
+
+void RMemoryStorage::setDimensionFont(const QString& f) {
+    this->dimensionFont = f;
+    setModified(true);
+}
+
+QString RMemoryStorage::getDimensionFont() const {
+    return dimensionFont;
 }
 
 void RMemoryStorage::setLinetypeScale(double v) {

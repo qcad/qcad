@@ -188,6 +188,10 @@
                 qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyAutoTextPos),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyFontName",
+                qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyFontName),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyDimensionLinePosX",
                 qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyDimensionLinePosX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

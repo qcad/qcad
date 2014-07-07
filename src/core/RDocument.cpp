@@ -263,6 +263,14 @@ RS::Unit RDocument::getUnit() const {
     return storage.getUnit();
 }
 
+void RDocument::setDimensionFont(const QString& f) {
+    storage.setDimensionFont(f);
+}
+
+QString RDocument::getDimensionFont() const {
+    return storage.getDimensionFont();
+}
+
 void RDocument::setLinetypeScale(double v) {
     storage.setLinetypeScale(v);
 }

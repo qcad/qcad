@@ -152,6 +152,10 @@
                 qScriptValueFromValue(&engine, RAttributeDefinitionEntity::PropertyAngle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyXScale",
+                qScriptValueFromValue(&engine, RAttributeDefinitionEntity::PropertyXScale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyBold",
                 qScriptValueFromValue(&engine, RAttributeDefinitionEntity::PropertyBold),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

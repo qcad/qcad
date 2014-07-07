@@ -1706,6 +1706,11 @@ function initFontComboBox(comboBox) {
     }
 }
 
+function activateFont(fontComboBox, fontName) {
+    var index = fontComboBox.findText(fontName, Qt.MatchFixedString);
+    fontComboBox.setCurrentIndex(index);
+}
+
 function setMainWindow(w) {
     global.gMainWindow = w;
 }
@@ -1774,14 +1779,7 @@ function addDirtyFlag(title) {
 }
 
 function hasPlugin(name) {
-    for (var i=0; i<RPluginLoader.countPlugins(); i++) {
-        var pluginInfo = RPluginLoader.getPluginInfo(i);
-        var n = pluginInfo.get("Name", "");
-        if (n===name) {
-            return true;
-        }
-    }
-    return false;
+    return RPluginLoader.hasPlugin(name);
 }
 
 /**

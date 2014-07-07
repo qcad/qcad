@@ -183,6 +183,10 @@
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyMeasuredValue),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyFontName",
+                qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyFontName),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyOriginX",
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyOriginX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

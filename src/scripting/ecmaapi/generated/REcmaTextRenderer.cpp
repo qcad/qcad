@@ -188,6 +188,10 @@
                 qScriptValueFromValue(&engine, RTextRenderer::escDiameter),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxUnderlined",
+                qScriptValueFromValue(&engine, RTextRenderer::rxUnderlined),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxUnicode",
                 qScriptValueFromValue(&engine, RTextRenderer::rxUnicode),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

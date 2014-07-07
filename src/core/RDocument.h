@@ -275,6 +275,9 @@ public:
     void setUnit(RS::Unit unit);
     RS::Unit getUnit() const;
 
+    void setDimensionFont(const QString& f);
+    QString getDimensionFont() const;
+
     void setLinetypeScale(double v);
     double getLinetypeScale() const;
 

@@ -165,6 +165,14 @@ public:
         setOption(RichText, on);
     }
 
+    bool isStyle() const {
+        return options.testFlag(Style);
+    }
+
+    void setStyle(bool on) {
+        setOption(Style, on);
+    }
+
     void mixWith(const RPropertyAttributes & other);
 
     bool isMixed() const {

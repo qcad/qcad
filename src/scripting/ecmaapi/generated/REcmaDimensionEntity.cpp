@@ -215,6 +215,10 @@
                 qScriptValueFromValue(&engine, RDimensionEntity::PropertyAutoTextPos),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyFontName",
+                qScriptValueFromValue(&engine, RDimensionEntity::PropertyFontName),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyAutoLabel",
                 qScriptValueFromValue(&engine, RDimensionEntity::PropertyAutoLabel),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

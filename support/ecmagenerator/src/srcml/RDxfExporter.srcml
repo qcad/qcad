@@ -77,6 +77,8 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <class_decl>class 
   <name>RSplineEntity</name>;</class_decl>
   <class_decl>class 
+  <name>RTraceEntity</name>;</class_decl>
+  <class_decl>class 
   <name>RTextEntity</name>;</class_decl>
   <comment type="block">/** * \brief Exporter for the DXF format,
   based on dxflib. * * \ingroup dxf */</comment>
@@ -487,6 +489,20 @@ dir="./io/dxf" filename="RDxfExporter.h">
       <name>const</name>
       <name>RSolidEntity</name>&amp;</type>
       <name>sol</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeTrace</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RTraceEntity</name>&amp;</type>
+      <name>t</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>

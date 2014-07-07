@@ -112,6 +112,7 @@ bool RFont::load() {
     ts.setCodec("UTF-8");
     QString line;
     int lineCount = 0;
+    double scale = 1.0;
 
     // Read line by line until we find a new letter:
     while (!ts.atEnd()) {
@@ -144,6 +145,8 @@ bool RFont::load() {
                 wordSpacing = value.toDouble();
             } else if (identifier.toLower()=="linespacingfactor") {
                 lineSpacingFactor = value.toDouble();
+            } else if (identifier.toLower()=="scale") {
+                scale = value.toDouble();
             } else if (identifier.toLower()=="author") {
                 authors.append(value);
             } else if (identifier.toLower()=="name") {
@@ -199,12 +202,12 @@ bool RFont::load() {
                     // Line:
                     if (line.at(0)=='L' && coords.size()==4) {
                         RVector startPoint(
-                                    coords.at(0).toDouble(),
-                                    coords.at(1).toDouble()
+                                    coords.at(0).toDouble()*scale,
+                                    coords.at(1).toDouble()*scale
                         );
                         RVector endPoint(
-                                    coords.at(2).toDouble(),
-                                    coords.at(3).toDouble()
+                                    coords.at(2).toDouble()*scale,
+                                    coords.at(3).toDouble()*scale
                         );
 
                         if (!pos.isValid() || !pos.equalsFuzzy(startPoint)) {
@@ -219,9 +222,9 @@ bool RFont::load() {
                     // Arc:
                     else if (line.at(0)=='A' && coords.size()==5) {
                         containsArcs = true;
-                        double cx = coords.at(0).toDouble();
-                        double cy = coords.at(1).toDouble();
-                        double r = coords.at(2).toDouble();
+                        double cx = coords.at(0).toDouble()*scale;
+                        double cy = coords.at(1).toDouble()*scale;
+                        double r = coords.at(2).toDouble()*scale;
                         double a1 = coords.at(3).toDouble();
                         double a2 = coords.at(4).toDouble();
                         bool reversed = (line.at(1)=='R');

@@ -60,6 +60,7 @@ public:
 
     static RPropertyTypeId PropertyLinearFactor;
     static RPropertyTypeId PropertyAutoTextPos;
+    static RPropertyTypeId PropertyFontName;
 
     static RPropertyTypeId PropertyCenterPointX;
     static RPropertyTypeId PropertyCenterPointY;

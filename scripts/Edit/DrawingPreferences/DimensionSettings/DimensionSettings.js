@@ -180,7 +180,6 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
 
     // init dimension settings from document:
     var keepProportions = true;
-
     var dimtxt = 0.0;
     for (var i=0; i<DimensionSettings.dimx.length; i++) {
         var item = DimensionSettings.dimx[i];
@@ -254,6 +253,18 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
 
     // update unit labels, preview:
     DimensionSettings.updateUnit(unit);
+
+    if (hasPlugin("DWG")) {
+        widgets["DimensionFont"].setProperty("Loaded", true);
+        widgets["DimensionFont"].editable = false;
+        //widgets["DimensionFont"].setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred);
+        initFontComboBox(widgets["DimensionFont"]);
+        var dimFont = document.getDimensionFont();
+        activateFont(widgets["DimensionFont"], dimFont.isEmpty() ? "Standard" : dimFont);
+    }
+    else {
+        widgets["FontGroup"].visible = false;
+    }
 
     // update previews:
     //DimensionSettings.updateLinearPreview(widgets);
@@ -554,6 +565,8 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
     document.setKnownVariable(RS.DIMDEC, widgets["LinearPrecision"].currentIndex);
     document.setKnownVariable(RS.DIMAUNIT, widgets["AngularFormat"].currentIndex);
     document.setKnownVariable(RS.DIMADEC, widgets["AngularPrecision"].currentIndex);
+    document.setDimensionFont(widgets["DimensionFont"].currentText);
+    qDebug("dim font: ", widgets["DimensionFont"].currentText);
 
     // show leading / trailing zeroes:
     if (widgets["LinearShowTrailingZeros"].checked) {

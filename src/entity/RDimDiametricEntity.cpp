@@ -40,6 +40,7 @@ RPropertyTypeId RDimDiametricEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimDiametricEntity::PropertyLinearFactor;
 RPropertyTypeId RDimDiametricEntity::PropertyAutoTextPos;
+RPropertyTypeId RDimDiametricEntity::PropertyFontName;
 
 RPropertyTypeId RDimDiametricEntity::PropertyChordPointX;
 RPropertyTypeId RDimDiametricEntity::PropertyChordPointY;
@@ -79,6 +80,7 @@ void RDimDiametricEntity::init() {
 
     RDimDiametricEntity::PropertyLinearFactor.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyLinearFactor);
     RDimDiametricEntity::PropertyAutoTextPos.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyAutoTextPos);
+    RDimDiametricEntity::PropertyFontName.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyFontName);
 
     RDimDiametricEntity::PropertyChordPointX.generateId(typeid(RDimDiametricEntity), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimDiametricEntity::PropertyChordPointY.generateId(typeid(RDimDiametricEntity), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "Y"));

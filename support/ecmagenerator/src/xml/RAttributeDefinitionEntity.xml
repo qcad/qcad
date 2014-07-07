@@ -130,6 +130,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyAngle" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyXScale" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyBold" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyFontName" type="RPropertyTypeId"

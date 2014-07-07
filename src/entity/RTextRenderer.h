@@ -211,6 +211,7 @@ public:
     static QString escPlusMinus;
     static QString rxDiameter;
     static QString escDiameter;
+    static QString rxUnderlined;
     static QString rxUnicode;
 
     static QString rxAll;

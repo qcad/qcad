@@ -61,6 +61,7 @@ public:
 
     static RPropertyTypeId PropertyLinearFactor;
     static RPropertyTypeId PropertyAutoTextPos;
+    static RPropertyTypeId PropertyFontName;
 
     static RPropertyTypeId PropertyChordPointX;
     static RPropertyTypeId PropertyChordPointY;

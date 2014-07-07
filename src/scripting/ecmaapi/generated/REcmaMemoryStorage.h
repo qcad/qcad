@@ -275,6 +275,12 @@
         getUnit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setDimensionFont
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimensionFont
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setLinetypeScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

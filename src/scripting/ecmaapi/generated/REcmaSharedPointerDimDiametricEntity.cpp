@@ -185,6 +185,10 @@
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyAutoTextPos),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyFontName",
+                qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyFontName),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyChordPointX",
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyChordPointX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

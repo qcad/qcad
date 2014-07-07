@@ -181,6 +181,10 @@
                 qScriptValueFromValue(&engine, RDimRadialEntity::PropertyAutoTextPos),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyFontName",
+                qScriptValueFromValue(&engine, RDimRadialEntity::PropertyFontName),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyCenterPointX",
                 qScriptValueFromValue(&engine, RDimRadialEntity::PropertyCenterPointX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

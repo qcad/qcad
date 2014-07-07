@@ -39,6 +39,7 @@ RPropertyTypeId RDimRadialEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimRadialEntity::PropertyLinearFactor;
 RPropertyTypeId RDimRadialEntity::PropertyAutoTextPos;
+RPropertyTypeId RDimRadialEntity::PropertyFontName;
 
 RPropertyTypeId RDimRadialEntity::PropertyCenterPointX;
 RPropertyTypeId RDimRadialEntity::PropertyCenterPointY;
@@ -77,6 +78,7 @@ void RDimRadialEntity::init() {
 
     RDimRadialEntity::PropertyLinearFactor.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyLinearFactor);
     RDimRadialEntity::PropertyAutoTextPos.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyAutoTextPos);
+    RDimRadialEntity::PropertyFontName.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyFontName);
 
     RDimRadialEntity::PropertyCenterPointX.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true);
     RDimRadialEntity::PropertyCenterPointY.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true);

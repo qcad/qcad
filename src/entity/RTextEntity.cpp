@@ -38,6 +38,7 @@ RPropertyTypeId RTextEntity::PropertyPlainText;
 RPropertyTypeId RTextEntity::PropertyFontName;
 RPropertyTypeId RTextEntity::PropertyHeight;
 RPropertyTypeId RTextEntity::PropertyAngle;
+RPropertyTypeId RTextEntity::PropertyXScale;
 RPropertyTypeId RTextEntity::PropertyBold;
 RPropertyTypeId RTextEntity::PropertyItalic;
 RPropertyTypeId RTextEntity::PropertyLineSpacingFactor;
@@ -72,6 +73,7 @@ void RTextEntity::init() {
     RTextEntity::PropertyFontName.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyFontName);
     RTextEntity::PropertyHeight.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyHeight);
     RTextEntity::PropertyAngle.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyAngle);
+    RTextEntity::PropertyXScale.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyXScale);
     RTextEntity::PropertyBold.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyBold);
     RTextEntity::PropertyItalic.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyItalic);
     RTextEntity::PropertyLineSpacingFactor.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyLineSpacingFactor);

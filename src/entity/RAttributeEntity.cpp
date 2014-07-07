@@ -38,6 +38,7 @@ RPropertyTypeId RAttributeEntity::PropertyTag;
 RPropertyTypeId RAttributeEntity::PropertyFontName;
 RPropertyTypeId RAttributeEntity::PropertyHeight;
 RPropertyTypeId RAttributeEntity::PropertyAngle;
+RPropertyTypeId RAttributeEntity::PropertyXScale;
 RPropertyTypeId RAttributeEntity::PropertyBold;
 RPropertyTypeId RAttributeEntity::PropertyItalic;
 RPropertyTypeId RAttributeEntity::PropertyLineSpacingFactor;
@@ -72,6 +73,7 @@ void RAttributeEntity::init() {
     RAttributeEntity::PropertyFontName.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyFontName);
     RAttributeEntity::PropertyHeight.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyHeight);
     RAttributeEntity::PropertyAngle.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyAngle);
+    RAttributeEntity::PropertyXScale.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyXScale);
     RAttributeEntity::PropertyBold.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyBold);
     RAttributeEntity::PropertyItalic.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyItalic);
     RAttributeEntity::PropertyLineSpacingFactor.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyLineSpacingFactor);

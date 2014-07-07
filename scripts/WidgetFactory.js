@@ -251,7 +251,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
             value = c.checkedButton().objectName;
         }
         */
-        if (isOfType(c, QComboBox)) {
+        if (isOfType(c, QComboBox) || isOfType(c, QFontComboBox)) {
             var forceSaveText = false;
             var forceSaveIndex = false;
             if (typeof(c["ForceSaveText"]) != "undefined"
@@ -460,6 +460,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             // never process internal children of these widgets:
             if (!isOfType(c, QSpinBox) &&
                 !isOfType(c, QComboBox) &&
+                !isOfType(c, QFontComboBox) &&
                 !isOfType(c, QPlainTextEdit) &&
                 !isOfType(c, RMathLineEdit)) {
 
@@ -652,7 +653,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             }
             continue;
         }
-        if (isOfType(c, QComboBox) && !c.editable) {
+        if ((isOfType(c, QComboBox) && !c.editable) || isOfType(c, QFontComboBox)) {
             WidgetFactory.connect(c['currentIndexChanged(int)'], signalReceiver, c.objectName);
             c["currentIndexChanged(int)"].connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
             hasData = false;

@@ -427,6 +427,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RS::Unit" isPureVirtual="false" />
     </method>
+    <method name="setDimensionFont" cppName="setDimensionFont"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="f"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getDimensionFont" cppName="getDimensionFont"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="setLinetypeScale" cppName="setLinetypeScale"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

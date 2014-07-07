@@ -113,6 +113,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" />
     <property name="escDiameter" type="QString" isConst="false"
     isStatic="true" />
+    <property name="rxUnderlined" type="QString" isConst="false"
+    isStatic="true" />
     <property name="rxUnicode" type="QString" isConst="false"
     isStatic="true" />
     <property name="rxAll" type="QString" isConst="false"

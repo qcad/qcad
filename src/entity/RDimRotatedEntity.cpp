@@ -39,6 +39,7 @@ RPropertyTypeId RDimRotatedEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimRotatedEntity::PropertyLinearFactor;
 RPropertyTypeId RDimRotatedEntity::PropertyAutoTextPos;
+RPropertyTypeId RDimRotatedEntity::PropertyFontName;
 
 RPropertyTypeId RDimRotatedEntity::PropertyDimensionLinePosX;
 RPropertyTypeId RDimRotatedEntity::PropertyDimensionLinePosY;
@@ -83,6 +84,7 @@ void RDimRotatedEntity::init() {
 
     RDimRotatedEntity::PropertyLinearFactor.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyLinearFactor);
     RDimRotatedEntity::PropertyAutoTextPos.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyAutoTextPos);
+    RDimRotatedEntity::PropertyFontName.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyFontName);
 
     RDimRotatedEntity::PropertyDimensionLinePosX.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimRotatedEntity::PropertyDimensionLinePosY.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "Y"));

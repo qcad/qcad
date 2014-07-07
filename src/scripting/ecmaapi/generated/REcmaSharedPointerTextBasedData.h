@@ -171,6 +171,12 @@
         getAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setXScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getXScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setSimple
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
