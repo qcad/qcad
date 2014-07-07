@@ -895,7 +895,7 @@ RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
         lss = RS::Exact;
     }
 
-    t = data.text.c_str();
+    t = decode(data.text.c_str());
     t.replace("^ ", "^");
     dxfServices.fixQCad2String(t);
     QString uTol, lTol;

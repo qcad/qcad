@@ -108,8 +108,9 @@ public:
 
     virtual bool deleteObject(RObject::Id objectId);
     virtual bool setUndoStatus(RObject::Id objectId, bool status);
+    virtual QString getDimensionFont() const;
 
-    QVariant getKnownVariable(RS::KnownVariable key) const;
+    virtual QVariant getKnownVariable(RS::KnownVariable key) const;
 
     virtual bool isInBackStorage(RObject::Id object);
 

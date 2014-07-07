@@ -158,6 +158,12 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     qDebug() << "writing styles...";
     QList<DL_StyleData> uniqueTextStyles;
 
+    QString dimFont;
+    dimFont = document->getDimensionFont();
+    if (dimFont.toLower()=="standard") {
+        dimFont = "txt";
+    }
+
     // add text style for dimensions:
     DL_StyleData style("Standard",
                        0,    // flags
@@ -166,7 +172,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
                        0.0,  // oblique angle
                        0,    // text generation flags
                        2.5,  // last height used
-                       "txt", // primary font file
+                       (const char*)dimFont.toLocal8Bit(), //"txt", // primary font file
                        ""    // big font file
                        );
     style.bold = false;

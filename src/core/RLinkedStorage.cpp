@@ -403,3 +403,10 @@ bool RLinkedStorage::isInBackStorage(RObject::Id objectId) {
     }
     return false;
 }
+
+QString RLinkedStorage::getDimensionFont() const {
+    if (dimensionFont.isEmpty()) {
+        return backStorage->getDimensionFont();
+    }
+    return dimensionFont;
+}
