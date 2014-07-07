@@ -5,7 +5,7 @@
     <message>
         <location filename="../Circle2TR.js" line="+68"/>
         <source>First line, arc or circle</source>
-        <translation type="unfinished"/>
+        <translation>第一条线、弧线或圆</translation>
     </message>
     <message>
         <location line="+10"/>

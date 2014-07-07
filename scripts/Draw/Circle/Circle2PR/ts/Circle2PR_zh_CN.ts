@@ -51,12 +51,12 @@
     <message>
         <location filename="../Circle2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation type="unfinished"/>
+        <translation>点和半径(&amp;2)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from 2 points and radius</source>
-        <translation type="unfinished"/>
+        <translation>按2个点和半径画弧线</translation>
     </message>
 </context>
 </TS>
