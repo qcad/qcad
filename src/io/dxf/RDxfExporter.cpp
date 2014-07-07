@@ -159,10 +159,10 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     QList<DL_StyleData> uniqueTextStyles;
 
     QString dimFont;
-    dimFont = document->getDimensionFont();
-    if (dimFont.toLower()=="standard") {
+    //dimFont = document->getDimensionFont();
+    //if (dimFont.toLower()=="standard") {
         dimFont = "txt";
-    }
+    //}
 
     // add text style for dimensions:
     DL_StyleData style("Standard",
