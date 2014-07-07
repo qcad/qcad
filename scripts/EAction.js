@@ -58,6 +58,7 @@ EAction.trBack = qsTr("Back");
 EAction.trCancel = qsTr("Cancel");
 
 EAction.crossCursor = undefined;
+EAction.noRelativeZeroResume = false;
 
 /**
  * Called when the user starts this action by clicking a button, choosing a
@@ -250,7 +251,12 @@ EAction.prototype.resumeEvent = function() {
     // restore relative zero position when returning from another command:
     var di = this.getDocumentInterface();
     if (!isNull(di) && isValidVector(this.relativeZeroPos)) {
-        di.setRelativeZero(this.relativeZeroPos);
+        if (EAction.noRelativeZeroResume===true) {
+            EAction.noRelativeZeroResume = false;
+        }
+        else {
+            di.setRelativeZero(this.relativeZeroPos);
+        }
     }
     this.relativeZeroPos = undefined;
 };
@@ -382,6 +388,33 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
  * bar.
  */
 EAction.prototype.initUiOptions = function(resume) {
+    // TODO: make this configurable:
+    var prefixChar = "/";
+
+    var optionsToolBar = EAction.getOptionsToolBar();
+    if (isNull(optionsToolBar)) {
+        return;
+    }
+
+    var children = optionsToolBar.children();
+    for (var i=0; i<children.length; i++) {
+        var child = children[i];
+        var shortCut = child.shortcut;
+        if (!isNull(shortCut) && !shortCut.isEmpty()) {
+            var str = shortCut.toString();
+            var firstChar = str[0];
+
+            // if first key is Ctrl then the string starts with Ctrl+
+            // so check for a + sign, which indicates a modifier key has been used
+            // '+' and '-' should not be used as prefix, as they zoom in and out
+            if (str.indexOf('+') === -1) {                       // no plus sign
+                if (firstChar >= '!' && firstChar <= '~') {      // isgraph()
+                    str = str.replace(firstChar, prefixChar);
+                    child.shortcut = new QKeySequence(str);
+                }
+            }
+        }
+    }
 };
 
 /**

@@ -66,6 +66,7 @@ SetRelativeZero.prototype.coordinateEvent = function(event) {
     }
 
     di.setRelativeZero(pos);
+    EAction.noRelativeZeroResume = true;
 
     if (locked) {
         di.lockRelativeZero();
