@@ -12,6 +12,22 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="0" isConst="false" />
       </variant>
     </constructor>
+    <method name="setSelectableColumn"
+    cppName="setSelectableColumn" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="c" isConst="false" />
+      </variant>
+    </method>
+    <method name="getIndex" cppName="getIndex" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QModelIndex" isPureVirtual="false">
+        <arg type="QTreeWidgetItem *" typeName="QTreeWidgetItem *"
+        name="item" isConst="false" />
+        <arg type="int" typeName="int" name="column"
+        hasDefault="true" default="0" isConst="false" />
+      </variant>
+    </method>
     <method name="contextMenuEvent" cppName="contextMenuEvent"
     specifier="protected" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

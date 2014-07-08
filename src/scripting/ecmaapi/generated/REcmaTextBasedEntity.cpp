@@ -100,7 +100,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPosition, "getPosition");
             
+            REcmaHelper::registerFunction(&engine, proto, setPosition, "setPosition");
+            
             REcmaHelper::registerFunction(&engine, proto, getAlignmentPoint, "getAlignmentPoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, setAlignmentPoint, "setAlignmentPoint");
             
             REcmaHelper::registerFunction(&engine, proto, getTextHeight, "getTextHeight");
             
@@ -1611,6 +1615,73 @@
             return result;
         }
          QScriptValue
+        REcmaTextBasedEntity::setPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedEntity::setPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedEntity::setPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedEntity* self = 
+                        getSelf("setPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RTextBasedEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPosition(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedEntity.setPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedEntity::setPosition", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaTextBasedEntity::getAlignmentPoint
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1657,6 +1728,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextBasedEntity::getAlignmentPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedEntity::setAlignmentPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedEntity::setAlignmentPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedEntity::setAlignmentPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedEntity* self = 
+                        getSelf("setAlignmentPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RTextBasedEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAlignmentPoint(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedEntity.setAlignmentPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedEntity::setAlignmentPoint", context, engine);
             return result;
         }
          QScriptValue

@@ -69,6 +69,71 @@ dir="./gui" filename="RTreeWidget.h">
   <specifier>virtual</specifier>
   <name>~RTreeWidget</name>
   <parameter_list>()</parameter_list>;</destructor_decl>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setSelectableColumn</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>int</name>
+        </type>
+        <name>c</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>selectableColumn</name>= 
+    <name>c</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>QModelIndex</name>
+    </type>
+    <name>getIndex</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>QTreeWidgetItem</name>*</type>
+        <name>item</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>column</name>=
+      <init>
+        <expr>0</expr>
+      </init></decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>indexFromItem</name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>item</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>column</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
+  <comment type="line">//void scrollToItem(const QTreeWidgetItem*
+  item, QAbstractItemView::ScrollHint hint =
+  EnsureVisible);</comment>
   <comment type="line">// void setIconOffset(int o) {</comment>
   <comment type="line">// iconOffset = o;</comment>
   <comment type="line">// }</comment></public>
@@ -183,6 +248,15 @@ dir="./gui" filename="RTreeWidget.h">
       <name>int</name>
     </type>
     <name>indexPressed</name>
+  </decl>;</decl_stmt>
+  <comment type="line">// selectable column or -1 for
+  all:</comment>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>int</name>
+    </type>
+    <name>selectableColumn</name>
   </decl>;</decl_stmt>
   <comment type="line">//int
   iconOffset;</comment></private>}</block>;</class>

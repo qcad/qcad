@@ -128,8 +128,16 @@ public:
         return getData().getPosition();
     }
 
+    void setPosition(const RVector& position) {
+        getData().setPosition(position);
+    }
+
     RVector getAlignmentPoint() const {
         return getData().getAlignmentPoint();
+    }
+
+    void setAlignmentPoint(const RVector& alignmentPoint) {
+        getData().setAlignmentPoint(alignmentPoint);
     }
 
     double getTextHeight() const {

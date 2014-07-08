@@ -95,7 +95,13 @@
         getPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getAlignmentPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAlignmentPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getTextHeight
