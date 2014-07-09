@@ -927,6 +927,11 @@ dir="./core" filename="RMetaTypes.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
+    <argument>const QTreeWidgetItem*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
     <argument>QUrl*</argument>)</argument_list>
   </macro>
   <macro>
@@ -1224,6 +1229,12 @@ dir="./core" filename="RMetaTypes.h">
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>QVariant::Type</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>
+    QAbstractItemView::ScrollHint</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

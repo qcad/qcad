@@ -202,6 +202,9 @@
         setUndoStatus
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDimensionFont
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getKnownVariable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

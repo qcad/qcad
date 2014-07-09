@@ -42,6 +42,16 @@ public:
     RTreeWidget(QWidget* parent=0);
     virtual ~RTreeWidget();
 
+    void setSelectableColumn(int c) {
+        selectableColumn = c;
+    }
+
+    QModelIndex	getIndex(QTreeWidgetItem* item, int column = 0) {
+        return indexFromItem(item, column);
+    }
+
+    //void scrollToItem(const QTreeWidgetItem* item, QAbstractItemView::ScrollHint hint = EnsureVisible);
+
 //    void setIconOffset(int o) {
 //        iconOffset = o;
 //    }
@@ -59,6 +69,8 @@ signals:
 private:
     QVariant itemPressedData;
     int indexPressed;
+    // selectable column or -1 for all:
+    int selectableColumn;
     //int iconOffset;
 };
 

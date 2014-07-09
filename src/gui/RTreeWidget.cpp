@@ -26,7 +26,7 @@
  * Default Constructor.
  */
 RTreeWidget::RTreeWidget(QWidget* parent) :
-    QTreeWidget(parent), indexPressed(-1) {
+    QTreeWidget(parent), indexPressed(-1), selectableColumn(0) {
 //#ifdef Q_OS_MAC
 //    iconOffset = 7;
 //#else
@@ -66,7 +66,7 @@ void RTreeWidget::mousePressEvent(QMouseEvent* e) {
     }
     indexPressed = index;
 
-    if (indexPressed==0) {
+    if (indexPressed==selectableColumn || selectableColumn==-1) {
         //e->ignore();
         QTreeWidget::mousePressEvent(e);
     }
@@ -80,7 +80,7 @@ void RTreeWidget::mouseReleaseEvent(QMouseEvent* e) {
         emit itemColumnClicked(item, index);
     }
 
-    if (index==0) {
+    if (index==selectableColumn || selectableColumn==-1) {
         //e->ignore();
         QTreeWidget::mouseReleaseEvent(e);
     }
@@ -93,8 +93,12 @@ void RTreeWidget::mouseMoveEvent(QMouseEvent* e) {
         itemPressedData=item->data(0, Qt::UserRole);
         emit itemColumnClicked(item, index);
     }
-    if (index==0) {
+    if (index==selectableColumn || selectableColumn==-1) {
         //e->ignore();
         QTreeWidget::mouseMoveEvent(e);
     }
 }
+
+//void RTreeWidget::scrollToItem(const QTreeWidgetItem* item, QAbstractItemView::ScrollHint hint) {
+//    QTreeWidget::scrollToItem(item, hint);
+//}

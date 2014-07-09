@@ -71,6 +71,7 @@
 	<entry key="Qt::KeyboardModifiers" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="QVariant::Type" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="QFontDatabase::WritingSystem" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="QAbstractItemView::ScrollHint" value="toNumber()" testFunction="isNumber()" cast="int" />
 
 	<entry key="QString" value="toString()" testFunction="isString()" />
 	<entry key="QColor" value="toVariant()" testFunction="isVariant()" />

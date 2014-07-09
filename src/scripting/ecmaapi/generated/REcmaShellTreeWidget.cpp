@@ -79,6 +79,159 @@
         
     
     
+      void REcmaShellTreeWidget::setSelectableColumn(
+                int c
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellTreeWidget::setSelectableColumn", engine);
+                QScriptValue _q_function = __qtscript_self.property("setSelectableColumn");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=1*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RTreeWidget::setSelectableColumn";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RTreeWidget::setSelectableColumn(
+                            c
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::setSelectableColumn", engine);
+
+                        
+                } else {
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: int, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        c
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::setSelectableColumn", engine);
+
+                    
+                }
+            }
+        
+    
+    
+      QModelIndex REcmaShellTreeWidget::getIndex(
+                QTreeWidgetItem * item, int column
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellTreeWidget::getIndex", engine);
+                QScriptValue _q_function = __qtscript_self.property("getIndex");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=2*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RTreeWidget::getIndex";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        QModelIndex ret =
+                        RTreeWidget::getIndex(
+                            item, column
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::getIndex", engine);
+
+                        
+                          return ret;
+                        
+                } else {
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    QModelIndex res = qscriptvalue_cast< 
+                        QModelIndex
+                      >(
+                    
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: QTreeWidgetItem *, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        item
+        )
+      
+
+
+
+    // type: int, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        column
+        )
+      
+                            )
+                        
+                      )
+                    
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::getIndex", engine);
+
+                    
+                            return res;
+                          
+                }
+            }
+        
+    
+    
       void REcmaShellTreeWidget::contextMenuEvent(
                 QContextMenuEvent * e
             ) {

@@ -63,6 +63,10 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, setSelectableColumn, "setSelectableColumn");
+            
+            REcmaHelper::registerFunction(&engine, proto, getIndex, "getIndex");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RTreeWidget*>(), *proto);
 
@@ -226,7 +230,181 @@
     
 
     // public methods:
-     QScriptValue REcmaTreeWidget::toString
+     QScriptValue
+        REcmaTreeWidget::setSelectableColumn
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTreeWidget::setSelectableColumn", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTreeWidget::setSelectableColumn";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTreeWidget* self = 
+                        getSelf("setSelectableColumn", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSelectableColumn(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTreeWidget.setSelectableColumn().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTreeWidget::setSelectableColumn", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTreeWidget::getIndex
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTreeWidget::getIndex", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTreeWidget::getIndex";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTreeWidget* self = 
+                        getSelf("getIndex", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QTreeWidgetItem * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    QTreeWidgetItem * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<QTreeWidgetItem >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RTreeWidget: Argument 0 is not of type QTreeWidgetItem *QTreeWidgetItem *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QModelIndex'
+    QModelIndex cppResult =
+        
+               self->getIndex(a0);
+        // return type: QModelIndex
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QTreeWidgetItem * */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    QTreeWidgetItem * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<QTreeWidgetItem >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RTreeWidget: Argument 0 is not of type QTreeWidgetItem *QTreeWidgetItem *.", context);                    
+                    }
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QModelIndex'
+    QModelIndex cppResult =
+        
+               self->getIndex(a0
+        ,
+    a1);
+        // return type: QModelIndex
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTreeWidget.getIndex().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTreeWidget::getIndex", context, engine);
+            return result;
+        }
+         QScriptValue REcmaTreeWidget::toString
     (QScriptContext *context, QScriptEngine *engine)
     
     {

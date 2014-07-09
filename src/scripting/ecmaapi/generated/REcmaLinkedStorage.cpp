@@ -173,6 +173,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setUndoStatus, "setUndoStatus");
             
+            REcmaHelper::registerFunction(&engine, proto, getDimensionFont, "getDimensionFont");
+            
             REcmaHelper::registerFunction(&engine, proto, getKnownVariable, "getKnownVariable");
             
             REcmaHelper::registerFunction(&engine, proto, isInBackStorage, "isInBackStorage");
@@ -3667,6 +3669,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinkedStorage::setUndoStatus", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinkedStorage::getDimensionFont
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getDimensionFont", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getDimensionFont";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinkedStorage* self = 
+                        getSelf("getDimensionFont", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getDimensionFont();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getDimensionFont().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getDimensionFont", context, engine);
             return result;
         }
          QScriptValue

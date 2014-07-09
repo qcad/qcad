@@ -39,6 +39,19 @@
         
     
     
+      void setSelectableColumn(
+                int c
+            );
+        
+    
+    
+      QModelIndex getIndex(
+                QTreeWidgetItem * item, int column
+        = 0
+            );
+        
+    
+    
       void contextMenuEvent(
                 QContextMenuEvent * e
             );

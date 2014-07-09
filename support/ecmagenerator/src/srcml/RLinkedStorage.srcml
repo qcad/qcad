@@ -1105,6 +1105,15 @@ dir="./core" filename="RLinkedStorage.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
+    <name>QString</name>
+  </type>
+  <name>getDimensionFont</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
     <name>QVariant</name>
   </type>
   <name>getKnownVariable</name>
