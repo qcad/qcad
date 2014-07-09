@@ -1,8 +1,8 @@
 <svg width="87.2234" fill="none" xmlns="http://www.w3.org/2000/svg" height="50.738" viewBox="2.98329 -60.175 87.2234 50.738" stroke-linejoin="round" stroke-linecap="round">
 <g transform="scale(1 -1)">
-<path stroke="#000" stroke-width=".13" d="m86,30l4,4m-12-4l12,12m-20-12l20,20m-20-12l12,12m-12-4l10,10m-10-2l6,6"/>
+<path stroke="#fff" stroke-width=".13" d="m86,30l4,4m-12-4l12,12m-20-12l20,20m-20-12l12,12m-12-4l10,10m-10-2l6,6"/>
 <g stroke-width=".35">
-<g stroke="#000">
+<g stroke="#fff">
 <path d="m70,10v20"/>
 <path d="m90,30v-20"/>
 </g>
@@ -21,7 +21,7 @@
 <path d="m20,30h20"/>
 </g>
 </g>
-<g stroke="#000" stroke-width=".13">
+<g stroke="#fff" stroke-width=".13">
 <path d="m16.6171,29.9873l2.6741,4.011"/>
 <path d="m16.6203,29.657l2.6568-3.7689"/>
 <path d="m66.1722,30.2131l3.2129,4.5103"/>

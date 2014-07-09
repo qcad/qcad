@@ -2,7 +2,7 @@
 <defs/>
 <g transform="translate(0 464)">
 <path fill="#f00" d="m16.5,4.5c0,.5523-.4477,1-1,1-.5523,0-1-.4477-1-1 0-.5523 .4477-1 1-1 .5523,0 1,.4477 1,1z" transform="matrix(-32 0 0 -32 752 -64)"/>
-<g fill="none" stroke="#000" stroke-linecap="round" stroke-width="16">
+<g fill="none" stroke="#fff" stroke-linecap="round" stroke-width="16">
 <path d="M 72,-24 A 101.82312,260.2153 45 0 1 440,-392"/>
 <path d="M 440,-392 A 101.82312,260.2153 45 0 1 72,-24"/>
 </g>

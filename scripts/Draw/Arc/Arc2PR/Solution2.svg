@@ -1,7 +1,7 @@
 <svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
 <defs/>
 <g transform="translate(0 464)">
-<g fill="none" stroke="#000" stroke-linecap="round" stroke-width="16">
+<g fill="none" stroke="#fff" stroke-linecap="round" stroke-width="16">
 <path d="M 399.59499,-179.02548 A 157.70558,157.70558 0 1 0 193.04837,-66.758168"/>
 <path opacity=".25" d="M 399.59499,-179.02548 A 157.70558,157.70558 0 0 0 193.04837,-66.758168"/>
 </g>

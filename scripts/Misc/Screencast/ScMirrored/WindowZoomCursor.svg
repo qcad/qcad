@@ -85,7 +85,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:2.82222223;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <path
        sodipodi:type="arc"
-       style="fill:none;stroke:#000000;stroke-width:1.25000018;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:none;stroke:#ffffff;stroke-width:1.25000018;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="path3845"
        sodipodi:cx="25"
        sodipodi:cy="25"
@@ -94,7 +94,7 @@
        d="m 35,25 a 10,10 0 1 1 -20,0 10,10 0 1 1 20,0 z"
        transform="matrix(0.45155551,0,0,0.45155551,5.6416678,-34.358333)" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1.69333339;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#ffffff;stroke-width:1.69333339;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="M 20.599444,-19.400556 25.114999,-14.885"
        id="path3847"
        inkscape:connector-curvature="0" />

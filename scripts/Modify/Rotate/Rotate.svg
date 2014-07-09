@@ -2,7 +2,7 @@
 <defs/>
 <g color="#000">
 <g fill="none" stroke-linecap="square" stroke-width="16">
-<path stroke="#000" d="m56,248 0,208 144,0z"/>
+<path stroke="#fff" d="m56,248 0,208 144,0z"/>
 <path stroke="#f00" d="m232,184 208,0 0-144z"/>
 </g>
 <path fill="#fff" stroke="#00f" stroke-width="10" d="m360,168-64,96 48,0 0,16c0,62.0454-49.9546,112-112,112v32c79.3395,0 144-64.6605 144-144v-16h48z"/>

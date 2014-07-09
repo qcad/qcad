@@ -54,7 +54,7 @@
 </defs>
 <g stroke-linejoin="round" stroke-linecap="round" stroke-width="10.667" color="#000" transform="translate(0 464)">
 <path fill="url(#radialGradient159)" stroke="#5a5a5a" d="m45.462-36.6093c.446,4.4849 5.3054,8.9697 9.719,8.9697h332.1189c4.4135,0 8.3811-4.4848 7.9352-8.9697l-28.7639-289.2722c-.4459-4.4848-5.3054-8.9697-9.719-8.9697h-135.7164c-6.2991,0-12.8969-4.0485-14.9638-10.2436l-11.7654-35.2627c-1.8054-5.411-5.8363-7.8485-14.021-7.8485h-159.3314c-4.4135,0-8.3811,4.4848-7.9352,8.9697l32.443,342.6269z"/>
-<g fill="#729fcf" stroke="#000">
+<g fill="#729fcf" stroke="#fff">
 <path opacity=".114" d="m31.7935-261.8628 332.265,0"/>
 <path opacity=".114" d="m53.0367-48.5296 319.8692,0"/>
 <path opacity=".114" d="m53.0367-69.8629 319.8692,0"/>
@@ -67,12 +67,12 @@
 </g>
 <g color="#000" transform="translate(0 464)">
 <path fill="url(#linearGradient158)" display="block" d="m62.0137-39.0876c.3345,3.3102-1.6493,5.5169-5.071,4.4135-3.4216-1.1034-5.8514-3.3102-6.1859-6.6203l-32.3154-334.5832c-.3345-3.3102 1.6703-5.309 4.9805-5.309l157.3306-.9754c5.667-.0351 7.8872,.5686 9.3845,5.5169 0,0 11.5773,33.2032 13.2932,39.4464l-16.593-31.115c-2.8286-5.3041-6.3866-4.4135-10.3764-4.4135h-140.0468c-3.3102,0-5.2939,2.2068-4.9595,5.5169l31.7741,329.2261-1.2149-1.1034z"/>
-<g fill="#729fcf" stroke="#000" stroke-linejoin="round" stroke-linecap="round" stroke-width="10.667">
+<g fill="#729fcf" stroke="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-width="10.667">
 <path opacity=".114" d="m20.7709-368.5294 157.6931,0"/>
 <path opacity=".114" d="m25.5933-325.8628 327.8812,0"/>
 </g>
 </g>
-<g display="block" stroke="#000">
+<g display="block" stroke="#fff">
 <g fill="#fff" fill-opacity=".58" transform="matrix(11.03385 0 1.11488 11.03385 -110.83131 43.18719)">
 <path stroke="none" d="m41.7857,9.0364c.0096-.4746 .0152-.7245-.4234-.7242l-12.5558,.0087c-.3,0-.3246-.1432 0,0 .3246,.1432 1.2471,.6583 2.1827,.701 0,0 10.7965,.0165 10.7965,.0146z"/>
 </g>
@@ -92,7 +92,7 @@
 </g>
 <g transform="translate(0 464)">
 <g display="block" color="#000">
-<g fill="#729fcf" stroke="#000" stroke-linejoin="round" stroke-linecap="round" stroke-width="10.667">
+<g fill="#729fcf" stroke="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-width="10.667">
 <path opacity=".114" d="m27.8002-304.5294 330.9492,0"/>
 <path opacity=".114" d="m35.1302-240.5295 323.1549,0"/>
 <path opacity=".114" d="m23.1071-347.1961 162.9953,0"/>

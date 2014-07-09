@@ -1,6 +1,6 @@
 <svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
 <defs/>
-<g stroke="#000" stroke-width="3.61">
+<g stroke="#fff" stroke-width="3.61">
 <path fill="#00f" d="m200,344h272v48h-272z"/>
 <g fill="#fff">
 <path d="m200,392h272v48h-272z"/>

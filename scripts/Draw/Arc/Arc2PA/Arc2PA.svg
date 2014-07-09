@@ -2,7 +2,7 @@
 <defs/>
 <g transform="translate(0 464)">
 <g fill="none" stroke-linecap="round">
-<path stroke="#000" stroke-width="16" d="M 408,-392 A 336,336 0 0 0 72.003409,-56"/>
+<path stroke="#fff" stroke-width="16" d="M 408,-392 A 336,336 0 0 0 72.003409,-56"/>
 <g stroke="#00f" stroke-width="8">
 <path opacity=".25" d="m408-56 0-336"/>
 <path opacity=".25" d="m408-56-335.9966,0"/>

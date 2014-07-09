@@ -1,5 +1,5 @@
 <svg width="279.445" fill="none" xmlns="http://www.w3.org/2000/svg" height="218.585" viewBox="59.65 -243.235 279.445 218.585" stroke-linejoin="round" stroke-linecap="round">
-<g stroke="#000" stroke-width=".7" transform="scale(1 -1)">
+<g stroke="#fff" stroke-width=".7" transform="scale(1 -1)">
 <path d="m60,60v30"/>
 <path d="m60,90l6,6"/>
 <path d="m60,210h210"/>
@@ -23,7 +23,7 @@
 <path stroke="#00f" stroke-width=".18" d="m60,150h210m-210,27.5v-32.5m210,32.5v-32.5"/>
 </g>
 <g transform="scale(1 -1)">
-<circle cx="252" cy="195" stroke="#000" r="9" stroke-width=".7"/>
+<circle cx="252" cy="195" stroke="#fff" r="9" stroke-width=".7"/>
 <g stroke="#f00" stroke-width=".18">
 <path d="m252,207v-24"/>
 <path d="m240,195h24"/>
@@ -47,7 +47,7 @@
 <path d="m287.371,135.675h-67.924"/>
 <path d="m219.447,135.675v94.571"/>
 </g>
-<g stroke="#000" stroke-width=".7">
+<g stroke="#fff" stroke-width=".7">
 <path d="m60,90h240"/>
 <path d="m300,60h-240"/>
 <path d="m66,96h228"/>
@@ -68,7 +68,7 @@
 <path stroke="#00f" stroke-width=".18" d="m60,30h240m-240,27.5v-32.5m240,32.5v-32.5"/>
 </g>
 <g transform="scale(1 -1)">
-<circle cx="282" cy="75" stroke="#000" r="9" stroke-width=".7"/>
+<circle cx="282" cy="75" stroke="#fff" r="9" stroke-width=".7"/>
 <g stroke="#f00" stroke-width=".18">
 <path d="m282,87v-24"/>
 <path d="m270,75h24"/>

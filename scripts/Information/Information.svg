@@ -24,7 +24,7 @@
 <stop offset="1" stop-color="#454545"/>
 </linearGradient>
 </defs>
-<g stroke="#000">
+<g stroke="#fff">
 <path fill-rule="evenodd" stroke-width="16" d="m424,488 64,0 0-64-64,64z"/>
 <path filter="url(#filter3976)" stroke-width=".8" d="m319.577,409.633h41.821a.7601,.7601 0 0,1 .76,.76v12.433a.7601,.7601 0 0,1 -.76,.76h-41.821a.7601,.7601 0 0,1 -.76-.76v-12.433a.7601,.7601 0 0,1 .76-.76" transform="matrix(9.39192 .00911 -.0134 8.42113 -2933.774 -3246.3082)"/>
 </g>

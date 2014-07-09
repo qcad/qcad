@@ -1,6 +1,6 @@
 <svg width="270.859" fill="none" xmlns="http://www.w3.org/2000/svg" height="330.7" viewBox="14.65 -345.35 270.859 330.7" stroke-linejoin="round" stroke-linecap="round">
 <g transform="scale(1 -1)">
-<g stroke="#000" stroke-width=".7">
+<g stroke="#fff" stroke-width=".7">
 <path d="m80.1472,140.1472-0-90"/>
 <path d="m80.1472,50.1472-30,0"/>
 <path d="m50.1472,50.1472 0,90"/>
@@ -18,7 +18,7 @@
 <text x="146.989" y="-187.418" dx="0" dy="12" line-height="1.1" transform="matrix(-.99163 .12911 -.12911 -.99163 735.96436 246.26923)">3.</text>
 <text x="272.849" y="-190.9" dx="0" dy="12" line-height="1.1" transform="matrix(-.98196 .1891 -.1891 -.98196 765.09964 472.70109)">4.</text>
 </g>
-<g stroke="#000" stroke-width=".7">
+<g stroke="#fff" stroke-width=".7">
 <path d="m255,225 30,0"/>
 <path d="m285,225 0-90"/>
 <path d="m285,135-30,0"/>

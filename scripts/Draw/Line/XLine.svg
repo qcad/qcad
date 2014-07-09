@@ -63,11 +63,11 @@
      inkscape:connector-curvature="0"
      id="path3238"
      d="M 498.77187,105.29577 352,144 C 391.79691,160.97662 404.94114,181.0572 404.5769,224.32227 z"
-     style="fill:#000000;stroke:#000000;stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      inkscape:transform-center-y="59.924001" />
   <path
      inkscape:transform-center-y="-59.923999"
-     style="fill:#000000;stroke:#000000;stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="M 16,424 162.77187,385.29577 C 122.97496,368.31915 109.83073,348.23857 110.19497,304.9735 z"
      id="path3302"
      inkscape:connector-curvature="0"
@@ -78,7 +78,7 @@
      d="M 424,152 88,376"
      id="path3304"
      inkscape:connector-curvature="0"
-     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:square" />
+     style="fill:none;stroke:#ffffff;stroke-width:16;stroke-linecap:square" />
   <path
      style="fill:#ff0000"
      d="M 224,264 A 32,32 0 1 1 288,264 32,32 0 0 1 224,264 z"

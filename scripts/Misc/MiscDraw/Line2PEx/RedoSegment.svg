@@ -30,7 +30,7 @@
       <path
          id="path3720"
          d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;marker-start:none"
          transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
     <marker
@@ -43,7 +43,7 @@
       <path
          id="path3854"
          d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;marker-start:none"
          transform="scale(0.8,0.8)" />
     </marker>
     <marker
@@ -69,7 +69,7 @@
       <path
          id="path3265"
          d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;marker-start:none"
          transform="matrix(-0.8,0,0,-0.8,-10,0)" />
     </marker>
     <marker
@@ -82,7 +82,7 @@
       <path
          id="path3262"
          d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;marker-start:none"
          transform="matrix(0.8,0,0,0.8,10,0)" />
     </marker>
     <inkscape:perspective
@@ -215,7 +215,7 @@
      id="layer1"
      transform="translate(0,464)">
     <path
-       style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#ffffff;stroke-width:16;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 304.61075,-136 64,80 -128,48 -192.000002,-80"
        id="path2495"
        sodipodi:nodetypes="cccc"

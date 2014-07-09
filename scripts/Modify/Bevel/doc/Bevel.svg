@@ -21,7 +21,7 @@
 <g transform="scale(1 -1)">
 <path stroke="#00f" stroke-width=".25" d="m300,120v-60m-57.5,60h62.5m-32.5-60h32.5"/>
 </g>
-<g stroke="#000" transform="scale(1 -1)">
+<g stroke="#fff" transform="scale(1 -1)">
 <path d="m0,120h90"/>
 <path d="m90,120v-120"/>
 <path d="m180,120h60"/>

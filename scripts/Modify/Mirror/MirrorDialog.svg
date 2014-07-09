@@ -2,7 +2,7 @@
 <defs/>
 <g stroke-width="8" color="#000">
 <path stroke-dasharray="32,32" fill="#fff" stroke="#f00" d="m792,952 0-880"/>
-<g fill="#e6e6e6" stroke="#000" fill-opacity=".471" stroke-linecap="square">
+<g fill="#e6e6e6" stroke="#fff" fill-opacity=".471" stroke-linecap="square">
 <path d="m954,152 0,720h270z"/>
 <path d="m632,152 0,720-270,0z"/>
 </g>

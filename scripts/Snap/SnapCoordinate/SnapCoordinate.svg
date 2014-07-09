@@ -2,7 +2,7 @@
 <defs/>
 <g transform="translate(0 492)">
 <path fill="#f00" d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(32 0 0 -32 -56 -276)"/>
-<path fill="none" stroke="#000" stroke-width="16" d="m488-164-288,0 0-288"/>
+<path fill="none" stroke="#fff" stroke-width="16" d="m488-164-288,0 0-288"/>
 <g font-family="Bitstream Vera Sans" line-height="125%" font-size="1318.03881836px">
 <text x="356.066" y="-15.827" xml:space="preserve" transform="scale(1.02107 .97936)"><tspan x="356.066" y="-15.827" font-family="DejaVu Sans" text-align="start" font-size="204.80000305px">x</tspan>
 </text>

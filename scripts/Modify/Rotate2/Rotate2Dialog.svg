@@ -11,13 +11,13 @@
 </g>
 </g>
 <g fill="#e6e6e6" fill-opacity=".471" stroke-linecap="square" color="#000" stroke-width="6.4">
-<path stroke="#000" d="m1136,718.8h128v204.8h-128z"/>
+<path stroke="#fff" d="m1136,718.8h128v204.8h-128z"/>
 <path stroke="#808080" d="m362.44,930.06h128v204.8h-128z" transform="matrix(.70711 -.70711 .70711 .70711 0 0)"/>
 </g>
 <path fill="none" stroke="#00f" stroke-width="8" d="m1408,431.7782-377.8995,0"/>
 <g color="#000">
 <g stroke-linecap="square">
-<g fill="#e6e6e6" stroke="#000" fill-opacity=".471" stroke-width="6.4">
+<g fill="#e6e6e6" stroke="#fff" fill-opacity=".471" stroke-width="6.4">
 <path d="m576,158.8h128v204.8h-128z"/>
 <path d="m-312.484,319.133h128v204.8h-128z" transform="scale(-1 1)"/>
 </g>
@@ -28,7 +28,7 @@
 <text x="836" y="769.2" font-family="Sans" text-align="start" word-spacing="0" line-height="125%" xml:space="preserve" letter-spacing="0" font-size="140px"><tspan x="836" y="769.2" font-family="Arial" font-size="150px">a</tspan>
 </text>
 <g color="#000">
-<path fill="#e6e6e6" stroke="#000" fill-opacity=".471" stroke-linecap="square" stroke-width="6.4" d="m-1095.6-530.921h128.002v204.8h-128.002z" transform="scale(-1)"/>
+<path fill="#e6e6e6" stroke="#fff" fill-opacity=".471" stroke-linecap="square" stroke-width="6.4" d="m-1095.6-530.921h128.002v204.8h-128.002z" transform="scale(-1)"/>
 <g stroke="#00f">
 <path fill="none" stroke-linecap="square" stroke-width="8" d="m1285,180c63.6995,63.6995 103.0984,151.6995 103.0984,248.9016"/>
 <path fill="#00f" stroke-width="6.365" d="m1388.0356,427.9513 19.5567-60.5714-56.2799,8.5832 36.7232,51.9882z"/>

@@ -10,7 +10,7 @@
 <path d="m632,824 0,96"/>
 <path d="m680,872-96,0"/>
 </g>
-<g fill="#e6e6e6" stroke="#000" fill-opacity=".471" stroke-linecap="square">
+<g fill="#e6e6e6" stroke="#fff" fill-opacity=".471" stroke-linecap="square">
 <path d="m152,152 0,720 270,0z"/>
 <path d="m712,328 0,400 150,0z"/>
 </g>
