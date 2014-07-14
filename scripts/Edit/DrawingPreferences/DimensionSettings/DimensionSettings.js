@@ -538,11 +538,16 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
         document.setKnownVariable(RS.DIMTSZ, document.getKnownVariable(RS.DIMASZ));
         //document.setKnownVariable(RS.DIMBLK, "ArchTick");
     }
+    else if (widgets["Dot"].checked) {
+        document.setKnownVariable(RS.DIMTSZ, -document.getKnownVariable(RS.DIMASZ));
+        //document.setKnownVariable(RS.DIMBLK, "Dot");
+    }
     else {
         document.setKnownVariable(RS.DIMTSZ, 0.0);
         //document.setKnownVariable(RS.DIMBLK, "");
     }
     widgets["ArchitecturalTick"].setProperty("Saved", true);
+    widgets["Dot"].setProperty("Saved", true);
     widgets["Arrow"].setProperty("Saved", true);
 
     //qDebug("linear format: ", );
