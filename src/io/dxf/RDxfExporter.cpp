@@ -374,7 +374,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
             }
 
             QString file = img->getFileName();
-            if (written.contains(file)==0 && img->getHandle()!=0) {
+            if (/*written.contains(file)==0 &&*/ img->getHandle()!=0) {
                 writeImageDef(*img);
                 written.append(file);
             }
