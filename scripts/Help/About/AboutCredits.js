@@ -30,7 +30,7 @@ var credits =
     ],
     [
         "Icons",
-        [ "blumi",   "Icons for Apollonius tools in Misc > Drawing." ],
+        [ "Ralf Blumhagen ('blumi')",   "Icons for Apollonius tools in Misc > Drawing." ],
     ],
     [
         "Testing, Feedback and Minor Fixes",
