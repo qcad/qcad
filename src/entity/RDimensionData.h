@@ -136,6 +136,7 @@ public:
     double getDimgap() const;
     double getDimtxt() const;
     bool useArchTick() const;
+    bool useDot() const;
     bool hasCustomTextPosition() const;
     void setCustomTextPosition(bool on);
 
