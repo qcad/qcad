@@ -19,6 +19,11 @@
 
 include("../Select.js");
 
+/**
+ * \class SelectAll
+ * \ingroup ecma_select
+ * \brief Select all entities.
+ */
 function SelectAll(guiAction) {
     Select.call(this, guiAction);
 }

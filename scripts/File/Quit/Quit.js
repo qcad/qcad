@@ -19,12 +19,14 @@
 
 include("../File.js");
 
+/**
+ * \class Quit
+ * \brief This action handles all user interaction to quit QCAD.
+ * \ingroup ecma_file
+ */
 function Quit(guiAction) {
     File.call(this, guiAction);
 }
 
-/**
- * This action handles all user interaction to quit QCAD.
- */
 Quit.prototype = new File();
 

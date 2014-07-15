@@ -23,7 +23,7 @@ include("../BlockInsert.js");
 /**
  * \class InsertBlockItem
  * \brief Called when a block is inserted from the part library.
- * \ingroup ecma_edit
+ * \ingroup ecma_block
  */
 function InsertBlockItem(guiAction) {
     BlockInsert.call(this, guiAction);

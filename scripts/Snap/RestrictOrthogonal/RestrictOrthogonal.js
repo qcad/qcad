@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class RestrictOrthogonal
+ * \ingroup ecma_snap
+ * \brief Restrict orthogonally.
+ */
 function RestrictOrthogonal(guiAction) {
     Snap.call(this, guiAction);
 }

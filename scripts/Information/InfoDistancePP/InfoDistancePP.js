@@ -19,6 +19,11 @@
 
 include("../Information.js");
 
+/**
+ * \class InfoDistancePP
+ * \ingroup ecma_information
+ * \brief Measure distance from point to point.
+ */
 function InfoDistancePP(guiAction) {
     Information.call(this, guiAction);
 

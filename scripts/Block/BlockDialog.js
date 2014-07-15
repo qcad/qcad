@@ -20,6 +20,9 @@
 include("../WidgetFactory.js");
 
 /**
+ * \class BlockDialog
+ * \ingroup ecma_block
+ *
  * Creates a dialog to edit the attributes of a block (currently name only).
  *
  * \param document RDocument the block is in.

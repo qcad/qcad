@@ -18,7 +18,7 @@
  */
 
 /**
- * \defgroup ecma_layer Layer Tools.
+ * \defgroup ecma_layer Layer Tools
  * \ingroup ecma_scripts
  *
  * \brief This module contains ECMAScript implementations of various

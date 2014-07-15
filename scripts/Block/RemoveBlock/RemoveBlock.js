@@ -20,6 +20,11 @@
 include("../Block.js");
 include("../../library.js");
 
+/**
+ * \class RemoveBlock
+ * \ingroup ecma_block
+ * \brief Remove the selected block.
+ */
 function RemoveBlock(guiAction) {
     Block.call(this, guiAction);
 }

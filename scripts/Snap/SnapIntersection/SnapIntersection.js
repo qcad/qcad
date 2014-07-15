@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class SnapIntersection
+ * \ingroup ecma_snap
+ * \brief Snap to intersection points.
+ */
 function SnapIntersection(guiAction) {
     Snap.call(this, guiAction);
 }

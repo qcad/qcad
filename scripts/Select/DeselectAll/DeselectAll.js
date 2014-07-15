@@ -19,6 +19,11 @@
 
 include("../Select.js");
 
+/**
+ * \class DeselectAll
+ * \ingroup ecma_select
+ * \brief Deselect all.
+ */
 function DeselectAll(guiAction) {
     Select.call(this, guiAction);
 }

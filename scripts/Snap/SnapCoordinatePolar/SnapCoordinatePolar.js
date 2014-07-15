@@ -71,7 +71,9 @@ RSnapCoordinatePolar.prototype.getCoordinate = function() {
 
 
 /**
- * Action that activates coordinate snap.
+ * \class SnapCoordinatePolar
+ * \ingroup ecma_snap
+ * \brief Enter polar coordinate.
  */
 function SnapCoordinatePolar(guiAction) {
     Snap.call(this, guiAction);

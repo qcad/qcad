@@ -26,6 +26,11 @@
  */
 include("../EAction.js");
 
+/**
+ * \class Block
+ * \ingroup ecma_block
+ * \brief Base class for block tools.
+ */
 function Block(guiAction) {
     EAction.call(this, guiAction);
 }

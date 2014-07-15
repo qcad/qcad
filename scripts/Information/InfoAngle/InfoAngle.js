@@ -19,6 +19,11 @@
 
 include("../Information.js");
 
+/**
+ * \class InfoAngle
+ * \ingroup ecma_information
+ * \brief Measure angle.
+ */
 function InfoAngle(guiAction) {
     Information.call(this, guiAction);
 

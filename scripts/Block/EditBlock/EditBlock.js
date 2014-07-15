@@ -20,6 +20,11 @@
 include("../Block.js");
 
 
+/**
+ * \class EditBlock
+ * \ingroup ecma_block
+ * \brief Edit selected block
+ */
 function EditBlock(guiAction) {
     Block.call(this, guiAction);
 }

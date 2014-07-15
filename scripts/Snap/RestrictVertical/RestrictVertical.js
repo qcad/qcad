@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class RestrictVertical
+ * \ingroup ecma_snap
+ * \brief Restrict vertically.
+ */
 function RestrictVertical(guiAction) {
     Snap.call(this, guiAction);
 }

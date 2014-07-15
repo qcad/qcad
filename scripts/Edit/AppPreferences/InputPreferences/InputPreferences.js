@@ -54,7 +54,8 @@ InputPreferences.initPreferences = function(pageWidget, calledByPrefDialog, docu
     combo['currentIndexChanged(int)'].connect(InputPreferences, "updatePreview");
 
     combo = pageWidget.findChild("RelativeCoordinatePrefix");
-    combo.addItem(qsTr("At") + " '@' " + qsTr("(Default)"), "@");
+    var at = String.fromCharCode(64);  // @ (doxygen can't cope with an @ here)
+    combo.addItem(qsTr("At") + " '" + at + "' " + qsTr("(Default)"), at);
     combo.addItem(qsTr("Percentage") + " '%'", "%");
     combo.addItem(qsTr("Dollar") + " '$'", "$");
     combo.addItem(qsTr("Hash") + " '#'", "#");

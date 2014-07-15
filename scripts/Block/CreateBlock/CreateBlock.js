@@ -20,6 +20,12 @@
 include("../Block.js");
 include("../BlockDialog.js");
 
+/**
+ * \class CreateBlock
+ * \ingroup ecma_block
+ * \brief This action handles the user interaction to create a new block
+ * from existing entities.
+ */
 function CreateBlock(guiAction) {
     Block.call(this, guiAction);
 

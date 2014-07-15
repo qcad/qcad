@@ -20,7 +20,9 @@
 include("../Layer.js");
 
 /**
- * This action handles all user interaction to hide all layers of the
+ * \class HideAllLayers
+ * \ingroup ecma_layer
+ * \brief This action handles all user interaction to hide all layers of the
  * current drawing.
  */
 function HideAllLayers(guiAction) {

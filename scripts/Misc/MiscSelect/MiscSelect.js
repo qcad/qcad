@@ -18,16 +18,18 @@
  */
 
 /**
- * \defgroup ecma_examples Example Scripts
- * \ingroup ecma_scripts
+ * \defgroup ecma_misc_select Misc selection tools
+ * \ingroup ecma_misc
  *
- * \brief This module contains ECMAScript example tutorials.
+ * \brief This module contains misc selection tool.
  */
 include("../Misc.js");
 
 /**
  * \class MiscSelect
- * \brief Base class for all tutorial style examples..
+ * \ingroup ecma_misc_select
+ *
+ * \brief Base class for misc selection tools.
  */
 function MiscSelect(guiAction) {
     Misc.call(this, guiAction);

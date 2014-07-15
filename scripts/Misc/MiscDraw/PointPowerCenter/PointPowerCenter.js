@@ -23,8 +23,9 @@ include("scripts/ShapeAlgorithms.js");
 
 /**
  * \class PointPowerCenter
+ * \ingroup ecma_misc_draw
+ *
  * \brief Point at the power center of three chosen circles.
- * \ingroup ecma_draw_circle
  */
 function PointPowerCenter(guiAction) {
     DrawBasedOnThreeCircles.call(this, guiAction);

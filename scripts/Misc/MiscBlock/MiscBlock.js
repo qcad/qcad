@@ -18,16 +18,17 @@
  */
 
 /**
- * \defgroup ecma_examples Example Scripts
- * \ingroup ecma_scripts
+ * \defgroup ecma_misc_block Misc block related tools
+ * \ingroup ecma_misc
  *
- * \brief This module contains ECMAScript example tutorials.
+ * \brief This module contains misc block tools..
  */
 include("../Misc.js");
 
 /**
  * \class MiscBlock
- * \brief Base class for all tutorial style examples..
+ * \ingroup ecma_misc_block
+ * \brief Base class for misc block tools.
  */
 function MiscBlock(guiAction) {
     Misc.call(this, guiAction);

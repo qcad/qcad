@@ -20,6 +20,9 @@
 include("../WidgetFactory.js");
 
 /**
+ * \class LayerDialog
+ * \ingroup ecma_layer
+ * 
  * Creates a dialog to edit the attributes of a layer.
  *
  * \param document RDocument the layer is in.

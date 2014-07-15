@@ -18,13 +18,14 @@
  */
 
 /**
- * \defgroup ecma_examples_cmd Command Line Tools Examples
- * \ingroup ecma_scripts
+ * \defgroup ecma_tutorials_cmd Command Line Tools Examples
+ * \ingroup ecma_tutorials
  */
 include("../Tutorials.js");
 
 /**
  * \class CommandLineTools
+ * \ingroup ecma_tutorials_cmd
  * \brief Base class for all command line tool examples.
  */
 function CommandLineTools(guiAction) {

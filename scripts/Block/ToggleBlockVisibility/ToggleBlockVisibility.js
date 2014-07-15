@@ -20,6 +20,11 @@
 include("../Block.js");
  
 
+/**
+ * \class ToggleBlockVisibility
+ * \ingroup ecma_block
+ * \brief Toggle block visibility.
+ */
 function ToggleBlockVisibility(guiAction) {
     Block.call(this, guiAction);
 }

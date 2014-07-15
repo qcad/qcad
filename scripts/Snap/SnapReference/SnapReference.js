@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class SnapReference
+ * \ingroup ecma_snap
+ * \brief Snap to reference points.
+ */
 function SnapReference(guiAction) {
     Snap.call(this, guiAction);
 }

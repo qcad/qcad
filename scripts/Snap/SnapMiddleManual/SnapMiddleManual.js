@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class SnapMiddleManual
+ * \ingroup ecma_snap
+ * \brief Snap to middle points between two points.
+ */
 function SnapMiddleManual(guiAction) {
     Snap.call(this, guiAction);
 

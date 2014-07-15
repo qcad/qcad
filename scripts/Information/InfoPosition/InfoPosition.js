@@ -19,6 +19,11 @@
 
 include("../Information.js");
 
+/**
+ * \class InfoPosition
+ * \ingroup ecma_information
+ * \brief Query point position.
+ */
 function InfoPosition(guiAction) {
     Information.call(this, guiAction);
     this.pos = undefined;

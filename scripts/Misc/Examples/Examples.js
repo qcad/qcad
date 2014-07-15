@@ -18,8 +18,8 @@
  */
 
 /**
- * \defgroup ecma_examples Example Scripts
- * \ingroup ecma_scripts
+ * \defgroup ecma_misc_examples Example Scripts
+ * \ingroup ecma_misc
  *
  * \brief This module contains ECMAScript example tutorials.
  */
@@ -27,6 +27,7 @@ include("../Misc.js");
 
 /**
  * \class Examples
+ * \ingroup ecma_misc_examples
  * \brief Base class for all tutorial style examples..
  */
 function Examples(guiAction) {

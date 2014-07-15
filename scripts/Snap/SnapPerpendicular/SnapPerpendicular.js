@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class SnapPerpendicular
+ * \ingroup ecma_snap
+ * \brief Snap to point perpendicular to entity.
+ */
 function SnapPerpendicular(guiAction) {
     Snap.call(this, guiAction);
 }

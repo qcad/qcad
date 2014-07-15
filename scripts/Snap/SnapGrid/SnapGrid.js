@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class SnapGrid
+ * \ingroup ecma_snap
+ * \brief Snap to grid.
+ */
 function SnapGrid(guiAction) {
     Snap.call(this, guiAction);
 }

@@ -28,7 +28,7 @@ include("../EAction.js");
 
 /**
  * \class Misc
- * \brief Base class for all example scripts.
+ * \brief Base class for misc scripts.
  * \ingroup ecma_misc
  */
 function Misc(guiAction) {

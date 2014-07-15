@@ -77,16 +77,10 @@ SaveAs.prototype.beginEvent = function() {
     fileDialog.setOption(QFileDialog.DontConfirmOverwrite, true);
     fileDialog.fileMode = QFileDialog.AnyFile;
     fileDialog.acceptMode = QFileDialog.AcceptSave;
+    fileDialog.setNameFilters(nameFilters);
+
     var fileName = this.getDocument().getFileName();
     var fileInfo = new QFileInfo(fileName);
-    if (fileName.length!==0) {
-        fileDialog.selectFile(fileInfo.fileName());
-        fileDialog.setDirectory(fileInfo.absolutePath());
-    }
-    else {
-        fileDialog.setDirectory(lastSaveAsFileDir);
-    }
-    fileDialog.setNameFilters(nameFilters);
 
     var suffix = fileInfo.suffix().toLowerCase();
 
@@ -108,6 +102,19 @@ SaveAs.prototype.beginEvent = function() {
             fileDialog.selectNameFilter(defaultNameFilter);
         }
     }
+
+    if (fileName.length!==0) {
+        //fileDialog.setDirectory(fileInfo.absoluteFilePath());
+        //fileDialog.selectFile(fileInfo.fileName());
+        fileDialog.selectFile(fileInfo.absoluteFilePath());
+        qDebug("fileInfo.absoluteFilePath(): ", fileInfo.absoluteFilePath());
+        qDebug("selected files: ", fileDialog.selectedFiles());
+        //debugger;
+    }
+    else {
+        fileDialog.setDirectory(lastSaveAsFileDir);
+    }
+
 
     fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
 

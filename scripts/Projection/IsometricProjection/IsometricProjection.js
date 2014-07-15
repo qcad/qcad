@@ -17,19 +17,12 @@
  * along with QCAD.
  */
 
-/**
- * \defgroup ecma_project_isometric Isometic Projection Tools
- * \ingroup ecma_project_isometric
- *
- * \brief This module contains ECMAScript implementations of various 
- * isometric projection tools.
- */
 include("../Projection.js");
 
 /**
  * \class IsometricProjection
  * \brief Base class for all isometric projection tools.
- * \ingroup ecma_project_isometric
+ * \ingroup ecma_projection
  */
 function IsometricProjection(guiAction) {
     Projection.call(this, guiAction);

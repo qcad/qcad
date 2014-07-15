@@ -19,6 +19,11 @@
 
 include("../Select.js");
 
+/**
+ * \class SelectContour
+ * \ingroup ecma_select
+ * \brief Select connected entities.
+ */
 function SelectContour(guiAction) {
     Select.call(this, guiAction);
 

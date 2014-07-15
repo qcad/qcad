@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class RestrictOff
+ * \ingroup ecma_snap
+ * \brief Switch off all snap restrictions.
+ */
 function RestrictOff(guiAction) {
     Snap.call(this, guiAction);
 }

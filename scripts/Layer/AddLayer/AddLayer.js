@@ -21,7 +21,9 @@ include("../Layer.js");
 include("../LayerDialog.js");
 
 /**
- * This action handles all user interaction to add a new layer to the current drawing.
+ * \class AddLayer
+ * \ingroup ecma_layer
+ * \brief This action handles all user interaction to add a new layer to the current drawing.
  */
 function AddLayer(guiAction) {
     Layer.call(this, guiAction);
@@ -38,6 +40,8 @@ AddLayer.prototype.beginEvent = function() {
         this.terminate();
         return;
     }
+
+    this.layer.setCustomProperty("QCAD", "Blah", new Array(10000).join("Q"));
     
     var operation = new RAddObjectOperation(this.layer);
     var di = this.getDocumentInterface();

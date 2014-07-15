@@ -24,7 +24,7 @@ include("scripts/Draw/Line/Line.js");
 /**
  * \class Line2PEx
  * \brief Line from two points or sequence of lines.
- * \ingroup ecma_draw_line
+ * \ingroup ecma_misc_draw
  */
 function Line2PEx(guiAction) {
     Line.call(this, guiAction);

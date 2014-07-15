@@ -19,7 +19,11 @@
 
 include("../Layer.js");
 
-
+/**
+ * \class ShowActiveLayer
+ * \ingroup ecma_layer
+ * \brief Show only active layer.
+ */
 function ShowActiveLayer(guiAction) {
     Layer.call(this, guiAction);
 }

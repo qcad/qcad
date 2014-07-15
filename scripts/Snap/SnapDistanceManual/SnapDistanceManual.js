@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class SnapDistanceManual
+ * \ingroup ecma_snap
+ * \brief Snap to point with distance to specified point.
+ */
 function SnapDistanceManual(guiAction) {
     Snap.call(this, guiAction);
 

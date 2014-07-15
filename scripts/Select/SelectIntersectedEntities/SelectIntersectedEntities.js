@@ -19,6 +19,11 @@
 
 include("../Select.js");
 
+/**
+ * \class SelectIntersectedEntities
+ * \ingroup ecma_select
+ * \brief Select entities intersected with line.
+ */
 function SelectIntersectedEntities(guiAction, select) {
     Select.call(this, guiAction);
 

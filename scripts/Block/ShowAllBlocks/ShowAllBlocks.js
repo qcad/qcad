@@ -18,8 +18,12 @@
  */
 
 include("../Block.js");
- 
 
+/**
+ * \class ShowAllBlocks
+ * \ingroup ecma_block
+ * \brief Show all blocks
+ */
 function ShowAllBlocks(guiAction) {
     Block.call(this, guiAction);
 }

@@ -22,7 +22,9 @@ include("../Layer.js");
 include("../LayerDialog.js");
 
 /**
- * This action handles all user interaction to edit the current layer.
+ * \class EditLayer
+ * \ingroup ecma_layer
+ * \brief This action handles all user interaction to edit the current layer.
  */
 function EditLayer(guiAction) {
     Layer.call(this, guiAction);

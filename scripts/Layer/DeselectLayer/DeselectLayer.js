@@ -18,8 +18,12 @@
  */
 
 include("../SelectLayer/SelectLayer.js");
- 
 
+/**
+ * \class DeselectLayer
+ * \ingroup ecma_layer
+ * \brief Deselect layer entities.
+ */
 function DeselectLayer(guiAction) {
     SelectLayer.call(this, guiAction);
     this.select = false;

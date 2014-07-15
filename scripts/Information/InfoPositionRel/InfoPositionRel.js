@@ -19,6 +19,11 @@
 
 include("../InfoPosition/InfoPosition.js");
 
+/**
+ * \class InfoPositionRel
+ * \ingroup ecma_information
+ * \brief Query relative position.
+ */
 function InfoPositionRel(guiAction) {
     InfoPosition.call(this, guiAction);
 }

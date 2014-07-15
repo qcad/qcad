@@ -20,7 +20,9 @@
 include("../Layer.js");
 
 /**
- * This action handles all user interaction to show all layers of the
+ * \class ShowAllLayers
+ * \ingroup ecma_layer
+ * \brief This action handles all user interaction to show all layers of the
  * current drawing.
  */
 function ShowAllLayers(guiAction) {
