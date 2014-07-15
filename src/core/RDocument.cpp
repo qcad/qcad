@@ -231,6 +231,8 @@ void RDocument::init() {
             setVariable(s, RSettings::getStringValue(s, "auto"));
         }
 
+        setDimensionFont(RSettings::getStringValue("DimensionSettings/DimensionFont", "Standard"));
+
         storage.setModified(false);
     }
 }
