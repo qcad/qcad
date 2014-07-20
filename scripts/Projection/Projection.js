@@ -18,10 +18,10 @@
  */
 
 /**
- * \defgroup ecma_projection Projection Drawing Tools
+ * \defgroup ecma_projection Projection Tools
  * \ingroup ecma_modify
  *
- * \brief This module contains ECMAScript implementations of various projection tools.
+ * \brief This module contains ECMAScript implementations of various projection (isometric, orthographic) tools.
  */
 
 include("../Modify/Transform.js");

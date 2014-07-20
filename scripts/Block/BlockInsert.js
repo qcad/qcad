@@ -19,9 +19,10 @@
 
 include("Block.js");
  
-
 /**
- * Base action for actions that insert blocks from the drawing or
+ * \class Block
+ * \ingroup ecma_block
+ * \brief Base action for actions that insert blocks from the drawing or
  * other sources.
  */
 function BlockInsert(guiAction) {

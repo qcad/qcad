@@ -24,7 +24,7 @@ include("scripts/ShapeAlgorithms.js");
 /**
  * \class LineRadicalAxis
  * \brief Point at the power center of three chosen circles.
- * \ingroup ecma_draw_circle
+ * \ingroup ecma_misc_draw
  */
 function LineRadicalAxis(guiAction) {
     EAction.call(this, guiAction);

@@ -22,7 +22,7 @@ include("script/EAction.js");
 /**
  * \class LineBoxJoint
  * \brief Box joint line between two points.
- * \ingroup ecma_draw_line
+ * \ingroup ecma_misc_draw
  */
 function LineBoxJoint(guiAction) {
   EAction.call(this, guiAction);

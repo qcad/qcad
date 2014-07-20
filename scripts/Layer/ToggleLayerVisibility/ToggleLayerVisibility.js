@@ -19,7 +19,11 @@
 
 include("../Layer.js");
  
-
+/**
+ * \class ToggleLayerVisibility
+ * \ingroup ecma_layer
+ * \brief Toggle layer visibility.
+ */
 function ToggleLayerVisibility(guiAction) {
     Layer.call(this, guiAction);
 }

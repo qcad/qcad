@@ -125,7 +125,9 @@ RSnapCoordinate.prototype.getCoordinateEvent = function() {
 
 
 /**
- * Action that activates coordinate snap.
+ * \class SnapCoordinate
+ * \ingroup ecma_snap
+ * \brief Enter coordinate.
  */
 function SnapCoordinate(guiAction) {
     Snap.call(this, guiAction);

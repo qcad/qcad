@@ -18,16 +18,17 @@
  */
 
 /**
- * \defgroup ecma_examples Example Scripts
- * \ingroup ecma_scripts
+ * \defgroup ecma_misc_draw Misc drawing tools
+ * \ingroup ecma_misc
  *
- * \brief This module contains ECMAScript example tutorials.
+ * \brief This module contains misc drawing tools.
  */
 include("../Misc.js");
 
 /**
  * \class MiscDraw
- * \brief Base class for all tutorial style examples..
+ * \ingroup ecma_misc_draw
+ * \brief Base class for misc drawing tools.
  */
 function MiscDraw(guiAction) {
     Misc.call(this, guiAction);

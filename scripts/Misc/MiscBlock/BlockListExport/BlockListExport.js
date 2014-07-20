@@ -21,7 +21,9 @@ include("../MiscBlock.js");
 include("scripts/File/File.js");
 
 /**
- * This action exports the block list as CSV file.
+ * \class BlockListExport
+ * \brief This action exports the block list as CSV file.
+ * \ingroup ecma_misc_block
  */
 function BlockListExport(guiAction) {
     MiscBlock.call(this, guiAction);

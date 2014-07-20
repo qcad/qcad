@@ -19,6 +19,11 @@
 
 include("../InfoPosition/InfoPosition.js");
 
+/**
+ * \class InfoPositionPolRel
+ * \ingroup ecma_information
+ * \brief Query relative polar position.
+ */
 function InfoPositionPolRel(guiAction) {
     InfoPosition.call(this, guiAction);
 }

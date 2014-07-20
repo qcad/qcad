@@ -22,7 +22,7 @@ include("scripts/EAction.js");
 /**
  * \class LineDove
  * \brief Dovetail joint line between two points.
- * \ingroup ecma_draw_line
+ * \ingroup ecma_misc_draw
  */
 function LineDove(guiAction) {
     EAction.call(this, guiAction);

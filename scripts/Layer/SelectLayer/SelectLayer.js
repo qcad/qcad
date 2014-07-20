@@ -20,6 +20,11 @@
 include("../Layer.js");
  
 
+/**
+ * \class SelectLayer
+ * \ingroup ecma_layer
+ * \brief Select entities based on layer.
+ */
 function SelectLayer(guiAction) {
     Layer.call(this, guiAction);
     this.select = true;

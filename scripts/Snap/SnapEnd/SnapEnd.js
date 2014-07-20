@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class SnapEnd
+ * \ingroup ecma_snap
+ * \brief Snap to end point.
+ */
 function SnapEnd(guiAction) {
     Snap.call(this, guiAction);
 }

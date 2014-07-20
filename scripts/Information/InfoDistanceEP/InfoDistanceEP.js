@@ -19,6 +19,11 @@
 
 include("../Information.js");
 
+/**
+ * \class InfoDistanceEP
+ * \ingroup ecma_information
+ * \brief Measure distance from entity to point.
+ */
 function InfoDistanceEP(guiAction) {
     Information.call(this, guiAction);
 

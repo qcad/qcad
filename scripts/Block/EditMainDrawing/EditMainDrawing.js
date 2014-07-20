@@ -20,6 +20,11 @@
 include("../Block.js");
 
 
+/**
+ * \class EditMainDrawing
+ * \ingroup ecma_block
+ * \brief Back to model space block
+ */
 function EditMainDrawing(guiAction) {
     Block.call(this, guiAction);
 }

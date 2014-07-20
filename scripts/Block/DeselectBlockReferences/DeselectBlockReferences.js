@@ -18,8 +18,12 @@
  */
 
 include("../Block.js");
- 
 
+/**
+ * \class DeselectBlockReferences
+ * \ingroup ecma_block
+ * \brief Deselect block references
+ */
 function DeselectBlockReferences(guiAction) {
     Block.call(this, guiAction);
 }

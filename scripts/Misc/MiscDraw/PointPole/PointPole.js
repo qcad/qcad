@@ -23,8 +23,9 @@ include("scripts/ShapeAlgorithms.js");
 
 /**
  * \class PointPole
+ * \ingroup ecma_misc_draw
+ *
  * \brief Point at the power center of three chosen circles.
- * \ingroup ecma_draw_circle
  */
 function PointPole(guiAction) {
     EAction.call(this, guiAction);

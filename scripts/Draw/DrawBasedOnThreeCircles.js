@@ -23,7 +23,7 @@ include("Draw.js");
  * \class DrawBasedOnThreeCircles
  * \brief Base class for drawing tools that draw something based on 
  * three given circles or arcs.
- * \ingroup ecma_draw_circle
+ * \ingroup ecma_misc_draw
  */
 function DrawBasedOnThreeCircles(guiAction) {
     EAction.call(this, guiAction);

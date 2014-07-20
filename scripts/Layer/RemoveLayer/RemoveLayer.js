@@ -21,7 +21,9 @@ include("../Layer.js");
  
 
 /**
- * This action handles all user interaction to remove the current layer.
+ * \class RemoveLayer
+ * \ingroup ecma_layer
+ * \brief This action handles all user interaction to remove the current layer.
  */
 function RemoveLayer(guiAction) {
     Layer.call(this, guiAction);

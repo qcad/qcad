@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class SnapAuto
+ * \ingroup ecma_snap
+ * \brief Auto snap.
+ */
 function SnapAuto(guiAction) {
     Snap.call(this, guiAction);
 }

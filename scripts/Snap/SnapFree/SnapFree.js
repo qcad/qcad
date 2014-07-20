@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class SnapFree
+ * \ingroup ecma_snap
+ * \brief Disable snapping.
+ */
 function SnapFree(guiAction) {
     Snap.call(this, guiAction);
 }

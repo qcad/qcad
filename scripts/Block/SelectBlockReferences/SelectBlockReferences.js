@@ -19,7 +19,11 @@
 
 include("../Block.js");
  
-
+/**
+ * \class SelectBlockReferences
+ * \ingroup ecma_block
+ * \brief Select block references from block.
+ */
 function SelectBlockReferences(guiAction) {
     Block.call(this, guiAction);
 }

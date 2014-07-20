@@ -1,7 +1,0 @@
-/*!
-
-\defgroup io Input / Output Module
-
-\brief Implements import and export support for CAD file formats (DXF).
-
-*/

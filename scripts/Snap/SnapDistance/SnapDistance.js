@@ -50,7 +50,9 @@ RSnapDistanceExtension.prototype.hideUiOptions = function() {
 
 
 /**
- * This action sets the current snap tool to "SnapDistance".
+ * \class SnapDistance
+ * \ingroup ecma_snap
+ * \brief Snap to point with distance from end point.
  */
 function SnapDistance(guiAction) {
     Snap.call(this, guiAction);

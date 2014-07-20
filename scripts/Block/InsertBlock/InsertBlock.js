@@ -19,9 +19,10 @@
 
 include("../BlockInsert.js");
  
-
 /**
- * This action handles the user interaction to insert a block
+ * \class DeselectBlockReferences
+ * \ingroup ecma_block
+ * \brief This action handles the user interaction to insert a block
  * from the block list into the drawing.
  */
 function InsertBlock(guiAction) {

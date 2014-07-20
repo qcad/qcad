@@ -21,7 +21,9 @@ include("../Block.js");
 include("../BlockDialog.js");
 
 /**
- * This action handles the user interaction to add a new block 
+ * \class AddBlock
+ * \ingroup ecma_block
+ * \brief This action handles the user interaction to add a new block 
  * to the current drawing.
  */
 function AddBlock(guiAction) {

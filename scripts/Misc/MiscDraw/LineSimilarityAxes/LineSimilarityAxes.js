@@ -24,7 +24,7 @@ include("scripts/ShapeAlgorithms.js");
 /**
  * \class LineSimilarityAxes
  * \brief Point at the power center of three chosen circles.
- * \ingroup ecma_draw_circle
+ * \ingroup ecma_misc_draw
  */
 function LineSimilarityAxes(guiAction) {
     DrawBasedOnThreeCircles.call(this, guiAction);

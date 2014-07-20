@@ -66,7 +66,11 @@ RRestrictAngleLengthExtension.prototype.hideUiOptions = function() {
 
 
 
-
+/**
+ * \class RestrictAngleLength
+ * \ingroup ecma_snap
+ * \brief Restriction of angle or distance.
+ */
 function RestrictAngleLength(guiAction) {
     Snap.call(this, guiAction);
 }

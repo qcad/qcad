@@ -18,8 +18,8 @@
  */
 
 /**
- * \defgroup ecma_screencast Screencast support
- * \ingroup ecma_scripts
+ * \defgroup ecma_misc_screencast Screencast support
+ * \ingroup ecma_misc
  *
  * \brief This module contains ECMAScript screencast recording tools.
  */
@@ -27,6 +27,7 @@ include("../Misc.js");
 
 /**
  * \class Screencast
+ * \ingroup ecma_misc_screencast
  */
 function Screencast(guiAction) {
     Misc.call(this, guiAction);

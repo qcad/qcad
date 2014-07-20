@@ -19,6 +19,11 @@
 
 include("scripts/EAction.js");
 
+/**
+ * \class SnapYManual
+ * \ingroup ecma_snap
+ * \brief Lock Y coordinate.
+ */
 function SnapYManual(guiAction) {
     EAction.call(this, guiAction);
 

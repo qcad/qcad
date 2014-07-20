@@ -20,7 +20,9 @@
 include("../Select.js");
 
 /**
- * Selects all entities inside a user specified rectangle.
+ * \class SelectRectangle
+ * \ingroup ecma_select
+ * \brief Selects all entities inside a user specified rectangle.
  */
 function SelectRectangle(guiAction) {
     Select.call(this, guiAction);

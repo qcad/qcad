@@ -19,6 +19,11 @@
 
 include("../Information.js");
 
+/**
+ * \class InfoArea
+ * \ingroup ecma_information
+ * \brief Measure area.
+ */
 function InfoArea(guiAction) {
     Information.call(this, guiAction);
     this.polyline = undefined;

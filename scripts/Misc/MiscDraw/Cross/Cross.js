@@ -23,7 +23,7 @@ include("scripts/ShapeAlgorithms.js");
 /**
  * \class Cross
  * \brief Draw cross at the centre of an arc, circle or ellipse.
- * \ingroup ecma_draw_line
+ * \ingroup ecma_misc_draw
  */
 function Cross(guiAction) {
     EAction.call(this, guiAction);

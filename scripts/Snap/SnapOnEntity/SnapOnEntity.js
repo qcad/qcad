@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class SnapOnEntity
+ * \ingroup ecma_snap
+ * \brief Snap to points on entities.
+ */
 function SnapOnEntity(guiAction) {
     Snap.call(this, guiAction);
 }

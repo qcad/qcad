@@ -19,6 +19,11 @@
 
 include("scripts/EAction.js");
 
+/**
+ * \class SnapXManual
+ * \ingroup ecma_snap
+ * \brief Lock X postion.
+ */
 function SnapXManual(guiAction) {
     EAction.call(this, guiAction);
 

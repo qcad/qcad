@@ -29,6 +29,10 @@ var credits =
         [ "Wang Zhen Zhe",     "Chinese (zh_CN) translation." ],
     ],
     [
+        "Icons",
+        [ "Ralf Blumhagen ('blumi')",   "Icons for Apollonius tools in Misc > Drawing." ],
+    ],
+    [
         "Testing, Feedback and Minor Fixes",
         [ "Clive Tubb ('clive')", "" ],
         [ "Harald Huesges ('Husky')", "" ],

@@ -23,7 +23,7 @@ include("../Block.js");
  * \class EditFromReference
  * \brief Edits the block that is referenced by the block reference
  * the user clicks.
- * \ingroup ecma_draw_line
+ * \ingroup ecma_block
  */
 function EditFromReference(guiAction) {
     Block.call(this, guiAction);

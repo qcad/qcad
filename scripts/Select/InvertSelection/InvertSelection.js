@@ -19,6 +19,11 @@
 
 include("../Select.js");
 
+/**
+ * \class InvertSelection
+ * \ingroup ecma_select
+ * \brief Invert selection.
+ */
 function InvertSelection(guiAction) {
     Select.call(this, guiAction);
 }

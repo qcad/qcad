@@ -68,6 +68,7 @@ public:
 
     virtual QSharedPointer<RObject> queryObject(RObject::Id objectId) const;
     virtual QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const;
+    virtual QSharedPointer<RObject> queryObjectByHandleDirect(RObject::Handle objectHandle) const;
     virtual QSharedPointer<REntity> queryEntity(REntity::Id objectId) const;
     virtual QSharedPointer<RLayer> queryLayer(RLayer::Id layerId) const;
     virtual QSharedPointer<RLayer> queryLayer(const QString& layerName) const;
@@ -167,6 +168,7 @@ protected:
 
     bool inTransaction;
     QHash<RObject::Id, QSharedPointer<RObject> > objectMap;
+    QHash<RObject::Handle, QSharedPointer<RObject> > objectHandleMap;
     QHash<REntity::Id, QSharedPointer<REntity> > entityMap;
     QMultiHash<RBlock::Id, QSharedPointer<REntity> > blockEntityMap;
     QHash<RBlock::Id, QSharedPointer<RBlock> > blockMap;

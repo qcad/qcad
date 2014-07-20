@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class SnapCenter
+ * \ingroup ecma_snap
+ * \brief Snap to center points.
+ */
 function SnapCenter(guiAction) {
     Snap.call(this, guiAction);
 }

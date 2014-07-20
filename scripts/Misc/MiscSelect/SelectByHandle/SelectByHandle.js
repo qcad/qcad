@@ -17,7 +17,10 @@
 include("scripts/EAction.js");
 
 /**
- * This action draws lines in different colors.
+ * \class SelectByHandle
+ * \ingroup ecma_misc_select
+ *
+ * \brief Selects an entity by its handle.
  */
 function SelectByHandle(guiAction) {
     EAction.call(this, guiAction);
@@ -26,9 +29,6 @@ function SelectByHandle(guiAction) {
 SelectByHandle.prototype = new EAction();
 SelectByHandle.includeBasePath = includeBasePath;
 
-/**
- * Changes the color of all white layers to black and terminates.
- */
 SelectByHandle.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 

@@ -43,6 +43,7 @@ void RMemoryStorage::clear() {
     boundingBoxChanged = true;
     boundingBox = RBox();
     objectMap.clear();
+    objectHandleMap.clear();
     entityMap.clear();
     blockEntityMap.clear();
     blockMap.clear();
@@ -369,6 +370,15 @@ QSharedPointer<RObject> RMemoryStorage::queryObjectDirect(RObject::Id objectId) 
 }
 
 QSharedPointer<RObject> RMemoryStorage::queryObjectByHandle(RObject::Handle objectHandle) const {
+    if (!objectHandleMap.contains(objectHandle)) {
+        return QSharedPointer<RObject> ();
+    }
+    if (!objectHandleMap[objectHandle].isNull()) {
+        return QSharedPointer<RObject>(objectHandleMap[objectHandle]->clone());
+    }
+    return QSharedPointer<RObject>();
+
+    /*
     QSharedPointer<RObject> ret;
 
     QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
@@ -384,6 +394,11 @@ QSharedPointer<RObject> RMemoryStorage::queryObjectByHandle(RObject::Handle obje
     }
 
     return ret;
+    */
+}
+
+QSharedPointer<RObject> RMemoryStorage::queryObjectByHandleDirect(RObject::Handle objectHandle) const {
+    return objectHandleMap[objectHandle];
 }
 
 QSharedPointer<REntity> RMemoryStorage::queryEntity(REntity::Id objectId) const {
@@ -855,6 +870,7 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
     //}
 
     objectMap[object->getId()] = object;
+    objectHandleMap[object->getHandle()] = object;
 
     //QSharedPointer<REntity> entity = object.dynamicCast<REntity> ();
     if (!entity.isNull()) {
@@ -916,6 +932,17 @@ bool RMemoryStorage::deleteObject(RObject::Id objectId) {
         //transactionObjectMap.insert(objectId, QSharedPointer<RObject>());
     }
 
+    QSharedPointer<RObject> obj = queryObjectDirect(objectId);
+    if (!obj.isNull()) {
+        objectHandleMap.remove(obj->getHandle());
+
+        QSharedPointer<REntity> entity = obj.dynamicCast<REntity>();
+        if (!entity.isNull()) {
+            blockEntityMap.remove(entity->getBlockId(), entity);
+            //qDebug() << "deleteObject: removed " << entity->getId() << " from block " << entity->getBlockId();
+        }
+    }
+
     objectMap.remove(objectId);
     if (entityMap.contains(objectId)) {
         entityMap.remove(objectId);
@@ -925,12 +952,6 @@ bool RMemoryStorage::deleteObject(RObject::Id objectId) {
     }
     if (layerMap.contains(objectId)) {
         layerMap.remove(objectId);
-    }
-
-    QSharedPointer<REntity> entity = queryEntityDirect(objectId);
-    if (!entity.isNull()) {
-        blockEntityMap.remove(entity->getBlockId(), entity);
-        //qDebug() << "deleteObject: removed " << entity->getId() << " from block " << entity->getBlockId();
     }
 
     return true;

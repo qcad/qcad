@@ -21,7 +21,9 @@ include("../Block.js");
 include("../BlockDialog.js");
 
 /**
- * Renames the active (selected) block.
+ * \class RenameBlock
+ * \ingroup ecma_block
+ * \brief Renames the active (selected) block.
  */
 function RenameBlock(guiAction) {
     Block.call(this, guiAction);

@@ -19,7 +19,11 @@
 
 include("../Block.js");
  
-
+/**
+ * \class HideAllBlocks
+ * \ingroup ecma_block
+ * \brief Hides all blocks
+ */
 function HideAllBlocks(guiAction) {
     Block.call(this, guiAction);
 }

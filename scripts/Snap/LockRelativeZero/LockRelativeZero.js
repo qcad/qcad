@@ -19,6 +19,11 @@
 
 include("../Snap.js");
 
+/**
+ * \class LockRelativeZero
+ * \ingroup ecma_snap
+ * \brief Lock relative zero position.
+ */
 function LockRelativeZero(guiAction) {
     Snap.call(this, guiAction);
 }

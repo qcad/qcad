@@ -19,6 +19,11 @@
 
 include("../Select.js");
 
+/**
+ * \class SelectLayerByEntity
+ * \ingroup ecma_select
+ * \brief Select all entities on the same layer.
+ */
 function SelectLayerByEntity(guiAction) {
     Select.call(this, guiAction);
 

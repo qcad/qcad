@@ -174,7 +174,19 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
         //DimensionSettings.updateUnit(unit);
         //DimensionSettings.updateLinearPrecision(widgets);
         //DimensionSettings.updateAngularPrecision(widgets);
-        // global preferences are initialized automatically
+
+        if (hasPlugin("DWG")) {
+            widgets["DimensionFont"].setProperty("Loaded", true);
+            widgets["DimensionFont"].editable = false;
+            initFontComboBox(widgets["DimensionFont"]);
+            var dimFont = RSettings.getStringValue("DimensionSettings/DimensionFont", "Standard");
+            activateFont(widgets["DimensionFont"], dimFont.isEmpty() ? "Standard" : dimFont);
+        }
+        else {
+            widgets["FontGroup"].visible = false;
+        }
+
+        // other global preferences are initialized automatically
         return;
     }
 
@@ -524,6 +536,7 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
     var widgets = getWidgets(pageWidget);
 
     if (isNull(document)) {
+        RSettings.setValue("DimensionSettings/DimensionFont", widgets["DimensionFont"].currentText);
         return;
     }
 

@@ -23,7 +23,7 @@ include("../InsertBlockItem/InsertBlockItem.js");
 /**
  * \class InsertScriptItem
  * \brief Called when a script is inserted from the part library.
- * \ingroup ecma_edit
+ * \ingroup ecma_block
  */
 function InsertScriptItem(guiAction) {
     InsertBlockItem.call(this, guiAction);
