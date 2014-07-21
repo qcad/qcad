@@ -185,16 +185,16 @@ public:
     }
 
     virtual RLinetype::Id getLinetypeId(bool resolve,
-        const QStack<RBlockReferenceEntity*>& blockRefStack) const;
+        const QStack<REntity*>& blockRefStack) const;
 
     RLineweight::Lineweight getLineweight() const {
         return lineweight;
     }
 
     virtual RLineweight::Lineweight getLineweight(bool resolve,
-        const QStack<RBlockReferenceEntity*>& blockRefStack) const;
+        const QStack<REntity*>& blockRefStack) const;
 
-    double getLineweightInUnits(const QStack<RBlockReferenceEntity*>& blockRefStack) const;
+    double getLineweightInUnits(const QStack<REntity*>& blockRefStack) const;
 
     void setLineweight(RLineweight::Lineweight lineweight) {
         this->lineweight = lineweight;
@@ -208,8 +208,7 @@ public:
         return color;
     }
 
-    virtual RColor getColor(bool resolve,
-        const QStack<RBlockReferenceEntity*>& blockRefStack) const;
+    virtual RColor getColor(bool resolve, const QStack<REntity *>& blockRefStack) const;
 
     /**
      * Can be overwritten to return internal, resolved reference points.

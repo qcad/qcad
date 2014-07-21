@@ -38,6 +38,7 @@
 #include "RTriangle.h"
 #include "RUnit.h"
 #include "RView.h"
+#include "RViewportEntity.h"
 #include "RXLine.h"
 
 class RImageData;
@@ -223,7 +224,7 @@ QBrush RExporter::getBrush(const RPainterPath& path) {
         // color fixed to "by block" (which really means by block reference):
         if (color==RColor::CompatByBlock) {
             if (!blockRefStack.isEmpty()) {
-                QStack<RBlockReferenceEntity*> newBlockRefStack;
+                QStack<REntity*> newBlockRefStack;
                 newBlockRefStack = blockRefStack;
                 newBlockRefStack.pop();
                 color = blockRefStack.top()->getColor(true, newBlockRefStack);
@@ -576,19 +577,25 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks) {
     }
 
     // find block reference of the current entity, ignore this entity:
-    bool blockRefSet = false;
+    bool blockRefOrViewportSet = false;
     // check if this entity is a block reference:
     RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(&entity);
     if (blockRef!=NULL) {
         blockRefStack.push(blockRef);
-        blockRefSet = true;
+        blockRefOrViewportSet = true;
+    }
+    // check if this entity is a viewport:
+    RViewportEntity* viewPort = dynamic_cast<RViewportEntity*>(&entity);
+    if (viewPort!=NULL) {
+        blockRefStack.push(viewPort);
+        blockRefOrViewportSet = true;
     }
 
-    startEntity(/* topLevelEntity = */ blockRefSet || blockRefStack.isEmpty());
+    startEntity(/* topLevelEntity = */ blockRefOrViewportSet || blockRefStack.isEmpty());
     exportCurrentEntity(preview);
     endEntity();
 
-    if (blockRefSet) {
+    if (blockRefOrViewportSet) {
         blockRefStack.pop();
         //blockRefBS.clear();
     }

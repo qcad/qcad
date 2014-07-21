@@ -46,6 +46,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="EntityImage" />
       <value name="EntityLeader" />
       <value name="EntitySpline" />
+      <value name="EntityViewport" />
       <value name="EntityUser" />
     </enum>
     <enum name="ProjectionRenderingHint">

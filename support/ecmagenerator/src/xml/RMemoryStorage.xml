@@ -180,6 +180,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="objectHandle" isConst="false" />
       </variant>
     </method>
+    <method name="queryObjectByHandleDirect"
+    cppName="queryObjectByHandleDirect" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RObject &gt;"
+      isPureVirtual="false">
+        <arg type="RObject::Handle" typeName="RObject::Handle"
+        name="objectHandle" isConst="false" />
+      </variant>
+    </method>
     <method name="queryEntity" cppName="queryEntity"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

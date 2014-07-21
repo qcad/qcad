@@ -60,9 +60,9 @@ public:
         tag = t;
     }
 
-    virtual RLinetype::Id getLinetypeId(bool resolve, const QStack<RBlockReferenceEntity*>& blockRefStack) const;
-    virtual RLineweight::Lineweight getLineweight(bool resolve, const QStack<RBlockReferenceEntity*>& blockRefStack) const;
-    virtual RColor getColor(bool resolve, const QStack<RBlockReferenceEntity*>& blockRefStack) const;
+    virtual RLinetype::Id getLinetypeId(bool resolve, const QStack<REntity*>& blockRefStack) const;
+    virtual RLineweight::Lineweight getLineweight(bool resolve, const QStack<REntity*>& blockRefStack) const;
+    virtual RColor getColor(bool resolve, const QStack<REntity*>& blockRefStack) const;
     virtual RColor getColor() const {
         return RTextBasedData::getColor();
     }

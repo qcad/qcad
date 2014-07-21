@@ -52,7 +52,7 @@ QString REntityData::getBlockName() const {
 }
 
 // TODO: fix
-double REntityData::getLineweightInUnits(const QStack<RBlockReferenceEntity*>& blockRefStack) const {
+double REntityData::getLineweightInUnits(const QStack<REntity*>& blockRefStack) const {
     RLineweight::Lineweight lw = getLineweight(true, blockRefStack);
     // TODO: unit conversion:
     return lw / 100.0;
@@ -63,7 +63,7 @@ double REntityData::getLineweightInUnits(const QStack<RBlockReferenceEntity*>& b
  *
  * \param resolve Resolve color if ByLayer or ByBlock.
  */
-RColor REntityData::getColor(bool resolve, const QStack<RBlockReferenceEntity*>& blockRefStack) const {
+RColor REntityData::getColor(bool resolve, const QStack<REntity*>& blockRefStack) const {
 
     if (!resolve) {
         return getColor();
@@ -102,7 +102,7 @@ RColor REntityData::getColor(bool resolve, const QStack<RBlockReferenceEntity*>&
  * \param blockRef Block reference to use for resolving if known,
  *      NULL otherwise.
  */
-RLineweight::Lineweight REntityData::getLineweight(bool resolve, const QStack<RBlockReferenceEntity*>& blockRefStack) const {
+RLineweight::Lineweight REntityData::getLineweight(bool resolve, const QStack<REntity*>& blockRefStack) const {
 
     if (!resolve) {
         return getLineweight();
@@ -155,8 +155,7 @@ RLineweight::Lineweight REntityData::getLineweight(bool resolve, const QStack<RB
     return lw;
 }
 
-RLinetype::Id REntityData::getLinetypeId(bool resolve,
-    const QStack<RBlockReferenceEntity*>& blockRefStack) const {
+RLinetype::Id REntityData::getLinetypeId(bool resolve, const QStack<REntity*>& blockRefStack) const {
 
     if (!resolve) {
         return getLinetypeId();

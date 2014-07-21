@@ -1423,7 +1423,7 @@
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
             context->argument(1).isNull()
-        ) /* type: QStack < RBlockReferenceEntity * > */
+        ) /* type: QStack < REntity * > */
     
     ){
     // prepare arguments:
@@ -1437,20 +1437,20 @@
                     toBool();
                 
                     // argument is reference
-                    QStack < RBlockReferenceEntity * >*
+                    QStack < REntity * >*
                     ap1 =
                     qscriptvalue_cast<
-                    QStack < RBlockReferenceEntity * >*
+                    QStack < REntity * >*
                         >(
                         context->argument(
                         1
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < RBlockReferenceEntity * >*.",
+                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < REntity * >*.",
                                context);                    
                     }
-                    QStack < RBlockReferenceEntity * >& a1 = *ap1;
+                    QStack < REntity * >& a1 = *ap1;
                 
     // end of arguments
 
@@ -1582,7 +1582,7 @@
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
             context->argument(1).isNull()
-        ) /* type: QStack < RBlockReferenceEntity * > */
+        ) /* type: QStack < REntity * > */
     
     ){
     // prepare arguments:
@@ -1596,20 +1596,20 @@
                     toBool();
                 
                     // argument is reference
-                    QStack < RBlockReferenceEntity * >*
+                    QStack < REntity * >*
                     ap1 =
                     qscriptvalue_cast<
-                    QStack < RBlockReferenceEntity * >*
+                    QStack < REntity * >*
                         >(
                         context->argument(
                         1
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < RBlockReferenceEntity * >*.",
+                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < REntity * >*.",
                                context);                    
                     }
-                    QStack < RBlockReferenceEntity * >& a1 = *ap1;
+                    QStack < REntity * >& a1 = *ap1;
                 
     // end of arguments
 
@@ -1662,26 +1662,26 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: QStack < RBlockReferenceEntity * > */
+        ) /* type: QStack < REntity * > */
     
     ){
     // prepare arguments:
     
                     // argument is reference
-                    QStack < RBlockReferenceEntity * >*
+                    QStack < REntity * >*
                     ap0 =
                     qscriptvalue_cast<
-                    QStack < RBlockReferenceEntity * >*
+                    QStack < REntity * >*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type QStack < RBlockReferenceEntity * >*.",
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type QStack < REntity * >*.",
                                context);                    
                     }
-                    QStack < RBlockReferenceEntity * >& a0 = *ap0;
+                    QStack < REntity * >& a0 = *ap0;
                 
     // end of arguments
 
@@ -1823,7 +1823,7 @@
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
             context->argument(1).isNull()
-        ) /* type: QStack < RBlockReferenceEntity * > */
+        ) /* type: QStack < REntity * > */
     
     ){
     // prepare arguments:
@@ -1837,20 +1837,20 @@
                     toBool();
                 
                     // argument is reference
-                    QStack < RBlockReferenceEntity * >*
+                    QStack < REntity * >*
                     ap1 =
                     qscriptvalue_cast<
-                    QStack < RBlockReferenceEntity * >*
+                    QStack < REntity * >*
                         >(
                         context->argument(
                         1
                         )
                     );
                     if( ap1 == NULL ){
-                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < RBlockReferenceEntity * >*.",
+                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < REntity * >*.",
                                context);                    
                     }
-                    QStack < RBlockReferenceEntity * >& a1 = *ap1;
+                    QStack < REntity * >& a1 = *ap1;
                 
     // end of arguments
 

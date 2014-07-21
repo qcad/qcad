@@ -118,8 +118,7 @@ RVector RShape::getPointAtPercent(double p) const {
 /**
  * \return True if this shape intersects with the given shape.
  */
-bool RShape::
-intersectsWith(const RShape& other, bool limited) const {
+bool RShape::intersectsWith(const RShape& other, bool limited) const {
     return !getIntersectionPoints(other, limited).isEmpty();
 }
 

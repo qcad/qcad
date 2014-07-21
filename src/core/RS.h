@@ -104,6 +104,7 @@ public:
         EntityImage,        /**< Image */
         EntityLeader,       /**< Leader */
         EntitySpline,       /**< Spline */
+        EntityViewport,     /**< Viewport */
         EntityUser          /**< User defined entity. Use this to identify
                                  entities that are added in a separate library
                                  and resort to C++ RTTI for RTTI. */

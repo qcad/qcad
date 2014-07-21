@@ -274,6 +274,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("EntityViewport",
+    QScriptValue(RS::EntityViewport),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityUser",
     QScriptValue(RS::EntityUser),
     QScriptValue::ReadOnly);

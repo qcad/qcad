@@ -44,9 +44,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RLinetype::Id" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="resolve"
         isConst="false" />
-        <arg type="QStack &lt; RBlockReferenceEntity * &gt; &amp;"
-        typeName="QStack &lt; RBlockReferenceEntity * &gt;"
-        name="blockRefStack" isConst="true" />
+        <arg type="QStack &lt; REntity * &gt; &amp;"
+        typeName="QStack &lt; REntity * &gt;" name="blockRefStack"
+        isConst="true" />
       </variant>
     </method>
     <method name="getLineweight" cppName="getLineweight"
@@ -56,9 +56,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="resolve"
         isConst="false" />
-        <arg type="QStack &lt; RBlockReferenceEntity * &gt; &amp;"
-        typeName="QStack &lt; RBlockReferenceEntity * &gt;"
-        name="blockRefStack" isConst="true" />
+        <arg type="QStack &lt; REntity * &gt; &amp;"
+        typeName="QStack &lt; REntity * &gt;" name="blockRefStack"
+        isConst="true" />
       </variant>
     </method>
     <method name="getColor" cppName="getColor" specifier="public"
@@ -67,9 +67,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RColor" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="resolve"
         isConst="false" />
-        <arg type="QStack &lt; RBlockReferenceEntity * &gt; &amp;"
-        typeName="QStack &lt; RBlockReferenceEntity * &gt;"
-        name="blockRefStack" isConst="true" />
+        <arg type="QStack &lt; REntity * &gt; &amp;"
+        typeName="QStack &lt; REntity * &gt;" name="blockRefStack"
+        isConst="true" />
       </variant>
     </method>
   </class>

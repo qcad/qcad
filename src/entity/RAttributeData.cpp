@@ -39,7 +39,7 @@ QString RAttributeData::getRenderedText(bool escUnicode) const {
     return RTextBasedData::getRenderedText(escUnicode);
 }
 
-RLinetype::Id RAttributeData::getLinetypeId(bool resolve, const QStack<RBlockReferenceEntity*>& blockRefStack) const {
+RLinetype::Id RAttributeData::getLinetypeId(bool resolve, const QStack<REntity*>& blockRefStack) const {
     if (document!=NULL && linetypeId==document->getLinetypeByBlockId()) {
         RObject::Id parentId = getParentId();
         if (parentId!=RObject::INVALID_ID) {
@@ -53,7 +53,7 @@ RLinetype::Id RAttributeData::getLinetypeId(bool resolve, const QStack<RBlockRef
     return REntityData::getLinetypeId(resolve, blockRefStack);
 }
 
-RLineweight::Lineweight RAttributeData::getLineweight(bool resolve, const QStack<RBlockReferenceEntity*>& blockRefStack) const {
+RLineweight::Lineweight RAttributeData::getLineweight(bool resolve, const QStack<REntity*>& blockRefStack) const {
     if (document!=NULL && lineweight==RLineweight::WeightByBlock) {
         RObject::Id parentId = getParentId();
         if (parentId!=RObject::INVALID_ID) {
@@ -67,7 +67,7 @@ RLineweight::Lineweight RAttributeData::getLineweight(bool resolve, const QStack
     return REntityData::getLineweight(resolve, blockRefStack);
 }
 
-RColor RAttributeData::getColor(bool resolve, const QStack<RBlockReferenceEntity*>& blockRefStack) const {
+RColor RAttributeData::getColor(bool resolve, const QStack<REntity*>& blockRefStack) const {
     if (document!=NULL && color.isByBlock()) {
         RObject::Id parentId = getParentId();
         if (parentId!=RObject::INVALID_ID) {

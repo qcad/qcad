@@ -74,6 +74,8 @@ SOURCES += \
     RUcs.cpp \
     RUnit.cpp \
     RView.cpp \
+    RViewportData.cpp \
+    RViewportEntity.cpp \
     RWheelEvent.cpp \
     math/RArc.cpp \
     math/RBox.cpp \
@@ -211,6 +213,8 @@ HEADERS = \
     RView.h \
     RViewFocusListener.h \
     RViewListener.h \
+    RViewportData.h \
+    RViewportEntity.h \
     RWheelEvent.h \
     math/RArc.h \
     math/RBox.h \

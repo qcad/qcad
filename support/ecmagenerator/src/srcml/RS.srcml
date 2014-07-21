@@ -302,6 +302,10 @@ dir="./core" filename="RS.h">
   </expr>, 
   <comment type="block">/**&lt; Spline */</comment>
   <expr>
+    <name>EntityViewport</name>
+  </expr>, 
+  <comment type="block">/**&lt; Viewport */</comment>
+  <expr>
     <name>EntityUser</name>
   </expr>
   <comment type="block">/**&lt; User defined entity. Use this to

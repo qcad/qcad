@@ -63,9 +63,9 @@ void REntity::init() {
  * \copydoc REntityData::getLineweight
  */
 RLineweight::Lineweight REntity::getLineweight(bool resolve,
-    const QStack<RBlockReferenceEntity*>& blockRefStack) const {
+    const QStack<REntity*>& blockRefStack) const {
 
-    QStack<RBlockReferenceEntity*> newBlockRefStack = blockRefStack;
+    QStack<REntity*> newBlockRefStack = blockRefStack;
     if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top()) {
         newBlockRefStack.pop();
     }
@@ -76,9 +76,9 @@ RLineweight::Lineweight REntity::getLineweight(bool resolve,
 /**
  * \copydoc REntityData::getColor
  */
-RColor REntity::getColor(bool resolve, const QStack<RBlockReferenceEntity*>& blockRefStack) {
+RColor REntity::getColor(bool resolve, const QStack<REntity*>& blockRefStack) {
 
-    QStack<RBlockReferenceEntity*> newBlockRefStack = blockRefStack;
+    QStack<REntity*> newBlockRefStack = blockRefStack;
     if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top()) {
         newBlockRefStack.pop();
     }
@@ -89,8 +89,8 @@ RColor REntity::getColor(bool resolve, const QStack<RBlockReferenceEntity*>& blo
 /**
  * \copydoc REntityData::getLineweightInUnits
  */
-double REntity::getLineweightInUnits(const QStack<RBlockReferenceEntity*>& blockRefStack) const {
-    QStack<RBlockReferenceEntity*> newBlockRefStack = blockRefStack;
+double REntity::getLineweightInUnits(const QStack<REntity*>& blockRefStack) const {
+    QStack<REntity*> newBlockRefStack = blockRefStack;
     if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top()) {
         newBlockRefStack.pop();
     }
@@ -100,10 +100,8 @@ double REntity::getLineweightInUnits(const QStack<RBlockReferenceEntity*>& block
 /**
  * \copydoc REntityData::getLinetypeId
  */
-RLinetype::Id REntity::getLinetypeId(bool resolve,
-    const QStack<RBlockReferenceEntity*>& blockRefStack) const {
-
-    QStack<RBlockReferenceEntity*> newBlockRefStack = blockRefStack;
+RLinetype::Id REntity::getLinetypeId(bool resolve, const QStack<REntity*>& blockRefStack) const {
+    QStack<REntity*> newBlockRefStack = blockRefStack;
     if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top()) {
         newBlockRefStack.pop();
     }

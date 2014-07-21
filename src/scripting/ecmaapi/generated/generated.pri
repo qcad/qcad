@@ -233,6 +233,7 @@ HEADERS += \
     $$PWD/REcmaSharedPointerTriangle.h \
     $$PWD/REcmaSharedPointerUcs.h \
     $$PWD/REcmaSharedPointerView.h \
+    $$PWD/REcmaSharedPointerViewportEntity.h \
     $$PWD/REcmaSharedPointerXLine.h \
     $$PWD/REcmaSharedPointerXLineEntity.h \
     $$PWD/REcmaShellActionAdapter.h \
@@ -311,6 +312,8 @@ HEADERS += \
     $$PWD/REcmaViewFocusListenerAdapter.h \
     $$PWD/REcmaViewListener.h \
     $$PWD/REcmaViewListenerAdapter.h \
+    $$PWD/REcmaViewportData.h \
+    $$PWD/REcmaViewportEntity.h \
     $$PWD/REcmaWebView.h \
     $$PWD/REcmaWheelEvent.h \
     $$PWD/REcmaXLine.h \
@@ -551,6 +554,7 @@ SOURCES += \
     $$PWD/REcmaSharedPointerTriangle.cpp \
     $$PWD/REcmaSharedPointerUcs.cpp \
     $$PWD/REcmaSharedPointerView.cpp \
+    $$PWD/REcmaSharedPointerViewportEntity.cpp \
     $$PWD/REcmaSharedPointerXLine.cpp \
     $$PWD/REcmaSharedPointerXLineEntity.cpp \
     $$PWD/REcmaShellActionAdapter.cpp \
@@ -629,6 +633,8 @@ SOURCES += \
     $$PWD/REcmaViewFocusListenerAdapter.cpp \
     $$PWD/REcmaViewListener.cpp \
     $$PWD/REcmaViewListenerAdapter.cpp \
+    $$PWD/REcmaViewportData.cpp \
+    $$PWD/REcmaViewportEntity.cpp \
     $$PWD/REcmaWebView.cpp \
     $$PWD/REcmaWheelEvent.cpp \
     $$PWD/REcmaXLine.cpp \

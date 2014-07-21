@@ -70,6 +70,7 @@
 #include "RSplineEntity.h"
 #include "RTextEntity.h"
 #include "RTraceEntity.h"
+#include "RViewportEntity.h"
 #include "RXLineEntity.h"
 
 
@@ -218,6 +219,7 @@ int main(int argc, char *argv[]) {
     RSplineEntity::init();
     RXLineEntity::init();
     RRayEntity::init();
+    RViewportEntity::init();
 
     RTextBasedEntity::init();
     RTextEntity::init();

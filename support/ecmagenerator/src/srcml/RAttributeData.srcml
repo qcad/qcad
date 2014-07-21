@@ -196,7 +196,7 @@ dir="./entity" filename="RAttributeData.h">
       <argument_list>&lt;
       <argument>
       <name>
-      RBlockReferenceEntity</name>*</argument>&gt;</argument_list></name>&amp;</type>
+      REntity</name>*</argument>&gt;</argument_list></name>&amp;</type>
       <name>blockRefStack</name>
     </decl>
   </param>)</parameter_list>
@@ -226,7 +226,7 @@ dir="./entity" filename="RAttributeData.h">
       <argument_list>&lt;
       <argument>
       <name>
-      RBlockReferenceEntity</name>*</argument>&gt;</argument_list></name>&amp;</type>
+      REntity</name>*</argument>&gt;</argument_list></name>&amp;</type>
       <name>blockRefStack</name>
     </decl>
   </param>)</parameter_list>
@@ -254,7 +254,7 @@ dir="./entity" filename="RAttributeData.h">
       <argument_list>&lt;
       <argument>
       <name>
-      RBlockReferenceEntity</name>*</argument>&gt;</argument_list></name>&amp;</type>
+      REntity</name>*</argument>&gt;</argument_list></name>&amp;</type>
       <name>blockRefStack</name>
     </decl>
   </param>)</parameter_list>

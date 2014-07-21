@@ -257,6 +257,7 @@
 #include "REcmaSharedPointerTriangle.h"
 #include "REcmaSharedPointerUcs.h"
 #include "REcmaSharedPointerView.h"
+#include "REcmaSharedPointerViewportEntity.h"
 #include "REcmaSharedPointerXLine.h"
 #include "REcmaSharedPointerXLineEntity.h"
 #include "REcmaSnap.h"
@@ -313,6 +314,8 @@
 #include "REcmaViewFocusListenerAdapter.h"
 #include "REcmaViewListener.h"
 #include "REcmaViewListenerAdapter.h"
+#include "REcmaViewportData.h"
+#include "REcmaViewportEntity.h"
 #include "REcmaWebView.h"
 #include "REcmaWheelEvent.h"
 #include "REcmaXLine.h"
@@ -670,6 +673,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaTraceData::init(*engine);
     REcmaTraceEntity::init(*engine);
     REcmaSharedPointerTraceEntity::init(*engine);
+
+    REcmaViewportData::init(*engine);
+    REcmaViewportEntity::init(*engine);
+    REcmaSharedPointerViewportEntity::init(*engine);
 
     REcmaSplineData::init(*engine);
     REcmaSplineEntity::init(*engine);

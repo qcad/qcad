@@ -227,7 +227,7 @@ public:
     }
 
     RLinetype::Id getLinetypeId(bool resolve,
-        const QStack<RBlockReferenceEntity*>& blockRefStack) const;
+        const QStack<REntity*>& blockRefStack) const;
 
     /**
      * \copydoc REntityData::setLineweight
@@ -244,9 +244,9 @@ public:
     }
 
     RLineweight::Lineweight getLineweight(bool resolve,
-        const QStack<RBlockReferenceEntity*>& blockRefStack) const;
+        const QStack<REntity*>& blockRefStack) const;
 
-    double getLineweightInUnits(const QStack<RBlockReferenceEntity*>& blockRefStack) const;
+    double getLineweightInUnits(const QStack<REntity*>& blockRefStack) const;
 
     /**
      * \copydoc REntityData::setColor
@@ -262,7 +262,7 @@ public:
         return getData().getColor();
     }
 
-    RColor getColor(bool resolve, const QStack<RBlockReferenceEntity*>& blockRefStack);
+    RColor getColor(bool resolve, const QStack<REntity*>& blockRefStack);
 
     void copyAttributesFrom(REntity* entity, bool copyBlockId=true);
 
@@ -540,5 +540,6 @@ Q_DECLARE_METATYPE(REntity*)
 Q_DECLARE_METATYPE(QSharedPointer<REntity>)
 Q_DECLARE_METATYPE(QSharedPointer<REntity>*)
 Q_DECLARE_METATYPE(QStack<REntity*>)
+Q_DECLARE_METATYPE(QStack<REntity*>*)
 
 #endif

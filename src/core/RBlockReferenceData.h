@@ -38,6 +38,7 @@ class RDocument;
 class QCADCORE_EXPORT RBlockReferenceData: public REntityData {
 
 friend class RBlockReferenceEntity;
+friend class RViewportEntity;
 
 protected:
     RBlockReferenceData(RDocument* document, const RBlockReferenceData& data);

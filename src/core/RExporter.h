@@ -279,7 +279,7 @@ protected:
     QBrush currentBrush;
     QStack<REntity*> entityStack;
     RLayer* currentLayer;
-    QStack<RBlockReferenceEntity*> blockRefStack;
+    QStack<REntity*> blockRefStack;
     RDocument* layerSource;
     RDocument* blockSource;
     bool draftMode;

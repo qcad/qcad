@@ -21,10 +21,11 @@ dir="./core" filename="RVersion.h">
   <cpp:directive>define</cpp:directive>
   <name>RVERSION_H</name></cpp:define>
   <comment type="block">/** * Version number of the QCAD
-  Application Framework. */</comment>
+  Application Framework. * x.x.x for releases * x.x.x.x for
+  snapshots only */</comment>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>R_QCAD_VERSION_STRING</name>"3.6.1.0"</cpp:define>
+  <name>R_QCAD_VERSION_STRING</name>"3.6.2"</cpp:define>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>R_QCAD_VERSION_MAJOR</name>3</cpp:define>
@@ -33,7 +34,7 @@ dir="./core" filename="RVersion.h">
   <name>R_QCAD_VERSION_MINOR</name>6</cpp:define>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>R_QCAD_VERSION_REV</name>1</cpp:define>
+  <name>R_QCAD_VERSION_REV</name>2</cpp:define>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>R_QCAD_VERSION_BUILD</name>0</cpp:define>

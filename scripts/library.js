@@ -421,6 +421,15 @@ function isTraceEntity(obj) {
 }
 
 /**
+ * Checks if the given object is a viewport entity.
+ *
+ * \return true if the given object is a viewport entity (RViewportEntity).
+ */
+function isViewportEntity(obj) {
+    return isOfType(obj, RViewportEntity) || isOfType(obj, RViewportEntityPointer);
+}
+
+/**
  * Checks if the given object is a spline entity.
  *
  * \return true if the given object is a spline entity (RSplineEntity).
@@ -724,6 +733,8 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("Text based") : qsTr("Text based");
     case RS.EntityText:
         return plural ? qsTr("Texts") : qsTr("Text");
+    case RS.EntityViewport:
+        return plural ? qsTr("Viewports") : qsTr("Viewport");
     case RS.EntityUnknown:
     default:
         return plural ? qsTr("Unknown Entities") : qsTr("Unknown Entity");
@@ -776,6 +787,8 @@ function getEntityTypeProperties(type) {
         return RSolidEntity.getStaticPropertyTypeIds();
     case RS.EntityTrace:
         return RTraceEntity.getStaticPropertyTypeIds();
+    case RS.EntityViewport:
+        return RViewportEntity.getStaticPropertyTypeIds();
     case RS.EntityRay:
         return RRayEntity.getStaticPropertyTypeIds();
     case RS.EntityXLine:

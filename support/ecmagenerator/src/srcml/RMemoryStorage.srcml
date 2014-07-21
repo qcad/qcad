@@ -495,6 +495,28 @@ dir="./core" filename="RMemoryStorage.h">
     <name>QSharedPointer
     <argument_list>&lt;
     <argument>
+      <name>RObject</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>queryObjectByHandleDirect</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RObject</name>::
+        <name>Handle</name></name>
+      </type>
+      <name>objectHandle</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSharedPointer
+    <argument_list>&lt;
+    <argument>
       <name>REntity</name>
     </argument>&gt;</argument_list></name>
   </type>
@@ -1827,6 +1849,26 @@ dir="./core" filename="RMemoryStorage.h">
       </argument>&gt;</argument_list></name>
     </type>
     <name>objectMap</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QHash
+      <argument_list>&lt;
+      <argument>
+        <name>
+        <name>RObject</name>::
+        <name>Handle</name></name>
+      </argument>, 
+      <argument>
+        <name>QSharedPointer
+        <argument_list>&lt;
+        <argument>
+          <name>RObject</name>
+        </argument>&gt;</argument_list></name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>objectHandleMap</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

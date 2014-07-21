@@ -112,6 +112,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryObjectByHandle, "queryObjectByHandle");
             
+            REcmaHelper::registerFunction(&engine, proto, queryObjectByHandleDirect, "queryObjectByHandleDirect");
+            
             REcmaHelper::registerFunction(&engine, proto, queryEntity, "queryEntity");
             
             REcmaHelper::registerFunction(&engine, proto, queryLayer, "queryLayer");
@@ -1832,6 +1834,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::queryObjectByHandle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::queryObjectByHandleDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::queryObjectByHandleDirect", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::queryObjectByHandleDirect";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("queryObjectByHandleDirect", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RObject::Handle */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RObject::Handle
+                    a0 =
+                    (RObject::Handle)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
+        
+               self->queryObjectByHandleDirect(a0);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.queryObjectByHandleDirect().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::queryObjectByHandleDirect", context, engine);
             return result;
         }
          QScriptValue

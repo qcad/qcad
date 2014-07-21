@@ -760,10 +760,9 @@ RBox RMemoryStorage::getBoundingBox(bool includeHiddenLayer) const {
         // don't resolve block references, if line weight is ByBlock,
         // the maxLinewidth will be adjusted when the block reference
         // is encountered:
-        QStack<RBlockReferenceEntity*> blockRefStack;
+        QStack<REntity*> blockRefStack;
 
-        RLineweight::Lineweight lw =
-                e->getLineweight(true, blockRefStack);
+        RLineweight::Lineweight lw = e->getLineweight(true, blockRefStack);
         if (!boundingBox.isValid()) {
             maxLineweight = lw;
         } else {
