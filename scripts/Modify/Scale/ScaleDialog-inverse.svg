@@ -1,0 +1,20 @@
+<svg width="1536" xmlns="http://www.w3.org/2000/svg" height="1024" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g stroke-width="8" color="#000">
+<g stroke-dasharray="32,32" fill="#fff" stroke="#00f">
+<path d="m1400,552-1248-400"/>
+<path d="m1400,552-1248,320" stroke-dashoffset="26.4"/>
+<path d="m1400,552-976,320" stroke-dashoffset="29.6"/>
+</g>
+<g fill="none" stroke="#f00" transform="translate(768 -320)">
+<path d="m632,824 0,96"/>
+<path d="m680,872-96,0"/>
+</g>
+<g fill="#e6e6e6" stroke="#fff" fill-opacity=".471" stroke-linecap="square">
+<path d="m152,152 0,720 270,0z"/>
+<path d="m712,328 0,400 150,0z"/>
+</g>
+</g>
+<text x="996" y="259.2" font-family="Sans" text-align="start" word-spacing="0" line-height="125%" xml:space="preserve" letter-spacing="0" font-size="140px"><tspan x="996" y="259.2" font-family="Arial" font-size="150px">1 : f</tspan>
+</text>
+</svg>

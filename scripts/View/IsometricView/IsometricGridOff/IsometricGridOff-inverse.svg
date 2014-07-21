@@ -1,0 +1,16 @@
+<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
+<defs/>
+<g transform="translate(0 492)">
+<path fill="#f00" fill-rule="evenodd" d="m200,200h112v112h-112z" transform="translate(0 -492)"/>
+<g fill="none" stroke="#fff" stroke-width="3.5">
+<path d="m94.9193-422 0,372"/>
+<path d="m309.6936-422 0,372"/>
+<path d="m202.3064-422 0,372"/>
+<path d="m417.0807-422 0,372"/>
+<path d="m442-397.0808-372,0"/>
+<path d="m442-182.3065-372,0"/>
+<path d="m442-289.6936-372,0"/>
+<path d="m442-74.9193-372,0"/>
+</g>
+</g>
+</svg>

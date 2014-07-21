@@ -1,0 +1,17 @@
+<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g transform="translate(0 492)">
+<g stroke="#fff">
+<g fill="none" stroke-linecap="square" stroke-width="16">
+<path d="m424-260 0,144"/>
+<path d="m72-228 352,0"/>
+</g>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" d="m424-228-71.6515-35.5817 .1952,71.5539l71.4563-35.9722z"/>
+<path fill="none" stroke-linecap="square" stroke-width="16" d="m72-260 0,144"/>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" d="m72-228 71.6515,35.5817-.1952-71.5539l-71.4563,35.9722z"/>
+</g>
+<path stroke-dasharray="24,24" fill="none" stroke="#00f" stroke-width="8" d="m168-276 0-96 160,0 0,96z"/>
+<text x="172.444" y="-282.214" font-family="Sans" word-spacing="0" line-height="125%" xml:space="preserve" letter-spacing="0" font-size="114.79171753px"><tspan x="172.444" y="-282.214">10</tspan>
+</text>
+</g>
+</svg>

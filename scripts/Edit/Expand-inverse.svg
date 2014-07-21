@@ -1,0 +1,13 @@
+<svg width="20" xmlns="http://www.w3.org/2000/svg" height="20">
+<defs/>
+<g fill-rule="evenodd">
+<path fill="#fff" stroke="#606060" stroke-width=".922" d="M 3.5,2.49936 H15.4828 V14.5 H3.5 z"/>
+<g stroke="#fff">
+<path fill="#fff" stroke-width=".922" d="m5.4612,4.4612h11.9828v12.0007h-11.9828z"/>
+<g fill="none" stroke-linecap="square" stroke-width=".943">
+<path d="m7.5556,10.5h8"/>
+<path d="m11.5,6.5v8"/>
+</g>
+</g>
+</g>
+</svg>

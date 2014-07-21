@@ -1,0 +1,17 @@
+<svg width="1536" xmlns="http://www.w3.org/2000/svg" height="1024" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g color="#000">
+<path fill="#fff" stroke="#00f" stroke-width="8" d="m712,618.3865-188.818,0"/>
+<path fill="#e6e6e6" stroke="#fff" fill-opacity=".471" stroke-linecap="square" stroke-width="7.605" d="m392.934-264h189.737a1.3285,1.3285 0 0,1 1.329,1.329v189.7374a1.3285,1.3285 0 0,1 -1.329,1.3285h-189.737a1.3285,1.3285 0 0,1 -1.329-1.3285v-189.7374a1.3285,1.3285 0 0,1 1.329-1.329" transform="rotate(90)"/>
+</g>
+<text x="584" y="744" font-family="Sans" text-align="start" word-spacing="0" line-height="125%" xml:space="preserve" letter-spacing="0" font-size="140px"><tspan x="584" y="744" font-family="Arial" font-size="150px">a</tspan>
+</text>
+<g color="#000">
+<g fill="#e6e6e6" stroke="#fff" fill-opacity=".471" stroke-linecap="square" stroke-width="7.605">
+<path d="m968.896-146.641h189.734a1.3285,1.3285 0 0,1 1.33,1.329v189.7377a1.3285,1.3285 0 0,1 -1.33,1.3286h-189.734a1.3285,1.3285 0 0,1 -1.328-1.3286v-189.7377a1.3285,1.3285 0 0,1 1.328-1.329" transform="rotate(30)"/>
+<path d="m393.329-1432h189.737a1.3285,1.3285 0 0,1 1.329,1.33v189.74a1.3285,1.3285 0 0,1 -1.329,1.32h-189.737a1.3285,1.3285 0 0,1 -1.329-1.32v-189.74a1.3285,1.3285 0 0,1 1.329-1.33" transform="rotate(90)"/>
+</g>
+<path fill="none" stroke="#00f" stroke-width="8" d="m648,549.375c11.375,25 14.5,37.375 16,66.625"/>
+<path fill="#e6e6e6" stroke="#fff" fill-opacity=".471" stroke-linecap="square" stroke-width="7.605" d="m606.49-334.593h189.738a1.3285,1.3285 0 0,1 1.329,1.329v189.738a1.3285,1.3285 0 0,1 -1.329,1.328h-189.738a1.3285,1.3285 0 0,1 -1.328-1.328v-189.738a1.3285,1.3285 0 0,1 1.328-1.329" transform="rotate(60)"/>
+</g>
+</svg>

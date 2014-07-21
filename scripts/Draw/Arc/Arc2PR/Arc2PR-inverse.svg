@@ -1,0 +1,11 @@
+<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
+<defs/>
+<g transform="translate(0 464)">
+<path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="16" d="M 408,-392 A 336,336 0 0 0 72.003409,-56"/>
+<g fill="#f00">
+<path d="m16.5,4.5c0,.5523-.4477,1-1,1-.5523,0-1-.4477-1-1 0-.5523 .4477-1 1-1 .5523,0 1,.4477 1,1z" transform="matrix(-32 0 0 -32 904 -248)"/>
+<path d="m16.5,4.5c0,.5523-.4477,1-1,1-.5523,0-1-.4477-1-1 0-.5523 .4477-1 1-1 .5523,0 1,.4477 1,1z" transform="matrix(-32 0 0 -32 568 88)"/>
+</g>
+<path fill="none" stroke="#f00" stroke-linecap="round" stroke-width="8" d="m408-56-240-240"/>
+</g>
+</svg>

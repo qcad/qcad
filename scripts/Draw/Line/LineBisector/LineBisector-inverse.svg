@@ -1,0 +1,19 @@
+<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
+<defs/>
+<g fill="none" stroke-linecap="square" transform="translate(0 464)">
+<path stroke="#fff" stroke-width="16" d="m408-248-352,192"/>
+<path stroke="#00f" stroke-width="8" d="m231.2405-305.246c77.8169,55.1897 128.7596,145.8532 128.7596,248.5109"/>
+<g stroke-width="16">
+<g stroke="#f00">
+<path d="m440-56-384,0"/>
+<path d="m280-376-224,320"/>
+</g>
+<g stroke="#00f">
+<path d="m376-296-64,0"/>
+<path d="m376-328-64,0"/>
+<path d="m456-136-64,0"/>
+<path d="m456-168-64,0"/>
+</g>
+</g>
+</g>
+</svg>

@@ -1,0 +1,10 @@
+<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
+<defs/>
+<g fill="none" transform="translate(0 464)">
+<g stroke-linecap="round" stroke-width="16">
+<path stroke="#f00" d="M 154.3257,-97.529996 A 153.16414,153.16414 0 0 1 395.64552,-188.02531"/>
+<path stroke="#fff" d="M 56.529418,-118.60367 A 253.20501,253.20501 0 0 1 455.47058,-268.20685"/>
+</g>
+<path stroke="#00f" stroke-linecap="square" stroke-width="8" d="m203.5129-180.8114-65.6686-75.4706"/>
+</g>
+</svg>

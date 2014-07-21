@@ -1,0 +1,13 @@
+<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
+<defs/>
+<g transform="translate(0 492)">
+<g line-height="125%">
+<text x="86.184" y="-249.142" font-family="Bitstream Vera Sans" xml:space="preserve" transform="scale(1.02107 .97936)" font-size="1318.03881836px"><tspan x="86.184" y="-249.142" font-family="DejaVu Sans" text-align="start" font-size="204.80000305px">r</tspan>
+</text>
+<text x="274.222" y="-134.781" font-family="DejaVu Sans" text-align="start" xml:space="preserve" transform="scale(1.02107 .97936)" font-size="204.80000305px"><tspan x="274.222" y="-134.781">α</tspan>
+</text>
+</g>
+<path fill="none" stroke="#fff" stroke-linecap="square" stroke-width="16" d="m473.6-69.6c0-121.2509-49.6685-230.9716-129.7559-309.9126l-305.4441,309.9126 435.2,0z"/>
+<path fill="#f00" d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(32 0 0 -32 -152 -228)"/>
+</g>
+</svg>

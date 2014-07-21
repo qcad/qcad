@@ -1,0 +1,27 @@
+<svg width="1536" xmlns="http://www.w3.org/2000/svg" height="1024" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g stroke-width="8">
+<g fill="#fff" stroke="#00f" color="#000">
+<path d="m1176,309.2-512,512"/>
+<path d="m152,293.2 512,528"/>
+</g>
+<g fill="none" stroke="#f00">
+<path d="m664,101.2 0,800"/>
+<path d="m1384,821.2-800,0"/>
+</g>
+</g>
+<g color="#000">
+<g stroke-linecap="square">
+<path fill="#e6e6e6" stroke="#fff" fill-opacity=".471" stroke-width="6.4" d="m1160,718.8h128v204.8h-128z"/>
+<path fill="none" stroke="#00f" stroke-width="8" d="m912.9016,572.2984c63.6995,63.6995 103.0984,151.6995 103.0984,248.9016"/>
+<g fill="#e6e6e6" stroke="#fff" fill-opacity=".471" stroke-width="6.4">
+<path d="m379.41,947.031h128v204.799h-128z" transform="matrix(.70711 -.70711 .70711 .70711 0 0)"/>
+<path d="m197.2-766.4h128v204.8h-128z" transform="rotate(90)"/>
+<path d="m-554.744,2.9936h128v204.8004h-128z" transform="matrix(-.70711 -.70711 -.70711 .70711 0 0)"/>
+</g>
+</g>
+<path fill="#00f" stroke="#00f" stroke-width="6.365" d="m916.3534,575.1626 12.7386,62.3625 44.7946-35.1359-57.5332-27.2266z"/>
+</g>
+<text x="860" y="769.2" font-family="Sans" text-align="start" word-spacing="0" line-height="125%" xml:space="preserve" letter-spacing="0" font-size="140px"><tspan x="860" y="769.2" font-family="Arial" font-size="150px">a</tspan>
+</text>
+</svg>

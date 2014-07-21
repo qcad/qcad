@@ -1,0 +1,26 @@
+<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g transform="translate(0 492)">
+<g fill="none" stroke="#fff" stroke-linecap="square">
+<g stroke-opacity=".251" stroke-width="16">
+<path d="m360-244 112,0"/>
+<path d="m40-244 112,0"/>
+</g>
+<path stroke-width="24" d="m152-244 208,0"/>
+<g stroke-width="16">
+<path d="m152-68 0-352"/>
+<path d="m360-68 0-352"/>
+</g>
+</g>
+<g fill="#f00">
+<path d="m16.5,4.5c0,.5523-.4477,1-1,1-.5523,0-1-.4477-1-1 0-.5523 .4477-1 1-1 .5523,0 1,.4477 1,1z" transform="matrix(-32 0 0 -32 648 -100)"/>
+<path d="m16.5,4.5c0,.5523-.4477,1-1,1-.5523,0-1-.4477-1-1 0-.5523 .4477-1 1-1 .5523,0 1,.4477 1,1z" transform="matrix(-32 0 0 -32 856 -100)"/>
+</g>
+<g fill="none" stroke="#00f" stroke-width="8">
+<path d="m104-276-64,64"/>
+<path d="m40-276 64,64"/>
+<path d="m472-276-64,64"/>
+<path d="m408-276 64,64"/>
+</g>
+</g>
+</svg>

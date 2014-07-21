@@ -1,0 +1,10 @@
+<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
+<defs/>
+<g transform="translate(0 464)">
+<g fill="none" stroke-width="16">
+<path stroke="#f00" stroke-linejoin="round" stroke-linecap="round" d="m376,344a112,112 0 1,1 -224,0 112,112 0 1,1 224,0z" transform="translate(-96 -496)"/>
+<path stroke="#fff" stroke-linecap="square" d="m440-328-288,64"/>
+</g>
+<path fill="#f00" d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(-32 0 0 -32 936 -184)"/>
+</g>
+</svg>

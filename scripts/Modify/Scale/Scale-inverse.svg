@@ -1,0 +1,10 @@
+<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g color="#000">
+<g fill="none" stroke-linecap="square" stroke-width="16">
+<path stroke="#fff" d="m56,72 0,384 144,0z"/>
+<path stroke="#f00" d="m360,136 0,240 96,0z"/>
+</g>
+<path fill="#fff" stroke="#00f" stroke-width="10" d="m152,296 0-32 128,0 0-32 96,48-96,48 0-32z"/>
+</g>
+</svg>
