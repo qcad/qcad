@@ -1,9 +1,9 @@
 <svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
 <defs/>
 <g color="#000" stroke-width="16">
-<path fill="#b3b3b3" stroke="#000" d="m56,184 304-160 0,256-304,176 0-272z"/>
+<path fill="#b3b3b3" stroke="#fff" d="m56,184 304-160 0,256-304,176 0-272z"/>
 <path fill="none" stroke="#666" d="m104,200 208-112 0,160-208,128 0-176z"/>
-<path fill="#fff" stroke="#000" d="m168,200 304-160 0,256-304,176 0-272z"/>
+<path fill="#fff" stroke="#fff" d="m168,200 304-160 0,256-304,176 0-272z"/>
 <path fill="none" stroke="#f00" d="m392,136-144,240 144-80 0-160z"/>
 </g>
 </svg>

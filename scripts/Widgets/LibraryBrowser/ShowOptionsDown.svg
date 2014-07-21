@@ -7,6 +7,6 @@
 </defs>
 <g fill-rule="evenodd">
 <path opacity=".7" fill="url(#radialGradient3222)" stroke="#939393" stroke-linecap="square" stroke-width="3.049" d="m48.4873,25.9029a21.8445,21.8445 0 1,1 -43.6891,0 21.8445,21.8445 0 1,1 43.6891,0z" transform="matrix(.98377 0 0 .98377 -2.21045 -1.48259)"/>
-<path fill="none" stroke="#000" stroke-width="3" d="m8.853,18.2245l15.5608,15.5608 14.7333-15.5706"/>
+<path fill="none" stroke="#fff" stroke-width="3" d="m8.853,18.2245l15.5608,15.5608 14.7333-15.5706"/>
 </g>
 </svg>

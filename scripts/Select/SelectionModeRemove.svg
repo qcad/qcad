@@ -2,7 +2,7 @@
 <defs/>
 <g color="#000">
 <path fill="#ff9191" d="m56,56h320v304h-320z"/>
-<g stroke="#000" stroke-linecap="square" stroke-width="16">
+<g stroke="#fff" stroke-linecap="square" stroke-width="16">
 <path stroke-dasharray="64,64" fill="#fff" d="m152,168h320v304h-320z" stroke-dashoffset="44.8"/>
 <path fill="none" d="m56,56h320v304h-320z" stroke-dashoffset="39.825"/>
 </g>

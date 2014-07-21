@@ -4,7 +4,7 @@
 <g color="#000">
 <g fill="none" stroke-linecap="square" stroke-width="16">
 <path stroke="#f00" d="m280-68 160,0 0-160-160,0m0-160 160,0 0,96-160,0"/>
-<g stroke="#000">
+<g stroke="#fff">
 <path d="m280-68 0-160-128,0 0-64 128,0 0-96-224,0 0,208c0,61.8559 50.1441,112 112,112h112z"/>
 <path d="m-1560-340 0,384 144,0z"/>
 </g>

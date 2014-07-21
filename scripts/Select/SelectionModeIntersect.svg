@@ -6,7 +6,7 @@
 <path d="m56,56h320v304h-320z"/>
 </g>
 <path fill="#ff9191" d="m152,168h224v192h-224z"/>
-<g fill="none" stroke="#000" stroke-linecap="square" stroke-width="16">
+<g fill="none" stroke="#fff" stroke-linecap="square" stroke-width="16">
 <path d="m56,56h320v304h-320z" stroke-dashoffset="39.825"/>
 <path stroke-dasharray="64,64" d="m152,168h320v304h-320z" stroke-dashoffset="44.8"/>
 </g>

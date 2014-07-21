@@ -21,7 +21,7 @@
 <stop offset="1" stop-color="#e7e2b8" stop-opacity="0"/>
 </radialGradient>
 </defs>
-<path stroke-opacity=".018" fill="none" fill-rule="evenodd" stroke="#000" fill-opacity=".75" stroke-width=".989" d="m11.5057,5.4943v37.9066"/>
+<path stroke-opacity=".018" fill="none" fill-rule="evenodd" stroke="#fff" fill-opacity=".75" stroke-width=".989" d="m11.5057,5.4943v37.9066"/>
 <g fill-rule="evenodd" transform="matrix(1.73663 -.61786 .64393 1.66632 -9.10994 -48.06754)">
 <path fill="#cb9022" stroke="#5c410c" stroke-width=".934" d="m17.3412,32.5l5.625-5.625 20.0937-9.75c3.25-1.25 5.1875,3.375 2.3125,5l-20.0312,9.375-8,1z" transform="translate(-29.7555 19)"/>
 <path fill="url(#linearGradient2554)" d="m38.3307,20c0,0 1.4375,.0938 2,1.3438 .5795,1.2878 0,2.6562 0,2.6562l5.0312-2.4688c0,0 1.452-.8814 .6562-2.8438-.7849-1.9356-2.6875-1.1562-2.6875-1.1562l-5,2.4688z" transform="translate(-29.7555 19)"/>

@@ -2,12 +2,12 @@
 <defs/>
 <g transform="translate(0 492)">
 <g fill="none" stroke-width="16">
-<path stroke="#000" stroke-linecap="square" d="m312-196-240,160"/>
+<path stroke="#fff" stroke-linecap="square" d="m312-196-240,160"/>
 <path stroke="#f00" stroke-linecap="round" d="m312-196 144-96"/>
 </g>
 <path fill="#fff" stroke="#00f" color="#000" stroke-width="10" d="m263.2464-41.4714-17.8949-26.5287 106.1149-71.5796-17.8949-26.5287 106.4285-13.8916l-52.7438,93.4778-17.8949-26.5287z"/>
 <g fill="none" stroke-width="16">
-<path stroke="#000" stroke-linecap="square" d="m264-356-192-64"/>
+<path stroke="#fff" stroke-linecap="square" d="m264-356-192-64"/>
 <path stroke="#f00" stroke-linecap="round" d="m264-356 192,64"/>
 </g>
 <path fill="#fff" stroke="#00f" color="#000" stroke-width="10" d="m228.4721-430.4118 10.1868-30.3353 121.3412,40.7471l10.1868-30.3353 75.7257,76.0632-106.286,14.9426 10.1868-30.3353z"/>

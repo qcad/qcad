@@ -1,7 +1,7 @@
 <svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
 <defs/>
 <g fill="none" stroke-linecap="square" transform="translate(0 464)">
-<path stroke="#000" stroke-width="16" d="m408-248-352,192"/>
+<path stroke="#fff" stroke-width="16" d="m408-248-352,192"/>
 <path stroke="#00f" stroke-width="8" d="m231.2405-305.246c77.8169,55.1897 128.7596,145.8532 128.7596,248.5109"/>
 <g stroke-width="16">
 <g stroke="#f00">

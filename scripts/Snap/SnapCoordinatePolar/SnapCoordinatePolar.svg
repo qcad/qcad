@@ -7,7 +7,7 @@
 <text x="274.222" y="-134.781" font-family="DejaVu Sans" text-align="start" xml:space="preserve" transform="scale(1.02107 .97936)" font-size="204.80000305px"><tspan x="274.222" y="-134.781">α</tspan>
 </text>
 </g>
-<path fill="none" stroke="#000" stroke-linecap="square" stroke-width="16" d="m473.6-69.6c0-121.2509-49.6685-230.9716-129.7559-309.9126l-305.4441,309.9126 435.2,0z"/>
+<path fill="none" stroke="#fff" stroke-linecap="square" stroke-width="16" d="m473.6-69.6c0-121.2509-49.6685-230.9716-129.7559-309.9126l-305.4441,309.9126 435.2,0z"/>
 <path fill="#f00" d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(32 0 0 -32 -152 -228)"/>
 </g>
 </svg>

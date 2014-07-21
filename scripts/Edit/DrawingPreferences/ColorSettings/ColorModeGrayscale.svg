@@ -7,6 +7,6 @@
 <linearGradient xlink:href="#linearGradient3630" id="linearGradient3636" x1="22" x2="490" gradientUnits="userSpaceOnUse"/>
 </defs>
 <g transform="translate(0 464)">
-<path fill="url(#linearGradient3636)" stroke="#000" stroke-linecap="square" color="#000" stroke-width="20" d="m32-331.586h448v247.1722h-448z" stroke-miterlimit="10"/>
+<path fill="url(#linearGradient3636)" stroke="#fff" stroke-linecap="square" color="#000" stroke-width="20" d="m32-331.586h448v247.1722h-448z" stroke-miterlimit="10"/>
 </g>
 </svg>

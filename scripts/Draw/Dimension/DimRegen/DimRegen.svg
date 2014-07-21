@@ -1,7 +1,7 @@
 <svg width="512" xmlns="http://www.w3.org/2000/svg" height="512" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs/>
 <g transform="translate(0 492)">
-<g stroke="#000">
+<g stroke="#fff">
 <g fill="none" stroke-linecap="square" stroke-width="16">
 <path d="m424-260 0,144"/>
 <path d="m72-228 352,0"/>

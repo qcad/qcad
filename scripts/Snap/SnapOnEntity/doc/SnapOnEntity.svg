@@ -11,12 +11,12 @@
 <circle cx="240" cy="60" r="30.5"/>
 <circle cx="240" cy="60" r="29.5"/>
 </g>
-<g stroke="#000">
+<g stroke="#fff">
 <circle cx="240" cy="60" r="30"/>
 <path d="M150,90 A30,30 0 1,1 180,60 "/>
 <path d="m60,30l30,60"/>
 </g>
 <circle cx="330" cy="60" stroke="#f00" r="1" stroke-width="2"/>
-<circle cx="330" cy="60" stroke="#000" r=".01"/>
+<circle cx="330" cy="60" stroke="#fff" r=".01"/>
 </g>
 </svg>

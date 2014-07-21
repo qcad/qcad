@@ -1,7 +1,7 @@
 <svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
 <defs/>
 <g transform="translate(0 492)">
-<g fill="none" stroke="#000" stroke-linecap="square" stroke-width="16">
+<g fill="none" stroke="#fff" stroke-linecap="square" stroke-width="16">
 <path d="m56-228 384-192"/>
 <path d="m209.6-52c0-128 102.4-230.4 230.4-230.4"/>
 </g>

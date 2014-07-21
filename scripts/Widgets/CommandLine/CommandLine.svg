@@ -26,7 +26,7 @@
 </clipPath>
 </defs>
 <g transform="translate(0 -540.3622)">
-<g stroke="#000" stroke-linecap="square" stroke-width="8" stroke-dashoffset="354.331">
+<g stroke="#fff" stroke-linecap="square" stroke-width="8" stroke-dashoffset="354.331">
 <path fill="#fff" d="m40.0271,644.362h431.9459a.0271,.0097 0 0,1 .027,.01v367.978a.0271,.0097 0 0,1 -.027,.01h-431.9459a.0271,.0097 0 0,1 -.0271-.01v-367.978a.0271,.0097 0 0,1 .0271-.01"/>
 <path d="m40.0271,40h431.9459a.0271,.0114 0 0,1 .027,.0114v63.9776a.0271,.0114 0 0,1 -.027,.011h-431.9459a.0271,.0114 0 0,1 -.0271-.011v-63.9776a.0271,.0114 0 0,1 .0271-.0114" transform="translate(0 540.3622)"/>
 <path fill="#fff" d="m40.004,580.362h63.992a.004,.0017 0 0,1 .004,.002v63.996a.004,.0017 0 0,1 -.004,.002h-63.992a.004,.0017 0 0,1 -.004-.002v-63.996a.004,.0017 0 0,1 .004-.002"/>
@@ -37,7 +37,7 @@
 <text x="184" y="996.362" xml:space="preserve"><tspan x="184" y="996.362" font-family="Arial" font-size="56px">command</tspan>
 </text>
 </g>
-<path fill="#fdffff" stroke="#000" stroke-linecap="square" stroke-width="8" d="m40.0271,644.362h431.9459a.0271,.0097 0 0,1 .027,.01v287.98a.0271,.0097 0 0,1 -.027,.01h-431.9459a.0271,.0097 0 0,1 -.0271-.01v-287.98a.0271,.0097 0 0,1 .0271-.01" stroke-dashoffset="354.331"/>
+<path fill="#fdffff" stroke="#fff" stroke-linecap="square" stroke-width="8" d="m40.0271,644.362h431.9459a.0271,.0097 0 0,1 .027,.01v287.98a.0271,.0097 0 0,1 -.027,.01h-431.9459a.0271,.0097 0 0,1 -.0271-.01v-287.98a.0271,.0097 0 0,1 .0271-.01" stroke-dashoffset="354.331"/>
 <g font-family="Al-seana" word-spacing="0" line-height="125%" letter-spacing="0" font-size="40px">
 <text x="72" y="777.696" xml:space="preserve"><tspan x="72" y="777.696" font-family="Arial" font-size="32px">Command: line</tspan>
 </text>

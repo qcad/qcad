@@ -58,7 +58,7 @@
   <defs
      id="defs4" />
   <path
-     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:square"
+     style="fill:none;stroke:#ffffff;stroke-width:16;stroke-linecap:square"
      inkscape:connector-curvature="0"
      id="path8"
      d="M 456,136 88,376"
@@ -74,6 +74,6 @@
      inkscape:connector-curvature="0"
      id="path3238"
      d="M 490.90802,113.02303 344.13615,151.72726 C 383.93306,168.70388 397.07729,188.78446 396.71305,232.04953 z"
-     style="fill:#000000;stroke:#000000;stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      inkscape:transform-center-y="59.924001" />
 </svg>

@@ -45,7 +45,7 @@
 <g transform="translate(0 464)">
 <path fill="url(#radialGradient238)" stroke="url(#linearGradient3104)" stroke-linejoin="round" stroke-linecap="round" stroke-width="10.993" d="m49.9935-48.1719c.2396,4.5766 5.0559,9.1532 9.6325,9.1532h344.3886c4.5765,0 8.9135-4.5766 8.6739-9.1532l-10.2946-299.3127c-.2396-4.5766-5.0558-9.1532-9.6324-9.1532h-145.8912c-5.3324,0-13.571-3.4694-15.4087-12.1656l-6.7212-31.8045c-1.7091-8.0875-9.6985-11.4098-14.275-11.4098h-162.469c-4.5767,0-8.9136,4.5766-8.674,9.1531z"/>
 <g color="#000">
-<g fill="#729fcf" stroke="#000" stroke-linejoin="round" stroke-linecap="round" stroke-width="10.993">
+<g fill="#729fcf" stroke="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-width="10.993">
 <path opacity=".114" d="m57.7417-225.4386 332.7198,0"/>
 <path opacity=".114" d="m55.7143-269.412 334.7134,0"/>
 <path opacity=".114" d="m55.0385-335.372 335.3778,0"/>

@@ -1,17 +1,17 @@
 <svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
 <defs/>
 <g transform="translate(0 464)">
-<path fill-rule="evenodd" stroke="#000" stroke-width="16" d="m424,24 64,0 0-64-64,64z"/>
+<path fill-rule="evenodd" stroke="#fff" stroke-width="16" d="m424,24 64,0 0-64-64,64z"/>
 </g>
-<g fill="none" stroke="#000" stroke-linecap="square" stroke-width="16" transform="translate(16 464)">
+<g fill="none" stroke="#fff" stroke-linecap="square" stroke-width="16" transform="translate(16 464)">
 <path d="m72-344c0,0 96,0 96,0"/>
 <path d="m120-296 0-96"/>
 </g>
-<g fill="none" stroke="#000" stroke-linecap="square" stroke-width="16" transform="translate(272 624)">
+<g fill="none" stroke="#fff" stroke-linecap="square" stroke-width="16" transform="translate(272 624)">
 <path d="m72-344c0,0 96,0 96,0"/>
 <path d="m120-296 0-96"/>
 </g>
-<g fill="none" stroke="#000" stroke-linecap="square" stroke-width="16" transform="translate(32 736)">
+<g fill="none" stroke="#fff" stroke-linecap="square" stroke-width="16" transform="translate(32 736)">
 <path d="m72-344c0,0 96,0 96,0"/>
 <path d="m120-296 0-96"/>
 </g>

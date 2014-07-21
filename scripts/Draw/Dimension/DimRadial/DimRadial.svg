@@ -1,7 +1,7 @@
 <svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
 <defs/>
 <g transform="translate(0 464)">
-<g stroke="#000">
+<g stroke="#fff">
 <path fill="none" stroke-linecap="square" stroke-width="16" d="m200-152 144-240"/>
 <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" d="m266.8574-264.1203 67.9502-42.2228-60.9583-37.4711-6.9919,79.6939z"/>
 <path fill="none" stroke-width="23" d="m440,240a184,184 0 1,1 -368,0 184,184 0 1,1 368,0z" transform="matrix(.69565 0 0 .69565 21.91304 -318.95652)"/>

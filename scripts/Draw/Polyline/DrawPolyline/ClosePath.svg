@@ -2,7 +2,7 @@
 <defs/>
 <g transform="translate(0 464)">
 <g fill="none" stroke-width="16">
-<path stroke="#000" stroke-linecap="square" d="m104-200 96,160 160-32 80-80-144-64-32-144"/>
+<path stroke="#fff" stroke-linecap="square" d="m104-200 96,160 160-32 80-80-144-64-32-144"/>
 <path stroke="#ff0101" d="m104-200 160-160"/>
 </g>
 <g fill="#f00">

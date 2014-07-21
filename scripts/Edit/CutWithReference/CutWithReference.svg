@@ -43,7 +43,7 @@
 <stop offset="1" stop-color="#a40000" stop-opacity="0"/>
 </radialGradient>
 </defs>
-<g fill="none" stroke="#000" stroke-width="16">
+<g fill="none" stroke="#fff" stroke-width="16">
 <path d="m87.5,392.5 0,96"/>
 <path d="m39.5,440.5 96,0"/>
 </g>

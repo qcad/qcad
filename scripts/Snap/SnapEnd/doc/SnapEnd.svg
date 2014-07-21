@@ -1,6 +1,6 @@
 <svg width="184" fill="none" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="58 -92 184 64" stroke-linejoin="round" stroke-linecap="round">
 <g transform="scale(1 -1)">
-<g stroke="#000">
+<g stroke="#fff">
 <path d="m60,30l30,60"/>
 <path d="M150,90 A30,30 0 1,1 180,60 "/>
 </g>
@@ -11,6 +11,6 @@
 <circle cx="180" cy="60" r="1.5"/>
 <circle cx="240" cy="60" r="1.5"/>
 </g>
-<circle cx="240" cy="60" stroke="#000" r=".01"/>
+<circle cx="240" cy="60" stroke="#fff" r=".01"/>
 </g>
 </svg>
