@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Line</name>
     <message>
@@ -21,17 +21,17 @@
     <message>
         <location filename="../Line.ui" line="+17"/>
         <source>Line Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Segment črte</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Infinite Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Neskončna črta</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>Poltrak</translation>
     </message>
 </context>
 </TS>
