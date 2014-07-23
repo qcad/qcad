@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Line2P</name>
     <message>
@@ -31,12 +31,12 @@
     <message>
         <location line="+17"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Razveljavi segment</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Omeji dolžino ali kot</translation>
     </message>
     <message>
         <location filename="../Line2PInit.js" line="+2"/>

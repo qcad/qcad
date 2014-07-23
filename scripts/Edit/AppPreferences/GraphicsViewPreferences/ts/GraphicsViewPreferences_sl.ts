@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -91,12 +91,12 @@
     <message>
         <location line="+58"/>
         <source>Text height display threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Prag prikaza višine besedila (px):</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži loke kot črt, če je kot manjši od (stopinje): </translation>
     </message>
     <message>
         <source>Text height display threshold:</source>
