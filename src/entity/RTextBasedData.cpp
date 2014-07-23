@@ -114,8 +114,6 @@ RBox RTextBasedData::getBoundingBox() const {
     if (!boundingBox.isValid() || dirty) {
         getPainterPaths(gotDraft);
     }
-
-    //qDebug() << "bb: " << boundingBox;
     return boundingBox;
 }
 

@@ -501,10 +501,12 @@ bool RMainWindowQt::event(QEvent* e) {
             QList<QMdiSubWindow *> subWindows = mdiArea->subWindowList();
             if (subWindows.size()==1) {
                 //mdiArea->setActiveSubWindow(subWindows.at(0));
+                qDebug() << "RMainWindowQt::event: closing subwindow";
                 subWindows.at(0)->close();
             }
         }
         else {
+            qDebug() << "RMainWindowQt::event: closing active subwindow";
             mdiArea->closeActiveSubWindow();
         }
         return true;

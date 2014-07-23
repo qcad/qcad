@@ -99,6 +99,7 @@ void RMdiChildQt::closeEvent(QCloseEvent* closeEvent) {
     }
 
     if (documentInterface != NULL) {
+
         if (diLast==documentInterface) {
             diLast = NULL;
         }
@@ -118,6 +119,8 @@ void RMdiChildQt::closeEvent(QCloseEvent* closeEvent) {
         if (action!=NULL) {
             action->suspendEvent();
         }
+
+        emit closeAccepted(this);
 
         RDocumentInterface* di = documentInterface;
         documentInterface=NULL;

@@ -45,7 +45,9 @@ protected:
 
 public:
     RViewportData();
-    RViewportData(const RVector& center, double width, double height, double scale);
+    RViewportData(const RVector& center, double width, double height, double scale,
+        const RVector& viewCenterPoint,
+        const RVector& viewTargetPoint);
 
     RVector getCenter() const {
        return center;
@@ -64,6 +66,9 @@ private:
     double width;
     double height;
     double scale;
+
+    RVector viewCenterPoint;
+    RVector viewTargetPoint;
 };
 
 Q_DECLARE_METATYPE(RViewportData*)

@@ -138,7 +138,7 @@
     } else 
 
     if( context->argumentCount() ==
-        4
+        6
                 && (
                 
                         context->argument(
@@ -176,6 +176,40 @@
                         3
                         ).isNumber()
                 ) /* type: double */
+            
+                && (
+                
+                        context->argument(
+                        4
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        4
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        4
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        5
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        5
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        5
+                        ).isNull()
+                ) /* type: RVector */
             
     ){
     // prepare arguments:
@@ -222,6 +256,42 @@
                     context->argument( 3 ).
                     toNumber();
                 
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap4 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        4
+                        )
+                    );
+                    if (ap4 == NULL) {
+                           return REcmaHelper::throwError("RViewportData: Argument 4 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a4 = 
+                    *ap4;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap5 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        5
+                        )
+                    );
+                    if (ap5 == NULL) {
+                           return REcmaHelper::throwError("RViewportData: Argument 5 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a5 = 
+                    *ap5;
+                
     // end of arguments
 
     // call C++ constructor:
@@ -239,6 +309,10 @@
     a2
         ,
     a3
+        ,
+    a4
+        ,
+    a5
                     );
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:

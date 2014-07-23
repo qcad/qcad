@@ -54,7 +54,6 @@ public:
     virtual void updateModifiedListener(const RStorage* storage);
 
     void setCloseEventRejected() {
-        //userNotifiedAboutClosing = false;
         closeEventAccepted = false;
     }
 
@@ -62,18 +61,13 @@ public:
         closeEventAccepted = true;
     }
 
-//    bool isInBackground() {
-//        return inBackground;
-//    }
-
-//    void setInBackground(bool on) {
-//        inBackground = on;
-//    }
-
-    //static RMdiChildQt* getMdiChild(QWidget* w);
+    bool isCloseEventAccepted() {
+        return closeEventAccepted;
+    }
 
 signals:
     void closeRequested(RMdiChildQt* mdiChild);
+    void closeAccepted(RMdiChildQt* mdiChild);
     void modifiedStatusChanged(RMdiChildQt* mdiChild);
 
 protected:
@@ -83,9 +77,7 @@ protected:
 private:
     RDocumentInterface* documentInterface;
     static RDocumentInterface* diLast;
-    //bool userNotifiedAboutClosing;
     bool closeEventAccepted;
-//    bool inBackground;
 };
 
 Q_DECLARE_METATYPE(RMdiChildQt*)

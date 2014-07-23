@@ -30,8 +30,16 @@ RViewportData::RViewportData(RDocument* document, const RViewportData& data)
     }
 }
 
-RViewportData::RViewportData(const RVector& center, double width, double height, double scale) :
-    center(center), width(width), height(height), scale(scale) {
+RViewportData::RViewportData(const RVector& center, double width, double height, double scale,
+                             const RVector& viewCenterPoint,
+                             const RVector& viewTargetPoint) :
+
+    center(center),
+    width(width), height(height),
+    scale(scale),
+    viewCenterPoint(viewCenterPoint),
+    viewTargetPoint(viewTargetPoint) {
+
 }
 
 QList<RVector> RViewportData::getReferencePoints(

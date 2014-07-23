@@ -17,6 +17,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="double" typeName="double" name="scale"
         isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="viewCenterPoint" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="viewTargetPoint" isConst="true" />
       </variant>
     </constructor>
     <method name="getCenter" cppName="getCenter" specifier="public"

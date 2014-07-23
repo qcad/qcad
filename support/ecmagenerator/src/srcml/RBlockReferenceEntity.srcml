@@ -779,21 +779,6 @@ dir="./core" filename="RBlockReferenceEntity.h">
     <argument>
     QSharedPointer&lt;RBlockReferenceEntity&gt;*</argument>)</argument_list>
   </macro>
-  <expr_stmt>
-  <expr>
-    <call>
-      <name>Q_DECLARE_METATYPE</name>
-      <argument_list>(
-      <argument>
-        <expr>
-        <name>QStack
-        <argument_list>&lt;
-        <argument>
-        <name>
-        RBlockReferenceEntity</name>*</argument>&gt;</argument_list></name>*</expr>
-      </argument>)</argument_list>
-    </call>
-  </expr>;</expr_stmt>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>
