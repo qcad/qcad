@@ -103,7 +103,7 @@ public:
         return const_cast<REntityData*>(this)->castToShape();
     }
 
-    virtual RBox getBoundingBox() const;
+    virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     /**
      * \return Vector of bounding boxes that contain this entity.
@@ -112,8 +112,8 @@ public:
      * (e.g. spatial index algorithms). The default implementation
      * returns the bounding box that contains the whole entity.
      */
-    virtual QList<RBox> getBoundingBoxes() const {
-        return QList<RBox>() << getBoundingBox();
+    virtual QList<RBox> getBoundingBoxes(bool ignoreEmpty=false) const {
+        return QList<RBox>() << getBoundingBox(ignoreEmpty);
     }
 
     /**

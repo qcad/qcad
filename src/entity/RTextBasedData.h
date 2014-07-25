@@ -70,7 +70,7 @@ public:
         return !text.isNull();
     }
 
-    virtual RBox getBoundingBox() const;
+    virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
     double getWidth() const;
     double getHeight() const;
 

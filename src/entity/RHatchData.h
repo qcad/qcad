@@ -52,7 +52,7 @@ public:
 
     RHatchData& operator=(const RHatchData& other);
 
-    virtual RBox getBoundingBox() const;
+    virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual RVector getPointOnEntity() const;
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false) const;

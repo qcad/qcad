@@ -462,7 +462,7 @@ public:
     /**
      * \return The bounding box around all visible entities.
      */
-    virtual RBox getBoundingBox(bool includeHiddenLayer = true) const = 0;
+    virtual RBox getBoundingBox(bool ignoreHiddenLayers = true, bool ignoreEmpty = false) const = 0;
 
     virtual RBox getSelectionBox() const = 0;
 

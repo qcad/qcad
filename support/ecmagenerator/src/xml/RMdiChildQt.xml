@@ -60,6 +60,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="isCloseEventAccepted"
+    cppName="isCloseEventAccepted" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="closeEvent" cppName="closeEvent"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

@@ -269,15 +269,15 @@ public:
     /**
      * \copydoc REntityData::getBoundingBox
      */
-    virtual RBox getBoundingBox() const {
-        return getData().getBoundingBox();
+    virtual RBox getBoundingBox(bool ignoreEmpty=false) const {
+        return getData().getBoundingBox(ignoreEmpty);
     }
 
     /**
      * \copydoc REntityData::getBoundingBoxes
      */
-    virtual QList<RBox> getBoundingBoxes(/*REntity::Id subEntityId = REntity::INVALID_ID*/) const {
-        return getData().getBoundingBoxes(/*subEntityId*/);
+    virtual QList<RBox> getBoundingBoxes(bool ignoreEmpty=false) const {
+        return getData().getBoundingBoxes(ignoreEmpty);
     }
 
     /**

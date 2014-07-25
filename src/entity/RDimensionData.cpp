@@ -88,11 +88,11 @@ RDimensionData::RDimensionData(const RVector& definitionPoint,
 
 }
 
-RBox RDimensionData::getBoundingBox() const {
+RBox RDimensionData::getBoundingBox(bool ignoreEmpty) const {
     if (dirty || !boundingBox.isValid()) {
-        boundingBox = REntityData::getBoundingBox();
+        boundingBox = REntityData::getBoundingBox(ignoreEmpty);
         getTextData();
-        boundingBox.growToInclude(textData.getBoundingBox());
+        boundingBox.growToInclude(textData.getBoundingBox(ignoreEmpty));
     }
 
     return boundingBox;

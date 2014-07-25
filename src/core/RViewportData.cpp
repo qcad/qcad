@@ -30,16 +30,23 @@ RViewportData::RViewportData(RDocument* document, const RViewportData& data)
     }
 }
 
-RViewportData::RViewportData(const RVector& center, double width, double height, double scale,
-                             const RVector& viewCenterPoint,
-                             const RVector& viewTargetPoint) :
+//RViewportData::RViewportData(const RVector& center, double width, double height, double scale,
+//                             const RVector& viewCenterPoint,
+//                             const RVector& viewTargetPoint) :
 
-    center(center),
-    width(width), height(height),
-    scale(scale),
-    viewCenterPoint(viewCenterPoint),
-    viewTargetPoint(viewTargetPoint) {
+//    center(center),
+//    width(width), height(height),
+//    scale(scale),
+//    viewCenter(viewCenterPoint),
+//    viewTarget(viewTargetPoint) {
 
+//}
+
+RBox RViewportData::getBoundingBox(bool ignoreEmpty) const {
+    Q_UNUSED(ignoreEmpty)
+
+    RVector v(width/2, height/2);
+    return RBox(center - v, center + v);
 }
 
 QList<RVector> RViewportData::getReferencePoints(

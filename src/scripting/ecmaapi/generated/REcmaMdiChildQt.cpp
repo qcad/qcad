@@ -95,6 +95,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setCloseEventAccepted, "setCloseEventAccepted");
             
+            REcmaHelper::registerFunction(&engine, proto, isCloseEventAccepted, "isCloseEventAccepted");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RMdiChildQt*>(), *proto);
 
@@ -627,6 +629,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMdiChildQt::setCloseEventAccepted", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMdiChildQt::isCloseEventAccepted
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMdiChildQt::isCloseEventAccepted", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMdiChildQt::isCloseEventAccepted";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMdiChildQt* self = 
+                        getSelf("isCloseEventAccepted", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isCloseEventAccepted();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMdiChildQt.isCloseEventAccepted().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMdiChildQt::isCloseEventAccepted", context, engine);
             return result;
         }
          QScriptValue REcmaMdiChildQt::toString

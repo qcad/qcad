@@ -46,6 +46,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="margin"
         hasDefault="true" default="RDEFAULT_MIN1"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="ignoreEmpty"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="zoomTo" cppName="zoomTo" specifier="public"

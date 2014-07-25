@@ -210,7 +210,9 @@ void REntityData::setLinetype(RLinetype linetype) {
 /**
  * \return The bounding box that contains this entity.
  */
-RBox REntityData::getBoundingBox() const {
+RBox REntityData::getBoundingBox(bool ignoreEmpty) const {
+    Q_UNUSED(ignoreEmpty)
+
     RBox bb;
     QList<QSharedPointer<RShape> > shapes = getShapes();
     for (int i=0; i<shapes.size(); i++) {

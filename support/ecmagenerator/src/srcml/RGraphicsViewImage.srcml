@@ -181,6 +181,18 @@ dir="./gui" filename="RGraphicsViewImage.h">
           <name>RDEFAULT_MIN1</name>
         </expr>
       </init></decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>ignoreEmpty</name>=
+      <init>
+        <expr>
+          <name>false</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <block>{ 
     <constructor_decl>
@@ -190,6 +202,13 @@ dir="./gui" filename="RGraphicsViewImage.h">
       <decl>
         <type>
           <name>margin</name>
+        </type>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+          <name>ignoreEmpty</name>
         </type>
       </decl>
     </param>)</parameter_list>;</constructor_decl>}</block>

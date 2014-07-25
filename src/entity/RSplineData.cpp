@@ -36,7 +36,9 @@ RSplineData::RSplineData(const RSpline& spline) :
     RSpline(spline) {
 }
 
-RBox RSplineData::getBoundingBox() const {
+RBox RSplineData::getBoundingBox(bool ignoreEmpty) const {
+    Q_UNUSED(ignoreEmpty)
+
     return RSpline::getBoundingBox();
 }
 

@@ -46,7 +46,7 @@ public:
     RSplineData();
     RSplineData(const RSpline& spline);
 
-    virtual RBox getBoundingBox() const;
+    virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual QList<RVector> getReferencePoints(
         RS::ProjectionRenderingHint hint = RS::RenderTop) const;

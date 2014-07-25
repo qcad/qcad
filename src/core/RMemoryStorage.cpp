@@ -727,7 +727,7 @@ bool RMemoryStorage::hasSelection() const {
     return false;
 }
 
-RBox RMemoryStorage::getBoundingBox(bool includeHiddenLayer) const {
+RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) const {
     if (!boundingBoxChanged) {
         return boundingBox;
     }
@@ -742,7 +742,7 @@ RBox RMemoryStorage::getBoundingBox(bool includeHiddenLayer) const {
             continue;
         }
 
-        if (includeHiddenLayer) {
+        if (ignoreHiddenLayers) {
             QSharedPointer<RLayer> layer = queryLayerDirect(e->getLayerId());
             if (layer.isNull() || layer->isFrozen()) {
                 continue;
@@ -750,7 +750,7 @@ RBox RMemoryStorage::getBoundingBox(bool includeHiddenLayer) const {
         }
 
         if (e->getBlockId() == currentBlockId) {
-            boundingBox.growToInclude(e->getBoundingBox());
+            boundingBox.growToInclude(e->getBoundingBox(ignoreEmpty));
         }
 
         // resolve line width ByLayer:

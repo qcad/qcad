@@ -84,57 +84,96 @@ dir="./core" filename="RViewportData.h">
   <constructor_decl>
   <name>RViewportData</name>
   <parameter_list>()</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RViewportData</name>
+  <comment type="line">// RViewportData(const RVector&amp; center,
+  double width, double height, double scale,</comment>
+  <comment type="line">// const RVector&amp; viewCenter,</comment>
+  <comment type="line">// const RVector&amp; viewTarget);</comment>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>RBox</name>
+  </type>
+  <name>getBoundingBox</name>
   <parameter_list>(
   <param>
     <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>center</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>width</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>height</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>scale</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>viewCenterPoint</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>viewTargetPoint</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>ignoreEmpty</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function>
+    <type>
+      <name>int</name>
+    </type>
+    <name>getViewportId</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>viewportId</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setViewportId</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>int</name>
+        </type>
+        <name>id</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>viewportId</name>= 
+    <name>id</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>int</name>
+    </type>
+    <name>getStatus</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>status</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setStatus</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>int</name>
+        </type>
+        <name>s</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>status</name>= 
+    <name>s</name></expr>;</expr_stmt>}</block>
+  </function>
   <function>
     <type>
       <name>RVector</name>
@@ -147,6 +186,191 @@ dir="./core" filename="RViewportData.h">
     <expr>
       <name>center</name>
     </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setCenter</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>c</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>center</name>= 
+    <name>c</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>RVector</name>
+    </type>
+    <name>getViewCenter</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>viewCenter</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setViewCenter</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>c</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>viewCenter</name>= 
+    <name>c</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>RVector</name>
+    </type>
+    <name>getViewTarget</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>viewTarget</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setViewTarget</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>t</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>viewTarget</name>= 
+    <name>t</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>double</name>
+    </type>
+    <name>getWidth</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>width</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setWidth</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>double</name>
+        </type>
+        <name>w</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>width</name>= 
+    <name>w</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>double</name>
+    </type>
+    <name>getHeight</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>height</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setHeight</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>double</name>
+        </type>
+        <name>h</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>height</name>= 
+    <name>h</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>double</name>
+    </type>
+    <name>getScale</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>scale</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setScale</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>double</name>
+        </type>
+        <name>s</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>scale</name>= 
+    <name>s</name></expr>;</expr_stmt>}</block>
   </function>
   <function_decl>
   <type>
@@ -231,6 +455,20 @@ dir="./core" filename="RViewportData.h">
   <decl_stmt>
   <decl>
     <type>
+      <name>int</name>
+    </type>
+    <name>viewportId</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>int</name>
+    </type>
+    <name>status</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
       <name>RVector</name>
     </type>
     <name>center</name>
@@ -261,14 +499,14 @@ dir="./core" filename="RViewportData.h">
     <type>
       <name>RVector</name>
     </type>
-    <name>viewCenterPoint</name>
+    <name>viewCenter</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>
     <type>
       <name>RVector</name>
     </type>
-    <name>viewTargetPoint</name>
+    <name>viewTarget</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

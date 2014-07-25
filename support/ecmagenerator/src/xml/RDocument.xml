@@ -508,8 +508,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RBox" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="includeHiddenLayer"
+        <arg type="bool" typeName="bool" name="ignoreHiddenLayers"
         hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="ignoreEmpty"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="getSelectionBox" cppName="getSelectionBox"

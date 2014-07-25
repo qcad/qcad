@@ -125,8 +125,6 @@ dir="./gui" filename="RMdiChildQt.h">
     <name>setCloseEventRejected</name>
     <parameter_list>()</parameter_list>
     <block>{ 
-    <comment type="line">//userNotifiedAboutClosing =
-    false;</comment>
     <expr_stmt>
     <expr>
     <name>closeEventAccepted</name>= 
@@ -144,14 +142,18 @@ dir="./gui" filename="RMdiChildQt.h">
     <name>closeEventAccepted</name>= 
     <name>true</name></expr>;</expr_stmt>}</block>
   </function>
-  <comment type="line">// bool isInBackground() {</comment>
-  <comment type="line">// return inBackground;</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// void setInBackground(bool on) {</comment>
-  <comment type="line">// inBackground = on;</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">//static RMdiChildQt* getMdiChild(QWidget*
-  w);</comment>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>isCloseEventAccepted</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>closeEventAccepted</name>
+    </expr>;</return>}</block>
+  </function>
   <label>
   <name>signals</name>:</label>
   <function_decl>
@@ -159,6 +161,19 @@ dir="./gui" filename="RMdiChildQt.h">
     <name>void</name>
   </type>
   <name>closeRequested</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RMdiChildQt</name>*</type>
+      <name>mdiChild</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>closeAccepted</name>
   <parameter_list>(
   <param>
     <decl>
@@ -217,16 +232,13 @@ dir="./gui" filename="RMdiChildQt.h">
     <name>RDocumentInterface</name>*</type>
     <name>diLast</name>
   </decl>;</decl_stmt>
-  <comment type="line">//bool userNotifiedAboutClosing;</comment>
   <decl_stmt>
   <decl>
     <type>
       <name>bool</name>
     </type>
     <name>closeEventAccepted</name>
-  </decl>;</decl_stmt>
-  <comment type="line">// bool
-  inBackground;</comment></private>}</block>;</class>
+  </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

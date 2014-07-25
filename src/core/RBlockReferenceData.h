@@ -48,7 +48,7 @@ public:
     RBlockReferenceData(RBlock::Id referencedBlockId,
             const RVector& position, const RVector& scaleFactors, double angle);
 
-    virtual RBox getBoundingBox() const;
+    virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual QList<RVector> getInternalReferencePoints(
         RS::ProjectionRenderingHint hint = RS::RenderTop) const;

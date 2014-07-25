@@ -129,7 +129,19 @@ dir="./core" filename="RBlockReferenceData.h">
     <name>RBox</name>
   </type>
   <name>getBoundingBox</name>
-  <parameter_list>()</parameter_list>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>ignoreEmpty</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>

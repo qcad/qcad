@@ -144,7 +144,7 @@ public:
     virtual void zoom(const RVector& center, double factor);
     virtual void zoomTo(const RBox& window, int margin = 0);
     void zoomPrevious();
-    void autoZoom(int margin = RDEFAULT_MIN1);
+    void autoZoom(int margin = RDEFAULT_MIN1, bool ignoreEmpty=false);
     bool zoomToSelection();
 
     virtual void centerToPoint(const RVector& point);

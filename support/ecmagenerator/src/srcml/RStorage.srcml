@@ -2597,10 +2597,22 @@ dir="./core" filename="RStorage.h">
     <type>
       <name>bool</name>
     </type>
-    <name>includeHiddenLayer</name>=
+    <name>ignoreHiddenLayers</name>=
     <init>
       <expr>
         <name>true</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>ignoreEmpty</name>=
+    <init>
+      <expr>
+        <name>false</name>
       </expr>
     </init></decl>
   </param>)</parameter_list>

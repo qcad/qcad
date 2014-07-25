@@ -66,7 +66,7 @@ view.setScene(scene);
 // set up page and paper settings as document variables:
 var pageWidth = 210;
 var pageHeight = 297;
-var bb = document.getBoundingBox();
+var bb = document.getBoundingBox(true, true);
 var scale = 10.0;
 
 // paper unit:

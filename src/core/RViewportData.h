@@ -45,12 +45,74 @@ protected:
 
 public:
     RViewportData();
-    RViewportData(const RVector& center, double width, double height, double scale,
-        const RVector& viewCenterPoint,
-        const RVector& viewTargetPoint);
+//    RViewportData(const RVector& center, double width, double height, double scale,
+//        const RVector& viewCenter,
+//        const RVector& viewTarget);
+
+    virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
+
+    int getViewportId() const {
+       return viewportId;
+    }
+
+    void setViewportId(int id) {
+        viewportId = id;
+    }
+
+    int getStatus() const {
+        return status;
+    }
+
+    void setStatus(int s) {
+        status = s;
+    }
 
     RVector getCenter() const {
        return center;
+    }
+
+    void setCenter(const RVector& c) {
+        center = c;
+    }
+
+    RVector getViewCenter() const {
+       return viewCenter;
+    }
+
+    void setViewCenter(const RVector& c) {
+        viewCenter = c;
+    }
+
+    RVector getViewTarget() const {
+        return viewTarget;
+    }
+
+    void setViewTarget(const RVector& t) {
+        viewTarget = t;
+    }
+
+    double getWidth() const {
+        return width;
+    }
+
+    void setWidth(double w) {
+        width = w;
+    }
+
+    double getHeight() const {
+        return height;
+    }
+
+    void setHeight(double h) {
+        height = h;
+    }
+
+    double getScale() const {
+        return scale;
+    }
+
+    void setScale(double s) {
+        scale = s;
     }
 
     virtual QList<RVector> getReferencePoints(
@@ -62,13 +124,15 @@ public:
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const;
 
 private:
+    int viewportId;
+    int status;
     RVector center;
     double width;
     double height;
     double scale;
 
-    RVector viewCenterPoint;
-    RVector viewTargetPoint;
+    RVector viewCenter;
+    RVector viewTarget;
 };
 
 Q_DECLARE_METATYPE(RViewportData*)

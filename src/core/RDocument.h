@@ -180,7 +180,7 @@ public:
 
     bool hasSelection() const;
 
-    RBox getBoundingBox(bool includeHiddenLayer = true) const;
+    RBox getBoundingBox(bool ignoreHiddenLayers = true, bool ignoreEmpty = false) const;
     RBox getSelectionBox() const;
 
     //void addToSpatialIndex(RObject& object, bool isNew = false);

@@ -1279,8 +1279,8 @@ bool RDocument::hasSelection() const {
 /**
  * \copydoc RStorage::getBoundingBox
  */
-RBox RDocument::getBoundingBox(bool includeHiddenLayer) const {
-    return storage.getBoundingBox(includeHiddenLayer);
+RBox RDocument::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) const {
+    return storage.getBoundingBox(ignoreHiddenLayers, ignoreEmpty);
 }
 
 RBox RDocument::getSelectionBox() const {
@@ -1408,8 +1408,8 @@ bool RDocument::addBlockToSpatialIndex(RBlock::Id blockId, RBlock::Id ignoreBloc
 }
 
 
-void RDocument::removeFromSpatialIndex(QSharedPointer<REntity> entity /*, REntity::Id subEntityId*/) {
-    QList<RBox> bbs = entity->getBoundingBoxes(/*subEntityId*/);
+void RDocument::removeFromSpatialIndex(QSharedPointer<REntity> entity) {
+    QList<RBox> bbs = entity->getBoundingBoxes();
     bool ok = spatialIndex.removeFromIndex(entity->getId(), bbs);
     if (!ok) {
         qWarning() << "RDocument::removeFromSpatialIndex: removing entity: " << *entity;

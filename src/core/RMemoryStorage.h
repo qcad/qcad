@@ -98,7 +98,7 @@ public:
 
     virtual bool hasSelection() const;
 
-    virtual RBox getBoundingBox(bool includeHiddenLayer = true) const;
+    virtual RBox getBoundingBox(bool ignoreHiddenLayers = true, bool ignoreEmpty=false) const;
     virtual RBox getSelectionBox() const;
 
     virtual bool removeObject(QSharedPointer<RObject> object);

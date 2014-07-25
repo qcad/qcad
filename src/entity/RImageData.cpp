@@ -75,7 +75,9 @@ RImageData& RImageData::operator =(const RImageData& other) {
     return *this;
 }
 
-RBox RImageData::getBoundingBox() const {
+RBox RImageData::getBoundingBox(bool ignoreEmpty) const {
+    Q_UNUSED(ignoreEmpty)
+
     RBox ret;
     QList<RLine> edges = getEdges();
     for (int i=0; i<edges.size(); i++) {

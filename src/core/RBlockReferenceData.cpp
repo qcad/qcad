@@ -132,7 +132,7 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
     return minDist;
 }
 
-RBox RBlockReferenceData::getBoundingBox() const {
+RBox RBlockReferenceData::getBoundingBox(bool ignoreEmpty) const {
     if (boundingBox.isValid()) {
         return boundingBox;
     }
@@ -161,7 +161,7 @@ RBox RBlockReferenceData::getBoundingBox() const {
             continue;
         }
 
-        RBox b = entity->getBoundingBox();
+        RBox b = entity->getBoundingBox(ignoreEmpty);
         boundingBox.growToInclude(b);
     }
 

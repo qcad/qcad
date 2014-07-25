@@ -36,7 +36,9 @@ RPolylineData::RPolylineData(const RPolyline& line) :
     RPolyline(line) {
 }
 
-QList<RBox> RPolylineData::getBoundingBoxes() const {
+QList<RBox> RPolylineData::getBoundingBoxes(bool ignoreEmpty) const {
+    Q_UNUSED(ignoreEmpty)
+
     QList<RBox> ret;
     QList<QSharedPointer<RShape> > shapes = getExploded();
     for (int i=0; i<shapes.size(); i++) {

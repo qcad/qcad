@@ -294,7 +294,19 @@ dir="./core" filename="REntityData.h">
     <name>RBox</name>
   </type>
   <name>getBoundingBox</name>
-  <parameter_list>()</parameter_list>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>ignoreEmpty</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <comment type="block">/** * \return Vector of bounding boxes that
   contain this entity. * This is used for complex entities such as
@@ -312,7 +324,19 @@ dir="./core" filename="REntityData.h">
       </argument>&gt;</argument_list></name>
     </type>
     <name>getBoundingBoxes</name>
-    <parameter_list>()</parameter_list>
+    <parameter_list>(
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>ignoreEmpty</name>=
+      <init>
+        <expr>
+          <name>false</name>
+        </expr>
+      </init></decl>
+    </param>)</parameter_list>
     <specifier>const</specifier>
     <block>{ 
     <return>return 
@@ -327,7 +351,12 @@ dir="./core" filename="REntityData.h">
     </call>&lt;&lt; 
     <call>
       <name>getBoundingBox</name>
-      <argument_list>()</argument_list>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>ignoreEmpty</name>
+        </expr>
+      </argument>)</argument_list>
     </call></expr>;</return>}</block>
   </function>
   <comment type="block">/** * \return True if the entity is

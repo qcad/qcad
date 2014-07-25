@@ -108,6 +108,8 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview) const {
     e.exportLine(RLine(data.center+v1, data.center-v2));
     e.exportLine(RLine(data.center-v2, data.center-v1));
 
+    qDebug() << "exporting viewport: " << RLine(data.center-v1, data.center+v2);
+
     RDocument* doc = (RDocument*)getDocument();
     if (doc==NULL) {
         return;
@@ -118,8 +120,18 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview) const {
 //    modelSpace.exportEntity(e, preview);
 
     //e.exportPoint(data);
+    RVector offset;
+    offset = -data.viewCenter * data.scale;
 
-    RBlockReferenceData modelSpaceData(doc, RBlockReferenceData(doc->getModelSpaceBlockId(), data.center, RVector(0.4,0.4), 0));
+    RBlockReferenceData modelSpaceData(
+        doc,
+        RBlockReferenceData(
+            doc->getModelSpaceBlockId(),
+            data.center + offset,
+            RVector(data.scale, data.scale),
+            0
+        )
+    );
     modelSpaceData.update();
 
     QSet<REntity::Id> ids = doc->queryBlockEntities(doc->getModelSpaceBlockId());
@@ -143,5 +155,8 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview) const {
 void RViewportEntity::print(QDebug dbg) const {
     dbg.nospace() << "RViewportEntity(";
     REntity::print(dbg);
-    dbg.nospace() << ", center: " << getCenter() << ")";
+    dbg.nospace() << ", center: " << data.getCenter()
+                  << ", width: " << data.getWidth()
+                  << ", height: " << data.getHeight()
+    << ")";
 }

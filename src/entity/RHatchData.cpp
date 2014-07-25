@@ -122,7 +122,9 @@ RHatchData& RHatchData::operator =(const RHatchData& other) {
     return *this;
 }
 
-RBox RHatchData::getBoundingBox() const {
+RBox RHatchData::getBoundingBox(bool ignoreEmpty) const {
+    Q_UNUSED(ignoreEmpty)
+
     if (dirty) {
         getBoundaryPath();
     }

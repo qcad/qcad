@@ -18,6 +18,7 @@
  */
 
 include("../File.js");
+include("BitmapExportWorker.js");
 
 function BitmapExport(guiAction) {
     File.call(this, guiAction);
@@ -30,9 +31,9 @@ BitmapExport.includeBasePath = includeBasePath;
 BitmapExport.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
 
-    var bmpFilename = this.getFilename();
+    var bmpFileName = this.getFilename();
 
-    if (isNull(bmpFilename)) {
+    if (isNull(bmpFileName)) {
         this.terminate();
         return;
     }
@@ -43,7 +44,22 @@ BitmapExport.prototype.beginEvent = function() {
         return;
     }
 
-    this.exportBitmap(bmpFilename, properties);
+    var res = this.exportBitmap(this.getDocumentInterface(), bmpFileName, properties);
+
+    var appWin = EAction.getMainWindow();
+    if (!res[0]) {
+        print("Error: cannot save file: ", fileName);
+        print("Error: ", res[1]);
+        appWin.handleUserWarning(
+                qsTr("Error while generating Bitmap file '%1': %2")
+                    .arg(bmpFileName).arg(res[1]));
+        appWin.handleUserWarning();
+    }
+    else {
+        appWin.handleUserMessage(
+                qsTr("Bitmap file has been exported to '%1'").arg(bmpFileName));
+    }
+
     this.terminate();
 };
 
@@ -124,8 +140,8 @@ BitmapExport.prototype.getProperties = function() {
     var blackRadio = dialog.findChild("BlackBackground");
 
     var document = this.getDocument();
-    var documentWidth = document.getBoundingBox().getWidth();
-    var documentHeight = document.getBoundingBox().getHeight();
+    var documentWidth = document.getBoundingBox(true, true).getWidth();
+    var documentHeight = document.getBoundingBox(true, true).getHeight();
 
     widthEdit.valueChanged.connect(
                 function() {
@@ -160,10 +176,10 @@ BitmapExport.prototype.getProperties = function() {
     ret["width"] = widthEdit.getValue();
     ret["height"] = heightEdit.getValue();
     if (whiteRadio.checked) {
-        ret["background"] = new QColor("white");
+        ret["backgroundColor"] = new QColor("white");
     }
     else {
-        ret["background"] = new QColor("black");
+        ret["backgroundColor"] = new QColor("black");
     }
     ret["margin"] = RMath.eval(marginCombo.currentText);
 
@@ -171,63 +187,69 @@ BitmapExport.prototype.getProperties = function() {
     return ret;
 };
 
-BitmapExport.prototype.exportBitmap = function(fileName, properties) {
-    var document = this.getDocument();
-    var di = this.getDocumentInterface();
-
+BitmapExport.prototype.exportBitmap = function(di, fileName, properties) {
     // make sure nothing is selected:
     di.deselectAll();
+    var view = di.getLastKnownViewWithFocus();
+    var scene = view.getScene();
 
-    var v = di.getLastKnownViewWithFocus();
-    var scene = v.getScene();
-    var view = new RGraphicsViewImage();
-    view.setScene(scene, false);
-    view.setAntialiasing(true);
-    view.setPaintOrigin(false);
-    view.setTextHeightThresholdOverride(0);
+    return exportBitmap(di.getDocument(), scene, fileName, properties);
+    //var document = this.getDocument();
+    //var di = this.getDocumentInterface();
+//    var document = di.getDocument();
 
-    // disabled: produces very thin lines, invisible for units >= Meter
-    //view.setPrinting(true);
+//    // make sure nothing is selected:
+//    di.deselectAll();
 
-    view.setBackgroundColor(properties.background);
-    view.resizeImage(properties.width, properties.height);
+//    var v = di.getLastKnownViewWithFocus();
+//    var scene = v.getScene();
+//    var view = new RGraphicsViewImage();
+//    view.setScene(scene, false);
+//    view.setAntialiasing(true);
+//    view.setPaintOrigin(false);
+//    view.setTextHeightThresholdOverride(0);
 
-    view.autoZoom(properties.margin);
+//    // disabled: produces very thin lines, invisible for units >= Meter
+//    //view.setPrinting(true);
 
-    di.regenerateScenes();
+//    view.setBackgroundColor(properties.background);
+//    view.resizeImage(properties.width, properties.height);
 
-    // export file
-    var buffer = view.getBuffer();
+//    view.autoZoom(properties.margin);
 
-    scene.unregisterView(view);
+//    di.regenerateScenes();
 
+//    // export file
+//    var buffer = view.getBuffer();
+
+//    scene.unregisterView(view);
     
-    var iw = new QImageWriter(fileName);
-    // always empty
-    //qDebug("BitmapExport.js:", "exportBitmap(): format:", iw.format());
-    var ext = new QFileInfo(fileName).suffix().toLowerCase();
-    if (ext === "png") {
-        iw.setQuality(9);
-    } else if (ext === "jpg" || ext === "jpeg") {
-        iw.setQuality(95);
-    } else if (ext === "tif" || ext === "tiff") {
-        iw.setCompression(1);
-    } else if (ext === "bmp") {
-        iw.setCompression(1);
-    }
+//    var iw = new QImageWriter(fileName);
+//    // always empty
+//    //qDebug("BitmapExport.js:", "exportBitmap(): format:", iw.format());
+//    var ext = new QFileInfo(fileName).suffix().toLowerCase();
+//    if (ext === "png") {
+//        iw.setQuality(9);
+//    } else if (ext === "jpg" || ext === "jpeg") {
+//        iw.setQuality(95);
+//    } else if (ext === "tif" || ext === "tiff") {
+//        iw.setCompression(1);
+//    } else if (ext === "bmp") {
+//        iw.setCompression(1);
+//    }
 
-    var appWin = EAction.getMainWindow();
-    if (!iw.write(buffer)) {
-        print("Error: cannot save file: ", fileName);
-        print("Error: ", iw.errorString());
-        appWin.handleUserWarning(
-                qsTr("Error while generating Bitmap file '%1': %2")
-                    .arg(fileName).arg(iw.errorString()));
-    } else {
-        print("Conversion finished.");
-        appWin.handleUserMessage(
-                qsTr("Bitmap file has been exported to '%1'").arg(fileName));
-    }
-    iw.destroy();
+//    var appWin = EAction.getMainWindow();
+//    if (!iw.write(buffer)) {
+//        print("Error: cannot save file: ", fileName);
+//        print("Error: ", iw.errorString());
+//        appWin.handleUserWarning(
+//                qsTr("Error while generating Bitmap file '%1': %2")
+//                    .arg(fileName).arg(iw.errorString()));
+//    } else {
+//        print("Conversion finished.");
+//        appWin.handleUserMessage(
+//                qsTr("Bitmap file has been exported to '%1'").arg(fileName));
+//    }
+//    iw.destroy();
 };
 

@@ -178,12 +178,12 @@ RDocumentInterface* RGraphicsView::getDocumentInterface() {
     return &scene->getDocumentInterface();
 }
 
-void RGraphicsView::autoZoom(int margin) {
+void RGraphicsView::autoZoom(int margin, bool ignoreEmpty) {
     RDocument* document = getDocument();
     if (document == NULL) {
         return;
     }
-    RBox bb = document->getBoundingBox(false);
+    RBox bb = document->getBoundingBox(true, ignoreEmpty);
     bb.growXY(
         RUnit::convert(
             document->getMaxLineweight()/100.0/2,

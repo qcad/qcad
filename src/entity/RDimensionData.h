@@ -53,7 +53,7 @@ public:
                    const QString& fontName,
                    double textAngle);
 
-    virtual RBox getBoundingBox() const;
+    virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual bool isValid() const;
 

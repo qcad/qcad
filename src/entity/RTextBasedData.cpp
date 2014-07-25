@@ -110,10 +110,15 @@ RTextBasedData::RTextBasedData(const RVector& position,
     setText(text);
 }
 
-RBox RTextBasedData::getBoundingBox() const {
+RBox RTextBasedData::getBoundingBox(bool ignoreEmpty) const {
     if (!boundingBox.isValid() || dirty) {
         getPainterPaths(gotDraft);
     }
+
+    if (ignoreEmpty && boundingBox.getWidth()<RS::PointTolerance && boundingBox.getHeight()<RS::PointTolerance) {
+        return RBox();
+    }
+
     return boundingBox;
 }
 

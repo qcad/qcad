@@ -1,9 +1,9 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Cross", "Centreline Cross"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("Cross", "Centerline Cross"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/Cross.js");
     action.setIcon(basePath + "/Cross.svg");
-    action.setStatusTip(qsTranslate("Cross", "Draw centreline cross in arc, circle or ellipses"));
+    action.setStatusTip(qsTranslate("Cross", "Draw centerline cross in arcs, circles or ellipses"));
     action.setDefaultShortcut(new QKeySequence("c,s"));
     action.setDefaultCommands(["cross", "cs"]);
     action.setSortOrder(310);

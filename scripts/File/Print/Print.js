@@ -76,7 +76,7 @@ Print.prototype.print = function(pdfFile) {
         printer.setPaperSize(paperSizeEnum);
     }
     else {
-        printer.setPaperSize(QPrinter.Custom);
+        //printer.setPaperSize(QPrinter.Custom);
         var paperSizeMM = Print.getPaperSizeMM(this.document);
         printer.setPaperSize(paperSizeMM, QPrinter.Millimeter);
     }
@@ -322,7 +322,7 @@ Print.autoFitDrawing = function(document) {
     var paperUnit = Print.getPaperUnit(document);
 
     // drawing bounding box in drawing units:
-    var bBox = document.getBoundingBox();
+    var bBox = document.getBoundingBox(true, true);
 
     // paper bounding box in drawing units, multiplied by scale:
     var pBox = Print.getPaperBox(document);
@@ -378,7 +378,7 @@ Print.autoCenter = function(document) {
     var glueWidth = glueLeft + glueRight;
     var glueHeight = glueTop + glueBottom;
 
-    var bBox = document.getBoundingBox(false);
+    var bBox = document.getBoundingBox(true, true);
     if (!bBox.isValid()) {
         return;
     }
@@ -1060,7 +1060,7 @@ Print.getPaperSizeEnum = function(document) {
 };
 
 /**
- * \return paper size name for given document.
+ * \return paper size name for given paper size.
  *
  * \param paperSizeMM QSizeF paper size in mm.
  */
@@ -1085,6 +1085,56 @@ Print.getPaperSizeNameFromSize = function(paperSizeMM) {
     }
 
     return "";
+};
+
+/**
+ * \return paper size for given paper size name.
+ *
+ * \param paperSizeName paper size name (A4, letter, ...).
+ */
+Print.getPaperSizeFromSizeName = function(paperSizeName) {
+    for (var i=0; i<PageSettings.paperSizes.length; ++i) {
+        // paper[0]: name
+        // paper[1]: QSizeF
+        // paper[2]: QPrinter::PaperSize
+        var paper = PageSettings.paperSizes[i];
+        var sizeName = paper[0];
+        var sizeNameAlt1 = "";
+        var sizeNameAlt2 = "";
+
+        if (sizeName.indexOf("ISO")===0) {
+            sizeNameAlt1 = paper[0].replace("ISO ", "");
+        }
+        if (sizeName==="ANSI A (Letter)") {
+            sizeName = "ANSI A";
+            sizeNameAlt1 = "Letter";
+        }
+        if (sizeName==="ANSI B (Ledger, Tabloid)") {
+            sizeName = "ANSI B";
+            sizeNameAlt1 = "Ledger";
+            sizeNameAlt2 = "Tabloid";
+        }
+        if (sizeName==="F4 (Folio, Foolscap)") {
+            sizeName = "F4";
+            sizeNameAlt1 = "Folio";
+            sizeNameAlt2 = "Foolscap";
+        }
+
+        var sizeMM = paper[1];
+        var cw = sizeMM.width();
+        var ch = sizeMM.height();
+        //var w = paperSizeMM.width();
+        //var h = paperSizeMM.height();
+        if (sizeName.toLowerCase()===paperSizeName.toLowerCase() ||
+            sizeNameAlt1.toLowerCase()===paperSizeName.toLowerCase() ||
+            sizeNameAlt2.toLowerCase()===paperSizeName.toLowerCase()) {
+            //qDebug("found match: ", paper);
+            //qDebug("found match: ", paper[0]);
+            return paper[1];
+        }
+    }
+
+    return new QSizeF();
 };
 
 
