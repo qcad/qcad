@@ -77,7 +77,7 @@ General Punctuation</translatorcomment>
     </message>
     <message>
         <location line="+15"/>
-        <location line="+26"/>
+        <location line="+27"/>
         <source>Comma</source>
         <translatorcomment>--google--
 Aktywuj linię poleceń
@@ -86,9 +86,9 @@ Linia poleceń</translatorcomment>
         <translation type="unfinished">Przecinek</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="-27"/>
         <location line="+6"/>
-        <location line="+4"/>
+        <location line="+5"/>
         <location line="+15"/>
         <source>(Default)</source>
         <translatorcomment>--google--
@@ -97,7 +97,7 @@ Ustawienia pulpitu (domyślne)</translatorcomment>
         <translation type="unfinished">(Default)</translation>
     </message>
     <message>
-        <location line="-24"/>
+        <location line="-25"/>
         <source>Semicolon</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Średnik</translation>
@@ -114,7 +114,7 @@ Wartość aspektu %1 musi być mniejsza od wartości aspektu %2 typu podstawoweg
         <translation type="unfinished">Mniej niż</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>At</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

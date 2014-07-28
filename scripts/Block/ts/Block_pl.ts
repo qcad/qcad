@@ -4,7 +4,7 @@
 <context>
     <name>Block</name>
     <message>
-        <location filename="../Block.js" line="+49"/>
+        <location filename="../Block.js" line="+54"/>
         <source>&amp;Block</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
@@ -15,7 +15,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+98"/>
+        <location filename="../BlockDialog.js" line="+101"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished"></translation>
     </message>

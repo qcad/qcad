@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ja">
 <context>
     <name>Block</name>
     <message>
-        <location filename="../Block.js" line="+49"/>
+        <location filename="../Block.js" line="+54"/>
         <source>&amp;Block</source>
         <translation>&amp;B ブロック</translation>
     </message>
@@ -11,7 +12,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+98"/>
+        <location filename="../BlockDialog.js" line="+101"/>
         <source>Leading or trailing spaces.</source>
         <translation>上部または下部の余白</translation>
     </message>

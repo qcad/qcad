@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -74,7 +74,7 @@
         <translation>Unità topografiche</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+161"/>
         <source>Unit / Format</source>
         <translation>Unità / formato</translation>
     </message>
@@ -140,6 +140,16 @@
     </message>
     <message>
         <location line="+23"/>
+        <source>Font</source>
+        <translation>Carattere</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Dimension label font:</source>
+        <translation>Carattere:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Label Format</source>
         <translation>Formato etichetta</translation>
     </message>

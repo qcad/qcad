@@ -111,20 +111,20 @@
     </message>
     <message>
         <location line="+15"/>
-        <location line="+26"/>
+        <location line="+27"/>
         <source>Comma</source>
         <translation>Komma</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="-27"/>
         <location line="+6"/>
-        <location line="+4"/>
+        <location line="+5"/>
         <location line="+15"/>
         <source>(Default)</source>
         <translation>(Vorgabe)</translation>
     </message>
     <message>
-        <location line="-24"/>
+        <location line="-25"/>
         <source>Semicolon</source>
         <translation>Semikolon</translation>
     </message>
@@ -134,7 +134,7 @@
         <translation>Kleiner als</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>At</source>
         <translation>At</translation>
     </message>

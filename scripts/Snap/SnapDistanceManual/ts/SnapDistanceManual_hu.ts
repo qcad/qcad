@@ -4,7 +4,7 @@
 <context>
     <name>SnapDistanceManual</name>
     <message>
-        <location filename="../SnapDistanceManual.js" line="+31"/>
+        <location filename="../SnapDistanceManual.js" line="+36"/>
         <source>Specify first point to measure distance from</source>
         <translation type="unfinished"></translation>
     </message>

@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<TS version="2.0" language="ja">
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../Line2P.js" line="+69"/>
+        <location filename="../Line2P.js" line="+67"/>
         <source>First point</source>
         <translation>最初の点</translation>
     </message>
@@ -23,17 +24,32 @@
         <translation>シーケンスを閉じる</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+7"/>
+        <source>,, C</source>
+        <translation>,, C</translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Undo Previous Segment</source>
         <translation>前のセグメントを取り消し</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
+        <source>,, U</source>
+        <translation>,, U</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Redo Segment</source>
         <translation>セグメントをやり直し</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+7"/>
+        <source>,, R</source>
+        <translation>,, R</translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Restrict length or angle</source>
         <translation>長さや角度を制限</translation>
     </message>

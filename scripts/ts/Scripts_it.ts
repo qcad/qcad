@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -42,7 +42,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+56"/>
+        <location filename="../EAction.js" line="+57"/>
         <source>Back</source>
         <translation>Indietro</translation>
     </message>
@@ -52,8 +52,8 @@
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="+248"/>
-        <location line="+106"/>
+        <location line="+267"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Strumento attivo:</translation>
@@ -159,7 +159,7 @@
         <translation>Raggio è sceso sotto 0,0 dopo %1 archi concentrici.</translation>
     </message>
     <message>
-        <location line="+467"/>
+        <location line="+463"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -192,7 +192,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+944"/>
+        <location filename="../WidgetFactory.js" line="+950"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>
@@ -380,7 +380,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+661"/>
+        <location filename="../library.js" line="+679"/>
         <source>Entity</source>
         <translation>Entità</translation>
     </message>
@@ -646,6 +646,16 @@ in linee, solidi e testi</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Traces</source>
+        <translation>Traccias</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Trace</source>
+        <translation>Traccia</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Splines</translation>
     </message>
@@ -668,6 +678,16 @@ in linee, solidi e testi</translatorcomment>
         <location line="+0"/>
         <source>Text</source>
         <translation>Testo</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Viewports</source>
+        <translation>Finestre</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Viewport</source>
+        <translation>Finestra</translation>
     </message>
     <message>
         <location line="+3"/>

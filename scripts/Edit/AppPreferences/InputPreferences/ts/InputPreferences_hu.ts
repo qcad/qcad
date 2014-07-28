@@ -63,20 +63,20 @@
     </message>
     <message>
         <location line="+15"/>
-        <location line="+26"/>
+        <location line="+27"/>
         <source>Comma</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="-27"/>
         <location line="+6"/>
-        <location line="+4"/>
+        <location line="+5"/>
         <location line="+15"/>
         <source>(Default)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-24"/>
+        <location line="-25"/>
         <source>Semicolon</source>
         <translation type="unfinished"></translation>
     </message>
@@ -86,7 +86,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>At</source>
         <translation type="unfinished"></translation>
     </message>

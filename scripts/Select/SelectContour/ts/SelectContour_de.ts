@@ -9,7 +9,7 @@
         <translation>&amp;Kontur (de-)selektieren</translation>
     </message>
     <message>
-        <location filename="../SelectContour.js" line="+128"/>
+        <location filename="../SelectContour.js" line="+133"/>
         <source>Choose entity of contour</source>
         <translation>Objekt der Kontur wählen</translation>
     </message>

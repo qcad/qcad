@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ja">
 <context>
@@ -44,7 +45,7 @@
     </message>
     <message>
         <location line="+18"/>
-        <source>Scale projection to original size ('isometric drawing')</source>
+        <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
         <translation>オリジナルサイズに対する拡縮投影（等角投影図面）</translation>
     </message>
     <message>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ja">
 <context>
@@ -11,7 +12,7 @@
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+135"/>
+        <location filename="../LayerDialog.js" line="+138"/>
         <source>Leading or trailing spaces.</source>
         <translation>上部または下部の余白</translation>
     </message>

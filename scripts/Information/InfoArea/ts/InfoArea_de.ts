@@ -4,7 +4,7 @@
 <context>
     <name>InfoArea</name>
     <message>
-        <location filename="../InfoArea.js" line="+71"/>
+        <location filename="../InfoArea.js" line="+76"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>

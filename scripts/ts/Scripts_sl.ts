@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -37,7 +37,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+56"/>
+        <location filename="../EAction.js" line="+57"/>
         <source>Back</source>
         <translation>Nazaj</translation>
     </message>
@@ -47,8 +47,8 @@
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="+248"/>
-        <location line="+106"/>
+        <location line="+267"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
     </message>
@@ -141,7 +141,7 @@
         <translation>Radius je padel pod 0.0 po %1 kocentričnih lokih.</translation>
     </message>
     <message>
-        <location line="+467"/>
+        <location line="+463"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vsaj dve točki sta identični.</translation>
@@ -170,7 +170,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+944"/>
+        <location filename="../WidgetFactory.js" line="+950"/>
         <source>Restore defaults</source>
         <translation>Obnovi privzeto</translation>
     </message>
@@ -317,7 +317,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+661"/>
+        <location filename="../library.js" line="+679"/>
         <source>Entity</source>
         <translation>Entiteta</translation>
     </message>
@@ -568,6 +568,16 @@
     </message>
     <message>
         <location line="+2"/>
+        <source>Traces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Trace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Krivulje</translation>
     </message>
@@ -590,6 +600,16 @@
         <location line="+0"/>
         <source>Text</source>
         <translation>Besedilo</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Viewports</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Viewport</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>

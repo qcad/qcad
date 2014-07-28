@@ -138,20 +138,20 @@ Aleatorizar el desplazamiento horizontal este porcentaje</translatorcomment>
     </message>
     <message>
         <location line="+15"/>
-        <location line="+26"/>
+        <location line="+27"/>
         <source>Comma</source>
         <translation>Coma</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="-27"/>
         <location line="+6"/>
-        <location line="+4"/>
+        <location line="+5"/>
         <location line="+15"/>
         <source>(Default)</source>
         <translation>(predeterminado)</translation>
     </message>
     <message>
-        <location line="-24"/>
+        <location line="-25"/>
         <source>Semicolon</source>
         <translation>Punto y coma</translation>
     </message>
@@ -161,7 +161,7 @@ Aleatorizar el desplazamiento horizontal este porcentaje</translatorcomment>
         <translation>Menor que</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>At</source>
         <translation>At</translation>
     </message>

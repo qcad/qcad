@@ -64,7 +64,7 @@ Interseca con la selezione corrente</translatorcomment>
 <context>
     <name>SelectLayerByEntity</name>
     <message>
-        <location filename="../SelectLayerByEntity.js" line="+63"/>
+        <location filename="../SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
         <translation>Scegli entità sul layer</translation>
     </message>

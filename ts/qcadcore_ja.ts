@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<TS version="2.0" language="ja">
 <context>
     <name>QObject</name>
     <message>
@@ -216,24 +217,30 @@
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+76"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+61"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Position</source>
         <translation>位置</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>X</source>
         <translation>X</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Y</source>
         <translation>Y</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Z</source>
         <translation>Z</translation>
     </message>
@@ -241,6 +248,7 @@
         <location line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+3"/>
         <source>Scale</source>
         <translation>スケール</translation>
     </message>
@@ -322,6 +330,16 @@
         <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
         <source>Custom</source>
         <translation>カスタム</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
+        <source>Width</source>
+        <translation>幅</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Height</source>
+        <translation>高さ</translation>
     </message>
 </context>
 <context>

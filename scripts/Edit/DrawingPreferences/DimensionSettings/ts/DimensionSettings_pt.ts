@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -115,7 +115,7 @@ Unidades de topógrafo</translatorcomment>
         <translation>Unidades de topógrafo</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+161"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Unidade / format</translation>
@@ -215,6 +215,16 @@ Espessura Arquitetônica</translatorcomment>
     </message>
     <message>
         <location line="+23"/>
+        <source>Font</source>
+        <translation>Fonte</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Dimension label font:</source>
+        <translation>Fonte:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Label Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Formato etiqueta</translation>

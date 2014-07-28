@@ -203,7 +203,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher coordonnées z</translation>
     </message>
 </context>
 </TS>

@@ -113,7 +113,7 @@ Jednostki geometryczne</translatorcomment>
         <translation type="unfinished">Jednostki geometryczne</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+161"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka / Format</translation>
@@ -213,6 +213,16 @@ Strzałka architektoniczna</translatorcomment>
     </message>
     <message>
         <location line="+23"/>
+        <source>Font</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Dimension label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Label Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Format etykiet</translation>

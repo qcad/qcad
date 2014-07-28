@@ -4,7 +4,7 @@
 <context>
     <name>InfoDistancePP</name>
     <message>
-        <location filename="../InfoDistancePP.js" line="+53"/>
+        <location filename="../InfoDistancePP.js" line="+58"/>
         <source>First point</source>
         <translation>Prva točka</translation>
     </message>

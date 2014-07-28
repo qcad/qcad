@@ -4,7 +4,7 @@
 <context>
     <name>IsometricProjection</name>
     <message>
-        <location filename="../IsometricProjection.js" line="+56"/>
+        <location filename="../IsometricProjection.js" line="+49"/>
         <source>&amp;Isometric Projection</source>
         <translation>Projection &amp;isométrique</translation>
     </message>

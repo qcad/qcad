@@ -279,7 +279,7 @@ Preferências Gerais do Aplicativo
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar coordenadas z</translation>
     </message>
 </context>
 </TS>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>Block</name>
     <message>
-        <location filename="../Block.js" line="+49"/>
+        <location filename="../Block.js" line="+54"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -12,7 +12,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+98"/>
+        <location filename="../BlockDialog.js" line="+101"/>
         <source>Leading or trailing spaces.</source>
         <translation>Presledki spredaj ali zadaj.</translation>
     </message>

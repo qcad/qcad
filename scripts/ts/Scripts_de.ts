@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -37,7 +37,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+56"/>
+        <location filename="../EAction.js" line="+57"/>
         <source>Back</source>
         <translation>Zurück</translation>
     </message>
@@ -47,8 +47,8 @@
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="+248"/>
-        <location line="+106"/>
+        <location line="+267"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
     </message>
@@ -145,7 +145,7 @@
         <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location line="+474"/>
+        <location line="+470"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>
@@ -178,7 +178,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+944"/>
+        <location filename="../WidgetFactory.js" line="+950"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>
@@ -373,7 +373,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+661"/>
+        <location filename="../library.js" line="+679"/>
         <source>Entity</source>
         <translation>Objekt</translation>
     </message>
@@ -624,6 +624,16 @@
     </message>
     <message>
         <location line="+2"/>
+        <source>Traces</source>
+        <translation>Bänder</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Trace</source>
+        <translation>Band</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Splines</translation>
     </message>
@@ -646,6 +656,16 @@
         <location line="+0"/>
         <source>Text</source>
         <translation>Text</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Viewports</source>
+        <translation>Ansichtsfenster</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Viewport</source>
+        <translation>Ansichtsfenster</translation>
     </message>
     <message>
         <location line="+3"/>

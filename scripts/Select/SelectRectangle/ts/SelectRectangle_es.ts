@@ -4,7 +4,7 @@
 <context>
     <name>SelectRectangle</name>
     <message>
-        <location filename="../SelectRectangle.js" line="+71"/>
+        <location filename="../SelectRectangle.js" line="+73"/>
         <source>First corner</source>
         <translation>Primer punto de esquina</translation>
     </message>

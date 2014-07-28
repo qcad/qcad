@@ -4,7 +4,7 @@
 <context>
     <name>InfoArea</name>
     <message>
-        <location filename="../InfoArea.js" line="+65"/>
+        <location filename="../InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
         <translation>次のポリゴン頂点を設定</translation>
     </message>

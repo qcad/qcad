@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -74,7 +74,7 @@
         <translation>Unidades de medición</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+161"/>
         <source>Unit / Format</source>
         <translation>Unidades / formato</translation>
     </message>
@@ -140,6 +140,16 @@
     </message>
     <message>
         <location line="+23"/>
+        <source>Font</source>
+        <translation>Fuente</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Dimension label font:</source>
+        <translation>Fuente:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Label Format</source>
         <translation>Formato de etiqueta</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>MiscBlock</name>
     <message>
-        <location filename="../MiscBlock.js" line="+60"/>
+        <location filename="../MiscBlock.js" line="+61"/>
         <source>&amp;Block</source>
         <translation>Blo&amp;ck</translation>
     </message>

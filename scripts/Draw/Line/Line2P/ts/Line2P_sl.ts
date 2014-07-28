@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../Line2P.js" line="+69"/>
+        <location filename="../Line2P.js" line="+67"/>
         <source>First point</source>
         <translation>Prva točka</translation>
     </message>
@@ -24,17 +24,32 @@
         <translation>Zaključi sekvenco</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+7"/>
+        <source>,, C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Undo Previous Segment</source>
         <translation>Razveljavi prejšnji segment</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
+        <source>,, U</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Redo Segment</source>
         <translation>Razveljavi segment</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+7"/>
+        <source>,, R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Restrict length or angle</source>
         <translation>Omeji dolžino ali kot</translation>
     </message>

@@ -34,7 +34,7 @@
         <translation>エクスポートフィルタがみつかりません。中断します...</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+60"/>
         <source>Format:</source>
         <translation>フォーマット:</translation>
     </message>

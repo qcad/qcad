@@ -4,7 +4,7 @@
 <context>
     <name>InfoAngle</name>
     <message>
-        <location filename="../InfoAngle.js" line="+61"/>
+        <location filename="../InfoAngle.js" line="+66"/>
         <source>Specify first line</source>
         <translation>Indiquer la première ligne</translation>
     </message>

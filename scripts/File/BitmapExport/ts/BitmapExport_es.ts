@@ -4,7 +4,7 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="+88"/>
+        <location filename="../BitmapExport.js" line="+104"/>
         <source>Files</source>
         <translation>Archivos</translation>
     </message>
@@ -14,12 +14,12 @@
         <translation>Exportar mapa de bits</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="-60"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translation>Error al generar el archivo de mapa de bits &apos;%1&apos;: %2</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translation>Archivo de mapa de bits se ha exportado en &apos;%1&apos;</translation>
     </message>

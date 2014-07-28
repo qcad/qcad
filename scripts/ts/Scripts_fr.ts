@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -42,7 +42,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+56"/>
+        <location filename="../EAction.js" line="+57"/>
         <source>Back</source>
         <translation>Précédent</translation>
     </message>
@@ -52,8 +52,8 @@
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="+248"/>
-        <location line="+106"/>
+        <location line="+267"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Outil actif:</translation>
     </message>
@@ -163,7 +163,7 @@
         <translation>Rayon chuté en dessous de zéro, après %1 arc(s) concentrique(s).</translation>
     </message>
     <message>
-        <location line="+467"/>
+        <location line="+463"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -196,7 +196,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+944"/>
+        <location filename="../WidgetFactory.js" line="+950"/>
         <source>Restore defaults</source>
         <translation>Restaurer les valeurs par défaut</translation>
     </message>
@@ -384,7 +384,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+661"/>
+        <location filename="../library.js" line="+679"/>
         <source>Entity</source>
         <translation>Entité</translation>
     </message>
@@ -670,6 +670,16 @@ Impossible de fermer la séquence de lignes : nombre d&apos;entités définies e
     </message>
     <message>
         <location line="+2"/>
+        <source>Traces</source>
+        <translation>Traces</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Trace</source>
+        <translation>Trace</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Splines</translation>
     </message>
@@ -693,6 +703,16 @@ Impossible de fermer la séquence de lignes : nombre d&apos;entités définies e
         <source>Texts</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Textes</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Viewports</source>
+        <translation>Fenêtres</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Viewport</source>
+        <translation>Fenêtre</translation>
     </message>
     <message>
         <location line="+3"/>

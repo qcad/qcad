@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../Line2P.js" line="+69"/>
+        <location filename="../Line2P.js" line="+67"/>
         <source>First point</source>
         <translatorcomment>--exact match--
 --file: Circle3P_pt.ts--
@@ -52,18 +52,33 @@ Não é possível fechar a seqüência de linhas: Ainda não há suficientes ent
         <translation>Fechar a seqüência</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+7"/>
+        <source>,, C</source>
+        <translation>,, C</translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Undo Previous Segment</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desfazer segmento anterior</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
+        <source>,, U</source>
+        <translation>,, U</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Redo Segment</source>
         <translation>Refaça segmento anterior</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+7"/>
+        <source>,, R</source>
+        <translation>,, R</translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Restrict length or angle</source>
         <translation>Restringir comprimento ou ângulo</translation>
     </message>

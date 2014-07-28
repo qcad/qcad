@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ja">
 <context>
     <name>SnapDistanceManual</name>
     <message>
-        <location filename="../SnapDistanceManual.js" line="+31"/>
+        <location filename="../SnapDistanceManual.js" line="+36"/>
         <source>Specify first point to measure distance from</source>
         <translation>距離計測のための最初の点を指定してください</translation>
     </message>

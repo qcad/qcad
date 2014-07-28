@@ -43,7 +43,7 @@
 <context>
     <name>SelectLayerByEntity</name>
     <message>
-        <location filename="../SelectLayerByEntity.js" line="+63"/>
+        <location filename="../SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
         <translation>画層のエンティティを選択</translation>
     </message>

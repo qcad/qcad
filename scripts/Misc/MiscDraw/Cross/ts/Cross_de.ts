@@ -23,12 +23,12 @@
     <message>
         <location filename="../CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
-        <translation type="unfinished"></translation>
+        <translation>Mittellinien</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation>Mittellinien in Bögen, Kreisen oder Ellipsen zeichnen</translation>
     </message>
 </context>
 <context>

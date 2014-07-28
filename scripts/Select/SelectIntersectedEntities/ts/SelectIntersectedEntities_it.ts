@@ -4,7 +4,7 @@
 <context>
     <name>SelectIntersectedEntities</name>
     <message>
-        <location filename="../SelectIntersectedEntities.js" line="+84"/>
+        <location filename="../SelectIntersectedEntities.js" line="+89"/>
         <source>First point</source>
         <translation>Primo punto</translation>
     </message>

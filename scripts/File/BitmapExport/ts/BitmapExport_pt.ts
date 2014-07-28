@@ -4,7 +4,7 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="+88"/>
+        <location filename="../BitmapExport.js" line="+104"/>
         <source>Files</source>
         <translatorcomment>--exact match--
 --file: Image_pt.ts--
@@ -19,13 +19,13 @@ Todos os Ficheiros (*.*)</translatorcomment>
         <translation>Exportação como bitmap</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="-60"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Erro ao gerar arquivo Bitmap &apos;%1&apos;: %2</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Arquivo bitmap tem sido exportado para &apos;%1&apos;</translation>

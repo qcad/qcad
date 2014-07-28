@@ -212,7 +212,7 @@ Seleccione entidad base</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizar coordenadas z</translation>
     </message>
 </context>
 </TS>

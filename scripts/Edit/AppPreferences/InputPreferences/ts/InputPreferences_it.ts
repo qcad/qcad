@@ -133,20 +133,20 @@ Percentuale di elementi
     </message>
     <message>
         <location line="+15"/>
-        <location line="+26"/>
+        <location line="+27"/>
         <source>Comma</source>
         <translation>Virgola</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="-27"/>
         <location line="+6"/>
-        <location line="+4"/>
+        <location line="+5"/>
         <location line="+15"/>
         <source>(Default)</source>
         <translation>(Predefinito)</translation>
     </message>
     <message>
-        <location line="-24"/>
+        <location line="-25"/>
         <source>Semicolon</source>
         <translation>Punto e virgola</translation>
     </message>
@@ -156,7 +156,7 @@ Percentuale di elementi
         <translation>Minore di</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>At</source>
         <translation>At</translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>REntity</name>
     <message>
@@ -10,7 +10,7 @@
         <location filename="../src/entity/RCircleEntity.cpp" line="+62"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+81"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+83"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+74"/>
@@ -26,28 +26,28 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
     <message>
         <location line="-2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+83"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+85"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+91"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+83"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+85"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+82"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+84"/>
         <location line="+4"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+81"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+83"/>
         <location line="+5"/>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+87"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+89"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+75"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+76"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
@@ -64,13 +64,17 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location filename="../src/entity/RRayEntity.cpp" line="+71"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="+69"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+68"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+64"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+67"/>
+        <location filename="../src/entity/RTextBasedEntity.cpp" line="+68"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="+68"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+71"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -129,6 +133,10 @@ Exportando o desenho...</translatorcomment>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="-6"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -187,6 +195,10 @@ Modifique
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="-6"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -250,8 +262,9 @@ Diâmetro (ø)</translatorcomment>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -604,7 +617,6 @@ R&amp;enomeie Carimbo</translatorcomment>
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+2"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="-1"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+2"/>
         <source>Angle</source>
         <translatorcomment>--exact match--
@@ -720,6 +732,9 @@ Fechado</translatorcomment>
         <location filename="../src/entity/RSolidEntity.cpp" line="-13"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="-13"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Point 1</source>
         <translatorcomment>--google--
 Ponto de Extensão 1|X
@@ -729,6 +744,9 @@ Ponto 1|X</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
@@ -742,6 +760,9 @@ Ponto 2|X</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Point 3</source>
         <translatorcomment>--google--
 Ponto 3|X
@@ -750,6 +771,9 @@ Ponto 3|Y</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
@@ -846,6 +870,11 @@ Tem a certeza que quer eliminar todo o conteúdo?</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <source>X Scale</source>
+        <translation>Escala X</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Bold</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -904,8 +933,8 @@ Dimensão vertical</translatorcomment>
         <translation>Vertical</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+82"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+81"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+84"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+83"/>
         <source>Tag</source>
         <translation>Etiqueta</translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>QObject</name>
     <message>
@@ -348,6 +348,7 @@ Lista de bloques</translatorcomment>
     <message>
         <location line="+1"/>
         <location line="+3"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+61"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -358,6 +359,9 @@ Exportando el dibujo...</translatorcomment>
     </message>
     <message>
         <location line="-3"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+0"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -371,6 +375,7 @@ Especifique posición</translatorcomment>
     <message>
         <location line="-1"/>
         <location line="+3"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="-1"/>
         <source>Y</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -382,6 +387,7 @@ Ubicando las Bibliotecas
     <message>
         <location line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Z</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -394,6 +400,7 @@ Ocultar todo</translatorcomment>
         <location line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+3"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -498,6 +505,16 @@ Colores
         <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
         <source>Custom</source>
         <translation>Personalizado</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
+        <source>Width</source>
+        <translation>Ancho</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Height</source>
+        <translation>Altura</translation>
     </message>
 </context>
 <context>

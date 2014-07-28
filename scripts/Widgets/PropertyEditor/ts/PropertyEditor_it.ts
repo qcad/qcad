@@ -193,7 +193,7 @@ Specifica la base</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizzare coordinate z</translation>
     </message>
 </context>
 </TS>

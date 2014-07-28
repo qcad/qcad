@@ -4,7 +4,7 @@
 <context>
     <name>InfoDistanceEP</name>
     <message>
-        <location filename="../InfoDistanceEP.js" line="+53"/>
+        <location filename="../InfoDistanceEP.js" line="+58"/>
         <source>Specify entity</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--

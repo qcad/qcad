@@ -54,7 +54,7 @@ Modo de búsqueda:</translatorcomment>
 <context>
     <name>SelectLayerByEntity</name>
     <message>
-        <location filename="../SelectLayerByEntity.js" line="+63"/>
+        <location filename="../SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
         <translation>Elija la entidad en la capa</translation>
     </message>

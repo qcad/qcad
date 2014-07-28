@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -42,7 +42,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+56"/>
+        <location filename="../EAction.js" line="+57"/>
         <source>Back</source>
         <translation>Atrás</translation>
     </message>
@@ -52,8 +52,8 @@
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="+248"/>
-        <location line="+106"/>
+        <location line="+267"/>
+        <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Herramienta activa:</translation>
     </message>
@@ -163,7 +163,7 @@
         <translation>Radio caído por debajo de 0,0 después %1 de arcos concéntricos.</translation>
     </message>
     <message>
-        <location line="+467"/>
+        <location line="+463"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -196,7 +196,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+944"/>
+        <location filename="../WidgetFactory.js" line="+950"/>
         <source>Restore defaults</source>
         <translation>Restaurar los valores predeterminados</translation>
     </message>
@@ -384,7 +384,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+661"/>
+        <location filename="../library.js" line="+679"/>
         <source>Entity</source>
         <translation>Entidad</translation>
     </message>
@@ -659,6 +659,16 @@ en las líneas, los sólidos y los textos</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Traces</source>
+        <translation>Trazas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Trace</source>
+        <translation>Trazo</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Splines</source>
         <translation>Splines</translation>
     </message>
@@ -681,6 +691,16 @@ en las líneas, los sólidos y los textos</translatorcomment>
         <location line="+0"/>
         <source>Text</source>
         <translation>Texto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Viewports</source>
+        <translation>Ventanas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Viewport</source>
+        <translation>Ventana</translation>
     </message>
     <message>
         <location line="+3"/>

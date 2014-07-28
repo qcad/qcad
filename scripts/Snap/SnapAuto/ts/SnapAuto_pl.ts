@@ -66,7 +66,7 @@
         <translation type="unfinished">&amp;Automatycznie</translation>
     </message>
     <message>
-        <location filename="../SnapAuto.js" line="+29"/>
+        <location filename="../SnapAuto.js" line="+34"/>
         <source>Snap</source>
         <translation type="unfinished"></translation>
     </message>

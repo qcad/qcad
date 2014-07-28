@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>QObject</name>
     <message>
@@ -358,6 +358,7 @@ Lista Blocchi</translatorcomment>
     <message>
         <location line="+1"/>
         <location line="+3"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+61"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: default.po--
@@ -368,6 +369,9 @@ Esportazione Disegno...</translatorcomment>
     </message>
     <message>
         <location line="-3"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+0"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -381,6 +385,7 @@ Specificare la posizione</translatorcomment>
     <message>
         <location line="-1"/>
         <location line="+3"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="-1"/>
         <source>Y</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -392,6 +397,7 @@ Caricamento indirizzi delle librerie
     <message>
         <location line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Z</source>
         <translatorcomment>--exact match--
 --file: src_shell_data_translations_ktoon_it.ts--
@@ -404,6 +410,7 @@ Congela tutto</translatorcomment>
         <location line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+3"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -507,6 +514,16 @@ Colore G&amp;riglia:</translatorcomment>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
         <source>Custom</source>
         <translation>Personalizzato</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
+        <source>Width</source>
+        <translation>Larghezza</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Height</source>
+        <translation>Altezza</translation>
     </message>
 </context>
 <context>
