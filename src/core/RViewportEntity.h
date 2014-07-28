@@ -33,9 +33,9 @@ class RExporter;
  *
  * \scriptable
  * \sharedPointerSupport
- * \ingroup entity
+ * \ingroup core
  */
-class QCADENTITY_EXPORT RViewportEntity: public REntity {
+class QCADCORE_EXPORT RViewportEntity: public REntity {
 
 public:
     static RPropertyTypeId PropertyCustom;

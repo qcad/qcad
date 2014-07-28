@@ -34,9 +34,9 @@
  * appearance of a viewport entity.
  *
  * \scriptable
- * \ingroup entity
+ * \ingroup core
  */
-class QCADENTITY_EXPORT RViewportData: public REntityData {
+class QCADCORE_EXPORT RViewportData: public REntityData {
 
     friend class RViewportEntity;
 
