@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -109,7 +109,7 @@ Nessuna selezione</translatorcomment>
         <translation>Tutto</translation>
     </message>
     <message>
-        <location line="+605"/>
+        <location line="+606"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -139,7 +139,7 @@ Specifica la base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-448"/>
+        <location line="-449"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -160,7 +160,7 @@ Specifica la base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+294"/>
+        <location line="+295"/>
         <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
@@ -189,6 +189,11 @@ Specifica la base</translatorcomment>
         <source>Handle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Maniglia:</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Display Z coordinates</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

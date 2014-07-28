@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>PointPole</name>
     <message>
-        <location filename="../PointPole.js" line="+66"/>
+        <location filename="../PointPole.js" line="+67"/>
         <source>Arc or circle</source>
         <translation>Bogen oder Kreis</translation>
     </message>

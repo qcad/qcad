@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -52,7 +52,7 @@
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+584"/>
+        <location line="+585"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -81,7 +81,7 @@
         <translation type="obsolete">Milieu</translation>
     </message>
     <message>
-        <location line="-1032"/>
+        <location line="-1033"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIABLE*</translation>
@@ -170,7 +170,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+294"/>
+        <location line="+295"/>
         <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
@@ -199,6 +199,11 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <source>Handle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Poignée:</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Display Z coordinates</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -103,7 +103,7 @@ Fecha todas as janelas</translatorcomment>
         <translation>Todos</translation>
     </message>
     <message>
-        <location line="+605"/>
+        <location line="+606"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -113,7 +113,7 @@ Fecha todas as janelas</translatorcomment>
         <translation type="obsolete">Adicionar propriedade personalizada</translation>
     </message>
     <message>
-        <location line="-584"/>
+        <location line="-585"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicionar uma propriedade personalizada para os objetos selecionados</translation>
     </message>
@@ -237,7 +237,7 @@ Por favor verifique as permissões.</translatorcomment>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+294"/>
+        <location line="+295"/>
         <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
@@ -275,6 +275,11 @@ Preferências Gerais do Aplicativo
         <translatorcomment>--ignored colon--
 --file: pt.po--</translatorcomment>
         <translation>Punho:</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Display Z coordinates</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

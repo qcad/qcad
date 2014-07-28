@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.0" language="pl_PL">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -105,7 +105,7 @@ Czy chcesz zamknąć plik
         <translation type="unfinished">Wszystkie</translation>
     </message>
     <message>
-        <location line="+605"/>
+        <location line="+606"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -115,7 +115,7 @@ Czy chcesz zamknąć plik
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="-584"/>
+        <location line="-585"/>
         <source>Add custom property to selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -228,7 +228,7 @@ Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
         <translation type="unfinished">Nie</translation>
     </message>
     <message>
-        <location line="+294"/>
+        <location line="+295"/>
         <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
@@ -265,6 +265,11 @@ General Punctuation</translatorcomment>
         <source>Handle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Uchwyt:</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Display Z coordinates</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

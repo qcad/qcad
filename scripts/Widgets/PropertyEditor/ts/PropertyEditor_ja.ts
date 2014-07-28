@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<TS version="2.0" language="ja">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -66,7 +67,7 @@
         <translation>全て</translation>
     </message>
     <message>
-        <location line="+605"/>
+        <location line="+606"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -75,7 +76,7 @@
         <translation type="obsolete">カスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="-584"/>
+        <location line="-585"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
@@ -100,7 +101,7 @@
         <translation>いいえ</translation>
     </message>
     <message>
-        <location line="+294"/>
+        <location line="+295"/>
         <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
@@ -125,6 +126,11 @@
         <location line="+20"/>
         <source>Handle:</source>
         <translation>扱い:</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Display Z coordinates</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

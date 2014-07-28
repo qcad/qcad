@@ -4,7 +4,7 @@
 <context>
     <name>PointPowerCenter</name>
     <message>
-        <location filename="../PointPowerCenter.js" line="+44"/>
+        <location filename="../PointPowerCenter.js" line="+45"/>
         <source>No solution</source>
         <translation>Ni rešitve</translation>
     </message>

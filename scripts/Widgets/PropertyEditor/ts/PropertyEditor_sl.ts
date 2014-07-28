@@ -72,7 +72,7 @@
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
     </message>
     <message>
-        <location line="+584"/>
+        <location line="+585"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -113,7 +113,7 @@
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-448"/>
+        <location line="-449"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -133,7 +133,7 @@
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+294"/>
+        <location line="+295"/>
         <location line="+32"/>
         <location line="+12"/>
         <source>Property Editor</source>
@@ -158,6 +158,11 @@
         <location line="+20"/>
         <source>Handle:</source>
         <translation>Identifikator:</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Display Z coordinates</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

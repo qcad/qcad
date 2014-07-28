@@ -4,7 +4,7 @@
 <context>
     <name>PointPole</name>
     <message>
-        <location filename="../PointPole.js" line="+66"/>
+        <location filename="../PointPole.js" line="+67"/>
         <source>Arc or circle</source>
         <translation>Krog ali lok</translation>
     </message>
