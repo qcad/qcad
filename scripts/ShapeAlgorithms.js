@@ -355,7 +355,6 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
 };
 
 ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
-
     if (!isCircleShape(shape) && !isFullEllipseShape(shape) &&
         !isXLineShape(shape) && !isRayShape(shape)) {
 
@@ -402,12 +401,6 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
         rest1 = undefined;
         rest2 = undefined;
 
-        if (!RMath.isSameDirection(cutPos2.getAngleTo(cutPos1), shape.getDirection1(), 0.01)) {
-            var dummy = cutPos1;
-            cutPos1 = cutPos2;
-            cutPos2 = dummy;
-        }
-
         if (isValidVector(cutPos2)) {
             rest1 = new RRay(cutPos2, RVector.createPolar(1.0, shape.getDirection2()));
         }
@@ -427,7 +420,7 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
         rest1 = undefined;
         rest2 = undefined;
 
-        if (!RMath.isSameDirection(cutPos2.getAngleTo(cutPos1), shape.getDirection1(), 0.01)) {
+        if (cutPos1.isValid() && !RMath.isSameDirection(cutPos2.getAngleTo(cutPos1), shape.getDirection1(), 0.01)) {
             var dummy = cutPos1;
             cutPos1 = cutPos2;
             cutPos2 = dummy;
@@ -657,15 +650,18 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
         return undefined;
     }
 
-    // find all intersection points:
     var intersections = [];
-    if (onShape && !isCircleShape(shape) && !isFullEllipseShape(shape) && !isXLineShape(shape) && !isRayShape(shape)) {
+
+    // treat start and end points as intersection points:
+    if (onShape && !isCircleShape(shape) && !isFullEllipseShape(shape) && !isXLineShape(shape)) {
         intersections.push(shape.getStartPoint());
-        intersections.push(shape.getEndPoint());
+
+        if (!isRayShape(shape)) {
+            intersections.push(shape.getEndPoint());
+        }
     }
 
-    //qDebug("otherShapes: ", otherShapes);
-
+    // find all intersection points:
     for (var i=0; i<otherShapes.length; i++) {
         //qDebug("otherShapes[" + i + "]: ", otherShapes[i]);
         var sol = shape.getIntersectionPoints(otherShapes[i].data(), onShape, false, true);
