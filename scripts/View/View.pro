@@ -3,6 +3,7 @@ SUBDIRS = \
     ts \
     AutoZoom \
     CommandLineFocus \
+    DisplayDistanceAngle \
     DraftMode \
     IsometricView \
     LinetypeMode \

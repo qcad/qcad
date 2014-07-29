@@ -87,6 +87,17 @@ QList<RVector> RRay::getPointsWithDistanceToEnd(double distance, RS::From from) 
     return ret;
 }
 
+bool RRay::stretch(const RPolyline& area, const RVector& offset) {
+    bool ret = false;
+
+    if (area.contains(basePoint)) {
+        basePoint += offset;
+        ret = true;
+    }
+
+    return ret;
+}
+
 void RRay::print(QDebug dbg) const {
 //    dbg.nospace() << "RRay("
 //        << startPoint.x << "," << startPoint.y << " - "

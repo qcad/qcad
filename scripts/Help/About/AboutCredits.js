@@ -16,7 +16,8 @@ var credits =
                               "Misc > Drawing > Line from 2 Points (LX)<br>" +
                               "Edit > Drawing Preferences > General > Point Display<br>" +
                               "Modify > Break out Manual<br>" +
-                              "Significant contributions to:<br>" +
+                              "View > Display Distance/Angle<br>" +
+                              "<i>Significant contributions to:</i><br>" +
                               "Draw > Line > Line from 2 Points"
                               ],
         [ "Tamas Tevesz",     "Port to FreeBSD,<br>" +

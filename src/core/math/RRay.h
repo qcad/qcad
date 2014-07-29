@@ -58,6 +58,7 @@ public:
     virtual RLine getClippedLine(const RBox& box) const;
     virtual RVector getVectorTo(const RVector& point, bool limited = true) const;
 
+    virtual bool stretch(const RPolyline& area, const RVector& offset);
 
 protected:
     virtual void print(QDebug dbg) const;

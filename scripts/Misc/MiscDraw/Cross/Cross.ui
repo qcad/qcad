@@ -96,10 +96,10 @@
       <number>0</number>
      </property>
      <property name="maxVisibleItems">
-      <number>2</number>
+      <number>3</number>
      </property>
      <property name="maxCount">
-      <number>2</number>
+      <number>3</number>
      </property>
      <item>
       <property name="text">
@@ -109,6 +109,11 @@
      <item>
       <property name="text">
        <string>Total length</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Percent</string>
       </property>
      </item>
     </widget>

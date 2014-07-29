@@ -278,7 +278,7 @@ EventHandler.prototype.drawInfoLabel = function(painter, textLabel) {
 
     var p = this.graphicsView.mapToView(pos);
     // info labels might have individual colors in future
-    // var color = RSettings.getColor("GraphicsViewColors/TextLabelColor");
+    //var color = RSettings.getColor("GraphicsViewColors/TextLabelColor", new RColor(249,198,31));
     var color = RSettings.getColor("GraphicsViewColors/MeasurementToolsColor", new RColor(155,220,112));
     painter.setPen(new QColor(color.red(), color.green(), color.blue(), color.alpha()));
 
@@ -299,7 +299,7 @@ EventHandler.prototype.drawInfoLabel = function(painter, textLabel) {
 
 //        }
 
-        painter.drawText(p.x, p.y, w, h, flags, text, null);
+        painter.drawText(p.x - w - 15, p.y + h + 5, w, h, flags, text, null);
     }
 };
 
@@ -387,35 +387,63 @@ EventHandler.prototype.drawSnapLabel = function(painter, pos, posRestriction, te
         painter.drawLine(pr.x-5, pr.y, pr.x, pr.y-5);
     }
 
-    // snap restriction info:
-    /*
-    // configurable (messy)?
-    var snapRes = this.documentInterface.getSnapRestriction();
-    if (isOfType(snapRes, RRestrictAngleLength)) {
-        var di = this.documentInterface;
-        var doc = this.document;
-        var rz = di.getRelativeZero();
-        var dist = rz.getDistanceTo(posRestriction);
-        var distStr = RUnit.getLabel(dist, this.document, true);
-
-        var angle = rz.getAngleTo(posRestriction);
-        var angStr = RUnit.formatAngle(angle,
-                                       doc.getAngleFormat(), Math.max(doc.getAnglePrecision(), 2),
-                                       doc.showLeadingZeroesAngle(), doc.showTrailingZeroesAngle());
-
-        var sep = RSettings.getStringValue("Input/PolarCoordinateSeparator", "<");
-
-        color = RSettings.getColor("GraphicsViewColors/MeasurementToolsColor", new RColor(155,220,112));
-        painter.setPen(color.toCompat());
-
-        text = distStr + sep + angStr;
-        painter.drawText(
-            p.x + 5, p.y - 5 - fm.height(),
-            fm.width(text)+10, fm.height()+10,
-            new Qt.Alignment(Qt.AlignHCenter | Qt.AlignVCenter),
-            text, null);
+    // display distance/angle:
+    var display = RSettings.getIntValue("DisplaySettings/DisplayDistanceAngle", 0);
+    if (display === 0) {
+        return;
     }
-    */
+
+    var di = this.graphicsView.getDocumentInterface();
+    var doc = this.graphicsView.getDocument();
+
+    var relativeZero = di.getRelativeZero();
+
+    if (isValidVector(posRestriction)) {
+        var dist = relativeZero.getDistanceTo(posRestriction);
+        var angle = relativeZero.getAngleTo(posRestriction);
+    } else {
+        dist = relativeZero.getDistanceTo(pos);
+        angle = relativeZero.getAngleTo(pos);
+    }
+
+    var lp = doc.getLinearPrecision();
+    var lformat = "%." + lp.toString() + "f";
+    var distStr = sprintf(lformat, dist);
+
+    angle = RMath.rad2deg(angle);
+    var ap = doc.getAnglePrecision();
+    var aformat = "%." + ap.toString() + "f";
+    var angStr = sprintf(aformat, angle);
+
+    var sep = RSettings.getStringValue("Input/PolarCoordinateSeparator", "<");
+
+    color = RSettings.getColor("GraphicsViewColors/MeasurementToolsColor", new RColor(155,220,112));
+    painter.setPen(color.toCompat());
+
+    switch(display) {
+    case 0:
+        text = "";
+        break;
+    case 1:
+        text = distStr + sep + angStr + "°";
+        break;
+    case 2:
+        text = distStr;
+        break;
+    case 3:
+        text = angStr + "°";
+        break;
+    default:
+        text = "";
+    }
+
+    if (text !== "") {
+        painter.drawText(
+                    p.x + 5, p.y - 15 - fm.height(),
+                    fm.width(text)+10, fm.height()+10,
+                    new Qt.Alignment(Qt.AlignHCenter | Qt.AlignVCenter),
+                    text, null);
+    }
 };
 
 /**

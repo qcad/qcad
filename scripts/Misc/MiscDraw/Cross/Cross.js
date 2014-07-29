@@ -23,7 +23,7 @@ include("scripts/ShapeAlgorithms.js");
 /**
  * \class Cross
  * \brief Draw cross at the centre of an arc, circle or ellipse.
- * \ingroup ecma_misc_draw
+ * \ingroup ecma_draw_line
  */
 function Cross(guiAction) {
     EAction.call(this, guiAction);
@@ -126,6 +126,24 @@ Cross.prototype.drawCross = function(shape) {
             } else {
                 ellipseangle = 0.0;
             }
+    } else if (mode.currentIndex === 2) {       //Percent
+        if (isArcShape(shape) || isCircleShape(shape)) {
+            lengthX = shape.getRadius() * RMath.eval(ex.text) / 100;
+            if (ey.text === "") {
+                lengthY = lengthX;
+            } else {
+                lengthY = shape.getRadius() * RMath.eval(ey.text) / 100;
+            }
+            ellipseangle = 0.0;
+        } else if (isEllipseShape(shape) || isEllipseArcShape(shape)) {
+            lengthX = shape.getMajorRadius() * RMath.eval(ex.text) / 100;
+            if (ey.text === "") {
+                lengthY = shape.getMinorRadius() * RMath.eval(ex.text) / 100;
+            } else {
+                lengthY = shape.getMinorRadius() * RMath.eval(ey.text) / 100;
+            }
+            ellipseangle = shape.getAngle();
+        }
     }
 
     var v = new RVector();
