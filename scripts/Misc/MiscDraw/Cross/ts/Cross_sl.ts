@@ -19,12 +19,12 @@
     <message>
         <location filename="../CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
-        <translation type="unfinished"></translation>
+        <translation>Križ središčnice</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši križ središčnice loku, krogu ali elipsi</translation>
     </message>
 </context>
 <context>
@@ -48,6 +48,11 @@
         <location line="+5"/>
         <source>Total length</source>
         <translation>Celotna dolžina</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Percent</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+15"/>

@@ -1,2 +1,4 @@
 NAME = $${TARGET}
-SOURCES = $${TARGET}.js $${TARGET}Init.js
+TSDIR = ts
+include(../../translations.pri)
+SOURCES = $${TARGET}.js $${TARGET}PostInit.js

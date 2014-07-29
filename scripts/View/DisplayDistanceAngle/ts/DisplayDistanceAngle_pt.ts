@@ -4,7 +4,7 @@
 <context>
     <name>DisplayDistanceAngle</name>
     <message>
-        <location filename="../DisplayDistanceAngleInit.js" line="2"/>
+        <location filename="../DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display Distance/Angle</source>
         <translation>Mostrar distância/ângulo</translation>
     </message>

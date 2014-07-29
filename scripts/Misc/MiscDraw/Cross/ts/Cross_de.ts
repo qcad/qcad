@@ -70,6 +70,11 @@
         <translation>Totale Länge</translation>
     </message>
     <message>
+        <location line="+5"/>
+        <source>Percent</source>
+        <translation>Prozent</translation>
+    </message>
+    <message>
         <location line="+15"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>

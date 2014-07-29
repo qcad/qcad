@@ -604,12 +604,12 @@
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation>ビューポート</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation type="unfinished"></translation>
+        <translation>ビューポート</translation>
     </message>
     <message>
         <location line="+3"/>
