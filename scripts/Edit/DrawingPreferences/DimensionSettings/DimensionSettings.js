@@ -579,7 +579,6 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
     document.setKnownVariable(RS.DIMAUNIT, widgets["AngularFormat"].currentIndex);
     document.setKnownVariable(RS.DIMADEC, widgets["AngularPrecision"].currentIndex);
     document.setDimensionFont(widgets["DimensionFont"].currentText);
-    qDebug("dim font: ", widgets["DimensionFont"].currentText);
 
     // show leading / trailing zeroes:
     if (widgets["LinearShowTrailingZeros"].checked) {

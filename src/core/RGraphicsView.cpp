@@ -184,6 +184,7 @@ void RGraphicsView::autoZoom(int margin, bool ignoreEmpty) {
         return;
     }
     RBox bb = document->getBoundingBox(true, ignoreEmpty);
+    // TODO: optional:
     bb.growXY(
         RUnit::convert(
             document->getMaxLineweight()/100.0/2,
