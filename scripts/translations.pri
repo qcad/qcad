@@ -1,6 +1,7 @@
 TRANSLATIONS = \
     $${TSDIR}/$${NAME}_de.ts \
     $${TSDIR}/$${NAME}_es.ts \
+    $${TSDIR}/$${NAME}_fi.ts \
     $${TSDIR}/$${NAME}_fr.ts \
     $${TSDIR}/$${NAME}_hu.ts \
     $${TSDIR}/$${NAME}_it.ts \
