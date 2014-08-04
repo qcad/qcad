@@ -8,11 +8,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <baseClass name="REntityData" specifier="public" />
     <baseClass name="RPolyline" specifier="protected" />
     <constructor>
-      <variant>
-        <arg type="RDocument *" typeName="RDocument *"
-        name="document" hasDefault="true" default=" NULL"
-        isConst="false" />
-      </variant>
+      <variant />
       <variant>
         <arg type="RTriangle &amp;" typeName="RTriangle"
         name="triangle" isConst="true" />

@@ -66,6 +66,9 @@
         ;static  QScriptValue
         getVectorTo
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        stretch
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

@@ -22,7 +22,7 @@ RTraceData::RTraceData() {
 }
 
 RTraceData::RTraceData(RDocument* document, const RTraceData& data)
-    : RSolidData(document) {
+    : RSolidData() {
     *this = data;
     this->document = document;
     if (document!=NULL) {

@@ -82,18 +82,7 @@ dir="./entity" filename="RSolidData.h">
   <public>public: 
   <constructor_decl>
   <name>RSolidData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>RDocument</name>*</type>
-    <name>document</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
+  <parameter_list>()</parameter_list>;</constructor_decl>
   <constructor_decl>
   <name>RSolidData</name>
   <parameter_list>(

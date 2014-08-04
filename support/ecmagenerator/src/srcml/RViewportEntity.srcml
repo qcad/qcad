@@ -34,10 +34,10 @@ dir="./core" filename="RViewportEntity.h">
   <class_decl>class 
   <name>RExporter</name>;</class_decl>
   <comment type="block">/** * Viewport entity. * * \scriptable *
-  \sharedPointerSupport * \ingroup entity */</comment>
+  \sharedPointerSupport * \ingroup core */</comment>
   <class>class 
   <macro>
-    <name>QCADENTITY_EXPORT</name>
+    <name>QCADCORE_EXPORT</name>
   </macro>
   <name>RViewportEntity</name>
   <super>: 

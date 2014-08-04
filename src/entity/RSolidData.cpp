@@ -19,8 +19,8 @@
 #include "RSolidData.h"
 #include "RSolidEntity.h"
 
-RSolidData::RSolidData(RDocument* document)
-    : REntityData(document) {
+RSolidData::RSolidData()
+    : REntityData() {
 }
 
 RSolidData::RSolidData(RDocument* document, const RSolidData& data)
