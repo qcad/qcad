@@ -131,6 +131,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
+    qDebug() << "creating QApplication";
     RSingleApplication* app = new RSingleApplication(appId, argc, argv, guiEnabled);
 
 #if defined(Q_OS_MAC) || defined(Q_OS_LINUX)

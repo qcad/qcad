@@ -277,6 +277,7 @@ void RMainWindowQt::closeEvent(QCloseEvent* e) {
 }
 
 void RMainWindowQt::dragEnterEvent(QDragEnterEvent* event) {
+    qDebug() << "RMainWindowQt::dragEnterEvent: " << event;
     emit dragEnter(event);
 }
 

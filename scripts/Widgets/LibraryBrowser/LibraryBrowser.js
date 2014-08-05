@@ -811,10 +811,10 @@ LibraryBrowser.sourceChanged = function(text) {
     LibraryBrowser.fsModel.setIconProvider(new FileIconProvider());
     //LibraryBrowser.fsModel.readOnly = true;
     var filter = new QDir.Filters(QDir.Dirs, QDir.NoDotAndDotDot);
-    LibraryBrowser.setFilter(filter);
+    LibraryBrowser.fsModel.setFilter(filter);
 
     // the Qt way of hiding all folders named "_META"...
-    LibraryBrowser.setNameFilterDisables(false);
+    LibraryBrowser.fsModel.setNameFilterDisables(false);
     var nf = [];
     var ch;
     // TODO:
@@ -921,7 +921,8 @@ LibraryBrowser.directoryChanged = function(selected, deselected) {
     // TODO: needed every time or one time only?
     // -> possibly every time (update view according to settings).
     LibraryBrowser.initItemView(listView);
-    var dirPath = index.model().filePath(index);
+    //var dirPath = index.model().filePath(index);
+    var dirPath = LibraryBrowser.fsModel.filePath(index);
 
     // TODO:
     //var source = DirectoryPeer.doSelectSourceByName(sourceCombo.itemData(sourceCombo.currentIndex));
@@ -931,9 +932,21 @@ LibraryBrowser.directoryChanged = function(selected, deselected) {
 //    }
 
     //qDebug("LibraryBrowser.directoryChanged: dirPath: ", dirPath);
-    QApplication.setOverrideCursor(new QCursor(Qt.WaitCursor));
+    if (RSettings.isQt(5)) {
+        QGuiApplication.setOverrideCursor(new QCursor(Qt.WaitCursor));
+    }
+    else {
+        QApplication.setOverrideCursor(new QCursor(Qt.WaitCursor));
+    }
+
     LibraryBrowser.updateFsView(dirPath, model);
-    QApplication.restoreOverrideCursor();
+
+    if (RSettings.isQt(5)) {
+        QGuiApplication.restoreOverrideCursor();
+    }
+    else {
+        QApplication.restoreOverrideCursor();
+    }
 };
 
 /**

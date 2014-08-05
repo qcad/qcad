@@ -252,6 +252,7 @@ function loadStyleSheets(args) {
  */
 function setUpDragAndDrop(appWin) {
     appWin.dragEnter.connect(function(event) {
+        qDebug("event.mimeData(): ", event.mimeData());
         if (event.mimeData().hasUrls()) {
             event.acceptProposedAction();
         }
