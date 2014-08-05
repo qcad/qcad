@@ -139,6 +139,7 @@ Q_DECLARE_METATYPE(char*)
 Q_DECLARE_METATYPE(const char*)
 
 Q_DECLARE_METATYPE(QAbstractItemModel*)
+Q_DECLARE_METATYPE(const QAbstractItemModel*)
 Q_DECLARE_METATYPE(QAbstractProxyModel*)
 Q_DECLARE_METATYPE(QSortFilterProxyModel*)
 Q_DECLARE_METATYPE(QAction*)
