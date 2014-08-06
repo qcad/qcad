@@ -131,19 +131,19 @@ QPair<QVariant, RPropertyAttributes> RXLineEntity::getProperty(
     }
 
     else if (propertyTypeId == PropertySecondPointX) {
-        return qMakePair(QVariant(data.getSecondPoint().x), RPropertyAttributes());
+        return qMakePair(QVariant(data.getSecondPoint().x), RPropertyAttributes(RPropertyAttributes::Redundant));
     } else if (propertyTypeId == PropertySecondPointY) {
-        return qMakePair(QVariant(data.getSecondPoint().y), RPropertyAttributes());
+        return qMakePair(QVariant(data.getSecondPoint().y), RPropertyAttributes(RPropertyAttributes::Redundant));
     } else if (propertyTypeId == PropertySecondPointZ) {
-        return qMakePair(QVariant(data.getSecondPoint().z), RPropertyAttributes());
+        return qMakePair(QVariant(data.getSecondPoint().z), RPropertyAttributes(RPropertyAttributes::Redundant));
     }
 
     else if (propertyTypeId == PropertyDirectionX) {
-        return qMakePair(QVariant(data.getDirectionVector().x), RPropertyAttributes(RPropertyAttributes::Redundant));
+        return qMakePair(QVariant(data.getDirectionVector().x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyDirectionY) {
-        return qMakePair(QVariant(data.getDirectionVector().y), RPropertyAttributes(RPropertyAttributes::Redundant));
+        return qMakePair(QVariant(data.getDirectionVector().y), RPropertyAttributes());
     } else if (propertyTypeId == PropertyDirectionZ) {
-        return qMakePair(QVariant(data.getDirectionVector().z), RPropertyAttributes(RPropertyAttributes::Redundant));
+        return qMakePair(QVariant(data.getDirectionVector().z), RPropertyAttributes());
     }
 
     if (propertyTypeId==PropertyAngle) {
