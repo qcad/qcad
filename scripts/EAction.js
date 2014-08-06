@@ -827,7 +827,6 @@ EAction.getToolBar = function(title, objectName, toolBarArea) {
         if (RSettings.isQt(5)) {
             // Mac OS X: remove border around tool buttons:
             //tb.setStyleSheet("QToolButton { background: transparent; }");
-            qDebug("style: ", tb.styleSheet);
             tb.setStyleSheet(
                 "QToolButton {" +
                 "  border: 1px solid transparent;" +
@@ -1066,13 +1065,11 @@ EAction.addGuiActionTo = function(action, iface, addToMenu, addToToolBar,
                 }
                 action.addToMenu(menu);
 
-                qDebug("menu: ", menu);
-                qDebug("menu: ", menu.objectName);
-                qDebug("menu parent: ", menu.parentWidget());
-                qDebug("action parent: ", action.parentWidget());
-
-                if (isOfType(menu.parentWidget(), QMenu)) {
-                    new QShortcut(action.shortcut, action.parentWidget(), 0, 0,  Qt.WindowShortcut).activated.connect(action, "trigger");
+                // workaround for QTBUG-38256 (action not triggered for letter based shortcuts in sub menus)
+                if (RSettings.isQt(5)) {
+                    if (isOfType(menu.parentWidget(), QMenu)) {
+                        new QShortcut(action.shortcut, action.parentWidget(), 0, 0,  Qt.WindowShortcut).activated.connect(action, "trigger");
+                    }
                 }
             }
         }
