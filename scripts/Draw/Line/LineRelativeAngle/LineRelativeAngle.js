@@ -194,27 +194,36 @@ LineRelativeAngle.prototype.getLine = function() {
         return undefined;
     }
 
-    //var v1 = RVector.createPolar(this.length/2.0, this.getAbsoluteAngle());
     var angle = this.getAbsoluteAngle();
 
-    switch(this.referencePoint) {
+    // for rays / xlines, always use start point as reference
+    // with length = 1.0:
+    var referencePoint = this.referencePoint;
+    var length = this.length;
+    if (this.isRayOrXLine()) {
+        referencePoint = LineRelativeAngle.ReferencePoint.Start;
+        length = 1.0;
+    }
+
+    var p1, p2;
+    switch(referencePoint) {
     case LineRelativeAngle.ReferencePoint.Start:
         p1 = this.pos;
         p2 = this.pos.operator_add(
-            RVector.createPolar(+this.length, angle)
+            RVector.createPolar(+length, angle)
         );
         break;
     case LineRelativeAngle.ReferencePoint.Middle:
         p1 = this.pos.operator_add(
-            RVector.createPolar(-this.length/2, angle)
+            RVector.createPolar(-length/2, angle)
         );
         p2 = this.pos.operator_add(
-            RVector.createPolar(+this.length/2, angle)
+            RVector.createPolar(+length/2, angle)
         );
         break;
     case LineRelativeAngle.ReferencePoint.End:
         p1 = this.pos.operator_add(
-            RVector.createPolar(-this.length, angle)
+            RVector.createPolar(-length, angle)
         );
         p2 = this.pos;
         break;
@@ -223,7 +232,6 @@ LineRelativeAngle.prototype.getLine = function() {
     }
 
     return new RLine(p1, p2);
-    //return new RLine(this.pos.operator_subtract(v1), this.pos.operator_add(v1));
 };
 
 LineRelativeAngle.prototype.getAbsoluteAngle = function() {

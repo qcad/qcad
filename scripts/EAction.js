@@ -1069,6 +1069,8 @@ EAction.addGuiActionTo = function(action, iface, addToMenu, addToToolBar,
                 if (RSettings.isQt(5)) {
                     if (isOfType(menu.parentWidget(), QMenu)) {
                         new QShortcut(action.shortcut, action.parentWidget(), 0, 0,  Qt.WindowShortcut).activated.connect(action, "trigger");
+                        // avoid 'Ambiguous shortcut overload' when tool buttons visible:
+                        action.setDefaultShortcuts([]);
                     }
                 }
             }

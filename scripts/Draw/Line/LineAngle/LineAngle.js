@@ -134,7 +134,6 @@ LineAngle.prototype.getOperation = function(preview) {
     }
 
     var line = this.createLineEntity(this.getDocument(), p1, p2);
-    //var line = new RLineEntity(this.getDocument(), new RLineData(p1, p2));
     return new RAddObjectOperation(line);
 };
 
