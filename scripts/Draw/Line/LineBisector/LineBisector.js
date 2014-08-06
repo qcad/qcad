@@ -59,6 +59,10 @@ LineBisector.prototype.setState = function(state) {
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case LineBisector.State.ChoosingLine1:
+        this.line1 = undefined;
+        this.pos1 = undefined;
+        this.line2 = undefined;
+        this.pos2 = undefined;
         this.setLeftMouseTip(qsTr("First line"));
         break;
 
