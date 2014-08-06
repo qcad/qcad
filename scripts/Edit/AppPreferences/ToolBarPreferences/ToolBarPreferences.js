@@ -45,3 +45,11 @@ ToolBarPreferences.applyPreferences = function(doc) {
     //var optionsToolBar = EAction.getOptionsToolBar();
     //optionsToolBar.setFixedHeight(h);
 };
+
+ToolBarPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {
+    var widgets = getWidgets(pageWidget);
+    var prefixChar = widgets["PrefixChar"];
+    var rx = new RegExp("[^ \\+\\-]");
+    this.validator = new QRegExpValidator(rx, prefixChar);
+    prefixChar.setValidator(this.validator);
+};

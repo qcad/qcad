@@ -388,8 +388,7 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
  * bar.
  */
 EAction.prototype.initUiOptions = function(resume) {
-    // TODO: make this configurable:
-    var prefixChar = "/";
+    var prefixChar = RSettings.getStringValue("ToolBar/PrefixChar", ",");
 
     var optionsToolBar = EAction.getOptionsToolBar();
     if (isNull(optionsToolBar)) {
@@ -411,6 +410,7 @@ EAction.prototype.initUiOptions = function(resume) {
                 if (firstChar >= '!' && firstChar <= '~') {      // isgraph()
                     str = str.replace(firstChar, prefixChar);
                     child.shortcut = new QKeySequence(str);
+                    child.toolTip = RGuiAction.formatToolTip(child.toolTip, str);
                 }
             }
         }
@@ -824,6 +824,19 @@ EAction.getToolBar = function(title, objectName, toolBarArea) {
 
     if (isNull(tb)) {
         tb = new QToolBar(title);
+        if (RSettings.isQt(5)) {
+            // Mac OS X: remove border around tool buttons:
+            //tb.setStyleSheet("QToolButton { background: transparent; }");
+            qDebug("style: ", tb.styleSheet);
+            tb.setStyleSheet(
+                "QToolButton {" +
+                "  border: 1px solid transparent;" +
+                "} " +
+                "QToolButton:checked { " +
+                "  border:1px solid #7f7f7f; " +
+                "  background: qlineargradient(x1:0 y1:0, x2:0 y2:1 stop:0 #c0c0c0, stop:0.1 #8a8a8a stop:0.2 #a3a3a3 stop:1 transparent); " +
+                "}");
+        }
         tb.objectName = objectName;
         var s = RSettings.getIntValue("ToolBar/IconSize", tb.iconSize.width());
         tb.iconSize = new QSize(s,s);
@@ -1052,6 +1065,15 @@ EAction.addGuiActionTo = function(action, iface, addToMenu, addToToolBar,
                     separator.addToMenu(menu);
                 }
                 action.addToMenu(menu);
+
+                qDebug("menu: ", menu);
+                qDebug("menu: ", menu.objectName);
+                qDebug("menu parent: ", menu.parentWidget());
+                qDebug("action parent: ", action.parentWidget());
+
+                if (isOfType(menu.parentWidget(), QMenu)) {
+                    new QShortcut(action.shortcut, action.parentWidget(), 0, 0,  Qt.WindowShortcut).activated.connect(action, "trigger");
+                }
             }
         }
     }
