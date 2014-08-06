@@ -37,6 +37,13 @@
 RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
     QMainWindow(parent), RMainWindow(), mdiArea(NULL) {
 
+// uncomment for unified tool bars under Mac:
+//#if QT_VERSION >= 0x050201
+//# ifdef Q_OS_MAC
+//    setUnifiedTitleAndToolBarOnMac(true);
+//# endif
+//#endif
+
     if (hasMdiArea) {
         mdiArea = new QMdiArea(this);
         mdiArea->setViewMode(QMdiArea::TabbedView);

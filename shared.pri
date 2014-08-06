@@ -2,6 +2,9 @@ contains(QT_VERSION, ^5\\..*\\..*) {
     cache()
     DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x000000
     QT += printsupport webkitwidgets
+    macx {
+        QT += macextras
+    }
     #INCLUDEPATH += ~/local/qt/include/QtWebKitWidgets
     #QMAKE_CXXFLAGS += -I/Users/andrew/local/qt/include/QtWebKitWidgets
 }

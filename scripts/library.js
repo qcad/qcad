@@ -1819,6 +1819,24 @@ function getInBlockTextEdit(entity) {
     return entity.getCustomProperty("QCAD", "InBlockTextEdit", "0")==="1";
 }
 
+function setOverrideCursor(cursor) {
+    if (RSettings.isQt(5)) {
+        QGuiApplication.setOverrideCursor(cursor);
+    }
+    else {
+        QApplication.setOverrideCursor(cursor);
+    }
+}
+
+function restoreOverrideCursor() {
+    if (RSettings.isQt(5)) {
+        QGuiApplication.restoreOverrideCursor();
+    }
+    else {
+        QApplication.restoreOverrideCursor();
+    }
+}
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {

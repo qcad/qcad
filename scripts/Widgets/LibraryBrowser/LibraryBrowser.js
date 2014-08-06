@@ -932,21 +932,9 @@ LibraryBrowser.directoryChanged = function(selected, deselected) {
 //    }
 
     //qDebug("LibraryBrowser.directoryChanged: dirPath: ", dirPath);
-    if (RSettings.isQt(5)) {
-        QGuiApplication.setOverrideCursor(new QCursor(Qt.WaitCursor));
-    }
-    else {
-        QApplication.setOverrideCursor(new QCursor(Qt.WaitCursor));
-    }
-
+    setOverrideCursor(new QCursor(Qt.WaitCursor));
     LibraryBrowser.updateFsView(dirPath, model);
-
-    if (RSettings.isQt(5)) {
-        QGuiApplication.restoreOverrideCursor();
-    }
-    else {
-        QApplication.restoreOverrideCursor();
-    }
+    restoreOverrideCursor();
 };
 
 /**

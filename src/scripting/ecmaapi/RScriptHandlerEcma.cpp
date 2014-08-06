@@ -464,9 +464,11 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     classQLineEdit.property("prototype").setProperty("validator",
             engine->newFunction(ecmaQLineEditValidator));
 
+# if QT_VERSION < 0x050301
     QScriptValue classQFile = globalObject.property("QFile");
     classQFile.property("prototype").setProperty("close",
             engine->newFunction(ecmaQFileClose));
+# endif
 #endif
 
     QScriptValue classQt = globalObject.property("Qt");
