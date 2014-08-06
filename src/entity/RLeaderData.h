@@ -48,6 +48,7 @@ public:
     }
 
     double getDimasz() const;
+    double getDimscale() const;
 
     void setArrowHead(bool on) {
         arrowHead = on;
