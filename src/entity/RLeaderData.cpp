@@ -31,9 +31,6 @@ RLeaderData::RLeaderData(RDocument* document, const RLeaderData& data)
     }
 }
 
-/**
- *
- */
 RLeaderData::RLeaderData(const RPolyline& polyline, bool arrowHead)
     : RPolyline(polyline),
       arrowHead(arrowHead) {
