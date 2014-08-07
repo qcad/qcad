@@ -52,6 +52,9 @@
         stopTimer
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        timeStamp
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hexDump
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

@@ -141,7 +141,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
          return;
     }
 
-    var view, referencePoint, entityId;
+    var view, referencePoint, entityId, range;
     
     if (isNull(this.rangePixels)) {
         return;
@@ -149,7 +149,6 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
 
     view = event.getGraphicsView();
 
-    var range = view.mapDistanceFromView(this.rangePixels);
     switch (this.state) {
     case DefaultAction.State.Neutral:
         var screenPosition = event.getScreenPosition();
@@ -157,6 +156,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
         if (referencePoint.isValid()) {
             this.highlightReferencePoint(referencePoint);
         } else {
+            range = view.mapDistanceFromView(this.rangePixels);
             entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
             if (entityId !== RObject.INVALID_ID && this.document.isEntityEditable(entityId)) {
                 this.highlightEntity(entityId);
@@ -190,6 +190,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
                             var blockId = entity.getReferencedBlockId();
                             var block = doc.queryBlock(blockId);
                             if (!isNull(block)) {
+                                range = view.mapDistanceFromView(this.rangePixels);
                                 // cursor, mapped to block coordinates:
                                 var pBlock = entity.mapToBlock(this.d1Model);
                                 var box = new RBox(
@@ -372,7 +373,9 @@ DefaultAction.prototype.mousePressEvent = function(event) {
             && event.modifiers().valueOf() != Qt.ControlModifier.valueOf()) {
         if (this.state == DefaultAction.State.Neutral) {
             this.d1Model = event.getModelPosition();
+            qDebug("this.d1Model: ", this.d1Model);
             this.d1Screen = event.getScreenPosition();
+            qDebug("this.d1Screen: ", this.d1Screen);
             this.setState(DefaultAction.State.Dragging);
             this.di.clearPreview();
         }

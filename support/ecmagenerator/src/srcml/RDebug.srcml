@@ -210,6 +210,13 @@ dir="./core" filename="RDebug.h">
     <name>static</name>
     <name>void</name>
   </type>
+  <name>timeStamp</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
   <name>hexDump</name>
   <parameter_list>(
   <param>

@@ -72,6 +72,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDimasz, "getDimasz");
             
+            REcmaHelper::registerFunction(&engine, proto, getDimscale, "getDimscale");
+            
             REcmaHelper::registerFunction(&engine, proto, setArrowHead, "setArrowHead");
             
             REcmaHelper::registerFunction(&engine, proto, hasArrowHead, "hasArrowHead");
@@ -378,6 +380,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLeaderData::getDimasz", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderData::getDimscale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderData::getDimscale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderData::getDimscale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderData* self = 
+                        getSelf("getDimscale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDimscale();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.getDimscale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderData::getDimscale", context, engine);
             return result;
         }
          QScriptValue

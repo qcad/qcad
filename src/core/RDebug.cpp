@@ -84,6 +84,10 @@ int RDebug::stopTimer(int id, const QString& msg) {
     return t;
 }
 
+void RDebug::timeStamp() {
+    qDebug() << QTime::currentTime().toString("HH:mm:ss:zzz");
+}
+
 void RDebug::hexDump(const QString& str) {
     QByteArray ba = str.toUtf8();
     for (int i=0; i<ba.length(); i++) {
