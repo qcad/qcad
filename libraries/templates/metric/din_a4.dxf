@@ -3433,7 +3433,7 @@ AcDbText
  40
 2.5
   1
-Massstab\~\~1\~:\~1
+Massstab  1 : 1
   7
 textstyle0
  11
@@ -3923,7 +3923,7 @@ AcDbText
  40
 2.5
   1
-Ersatz\~für:
+Ersatz für:
   7
 textstyle1
  11
@@ -4567,7 +4567,7 @@ AcDbText
  40
 2.5
   1
-Ersatz\~durch:
+Ersatz durch:
   7
 textstyle15
  11
@@ -4635,7 +4635,7 @@ AcDbText
  40
 2.5
   1
-(Werkstoff,\~Halbzeug)
+(Werkstoff, Halbzeug)
   7
 textstyle17
  11
@@ -4669,7 +4669,7 @@ AcDbText
  40
 2.5
   1
-(Modell-\~oder\~Gesenk-Nr)
+(Modell- oder Gesenk-Nr)
   7
 textstyle18
  11
@@ -4771,7 +4771,7 @@ AcDbText
  40
 2.5
   1
-ISO\~2768-m
+ISO 2768-m
   7
 textstyle21
  11
@@ -4907,7 +4907,7 @@ AcDbText
  40
 2.2
   1
-DIN\~6784
+DIN 6784
   7
 textstyle25
  11

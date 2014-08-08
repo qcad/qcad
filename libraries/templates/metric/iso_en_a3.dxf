@@ -7273,7 +7273,7 @@ AcDbMText
  72
      1
   1
-Revision\~note
+Revision note
   7
 textstyle27
  73
@@ -7513,7 +7513,7 @@ AcDbMText
  72
      1
   1
-Designed\~by
+Designed by
   7
 textstyle33
  73
@@ -7553,7 +7553,7 @@ AcDbMText
  72
      1
   1
-Checked\~by
+Checked by
   7
 textstyle34
  73
@@ -7593,7 +7593,7 @@ AcDbMText
  72
      1
   1
-Approved\~by\~-\~date
+Approved by - date
   7
 textstyle35
  73
@@ -7713,7 +7713,7 @@ AcDbMText
  72
      1
   1
-Title/Name,\~designation,\~material,\~dimension\~etc
+Title/Name, designation, material, dimension etc
   7
 textstyle38
  73
@@ -7753,7 +7753,7 @@ AcDbMText
  72
      1
   1
-Article\~No./Reference
+Article No./Reference
   7
 textstyle39
  73

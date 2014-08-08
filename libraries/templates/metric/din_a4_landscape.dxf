@@ -3341,7 +3341,7 @@ AcDbMText
  72
      1
   1
-(Modell-\~oder\~Gesenk-Nr)
+(Modell- oder Gesenk-Nr)
   7
 textstyle0
  73
@@ -3443,7 +3443,7 @@ AcDbMText
  72
      1
   1
-ISO\~2768-m
+ISO 2768-m
   7
 textstyle3
  73
@@ -3579,7 +3579,7 @@ AcDbMText
  72
      1
   1
-DIN\~6784
+DIN 6784
   7
 textstyle7
  73
@@ -3613,7 +3613,7 @@ AcDbMText
  72
      1
   1
-Tolerierung\~ISO\~8015
+Tolerierung ISO 8015
   7
 textstyle8
  73
@@ -3647,7 +3647,7 @@ AcDbMText
  72
      1
   1
-Massstab\~\~1\~:\~1
+Massstab  1 : 1
   7
 textstyle9
  73
@@ -4137,7 +4137,7 @@ AcDbMText
  72
      1
   1
-Ersatz\~f\U+00FCr:
+Ersatz f\U+00FCr:
   7
 textstyle10
  73
@@ -4709,7 +4709,7 @@ AcDbMText
  72
      1
   1
-Ersatz\~durch:
+Ersatz durch:
   7
 textstyle24
  73
@@ -4777,7 +4777,7 @@ AcDbMText
  72
      1
   1
-(Werkstoff,\~Halbzeug)
+(Werkstoff, Halbzeug)
   7
 textstyle26
  73
