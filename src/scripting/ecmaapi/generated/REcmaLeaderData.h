@@ -51,6 +51,9 @@
         getDimasz
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDimscale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setArrowHead
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

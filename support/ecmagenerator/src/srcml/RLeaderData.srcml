@@ -117,6 +117,13 @@ dir="./entity" filename="RLeaderData.h">
   <name>getDimasz</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>double</name>
+  </type>
+  <name>getDimscale</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function>
     <type>
       <name>void</name>

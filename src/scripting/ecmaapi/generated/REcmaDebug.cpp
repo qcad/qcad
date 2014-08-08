@@ -63,6 +63,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, stopTimer, "stopTimer");
             
+            REcmaHelper::registerFunction(&engine, &ctor, timeStamp, "timeStamp");
+            
             REcmaHelper::registerFunction(&engine, &ctor, hexDump, "hexDump");
             
 
@@ -370,6 +372,40 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDebug::stopTimer", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDebug::timeStamp
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDebug::timeStamp", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDebug::timeStamp";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RDebug::
+       timeStamp();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.timeStamp().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDebug::timeStamp", context, engine);
             return result;
         }
          QScriptValue

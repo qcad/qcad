@@ -93,6 +93,8 @@ public:
         return stopTimer(0, msg);
     }
 
+    static void timeStamp();
+
     static void hexDump(const QString& str);
 
 private:

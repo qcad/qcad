@@ -103,6 +103,7 @@ public:
     static QScriptValue ecmaQLocaleScript(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQLocaleScriptToString(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQLineEditValidator(QScriptContext* context, QScriptEngine* engine);
+    //static QScriptValue ecmaQWebPageSetLinkDelegationPolicy(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaMSleep(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaArguments(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaGetObjectId(QScriptContext* context, QScriptEngine* engine);

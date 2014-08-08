@@ -67,7 +67,12 @@ InsertBlockItem.prototype.beginEvent = function() {
     var url = this.guiAction.data();
     this.diItem.importUrl(url, false);
 
-    this.blockName = new QFileInfo(url.path()).completeBaseName();
+    if (RSettings.isQt(5)) {
+        this.blockName = new QFileInfo(url.toLocalFile()).completeBaseName();
+    }
+    else {
+        this.blockName = new QFileInfo(url.path()).completeBaseName();
+    }
 
     // fix block name if necessary:
     this.blockName = fixSymbolTableName(this.blockName);

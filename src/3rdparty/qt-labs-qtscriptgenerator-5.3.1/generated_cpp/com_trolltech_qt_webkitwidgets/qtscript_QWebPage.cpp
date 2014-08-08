@@ -139,6 +139,7 @@ Q_DECLARE_METATYPE(QWebPage*)
 Q_DECLARE_METATYPE(QtScriptShell_QWebPage*)
 Q_DECLARE_METATYPE(QWebPage::FindFlag)
 Q_DECLARE_METATYPE(QFlags<QWebPage::FindFlag>)
+Q_DECLARE_METATYPE(QWebPage::LinkDelegationPolicy)
 Q_DECLARE_METATYPE(QWebPage::Extension)
 Q_DECLARE_METATYPE(QWebPage::WebAction)
 Q_DECLARE_METATYPE(QWebPage::ErrorDomain)
@@ -858,6 +859,81 @@ static QScriptValue qtscript_create_QWebPage_WebWindowType_class(QScriptEngine *
 }
 
 //
+// QWebPage::LinkDelegationPolicy
+//
+
+static const QWebPage::LinkDelegationPolicy qtscript_QWebPage_LinkDelegationPolicy_values[] = {
+    QWebPage::DontDelegateLinks
+    , QWebPage::DelegateExternalLinks
+    , QWebPage::DelegateAllLinks
+};
+
+static const char * const qtscript_QWebPage_LinkDelegationPolicy_keys[] = {
+    "DontDelegateLinks"
+    , "DelegateExternalLinks"
+    , "DelegateAllLinks"
+};
+
+static QString qtscript_QWebPage_LinkDelegationPolicy_toStringHelper(QWebPage::LinkDelegationPolicy value)
+{
+    const QMetaObject *meta = qtscript_QWebPage_metaObject();
+    int idx = meta->indexOfEnumerator("LinkDelegationPolicy");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    return QString::fromLatin1(menum.valueToKey(value));
+}
+
+static QScriptValue qtscript_QWebPage_LinkDelegationPolicy_toScriptValue(QScriptEngine *engine, const QWebPage::LinkDelegationPolicy &value)
+{
+    QScriptValue clazz = engine->globalObject().property(QString::fromLatin1("QWebPage"));
+    return clazz.property(qtscript_QWebPage_LinkDelegationPolicy_toStringHelper(value));
+}
+
+static void qtscript_QWebPage_LinkDelegationPolicy_fromScriptValue(const QScriptValue &value, QWebPage::LinkDelegationPolicy &out)
+{
+    out = qvariant_cast<QWebPage::LinkDelegationPolicy>(value.toVariant());
+}
+
+static QScriptValue qtscript_construct_QWebPage_LinkDelegationPolicy(QScriptContext *context, QScriptEngine *engine)
+{
+    int arg = context->argument(0).toInt32();
+    const QMetaObject *meta = qtscript_QWebPage_metaObject();
+    int idx = meta->indexOfEnumerator("LinkDelegationPolicy");
+    Q_ASSERT(idx != -1);
+    QMetaEnum menum = meta->enumerator(idx);
+    if (menum.valueToKey(arg) != 0)
+        return qScriptValueFromValue(engine,  static_cast<QWebPage::LinkDelegationPolicy>(arg));
+    return context->throwError(QString::fromLatin1("LinkDelegationPolicy(): invalid enum value (%0)").arg(arg));
+}
+
+static QScriptValue qtscript_QWebPage_LinkDelegationPolicy_valueOf(QScriptContext *context, QScriptEngine *engine)
+{
+    QWebPage::LinkDelegationPolicy value = qscriptvalue_cast<QWebPage::LinkDelegationPolicy>(context->thisObject());
+    return QScriptValue(engine, static_cast<int>(value));
+}
+
+static QScriptValue qtscript_QWebPage_LinkDelegationPolicy_toString(QScriptContext *context, QScriptEngine *engine)
+{
+    QWebPage::LinkDelegationPolicy value = qscriptvalue_cast<QWebPage::LinkDelegationPolicy>(context->thisObject());
+    return QScriptValue(engine, qtscript_QWebPage_LinkDelegationPolicy_toStringHelper(value));
+}
+
+static QScriptValue qtscript_create_QWebPage_LinkDelegationPolicy_class(QScriptEngine *engine, QScriptValue &clazz)
+{
+    QScriptValue ctor = qtscript_create_enum_class_helper(
+        engine, qtscript_construct_QWebPage_LinkDelegationPolicy,
+        qtscript_QWebPage_LinkDelegationPolicy_valueOf, qtscript_QWebPage_LinkDelegationPolicy_toString);
+    qScriptRegisterMetaType<QWebPage::LinkDelegationPolicy>(engine, qtscript_QWebPage_LinkDelegationPolicy_toScriptValue,
+        qtscript_QWebPage_LinkDelegationPolicy_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
+    for (int i = 0; i < 3; ++i) {
+        clazz.setProperty(QString::fromLatin1(qtscript_QWebPage_LinkDelegationPolicy_keys[i]),
+            engine->newVariant(qVariantFromValue(qtscript_QWebPage_LinkDelegationPolicy_values[i])),
+            QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    }
+    return ctor;
+}
+
+//
 // QWebPage
 //
 
@@ -1181,5 +1257,7 @@ QScriptValue qtscript_create_QWebPage_class(QScriptEngine *engine)
         qtscript_create_QWebPage_NavigationType_class(engine, ctor));
     ctor.setProperty(QString::fromLatin1("WebWindowType"),
         qtscript_create_QWebPage_WebWindowType_class(engine, ctor));
+    ctor.setProperty(QString::fromLatin1("LinkDelegationPolicy"),
+        qtscript_create_QWebPage_LinkDelegationPolicy_class(engine, ctor));
     return ctor;
 }

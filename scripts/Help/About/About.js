@@ -180,10 +180,13 @@ About.prototype.initAboutPlugins = function(webView) {
                     }
                     else {
                         // TODO Qt5:
+                        var fixedUrl = url.toString();
+                        fixedUrl = fixedUrl.replace("QUrl( \"", "");
+                        fixedUrl = fixedUrl.replace("\" )", "");
                         html += this.getTableRow(
                             qsTr("Internet:"),
                             "<a href='%2'>%3</a>"
-                                .arg(url.toString()).arg(url.toString()),
+                                .arg(fixedUrl).arg(fixedUrl),
                             false
                         );
                     }
