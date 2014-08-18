@@ -22,8 +22,9 @@
 
 void RModifyObjectsOperation::transformSelection(RTransformation* transformation, RDocumentInterface* di, int copies, bool preview, bool selectResult, bool useCurrentAttributes) {
     RDocument& document = di->getDocument();
-    //RStorage& storage = document.getStorage();
+    RStorage& storage = document.getStorage();
     QSet<REntity::Id> ids = document.querySelectedEntities();
+    QList<REntity::Id> list = storage.orderBackToFront(ids);
     bool move = false;
     if (copies==0) {
         copies=1;
@@ -40,8 +41,8 @@ void RModifyObjectsOperation::transformSelection(RTransformation* transformation
     }
 
     for (int k=1; k<=copies; k++) {
-        QSet<REntity::Id>::iterator it;
-        for (it=ids.begin(); it!=ids.end(); it++) {
+        QList<REntity::Id>::iterator it;
+        for (it=list.begin(); it!=list.end(); it++) {
             if (preview && getPreviewCounter() > RSettings::getPreviewEntities()) {
                 break;
             }
