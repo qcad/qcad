@@ -951,6 +951,11 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
     }
 }
 
+bool RTransaction::isPreview() const {
+    RLinkedStorage* ls = dynamic_cast<RLinkedStorage*>(storage);
+    return (ls!=NULL);
+}
+
 /**
  * Appends the given child to the list of child transactions of
  * this transaction. This transaction takes o

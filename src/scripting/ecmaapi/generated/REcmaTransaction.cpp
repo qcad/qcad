@@ -116,6 +116,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, endCycle, "endCycle");
             
+            REcmaHelper::registerFunction(&engine, proto, isPreview, "isPreview");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RTransaction*>(), *proto);
 
@@ -2652,6 +2654,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTransaction::endCycle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTransaction::isPreview
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTransaction::isPreview", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTransaction::isPreview";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTransaction* self = 
+                        getSelf("isPreview", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isPreview();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.isPreview().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTransaction::isPreview", context, engine);
             return result;
         }
          QScriptValue REcmaTransaction::toString

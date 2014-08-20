@@ -227,6 +227,8 @@ public:
 
     void endCycle();
 
+    bool isPreview() const;
+
 protected:
     bool addPropertyChange(RObject::Id objectId, const RPropertyChange& propertyChange);
     //void appendChild(RTransaction& t);

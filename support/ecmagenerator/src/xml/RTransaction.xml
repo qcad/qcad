@@ -256,6 +256,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="isPreview" cppName="isPreview" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="addPropertyChange" cppName="addPropertyChange"
     specifier="protected" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

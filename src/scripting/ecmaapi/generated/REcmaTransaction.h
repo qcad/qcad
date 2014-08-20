@@ -132,6 +132,9 @@
         ;static  QScriptValue
         endCycle
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isPreview
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

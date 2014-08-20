@@ -943,6 +943,9 @@ dir="./scripting/ecmaapi" filename="RScriptHandlerEcma.h">
       <name>engine</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <comment type="line">//static QScriptValue
+  ecmaQWebPageSetLinkDelegationPolicy(QScriptContext* context,
+  QScriptEngine* engine);</comment>
   <function_decl>
   <type>
     <name>static</name>
