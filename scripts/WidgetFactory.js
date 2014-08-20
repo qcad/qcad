@@ -510,8 +510,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if (isOfType(c, QPlainTextEdit)) {
             WidgetFactory.connect(c.textChanged, signalReceiver, c.objectName);
-            c.textChanged.connect(WidgetFactory.topLevelWidget,
-                    "slotSettingChanged");
+            c.textChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
             if (isNull(c.defaultValue)) {
                 c.setProperty("defaultValue", c.toPlainText());
             }

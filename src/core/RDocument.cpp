@@ -1412,8 +1412,8 @@ void RDocument::removeFromSpatialIndex(QSharedPointer<REntity> entity) {
     QList<RBox> bbs = entity->getBoundingBoxes();
     bool ok = spatialIndex.removeFromIndex(entity->getId(), bbs);
     if (!ok) {
-        qWarning() << "RDocument::removeFromSpatialIndex: removing entity: " << *entity;
-        qWarning() << "failed to remove entity from spatial index";
+        //qWarning() << "RDocument::removeFromSpatialIndex: removing entity: " << *entity;
+        //qWarning() << "failed to remove entity from spatial index";
     }
 }
 

@@ -261,12 +261,12 @@ bool RSpatialIndexNavel::removeFromIndex(
     //}
 
     //RDebug::printBacktrace();
-    qWarning() << QString(
-                      "RSpatialIndexNavel::removeFromIndex: "
-                      "entry not found, id: %1, pos: %2, %3,%4,%5 / %6,%7,%8")
-                  .arg(id).arg(pos)
-                  .arg(x1) .arg(y1) .arg(z1)
-                  .arg(x2) .arg(y2) .arg(z2);
+//    qWarning() << QString(
+//                      "RSpatialIndexNavel::removeFromIndex: "
+//                      "entry not found, id: %1, pos: %2, %3,%4,%5 / %6,%7,%8")
+//                  .arg(id).arg(pos)
+//                  .arg(x1) .arg(y1) .arg(z1)
+//                  .arg(x2) .arg(y2) .arg(z2);
     // TODO: call removeFromIndex with id (inefficient?)
     //qDebug() << "spatial index: " << *this;
     //Q_ASSERT(false);

@@ -74,7 +74,6 @@ RVector RSnapEntityBase::snap(
     double minDist = RMAXDOUBLE;
     double dist;
 
-    //RDebug::startTimer(3);
     QSet<REntity::Id>::const_iterator it;
     for (it=candidates.begin(); it!=candidates.end(); it++) {
         // 20111112: query direct:
@@ -96,8 +95,6 @@ RVector RSnapEntityBase::snap(
             entityId = e->getId();
         }
     }
-
-    //RDebug::stopTimer(3, "######### for loop");
 
     if (!lastSnap.isValid()) {
         lastSnap = position;
