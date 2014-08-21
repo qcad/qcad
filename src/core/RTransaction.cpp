@@ -957,14 +957,6 @@ bool RTransaction::isPreview() const {
 }
 
 /**
- * Appends the given child to the list of child transactions of
- * this transaction. This transaction takes o
- */
-//void RTransaction::appendChild(RTransaction& t) {
-//    childTransactions.push_back(t);
-//}
-
-/**
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, RTransaction& t) {
