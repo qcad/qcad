@@ -344,6 +344,9 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
         if (entity->getType()==RS::EntityAttributeDefinition) {
             continue;
         }
+        if (entity->getType()==RS::EntityAttribute) {
+            continue;
+        }
         ret.append(entity->getShapes(queryBox));
     }
 
