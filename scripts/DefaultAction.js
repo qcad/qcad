@@ -373,9 +373,7 @@ DefaultAction.prototype.mousePressEvent = function(event) {
             && event.modifiers().valueOf() != Qt.ControlModifier.valueOf()) {
         if (this.state == DefaultAction.State.Neutral) {
             this.d1Model = event.getModelPosition();
-            qDebug("this.d1Model: ", this.d1Model);
             this.d1Screen = event.getScreenPosition();
-            qDebug("this.d1Screen: ", this.d1Screen);
             this.setState(DefaultAction.State.Dragging);
             this.di.clearPreview();
         }
