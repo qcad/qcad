@@ -1,43 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>CircleT2P</name>
     <message>
         <location filename="../CircleT2P.js" line="+75"/>
         <source>Line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Viiva, kaari tai ympyrä</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>First point on circle line</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensimmäinen piste ympyrän viivalla</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second point on circle line</source>
-        <translation type="unfinished"></translation>
+        <translation>Toinen piste ympyrän viivalla</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse ratkaisu</translation>
     </message>
     <message>
         <location line="+134"/>
         <location line="+47"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei ratkaisua</translation>
     </message>
     <message>
         <location filename="../CircleT2PInit.js" line="+2"/>
         <source>2 Poin&amp;ts and Tangent</source>
-        <translation type="unfinished"></translation>
+        <translation>2 Pistettä ja Tangentti</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle through two points and tangential to one entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>

@@ -1,32 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>CircleCR</name>
     <message>
         <location filename="../CircleCR.js" line="+56"/>
         <source>Center or radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskipiste tai säde</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskipiste</translation>
     </message>
     <message>
         <location filename="../CircleCR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Säde:</translation>
     </message>
     <message>
         <location filename="../CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskipiste, Säde</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from center and radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä ympyrä keskipisteellä ja säteellä</translation>
     </message>
 </context>
 </TS>

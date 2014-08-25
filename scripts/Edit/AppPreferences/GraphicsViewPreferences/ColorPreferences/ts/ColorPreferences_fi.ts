@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>ColorPreferences</name>
     <message>
         <location filename="../ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Värit</translation>
     </message>
 </context>
 <context>
@@ -19,87 +18,87 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+35"/>
         <source>Background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tausta:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ristikko:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Inactive Crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+27"/>
         <source>Origin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nollakohta:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Relative Zero:</source>
-        <translation type="unfinished"></translation>
+        <translation>Relatiivinen Nolla:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Referenssipiste:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruudukko:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Meta Grid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+27"/>
         <source>Zoom Box:</source>
-        <translation type="unfinished"></translation>
+        <translation>Suurennuslaatikko:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valinta:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Selection Box Border:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valintalaatikon Raja:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Selection Box:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valintalaatikko:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Cross Selection Box:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+27"/>
         <source>Auxiliary Shapes:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+67"/>
         <source>Info Label Background:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+27"/>
         <source>Info Label Font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Measurement Tools:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>

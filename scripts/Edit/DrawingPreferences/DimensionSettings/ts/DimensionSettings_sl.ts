@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -137,12 +137,12 @@
     <message>
         <location line="+23"/>
         <source>Font</source>
-        <translation>Pisava</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Dimension label font:</source>
-        <translation>Pisava kotiranj:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -569,12 +569,12 @@
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation>Sledi</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation>Sled</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -604,12 +604,12 @@
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Pogledi</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Pogled</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>

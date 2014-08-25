@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>QObject</name>
     <message>
@@ -329,12 +329,12 @@
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
-        <translation>Širina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height</source>
-        <translation>Višina</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
