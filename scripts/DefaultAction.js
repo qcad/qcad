@@ -608,13 +608,7 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
         isAttributeEntity(entity) ||
         isAttributeDefinitionEntity(entity)) {
 
-//        var def = true;
-//        if (RS.getSystemId()==="osx") {
-//            // disable doubleclick to edit text on OSX by default (bug):
-//            def = false;
-//        }
-
-        if (RSettings.getBoolValue("GraphicsView/DoubleClickEditText", def)===true) {
+        if (RSettings.getBoolValue("GraphicsView/DoubleClickEditText", true)===true) {
             include("scripts/Modify/EditText/EditText.js");
             EditText.editText(entity);
         }
