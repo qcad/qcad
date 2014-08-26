@@ -75,6 +75,9 @@ void RPainterPath::addSpline(const RSpline& spline) {
         else if (cps.size()==3 && degree==2) {
             quadTo(cps[1], cps[2]);
         }
+        else if (cps.size()==2 && degree==1) {
+            lineTo(cps[1]);
+        }
         else {
             qWarning() << "RPainterPath::addSpline: invalid bezier segment: " << list[i];
             continue;

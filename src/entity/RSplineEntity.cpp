@@ -152,6 +152,7 @@ QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
         RPropertyAttributes attr;
         QSet<QString> choices;
         if (!data.hasFitPoints()) {
+            choices.insert("1");
             choices.insert("2");
         }
         choices.insert("3");

@@ -1070,7 +1070,7 @@ void RSpline::updateInternal() const {
     dirty = false;
     updateInProgress = true;
 
-    if (degree<2 || degree>3) {
+    if (degree<1 || degree>3) {
         invalidate();
         qWarning() << "RSpline::updateInternal: invalid degree: " << degree;
         updateInProgress = false;
