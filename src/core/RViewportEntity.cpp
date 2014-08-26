@@ -99,6 +99,7 @@ QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
 
 void RViewportEntity::exportEntity(RExporter& e, bool preview) const {
     Q_UNUSED(preview);
+    return;
 
     e.setBrush(Qt::NoBrush);
     RVector v1(data.width/2, data.height/2);
