@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="fi">
 <context>
     <name>LineBisector</name>
     <message>
-        <location filename="../LineBisector.js" line="+62"/>
+        <location filename="../LineBisector.js" line="+66"/>
         <source>First line</source>
         <translation>Ensimmäinen viiva</translation>
     </message>
@@ -14,7 +15,7 @@
     </message>
     <message>
         <location line="+77"/>
-        <source>Lines don't intersect.</source>
+        <source>Lines don&apos;t intersect.</source>
         <translation>Viivat eivät kohtaa.</translation>
     </message>
     <message>
@@ -35,7 +36,7 @@
     <message>
         <location line="+5"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

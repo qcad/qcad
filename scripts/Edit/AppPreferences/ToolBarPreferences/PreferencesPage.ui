@@ -141,10 +141,10 @@
          <bool>false</bool>
         </property>
         <property name="inputMask">
-         <string>X</string>
+         <string notr="true">X; </string>
         </property>
         <property name="text">
-         <string>,</string>
+         <string notr="true">,</string>
         </property>
         <property name="maxLength">
          <number>1</number>

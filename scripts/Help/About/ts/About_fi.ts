@@ -52,7 +52,7 @@
     </message>
     <message>
         <location line="+9"/>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Internet:</source>
         <translation type="unfinished"></translation>
     </message>

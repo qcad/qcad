@@ -1,11 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="fi">
 <context>
     <name>InsertBlockItem</name>
     <message>
-        <location filename="../InsertBlockItem.js" line="+82"/>
-        <source>Adjusted invalid block name to '%1'</source>
-        <translation type="unfinished"/>
+        <location filename="../InsertBlockItem.js" line="+87"/>
+        <source>Adjusted invalid block name to &apos;%1&apos;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+55"/>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="fi">
 <context>
@@ -5,17 +6,17 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Rulers and Scrollbars</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
@@ -55,7 +56,7 @@
     <message>
         <location line="+26"/>
         <source>Color lightness threshold:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+36"/>
@@ -65,12 +66,12 @@
     <message>
         <location line="+9"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Automatically use screen based linetypes in model view</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
@@ -90,7 +91,7 @@
     <message>
         <location line="+58"/>
         <source>Text height display threshold (px):</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
@@ -113,7 +114,7 @@
     <message>
         <location filename="../GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="fi">
 <context>
@@ -5,7 +6,7 @@
     <message>
         <location filename="../DimRegen.js" line="+63"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>

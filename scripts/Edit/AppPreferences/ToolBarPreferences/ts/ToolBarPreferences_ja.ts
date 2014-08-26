@@ -4,12 +4,12 @@
 <context>
     <name>ToolBar</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+20"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Icon Size:</source>
         <translation>アイコンサイズ:</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+72"/>
         <source>Pixel</source>
         <translation>ピクセル</translation>
     </message>
@@ -17,6 +17,16 @@
         <location line="+3"/>
         <source>px</source>
         <translation>ピクセル</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Options Toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Shortcut Prefix Character: </source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

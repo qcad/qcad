@@ -11,7 +11,7 @@
 <context>
     <name>LibraryBrowser</name>
     <message>
-        <location filename="../LibraryBrowser.js" line="+69"/>
+        <location filename="../LibraryBrowser.js" line="+70"/>
         <source>audience</source>
         <translation>Cible</translation>
     </message>
@@ -67,13 +67,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1107"/>
+        <location line="+1108"/>
         <location filename="../LibraryBrowserInit.js" line="+18"/>
         <source>Library Browser</source>
         <translation>Explorateur de la bibliothèque</translation>
     </message>
     <message>
-        <location line="-1099"/>
+        <location line="-1100"/>
         <source>Icon</source>
         <translation>Icône</translation>
     </message>
@@ -93,7 +93,7 @@
         <translation>Page %1 de %2</translation>
     </message>
     <message>
-        <location line="+219"/>
+        <location line="+220"/>
         <source>Updating icons...</source>
         <translation>Régénérer icônes...</translation>
     </message>

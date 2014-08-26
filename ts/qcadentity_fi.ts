@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="fi">
 <context>
@@ -277,7 +278,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 1</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -290,7 +291,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 2</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-18"/>
@@ -356,7 +357,7 @@
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -370,7 +371,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+2"/>
@@ -428,7 +429,7 @@
     <message>
         <location line="+1"/>
         <source>Linear Factor</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -440,7 +441,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -570,7 +571,7 @@
     <message>
         <location line="+4"/>
         <source>Bulge</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
@@ -664,7 +665,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -689,7 +690,7 @@
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>

@@ -4,7 +4,7 @@
 <context>
     <name>LineBisector</name>
     <message>
-        <location filename="../LineBisector.js" line="+62"/>
+        <location filename="../LineBisector.js" line="+66"/>
         <source>First line</source>
         <translatorcomment>--google--
 Selecione a primeira linha ou arco

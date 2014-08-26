@@ -58,7 +58,7 @@
         <translation>Brez</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+400"/>
         <source>Options</source>
         <translation>Nastavitve</translation>
     </message>
@@ -78,7 +78,7 @@
         <translation>CAD orodja</translation>
     </message>
     <message>
-        <location line="+558"/>
+        <location line="+567"/>
         <source>Entity is on a locked layer.</source>
         <translation>Entiteta je na zaklenjeni plasti.</translation>
     </message>
@@ -170,7 +170,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+950"/>
+        <location filename="../WidgetFactory.js" line="+949"/>
         <source>Restore defaults</source>
         <translation>Obnovi privzeto</translation>
     </message>
@@ -289,7 +289,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+302"/>
+        <location filename="../autostart.js" line="+303"/>
         <source>Loading add-on translations...</source>
         <translation>Nalagam prevode dodatkov...</translation>
     </message>

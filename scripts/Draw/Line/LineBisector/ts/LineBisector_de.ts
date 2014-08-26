@@ -4,7 +4,7 @@
 <context>
     <name>LineBisector</name>
     <message>
-        <location filename="../LineBisector.js" line="+66"/>
+        <location filename="../LineBisector.js" line="+70"/>
         <source>Second line</source>
         <translation>Zweite Linie</translation>
     </message>

@@ -14,7 +14,7 @@
         <translation>Numero:</translation>
     </message>
     <message>
-        <location filename="../LineBisector.js" line="+62"/>
+        <location filename="../LineBisector.js" line="+66"/>
         <source>First line</source>
         <translation>Prima linea</translation>
     </message>

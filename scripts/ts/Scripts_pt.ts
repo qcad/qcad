@@ -81,7 +81,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+400"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -110,7 +110,7 @@ Ferramentas CAD</translatorcomment>
         <translation>Ferramentas CAD</translation>
     </message>
     <message>
-        <location line="+558"/>
+        <location line="+567"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidade está em uma camada bloqueada.</translation>
@@ -216,7 +216,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+950"/>
+        <location filename="../WidgetFactory.js" line="+949"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--
@@ -400,7 +400,7 @@ Carregando plugins...</translatorcomment>
         <translation type="obsolete">Pós-inicialização...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+302"/>
+        <location filename="../autostart.js" line="+303"/>
         <source>Loading add-on translations...</source>
         <translation>Carregar add-on traduções...</translation>
     </message>

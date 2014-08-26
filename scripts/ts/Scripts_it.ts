@@ -64,7 +64,7 @@
         <translation>Niente</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+400"/>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>
@@ -86,7 +86,7 @@
         <translation>Strumenti CAD</translation>
     </message>
     <message>
-        <location line="+558"/>
+        <location line="+567"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entità è su un layer bloccato.</translation>
@@ -192,7 +192,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+950"/>
+        <location filename="../WidgetFactory.js" line="+949"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>
@@ -336,7 +336,7 @@
         <translation type="obsolete">Post-inizializzazione...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+302"/>
+        <location filename="../autostart.js" line="+303"/>
         <source>Loading add-on translations...</source>
         <translation>Caricamento aggiuntivo traduzioni...</translation>
     </message>

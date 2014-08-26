@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="fi">
 <context>
@@ -15,7 +16,7 @@
     <message>
         <location line="+8"/>
         <source>Dimension arc location</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../DimAngularInit.js" line="+2"/>

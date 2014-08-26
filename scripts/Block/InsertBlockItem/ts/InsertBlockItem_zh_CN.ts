@@ -4,7 +4,7 @@
 <context>
     <name>InsertBlockItem</name>
     <message>
-        <location filename="../InsertBlockItem.js" line="+82"/>
+        <location filename="../InsertBlockItem.js" line="+87"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>将无效块的名称设为‘%1’</translation>
     </message>

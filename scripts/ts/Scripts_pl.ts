@@ -76,7 +76,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+400"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -105,7 +105,7 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Narzędzia CAD</translation>
     </message>
     <message>
-        <location line="+558"/>
+        <location line="+567"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka jest na zablokowanej warstwie.</translation>
@@ -213,7 +213,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+950"/>
+        <location filename="../WidgetFactory.js" line="+949"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
@@ -383,7 +383,7 @@ Dzielenie (÷)</translatorcomment>
         <translation type="obsolete">Po inicjalizacji wtyczki ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+302"/>
+        <location filename="../autostart.js" line="+303"/>
         <source>Loading add-on translations...</source>
         <translation type="unfinished"></translation>
     </message>

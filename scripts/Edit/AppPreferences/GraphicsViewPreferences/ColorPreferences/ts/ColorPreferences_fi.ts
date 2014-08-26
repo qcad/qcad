@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="fi">
 <context>
@@ -5,7 +6,7 @@
     <message>
         <location filename="../ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -28,7 +29,7 @@
     <message>
         <location line="+7"/>
         <source>Inactive Crosshairs:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
@@ -53,7 +54,7 @@
     <message>
         <location line="+30"/>
         <source>Meta Grid:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
@@ -78,27 +79,27 @@
     <message>
         <location line="+27"/>
         <source>Cross Selection Box:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Auxiliary Shapes:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Info Label Background:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Info Label Font:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Measurement Tools:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

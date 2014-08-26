@@ -62,7 +62,7 @@
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+400"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -82,7 +82,7 @@
         <translation>CAD Werkzeuge</translation>
     </message>
     <message>
-        <location line="+558"/>
+        <location line="+567"/>
         <source>Entity is on a locked layer.</source>
         <translation>Element ist auf gesperrtem Layer.</translation>
     </message>
@@ -178,7 +178,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+950"/>
+        <location filename="../WidgetFactory.js" line="+949"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>
@@ -329,7 +329,7 @@
         <translation type="obsolete">Suche Plugins...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+302"/>
+        <location filename="../autostart.js" line="+303"/>
         <source>Loading add-on translations...</source>
         <translation>Lade Add-on Übersetzungen...</translation>
     </message>

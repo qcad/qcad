@@ -68,7 +68,7 @@
         <translation>Aucun</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+400"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>
@@ -90,7 +90,7 @@
         <translation>Outils de CAO</translation>
     </message>
     <message>
-        <location line="+558"/>
+        <location line="+567"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entité est sur un calque verrouillé.</translation>
@@ -196,7 +196,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+950"/>
+        <location filename="../WidgetFactory.js" line="+949"/>
         <source>Restore defaults</source>
         <translation>Restaurer les valeurs par défaut</translation>
     </message>
@@ -340,7 +340,7 @@
         <translation type="obsolete">Post-initialisation ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+302"/>
+        <location filename="../autostart.js" line="+303"/>
         <source>Loading add-on translations...</source>
         <translation>Chargement add-on traductions...</translation>
     </message>

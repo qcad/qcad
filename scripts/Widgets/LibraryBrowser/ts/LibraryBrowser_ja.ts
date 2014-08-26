@@ -4,7 +4,7 @@
 <context>
     <name>LibraryBrowser</name>
     <message>
-        <location filename="../LibraryBrowser.js" line="+69"/>
+        <location filename="../LibraryBrowser.js" line="+70"/>
         <source>audience</source>
         <translation>支持者</translation>
     </message>
@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1107"/>
+        <location line="+1108"/>
         <location filename="../LibraryBrowserInit.js" line="+18"/>
         <source>Library Browser</source>
         <translation>ライブラリブラウザ</translation>
     </message>
     <message>
-        <location line="-1099"/>
+        <location line="-1100"/>
         <source>Icon</source>
         <translation>アイコン</translation>
     </message>
@@ -86,7 +86,7 @@
         <translation>ページ %1 / %2</translation>
     </message>
     <message>
-        <location line="+219"/>
+        <location line="+220"/>
         <source>Updating icons...</source>
         <translation>アイコンをアップデート...</translation>
     </message>

@@ -66,7 +66,7 @@
         <translation>Sobreescribir los bloques</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="+82"/>
+        <location filename="../InsertBlockItem.js" line="+87"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Ajustado nombre de bloque no válido &apos;%1&apos;</translation>
     </message>
