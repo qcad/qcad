@@ -61,13 +61,14 @@ void RClipboardOperation::copy(
         dest.clear();
     }
 
-    QSet<REntity::Id> entityIds;
+    QSet<REntity::Id> entityIdsSet;
     if (selectionOnly) {
-        entityIds = src.querySelectedEntities();
+        entityIdsSet = src.querySelectedEntities();
     }
     else {
-        entityIds = src.queryAllEntities();
+        entityIdsSet = src.queryAllEntities();
     }
+    QList<REntity::Id> entityIdsList = src.getStorage().orderBackToFront(entityIdsSet);
 
     // Non-const offset. reset to 0/0/0 if copying to block
     //    (offset implemented as block reference offset).
@@ -168,8 +169,8 @@ void RClipboardOperation::copy(
         copiedBlocks.clear();
 
         int counter = 0;
-        QSet<REntity::Id>::iterator it;
-        for (it=entityIds.begin(); it!=entityIds.end(); ++it) {
+        QList<REntity::Id>::iterator it;
+        for (it=entityIdsList.begin(); it!=entityIdsList.end(); ++it) {
             if (preview && ++counter>RSettings::getPreviewEntities()) {
                 break;
             }
@@ -200,8 +201,8 @@ void RClipboardOperation::copy(
         copiedLayers.clear();
 
         int counter = 0;
-        QSet<REntity::Id>::iterator it;
-        for (it=entityIds.begin(); it!=entityIds.end(); ++it) {
+        QList<REntity::Id>::iterator it;
+        for (it=entityIdsList.begin(); it!=entityIdsList.end(); ++it) {
             if (preview && ++counter>RSettings::getPreviewEntities()) {
                 break;
             }

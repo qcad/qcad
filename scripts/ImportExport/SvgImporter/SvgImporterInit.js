@@ -25,6 +25,5 @@ SvgImporterFactory.prototype.instantiate = function(document, messageHandler, pr
 
 
 function init() {
-    qDebug("registering svg file importer");
     RFileImporterRegistry.registerFileImporter(new SvgImporterFactory());
 }
