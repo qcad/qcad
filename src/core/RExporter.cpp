@@ -432,6 +432,8 @@ bool RExporter::exportDocument() {
 }
 
 bool RExporter::exportDocumentSettings() {
+    exportDocumentSetting("QCADVersion", RSettings::getVersionString());
+
     // export all QCAD specific document variables:
     QStringList variables = document->getVariables();
     variables.sort();

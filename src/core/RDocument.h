@@ -265,12 +265,12 @@ public:
 
     QStringList getVariables() const;
     void setVariable(const QString& key, const QVariant& value, bool overwrite=true);
-    QVariant getVariable(const QString& key, const QVariant& defaultValue = RDEFAULT_QVARIANT, bool useSettings = false);
+    QVariant getVariable(const QString& key, const QVariant& defaultValue = RDEFAULT_QVARIANT, bool useSettings = false) const;
     bool hasVariable(const QString& key) const;
 
     void setKnownVariable(RS::KnownVariable key, const QVariant& value);
     void setKnownVariable(RS::KnownVariable key, const RVector& value);
-    QVariant getKnownVariable(RS::KnownVariable key, const QVariant& defaultValue = RDEFAULT_QVARIANT);
+    QVariant getKnownVariable(RS::KnownVariable key, const QVariant& defaultValue = RDEFAULT_QVARIANT) const;
 
     void setUnit(RS::Unit unit);
     RS::Unit getUnit() const;
@@ -292,6 +292,8 @@ public:
 
     bool isModified() const;
     void setModified(bool m);
+
+    void copyVariablesFrom(const RDocument& other);
 
     /*
     void copyToDocument(const RVector& reference, RDocument& other,

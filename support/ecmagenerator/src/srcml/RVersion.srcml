@@ -25,7 +25,7 @@ dir="./core" filename="RVersion.h">
   snapshots only */</comment>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>R_QCAD_VERSION_STRING</name>"3.6.3"</cpp:define>
+  <name>R_QCAD_VERSION_STRING</name>"3.6.4.1"</cpp:define>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>R_QCAD_VERSION_MAJOR</name>3</cpp:define>
@@ -34,10 +34,10 @@ dir="./core" filename="RVersion.h">
   <name>R_QCAD_VERSION_MINOR</name>6</cpp:define>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>R_QCAD_VERSION_REV</name>3</cpp:define>
+  <name>R_QCAD_VERSION_REV</name>4</cpp:define>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>R_QCAD_VERSION_BUILD</name>0</cpp:define>
+  <name>R_QCAD_VERSION_BUILD</name>1</cpp:define>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

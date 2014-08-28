@@ -323,6 +323,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setModified, "setModified");
             
+            REcmaHelper::registerFunction(&engine, proto, copyVariablesFrom, "copyVariablesFrom");
+            
             REcmaHelper::registerFunction(&engine, proto, dump, "dump");
             
         engine.setDefaultPrototype(
@@ -9531,6 +9533,71 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::setModified", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::copyVariablesFrom
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::copyVariablesFrom", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::copyVariablesFrom";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("copyVariablesFrom", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocument */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RDocument*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->copyVariablesFrom(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.copyVariablesFrom().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::copyVariablesFrom", context, engine);
             return result;
         }
          QScriptValue

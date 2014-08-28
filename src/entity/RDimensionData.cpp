@@ -435,6 +435,7 @@ void RDimensionData::initTextData() const {
                          0.0,
                          false           // not simple (diameter signs, stacked text, ...)
                          );
+    textData.setDocument(document);
 
     //qDebug() << "textData: " << textData;
 

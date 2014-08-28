@@ -2242,7 +2242,8 @@ dir="./core" filename="RDocument.h">
         <name>false</name>
       </expr>
     </init></decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>bool</name>
@@ -2333,7 +2334,8 @@ dir="./core" filename="RDocument.h">
         <name>RDEFAULT_QVARIANT</name>
       </expr>
     </init></decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
@@ -2472,6 +2474,20 @@ dir="./core" filename="RDocument.h">
         <name>bool</name>
       </type>
       <name>m</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>copyVariablesFrom</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RDocument</name>&amp;</type>
+      <name>other</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <comment type="block">/* void copyToDocument(const RVector&amp;

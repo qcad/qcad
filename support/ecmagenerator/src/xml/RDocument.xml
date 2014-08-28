@@ -1032,6 +1032,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="copyVariablesFrom" cppName="copyVariablesFrom"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="other" isConst="true" />
+      </variant>
+    </method>
     <method name="getClipboard" cppName="getClipboard"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

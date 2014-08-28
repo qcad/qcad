@@ -349,7 +349,7 @@ void RDocument::setVariable(const QString& key, const QVariant& value, bool over
     storage.setVariable(key, value, overwrite);
 }
 
-QVariant RDocument::getVariable(const QString& key, const QVariant& defaultValue, bool useSettings) {
+QVariant RDocument::getVariable(const QString& key, const QVariant& defaultValue, bool useSettings) const {
     QVariant ret = storage.getVariable(key);
     if (!ret.isValid()) {
         if (useSettings) {
@@ -370,7 +370,7 @@ void RDocument::setKnownVariable(RS::KnownVariable key, const RVector& value) {
     storage.setKnownVariable(key, v);
 }
 
-QVariant RDocument::getKnownVariable(RS::KnownVariable key, const QVariant& defaultValue) {
+QVariant RDocument::getKnownVariable(RS::KnownVariable key, const QVariant& defaultValue) const {
     QVariant ret = storage.getKnownVariable(key);
     if (!ret.isValid()) {
         ret = defaultValue;
@@ -1458,6 +1458,26 @@ bool RDocument::isModified() const {
 
 void RDocument::setModified(bool m) {
     storage.setModified(m);
+}
+
+void RDocument::copyVariablesFrom(const RDocument& other) {
+    for (RS::KnownVariable kv=RS::ANGBASE; kv<=RS::MaxKnownVariable; kv=(RS::KnownVariable)(kv+1)) {
+        QVariant otherKV = other.getKnownVariable(kv);
+        if (otherKV.isValid()) {
+            setKnownVariable(kv, otherKV);
+        }
+    }
+
+    QStringList keys = other.getVariables();
+    for (int i=0; i<keys.length(); i++) {
+        QString key = keys[i];
+        QVariant otherV = other.getVariable(key);
+        if (otherV.isValid()) {
+            setVariable(key, otherV);
+        }
+    }
+
+    setDimensionFont(other.getDimensionFont());
 }
 
 RDocument& RDocument::getClipboard() {

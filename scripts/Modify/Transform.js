@@ -70,13 +70,14 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
             return op;
         }
 
-        this.diTrans = new RDocumentInterface(new RDocument(new RMemoryStorage(), new RSpatialIndexNavel()));
+        var docTrans = new RDocument(new RMemoryStorage(), new RSpatialIndexNavel());
+        this.diTrans = new RDocumentInterface(docTrans);
 
-        //this.diTrans.getDocument().setUnit(this.getDocument().getUnit());
         this.diTrans.applyOperation(new RCopyOperation(new RVector(0,0), this.getDocument()));
-        //this.diTrans.getDocument().setUnit(this.getDocument().getUnit());
+        docTrans.copyVariablesFrom(this.getDocument());
         di = this.diTrans;
         ids = di.getDocument().queryAllEntities();
+
     }
     else {
         di = this.getDocumentInterface();
