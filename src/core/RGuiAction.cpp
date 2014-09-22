@@ -711,7 +711,7 @@ bool RGuiAction::slotTrigger(const QString& command) {
         return true;
     } else if (factory != NULL) {
         // call C++ action factory:
-        factory();
+        factory(this);
         emit postTriggered();
         return true;
     }
