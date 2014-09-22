@@ -9,5 +9,4 @@ SUBDIRS = \
     ListenerExamples \
     MathExamples \
     ModifyExamples \
-    SystemExamples \
     QtExamples
