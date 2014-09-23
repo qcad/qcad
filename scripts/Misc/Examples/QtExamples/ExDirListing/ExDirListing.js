@@ -17,20 +17,20 @@
  * along with QCAD.
  */
 
-include("../SystemExamples.js");
+include("scripts/EAction.js");
 
 /**
  * This action lists the contents of the home directory and prints
  * it into the QCAD command line history.
  */
 function ExDirListing(guiAction) {
-    SystemExamples.call(this, guiAction);
+    EAction.call(this, guiAction);
 }
 
-ExDirListing.prototype = new SystemExamples();
+ExDirListing.prototype = new EAction();
 
 ExDirListing.prototype.beginEvent = function() {
-    SystemExamples.prototype.beginEvent.call(this);
+    EAction.prototype.beginEvent.call(this);
 
     // create QDir object that represents a directory:
     var dir = new QDir.home();
@@ -65,5 +65,5 @@ ExDirListing.init = function(basePath) {
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ExDirListing.js");
     action.setSortOrder(10);
-    EAction.addGuiActionTo(action, SystemExamples, true, false, false);
+    EAction.addGuiActionTo(action, QtExamples, true, false, false);
 };

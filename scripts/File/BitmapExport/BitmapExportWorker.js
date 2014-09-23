@@ -19,11 +19,17 @@ function exportBitmap(doc, scene, fileName, properties) {
         view.setBackgroundColor(properties["backgroundColor"]);
     }
 
+    if (typeof(properties["margin"])==="undefined") {
+        properties["margin"] = 20;
+    }
+
     if (properties["resolution"]) {
         var bb = doc.getBoundingBox(true, true);
+        qDebug(bb);
         properties["width"] = Math.round(bb.getWidth() * properties["resolution"] + 2 * properties["margin"]);
         properties["height"] = Math.round(bb.getHeight() * properties["resolution"] + 2 * properties["margin"]);
-        //print("size: ", width, "x", height);
+        qDebug(properties["width"]);
+        qDebug(properties["height"]);
     }
 
     if (!properties["width"]) {
@@ -35,7 +41,7 @@ function exportBitmap(doc, scene, fileName, properties) {
 
     view.resizeImage(properties["width"], properties["height"]);
 
-    view.autoZoom(properties["margin"]==null ? 20 : properties["margin"], true);
+    view.autoZoom(properties["margin"], true);
 
     //view.setAntialiasing(true);
     //view.setPaintOrigin(false);
