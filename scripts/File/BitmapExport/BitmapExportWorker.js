@@ -25,11 +25,8 @@ function exportBitmap(doc, scene, fileName, properties) {
 
     if (properties["resolution"]) {
         var bb = doc.getBoundingBox(true, true);
-        qDebug(bb);
         properties["width"] = Math.round(bb.getWidth() * properties["resolution"] + 2 * properties["margin"]);
         properties["height"] = Math.round(bb.getHeight() * properties["resolution"] + 2 * properties["margin"]);
-        qDebug(properties["width"]);
-        qDebug(properties["height"]);
     }
 
     if (!properties["width"]) {
