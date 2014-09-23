@@ -19,7 +19,6 @@ public:
             qDebug("guiAction is NULL");
             return;
         }
-//        RDocumentInterface* di = guiAction->getDocumentInterface();
         RDocumentInterface* di = RMainWindow::getDocumentInterfaceStatic();
 
         if (di==NULL) {
