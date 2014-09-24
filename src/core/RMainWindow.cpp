@@ -30,6 +30,7 @@
 #include "RFontList.h"
 #include "RGraphicsView.h"
 #include "RGuiAction.h"
+#include "RImportListener.h"
 #include "RLayerListener.h"
 #include "RMainWindow.h"
 #include "RPenListener.h"
@@ -208,6 +209,31 @@ void RMainWindow::notifySelectionListeners(RDocumentInterface* documentInterface
     QList<RSelectionListener*>::iterator it;
     for (it = selectionListeners.begin(); it != selectionListeners.end(); ++it) {
         (*it)->updateSelectionListener(documentInterface);
+    }
+}
+
+/**
+ * Adds a listener for import events.
+ */
+void RMainWindow::addImportListener(RImportListener* l) {
+    if (l != NULL) {
+        importListeners.push_back(l);
+    } else {
+        qWarning("RMainWindow::addImportListener(): Listener is NULL.");
+    }
+}
+
+void RMainWindow::removeImportListener(RImportListener* l) {
+    importListeners.removeAll(l);
+}
+
+/**
+ * Notifies all import listeners.
+ */
+void RMainWindow::notifyImportListeners(RDocumentInterface* documentInterface) {
+    QList<RImportListener*>::iterator it;
+    for (it = importListeners.begin(); it != importListeners.end(); ++it) {
+        (*it)->updateImportListener(documentInterface);
     }
 }
 

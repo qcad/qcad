@@ -985,6 +985,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
 
     if (mainWindow!=NULL && notify==true && notifyListeners==true) {
         mainWindow->notifyListeners();
+        mainWindow->notifyImportListeners(this);
     }
     return ret;
 }

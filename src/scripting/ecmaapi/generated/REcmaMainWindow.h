@@ -109,6 +109,15 @@
         notifyPropertyListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addImportListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeImportListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        notifyImportListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addTransactionListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -93,8 +93,13 @@ dir="./core" filename="RGuiAction.h">
     <name>void</name>
   </type>(*
   <name>FactoryFunction</name>)
-  <parameter_list>
-  ()</parameter_list>;</function_decl></typedef></public>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RGuiAction</name>*</type>
+    </decl>
+  </param>)</parameter_list>;</function_decl></typedef></public>
   <public>public: 
   <constructor_decl>
   <name>RGuiAction</name>

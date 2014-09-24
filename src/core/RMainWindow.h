@@ -24,6 +24,7 @@
 
 #include <QMutex>
 
+#include "RImportListener.h"
 #include "RInterTransactionListener.h"
 #include "RTransactionListener.h"
 #include "RPropertyEvent.h"
@@ -116,6 +117,10 @@ public:
     );
     void notifyPropertyListeners(RDocument& document, REntity& entity);
     void notifyPropertyListeners();
+
+    void addImportListener(RImportListener* l);
+    void removeImportListener(RImportListener* l);
+    void notifyImportListeners(RDocumentInterface* documentInterface);
 
     void addTransactionListener(RTransactionListener* l);
     void removeTransactionListener(RTransactionListener* l);
@@ -252,6 +257,7 @@ protected:
     QList<RBlockListener*> blockListeners;
     QList<RViewListener*> viewListeners;
     QList<RPenListener*> penListeners;
+    QList<RImportListener*> importListeners;
     QList<RTransactionListener*> transactionListeners;
     QList<RInterTransactionListener*> interTransactionListeners;
     QList<RSnapListener*> snapListeners;
