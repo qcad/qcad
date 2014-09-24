@@ -811,16 +811,22 @@ void RExporter::exportLine(const RLine& line, double offset) {
     bool gapFound = false;
     RVector p1 = line.getStartPoint();
     RVector p2 = p1;
+    RLine l;
 
     do {
         if (dashFound && !gapFound) {
             // don't shoot over end of line:
             if (total + fabs(p.getDashLengthAt(i)) >= length - 1.0e-6) {
                 if (optimizeEnds) {
-                    exportLineSegment(RLine(p1, line.endPoint));
+                    l = RLine(p1, line.endPoint);
                 }
                 else {
-                    exportLineSegment(RLine(p1, p2));
+                    l = RLine(p1, p2);
+                }
+
+                // ignore zero length lines at line ends:
+                if (l.getLength()>RS::PointTolerance) {
+                    exportLineSegment(l);
                 }
                 break;
             }
@@ -865,10 +871,14 @@ void RExporter::exportLine(const RLine& line, double offset) {
     if (!gapFound || !dashFound) {
         if (total + fabs(p.getDashLengthAt(i)) >= length - 1.0e-6) {
             if (optimizeEnds || (total>length && !gapFound)) {
-                exportLineSegment(RLine(p1, line.endPoint));
+                l = RLine(p1, line.endPoint);
             }
             else {
-                exportLineSegment(RLine(p1, p2));
+                l = RLine(p1, p2);
+            }
+            if (l.getLength()>RS::PointTolerance) {
+                // ignore zero length lines at line ends:
+                exportLineSegment(l);
             }
         } else {
             exportLineSegment(RLine(p1, p2));
