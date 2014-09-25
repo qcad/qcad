@@ -1336,9 +1336,7 @@ EAction.prototype.updatePreview = function(clear) {
     }
     var op = this.getOperation(true);
     if (!isNull(op)) {
-        RDebug.startTimer(10);
         di.previewOperation(op);
-        RDebug.stopTimer(10, "preview op");
     }
 
     var i;
