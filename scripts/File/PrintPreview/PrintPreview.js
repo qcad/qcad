@@ -91,7 +91,7 @@ PrintPreview.prototype.beginEvent = function() {
     this.view = mdiChild.getLastKnownViewWithFocus();
 
     DefaultAction.prototype.beginEvent.call(this);
-    
+
     if (!isNull(this.view)) {
         var document = this.getDocument();
         this.bgColor = this.view.getBackgroundColor();
@@ -120,6 +120,16 @@ PrintPreview.prototype.beginEvent = function() {
 
     var action = RGuiAction.getByScriptFile("scripts/Edit/DrawingPreferences/DrawingPreferences.js");
     action.triggered.connect(this, "updateBackgroundDecoration");
+
+    var appWin = RMainWindowQt.getMainWindow();
+    var initialZoom = appWin.property("PrintPreview/InitialZoom");
+    if (initialZoom==="Auto") {
+        this.slotAutoFitDrawing();
+    }
+    else if (initialZoom==="View") {
+        qDebug("view box: ", this.view.getBox());
+        this.slotAutoFitBox(this.view.getBox());
+    }
 
     if (this.initialAction==="Print") {
         this.slotPrint();
@@ -675,6 +685,23 @@ PrintPreview.prototype.slotPrintCropMarksChanged = function(checked) {
     var document = EAction.getDocument();
     Print.setPrintCropMarks(document, checked);
 
+    this.updateBackgroundDecoration();
+};
+
+/**
+ * Auto fit box to page.
+ */
+PrintPreview.prototype.slotAutoFitBox = function(box) {
+    var document = this.getDocument();
+    Print.autoFitBox(document, box);
+    PrintPreview.updateScaleString(document);
+
+    // needed to update pattern scaling according to drawing scale:
+    var di = this.getDocumentInterface();
+    di.regenerateScenes();
+
+    this.updateBackgroundTransform();
+    //this.slotAutoZoomToPage();
     this.updateBackgroundDecoration();
 };
 
