@@ -973,6 +973,11 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
     RDocumentInterface::IoErrorCode ret = RDocumentInterface::IoErrorNoError;
     QString previousFileName = document.getFileName();
     document.setFileName(fileName);
+
+    if (mainWindow!=NULL && notify==true && notifyListeners==true) {
+        mainWindow->notifyImportListenersPre(this);
+    }
+
     if (fileImporter->importFile(fileName, nameFilter)) {
         document.setModified(false);
     } else {
@@ -985,7 +990,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
 
     if (mainWindow!=NULL && notify==true && notifyListeners==true) {
         mainWindow->notifyListeners();
-        mainWindow->notifyImportListeners(this);
+        mainWindow->notifyImportListenersPost(this);
     }
     return ret;
 }
@@ -1008,6 +1013,12 @@ bool RDocumentInterface::exportFile(const QString& fileName, const QString& file
         return false;
     }
 
+    RMainWindow* mainWindow = RMainWindow::getMainWindow();
+
+    if (mainWindow!=NULL && notifyListeners==true) {
+        mainWindow->notifyExportListenersPre(this);
+    }
+
     bool success = fileExporter->exportFile(fileName, fileVersion, resetModified);
 
     if (success) {
@@ -1016,6 +1027,10 @@ bool RDocumentInterface::exportFile(const QString& fileName, const QString& file
         if (resetModified) {
             document.setFileVersion(fileVersion);
             document.setModified(false);
+        }
+
+        if (mainWindow!=NULL && notifyListeners==true) {
+            mainWindow->notifyExportListenersPost(this);
         }
     }
     else {

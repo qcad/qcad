@@ -40,9 +40,14 @@ public:
     virtual ~RImportListener() {}
 
     /**
+     * Called by the document whenever a document is about to be imported.
+     */
+    virtual void preImportEvent(RDocumentInterface* documentInterface) = 0;
+
+    /**
      * Called by the document whenever a document has been imported.
      */
-    virtual void updateImportListener(RDocumentInterface* documentInterface) = 0;
+    virtual void postImportEvent(RDocumentInterface* documentInterface) = 0;
 };
 
 Q_DECLARE_METATYPE(RImportListener*)

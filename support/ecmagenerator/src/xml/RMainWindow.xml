@@ -178,6 +178,40 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="addExportListener" cppName="addExportListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RExportListener *" typeName="RExportListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="removeExportListener"
+    cppName="removeExportListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RExportListener *" typeName="RExportListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyExportListenersPre"
+    cppName="notifyExportListenersPre" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyExportListenersPost"
+    cppName="notifyExportListenersPost" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="addImportListener" cppName="addImportListener"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -194,8 +228,17 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="l" isConst="false" />
       </variant>
     </method>
-    <method name="notifyImportListeners"
-    cppName="notifyImportListeners" specifier="public"
+    <method name="notifyImportListenersPre"
+    cppName="notifyImportListenersPre" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyImportListenersPost"
+    cppName="notifyImportListenersPost" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RDocumentInterface *"

@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
-  <class name="RImportListenerAdapter"
+  <class name="RExportListenerAdapter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="true"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="QObject" specifier="public" />
-    <baseClass name="RImportListener" specifier="public" />
-    <method name="preImportEvent" cppName="preImportEvent"
+    <baseClass name="RExportListener" specifier="public" />
+    <method name="preExportEvent" cppName="preExportEvent"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -16,7 +16,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="postImportEvent" cppName="postImportEvent"
+    <method name="postExportEvent" cppName="postExportEvent"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

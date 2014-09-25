@@ -319,6 +319,7 @@ private:
     QString fileVersion;
 
     RStorage& storage;
+    // TODO: map of spatial indices (per block), spatial index template to copy for new blocks:
     RSpatialIndex& spatialIndex;
     RTransactionStack transactionStack;
     RBlock::Id modelSpaceBlockId;

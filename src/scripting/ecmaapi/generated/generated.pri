@@ -66,6 +66,8 @@ HEADERS += \
     $$PWD/REcmaEntityPickEvent.h \
     $$PWD/REcmaEventFilter.h \
     $$PWD/REcmaExplodable.h \
+    $$PWD/REcmaExportListener.h \
+    $$PWD/REcmaExportListenerAdapter.h \
     $$PWD/REcmaExporter.h \
     $$PWD/REcmaFileCache.h \
     $$PWD/REcmaFileExporter.h \
@@ -389,6 +391,8 @@ SOURCES += \
     $$PWD/REcmaEntityPickEvent.cpp \
     $$PWD/REcmaEventFilter.cpp \
     $$PWD/REcmaExplodable.cpp \
+    $$PWD/REcmaExportListener.cpp \
+    $$PWD/REcmaExportListenerAdapter.cpp \
     $$PWD/REcmaExporter.cpp \
     $$PWD/REcmaFileCache.cpp \
     $$PWD/REcmaFileExporter.cpp \

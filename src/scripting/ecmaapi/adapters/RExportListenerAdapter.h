@@ -17,37 +17,36 @@
  * along with QCAD.
  */
 
-#ifndef RIMPORTLISTENERADAPTER_H_
-#define RIMPORTLISTENERADAPTER_H_
+#ifndef REXPORTLISTENERADAPTER_H_
+#define REXPORTLISTENERADAPTER_H_
 
 #include <QObject>
 
 #include "RDocumentInterface.h"
-#include "RImportListener.h"
+#include "RExportListener.h"
 
 /**
  * \scriptable
  * \ingroup ecma
  */
-class RImportListenerAdapter: public QObject, public RImportListener {
+class RExportListenerAdapter: public QObject, public RExportListener {
 Q_OBJECT
 
 public:
-    virtual ~RImportListenerAdapter() { }
+    virtual ~RExportListenerAdapter() { }
 
-    virtual void preImportEvent(RDocumentInterface* documentInterface) {
-        emit preImport(documentInterface);
+    virtual void preExportEvent(RDocumentInterface* documentInterface) {
+        emit preExport(documentInterface);
     }
-
-    virtual void postImportEvent(RDocumentInterface* documentInterface) {
-        emit postImport(documentInterface);
+    virtual void postExportEvent(RDocumentInterface* documentInterface) {
+        emit postExport(documentInterface);
     }
 
 signals:
-    void preImport(RDocumentInterface* documentInterface);
-    void postImport(RDocumentInterface* documentInterface);
+    void preExport(RDocumentInterface* documentInterface);
+    void postExport(RDocumentInterface* documentInterface);
 };
 
-Q_DECLARE_METATYPE(RImportListenerAdapter*)
+Q_DECLARE_METATYPE(RExportListenerAdapter*)
 
 #endif

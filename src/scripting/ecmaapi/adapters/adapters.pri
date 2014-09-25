@@ -7,6 +7,7 @@ HEADERS += \
     $$PWD/RFileImporterFactoryAdapter.h \
     $$PWD/RFocusListenerAdapter.h \
     $$PWD/RFontDatabase.h \
+    $$PWD/RExportListenerAdapter.h \
     $$PWD/RImportListenerAdapter.h \
     $$PWD/RInterTransactionListenerAdapter.h \
     $$PWD/RLayerListenerAdapter.h \

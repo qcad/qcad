@@ -17,37 +17,39 @@
  * along with QCAD.
  */
 
-#ifndef RIMPORTLISTENERADAPTER_H_
-#define RIMPORTLISTENERADAPTER_H_
+#ifndef REXPORTLISTENER_H
+#define REXPORTLISTENER_H
 
-#include <QObject>
+#include <QMetaType>
 
-#include "RDocumentInterface.h"
-#include "RImportListener.h"
+#include "core_global.h"
+
+class RDocumentInterface;
+
+
 
 /**
+ * \brief Abstract base class for classes that are interested in 
+ * file export events.
+ *
+ * \ingroup core
  * \scriptable
- * \ingroup ecma
  */
-class RImportListenerAdapter: public QObject, public RImportListener {
-Q_OBJECT
-
+class QCADCORE_EXPORT RExportListener {
 public:
-    virtual ~RImportListenerAdapter() { }
+    virtual ~RExportListener() {}
 
-    virtual void preImportEvent(RDocumentInterface* documentInterface) {
-        emit preImport(documentInterface);
-    }
+    /**
+     * Called by the document whenever a document is about to be exported.
+     */
+    virtual void preExportEvent(RDocumentInterface* documentInterface) = 0;
 
-    virtual void postImportEvent(RDocumentInterface* documentInterface) {
-        emit postImport(documentInterface);
-    }
-
-signals:
-    void preImport(RDocumentInterface* documentInterface);
-    void postImport(RDocumentInterface* documentInterface);
+    /**
+     * Called by the document whenever a document has been exported.
+     */
+    virtual void postExportEvent(RDocumentInterface* documentInterface) = 0;
 };
 
-Q_DECLARE_METATYPE(RImportListenerAdapter*)
+Q_DECLARE_METATYPE(RExportListener*)
 
 #endif

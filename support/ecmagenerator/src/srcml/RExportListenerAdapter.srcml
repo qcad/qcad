@@ -2,7 +2,7 @@
 <unit xmlns="http://www.sdml.info/srcML/src"
 xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
 dir="./scripting/ecmaapi/adapters"
-filename="RImportListenerAdapter.h">
+filename="RExportListenerAdapter.h">
   <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
   Mustun. All rights reserved. * * This file is part of the QCAD
   project. * * QCAD is free software: you can redistribute it
@@ -17,10 +17,10 @@ filename="RImportListenerAdapter.h">
   License * along with QCAD. */</comment>
   <cpp:ifndef>#
   <cpp:directive>ifndef</cpp:directive>
-  <name>RIMPORTLISTENERADAPTER_H_</name></cpp:ifndef>
+  <name>REXPORTLISTENERADAPTER_H_</name></cpp:ifndef>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>RIMPORTLISTENERADAPTER_H_</name></cpp:define>
+  <name>REXPORTLISTENERADAPTER_H_</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
@@ -29,16 +29,16 @@ filename="RImportListenerAdapter.h">
   <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RImportListener.h"</cpp:file></cpp:include>
+  <cpp:file>"RExportListener.h"</cpp:file></cpp:include>
   <comment type="block">/** * \scriptable * \ingroup ecma
   */</comment>
   <class>class 
-  <name>RImportListenerAdapter</name>
+  <name>RExportListenerAdapter</name>
   <super>: 
   <specifier>public</specifier>
   <name>QObject</name>, 
   <specifier>public</specifier>
-  <name>RImportListener</name></super>
+  <name>RExportListener</name></super>
   <block>{
   <private type="default">
     <macro>
@@ -48,7 +48,7 @@ filename="RImportListenerAdapter.h">
   <public>public: 
   <destructor>
     <specifier>virtual</specifier>
-    <name>~RImportListenerAdapter</name>
+    <name>~RExportListenerAdapter</name>
     <parameter_list>()</parameter_list>
     <block>{ }</block>
   </destructor>
@@ -57,7 +57,7 @@ filename="RImportListenerAdapter.h">
       <name>virtual</name>
       <name>void</name>
     </type>
-    <name>preImportEvent</name>
+    <name>preExportEvent</name>
     <parameter_list>(
     <param>
       <decl>
@@ -71,7 +71,7 @@ filename="RImportListenerAdapter.h">
     <type>
       <name>emit</name>
     </type>
-    <name>preImport</name>
+    <name>preExport</name>
     <parameter_list>(
     <param>
       <decl>
@@ -86,7 +86,7 @@ filename="RImportListenerAdapter.h">
       <name>virtual</name>
       <name>void</name>
     </type>
-    <name>postImportEvent</name>
+    <name>postExportEvent</name>
     <parameter_list>(
     <param>
       <decl>
@@ -100,7 +100,7 @@ filename="RImportListenerAdapter.h">
     <type>
       <name>emit</name>
     </type>
-    <name>postImport</name>
+    <name>postExport</name>
     <parameter_list>(
     <param>
       <decl>
@@ -116,7 +116,7 @@ filename="RImportListenerAdapter.h">
   <type>
     <name>void</name>
   </type>
-  <name>preImport</name>
+  <name>preExport</name>
   <parameter_list>(
   <param>
     <decl>
@@ -129,7 +129,7 @@ filename="RImportListenerAdapter.h">
   <type>
     <name>void</name>
   </type>
-  <name>postImport</name>
+  <name>postExport</name>
   <parameter_list>(
   <param>
     <decl>
@@ -141,7 +141,7 @@ filename="RImportListenerAdapter.h">
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
-    <argument>RImportListenerAdapter*</argument>)</argument_list>
+    <argument>RExportListenerAdapter*</argument>)</argument_list>
   </macro>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
