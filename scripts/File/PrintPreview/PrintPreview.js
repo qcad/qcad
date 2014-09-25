@@ -127,7 +127,6 @@ PrintPreview.prototype.beginEvent = function() {
         this.slotAutoFitDrawing();
     }
     else if (initialZoom==="View") {
-        qDebug("view box: ", this.view.getBox());
         this.slotAutoFitBox(this.view.getBox());
     }
 
