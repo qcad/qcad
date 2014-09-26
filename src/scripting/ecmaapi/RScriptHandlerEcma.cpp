@@ -156,6 +156,7 @@
 #include "REcmaLinetypePattern.h"
 #include "REcmaLinetypePatternMap.h"
 #include "REcmaLineweight.h"
+#include "REcmaLinkedStorage.h"
 #include "REcmaLineweightCombo.h"
 #include "REcmaListView.h"
 #include "REcmaListWidget.h"
@@ -544,6 +545,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaSharedPointerTextLabel::init(*engine);
 
     REcmaStorage::init(*engine);
+    REcmaLinkedStorage::init(*engine);
     REcmaMemoryStorage::init(*engine);
 
     REcmaDocument::init(*engine);

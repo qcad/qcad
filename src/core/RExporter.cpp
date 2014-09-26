@@ -409,7 +409,7 @@ void RExporter::endExport() {
 }
 
 /**
- * Exports the visual representation of all objects (including entities) of the document->
+ * Exports the visual representation of all objects (including entities) of the document.
  */
 bool RExporter::exportDocument() {
     startExport();
