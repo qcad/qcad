@@ -541,7 +541,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
 
     // get pattern:
     RPattern* p;
-    if (document==NULL || RUnit::isMetric(document->getUnit())) {
+    if (document==NULL || (RUnit::isMetric(document->getUnit()) && document->getUnit()!=RS::None)) {
         p = RPatternListMetric::get(getPatternName());
     }
     else {
