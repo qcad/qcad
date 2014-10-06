@@ -29,8 +29,10 @@ SOURCES += \
     RInputEvent.cpp \
     RLayer.cpp \
     RLinetype.cpp \
+    RLinetypeList.cpp \
+    RLinetypeListImperial.cpp \
+    RLinetypeListMetric.cpp \
     RLinetypePattern.cpp \
-    RLinetypePatternMap.cpp \
     RLineweight.cpp \
     RLinkedStorage.cpp \
     RLocalPeer.cpp \
@@ -144,8 +146,10 @@ HEADERS = \
     RLayer.h \
     RLayerListener.h \
     RLinetype.h \
+    RLinetypeList.h \
+    RLinetypeListImperial.h\
+    RLinetypeListMetric.h \
     RLinetypePattern.h \
-    RLinetypePatternMap.h \
     RLineweight.h \
     RLinkedStorage.h \
     RLocalPeer.h \
@@ -245,7 +249,7 @@ RESOURCES = resources/core.qrc
 OTHER_FILES += core.dox math/math.dox
 DEFINES += QCADCORE_LIBRARY
 
-LIBS += -lzlib -lopennurbs
+LIBS += -lopennurbs -lzlib
 
 win32 {
     LIBS += -lRpcrt4 -lAdvapi32
@@ -253,6 +257,11 @@ win32 {
 
 macx {
     QMAKE_LFLAGS += -framework ApplicationServices
+}
+
+linux-g++* {
+    # this might or might not be needed under Linux:
+    LIBS += -X11
 }
 
 !win32 {
