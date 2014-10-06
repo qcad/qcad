@@ -26,6 +26,7 @@ RPropertyTypeId RXLineEntity::PropertyType;
 RPropertyTypeId RXLineEntity::PropertyBlock;
 RPropertyTypeId RXLineEntity::PropertyLayer;
 RPropertyTypeId RXLineEntity::PropertyLinetype;
+RPropertyTypeId RXLineEntity::PropertyLinetypeScale;
 RPropertyTypeId RXLineEntity::PropertyLineweight;
 RPropertyTypeId RXLineEntity::PropertyColor;
 RPropertyTypeId RXLineEntity::PropertyDrawOrder;
@@ -64,6 +65,7 @@ void RXLineEntity::init() {
     RXLineEntity::PropertyBlock.generateId(typeid(RXLineEntity), REntity::PropertyBlock);
     RXLineEntity::PropertyLayer.generateId(typeid(RXLineEntity), REntity::PropertyLayer);
     RXLineEntity::PropertyLinetype.generateId(typeid(RXLineEntity), REntity::PropertyLinetype);
+    RXLineEntity::PropertyLinetypeScale.generateId(typeid(RXLineEntity), REntity::PropertyLinetypeScale);
     RXLineEntity::PropertyLineweight.generateId(typeid(RXLineEntity), REntity::PropertyLineweight);
     RXLineEntity::PropertyColor.generateId(typeid(RXLineEntity), REntity::PropertyColor);
     RXLineEntity::PropertyDrawOrder.generateId(typeid(RXLineEntity), REntity::PropertyDrawOrder);

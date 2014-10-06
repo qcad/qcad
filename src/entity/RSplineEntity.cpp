@@ -27,6 +27,7 @@ RPropertyTypeId RSplineEntity::PropertyType;
 RPropertyTypeId RSplineEntity::PropertyBlock;
 RPropertyTypeId RSplineEntity::PropertyLayer;
 RPropertyTypeId RSplineEntity::PropertyLinetype;
+RPropertyTypeId RSplineEntity::PropertyLinetypeScale;
 RPropertyTypeId RSplineEntity::PropertyLineweight;
 RPropertyTypeId RSplineEntity::PropertyColor;
 RPropertyTypeId RSplineEntity::PropertyDrawOrder;
@@ -56,6 +57,7 @@ void RSplineEntity::init() {
     RSplineEntity::PropertyBlock.generateId(typeid(RSplineEntity), REntity::PropertyBlock);
     RSplineEntity::PropertyLayer.generateId(typeid(RSplineEntity), REntity::PropertyLayer);
     RSplineEntity::PropertyLinetype.generateId(typeid(RSplineEntity), REntity::PropertyLinetype);
+    RSplineEntity::PropertyLinetypeScale.generateId(typeid(RSplineEntity), REntity::PropertyLinetypeScale);
     RSplineEntity::PropertyLineweight.generateId(typeid(RSplineEntity), REntity::PropertyLineweight);
     RSplineEntity::PropertyColor.generateId(typeid(RSplineEntity), REntity::PropertyColor);
     RSplineEntity::PropertyDrawOrder.generateId(typeid(RSplineEntity), REntity::PropertyDrawOrder);

@@ -33,6 +33,7 @@
 #include "RMatrix.h"
 #include "RObject.h"
 #include "RPolyline.h"
+#include "RSettings.h"
 #include "RView.h"
 
 class RBlockReferenceEntity;
@@ -178,16 +179,25 @@ public:
         this->linetypeId = linetypeId;
     }
 
-    virtual void setLinetype(RLinetype linetype);
-
-    RLinetype::Id getLinetypeId() const {
+    virtual RLinetype::Id getLinetypeId() const {
         return linetypeId;
     }
+
+    virtual void setLinetypePattern(const RLinetypePattern& p);
+    virtual RLinetypePattern getLinetypePattern() const;
 
     virtual RLinetype::Id getLinetypeId(bool resolve,
         const QStack<REntity*>& blockRefStack) const;
 
-    RLineweight::Lineweight getLineweight() const {
+    virtual void setLinetypeScale(double linetypeScale) {
+        this->linetypeScale = linetypeScale;
+    }
+
+    virtual double getLinetypeScale() const {
+        return linetypeScale;
+    }
+
+    virtual RLineweight::Lineweight getLineweight() const {
         return lineweight;
     }
 
@@ -198,6 +208,9 @@ public:
 
     void setLineweight(RLineweight::Lineweight lineweight) {
         this->lineweight = lineweight;
+//        if (RSettings::getAutoScaleLinetypePattern()) {
+//            this->linetypeScale = lineweight;
+//        }
     }
 
     void setColor(const RColor& color) {
@@ -307,6 +320,7 @@ protected:
     RBlock::Id blockId;
     RObject::Id parentId;
     RLinetype::Id linetypeId;
+    double linetypeScale;
     RLineweight::Lineweight lineweight;
     RColor color;
 };

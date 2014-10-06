@@ -46,10 +46,31 @@
         set
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        loadAllFrom
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getNumDashes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getIcon
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPattern
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getPatternLength
@@ -80,6 +101,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         equals
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isLoaded
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        load
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

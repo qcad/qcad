@@ -131,6 +131,9 @@
         queryUcs
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryLinetypeDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryLinetype
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -245,7 +248,13 @@
         getLinetypeName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLinetypeDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLinetypeNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLinetypePatterns
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLinetypeId

@@ -60,17 +60,29 @@ public:
     virtual QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId);
     virtual QSet<REntity::Id> queryAllBlockReferences();
 
+    virtual QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const;
     virtual QSharedPointer<RObject> queryObject(RObject::Id objectId) const;
-    virtual QSharedPointer<REntity> queryEntity(REntity::Id objectId) const;
     virtual QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const;
+
+    virtual QSharedPointer<REntity> queryEntityDirect(REntity::Id objectId) const;
+    virtual QSharedPointer<REntity> queryEntity(REntity::Id objectId) const;
+
+    virtual QSharedPointer<RLayer> queryLayerDirect(RLayer::Id layerId) const;
     virtual QSharedPointer<RLayer> queryLayer(RLayer::Id layerId) const;
     virtual QSharedPointer<RLayer> queryLayer(const QString& layerName) const;
+
+    virtual QSharedPointer<RBlock> queryBlockDirect(RBlock::Id blockId) const;
     virtual QSharedPointer<RBlock> queryBlock(RBlock::Id blockId) const;
     virtual QSharedPointer<RBlock> queryBlock(const QString& blockName) const;
+
     virtual QSharedPointer<RView> queryView(RView::Id viewId) const;
     virtual QSharedPointer<RView> queryView(const QString& viewName) const;
+
+    virtual QSharedPointer<RUcs> queryUcsDirect(RUcs::Id ucsId) const;
     virtual QSharedPointer<RUcs> queryUcs(RUcs::Id ucsId) const;
     virtual QSharedPointer<RUcs> queryUcs(const QString& ucsName) const;
+
+    virtual QSharedPointer<RLinetype> queryLinetypeDirect(RLinetype::Id linetypeId) const;
     virtual QSharedPointer<RLinetype> queryLinetype(RLinetype::Id linetypeId) const;
     virtual QSharedPointer<RLinetype> queryLinetype(const QString& linetypeName) const;
 
@@ -87,14 +99,11 @@ public:
     virtual RView::Id getViewId(const QString& viewName) const;
 
     virtual QString getLinetypeName(RLinetype::Id linetypeId) const;
+    virtual QString getLinetypeDescription(RLinetype::Id linetypeId) const;
     virtual QSet<QString> getLinetypeNames() const;
+    virtual QList<RLinetypePattern> getLinetypePatterns() const;
     virtual RLinetype::Id getLinetypeId(const QString& linetypeName) const;
 
-    virtual QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const;
-    virtual QSharedPointer<REntity> queryEntityDirect(REntity::Id objectId) const;
-    virtual QSharedPointer<RUcs> queryUcsDirect(RUcs::Id ucsId) const;
-    virtual QSharedPointer<RLayer> queryLayerDirect(RLayer::Id layerId) const;
-    virtual QSharedPointer<RBlock> queryBlockDirect(RBlock::Id blockId) const;
 
     virtual RObject::Id getNewObjectId();
     virtual RObject::Handle getNewObjectHandle();
@@ -104,7 +113,7 @@ public:
     virtual RView::Id getCurrentViewId();
     virtual RColor getCurrentColor();
     virtual RLineweight::Lineweight getCurrentLineweight() const;
-    virtual RLinetype getCurrentLinetype() const;
+    virtual RLinetype::Id getCurrentLinetypeId() const;
 
     virtual bool deleteObject(RObject::Id objectId);
     virtual bool setUndoStatus(RObject::Id objectId, bool status);

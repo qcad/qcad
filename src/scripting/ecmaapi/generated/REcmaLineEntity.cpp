@@ -153,6 +153,10 @@
                 qScriptValueFromValue(&engine, RLineEntity::PropertyLinetype),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyLinetypeScale",
+                qScriptValueFromValue(&engine, RLineEntity::PropertyLinetypeScale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyLineweight",
                 qScriptValueFromValue(&engine, RLineEntity::PropertyLineweight),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

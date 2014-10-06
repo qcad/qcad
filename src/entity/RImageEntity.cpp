@@ -32,6 +32,7 @@ RPropertyTypeId RImageEntity::PropertyType;
 RPropertyTypeId RImageEntity::PropertyBlock;
 RPropertyTypeId RImageEntity::PropertyLayer;
 RPropertyTypeId RImageEntity::PropertyLinetype;
+RPropertyTypeId RImageEntity::PropertyLinetypeScale;
 RPropertyTypeId RImageEntity::PropertyLineweight;
 RPropertyTypeId RImageEntity::PropertyColor;
 RPropertyTypeId RImageEntity::PropertyDrawOrder;
@@ -65,6 +66,7 @@ void RImageEntity::init() {
     RImageEntity::PropertyBlock.generateId(typeid(RImageEntity), REntity::PropertyBlock);
     RImageEntity::PropertyLayer.generateId(typeid(RImageEntity), REntity::PropertyLayer);
     RImageEntity::PropertyLinetype.generateId(typeid(RImageEntity), REntity::PropertyLinetype);
+    RImageEntity::PropertyLinetypeScale.generateId(typeid(RImageEntity), REntity::PropertyLinetypeScale);
     RImageEntity::PropertyLineweight.generateId(typeid(RImageEntity), REntity::PropertyLineweight);
     RImageEntity::PropertyColor.generateId(typeid(RImageEntity), REntity::PropertyColor);
     RImageEntity::PropertyDrawOrder.generateId(typeid(RImageEntity), REntity::PropertyDrawOrder);

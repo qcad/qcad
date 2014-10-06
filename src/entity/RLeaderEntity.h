@@ -45,6 +45,7 @@ public:
     static RPropertyTypeId PropertyBlock;
     static RPropertyTypeId PropertyLayer;
     static RPropertyTypeId PropertyLinetype;
+    static RPropertyTypeId PropertyLinetypeScale;
     static RPropertyTypeId PropertyLineweight;
     static RPropertyTypeId PropertyColor;
     static RPropertyTypeId PropertyDrawOrder;

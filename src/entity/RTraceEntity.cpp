@@ -26,6 +26,7 @@ RPropertyTypeId RTraceEntity::PropertyType;
 RPropertyTypeId RTraceEntity::PropertyBlock;
 RPropertyTypeId RTraceEntity::PropertyLayer;
 RPropertyTypeId RTraceEntity::PropertyLinetype;
+RPropertyTypeId RTraceEntity::PropertyLinetypeScale;
 RPropertyTypeId RTraceEntity::PropertyLineweight;
 RPropertyTypeId RTraceEntity::PropertyColor;
 RPropertyTypeId RTraceEntity::PropertyDrawOrder;
@@ -61,6 +62,7 @@ void RTraceEntity::init() {
     RTraceEntity::PropertyBlock.generateId(typeid(RTraceEntity), REntity::PropertyBlock);
     RTraceEntity::PropertyLayer.generateId(typeid(RTraceEntity), REntity::PropertyLayer);
     RTraceEntity::PropertyLinetype.generateId(typeid(RTraceEntity), REntity::PropertyLinetype);
+    RTraceEntity::PropertyLinetypeScale.generateId(typeid(RTraceEntity), REntity::PropertyLinetypeScale);
     RTraceEntity::PropertyLineweight.generateId(typeid(RTraceEntity), REntity::PropertyLineweight);
     RTraceEntity::PropertyColor.generateId(typeid(RTraceEntity), REntity::PropertyColor);
     RTraceEntity::PropertyDrawOrder.generateId(typeid(RTraceEntity), REntity::PropertyDrawOrder);

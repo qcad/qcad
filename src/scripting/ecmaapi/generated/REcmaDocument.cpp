@@ -223,7 +223,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, setCurrentLinetype, "setCurrentLinetype");
             
-            REcmaHelper::registerFunction(&engine, proto, getCurrentLinetype, "getCurrentLinetype");
+            REcmaHelper::registerFunction(&engine, proto, setCurrentLinetypePattern, "setCurrentLinetypePattern");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCurrentLinetypeId, "getCurrentLinetypeId");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCurrentLinetypePattern, "getCurrentLinetypePattern");
             
             REcmaHelper::registerFunction(&engine, proto, queryCurrentBlock, "queryCurrentBlock");
             
@@ -271,7 +275,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypeName, "getLinetypeName");
             
+            REcmaHelper::registerFunction(&engine, proto, getLinetypeDescription, "getLinetypeDescription");
+            
             REcmaHelper::registerFunction(&engine, proto, getLinetypeNames, "getLinetypeNames");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLinetypePatterns, "getLinetypePatterns");
             
             REcmaHelper::registerFunction(&engine, proto, isByLayer, "isByLayer");
             
@@ -6432,31 +6440,46 @@
     
     if( context->argumentCount() ==
     1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RLinetype */
+            context->argument(0).isNumber()
+        ) /* type: RLinetype::Id */
     
     ){
     // prepare arguments:
     
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RLinetype*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RLinetype*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLinetype.",
-                               context);                    
-                    }
-                    RLinetype 
-                    a0 = 
-                    *ap0;
+                    // argument isStandardType
+                    RLinetype::Id
+                    a0 =
+                    (RLinetype::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCurrentLinetype(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
                 
     // end of arguments
 
@@ -6476,19 +6499,86 @@
             return result;
         }
          QScriptValue
-        REcmaDocument::getCurrentLinetype
+        REcmaDocument::setCurrentLinetypePattern
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDocument::getCurrentLinetype", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getCurrentLinetype";
+            //REcmaHelper::functionStart("REcmaDocument::setCurrentLinetypePattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::setCurrentLinetypePattern";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDocument* self = 
-                        getSelf("getCurrentLinetype", context);
+                        getSelf("setCurrentLinetypePattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLinetypePattern */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLinetypePattern*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLinetypePattern*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RLinetypePattern.",
+                               context);                    
+                    }
+                    RLinetypePattern 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCurrentLinetypePattern(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.setCurrentLinetypePattern().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::setCurrentLinetypePattern", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getCurrentLinetypeId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getCurrentLinetypeId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getCurrentLinetypeId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getCurrentLinetypeId", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -6505,11 +6595,60 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLinetype'
-    RLinetype cppResult =
+    // return type 'RLinetype::Id'
+    RLinetype::Id cppResult =
         
-               self->getCurrentLinetype();
-        // return type: RLinetype
+               self->getCurrentLinetypeId();
+        // return type: RLinetype::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getCurrentLinetypeId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getCurrentLinetypeId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getCurrentLinetypePattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getCurrentLinetypePattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getCurrentLinetypePattern";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getCurrentLinetypePattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLinetypePattern'
+    RLinetypePattern cppResult =
+        
+               self->getCurrentLinetypePattern();
+        // return type: RLinetypePattern
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -6518,10 +6657,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getCurrentLinetype().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getCurrentLinetypePattern().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDocument::getCurrentLinetype", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocument::getCurrentLinetypePattern", context, engine);
             return result;
         }
          QScriptValue
@@ -7831,6 +7970,66 @@
             return result;
         }
          QScriptValue
+        REcmaDocument::getLinetypeDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getLinetypeDescription", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getLinetypeDescription";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getLinetypeDescription", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLinetype::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLinetype::Id
+                    a0 =
+                    (RLinetype::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLinetypeDescription(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getLinetypeDescription().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getLinetypeDescription", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDocument::getLinetypeNames
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -7878,6 +8077,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getLinetypeNames", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getLinetypePatterns
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getLinetypePatterns", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getLinetypePatterns";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getLinetypePatterns", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RLinetypePattern >'
+    QList < RLinetypePattern > cppResult =
+        
+               self->getLinetypePatterns();
+        // return type: QList < RLinetypePattern >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getLinetypePatterns().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getLinetypePatterns", context, engine);
             return result;
         }
          QScriptValue

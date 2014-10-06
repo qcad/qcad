@@ -49,6 +49,8 @@ void RClipboardOperation::copy(
         bool preview,
         const RQMapQStringQString& attributes) const {
 
+    bool overwriteLinetypes = false;
+
     double unitScale;
     if (src.getUnit()==RS::None) {
         unitScale = 1.0;
@@ -152,6 +154,9 @@ void RClipboardOperation::copy(
             QSharedPointer<RLayer> destLayer = copyEntityLayer(*attDef, src, dest, overwriteLayers, transaction);
             att->setLayerId(destLayer->getId());
 
+            QSharedPointer<RLinetype> destLinetype = copyEntityLinetype(*attDef, src, dest, overwriteLinetypes, transaction);
+            att->setLinetypeId(destLinetype->getId());
+
             transaction.addObject(att, false);
             attributeIds.insert(att->getId());
         }
@@ -170,6 +175,7 @@ void RClipboardOperation::copy(
     //     there's nothing to do here:
     if (!hasBlock || overwriteBlocks || preview) {
         copiedLayers.clear();
+        copiedLinetypes.clear();
         copiedBlocks.clear();
 
         int counter = 0;
@@ -281,7 +287,10 @@ void RClipboardOperation::copyEntity(
         RTransaction& transaction,
         bool toModelSpaceBlock) const {
 
+    bool overwriteLinetypes = false;
+
     QSharedPointer<RLayer> destLayer = copyEntityLayer(entity, src, dest, overwriteLayers, transaction);
+    QSharedPointer<RLinetype> destLinetype = copyEntityLinetype(entity, src, dest, overwriteLinetypes, transaction);
 
     // add block the entity belongs to, if the block exists it is overwritten
     // if 'overwriteBlocks' is true:
@@ -422,6 +431,8 @@ void RClipboardOperation::copyEntity(
         destEntity->setLayerId(destLayer->getId());
     }
 
+    destEntity->setLinetypeId(destLinetype->getId());
+
     if (toModelSpaceBlock) {
         destEntity->setBlockId(dest.getModelSpaceBlockId());
     }
@@ -509,4 +520,54 @@ QSharedPointer<RLayer> RClipboardOperation::copyLayer(
     }
 
     return destLayer;
+}
+
+QSharedPointer<RLinetype> RClipboardOperation::copyEntityLinetype(
+        REntity& entity,
+        RDocument& src, RDocument& dest,
+        bool overwriteLinetypes,
+        RTransaction& transaction) const {
+
+    return copyLinetype(entity.getLinetypeId(), src, dest, overwriteLinetypes, transaction);
+}
+
+QSharedPointer<RLinetype> RClipboardOperation::copyLinetype(
+        RLinetype::Id linetypeId,
+        RDocument& src, RDocument& dest,
+        bool overwriteLinetypes,
+        RTransaction& transaction) const {
+
+    // add linetype of entity, if the linetype exists it is overwritten
+    // if overwriteLinetypes is true:
+    QSharedPointer<RLinetype> srcLinetype = src.queryLinetype(linetypeId);
+    if (srcLinetype.isNull()) {
+        qWarning("RClipboardOperation::copyLinetype: "
+                 "linetype is NULL.");
+        return QSharedPointer<RLinetype>();
+    }
+    QString srcLinetypeName = srcLinetype->getName();
+    QSharedPointer<RLinetype> destLinetype;
+    if (copiedLinetypes.contains(srcLinetypeName)) {
+        destLinetype = copiedLinetypes.value(srcLinetypeName);
+        Q_ASSERT(!destLinetype.isNull());
+    }
+    else {
+        if (!dest.hasLinetype(srcLinetypeName) || overwriteLinetypes) {
+            destLinetype = QSharedPointer<RLinetype>(srcLinetype->clone());
+            destLinetype->setDocument(&dest);
+            if (destLinetype->getDocument()!=srcLinetype->getDocument()) {
+                dest.getStorage().setObjectId(*destLinetype.data(), RObject::INVALID_ID);
+                dest.getStorage().setObjectHandle(*destLinetype.data(), RObject::INVALID_HANDLE);
+            }
+            transaction.addObject(destLinetype);
+        }
+        else {
+            destLinetype = dest.queryLinetype(srcLinetypeName);
+            Q_ASSERT(!destLinetype.isNull());
+        }
+
+        copiedLinetypes.insert(srcLinetypeName, destLinetype);
+    }
+
+    return destLinetype;
 }

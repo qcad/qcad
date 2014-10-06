@@ -29,7 +29,7 @@
 #include "RS.h"
 
 /**
- * A global list of loadable resources (fonts, hatch patterns, ..).
+ * A global list of loadable resources (fonts, hatch patterns, line types, ..).
  *
  * \ingroup core
  */

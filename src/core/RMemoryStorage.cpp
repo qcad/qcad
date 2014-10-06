@@ -48,6 +48,7 @@ void RMemoryStorage::clear() {
     blockEntityMap.clear();
     blockMap.clear();
     layerMap.clear();
+    linetypeMap.clear();
     transactionMap.clear();
     variables.clear();
     variableCaseMap.clear();
@@ -215,9 +216,9 @@ QSet<RView::Id> RMemoryStorage::queryAllViews(bool undone) {
 
 QSet<RLinetype::Id> RMemoryStorage::queryAllLinetypes() {
     QSet<RLinetype::Id> result;
-    QHash<RObject::Id, QSharedPointer<RObject> >::iterator it;
-    for (it = objectMap.begin(); it != objectMap.end(); ++it) {
-        QSharedPointer<RLinetype> l = it->dynamicCast<RLinetype>();
+    QHash<RObject::Id, QSharedPointer<RLinetype> >::iterator it;
+    for (it = linetypeMap.begin(); it != linetypeMap.end(); ++it) {
+        QSharedPointer<RLinetype> l = *it;
         if (!l.isNull() && !l->isUndone()) {
             result.insert(l->getId());
         }
@@ -366,6 +367,9 @@ QSharedPointer<RObject> RMemoryStorage::queryObject(RObject::Id objectId) const 
 }
 
 QSharedPointer<RObject> RMemoryStorage::queryObjectDirect(RObject::Id objectId) const {
+    if (!objectMap.contains(objectId)) {
+        return QSharedPointer<RObject>();
+    }
     return objectMap[objectId];
 }
 
@@ -398,6 +402,9 @@ QSharedPointer<RObject> RMemoryStorage::queryObjectByHandle(RObject::Handle obje
 }
 
 QSharedPointer<RObject> RMemoryStorage::queryObjectByHandleDirect(RObject::Handle objectHandle) const {
+    if (!objectHandleMap.contains(objectHandle)) {
+        return QSharedPointer<RObject>();
+    }
     return objectHandleMap[objectHandle];
 }
 
@@ -412,10 +419,16 @@ QSharedPointer<REntity> RMemoryStorage::queryEntity(REntity::Id objectId) const 
 }
 
 QSharedPointer<REntity> RMemoryStorage::queryEntityDirect(REntity::Id objectId) const {
+    if (!entityMap.contains(objectId)) {
+        return QSharedPointer<REntity>();
+    }
     return entityMap[objectId];
 }
 
 QSharedPointer<RLayer> RMemoryStorage::queryLayerDirect(RLayer::Id layerId) const {
+    if (!layerMap.contains(layerId)) {
+        return QSharedPointer<RLayer>();
+    }
     return layerMap[layerId].dynamicCast<RLayer>();
 }
 
@@ -460,6 +473,9 @@ QSharedPointer<RBlock> RMemoryStorage::queryBlock(RBlock::Id blockId) const {
 }
 
 QSharedPointer<RBlock> RMemoryStorage::queryBlockDirect(RBlock::Id blockId) const {
+    if (!blockMap.contains(blockId)) {
+        return QSharedPointer<RBlock>();
+    }
     return blockMap[blockId].dynamicCast<RBlock>();
 }
 
@@ -539,6 +555,9 @@ QSharedPointer<RView> RMemoryStorage::queryView(const QString& viewName) const {
 }
 
 QSharedPointer<RUcs> RMemoryStorage::queryUcsDirect(RUcs::Id ucsId) const {
+    if (!objectMap.contains(ucsId)) {
+        return QSharedPointer<RUcs>();
+    }
     return objectMap[ucsId].dynamicCast<RUcs>();
 }
 
@@ -564,13 +583,29 @@ QSharedPointer<RUcs> RMemoryStorage::queryUcs(const QString& ucsName) const {
     return QSharedPointer<RUcs>();
 }
 
+QSharedPointer<RLinetype> RMemoryStorage::queryLinetypeDirect(RLinetype::Id linetypeId) const {
+    if (!linetypeMap.contains(linetypeId)) {
+        return QSharedPointer<RLinetype>();
+    }
+    return linetypeMap[linetypeId].dynamicCast<RLinetype>();
+}
+
 QSharedPointer<RLinetype> RMemoryStorage::queryLinetype(RLinetype::Id linetypeId) const {
-    return objectMap[linetypeId].dynamicCast<RLinetype>();
+    if (!linetypeMap.contains(linetypeId)) {
+        return QSharedPointer<RLinetype> ();
+    }
+    if (linetypeMap[linetypeId].isNull()) {
+        return QSharedPointer<RLinetype> ();
+    }
+    if (!linetypeMap[linetypeId].dynamicCast<RLinetype>().isNull()) {
+        return QSharedPointer<RLinetype>(linetypeMap[linetypeId]->clone());
+    }
+    return QSharedPointer<RLinetype>();
 }
 
 QSharedPointer<RLinetype> RMemoryStorage::queryLinetype(const QString& linetypeName) const {
-    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
-    for (it = objectMap.constBegin(); it != objectMap.constEnd(); ++it) {
+    QHash<RObject::Id, QSharedPointer<RLinetype> >::const_iterator it;
+    for (it = linetypeMap.constBegin(); it != linetypeMap.constEnd(); ++it) {
         QSharedPointer<RLinetype> l = it->dynamicCast<RLinetype>();
         if (!l.isNull() && l->getName().compare(linetypeName, Qt::CaseInsensitive)==0) {
             return l;
@@ -827,6 +862,15 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
         }
     }
 
+    // never allow two linetypes with identical names, update linetype instead:
+    QSharedPointer<RLinetype> linetype = object.dynamicCast<RLinetype> ();
+    if (!linetype.isNull()) {
+        RLinetype::Id id = getLinetypeId(linetype->getName());
+        if (id != RLinetype::INVALID_ID) {
+            setObjectId(*linetype, id);
+        }
+    }
+
     // avoid block recursions:
     if (checkBlockRecursion) {
         /*
@@ -885,6 +929,10 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
 
     if (!block.isNull()) {
         blockMap[object->getId()] = block;
+    }
+
+    if (!linetype.isNull()) {
+        linetypeMap[object->getId()] = linetype;
     }
 
     return true;
@@ -1183,20 +1231,40 @@ RView::Id RMemoryStorage::getViewId(const QString& viewName) const {
 }
 
 QString RMemoryStorage::getLinetypeName(RLinetype::Id linetypeId) const {
-    QSharedPointer<RLinetype> l = queryLinetype(linetypeId);
+    QSharedPointer<RLinetype> l = queryLinetypeDirect(linetypeId);
     if (l.isNull()) {
         return QString();
     }
     return l->getName();
 }
 
+QString RMemoryStorage::getLinetypeDescription(RLinetype::Id linetypeId) const {
+    QSharedPointer<RLinetype> l = queryLinetypeDirect(linetypeId);
+    if (l.isNull()) {
+        return QString();
+    }
+    return l->getDescription();
+}
+
 QSet<QString> RMemoryStorage::getLinetypeNames() const {
     QSet<QString> ret;
-    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
-    for (it = objectMap.constBegin(); it != objectMap.constEnd(); ++it) {
-        QSharedPointer<RLinetype> l = it->dynamicCast<RLinetype>();
+    QHash<RObject::Id, QSharedPointer<RLinetype> >::const_iterator it;
+    for (it = linetypeMap.constBegin(); it != linetypeMap.constEnd(); ++it) {
+        QSharedPointer<RLinetype> l = *it;
         if (!l.isNull() && !l->isUndone()) {
             ret.insert(l->getName());
+        }
+    }
+    return ret;
+}
+
+QList<RLinetypePattern> RMemoryStorage::getLinetypePatterns() const {
+    QList<RLinetypePattern> ret;
+    QHash<RObject::Id, QSharedPointer<RLinetype> >::const_iterator it;
+    for (it = linetypeMap.constBegin(); it != linetypeMap.constEnd(); ++it) {
+        QSharedPointer<RLinetype> l = *it;
+        if (!l.isNull() && !l->isUndone()) {
+            ret.append(l->getPattern());
         }
     }
     return ret;
@@ -1221,7 +1289,6 @@ RLineweight::Lineweight RMemoryStorage::getMaxLineweight() const {
 
 void RMemoryStorage::setUnit(RS::Unit unit) {
     this->unit = unit;
-
     setModified(true);
 }
 
@@ -1240,7 +1307,6 @@ QString RMemoryStorage::getDimensionFont() const {
 
 void RMemoryStorage::setLinetypeScale(double v) {
     linetypeScale = v;
-
     setModified(true);
 }
 

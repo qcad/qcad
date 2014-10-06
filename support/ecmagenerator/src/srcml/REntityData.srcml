@@ -55,6 +55,9 @@ dir="./core" filename="REntityData.h">
   <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"RSettings.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RView.h"</cpp:file></cpp:include>
   <class_decl>class 
   <name>RBlockReferenceEntity</name>;</class_decl>
@@ -595,23 +598,9 @@ dir="./core" filename="REntityData.h">
     <name>linetypeId</name>= 
     <name>linetypeId</name></expr>;</expr_stmt>}</block>
   </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setLinetype</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>RLinetype</name>
-      </type>
-      <name>linetype</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
   <function>
     <type>
+      <name>virtual</name>
       <name>
       <name>RLinetype</name>::
       <name>Id</name></name>
@@ -625,6 +614,29 @@ dir="./core" filename="REntityData.h">
       <name>linetypeId</name>
     </expr>;</return>}</block>
   </function>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>setLinetypePattern</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RLinetypePattern</name>&amp;</type>
+      <name>p</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>RLinetypePattern</name>
+  </type>
+  <name>getLinetypePattern</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -657,6 +669,43 @@ dir="./core" filename="REntityData.h">
   <specifier>const</specifier>;</function_decl>
   <function>
     <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>setLinetypeScale</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>double</name>
+        </type>
+        <name>linetypeScale</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>this</name>-&gt;
+    <name>linetypeScale</name>= 
+    <name>linetypeScale</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>double</name>
+    </type>
+    <name>getLinetypeScale</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>linetypeScale</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
       <name>
       <name>RLineweight</name>::
       <name>Lineweight</name></name>
@@ -740,7 +789,12 @@ dir="./core" filename="REntityData.h">
     <expr>
     <name>this</name>-&gt;
     <name>lineweight</name>= 
-    <name>lineweight</name></expr>;</expr_stmt>}</block>
+    <name>lineweight</name></expr>;</expr_stmt>
+    <comment type="line">// if
+    (RSettings::getAutoScaleLinetypePattern()) {</comment>
+    <comment type="line">// this-&gt;linetypeScale =
+    lineweight;</comment>
+    <comment type="line">// }</comment>}</block>
   </function>
   <function>
     <type>
@@ -1587,6 +1641,13 @@ dir="./core" filename="REntityData.h">
       <name>Id</name></name>
     </type>
     <name>linetypeId</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>linetypeScale</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

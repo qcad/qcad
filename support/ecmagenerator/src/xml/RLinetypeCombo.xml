@@ -12,22 +12,35 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="0" isConst="false" />
       </variant>
     </constructor>
-    <method name="getLinetype" cppName="getLinetype"
+    <method name="init" cppName="init" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *" name="doc"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="reinit" cppName="reinit" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getLinetypePattern" cppName="getLinetypePattern"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RLinetype" isPureVirtual="false" />
+      <variant returnType="RLinetypePattern"
+      isPureVirtual="false" />
     </method>
-    <method name="setLinetype" cppName="setLinetype"
+    <method name="setLinetypePattern" cppName="setLinetypePattern"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLinetype &amp;" typeName="RLinetype"
-        name="linetype" isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
       </variant>
-    </method>
-    <method name="init" cppName="init" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLinetypePattern &amp;"
+        typeName="RLinetypePattern" name="linetypePattern"
+        isConst="true" />
+      </variant>
     </method>
     <method name="getOnlyFixed" cppName="getOnlyFixed"
     specifier="public" isStatic="false" isVirtual="false"
@@ -42,9 +55,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="linetypeChanged" cppName="linetypeChanged"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
+    <method name="linetypePatternChanged"
+    cppName="linetypePatternChanged" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="int" typeName="int" name="index"
         isConst="false" />

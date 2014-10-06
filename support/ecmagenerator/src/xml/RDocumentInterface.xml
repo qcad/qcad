@@ -813,14 +813,28 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLinetype" typeName="RLinetype" name="lt"
-        isConst="false" />
+        <arg type="RLinetype::Id" typeName="RLinetype::Id"
+        name="ltId" isConst="false" />
       </variant>
     </method>
-    <method name="getCurrentLinetype" cppName="getCurrentLinetype"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="RLinetype" isPureVirtual="false" />
+    <method name="setCurrentLinetypePattern"
+    cppName="setCurrentLinetypePattern" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLinetypePattern &amp;"
+        typeName="RLinetypePattern" name="p" isConst="true" />
+      </variant>
+    </method>
+    <method name="getCurrentLinetypeId"
+    cppName="getCurrentLinetypeId" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RLinetype::Id" isPureVirtual="false" />
+    </method>
+    <method name="getCurrentLinetypePattern"
+    cppName="getCurrentLinetypePattern" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RLinetypePattern"
+      isPureVirtual="false" />
     </method>
     <method name="setCurrentLayer" cppName="setCurrentLayer"
     specifier="public" isStatic="false" isVirtual="false"

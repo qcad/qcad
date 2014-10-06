@@ -35,7 +35,7 @@
 #include "dl_creationadapter.h"
 #include "dl_writer_ascii.h"
 
-
+#include "iostream"
 
 /**
  * Default constructor.
@@ -386,6 +386,7 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
                                width,                   // width
                                linetype,                // linetype
                                handle);                 // handle
+        attrib.setLinetypeScale(getRealValue(48, 1.0));
         creationInterface->setAttributes(attrib);
 
         int elevationGroupCode=30;
@@ -411,6 +412,10 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
 
         case DL_LAYER:
             addLayer(creationInterface);
+            break;
+
+        case DL_LINETYPE:
+            addLinetype(creationInterface);
             break;
 
         case DL_BLOCK:
@@ -589,6 +594,11 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
             currentObjectType = DL_LAYER;
         }
 
+        // Read Linetypes:
+        else if (groupValue=="LTYPE") {
+            currentObjectType = DL_LINETYPE;
+        }
+
         // Read Blocks:
         else if (groupValue=="BLOCK") {
             currentObjectType = DL_BLOCK;
@@ -707,6 +717,10 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
                 handled = handleDictionaryData(creationInterface);
                 break;
 
+            case DL_LINETYPE:
+                handled = handleLinetypeData(creationInterface);
+                break;
+
             default:
                 break;
             }
@@ -810,10 +824,10 @@ void DL_Dxf::addLayer(DL_CreationInterface* creationInterface) {
         attrib.setWidth(1);
     }
 
-    std::string lineType = attrib.getLineType();
-    std::transform(lineType.begin(), lineType.end(), lineType.begin(), ::toupper);
-    if (lineType=="BYLAYER" || lineType=="BYBLOCK") {
-        attrib.setLineType("CONTINUOUS");
+    std::string linetype = attrib.getLinetype();
+    std::transform(linetype.begin(), linetype.end(), linetype.begin(), ::toupper);
+    if (linetype=="BYLAYER" || linetype=="BYBLOCK") {
+        attrib.setLinetype("CONTINUOUS");
     }
 
     // add layer
@@ -825,6 +839,48 @@ void DL_Dxf::addLayer(DL_CreationInterface* creationInterface) {
     creationInterface->addLayer(DL_LayerData(name, getIntValue(70, 0)));
 }
 
+/**
+ * Adds a linetype that was read from the file via the creation interface.
+ */
+void DL_Dxf::addLinetype(DL_CreationInterface* creationInterface) {
+    std::string name = getStringValue(2, "");
+    if (name.length()==0) {
+        return;
+    }
+    int numDashes = getIntValue(73, 0);
+    //double dashes[numDashes];
+
+    DL_LinetypeData d(
+        // name:
+        name,
+        // description:
+        getStringValue(3, ""),
+        // flags
+        getIntValue(70, 0),
+        // number of dashes:
+        numDashes,
+        // pattern length:
+        getRealValue(40, 0.0)
+        // pattern:
+        //dashes
+    );
+
+    if (name != "By Layer" && name != "By Block" && name != "BYLAYER" && name != "BYBLOCK") {
+        creationInterface->addLinetype(d);
+    }
+}
+
+/**
+ * Handles all dashes in linetype pattern.
+ */
+bool DL_Dxf::handleLinetypeData(DL_CreationInterface* creationInterface) {
+    if (groupCode == 49) {
+        creationInterface->addLinetypeDash(toReal(groupValue));
+        return true;
+    }
+
+    return false;
+}
 
 
 /**
@@ -3573,8 +3629,8 @@ void DL_Dxf::writeLayer(DL_WriterA& dw,
         dw.dxfInt(420, attrib.getColor24());
     }
 
-    dw.dxfString(6, (attrib.getLineType().length()==0 ?
-                     std::string("CONTINUOUS") : attrib.getLineType()));
+    dw.dxfString(6, (attrib.getLinetype().length()==0 ?
+                     std::string("CONTINUOUS") : attrib.getLinetype()));
 
     if (version>=DL_VERSION_2000) {
         // layer defpoints cannot be plotted
@@ -3598,428 +3654,65 @@ void DL_Dxf::writeLayer(DL_WriterA& dw,
  * Writes a line type to the file. Line types are stored in the 
  * tables section of a DXF file.
  */
-void DL_Dxf::writeLineType(DL_WriterA& dw,
-                           const DL_LineTypeData& data) {
-    //const char* description,
-    //int elements,
-    //double patternLength) {
-    std::string name = data.name;
-    std::transform(name.begin(), name.end(), name.begin(), ::toupper);
+void DL_Dxf::writeLinetype(DL_WriterA& dw,
+                           const DL_LinetypeData& data) {
+
+    std::string nameUpper = data.name;
+    std::transform(nameUpper.begin(), nameUpper.end(), nameUpper.begin(), ::toupper);
 
     if (data.name.empty()) {
-        std::cerr << "DL_Dxf::writeLineType: "
+        std::cerr << "DL_Dxf::writeLinetype: "
         << "Line type name must not be empty\n";
         return;
     }
 
     // ignore BYLAYER, BYBLOCK for R12
     if (version<DL_VERSION_2000) {
-        if (name=="BYBLOCK" || name=="BYLAYER") {
+        if (nameUpper=="BYBLOCK" || nameUpper=="BYLAYER") {
             return;
         }
     }
 
     // write id (not for R12)
-    if (name=="BYBLOCK") {
-        dw.tableLineTypeEntry(0x14);
-    } else if (name=="BYLAYER") {
-        dw.tableLineTypeEntry(0x15);
-    } else if (name=="CONTINUOUS") {
-        dw.tableLineTypeEntry(0x16);
+    if (nameUpper=="BYBLOCK") {
+        dw.tableLinetypeEntry(0x14);
+    } else if (nameUpper=="BYLAYER") {
+        dw.tableLinetypeEntry(0x15);
+    } else if (nameUpper=="CONTINUOUS") {
+        dw.tableLinetypeEntry(0x16);
     } else {
-        dw.tableLineTypeEntry();
+        dw.tableLinetypeEntry();
     }
 
     dw.dxfString(2, data.name);
-    //if (version>=DL_VERSION_2000) {
-        dw.dxfInt(70, data.flags);
-    //}
+    dw.dxfInt(70, data.flags);
 
-    if (name=="BYBLOCK") {
+    if (nameUpper=="BYBLOCK") {
         dw.dxfString(3, "");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 0);
         dw.dxfReal(40, 0.0);
-    } else if (name=="BYLAYER") {
+    } else if (nameUpper=="BYLAYER") {
         dw.dxfString(3, "");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 0);
         dw.dxfReal(40, 0.0);
-    } else if (name=="CONTINUOUS") {
+    } else if (nameUpper=="CONTINUOUS") {
         dw.dxfString(3, "Solid line");
         dw.dxfInt(72, 65);
         dw.dxfInt(73, 0);
         dw.dxfReal(40, 0.0);
-    } else if (name=="ACAD_ISO02W100") {
-        dw.dxfString(3, "ISO Dashed __ __ __ __ __ __ __ __ __ __ _");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 2);
-        dw.dxfReal(40, 15.0);
-        dw.dxfReal(49, 12.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="ACAD_ISO03W100") {
-        dw.dxfString(3, "ISO Dashed with Distance __    __    __    _");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 2);
-        dw.dxfReal(40, 30.0);
-        dw.dxfReal(49, 12.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -18.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="ACAD_ISO04W100") {
-        dw.dxfString(3, "ISO Long Dashed Dotted ____ . ____ . __");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 4);
-        dw.dxfReal(40, 30.0);
-        dw.dxfReal(49, 24.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="ACAD_ISO05W100") {
-        dw.dxfString(3, "ISO Long Dashed Double Dotted ____ .. __");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 6);
-        dw.dxfReal(40, 33.0);
-        dw.dxfReal(49, 24.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="BORDER") {
-        dw.dxfString(3, "Border __ __ . __ __ . __ __ . __ __ . __ __ .");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 6);
-        dw.dxfReal(40, 44.45);
-        dw.dxfReal(49, 12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="BORDER2") {
-        dw.dxfString(3, "Border (.5x) __.__.__.__.__.__.__.__.__.__.__.");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 6);
-        dw.dxfReal(40, 22.225);
-        dw.dxfReal(49, 6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.175);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.175);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.175);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="BORDERX2") {
-        dw.dxfString(3, "Border (2x) ____  ____  .  ____  ____  .  ___");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 6);
-        dw.dxfReal(40, 88.9);
-        dw.dxfReal(49, 25.4);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 25.4);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="CENTER") {
-        dw.dxfString(3, "Center ____ _ ____ _ ____ _ ____ _ ____ _ ____");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 4);
-        dw.dxfReal(40, 50.8);
-        dw.dxfReal(49, 31.75);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="CENTER2") {
-        dw.dxfString(3, "Center (.5x) ___ _ ___ _ ___ _ ___ _ ___ _ ___");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 4);
-        dw.dxfReal(40, 28.575);
-        dw.dxfReal(49, 19.05);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.175);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 3.175);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.175);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="CENTERX2") {
-        dw.dxfString(3, "Center (2x) ________  __  ________  __  _____");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 4);
-        dw.dxfReal(40, 101.6);
-        dw.dxfReal(49, 63.5);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="DASHDOT") {
-        dw.dxfString(3, "Dash dot __ . __ . __ . __ . __ . __ . __ . __");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 4);
-        dw.dxfReal(40, 25.4);
-        dw.dxfReal(49, 12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="DASHDOT2") {
-        dw.dxfString(3, "Dash dot (.5x) _._._._._._._._._._._._._._._.");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 4);
-        dw.dxfReal(40, 12.7);
-        dw.dxfReal(49, 6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.175);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.175);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="DASHDOTX2") {
-        dw.dxfString(3, "Dash dot (2x) ____  .  ____  .  ____  .  ___");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 4);
-        dw.dxfReal(40, 50.8);
-        dw.dxfReal(49, 25.4);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="DASHED") {
-        dw.dxfString(3, "Dashed __ __ __ __ __ __ __ __ __ __ __ __ __ _");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 2);
-        dw.dxfReal(40, 19.05);
-        dw.dxfReal(49, 12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="DASHED2") {
-        dw.dxfString(3, "Dashed (.5x) _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 2);
-        dw.dxfReal(40, 9.525);
-        dw.dxfReal(49, 6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.175);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="DASHEDX2") {
-        dw.dxfString(3, "Dashed (2x) ____  ____  ____  ____  ____  ___");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 2);
-        dw.dxfReal(40, 38.1);
-        dw.dxfReal(49, 25.4);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="DIVIDE") {
-        dw.dxfString(3, "Divide ____ . . ____ . . ____ . . ____ . . ____");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 6);
-        dw.dxfReal(40, 31.75);
-        dw.dxfReal(49, 12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="DIVIDE2") {
-        dw.dxfString(3, "Divide (.5x) __..__..__..__..__..__..__..__.._");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 6);
-        dw.dxfReal(40, 15.875);
-        dw.dxfReal(49, 6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.175);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.175);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.175);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="DIVIDEX2") {
-        dw.dxfString(3, "Divide (2x) ________  .  .  ________  .  .  _");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 6);
-        dw.dxfReal(40, 63.5);
-        dw.dxfReal(49, 25.4);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="DOT") {
-        dw.dxfString(3, "Dot . . . . . . . . . . . . . . . . . . . . . .");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 2);
-        dw.dxfReal(40, 6.35);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -6.35);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="DOT2") {
-        dw.dxfString(3, "Dot (.5x) .....................................");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 2);
-        dw.dxfReal(40, 3.175);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -3.175);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-    } else if (name=="DOTX2") {
-        dw.dxfString(3, "Dot (2x) .  .  .  .  .  .  .  .  .  .  .  .  .");
-        dw.dxfInt(72, 65);
-        dw.dxfInt(73, 2);
-        dw.dxfReal(40, 12.7);
-        dw.dxfReal(49, 0.0);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
-        dw.dxfReal(49, -12.7);
-        if (version>=DL_VERSION_R13)
-            dw.dxfInt(74, 0);
     } else {
-        std::cerr << "dxflib warning: DL_Dxf::writeLineType: Unknown Line Type\n";
+        dw.dxfString(3, data.description);
+        dw.dxfInt(72, 65);
+        dw.dxfInt(73, data.numberOfDashes);
+        dw.dxfReal(40, data.patternLength);
+        for (int i = 0; i < data.numberOfDashes; i++) {
+            dw.dxfReal(49, data.pattern[i]);
+            if (version>=DL_VERSION_R13) {
+                dw.dxfInt(74, 0);
+            }
+        }
     }
 }
 

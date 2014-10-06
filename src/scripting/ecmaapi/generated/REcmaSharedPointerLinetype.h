@@ -59,10 +59,13 @@
         setName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        isValid
+        getDescription
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getList
+        setDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getProperty
@@ -74,10 +77,10 @@
         isSelectedForPropertyEditing
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getIcon
+        getPattern
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getTitle
+        setPattern
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         equals

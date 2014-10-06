@@ -25,6 +25,7 @@ RPropertyTypeId RDimDiametricEntity::PropertyType;
 RPropertyTypeId RDimDiametricEntity::PropertyBlock;
 RPropertyTypeId RDimDiametricEntity::PropertyLayer;
 RPropertyTypeId RDimDiametricEntity::PropertyLinetype;
+RPropertyTypeId RDimDiametricEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimDiametricEntity::PropertyLineweight;
 RPropertyTypeId RDimDiametricEntity::PropertyColor;
 RPropertyTypeId RDimDiametricEntity::PropertyDrawOrder;
@@ -65,6 +66,7 @@ void RDimDiametricEntity::init() {
     RDimDiametricEntity::PropertyBlock.generateId(typeid(RDimDiametricEntity), REntity::PropertyBlock);
     RDimDiametricEntity::PropertyLayer.generateId(typeid(RDimDiametricEntity), REntity::PropertyLayer);
     RDimDiametricEntity::PropertyLinetype.generateId(typeid(RDimDiametricEntity), REntity::PropertyLinetype);
+    RDimDiametricEntity::PropertyLinetypeScale.generateId(typeid(RDimDiametricEntity), REntity::PropertyLinetypeScale);
     RDimDiametricEntity::PropertyLineweight.generateId(typeid(RDimDiametricEntity), REntity::PropertyLineweight);
     RDimDiametricEntity::PropertyColor.generateId(typeid(RDimDiametricEntity), REntity::PropertyColor);
     RDimDiametricEntity::PropertyDrawOrder.generateId(typeid(RDimDiametricEntity), REntity::PropertyDrawOrder);

@@ -149,7 +149,7 @@ void RTextRenderer::renderSimple() {
     // diameter:
     text.replace(QRegExp(RTextRenderer::rxDiameter), RTextRenderer::chDiameter);
     // underlined:
-    text.replace(QRegExp(RTextRenderer::rxUnderlined), "");
+    //text.replace(QRegExp(RTextRenderer::rxUnderlined), "");
     // unicode:
     text = RDxfServices::parseUnicode(text);
 //    QRegExp reg;
@@ -180,6 +180,7 @@ void RTextRenderer::renderSimple() {
     // implicit top level format block:
     QTextCharFormat f;
     f.setForeground(QBrush(QColor()));
+    //f.setUnderlineStyle(QTextCharFormat::SingleUnderline);
     currentFormat.push(f);
     QTextLayout::FormatRange fr;
     fr.start = 0;
@@ -198,6 +199,43 @@ void RTextRenderer::renderSimple() {
     double horizontalAdvanceNoSpacing = 0.0;
     double ascent = 0.0;
     double descent = 0.0;
+
+    {
+        // handle underlining formats:
+        //qDebug() << "text: " << text;
+        bool found = true;
+        QList<int> underlinedOnOff;
+        QRegExp rx(RTextRenderer::rxUnderlined);
+        while (found) {
+            found = false;
+            int i = rx.indexIn(text);
+            int len = rx.matchedLength();
+
+            //int i = text.indexOf(QRegExp(RTextRenderer::rxUnderlined));
+            if (i!=-1) {
+                found = true;
+                underlinedOnOff.append(i);
+                //text.replace(QRegExp(QString("(") + RTextRenderer::rxUnderlined + "){1,1}"), "");
+                text.replace(i, len, "");
+                //qDebug() << "text: " << text;
+            }
+        }
+
+        //qDebug() << "text (stripped): " << text;
+        //qDebug() << "underlined: " << underlinedOnOff;
+
+        int maxI = text.length()-1;
+        QTextCharFormat fUnderlined;
+        fUnderlined.setUnderlineStyle(QTextCharFormat::SingleUnderline);
+        for (int i=0; i<underlinedOnOff.length(); i+=2) {
+            QTextLayout::FormatRange fr;
+            fr.start = underlinedOnOff[i];
+            int end = i+1<underlinedOnOff.length() ? underlinedOnOff[i+1] : maxI + 1;
+            fr.length = end - fr.start;
+            fr.format = fUnderlined;
+            formats.append(fr);
+        }
+    }
 
     // get painter paths for text at height 1.0:
     painterPaths = getPainterPathsForBlock(
@@ -1283,17 +1321,26 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
     double cxfScale = 1.0/9.0;
     QColor currentColor;
     bool gotLetterSpacing = false;
+    QMap<int, double> indexToCursorStart;
+    QMap<int, double> indexToCursorEnd;
+    QList<int> underlinedIndices;
 
     for (int i=0; i<blockText.length(); ++i) {
         QChar ch = blockText.at(i);
 
+        //if (i==0) {
+            indexToCursorStart.insert(i, cursor);
+        //}
+
+        bool isSpace = false;
         if (ch==' ' || ch==QChar(Qt::Key_nobreakspace)) {
             if (gotLetterSpacing) {
                 cursor -= font->getLetterSpacing() * cxfScale;
             }
             cursor += font->getWordSpacing() * cxfScale;
+            indexToCursorEnd.insert(i, cursor);
             gotLetterSpacing = false;
-            continue;
+            isSpace = true;
         }
 
         // handle color and other formats
@@ -1302,8 +1349,22 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
 
             if (format.start==i && format.start+format.length>i) {
                 QColor color = format.format.foreground().color();
-                currentColor = color;
+                if (currentColor!=color) {
+                    currentColor = color;
+                    // forced break in underline due to color change:
+                    underlinedIndices.append(-1);
+                }
             }
+
+            if (format.start<=i && format.start+format.length>i) {
+                if (format.format.underlineStyle()==QTextCharFormat::SingleUnderline) {
+                    underlinedIndices.append(i);
+                }
+            }
+        }
+
+        if (isSpace) {
+            continue;
         }
 
         QPainterPath glyph = font->getGlyph(ch, draft);
@@ -1314,25 +1375,56 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
         // if question mark is not available, show nothing:
         if (glyph.elementCount()>0) {
             RPainterPath path(glyph);
-            QPen pen = path.getPen();
-            pen.setStyle(Qt::SolidLine);
-            pen.setColor(currentColor);
-            path.setPen(pen);
-            if (currentColor.isValid()) {
-                // fixed color:
-                path.setFixedPenColor(true);
-            }
-
-            QTransform transform;
-            transform.translate(cursor, 0);
-            transform.scale(cxfScale, cxfScale);
-            path.transform(transform);
+            preparePath(path, currentColor, cursor, cxfScale);
             ret.append(path);
 
             // letter spacing:
-            cursor += path.boundingRect().width() + font->getLetterSpacing() * cxfScale;
+            cursor += path.boundingRect().width();
+            indexToCursorEnd.insert(i, cursor);
+            cursor += font->getLetterSpacing() * cxfScale;
             gotLetterSpacing = true;
         }
+    }
+
+    //qDebug() << "indexToCursor: " << indexToCursorStart;
+
+    if (!underlinedIndices.isEmpty()) {
+        underlinedIndices.append(-1);
+    }
+
+    //qDebug() << "underlines: " << underlinedIndices;
+
+    RLine line;
+    int lastIndex = -1;
+    for (int i=0; i<underlinedIndices.length(); i++) {
+        int idx = underlinedIndices[i];
+
+        bool prevUnderlined = lastIndex!=-1 && lastIndex==idx-1;
+        lastIndex = idx;
+
+        if (!prevUnderlined) {
+            if (line.isValid()) {
+                //qDebug() << "underline: " << line;
+                RPainterPath path;
+                path.moveTo(line.getStartPoint());
+                path.lineTo(line.getEndPoint());
+                preparePath(path, currentColor, 0.0, 1.0);
+                ret.append(path);
+                line = RLine();
+            }
+            if (idx!=-1) {
+                line.setStartPoint(RVector(indexToCursorStart[idx], -0.1));
+                line.setEndPoint(RVector(indexToCursorEnd[idx], -0.1));
+                //prevUnderlined = true;
+            }
+        }
+        else {
+            if (idx!=-1) {
+                line.setEndPoint(RVector(indexToCursorEnd[idx], -0.1));
+            }
+        }
+        //qDebug() << "line: " << line;
+        //qDebug() << "cxfScale: " << cxfScale;
     }
 
     horizontalAdvance = cursor;
@@ -1341,6 +1433,22 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
     descent = -0.36;
 
     return ret;
+}
+
+void RTextRenderer::preparePath(RPainterPath& path, const RColor& color, double cursor, double cxfScale) {
+    QPen pen = path.getPen();
+    pen.setStyle(Qt::SolidLine);
+    pen.setColor(color);
+    path.setPen(pen);
+    if (color.isValid()) {
+        // fixed color:
+        path.setFixedPenColor(true);
+    }
+
+    QTransform transform;
+    transform.translate(cursor, 0);
+    transform.scale(cxfScale, cxfScale);
+    path.transform(transform);
 }
 
 /**

@@ -35,17 +35,25 @@ PenToolBar.init = function(basePath) {
     var adapter = new RPenListenerAdapter();
     appWin.addPenListener(adapter);
     adapter.penUpdated.connect(
-        function(documentInterface) {
-            var di = EAction.getDocumentInterface();
-            if (di == null) {
+        function(di) {
+            if (isNull(di)) {
                 return;
             }
             var colorCombo = penToolBar.findChild("Color");
+            colorCombo.blockSignals(true);
             colorCombo.setColor(di.getCurrentColor());
+            colorCombo.blockSignals(false);
+
             var linetypeCombo = penToolBar.findChild("Linetype");
-            linetypeCombo.setLinetype(di.getCurrentLinetype());
+            linetypeCombo.blockSignals(true);
+            linetypeCombo.init(di.getDocument());
+            linetypeCombo.setLinetypePattern(di.getCurrentLinetypePattern());
+            linetypeCombo.blockSignals(false);
+
             var lineweightCombo = penToolBar.findChild("Lineweight");
+            lineweightCombo.blockSignals(true);
             lineweightCombo.setLineweight(di.getCurrentLineweight());
+            lineweightCombo.blockSignals(false);
         }
     );
 
@@ -65,8 +73,8 @@ PenToolBar.init = function(basePath) {
 
     var linetypeCombo = penToolBar.findChild("Linetype");
     linetypeCombo.valueChanged.connect(
-        function(lt) {
-            EAction.getDocumentInterface().setCurrentLinetype(lt);
+        function(p) {
+            EAction.getDocumentInterface().setCurrentLinetypePattern(p);
         }
     );
 
@@ -78,12 +86,12 @@ PenToolBar.init = function(basePath) {
     );
 
     var resetButton = penToolBar.findChild("Reset");
-    if (resetButton!=undefined) {
+    if (!isNull(resetButton)) {
         resetButton.toolTip = qsTr("Reset to Defaults");
         resetButton.clicked.connect(
             function() {
                 colorCombo.setColor(new RColor(RColor.ByLayer));
-                linetypeCombo.setLinetype(new RLinetype(null, "BYLAYER"));
+                linetypeCombo.setLinetypePattern("BYLAYER");
                 lineweightCombo.setLineweight(RLineweight.WeightByLayer);
             }
         );

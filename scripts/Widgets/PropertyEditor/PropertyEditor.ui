@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>348</width>
+    <width>298</width>
     <height>622</height>
    </rect>
   </property>
@@ -27,7 +27,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>346</width>
+     <width>296</width>
      <height>620</height>
     </rect>
    </property>
@@ -80,35 +80,6 @@
        <property name="verticalSpacing">
         <number>2</number>
        </property>
-       <item row="0" column="0">
-        <widget class="QLabel" name="LabelLayer">
-         <property name="text">
-          <string notr="true">Layer:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QComboBox" name="Layer">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>50</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="focusPolicy">
-          <enum>Qt::ClickFocus</enum>
-         </property>
-        </widget>
-       </item>
        <item row="1" column="0">
         <widget class="QLabel" name="LabelColor">
          <property name="text">
@@ -151,18 +122,8 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="LabelLineweight">
-         <property name="text">
-          <string notr="true">Lineweight:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1" colspan="2">
-        <widget class="RLineweightCombo" name="Lineweight">
+       <item row="0" column="1">
+        <widget class="QComboBox" name="Layer">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -176,17 +137,64 @@
           </size>
          </property>
          <property name="focusPolicy">
-          <enum>Qt::TabFocus</enum>
-         </property>
-         <property name="onlyFixed" stdset="0">
-          <bool>false</bool>
+          <enum>Qt::ClickFocus</enum>
          </property>
         </widget>
        </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="LabelLinetype">
+       <item row="0" column="0">
+        <widget class="QLabel" name="LabelLayer">
          <property name="text">
-          <string notr="true">Linetype:</string>
+          <string notr="true">Layer:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1" colspan="2">
+        <widget class="QLineEdit" name="Handle">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="LabelHandle">
+         <property name="text">
+          <string>Handle:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QToolButton" name="MoveToNewLayer">
+         <property name="toolTip">
+          <string>Move Selection to a New Layer</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>AddLayer.svg</normaloff>AddLayer.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>12</width>
+           <height>12</height>
+          </size>
+         </property>
+         <property name="autoRaise">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1" colspan="2">
+        <widget class="QLineEdit" name="DrawOrder"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="LabelDrawOrder">
+         <property name="text">
+          <string notr="true">Draw Order:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -215,53 +223,62 @@
          </property>
         </widget>
        </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="LabelDrawOrder">
+       <item row="3" column="0">
+        <widget class="QLabel" name="LabelLinetype">
          <property name="text">
-          <string notr="true">Draw Order:</string>
+          <string notr="true">Linetype:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1" colspan="2">
+        <widget class="RLineweightCombo" name="Lineweight">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::TabFocus</enum>
+         </property>
+         <property name="onlyFixed" stdset="0">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="LabelLineweight">
+         <property name="text">
+          <string notr="true">Lineweight:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="LabelLinetypeScale">
+         <property name="text">
+          <string>Linetype Scale:</string>
          </property>
         </widget>
        </item>
        <item row="4" column="1" colspan="2">
-        <widget class="QLineEdit" name="DrawOrder"/>
-       </item>
-       <item row="0" column="2">
-        <widget class="QToolButton" name="MoveToNewLayer">
-         <property name="toolTip">
-          <string>Move Selection to a New Layer</string>
+        <widget class="RMathLineEdit" name="LinetypeScale">
+         <property name="angle" stdset="0">
+          <bool>false</bool>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>AddLayer.svg</normaloff>AddLayer.svg</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>12</width>
-           <height>12</height>
-          </size>
-         </property>
-         <property name="autoRaise">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0">
-        <widget class="QLabel" name="LabelHandle">
-         <property name="text">
-          <string>Handle:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1" colspan="2">
-        <widget class="QLineEdit" name="Handle">
-         <property name="readOnly">
-          <bool>true</bool>
+         <property name="defaultUnit" stdset="0">
+          <number>0</number>
          </property>
         </widget>
        </item>

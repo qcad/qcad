@@ -16,13 +16,14 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RLinetypePattern.h"
+#include <QIcon>
 
+#include "RLinetypePattern.h"
 #include "RMath.h"
 #include "RDebug.h"
 
-RLinetypePattern::RLinetypePattern(const QString& name, int num...)
-    : name(name), num(0), pattern(NULL), symmetrical(NULL) {
+RLinetypePattern::RLinetypePattern(const QString& name, const QString& description, int num...)
+    : name(name), description(description), symmetrical(NULL) {
 
     QList<double> dashes;
 
@@ -36,20 +37,52 @@ RLinetypePattern::RLinetypePattern(const QString& name, int num...)
     set(dashes);
 }
 
-void RLinetypePattern::set(const QList<double> dashes) {
-    if (pattern!=NULL) {
-        delete[] pattern;
+RLinetypePattern::RLinetypePattern(const QString& name, const QString& description, const QList<double>& dashes)
+    : name(name), description(description), symmetrical(NULL) {
+
+    set(dashes);
+}
+
+RLinetypePattern::RLinetypePattern() :
+    symmetrical(NULL) {
+}
+
+RLinetypePattern::RLinetypePattern(const QString& name, const QString& description) :
+    name(name), description(description), symmetrical(NULL) {
+}
+
+RLinetypePattern::RLinetypePattern(const RLinetypePattern& other) :
+    symmetrical(NULL) {
+    operator =(other);
+}
+
+RLinetypePattern::~RLinetypePattern() {
+    if (symmetrical != NULL) {
+        delete[] symmetrical;
     }
+}
+
+//RLinetypePattern::RLinetypePattern(const QString& name, int num, double* pattern)
+//    : name(name), num(0), pattern(), symmetrical(NULL) {
+
+//    QList<double> dashes;
+
+//    for (int i = 0; i < num; ++i) {
+//        dashes.append(pattern[i]);
+//    }
+
+//    set(dashes);
+//}
+
+
+void RLinetypePattern::set(const QList<double>& dashes) {
     if (symmetrical != NULL) {
         delete[] symmetrical;
     }
 
-    num = dashes.count();
-    pattern = new double[num];
-    for (int i=0; i<num; ++i) {
-        pattern[i] = dashes[i];
-    }
+    pattern = dashes;
 
+    int num = pattern.length();
     symmetrical = new bool[num];
     for (int i = 0; i < num; ++i) {
         symmetrical[i] = true;
@@ -63,61 +96,40 @@ void RLinetypePattern::set(const QList<double> dashes) {
     }
 }
 
-RLinetypePattern::RLinetypePattern() :
-    num(-1), pattern(NULL), symmetrical(NULL) {
-}
-
-RLinetypePattern::RLinetypePattern(const QString &name) :
-    name(name), num(-1), pattern(NULL), symmetrical(NULL) {
-}
-
-RLinetypePattern::RLinetypePattern(const RLinetypePattern& other) :
-    num(-1), pattern(NULL), symmetrical(NULL) {
-    operator =(other);
-}
-
-RLinetypePattern::~RLinetypePattern() {
-    if (pattern != NULL) {
-        delete[] pattern;
-    }
-    if (symmetrical != NULL) {
-        delete[] symmetrical;
-    }
-}
-
 RLinetypePattern& RLinetypePattern::operator=(const RLinetypePattern& other) {
     if (this == &other) {
         return *this;
     }
 
-    if (pattern != NULL) {
-        delete pattern;
-    }
     if (symmetrical != NULL) {
         delete symmetrical;
     }
 
-    num = other.num;
-    if (num > 0) {
-        pattern = new double[num];
+    if (!other.pattern.isEmpty()) {
+        pattern = other.pattern;
+        int num = pattern.length();
         symmetrical = new bool[num];
         for (int i = 0; i < num; ++i) {
-            pattern[i] = other.pattern[i];
             symmetrical[i] = other.symmetrical[i];
         }
     } else {
-        pattern = NULL;
+        pattern.clear();
         symmetrical = NULL;
     }
+    name = other.name;
+    description = other.description;
     return *this;
 }
 
 bool RLinetypePattern::operator==(const RLinetypePattern& other) const {
-    if (num!=other.num) {
+    if (pattern.length()!=other.pattern.length()) {
+        return false;
+    }
+    if (name.toLower()!=other.name.toLower()) {
         return false;
     }
 
-    for (int i = 0; i < num; ++i) {
+    for (int i = 0; i < other.pattern.length(); ++i) {
         if (pattern[i] != other.pattern[i]) {
             return false;
         }
@@ -130,7 +142,7 @@ bool RLinetypePattern::operator==(const RLinetypePattern& other) const {
 }
 
 void RLinetypePattern::scale(double factor) {
-    for (int i = 0; i < num; ++i) {
+    for (int i = 0; i < pattern.length(); ++i) {
         pattern[i] *= factor;
     }
 }
@@ -142,8 +154,8 @@ void RLinetypePattern::scale(double factor) {
 QVector<qreal> RLinetypePattern::getScreenBasedLinetype() {
     QVector<qreal> ret;
 
-    if (num>1) {
-        for (int i = 0; i < num; ++i) {
+    if (pattern.length()>1) {
+        for (int i = 0; i < pattern.length(); ++i) {
             ret << ceil(fabs(pattern[i]));
         }
     }
@@ -158,7 +170,7 @@ double RLinetypePattern::getDelta(double pos) const {
         pos -= RMath::trunc(pos / getPatternLength()) * getPatternLength();
     }
     double total = 0.0;
-    for (int i = 0; i < num; ++i) {
+    for (int i = 0; i < pattern.length(); ++i) {
         total += fabs(pattern[i]);
         if (total >= pos) {
             if (pattern[i] < 0) {
@@ -178,7 +190,7 @@ bool RLinetypePattern::hasDashAt(double pos) const {
         pos -= RMath::trunc(pos / getPatternLength()) * getPatternLength();
     }
     double total = 0.0;
-    for (int i = 0; i < num; ++i) {
+    for (int i = 0; i < pattern.length(); ++i) {
         total += fabs(pattern[i]);
         if (total > pos) {
             return pattern[i] > 0;
@@ -189,37 +201,55 @@ bool RLinetypePattern::hasDashAt(double pos) const {
 }
 
 bool RLinetypePattern::isSymmetrical(int i) const {
-    if (i >= num) {
+    if (i >= pattern.length()) {
         return false;
     }
     return symmetrical[i];
-    //  if (num == 2) {
-    //      return true;
-    //  }
-    //  if (num == 4) {
-    //      return (i % 2) == 0;
-    //  }
-    //  return true;
 }
 
 bool RLinetypePattern::isValid() const {
-    return num>0;
+    return pattern.length()>0;
 }
 
 int RLinetypePattern::getNumDashes() const {
-    return num;
+    return pattern.length();
+}
+
+QString RLinetypePattern::getName() const {
+    return name;
+}
+
+void RLinetypePattern::setName(const QString& n) {
+    name = n;
+}
+
+QString RLinetypePattern::getDescription() const {
+    return description;
+}
+
+void RLinetypePattern::setDescription(const QString& d) {
+    description = d;
+}
+
+QIcon RLinetypePattern::getIcon() const {
+    // TODO:
+    return QIcon();
+}
+
+QList<double> RLinetypePattern::getPattern() const {
+    return pattern;
 }
 
 double RLinetypePattern::getPatternLength() const {
     double ret=0;
-    for(int i=0;i<num;++i) {
+    for (int i=0; i<pattern.length(); ++i) {
         ret += fabs(pattern[i]);
     }
     return ret;
 }
 
 double RLinetypePattern::getDashLengthAt(int i) const {
-    if (i>=0 && i<num) {
+    if (i>=0 && i<pattern.length()) {
         return pattern[i];
     }
     return 0.0;
@@ -227,7 +257,7 @@ double RLinetypePattern::getDashLengthAt(int i) const {
 
 double RLinetypePattern::getLargestGap() const {
     double ret = 0.0;
-    for(int i=0;i<num;++i) {
+    for(int i=0;i<pattern.length();++i) {
         if (pattern[i]<0.0 && fabs(pattern[i])>ret) {
             ret = fabs(pattern[i]);
         }
@@ -236,11 +266,109 @@ double RLinetypePattern::getLargestGap() const {
 }
 
 /**
+ * Loads all linetype patterns in the given file into memory.
+ */
+QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(const QString& fileName) {
+    qDebug() << "loading patterns from file: " << fileName;
+    QList<QPair<QString, RLinetypePattern*> > ret;
+
+    // Open lin file:
+    QFile file(fileName);
+    if (!file.open(QIODevice::ReadOnly)) {
+        qWarning() <<  "RLinetypePattern::loadAllFrom: Cannot open lin file: " <<  fileName;
+        return ret;
+    }
+
+    QTextStream ts(&file);
+    ts.setCodec("UTF-8");
+    QString line;
+    RLinetypePattern* ltpattern = NULL;;
+
+    // Read line by line:
+    while (!ts.atEnd()) {
+        line = ts.readLine();
+
+        // handle comments (;):
+        int semi = line.indexOf(';');
+        if (semi==0) {
+            continue;
+        }
+
+        if (semi!=-1) {
+            line = line.left(semi);
+        }
+
+        // skip empty lines:
+        if (line.isEmpty()) {
+            continue;
+        }
+
+        // name / description:
+        if (line.at(0)=='*') {
+            QRegExp rx("\\*([^,]*)(?:,\\s*(.*))?", Qt::CaseSensitive, QRegExp::RegExp2);
+            rx.indexIn(line);
+            QString name = rx.cap(1);
+            QString description = rx.cap(2);
+            qDebug() << "loading: " << name;
+            ltpattern = new RLinetypePattern(name, description);
+            ret.append(qMakePair(name, ltpattern));
+            continue;
+        }
+
+        // linetype pattern definition:
+        if (ltpattern!=NULL) {
+            QStringList parts = line.split(',', QString::SkipEmptyParts);
+            if (parts.at(0).startsWith("A", Qt::CaseInsensitive)) {
+                parts.removeFirst();
+            }
+
+            QList<double> dashes;
+            for (int i = 0; i < parts.length(); i++) {
+                if (parts.at(i).startsWith("[", Qt::CaseInsensitive)) {
+                    dashes.clear();
+                    delete ltpattern;
+                    ret.removeLast();
+                    break;
+                } else {
+                    dashes.append(parts.at(i).toDouble());
+                }
+            }
+
+            if (dashes.count() > 0) {
+                for (int i = 0; i < dashes.count(); i++) {
+                    if (dashes.at(i) == 0) {
+                        // subtract half of 0.1 (0.05) from previous space
+                        // and following space (if any)
+                        // The spaces are negative numbers so we add 0.05
+                        if (i == 0) {
+                            dashes.replace(i, 0.1);
+                            dashes.replace(i + 1, dashes.at(i + 1) + 0.1);
+                        } else if (i > 0 && i < dashes.count() - 1) {
+                            dashes.replace(i - 1, dashes.at(i - 1) + 0.05);
+                            dashes.replace(i, 0.1);
+                            dashes.replace(i + 1, dashes.at(i + 1) + 0.05);
+                        } else if (i == dashes.count() - 1) {
+                            dashes.replace(i - 1, dashes.at(i - 1) + 0.1);
+                            dashes.replace(i, 0.1);
+                        }
+
+                    }
+                }
+                ltpattern->set(dashes);
+            }
+        }
+    }
+
+    return ret;
+}
+
+
+/**
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, const RLinetypePattern& p) {
-    dbg.nospace() << "RLinetypePattern(";
-    for(int i=0;i<p.getNumDashes();++i) {
+    dbg.nospace() << "RLinetypePattern(" << p.getName() << ", " << p.getDescription() << ", ";
+    for (int i=0;i<p.getNumDashes();++i) {
         if (i!=0) {
             dbg.nospace() << ",";
         }

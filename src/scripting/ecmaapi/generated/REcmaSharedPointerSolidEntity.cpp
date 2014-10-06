@@ -148,6 +148,10 @@
                 qScriptValueFromValue(&engine, RSolidEntity::PropertyLinetype),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyLinetypeScale",
+                qScriptValueFromValue(&engine, RSolidEntity::PropertyLinetypeScale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyLineweight",
                 qScriptValueFromValue(&engine, RSolidEntity::PropertyLineweight),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

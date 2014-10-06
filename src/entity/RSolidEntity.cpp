@@ -26,6 +26,7 @@ RPropertyTypeId RSolidEntity::PropertyType;
 RPropertyTypeId RSolidEntity::PropertyBlock;
 RPropertyTypeId RSolidEntity::PropertyLayer;
 RPropertyTypeId RSolidEntity::PropertyLinetype;
+RPropertyTypeId RSolidEntity::PropertyLinetypeScale;
 RPropertyTypeId RSolidEntity::PropertyLineweight;
 RPropertyTypeId RSolidEntity::PropertyColor;
 RPropertyTypeId RSolidEntity::PropertyDrawOrder;
@@ -61,6 +62,7 @@ void RSolidEntity::init() {
     RSolidEntity::PropertyBlock.generateId(typeid(RSolidEntity), REntity::PropertyBlock);
     RSolidEntity::PropertyLayer.generateId(typeid(RSolidEntity), REntity::PropertyLayer);
     RSolidEntity::PropertyLinetype.generateId(typeid(RSolidEntity), REntity::PropertyLinetype);
+    RSolidEntity::PropertyLinetypeScale.generateId(typeid(RSolidEntity), REntity::PropertyLinetypeScale);
     RSolidEntity::PropertyLineweight.generateId(typeid(RSolidEntity), REntity::PropertyLineweight);
     RSolidEntity::PropertyColor.generateId(typeid(RSolidEntity), REntity::PropertyColor);
     RSolidEntity::PropertyDrawOrder.generateId(typeid(RSolidEntity), REntity::PropertyDrawOrder);

@@ -55,6 +55,8 @@
 #include "RImageEntity.h"
 #include "RLeaderEntity.h"
 #include "RLineEntity.h"
+#include "RLinetypeListImperial.h"
+#include "RLinetypeListMetric.h"
 #include "RPatternListImperial.h"
 #include "RPatternListMetric.h"
 #include "RPluginLoader.h"
@@ -192,6 +194,8 @@ int main(int argc, char *argv[]) {
     RFontList::init();
     RPatternListMetric::init();
     RPatternListImperial::init();
+    RLinetypeListMetric::init();
+    RLinetypeListImperial::init();
 
     // init object properties:
     RObject::init();

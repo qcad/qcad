@@ -188,6 +188,7 @@ Item.prototype.getIcon = function(small, regenerate, noFavoritesMark) {
     var si = new RSpatialIndexNavel();
     var doc = new RDocument(ms, si);
     var di = new RDocumentInterface(doc);
+    di.setNotifyListeners(false);
     var scene = new RGraphicsSceneQt(di);
     var view = new RGraphicsViewImage();
     view.setAntialiasing(true);

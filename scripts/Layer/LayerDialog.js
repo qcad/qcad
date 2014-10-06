@@ -55,7 +55,7 @@ LayerDialog.prototype.getLayerName = function(dialog) {
 };
 
 LayerDialog.prototype.show = function() {
-    var lt;
+    //var lt;
     
     this.dialog = WidgetFactory.createDialog("scripts/Layer", "LayerDialog.ui");
     //this.dialog.windowIcon = new QIcon("scripts/Layer/EditLayer/EditLayer.svg");
@@ -70,7 +70,9 @@ LayerDialog.prototype.show = function() {
     var cbColor = widgets["Color"];
     var cbLineweight = widgets["Lineweight"];
     var cbLinetype = widgets["Linetype"];
+    cbLinetype.init(this.document);
 
+    // init from existing layer:
     if (!isNull(this.layer)) {
         layerName.text = this.layer.getName();
         if (layerName.text == "0") {
@@ -79,8 +81,10 @@ LayerDialog.prototype.show = function() {
         cbColor.setColor(this.layer.getColor());
         cbLineweight.setLineweight(this.layer.getLineweight());
         var ltP = this.document.queryLinetype(this.layer.getLinetypeId());
-        lt = ltP.data();
-        cbLinetype.setLinetype(lt);
+        if (!isNull(ltP)) {
+            //lt = ltP.data();
+            cbLinetype.setLinetypePattern(ltP.getPattern());
+        }
     }
 
     this.initDialog(this.dialog, this.layer);
@@ -101,7 +105,7 @@ LayerDialog.prototype.show = function() {
     var text = layerName.text.trim();
     var clr = cbColor.getColor();
     var lw = cbLineweight.getLineweight();
-    lt = cbLinetype.getLinetype();
+    var lt = cbLinetype.getLinetypePattern();
     var ltId = this.document.getLinetypeId(lt.getName());
     if (!isNull(this.layer)) {
         this.layer.setName(text);

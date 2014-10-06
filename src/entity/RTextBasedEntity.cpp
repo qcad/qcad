@@ -25,6 +25,7 @@ RPropertyTypeId RTextBasedEntity::PropertyType;
 RPropertyTypeId RTextBasedEntity::PropertyBlock;
 RPropertyTypeId RTextBasedEntity::PropertyLayer;
 RPropertyTypeId RTextBasedEntity::PropertyLinetype;
+RPropertyTypeId RTextBasedEntity::PropertyLinetypeScale;
 RPropertyTypeId RTextBasedEntity::PropertyLineweight;
 RPropertyTypeId RTextBasedEntity::PropertyColor;
 RPropertyTypeId RTextBasedEntity::PropertyDrawOrder;
@@ -60,6 +61,7 @@ void RTextBasedEntity::init() {
     RTextBasedEntity::PropertyBlock.generateId(typeid(RTextBasedEntity), REntity::PropertyBlock);
     RTextBasedEntity::PropertyLayer.generateId(typeid(RTextBasedEntity), REntity::PropertyLayer);
     RTextBasedEntity::PropertyLinetype.generateId(typeid(RTextBasedEntity), REntity::PropertyLinetype);
+    RTextBasedEntity::PropertyLinetypeScale.generateId(typeid(RTextBasedEntity), REntity::PropertyLinetypeScale);
     RTextBasedEntity::PropertyLineweight.generateId(typeid(RTextBasedEntity), REntity::PropertyLineweight);
     RTextBasedEntity::PropertyColor.generateId(typeid(RTextBasedEntity), REntity::PropertyColor);
     RTextBasedEntity::PropertyDrawOrder.generateId(typeid(RTextBasedEntity), REntity::PropertyDrawOrder);

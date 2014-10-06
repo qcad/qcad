@@ -97,6 +97,11 @@ private:
         double& ascent,
         double& descent);
 
+    void preparePath(RPainterPath& path,
+        const RColor& color,
+        double cursor,
+        double cxfScale);
+
     QRectF getCharacterRect(const QString& fontName, const QChar& ch) const;
     QRectF getCharacterRect(const QFont& font, const QChar& ch) const;
 

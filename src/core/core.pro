@@ -29,11 +29,10 @@ SOURCES += \
     RInputEvent.cpp \
     RLayer.cpp \
     RLinetype.cpp \
-    #RLinetypeList.cpp \
-    #RLinetypeListImperial.cpp \
-    #RLinetypeListMetric.cpp \
+    RLinetypeList.cpp \
+    RLinetypeListImperial.cpp \
+    RLinetypeListMetric.cpp \
     RLinetypePattern.cpp \
-    RLinetypePatternMap.cpp \
     RLineweight.cpp \
     RLinkedStorage.cpp \
     RLocalPeer.cpp \
@@ -147,11 +146,10 @@ HEADERS = \
     RLayer.h \
     RLayerListener.h \
     RLinetype.h \
-    #RLinetypeList.h \
-    #RLinetypeListImperial.h\
-    #RLinetypeListMetric.h \
+    RLinetypeList.h \
+    RLinetypeListImperial.h\
+    RLinetypeListMetric.h \
     RLinetypePattern.h \
-    RLinetypePatternMap.h \
     RLineweight.h \
     RLinkedStorage.h \
     RLocalPeer.h \
@@ -263,7 +261,7 @@ macx {
 
 linux-g++* {
     # this might or might not be needed under Linux:
-    LIBS += -lX11
+    LIBS += -X11
 }
 
 !win32 {

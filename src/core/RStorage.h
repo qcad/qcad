@@ -31,6 +31,7 @@
 #include "REntity.h"
 #include "RLayer.h"
 #include "RLinetype.h"
+#include "RLinetypePattern.h"
 #include "RModifiedListener.h"
 #include "RNonCopyable.h"
 #include "RRequireHeap.h"
@@ -222,12 +223,12 @@ public:
         return queryView(getCurrentViewId());
     }
 
+    virtual QSharedPointer<RLinetype> queryLinetypeDirect(RLinetype::Id linetypeId) const = 0;
     virtual QSharedPointer<RLinetype> queryLinetype(RLinetype::Id linetypeId) const = 0;
-
     virtual QSharedPointer<RLinetype> queryLinetype(const QString& linetypeName) const = 0;
 
-    virtual QSharedPointer<RBlock> queryBlock(RBlock::Id blockId) const = 0;
     virtual QSharedPointer<RBlock> queryBlockDirect(RBlock::Id blockId) const = 0;
+    virtual QSharedPointer<RBlock> queryBlock(RBlock::Id blockId) const = 0;
     virtual QSharedPointer<RBlock> queryBlock(const QString& blockName) const = 0;
 
     virtual QSharedPointer<RView> queryView(RView::Id viewId) const = 0;
@@ -262,8 +263,14 @@ public:
     void setCurrentLineweight(RLineweight::Lineweight lw);
     virtual RLineweight::Lineweight getCurrentLineweight() const;
 
-    void setCurrentLinetype(RLinetype lt);
-    virtual RLinetype getCurrentLinetype() const;
+    void setCurrentLinetype(RLinetype::Id ltId);
+    void setCurrentLinetype(const QString& name);
+    void setCurrentLinetypePattern(const RLinetypePattern& p);
+    virtual RLinetype::Id getCurrentLinetypeId() const;
+    virtual RLinetypePattern getCurrentLinetypePattern() const;
+    virtual QSharedPointer<RLinetype> queryCurrentLinetype() const {
+        return queryLinetype(getCurrentLinetypeId());
+    }
 
     virtual QSharedPointer<RBlock> queryCurrentBlock() {
         return queryBlock(getCurrentBlockId());
@@ -328,7 +335,9 @@ public:
     virtual bool hasLayer(const QString& layerName) const;
 
     virtual QString getLinetypeName(RLinetype::Id linetypeId) const = 0;
+    virtual QString getLinetypeDescription(RLinetype::Id linetypeId) const = 0;
     virtual QSet<QString> getLinetypeNames() const = 0;
+    virtual QList<RLinetypePattern> getLinetypePatterns() const = 0;
     virtual RLinetype::Id getLinetypeId(const QString& linetypeName) const = 0;
     virtual bool hasLinetype(const QString& linetypeName) const;
 
@@ -592,7 +601,7 @@ private:
     RObject::Handle handleCounter;
     RColor currentColor;
     RLineweight::Lineweight currentLineweight;
-    RLinetype currentLinetype;
+    RLinetype::Id currentLinetypeId;
     RLayer::Id currentLayerId;
     RView::Id currentViewId;
     RBlock::Id currentBlockId;

@@ -27,6 +27,7 @@ RPropertyTypeId RViewportEntity::PropertyType;
 RPropertyTypeId RViewportEntity::PropertyBlock;
 RPropertyTypeId RViewportEntity::PropertyLayer;
 RPropertyTypeId RViewportEntity::PropertyLinetype;
+RPropertyTypeId RViewportEntity::PropertyLinetypeScale;
 RPropertyTypeId RViewportEntity::PropertyLineweight;
 RPropertyTypeId RViewportEntity::PropertyColor;
 RPropertyTypeId RViewportEntity::PropertyDrawOrder;
@@ -54,6 +55,7 @@ void RViewportEntity::init() {
     RViewportEntity::PropertyBlock.generateId(typeid(RViewportEntity), REntity::PropertyBlock);
     RViewportEntity::PropertyLayer.generateId(typeid(RViewportEntity), REntity::PropertyLayer);
     RViewportEntity::PropertyLinetype.generateId(typeid(RViewportEntity), REntity::PropertyLinetype);
+    RViewportEntity::PropertyLinetypeScale.generateId(typeid(RViewportEntity), REntity::PropertyLinetypeScale);
     RViewportEntity::PropertyLineweight.generateId(typeid(RViewportEntity), REntity::PropertyLineweight);
     RViewportEntity::PropertyColor.generateId(typeid(RViewportEntity), REntity::PropertyColor);
     RViewportEntity::PropertyDrawOrder.generateId(typeid(RViewportEntity), REntity::PropertyDrawOrder);

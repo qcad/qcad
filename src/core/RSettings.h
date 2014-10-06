@@ -149,6 +149,8 @@ public:
     static void setXDataEnabled(bool on);
     static bool isXDataEnabled();
 
+    static bool getAutoScaleLinetypePatterns();
+
 private:
     static bool isInitialized();
     static void shortenRecentFiles();
@@ -169,6 +171,7 @@ private:
     static int concurrentDrawing;
     static int previewEntities;
     static int limitZoomAndScroll;
+    static int autoScaleLinetypePattern;
     static double arcAngleLengthThreshold;
     static QStringList recentFiles;
     static QLocale* numberLocale;

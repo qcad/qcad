@@ -97,16 +97,28 @@
         queryAllBlockReferences
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        queryObject
+        queryObjectDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        queryEntity
+        queryObject
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryObjectByHandle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryEntityDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryLayerDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryBlockDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryBlock
@@ -115,7 +127,13 @@
         queryView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryUcsDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryUcs
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryLinetypeDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryLinetype
@@ -151,25 +169,16 @@
         getLinetypeName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLinetypeDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLinetypeNames
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLinetypePatterns
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLinetypeId
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        queryObjectDirect
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        queryEntityDirect
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        queryUcsDirect
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        queryLayerDirect
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        queryBlockDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getNewObjectId
@@ -193,7 +202,7 @@
         getCurrentLineweight
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getCurrentLinetype
+        getCurrentLinetypeId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         deleteObject

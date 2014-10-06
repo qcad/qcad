@@ -27,6 +27,7 @@ RPropertyTypeId RBlockReferenceEntity::PropertyType;
 RPropertyTypeId RBlockReferenceEntity::PropertyBlock;
 RPropertyTypeId RBlockReferenceEntity::PropertyLayer;
 RPropertyTypeId RBlockReferenceEntity::PropertyLinetype;
+RPropertyTypeId RBlockReferenceEntity::PropertyLinetypeScale;
 RPropertyTypeId RBlockReferenceEntity::PropertyLineweight;
 RPropertyTypeId RBlockReferenceEntity::PropertyColor;
 RPropertyTypeId RBlockReferenceEntity::PropertyDrawOrder;
@@ -68,6 +69,7 @@ void RBlockReferenceEntity::init() {
     RBlockReferenceEntity::PropertyBlock.generateId(typeid(RBlockReferenceEntity), REntity::PropertyBlock);
     RBlockReferenceEntity::PropertyLayer.generateId(typeid(RBlockReferenceEntity), REntity::PropertyLayer);
     RBlockReferenceEntity::PropertyLinetype.generateId(typeid(RBlockReferenceEntity), REntity::PropertyLinetype);
+    RBlockReferenceEntity::PropertyLinetypeScale.generateId(typeid(RBlockReferenceEntity), REntity::PropertyLinetypeScale);
     RBlockReferenceEntity::PropertyLineweight.generateId(typeid(RBlockReferenceEntity), REntity::PropertyLineweight);
     RBlockReferenceEntity::PropertyColor.generateId(typeid(RBlockReferenceEntity), REntity::PropertyColor);
     RBlockReferenceEntity::PropertyDrawOrder.generateId(typeid(RBlockReferenceEntity), REntity::PropertyDrawOrder);

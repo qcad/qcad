@@ -28,13 +28,10 @@ dir="./gui" filename="RLinetypeCombo.h">
   <cpp:file>&lt;QComboBox&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QColor&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
   <cpp:file>"RDocument.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RLinetype.h"</cpp:file></cpp:include>
+  <cpp:file>"RLinetypePattern.h"</cpp:file></cpp:include>
   <comment type="block">/** * \scriptable * \ingroup gui
   */</comment>
   <class>class 
@@ -81,30 +78,57 @@ dir="./gui" filename="RLinetypeCombo.h">
   </param>)</parameter_list>;</constructor_decl>
   <function_decl>
   <type>
-    <name>RLinetype</name>
-  </type>
-  <name>getLinetype</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
     <name>void</name>
   </type>
-  <name>setLinetype</name>
+  <name>init</name>
   <parameter_list>(
   <param>
     <decl>
       <type>
-      <name>const</name>
-      <name>RLinetype</name>&amp;</type>
-      <name>linetype</name>
+      <name>RDocument</name>*</type>
+      <name>doc</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
   </type>
-  <name>init</name>
+  <name>reinit</name>
   <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>RLinetypePattern</name>
+  </type>
+  <name>getLinetypePattern</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setLinetypePattern</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>name</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setLinetypePattern</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RLinetypePattern</name>&amp;</type>
+      <name>linetypePattern</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>bool</name>
@@ -137,8 +161,8 @@ dir="./gui" filename="RLinetypeCombo.h">
     <decl>
       <type>
       <name>const</name>
-      <name>RLinetype</name>&amp;</type>
-      <name>linetype</name>
+      <name>RLinetypePattern</name>&amp;</type>
+      <name>linetypePattern</name>
     </decl>
   </param>)</parameter_list>;</function_decl></public>
   <public>public slots: 
@@ -146,7 +170,7 @@ dir="./gui" filename="RLinetypeCombo.h">
   <type>
     <name>void</name>
   </type>
-  <name>linetypeChanged</name>
+  <name>linetypePatternChanged</name>
   <parameter_list>(
   <param>
     <decl>
@@ -163,6 +187,17 @@ dir="./gui" filename="RLinetypeCombo.h">
       <name>bool</name>
     </type>
     <name>onlyFixed</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>RLinetypePattern</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>patterns</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

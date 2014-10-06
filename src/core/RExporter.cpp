@@ -29,7 +29,7 @@
 #include "RExporter.h"
 #include "RLine.h"
 #include "RLinetype.h"
-#include "RLinetypePatternMap.h"
+//#include "RLinetypePatternMap.h"
 #include "RPainterPathSource.h"
 #include "RPolyline.h"
 #include "RSettings.h"
@@ -371,8 +371,11 @@ void RExporter::setLinetypeId(RLinetype::Id ltId) {
         doc = document;
     }
 
-    currentLinetypePattern =
-        RLinetypePatternMap::getPattern(doc->getLinetypeName(ltId));
+    QSharedPointer<RLinetype> lt = doc->queryLinetype(ltId);
+
+    if (!lt.isNull()) {
+        currentLinetypePattern = lt->getPattern();
+    }
 }
 
 void RExporter::setLinetypePattern(const RLinetypePattern& ltPattern) {
@@ -1305,10 +1308,10 @@ double RExporter::getPatternFactor() {
         return 1.0;
     }
 
-    // note: pen width is in current drawing unit:
-    double factor = currentPen.widthF();
+    double factor = 1.0;
 
-    double ltscale = document->getKnownVariable(RS::LTSCALE).toDouble();
+    // document wide linetype scale:
+    double docLinetypeScale = document->getKnownVariable(RS::LTSCALE).toDouble();
 
     if (factor < 1e-6) {
         // line pattern factor for lines of width 0:
@@ -1316,12 +1319,27 @@ double RExporter::getPatternFactor() {
         if (zww<=0) {
             zww = 100;
         }
-        return RUnit::convert(zww/100.0, RS::Millimeter, document->getUnit()) * ltscale;
+        return RUnit::convert(zww/100.0, RS::Millimeter, document->getUnit()) * docLinetypeScale;
     }
 
     // LTSCALE might be zero:
-    if (ltscale>1e-6) {
-        factor *= ltscale;
+    if (docLinetypeScale>1e-6) {
+        factor *= docLinetypeScale;
+    }
+
+    // entity line type scale:
+    REntity* entity = getEntity();
+    if (entity!=NULL) {
+        double entityLinetypeScale = entity->getLinetypeScale();
+        if (!RMath::fuzzyCompare(entityLinetypeScale, 1.0)) {
+            if (entityLinetypeScale>1e-6) {
+                factor *= entityLinetypeScale;
+            }
+        }
+        // optional: automatic scaling by line weight:
+        if (RSettings::getAutoScaleLinetypePatterns()) {
+            factor *= currentPen.widthF();
+        }
     }
 
     return factor;

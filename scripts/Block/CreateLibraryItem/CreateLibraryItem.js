@@ -65,6 +65,7 @@ CreateLibraryItem.prototype.coordinateEvent = function(event) {
     var itemDocument = new RDocument(itemStorage, itemSpatialIndex);
     itemDocument.setUnit(document.getUnit());
     var itemDocumentInterface = new RDocumentInterface(itemDocument);
+    itemDocumentInterface.setNotifyListeners(false);
 
     var op = new RCopyOperation(pos.getNegated(), document);
     itemDocumentInterface.applyOperation(op);

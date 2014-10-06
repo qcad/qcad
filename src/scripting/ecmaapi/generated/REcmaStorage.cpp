@@ -129,11 +129,13 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryCurrentView, "queryCurrentView");
             
+            REcmaHelper::registerFunction(&engine, proto, queryLinetypeDirect, "queryLinetypeDirect");
+            
             REcmaHelper::registerFunction(&engine, proto, queryLinetype, "queryLinetype");
             
-            REcmaHelper::registerFunction(&engine, proto, queryBlock, "queryBlock");
-            
             REcmaHelper::registerFunction(&engine, proto, queryBlockDirect, "queryBlockDirect");
+            
+            REcmaHelper::registerFunction(&engine, proto, queryBlock, "queryBlock");
             
             REcmaHelper::registerFunction(&engine, proto, queryView, "queryView");
             
@@ -153,7 +155,13 @@
             
             REcmaHelper::registerFunction(&engine, proto, setCurrentLinetype, "setCurrentLinetype");
             
-            REcmaHelper::registerFunction(&engine, proto, getCurrentLinetype, "getCurrentLinetype");
+            REcmaHelper::registerFunction(&engine, proto, setCurrentLinetypePattern, "setCurrentLinetypePattern");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCurrentLinetypeId, "getCurrentLinetypeId");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCurrentLinetypePattern, "getCurrentLinetypePattern");
+            
+            REcmaHelper::registerFunction(&engine, proto, queryCurrentLinetype, "queryCurrentLinetype");
             
             REcmaHelper::registerFunction(&engine, proto, queryCurrentBlock, "queryCurrentBlock");
             
@@ -201,7 +209,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypeName, "getLinetypeName");
             
+            REcmaHelper::registerFunction(&engine, proto, getLinetypeDescription, "getLinetypeDescription");
+            
             REcmaHelper::registerFunction(&engine, proto, getLinetypeNames, "getLinetypeNames");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLinetypePatterns, "getLinetypePatterns");
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypeId, "getLinetypeId");
             
@@ -2448,6 +2460,66 @@
             return result;
         }
          QScriptValue
+        REcmaStorage::queryLinetypeDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::queryLinetypeDirect", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::queryLinetypeDirect";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("queryLinetypeDirect", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLinetype::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLinetype::Id
+                    a0 =
+                    (RLinetype::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLinetype >'
+    QSharedPointer < RLinetype > cppResult =
+        
+               self->queryLinetypeDirect(a0);
+        // return type: QSharedPointer < RLinetype >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.queryLinetypeDirect().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::queryLinetypeDirect", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaStorage::queryLinetype
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2540,6 +2612,66 @@
             return result;
         }
          QScriptValue
+        REcmaStorage::queryBlockDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::queryBlockDirect", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::queryBlockDirect";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("queryBlockDirect", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RBlock::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RBlock::Id
+                    a0 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RBlock >'
+    QSharedPointer < RBlock > cppResult =
+        
+               self->queryBlockDirect(a0);
+        // return type: QSharedPointer < RBlock >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.queryBlockDirect().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::queryBlockDirect", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaStorage::queryBlock
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2629,66 +2761,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::queryBlock", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaStorage::queryBlockDirect
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaStorage::queryBlockDirect", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::queryBlockDirect";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RStorage* self = 
-                        getSelf("queryBlockDirect", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    RBlock::Id
-                    a0 =
-                    (RBlock::Id)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QSharedPointer < RBlock >'
-    QSharedPointer < RBlock > cppResult =
-        
-               self->queryBlockDirect(a0);
-        // return type: QSharedPointer < RBlock >
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.queryBlockDirect().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaStorage::queryBlockDirect", context, engine);
             return result;
         }
          QScriptValue
@@ -3228,31 +3300,46 @@
     
     if( context->argumentCount() ==
     1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RLinetype */
+            context->argument(0).isNumber()
+        ) /* type: RLinetype::Id */
     
     ){
     // prepare arguments:
     
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RLinetype*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RLinetype*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RStorage: Argument 0 is not of type RLinetype.",
-                               context);                    
-                    }
-                    RLinetype 
-                    a0 = 
-                    *ap0;
+                    // argument isStandardType
+                    RLinetype::Id
+                    a0 =
+                    (RLinetype::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCurrentLinetype(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
                 
     // end of arguments
 
@@ -3272,19 +3359,86 @@
             return result;
         }
          QScriptValue
-        REcmaStorage::getCurrentLinetype
+        REcmaStorage::setCurrentLinetypePattern
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaStorage::getCurrentLinetype", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getCurrentLinetype";
+            //REcmaHelper::functionStart("REcmaStorage::setCurrentLinetypePattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::setCurrentLinetypePattern";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RStorage* self = 
-                        getSelf("getCurrentLinetype", context);
+                        getSelf("setCurrentLinetypePattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLinetypePattern */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLinetypePattern*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLinetypePattern*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RStorage: Argument 0 is not of type RLinetypePattern.",
+                               context);                    
+                    }
+                    RLinetypePattern 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCurrentLinetypePattern(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.setCurrentLinetypePattern().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::setCurrentLinetypePattern", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getCurrentLinetypeId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getCurrentLinetypeId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getCurrentLinetypeId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getCurrentLinetypeId", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -3301,11 +3455,60 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RLinetype'
-    RLinetype cppResult =
+    // return type 'RLinetype::Id'
+    RLinetype::Id cppResult =
         
-               self->getCurrentLinetype();
-        // return type: RLinetype
+               self->getCurrentLinetypeId();
+        // return type: RLinetype::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getCurrentLinetypeId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getCurrentLinetypeId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getCurrentLinetypePattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getCurrentLinetypePattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getCurrentLinetypePattern";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getCurrentLinetypePattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLinetypePattern'
+    RLinetypePattern cppResult =
+        
+               self->getCurrentLinetypePattern();
+        // return type: RLinetypePattern
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -3314,10 +3517,59 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getCurrentLinetype().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getCurrentLinetypePattern().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaStorage::getCurrentLinetype", context, engine);
+            //REcmaHelper::functionEnd("REcmaStorage::getCurrentLinetypePattern", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::queryCurrentLinetype
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::queryCurrentLinetype", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::queryCurrentLinetype";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("queryCurrentLinetype", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLinetype >'
+    QSharedPointer < RLinetype > cppResult =
+        
+               self->queryCurrentLinetype();
+        // return type: QSharedPointer < RLinetype >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.queryCurrentLinetype().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::queryCurrentLinetype", context, engine);
             return result;
         }
          QScriptValue
@@ -4645,6 +4897,66 @@
             return result;
         }
          QScriptValue
+        REcmaStorage::getLinetypeDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getLinetypeDescription", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getLinetypeDescription";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getLinetypeDescription", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLinetype::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLinetype::Id
+                    a0 =
+                    (RLinetype::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLinetypeDescription(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getLinetypeDescription().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getLinetypeDescription", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaStorage::getLinetypeNames
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4692,6 +5004,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::getLinetypeNames", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getLinetypePatterns
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getLinetypePatterns", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getLinetypePatterns";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getLinetypePatterns", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RLinetypePattern >'
+    QList < RLinetypePattern > cppResult =
+        
+               self->getLinetypePatterns();
+        // return type: QList < RLinetypePattern >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getLinetypePatterns().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getLinetypePatterns", context, engine);
             return result;
         }
          QScriptValue

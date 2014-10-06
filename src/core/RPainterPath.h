@@ -72,12 +72,26 @@ public:
         QPainterPath::moveTo(x, y);
     }
 
+    /**
+     * \nonscriptable
+     */
+    void moveTo(const QPointF& p) {
+        QPainterPath::moveTo(p);
+    }
+
     void lineTo(const RVector& v) {
         QPainterPath::lineTo(v.x, v.y);
     }
 
     void lineTo(qreal x, qreal y) {
         QPainterPath::lineTo(x, y);
+    }
+
+    /**
+     * \nonscriptable
+     */
+    void lineTo(const QPointF& p) {
+        QPainterPath::lineTo(p);
     }
 
     void quadTo(const RVector& cp, const RVector& v) {

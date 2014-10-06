@@ -32,6 +32,7 @@ RPropertyTypeId RHatchEntity::PropertyType;
 RPropertyTypeId RHatchEntity::PropertyBlock;
 RPropertyTypeId RHatchEntity::PropertyLayer;
 RPropertyTypeId RHatchEntity::PropertyLinetype;
+RPropertyTypeId RHatchEntity::PropertyLinetypeScale;
 RPropertyTypeId RHatchEntity::PropertyLineweight;
 RPropertyTypeId RHatchEntity::PropertyColor;
 RPropertyTypeId RHatchEntity::PropertyDrawOrder;
@@ -69,6 +70,7 @@ void RHatchEntity::init() {
     RHatchEntity::PropertyBlock.generateId(typeid(RHatchEntity), REntity::PropertyBlock);
     RHatchEntity::PropertyLayer.generateId(typeid(RHatchEntity), REntity::PropertyLayer);
     RHatchEntity::PropertyLinetype.generateId(typeid(RHatchEntity), REntity::PropertyLinetype);
+    RHatchEntity::PropertyLinetypeScale.generateId(typeid(RHatchEntity), REntity::PropertyLinetypeScale);
     RHatchEntity::PropertyLineweight.generateId(typeid(RHatchEntity), REntity::PropertyLineweight);
     RHatchEntity::PropertyColor.generateId(typeid(RHatchEntity), REntity::PropertyColor);
     RHatchEntity::PropertyDrawOrder.generateId(typeid(RHatchEntity), REntity::PropertyDrawOrder);

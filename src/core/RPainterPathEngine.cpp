@@ -86,3 +86,36 @@ QList<RPainterPath> RPainterPathEngine::getPainterPaths() {
     return paths;
 }
 
+void RPainterPathEngine::drawPolygon(const QPointF* points, int pointCount, PolygonDrawMode mode) {
+    if (pointCount==0) {
+        return;
+    }
+
+    RPainterPath path;
+    switch (mode) {
+    case QPaintEngine::ConvexMode:
+    case QPaintEngine::OddEvenMode:
+        path.setFillRule(Qt::OddEvenFill);
+        break;
+    case QPaintEngine::WindingMode:
+        path.setFillRule(Qt::WindingFill);
+        break;
+    case QPaintEngine::PolylineMode:
+        path.setPen(state->pen());
+        break;
+    }
+
+    path.setBrush(state->brush());
+    if (state->brush().color().isValid()) {
+        path.setFixedBrushColor(true);
+    }
+
+    path.moveTo(points[0]);
+    for (int i=0; i<pointCount; i++) {
+        path.lineTo(points[i]);
+    }
+
+    // required for Qt >= 4.8.0 for texts with unicode characters:
+    path.transform(transform);
+    paths.append(path);
+}

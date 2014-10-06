@@ -278,7 +278,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
             value = c.getLineweight();
         }
         if (isOfType(c, RLinetypeCombo)) {
-            value = c.getLinetype();
+            value = c.getLinetypePattern();
         }
         if (isOfType(c, QSpinBox)) {
             value = c.value;
@@ -735,10 +735,10 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             WidgetFactory.connect(c.editTextChanged, signalReceiver, c.objectName);
             c["currentIndexChanged(int)"].connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
             if (isNull(c.defaultValue)) {
-                c.defaultValue = c.getLinetype();
+                c.defaultValue = c.getLinetypePattern();
             }
             if (!isNull(value)) {
-                c.setLinetype(value);
+                c.setLinetypePattern(value);
             }
             continue;
         }

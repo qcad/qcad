@@ -17,64 +17,95 @@
  * along with QCAD.
  */
 #include <QSize>
-#include <QSet>
 
 #include "RDebug.h"
 #include "RLinetypeCombo.h"
 
-RLinetypeCombo::RLinetypeCombo(QWidget *parent) :
+RLinetypeCombo::RLinetypeCombo(QWidget* parent) :
     QComboBox(parent), onlyFixed(false) {
     setIconSize(QSize(32, 16));
 
-    init();
+    //init();
 
-    connect(this, SIGNAL(currentIndexChanged(int)), this, SLOT(linetypeChanged(int)));
+    connect(this, SIGNAL(currentIndexChanged(int)), this, SLOT(linetypePatternChanged(int)));
 }
 
-void RLinetypeCombo::linetypeChanged(int index) {
+void RLinetypeCombo::linetypePatternChanged(int index) {
     if (!itemData(index).isValid()) {
         return;
     }
-    if (!itemData(index).value<RLinetype> ().isValid()) {
-        return;
-    }
-    emit valueChanged(itemData(index).value<RLinetype> ());
+    emit valueChanged(itemData(index).value<RLinetypePattern> ());
 }
 
-void RLinetypeCombo::init() {
+void RLinetypeCombo::init(RDocument* doc) {
     clear();
     setMaxVisibleItems(12);
-    QVariant v;
-    QListIterator<QPair<QString, RLinetype> > it(RLinetype::getList(onlyFixed));
 
-    while (it.hasNext()) {
-        QPair<QString, RLinetype> p = it.next();
-        if (p.second.isValid()) {
-            v.setValue<RLinetype> (p.second);
-            addItem(RLinetype::getIcon(p.second), RLinetype::tr(
-                    (const char*) p.first.toUtf8()), v);
-        } else {
-            addItem(RLinetype::getIcon(p.second), RLinetype::tr(
-                    (const char*) p.first.toUtf8()));
+    if (doc!=NULL) {
+        patterns = doc->getLinetypePatterns();
+    }
+
+    reinit();
+}
+
+void RLinetypeCombo::reinit() {
+    QVariant v;
+    for (int i=0; i<patterns.length(); i++) {
+        RLinetypePattern p = patterns[i];
+
+        if (onlyFixed && p.getName().toUpper()=="BYLAYER") {
+            continue;
         }
+        if (onlyFixed && p.getName().toUpper()=="BYBLOCK") {
+            continue;
+        }
+
+        v.setValue<RLinetypePattern>(p);
+        QString desc = p.getDescription();
+        if (desc.isEmpty()) {
+            desc = p.getName();
+        }
+        QString name, prev;
+        int k = desc.lastIndexOf(QRegExp("[^_\\. ]"));
+        if (k!=-1) {
+            name = desc.mid(0, k);
+            prev = desc.mid(k);
+            //prev.replace('.', QChar(0x00B7));
+            //prev.replace('_', QChar(0x2014));
+        }
+        //RLinetypeCombo::tr((const char*)d.toUtf8())
+        addItem(p.getIcon(), name + prev, v);
     }
 
     if (!onlyFixed) {
-        setLinetype(RLinetype(NULL, "BYLAYER"));
+        setLinetypePattern("BYLAYER");
     } else {
-        setLinetype(RLinetype(NULL, "CONTINUOUS"));
+        setLinetypePattern("CONTINUOUS");
     }
 }
 
-RLinetype RLinetypeCombo::getLinetype() {
-    return itemData(currentIndex()).value<RLinetype> ();
+RLinetypePattern RLinetypeCombo::getLinetypePattern() {
+    return itemData(currentIndex()).value<RLinetypePattern> ();
 }
 
-void RLinetypeCombo::setLinetype(const RLinetype& linetype) {
+void RLinetypeCombo::setLinetypePattern(const QString& name) {
     for (int i = 0; i < count(); ++i) {
         if (itemData(i).isValid()) {
-            RLinetype t = itemData(i).value<RLinetype> ();
-            if (t == linetype) {
+            RLinetypePattern t = itemData(i).value<RLinetypePattern> ();
+            //if (t.getName().toUpper() == name.toUpper()) {
+            if (t.getName().toUpper() == name.toUpper()) {
+                setCurrentIndex(i);
+                return;
+            }
+        }
+    }
+}
+
+void RLinetypeCombo::setLinetypePattern(const RLinetypePattern& linetypePattern) {
+    for (int i = 0; i < count(); ++i) {
+        if (itemData(i).isValid()) {
+            RLinetypePattern t = itemData(i).value<RLinetypePattern> ();
+            if (t == linetypePattern) {
                 setCurrentIndex(i);
                 return;
             }
@@ -88,5 +119,5 @@ bool RLinetypeCombo::getOnlyFixed() {
 
 void RLinetypeCombo::setOnlyFixed(bool onlyFixed) {
     this->onlyFixed = onlyFixed;
-    init();
+    reinit();
 }

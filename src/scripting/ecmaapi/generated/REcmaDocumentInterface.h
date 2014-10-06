@@ -367,7 +367,13 @@
         setCurrentLinetype
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getCurrentLinetype
+        setCurrentLinetypePattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCurrentLinetypeId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCurrentLinetypePattern
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setCurrentLayer

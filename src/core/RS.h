@@ -483,6 +483,7 @@ public:
                                    const QString& fileExtension);
     static QStringList getFontList();
     static QStringList getPatternList(bool metric);
+    static QStringList getLinetypeList(bool metric);
 
     template<class T>
     static bool mapContainsCaseInsensitive(const QMap<QString, T>& map, const QString& key) {

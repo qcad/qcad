@@ -25,6 +25,7 @@ RPropertyTypeId RDimRotatedEntity::PropertyType;
 RPropertyTypeId RDimRotatedEntity::PropertyBlock;
 RPropertyTypeId RDimRotatedEntity::PropertyLayer;
 RPropertyTypeId RDimRotatedEntity::PropertyLinetype;
+RPropertyTypeId RDimRotatedEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimRotatedEntity::PropertyLineweight;
 RPropertyTypeId RDimRotatedEntity::PropertyColor;
 RPropertyTypeId RDimRotatedEntity::PropertyDrawOrder;
@@ -70,6 +71,7 @@ void RDimRotatedEntity::init() {
     RDimRotatedEntity::PropertyBlock.generateId(typeid(RDimRotatedEntity), REntity::PropertyBlock);
     RDimRotatedEntity::PropertyLayer.generateId(typeid(RDimRotatedEntity), REntity::PropertyLayer);
     RDimRotatedEntity::PropertyLinetype.generateId(typeid(RDimRotatedEntity), REntity::PropertyLinetype);
+    RDimRotatedEntity::PropertyLinetypeScale.generateId(typeid(RDimRotatedEntity), REntity::PropertyLinetypeScale);
     RDimRotatedEntity::PropertyLineweight.generateId(typeid(RDimRotatedEntity), REntity::PropertyLineweight);
     RDimRotatedEntity::PropertyColor.generateId(typeid(RDimRotatedEntity), REntity::PropertyColor);
     RDimRotatedEntity::PropertyDrawOrder.generateId(typeid(RDimRotatedEntity), REntity::PropertyDrawOrder);

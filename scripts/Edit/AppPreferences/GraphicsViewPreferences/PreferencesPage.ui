@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>651</width>
-    <height>610</height>
+    <width>567</width>
+    <height>603</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,8 +21,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>649</width>
-     <height>608</height>
+     <width>550</width>
+     <height>638</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -223,19 +223,52 @@
       <property name="title">
        <string>Linetypes</string>
       </property>
-      <layout class="QFormLayout" name="formLayout_3">
-       <property name="fieldGrowthPolicy">
-        <enum>QFormLayout::FieldsStayAtSizeHint</enum>
-       </property>
-       <item row="0" column="0">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0" colspan="3">
+        <widget class="QCheckBox" name="AutoSwitchLinetypes">
+         <property name="toolTip">
+          <string>Automatically use screen based linetypes in model view</string>
+         </property>
+         <property name="text">
+          <string>Auto switch to screen based linetypes in model view</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="3">
+        <widget class="QCheckBox" name="AutoScaleLinetypePatterns">
+         <property name="text">
+          <string>Scale linetype patterns by line weight</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QWidget" name="widget_2" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
         <widget class="QLabel" name="label_5">
          <property name="text">
           <string>Pattern scale for lineweight 0.00mm:</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
-        <widget class="RLineweightCombo" name="ZeroWeightWeight" native="true">
+       <item row="2" column="2">
+        <widget class="RLineweightCombo" name="ZeroWeightWeight">
          <property name="minimumSize">
           <size>
            <width>100</width>
@@ -247,15 +280,18 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="0">
-        <widget class="QCheckBox" name="AutoSwitchLinetypes">
-         <property name="toolTip">
-          <string>Automatically use screen based linetypes in model view</string>
+       <item row="2" column="3">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
-         <property name="text">
-          <string>Auto switch linetypes</string>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
          </property>
-        </widget>
+        </spacer>
        </item>
       </layout>
      </widget>
@@ -447,8 +483,8 @@
  <customwidgets>
   <customwidget>
    <class>RLineweightCombo</class>
-   <extends>QWidget</extends>
-   <header>rlineweightcombo.h</header>
+   <extends>QComboBox</extends>
+   <header>RLineweightCombo.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
@@ -464,8 +500,40 @@
      <y>101</y>
     </hint>
     <hint type="destinationlabel">
-     <x>168</x>
-     <y>122</y>
+     <x>435</x>
+     <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AutoScaleLinetypePatterns</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_5</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>215</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>210</x>
+     <y>382</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AutoScaleLinetypePatterns</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ZeroWeightWeight</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>332</x>
+     <y>360</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>336</x>
+     <y>380</y>
     </hint>
    </hints>
   </connection>

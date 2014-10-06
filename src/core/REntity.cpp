@@ -29,6 +29,7 @@ RPropertyTypeId REntity::PropertyType;
 RPropertyTypeId REntity::PropertyBlock;
 RPropertyTypeId REntity::PropertyLayer;
 RPropertyTypeId REntity::PropertyLinetype;
+RPropertyTypeId REntity::PropertyLinetypeScale;
 RPropertyTypeId REntity::PropertyLineweight;
 RPropertyTypeId REntity::PropertyColor;
 RPropertyTypeId REntity::PropertyDrawOrder;
@@ -49,6 +50,7 @@ void REntity::init() {
     REntity::PropertyBlock.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Block ID"));
     REntity::PropertyLayer.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Layer"));
     REntity::PropertyLinetype.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Linetype"));
+    REntity::PropertyLinetypeScale.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Linetype Scale"));
     REntity::PropertyLineweight.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Lineweight"));
     REntity::PropertyColor.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Color"));
     REntity::PropertyDrawOrder.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Draw Order"));
@@ -130,6 +132,7 @@ void REntity::copyAttributesFrom(REntity* entity, bool copyBlockId) {
     setColor(entity->getColor());
     setLineweight(entity->getLineweight());
     setLinetypeId(entity->getLinetypeId());
+    setLinetypeScale(entity->getLinetypeScale());
 }
 
 QList<RVector> REntity::getIntersectionPoints(
@@ -191,17 +194,24 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
         if (humanReadable) {
             RDocument* document = getData().getDocument();
             if (document != NULL) {
-                QVariant var;
-                QSharedPointer<RLinetype> linetype = document->queryLinetype(
-                        getData().getLinetypeId());
-                var.setValue<RLinetype> (*linetype.data());
-                return qMakePair(var, RPropertyAttributes());
+                RPropertyAttributes attr;
+//                if (!noAttributes) {
+//                    attr.setChoices(document->getLinetypeNames());
+//                }
+                QString desc = document->getLinetypeDescription(getData().getLinetypeId());
+                if (desc.isEmpty()) {
+                    desc = document->getLinetypeName(getData().getLinetypeId());
+                }
+                return qMakePair(QVariant(desc), attr);
             }
         }
         else {
             return qMakePair(QVariant(getData().getLinetypeId()),
                     RPropertyAttributes());
         }
+    }
+    else if (propertyTypeId == PropertyLinetypeScale) {
+        return qMakePair(QVariant(getData().getLinetypeScale()), RPropertyAttributes());
     }
     else if (propertyTypeId == PropertyLineweight) {
         QVariant v;
@@ -254,12 +264,14 @@ bool REntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         } else {
             RDocument* document = getData().getDocument();
             if (document != NULL) {
-                RLinetype t = value.value<RLinetype> ();
+                RLinetypePattern t = value.value<RLinetypePattern> ();
                 int id = document->getLinetypeId(t.getName());
                 ret = ret || RObject::setMember(getData().linetypeId, id,
                         true);
             }
         }
+    } else if (propertyTypeId == PropertyLinetypeScale) {
+        ret = ret || RObject::setMember(getData().linetypeScale, value.toDouble(), true);
     } else if (propertyTypeId == PropertyLineweight) {
         if (value.type()==QVariant::Int || value.type()==QVariant::Double) {
             ret = ret || RObject::setMember((int&)getData().lineweight,
@@ -349,6 +361,7 @@ void REntity::print(QDebug dbg) const {
         << ", childIds: " << getDocument()->queryChildEntities(getId())
         << ", lineweight: " << getLineweight()
         << ", linetypeId: " << getLinetypeId()
+        << ", linetypeScale: " << getLinetypeScale()
         << ", color: " << getColor()
         << ", drawOrder: " << getDrawOrder()
         << ", selectionStatus: " << isSelected()

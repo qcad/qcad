@@ -107,9 +107,15 @@
             
             REcmaHelper::registerFunction(&engine, proto, setLinetypeId, "setLinetypeId");
             
-            REcmaHelper::registerFunction(&engine, proto, setLinetype, "setLinetype");
+            REcmaHelper::registerFunction(&engine, proto, setLinetypePattern, "setLinetypePattern");
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypeId, "getLinetypeId");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLinetypePattern, "getLinetypePattern");
+            
+            REcmaHelper::registerFunction(&engine, proto, setLinetypeScale, "setLinetypeScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLinetypeScale, "getLinetypeScale");
             
             REcmaHelper::registerFunction(&engine, proto, setLineweight, "setLineweight");
             
@@ -234,6 +240,10 @@
             
             ctor.setProperty("PropertyLinetype",
                 qScriptValueFromValue(&engine, REntity::PropertyLinetype),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyLinetypeScale",
+                qScriptValueFromValue(&engine, REntity::PropertyLinetypeScale),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyLineweight",
@@ -1305,19 +1315,19 @@
             return result;
         }
          QScriptValue
-        REcmaEntity::setLinetype
+        REcmaEntity::setLinetypePattern
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEntity::setLinetype", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaEntity::setLinetype";
+            //REcmaHelper::functionStart("REcmaEntity::setLinetypePattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntity::setLinetypePattern";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     REntity* self = 
-                        getSelf("setLinetype", context);
+                        getSelf("setLinetypePattern", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1331,26 +1341,26 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RLinetype */
+        ) /* type: RLinetypePattern */
     
     ){
     // prepare arguments:
     
                     // argument isCopyable and has default constructor and isSimpleClass 
-                    RLinetype*
+                    RLinetypePattern*
                     ap0 =
                     qscriptvalue_cast<
-                    RLinetype*
+                    RLinetypePattern*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if (ap0 == NULL) {
-                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RLinetype.",
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RLinetypePattern.",
                                context);                    
                     }
-                    RLinetype 
+                    RLinetypePattern 
                     a0 = 
                     *ap0;
                 
@@ -1359,16 +1369,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->setLinetype(a0);
+               self->setLinetypePattern(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.setLinetype().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.setLinetypePattern().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEntity::setLinetype", context, engine);
+            //REcmaHelper::functionEnd("REcmaEntity::setLinetypePattern", context, engine);
             return result;
         }
          QScriptValue
@@ -1473,6 +1483,159 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEntity::getLinetypeId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntity::getLinetypePattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntity::getLinetypePattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntity::getLinetypePattern";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntity* self = 
+                        getSelf("getLinetypePattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLinetypePattern'
+    RLinetypePattern cppResult =
+        
+               self->getLinetypePattern();
+        // return type: RLinetypePattern
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.getLinetypePattern().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntity::getLinetypePattern", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntity::setLinetypeScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntity::setLinetypeScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntity::setLinetypeScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntity* self = 
+                        getSelf("setLinetypeScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLinetypeScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.setLinetypeScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntity::setLinetypeScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntity::getLinetypeScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntity::getLinetypeScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntity::getLinetypeScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntity* self = 
+                        getSelf("getLinetypeScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getLinetypeScale();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.getLinetypeScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntity::getLinetypeScale", context, engine);
             return result;
         }
          QScriptValue

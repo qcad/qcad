@@ -421,6 +421,28 @@ dir="./core" filename="RLinkedStorage.h">
       <name>RObject</name>
     </argument>&gt;</argument_list></name>
   </type>
+  <name>queryObjectDirect</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RObject</name>::
+        <name>Id</name></name>
+      </type>
+      <name>objectId</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSharedPointer
+    <argument_list>&lt;
+    <argument>
+      <name>RObject</name>
+    </argument>&gt;</argument_list></name>
+  </type>
   <name>queryObject</name>
   <parameter_list>(
   <param>
@@ -428,6 +450,50 @@ dir="./core" filename="RLinkedStorage.h">
       <type>
         <name>
         <name>RObject</name>::
+        <name>Id</name></name>
+      </type>
+      <name>objectId</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSharedPointer
+    <argument_list>&lt;
+    <argument>
+      <name>RObject</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>queryObjectByHandle</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RObject</name>::
+        <name>Handle</name></name>
+      </type>
+      <name>objectHandle</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSharedPointer
+    <argument_list>&lt;
+    <argument>
+      <name>REntity</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>queryEntityDirect</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>REntity</name>::
         <name>Id</name></name>
       </type>
       <name>objectId</name>
@@ -462,19 +528,19 @@ dir="./core" filename="RLinkedStorage.h">
     <name>QSharedPointer
     <argument_list>&lt;
     <argument>
-      <name>RObject</name>
+      <name>RLayer</name>
     </argument>&gt;</argument_list></name>
   </type>
-  <name>queryObjectByHandle</name>
+  <name>queryLayerDirect</name>
   <parameter_list>(
   <param>
     <decl>
       <type>
         <name>
-        <name>RObject</name>::
-        <name>Handle</name></name>
+        <name>RLayer</name>::
+        <name>Id</name></name>
       </type>
-      <name>objectHandle</name>
+      <name>layerId</name>
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
@@ -517,6 +583,28 @@ dir="./core" filename="RLinkedStorage.h">
       <name>const</name>
       <name>QString</name>&amp;</type>
       <name>layerName</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSharedPointer
+    <argument_list>&lt;
+    <argument>
+      <name>RBlock</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>queryBlockDirect</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RBlock</name>::
+        <name>Id</name></name>
+      </type>
+      <name>blockId</name>
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
@@ -613,6 +701,28 @@ dir="./core" filename="RLinkedStorage.h">
       <name>RUcs</name>
     </argument>&gt;</argument_list></name>
   </type>
+  <name>queryUcsDirect</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RUcs</name>::
+        <name>Id</name></name>
+      </type>
+      <name>ucsId</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSharedPointer
+    <argument_list>&lt;
+    <argument>
+      <name>RUcs</name>
+    </argument>&gt;</argument_list></name>
+  </type>
   <name>queryUcs</name>
   <parameter_list>(
   <param>
@@ -643,6 +753,28 @@ dir="./core" filename="RLinkedStorage.h">
       <name>const</name>
       <name>QString</name>&amp;</type>
       <name>ucsName</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSharedPointer
+    <argument_list>&lt;
+    <argument>
+      <name>RLinetype</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>queryLinetypeDirect</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RLinetype</name>::
+        <name>Id</name></name>
+      </type>
+      <name>linetypeId</name>
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
@@ -853,6 +985,24 @@ dir="./core" filename="RLinkedStorage.h">
   <function_decl>
   <type>
     <name>virtual</name>
+    <name>QString</name>
+  </type>
+  <name>getLinetypeDescription</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RLinetype</name>::
+        <name>Id</name></name>
+      </type>
+      <name>linetypeId</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
     <name>QSet
     <argument_list>&lt;
     <argument>
@@ -860,6 +1010,18 @@ dir="./core" filename="RLinkedStorage.h">
     </argument>&gt;</argument_list></name>
   </type>
   <name>getLinetypeNames</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RLinetypePattern</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getLinetypePatterns</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>
@@ -877,116 +1039,6 @@ dir="./core" filename="RLinkedStorage.h">
       <name>const</name>
       <name>QString</name>&amp;</type>
       <name>linetypeName</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RObject</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryObjectDirect</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </type>
-      <name>objectId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>REntity</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryEntityDirect</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </type>
-      <name>objectId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RUcs</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryUcsDirect</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RUcs</name>::
-        <name>Id</name></name>
-      </type>
-      <name>ucsId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RLayer</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryLayerDirect</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLayer</name>::
-        <name>Id</name></name>
-      </type>
-      <name>layerId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RBlock</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryBlockDirect</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RBlock</name>::
-        <name>Id</name></name>
-      </type>
-      <name>blockId</name>
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
@@ -1056,9 +1108,11 @@ dir="./core" filename="RLinkedStorage.h">
   <function_decl>
   <type>
     <name>virtual</name>
-    <name>RLinetype</name>
+    <name>
+    <name>RLinetype</name>::
+    <name>Id</name></name>
   </type>
-  <name>getCurrentLinetype</name>
+  <name>getCurrentLinetypeId</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>

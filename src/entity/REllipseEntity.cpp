@@ -26,6 +26,7 @@ RPropertyTypeId REllipseEntity::PropertyType;
 RPropertyTypeId REllipseEntity::PropertyBlock;
 RPropertyTypeId REllipseEntity::PropertyLayer;
 RPropertyTypeId REllipseEntity::PropertyLinetype;
+RPropertyTypeId REllipseEntity::PropertyLinetypeScale;
 RPropertyTypeId REllipseEntity::PropertyLineweight;
 RPropertyTypeId REllipseEntity::PropertyColor;
 RPropertyTypeId REllipseEntity::PropertyDrawOrder;
@@ -67,6 +68,7 @@ void REllipseEntity::init() {
     REllipseEntity::PropertyBlock.generateId(typeid(REllipseEntity), REntity::PropertyBlock);
     REllipseEntity::PropertyLayer.generateId(typeid(REllipseEntity), REntity::PropertyLayer);
     REllipseEntity::PropertyLinetype.generateId(typeid(REllipseEntity), REntity::PropertyLinetype);
+    REllipseEntity::PropertyLinetypeScale.generateId(typeid(REllipseEntity), REntity::PropertyLinetypeScale);
     REllipseEntity::PropertyLineweight.generateId(typeid(REllipseEntity), REntity::PropertyLineweight);
     REllipseEntity::PropertyColor.generateId(typeid(REllipseEntity), REntity::PropertyColor);
     REllipseEntity::PropertyDrawOrder.generateId(typeid(REllipseEntity), REntity::PropertyDrawOrder);

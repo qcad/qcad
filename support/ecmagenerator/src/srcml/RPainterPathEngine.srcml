@@ -156,7 +156,38 @@ dir="./core" filename="RPainterPathEngine.h">
     </argument>&gt;</argument_list></name>
   </type>
   <name>getPainterPaths</name>
-  <parameter_list>()</parameter_list>;</function_decl></public>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>drawPolygon</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QPointF</name>*</type>
+      <name>points</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>pointCount</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>PolygonDrawMode</name>
+      </type>
+      <name>mode</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>
   <private>private: 
   <decl_stmt>
   <decl>

@@ -134,12 +134,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="linetypeId" isConst="false" />
       </variant>
     </method>
-    <method name="setLinetype" cppName="setLinetype"
+    <method name="setLinetypePattern" cppName="setLinetypePattern"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLinetype" typeName="RLinetype" name="linetype"
-        isConst="false" />
+        <arg type="RLinetypePattern &amp;"
+        typeName="RLinetypePattern" name="linetypePattern"
+        isConst="true" />
       </variant>
     </method>
     <method name="getLinetypeId" cppName="getLinetypeId"
@@ -153,6 +154,25 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="QStack &lt; REntity * &gt;" name="blockRefStack"
         isConst="true" />
       </variant>
+    </method>
+    <method name="getLinetypePattern" cppName="getLinetypePattern"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RLinetypePattern"
+      isPureVirtual="false" />
+    </method>
+    <method name="setLinetypeScale" cppName="setLinetypeScale"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="linetypeScale"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getLinetypeScale" cppName="getLinetypeScale"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
     </method>
     <method name="setLineweight" cppName="setLineweight"
     specifier="public" isStatic="false" isVirtual="false"
@@ -567,6 +587,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyLayer" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyLinetype" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLinetypeScale" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyLineweight" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

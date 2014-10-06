@@ -55,10 +55,6 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
     }
 
     // value comes from a combo box:
-//    else if (this.sender.toString()==="QComboBox" ||
-//        this.sender.toString().startsWith("RColorCombo") ||
-//        this.sender.toString().startsWith("RLineweightCombo") ||
-//        this.sender.toString().startsWith("RLinetypeCombo")) {
     else if (isComboBox(this.sender)) {
 
         // value is index of combo box:
@@ -197,6 +193,7 @@ function PropertyEditorImpl(basePath) {
     this.widget.findChild("LabelColor").text = RSettings.translate("REntity", "Color") + this.colon;
     this.widget.findChild("LabelLineweight").text = RSettings.translate("REntity", "Lineweight") + this.colon;
     this.widget.findChild("LabelLinetype").text = RSettings.translate("REntity", "Linetype") + this.colon;
+    this.widget.findChild("LabelLinetypeScale").text = RSettings.translate("REntity", "Linetype Scale") + this.colon;
     this.widget.findChild("LabelDrawOrder").text = RSettings.translate("REntity", "Draw Order") + this.colon;
     this.widget.findChild("LabelHandle").text = RSettings.translate("REntity", "Handle") + this.colon;
 
@@ -257,6 +254,11 @@ function PropertyEditorImpl(basePath) {
     linetypeCombo.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
     linetypeCombo.focusPolicy = Qt.ClickFocus;
 
+    var linetypeScaleEdit = this.widget.findChild("LinetypeScale");
+    linetypeScaleEdit.editingFinished.connect(
+                new PropertyWatcher(this, linetypeScaleEdit, REntity.PropertyLinetypeScale),
+                'propertyChanged');
+
     var drawOrderEdit = this.widget.findChild("DrawOrder");
     drawOrderEdit.editingFinished.connect(
                 new PropertyWatcher(this, drawOrderEdit, REntity.PropertyDrawOrder),
@@ -312,6 +314,10 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
     var colorCombo = this.widget.findChild("Color");
     var lineweightCombo = this.widget.findChild("Lineweight");
     var linetypeCombo = this.widget.findChild("Linetype");
+    var doc = EAction.getDocument();
+    linetypeCombo.init(isNull(doc) ? null : doc);
+
+    var linetypeScaleEdit = this.widget.findChild("LinetypeScale");
     var drawOrderEdit = this.widget.findChild("DrawOrder");
     var handleEdit = this.widget.findChild("Handle");
     this.makeReadOnly(handleEdit);
@@ -332,6 +338,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
         colorCombo.currentIndex = 0;
         lineweightCombo.currentIndex = 0;
         linetypeCombo.currentIndex = 0;
+        linetypeScaleEdit.text = "";
         drawOrderEdit.text = "";
         handleEdit.text = "";
         generalGroup.enabled = false;
@@ -428,8 +435,8 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
                 continue;
             }
 
-            //qDebug("\tproperty: ", title, ": ", value);
-            //qDebug("\tproperty type id: ", attributes.getPropertyTypeId());
+//            qDebug("\tproperty: ", title, ": ", value);
+//            qDebug("\tproperty type id: ", propertyTypeId);
 
 //            if (attributes.hasEnumChoices()) {
 //                var ec = attributes.getEnumChoices();
@@ -468,6 +475,11 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
             // linetype:
             else if (propertyTypeId.getId()===REntity.PropertyLinetype.getId()) {
                 this.initControls(propertyTypeId, onlyChanges, linetypeCombo);
+            }
+
+            // linetype scale:
+            else if (propertyTypeId.getId()===REntity.PropertyLinetypeScale.getId()) {
+                this.initControls(propertyTypeId, onlyChanges, linetypeScaleEdit);
             }
 
             // draw order:
@@ -1061,7 +1073,7 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
             var data = control.itemData(i);
             var match = false;
 
-            // for some types (e.g. RColor), we have to use equals here:
+            // for some types (e.g. RColor, RLinetype), we have to use equals here:
             if (!isNull(data) && isFunction(data.equals)) {
                 if (data.equals(value)) {
                     match = true;
@@ -1087,6 +1099,10 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
         }
         else if (isOfType(control, RLineweightCombo)) {
             // custom lineweight: default to ByLayer:
+            control.currentIndex = 0;
+        }
+        else if (isOfType(control, RLinetypeCombo)) {
+            // custom linetype: default to ByLayer:
             control.currentIndex = 0;
         }
         else {
@@ -1239,6 +1255,9 @@ PropertyEditor.prototype.beginEvent = function() {
     if (!QCoreApplication.arguments().contains("-no-show")) {
         dock.visible = !dock.visible;
     }
+    var linetypeCombo = this.widget.findChild("Linetype");
+    linetypeCombo.init();
+
 };
 
 PropertyEditor.prototype.finishEvent = function() {

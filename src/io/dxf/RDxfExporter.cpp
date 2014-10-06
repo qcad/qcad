@@ -41,7 +41,6 @@
 #include "RImageEntity.h"
 #include "RLeaderEntity.h"
 #include "RLineEntity.h"
-#include "RLinetypePatternMap.h"
 #include "RPointEntity.h"
 #include "RPolylineEntity.h"
 #include "RSettings.h"
@@ -119,11 +118,11 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     qDebug() << "RDxfExporter::exportFile: linetypes";
     QStringList lts = document->getLinetypeNames().toList();
     qDebug() << "RDxfExporter::exportFile: linetypes table";
-    dw->tableLineTypes(lts.size());
+    dw->tableLinetypes(lts.size());
     // continuous must always be the first LTYPE:
     QSharedPointer<RLinetype> lt = document->queryLinetype("CONTINUOUS");
     if (!lt.isNull()) {
-        writeLinetype(*lt);
+        writeLinetype(lt->getPattern());
     }
     qDebug() << "RDxfExporter::exportFile: linetypes loop";
     for (int i=0; i<lts.size(); i++) {
@@ -131,11 +130,13 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
             continue;
         }
         QSharedPointer<RLinetype> lt = document->queryLinetype(lts[i]);
-        writeLinetype(*lt);
+        if (!lt.isNull()) {
+            writeLinetype(lt->getPattern());
+        }
     }
 //    for (int t=(int)RS2::LineByBlock; t<=(int)RS2::BorderLineX2; ++t) {
-//        if ((RS2::LineType)t!=RS2::NoPen) {
-//            writeLineType((RS2::LineType)t);
+//        if ((RS2::Linetype)t!=RS2::NoPen) {
+//            writeLinetype((RS2::Linetype)t);
 //        }
 //    }
     qDebug() << "RDxfExporter::exportFile: linetypes table end";
@@ -508,10 +509,26 @@ void RDxfExporter::writeVariables() {
     */
 }
 
-void RDxfExporter::writeLinetype(const RLinetype& lt) {
-    dxf.writeLineType(
+void RDxfExporter::writeLinetype(const RLinetypePattern& lt) {
+    int numDashes = lt.getNumDashes();
+    double* dashes = new double[numDashes];
+    for (int i=0; i<numDashes; i++) {
+        dashes[i] = lt.getDashLengthAt(i);
+    }
+
+    dxf.writeLinetype(
         *dw,
-        DL_LineTypeData((const char*)RDxfExporter::escapeUnicode(lt.getName()), 0));
+        DL_LinetypeData(
+            (const char*)RDxfExporter::escapeUnicode(lt.getName()),
+            (const char*)RDxfExporter::escapeUnicode(lt.getDescription()),
+            0,
+            numDashes,
+            lt.getPatternLength(),
+            dashes
+        )
+    );
+
+    delete[] dashes;
 }
 
 void RDxfExporter::writeLayer(const RLayer& l) {
@@ -1621,7 +1638,7 @@ DL_Attributes RDxfExporter::getEntityAttributes(const REntity& entity) {
     int color24 = RDxfServices::colorToNumber24(entity.getColor());
 
     // Linetype:
-    QString lineType = document->getLinetypeName(entity.getLinetypeId());
+    QString linetype = document->getLinetypeName(entity.getLinetypeId());
 
     // Width:
     int width = RDxfServices::widthToNumber(entity.getLineweight());
@@ -1630,8 +1647,8 @@ DL_Attributes RDxfExporter::getEntityAttributes(const REntity& entity) {
                          color,
                          color24,
                          width,
-                         (const char*)RDxfExporter::escapeUnicode(lineType));
-
+                         (const char*)RDxfExporter::escapeUnicode(linetype));
+    attrib.setLinetypeScale(entity.getLinetypeScale());
     return attrib;
 }
 

@@ -36,7 +36,8 @@ dir="./core" filename="RResourceList.h">
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RS.h"</cpp:file></cpp:include>
   <comment type="block">/** * A global list of loadable resources
-  (fonts, hatch patterns, ..). * * \ingroup core */</comment>
+  (fonts, hatch patterns, line types, ..). * * \ingroup core
+  */</comment>
   <template>template 
   <parameter_list>&lt;
   <param>

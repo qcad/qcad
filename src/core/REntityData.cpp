@@ -30,6 +30,7 @@ REntityData::REntityData(RDocument* document) :
     blockId(RBlock::INVALID_ID), 
     parentId(REntity::INVALID_ID),
     linetypeId(RLinetype::INVALID_ID),
+    linetypeScale(1.0),
     lineweight(RLineweight::WeightInvalid),
     color() {
 
@@ -185,6 +186,22 @@ RLinetype::Id REntityData::getLinetypeId(bool resolve, const QStack<REntity*>& b
     return getLinetypeId();
 }
 
+void REntityData::setLinetypePattern(const RLinetypePattern& linetypePattern) {
+    if (document!=NULL) {
+        this->linetypeId = document->getLinetypeId(linetypePattern.getName());
+    }
+}
+
+RLinetypePattern REntityData::getLinetypePattern() const {
+    if (document==NULL) {
+        return RLinetypePattern();
+    }
+    QSharedPointer<RLinetype> lt = document->queryLinetype(linetypeId);
+    if (lt.isNull()) {
+        return RLinetypePattern();
+    }
+    return lt->getPattern();
+}
 
 /**
  * \return The shortest distance from this entity to the given point.
@@ -198,13 +215,6 @@ double REntityData::getDistanceTo(const RVector& point, bool limited, double ran
         return v.getMagnitude();
     }
     return RNANDOUBLE;
-}
-
-
-void REntityData::setLinetype(RLinetype linetype) {
-    if (document!=NULL) {
-        this->linetypeId = document->getLinetypeId(linetype.getName());
-    }
 }
 
 /**

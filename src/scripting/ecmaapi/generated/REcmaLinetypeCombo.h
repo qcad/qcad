@@ -45,13 +45,16 @@
 
     // public methods:
     static  QScriptValue
-        getLinetype
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setLinetype
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         init
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        reinit
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLinetypePattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLinetypePattern
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getOnlyFixed
@@ -60,7 +63,7 @@
         setOnlyFixed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        linetypeChanged
+        linetypePatternChanged
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

@@ -83,25 +83,42 @@ struct DXFLIB_EXPORT DL_BlockData {
 };
 
 
-
 /**
  * Line Type Data.
  */
-struct DXFLIB_EXPORT DL_LineTypeData {
+struct DXFLIB_EXPORT DL_LinetypeData {
     /**
      * Constructor.
      * Parameters: see member variables.
      */
-    DL_LineTypeData(const std::string& lName,
-                    int lFlags) {
-        name = lName;
-        flags = lFlags;
-    }
+    DL_LinetypeData(
+        const std::string& name,
+        const std::string& description,
+        int flags,
+        int numberOfDashes,
+        double patternLength,
+        double* pattern = NULL
+        )
+        : name(name),
+        description(description),
+        flags(flags),
+        numberOfDashes(numberOfDashes),
+        patternLength(patternLength),
+        pattern(pattern)
+    {}
 
-    /** Line type name. */
+    /** Linetype name */
     std::string name;
-    /** Line type flags. */
+    /** Linetype description */
+    std::string description;
+    /** Linetype flags */
     int flags;
+    /** Number of dashes */
+    int numberOfDashes;
+    /** Pattern length */
+    double patternLength;
+    /** Pattern */
+    double* pattern;
 };
 
 

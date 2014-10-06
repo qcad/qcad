@@ -271,8 +271,10 @@ public:
     void setCurrentLineweight(RLineweight::Lineweight lw);
     RLineweight::Lineweight getCurrentLineweight();
 
-    void setCurrentLinetype(RLinetype lt);
-    RLinetype getCurrentLinetype();
+    void setCurrentLinetype(RLinetype::Id ltId);
+    void setCurrentLinetypePattern(const RLinetypePattern& p);
+    RLinetype::Id getCurrentLinetypeId();
+    RLinetypePattern getCurrentLinetypePattern();
 
     void setCurrentLayer(const RLayer& layer);
     void setCurrentLayer(const QString& layerName);

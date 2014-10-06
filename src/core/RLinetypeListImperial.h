@@ -17,37 +17,40 @@
  * along with QCAD.
  */
 
-#ifndef RLINETYPEPATTERNMAP_H
-#define RLINETYPEPATTERNMAP_H
+#ifndef RLINETYPELISTIMPERIAL_H
+#define RLINETYPELISTIMPERIAL_H
 
 #include "core_global.h"
 
-#include <QList>
-#include <QString>
-#include <QMap>
-
-#include "RLinetypePattern.h"
+#include "RLinetypeList.h"
 
 /**
- * Provides access to the global, static map of available linetypes.
- * \todo Refactor to use linetypes that are stored in drawings and
- * allow for custom linetypes.
+ * The global list of imperial linetypes.
  *
+ * \ingroup core
  * \scriptable
  */
-class QCADCORE_EXPORT RLinetypePatternMap: public QMap<QString, RLinetypePattern> {
+class QCADCORE_EXPORT RLinetypeListImperial : public RLinetypeList {
 public:
-    RLinetypePatternMap();
-    RLinetypePatternMap(const RLinetypePatternMap*) {}
+    static void init();
 
-    static RLinetypePattern getPattern(const QString& name);
-    static QList<RLinetypePattern> getPatterns();
+    static void uninit() {
+        res.uninit();
+    }
+
+    static QStringList getNames() {
+        return res.getNames();
+    }
+
+    static RLinetypePattern* get(const QString& name) {
+        return res.get(name);
+    }
 
 private:
-    static RLinetypePatternMap patternMap;
+    static RResourceList<RLinetypePattern> res;
 };
 
-Q_DECLARE_METATYPE(RLinetypePatternMap*)
-Q_DECLARE_METATYPE(RLinetypePatternMap)
+Q_DECLARE_METATYPE(RLinetypeListImperial)
+Q_DECLARE_METATYPE(RLinetypeListImperial*)
 
 #endif

@@ -105,10 +105,19 @@
         setLinetypeId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setLinetype
+        getLinetypeId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getLinetypeId
+        setLinetypePattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLinetypePattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLinetypeScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLinetypeScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLineweight

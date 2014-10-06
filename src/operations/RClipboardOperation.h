@@ -99,8 +99,24 @@ protected:
         RTransaction& transaction
     ) const;
 
+    QSharedPointer<RLinetype> copyEntityLinetype(
+            REntity& entity,
+            RDocument& src,
+            RDocument& dest,
+            bool overwriteLinetypes,
+            RTransaction& transaction
+            ) const;
+
+    QSharedPointer<RLinetype> copyLinetype(
+            RLinetype::Id linetypeId,
+            RDocument& src, RDocument& dest,
+            bool overwriteLinetypes,
+            RTransaction& transaction
+            ) const;
+
 private:
     mutable QMap<QString, QSharedPointer<RLayer> > copiedLayers;
+    mutable QMap<QString, QSharedPointer<RLinetype> > copiedLinetypes;
     mutable QMap<QString, QSharedPointer<RBlock> > copiedBlocks;
     mutable QSet<RBlock::Id> copiedBlockContents;
 };

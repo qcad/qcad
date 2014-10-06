@@ -26,7 +26,7 @@ RStorage::RStorage() :
     handleCounter(0),
     currentColor(RColor::ByLayer),
     currentLineweight(RLineweight::WeightByLayer),
-    currentLinetype(RLinetype(NULL, "BYLAYER")),
+    currentLinetypeId(RLinetype::INVALID_ID),
     currentLayerId(RLayer::INVALID_ID),
     currentViewId(RView::INVALID_ID),
     currentBlockId(RBlock::INVALID_ID),
@@ -83,12 +83,36 @@ RLineweight::Lineweight RStorage::getCurrentLineweight() const {
     return currentLineweight;
 }
 
-void RStorage::setCurrentLinetype(RLinetype lt) {
-    currentLinetype = lt;
+void RStorage::setCurrentLinetype(RLinetype::Id ltId) {
+    currentLinetypeId = ltId;
 }
 
-RLinetype RStorage::getCurrentLinetype() const {
-    return currentLinetype;
+void RStorage::setCurrentLinetype(const QString& name) {
+    QSet<RLinetype::Id> ltIds = queryAllLinetypes();
+    QSet<RLinetype::Id>::iterator it;
+    for (it = ltIds.begin(); it != ltIds.end(); ++it) {
+        QSharedPointer<RLinetype> lt = queryLinetypeDirect(*it);
+        if (lt->getName().toUpper()==name.toUpper()) {
+            setCurrentLinetype(lt->getId());
+            return;
+        }
+    }
+}
+
+void RStorage::setCurrentLinetypePattern(const RLinetypePattern& p) {
+    setCurrentLinetype(p.getName());
+}
+
+RLinetype::Id RStorage::getCurrentLinetypeId() const {
+    return currentLinetypeId;
+}
+
+RLinetypePattern RStorage::getCurrentLinetypePattern() const {
+    QSharedPointer<RLinetype> lt = queryCurrentLinetype();
+    if (lt.isNull()) {
+        return RLinetypePattern();
+    }
+    return lt->getPattern();
 }
 
 bool RStorage::hasView(const QString& viewName) const {
@@ -186,6 +210,13 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
         dbg.nospace() << "current layer: " << layer->getName() << "\n";
     }
     dbg.nospace() << "current view ID: " << s.getCurrentViewId() << "\n";
+    QSharedPointer<RLinetype> linetype = s.queryCurrentLinetype();
+    if (linetype.isNull()) {
+        dbg.nospace() << "current linetype: INVALID\n";
+    }
+    else {
+        dbg.nospace() << "current linetype: " << linetype->getName() << "\n";
+    }
     dbg.nospace() << "drawing unit: " << s.getUnit() << "\n";
     dbg.nospace() << "dimension font: " << s.getDimensionFont() << "\n";
     dbg.nospace() << "bounding box: " << s.getBoundingBox() << "\n";
@@ -205,7 +236,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
     }
 
     {
-        QSet<RLayer::Id> views = s.queryAllViews(true);
+        QSet<RView::Id> views = s.queryAllViews(true);
         QSetIterator<RView::Id> i(views);
         while (i.hasNext()) {
             RView::Id id = i.next();
@@ -219,7 +250,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
     }
 
     {
-        QSet<RLayer::Id> blocks = s.queryAllBlocks(true);
+        QSet<RBlock::Id> blocks = s.queryAllBlocks(true);
         QSetIterator<RBlock::Id> i(blocks);
         while (i.hasNext()) {
             RBlock::Id id = i.next();
@@ -230,6 +261,20 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
             }
             dbg.nospace() << *b.data() << "\n";
             dbg.nospace() << "block entities: " << s.queryBlockEntities(id) << "\n";
+        }
+    }
+
+    {
+        QSet<RLinetype::Id> linetypes = s.queryAllLinetypes();
+        QSetIterator<RLinetype::Id> i(linetypes);
+        while (i.hasNext()) {
+            RLinetype::Id id = i.next();
+            QSharedPointer<RLinetype> l = s.queryObjectDirect(id).dynamicCast<RLinetype>();
+            if (l.isNull()) {
+                dbg.nospace() << "linetype not found: " << id;
+                continue;
+            }
+            dbg.nospace() << *l.data() << "\n";
         }
     }
 

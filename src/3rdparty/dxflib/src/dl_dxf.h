@@ -52,11 +52,11 @@ class DL_CreationInterface;
 class DL_WriterA;
 
 
-#define DL_VERSION "3.3.4.0"
+#define DL_VERSION "3.7.0.0"
 
 #define DL_VERSION_MAJOR    3
-#define DL_VERSION_MINOR    3
-#define DL_VERSION_REV      4
+#define DL_VERSION_MINOR    7
+#define DL_VERSION_REV      0
 #define DL_VERSION_BUILD    0
 
 #define DL_UNKNOWN               0
@@ -138,6 +138,7 @@ public:
                          int groupCode, const std::string& groupValue);
     void addSetting(DL_CreationInterface* creationInterface);
     void addLayer(DL_CreationInterface* creationInterface);
+    void addLinetype(DL_CreationInterface *creationInterface);
     void addBlock(DL_CreationInterface* creationInterface);
     void endBlock(DL_CreationInterface* creationInterface);
     void addTextStyle(DL_CreationInterface* creationInterface);
@@ -198,6 +199,7 @@ public:
     bool handleLWPolylineData(DL_CreationInterface* creationInterface);
     bool handleSplineData(DL_CreationInterface* creationInterface);
     bool handleLeaderData(DL_CreationInterface* creationInterface);
+    bool handleLinetypeData(DL_CreationInterface* creationInterface);
 
     void endEntity(DL_CreationInterface* creationInterface);
     
@@ -317,8 +319,8 @@ public:
                     const DL_LayerData& data,
                     const DL_Attributes& attrib);
 
-    void writeLineType(DL_WriterA& dw,
-                       const DL_LineTypeData& data);
+    void writeLinetype(DL_WriterA& dw,
+                       const DL_LinetypeData& data);
 
     void writeAppid(DL_WriterA& dw, const std::string& name);
 

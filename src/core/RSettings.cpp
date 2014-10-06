@@ -50,6 +50,7 @@ int RSettings::showLargeCrosshair = -1;
 int RSettings::concurrentDrawing = -1;
 int RSettings::previewEntities = -1;
 int RSettings::limitZoomAndScroll = -1;
+int RSettings::autoScaleLinetypePattern = -1;
 double RSettings::arcAngleLengthThreshold = -1;
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
@@ -761,6 +762,13 @@ bool RSettings::isXDataEnabled() {
     return xDataEnabled;
 }
 
+bool RSettings::getAutoScaleLinetypePatterns() {
+    if (autoScaleLinetypePattern==-1) {
+        autoScaleLinetypePattern = getValue("GraphicsView/AutoScaleLinetypePatterns", QVariant(true)).toBool();
+    }
+    return (bool)autoScaleLinetypePattern;
+}
+
 void RSettings::resetCache() {
     if (rulerFont!=NULL) {
         delete rulerFont;
@@ -785,6 +793,7 @@ void RSettings::resetCache() {
     concurrentDrawing = -1;
     previewEntities = -1;
     limitZoomAndScroll = -1;
+    autoScaleLinetypePattern = -1;
     arcAngleLengthThreshold = -1;
     cache.clear();
 }

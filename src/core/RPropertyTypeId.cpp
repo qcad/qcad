@@ -51,7 +51,7 @@ RPropertyTypeId::RPropertyTypeId(long int id) {
 void RPropertyTypeId::generateId(const std::type_info& classInfo,
         const QString& groupTitle, const QString& title, bool forceNew) {
     if (id!=-1) {
-        qWarning("RPropertyTypeId::generateId: property already initialized");
+        qWarning() << "RPropertyTypeId::generateId: property already initialized: " << classInfo.name() << ":" << groupTitle << ":" << title;
         return;
     }
 

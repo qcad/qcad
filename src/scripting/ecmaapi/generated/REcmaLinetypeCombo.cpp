@@ -63,17 +63,19 @@
 
     // methods:
     
-            REcmaHelper::registerFunction(&engine, proto, getLinetype, "getLinetype");
-            
-            REcmaHelper::registerFunction(&engine, proto, setLinetype, "setLinetype");
-            
             REcmaHelper::registerFunction(&engine, proto, init, "init");
+            
+            REcmaHelper::registerFunction(&engine, proto, reinit, "reinit");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLinetypePattern, "getLinetypePattern");
+            
+            REcmaHelper::registerFunction(&engine, proto, setLinetypePattern, "setLinetypePattern");
             
             REcmaHelper::registerFunction(&engine, proto, getOnlyFixed, "getOnlyFixed");
             
             REcmaHelper::registerFunction(&engine, proto, setOnlyFixed, "setOnlyFixed");
             
-            REcmaHelper::registerFunction(&engine, proto, linetypeChanged, "linetypeChanged");
+            REcmaHelper::registerFunction(&engine, proto, linetypePatternChanged, "linetypePatternChanged");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RLinetypeCombo*>(), *proto);
@@ -235,122 +237,6 @@
 
     // public methods:
      QScriptValue
-        REcmaLinetypeCombo::getLinetype
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaLinetypeCombo::getLinetype", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::getLinetype";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RLinetypeCombo* self = 
-                        getSelf("getLinetype", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RLinetype'
-    RLinetype cppResult =
-        
-               self->getLinetype();
-        // return type: RLinetype
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.getLinetype().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaLinetypeCombo::getLinetype", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaLinetypeCombo::setLinetype
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaLinetypeCombo::setLinetype", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::setLinetype";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RLinetypeCombo* self = 
-                        getSelf("setLinetype", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RLinetype */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RLinetype*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RLinetype*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RLinetypeCombo: Argument 0 is not of type RLinetype.",
-                               context);                    
-                    }
-                    RLinetype 
-                    a0 = 
-                    *ap0;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setLinetype(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.setLinetype().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaLinetypeCombo::setLinetype", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaLinetypeCombo::init
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -373,16 +259,34 @@
                 
     
     if( context->argumentCount() ==
-    0
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocument * */
+    
     ){
     // prepare arguments:
     
+                    // argument is pointer
+                    RDocument * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocument >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RLinetypeCombo: Argument 0 is not of type RDocument *RDocument *.", context);                    
+                    }
+                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->init();
+               self->init(a0);
     } else
 
 
@@ -392,6 +296,193 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinetypeCombo::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypeCombo::reinit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypeCombo::reinit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::reinit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypeCombo* self = 
+                        getSelf("reinit", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->reinit();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.reinit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypeCombo::reinit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypeCombo::getLinetypePattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypeCombo::getLinetypePattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::getLinetypePattern";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypeCombo* self = 
+                        getSelf("getLinetypePattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLinetypePattern'
+    RLinetypePattern cppResult =
+        
+               self->getLinetypePattern();
+        // return type: RLinetypePattern
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.getLinetypePattern().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypeCombo::getLinetypePattern", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypeCombo::setLinetypePattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypeCombo::setLinetypePattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::setLinetypePattern";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypeCombo* self = 
+                        getSelf("setLinetypePattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLinetypePattern(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLinetypePattern */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLinetypePattern*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLinetypePattern*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLinetypeCombo: Argument 0 is not of type RLinetypePattern.",
+                               context);                    
+                    }
+                    RLinetypePattern 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLinetypePattern(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.setLinetypePattern().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypeCombo::setLinetypePattern", context, engine);
             return result;
         }
          QScriptValue
@@ -499,19 +590,19 @@
             return result;
         }
          QScriptValue
-        REcmaLinetypeCombo::linetypeChanged
+        REcmaLinetypeCombo::linetypePatternChanged
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLinetypeCombo::linetypeChanged", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::linetypeChanged";
+            //REcmaHelper::functionStart("REcmaLinetypeCombo::linetypePatternChanged", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::linetypePatternChanged";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RLinetypeCombo* self = 
-                        getSelf("linetypeChanged", context);
+                        getSelf("linetypePatternChanged", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -541,16 +632,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->linetypeChanged(a0);
+               self->linetypePatternChanged(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.linetypeChanged().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.linetypePatternChanged().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLinetypeCombo::linetypeChanged", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinetypeCombo::linetypePatternChanged", context, engine);
             return result;
         }
          QScriptValue REcmaLinetypeCombo::toString

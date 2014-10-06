@@ -60,6 +60,7 @@ InsertBlockItem.prototype.beginEvent = function() {
     var si = new RSpatialIndexNavel();
     this.docItem = new RDocument(ms, si);
     this.diItem = new RDocumentInterface(this.docItem);
+    this.diItem.setNotifyListeners(false);
 
     // TODO refactor
     BlockInsert.prototype.beginEvent.call(this);

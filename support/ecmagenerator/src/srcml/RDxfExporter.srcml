@@ -205,7 +205,7 @@ dir="./io/dxf" filename="RDxfExporter.h">
     <decl>
       <type>
       <name>const</name>
-      <name>RLinetype</name>&amp;</type>
+      <name>RLinetypePattern</name>&amp;</type>
       <name>lt</name>
     </decl>
   </param>)</parameter_list>;</function_decl>

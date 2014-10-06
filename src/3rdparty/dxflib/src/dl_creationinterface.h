@@ -70,6 +70,16 @@ public:
     virtual void addLayer(const DL_LayerData& data) = 0;
 
     /**
+     * Called for every linetype.
+     */
+    virtual void addLinetype(const DL_LinetypeData& data) = 0;
+
+    /**
+      * Called for every dash in linetype pattern
+      */
+    virtual void addLinetypeDash(double length) = 0;
+
+    /**
      * Called for every block. Note: all entities added after this
      * command go into this block until endBlock() is called.
     *

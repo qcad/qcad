@@ -25,6 +25,7 @@ RPropertyTypeId RDimRadialEntity::PropertyType;
 RPropertyTypeId RDimRadialEntity::PropertyBlock;
 RPropertyTypeId RDimRadialEntity::PropertyLayer;
 RPropertyTypeId RDimRadialEntity::PropertyLinetype;
+RPropertyTypeId RDimRadialEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimRadialEntity::PropertyLineweight;
 RPropertyTypeId RDimRadialEntity::PropertyColor;
 RPropertyTypeId RDimRadialEntity::PropertyDrawOrder;
@@ -63,6 +64,7 @@ void RDimRadialEntity::init() {
     RDimRadialEntity::PropertyBlock.generateId(typeid(RDimRadialEntity), REntity::PropertyBlock);
     RDimRadialEntity::PropertyLayer.generateId(typeid(RDimRadialEntity), REntity::PropertyLayer);
     RDimRadialEntity::PropertyLinetype.generateId(typeid(RDimRadialEntity), REntity::PropertyLinetype);
+    RDimRadialEntity::PropertyLinetypeScale.generateId(typeid(RDimRadialEntity), REntity::PropertyLinetypeScale);
     RDimRadialEntity::PropertyLineweight.generateId(typeid(RDimRadialEntity), REntity::PropertyLineweight);
     RDimRadialEntity::PropertyColor.generateId(typeid(RDimRadialEntity), REntity::PropertyColor);
     RDimRadialEntity::PropertyDrawOrder.generateId(typeid(RDimRadialEntity), REntity::PropertyDrawOrder);

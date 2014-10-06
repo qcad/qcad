@@ -25,6 +25,7 @@ RPropertyTypeId RAttributeEntity::PropertyType;
 RPropertyTypeId RAttributeEntity::PropertyBlock;
 RPropertyTypeId RAttributeEntity::PropertyLayer;
 RPropertyTypeId RAttributeEntity::PropertyLinetype;
+RPropertyTypeId RAttributeEntity::PropertyLinetypeScale;
 RPropertyTypeId RAttributeEntity::PropertyLineweight;
 RPropertyTypeId RAttributeEntity::PropertyColor;
 RPropertyTypeId RAttributeEntity::PropertyDrawOrder;
@@ -61,6 +62,7 @@ void RAttributeEntity::init() {
     RAttributeEntity::PropertyBlock.generateId(typeid(RAttributeEntity), REntity::PropertyBlock);
     RAttributeEntity::PropertyLayer.generateId(typeid(RAttributeEntity), REntity::PropertyLayer);
     RAttributeEntity::PropertyLinetype.generateId(typeid(RAttributeEntity), REntity::PropertyLinetype);
+    RAttributeEntity::PropertyLinetypeScale.generateId(typeid(RAttributeEntity), REntity::PropertyLinetypeScale);
     RAttributeEntity::PropertyLineweight.generateId(typeid(RAttributeEntity), REntity::PropertyLineweight);
     RAttributeEntity::PropertyColor.generateId(typeid(RAttributeEntity), REntity::PropertyColor);
     RAttributeEntity::PropertyDrawOrder.generateId(typeid(RAttributeEntity), REntity::PropertyDrawOrder);

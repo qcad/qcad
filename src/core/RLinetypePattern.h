@@ -27,9 +27,13 @@
 
 #include <QMetaType>
 #include <QString>
+#include <QPair>
 #include <QList>
 #include <QVector>
-
+//#include <QChar>
+//#include <QMap>
+//#include <QPainterPath>
+//#include <QSharedPointer>
 
 
 /**
@@ -44,16 +48,27 @@ public:
     /**
      * \nonscriptable
      */
-    RLinetypePattern(const QString& name, int num...);
-    void set(const QList<double> dashes);
+    RLinetypePattern(const QString& name, const QString& description, int num...);
+
+    RLinetypePattern(const QString& name, const QString& description, const QList<double>& dashes);
+
+    void set(const QList<double>& dashes);
+
+    static QList<QPair<QString, RLinetypePattern*> > loadAllFrom(const QString& fileName);
 
     RLinetypePattern();
-    RLinetypePattern(const QString& name);
+    RLinetypePattern(const QString& name, const QString& description);
     RLinetypePattern(const RLinetypePattern& other);
     ~RLinetypePattern();
 
     bool isValid() const;
     int getNumDashes() const;
+    QString getName() const;
+    void setName(const QString& n);
+    QString getDescription() const;
+    void setDescription(const QString& d);
+    QIcon getIcon() const;
+    QList<double> getPattern() const;
     double getPatternLength() const;
     double getDashLengthAt(int i) const;
     double getLargestGap() const;
@@ -67,10 +82,15 @@ public:
     RLinetypePattern& operator=(const RLinetypePattern& other);
     bool operator==(const RLinetypePattern& other) const;
 
-private:
+    bool isLoaded() { return true; }
+    void load() {}
+
+public:
     QString name;
-    int num;
-    double* pattern;
+    QString description;
+    QList<double> pattern;
+
+    // internal info about segments at which the pattern is symmetrical:
     bool* symmetrical;
 };
 

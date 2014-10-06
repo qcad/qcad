@@ -26,6 +26,7 @@ RPropertyTypeId RArcEntity::PropertyType;
 RPropertyTypeId RArcEntity::PropertyBlock;
 RPropertyTypeId RArcEntity::PropertyLayer;
 RPropertyTypeId RArcEntity::PropertyLinetype;
+RPropertyTypeId RArcEntity::PropertyLinetypeScale;
 RPropertyTypeId RArcEntity::PropertyLineweight;
 RPropertyTypeId RArcEntity::PropertyColor;
 RPropertyTypeId RArcEntity::PropertyDrawOrder;
@@ -65,6 +66,7 @@ void RArcEntity::init() {
     RArcEntity::PropertyBlock.generateId(typeid(RArcEntity), REntity::PropertyBlock);
     RArcEntity::PropertyLayer.generateId(typeid(RArcEntity), REntity::PropertyLayer);
     RArcEntity::PropertyLinetype.generateId(typeid(RArcEntity), REntity::PropertyLinetype);
+    RArcEntity::PropertyLinetypeScale.generateId(typeid(RArcEntity), REntity::PropertyLinetypeScale);
     RArcEntity::PropertyLineweight.generateId(typeid(RArcEntity), REntity::PropertyLineweight);
     RArcEntity::PropertyColor.generateId(typeid(RArcEntity), REntity::PropertyColor);
     RArcEntity::PropertyDrawOrder.generateId(typeid(RArcEntity), REntity::PropertyDrawOrder);

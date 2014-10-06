@@ -1318,6 +1318,21 @@ dir="./core" filename="RS.h">
       <name>metric</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QStringList</name>
+  </type>
+  <name>getLinetypeList</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>metric</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <template>template
   <parameter_list>&lt;
   <param>

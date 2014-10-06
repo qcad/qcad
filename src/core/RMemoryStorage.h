@@ -78,6 +78,7 @@ public:
     virtual QSharedPointer<RView> queryView(const QString& viewName) const;
     virtual QSharedPointer<RUcs> queryUcs(RUcs::Id ucsId) const;
     virtual QSharedPointer<RUcs> queryUcs(const QString& ucsName) const;
+    virtual QSharedPointer<RLinetype> queryLinetypeDirect(RLinetype::Id linetypeId) const;
     virtual QSharedPointer<RLinetype> queryLinetype(RLinetype::Id linetypeId) const;
     virtual QSharedPointer<RLinetype> queryLinetype(const QString& linetypeName) const;
 
@@ -139,7 +140,9 @@ public:
     virtual RView::Id getViewId(const QString& viewName) const;
 
     virtual QString getLinetypeName(RLinetype::Id linetypeId) const;
+    virtual QString getLinetypeDescription(RLinetype::Id linetypeId) const;
     virtual QSet<QString> getLinetypeNames() const;
+    virtual QList<RLinetypePattern> getLinetypePatterns() const;
     virtual RLinetype::Id getLinetypeId(const QString& linetypeName) const;
 
     virtual QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const;
@@ -173,6 +176,7 @@ protected:
     QMultiHash<RBlock::Id, QSharedPointer<REntity> > blockEntityMap;
     QHash<RBlock::Id, QSharedPointer<RBlock> > blockMap;
     QHash<RLayer::Id, QSharedPointer<RLayer> > layerMap;
+    QHash<RLayer::Id, QSharedPointer<RLinetype> > linetypeMap;
     QHash<int, RTransaction> transactionMap;
     QHash<QString, QVariant> variables;
     QMap<QString, QString> variableCaseMap;

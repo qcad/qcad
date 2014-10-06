@@ -40,7 +40,7 @@ class RTransaction;
 
 /**
  * Represents a linetype in a drawing. A linetype is an object (RObject).
- * A drawings contains and owns a set of linetypes.
+ * A drawing contains and owns a set of linetypes.
  *
  * \ingroup core
  * \scriptable
@@ -49,14 +49,15 @@ class RTransaction;
  */
 class QCADCORE_EXPORT RLinetype: public RObject {
 
-    Q_DECLARE_TR_FUNCTIONS(RLinetype);
+    //Q_DECLARE_TR_FUNCTIONS(RLinetype);
 
 public:
     static RPropertyTypeId PropertyName;
+    static RPropertyTypeId PropertyDescription;
 
 public:
     RLinetype(RDocument* document=NULL);
-    RLinetype(RDocument* document, const QString& name);
+    RLinetype(RDocument* document, const RLinetypePattern& pattern);
 
     virtual ~RLinetype();
 
@@ -67,16 +68,24 @@ public:
     }
 
     QString getName() const {
-        return name;
+        return pattern.getName();
     }
 
     void setName(const QString& n) {
-        name = n;
+        pattern.setName(n);
+    }
+
+    QString getDescription() const {
+        return pattern.getDescription();
+    }
+
+    void setDescription(const QString& d) {
+        pattern.setDescription(d);
     }
 
     bool isValid() const;
 
-    static QList<QPair<QString, RLinetype> > getList(bool onlyFixed = false);
+    //static QList<QPair<QString, RLinetype> > getList(bool onlyFixed = false);
 
     virtual QPair<QVariant, RPropertyAttributes> getProperty(
             RPropertyTypeId& propertyTypeId,
@@ -86,20 +95,29 @@ public:
 
     virtual bool isSelectedForPropertyEditing();
 
-    static QIcon getIcon(const RLinetype& linetype);
-    static QString getTitle(const RLinetype& linetype);
+    RLinetypePattern getPattern() const;
+    void setPattern(const RLinetypePattern& p);
+
+//    static QIcon getIcon(const RLinetype& linetype);
+//  static QString getTitle(const RLinetype& linetype);
 
     bool operator==(const RLinetype & linetype) const;
     bool operator!=(const RLinetype & linetype) const;
     bool operator<(const RLinetype & linetype) const;
 
-private:
-    static void init(const QString& cn, const RLinetype& c);
+//private:
+//    static void init(const QString& cn, const RLinetype& c);
 
 private:
-    QString name;
-    static QList<QPair<QString, RLinetype> > list;
-    static QMap<RLinetype, QIcon> iconMap;
+    RLinetypePattern pattern;
+    //QString name;
+    //QString description;
+    //int flags;
+    //int numberOfDashes;
+    //double patternLength;
+    //double* pattern;
+    //static QList<QPair<QString, RLinetype> > list;
+    //static QMap<RLinetype, QIcon> iconMap;
 };
 
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RLinetype& l);

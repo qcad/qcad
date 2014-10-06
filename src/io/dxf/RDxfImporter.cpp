@@ -21,6 +21,7 @@
 #include <QFileInfo>
 #include <QTextCodec>
 #include <QMultiMap>
+#include  <QDebug>
 
 #include "dxflib/src/dl_dxf.h"
 
@@ -47,6 +48,7 @@
 #include "RLeaderEntity.h"
 #include "RLineEntity.h"
 #include "RLinetype.h"
+#include "RLinetypePattern.h"
 #include "RModifyObjectsOperation.h"
 #include "RPointEntity.h"
 #include "RPolylineEntity.h"
@@ -202,7 +204,7 @@ void RDxfImporter::addLayer(const DL_LayerData& data) {
     RColor color = RDxfServices::attributesToColor(
         attributes.getColor(), attributes.getColor24(), dxfColors, true);
     RLinetype::Id linetypeId = RLinetype::INVALID_ID;
-    linetypeId = document->getLinetypeId(attributes.getLineType().c_str());
+    linetypeId = document->getLinetypeId(attributes.getLinetype().c_str());
     if (linetypeId == RLinetype::INVALID_ID) {
         linetypeId = document->getLinetypeId("CONTINUOUS");
     }
@@ -229,6 +231,59 @@ void RDxfImporter::addLayer(const DL_LayerData& data) {
     }
 
     importObjectP(layer);
+}
+
+void RDxfImporter::addLinetype(const DL_LinetypeData& data) {
+    QString name = decode(data.name.c_str());
+    QString description = decode(data.description.c_str());
+    //QString description = decode(data.description.c_str());
+    //int numDashes = data.numberOfDashes;
+    //double patternLength = data.patternLength;
+
+    if (pattern.count() > 0) {
+        for (int i = 0; i < pattern.count(); i++) {
+            if (pattern.at(i) == 0) {
+                // subtract half of 0.1 (0.05) from previous space
+                // and following space (if any)
+                // The spaces are negative numbers so we add 0.05
+                if (i == 0) {
+                    pattern.replace(i, 0.1);
+                    pattern.replace(i + 1, pattern.at(i + 1) + 0.1);
+                } else if (i > 0 && i < pattern.count() - 1) {
+                    pattern.replace(i - 1, pattern.at(i - 1) + 0.05);
+                    pattern.replace(i, 0.1);
+                    pattern.replace(i + 1, pattern.at(i + 1) + 0.05);
+                } else if (i == pattern.count() - 1) {
+                    pattern.replace(i - 1, pattern.at(i - 1) + 0.1);
+                    pattern.replace(i, 0.1);
+                }
+            }
+        }
+    }
+
+//    for (int i = 0; i < numDashes; i++) {
+//        data.pattern[i] = pattern[i];
+//    }
+
+    //RLinetypePattern lt = RLinetypePatternMap::getPattern(name.toUpper());
+    //if (!lt.isValid()) {
+        // linetype name not found
+        //RLinetypePatternMap::addLinetype(data);
+        //document->addLinetype(name);
+        QSharedPointer<RLinetype> linetype(
+                    new RLinetype(
+                        document,
+                        RLinetypePattern(name, description, pattern)
+                        )
+                    );
+
+        importObjectP(linetype);
+    //}
+    pattern.clear();
+}
+
+void RDxfImporter::addLinetypeDash(double length) {
+    pattern.append(length);
 }
 
 void RDxfImporter::addBlock(const DL_BlockData& data) {
@@ -394,7 +449,7 @@ void RDxfImporter::importEntity(QSharedPointer<REntity> entity) {
     }
 
     // Linetype:
-    QString linetypeName = decode(attributes.getLineType().c_str());
+    QString linetypeName = decode(attributes.getLinetype().c_str());
     RLinetype::Id linetypeId = document->getLinetypeId(linetypeName);
     if (linetypeId==RLinetype::INVALID_ID) {
         qWarning() << "RDxfImporter::importEntity: "
@@ -403,6 +458,9 @@ void RDxfImporter::importEntity(QSharedPointer<REntity> entity) {
         linetypeId = document->getLinetypeByLayerId();
     }
     entity->setLinetypeId(linetypeId);
+
+    // linetype scale:
+    entity->setLinetypeScale(attributes.getLinetypeScale());
 
     // Width:
     entity->setLineweight(RDxfServices::numberToWeight(attributes.getWidth()));

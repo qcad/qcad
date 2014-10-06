@@ -67,7 +67,7 @@ public:
     virtual bool exportFile(const QString& fileName, const QString& nameFilter, bool setFileName = true);
 
     void writeVariables();
-    void writeLinetype(const RLinetype& lt);
+    void writeLinetype(const RLinetypePattern& lt);
     void writeLayer(const RLayer& l);
     void writeBlock(const RBlock& b);
 

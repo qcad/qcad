@@ -23,10 +23,9 @@
 #include "gui_global.h"
 
 #include <QComboBox>
-#include <QColor>
 
 #include "RDocument.h"
-#include "RLinetype.h"
+#include "RLinetypePattern.h"
 
 /**
  * \scriptable
@@ -38,22 +37,26 @@ Q_OBJECT
 Q_PROPERTY(bool onlyFixed READ getOnlyFixed WRITE setOnlyFixed);
 
 public:
-    RLinetypeCombo(QWidget *parent = 0);
+    RLinetypeCombo(QWidget* parent = 0);
 
-    RLinetype getLinetype();
-    void setLinetype(const RLinetype& linetype);
-    void init();
+    void init(RDocument* doc);
+    void reinit();
+
+    RLinetypePattern getLinetypePattern();
+    void setLinetypePattern(const QString& name);
+    void setLinetypePattern(const RLinetypePattern& linetypePattern);
     bool getOnlyFixed();
     void setOnlyFixed(bool onlyFixed);
 
 signals:
-    void valueChanged(const RLinetype& linetype);
+    void valueChanged(const RLinetypePattern& linetypePattern);
 
 public slots:
-    void linetypeChanged(int index);
+    void linetypePatternChanged(int index);
 
 private:
     bool onlyFixed;
+    QList<RLinetypePattern> patterns;
 };
 
 Q_DECLARE_METATYPE(RLinetypeCombo*)

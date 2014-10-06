@@ -65,6 +65,7 @@ public:
     virtual ~RDocument();
 
     void init();
+    void initLinetypes();
 
     RStorage& getStorage();
     const RStorage& getStorage() const;
@@ -220,8 +221,11 @@ public:
     void setCurrentLineweight(RLineweight::Lineweight lw);
     RLineweight::Lineweight getCurrentLineweight() const;
 
-    void setCurrentLinetype(RLinetype lt);
-    RLinetype getCurrentLinetype() const;
+    void setCurrentLinetype(RLinetype::Id ltId);
+    void setCurrentLinetype(const QString& name);
+    void setCurrentLinetypePattern(const RLinetypePattern& p);
+    RLinetype::Id getCurrentLinetypeId() const;
+    RLinetypePattern getCurrentLinetypePattern() const;
 
     QSharedPointer<RBlock> queryCurrentBlock();
     void setCurrentBlock(RBlock::Id blockId);
@@ -257,7 +261,9 @@ public:
         return linetypeByBlockId;
     }
     QString getLinetypeName(RLinetype::Id linetypeId) const;
+    QString getLinetypeDescription(RLinetype::Id linetypeId) const;
     QSet<QString> getLinetypeNames() const;
+    QList<RLinetypePattern> getLinetypePatterns() const;
     bool isByLayer(RLinetype::Id linetypeId) const;
     bool isByBlock(RLinetype::Id linetypeId) const;
 

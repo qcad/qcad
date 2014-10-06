@@ -251,8 +251,15 @@ QSharedPointer<RUcs> RLinkedStorage::queryUcs(const QString& ucsName) const {
     return ret;
 }
 
+QSharedPointer<RLinetype> RLinkedStorage::queryLinetypeDirect(RLinetype::Id linetypeId) const {
+    if (!linetypeMap.contains(linetypeId)) {
+        return backStorage->queryLinetypeDirect(linetypeId);
+    }
+    return RMemoryStorage::queryLinetypeDirect(linetypeId);
+}
+
 QSharedPointer<RLinetype> RLinkedStorage::queryLinetype(RLinetype::Id linetypeId) const {
-    if (!objectMap.contains(linetypeId)) {
+    if (!linetypeMap.contains(linetypeId)) {
         return backStorage->queryLinetype(linetypeId);
     }
     return RMemoryStorage::queryLinetype(linetypeId);
@@ -306,6 +313,14 @@ QString RLinkedStorage::getLinetypeName(RLinetype::Id linetypeId) const {
     return ret;
 }
 
+QString RLinkedStorage::getLinetypeDescription(RLinetype::Id linetypeId) const {
+    QString ret = RMemoryStorage::getLinetypeDescription(linetypeId);
+    if (ret.isNull()) {
+        ret = backStorage->getLinetypeDescription(linetypeId);
+    }
+    return ret;
+}
+
 RLinetype::Id RLinkedStorage::getLinetypeId(const QString& linetypeName) const {
     RLinetype::Id ret = RMemoryStorage::getLinetypeId(linetypeName);
     if (ret==RLinetype::INVALID_ID) {
@@ -353,8 +368,8 @@ RLineweight::Lineweight RLinkedStorage::getCurrentLineweight() const {
     return backStorage->getCurrentLineweight();
 }
 
-RLinetype RLinkedStorage::getCurrentLinetype() const {
-    return backStorage->getCurrentLinetype();
+RLinetype::Id RLinkedStorage::getCurrentLinetypeId() const {
+    return backStorage->getCurrentLinetypeId();
 }
 
 QSet<QString> RLinkedStorage::getBlockNames() const {
@@ -371,6 +386,20 @@ QSet<QString> RLinkedStorage::getLayerNames() const {
 
 QSet<QString> RLinkedStorage::getLinetypeNames() const {
     return RMemoryStorage::getLinetypeNames().unite(backStorage->getLinetypeNames());
+}
+
+QList<RLinetypePattern> RLinkedStorage::getLinetypePatterns() const {
+    QList<RLinetypePattern> ret;
+    QSet<QString> names = getLinetypeNames();
+    QSet<QString>::iterator it;
+    for (it = names.begin(); it != names.end(); ++it) {
+        QSharedPointer<RLinetype> lt = queryLinetype(*it);
+        if (lt.isNull()) {
+            continue;
+        }
+        ret.append(lt->getPattern());
+    }
+    return ret;
 }
 
 bool RLinkedStorage::deleteObject(RObject::Id objectId) {

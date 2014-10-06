@@ -80,6 +80,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setName, "setName");
             
+            REcmaHelper::registerFunction(&engine, proto, getDescription, "getDescription");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDescription, "setDescription");
+            
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -87,6 +91,10 @@
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, isSelectedForPropertyEditing, "isSelectedForPropertyEditing");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPattern, "getPattern");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPattern, "setPattern");
             
             REcmaHelper::registerFunction(&engine, proto, equals, "equals");
             
@@ -105,17 +113,15 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
-            REcmaHelper::registerFunction(&engine, &ctor, getList, "getList");
-            
-            REcmaHelper::registerFunction(&engine, &ctor, getIcon, "getIcon");
-            
-            REcmaHelper::registerFunction(&engine, &ctor, getTitle, "getTitle");
-            
 
     // static properties:
     
             ctor.setProperty("PropertyName",
                 qScriptValueFromValue(&engine, RLinetype::PropertyName),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDescription",
+                qScriptValueFromValue(&engine, RLinetype::PropertyDescription),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -239,8 +245,18 @@
                 
                         context->argument(
                         1
-                        ).isString()
-                ) /* type: QString */
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isNull()
+                ) /* type: RLinetypePattern */
             
     ){
     // prepare arguments:
@@ -258,13 +274,23 @@
                         return REcmaHelper::throwError("RLinetype: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument isStandardType
-                    QString
-                    a1 =
-                    (QString)
-                    
-                    context->argument( 1 ).
-                    toString();
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLinetypePattern*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RLinetypePattern*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RLinetype: Argument 1 is not of type RLinetypePattern.",
+                               context);                    
+                    }
+                    RLinetypePattern 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -518,6 +544,110 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerLinetype::getDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLinetype::getDescription", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLinetype::getDescription";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetype* self = 
+                        getSelf("getDescription", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getDescription();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetype.getDescription().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLinetype::getDescription", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerLinetype::setDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLinetype::setDescription", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLinetype::setDescription";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetype* self = 
+                        getSelf("setDescription", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDescription(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetype.setDescription().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLinetype::setDescription", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerLinetype::isValid
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -564,77 +694,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerLinetype::isValid", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSharedPointerLinetype::getList
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerLinetype::getList", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLinetype::getList";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < QPair < QString , RLinetype > >'
-    QList < QPair < QString , RLinetype > > cppResult =
-        RLinetype::
-       getList();
-        // return type: QList < QPair < QString , RLinetype > >
-                // List of Pairs of ...:
-                result = REcmaHelper::pairListToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < QPair < QString , RLinetype > >'
-    QList < QPair < QString , RLinetype > > cppResult =
-        RLinetype::
-       getList(a0);
-        // return type: QList < QPair < QString , RLinetype > >
-                // List of Pairs of ...:
-                result = REcmaHelper::pairListToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetype.getList().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerLinetype::getList", context, engine);
             return result;
         }
          QScriptValue
@@ -1116,53 +1175,40 @@
             return result;
         }
          QScriptValue
-        REcmaSharedPointerLinetype::getIcon
+        REcmaSharedPointerLinetype::getPattern
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerLinetype::getIcon", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLinetype::getIcon";
+            //REcmaHelper::functionStart("REcmaSharedPointerLinetype::getPattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLinetype::getPattern";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetype* self = 
+                        getSelf("getPattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
     
     if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RLinetype */
-    
+    0
     ){
     // prepare arguments:
     
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RLinetype*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RLinetype*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RLinetype: Argument 0 is not of type RLinetype.",
-                               context);                    
-                    }
-                    RLinetype 
-                    a0 = 
-                    *ap0;
-                
     // end of arguments
 
     // call C++ function:
-    // return type 'QIcon'
-    QIcon cppResult =
-        RLinetype::
-       getIcon(a0);
-        // return type: QIcon
+    // return type 'RLinetypePattern'
+    RLinetypePattern cppResult =
+        
+               self->getPattern();
+        // return type: RLinetypePattern
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -1171,72 +1217,77 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetype.getIcon().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetype.getPattern().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerLinetype::getIcon", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLinetype::getPattern", context, engine);
             return result;
         }
          QScriptValue
-        REcmaSharedPointerLinetype::getTitle
+        REcmaSharedPointerLinetype::setPattern
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerLinetype::getTitle", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLinetype::getTitle";
+            //REcmaHelper::functionStart("REcmaSharedPointerLinetype::setPattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLinetype::setPattern";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetype* self = 
+                        getSelf("setPattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
     
     if( context->argumentCount() ==
     1 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RLinetype */
+        ) /* type: RLinetypePattern */
     
     ){
     // prepare arguments:
     
                     // argument isCopyable and has default constructor and isSimpleClass 
-                    RLinetype*
+                    RLinetypePattern*
                     ap0 =
                     qscriptvalue_cast<
-                    RLinetype*
+                    RLinetypePattern*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RLinetype: Argument 0 is not of type RLinetype.",
+                           return REcmaHelper::throwError("RLinetype: Argument 0 is not of type RLinetypePattern.",
                                context);                    
                     }
-                    RLinetype 
+                    RLinetypePattern 
                     a0 = 
                     *ap0;
                 
     // end of arguments
 
     // call C++ function:
-    // return type 'QString'
-    QString cppResult =
-        RLinetype::
-       getTitle(a0);
-        // return type: QString
-                // standard Type
-                result = QScriptValue(cppResult);
-            
+    // return type 'void'
+    
+               self->setPattern(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetype.getTitle().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetype.setPattern().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerLinetype::getTitle", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLinetype::setPattern", context, engine);
             return result;
         }
          QScriptValue

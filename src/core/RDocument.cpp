@@ -19,6 +19,8 @@
 #include "RBox.h"
 #include "RDebug.h"
 #include "RDocument.h"
+#include "RLinetypeListImperial.h"
+#include "RLinetypeListMetric.h"
 #include "RLinkedStorage.h"
 #include "RMath.h"
 #include "RMemoryStorage.h"
@@ -26,8 +28,9 @@
 #include "RSpatialIndexSimple.h"
 #include "RStorage.h"
 #include "RUcs.h"
+#include "RUnit.h"
 #include "RPolyline.h"
-
+//#include "RLinetypePatternMap.h"
 
 RDocument* RDocument::clipboard = NULL;
 
@@ -48,6 +51,13 @@ RDocument::RDocument(
     init();
 }
 
+//void RDocument::addLinetype(QString name) {
+//    RTransaction t(storage, "", false);
+
+//    if (queryLinetype(name).isNull()) {
+//        t.addObject(QSharedPointer<RObject>(new RLinetype(this, name)));
+//    }
+//}
 
 void RDocument::init() {
     RTransaction t(storage, "", false);
@@ -57,27 +67,10 @@ void RDocument::init() {
 
     // add default line types if not already added (RLinkedStorage):
     if (!storageIsLinked && queryLinetype("BYLAYER").isNull()) {
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "BYLAYER")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "BYBLOCK")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "CONTINUOUS")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "BORDER")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "BORDER2")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "BORDERX2")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "CENTER")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "CENTER2")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "CENTERX2")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "DASHDOT")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "DASHDOT2")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "DASHDOTX2")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "DASHED")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "DASHED2")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "DASHEDX2")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "DIVIDE")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "DIVIDE2")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "DIVIDEX2")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "DOT")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "DOT2")));
-        t.addObject(QSharedPointer<RObject>(new RLinetype(this, "DOTX2")));
+        t.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("BYLAYER", "By Layer"))));
+        t.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("BYBLOCK", "By Block"))));
+        t.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("Continuous", "Solid line"))));
+        //t.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("MyDashed", "My Dashed Pattern", 2, 2.0, -2.0))));
     }
 
     // add default layer:
@@ -107,13 +100,21 @@ void RDocument::init() {
     t.end(this);
 
     // caching for faster operations:
-    linetypeByLayerId = queryLinetype("BYLAYER")->getId();
-    linetypeByBlockId = queryLinetype("BYBLOCK")->getId();
+    QSharedPointer<RLinetype> ltByLayer = queryLinetype("BYLAYER");
+    if (!ltByLayer.isNull()) {
+        linetypeByLayerId = ltByLayer->getId();
+    }
+    QSharedPointer<RLinetype> ltByBlock = queryLinetype("BYBLOCK");
+    if (!ltByBlock.isNull()) {
+        linetypeByBlockId = ltByBlock->getId();
+    }
 
     if (!storageIsLinked) {
         setCurrentLayer("0");
 
         setCurrentBlock(RBlock::modelSpaceName);
+
+        setCurrentLinetype("BYLAYER");
 
         // default variables:
         setUnit((RS::Unit)RSettings::getValue("UnitSettings/Unit", RS::None).toInt());
@@ -237,6 +238,35 @@ void RDocument::init() {
     }
 }
 
+void RDocument::initLinetypes() {
+    RTransaction t(storage, "", false);
+
+    // read patterns from file system and add to doc:
+    QStringList patlist;
+    if (RUnit::isMetric(getUnit())) {
+        patlist = RLinetypeListMetric::getNames();
+    }
+    else {
+        patlist = RLinetypeListImperial::getNames();
+    }
+    for (int i = 0; i < patlist.length(); i++) {
+        QString name = patlist[i];
+
+        RLinetypePattern* pattern;
+        if (RUnit::isMetric(getUnit())) {
+            pattern = RLinetypeListMetric::get(name);
+        }
+        else {
+            pattern = RLinetypeListImperial::get(name);
+        }
+
+        if (pattern!=NULL) {
+            t.addObject(QSharedPointer<RObject>(new RLinetype(this, *pattern)));
+        }
+    }
+    t.end(this);
+}
+
 
 /**
  * Resets this document to its initial, empty state.
@@ -259,6 +289,7 @@ RDocument::~RDocument() {
 
 void RDocument::setUnit(RS::Unit unit) {
     storage.setUnit(unit);
+    initLinetypes();
 }
 
 RS::Unit RDocument::getUnit() const {
@@ -361,7 +392,17 @@ QVariant RDocument::getVariable(const QString& key, const QVariant& defaultValue
 }
 
 void RDocument::setKnownVariable(RS::KnownVariable key, const QVariant& value) {
+    bool metric = true;
+
+    if (key==RS::INSUNITS) {
+        metric = RUnit::isMetric(getUnit());
+    }
+
     storage.setKnownVariable(key, value);
+
+    if (key==RS::INSUNITS && metric!=RUnit::isMetric(getUnit())) {
+        initLinetypes();
+    }
 }
 
 void RDocument::setKnownVariable(RS::KnownVariable key, const RVector& value) {
@@ -402,12 +443,24 @@ RLineweight::Lineweight RDocument::getCurrentLineweight() const {
     return storage.getCurrentLineweight();
 }
 
-void RDocument::setCurrentLinetype(RLinetype lt) {
-    storage.setCurrentLinetype(lt);
+void RDocument::setCurrentLinetype(RLinetype::Id ltId) {
+    storage.setCurrentLinetype(ltId);
 }
 
-RLinetype RDocument::getCurrentLinetype() const {
-    return storage.getCurrentLinetype();
+void RDocument::setCurrentLinetype(const QString& name) {
+    storage.setCurrentLinetype(name);
+}
+
+void RDocument::setCurrentLinetypePattern(const RLinetypePattern& p) {
+    storage.setCurrentLinetypePattern(p);
+}
+
+RLinetype::Id RDocument::getCurrentLinetypeId() const {
+    return storage.getCurrentLinetypeId();
+}
+
+RLinetypePattern RDocument::getCurrentLinetypePattern() const {
+    return storage.getCurrentLinetypePattern();
 }
 
 void RDocument::setCurrentLayer(RLayer::Id layerId) {
@@ -537,12 +590,20 @@ QString RDocument::getLinetypeName(RLinetype::Id linetypeId) const {
     return storage.getLinetypeName(linetypeId);
 }
 
+QString RDocument::getLinetypeDescription(RLinetype::Id linetypeId) const {
+    return storage.getLinetypeDescription(linetypeId);
+}
+
 RLinetype::Id RDocument::getLinetypeId(const QString& linetypeName) const {
     return storage.getLinetypeId(linetypeName);
 }
 
 QSet<QString> RDocument::getLinetypeNames() const {
     return storage.getLinetypeNames();
+}
+
+QList<RLinetypePattern> RDocument::getLinetypePatterns() const {
+    return storage.getLinetypePatterns();
 }
 
 bool RDocument::isByLayer(RLinetype::Id linetypeId) const {

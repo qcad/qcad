@@ -276,6 +276,9 @@
         ;static  QScriptValue
         isXDataEnabled
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAutoScaleLinetypePatterns
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

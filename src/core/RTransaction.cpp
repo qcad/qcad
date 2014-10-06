@@ -555,7 +555,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             entity->setLineweight(object->getDocument()->getCurrentLineweight());
         }
         if (useCurrentAttributes || entity->getLinetypeId()==RLinetype::INVALID_ID) {
-            entity->setLinetype(object->getDocument()->getCurrentLinetype());
+            entity->setLinetypeId(object->getDocument()->getCurrentLinetypeId());
         }
 
         // allowAll to make sure entities on hidden / locked layers can be imported:

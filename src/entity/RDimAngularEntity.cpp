@@ -25,6 +25,7 @@ RPropertyTypeId RDimAngularEntity::PropertyType;
 RPropertyTypeId RDimAngularEntity::PropertyBlock;
 RPropertyTypeId RDimAngularEntity::PropertyLayer;
 RPropertyTypeId RDimAngularEntity::PropertyLinetype;
+RPropertyTypeId RDimAngularEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimAngularEntity::PropertyLineweight;
 RPropertyTypeId RDimAngularEntity::PropertyColor;
 RPropertyTypeId RDimAngularEntity::PropertyDrawOrder;
@@ -74,6 +75,7 @@ void RDimAngularEntity::init() {
     RDimAngularEntity::PropertyBlock.generateId(typeid(RDimAngularEntity), REntity::PropertyBlock);
     RDimAngularEntity::PropertyLayer.generateId(typeid(RDimAngularEntity), REntity::PropertyLayer);
     RDimAngularEntity::PropertyLinetype.generateId(typeid(RDimAngularEntity), REntity::PropertyLinetype);
+    RDimAngularEntity::PropertyLinetypeScale.generateId(typeid(RDimAngularEntity), REntity::PropertyLinetypeScale);
     RDimAngularEntity::PropertyLineweight.generateId(typeid(RDimAngularEntity), REntity::PropertyLineweight);
     RDimAngularEntity::PropertyColor.generateId(typeid(RDimAngularEntity), REntity::PropertyColor);
     RDimAngularEntity::PropertyDrawOrder.generateId(typeid(RDimAngularEntity), REntity::PropertyDrawOrder);

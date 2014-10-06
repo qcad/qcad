@@ -142,12 +142,39 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; REntity::Id &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="queryObjectDirect" cppName="queryObjectDirect"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RObject &gt;"
+      isPureVirtual="false">
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="objectId" isConst="false" />
+      </variant>
+    </method>
     <method name="queryObject" cppName="queryObject"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; RObject &gt;"
       isPureVirtual="false">
         <arg type="RObject::Id" typeName="RObject::Id"
+        name="objectId" isConst="false" />
+      </variant>
+    </method>
+    <method name="queryObjectByHandle"
+    cppName="queryObjectByHandle" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RObject &gt;"
+      isPureVirtual="false">
+        <arg type="RObject::Handle" typeName="RObject::Handle"
+        name="objectHandle" isConst="false" />
+      </variant>
+    </method>
+    <method name="queryEntityDirect" cppName="queryEntityDirect"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; REntity &gt;"
+      isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
         name="objectId" isConst="false" />
       </variant>
     </method>
@@ -160,13 +187,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="objectId" isConst="false" />
       </variant>
     </method>
-    <method name="queryObjectByHandle"
-    cppName="queryObjectByHandle" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="QSharedPointer &lt; RObject &gt;"
+    <method name="queryLayerDirect" cppName="queryLayerDirect"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RLayer &gt;"
       isPureVirtual="false">
-        <arg type="RObject::Handle" typeName="RObject::Handle"
-        name="objectHandle" isConst="false" />
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        isConst="false" />
       </variant>
     </method>
     <method name="queryLayer" cppName="queryLayer"
@@ -181,6 +208,15 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="layerName" isConst="true" />
+      </variant>
+    </method>
+    <method name="queryBlockDirect" cppName="queryBlockDirect"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RBlock &gt;"
+      isPureVirtual="false">
+        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
+        isConst="false" />
       </variant>
     </method>
     <method name="queryBlock" cppName="queryBlock"
@@ -210,6 +246,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="viewName" isConst="true" />
       </variant>
     </method>
+    <method name="queryUcsDirect" cppName="queryUcsDirect"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RUcs &gt;"
+      isPureVirtual="false">
+        <arg type="RUcs::Id" typeName="RUcs::Id" name="ucsId"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="queryUcs" cppName="queryUcs" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; RUcs &gt;"
@@ -221,6 +266,15 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="ucsName"
         isConst="true" />
+      </variant>
+    </method>
+    <method name="queryLinetypeDirect"
+    cppName="queryLinetypeDirect" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RLinetype &gt;"
+      isPureVirtual="false">
+        <arg type="RLinetype::Id" typeName="RLinetype::Id"
+        name="linetypeId" isConst="false" />
       </variant>
     </method>
     <method name="queryLinetype" cppName="queryLinetype"
@@ -310,10 +364,24 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="linetypeId" isConst="false" />
       </variant>
     </method>
+    <method name="getLinetypeDescription"
+    cppName="getLinetypeDescription" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="RLinetype::Id" typeName="RLinetype::Id"
+        name="linetypeId" isConst="false" />
+      </variant>
+    </method>
     <method name="getLinetypeNames" cppName="getLinetypeNames"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QSet &lt; QString &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getLinetypePatterns"
+    cppName="getLinetypePatterns" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RLinetypePattern &gt;"
       isPureVirtual="false" />
     </method>
     <method name="getLinetypeId" cppName="getLinetypeId"
@@ -322,51 +390,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RLinetype::Id" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="linetypeName" isConst="true" />
-      </variant>
-    </method>
-    <method name="queryObjectDirect" cppName="queryObjectDirect"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="QSharedPointer &lt; RObject &gt;"
-      isPureVirtual="false">
-        <arg type="RObject::Id" typeName="RObject::Id"
-        name="objectId" isConst="false" />
-      </variant>
-    </method>
-    <method name="queryEntityDirect" cppName="queryEntityDirect"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="QSharedPointer &lt; REntity &gt;"
-      isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
-        name="objectId" isConst="false" />
-      </variant>
-    </method>
-    <method name="queryUcsDirect" cppName="queryUcsDirect"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="QSharedPointer &lt; RUcs &gt;"
-      isPureVirtual="false">
-        <arg type="RUcs::Id" typeName="RUcs::Id" name="ucsId"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="queryLayerDirect" cppName="queryLayerDirect"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="QSharedPointer &lt; RLayer &gt;"
-      isPureVirtual="false">
-        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="queryBlockDirect" cppName="queryBlockDirect"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="QSharedPointer &lt; RBlock &gt;"
-      isPureVirtual="false">
-        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
-        isConst="false" />
       </variant>
     </method>
     <method name="getNewObjectId" cppName="getNewObjectId"
@@ -406,10 +429,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RLineweight::Lineweight"
       isPureVirtual="false" />
     </method>
-    <method name="getCurrentLinetype" cppName="getCurrentLinetype"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="RLinetype" isPureVirtual="false" />
+    <method name="getCurrentLinetypeId"
+    cppName="getCurrentLinetypeId" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RLinetype::Id" isPureVirtual="false" />
     </method>
     <method name="deleteObject" cppName="deleteObject"
     specifier="public" isStatic="false" isVirtual="true"

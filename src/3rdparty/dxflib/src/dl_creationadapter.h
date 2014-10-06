@@ -43,6 +43,8 @@ public:
     virtual void processCodeValuePair(unsigned int, const std::string&) {}
     virtual void endSection() {}
     virtual void addLayer(const DL_LayerData&) {}
+    virtual void addLinetype(const DL_LinetypeData&) {}
+    virtual void addLinetypeDash(double) {}
     virtual void addBlock(const DL_BlockData&) {}
     virtual void endBlock() {}
     virtual void addTextStyle(const DL_StyleData&) {}

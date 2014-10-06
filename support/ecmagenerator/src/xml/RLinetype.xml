@@ -17,7 +17,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant>
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />
-        <arg type="QString &amp;" typeName="QString" name="name"
+        <arg type="RLinetypePattern &amp;"
+        typeName="RLinetypePattern" name="pattern"
         isConst="true" />
       </variant>
     </constructor>
@@ -40,17 +41,22 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getDescription" cppName="getDescription"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setDescription" cppName="setDescription"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="d"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="isValid" cppName="isValid" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
-    </method>
-    <method name="getList" cppName="getList" specifier="public"
-    isStatic="true" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QList &lt; QPair &lt; QString , RLinetype &gt; &gt;"
-      isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="onlyFixed"
-        hasDefault="true" default=" false" isConst="false" />
-      </variant>
     </method>
     <method name="getProperty" cppName="getProperty"
     specifier="public" isStatic="false" isVirtual="true"
@@ -84,18 +90,18 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="getIcon" cppName="getIcon" specifier="public"
-    isStatic="true" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QIcon" isPureVirtual="false">
-        <arg type="RLinetype &amp;" typeName="RLinetype"
-        name="linetype" isConst="true" />
-      </variant>
+    <method name="getPattern" cppName="getPattern"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RLinetypePattern"
+      isPureVirtual="false" />
     </method>
-    <method name="getTitle" cppName="getTitle" specifier="public"
-    isStatic="true" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false">
-        <arg type="RLinetype &amp;" typeName="RLinetype"
-        name="linetype" isConst="true" />
+    <method name="setPattern" cppName="setPattern"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLinetypePattern &amp;"
+        typeName="RLinetypePattern" name="p" isConst="true" />
       </variant>
     </method>
     <method name="operator==" cppName="operator=="
@@ -123,6 +129,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <property name="PropertyName" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDescription" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

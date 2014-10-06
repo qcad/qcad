@@ -1817,12 +1817,20 @@ RLineweight::Lineweight RDocumentInterface::getCurrentLineweight() {
     return document.getCurrentLineweight();
 }
 
-void RDocumentInterface::setCurrentLinetype(RLinetype lt) {
-    document.setCurrentLinetype(lt);
+void RDocumentInterface::setCurrentLinetype(RLinetype::Id ltId) {
+    document.setCurrentLinetype(ltId);
 }
 
-RLinetype RDocumentInterface::getCurrentLinetype() {
-    return document.getCurrentLinetype();
+void RDocumentInterface::setCurrentLinetypePattern(const RLinetypePattern& p) {
+    document.setCurrentLinetypePattern(p);
+}
+
+RLinetype::Id RDocumentInterface::getCurrentLinetypeId() {
+    return document.getCurrentLinetypeId();
+}
+
+RLinetypePattern RDocumentInterface::getCurrentLinetypePattern() {
+    return document.getCurrentLinetypePattern();
 }
 
 /**

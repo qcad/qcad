@@ -72,6 +72,8 @@ public:
 private:
     // Methods from DL_CreationInterface:
     virtual void addLayer(const DL_LayerData& data);
+    virtual void addLinetype(const DL_LinetypeData& data);
+    virtual void addLinetypeDash(double length);
     virtual void addBlock(const DL_BlockData& data);
     virtual void endBlock();
     virtual void addPoint(const DL_PointData& data);
@@ -154,6 +156,8 @@ private:
     QByteArray mtext;
     QMap<QString, RDxfTextStyle> textStyles;
     QMultiMap<int, RObject::Id> images;
+    // pattern for linetype
+    QList<double> pattern;
 
     // Current app id for XData:
     QString xDataAppId;

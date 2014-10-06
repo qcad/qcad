@@ -364,3 +364,15 @@ QStringList RS::getPatternList(bool metric) {
         return getFileList("patterns/imperial", "pat");
     }
 }
+
+/**
+ * \return A list of absolute paths to all pattern files found.
+ */
+QStringList RS::getLinetypeList(bool metric) {
+    if (metric) {
+        return getFileList("linetypes/metric", "lin");
+    }
+    else {
+        return getFileList("linetypes/imperial", "lin");
+    }
+}

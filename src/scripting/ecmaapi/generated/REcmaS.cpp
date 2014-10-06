@@ -79,6 +79,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getPatternList, "getPatternList");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getLinetypeList, "getLinetypeList");
+            
 
     // static properties:
     
@@ -2214,6 +2216,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::getPatternList", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::getLinetypeList
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::getLinetypeList", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::getLinetypeList";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        RS::
+       getLinetypeList(a0);
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getLinetypeList().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::getLinetypeList", context, engine);
             return result;
         }
          QScriptValue REcmaS::toString

@@ -68,6 +68,7 @@ public:
     static RPropertyTypeId PropertyBlock;
     static RPropertyTypeId PropertyLayer;
     static RPropertyTypeId PropertyLinetype;
+    static RPropertyTypeId PropertyLinetypeScale;
     static RPropertyTypeId PropertyLineweight;
     static RPropertyTypeId PropertyColor;
     static RPropertyTypeId PropertyDrawOrder;
@@ -213,10 +214,10 @@ public:
     }
 
     /**
-     * \copydoc REntityData::setLinetype
+     * \copydoc REntityData::setLinetypePattern
      */
-    void setLinetype(RLinetype linetype) {
-        getData().setLinetype(linetype);
+    void setLinetypePattern(const RLinetypePattern& linetypePattern) {
+        getData().setLinetypePattern(linetypePattern);
     }
 
     /**
@@ -228,6 +229,30 @@ public:
 
     RLinetype::Id getLinetypeId(bool resolve,
         const QStack<REntity*>& blockRefStack) const;
+
+    /**
+     * \copydoc REntityData::getLinetypePattern
+     */
+    RLinetypePattern getLinetypePattern() const {
+        return getData().getLinetypePattern();
+    }
+
+    /**
+     * \copydoc REntityData::setLinetypeScale
+     */
+    void setLinetypeScale(double linetypeScale) {
+        if (linetypeScale<0.0) {
+            qDebug() << "setLinetypeScale to -1";
+        }
+        getData().setLinetypeScale(linetypeScale);
+    }
+
+    /**
+     * \copydoc REntityData::getLinetypeScale
+     */
+    double getLinetypeScale() const {
+        return getData().getLinetypeScale();
+    }
 
     /**
      * \copydoc REntityData::setLineweight

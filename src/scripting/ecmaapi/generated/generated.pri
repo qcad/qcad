@@ -115,8 +115,10 @@ HEADERS += \
     $$PWD/REcmaLineEntity.h \
     $$PWD/REcmaLinetype.h \
     $$PWD/REcmaLinetypeCombo.h \
+    $$PWD/REcmaLinetypeList.h \
+    $$PWD/REcmaLinetypeListImperial.h \
+    $$PWD/REcmaLinetypeListMetric.h \
     $$PWD/REcmaLinetypePattern.h \
-    $$PWD/REcmaLinetypePatternMap.h \
     $$PWD/REcmaLineweight.h \
     $$PWD/REcmaLineweightCombo.h \
     $$PWD/REcmaLinkedStorage.h \
@@ -440,8 +442,10 @@ SOURCES += \
     $$PWD/REcmaLineEntity.cpp \
     $$PWD/REcmaLinetype.cpp \
     $$PWD/REcmaLinetypeCombo.cpp \
+    $$PWD/REcmaLinetypeList.cpp \
+    $$PWD/REcmaLinetypeListImperial.cpp \
+    $$PWD/REcmaLinetypeListMetric.cpp \
     $$PWD/REcmaLinetypePattern.cpp \
-    $$PWD/REcmaLinetypePatternMap.cpp \
     $$PWD/REcmaLineweight.cpp \
     $$PWD/REcmaLineweightCombo.cpp \
     $$PWD/REcmaLinkedStorage.cpp \

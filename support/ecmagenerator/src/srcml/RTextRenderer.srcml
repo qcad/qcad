@@ -367,6 +367,43 @@ dir="./entity" filename="RTextRenderer.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>void</name>
+  </type>
+  <name>preparePath</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RPainterPath</name>&amp;</type>
+      <name>path</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RColor</name>&amp;</type>
+      <name>color</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>cursor</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>cxfScale</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
     <name>QRectF</name>
   </type>
   <name>getCharacterRect</name>

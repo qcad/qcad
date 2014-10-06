@@ -28,6 +28,7 @@
 #include "dl_global.h"
 
 #include <string>
+#include <vector>
 
 #include "dl_codes.h"
 
@@ -49,7 +50,8 @@ public:
         color(0),
         color24(-1),
         width(0),
-        lineType("BYLAYER"),
+        linetype("BYLAYER"),
+        linetypeScale(1.0),
         handle(-1) {
     }
 
@@ -61,17 +63,19 @@ public:
      * @param color Color number (0..256). 0 = BYBLOCK, 256 = BYLAYER.
      * @param width Line thickness. Defaults to zero. -1 = BYLAYER, 
      *               -2 = BYBLOCK, -3 = default width
-     * @param lineType Line type name or "BYLAYER" or "BYBLOCK". Defaults
+     * @param linetype Line type name or "BYLAYER" or "BYBLOCK". Defaults
      *              to "BYLAYER"
      */
     DL_Attributes(const std::string& layer,
                   int color, int width,
-                  const std::string& lineType) :
+                  const std::string& linetype,
+                  double linetypeScale) :
         layer(layer),
         color(color),
         color24(-1),
         width(width),
-        lineType(lineType),
+        linetype(linetype),
+        linetypeScale(linetypeScale),
         handle(-1) {
 
     }
@@ -85,18 +89,19 @@ public:
      * @param color24 24 bit color (see DXF reference).
      * @param width Line thickness. Defaults to zero. -1 = BYLAYER, 
      *               -2 = BYBLOCK, -3 = default width
-     * @param lineType Line type name or "BYLAYER" or "BYBLOCK". Defaults
+     * @param linetype Line type name or "BYLAYER" or "BYBLOCK". Defaults
      *              to "BYLAYER"
      */
     DL_Attributes(const std::string& layer,
                   int color, int color24, int width,
-                  const std::string& lineType,
+                  const std::string& linetype,
                   int handle=-1)  :
         layer(layer),
         color(color),
         color24(color24),
         width(width),
-        lineType(lineType),
+        linetype(linetype),
+        linetypeScale(1.0),
         handle(handle) {
     }
 
@@ -169,18 +174,33 @@ public:
      * Sets the line type. This can be any string and is not
      *  checked to be a valid line type. 
      */
-    void setLineType(const std::string& lineType) {
-        this->lineType = lineType;
+    void setLinetype(const std::string& linetype) {
+        this->linetype = linetype;
     }
+
+    /**
+     * Sets the entity specific line type scale.
+     */
+    void setLinetypeScale(double linetypeScale) {
+        this->linetypeScale = linetypeScale;
+    }
+
+    double getLinetypeScale() const {
+        return linetypeScale;
+    }
+
+//    void setDashes(const std::vector<double>& dashes) {
+//        this->dashes = dashes;
+//    }
 
     /**
      * @return Line type.
      */
-    std::string getLineType() const {
-        if (lineType.length()==0) {
+    std::string getLinetype() const {
+        if (linetype.length()==0) {
             return "BYLAYER";
         } else {
-            return lineType;
+            return linetype;
         }
     }
 
@@ -197,7 +217,9 @@ private:
     int color;
     int color24;
     int width;
-    std::string lineType;
+    std::string linetype;
+    double linetypeScale;
+//    std::vector<double> dashes;
     int handle;
 };
 

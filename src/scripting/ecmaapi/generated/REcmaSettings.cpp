@@ -213,6 +213,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, isXDataEnabled, "isXDataEnabled");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getAutoScaleLinetypePatterns, "getAutoScaleLinetypePatterns");
+            
 
     // static properties:
     
@@ -3774,6 +3776,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::isXDataEnabled", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getAutoScaleLinetypePatterns
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getAutoScaleLinetypePatterns", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getAutoScaleLinetypePatterns";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getAutoScaleLinetypePatterns();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getAutoScaleLinetypePatterns().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getAutoScaleLinetypePatterns", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

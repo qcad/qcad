@@ -124,6 +124,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryUcs, "queryUcs");
             
+            REcmaHelper::registerFunction(&engine, proto, queryLinetypeDirect, "queryLinetypeDirect");
+            
             REcmaHelper::registerFunction(&engine, proto, queryLinetype, "queryLinetype");
             
             REcmaHelper::registerFunction(&engine, proto, clearEntitySelection, "clearEntitySelection");
@@ -200,7 +202,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypeName, "getLinetypeName");
             
+            REcmaHelper::registerFunction(&engine, proto, getLinetypeDescription, "getLinetypeDescription");
+            
             REcmaHelper::registerFunction(&engine, proto, getLinetypeNames, "getLinetypeNames");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLinetypePatterns, "getLinetypePatterns");
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypeId, "getLinetypeId");
             
@@ -2322,6 +2328,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::queryUcs", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::queryLinetypeDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::queryLinetypeDirect", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::queryLinetypeDirect";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("queryLinetypeDirect", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLinetype::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLinetype::Id
+                    a0 =
+                    (RLinetype::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLinetype >'
+    QSharedPointer < RLinetype > cppResult =
+        
+               self->queryLinetypeDirect(a0);
+        // return type: QSharedPointer < RLinetype >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.queryLinetypeDirect().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::queryLinetypeDirect", context, engine);
             return result;
         }
          QScriptValue
@@ -5502,6 +5568,66 @@
             return result;
         }
          QScriptValue
+        REcmaMemoryStorage::getLinetypeDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::getLinetypeDescription", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::getLinetypeDescription";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("getLinetypeDescription", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLinetype::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLinetype::Id
+                    a0 =
+                    (RLinetype::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLinetypeDescription(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.getLinetypeDescription().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::getLinetypeDescription", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMemoryStorage::getLinetypeNames
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -5549,6 +5675,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::getLinetypeNames", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::getLinetypePatterns
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::getLinetypePatterns", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::getLinetypePatterns";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("getLinetypePatterns", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RLinetypePattern >'
+    QList < RLinetypePattern > cppResult =
+        
+               self->getLinetypePatterns();
+        // return type: QList < RLinetypePattern >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.getLinetypePatterns().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::getLinetypePatterns", context, engine);
             return result;
         }
          QScriptValue

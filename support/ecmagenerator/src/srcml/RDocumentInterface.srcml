@@ -1640,16 +1640,40 @@ dir="./core" filename="RDocumentInterface.h">
   <param>
     <decl>
       <type>
-        <name>RLinetype</name>
+        <name>
+        <name>RLinetype</name>::
+        <name>Id</name></name>
       </type>
-      <name>lt</name>
+      <name>ltId</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
-    <name>RLinetype</name>
+    <name>void</name>
   </type>
-  <name>getCurrentLinetype</name>
+  <name>setCurrentLinetypePattern</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RLinetypePattern</name>&amp;</type>
+      <name>p</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>
+    <name>RLinetype</name>::
+    <name>Id</name></name>
+  </type>
+  <name>getCurrentLinetypeId</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>RLinetypePattern</name>
+  </type>
+  <name>getCurrentLinetypePattern</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>

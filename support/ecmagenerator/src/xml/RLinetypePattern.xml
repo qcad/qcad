@@ -6,10 +6,21 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="true" isAbstract="false" isScriptable="true">
     <constructor>
+      <variant>
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="description" isConst="true" />
+        <arg type="QList &lt; double &gt; &amp;"
+        typeName="QList &lt; double &gt;" name="dashes"
+        isConst="true" />
+      </variant>
       <variant />
       <variant>
         <arg type="QString &amp;" typeName="QString" name="name"
         isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="description" isConst="true" />
       </variant>
       <variant>
         <arg type="RLinetypePattern &amp;"
@@ -19,9 +30,18 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="set" cppName="set" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QList &lt; double &gt;"
+        <arg type="QList &lt; double &gt; &amp;"
         typeName="QList &lt; double &gt;" name="dashes"
         isConst="true" />
+      </variant>
+    </method>
+    <method name="loadAllFrom" cppName="loadAllFrom"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; QPair &lt; QString , RLinetypePattern * &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" isConst="true" />
       </variant>
     </method>
     <method name="isValid" cppName="isValid" specifier="public"
@@ -32,6 +52,40 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getName" cppName="getName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setName" cppName="setName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="n"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getDescription" cppName="getDescription"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setDescription" cppName="setDescription"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="d"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getIcon" cppName="getIcon" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QIcon" isPureVirtual="false" />
+    </method>
+    <method name="getPattern" cppName="getPattern"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; double &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="getPatternLength" cppName="getPatternLength"
     specifier="public" isStatic="false" isVirtual="false"
@@ -99,6 +153,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RLinetypePattern &amp;"
         typeName="RLinetypePattern" name="other" isConst="true" />
       </variant>
+    </method>
+    <method name="isLoaded" cppName="isLoaded" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="load" cppName="load" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
   </class>
 </unit>

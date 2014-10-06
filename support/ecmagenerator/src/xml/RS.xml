@@ -392,6 +392,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getLinetypeList" cppName="getLinetypeList"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="metric"
+        isConst="false" />
+      </variant>
+    </method>
     <property name="PointTolerance" type="double" isConst="true"
     isStatic="true" />
     <property name="AngleTolerance" type="double" isConst="true"

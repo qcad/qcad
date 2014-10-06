@@ -26,6 +26,7 @@ RPropertyTypeId RCircleEntity::PropertyType;
 RPropertyTypeId RCircleEntity::PropertyBlock;
 RPropertyTypeId RCircleEntity::PropertyLayer;
 RPropertyTypeId RCircleEntity::PropertyLinetype;
+RPropertyTypeId RCircleEntity::PropertyLinetypeScale;
 RPropertyTypeId RCircleEntity::PropertyLineweight;
 RPropertyTypeId RCircleEntity::PropertyColor;
 RPropertyTypeId RCircleEntity::PropertyDrawOrder;
@@ -56,6 +57,7 @@ void RCircleEntity::init() {
     RCircleEntity::PropertyBlock.generateId(typeid(RCircleEntity), REntity::PropertyBlock);
     RCircleEntity::PropertyLayer.generateId(typeid(RCircleEntity), REntity::PropertyLayer);
     RCircleEntity::PropertyLinetype.generateId(typeid(RCircleEntity), REntity::PropertyLinetype);
+    RCircleEntity::PropertyLinetypeScale.generateId(typeid(RCircleEntity), REntity::PropertyLinetypeScale);
     RCircleEntity::PropertyLineweight.generateId(typeid(RCircleEntity), REntity::PropertyLineweight);
     RCircleEntity::PropertyColor.generateId(typeid(RCircleEntity), REntity::PropertyColor);
     RCircleEntity::PropertyDrawOrder.generateId(typeid(RCircleEntity), REntity::PropertyDrawOrder);

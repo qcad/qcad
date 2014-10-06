@@ -252,6 +252,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="queryLinetypeDirect"
+    cppName="queryLinetypeDirect" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RLinetype &gt;"
+      isPureVirtual="false">
+        <arg type="RLinetype::Id" typeName="RLinetype::Id"
+        name="linetypeId" isConst="false" />
+      </variant>
+    </method>
     <method name="queryLinetype" cppName="queryLinetype"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -598,10 +607,24 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="linetypeId" isConst="false" />
       </variant>
     </method>
+    <method name="getLinetypeDescription"
+    cppName="getLinetypeDescription" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="RLinetype::Id" typeName="RLinetype::Id"
+        name="linetypeId" isConst="false" />
+      </variant>
+    </method>
     <method name="getLinetypeNames" cppName="getLinetypeNames"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QSet &lt; QString &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getLinetypePatterns"
+    cppName="getLinetypePatterns" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RLinetypePattern &gt;"
       isPureVirtual="false" />
     </method>
     <method name="getLinetypeId" cppName="getLinetypeId"

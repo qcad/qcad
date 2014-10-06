@@ -55,7 +55,7 @@ dir="./core" filename="RLinetype.h">
   <class_decl>class 
   <name>RTransaction</name>;</class_decl>
   <comment type="block">/** * Represents a linetype in a drawing. A
-  linetype is an object (RObject). * A drawings contains and owns a
+  linetype is an object (RObject). * A drawing contains and owns a
   set of linetypes. * * \ingroup core * \scriptable *
   \sharedPointerSupport * \copyable */</comment>
   <class>class 
@@ -68,16 +68,8 @@ dir="./core" filename="RLinetype.h">
   <name>RObject</name></super>
   <block>{
   <private type="default">
-    <constructor_decl>
-    <name>Q_DECLARE_TR_FUNCTIONS</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>RLinetype</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
+    <comment type="line">
+    //Q_DECLARE_TR_FUNCTIONS(RLinetype);</comment>
   </private>
   <public>public: 
   <decl_stmt>
@@ -87,6 +79,14 @@ dir="./core" filename="RLinetype.h">
       <name>RPropertyTypeId</name>
     </type>
     <name>PropertyName</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
+    <name>PropertyDescription</name>
   </decl>;</decl_stmt></public>
   <public>public: 
   <constructor_decl>
@@ -117,8 +117,8 @@ dir="./core" filename="RLinetype.h">
     <decl>
       <type>
       <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>name</name>
+      <name>RLinetypePattern</name>&amp;</type>
+      <name>pattern</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl>
   <destructor_decl>
@@ -161,8 +161,11 @@ dir="./core" filename="RLinetype.h">
     <block>{ 
     <return>return 
     <expr>
-      <name>name</name>
-    </expr>;</return>}</block>
+    <name>pattern</name>.
+    <call>
+      <name>getName</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
   </function>
   <function>
     <type>
@@ -181,8 +184,60 @@ dir="./core" filename="RLinetype.h">
     <block>{ 
     <expr_stmt>
     <expr>
-    <name>name</name>= 
-    <name>n</name></expr>;</expr_stmt>}</block>
+    <name>pattern</name>.
+    <call>
+      <name>setName</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>n</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>getDescription</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>pattern</name>.
+    <call>
+      <name>getDescription</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setDescription</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>d</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>pattern</name>.
+    <call>
+      <name>setDescription</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>d</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
   </function>
   <function_decl>
   <type>
@@ -191,36 +246,8 @@ dir="./core" filename="RLinetype.h">
   <name>isValid</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>QPair
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-        <name>RLinetype</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getList</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>onlyFixed</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
+  <comment type="line">//static QList&lt;QPair&lt;QString,
+  RLinetype&gt; &gt; getList(bool onlyFixed = false);</comment>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -309,34 +336,29 @@ dir="./core" filename="RLinetype.h">
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
-    <name>static</name>
-    <name>QIcon</name>
+    <name>RLinetypePattern</name>
   </type>
-  <name>getIcon</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLinetype</name>&amp;</type>
-      <name>linetype</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
+  <name>getPattern</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
-    <name>static</name>
-    <name>QString</name>
+    <name>void</name>
   </type>
-  <name>getTitle</name>
+  <name>setPattern</name>
   <parameter_list>(
   <param>
     <decl>
       <type>
       <name>const</name>
-      <name>RLinetype</name>&amp;</type>
-      <name>linetype</name>
+      <name>RLinetypePattern</name>&amp;</type>
+      <name>p</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <comment type="line">// static QIcon getIcon(const RLinetype&amp;
+  linetype);</comment>
+  <comment type="line">// static QString getTitle(const
+  RLinetype&amp; linetype);</comment>
   <function_decl>
   <type>
     <name>bool</name>
@@ -381,73 +403,28 @@ dir="./core" filename="RLinetype.h">
       <name>linetype</name>
     </decl>
   </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
-  <private>private: 
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>init</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>cn</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLinetype</name>&amp;</type>
-      <name>c</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></private>
+  <specifier>const</specifier>;</function_decl>
+  <comment type="line">//private:</comment>
+  <comment type="line">// static void init(const QString&amp; cn,
+  const RLinetype&amp; c);</comment></public>
   <private>private: 
   <decl_stmt>
   <decl>
     <type>
-      <name>QString</name>
+      <name>RLinetypePattern</name>
     </type>
-    <name>name</name>
+    <name>pattern</name>
   </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QPair
-        <argument_list>&lt;
-        <argument>
-          <name>QString</name>
-        </argument>, 
-        <argument>
-          <name>RLinetype</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>list</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>RLinetype</name>
-      </argument>, 
-      <argument>
-        <name>QIcon</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>iconMap</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
+  <comment type="line">//QString name;</comment>
+  <comment type="line">//QString description;</comment>
+  <comment type="line">//int flags;</comment>
+  <comment type="line">//int numberOfDashes;</comment>
+  <comment type="line">//double patternLength;</comment>
+  <comment type="line">//double* pattern;</comment>
+  <comment type="line">//static QList&lt;QPair&lt;QString,
+  RLinetype&gt; &gt; list;</comment>
+  <comment type="line">//static QMap&lt;RLinetype, QIcon&gt;
+  iconMap;</comment></private>}</block>;</class>
   <function_decl>
   <type>
     <name>QCADCORE_EXPORT</name>

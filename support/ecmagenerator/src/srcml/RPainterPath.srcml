@@ -197,6 +197,33 @@ dir="./core" filename="RPainterPath.h">
       </decl>
     </param>)</parameter_list>;</constructor_decl>}</block>
   </function>
+  <comment type="block">/** * \nonscriptable */</comment>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>moveTo</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QPointF</name>&amp;</type>
+        <name>p</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <constructor_decl>
+    <name>QPainterPath::moveTo</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>p</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</constructor_decl>}</block>
+  </function>
   <function>
     <type>
       <name>void</name>
@@ -269,6 +296,33 @@ dir="./core" filename="RPainterPath.h">
       <decl>
         <type>
           <name>y</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</constructor_decl>}</block>
+  </function>
+  <comment type="block">/** * \nonscriptable */</comment>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>lineTo</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QPointF</name>&amp;</type>
+        <name>p</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <constructor_decl>
+    <name>QPainterPath::lineTo</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>p</name>
         </type>
       </decl>
     </param>)</parameter_list>;</constructor_decl>}</block>

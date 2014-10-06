@@ -138,13 +138,16 @@
         queryCurrentView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryLinetypeDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryLinetype
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        queryBlock
+        queryBlockDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        queryBlockDirect
+        queryBlock
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryView
@@ -174,7 +177,16 @@
         setCurrentLinetype
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getCurrentLinetype
+        setCurrentLinetypePattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCurrentLinetypeId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCurrentLinetypePattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryCurrentLinetype
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryCurrentBlock
@@ -246,7 +258,13 @@
         getLinetypeName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLinetypeDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLinetypeNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLinetypePatterns
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLinetypeId

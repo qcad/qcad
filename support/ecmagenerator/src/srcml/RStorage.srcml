@@ -49,6 +49,9 @@ dir="./core" filename="RStorage.h">
   <cpp:file>"RLinetype.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"RLinetypePattern.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RModifiedListener.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -933,6 +936,29 @@ dir="./core" filename="RStorage.h">
       <name>RLinetype</name>
     </argument>&gt;</argument_list></name>
   </type>
+  <name>queryLinetypeDirect</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RLinetype</name>::
+        <name>Id</name></name>
+      </type>
+      <name>linetypeId</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSharedPointer
+    <argument_list>&lt;
+    <argument>
+      <name>RLinetype</name>
+    </argument>&gt;</argument_list></name>
+  </type>
   <name>queryLinetype</name>
   <parameter_list>(
   <param>
@@ -977,7 +1003,7 @@ dir="./core" filename="RStorage.h">
       <name>RBlock</name>
     </argument>&gt;</argument_list></name>
   </type>
-  <name>queryBlock</name>
+  <name>queryBlockDirect</name>
   <parameter_list>(
   <param>
     <decl>
@@ -1000,7 +1026,7 @@ dir="./core" filename="RStorage.h">
       <name>RBlock</name>
     </argument>&gt;</argument_list></name>
   </type>
-  <name>queryBlockDirect</name>
+  <name>queryBlock</name>
   <parameter_list>(
   <param>
     <decl>
@@ -1252,19 +1278,88 @@ dir="./core" filename="RStorage.h">
   <param>
     <decl>
       <type>
-        <name>RLinetype</name>
+        <name>
+        <name>RLinetype</name>::
+        <name>Id</name></name>
       </type>
-      <name>lt</name>
+      <name>ltId</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setCurrentLinetype</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>name</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setCurrentLinetypePattern</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RLinetypePattern</name>&amp;</type>
+      <name>p</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>
-    <name>RLinetype</name>
+    <name>
+    <name>RLinetype</name>::
+    <name>Id</name></name>
   </type>
-  <name>getCurrentLinetype</name>
+  <name>getCurrentLinetypeId</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>RLinetypePattern</name>
+  </type>
+  <name>getCurrentLinetypePattern</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>QSharedPointer
+      <argument_list>&lt;
+      <argument>
+        <name>RLinetype</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>queryCurrentLinetype</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>queryLinetype</name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <call>
+              <name>getCurrentLinetypeId</name>
+              <argument_list>()</argument_list>
+            </call>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
   <function>
     <type>
       <name>virtual</name>
@@ -1781,6 +1876,25 @@ dir="./core" filename="RStorage.h">
   <function_decl>
   <type>
     <name>virtual</name>
+    <name>QString</name>
+  </type>
+  <name>getLinetypeDescription</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RLinetype</name>::
+        <name>Id</name></name>
+      </type>
+      <name>linetypeId</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
     <name>QSet
     <argument_list>&lt;
     <argument>
@@ -1788,6 +1902,19 @@ dir="./core" filename="RStorage.h">
     </argument>&gt;</argument_list></name>
   </type>
   <name>getLinetypeNames</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RLinetypePattern</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getLinetypePatterns</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
@@ -3165,9 +3292,11 @@ dir="./core" filename="RStorage.h">
   <decl_stmt>
   <decl>
     <type>
-      <name>RLinetype</name>
+      <name>
+      <name>RLinetype</name>::
+      <name>Id</name></name>
     </type>
-    <name>currentLinetype</name>
+    <name>currentLinetypeId</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

@@ -53,6 +53,8 @@ public:
 
     QList<RPainterPath> getPainterPaths();
 
+    virtual void drawPolygon(const QPointF *points, int pointCount, PolygonDrawMode mode);
+
 private:
     QList<RPainterPath> paths;
     QTransform transform;

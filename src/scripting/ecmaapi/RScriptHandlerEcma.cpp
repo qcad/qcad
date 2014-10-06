@@ -154,7 +154,6 @@
 #include "REcmaLinetype.h"
 #include "REcmaLinetypeCombo.h"
 #include "REcmaLinetypePattern.h"
-#include "REcmaLinetypePatternMap.h"
 #include "REcmaLineweight.h"
 #include "REcmaLinkedStorage.h"
 #include "REcmaLineweightCombo.h"
@@ -506,7 +505,6 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaThread::init(*engine);
     REcmaRunner::init(*engine);
     REcmaLinetypePattern::init(*engine);
-    REcmaLinetypePatternMap::init(*engine);
     REcmaPattern::init(*engine);
     REcmaPatternListMetric::init(*engine);
     REcmaPatternListImperial::init(*engine);

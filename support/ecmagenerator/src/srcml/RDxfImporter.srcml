@@ -236,6 +236,36 @@ dir="./io/dxf" filename="RDxfImporter.h">
     <name>virtual</name>
     <name>void</name>
   </type>
+  <name>addLinetype</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>DL_LinetypeData</name>&amp;</type>
+      <name>data</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>addLinetypeDash</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>length</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
   <name>addBlock</name>
   <parameter_list>(
   <param>
@@ -1430,6 +1460,18 @@ dir="./io/dxf" filename="RDxfImporter.h">
       </argument>&gt;</argument_list></name>
     </type>
     <name>images</name>
+  </decl>;</decl_stmt>
+  <comment type="line">// pattern for linetype</comment>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>double</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>pattern</name>
   </decl>;</decl_stmt>
   <comment type="line">// Current app id for XData:</comment>
   <decl_stmt>

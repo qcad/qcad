@@ -106,6 +106,14 @@ dir="./entity" filename="RTextBasedEntity.h">
       <name>static</name>
       <name>RPropertyTypeId</name>
     </type>
+    <name>PropertyLinetypeScale</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
     <name>PropertyLineweight</name>
   </decl>;</decl_stmt>
   <decl_stmt>
