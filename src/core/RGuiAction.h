@@ -65,7 +65,7 @@ class QCADCORE_EXPORT RGuiAction:
 Q_OBJECT
 
 public:
-    typedef void (*FactoryFunction)();
+    typedef void (*FactoryFunction)(RGuiAction*);
 
 public:
     RGuiAction(const QString& text, QObject* parent = 0);

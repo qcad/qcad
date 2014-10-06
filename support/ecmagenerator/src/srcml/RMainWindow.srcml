@@ -28,6 +28,12 @@ dir="./core" filename="RMainWindow.h">
   <cpp:file>&lt;QMutex&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"RExportListener.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RImportListener.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"RInterTransactionListener.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -410,6 +416,110 @@ dir="./core" filename="RMainWindow.h">
   </type>
   <name>notifyPropertyListeners</name>
   <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>addExportListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RExportListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>removeExportListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RExportListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>notifyExportListenersPre</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocumentInterface</name>*</type>
+      <name>documentInterface</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>notifyExportListenersPost</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocumentInterface</name>*</type>
+      <name>documentInterface</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>addImportListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RImportListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>removeImportListener</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RImportListener</name>*</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>notifyImportListenersPre</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocumentInterface</name>*</type>
+      <name>documentInterface</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>notifyImportListenersPost</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RDocumentInterface</name>*</type>
+      <name>documentInterface</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
@@ -1327,6 +1437,28 @@ dir="./core" filename="RMainWindow.h">
       RPenListener</name>*</argument>&gt;</argument_list></name>
     </type>
     <name>penListeners</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+      <name>
+      RExportListener</name>*</argument>&gt;</argument_list></name>
+    </type>
+    <name>exportListeners</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+      <name>
+      RImportListener</name>*</argument>&gt;</argument_list></name>
+    </type>
+    <name>importListeners</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

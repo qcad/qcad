@@ -319,10 +319,17 @@ Print.getPaperBox = function(document) {
  * Auto fit drawing to page size.
  */
 Print.autoFitDrawing = function(document) {
-    var paperUnit = Print.getPaperUnit(document);
-
     // drawing bounding box in drawing units:
     var bBox = document.getBoundingBox(true, true);
+    Print.autoFitBox(document, bBox);
+    Print.centerBox(document, bBox);
+};
+
+/**
+ * Auto fit given box to page size.
+ */
+Print.autoFitBox = function(document, bBox) {
+    var paperUnit = Print.getPaperUnit(document);
 
     // paper bounding box in drawing units, multiplied by scale:
     var pBox = Print.getPaperBox(document);
@@ -359,11 +366,18 @@ Print.autoFitDrawing = function(document) {
     }
 
     Print.setScale(document, f);
-
-    Print.autoCenter(document);
+    Print.centerBox(document, bBox);
 };
 
 Print.autoCenter = function(document) {
+    var bBox = document.getBoundingBox(true, true);
+    if (!bBox.isValid()) {
+        return;
+    }
+    Print.centerBox(document, bBox);
+};
+
+Print.centerBox = function(document, bBox) {
     var paperUnit = Print.getPaperUnit(document);
 
     var glueLeft = Print.getGlueMarginLeft(document);
@@ -378,11 +392,6 @@ Print.autoCenter = function(document) {
     var glueWidth = glueLeft + glueRight;
     var glueHeight = glueTop + glueBottom;
 
-    var bBox = document.getBoundingBox(true, true);
-    if (!bBox.isValid()) {
-        return;
-    }
-
     var pBox = Print.getPaperBox(document);
     var scale = Print.getScale(document);
 
@@ -393,12 +402,7 @@ Print.autoCenter = function(document) {
     var offset = bBox.getMinimum().operator_subtract(new RVector(w2, h2));
     offset = offset.operator_add(new RVector(dw/2, dh/2));
     Print.setOffset(document, offset);
-
-//    this.updateBackgroundTransform();
-//    this.slotAutoZoomToPage();
-//    this.updateBackgroundDecoration();
 };
-
 
 /**
  * Draws the crop marks for the given page.

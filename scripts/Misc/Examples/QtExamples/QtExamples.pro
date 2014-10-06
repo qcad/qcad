@@ -2,5 +2,7 @@ TEMPLATE = subdirs
 
 SUBDIRS = \
     ts \
+    ExDirListing \
     ExMainWindow \
-    ExResizeWindow
+    ExResizeWindow \
+    ExProcess

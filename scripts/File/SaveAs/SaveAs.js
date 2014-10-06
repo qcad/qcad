@@ -104,12 +104,7 @@ SaveAs.prototype.beginEvent = function() {
     }
 
     if (fileName.length!==0) {
-        //fileDialog.setDirectory(fileInfo.absoluteFilePath());
-        //fileDialog.selectFile(fileInfo.fileName());
         fileDialog.selectFile(fileInfo.absoluteFilePath());
-        qDebug("fileInfo.absoluteFilePath(): ", fileInfo.absoluteFilePath());
-        qDebug("selected files: ", fileDialog.selectedFiles());
-        //debugger;
     }
     else {
         fileDialog.setDirectory(lastSaveAsFileDir);
@@ -125,7 +120,6 @@ SaveAs.prototype.beginEvent = function() {
     }
 
     if (!fileDialog.exec()) {
-        qDebug("save as: canceled");
         fileDialog.destroy();
         this.terminate();
         return;

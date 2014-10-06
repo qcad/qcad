@@ -33,6 +33,8 @@
 #include "RLayerListener.h"
 #include "RMainWindow.h"
 #include "RPenListener.h"
+#include "RExportListener.h"
+#include "RImportListener.h"
 #include "RPropertyListener.h"
 #include "RSelectionListener.h"
 #include "RSettings.h"
@@ -208,6 +210,76 @@ void RMainWindow::notifySelectionListeners(RDocumentInterface* documentInterface
     QList<RSelectionListener*>::iterator it;
     for (it = selectionListeners.begin(); it != selectionListeners.end(); ++it) {
         (*it)->updateSelectionListener(documentInterface);
+    }
+}
+
+/**
+ * Adds a listener for export events.
+ */
+void RMainWindow::addExportListener(RExportListener* l) {
+    if (l != NULL) {
+        exportListeners.push_back(l);
+    } else {
+        qWarning("RMainWindow::addExportListener(): Listener is NULL.");
+    }
+}
+
+void RMainWindow::removeExportListener(RExportListener* l) {
+    exportListeners.removeAll(l);
+}
+
+/**
+ * Notifies all Export listeners about pre export event.
+ */
+void RMainWindow::notifyExportListenersPre(RDocumentInterface* documentInterface) {
+    QList<RExportListener*>::iterator it;
+    for (it = exportListeners.begin(); it != exportListeners.end(); ++it) {
+        (*it)->preExportEvent(documentInterface);
+    }
+}
+
+/**
+ * Notifies all Export listeners about post export event.
+ */
+void RMainWindow::notifyExportListenersPost(RDocumentInterface* documentInterface) {
+    QList<RExportListener*>::iterator it;
+    for (it = exportListeners.begin(); it != exportListeners.end(); ++it) {
+        (*it)->postExportEvent(documentInterface);
+    }
+}
+
+/**
+ * Adds a listener for import events.
+ */
+void RMainWindow::addImportListener(RImportListener* l) {
+    if (l != NULL) {
+        importListeners.push_back(l);
+    } else {
+        qWarning("RMainWindow::addImportListener(): Listener is NULL.");
+    }
+}
+
+void RMainWindow::removeImportListener(RImportListener* l) {
+    importListeners.removeAll(l);
+}
+
+/**
+ * Notifies all import listeners about pre import event.
+ */
+void RMainWindow::notifyImportListenersPre(RDocumentInterface* documentInterface) {
+    QList<RImportListener*>::iterator it;
+    for (it = importListeners.begin(); it != importListeners.end(); ++it) {
+        (*it)->preImportEvent(documentInterface);
+    }
+}
+
+/**
+ * Notifies all import listeners about post import event.
+ */
+void RMainWindow::notifyImportListenersPost(RDocumentInterface* documentInterface) {
+    QList<RImportListener*>::iterator it;
+    for (it = importListeners.begin(); it != importListeners.end(); ++it) {
+        (*it)->postImportEvent(documentInterface);
     }
 }
 

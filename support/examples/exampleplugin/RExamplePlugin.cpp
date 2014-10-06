@@ -1,12 +1,37 @@
+#include <QMenuBar>
+
 #include "REcmaHelper.h"
 #include "RExamplePlugin.h"
 #include "RSettings.h"
 #include "RPluginInfo.h"
 #include "RVersion.h"
+#include "RMainWindowQt.h"
+
 
 bool RExamplePlugin::init() {
     qDebug() << "RExamplePlugin::init";
     return true;
+}
+
+void RExamplePlugin::postInit() {
+    RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
+    RGuiAction* guiAction = new RGuiAction("My CPP Action");
+    guiAction->setRequiresDocument(true);
+    //guiAction->setScriptFile(basePath + "/Line2P.js");
+    //guiAction->setIcon(basePath + "/Line2P.svg");
+    //guiAction->setStatusTip(qsTranslate("Line2P", "Draw single line or sequence of lines"));
+    //guiAction->setDefaultShortcut(new QKeySequence("l,i"));
+    guiAction->setSortOrder(100000);
+
+    QMenuBar* menuBar = appWin->menuBar();
+    QMenu* menu = menuBar->findChild<QMenu*>("MiscMenu");
+    //menu->addAction(guiAction);
+    guiAction->addToMenu(menu);
+
+    guiAction->setFactory(MyAction::factory);
+    //MyAction* action = new MyAction(guiAction);
+
+
 }
 
 void RExamplePlugin::initScriptExtensions(QScriptEngine& engine) {

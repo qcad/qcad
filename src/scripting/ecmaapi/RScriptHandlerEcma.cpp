@@ -136,6 +136,10 @@
 #include "REcmaImageData.h"
 #include "REcmaImageEntity.h"
 #include "REcmaImporter.h"
+#include "REcmaExportListener.h"
+#include "REcmaImportListener.h"
+#include "REcmaExportListenerAdapter.h"
+#include "REcmaImportListenerAdapter.h"
 #include "REcmaInputEvent.h"
 #include "REcmaInterTransactionListener.h"
 #include "REcmaInterTransactionListenerAdapter.h"
@@ -152,6 +156,7 @@
 #include "REcmaLinetypePattern.h"
 #include "REcmaLinetypePatternMap.h"
 #include "REcmaLineweight.h"
+#include "REcmaLinkedStorage.h"
 #include "REcmaLineweightCombo.h"
 #include "REcmaListView.h"
 #include "REcmaListWidget.h"
@@ -540,6 +545,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaSharedPointerTextLabel::init(*engine);
 
     REcmaStorage::init(*engine);
+    REcmaLinkedStorage::init(*engine);
     REcmaMemoryStorage::init(*engine);
 
     REcmaDocument::init(*engine);
@@ -547,6 +553,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaSelectionListener::init(*engine);
     REcmaSelectionListenerAdapter::init(*engine);
+    REcmaExportListener::init(*engine);
+    REcmaExportListenerAdapter::init(*engine);
+    REcmaImportListener::init(*engine);
+    REcmaImportListenerAdapter::init(*engine);
     REcmaTransactionListener::init(*engine);
     REcmaTransactionListenerAdapter::init(*engine);
     REcmaInterTransactionListener::init(*engine);

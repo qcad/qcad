@@ -66,6 +66,8 @@ HEADERS += \
     $$PWD/REcmaEntityPickEvent.h \
     $$PWD/REcmaEventFilter.h \
     $$PWD/REcmaExplodable.h \
+    $$PWD/REcmaExportListener.h \
+    $$PWD/REcmaExportListenerAdapter.h \
     $$PWD/REcmaExporter.h \
     $$PWD/REcmaFileCache.h \
     $$PWD/REcmaFileExporter.h \
@@ -97,6 +99,8 @@ HEADERS += \
     $$PWD/REcmaHatchEntity.h \
     $$PWD/REcmaImageData.h \
     $$PWD/REcmaImageEntity.h \
+    $$PWD/REcmaImportListener.h \
+    $$PWD/REcmaImportListenerAdapter.h \
     $$PWD/REcmaImporter.h \
     $$PWD/REcmaInputEvent.h \
     $$PWD/REcmaInterTransactionListener.h \
@@ -387,6 +391,8 @@ SOURCES += \
     $$PWD/REcmaEntityPickEvent.cpp \
     $$PWD/REcmaEventFilter.cpp \
     $$PWD/REcmaExplodable.cpp \
+    $$PWD/REcmaExportListener.cpp \
+    $$PWD/REcmaExportListenerAdapter.cpp \
     $$PWD/REcmaExporter.cpp \
     $$PWD/REcmaFileCache.cpp \
     $$PWD/REcmaFileExporter.cpp \
@@ -418,6 +424,8 @@ SOURCES += \
     $$PWD/REcmaHatchEntity.cpp \
     $$PWD/REcmaImageData.cpp \
     $$PWD/REcmaImageEntity.cpp \
+    $$PWD/REcmaImportListener.cpp \
+    $$PWD/REcmaImportListenerAdapter.cpp \
     $$PWD/REcmaImporter.cpp \
     $$PWD/REcmaInputEvent.cpp \
     $$PWD/REcmaInterTransactionListener.cpp \

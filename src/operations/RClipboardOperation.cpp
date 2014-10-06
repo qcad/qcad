@@ -76,6 +76,8 @@ void RClipboardOperation::copy(
 
     bool hasBlock = false;
 
+    QSet<REntity::Id> attributeIds;
+
     // this part is used to insert ('paste') blocks from the part library
     // as new blocks:
     QSharedPointer<RBlockReferenceEntity> refp;
@@ -151,6 +153,7 @@ void RClipboardOperation::copy(
             att->setLayerId(destLayer->getId());
 
             transaction.addObject(att, false);
+            attributeIds.insert(att->getId());
         }
 
         scale = 1.0;
@@ -160,6 +163,7 @@ void RClipboardOperation::copy(
         toCurrentLayer = false;
         //toCurrentBlock = false;
     }
+
 
     // copy entities from src to dest:
     //     if the block existed already in dest and is not overwritten,
@@ -233,9 +237,9 @@ void RClipboardOperation::copy(
 
         // fix parent ID of attributes created by the new inserted block:
         REntity::Id refId = refp->getId();
-        QSet<REntity::Id> ids = dest.queryAllEntities();
+        //QSet<REntity::Id> ids = dest.queryAllEntities();
         QSet<REntity::Id>::iterator it;
-        for (it=ids.begin(); it!=ids.end(); it++) {
+        for (it=attributeIds.begin(); it!=attributeIds.end(); it++) {
             REntity::Id id = *it;
             QSharedPointer<RAttributeEntity> e =
                 dest.queryEntityDirect(id).dynamicCast<RAttributeEntity>();
@@ -248,14 +252,6 @@ void RClipboardOperation::copy(
             }
         }
     }
-
-    // if block was overwritten, we need to update the spatial index
-    // entries for all block references of that block:
-    //if (overwriteBlocks) {
-
-    //}
-
-    //qDebug() << "After copying block and block ref and entities: \n" << dest;
 
     transaction.endCycle();
 }
