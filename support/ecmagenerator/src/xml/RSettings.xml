@@ -313,6 +313,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getShowLargeOriginAxis"
+    cppName="getShowLargeOriginAxis" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setShowLargeOriginAxis"
+    cppName="setShowLargeOriginAxis" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getConcurrentDrawing"
     cppName="getConcurrentDrawing" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
@@ -370,6 +383,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RColor &amp;" typeName="RColor"
         name="defaultValue" hasDefault="true"
         default="RDEFAULT_RCOLOR" isConst="true" />
+      </variant>
+    </method>
+    <method name="hasValue" cppName="hasValue" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
       </variant>
     </method>
     <method name="getValue" cppName="getValue" specifier="public"

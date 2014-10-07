@@ -73,6 +73,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, init, "init");
             
+            REcmaHelper::registerFunction(&engine, proto, initLinetypes, "initLinetypes");
+            
             REcmaHelper::registerFunction(&engine, proto, getStorage, "getStorage");
             
             REcmaHelper::registerFunction(&engine, proto, getSpatialIndex, "getSpatialIndex");
@@ -302,6 +304,8 @@
             REcmaHelper::registerFunction(&engine, proto, setUnit, "setUnit");
             
             REcmaHelper::registerFunction(&engine, proto, getUnit, "getUnit");
+            
+            REcmaHelper::registerFunction(&engine, proto, isMetric, "isMetric");
             
             REcmaHelper::registerFunction(&engine, proto, setDimensionFont, "setDimensionFont");
             
@@ -560,6 +564,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::initLinetypes
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::initLinetypes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::initLinetypes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("initLinetypes", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->initLinetypes();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.initLinetypes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::initLinetypes", context, engine);
             return result;
         }
          QScriptValue
@@ -9077,6 +9125,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getUnit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::isMetric
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::isMetric", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::isMetric";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("isMetric", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isMetric();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.isMetric().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::isMetric", context, engine);
             return result;
         }
          QScriptValue

@@ -169,6 +169,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, setShowLargeCrosshair, "setShowLargeCrosshair");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getShowLargeOriginAxis, "getShowLargeOriginAxis");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setShowLargeOriginAxis, "setShowLargeOriginAxis");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getConcurrentDrawing, "getConcurrentDrawing");
             
             REcmaHelper::registerFunction(&engine, &ctor, setConcurrentDrawing, "setConcurrentDrawing");
@@ -186,6 +190,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, clearRecentFiles, "clearRecentFiles");
             
             REcmaHelper::registerFunction(&engine, &ctor, getColor, "getColor");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, hasValue, "hasValue");
             
             REcmaHelper::registerFunction(&engine, &ctor, getValue, "getValue");
             
@@ -2630,6 +2636,90 @@
             return result;
         }
          QScriptValue
+        REcmaSettings::getShowLargeOriginAxis
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getShowLargeOriginAxis", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getShowLargeOriginAxis";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getShowLargeOriginAxis();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getShowLargeOriginAxis().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getShowLargeOriginAxis", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::setShowLargeOriginAxis
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::setShowLargeOriginAxis", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::setShowLargeOriginAxis";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       setShowLargeOriginAxis(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.setShowLargeOriginAxis().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::setShowLargeOriginAxis", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSettings::getConcurrentDrawing
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3054,6 +3144,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::hasValue
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::hasValue", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::hasValue";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       hasValue(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.hasValue().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::hasValue", context, engine);
             return result;
         }
          QScriptValue

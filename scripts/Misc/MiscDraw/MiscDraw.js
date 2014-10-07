@@ -24,6 +24,7 @@
  * \brief This module contains misc drawing tools.
  */
 include("../Misc.js");
+include("scripts/Draw/Line/Line.js");
 
 /**
  * \class MiscDraw
@@ -51,10 +52,6 @@ MiscDraw.getToolBar = function() {
     var tb = EAction.getToolBar(MiscDraw.getTitle(), "MiscDrawToolBar");
     tb.visible = false;
     return tb;
-};
-
-MiscDraw.getCadToolBarPanel = function() {
-    return EAction.getMainCadToolBarPanel();
 };
 
 MiscDraw.getTitle = function() {

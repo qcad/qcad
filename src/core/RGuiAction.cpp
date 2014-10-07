@@ -513,6 +513,14 @@ bool RGuiAction::isGroupDefault() {
     return groupDefault;
 }
 
+void RGuiAction::setSeparatorGroup(const QString& title) {
+    separatorGroup = title;
+}
+
+QString RGuiAction::getSeparatorGroup() {
+    return separatorGroup;
+}
+
 /**
  * Triggers the first action in the list of actions that is registered
  * to use the given command.

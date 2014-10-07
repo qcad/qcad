@@ -213,6 +213,9 @@
         getScriptFile
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getScriptClass
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setGroup
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

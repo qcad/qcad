@@ -48,6 +48,9 @@
         init
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        initLinetypes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getStorage
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -391,6 +394,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isMetric
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setDimensionFont

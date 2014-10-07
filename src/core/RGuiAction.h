@@ -22,6 +22,7 @@
 
 #include "core_global.h"
 
+#include <QFileInfo>
 #include <QMap>
 #include <QMetaType>
 #include <QString>
@@ -256,8 +257,12 @@ public:
     /**
      * \return Script file on which this action is based on.
      */
-    QString getScriptFile() {
+    QString getScriptFile() const {
         return scriptFile;
+    }
+
+    QString getScriptClass() const {
+        return QFileInfo(scriptFile).baseName();
     }
 
     virtual void setGroup(const QString& title);
@@ -265,6 +270,9 @@ public:
 
     void setGroupDefault(bool on);
     bool isGroupDefault();
+
+    void setSeparatorGroup(const QString& title);
+    QString getSeparatorGroup();
 
     /**
      * \return List of all instantiated actions.
@@ -330,6 +338,8 @@ protected:
     bool iconDisabled;
     int enabledOverride;
     RDocumentInterface* documentInterface;
+
+    QString separatorGroup;
 };
 
 Q_DECLARE_METATYPE(RGuiAction*)

@@ -197,6 +197,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getScriptFile, "getScriptFile");
             
+            REcmaHelper::registerFunction(&engine, proto, getScriptClass, "getScriptClass");
+            
             REcmaHelper::registerFunction(&engine, proto, setGroup, "setGroup");
             
             REcmaHelper::registerFunction(&engine, proto, getGroup, "getGroup");
@@ -3138,6 +3140,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::getScriptFile", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::getScriptClass
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::getScriptClass", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getScriptClass";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("getScriptClass", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getScriptClass();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getScriptClass().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::getScriptClass", context, engine);
             return result;
         }
          QScriptValue

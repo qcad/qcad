@@ -1041,9 +1041,44 @@ EAction.showSelectTools = function() {
 EAction.addGuiActionTo = function(action, iface, addToMenu, addToToolBar,
         addToCadToolBar, addSeparator) {
 
+    var className = action.getScriptClass();
+
+    if (isNull(addToMenu)) {
+        addToMenu = false;
+    }
+    if (isNull(addToToolBar)) {
+        addToToolBar = false;
+    }
+    if (isNull(addToCadToolBar)) {
+        addToCadToolBar = false;
+    }
+    if (isNull(addSeparator)) {
+        addSeparator = false;
+    }
+
+    if (className.length!==0) {
+        var key = className + "/VisibleInMenu";
+        addToMenu = RSettings.getBoolValue(key, addToMenu);
+        if (!RSettings.hasValue(key)) {
+            RSettings.setValue(key, addToMenu);
+        }
+        key = className + "/VisibleInToolBar";
+        addToToolBar = RSettings.getBoolValue(key, addToToolBar);
+        if (!RSettings.hasValue(key)) {
+            RSettings.setValue(key, addToToolBar);
+        }
+        key = className + "/VisibleInCadToolBar";
+        addToCadToolBar = RSettings.getBoolValue(key, addToCadToolBar);
+        if (!RSettings.hasValue(key)) {
+            RSettings.setValue(key, addToCadToolBar);
+        }
+    }
+
     if (isNull(iface)) {
         qWarning("EAction.js:", "addGuiActionTo(): iface not defined");
     }
+
+
 
     if (action.icon.isNull() && !action.isIconDisabled()) {
         action.setIcon("scripts/Empty.svg");

@@ -211,6 +211,12 @@
         setShowLargeCrosshair
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getShowLargeOriginAxis
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setShowLargeOriginAxis
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getConcurrentDrawing
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -236,6 +242,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasValue
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getValue

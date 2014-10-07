@@ -35,6 +35,9 @@ dir="./core" filename="RDxfServices.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RLineweight.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RLinetypePattern.h"</cpp:file></cpp:include>
   <comment type="block">/** * \brief DXF support tools, mainly for
   QCAD 2 DXF imports. * * \ingroup core * \scriptable * \copyable
   */</comment>
@@ -713,6 +716,28 @@ dir="./core" filename="RDxfServices.h">
       <name>const</name>
       <name>QString</name>&amp;</type>
       <name>str</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>autoFixLinetypePattern</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>metric</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>RLinetypePattern</name>&amp;</type>
+      <name>pattern</name>
     </decl>
   </param>)</parameter_list>;</function_decl></public>
   <private>private: 

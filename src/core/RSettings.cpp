@@ -672,6 +672,17 @@ RColor RSettings::getColor(const QString& key, const RColor& defaultValue) {
     return ret;
 }
 
+bool RSettings::hasValue(const QString& key) {
+    if (!isInitialized()) {
+        return false;
+    }
+    if (cache.contains(key)) {
+        return true;
+    }
+    QVariant ret = getQSettings()->value(key);
+    return ret.isValid();
+}
+
 QVariant RSettings::getValue(const QString& key, const QVariant& defaultValue) {
     if (!isInitialized()) {
         return defaultValue;

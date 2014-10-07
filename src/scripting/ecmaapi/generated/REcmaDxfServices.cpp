@@ -130,6 +130,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, parseUnicode, "parseUnicode");
             
+            REcmaHelper::registerFunction(&engine, &ctor, autoFixLinetypePattern, "autoFixLinetypePattern");
+            
 
     // static properties:
     
@@ -2088,6 +2090,76 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDxfServices::parseUnicode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDxfServices::autoFixLinetypePattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::autoFixLinetypePattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::autoFixLinetypePattern";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RLinetypePattern */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLinetypePattern*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RLinetypePattern*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDxfServices: Argument 1 is not of type RLinetypePattern.",
+                               context);                    
+                    }
+                    RLinetypePattern 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RDxfServices::
+       autoFixLinetypePattern(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.autoFixLinetypePattern().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::autoFixLinetypePattern", context, engine);
             return result;
         }
          QScriptValue REcmaDxfServices::toString

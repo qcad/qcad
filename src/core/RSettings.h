@@ -131,6 +131,7 @@ public:
 
     static RColor getColor(const QString& key, const RColor& defaultValue=RDEFAULT_RCOLOR);
 
+    static bool hasValue(const QString& key);
     static QVariant getValue(const QString& key, const QVariant& defaultValue=RDEFAULT_QVARIANT);
     static bool getBoolValue(const QString& key, bool defaultValue);
     static double getDoubleValue(const QString& key, double defaultValue);

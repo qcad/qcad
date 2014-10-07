@@ -136,7 +136,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="getScreenBasedLinetype" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QVector &lt; qreal &gt;"
-      isPureVirtual="false" />
+      isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="metric"
+        hasDefault="true" default=" true" isConst="false" />
+      </variant>
     </method>
     <method name="operator=" cppName="operator=" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

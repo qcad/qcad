@@ -578,6 +578,28 @@ dir="./core" filename="RSettings.h">
     <name>static</name>
     <name>bool</name>
   </type>
+  <name>getShowLargeOriginAxis</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>setShowLargeOriginAxis</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>on</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>bool</name>
+  </type>
   <name>getConcurrentDrawing</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
@@ -679,6 +701,21 @@ dir="./core" filename="RSettings.h">
         <name>RDEFAULT_RCOLOR</name>
       </expr>
     </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>bool</name>
+  </type>
+  <name>hasValue</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>key</name>
+    </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -994,6 +1031,14 @@ dir="./core" filename="RSettings.h">
       <name>int</name>
     </type>
     <name>showLargeCrosshair</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>int</name>
+    </type>
+    <name>showLargeOriginAxis</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

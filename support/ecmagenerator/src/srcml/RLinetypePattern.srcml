@@ -349,7 +349,19 @@ dir="./core" filename="RLinetypePattern.h">
     </argument>&gt;</argument_list></name>
   </type>
   <name>getScreenBasedLinetype</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>metric</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
   <name>RLinetypePattern</name>&amp;</type>

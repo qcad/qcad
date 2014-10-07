@@ -38,6 +38,15 @@ function File(guiAction) {
 File.prototype = new EAction();
 File.includeBasePath = includeBasePath;
 
+File.prototype.beginEvent = function() {
+    EAction.prototype.beginEvent.call(this);
+
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="FileMenu") {
+        EAction.showCadToolBarPanel("FileToolsPanel");
+        this.terminate();
+    }
+};
+
 File.getMenu = function() {
     var menu = EAction.getMenu(File.getTitle(), "FileMenu");
     menu.setProperty("scriptFile", File.includeBasePath + "/File.js");
@@ -48,6 +57,37 @@ File.getToolBar = function() {
     var tb = EAction.getToolBar(File.getTitle(), "FileToolBar");
     return tb;
 };
+
+File.getCadToolBarPanel = function() {
+    var mtb = EAction.getMainCadToolBarPanel();
+    var actionName = "FileMenu";
+    if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
+//        var separator = new RGuiAction("", RMainWindowQt.getMainWindow());
+//        separator.setSeparator(true);
+//        separator.setSortOrder(0);
+//        CadToolBarPanel.prototype.addAction.call(mtb, separator);
+
+        var action = new RGuiAction(qsTr("File Tools"), mtb);
+        action.setScriptFile(File.includeBasePath + "/File.js");
+        action.objectName = actionName;
+        action.setRequiresDocument(false);
+        action.setIcon(File.includeBasePath + "/File.svg");
+        action.setStatusTip(qsTr("Show file tools"));
+        action.setDefaultShortcut(new QKeySequence("w,f"));
+        action.setNoState();
+        action.setProperty("SortOrder", 1);
+        action.setDefaultCommands(["filemenu"]);
+        CadToolBarPanel.prototype.addAction.call(mtb, action);
+    }
+
+    var tb = EAction.getCadToolBarPanel(
+        File.getTitle(),
+        "FileToolsPanel",
+        true
+    );
+    return tb;
+};
+
 
 File.getTitle = function() {
     return qsTr("&File");

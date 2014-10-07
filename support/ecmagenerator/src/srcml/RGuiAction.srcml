@@ -25,6 +25,9 @@ dir="./core" filename="RGuiAction.h">
   <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QFileInfo&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -873,11 +876,36 @@ dir="./core" filename="RGuiAction.h">
     </type>
     <name>getScriptFile</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
       <name>scriptFile</name>
     </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>getScriptClass</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <call>
+      <name>QFileInfo</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>scriptFile</name>
+        </expr>
+      </argument>)</argument_list>
+    </call>.
+    <call>
+      <name>baseName</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
   </function>
   <function_decl>
   <type>

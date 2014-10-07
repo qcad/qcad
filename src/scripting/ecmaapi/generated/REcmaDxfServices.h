@@ -141,6 +141,9 @@
         ;static  QScriptValue
         parseUnicode
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        autoFixLinetypePattern
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

@@ -120,12 +120,17 @@ dir="./core" filename="RDocument.h">
   <specifier>virtual</specifier>
   <name>~RDocument</name>
   <parameter_list>()</parameter_list>;</destructor_decl>
-  <comment type="line">//void addLinetype(QString name);</comment>
   <function_decl>
   <type>
     <name>void</name>
   </type>
   <name>init</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>initLinetypes</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -2427,6 +2432,13 @@ dir="./core" filename="RDocument.h">
     <name>Unit</name></name>
   </type>
   <name>getUnit</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>bool</name>
+  </type>
+  <name>isMetric</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>

@@ -21,6 +21,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="initLinetypes" cppName="initLinetypes"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="getStorage" cppName="getStorage"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -982,6 +987,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getUnit" cppName="getUnit" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RS::Unit" isPureVirtual="false" />
+    </method>
+    <method name="isMetric" cppName="isMetric" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setDimensionFont" cppName="setDimensionFont"
     specifier="public" isStatic="false" isVirtual="false"
