@@ -2191,48 +2191,6 @@ void RDxfServices::autoFixLinetypePattern(bool metric, RLinetypePattern& pattern
     }
 
     if (pattern.getPatternLength()>pat->getPatternLength()*(25.4/2)) {
-        //qDebug() << "fix pattern: " << pattern;
         pattern.scale(1/25.4);
     }
-
-    //QStringList names = RLinetypeListImperial::getNames();
-
-//    static QMap<QString, double> nameToMaxLength;
-//    if (nameToMaxLength.isEmpty()) {
-//        nameToMaxLength.insert("BORDER", 30.0);
-//        nameToMaxLength.insert("BORDER2", 15.0);
-//        nameToMaxLength.insert("BORDERX2", 50.0);
-//        nameToMaxLength.insert("CENTER", 25.0);
-//        nameToMaxLength.insert("CENTER2", 15.0);
-//        nameToMaxLength.insert("CENTERX2", 50.0);
-//        nameToMaxLength.insert("DASHDOT", 15.0);
-//        nameToMaxLength.insert("DASHDOT2", 5.0);
-//        nameToMaxLength.insert("DASHDOTX2", 25.0);
-//        nameToMaxLength.insert("DASHED", 10.0);
-//        nameToMaxLength.insert("DASHED2", 5.0);
-//        nameToMaxLength.insert("DASHEDX2", 20.0);
-//        nameToMaxLength.insert("DIVIDE", 15.0);
-//        nameToMaxLength.insert("DIVIDE2", 7.5);
-//        nameToMaxLength.insert("DIVIDEX2", 30.0);
-//        nameToMaxLength.insert("DOT", 3.0);
-//        nameToMaxLength.insert("DOT2", 1.5);
-//        nameToMaxLength.insert("DOTX2", 6.0);
-//        nameToMaxLength.insert("HIDDEN", 5.0);
-//        nameToMaxLength.insert("HIDDEN2", 2.0);
-//        nameToMaxLength.insert("HIDDENX2", 10.0);
-//        nameToMaxLength.insert("PHANTOM", 30.0);
-//        nameToMaxLength.insert("PHANTOM2", 15.0);
-//        nameToMaxLength.insert("PHANTOMX2", 60.0);
-//    }
-
-    // QCAD <=3.6 stored line patterns in mm, even for imperial units:
-//    QMap<QString, double>::iterator it;
-//    for (it=nameToMaxLength.begin(); it!=nameToMaxLength.end(); it++) {
-//        QString name = it.key();
-//        double l = it.value();
-
-//        if (pattern.name.toUpper()==name && pattern.getPatternLength()>l) {
-//            pattern.scale(1/25.4);
-//        }
-//    }
 }
