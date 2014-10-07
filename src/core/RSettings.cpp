@@ -47,6 +47,7 @@ int RSettings::snapRange = -1;
 int RSettings::zeroWeightWeight = -1;
 int RSettings::showCrosshair = -1;
 int RSettings::showLargeCrosshair = -1;
+int RSettings::showLargeOriginAxis = -1;
 int RSettings::concurrentDrawing = -1;
 int RSettings::previewEntities = -1;
 int RSettings::limitZoomAndScroll = -1;
@@ -607,6 +608,19 @@ void RSettings::setShowLargeCrosshair(bool on) {
     showLargeCrosshair = on;
 }
 
+bool RSettings::getShowLargeOriginAxis() {
+    if (showLargeOriginAxis==-1) {
+        showLargeOriginAxis = getValue("GraphicsView/ShowLargeOriginAxis",
+                                 QVariant(false)).toBool();
+    }
+    return (bool)showLargeOriginAxis;
+}
+
+void RSettings::setShowLargeOriginAxis(bool on) {
+    setValue("GraphicsView/ShowLargeOriginAxis", on);
+    showLargeOriginAxis = on;
+}
+
 bool RSettings::getConcurrentDrawing() {
     if (concurrentDrawing==-1) {
         concurrentDrawing = getValue("GraphicsView/ConcurrentDrawing", 
@@ -790,6 +804,7 @@ void RSettings::resetCache() {
     zeroWeightWeight = -1;
     showCrosshair = -1;
     showLargeCrosshair = -1;
+    showLargeOriginAxis = -1;
     concurrentDrawing = -1;
     previewEntities = -1;
     limitZoomAndScroll = -1;

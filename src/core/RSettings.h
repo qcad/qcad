@@ -117,6 +117,8 @@ public:
     static void setShowCrosshair(bool on);
     static bool getShowLargeCrosshair();
     static void setShowLargeCrosshair(bool on);
+    static bool getShowLargeOriginAxis();
+    static void setShowLargeOriginAxis(bool on);
     static bool getConcurrentDrawing();
     static void setConcurrentDrawing(bool on);
     static QLocale getNumberLocale();
@@ -168,6 +170,7 @@ private:
     static int zeroWeightWeight;
     static int showCrosshair;
     static int showLargeCrosshair;
+    static int showLargeOriginAxis;
     static int concurrentDrawing;
     static int previewEntities;
     static int limitZoomAndScroll;

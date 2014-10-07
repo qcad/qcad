@@ -231,12 +231,18 @@ void RGraphicsViewImage::updateImage() {
         }
         else {
             paintErase(graphicsBuffer);
+            bool originBelowEntities = RSettings::getShowLargeOriginAxis();
+            if (originBelowEntities) {
+                paintOrigin(graphicsBuffer);
+            }
             paintDocument();
             if (displayGrid) {
                 paintMetaGrid(graphicsBuffer);
                 paintGrid(graphicsBuffer);
             }
-            paintOrigin(graphicsBuffer);
+            if (!originBelowEntities) {
+                paintOrigin(graphicsBuffer);
+            }
         }
         lastOffset = offset;
         lastFactor = factor;
@@ -392,16 +398,26 @@ void RGraphicsViewImage::paintOrigin(QPaintDevice& device) {
     QPen pen(RSettings::getColor("GraphicsViewColors/OriginColor", RColor(255,0,0,192)));
     pen.setWidth(0);
 
-    gridPainter->setPen(pen);
-    double r = mapDistanceFromView(20.0);
-    gridPainter->drawLine(
-        QPointF(-r,0.0),
-        QPointF(r,0.0)
-    );
-    gridPainter->drawLine(
-        QPointF(0.0,-r),
-        QPointF(0.0,r)
-    );
+    if (RSettings::getShowLargeOriginAxis()) {
+        RBox b = getBox();
+        //pen.setStyle(Qt::DashDotDotLine);
+        pen.setDashPattern(QVector<qreal>() << 9 << 3 << 3 << 3 << 3 << 3);
+        gridPainter->setPen(pen);
+        gridPainter->drawLine(QPointF(b.c1.x, 0.0), QPointF(b.c2.x, 0));
+        gridPainter->drawLine(QPointF(0.0, b.c1.y), QPointF(0.0, b.c2.y));
+    }
+    else {
+        gridPainter->setPen(pen);
+        double r = mapDistanceFromView(20.0);
+        gridPainter->drawLine(
+            QPointF(-r,0.0),
+            QPointF(r,0.0)
+        );
+        gridPainter->drawLine(
+            QPointF(0.0,-r),
+            QPointF(0.0,r)
+        );
+    }
 
     delete gridPainter;
     gridPainter = NULL;

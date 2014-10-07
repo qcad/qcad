@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>567</width>
-    <height>603</height>
+    <height>792</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,11 +21,30 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>550</width>
-     <height>638</height>
+     <width>565</width>
+     <height>790</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QGroupBox" name="Origin">
+      <property name="title">
+       <string>Origin</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QCheckBox" name="ShowLargeOriginAxis">
+         <property name="text">
+          <string>Show large origin axis</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
     <item>
      <widget class="QGroupBox" name="groupBox">
       <property name="title">

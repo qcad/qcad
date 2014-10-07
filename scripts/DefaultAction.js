@@ -295,6 +295,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
 
 DefaultAction.prototype.mouseReleaseEvent = function(event) {
     var persistentSelection = RSettings.getBoolValue("GraphicsView/PersistentSelection", false);
+    var view, range, entityId;
 
     if (event.button() === Qt.LeftButton) {
         switch (this.state) {
@@ -306,10 +307,10 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
 
                 add = true;
             }
-            var view = event.getGraphicsView();
-            var range = view.mapDistanceFromView(this.rangePixels);
+            view = event.getGraphicsView();
+            range = view.mapDistanceFromView(this.rangePixels);
 
-            var entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
+            entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
             //qDebug("entity id: ", entityId);
             if (entityId !== -1) {
                 if (add && this.document.isSelected(entityId)) {
@@ -361,6 +362,26 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             this.di.clearPreview();
             this.di.repaintViews();
             this.setState(DefaultAction.State.Neutral);
+        }
+
+        // use right-click to deselect individual entities:
+        else if (this.state===DefaultAction.State.Neutral &&
+            RSettings.getBoolValue("GraphicsView/RightClickToDeselect", false)) {
+
+            view = event.getGraphicsView();
+            range = view.mapDistanceFromView(this.rangePixels);
+
+            entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
+            if (entityId!==-1) {
+                if (this.document.isSelected(entityId)) {
+                    this.deselectEntity(entityId);
+                }
+                this.di.clearPreview();
+                this.di.repaintViews();
+            }
+            else {
+                CadToolBar.back();
+            }
         }
         else {
             CadToolBar.back();
