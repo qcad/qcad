@@ -27,6 +27,7 @@
 
 #undef __USE_BSD
 #include <cstring>
+#include <strings.h>
 
 using namespace SpatialIndex::TPRTree;
 
