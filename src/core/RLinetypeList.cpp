@@ -39,5 +39,5 @@ void RLinetypeList::init(bool metric, RResourceList<RLinetypePattern>& res) {
     }
 
     // TODO, extend with acad linetype substitutions:
-    res.resSubstitutionMap.insert("ACAD_ISO02W100", "QCAD_ISO02W100");
+    //res.resSubstitutionMap.insert("ACAD_ISO02W100", "QCAD_ISO02W100");
 }

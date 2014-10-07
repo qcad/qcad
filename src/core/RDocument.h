@@ -281,6 +281,8 @@ public:
     void setUnit(RS::Unit unit);
     RS::Unit getUnit() const;
 
+    bool isMetric() const;
+
     void setDimensionFont(const QString& f);
     QString getDimensionFont() const;
 

@@ -261,6 +261,9 @@ void RDxfImporter::addLinetype(const DL_LinetypeData& data) {
         }
     }
 
+    RLinetypePattern p(name, description, pattern);
+    RDxfServices::autoFixLinetypePattern(document->isMetric(), p);
+
 //    for (int i = 0; i < numDashes; i++) {
 //        data.pattern[i] = pattern[i];
 //    }
@@ -270,12 +273,7 @@ void RDxfImporter::addLinetype(const DL_LinetypeData& data) {
         // linetype name not found
         //RLinetypePatternMap::addLinetype(data);
         //document->addLinetype(name);
-        QSharedPointer<RLinetype> linetype(
-                    new RLinetype(
-                        document,
-                        RLinetypePattern(name, description, pattern)
-                        )
-                    );
+        QSharedPointer<RLinetype> linetype(new RLinetype(document, p));
 
         importObjectP(linetype);
     //}

@@ -260,6 +260,8 @@ void RDocument::initLinetypes() {
             pattern = RLinetypeListImperial::get(name);
         }
 
+        //qDebug() << "pattern: " << *pattern;
+
         if (pattern!=NULL) {
             t.addObject(QSharedPointer<RObject>(new RLinetype(this, *pattern)));
         }
@@ -294,6 +296,10 @@ void RDocument::setUnit(RS::Unit unit) {
 
 RS::Unit RDocument::getUnit() const {
     return storage.getUnit();
+}
+
+bool RDocument::isMetric() const {
+    return RUnit::isMetric(getUnit());
 }
 
 void RDocument::setDimensionFont(const QString& f) {

@@ -273,7 +273,7 @@
         </widget>
        </item>
        <item row="4" column="1" colspan="2">
-        <widget class="RMathLineEdit" name="LinetypeScale">
+        <widget class="RMathLineEdit" name="LinetypeScale" native="true">
          <property name="angle" stdset="0">
           <bool>false</bool>
          </property>
@@ -317,6 +317,11 @@
    <extends>QComboBox</extends>
    <header>RLinetypeCombo.h</header>
   </customwidget>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QWidget</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
  </customwidgets>
  <tabstops>
   <tabstop>Selection</tabstop>
@@ -325,7 +330,9 @@
   <tabstop>Color</tabstop>
   <tabstop>Lineweight</tabstop>
   <tabstop>Linetype</tabstop>
+  <tabstop>LinetypeScale</tabstop>
   <tabstop>DrawOrder</tabstop>
+  <tabstop>Handle</tabstop>
  </tabstops>
  <resources/>
  <connections/>

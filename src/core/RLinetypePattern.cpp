@@ -309,7 +309,6 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(const QS
             rx.indexIn(line);
             QString name = rx.cap(1);
             QString description = rx.cap(2);
-            qDebug() << "loading: " << name;
             ltpattern = new RLinetypePattern(name, description);
             ret.append(qMakePair(name, ltpattern));
             continue;
@@ -367,7 +366,7 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(const QS
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, const RLinetypePattern& p) {
-    dbg.nospace() << "RLinetypePattern(" << p.getName() << ", " << p.getDescription() << ", ";
+    dbg.nospace() << "RLinetypePattern(" << p.getName() << ", " << p.getDescription() << ", " << p.getPatternLength() << ", ";
     for (int i=0;i<p.getNumDashes();++i) {
         if (i!=0) {
             dbg.nospace() << ",";

@@ -768,7 +768,6 @@ void RExporter::exportLine(const RLine& line, double offset) {
     }
 
     RLinetypePattern p = getLinetypePattern();
-    qDebug() << "pattern: " << p;
 
     // continuous line or
     // we are in draft mode or
@@ -780,7 +779,6 @@ void RExporter::exportLine(const RLine& line, double offset) {
 
     p.scale(getPatternFactor());
     double patternLength = p.getPatternLength();
-    
 
     // avoid huge number of small segments due to very fine 
     // pattern or long lines:
@@ -1311,17 +1309,12 @@ double RExporter::getPatternFactor() {
 
     double factor = 1.0;
 
+//    if (!document->isMetric()) {
+//        factor *= 25.4;
+//    }
+
     // document wide linetype scale:
     double docLinetypeScale = document->getKnownVariable(RS::LTSCALE).toDouble();
-
-    if (factor < 1e-6) {
-        // line pattern factor for lines of width 0:
-        int zww = RSettings::getZeroWeightWeight();
-        if (zww<=0) {
-            zww = 100;
-        }
-        return RUnit::convert(zww/100.0, RS::Millimeter, document->getUnit()) * docLinetypeScale;
-    }
 
     // LTSCALE might be zero:
     if (docLinetypeScale>1e-6) {
@@ -1337,9 +1330,22 @@ double RExporter::getPatternFactor() {
                 factor *= entityLinetypeScale;
             }
         }
+
         // optional: automatic scaling by line weight:
         if (RSettings::getAutoScaleLinetypePatterns()) {
-            factor *= currentPen.widthF();
+            if (currentPen.widthF()<1e-6) {
+                // line pattern factor for lines of width 0:
+                int zww = RSettings::getZeroWeightWeight();
+                if (zww<=0) {
+                    zww = 100;
+                }
+                factor *= RUnit::convert(zww/100.0, RS::Millimeter, document->getUnit()) * docLinetypeScale;
+            }
+            else {
+                //qDebug() << "currentPen.widthF(): " << currentPen.widthF();
+                //qDebug() << "currentPen.widthF() mm: " << RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter);
+                factor *= RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter);
+            }
         }
     }
 

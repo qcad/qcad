@@ -27,6 +27,7 @@
 #include "RS.h"
 #include "RColor.h"
 #include "RLineweight.h"
+#include "RLinetypePattern.h"
 
 /**
  * \brief DXF support tools, mainly for QCAD 2 DXF imports.
@@ -111,6 +112,8 @@ public:
 
     static QString escapeUnicode(const QString& str);
     static QString parseUnicode(const QString& str);
+
+    static void autoFixLinetypePattern(bool metric, RLinetypePattern& pattern);
 
 private:
     bool qcad2GotDIMZIN;
