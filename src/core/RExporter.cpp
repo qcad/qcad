@@ -768,6 +768,7 @@ void RExporter::exportLine(const RLine& line, double offset) {
     }
 
     RLinetypePattern p = getLinetypePattern();
+    qDebug() << "pattern: " << p;
 
     // continuous line or
     // we are in draft mode or

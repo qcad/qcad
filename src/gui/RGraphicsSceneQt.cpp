@@ -19,16 +19,17 @@
 #include <QDragMoveEvent>
 #include <QScrollBar>
 
+#include "RBlockReferenceEntity.h"
 #include "RDebug.h"
 #include "RDocumentInterface.h"
 #include "REntity.h"
 #include "RGraphicsSceneQt.h"
 #include "RGraphicsViewImage.h"
+#include "RPainterPathSource.h"
 #include "RSettings.h"
 #include "RSpline.h"
 #include "RTextLabel.h"
-#include "RPainterPathSource.h"
-#include "RBlockReferenceEntity.h"
+#include "RUnit.h"
 
 
 RGraphicsSceneQt::RGraphicsSceneQt(RDocumentInterface& documentInterface)
@@ -104,7 +105,7 @@ bool RGraphicsSceneQt::beginPath() {
     currentPainterPath.setZLevel(0);
 
     if (screenBasedLinetypes) {
-        QVector<qreal> pat = currentLinetypePattern.getScreenBasedLinetype();
+        QVector<qreal> pat = currentLinetypePattern.getScreenBasedLinetype(RUnit::isMetric(document->getUnit()));
         if (!pat.isEmpty()) {
             currentPen.setDashPattern(pat);
         }

@@ -77,7 +77,7 @@ public:
     bool isSymmetrical(int i) const;
     void scale(double factor);
 
-    QVector<qreal> getScreenBasedLinetype();
+    QVector<qreal> getScreenBasedLinetype(bool metric=true);
 
     RLinetypePattern& operator=(const RLinetypePattern& other);
     bool operator==(const RLinetypePattern& other) const;

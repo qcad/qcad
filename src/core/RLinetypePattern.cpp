@@ -151,12 +151,12 @@ void RLinetypePattern::scale(double factor) {
  * \return Line pattern that can be used for a QPen to render screen
  * optimized patterns. Empty vector for continuous.
  */
-QVector<qreal> RLinetypePattern::getScreenBasedLinetype() {
+QVector<qreal> RLinetypePattern::getScreenBasedLinetype(bool metric) {
     QVector<qreal> ret;
 
     if (pattern.length()>1) {
         for (int i = 0; i < pattern.length(); ++i) {
-            ret << ceil(fabs(pattern[i]));
+            ret << ceil(fabs(pattern[i])) * (metric ? 1.0 : 25.4);
         }
     }
 
