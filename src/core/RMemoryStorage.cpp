@@ -289,6 +289,10 @@ QSet<REntity::Id> RMemoryStorage::queryBlockEntities(RBlock::Id blockId) {
 
 QSet<REntity::Id> RMemoryStorage::queryChildEntities(REntity::Id parentId, RS::EntityType type) {
     QSet<REntity::Id> result; // = queryBlockEntities(blockRef->getReferencedBlockId());
+    if (parentId==REntity::INVALID_ID) {
+        return result;
+    }
+
     QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
     for (it = entityMap.begin(); it != entityMap.end(); ++it) {
         QSharedPointer<REntity> e = *it;
@@ -841,6 +845,7 @@ bool RMemoryStorage::removeObject(QSharedPointer<RObject> object) {
 
 bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion, bool keepHandles) {
     if (object.isNull()) {
+        qWarning() << "RMemoryStorage::saveObject: object is NULL";
         return false;
     }
 
@@ -915,11 +920,9 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
     objectMap[object->getId()] = object;
     objectHandleMap[object->getHandle()] = object;
 
-    //QSharedPointer<REntity> entity = object.dynamicCast<REntity> ();
     if (!entity.isNull()) {
         entityMap[entity->getId()] = entity;
         blockEntityMap.insert(entity->getBlockId(), entity);
-        //qDebug() << "added " << entity->getId() << " to block " << entity->getBlockId();
         setMaxDrawOrder(qMax(entity->getDrawOrder()+1, getMaxDrawOrder()));
     }
 
