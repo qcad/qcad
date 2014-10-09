@@ -28,7 +28,6 @@
 #include <QSize>
 #include <QString>
 #include <QWidget>
-#include <QtDesigner/QDesignerExportWidget>
 
 class QMouseEvent;
 class QPaintEvent;

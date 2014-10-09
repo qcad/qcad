@@ -25,7 +25,6 @@
 #include <QMetaType>
 #include <QEvent>
 #include <QLineEdit>
-#include <QtDesigner/QDesignerExportWidget>
 
 /**
  * \scriptable

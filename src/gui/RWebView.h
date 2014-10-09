@@ -23,7 +23,6 @@
 #include "gui_global.h"
 
 #include <QWebView>
-#include <QtDesigner/QDesignerExportWidget>
 
 /**
  * \scriptable

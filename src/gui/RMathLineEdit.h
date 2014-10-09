@@ -25,7 +25,6 @@
 #include <QMetaType>
 #include <QLabel>
 #include <QLineEdit>
-#include <QtDesigner/QDesignerExportWidget>
 
 #include "RMath.h"
 
