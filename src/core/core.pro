@@ -268,7 +268,7 @@ macx {
 
 linux-g++* {
     # this might or might not be needed under Linux:
-    LIBS += -X11
+    LIBS += -lX11
 }
 
 !win32 {
