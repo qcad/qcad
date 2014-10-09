@@ -6,6 +6,11 @@ HEADERS = \
 TEMPLATE = lib
 OTHER_FILES += grid.dox
 DEFINES += QCADGRID_LIBRARY
-CONFIG += plugin
+r_static_libs {
+    CONFIG += staticlib
+}
+else {
+    CONFIG += plugin
+}
 TARGET = qcadgrid
 LIBS += -lqcadcore
