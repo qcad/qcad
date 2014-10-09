@@ -1,7 +1,7 @@
 contains(QT_VERSION, ^5\\..*\\..*) {
     cache()
     DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x000000
-    QT += printsupport webkitwidgets
+    QT += printsupport
     macx {
         QT += macextras
     }
@@ -34,6 +34,22 @@ CONFIG(plugin, plugin) {
 
 r_no_opennurbs {
     DEFINES += R_NO_OPENNURBS
+}
+
+android-* {
+    CONFIG += r_static_libs
+    CONFIG += r_mobile
+}
+
+macx-ios-* {
+    CONFIG += r_static_libs
+    CONFIG += r_mobile
+}
+
+!r_mobile {
+    contains(QT_VERSION, ^5\\..*\\..*) {
+        QT += webkitwidgets
+    }
 }
 
 win32-msvc2010 {
@@ -82,8 +98,10 @@ QT += core \
 # make sure that the QtHelp framework is included in the app bundle under Mac OS X:
 contains(QT_VERSION, ^5\\..*\\..*) {
     QT += help \
-        designer \
         uitools
+    !r_mobile {
+        QT += designer
+    }
 }
 else {
     CONFIG += help \

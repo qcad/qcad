@@ -5,8 +5,10 @@ SUBDIRS = \
     src \
     ts
 
-exists(support) {
-    SUBDIRS += support
+!r_mobile {
+    exists(support) {
+        SUBDIRS += support
+    }
 }
 
 # DO NOT REMOVE
