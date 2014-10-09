@@ -115,7 +115,9 @@
 #include <QValidator>
 #include <QVariant>
 #include <QVector>
+#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
 #include <QWebView>
+#endif
 #include <QWheelEvent>
 #include <QWidget>
 #include <QXmlResultItems>
@@ -221,7 +223,9 @@ Q_DECLARE_METATYPE(QPen*)
 Q_DECLARE_METATYPE(QPinchGesture*)
 Q_DECLARE_METATYPE(QPlainTextEdit*)
 Q_DECLARE_METATYPE(QPointF*)
+#if !defined(Q_OS_IOS)
 Q_DECLARE_METATYPE(QPrinter*)
+#endif
 Q_DECLARE_METATYPE(QProgressBar*)
 Q_DECLARE_METATYPE(QProcess::ProcessError*)
 Q_DECLARE_METATYPE(QQuaternion*)
@@ -258,7 +262,9 @@ Q_DECLARE_METATYPE(QUrl*)
 Q_DECLARE_METATYPE(QValidator*)
 Q_DECLARE_METATYPE(const QValidator*)
 Q_DECLARE_METATYPE(QVariant*)
+#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
 Q_DECLARE_METATYPE(QWebView*)
+#endif
 Q_DECLARE_METATYPE(QWheelEvent*)
 Q_DECLARE_METATYPE(QWidget*)
 Q_DECLARE_METATYPE(QXmlQuery)
@@ -307,7 +313,9 @@ Q_DECLARE_METATYPE(Qt::PenStyle)
 Q_DECLARE_METATYPE(Qt::BrushStyle)
 Q_DECLARE_METATYPE(Qt::ItemDataRole)
 Q_DECLARE_METATYPE(Qt::WindowFlags)
+#if !defined(Q_OS_IOS)
 Q_DECLARE_METATYPE(QPrinter::PaperSize)
+#endif
 Q_DECLARE_METATYPE(QVariant::Type)
 Q_DECLARE_METATYPE(QAbstractItemView::ScrollHint)
 

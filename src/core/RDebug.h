@@ -33,14 +33,14 @@
 #include <QFile>
 #include <QMetaType>
 
-#ifdef Q_OS_MAC
+#if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
 #include <CoreServices/CoreServices.h>
 #include <mach/mach.h>
 #include <mach/mach_time.h>
 #undef check
 #endif
 
-#ifndef Q_OS_WIN32
+#if !defined(Q_OS_WIN) && !defined(Q_OS_ANDROID)
 #include <execinfo.h>
 #endif
 
@@ -98,7 +98,7 @@ public:
     static void hexDump(const QString& str);
 
 private:
-#ifdef Q_OS_MAC
+#if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
     static QMap<int, uint64_t> timerMac;
 #else
     static QMap<int, QTime> timer;

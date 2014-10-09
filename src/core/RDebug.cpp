@@ -24,14 +24,14 @@
 
 //FILE* RDebug::stream=stderr;
 
-#ifdef Q_OS_MAC
+#if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
 QMap<int, uint64_t> RDebug::timerMac;
 #else
 QMap<int, QTime> RDebug::timer;
 #endif
 
 void RDebug::printBacktrace(const QString& prefix) {
-#if !defined(Q_OS_WIN32)
+#if !defined(Q_OS_WIN) && !defined(Q_OS_ANDROID)
     void *array[10];
     size_t size;
     char **strings;
@@ -53,7 +53,7 @@ void RDebug::printBacktrace(const QString& prefix) {
 }
 
 void RDebug::startTimer(int id) {
-#ifdef Q_OS_MAC
+#if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
     timerMac[id] = mach_absolute_time();
 #else
     timer[id].start();
@@ -62,7 +62,7 @@ void RDebug::startTimer(int id) {
 
 
 int RDebug::stopTimer(int id, const QString& msg) {
-#ifdef Q_OS_MAC
+#if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
     Nanoseconds elapsedNano;
     uint64_t end = mach_absolute_time();
     uint64_t elapsed = end - timerMac[id];

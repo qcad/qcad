@@ -242,7 +242,14 @@ HEADERS = \
     math/RVector.h \
     math/RXLine.h
 TEMPLATE = lib
-CONFIG += plugin
+
+r_static_libs {
+    CONFIG += staticlib
+}
+else {
+    CONFIG += plugin
+}
+
 NAME = qcadcore
 TARGET = $${NAME}
 RESOURCES = resources/core.qrc
