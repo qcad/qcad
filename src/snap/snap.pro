@@ -36,7 +36,12 @@ HEADERS = \
     RSnapPerpendicular.h \
     RSnapReference.h 
 TEMPLATE = lib
-CONFIG += plugin
+r_static_libs {
+    CONFIG += staticlib
+}
+else {
+    CONFIG += plugin
+}
 TARGET = qcadsnap
 LIBS += -lqcadcore -lqcadgrid -lqcadentity
 OTHER_FILES += snap.dox
