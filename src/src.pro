@@ -10,9 +10,14 @@ SUBDIRS = \
     spatialindex \
     gui \
     io \
-    customwidgets \
-    scripting \
-    run
+    min
+
+!r_mobile {
+    SUBDIRS += \
+        customwidgets \
+        scripting \
+        run
+}
 
 TEMPLATE = subdirs
 OTHER_FILES += api_overview.dox
