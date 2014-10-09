@@ -127,7 +127,7 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
     document->setFileVersion("R15 (2000) DXF Drawing (dxflib) (*.dxf)");
 
     // lock locked layers now. they are unlocked during import to load
-    // the entitied on them:
+    // the entities on them:
     for (int i=0; i<lockedLayers.size(); i++) {
         RModifyObjectsOperation op;
         QSharedPointer<RLayer> layer = document->queryLayer(lockedLayers.at(i));
@@ -286,7 +286,6 @@ void RDxfImporter::addLinetypeDash(double length) {
 
 void RDxfImporter::addBlock(const DL_BlockData& data) {
     QString blockName = decode(data.name.c_str());
-
 
     /*
     if (blockName.toLower()=="*paper_space0" ||
