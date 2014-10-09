@@ -320,11 +320,14 @@
 #include "REcmaViewListenerAdapter.h"
 #include "REcmaViewportData.h"
 #include "REcmaViewportEntity.h"
-#include "REcmaWebView.h"
 #include "REcmaWheelEvent.h"
 #include "REcmaXLine.h"
 #include "REcmaXLineData.h"
 #include "REcmaXLineEntity.h"
+
+#ifdef !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+#include "REcmaWebView.h"
+#endif
 
 bool RScriptHandlerEcma::alwaysLoadScripts = false;
 bool RScriptHandlerEcma::translatorInstalled = false;
@@ -832,7 +835,9 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaFileSystemModel::init(*engine);
 
+#ifdef !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
     REcmaWebView::init(*engine);
+#endif
 
     REcmaFocusListener::init(*engine);
     REcmaFocusListenerAdapter::init(*engine);
