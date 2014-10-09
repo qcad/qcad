@@ -320,7 +320,6 @@ HEADERS += \
     $$PWD/REcmaViewListenerAdapter.h \
     $$PWD/REcmaViewportData.h \
     $$PWD/REcmaViewportEntity.h \
-    $$PWD/REcmaWebView.h \
     $$PWD/REcmaWheelEvent.h \
     $$PWD/REcmaXLine.h \
     $$PWD/REcmaXLineData.h \
@@ -647,8 +646,11 @@ SOURCES += \
     $$PWD/REcmaViewListenerAdapter.cpp \
     $$PWD/REcmaViewportData.cpp \
     $$PWD/REcmaViewportEntity.cpp \
-    $$PWD/REcmaWebView.cpp \
     $$PWD/REcmaWheelEvent.cpp \
     $$PWD/REcmaXLine.cpp \
     $$PWD/REcmaXLineData.cpp \
     $$PWD/REcmaXLineEntity.cpp
+!r_mobile {
+    HEADERS += $$PWD/REcmaWebView.h
+    SOURCES += $$PWD/REcmaWebView.cpp
+}

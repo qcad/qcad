@@ -228,6 +228,12 @@
         isGroupDefault
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setSeparatorGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSeparatorGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getActions
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

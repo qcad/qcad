@@ -207,6 +207,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, isGroupDefault, "isGroupDefault");
             
+            REcmaHelper::registerFunction(&engine, proto, setSeparatorGroup, "setSeparatorGroup");
+            
+            REcmaHelper::registerFunction(&engine, proto, getSeparatorGroup, "getSeparatorGroup");
+            
             REcmaHelper::registerFunction(&engine, proto, updateTransactionListener, "updateTransactionListener");
             
             REcmaHelper::registerFunction(&engine, proto, updateSelectionListener, "updateSelectionListener");
@@ -3397,6 +3401,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::isGroupDefault", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::setSeparatorGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::setSeparatorGroup", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setSeparatorGroup";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("setSeparatorGroup", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSeparatorGroup(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setSeparatorGroup().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::setSeparatorGroup", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::getSeparatorGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::getSeparatorGroup", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getSeparatorGroup";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("getSeparatorGroup", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getSeparatorGroup();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getSeparatorGroup().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::getSeparatorGroup", context, engine);
             return result;
         }
          QScriptValue
