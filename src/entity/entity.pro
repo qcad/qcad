@@ -110,7 +110,12 @@ HEADERS = \
     RXLineEntity.h
 
 TEMPLATE = lib
-CONFIG += plugin
+r_static_libs {
+    CONFIG += staticlib
+}
+else {
+    CONFIG += plugin
+}
 NAME = qcadentity
 TARGET = $${NAME}
 OTHER_FILES += entity.dox
