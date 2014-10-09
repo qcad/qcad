@@ -325,7 +325,7 @@
 #include "REcmaXLineData.h"
 #include "REcmaXLineEntity.h"
 
-#ifdef !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
 #include "REcmaWebView.h"
 #endif
 
@@ -835,7 +835,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaFileSystemModel::init(*engine);
 
-#ifdef !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
     REcmaWebView::init(*engine);
 #endif
 
