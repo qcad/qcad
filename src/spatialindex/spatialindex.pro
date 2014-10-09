@@ -7,10 +7,16 @@ SOURCES = \
     RSpatialIndexNavel.cpp
 
 TEMPLATE = lib
-CONFIG += plugin
+r_static_libs {
+    CONFIG += staticlib
+}
+else {
+    DESTDIR = ../../../plugins
+    CONFIG += plugin
+}
 TARGET = qcadspatialindex
 LIBS += -lqcadcore -lspatialindexnavel
 OTHER_FILES += spatialindex.dox
 DEFINES += QCADSPATIALINDEX_LIBRARY
 
-POST_TARGETDEPS += ../../$$ROUTDIR/$${RLIBPRE}spatialindexnavel$${RLIBPOSTDLL}
+#POST_TARGETDEPS += ../../$$ROUTDIR/$${RLIBPRE}spatialindexnavel$${RLIBPOSTDLL}
