@@ -21,8 +21,7 @@ SOURCES += \
     RMdiChildQt.cpp \
     RRulerQt.cpp \
     RTextEdit.cpp \
-    RTreeWidget.cpp \
-    RWebView.cpp
+    RTreeWidget.cpp
 
 HEADERS += \
     RShortcutLineEdit.h \
@@ -47,10 +46,23 @@ HEADERS += \
     RMdiChildQt.h \
     RRulerQt.h \
     RTextEdit.h \
-    RTreeWidget.h \
-    RWebView.h
+    RTreeWidget.h
+
+!r_mobile {
+    SOURCES += \
+        RWebView.cpp
+    HEADERS += \
+        RWebView.h
+}
+
 TEMPLATE = lib
-CONFIG += plugin
+r_static_libs {
+    CONFIG += staticlib
+}
+else {
+    CONFIG += plugin
+}
+
 LIBS += -lqcadcore -lqcadentity
 NAME = qcadgui
 TARGET = $${NAME}
