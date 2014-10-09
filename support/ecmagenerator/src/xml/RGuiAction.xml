@@ -387,6 +387,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="setSeparatorGroup" cppName="setSeparatorGroup"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getSeparatorGroup" cppName="getSeparatorGroup"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="getActions" cppName="getActions"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

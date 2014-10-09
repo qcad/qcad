@@ -26,10 +26,6 @@ dir="./gui" filename="RWebView.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QWebView&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>
-  &lt;QtDesigner/QDesignerExportWidget&gt;</cpp:file></cpp:include>
   <comment type="block">/** * \scriptable * \ingroup gui
   */</comment>
   <class>class 

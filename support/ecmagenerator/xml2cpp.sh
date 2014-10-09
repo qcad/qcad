@@ -102,6 +102,13 @@ do
     done
 done
 
+cat $profile_tmp | grep -v "REcmaWebView" >tmp
+mv tmp $profile_tmp
+echo "!r_mobile {" >> "$profile_tmp"
+echo "    HEADERS += \$\$PWD/REcmaWebView.h" >> "$profile_tmp"
+echo "    SOURCES += \$\$PWD/REcmaWebView.cpp" >> "$profile_tmp"
+echo "}" >> "$profile_tmp"
+
 diff $profile_tmp $profile
 if [ $? -eq 0 ]; then
     rm $profile_tmp

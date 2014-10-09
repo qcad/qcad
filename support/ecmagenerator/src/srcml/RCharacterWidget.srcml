@@ -41,10 +41,6 @@ dir="./gui" filename="RCharacterWidget.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QWidget&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>
-  &lt;QtDesigner/QDesignerExportWidget&gt;</cpp:file></cpp:include>
   <class_decl>class 
   <name>QMouseEvent</name>;</class_decl>
   <class_decl>class 
