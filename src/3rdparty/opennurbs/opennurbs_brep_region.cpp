@@ -911,7 +911,7 @@ ON_Brep* ON_Brep::SubBrep(
     if ( fi < 0 || fi >= m_F.Count() )
     {
       ON_ERROR("ON_Brep::SubBrep sub_fi[] has invalid indices");
-      return false;
+      return 0;
     }
     if ( fi > maxfi )
       maxfi = fi;
@@ -924,7 +924,7 @@ ON_Brep* ON_Brep::SubBrep(
         if ( subfi[j] == fi )
         {
           ON_ERROR("ON_Brep::SubBrep sub_fi[] has duplicate indices");
-          return false;
+          return 0;
         }
       }
     }
@@ -934,7 +934,7 @@ ON_Brep* ON_Brep::SubBrep(
     {
       const ON_BrepLoop* loop = face.Loop(fli);
       if ( !loop || this != loop->Brep() )
-        return false;
+        return 0;
       Lcount++;
       for ( lti = 0; lti < loop->m_ti.Count(); lti++ )
       {

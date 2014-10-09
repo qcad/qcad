@@ -12698,9 +12698,13 @@ bool ON_WriteOneObjectArchive(
 
   while(pObject)
   {
-    rc = archive.Write3dmStartSection( version, "Archive created by ON_WriteOneObjectArchive "__DATE__" "__TIME__ );
-    if ( !rc )
-      break;
+
+ // andrew: android error about __NAME__ and __TIME__ macros used here:
+// #if !defined(__ANDROID__) && !TARGET_OS_IPHONE
+//    rc = archive.Write3dmStartSection( version, "Archive created by ON_WriteOneObjectArchive "__DATE__" "__TIME__ );
+//    if ( !rc )
+//      break;
+// #endif
 
     rc = archive.Write3dmProperties( props );
     if ( !rc )

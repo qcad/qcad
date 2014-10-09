@@ -977,7 +977,9 @@ public:
     os_perpendicular =    0x80000,
     os_tangent       =   0x200000,
     os_point         = 0x08000000,
-    os_all_snaps     = 0xFFFFFFFF
+    // andrew: case value evaluates to 4294967295, which cannot be narrowed to type 'int' [-Wc++11-narrowing]
+    //os_all_snaps     = 0xFFFFFFFF
+    os_all_snaps     = (long)0xFFFFFFFF
   };
   static osnap_mode OSnapMode(int); // convert integer to osnap_mode enum
 
@@ -1073,7 +1075,9 @@ public:
     dim_ordinate_point = 103,
     dim_text_point     = 104,
 
-    no_type           = 0xFFFFFFFF
+    // andrew: case value evaluates to 4294967295, which cannot be narrowed to type 'int' [-Wc++11-narrowing]
+    //no_type           = 0xFFFFFFFF
+    no_type           = (long)0xFFFFFFFF
   };
 
   /*

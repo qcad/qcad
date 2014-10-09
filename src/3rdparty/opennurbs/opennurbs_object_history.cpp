@@ -41,7 +41,9 @@ public:
 
     // each value type must have a case in ON_Value::CreateValue().
 
-    force_32bit_enum = 0xFFFFFFFF
+    // andrew: case value evaluates to 4294967295, which cannot be narrowed to type 'int' [-Wc++11-narrowing]
+    //force_32bit_enum = 0xFFFFFFFF
+    force_32bit_enum = (long)0xFFFFFFFF
   };
 
   static

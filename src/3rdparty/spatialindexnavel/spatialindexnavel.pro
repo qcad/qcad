@@ -1,7 +1,13 @@
 include( ../../../shared.pri )
 
 TEMPLATE = lib
-CONFIG += plugin
+r_static_libs {
+    CONFIG += staticlib
+}
+else {
+    DESTDIR = ../../../plugins
+    CONFIG += plugin
+}
 
 # this is required to compile the spatial index library from navel ltd:
 DEFINES += PACKAGE_BUGREPORT=\\\"mhadji@gmail.com\\\"

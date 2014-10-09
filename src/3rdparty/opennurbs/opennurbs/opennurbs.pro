@@ -47,7 +47,7 @@ SOURCES += \
     ../opennurbs_extensions.cpp \
     ../opennurbs_font.cpp \
     ../opennurbs_geometry.cpp \
-    ../opennurbs_gl.cpp \
+    #../opennurbs_gl.cpp \
     ../opennurbs_group.cpp \
     ../opennurbs_hatch.cpp \
     ../opennurbs_instance.cpp \
@@ -154,7 +154,7 @@ HEADERS += \
     ../opennurbs_font.h \
     ../opennurbs_fpoint.h \
     ../opennurbs_geometry.h \
-    ../opennurbs_gl.h \
+    #../opennurbs_gl.h \
     ../opennurbs_group.h \
     ../opennurbs_hatch.h \
     ../opennurbs_instance.h \

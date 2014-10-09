@@ -8,11 +8,13 @@ SUBDIRS = qtscript_core \
           qtscript_sql \
           qtscript_uitools \
           qtscript_xml \
-          qtscript_webkit \
-          qtscript_webkitwidgets \
           qtscript_xmlpatterns
 
-
+!r_mobile {
+    SUBDIRS += \
+          qtscript_webkit \
+          qtscript_webkitwidgets
+}
 
 #          qs_eval
 
