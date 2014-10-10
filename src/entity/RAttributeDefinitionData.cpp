@@ -33,66 +33,14 @@ RAttributeDefinitionData::RAttributeDefinitionData(const RTextBasedData& textDat
 
 }
 
-/*double RAttributeDefinitionData::getDistanceTo(const RVector& point, bool limited, double range, bool draft) const {
-    if (document==NULL) {
-        return RNANDOUBLE;
-    }
-
-    // if we are editing the block this attribute definition belongs to,
-    // use the tag as text:
-    if (getBlockId()==document->getCurrentBlockId()) {
-        RTextData data = *this;
-        data.setText(getTag());
-        return data.getDistanceTo(point, limited, range, draft);
-    }
-
-    return RNANDOUBLE;
-}*/
-
 QString RAttributeDefinitionData::getRenderedText(bool escUnicode) const {
-    //qDebug() << "RAttributeDefinitionData::getRenderedText";
-    //if (document!=NULL && getBlockId()==document->getCurrentBlockId()) {
     if (escUnicode) {
         return escapeUnicode(getTag());
     }
     else {
         return getTag();
     }
-    //}
-    //else {
-    //    return QString();
-    //}
 }
-
-//QList<RPainterPath> RAttributeDefinitionData::getPainterPaths(bool draft) const {
-//    return RTextBasedData::getPainterPaths(draft);
-//    /*
-//    RTextBasedData data = getRenderedTextData();
-//    //return data.getPainterPaths(draft);
-//    painterPaths = data.getPainterPaths(draft);
-//    boundingBox = data.getBoundingBox();
-//    height = data.getHeight();
-//    width = data.getWidth();
-
-//    dirty = false;
-//    gotDraft = draft;
-//    return painterPaths;
-//    */
-//}
-
-//RTextBasedData RAttributeDefinitionData::getRenderedTextData() const {
-//    qDebug() << "RAttributeDefinitionData::getRenderedTextData";
-//    // invalid data  (returned if we are not editing the block this
-//    // attribute definition belongs to):
-//    RTextBasedData ret;
-
-//    if (document!=NULL && getBlockId()==document->getCurrentBlockId()) {
-//        ret = *this;
-//        ret.setText(getTag());
-//    }
-
-//    return ret;
-//}
 
 QDebug operator<<(QDebug dbg, const RAttributeDefinitionData& t) {
     dbg.nospace() << "RAttributeDefinitionData("

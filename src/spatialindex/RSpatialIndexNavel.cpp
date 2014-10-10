@@ -21,8 +21,8 @@
 
 
 #ifdef _MSC_VER
-#define RSIMAXDOUBLE 1e10
-#define RSIMINDOUBLE -1e10
+#define RSIMAXDOUBLE 1e300
+#define RSIMINDOUBLE -1e300
 #else
 #define RSIMAXDOUBLE std::numeric_limits<double>::max()
 #define RSIMINDOUBLE -std::numeric_limits<double>::max()

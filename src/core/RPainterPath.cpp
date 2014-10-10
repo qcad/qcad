@@ -240,6 +240,14 @@ bool RPainterPath::getAlwaysRegen() const {
     return getMode(RPainterPath::AlwaysRegen);
 }
 
+void RPainterPath::setInheritPen(bool on) {
+    setMode(RPainterPath::InheritPen, on);
+}
+
+bool RPainterPath::getInheritPen() const {
+    return getMode(RPainterPath::InheritPen);
+}
+
 void RPainterPath::setFeatureSize(double s) {
     featureSize = s;
 }

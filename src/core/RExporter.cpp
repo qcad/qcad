@@ -174,7 +174,7 @@ void RExporter::setPen(const QPen& pen) {
 QPen RExporter::getPen(const RPainterPath& path) {
     QPen pen = currentPen;
 
-    if (draftMode || screenBasedLinetypes) {
+    if (draftMode /*|| screenBasedLinetypes*/) {
         pen.setWidth(0);
     }
 
@@ -261,7 +261,13 @@ void RExporter::setEntityAttributes() {
         return;
     }
 
-    setColor(currentEntity->getColor(true, blockRefStack));
+    if (currentEntity->isSelected()) {
+        RColor selectionColor = RSettings::getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128));
+        setColor(selectionColor);
+    }
+    else {
+        setColor(currentEntity->getColor(true, blockRefStack));
+    }
     setLineweight(currentEntity->getLineweight(true, blockRefStack));
     setLinetypeId(currentEntity->getLinetypeId(true, blockRefStack));
 
@@ -660,8 +666,28 @@ void RExporter::exportCurrentEntity(bool preview) {
         }
     }
 
+    twoColorSelectedMode = false;
+
     setEntityAttributes();
+
+    //bool sblt = getScreenBasedLinetypes();
+    if (entity->isSelected() && RSettings::getUseSecondSelectionColor()) {
+        // first part of two color selection:
+        //setScreenBasedLinetypes(true);
+        twoColorSelectedMode = true;
+    }
+
     entity->exportEntity(*this, preview);
+
+    // selected? export again with second color:
+    if (entity->isSelected() && RSettings::getUseSecondSelectionColor()) {
+        RColor secondSelectionColor = RSettings::getColor("GraphicsViewColors/SecondSelectionColor", RColor(Qt::white));
+        setColor(secondSelectionColor);
+        //setStyle(Qt::CustomDashLine);
+        setDashPattern(QVector<qreal>() << 2 << 3);
+        entity->exportEntity(*this, preview);
+    }
+    //setScreenBasedLinetypes(sblt);
 }
 
 
@@ -772,7 +798,7 @@ void RExporter::exportLine(const RLine& line, double offset) {
     // continuous line or
     // we are in draft mode or
     // QCAD is configured to show screen based line patterns
-    if (!p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes) {
+    if (!p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
         exportLineSegment(line);
         return;
     }
@@ -897,7 +923,7 @@ void RExporter::exportArc(const RArc& arc, double offset) {
 
     RLinetypePattern p = getLinetypePattern();
 
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
         exportArcSegment(arc);
         return;
     }
@@ -1149,7 +1175,7 @@ void RExporter::exportPolyline(const RPolyline& polyline, double offset) {
     RLinetypePattern p = getLinetypePattern();
 
     bool continuous = false;
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
         continuous = true;
     }
 
@@ -1169,7 +1195,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
     RLinetypePattern p = getLinetypePattern();
 
     bool continuous = false;
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
         continuous = true;
     }
 
@@ -1188,7 +1214,11 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
 
         // performance improvement (using real splines):
         RPainterPath pp;
-        pp.setPen(QPen(Qt::SolidLine));
+        //QPen localPen = currentPen;
+        //localPen.setStyle();
+        //pp.setPen(QPen(Qt::SolidLine));
+        //pp.setPen(currentPain);
+        pp.setInheritPen(true);
         pp.addSpline(spline);
         exportPainterPaths(QList<RPainterPath>() << pp);
     }

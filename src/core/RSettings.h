@@ -153,6 +153,8 @@ public:
     static bool isXDataEnabled();
 
     static bool getAutoScaleLinetypePatterns();
+    static bool getUseSecondSelectionColor();
+    static bool getUseSolidLineSelection();
 
 private:
     static bool isInitialized();
@@ -176,6 +178,8 @@ private:
     static int previewEntities;
     static int limitZoomAndScroll;
     static int autoScaleLinetypePattern;
+    static int useSolidLineSelection;
+    static int useSecondSelectionColor;
     static double arcAngleLengthThreshold;
     static QStringList recentFiles;
     static QLocale* numberLocale;

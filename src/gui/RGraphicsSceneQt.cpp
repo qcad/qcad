@@ -111,9 +111,24 @@ bool RGraphicsSceneQt::beginPath() {
         }
     }
 
-    if (draftMode || screenBasedLinetypes) {
+    if (draftMode || screenBasedLinetypes || twoColorSelectedMode) {
         QPen draftPen = currentPen;
-        draftPen.setWidth(0);
+        //draftPen.setWidth(0);
+        if (twoColorSelectedMode) {
+            // fixed width for selected entities in two color selected mode:
+            draftPen.setCosmetic(true);
+            draftPen.setWidth(3);
+        }
+        else {
+            if (draftMode) {
+                draftPen.setWidth(0);
+            }
+            else {
+                draftPen.setCosmetic(true);
+                // magic number 4.25 to scale approximately, so 1mm width is 1mm on screen:
+                draftPen.setWidth(currentPen.widthF()*4.25);
+            }
+        }
         currentPainterPath.setPen(draftPen);
     }
     else {
@@ -125,6 +140,7 @@ bool RGraphicsSceneQt::beginPath() {
 
     if (!exportToPreview) {
         if (getEntity()->isSelected()) {
+            //setSelectedMode(true);
             currentPainterPath.setSelected(true);
         }
     }
@@ -149,6 +165,7 @@ void RGraphicsSceneQt::endPath() {
     }
 
     currentPainterPath.setValid(false);
+    //setSelectedMode(false);
 }
 
 void RGraphicsSceneQt::exportPoint(const RPoint& point) {
@@ -395,7 +412,12 @@ void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
         path.setZLevel(0);
 
         path.setBrush(getBrush(path));
-        path.setPen(getPen(path));
+        if (path.getInheritPen()) {
+            path.setPen(currentPainterPath.getPen());
+        }
+        else {
+            path.setPen(getPen(path));
+        }
 
         if (!exportToPreview) {
             if (draftMode) {

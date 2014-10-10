@@ -167,7 +167,7 @@ void RGraphicsViewImage::updateImage() {
         drawingScale = 1.0;
     }
 
-//    RDebug::startTimer();
+    //RDebug::startTimer();
 
     if (graphicsBufferNeedsUpdate) {
 
@@ -297,6 +297,8 @@ void RGraphicsViewImage::updateImage() {
 
     // relative zero:
     paintRelativeZero(graphicsBufferWithPreview);
+
+    //RDebug::stopTimer("repaint");
 }
 
 void RGraphicsViewImage::paintErase(QPaintDevice& device, const QRect& rect) {
@@ -499,8 +501,10 @@ void RGraphicsViewImage::updateTransformation() const {
     transform.reset();
     transform.scale(1, -1);
     transform.translate(0, -getHeight());
-    transform.scale(getFactor(), getFactor());
-    transform.translate(getOffset().x, getOffset().y);
+    double f = getFactor();
+    transform.scale(f, f);
+    RVector o = getOffset();
+    transform.translate(o.x, o.y);
 }
 
 /**
@@ -539,8 +543,8 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     QPainter* painter;
     painter = initPainter(graphicsBuffer, false, false, r);
     paintBackground(painter, r);
-    RVector c1 = mapFromView(RVector(r.left()-1,r.bottom()+1), -1e6);
-    RVector c2 = mapFromView(RVector(r.right()+1,r.top()-1), 1e6);
+    RVector c1 = mapFromView(RVector(r.left()-1,r.bottom()+1), -1e300);
+    RVector c2 = mapFromView(RVector(r.right()+1,r.top()-1), 1e300);
     RBox queryBox(c1, c2);
 
     paintEntities(painter, queryBox);
@@ -721,14 +725,22 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         // get painter paths of the given entity:
         painterPaths = sceneQt->getPainterPaths(id);
 
-        // ideal pixel size for rendering arc at current zoom:
+        // if at least one arc path is too detailed or not detailed enough,
+        // or the path is an XLine or Ray, regen:
+
+        // ideal pixel size for rendering arc at current zoom level:
         double ps = mapDistanceFromView(1.0);
         if (isPrinting()) {
             ps = getScene()->getPixelSizeHint();
         }
 
+        // do we need to regen:
         bool regen = false;
         for (int p=0; p<painterPaths.size(); p++) {
+            if (painterPaths[p].getAlwaysRegen()==true) {
+                regen = true;
+                break;
+            }
             if (painterPaths[p].getAutoRegen()==true) {
                 if (painterPaths[p].getPixelSizeHint()>RS::PointTolerance &&
                     (painterPaths[p].getPixelSizeHint()<ps/5 || painterPaths[p].getPixelSizeHint()>ps*5)) {
@@ -737,15 +749,10 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
                     break;
                 }
             }
-            if (painterPaths[p].getAlwaysRegen()==true) {
-                regen = true;
-                break;
-            }
         }
 
+        // regen:
         if (regen) {
-            // if at least one arc path is too detailed or not detailed enough,
-            // or the path is an XLine or Ray, regen:
             sceneQt->exportEntity(id, true);
             painterPaths = sceneQt->getPainterPaths(id);
         }
@@ -769,12 +776,13 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
             continue;
         }
 
-        // for texts:
+        // small texts might be invisible while their bounding box is displayed:
         if (!isPathVisible(path)) {
             continue;
         }
 
         QPen pen = path.getPen();
+        //QPen pen2(Qt::NoPen);
         QBrush brush = path.getBrush();
 
         if (pen.style() != Qt::NoPen) {
@@ -870,6 +878,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
             break;
         }
 
+        /*
         if (!isPrinting() && (isSelected || path.isSelected())) {
             RColor selectionColor = RSettings::getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128));
             if (pen.style() != Qt::NoPen) {
@@ -878,7 +887,18 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
             if (brush.style() != Qt::NoBrush) {
                 brush.setColor(selectionColor);
             }
+
+            // second pen for two color selection pattern:
+            //if (RSettings::getUseSecondSelectionColor()) {
+                //pen2 = pen;
+                //pen2.setColor(RSettings::getColor("GraphicsViewColors/SecondSelectionColor", RColor(Qt::white)));
+                //pen2.setDashPattern(QVector<qreal>() << 2 << 2);
+                //double w = mapDistanceFromView(2.0);
+                //pen2.setWidthF(w);
+                //pen.setWidthF(w);
+            //}
         }
+        */
 
         painter->setBrush(brush);
         painter->setPen(pen);
@@ -891,6 +911,11 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
             // draw outline:
             if (pen.style() != Qt::NoPen) {
                 painter->drawPath(path);
+                //if (pen2.style() != Qt::NoPen) {
+                //    painter->setPen(pen2);
+                //    painter->drawPath(path);
+                //    painter->setPen(pen);
+                //}
             }
         }
         else {
@@ -910,8 +935,14 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
                 }
 
                 if (line.isValid()) {
-                    painter->drawLine(QPointF(line.startPoint.x, line.startPoint.y),
-                                      QPointF(line.endPoint.x, line.endPoint.y));
+                    QLineF qLine(QPointF(line.startPoint.x, line.startPoint.y),
+                                QPointF(line.endPoint.x, line.endPoint.y));
+                    painter->drawLine(qLine);
+//                    if (pen2.style() != Qt::NoPen) {
+//                        painter->setPen(pen2);
+//                        painter->drawLine(qLine);
+//                        painter->setPen(pen);
+//                    }
                 }
             }
             else {
@@ -938,8 +969,14 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
                                 line.clipToXY(clipBox);
                             }
                             if (line.isValid()) {
-                                painter->drawLine(QPointF(line.startPoint.x, line.startPoint.y),
-                                                  QPointF(line.endPoint.x, line.endPoint.y));
+                                QLineF qLine(QPointF(line.startPoint.x, line.startPoint.y),
+                                             QPointF(line.endPoint.x, line.endPoint.y));
+                                painter->drawLine(qLine);
+//                                if (pen2.style() != Qt::NoPen) {
+//                                    painter->setPen(pen2);
+//                                    painter->drawLine(qLine);
+//                                    painter->setPen(pen);
+//                                }
                             }
                             x = el.x;
                             y = el.y;
@@ -956,6 +993,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
                             cubicCurve.moveTo(x, y);
                             cubicCurve.cubicTo(el.x, el.y, del1.x, del1.y, del2.x, del2.y);
                             painter->strokePath(cubicCurve, painter->pen());
+                            //painter->strokePath(cubicCurve, pen2);
                             x = del2.x;
                             y = del2.y;
                             continue;

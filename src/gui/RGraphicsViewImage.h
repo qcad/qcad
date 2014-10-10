@@ -141,14 +141,6 @@ public:
         return RGraphicsView::getDocumentInterface();
     }
 
-//    void setDraftMode(bool on) {
-//        RGraphicsView::setDraftMode(on);
-//    }
-
-//    bool getDraftMode() const {
-//        return RGraphicsView::getDraftMode();
-//    }
-
     void setPrinting(bool on) {
         RGraphicsView::setPrinting(on);
     }

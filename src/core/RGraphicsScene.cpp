@@ -83,7 +83,6 @@ void RGraphicsScene::registerView(RGraphicsView* view, bool regen) {
     if (regen) {
         regenerate();
     }
-    //updateDraftStatus(regen);
 }
 
 /**
@@ -91,7 +90,6 @@ void RGraphicsScene::registerView(RGraphicsView* view, bool regen) {
  */
 void RGraphicsScene::unregisterView(RGraphicsView* view) {
     views.removeOne(view);
-    //updateDraftStatus();
 }
 
 void RGraphicsScene::beginPreview() {
@@ -304,34 +302,6 @@ void RGraphicsScene::highlightReferencePoint(const RVector& position) {
 RVector RGraphicsScene::getHighlightedReferencePoint() {
     return highlightedReferencePoint;
 }
-
-/**
- * Called when a view changes its draft mode status or a new view is added.
- * Updates internal information about availability of draft / normal mode.
- */
-//void RGraphicsScene::updateDraftStatus(bool regen) {
-//    bool oldDraftView = gotDraftView;
-//    bool oldNormalView = gotNormalView;
-
-//    gotDraftView = false;
-//    gotNormalView = false;
-
-//    QList<RGraphicsView*>::iterator it;
-//    for (it = views.begin(); it != views.end(); it++) {
-//        bool dm = (*it)->getDraftMode();
-//        if (dm) {
-//            gotDraftView = true;
-//        }
-//        if (!dm) {
-//            gotNormalView = true;
-//        }
-//    }
-
-//    if (regen && (gotDraftView!=oldDraftView || gotNormalView!=oldNormalView)) {
-//        //regenerateViews(true);
-//        regenerate();
-//    }
-//}
 
 /**
  * Stream operator for QDebug

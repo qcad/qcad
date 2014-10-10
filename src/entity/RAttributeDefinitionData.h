@@ -47,8 +47,6 @@ public:
     RAttributeDefinitionData(const RTextBasedData& textData, const QString& tag, const QString& prompt);
     virtual ~RAttributeDefinitionData() {}
 
-    //double getDistanceTo(const RVector& point, bool limited, double range, bool draft) const;
-
     QString getTag() const {
         return tag;
     }
@@ -65,10 +63,7 @@ public:
         prompt = p;
     }
 
-    //virtual QList<RPainterPath> getPainterPaths(bool draft) const;
-
     virtual QString getRenderedText(bool escUnicode=false) const;
-    //virtual RTextBasedData getRenderedTextData() const;
 
     /**
      * \nonscriptable

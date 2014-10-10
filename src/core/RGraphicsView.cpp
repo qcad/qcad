@@ -887,6 +887,12 @@ void RGraphicsView::addTextLabel(const RTextLabel& textLabel) {
 
 bool RGraphicsView::isPathVisible(const RPainterPath &path) const {
     double featureSize = path.getFeatureSize();
+
+    // no feature size given, always visible:
+    if (fabs(featureSize)<RS::PointTolerance) {
+        return true;
+    }
+
     int featureSizePx = (int)mapDistanceToView(fabs(featureSize));
 
     if (featureSize>RS::PointTolerance) {

@@ -364,7 +364,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             this.setState(DefaultAction.State.Neutral);
         }
 
-        // use right-click to deselect individual entities:
+        // use right-click into empty area to deselect everything:
         else if (this.state===DefaultAction.State.Neutral &&
             RSettings.getBoolValue("GraphicsView/RightClickToDeselect", false)) {
 
@@ -373,14 +373,18 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
 
             entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
             if (entityId!==-1) {
-                if (this.document.isSelected(entityId)) {
-                    this.deselectEntity(entityId);
-                }
-                this.di.clearPreview();
-                this.di.repaintViews();
+                // TODO: show entity context menu?
+                CadToolBar.back();
             }
             else {
-                CadToolBar.back();
+                if (this.di.hasSelection()) {
+                    this.di.clearSelection();
+                    this.di.clearPreview();
+                    this.di.repaintViews();
+                }
+                else {
+                    CadToolBar.back();
+                }
             }
         }
         else {

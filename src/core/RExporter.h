@@ -242,6 +242,14 @@ public:
         return draftMode;
     }
 
+    void setSelectedMode(bool on) {
+        twoColorSelectedMode = on;
+    }
+
+    bool getSelectedMode() const {
+        return twoColorSelectedMode;
+    }
+
     void setScreenBasedLinetypes(bool on);
 
     void toggleScreenBasedLinetypes() {
@@ -283,6 +291,7 @@ protected:
     RDocument* layerSource;
     RDocument* blockSource;
     bool draftMode;
+    bool twoColorSelectedMode;
     bool screenBasedLinetypes;
     bool visualExporter;
     QString errorMessage;
