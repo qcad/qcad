@@ -30,10 +30,12 @@ const RObject::Handle RObject::INVALID_HANDLE = -1;
 
 RPropertyTypeId RObject::PropertyCustom;
 RPropertyTypeId RObject::PropertyHandle;
+RPropertyTypeId RObject::PropertyProtected;
 
 void RObject::init() {
     RObject::PropertyCustom.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Custom"));
     RObject::PropertyHandle.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Handle"));
+    RObject::PropertyProtected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Protected"));
 }
 
 void RObject::setUndone(bool on) {
@@ -71,22 +73,23 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
     if (propertyTypeId == PropertyHandle) {
         return qMakePair(QVariant(handle), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
-    else {
-        if (propertyTypeId.isCustom()) {
-            QString appId = propertyTypeId.getCustomPropertyTitle();
-            QString name = propertyTypeId.getCustomPropertyName();
-            if (customProperties.contains(appId)) {
-                QVariantMap vm = customProperties.value(appId);
-                if (vm.contains(name)) {
-                    RPropertyAttributes attr;
-                    if  (vm.value(name).type()==QVariant::Int) {
-                        attr = RPropertyAttributes(RPropertyAttributes::Custom|RPropertyAttributes::Integer);
-                    }
-                    else {
-                        attr = RPropertyAttributes(RPropertyAttributes::Custom);
-                    }
-                    return qMakePair(vm.value(name), attr);
+    if (propertyTypeId == PropertyProtected) {
+        return qMakePair(QVariant(protect), RPropertyAttributes(RPropertyAttributes::Invisible));
+    }
+    if (propertyTypeId.isCustom()) {
+        QString appId = propertyTypeId.getCustomPropertyTitle();
+        QString name = propertyTypeId.getCustomPropertyName();
+        if (customProperties.contains(appId)) {
+            QVariantMap vm = customProperties.value(appId);
+            if (vm.contains(name)) {
+                RPropertyAttributes attr;
+                if  (vm.value(name).type()==QVariant::Int) {
+                    attr = RPropertyAttributes(RPropertyAttributes::Custom|RPropertyAttributes::Integer);
                 }
+                else {
+                    attr = RPropertyAttributes(RPropertyAttributes::Custom);
+                }
+                return qMakePair(vm.value(name), attr);
             }
         }
     }
@@ -96,6 +99,10 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
 
 bool RObject::setProperty(RPropertyTypeId propertyTypeId,
     const QVariant& value, RTransaction* transaction) {
+
+    bool ret = false;
+
+    ret = ret || RObject::setMember(protect, value, PropertyProtected == propertyTypeId);
 
     // set custom property:
     if (propertyTypeId.getId()==RPropertyTypeId::INVALID_ID) {
@@ -116,7 +123,7 @@ bool RObject::setProperty(RPropertyTypeId propertyTypeId,
     }
 
     //qWarning() << "RObject::setProperty: property not set: " << propertyTypeId.getId();
-    return false;
+    return ret;
 }
 
 /**

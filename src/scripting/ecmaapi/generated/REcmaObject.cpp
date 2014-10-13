@@ -61,6 +61,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getHandle, "getHandle");
             
+            REcmaHelper::registerFunction(&engine, proto, isProtected, "isProtected");
+            
+            REcmaHelper::registerFunction(&engine, proto, setProtected, "setProtected");
+            
             REcmaHelper::registerFunction(&engine, proto, isUndone, "isUndone");
             
             REcmaHelper::registerFunction(&engine, proto, setUndone, "setUndone");
@@ -118,6 +122,10 @@
             
             ctor.setProperty("PropertyHandle",
                 qScriptValueFromValue(&engine, RObject::PropertyHandle),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RObject::PropertyProtected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -503,6 +511,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaObject::getHandle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaObject::isProtected
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaObject::isProtected", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaObject::isProtected";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("isProtected", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isProtected();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.isProtected().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaObject::isProtected", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaObject::setProtected
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaObject::setProtected", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaObject::setProtected";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("setProtected", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setProtected(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.setProtected().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaObject::setProtected", context, engine);
             return result;
         }
          QScriptValue

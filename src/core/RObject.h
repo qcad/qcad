@@ -57,6 +57,7 @@ public:
 
     static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyHandle;
+    static RPropertyTypeId PropertyProtected;
 
     enum XYZ {
         X, Y, Z
@@ -65,7 +66,7 @@ public:
 public:
 
     RObject(RDocument* document=NULL, Id id = INVALID_ID) :
-        document(document), objectId(id), handle(INVALID_HANDLE), undone(false) {
+        document(document), objectId(id), handle(INVALID_HANDLE), undone(false), protect(false) {
     }
     virtual ~RObject() {
     }
@@ -116,6 +117,14 @@ public:
 
     RObject::Handle getHandle() const {
         return handle;
+    }
+
+    bool isProtected() const {
+        return protect;
+    }
+
+    void setProtected(bool on) {
+        protect = on;
     }
 
     bool isUndone() const {
@@ -286,6 +295,10 @@ private:
      * True if this object has been undone (deleted).
      */
     bool undone;
+    /**
+     * True if this object is protected (undeletable).
+     */
+    bool protect;
     /**
      * AppID -> key -> value
      * e.g. 'QCAD' -> 'wall thickness' -> 12.0;

@@ -221,6 +221,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getAutoScaleLinetypePatterns, "getAutoScaleLinetypePatterns");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getUseSecondSelectionColor, "getUseSecondSelectionColor");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getUseSolidLineSelection, "getUseSolidLineSelection");
+            
 
     // static properties:
     
@@ -3955,6 +3959,84 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getAutoScaleLinetypePatterns", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getUseSecondSelectionColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getUseSecondSelectionColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getUseSecondSelectionColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getUseSecondSelectionColor();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getUseSecondSelectionColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getUseSecondSelectionColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getUseSolidLineSelection
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getUseSolidLineSelection", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getUseSolidLineSelection";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getUseSolidLineSelection();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getUseSolidLineSelection().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getUseSolidLineSelection", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

@@ -1323,16 +1323,18 @@ void RDocumentInterface::addZoomBoxToPreview(const RBox& box) {
 
     QList<RGraphicsScene*>::iterator it;
     for (it = scenes.begin(); it != scenes.end(); it++) {
-        (*it)->beginPreview();
-        (*it)->setColor(RSettings::getColor("GraphicsViewColors/ZoomBoxColor", RColor(127,0,0)));
-        (*it)->setLineweight(RLineweight::Weight000);
-        (*it)->setStyle(Qt::DashLine);
-        (*it)->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
+        RGraphicsScene* scene = *it;
+        scene->beginPreview();
+        scene->setColor(RSettings::getColor("GraphicsViewColors/ZoomBoxColor", RColor(127,0,0)));
+        scene->setLineweight(RLineweight::Weight000);
+        scene->setStyle(Qt::DashLine);
+        scene->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
+        //scene->setScreenBasedLinetypes(true);
 
         for (int i=0; i<4; ++i) {
-            (*it)->exportLine(RLine(boxCorners[i], boxCorners[(i+1)%4]));
+            scene->exportLine(RLine(boxCorners[i], boxCorners[(i+1)%4]));
         }
-        (*it)->endPreview();
+        scene->endPreview();
     }
 }
 

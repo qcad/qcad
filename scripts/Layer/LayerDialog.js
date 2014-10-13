@@ -75,9 +75,10 @@ LayerDialog.prototype.show = function() {
     // init from existing layer:
     if (!isNull(this.layer)) {
         layerName.text = this.layer.getName();
-        if (layerName.text == "0") {
+        if (layerName.text === "0") {
             layerName.enabled = false;
         }
+        // TODO: undeletable layers
         cbColor.setColor(this.layer.getColor());
         cbLineweight.setLineweight(this.layer.getLineweight());
         var ltP = this.document.queryLinetype(this.layer.getLinetypeId());

@@ -261,6 +261,7 @@ protected:
 
     virtual void paintImage(QPainter* painter, RImageData& image);
     virtual void paintOrigin(QPaintDevice& device);
+    virtual void paintReferencePoint(QPainter& painter, const RVector& pos, bool highlight);
     virtual void paintErase(QPaintDevice& device, const QRect& rect = QRect());
     virtual void paintGrid(QPaintDevice& device, const QRect& rect = QRect());
     virtual void paintMetaGrid(QPaintDevice& device, const QRect& rect = QRect());

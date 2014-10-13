@@ -217,6 +217,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDraftMode, "getDraftMode");
             
+            REcmaHelper::registerFunction(&engine, proto, setTwoColorSelectedMode, "setTwoColorSelectedMode");
+            
+            REcmaHelper::registerFunction(&engine, proto, getTwoColorSelectedMode, "getTwoColorSelectedMode");
+            
             REcmaHelper::registerFunction(&engine, proto, setScreenBasedLinetypes, "setScreenBasedLinetypes");
             
             REcmaHelper::registerFunction(&engine, proto, toggleScreenBasedLinetypes, "toggleScreenBasedLinetypes");
@@ -970,6 +974,33 @@
     // return type 'void'
     
                self->setEntityAttributes();
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setEntityAttributes(a0);
     } else
 
 
@@ -2890,6 +2921,82 @@
         
     
     if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntity */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity*.",
+                               context);                    
+                    }
+                    REntity& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportEntity(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
     1 && (
             context->argument(0).isNumber()
         ) /* type: REntity::Id */
@@ -2951,6 +3058,59 @@
                self->exportEntity(a0
         ,
     a1);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isNumber()
+        ) /* type: REntity::Id */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    REntity::Id
+                    a0 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportEntity(a0
+        ,
+    a1
+        ,
+    a2);
     } else
 
 
@@ -3121,6 +3281,46 @@
     // return type 'void'
     
                self->exportCurrentEntity(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportCurrentEntity(a0
+        ,
+    a1);
     } else
 
 
@@ -5302,6 +5502,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::getDraftMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::setTwoColorSelectedMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::setTwoColorSelectedMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::setTwoColorSelectedMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("setTwoColorSelectedMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setTwoColorSelectedMode(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.setTwoColorSelectedMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::setTwoColorSelectedMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::getTwoColorSelectedMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::getTwoColorSelectedMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getTwoColorSelectedMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("getTwoColorSelectedMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getTwoColorSelectedMode();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getTwoColorSelectedMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::getTwoColorSelectedMode", context, engine);
             return result;
         }
          QScriptValue

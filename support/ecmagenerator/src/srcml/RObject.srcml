@@ -107,6 +107,14 @@ dir="./core" filename="RObject.h">
     </type>
     <name>PropertyHandle</name>
   </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
+    <name>PropertyProtected</name>
+  </decl>;</decl_stmt>
   <enum>enum 
   <name>XYZ</name>
   <block>{ 
@@ -176,6 +184,15 @@ dir="./core" filename="RObject.h">
     </call>, 
     <call>
       <name>undone</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>false</name>
+        </expr>
+      </argument>)</argument_list>
+    </call>, 
+    <call>
+      <name>protect</name>
       <argument_list>(
       <argument>
         <expr>
@@ -358,6 +375,39 @@ dir="./core" filename="RObject.h">
     <expr>
       <name>handle</name>
     </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>isProtected</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>protect</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setProtected</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>bool</name>
+        </type>
+        <name>on</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>protect</name>= 
+    <name>on</name></expr>;</expr_stmt>}</block>
   </function>
   <function>
     <type>
@@ -1193,6 +1243,15 @@ dir="./core" filename="RObject.h">
       <name>bool</name>
     </type>
     <name>undone</name>
+  </decl>;</decl_stmt>
+  <comment type="block">/** * True if this object is protected
+  (undeletable). */</comment>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>protect</name>
   </decl>;</decl_stmt>
   <comment type="block">/** * AppID -&gt; key -&gt; value * e.g.
   'QCAD' -&gt; 'wall thickness' -&gt; 12.0; * or 'SomeApplication'

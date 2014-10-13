@@ -242,6 +242,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="preview"
         hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool" name="forceSelected"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="unexportEntity" cppName="unexportEntity"

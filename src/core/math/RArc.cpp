@@ -717,6 +717,7 @@ void RArc::print(QDebug dbg) const {
                   << ", endAngle: " << getEndAngle()
                   << ", startPoint: " << getStartPoint()
                   << ", endPoint: " << getEndPoint()
+                  << ", sweep: " << getSweep()
                   << ", reversed: " << isReversed()
                   << ")";
 }

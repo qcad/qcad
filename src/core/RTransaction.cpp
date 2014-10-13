@@ -872,6 +872,9 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
                     "trying to delete the default layer \"0\"";
             return;
         }
+
+        // TODO: undeletable layers
+
         QSet<REntity::Id> ids = storage->queryLayerEntities(objectId, true);
         QSetIterator<REntity::Id> it(ids);
         while (it.hasNext()) {

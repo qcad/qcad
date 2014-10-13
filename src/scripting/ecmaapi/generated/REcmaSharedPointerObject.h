@@ -63,6 +63,12 @@
         getHandle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isProtected
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setProtected
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isUndone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

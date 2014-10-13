@@ -669,14 +669,6 @@ dir="./gui" filename="RGraphicsViewImage.h">
       </call>
     </expr>;</return>}</block>
   </function>
-  <comment type="line">// void setDraftMode(bool on) {</comment>
-  <comment type="line">//
-  RGraphicsView::setDraftMode(on);</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// bool getDraftMode() const {</comment>
-  <comment type="line">// return
-  RGraphicsView::getDraftMode();</comment>
-  <comment type="line">// }</comment>
   <function>
     <type>
       <name>void</name>

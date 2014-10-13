@@ -116,7 +116,7 @@ public:
      */
     virtual void highlightReferencePoint(const RVector& position);
 
-    virtual void exportCurrentEntity(bool preview = false);
+    virtual void exportCurrentEntity(bool preview = false, bool forceSelected = false);
     virtual void unexportEntity(REntity::Id entityId);
 
     QMultiMap<REntity::Id, RVector>& getReferencePoints() {

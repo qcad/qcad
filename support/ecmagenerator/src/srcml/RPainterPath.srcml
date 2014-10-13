@@ -80,7 +80,9 @@ dir="./core" filename="RPainterPath.h">
   <name>AutoRegen</name>= 0x20</expr>, 
   <comment type="line">// arcs (regen on zoom change)</comment>
   <expr>
-  <name>AlwaysRegen</name>= 0x40</expr>}</block>;</enum>
+  <name>AlwaysRegen</name>= 0x40</expr>, 
+  <expr>
+  <name>InheritPen</name>= 0x80</expr>}</block>;</enum>
   <macro>
     <name>Q_DECLARE_FLAGS</name>
     <argument_list>(
@@ -1076,6 +1078,27 @@ dir="./core" filename="RPainterPath.h">
     <name>bool</name>
   </type>
   <name>getAlwaysRegen</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setInheritPen</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>on</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>bool</name>
+  </type>
+  <name>getInheritPen</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>

@@ -945,6 +945,20 @@ dir="./core" filename="RSettings.h">
     <name>bool</name>
   </type>
   <name>getAutoScaleLinetypePatterns</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>bool</name>
+  </type>
+  <name>getUseSecondSelectionColor</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>bool</name>
+  </type>
+  <name>getUseSolidLineSelection</name>
   <parameter_list>()</parameter_list>;</function_decl></public>
   <private>private: 
   <function_decl>
@@ -1071,6 +1085,22 @@ dir="./core" filename="RSettings.h">
       <name>int</name>
     </type>
     <name>autoScaleLinetypePattern</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>int</name>
+    </type>
+    <name>useSolidLineSelection</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>int</name>
+    </type>
+    <name>useSecondSelectionColor</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

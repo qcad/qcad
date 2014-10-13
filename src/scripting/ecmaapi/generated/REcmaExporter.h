@@ -247,6 +247,12 @@
         getDraftMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setTwoColorSelectedMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTwoColorSelectedMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setScreenBasedLinetypes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

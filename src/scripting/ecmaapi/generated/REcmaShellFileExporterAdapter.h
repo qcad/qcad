@@ -151,7 +151,8 @@
         
     
       void setEntityAttributes(
-                
+                bool forceSelected
+        =  false
             );
         
     
@@ -311,12 +312,14 @@
       void exportEntity(
                 REntity & e, bool preview
         =  false, bool allBlocks
-        =  true
+        =  true, bool forceSelected
+        =  false
             );
         
       void exportEntity(
                 REntity::Id entityId, bool allBlocks
-        =  true
+        =  true, bool forceSelected
+        =  false
             );
         
     
@@ -332,6 +335,7 @@
     
       void exportCurrentEntity(
                 bool preview
+        =  false, bool forceSelected
         =  false
             );
         
@@ -447,6 +451,16 @@
         
     
       bool getDraftMode(
+                
+            );
+        
+    
+      void setTwoColorSelectedMode(
+                bool on
+            );
+        
+    
+      bool getTwoColorSelectedMode(
                 
             );
         

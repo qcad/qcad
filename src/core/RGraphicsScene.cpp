@@ -285,8 +285,8 @@ void RGraphicsScene::exportReferencePoints() {
     }
 }
 
-void RGraphicsScene::exportCurrentEntity(bool preview) {
-    RExporter::exportCurrentEntity(preview);
+void RGraphicsScene::exportCurrentEntity(bool preview, bool forceSelected) {
+    RExporter::exportCurrentEntity(preview, forceSelected);
     exportReferencePoints();
 }
 

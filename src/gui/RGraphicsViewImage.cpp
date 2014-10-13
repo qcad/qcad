@@ -266,8 +266,7 @@ void RGraphicsViewImage::updateImage() {
     if (scene->getHighlightedReferencePoint().isValid()) {
         RVector p = mapToView(scene->getHighlightedReferencePoint());
         QPainter gbPainter(&graphicsBufferWithPreview);
-        gbPainter.setPen(RColor::getHighlighted(RSettings::getColor("GraphicsViewColors/ReferencePointColor", RColor(0,0,172)), backgroundColor));
-        gbPainter.drawRect(QRect(p.x - 5, p.y - 5, 10, 10));
+        paintReferencePoint(gbPainter, p, true);
         gbPainter.end();
     }
 
@@ -299,6 +298,26 @@ void RGraphicsViewImage::updateImage() {
     paintRelativeZero(graphicsBufferWithPreview);
 
     //RDebug::stopTimer("repaint");
+}
+
+void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RVector& pos, bool highlight) {
+    RColor color = RSettings::getColor("GraphicsViewColors/ReferencePointColor", RColor(0,0,172));
+    if (highlight) {
+        color = RColor::getHighlighted(color, backgroundColor);
+    }
+    int size = RSettings::getIntValue("GraphicsView/ReferencePointSize", 10);
+    int shape = RSettings::getIntValue("GraphicsView/ReferencePointShape", 0);
+
+    if (shape==1) {
+        QPen p(color);
+        p.setWidth(3);
+        painter.setPen(p);
+        painter.drawLine(QPointF(pos.x-size/2, pos.y), QPointF(pos.x+size/2, pos.y));
+        painter.drawLine(QPointF(pos.x, pos.y-size/2), QPointF(pos.x, pos.y+size/2));
+    }
+    else {
+        painter.fillRect(QRect(pos.x - size/2, pos.y - size/2, size, size), color);
+    }
 }
 
 void RGraphicsViewImage::paintErase(QPaintDevice& device, const QRect& rect) {
@@ -534,9 +553,6 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
         r = QRect(0,0,getWidth(),getHeight());
     }
     
-    // TODO: sort painter paths by Z-level:
-    //qSort(p.begin(), p.end());
-
     bgColorLightness = getBackgroundColor().lightness();
     selectedIds.clear();
 
@@ -572,9 +588,7 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
         QMultiMap<REntity::Id, RVector>::iterator it;
         for (it = referencePoints.begin(); it != referencePoints.end(); ++it) {
             RVector p = mapToView(it.value());
-            // TODO: configurable size of reference point (app pref):
-            gbPainter.fillRect(QRect(p.x - 5, p.y - 5, 10, 10),
-                    RSettings::getColor("GraphicsViewColors/ReferencePointColor", RColor(0,0,172)));
+            paintReferencePoint(gbPainter, p, false);
         }
 
         gbPainter.end();
@@ -804,11 +818,11 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
                 else {
                     // for display, ignore drawing scale and optimize
                     // thin lines to 0:
-                    if (pen.widthF() * getFactor() < 1.5) {
+                    if (pen.widthF() * getFactor() < 1.5 && !pen.isCosmetic()) {
                         pen.setWidth(0);
                     }
                     else {
-                        pen.setWidthF(pen.widthF());
+                        //pen.setWidthF(pen.widthF());
                     }
                 }
             }

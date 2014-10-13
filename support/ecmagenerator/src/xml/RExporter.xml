@@ -110,7 +110,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="setEntityAttributes"
     cppName="setEntityAttributes" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="forceSelected"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
     </method>
     <method name="setStyle" cppName="setStyle" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -323,12 +326,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default=" false" isConst="false" />
         <arg type="bool" typeName="bool" name="allBlocks"
         hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="forceSelected"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
         <arg type="bool" typeName="bool" name="allBlocks"
         hasDefault="true" default=" true" isConst="false" />
+        <arg type="bool" typeName="bool" name="forceSelected"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="startEntity" cppName="startEntity"
@@ -347,6 +354,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="preview"
+        hasDefault="true" default=" false" isConst="false" />
+        <arg type="bool" typeName="bool" name="forceSelected"
         hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
@@ -587,6 +596,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getDraftMode" cppName="getDraftMode"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setTwoColorSelectedMode"
+    cppName="setTwoColorSelectedMode" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getTwoColorSelectedMode"
+    cppName="getTwoColorSelectedMode" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setScreenBasedLinetypes"

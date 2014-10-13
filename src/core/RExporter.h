@@ -86,7 +86,7 @@ public:
     virtual QBrush getBrush(const RPainterPath& path);
     virtual QBrush getBrush();
 
-    virtual void setEntityAttributes();
+    virtual void setEntityAttributes(bool forceSelected=false);
 
     virtual void setStyle(Qt::PenStyle penStyle);
     virtual void setBrushStyle(Qt::BrushStyle brushStyle);
@@ -135,11 +135,11 @@ public:
     virtual void exportEntities(bool allBlocks = true, bool undone = false);
     virtual void exportEntities(const RBox& box);
     virtual void exportEntities(QSet<REntity::Id>& entityIds, bool allBlocks = true);
-    virtual void exportEntity(REntity& e, bool preview = false, bool allBlocks = true);
-    virtual void exportEntity(REntity::Id entityId, bool allBlocks = true);
+    virtual void exportEntity(REntity& e, bool preview = false, bool allBlocks = true, bool forceSelected = false);
+    virtual void exportEntity(REntity::Id entityId, bool allBlocks = true, bool forceSelected = false);
     virtual void startEntity(bool /*topLevelEntity*/) {}
     virtual void endEntity() {}
-    virtual void exportCurrentEntity(bool preview = false);
+    virtual void exportCurrentEntity(bool preview = false, bool forceSelected = false);
     virtual void unexportEntity(REntity::Id entityId);
 
     virtual void exportShapes(const QList<QSharedPointer<RShape> >& shapes);
@@ -242,11 +242,11 @@ public:
         return draftMode;
     }
 
-    void setSelectedMode(bool on) {
+    void setTwoColorSelectedMode(bool on) {
         twoColorSelectedMode = on;
     }
 
-    bool getSelectedMode() const {
+    bool getTwoColorSelectedMode() const {
         return twoColorSelectedMode;
     }
 

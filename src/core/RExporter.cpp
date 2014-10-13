@@ -255,13 +255,13 @@ QBrush RExporter::getBrush() {
     return currentBrush;
 }
 
-void RExporter::setEntityAttributes() {
+void RExporter::setEntityAttributes(bool forceSelected) {
     REntity* currentEntity = getEntity();
     if (currentEntity == NULL) {
         return;
     }
 
-    if (currentEntity->isSelected()) {
+    if (forceSelected || currentEntity->isSelected()) {
         RColor selectionColor = RSettings::getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128));
         setColor(selectionColor);
     }
@@ -554,7 +554,7 @@ void RExporter::exportView(RView::Id viewId) {
  * Sets the current entity to the given entity and calls \ref exportEntity().
  * Note that entity is a temporary clone.
  */
-void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks) {
+void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool forceSelected) {
     RDocument* doc = entity.getDocument();
     if (doc==NULL) {
         doc = document;
@@ -603,7 +603,7 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks) {
     }
 
     startEntity(/* topLevelEntity = */ blockRefOrViewportSet || blockRefStack.isEmpty());
-    exportCurrentEntity(preview);
+    exportCurrentEntity(preview, forceSelected);
     endEntity();
 
     if (blockRefOrViewportSet) {
@@ -618,10 +618,10 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks) {
 /**
  * Calls \ref exportEntity(REntity*) for the entity with the given ID.
  */
-void RExporter::exportEntity(REntity::Id entityId, bool allBlocks) {
+void RExporter::exportEntity(REntity::Id entityId, bool allBlocks, bool forceSelected) {
     QSharedPointer<REntity> e = document->queryEntityDirect(entityId);
     if (!e.isNull()) {
-        exportEntity(*e, false, allBlocks);
+        exportEntity(*e, false, allBlocks, forceSelected);
     }
     else {
         unexportEntity(entityId);
@@ -639,7 +639,7 @@ void RExporter::exportEntity(REntity::Id entityId, bool allBlocks) {
  * in a target platform specific manner (e.g. to optimize things for
  * a specific platform).
  */
-void RExporter::exportCurrentEntity(bool preview) {
+void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
     REntity* entity = getEntity();
     if (entity==NULL) {
         return;
@@ -666,12 +666,10 @@ void RExporter::exportCurrentEntity(bool preview) {
         }
     }
 
-    twoColorSelectedMode = false;
-
-    setEntityAttributes();
+    setEntityAttributes(forceSelected);
 
     //bool sblt = getScreenBasedLinetypes();
-    if (entity->isSelected() && RSettings::getUseSecondSelectionColor()) {
+    if ((forceSelected || entity->isSelected()) && RSettings::getUseSecondSelectionColor()) {
         // first part of two color selection:
         //setScreenBasedLinetypes(true);
         twoColorSelectedMode = true;
@@ -679,14 +677,15 @@ void RExporter::exportCurrentEntity(bool preview) {
 
     entity->exportEntity(*this, preview);
 
-    // selected? export again with second color:
-    if (entity->isSelected() && RSettings::getUseSecondSelectionColor()) {
+    // selected? export again with second color and pattern:
+    if ((forceSelected || entity->isSelected()) && RSettings::getUseSecondSelectionColor() && entity->getType()!=RS::EntityBlockRef) {
         RColor secondSelectionColor = RSettings::getColor("GraphicsViewColors/SecondSelectionColor", RColor(Qt::white));
         setColor(secondSelectionColor);
         //setStyle(Qt::CustomDashLine);
         setDashPattern(QVector<qreal>() << 2 << 3);
         entity->exportEntity(*this, preview);
     }
+    twoColorSelectedMode = false;
     //setScreenBasedLinetypes(sblt);
 }
 
@@ -1043,12 +1042,6 @@ void RExporter::exportArcSegment(const RArc& arc) {
     double a2 = arc.getEndAngle();
     RVector center = arc.getCenter();
     double radius = arc.getRadius();
-
-    // 20140501: not needed anymore since arcs are exported with dynamic line segment lengths:
-    // avoid huge radius and slow down to almost stand-still:
-//    if (radius>1.0e6) {
-//        return;
-//    }
 
     double aStep;
     if (radius<1.0e-3) {

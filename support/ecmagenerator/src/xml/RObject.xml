@@ -53,6 +53,19 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RObject::Handle"
       isPureVirtual="false" />
     </method>
+    <method name="isProtected" cppName="isProtected"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setProtected" cppName="setProtected"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="isUndone" cppName="isUndone" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
@@ -198,6 +211,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyCustom" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyHandle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyProtected" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

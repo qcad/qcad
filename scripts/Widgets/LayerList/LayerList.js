@@ -251,7 +251,8 @@ LayerList.init = function(basePath) {
             return;
         }
 
-        if (item.text() == "0") {
+        // TODO: undeletable layers
+        if (item.text() === "0") {
             action.setEnabledOverride(false, 0);
         } else {
             action.setEnabledOverride(true, 1);

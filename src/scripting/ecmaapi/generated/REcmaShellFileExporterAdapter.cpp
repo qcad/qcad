@@ -1460,7 +1460,7 @@
         
     
       void REcmaShellFileExporterAdapter::setEntityAttributes(
-                
+                bool forceSelected
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::setEntityAttributes", engine);
@@ -1473,7 +1473,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=0*/
+                    || _q_function.property("length").toInt32()!=1*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::setEntityAttributes";
@@ -1486,7 +1486,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::setEntityAttributes(
-                            
+                            forceSelected
                         );
 
                         // block recursion again:
@@ -1501,7 +1501,19 @@
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
                     
-                            _q_function.call(__qtscript_self)
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        forceSelected
+        )
+      
+                            )
                         
                     ;
                     _q_function.setData(QScriptValue(engine, prev));
@@ -3534,7 +3546,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportEntity(
-                REntity & e, bool preview, bool allBlocks
+                REntity & e, bool preview, bool allBlocks, bool forceSelected
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportEntity", engine);
@@ -3547,7 +3559,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=3*/
+                    || _q_function.property("length").toInt32()!=4*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportEntity";
@@ -3560,7 +3572,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportEntity(
-                            e, preview, allBlocks
+                            e, preview, allBlocks, forceSelected
                         );
 
                         // block recursion again:
@@ -3605,6 +3617,15 @@
         allBlocks
         )
       
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        forceSelected
+        )
+      
                             )
                         
                     ;
@@ -3617,7 +3638,7 @@
             }
         
       void REcmaShellFileExporterAdapter::exportEntity(
-                REntity::Id entityId, bool allBlocks
+                REntity::Id entityId, bool allBlocks, bool forceSelected
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportEntity", engine);
@@ -3630,7 +3651,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=2*/
+                    || _q_function.property("length").toInt32()!=3*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportEntity";
@@ -3643,7 +3664,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportEntity(
-                            entityId, allBlocks
+                            entityId, allBlocks, forceSelected
                         );
 
                         // block recursion again:
@@ -3677,6 +3698,15 @@
         << qScriptValueFromValue(engine, 
 
         allBlocks
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        forceSelected
         )
       
                             )
@@ -3812,7 +3842,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportCurrentEntity(
-                bool preview
+                bool preview, bool forceSelected
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportCurrentEntity", engine);
@@ -3825,7 +3855,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportCurrentEntity";
@@ -3838,7 +3868,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportCurrentEntity(
-                            preview
+                            preview, forceSelected
                         );
 
                         // block recursion again:
@@ -3863,6 +3893,15 @@
         << qScriptValueFromValue(engine, 
 
         preview
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        forceSelected
         )
       
                             )
@@ -5444,6 +5483,136 @@
                     _q_function.setData(QScriptValue(engine, prev));
 
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getDraftMode", engine);
+
+                    
+                            return res;
+                          
+                }
+            }
+        
+    
+      void REcmaShellFileExporterAdapter::setTwoColorSelectedMode(
+                bool on
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::setTwoColorSelectedMode", engine);
+                QScriptValue _q_function = __qtscript_self.property("setTwoColorSelectedMode");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=1*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RFileExporterAdapter::setTwoColorSelectedMode";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RFileExporterAdapter::setTwoColorSelectedMode(
+                            on
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setTwoColorSelectedMode", engine);
+
+                        
+                } else {
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        on
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setTwoColorSelectedMode", engine);
+
+                    
+                }
+            }
+        
+    
+      bool REcmaShellFileExporterAdapter::getTwoColorSelectedMode(
+                
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::getTwoColorSelectedMode", engine);
+                QScriptValue _q_function = __qtscript_self.property("getTwoColorSelectedMode");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=0*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RFileExporterAdapter::getTwoColorSelectedMode";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        bool ret =
+                        RFileExporterAdapter::getTwoColorSelectedMode(
+                            
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getTwoColorSelectedMode", engine);
+
+                        
+                          return ret;
+                        
+                } else {
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    bool res = qscriptvalue_cast< 
+                        bool
+                      >(
+                    
+                            _q_function.call(__qtscript_self)
+                        
+                      )
+                    
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getTwoColorSelectedMode", engine);
 
                     
                             return res;

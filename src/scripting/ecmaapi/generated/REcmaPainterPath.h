@@ -156,6 +156,12 @@
         getAlwaysRegen
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setInheritPen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getInheritPen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setFeatureSize
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -281,7 +281,19 @@ dir="./core" filename="RExporter.h">
     <name>void</name>
   </type>
   <name>setEntityAttributes</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>forceSelected</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -785,6 +797,18 @@ dir="./core" filename="RExporter.h">
         <name>true</name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>forceSelected</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -812,6 +836,18 @@ dir="./core" filename="RExporter.h">
     <init>
       <expr>
         <name>true</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>forceSelected</name>=
+    <init>
+      <expr>
+        <name>false</name>
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
@@ -855,6 +891,18 @@ dir="./core" filename="RExporter.h">
       <name>bool</name>
     </type>
     <name>preview</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>forceSelected</name>=
     <init>
       <expr>
         <name>false</name>
@@ -1510,6 +1558,39 @@ dir="./core" filename="RExporter.h">
       <name>draftMode</name>
     </expr>;</return>}</block>
   </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setTwoColorSelectedMode</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>bool</name>
+        </type>
+        <name>on</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>twoColorSelectedMode</name>= 
+    <name>on</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>getTwoColorSelectedMode</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>twoColorSelectedMode</name>
+    </expr>;</return>}</block>
+  </function>
   <function_decl>
   <type>
     <name>void</name>
@@ -1696,6 +1777,13 @@ dir="./core" filename="RExporter.h">
       <name>bool</name>
     </type>
     <name>draftMode</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>twoColorSelectedMode</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

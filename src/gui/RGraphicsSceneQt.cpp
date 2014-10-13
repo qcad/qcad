@@ -25,6 +25,7 @@
 #include "REntity.h"
 #include "RGraphicsSceneQt.h"
 #include "RGraphicsViewImage.h"
+#include "RPainterPathExporter.h"
 #include "RPainterPathSource.h"
 #include "RSettings.h"
 #include "RSpline.h"
@@ -104,38 +105,52 @@ bool RGraphicsSceneQt::beginPath() {
     currentPainterPath = RPainterPath();
     currentPainterPath.setZLevel(0);
 
-    if (screenBasedLinetypes) {
+    if (screenBasedLinetypes && currentPen.style()==Qt::SolidLine) {
         QVector<qreal> pat = currentLinetypePattern.getScreenBasedLinetype(RUnit::isMetric(document->getUnit()));
         if (!pat.isEmpty()) {
             currentPen.setDashPattern(pat);
         }
     }
 
+    //qDebug() << "screenBasedLinetypes: " << screenBasedLinetypes;
+    //qDebug() << "twoColorSelectedMode: " << twoColorSelectedMode;
+
     if (draftMode || screenBasedLinetypes || twoColorSelectedMode) {
-        QPen draftPen = currentPen;
+        QPen localPen = currentPen;
         //draftPen.setWidth(0);
         if (twoColorSelectedMode) {
             // fixed width for selected entities in two color selected mode:
-            draftPen.setCosmetic(true);
-            draftPen.setWidth(3);
+            localPen.setCosmetic(true);
+            localPen.setWidth(3);
+            //localPen.setStyle(Qt::CustomDashLine);
         }
         else {
             if (draftMode) {
-                draftPen.setWidth(0);
+                localPen.setWidth(0);
             }
             else {
-                draftPen.setCosmetic(true);
+                // screen based line weights:
+                localPen.setCosmetic(true);
                 // magic number 4.25 to scale approximately, so 1mm width is 1mm on screen:
-                draftPen.setWidth(currentPen.widthF()*4.25);
+                localPen.setWidth(currentPen.widthF()*4.25);
             }
         }
-        currentPainterPath.setPen(draftPen);
+        currentPainterPath.setPen(localPen);
     }
     else {
         currentPainterPath.setPen(currentPen);
     }
 
-    currentPainterPath.setBrush(QBrush(Qt::NoBrush));
+//    if (twoColorSelectedMode) {
+//        QBrush localBrush(Qt::BDiagPattern);
+//        QTransform t;
+//        t.scale(0.01, 0.01);
+//        localBrush.setTransform(t);
+//        currentPainterPath.setBrush(localBrush);
+//    }
+//    else {
+        currentPainterPath.setBrush(QBrush(Qt::NoBrush));
+//    }
     currentPainterPath.setPixelSizeHint(pixelSizeHint);
 
     if (!exportToPreview) {
@@ -274,12 +289,25 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc) {
     }
 
     // arc approximation with splines: faster but not precise enough:
-    // RPainterPath p;
-    // p.addArc(arc);
-    // path.addPath(p);
+//     RPainterPath p;
+//     p.addArc(arc);
+//     currentPainterPath.addPath(p);
 
-    currentPainterPath.setAutoRegen(true);
-    RGraphicsScene::exportArcSegment(arc);
+    if (twoColorSelectedMode) {
+        // QPainterPath with pattern shown as solid when clipped bug workaround:
+        currentPainterPath.moveTo(arc.getStartPoint());
+        currentPainterPath.arcTo(
+            arc.getCenter().x-arc.getRadius(),
+            arc.getCenter().y-arc.getRadius(),
+            arc.getRadius()*2, arc.getRadius()*2,
+            RMath::rad2deg(-arc.getStartAngle()),
+            RMath::rad2deg(-arc.getSweep())
+        );
+    }
+    else {
+        currentPainterPath.setAutoRegen(true);
+        RGraphicsScene::exportArcSegment(arc);
+    }
 }
 
 void RGraphicsSceneQt::exportLineSegment(const RLine& line) {

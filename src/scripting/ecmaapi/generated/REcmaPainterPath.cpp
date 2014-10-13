@@ -146,6 +146,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAlwaysRegen, "getAlwaysRegen");
             
+            REcmaHelper::registerFunction(&engine, proto, setInheritPen, "setInheritPen");
+            
+            REcmaHelper::registerFunction(&engine, proto, getInheritPen, "getInheritPen");
+            
             REcmaHelper::registerFunction(&engine, proto, setFeatureSize, "setFeatureSize");
             
             REcmaHelper::registerFunction(&engine, proto, getFeatureSize, "getFeatureSize");
@@ -236,6 +240,11 @@
 
     ctor.setProperty("AlwaysRegen",
     QScriptValue(RPainterPath::AlwaysRegen),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InheritPen",
+    QScriptValue(RPainterPath::InheritPen),
     QScriptValue::ReadOnly);
 
 
@@ -2925,6 +2934,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::getAlwaysRegen", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::setInheritPen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::setInheritPen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setInheritPen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("setInheritPen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setInheritPen(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setInheritPen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::setInheritPen", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::getInheritPen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::getInheritPen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getInheritPen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("getInheritPen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getInheritPen();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getInheritPen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::getInheritPen", context, engine);
             return result;
         }
          QScriptValue
