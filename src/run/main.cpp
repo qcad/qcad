@@ -260,6 +260,8 @@ int main(int argc, char *argv[]) {
     // delete script handler and print uncaught exceptions:
     delete handler;
 
+    RPluginLoader::unloadPlugins();
+
     RSettings::uninit();
     RFontList::uninit();
     RPatternListMetric::uninit();

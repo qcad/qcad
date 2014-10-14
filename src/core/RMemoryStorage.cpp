@@ -928,7 +928,6 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
 
     if (!layer.isNull()) {
         layerMap[object->getId()] = layer;
-        qDebug() << "saved layer: " << *layer;
     }
 
     if (!block.isNull()) {

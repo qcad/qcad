@@ -41,8 +41,6 @@ AddLayer.prototype.beginEvent = function() {
         return;
     }
 
-    this.layer.setCustomProperty("QCAD", "Blah", new Array(10000).join("Q"));
-    
     var operation = new RAddObjectOperation(this.layer);
     var di = this.getDocumentInterface();
     di.applyOperation(operation);

@@ -582,7 +582,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
 
     // if object is a layer,
     // look up existing layer based on case insensitive name comparison:
-    if (!existingLayerDetectionDisabled) {
+    if (!existingLayerDetectionDisabled && object->getId()==RObject::INVALID_ID) {
         QSharedPointer<RLayer> layer = object.dynamicCast<RLayer>();
         if (!layer.isNull()) {
             QSharedPointer<RLayer> existingLayer = layer->getDocument()->queryLayer(layer->getName());

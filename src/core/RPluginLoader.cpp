@@ -93,6 +93,18 @@ void RPluginLoader::loadPlugins(bool init) {
     }
 }
 
+void RPluginLoader::unloadPlugins() {
+    foreach (QString fileName, getPluginFiles()) {
+        unloadPlugin(fileName, true);
+    }
+
+    QObjectList staticPlugins = QPluginLoader::staticInstances();
+    for (int i=0; i<staticPlugins.size(); i++) {
+        QObject* plugin = staticPlugins[i];
+        unloadPlugin(plugin);
+    }
+}
+
 void RPluginLoader::loadPlugin(QObject* plugin, bool init, const QString& fileName, const QString& errorString) {
     RPluginInfo info;
     if (plugin) {
@@ -123,12 +135,16 @@ void RPluginLoader::unloadPlugin(const QString& fileName, bool remove) {
     QPluginLoader loader(fileName);
     QObject* plugin = loader.instance();
     if (plugin) {
-        RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
-        if (p) {
-            p->uninit(remove);
-        }
+        unloadPlugin(plugin, remove);
     }
     loader.unload();
+}
+
+void RPluginLoader::unloadPlugin(const QObject* plugin, bool remove) {
+    RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
+    if (p) {
+        p->uninit(remove);
+    }
 }
 
 void RPluginLoader::postInitPlugins(RPluginInterface::InitStatus status) {

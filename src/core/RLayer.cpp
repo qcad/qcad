@@ -19,6 +19,8 @@
 #include "RLayer.h"
 #include "RDocument.h"
 
+RPropertyTypeId RLayer::PropertyProtected;
+
 RPropertyTypeId RLayer::PropertyName;
 RPropertyTypeId RLayer::PropertyFrozen;
 RPropertyTypeId RLayer::PropertyLocked;
@@ -45,6 +47,8 @@ RLayer::~RLayer() {
 }
 
 void RLayer::init() {
+    RLayer::PropertyProtected.generateId(typeid(RLayer), RObject::PropertyProtected);
+
     RLayer::PropertyName.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Name"));
     RLayer::PropertyFrozen.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Frozen"));
     RLayer::PropertyLocked.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Locked"));

@@ -236,7 +236,14 @@ QBrush RExporter::getBrush(const RPainterPath& path) {
                 //Q_ASSERT(false);
             }
         }
-        brush.setColor(color);
+        REntity* e=getEntity();
+        if (e!=NULL && e->isSelected()) {
+            RColor selectionColor = RSettings::getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128));
+            brush.setColor(selectionColor);
+        }
+        else {
+            brush.setColor(color);
+        }
         return brush;
     }
     else {
@@ -678,12 +685,20 @@ void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
     entity->exportEntity(*this, preview);
 
     // selected? export again with second color and pattern:
-    if ((forceSelected || entity->isSelected()) && RSettings::getUseSecondSelectionColor() && entity->getType()!=RS::EntityBlockRef) {
-        RColor secondSelectionColor = RSettings::getColor("GraphicsViewColors/SecondSelectionColor", RColor(Qt::white));
-        setColor(secondSelectionColor);
-        //setStyle(Qt::CustomDashLine);
-        setDashPattern(QVector<qreal>() << 2 << 3);
-        entity->exportEntity(*this, preview);
+    if (visualExporter) {
+        if ((forceSelected || entity->isSelected()) &&
+            RSettings::getUseSecondSelectionColor() &&
+            entity->getType()!=RS::EntityBlockRef &&
+            entity->getType()!=RS::EntityText &&
+            entity->getType()!=RS::EntityAttribute &&
+            entity->getType()!=RS::EntityAttributeDefinition) {
+
+            RColor secondSelectionColor = RSettings::getColor("GraphicsViewColors/SecondSelectionColor", RColor(Qt::white));
+            setColor(secondSelectionColor);
+            //setStyle(Qt::CustomDashLine);
+            setDashPattern(QVector<qreal>() << 2 << 3);
+            entity->exportEntity(*this, preview);
+        }
     }
     twoColorSelectedMode = false;
     //setScreenBasedLinetypes(sblt);

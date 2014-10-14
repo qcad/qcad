@@ -92,6 +92,9 @@ RLayerListQt.prototype.updateLayers = function(documentInterface) {
                 + "/layerstatus_%1%2.svg".arg(Number(layer.isFrozen()))
                 .arg(Number(layer.isLocked()));
         item.setIcon(new QIcon(iconName));
+        if (layer.isProtected()) {
+            item.setData(Qt.UserRole, 1);
+        }
         this.addItem(item);
     }
     this.sortItems();
@@ -251,8 +254,8 @@ LayerList.init = function(basePath) {
             return;
         }
 
-        // TODO: undeletable layers
-        if (item.text() === "0") {
+        // protected layers:
+        if (item.text() === "0" || item.data(Qt.UserRole)===1) {
             action.setEnabledOverride(false, 0);
         } else {
             action.setEnabledOverride(true, 1);

@@ -892,28 +892,6 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
             break;
         }
 
-        /*
-        if (!isPrinting() && (isSelected || path.isSelected())) {
-            RColor selectionColor = RSettings::getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128));
-            if (pen.style() != Qt::NoPen) {
-                pen.setColor(selectionColor);
-            }
-            if (brush.style() != Qt::NoBrush) {
-                brush.setColor(selectionColor);
-            }
-
-            // second pen for two color selection pattern:
-            //if (RSettings::getUseSecondSelectionColor()) {
-                //pen2 = pen;
-                //pen2.setColor(RSettings::getColor("GraphicsViewColors/SecondSelectionColor", RColor(Qt::white)));
-                //pen2.setDashPattern(QVector<qreal>() << 2 << 2);
-                //double w = mapDistanceFromView(2.0);
-                //pen2.setWidthF(w);
-                //pen.setWidthF(w);
-            //}
-        }
-        */
-
         painter->setBrush(brush);
         painter->setPen(pen);
 
