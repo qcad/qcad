@@ -131,25 +131,25 @@ void RPluginLoader::unloadPlugin(const QString& fileName, bool remove) {
     loader.unload();
 }
 
-void RPluginLoader::postInitPlugins() {
+void RPluginLoader::postInitPlugins(RPluginInterface::InitStatus status) {
     foreach (QString fileName, getPluginFiles()) {
         QPluginLoader loader(fileName);
         QObject* plugin = loader.instance();
-        postInitPlugin(plugin);
+        postInitPlugin(plugin, status);
     }
 
     QObjectList staticPlugins = QPluginLoader::staticInstances();
     for (int i=0; i<staticPlugins.size(); i++) {
         QObject* plugin = staticPlugins[i];
         qDebug() << "postInitPlugin (static)";
-        postInitPlugin(plugin);
+        postInitPlugin(plugin, status);
     }
 }
 
-void RPluginLoader::postInitPlugin(QObject* plugin) {
+void RPluginLoader::postInitPlugin(QObject* plugin, RPluginInterface::InitStatus status) {
     RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
     if (p) {
-        p->postInit();
+        p->postInit(status);
     }
 }
 

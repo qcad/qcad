@@ -27,12 +27,26 @@
 
 #include "RPluginInfo.h"
 
-QT_BEGIN_NAMESPACE
+//QT_BEGIN_NAMESPACE
 class QString;
 class QScriptEngine;
-QT_END_NAMESPACE
+//QT_END_NAMESPACE
 
+/**
+ * Interface for all C++ QCAD plugins.
+ * 
+ * \ingroup core
+ * \scriptable
+ */
 class QCADCORE_EXPORT RPluginInterface {
+public:
+    enum InitStatus {
+        GotMainWindow,
+        LoadedFiles,
+        ScriptsExecuted,
+        AllDone
+    };
+
 public:
     virtual ~RPluginInterface() {}
 
@@ -53,12 +67,14 @@ public:
      * entering the main event loop. Implementations typically perform
      * initialization that depends on the application being up and running.
      */
-    virtual void postInit() = 0;
+    virtual void postInit(RPluginInterface::InitStatus status) = 0;
 
     /**
      * Called whenever a new script engine is instantiated.
      * Implementations may register their own script extensions by making
      * C / C++ code scriptable.
+     *
+     * \nonscriptable
      */
     virtual void initScriptExtensions(QScriptEngine& engine) = 0;
 
@@ -80,6 +96,7 @@ Q_DECLARE_INTERFACE(RPluginInterface, "org.qcad.QCAD.RPluginInterface/1.0")
 QT_END_NAMESPACE
 
 Q_DECLARE_METATYPE(RPluginInterface*)
-
+Q_DECLARE_METATYPE(RPluginInterface::InitStatus)
+Q_DECLARE_METATYPE(RPluginInterface::InitStatus*)
 
 #endif

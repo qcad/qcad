@@ -618,6 +618,7 @@ function main() {
     }
 
     postInitAddOns(addOns, splash);
+    RPluginLoader.postInitPlugins(RPluginInterface.GotMainWindow);
 
     if (!isNull(splash)) {
         splash.close();
@@ -655,14 +656,18 @@ function main() {
     QCoreApplication.processEvents();
     openFiles(clickedFilesAndArgs, !recovered);
 
+    RPluginLoader.postInitPlugins(RPluginInterface.LoadedFiles);
+
     // execute scripts given on command line:
     execScripts(args);
+
+    RPluginLoader.postInitPlugins(RPluginInterface.ScriptsExecuted);
 
     var statusBar = appWin.statusBar();
     var action = RGuiAction.getByScriptFile("scripts/View/ToggleStatusBar/ToggleStatusBar.js");
     action.setChecked(statusBar.visible);
 
-    RPluginLoader.postInitPlugins();
+    RPluginLoader.postInitPlugins(RPluginInterface.AllDone);
 
     if (!RSettings.hasQuitFlag()) {
         // start and enter the main application loop:
