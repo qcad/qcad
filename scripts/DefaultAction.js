@@ -297,16 +297,18 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
     var persistentSelection = RSettings.getBoolValue("GraphicsView/PersistentSelection", false);
     var view, range, entityId;
 
+    var add = false;
+    if ((event.modifiers().valueOf() === Qt.ShiftModifier.valueOf()) ||
+            (event.modifiers().valueOf() === Qt.ControlModifier.valueOf()) ||
+            persistentSelection===true) {
+
+        add = true;
+    }
+
     if (event.button() === Qt.LeftButton) {
         switch (this.state) {
         case DefaultAction.State.Dragging:
-            var add = false;
-            if ((event.modifiers().valueOf() === Qt.ShiftModifier.valueOf()) ||
-                (event.modifiers().valueOf() === Qt.ControlModifier.valueOf()) ||
-                persistentSelection===true) {
 
-                add = true;
-            }
             view = event.getGraphicsView();
             range = view.mapDistanceFromView(this.rangePixels);
 
@@ -373,6 +375,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
 
             entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
             if (entityId!==-1) {
+                this.selectEntity(entityId, add);
                 // TODO: show entity context menu?
                 CadToolBar.back();
             }
