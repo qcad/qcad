@@ -93,7 +93,7 @@ RLayerListQt.prototype.updateLayers = function(documentInterface) {
                 .arg(Number(layer.isLocked()));
         item.setIcon(new QIcon(iconName));
         if (layer.isProtected()) {
-            item.setData(Qt.UserRole, 1);
+            item.setData(Qt.UserRole, true);
         }
         this.addItem(item);
     }
@@ -255,7 +255,7 @@ LayerList.init = function(basePath) {
         }
 
         // protected layers:
-        if (item.text() === "0" || item.data(Qt.UserRole)===1) {
+        if (item.text() === "0" || item.data(Qt.UserRole)===true) {
             action.setEnabledOverride(false, 0);
         } else {
             action.setEnabledOverride(true, 1);

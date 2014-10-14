@@ -237,12 +237,10 @@ void RDocument::init() {
 
         // notify new document listeners
         if (RMainWindow::hasMainWindow()) {
-            qDebug() << "RMainWindow::getMainWindow()->notifyNewDocumentListeners(this);";
             RMainWindow::getMainWindow()->notifyNewDocumentListeners(this, &transaction);
         }
 
         storage.setModified(false);
-        qDebug() << "RDocument::init: done";
     }
 }
 
