@@ -70,6 +70,9 @@
         ;static  QScriptValue
         setLimitPreview
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isEmpty
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

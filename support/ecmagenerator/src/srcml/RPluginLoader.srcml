@@ -150,7 +150,18 @@ dir="./core" filename="RPluginLoader.h">
     <name>void</name>
   </type>
   <name>postInitPlugins</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RPluginInterface</name>::
+        <name>InitStatus</name></name>
+      </type>
+      <name>status</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
     <name>static</name>
@@ -163,6 +174,16 @@ dir="./core" filename="RPluginLoader.h">
       <type>
       <name>QObject</name>*</type>
       <name>plugin</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RPluginInterface</name>::
+        <name>InitStatus</name></name>
+      </type>
+      <name>status</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <comment type="block">/** * \nonscriptable */</comment>

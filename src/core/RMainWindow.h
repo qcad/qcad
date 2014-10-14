@@ -41,6 +41,7 @@ class REntity;
 class RFocusListener;
 class RGraphicsView;
 class RLayerListener;
+class RNewDocumentListener;
 class RPenListener;
 class RPropertyListener;
 class RSelectionListener;
@@ -136,6 +137,10 @@ public:
     void addInterTransactionListener(RInterTransactionListener* l);
     void removeInterTransactionListener(RInterTransactionListener* l);
     void notifyInterTransactionListeners(RDocument* document, RTransaction* transaction = NULL);
+
+    void addNewDocumentListener(RNewDocumentListener* l);
+    void removeNewDocumentListener(RNewDocumentListener* l);
+    void notifyNewDocumentListeners(RDocument* document, RTransaction* transaction);
 
     void addSnapListener(RSnapListener* l);
     void removeSnapListener(RSnapListener* l);
@@ -268,6 +273,7 @@ protected:
     QList<RImportListener*> importListeners;
     QList<RTransactionListener*> transactionListeners;
     QList<RInterTransactionListener*> interTransactionListeners;
+    QList<RNewDocumentListener*> newDocumentListeners;
     QList<RSnapListener*> snapListeners;
     QList<RFocusListener*> focusListeners;
     QList<RViewFocusListener*> viewFocusListeners;

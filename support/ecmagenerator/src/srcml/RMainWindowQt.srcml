@@ -56,6 +56,8 @@ dir="./gui" filename="RMainWindowQt.h">
   <class_decl>class 
   <name>RMdiChildQt</name>;</class_decl>
   <class_decl>class 
+  <name>RNewDocumentListener</name>;</class_decl>
+  <class_decl>class 
   <name>RPenListener</name>;</class_decl>
   <class_decl>class 
   <name>RPropertyListener</name>;</class_decl>

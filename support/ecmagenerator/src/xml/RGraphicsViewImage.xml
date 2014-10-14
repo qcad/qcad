@@ -575,6 +575,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="device" isConst="false" />
       </variant>
     </method>
+    <method name="paintReferencePoint"
+    cppName="paintReferencePoint" specifier="protected"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter &amp;" typeName="QPainter"
+        name="painter" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="pos"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="highlight"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="paintCursor" cppName="paintCursor"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

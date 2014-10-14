@@ -86,7 +86,14 @@ dir="./io/dxf" filename="RDxfPlugin.h">
       <name>void</name>
     </type>
     <name>postInit</name>
-    <parameter_list>()</parameter_list>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>InitStatus</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>
     <block>{}</block>
   </function>
   <function>

@@ -445,6 +445,7 @@ void RObject::print(QDebug dbg) const {
             << ", document: " << QString("0x%1").arg((long int)document, 0, 16)
             << ", address: " << QString("0x%1").arg((long int) this, 0, 16)
             << ", undone: " << (int)isUndone()
+            << ", protected: " << (int)isProtected()
             << ")";
 
     if (!customProperties.isEmpty()) {

@@ -358,6 +358,8 @@ static void functionEnd(const QString& name, QScriptContext *context, QScriptEng
 static void shellFunctionStart(const QString& name, QScriptEngine *engine);
 static void shellFunctionEnd(const QString& name, QScriptEngine *engine);
 
+static void printStackTrace(QScriptContext* context);
+
 //static int shellFunctionCounter;
 };
 

@@ -23,6 +23,8 @@
             
                 #include "RLayerListener.h"
             
+                #include "RNewDocumentListener.h"
+            
                 #include "RPenListener.h"
             
                 #include "RPropertyListener.h"
@@ -168,6 +170,12 @@
             REcmaHelper::registerFunction(&engine, proto, removeInterTransactionListener, "removeInterTransactionListener");
             
             REcmaHelper::registerFunction(&engine, proto, notifyInterTransactionListeners, "notifyInterTransactionListeners");
+            
+            REcmaHelper::registerFunction(&engine, proto, addNewDocumentListener, "addNewDocumentListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeNewDocumentListener, "removeNewDocumentListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, notifyNewDocumentListeners, "notifyNewDocumentListeners");
             
             REcmaHelper::registerFunction(&engine, proto, addSnapListener, "addSnapListener");
             
@@ -2658,6 +2666,212 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindow::notifyInterTransactionListeners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::addNewDocumentListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::addNewDocumentListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addNewDocumentListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("addNewDocumentListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RNewDocumentListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RNewDocumentListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RNewDocumentListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RNewDocumentListener *RNewDocumentListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addNewDocumentListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addNewDocumentListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::addNewDocumentListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::removeNewDocumentListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::removeNewDocumentListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeNewDocumentListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("removeNewDocumentListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RNewDocumentListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RNewDocumentListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RNewDocumentListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RNewDocumentListener *RNewDocumentListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeNewDocumentListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeNewDocumentListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::removeNewDocumentListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::notifyNewDocumentListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::notifyNewDocumentListeners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyNewDocumentListeners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("notifyNewDocumentListeners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocument * */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RTransaction * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocument * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocument >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RDocument *RDocument *.", context);                    
+                    }
+                
+                    // argument is pointer
+                    RTransaction * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 1 is not of type RTransaction *RTransaction *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyNewDocumentListeners(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyNewDocumentListeners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::notifyNewDocumentListeners", context, engine);
             return result;
         }
          QScriptValue

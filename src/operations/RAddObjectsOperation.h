@@ -102,6 +102,10 @@ public:
         limitPreview = on;
     }
 
+    bool isEmpty() {
+        return addedObjects.isEmpty();
+    }
+
 private:
     QList<RModifiedObjects> addedObjects;
     //QList<QPair<QSharedPointer<RObject>, bool> > addedObjects;

@@ -13,7 +13,10 @@ bool RExamplePlugin::init() {
     return true;
 }
 
-void RExamplePlugin::postInit() {
+void RExamplePlugin::postInit(InitStatus status) {
+    if (status!=RPluginInterface::AllDone) {
+        return;
+    }
     RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
     RGuiAction* guiAction = new RGuiAction("My CPP Action");
     guiAction->setRequiresDocument(true);

@@ -1645,6 +1645,36 @@ dir="./gui" filename="RGraphicsViewImage.h">
       <name>device</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>paintReferencePoint</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>QPainter</name>&amp;</type>
+      <name>painter</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>pos</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>highlight</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <decl_stmt>
   <decl>
     <type>

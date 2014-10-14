@@ -36,13 +36,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="postInitPlugins" cppName="postInitPlugins"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
-    </method>
-    <method name="postInitPlugin" cppName="postInitPlugin"
-    specifier="public" isStatic="true" isVirtual="false"
-    isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QObject *" typeName="QObject *" name="plugin"
+        <arg type="RPluginInterface::InitStatus"
+        typeName="RPluginInterface::InitStatus" name="status"
         isConst="false" />
       </variant>
     </method>

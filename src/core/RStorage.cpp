@@ -194,6 +194,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
     dbg.nospace() << "RStorage(" << QString("%1").arg((long int)&s, 0, 16) << ", ";
     dbg.nospace() << "\n";
     //dbg.nospace() << "current block ID: " << s.getCurrentBlockId() << "\n";
+    dbg.nospace() << "modified: " << s.isModified() << "\n";
     QSharedPointer<RBlock> block = s.queryCurrentBlock();
     if (block.isNull()) {
         dbg.nospace() << "current block: INVALID\n";

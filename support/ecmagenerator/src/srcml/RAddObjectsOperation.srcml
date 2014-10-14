@@ -512,6 +512,21 @@ dir="./operations" filename="RAddObjectsOperation.h">
     <expr>
     <name>limitPreview</name>= 
     <name>on</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>isEmpty</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>addedObjects</name>.
+    <call>
+      <name>isEmpty</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
   </function></public>
   <private>private: 
   <decl_stmt>

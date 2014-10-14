@@ -676,6 +676,14 @@ void REcmaHelper::shellFunctionEnd(const QString& name, QScriptEngine* engine) {
     //qDebug() << "REcmaHelper::shellFunctionEnd: " << name;
 }
 
+void REcmaHelper::printStackTrace(QScriptContext* context) {
+    QScriptContext* c = context;
+    while (c!=NULL) {
+        qDebug() << c->toString();
+        c = c->parentContext();
+    }
+}
+
 
 template<>
 QScriptValue REcmaHelper::listToScriptValue<RGraphicsScene*>(QScriptEngine* engine, const QList<RGraphicsScene*>& cppValue) {

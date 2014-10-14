@@ -9,6 +9,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RFocusListener" />
   <class_decl name="RGraphicsView" />
   <class_decl name="RLayerListener" />
+  <class_decl name="RNewDocumentListener" />
   <class_decl name="RPenListener" />
   <class_decl name="RPropertyListener" />
   <class_decl name="RSelectionListener" />
@@ -302,6 +303,34 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RTransaction *" typeName="RTransaction *"
         name="transaction" hasDefault="true" default=" NULL"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="addNewDocumentListener"
+    cppName="addNewDocumentListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RNewDocumentListener *"
+        typeName="RNewDocumentListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="removeNewDocumentListener"
+    cppName="removeNewDocumentListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RNewDocumentListener *"
+        typeName="RNewDocumentListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyNewDocumentListeners"
+    cppName="notifyNewDocumentListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" isConst="false" />
       </variant>
     </method>
     <method name="addSnapListener" cppName="addSnapListener"

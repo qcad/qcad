@@ -58,9 +58,6 @@
         postInitPlugins
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        postInitPlugin
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         countPlugins
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

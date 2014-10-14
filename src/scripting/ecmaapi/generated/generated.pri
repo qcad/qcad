@@ -140,6 +140,7 @@ HEADERS += \
     $$PWD/REcmaMoveReferencePointOperation.h \
     $$PWD/REcmaMoveSelectionOperation.h \
     $$PWD/REcmaNavigationAction.h \
+    $$PWD/REcmaNewDocumentListener.h \
     $$PWD/REcmaObject.h \
     $$PWD/REcmaOperation.h \
     $$PWD/REcmaOrthoGrid.h \
@@ -155,6 +156,7 @@ HEADERS += \
     $$PWD/REcmaPenListener.h \
     $$PWD/REcmaPenListenerAdapter.h \
     $$PWD/REcmaPluginInfo.h \
+    $$PWD/REcmaPluginInterface.h \
     $$PWD/REcmaPluginLoader.h \
     $$PWD/REcmaPoint.h \
     $$PWD/REcmaPointData.h \
@@ -466,6 +468,7 @@ SOURCES += \
     $$PWD/REcmaMoveReferencePointOperation.cpp \
     $$PWD/REcmaMoveSelectionOperation.cpp \
     $$PWD/REcmaNavigationAction.cpp \
+    $$PWD/REcmaNewDocumentListener.cpp \
     $$PWD/REcmaObject.cpp \
     $$PWD/REcmaOperation.cpp \
     $$PWD/REcmaOrthoGrid.cpp \
@@ -481,6 +484,7 @@ SOURCES += \
     $$PWD/REcmaPenListener.cpp \
     $$PWD/REcmaPenListenerAdapter.cpp \
     $$PWD/REcmaPluginInfo.cpp \
+    $$PWD/REcmaPluginInterface.cpp \
     $$PWD/REcmaPluginLoader.cpp \
     $$PWD/REcmaPoint.cpp \
     $$PWD/REcmaPointData.cpp \

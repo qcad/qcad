@@ -5417,6 +5417,97 @@
         
     
     
+      void REcmaShellGraphicsViewImage::paintReferencePoint(
+                QPainter & painter, const RVector & pos, bool highlight
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::paintReferencePoint", engine);
+                QScriptValue _q_function = __qtscript_self.property("paintReferencePoint");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=3*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RGraphicsViewImage::paintReferencePoint";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RGraphicsViewImage::paintReferencePoint(
+                            painter, pos, highlight
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintReferencePoint", engine);
+
+                        
+                } else {
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                        // temporary make protected function scriptable, only from the context of this function call:
+                        QScriptValue proto = engine->defaultPrototype(qMetaTypeId<RGraphicsViewImage*>());
+                        REcmaHelper::registerFunction(engine, &proto, paintReferencePoint, "paintReferencePoint");
+                        
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: QPainter &, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        &painter
+        )
+      
+
+
+
+    // type: RVector &, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        
+            // const reference argument - make a new object:
+            new RVector(pos)
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        highlight
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintReferencePoint", engine);
+
+                    
+                }
+            }
+        
+    
+    
       void REcmaShellGraphicsViewImage::paintCursor(
                 QPaintDevice & device
             ) {
@@ -9420,6 +9511,109 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaShellGraphicsViewImage::paintOrigin", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShellGraphicsViewImage::paintReferencePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShellGraphicsViewImage::paintReferencePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShellGraphicsViewImage::paintReferencePoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // protected function: can only be called from ECMA shell:
+                    REcmaShellGraphicsViewImage* self = 
+                        getSelfShell("", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPainter */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QPainter*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QPainter*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QPainter*.",
+                               context);                    
+                    }
+                    QPainter& a0 = *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->RGraphicsViewImage::paintReferencePoint(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.paintReferencePoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShellGraphicsViewImage::paintReferencePoint", context, engine);
             return result;
         }
          QScriptValue

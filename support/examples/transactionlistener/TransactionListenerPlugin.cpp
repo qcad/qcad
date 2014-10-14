@@ -18,7 +18,11 @@ bool TransactionListenerPlugin::init() {
     return true;
 }
 
-void TransactionListenerPlugin::postInit() {
+void TransactionListenerPlugin::postInit(InitStatus status) {
+    if (status!=RPluginInterface::GotMainWindow) {
+        return;
+    }
+
     qDebug() << "TransactionListenerPlugin::postInit";
     // get notified after objects have changed:
     RMainWindowQt::getMainWindow()->addTransactionListener(this);

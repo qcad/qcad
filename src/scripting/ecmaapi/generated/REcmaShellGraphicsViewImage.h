@@ -504,6 +504,12 @@
         
     
     
+      void paintReferencePoint(
+                QPainter & painter, const RVector & pos, bool highlight
+            );
+        
+    
+    
       void paintCursor(
                 QPaintDevice & device
             );
@@ -783,6 +789,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         paintOrigin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        paintReferencePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         paintCursor

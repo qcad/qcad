@@ -205,7 +205,9 @@ void RDocumentInterface::notifyCoordinateListeners() {
         (*it)->updateCoordinate(this);
     }
 
-    RMainWindow::getMainWindow()->notifyCoordinateListeners(this);
+    if (RMainWindow::hasMainWindow()) {
+        RMainWindow::getMainWindow()->notifyCoordinateListeners(this);
+    }
 }
 
 /**

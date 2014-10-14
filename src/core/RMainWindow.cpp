@@ -32,6 +32,7 @@
 #include "RGuiAction.h"
 #include "RLayerListener.h"
 #include "RMainWindow.h"
+#include "RNewDocumentListener.h"
 #include "RPenListener.h"
 #include "RExportListener.h"
 #include "RImportListener.h"
@@ -331,6 +332,32 @@ void RMainWindow::notifyInterTransactionListeners(RDocument* document, RTransact
     QList<RInterTransactionListener*>::iterator it;
     for (it = interTransactionListeners.begin(); it != interTransactionListeners.end(); ++it) {
         (*it)->updateInterTransactionListener(document, transaction);
+    }
+}
+
+/**
+ * Adds a listener for transaction in progress events.
+ */
+void RMainWindow::addNewDocumentListener(RNewDocumentListener* l) {
+    if (l != NULL) {
+        newDocumentListeners.push_back(l);
+    } else {
+        qWarning("RMainWindow::addNewDocumentListener(): Listener is NULL.");
+    }
+}
+
+void RMainWindow::removeNewDocumentListener(RNewDocumentListener* l) {
+    newDocumentListeners.removeAll(l);
+}
+
+/**
+ * Notifies all transaction in progress listeners.
+ */
+void RMainWindow::notifyNewDocumentListeners(RDocument* document, RTransaction* transaction) {
+    QList<RNewDocumentListener*>::iterator it;
+    for (it = newDocumentListeners.begin(); it != newDocumentListeners.end(); ++it) {
+        qDebug() << "updateNewDocumentListener";
+        (*it)->updateNewDocumentListener(document, transaction);
     }
 }
 

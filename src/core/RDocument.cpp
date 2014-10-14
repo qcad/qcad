@@ -22,6 +22,7 @@
 #include "RLinetypeListImperial.h"
 #include "RLinetypeListMetric.h"
 #include "RLinkedStorage.h"
+#include "RMainWindow.h"
 #include "RMath.h"
 #include "RMemoryStorage.h"
 #include "RSettings.h"
@@ -60,16 +61,16 @@ RDocument::RDocument(
 //}
 
 void RDocument::init() {
-    RTransaction t(storage, "", false);
+    RTransaction transaction(storage, "", false);
 
     RLinkedStorage* ls = dynamic_cast<RLinkedStorage*>(&storage);
     bool storageIsLinked = (ls!=NULL);
 
     // add default line types if not already added (RLinkedStorage):
     if (!storageIsLinked && queryLinetype("BYLAYER").isNull()) {
-        t.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("BYLAYER", "By Layer"))));
-        t.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("BYBLOCK", "By Block"))));
-        t.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("Continuous", "Solid line"))));
+        transaction.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("BYLAYER", "By Layer"))));
+        transaction.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("BYBLOCK", "By Block"))));
+        transaction.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("Continuous", "Solid line"))));
         //t.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("MyDashed", "My Dashed Pattern", 2, 2.0, -2.0))));
     }
 
@@ -82,7 +83,7 @@ void RDocument::init() {
                 RLineweight::Weight025
             )
         );
-        t.addObject(layer);
+        transaction.addObject(layer);
     }
 
     // add default block:
@@ -92,12 +93,12 @@ void RDocument::init() {
                 this, RBlock::modelSpaceName, RVector()
             )
         );
-        t.addObject(modelSpace);
+        transaction.addObject(modelSpace);
     }
 
     modelSpaceBlockId = getBlockId(RBlock::modelSpaceName);
 
-    t.end(this);
+    transaction.end(this);
 
     // caching for faster operations:
     QSharedPointer<RLinetype> ltByLayer = queryLinetype("BYLAYER");
@@ -234,7 +235,14 @@ void RDocument::init() {
 
         setDimensionFont(RSettings::getStringValue("DimensionSettings/DimensionFont", "Standard"));
 
+        // notify new document listeners
+        if (RMainWindow::hasMainWindow()) {
+            qDebug() << "RMainWindow::getMainWindow()->notifyNewDocumentListeners(this);";
+            RMainWindow::getMainWindow()->notifyNewDocumentListeners(this, &transaction);
+        }
+
         storage.setModified(false);
+        qDebug() << "RDocument::init: done";
     }
 }
 
@@ -1524,6 +1532,9 @@ bool RDocument::isModified() const {
 }
 
 void RDocument::setModified(bool m) {
+    if (this==clipboard) {
+        return;
+    }
     storage.setModified(m);
 }
 

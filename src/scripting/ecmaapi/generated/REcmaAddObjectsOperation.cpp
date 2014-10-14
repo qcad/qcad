@@ -86,6 +86,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setLimitPreview, "setLimitPreview");
             
+            REcmaHelper::registerFunction(&engine, proto, isEmpty, "isEmpty");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RAddObjectsOperation*>(), *proto);
 
@@ -1211,6 +1213,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaAddObjectsOperation::setLimitPreview", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaAddObjectsOperation::isEmpty
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaAddObjectsOperation::isEmpty", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaAddObjectsOperation::isEmpty";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAddObjectsOperation* self = 
+                        getSelf("isEmpty", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isEmpty();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAddObjectsOperation.isEmpty().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaAddObjectsOperation::isEmpty", context, engine);
             return result;
         }
          QScriptValue REcmaAddObjectsOperation::toString

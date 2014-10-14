@@ -31,6 +31,7 @@
 	<entry key="RUcs::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RUcs::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RSnap::Status" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RPluginInterface::InitStatus" value="toNumber()" testFunction="isNumber()" cast="int" />
 
 	<entry key="RS::AngleFormat" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::AngleUnit" value="toNumber()" testFunction="isNumber()" cast="int" />

@@ -23,7 +23,7 @@ class RDxfPlugin : public QObject, public RPluginInterface
 public:
     virtual bool init();
     virtual void uninit(bool) {}
-    virtual void postInit() {}
+    virtual void postInit(InitStatus) {}
     virtual void initScriptExtensions(QScriptEngine&) {}
     virtual RPluginInfo getPluginInfo();
 };

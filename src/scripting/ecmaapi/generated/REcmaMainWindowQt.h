@@ -131,6 +131,15 @@
         notifyInterTransactionListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addNewDocumentListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeNewDocumentListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        notifyNewDocumentListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addSnapListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

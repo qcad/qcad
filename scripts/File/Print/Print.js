@@ -828,6 +828,14 @@ Print.setColorMode = function(document, colorMode) {
     }
 };
 
+Print.getHairLineMode = function(document) {
+    return EAction.getBoolValue("Print/HairLineMode", false, document);
+};
+
+Print.setHairLineMode = function(document, onOff) {
+    document.setVariable("Print/HairLineMode", onOff);
+};
+
 /**
  * Converts the given color mode as string into a color mode enum
  * (RGraphicsView::ColorMode).

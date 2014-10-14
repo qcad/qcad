@@ -67,8 +67,6 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, postInitPlugins, "postInitPlugins");
             
-            REcmaHelper::registerFunction(&engine, &ctor, postInitPlugin, "postInitPlugin");
-            
             REcmaHelper::registerFunction(&engine, &ctor, countPlugins, "countPlugins");
             
             REcmaHelper::registerFunction(&engine, &ctor, getPluginInfo, "getPluginInfo");
@@ -388,16 +386,27 @@
             
     
     if( context->argumentCount() ==
-    0
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RPluginInterface::InitStatus */
+    
     ){
     // prepare arguments:
     
+                    // argument isStandardType
+                    RPluginInterface::InitStatus
+                    a0 =
+                    (RPluginInterface::InitStatus)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     RPluginLoader::
-       postInitPlugins();
+       postInitPlugins(a0);
     } else
 
 
@@ -407,54 +416,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPluginLoader::postInitPlugins", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaPluginLoader::postInitPlugin
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaPluginLoader::postInitPlugin", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPluginLoader::postInitPlugin";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isQObject()
-        ) /* type: QObject * */
-    
-    ){
-    // prepare arguments:
-    
-            // argument isQObject
-            QObject *
-            a0 =
-            qobject_cast<
-            QObject *>
-            ( context->argument(
-            0
-            ).
-            toQObject()
-            );
-        
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    RPluginLoader::
-       postInitPlugin(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginLoader.postInitPlugin().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaPluginLoader::postInitPlugin", context, engine);
             return result;
         }
          QScriptValue

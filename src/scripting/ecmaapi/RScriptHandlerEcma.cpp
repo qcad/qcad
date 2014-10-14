@@ -186,6 +186,7 @@
 #include "REcmaPenListenerAdapter.h"
 #include "REcmaPluginLoader.h"
 #include "REcmaPluginInfo.h"
+#include "REcmaPluginInterface.h"
 #include "REcmaPoint.h"
 #include "REcmaPointData.h"
 #include "REcmaPointEntity.h"
@@ -826,6 +827,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaPluginLoader::init(*engine);
     REcmaPluginInfo::init(*engine);
+    REcmaPluginInterface::init(*engine);
 
     REcmaFontList::init(*engine);
 
@@ -875,6 +877,7 @@ RScriptHandlerEcma::~RScriptHandlerEcma() {
     if (engine->hasUncaughtException()) {
         qWarning() << "At least one uncaught exception:";
         qWarning() << engine->uncaughtExceptionBacktrace().join("\n");
+        REcmaHelper::printStackTrace(engine->currentContext());
     }
 
     if (engine->isEvaluating()) {

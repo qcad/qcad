@@ -11,6 +11,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RGraphicsView" />
   <class_decl name="RLayerListener" />
   <class_decl name="RMdiChildQt" />
+  <class_decl name="RNewDocumentListener" />
   <class_decl name="RPenListener" />
   <class_decl name="RPropertyListener" />
   <class_decl name="RSelectionListener" />

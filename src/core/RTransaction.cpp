@@ -864,6 +864,10 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
 
     RObject::Id objectId = object->getId();
 
+    if (object->isProtected()) {
+        return;
+    }
+
     // if a layer is deleted, delete all entities on the layer:
     QSharedPointer<RLayer> layer = object.dynamicCast<RLayer>();
     if (!layer.isNull()) {

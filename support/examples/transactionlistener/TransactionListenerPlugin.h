@@ -17,7 +17,7 @@ class TransactionListenerPlugin : public QObject, public RPluginInterface, publi
 public:
     virtual bool init();
     virtual void uninit(bool remove=false) {}
-    virtual void postInit();
+    virtual void postInit(InitStatus status);
     virtual void initScriptExtensions(QScriptEngine& engine);
     virtual RPluginInfo getPluginInfo();
 

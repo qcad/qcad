@@ -39,6 +39,7 @@ class RFocusListener;
 class RGraphicsView;
 class RLayerListener;
 class RMdiChildQt;
+class RNewDocumentListener;
 class RPenListener;
 class RPropertyListener;
 class RSelectionListener;
