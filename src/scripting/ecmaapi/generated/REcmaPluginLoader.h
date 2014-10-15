@@ -52,6 +52,9 @@
         loadPlugins
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        unloadPlugins
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         unloadPlugin
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

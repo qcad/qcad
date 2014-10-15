@@ -23,12 +23,23 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="unloadPlugins" cppName="unloadPlugins"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="unloadPlugin" cppName="unloadPlugin"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="fileName" isConst="true" />
+        <arg type="bool" typeName="bool" name="remove"
+        hasDefault="true" default=" false" isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QObject *" typeName="QObject *" name="plugin"
+        isConst="true" />
         <arg type="bool" typeName="bool" name="remove"
         hasDefault="true" default=" false" isConst="false" />
       </variant>

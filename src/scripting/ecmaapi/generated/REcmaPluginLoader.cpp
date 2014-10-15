@@ -63,6 +63,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, loadPlugins, "loadPlugins");
             
+            REcmaHelper::registerFunction(&engine, &ctor, unloadPlugins, "unloadPlugins");
+            
             REcmaHelper::registerFunction(&engine, &ctor, unloadPlugin, "unloadPlugin");
             
             REcmaHelper::registerFunction(&engine, &ctor, postInitPlugins, "postInitPlugins");
@@ -289,6 +291,40 @@
             return result;
         }
          QScriptValue
+        REcmaPluginLoader::unloadPlugins
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginLoader::unloadPlugins", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginLoader::unloadPlugins";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RPluginLoader::
+       unloadPlugins();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginLoader.unloadPlugins().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginLoader::unloadPlugins", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPluginLoader::unloadPlugin
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -346,6 +382,79 @@
                     context->argument( 0 ).
                     toString();
                 
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RPluginLoader::
+       unloadPlugin(a0
+        ,
+    a1);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject()
+        ) /* type: QObject * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QObject *
+            a0 =
+            qobject_cast<
+            QObject *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RPluginLoader::
+       unloadPlugin(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isQObject()
+        ) /* type: QObject * */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QObject *
+            a0 =
+            qobject_cast<
+            QObject *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
                     // argument isStandardType
                     bool
                     a1 =

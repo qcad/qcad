@@ -141,6 +141,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <property name="PropertyProtected" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyName" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyFrozen" type="RPropertyTypeId"

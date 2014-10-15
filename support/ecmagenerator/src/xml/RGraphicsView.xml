@@ -556,6 +556,19 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RGraphicsView::ColorMode"
       isPureVirtual="false" />
     </method>
+    <method name="setHairlineMode" cppName="setHairlineMode"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getHairlineMode" cppName="getHairlineMode"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getTextLabels" cppName="getTextLabels"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

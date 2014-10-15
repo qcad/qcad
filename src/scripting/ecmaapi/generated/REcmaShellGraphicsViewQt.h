@@ -688,6 +688,16 @@
             );
         
     
+      void setHairlineMode(
+                bool on
+            );
+        
+    
+      bool getHairlineMode(
+                
+            );
+        
+    
       QList < RTextLabel > getTextLabels(
                 
             );

@@ -1294,6 +1294,26 @@ dir="./core" filename="RGraphicsView.h">
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>void</name>
+  </type>
+  <name>setHairlineMode</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>on</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>bool</name>
+  </type>
+  <name>getHairlineMode</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
     <name>QList
     <argument_list>&lt;
     <argument>
@@ -1483,6 +1503,13 @@ dir="./core" filename="RGraphicsView.h">
       <name>ColorMode</name>
     </type>
     <name>colorMode</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>hairlineMode</name>
   </decl>;</decl_stmt>
   <comment type="block">/** * The scene this view is attached to.
   */</comment>

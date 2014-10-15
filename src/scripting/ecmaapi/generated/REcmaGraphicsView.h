@@ -268,6 +268,12 @@
         getColorMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setHairlineMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getHairlineMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTextLabels
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
