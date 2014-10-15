@@ -16,8 +16,9 @@ DEFINES += PACKAGE_BUGREPORT=\\\"mhadji@gmail.com\\\"
 DEFINES += NDEBUG
 DEFINES += SPATIALINDEX_CREATE_DLL
 
-# TODO: test on all platforms:
-DEFINES += HAVE_BZERO
+!win32-msvc2010 {
+    DEFINES += HAVE_BZERO
+}
 
 CONFIG -= warn_on
 CONFIG += warn_off
