@@ -106,7 +106,7 @@ bool RGraphicsSceneQt::beginPath() {
     currentPainterPath.setZLevel(0);
 
     if (screenBasedLinetypes && currentPen.style()==Qt::SolidLine) {
-        QVector<qreal> pat = currentLinetypePattern.getScreenBasedLinetype(RUnit::isMetric(document->getUnit()));
+        QVector<qreal> pat = currentLinetypePattern.getScreenBasedLinetype(document->isMetric());
         if (!pat.isEmpty()) {
             currentPen.setDashPattern(pat);
         }

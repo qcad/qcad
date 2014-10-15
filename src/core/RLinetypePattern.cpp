@@ -156,7 +156,11 @@ QVector<qreal> RLinetypePattern::getScreenBasedLinetype(bool metric) {
 
     if (pattern.length()>1) {
         for (int i = 0; i < pattern.length(); ++i) {
-            ret << ceil(fabs(pattern[i])) * (metric ? 1.0 : 25.4);
+            double dash = fabs(pattern[i]);
+            if (!metric) {
+                dash*=25.4;
+            }
+            ret << ceil(dash);
         }
     }
 

@@ -356,7 +356,6 @@ void RMainWindow::removeNewDocumentListener(RNewDocumentListener* l) {
 void RMainWindow::notifyNewDocumentListeners(RDocument* document, RTransaction* transaction) {
     QList<RNewDocumentListener*>::iterator it;
     for (it = newDocumentListeners.begin(); it != newDocumentListeners.end(); ++it) {
-        qDebug() << "updateNewDocumentListener";
         (*it)->updateNewDocumentListener(document, transaction);
     }
 }
