@@ -129,6 +129,14 @@ public:
         RGraphicsView::setColorMode(cm);
     }
 
+    void setHairlineMode(bool on) {
+        RGraphicsView::setHairlineMode(on);
+    }
+
+    bool getHairlineMode() {
+        return RGraphicsView::getHairlineMode();
+    }
+
     RGraphicsScene* getScene() {
         return RGraphicsView::getScene();
     }

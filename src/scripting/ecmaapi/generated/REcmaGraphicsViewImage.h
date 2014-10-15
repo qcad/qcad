@@ -99,6 +99,12 @@
         setColorMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setHairlineMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getHairlineMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getScene
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

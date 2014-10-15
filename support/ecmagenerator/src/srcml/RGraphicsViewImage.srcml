@@ -623,6 +623,49 @@ dir="./gui" filename="RGraphicsViewImage.h">
   </function>
   <function>
     <type>
+      <name>void</name>
+    </type>
+    <name>setHairlineMode</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>bool</name>
+        </type>
+        <name>on</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <constructor_decl>
+    <name>RGraphicsView::setHairlineMode</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>on</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</constructor_decl>}</block>
+  </function>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>getHairlineMode</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RGraphicsView</name>::
+        <name>getHairlineMode</name></name>
+        <argument_list>()</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
     <name>RGraphicsScene</name>*</type>
     <name>getScene</name>
     <parameter_list>()</parameter_list>

@@ -115,6 +115,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setColorMode, "setColorMode");
             
+            REcmaHelper::registerFunction(&engine, proto, setHairlineMode, "setHairlineMode");
+            
+            REcmaHelper::registerFunction(&engine, proto, getHairlineMode, "getHairlineMode");
+            
             REcmaHelper::registerFunction(&engine, proto, getScene, "getScene");
             
             REcmaHelper::registerFunction(&engine, proto, getDocument, "getDocument");
@@ -1629,6 +1633,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setColorMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::setHairlineMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setHairlineMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setHairlineMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("setHairlineMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setHairlineMode(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setHairlineMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setHairlineMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getHairlineMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getHairlineMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getHairlineMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getHairlineMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getHairlineMode();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getHairlineMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getHairlineMode", context, engine);
             return result;
         }
          QScriptValue

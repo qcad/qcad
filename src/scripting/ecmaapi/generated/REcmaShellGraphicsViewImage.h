@@ -153,6 +153,18 @@
         
     
     
+      void setHairlineMode(
+                bool on
+            );
+        
+    
+    
+      bool getHairlineMode(
+                
+            );
+        
+    
+    
       RGraphicsScene * getScene(
                 
             );
@@ -707,16 +719,6 @@
         
     
       RGraphicsView::ColorMode getColorMode(
-                
-            );
-        
-    
-      void setHairlineMode(
-                bool on
-            );
-        
-    
-      bool getHairlineMode(
                 
             );
         
