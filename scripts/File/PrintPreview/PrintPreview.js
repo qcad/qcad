@@ -315,6 +315,12 @@ PrintPreview.prototype.showUiOptions = function(resume) {
         widgets["BlackWhite"].blockSignals(false);
         break;
     }
+
+    if (Print.getHairLineMode(document)) {
+        widgets["HairLine"].blockSignals(true);
+        widgets["HairLine"].checked=true;
+        widgets["HairLine"].blockSignals(false);
+    }
     
     widgets["Portrait"].blockSignals(true);
     widgets["Landscape"].blockSignals(true);
@@ -660,6 +666,20 @@ PrintPreview.prototype.colorModeUpdate = function() {
         this.view.regenerate(true);
     }    
 };
+
+PrintPreview.prototype.slotHairLineChanged = function(checked) {
+    if (this.updateDisabled===true) {
+        return;
+    }
+    if (checked) {
+        Print.setHairLineMode(EAction.getDocument(), checked);
+        if (!isNull(this.view)) {
+            this.view.setHairLineMode(checked)
+            this.view.regenerate(true);
+        }
+    }
+};
+
 
 /**
  * Page borders toggled in options toolbar.

@@ -33,6 +33,7 @@ RGraphicsView::RGraphicsView(RGraphicsScene* scene) :
       printPreview(false),
       printPointSize(1.0, 1.0),
       colorMode(RGraphicsView::FullColor),
+      hairlineMode(false),
       scene(NULL),
       grid(NULL),
       navigationAction(NULL),
@@ -871,6 +872,14 @@ void RGraphicsView::setColorMode(RGraphicsView::ColorMode cm) {
 
 RGraphicsView::ColorMode RGraphicsView::getColorMode() {
     return colorMode;
+}
+
+void RGraphicsView::setHairlineMode(bool on) {
+    hairlineMode = on;
+}
+
+bool RGraphicsView::getHairlineMode() {
+    return hairlineMode;
 }
 
 QList<RTextLabel> RGraphicsView::getTextLabels() {

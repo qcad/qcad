@@ -801,9 +801,14 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
 
         if (pen.style() != Qt::NoPen) {
             if (isPrinting()) {
-                // printing: always use real, scaled line weight, no matter
-                // how thin:
-                pen.setWidthF(pen.widthF() / drawingScale);
+                if (hairlineMode) {
+                    pen.setWidthF(0.05 / drawingScale);
+                }
+                else {
+                    // printing: always use real, scaled line weight, no matter
+                    // how thin:
+                    pen.setWidthF(pen.widthF() / drawingScale);
+                }
             }
             else {
                 if (isPrintPreview()) {

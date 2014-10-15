@@ -239,6 +239,9 @@ public:
     void setColorMode(RGraphicsView::ColorMode cm);
     RGraphicsView::ColorMode getColorMode();
 
+    void setHairlineMode(bool on);
+    bool getHairlineMode();
+
     QList<RTextLabel> getTextLabels();
     void clearTextLabels();
     void addTextLabel(const RTextLabel &textLabel);
@@ -281,6 +284,7 @@ protected:
     RVector printPointSize;
 
     ColorMode colorMode;
+    bool hairlineMode;
 
     /**
      * The scene this view is attached to.
