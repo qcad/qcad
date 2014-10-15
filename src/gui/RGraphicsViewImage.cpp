@@ -796,7 +796,6 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         }
 
         QPen pen = path.getPen();
-        //QPen pen2(Qt::NoPen);
         QBrush brush = path.getBrush();
 
         if (pen.style() != Qt::NoPen) {
@@ -812,27 +811,28 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
             }
             else {
                 if (isPrintPreview()) {
-                    // print preview: optimize thin lines to 0 (1 pixel):
-                    if (pen.widthF() * getFactor() / drawingScale < 1.5) {
-                        pen.setWidth(0);
-                    }
-                    else {
-                        if (hairlineMode) {
-                            pen.setWidthF(0.05 / drawingScale);
+                    if (!pen.isCosmetic()) {
+                        // print preview: optimize thin lines to 0 (1 pixel):
+                        if (pen.widthF() * getFactor() / drawingScale < 1.5) {
+                            pen.setWidth(0);
                         }
                         else {
-                            pen.setWidthF(pen.widthF() / drawingScale);
+                            if (hairlineMode) {
+                                pen.setWidthF(0.05 / drawingScale);
+                            }
+                            else {
+                                pen.setWidthF(pen.widthF() / drawingScale);
+                            }
                         }
                     }
                 }
                 else {
-                    // for display, ignore drawing scale and optimize
-                    // thin lines to 0:
-                    if (pen.widthF() * getFactor() < 1.5 && !pen.isCosmetic()) {
-                        pen.setWidth(0);
-                    }
-                    else {
-                        //pen.setWidthF(pen.widthF());
+                    if (!pen.isCosmetic()) {
+                        // for display, ignore drawing scale and optimize
+                        // thin lines to 0:
+                        if (pen.widthF() * getFactor() < 1.5 && !pen.isCosmetic()) {
+                            pen.setWidth(0);
+                        }
                     }
                 }
             }
@@ -913,11 +913,6 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
             // draw outline:
             if (pen.style() != Qt::NoPen) {
                 painter->drawPath(path);
-                //if (pen2.style() != Qt::NoPen) {
-                //    painter->setPen(pen2);
-                //    painter->drawPath(path);
-                //    painter->setPen(pen);
-                //}
             }
         }
         else {
@@ -940,11 +935,6 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
                     QLineF qLine(QPointF(line.startPoint.x, line.startPoint.y),
                                 QPointF(line.endPoint.x, line.endPoint.y));
                     painter->drawLine(qLine);
-//                    if (pen2.style() != Qt::NoPen) {
-//                        painter->setPen(pen2);
-//                        painter->drawLine(qLine);
-//                        painter->setPen(pen);
-//                    }
                 }
             }
             else {

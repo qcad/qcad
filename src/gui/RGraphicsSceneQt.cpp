@@ -112,17 +112,12 @@ bool RGraphicsSceneQt::beginPath() {
         }
     }
 
-    //qDebug() << "screenBasedLinetypes: " << screenBasedLinetypes;
-    //qDebug() << "twoColorSelectedMode: " << twoColorSelectedMode;
-
     if (draftMode || screenBasedLinetypes || twoColorSelectedMode) {
         QPen localPen = currentPen;
-        //draftPen.setWidth(0);
         if (twoColorSelectedMode) {
             // fixed width for selected entities in two color selected mode:
             localPen.setCosmetic(true);
             localPen.setWidth(3);
-            //localPen.setStyle(Qt::CustomDashLine);
         }
         else {
             if (draftMode) {
@@ -141,21 +136,11 @@ bool RGraphicsSceneQt::beginPath() {
         currentPainterPath.setPen(currentPen);
     }
 
-//    if (twoColorSelectedMode) {
-//        QBrush localBrush(Qt::BDiagPattern);
-//        QTransform t;
-//        t.scale(0.01, 0.01);
-//        localBrush.setTransform(t);
-//        currentPainterPath.setBrush(localBrush);
-//    }
-//    else {
-        currentPainterPath.setBrush(QBrush(Qt::NoBrush));
-//    }
+    currentPainterPath.setBrush(QBrush(Qt::NoBrush));
     currentPainterPath.setPixelSizeHint(pixelSizeHint);
 
     if (!exportToPreview) {
         if (getEntity()->isSelected()) {
-            //setSelectedMode(true);
             currentPainterPath.setSelected(true);
         }
     }
