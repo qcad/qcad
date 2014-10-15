@@ -100,6 +100,7 @@ PrintPreview.prototype.beginEvent = function() {
         // for printing / preview:
         this.view.setBackgroundColor(Print.getBackgroundColor(document));
         this.view.setColorMode(Print.getColorMode(document));
+        this.view.setHairlineMode(Print.getHairlineMode(document));
         this.view.setPrintPreview(true);
 
         this.updateBackgroundDecoration();
