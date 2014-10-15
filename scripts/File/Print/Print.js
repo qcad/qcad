@@ -828,12 +828,12 @@ Print.setColorMode = function(document, colorMode) {
     }
 };
 
-Print.getHairLineMode = function(document) {
-    return EAction.getBoolValue("Print/HairLineMode", false, document);
+Print.getHairlineMode = function(document) {
+    return EAction.getBoolValue("Print/HairlineMode", false, document);
 };
 
-Print.setHairLineMode = function(document, onOff) {
-    document.setVariable("Print/HairLineMode", onOff);
+Print.setHairlineMode = function(document, onOff) {
+    document.setVariable("Print/HairlineMode", onOff);
 };
 
 /**

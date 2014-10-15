@@ -316,10 +316,10 @@ PrintPreview.prototype.showUiOptions = function(resume) {
         break;
     }
 
-    if (Print.getHairLineMode(document)) {
-        widgets["HairLine"].blockSignals(true);
-        widgets["HairLine"].checked=true;
-        widgets["HairLine"].blockSignals(false);
+    if (Print.getHairlineMode(document)) {
+        widgets["Hairline"].blockSignals(true);
+        widgets["Hairline"].checked=true;
+        widgets["Hairline"].blockSignals(false);
     }
     
     widgets["Portrait"].blockSignals(true);
@@ -667,14 +667,14 @@ PrintPreview.prototype.colorModeUpdate = function() {
     }    
 };
 
-PrintPreview.prototype.slotHairLineChanged = function(checked) {
+PrintPreview.prototype.slotHairlineChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
     if (checked) {
-        Print.setHairLineMode(EAction.getDocument(), checked);
+        Print.setHairlineMode(EAction.getDocument(), checked);
         if (!isNull(this.view)) {
-            this.view.setHairLineMode(checked)
+            this.view.setHairlineMode(checked)
             this.view.regenerate(true);
         }
     }
