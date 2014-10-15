@@ -817,7 +817,12 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
                         pen.setWidth(0);
                     }
                     else {
-                        pen.setWidthF(pen.widthF() / drawingScale);
+                        if (hairlineMode) {
+                            pen.setWidthF(0.05 / drawingScale);
+                        }
+                        else {
+                            pen.setWidthF(pen.widthF() / drawingScale);
+                        }
                     }
                 }
                 else {

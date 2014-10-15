@@ -671,12 +671,11 @@ PrintPreview.prototype.slotHairlineChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
-    if (checked) {
-        Print.setHairlineMode(EAction.getDocument(), checked);
-        if (!isNull(this.view)) {
-            this.view.setHairlineMode(checked)
-            this.view.regenerate(true);
-        }
+    Print.setHairlineMode(EAction.getDocument(), checked);
+    if (!isNull(this.view)) {
+        qDebug("hairline mode: ", checked);
+        this.view.setHairlineMode(checked)
+        this.view.regenerate(true);
     }
 };
 
