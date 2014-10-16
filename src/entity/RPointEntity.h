@@ -77,7 +77,7 @@ public:
             RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
 
-    virtual void exportEntity(RExporter& e, bool preview=false) const;
+    virtual void exportEntity(RExporter& e, bool preview=false, bool forceSelected=false) const;
 
     virtual RPointData& getData() {
         return data;

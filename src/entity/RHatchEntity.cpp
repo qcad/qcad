@@ -346,8 +346,10 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
 }
 
 
-void RHatchEntity::exportEntity(RExporter& e, bool preview) const {
+void RHatchEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
+    Q_UNUSED(forceSelected);
+
     e.exportPainterPathSource(data);
 }
 

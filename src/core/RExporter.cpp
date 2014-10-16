@@ -682,7 +682,7 @@ void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
         twoColorSelectedMode = true;
     }
 
-    entity->exportEntity(*this, preview);
+    entity->exportEntity(*this, preview, forceSelected);
 
     // selected? export again with second color and pattern:
     if (visualExporter) {
@@ -697,7 +697,7 @@ void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
             setColor(secondSelectionColor);
             //setStyle(Qt::CustomDashLine);
             setDashPattern(QVector<qreal>() << 2 << 3);
-            entity->exportEntity(*this, preview);
+            entity->exportEntity(*this, preview, forceSelected);
         }
     }
     twoColorSelectedMode = false;

@@ -151,8 +151,9 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
 }
 
 
-void RTextBasedEntity::exportEntity(RExporter& e, bool preview) const {
+void RTextBasedEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
+    Q_UNUSED(forceSelected);
 
     //RTextBasedData data = getData().getRenderedTextData();
     //if (data.isValid()) {

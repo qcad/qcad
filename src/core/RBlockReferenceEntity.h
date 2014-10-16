@@ -87,7 +87,7 @@ public:
 
 //    virtual void setSelected(bool on);
 
-    virtual void exportEntity(RExporter& e, bool preview = false) const;
+    virtual void exportEntity(RExporter& e, bool preview = false, bool forceSelected=false) const;
 
     virtual RBlockReferenceData& getData() {
         return data;

@@ -193,8 +193,9 @@ QPair<QVariant, RPropertyAttributes> RSolidEntity::getProperty(
 }
 
 
-void RSolidEntity::exportEntity(RExporter& e, bool preview) const {
+void RSolidEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
+    Q_UNUSED(forceSelected);
 
     // note that order of fourth and third vertex is swapped:
     RPolyline pl;

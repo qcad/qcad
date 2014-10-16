@@ -85,8 +85,9 @@ QPair<QVariant, RPropertyAttributes> RPointEntity::getProperty(
 }
 
 
-void RPointEntity::exportEntity(RExporter& e, bool preview) const {
+void RPointEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
+    Q_UNUSED(forceSelected);
 
     e.setBrush(Qt::NoBrush);
     e.exportPoint(data);

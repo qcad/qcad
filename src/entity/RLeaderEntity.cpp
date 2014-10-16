@@ -96,8 +96,9 @@ QPair<QVariant, RPropertyAttributes> RLeaderEntity::getProperty(
 }
 
 
-void RLeaderEntity::exportEntity(RExporter& e, bool preview) const {
+void RLeaderEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview)
+    Q_UNUSED(forceSelected)
 
     // a leader needs at least two vertices to display something:
     if (countVertices()<=1) {

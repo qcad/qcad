@@ -99,8 +99,9 @@ QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
 }
 
 
-void RViewportEntity::exportEntity(RExporter& e, bool preview) const {
+void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
+    Q_UNUSED(forceSelected);
     return;
 
     e.setBrush(Qt::NoBrush);
