@@ -2544,6 +2544,18 @@ dir="./core" filename="REntity.h">
         <name>false</name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>forceSelected</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>

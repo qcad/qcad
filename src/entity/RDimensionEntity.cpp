@@ -223,8 +223,9 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
 }
 
 
-void RDimensionEntity::exportEntity(RExporter& e, bool preview) const {
+void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
+    Q_UNUSED(forceSelected);
 
     getData().dirty = true;
 

@@ -534,7 +534,7 @@ public:
      * exporter, a graphics scene or any other platform one can export entities
      * to.
      */
-    virtual void exportEntity(RExporter& e, bool preview = false) const = 0;
+    virtual void exportEntity(RExporter& e, bool preview = false, bool forceSelected=false) const = 0;
 
     // from RObject:
     virtual bool isSelectedForPropertyEditing() {

@@ -120,8 +120,9 @@ QPair<QVariant, RPropertyAttributes> RCircleEntity::getProperty(
 }
 
 
-void RCircleEntity::exportEntity(RExporter& e, bool preview) const {
+void RCircleEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
+    Q_UNUSED(forceSelected);
 
     e.setBrush(Qt::NoBrush);
     e.exportCircle(data);

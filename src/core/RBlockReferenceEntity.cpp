@@ -323,7 +323,7 @@ QPair<QVariant, RPropertyAttributes> RBlockReferenceEntity::getProperty(
 //    REntity::setSelected(on);
 //}
 
-void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview) const {
+void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     const RDocument* document = getDocument();
     if (document==NULL) {
         qWarning() << "RBlockReferenceEntity::exportEntity: document is NULL";
@@ -358,7 +358,7 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview) const {
         if (entity.isNull()) {
             continue;
         }
-        e.exportEntity(*entity, preview, true, isSelected());
+        e.exportEntity(*entity, preview, true, isSelected() || forceSelected);
     }
 
     // too slow:

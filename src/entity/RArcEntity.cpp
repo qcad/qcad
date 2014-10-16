@@ -146,8 +146,9 @@ QPair<QVariant, RPropertyAttributes> RArcEntity::getProperty(
 }
 
 
-void RArcEntity::exportEntity(RExporter& e, bool preview) const {
+void RArcEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
+    Q_UNUSED(forceSelected);
 
     e.setBrush(Qt::NoBrush);
     e.exportArc(data);

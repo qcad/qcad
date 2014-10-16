@@ -156,8 +156,9 @@ QPair<QVariant, RPropertyAttributes> RXLineEntity::getProperty(
 }
 
 
-void RXLineEntity::exportEntity(RExporter& e, bool preview) const {
+void RXLineEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
+    Q_UNUSED(forceSelected);
 
     e.setBrush(Qt::NoBrush);
     e.exportXLine(data);

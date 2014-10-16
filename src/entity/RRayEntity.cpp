@@ -156,8 +156,9 @@ QPair<QVariant, RPropertyAttributes> RRayEntity::getProperty(
 }
 
 
-void RRayEntity::exportEntity(RExporter& e, bool preview) const {
+void RRayEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
+    Q_UNUSED(forceSelected);
 
     e.setBrush(Qt::NoBrush);
     e.exportRay(data);

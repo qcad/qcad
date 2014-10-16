@@ -118,8 +118,9 @@ QPair<QVariant, RPropertyAttributes> RAttributeEntity::getProperty(
     return RTextBasedEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
-void RAttributeEntity::exportEntity(RExporter& e, bool preview) const {
+void RAttributeEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
+    Q_UNUSED(forceSelected);
 
     RAttributeData data = getData();
 

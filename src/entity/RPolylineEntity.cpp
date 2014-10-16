@@ -110,8 +110,9 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
 }
 
 
-void RPolylineEntity::exportEntity(RExporter& e, bool preview) const {
+void RPolylineEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
+    Q_UNUSED(forceSelected);
 
     e.setBrush(Qt::NoBrush);
 
