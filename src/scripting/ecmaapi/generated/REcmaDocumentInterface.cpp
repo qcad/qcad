@@ -145,6 +145,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, disableUpdates, "disableUpdates");
             
+            REcmaHelper::registerFunction(&engine, proto, enableRegeneration, "enableRegeneration");
+            
+            REcmaHelper::registerFunction(&engine, proto, disableRegeneration, "disableRegeneration");
+            
             REcmaHelper::registerFunction(&engine, proto, enableMouseTracking, "enableMouseTracking");
             
             REcmaHelper::registerFunction(&engine, proto, disableMouseTracking, "disableMouseTracking");
@@ -2695,6 +2699,94 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::disableUpdates", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::enableRegeneration
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::enableRegeneration", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::enableRegeneration";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("enableRegeneration", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->enableRegeneration();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.enableRegeneration().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::enableRegeneration", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::disableRegeneration
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::disableRegeneration", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::disableRegeneration";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("disableRegeneration", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->disableRegeneration();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.disableRegeneration().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::disableRegeneration", context, engine);
             return result;
         }
          QScriptValue

@@ -171,6 +171,10 @@ public:
 
     void enableUpdates();
     void disableUpdates();
+
+    void enableRegeneration();
+    void disableRegeneration();
+
     void enableMouseTracking();
     void disableMouseTracking();
 
@@ -331,6 +335,7 @@ private:
     bool suspended;
 
     bool allowUpdate;
+    bool allowRegeneration;
 
     static RDocumentInterface* clipboard;
 

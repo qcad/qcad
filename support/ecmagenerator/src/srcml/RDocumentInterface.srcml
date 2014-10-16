@@ -603,6 +603,18 @@ dir="./core" filename="RDocumentInterface.h">
   <type>
     <name>void</name>
   </type>
+  <name>enableRegeneration</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>disableRegeneration</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>enableMouseTracking</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
@@ -2036,6 +2048,13 @@ dir="./core" filename="RDocumentInterface.h">
       <name>bool</name>
     </type>
     <name>allowUpdate</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>allowRegeneration</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>
