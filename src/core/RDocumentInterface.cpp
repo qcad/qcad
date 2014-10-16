@@ -67,6 +67,7 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
     cursorPosition(RVector::invalid),
     suspended(false),
     allowUpdate(true),
+    allowRegeneration(true),
     notifyListeners(true),
     deleting(false),
     cursorOverride(false),
@@ -499,6 +500,14 @@ void RDocumentInterface::enableUpdates() {
 
 void RDocumentInterface::disableUpdates() {
     allowUpdate = false;
+}
+
+void RDocumentInterface::enableRegeneration() {
+    allowRegeneration = true;
+}
+
+void RDocumentInterface::disableRegeneration() {
+    allowRegeneration = false;
 }
 
 void RDocumentInterface::enableMouseTracking() {
@@ -1762,6 +1771,7 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
         if (!block.isNull()) {
             if (block->getId()!=document.getModelSpaceBlockId()) {
                 blockHasChanged = true;
+                //document.queryBlockReferences(block->getId());
             }
 
             // deselect block reference entities of hidden block:
@@ -1796,7 +1806,12 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
     }
 
     if (layerHasChanged || blockHasChanged) {
-        regenerateScenes(true);
+        if (allowRegeneration) {
+            regenerateScenes(true);
+        }
+        else {
+            regenerateScenes(entityIdsToRegenerate, false);
+        }
     }
     else {
         regenerateScenes(entityIdsToRegenerate, false);

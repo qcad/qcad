@@ -160,6 +160,12 @@
         disableUpdates
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        enableRegeneration
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        disableRegeneration
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         enableMouseTracking
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

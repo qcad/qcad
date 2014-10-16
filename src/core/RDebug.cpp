@@ -32,12 +32,12 @@ QMap<int, QTime> RDebug::timer;
 
 void RDebug::printBacktrace(const QString& prefix) {
 #if !defined(Q_OS_WIN) && !defined(Q_OS_ANDROID)
-    void *array[10];
+    void *array[20];
     size_t size;
     char **strings;
     size_t i;
 
-    size = backtrace(array, 10);
+    size = backtrace(array, 20);
     strings = backtrace_symbols(array, size);
 
     qDebug("Obtained %zd stack frames.\n", size);
