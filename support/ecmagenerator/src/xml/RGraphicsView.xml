@@ -480,6 +480,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="screenPosition" isConst="true" />
         <arg type="int" typeName="int" name="range"
         isConst="false" />
+        <arg type="int" typeName="int" name="strictRange"
+        isConst="false" />
         <arg type="bool" typeName="bool" name="includeLockedLayers"
         hasDefault="true" default=" true" isConst="false" />
       </variant>

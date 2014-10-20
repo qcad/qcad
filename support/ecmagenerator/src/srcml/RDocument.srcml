@@ -195,6 +195,18 @@ dir="./core" filename="RDocument.h">
   <param>
     <decl>
     <type>
+      <name>double</name>
+    </type>
+    <name>strictRange</name>=
+    <init>
+      <expr>
+        <name>RMAXDOUBLE</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
       <name>bool</name>
     </type>
     <name>includeLockedLayers</name>=
@@ -248,6 +260,18 @@ dir="./core" filename="RDocument.h">
       </type>
       <name>draft</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>strictRange</name>=
+    <init>
+      <expr>
+        <name>RMAXDOUBLE</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>

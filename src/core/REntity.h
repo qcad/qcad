@@ -350,15 +350,15 @@ public:
     /**
      * \copydoc REntityData::getDistanceTo(const RVector& point)
      */
-    virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false) const {
-        return getData().getDistanceTo(point, limited, range, draft);
+    virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false, double strictRange = RMAXDOUBLE) const {
+        return getData().getDistanceTo(point, limited, range, draft, strictRange);
     }
 
     /**
      * \copydoc REntityData::getVectorTo
      */
-    virtual RVector getVectorTo(const RVector& point, bool limited = true) const {
-        return getData().getVectorTo(point, limited);
+    virtual RVector getVectorTo(const RVector& point, bool limited = true, double strictRange = RMAXDOUBLE) const {
+        return getData().getVectorTo(point, limited, strictRange);
     }
 
     /**

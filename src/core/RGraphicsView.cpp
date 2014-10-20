@@ -766,15 +766,16 @@ RVector RGraphicsView::getClosestReferencePoint(
  *
  * \return The closest entity or NULL.
  */
-REntity::Id RGraphicsView::getClosestEntity(const RVector& screenPosition, int range, bool includeLockedLayers) {
+REntity::Id RGraphicsView::getClosestEntity(const RVector& screenPosition, int range, int strictRange, bool includeLockedLayers) {
 
     RVector modelPosition = mapFromView(screenPosition);
     double modelRange = mapDistanceFromView(range);
+    double modelStrictRange = mapDistanceFromView(strictRange);
 
     if (getDocumentInterface() == NULL) {
         return REntity::INVALID_ID;
     }
-    return getDocumentInterface()->getClosestEntity(modelPosition, modelRange, includeLockedLayers);
+    return getDocumentInterface()->getClosestEntity(modelPosition, modelRange, modelStrictRange, includeLockedLayers);
 }
 
 

@@ -94,43 +94,6 @@ public:
         return QList<QSharedPointer<RShape> >() <<
                 QSharedPointer<RShape>(new RXLine(*this));
     }
-
-    /*
-    virtual RBox getBoundingBox() const;
-
-    void setBasePoint(const RVector& v) {
-        RLine::setStartPoint(v);
-    }
-
-    RVector getBasePoint() const {
-        return RLine::getStartPoint();
-    }
-
-    void setSecondPoint(const RVector& v) {
-        RLine::setEndPoint(v);
-    }
-
-    RVector getSecondPoint() const {
-        return RLine::getEndPoint();
-    }
-
-    void setDirectionVector(const RVector& v) {
-        RLine::setEndPoint(RLine::getStartPoint() + v);
-    }
-
-    RVector getDirectionVector() const {
-        return RLine::getEndPoint() - RLine::getStartPoint();
-    }
-
-    virtual RVector getVectorTo(const RVector& point, bool limited = true) const {
-        return RLine::getVectorTo(point, false);
-    }
-
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const;
-    */
-
-//protected:
-    //virtual RLine getXLineShape() const;
 };
 
 Q_DECLARE_METATYPE(RXLineData*)

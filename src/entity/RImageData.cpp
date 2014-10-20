@@ -90,9 +90,10 @@ RVector RImageData::getPointOnEntity() const {
     return insertionPoint;
 }
 
-double RImageData::getDistanceTo(const RVector& point, bool limited, double range, bool draft) const {
+double RImageData::getDistanceTo(const RVector& point, bool limited, double range, bool draft, double strictRange) const {
     Q_UNUSED(range)
     Q_UNUSED(draft)
+    Q_UNUSED(strictRange)
 
     double minDist = RMAXDOUBLE;
     QList<RLine> edges = getEdges();

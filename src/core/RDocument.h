@@ -78,13 +78,15 @@ public:
         const RVector& wcsPosition,
         double range,
         bool draft,
+        double strictRange = RMAXDOUBLE,
         bool includeLockedLayers = true
     );
     REntity::Id queryClosestXY(
         QSet<REntity::Id>& candidates,
         const RVector& wcsPosition,
         double range,
-        bool draft
+        bool draft,
+        double strictRange = RMAXDOUBLE
     );
 
     QSet<RObject::Id> queryAllObjects() const;

@@ -56,7 +56,7 @@ public:
 
     virtual bool reverse();
     virtual RLine getClippedLine(const RBox& box) const;
-    virtual RVector getVectorTo(const RVector& point, bool limited = true) const;
+    virtual RVector getVectorTo(const RVector& point, bool limited = true, double strictRange = RMAXDOUBLE) const;
 
     virtual bool stretch(const RPolyline& area, const RVector& offset);
 

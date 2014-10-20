@@ -708,7 +708,7 @@
         
     
       REntity::Id getClosestEntity(
-                const RVector & screenPosition, int range, bool includeLockedLayers
+                const RVector & screenPosition, int range, int strictRange, bool includeLockedLayers
         =  true
             );
         

@@ -110,6 +110,7 @@ public:
     static int getRevisionVersion();
     static int getBuildVersion();
     static int getSnapRange();
+    static int getPickRange();
     static int getZeroWeightWeight();
     static int getPreviewEntities();
     static bool getLimitZoomAndScroll();
@@ -170,6 +171,7 @@ private:
     static QFont* infoLabelFont;
     static QFont* statusBarFont;
     static int snapRange;
+    static int pickRange;
     static int zeroWeightWeight;
     static int showCrosshair;
     static int showLargeCrosshair;

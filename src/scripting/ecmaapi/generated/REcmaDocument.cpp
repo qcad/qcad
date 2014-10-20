@@ -931,7 +931,93 @@
             context->argument(2).isBool()
         ) /* type: bool */
      && (
-            context->argument(3).isBool()
+            context->argument(3).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    double
+                    a3 =
+                    (double)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'REntity::Id'
+    REntity::Id cppResult =
+        
+               self->queryClosestXY(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+        // return type: REntity::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    5 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(3).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(4).isBool()
         ) /* type: bool */
     
     ){
@@ -972,11 +1058,19 @@
                     toBool();
                 
                     // argument isStandardType
-                    bool
+                    double
                     a3 =
-                    (bool)
+                    (double)
                     
                     context->argument( 3 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a4 =
+                    (bool)
+                    
+                    context->argument( 4 ).
                     toBool();
                 
     // end of arguments
@@ -991,7 +1085,9 @@
         ,
     a2
         ,
-    a3);
+    a3
+        ,
+    a4);
         // return type: REntity::Id
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1076,6 +1172,103 @@
     a2
         ,
     a3);
+        // return type: REntity::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    5 && (
+            context->argument(0).isArray()
+        ) /* type: QSet < REntity::Id > */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(4).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QSet < REntity::Id >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDocument: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    double
+                    a4 =
+                    (double)
+                    
+                    context->argument( 4 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'REntity::Id'
+    REntity::Id cppResult =
+        
+               self->queryClosestXY(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4);
         // return type: REntity::Id
                 // standard Type
                 result = QScriptValue(cppResult);

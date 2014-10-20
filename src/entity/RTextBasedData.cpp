@@ -171,9 +171,10 @@ RVector RTextBasedData::getPointOnEntity() const {
     return RVector(p.x(), p.y());
 }
 
-double RTextBasedData::getDistanceTo(const RVector& point, bool limited, double range, bool draft) const {
+double RTextBasedData::getDistanceTo(const RVector& point, bool limited, double range, bool draft, double strictRange) const {
     Q_UNUSED(limited)
     Q_UNUSED(draft)
+    Q_UNUSED(strictRange)
     
     if (!getBoundingBox().grow(range).contains(point)) {
         //qDebug() << "RTextBasedData::getDistanceTo: bounding box not in range: " << getBoundingBox();

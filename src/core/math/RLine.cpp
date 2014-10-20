@@ -140,7 +140,7 @@ QList<RVector> RLine::getPointsWithDistanceToEnd(double distance, RS::From from)
     return ret;
 }
 
-RVector RLine::getVectorTo(const RVector& point, bool limited) const {
+RVector RLine::getVectorTo(const RVector& point, bool limited, double strictRange) const {
 
     RVector ae = endPoint - startPoint;
     RVector ap = point - startPoint;
@@ -152,7 +152,14 @@ RVector RLine::getVectorTo(const RVector& point, bool limited) const {
     double b = RVector::getDotProduct(ap, ae) / RVector::getDotProduct(ae, ae);
 
     if (limited && (b < 0 || b > 1.0)) {
-        return getVectorFromEndpointTo(point);
+        // orthogonal to line does not cross line:
+        RVector ret = getVectorFromEndpointTo(point);
+        if (ret.getMagnitude()<strictRange) {
+            return ret;
+        }
+        else {
+            return RVector::invalid;
+        }
     }
 
     RVector closestPoint = startPoint + ae * b;

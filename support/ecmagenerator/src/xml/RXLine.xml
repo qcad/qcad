@@ -86,6 +86,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
         hasDefault="true" default=" true" isConst="false" />
+        <arg type="double" typeName="double" name="strictRange"
+        hasDefault="true" default="RMAXDOUBLE" isConst="false" />
       </variant>
     </method>
     <method name="getBasePoint" cppName="getBasePoint"

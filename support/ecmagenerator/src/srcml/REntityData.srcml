@@ -1240,6 +1240,18 @@ dir="./core" filename="REntityData.h">
         <name>true</name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>strictRange</name>=
+    <init>
+      <expr>
+        <name>RMAXDOUBLE</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>
@@ -1288,6 +1300,18 @@ dir="./core" filename="REntityData.h">
     <init>
       <expr>
         <name>false</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>strictRange</name>=
+    <init>
+      <expr>
+        <name>RMAXDOUBLE</name>
       </expr>
     </init></decl>
   </param>)</parameter_list>

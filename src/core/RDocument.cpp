@@ -801,6 +801,7 @@ REntity::Id RDocument::queryClosestXY(
     const RVector& wcsPosition,
     double range,
     bool draft,
+    double strictRange,
     bool includeLockedLayers) {
 
     RVector rangeV(
@@ -819,7 +820,7 @@ REntity::Id RDocument::queryClosestXY(
             true, includeLockedLayers
         );
 
-    return queryClosestXY(candidates, wcsPosition, range, draft);
+    return queryClosestXY(candidates, wcsPosition, range, draft, strictRange);
 }
 
 /**
@@ -838,7 +839,8 @@ REntity::Id RDocument::queryClosestXY(
     QSet<REntity::Id>& candidates,
     const RVector& wcsPosition,
     double range,
-    bool draft) {
+    bool draft,
+    double strictRange) {
 
     double minDist = RMAXDOUBLE;
     REntity::Id ret = -1;
@@ -849,7 +851,7 @@ REntity::Id RDocument::queryClosestXY(
         if (e.isNull()) {
             continue;
         }
-        double dist = e->getDistanceTo(wcsPosition, true, range, draft);
+        double dist = e->getDistanceTo(wcsPosition, true, range, draft, strictRange);
         if (!RMath::isNaN(dist) && dist < minDist && dist < range+RS::PointTolerance) {
             minDist = dist;
             ret = *it;

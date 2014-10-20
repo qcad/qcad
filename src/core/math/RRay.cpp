@@ -45,9 +45,9 @@ RRay::RRay(const RVector& basePoint, double angle, double distance) :
 RRay::~RRay() {
 }
 
-RVector RRay::getVectorTo(const RVector& point, bool limited) const {
+RVector RRay::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     if (!limited) {
-        return RXLine::getVectorTo(point, false);
+        return RXLine::getVectorTo(point, false, strictRange);
     }
     else {
         RVector p = RXLine::getClosestPointOnShape(point, false);

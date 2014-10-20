@@ -558,7 +558,9 @@ QList<RVector> REllipse::getPointsWithDistanceToEnd(double distance, RS::From fr
     return ret;
 }
 
-RVector REllipse::getVectorTo(const RVector& point, bool limited) const {
+RVector REllipse::getVectorTo(const RVector& point, bool limited, double strictRange) const {
+    Q_UNUSED(strictRange)
+
     RVector ret = RVector::invalid;
 
     double ang = getAngle();

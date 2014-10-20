@@ -501,7 +501,9 @@ QList<RVector> RArc::getPointsWithDistanceToEnd(double distance, RS::From from) 
     return ret;
 }
 
-RVector RArc::getVectorTo(const RVector& point, bool limited) const {
+RVector RArc::getVectorTo(const RVector& point, bool limited, double strictRange) const {
+    Q_UNUSED(strictRange)
+
     double angle = center.getAngleTo(point);
     if (limited
             && !RMath::isAngleBetween(angle, startAngle, endAngle, reversed)) {

@@ -454,12 +454,7 @@ dir="./entity" filename="RRayData.h">
         </call></expr>
       </argument>)</argument_list>
     </call></expr>;</return>}</block>
-  </function>
-  <comment type="line">// virtual RVector getVectorTo(const
-  RVector&amp; point, bool limited = true) const;</comment>
-  <comment type="line">//protected:</comment>
-  <comment type="line">// virtual RLine getXLineShape()
-  const;</comment></public>}</block>;</class>
+  </function></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

@@ -108,7 +108,7 @@ public:
         double distance, RS::From from = RS::FromAny) const;
 
     virtual RVector getVectorTo(const RVector& point,
-            bool limited = true) const;
+            bool limited = true, double strictRange = RMAXDOUBLE) const;
 
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR);

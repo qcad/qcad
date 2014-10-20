@@ -214,18 +214,18 @@ PrintPreview.prototype.mousePressEvent = function(event) {
  * Reimplemented from EAction to prevent that a right-click closes the
  * print preview.
  */
-PrintPreview.prototype.mouseReleaseEvent = function(event) {
-    if (event.button() == Qt.RightButton) {
-        if (this.state!=DefaultAction.State.Neutral) {
-            EAction.getDocumentInterface().clearPreview();
-            EAction.getDocumentInterface().repaintViews();
-            this.setState(DefaultAction.State.Neutral);
-        }
-    }
-    else {
-        DefaultAction.prototype.mouseReleaseEvent.call(this, event);
-    }
-};
+//PrintPreview.prototype.mouseReleaseEvent = function(event) {
+//    if (event.button() == Qt.RightButton) {
+//        if (this.state!=DefaultAction.State.Neutral) {
+//            EAction.getDocumentInterface().clearPreview();
+//            EAction.getDocumentInterface().repaintViews();
+//            this.setState(DefaultAction.State.Neutral);
+//        }
+//    }
+//    else {
+//        DefaultAction.prototype.mouseReleaseEvent.call(this, event);
+//    }
+//};
 
 /**
  * Implements moving of paper (offset).

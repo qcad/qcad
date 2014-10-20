@@ -155,6 +155,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getSnapRange, "getSnapRange");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getPickRange, "getPickRange");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getZeroWeightWeight, "getZeroWeightWeight");
             
             REcmaHelper::registerFunction(&engine, &ctor, getPreviewEntities, "getPreviewEntities");
@@ -2352,6 +2354,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getSnapRange", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getPickRange
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getPickRange", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getPickRange";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RSettings::
+       getPickRange();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getPickRange().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getPickRange", context, engine);
             return result;
         }
          QScriptValue

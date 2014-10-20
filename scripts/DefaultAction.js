@@ -47,7 +47,10 @@ DefaultAction.State = {
 DefaultAction.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    this.rangePixels = RSettings.getSnapRange();
+    //this.snapRangePixels = RSettings.getSnapRange();
+    //this.minSnapRangePixels = Math.min(this.snapRangePixels / 2, 10);
+    this.pickRangePixels = RSettings.getPickRange();
+    this.minPickRangePixels = Math.min(this.pickRangePixels / 2, 10);
     this.d1Model = RVector.invalid;
     this.d1Screen = RVector.invalid;
     this.d2Model = RVector.invalid;
@@ -143,7 +146,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
 
     var view, referencePoint, entityId, range;
     
-    if (isNull(this.rangePixels)) {
+    if (isNull(this.pickRangePixels)) {
         return;
     }
 
@@ -152,12 +155,13 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
     switch (this.state) {
     case DefaultAction.State.Neutral:
         var screenPosition = event.getScreenPosition();
-        referencePoint = view.getClosestReferencePoint(screenPosition, this.rangePixels / 2);
+        referencePoint = view.getClosestReferencePoint(screenPosition, this.minPickRangePixels);
         if (referencePoint.isValid()) {
             this.highlightReferencePoint(referencePoint);
         } else {
-            range = view.mapDistanceFromView(this.rangePixels);
-            entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
+            range = view.mapDistanceFromView(this.pickRangePixels);
+            var strictRange = view.mapDistanceFromView(10);
+            entityId = this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
             if (entityId !== RObject.INVALID_ID && this.document.isEntityEditable(entityId)) {
                 this.highlightEntity(entityId);
             }
@@ -168,10 +172,10 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
         this.d2Model = event.getModelPosition();
         this.d2Screen = event.getScreenPosition();
         view = event.getGraphicsView();
-        if (!this.d1Screen.equalsFuzzy(this.d2Screen, this.rangePixels / 2)) {
+        if (!this.d1Screen.equalsFuzzy(this.d2Screen, 10 /*this.minPickRangePixels*/)) {
             // if the dragging started on top of a reference point,
             // start moving the reference point:
-            referencePoint = view.getClosestReferencePoint(this.d1Screen, this.rangePixels / 2);
+            referencePoint = view.getClosestReferencePoint(this.d1Screen, this.minPickRangePixels);
             if (referencePoint.isValid()) {
                 this.d1Model = referencePoint;
                 this.di.setRelativeZero(this.d1Model);
@@ -179,7 +183,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
             } else {
                 // if the dragging started on top of an entity,
                 // start moving the entity:
-                entityId = view.getClosestEntity(this.d1Screen, this.rangePixels, false);
+                entityId = view.getClosestEntity(this.d1Screen, this.minPickRangePixels, 10, false);
 
                 // in block easy drag and drop:
                 if (entityId !== RObject.INVALID_ID) {
@@ -190,7 +194,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
                             var blockId = entity.getReferencedBlockId();
                             var block = doc.queryBlock(blockId);
                             if (!isNull(block)) {
-                                range = view.mapDistanceFromView(this.rangePixels);
+                                range = view.mapDistanceFromView(this.pickRangePixels);
                                 // cursor, mapped to block coordinates:
                                 var pBlock = entity.mapToBlock(this.d1Model);
                                 var box = new RBox(
@@ -295,7 +299,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
 
 DefaultAction.prototype.mouseReleaseEvent = function(event) {
     var persistentSelection = RSettings.getBoolValue("GraphicsView/PersistentSelection", false);
-    var view, range, entityId;
+    var view, range, strictRange, entityId;
 
     var add = false;
     if ((event.modifiers().valueOf() === Qt.ShiftModifier.valueOf()) ||
@@ -310,9 +314,11 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
         case DefaultAction.State.Dragging:
 
             view = event.getGraphicsView();
-            range = view.mapDistanceFromView(this.rangePixels);
+            range = view.mapDistanceFromView(this.pickRangePixels);
+            //range = view.mapDistanceFromView(10);
+            strictRange = view.mapDistanceFromView(10);
 
-            entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
+            entityId = this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
             //qDebug("entity id: ", entityId);
             if (entityId !== -1) {
                 if (add && this.document.isSelected(entityId)) {
@@ -370,10 +376,12 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
         else if (this.state===DefaultAction.State.Neutral &&
             RSettings.getBoolValue("GraphicsView/RightClickToDeselect", false)) {
 
+            var rightClickRange = RSettings.getIntValue("GraphicsView/RightClickRange", 10);
             view = event.getGraphicsView();
-            range = view.mapDistanceFromView(this.rangePixels);
+            range = view.mapDistanceFromView(rightClickRange);
+            strictRange = view.mapDistanceFromView(10);
 
-            entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
+            entityId = this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
             if (entityId!==-1) {
                 this.selectEntity(entityId, add);
                 // TODO: show entity context menu?
@@ -411,8 +419,9 @@ DefaultAction.prototype.mousePressEvent = function(event) {
 DefaultAction.prototype.mouseDoubleClickEvent = function(event) {
     if (event.button() == Qt.LeftButton && this.state==DefaultAction.State.Neutral) {
         var view = event.getGraphicsView();
-        var range = view.mapDistanceFromView(this.rangePixels);
-        var entityId = this.di.getClosestEntity(event.getModelPosition(), range, false);
+        var range = view.mapDistanceFromView(this.pickRangePixels);
+        var strictRange = view.mapDistanceFromView(10);
+        var entityId = this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
         if (entityId===RObject.INVALID_ID) {
             return;
         }
@@ -647,7 +656,7 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
         var block = this.document.queryBlock(blockId);
         if (!isNull(block)) {
             var view = event.getGraphicsView();
-            var range = view.mapDistanceFromView(this.rangePixels);
+            var range = view.mapDistanceFromView(this.pickRangePixels);
             // cursor, mapped to block coordinates:
             var pBlock = entity.mapToBlock(event.getModelPosition());
             var box = new RBox(

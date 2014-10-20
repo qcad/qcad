@@ -163,7 +163,10 @@ QList<RVector> RCircle::getPointsWithDistanceToEnd(double distance, RS::From fro
     return ret;
 }
 
-RVector RCircle::getVectorTo(const RVector& point, bool /*limited*/) const {
+RVector RCircle::getVectorTo(const RVector& point, bool limited, double strictRange) const {
+    Q_UNUSED(limited)
+    Q_UNUSED(strictRange)
+
     RVector v = point - center;
 
     // point is at the center of the circle, infinite solutions:

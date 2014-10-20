@@ -55,9 +55,9 @@ public:
     virtual QList<RVector> getReferencePoints(
         RS::ProjectionRenderingHint hint = RS::RenderTop) const;
     virtual RVector getVectorTo(const RVector& point, 
-        bool limited = true) const;
+        bool limited = true, double strictRange = RMAXDOUBLE) const;
     virtual double getDistanceTo(const RVector& point,
-        bool limited = true, double range = 0.0, bool draft = false) const;
+        bool limited = true, double range = 0.0, bool draft = false, double strictRange = RMAXDOUBLE) const;
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const;
 

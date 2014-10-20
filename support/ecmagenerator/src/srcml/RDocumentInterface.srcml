@@ -1052,6 +1052,18 @@ dir="./core" filename="RDocumentInterface.h">
   <param>
     <decl>
     <type>
+      <name>double</name>
+    </type>
+    <name>strictRange</name>=
+    <init>
+      <expr>
+        <name>RMAXDOUBLE</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
       <name>bool</name>
     </type>
     <name>includeLockedLayers</name>=

@@ -63,7 +63,7 @@ public:
         double distance, RS::From from = RS::FromAny) const;
 
     virtual RVector getVectorTo(const RVector& point,
-            bool limited = true) const;
+            bool limited = true, double strictRange = RMAXDOUBLE) const;
 
     virtual RVector getStartPoint() const;
     void setStartPoint(const RVector& vector);

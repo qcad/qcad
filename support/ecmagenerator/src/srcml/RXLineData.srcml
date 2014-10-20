@@ -463,23 +463,7 @@ dir="./entity" filename="RXLineData.h">
         </call></expr>
       </argument>)</argument_list>
     </call></expr>;</return>}</block>
-  </function>
-  <comment type="block">/* virtual RBox getBoundingBox() const;
-  void setBasePoint(const RVector&amp; v) {
-  RLine::setStartPoint(v); } RVector getBasePoint() const { return
-  RLine::getStartPoint(); } void setSecondPoint(const RVector&amp;
-  v) { RLine::setEndPoint(v); } RVector getSecondPoint() const {
-  return RLine::getEndPoint(); } void setDirectionVector(const
-  RVector&amp; v) { RLine::setEndPoint(RLine::getStartPoint() + v);
-  } RVector getDirectionVector() const { return
-  RLine::getEndPoint() - RLine::getStartPoint(); } virtual RVector
-  getVectorTo(const RVector&amp; point, bool limited = true) const
-  { return RLine::getVectorTo(point, false); } virtual
-  QList&lt;QSharedPointer&lt;RShape&gt; &gt; getShapes(const
-  RBox&amp; queryBox = RDEFAULT_RBOX) const; */</comment>
-  <comment type="line">//protected:</comment>
-  <comment type="line">//virtual RLine getXLineShape()
-  const;</comment></public>}</block>;</class>
+  </function></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

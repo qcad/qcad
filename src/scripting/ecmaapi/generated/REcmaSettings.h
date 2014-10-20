@@ -190,6 +190,9 @@
         getSnapRange
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPickRange
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getZeroWeightWeight
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

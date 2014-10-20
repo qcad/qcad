@@ -221,7 +221,7 @@ public:
 
     RVector getClosestReferencePoint(const RVector& screenPosition, int range);
     RVector getClosestReferencePoint(REntity::Id entityId, const RVector& screenPosition);
-    REntity::Id getClosestEntity(const RVector& screenPosition, int range, bool includeLockedLayers=true);
+    REntity::Id getClosestEntity(const RVector& screenPosition, int range, int strictRange, bool includeLockedLayers=true);
     //REntity::Id getClosestEntityInUcs(const RVector& screenPosition, int range);
 
     virtual void setBackgroundColor(const QColor& col);

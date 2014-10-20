@@ -38,8 +38,8 @@ double RShape::epsTolerance = 1.0e-04;
  * \return Shortest distance from this shape to the given point.
  *      Based on \ref getVectorTo.
  */
-double RShape::getDistanceTo(const RVector& point, bool limited) const {
-    RVector v = getVectorTo(point, limited);
+double RShape::getDistanceTo(const RVector& point, bool limited, double strictRange) const {
+    RVector v = getVectorTo(point, limited, strictRange);
     if (v.isValid()) {
         return v.getMagnitude();
     }
@@ -94,8 +94,8 @@ RVector RShape::getVectorFromEndpointTo(const RVector& point) const {
 /**
  * \return Point on this shape that is closest to p. Based on getVectorTo.
  */
-RVector RShape::getClosestPointOnShape(const RVector& p, bool limited) const {
-    RVector dv = getVectorTo(p, limited);
+RVector RShape::getClosestPointOnShape(const RVector& p, bool limited, double strictRange) const {
+    RVector dv = getVectorTo(p, limited, strictRange);
     if (!dv.isValid()) {
         return RVector::invalid;
     }

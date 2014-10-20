@@ -280,6 +280,7 @@ dir="./core/math" filename="RTriangle.h">
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>double</name>
   </type>
   <name>getDistanceTo</name>
@@ -301,6 +302,18 @@ dir="./core/math" filename="RTriangle.h">
     <init>
       <expr>
         <name>true</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>strictRange</name>=
+    <init>
+      <expr>
+        <name>RMAXDOUBLE</name>
       </expr>
     </init></decl>
   </param>)</parameter_list>
@@ -329,6 +342,18 @@ dir="./core/math" filename="RTriangle.h">
     <init>
       <expr>
         <name>true</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>strictRange</name>=
+    <init>
+      <expr>
+        <name>RMAXDOUBLE</name>
       </expr>
     </init></decl>
   </param>)</parameter_list>

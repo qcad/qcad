@@ -67,7 +67,7 @@ public:
     }
 
     virtual RVector getClosestPointOnShape(const RVector& p,
-            bool limited = true) const;
+            bool limited = true, double strictRange = RMAXDOUBLE) const;
 
     /**
      * \return The bounding box of this shape.
@@ -95,9 +95,9 @@ public:
      *      a plane for a triangle.
      */
     virtual RVector getVectorTo(const RVector& point,
-            bool limited = true) const = 0;
+            bool limited = true, double strictRange = RMAXDOUBLE) const = 0;
 
-    virtual double getDistanceTo(const RVector& point, bool limited = true) const;
+    virtual double getDistanceTo(const RVector& point, bool limited = true, double strictRange = RMAXDOUBLE) const;
     virtual bool isOnShape(const RVector& point,
                            bool limited = true,
                            double tolerance = RDEFAULT_TOLERANCE_1E_MIN4) const;

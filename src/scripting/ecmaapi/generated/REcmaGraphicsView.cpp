@@ -4576,13 +4576,16 @@
                 
     
     if( context->argumentCount() ==
-    2 && (
+    3 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
         ) /* type: RVector */
      && (
             context->argument(1).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(2).isNumber()
         ) /* type: int */
     
     ){
@@ -4614,6 +4617,14 @@
                     context->argument( 1 ).
                     toNumber();
                 
+                    // argument isStandardType
+                    int
+                    a2 =
+                    (int)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
     // end of arguments
 
     // call C++ function:
@@ -4622,7 +4633,9 @@
         
                self->getClosestEntity(a0
         ,
-    a1);
+    a1
+        ,
+    a2);
         // return type: REntity::Id
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -4633,7 +4646,7 @@
         
     
     if( context->argumentCount() ==
-    3 && (
+    4 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
@@ -4642,7 +4655,10 @@
             context->argument(1).isNumber()
         ) /* type: int */
      && (
-            context->argument(2).isBool()
+            context->argument(2).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(3).isBool()
         ) /* type: bool */
     
     ){
@@ -4675,11 +4691,19 @@
                     toNumber();
                 
                     // argument isStandardType
-                    bool
+                    int
                     a2 =
-                    (bool)
+                    (int)
                     
                     context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
                     toBool();
                 
     // end of arguments
@@ -4692,7 +4716,9 @@
         ,
     a1
         ,
-    a2);
+    a2
+        ,
+    a3);
         // return type: REntity::Id
                 // standard Type
                 result = QScriptValue(cppResult);

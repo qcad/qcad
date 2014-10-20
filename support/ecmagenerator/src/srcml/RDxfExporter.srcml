@@ -51,6 +51,8 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <class_decl>class 
   <name>RArcEntity</name>;</class_decl>
   <class_decl>class 
+  <name>RAttributeEntity</name>;</class_decl>
+  <class_decl>class 
   <name>RCircleEntity</name>;</class_decl>
   <class_decl>class 
   <name>RDimensionEntity</name>;</class_decl>
@@ -80,6 +82,10 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <name>RTraceEntity</name>;</class_decl>
   <class_decl>class 
   <name>RTextEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RTextBasedData</name>;</class_decl>
+  <class_decl>class 
+  <name>RTextBasedEntity</name>;</class_decl>
   <comment type="block">/** * \brief Exporter for the DXF format,
   based on dxflib. * * \ingroup dxf */</comment>
   <class>class 
@@ -381,6 +387,42 @@ dir="./io/dxf" filename="RDxfExporter.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>DL_TextData</name>
+  </type>
+  <name>getTextData</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RTextBasedData</name>&amp;</type>
+      <name>t</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>styleName</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QString</name>
+  </type>
+  <name>getStyleName</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RTextBasedEntity</name>&amp;</type>
+      <name>t</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
     <name>void</name>
   </type>
   <name>writeText</name>
@@ -390,6 +432,20 @@ dir="./io/dxf" filename="RDxfExporter.h">
       <type>
       <name>const</name>
       <name>RTextEntity</name>&amp;</type>
+      <name>t</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeAttribute</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RAttributeEntity</name>&amp;</type>
       <name>t</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
@@ -705,7 +761,7 @@ dir="./io/dxf" filename="RDxfExporter.h">
     <decl>
       <type>
       <name>const</name>
-      <name>RTextEntity</name>&amp;</type>
+      <name>RTextBasedEntity</name>&amp;</type>
       <name>entity</name>
     </decl>
   </param>)</parameter_list>;</function_decl></private>

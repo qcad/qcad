@@ -573,13 +573,13 @@ QList<RVector> RPolyline::getPointsWithDistanceToEnd(double distance, RS::From f
     return ret;
 }
 
-RVector RPolyline::getVectorTo(const RVector& point, bool limited) const {
+RVector RPolyline::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     RVector ret = RVector::invalid;
 
     QList<QSharedPointer<RShape> > sub = getExploded();
     QList<QSharedPointer<RShape> >::iterator it;
     for (it=sub.begin(); it!=sub.end(); ++it) {
-        RVector v = (*it)->getVectorTo(point, limited);
+        RVector v = (*it)->getVectorTo(point, limited, strictRange);
         if (v.isValid() && (!ret.isValid() || v.getMagnitude()<ret.getMagnitude())) {
             ret = v;
         }

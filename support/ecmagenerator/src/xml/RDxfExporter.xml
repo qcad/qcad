@@ -2,6 +2,7 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RArcEntity" />
+  <class_decl name="RAttributeEntity" />
   <class_decl name="RCircleEntity" />
   <class_decl name="RDimensionEntity" />
   <class_decl name="REllipseEntity" />
@@ -17,6 +18,8 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RSplineEntity" />
   <class_decl name="RTraceEntity" />
   <class_decl name="RTextEntity" />
+  <class_decl name="RTextBasedData" />
+  <class_decl name="RTextBasedEntity" />
   <class name="RDxfExporter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

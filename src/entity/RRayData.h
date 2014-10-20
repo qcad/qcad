@@ -91,11 +91,6 @@ public:
         return QList<QSharedPointer<RShape> >() <<
                 QSharedPointer<RShape>(new RRay(*this));
     }
-
-//    virtual RVector getVectorTo(const RVector& point, bool limited = true) const;
-
-//protected:
-//    virtual RLine getXLineShape() const;
 };
 
 Q_DECLARE_METATYPE(RRayData*)

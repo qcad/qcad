@@ -93,7 +93,8 @@ void RTriangle::setCorner(int i, const RVector& p) {
     corner[i] = p;
 }
 
-double RTriangle::getDistanceTo(const RVector& point, bool limited) const {
+double RTriangle::getDistanceTo(const RVector& point, bool limited, double strictRange) const {
+    Q_UNUSED(strictRange)
 
     RVector normal = getNormal();
     double d = getD();
@@ -108,15 +109,15 @@ double RTriangle::getDistanceTo(const RVector& point, bool limited) const {
     return RMAXDOUBLE;
 }
 
-RVector RTriangle::getVectorTo(const RVector& point, bool limited) const {
+RVector RTriangle::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     //assert(false);
     RLine l1(corner[0], corner[1]);
     RLine l2(corner[1], corner[2]);
     RLine l3(corner[2], corner[0]);
 
-    RVector v1 = l1.getVectorTo(point, limited);
-    RVector v2 = l2.getVectorTo(point, limited);
-    RVector v3 = l3.getVectorTo(point, limited);
+    RVector v1 = l1.getVectorTo(point, limited, strictRange);
+    RVector v2 = l2.getVectorTo(point, limited, strictRange);
+    RVector v3 = l3.getVectorTo(point, limited, strictRange);
 
     double m1 = v1.getMagnitude();
     double m2 = v2.getMagnitude();

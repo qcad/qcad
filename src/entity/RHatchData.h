@@ -55,7 +55,7 @@ public:
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual RVector getPointOnEntity() const;
-    virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false) const;
+    virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false, double strictRange = RMAXDOUBLE) const;
     virtual bool intersectsWith(const RShape& shape) const;
 
     virtual QList<RVector> getReferencePoints(

@@ -102,10 +102,10 @@ bool RDimensionData::isValid() const {
     return definitionPoint.isValid();
 }
 
-double RDimensionData::getDistanceTo(const RVector& point, bool limited, double range, bool draft) const {
-    double ret1 = REntityData::getDistanceTo(point, limited, range, draft);
+double RDimensionData::getDistanceTo(const RVector& point, bool limited, double range, bool draft, double strictRange) const {
+    double ret1 = REntityData::getDistanceTo(point, limited, range, draft, strictRange);
     getTextData();
-    double ret2 = textData.getDistanceTo(point, limited, range, draft);
+    double ret2 = textData.getDistanceTo(point, limited, range, draft, strictRange);
     if (RMath::isNaN(ret2)) {
         return ret1;
     }

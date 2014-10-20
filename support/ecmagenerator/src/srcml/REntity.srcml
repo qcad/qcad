@@ -1478,6 +1478,18 @@ dir="./core" filename="REntity.h">
           <name>false</name>
         </expr>
       </init></decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>strictRange</name>=
+      <init>
+        <expr>
+          <name>RMAXDOUBLE</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <specifier>const</specifier>
     <block>{ 
@@ -1508,6 +1520,11 @@ dir="./core" filename="REntity.h">
       <argument>
         <expr>
           <name>draft</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>strictRange</name>
         </expr>
       </argument>)</argument_list>
     </call></expr>;</return>}</block>
@@ -1540,6 +1557,18 @@ dir="./core" filename="REntity.h">
           <name>true</name>
         </expr>
       </init></decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>strictRange</name>=
+      <init>
+        <expr>
+          <name>RMAXDOUBLE</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <specifier>const</specifier>
     <block>{ 
@@ -1560,6 +1589,11 @@ dir="./core" filename="REntity.h">
       <argument>
         <expr>
           <name>limited</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>strictRange</name>
         </expr>
       </argument>)</argument_list>
     </call></expr>;</return>}</block>

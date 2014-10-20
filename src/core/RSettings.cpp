@@ -44,6 +44,7 @@ QFont* RSettings::snapLabelFont = NULL;
 QFont* RSettings::infoLabelFont = NULL;
 QFont* RSettings::statusBarFont = NULL;
 int RSettings::snapRange = -1;
+int RSettings::pickRange = -1;
 int RSettings::zeroWeightWeight = -1;
 int RSettings::showCrosshair = -1;
 int RSettings::showLargeCrosshair = -1;
@@ -561,6 +562,13 @@ int RSettings::getSnapRange() {
         snapRange = getValue("GraphicsView/SnapRange", QVariant(10)).toInt();
     }
     return snapRange;
+}
+
+int RSettings::getPickRange() {
+    if (pickRange==-1) {
+        pickRange = getValue("GraphicsView/PickRange", QVariant(10)).toInt();
+    }
+    return pickRange;
 }
 
 int RSettings::getZeroWeightWeight() {

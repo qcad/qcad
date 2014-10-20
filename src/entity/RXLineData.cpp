@@ -49,60 +49,6 @@ QList<RVector> RXLineData::getReferencePoints(
     return ret;
 }
 
-// prevent recursion
-//RBox RXLineData::getBoundingBox() const {
-//    return RLine::getBoundingBox();
-//}
-
-//bool RXLineData::intersectsWith(const RShape& shape) const {
-//    RLine xLine = getXLineShape();
-//    return xLine.intersectsWith(shape);
-//}
-
-//QList<RVector> RXLineData::getIntersectionPoints(
-//        const REntityData& other, bool limited, bool same, const RBox& queryBox) const {
-
-//    QList<RVector> ret;
-//    RLine shape1 = getXLineShape();
-//    QList<QSharedPointer<RShape> > shapes2 = other.getShapes(queryBox);
-
-//    for (int k=0; k<shapes2.size(); k++) {
-//        ret.append(shape1.getIntersectionPoints(*shapes2.at(k), limited, same));
-//    }
-
-//    return ret;
-//}
-
-//QList<RVector> RXLineData::getIntersectionPoints(const RShape& shape, bool limited, const RBox& queryBox) const {
-//    qDebug() << "RXLineData::getIntersectionPoints";
-//    Q_UNUSED(queryBox)
-
-//    RLine xLine = getXLineShape();
-//    return xLine.getIntersectionPoints(shape, limited);
-//}
-
-//RLine RXLineData::getXLineShape() const {
-//    const RDocument* doc = getDocument();
-//    if (doc==NULL) {
-//        return RLine();
-//    }
-
-//    RLine xLine = *this;
-//    RBox bbox = doc->getBoundingBox();
-
-    //RBox bbox(RVector(-1e6,-1e6), RVector(1e6,1e6));
-    //xLine.clipToXY(bbox, true);
-//    return xLine;
-//}
-
-/*
-QList<QSharedPointer<RShape> > RXLineData::getShapes(const RBox& queryBox) const {
-    Q_UNUSED(queryBox)
-
-    return QList<QSharedPointer<RShape> >() << QSharedPointer<RShape>(new RLine(getXLineShape()));
-}
-*/
-
 bool RXLineData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
     bool ret = false;

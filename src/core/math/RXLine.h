@@ -64,7 +64,7 @@ public:
     virtual QList<RVector> getPointsWithDistanceToEnd(
         double distance, RS::From from = RS::FromAny) const;
 
-    virtual RVector getVectorTo(const RVector& point, bool limited = true) const;
+    virtual RVector getVectorTo(const RVector& point, bool limited = true, double strictRange = RMAXDOUBLE) const;
 
     RVector getBasePoint() const;
     void setBasePoint(const RVector& vector);

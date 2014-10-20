@@ -206,11 +206,11 @@ RLinetypePattern REntityData::getLinetypePattern() const {
 /**
  * \return The shortest distance from this entity to the given point.
  */
-double REntityData::getDistanceTo(const RVector& point, bool limited, double range, bool draft) const {
+double REntityData::getDistanceTo(const RVector& point, bool limited, double range, bool draft, double strictRange) const {
     Q_UNUSED(range);
     Q_UNUSED(draft);
 
-    RVector v = getVectorTo(point, limited);
+    RVector v = getVectorTo(point, limited, strictRange);
     if (v.isValid()) {
         return v.getMagnitude();
     }
@@ -335,12 +335,12 @@ RVector REntityData::getClosestPointOnEntity(const RVector& point,
  *   the extension line of a line or outside the start / end angle
  *   of an arc).
  */
-RVector REntityData::getVectorTo(const RVector& point, bool limited) const {
+RVector REntityData::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     RVector ret = RVector::invalid;
     QList<QSharedPointer<RShape> > shapes = getShapes();
     for (int i=0; i<shapes.size(); i++) {
         shapes.at(i)->to2D();
-        RVector r = shapes.at(i)->getVectorTo(point, limited);
+        RVector r = shapes.at(i)->getVectorTo(point, limited, strictRange);
         if (!ret.isValid() || r.getMagnitude()<ret.getMagnitude()) {
             ret = r;
         }

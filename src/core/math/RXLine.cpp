@@ -158,9 +158,9 @@ QList<RVector> RXLine::getPointsWithDistanceToEnd(double distance, RS::From from
     return QList<RVector>();
 }
 
-RVector RXLine::getVectorTo(const RVector& point, bool limited) const {
+RVector RXLine::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     Q_UNUSED(limited)
-    return getLineShape().getVectorTo(point, false);
+    return getLineShape().getVectorTo(point, false, strictRange);
 }
 
 RLine RXLine::getClippedLine(const RBox& box) const {

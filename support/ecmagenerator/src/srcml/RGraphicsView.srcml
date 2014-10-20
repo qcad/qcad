@@ -1159,6 +1159,14 @@ dir="./core" filename="RGraphicsView.h">
   </param>, 
   <param>
     <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>strictRange</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
     <type>
       <name>bool</name>
     </type>

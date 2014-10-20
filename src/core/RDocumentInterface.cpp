@@ -1174,7 +1174,7 @@ REntity::Id RDocumentInterface::getClosestEntity(RMouseEvent& event) {
 
 
 REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
-        double range, bool includeLockedLayers) {
+        double range, double strictRange, bool includeLockedLayers) {
 
     RGraphicsView* view = getLastKnownViewWithFocus();
     bool draft = false;
@@ -1185,7 +1185,7 @@ REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
         }
     }
 
-    return document.queryClosestXY(position, range, draft, includeLockedLayers);
+    return document.queryClosestXY(position, range, draft, strictRange, includeLockedLayers);
 }
 
 /**

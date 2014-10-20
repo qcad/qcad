@@ -57,7 +57,7 @@ QString RBlockReferenceData::getReferencedBlockName() const {
 }
 
 RVector RBlockReferenceData::getVectorTo(
-        const RVector& point, bool limited) const {
+        const RVector& point, bool limited, double strictRange) const {
 
     if (document == NULL) {
         return RVector::invalid;
@@ -97,7 +97,7 @@ RVector RBlockReferenceData::getVectorTo(
 
 // 20120521: for texts in blocks:
 double RBlockReferenceData::getDistanceTo(const RVector& point,
-        bool limited, double range, bool draft) const {
+        bool limited, double range, bool draft, double strictRange) const {
 
     if (document == NULL) {
         return RNANDOUBLE;
@@ -121,7 +121,7 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
         if (entity.isNull()) {
             continue;
         }
-        double dist = entity->getDistanceTo(point, limited, range, draft);
+        double dist = entity->getDistanceTo(point, limited, range, draft, strictRange);
         if (RMath::isNormal(dist) && dist < minDist) {
             minDist = dist;
         }

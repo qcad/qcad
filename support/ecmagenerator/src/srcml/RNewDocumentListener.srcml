@@ -28,9 +28,8 @@ dir="./core" filename="RNewDocumentListener.h">
   <class_decl>class 
   <name>RTransaction</name>;</class_decl>
   <comment type="block">/** * \brief Abstract base class for
-  classes that are intercepting transactions * for example to add
-  to a transaction in progress.. * * \ingroup core * \scriptable
-  */</comment>
+  classes that are interested in * being notified when a new
+  document is created. * * \ingroup core * \scriptable */</comment>
   <class>class 
   <macro>
     <name>QCADCORE_EXPORT</name>

@@ -129,6 +129,18 @@ dir="./core/math" filename="RShape.h">
         <name>true</name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>strictRange</name>=
+    <init>
+      <expr>
+        <name>RMAXDOUBLE</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <comment type="block">/** * \return The bounding box of this
@@ -195,6 +207,18 @@ dir="./core/math" filename="RShape.h">
         <name>true</name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>strictRange</name>=
+    <init>
+      <expr>
+        <name>RMAXDOUBLE</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
@@ -222,6 +246,18 @@ dir="./core/math" filename="RShape.h">
     <init>
       <expr>
         <name>true</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>strictRange</name>=
+    <init>
+      <expr>
+        <name>RMAXDOUBLE</name>
       </expr>
     </init></decl>
   </param>)</parameter_list>
