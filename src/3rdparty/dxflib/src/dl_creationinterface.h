@@ -158,6 +158,9 @@ public:
     /** Called for every Text entity. */
     virtual void addText(const DL_TextData& data) = 0;
 
+    /** Called for every Block Attribute entity. */
+    virtual void addAttribute(const DL_AttributeData& data) = 0;
+
     /**
      * Called for every aligned dimension entity. 
      */

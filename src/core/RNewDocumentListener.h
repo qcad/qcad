@@ -28,8 +28,8 @@ class RTransaction;
 
 
 /**
- * \brief Abstract base class for classes that are intercepting transactions
- * for example to add to a transaction in progress..
+ * \brief Abstract base class for classes that are interested in
+ * being notified when a new document is created.
  *
  * \ingroup core
  * \scriptable

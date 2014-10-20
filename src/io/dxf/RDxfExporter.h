@@ -33,6 +33,7 @@
 #include "RXLine.h"
 
 class RArcEntity;
+class RAttributeEntity;
 class RCircleEntity;
 class RDimensionEntity;
 class REllipseEntity;
@@ -48,6 +49,8 @@ class RSolidEntity;
 class RSplineEntity;
 class RTraceEntity;
 class RTextEntity;
+class RTextBasedData;
+class RTextBasedEntity;
 
 
 /**
@@ -81,7 +84,10 @@ public:
     void writePolyline(const RPolylineEntity& pl);
     void writePolyline(const RPolyline& pl);
     void writeSpline(const RSplineEntity& sp);
+    DL_TextData getTextData(const RTextBasedData& t, const QString& styleName);
+    QString getStyleName(const RTextBasedEntity& t);
     void writeText(const RTextEntity& t);
+    void writeAttribute(const RAttributeEntity& t);
     void writeSimpleText(const RTextEntity& t);
     void writeMText(const RTextEntity& t);
     void writeDimension(const RDimensionEntity& d);
@@ -123,7 +129,7 @@ public:
 
 private:
     DL_Attributes getEntityAttributes(const REntity& entity);
-    DL_StyleData getStyle(const RTextEntity& entity);
+    DL_StyleData getStyle(const RTextBasedEntity& entity);
 
 private:
     DL_Dxf dxf;

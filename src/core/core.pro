@@ -162,6 +162,7 @@ HEADERS = \
     RMouseCoordinateListener.h \
     RMouseEvent.h \
     RNavigationAction.h \
+    RNewDocumentListener.h \
     RNonCopyable.h \
     RObject.h \
     ROperation.h \

@@ -484,7 +484,7 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
             break;
 
         case DL_ENTITY_ATTRIB:
-            addAttrib(creationInterface);
+            addAttribute(creationInterface);
             break;
 
         case DL_ENTITY_DIMENSION: {
@@ -1650,8 +1650,8 @@ void DL_Dxf::addText(DL_CreationInterface* creationInterface) {
  * Adds an attrib entity that was read from the file via the creation interface.
  * @todo add attrib instead of normal text
  */
-void DL_Dxf::addAttrib(DL_CreationInterface* creationInterface) {
-    DL_TextData d(
+void DL_Dxf::addAttribute(DL_CreationInterface* creationInterface) {
+    DL_AttributeData d(
         // insertion point
         getRealValue(10, 0.0),
         getRealValue(20, 0.0),
@@ -1670,6 +1670,8 @@ void DL_Dxf::addAttrib(DL_CreationInterface* creationInterface) {
         getIntValue(72, 0),
         // v just
         getIntValue(74, 0),
+        // tag
+        getStringValue(2, ""),
         // text
         getStringValue(1, ""),
         // style
@@ -1677,7 +1679,7 @@ void DL_Dxf::addAttrib(DL_CreationInterface* creationInterface) {
         // angle
         (getRealValue(50, 0.0)*2*M_PI)/360.0);
 
-    creationInterface->addText(d);
+    creationInterface->addAttribute(d);
 }
 
 
@@ -2793,6 +2795,40 @@ void DL_Dxf::writeText(DL_WriterA& dw,
     }
 
     dw.dxfInt(73, data.vJustification);
+}
+
+void DL_Dxf::writeAttribute(DL_WriterA& dw,
+                   const DL_AttributeData& data,
+                   const DL_Attributes& attrib) {
+
+    dw.entity("ATTRIB");
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(100, "AcDbEntity");
+        dw.dxfString(100, "AcDbText");
+    }
+    dw.entityAttributes(attrib);
+    dw.dxfReal(10, data.ipx);
+    dw.dxfReal(20, data.ipy);
+    dw.dxfReal(30, data.ipz);
+    dw.dxfReal(40, data.height);
+    dw.dxfString(1, data.text);
+    dw.dxfReal(50, data.angle/(2*M_PI)*360.0);
+    dw.dxfReal(41, data.xScaleFactor);
+    dw.dxfString(7, data.style);
+
+    dw.dxfInt(71, data.textGenerationFlags);
+    dw.dxfInt(72, data.hJustification);
+
+    dw.dxfReal(11, data.apx);
+    dw.dxfReal(21, data.apy);
+    dw.dxfReal(31, data.apz);
+
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(100, "AcDbAttribute");
+    }
+
+    dw.dxfString(2, data.tag);
+    dw.dxfInt(74, data.vJustification);
 }
 
 void DL_Dxf::writeDimStyleOverrides(DL_WriterA& dw,

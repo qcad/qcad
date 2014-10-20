@@ -180,7 +180,6 @@ void RTextRenderer::renderSimple() {
     // implicit top level format block:
     QTextCharFormat f;
     f.setForeground(QBrush(QColor()));
-    //f.setUnderlineStyle(QTextCharFormat::SingleUnderline);
     currentFormat.push(f);
     QTextLayout::FormatRange fr;
     fr.start = 0;
@@ -202,7 +201,6 @@ void RTextRenderer::renderSimple() {
 
     {
         // handle underlining formats:
-        //qDebug() << "text: " << text;
         bool found = true;
         QList<int> underlinedOnOff;
         QRegExp rx(RTextRenderer::rxUnderlined);
@@ -211,18 +209,12 @@ void RTextRenderer::renderSimple() {
             int i = rx.indexIn(text);
             int len = rx.matchedLength();
 
-            //int i = text.indexOf(QRegExp(RTextRenderer::rxUnderlined));
             if (i!=-1) {
                 found = true;
                 underlinedOnOff.append(i);
-                //text.replace(QRegExp(QString("(") + RTextRenderer::rxUnderlined + "){1,1}"), "");
                 text.replace(i, len, "");
-                //qDebug() << "text: " << text;
             }
         }
-
-        //qDebug() << "text (stripped): " << text;
-        //qDebug() << "underlined: " << underlinedOnOff;
 
         int maxI = text.length()-1;
         QTextCharFormat fUnderlined;

@@ -26,6 +26,7 @@
 #include "dxflib/src/dl_dxf.h"
 
 #include "RArcEntity.h"
+#include "RAttributeEntity.h"
 #include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RCircleEntity.h"
@@ -603,9 +604,9 @@ void RDxfImporter::addKnot(const DL_KnotData& data) {
 
 void RDxfImporter::addInsert(const DL_InsertData& data) {
     QString blockName = decode(data.name.c_str());
-    if (blockName.left(3)=="A$C") {
-        return;
-    }
+//    if (blockName.left(3)=="A$C") {
+//        return;
+//    }
 
     RBlock::Id blockId = RBlock::INVALID_ID;
 
@@ -783,15 +784,9 @@ void RDxfImporter::addMText(const DL_MTextData& data) {
     mtext = "";
 }
 
-/**
- * Implementation of the method which handles
- * texts (TEXT).
- */
-void RDxfImporter::addText(const DL_TextData& data) {
+RTextBasedData RDxfImporter::getTextBasedData(const DL_TextData& data) {
     RS::VAlign valign;
     RS::HAlign halign;
-    //RVector refPoint;
-    //double angle = data.angle;
 
     RDxfTextStyle s = textStyles.value(decode(data.style.c_str()), RDxfTextStyle());
 
@@ -870,7 +865,7 @@ void RDxfImporter::addText(const DL_TextData& data) {
     //double width = 100.0;
     double width = 0.0;
 
-    RTextData textData(
+    RTextBasedData textBasedData(
         RVector::invalid, RVector::invalid,
 //        refPoint, refPoint,
         data.height, width,
@@ -885,25 +880,45 @@ void RDxfImporter::addText(const DL_TextData& data) {
         true                         // simple
     );
 
-    textData.setPosition(position);
+    textBasedData.setPosition(position);
 
     // if alignment is left / base, alignment point is omitted (same as position).
-    if (textData.getHAlign()==RS::HAlignLeft && textData.getVAlign()==RS::VAlignBase) {
-        textData.setAlignmentPoint(position);
+    if (textBasedData.getHAlign()==RS::HAlignLeft && textBasedData.getVAlign()==RS::VAlignBase) {
+        textBasedData.setAlignmentPoint(position);
     }
     else {
         // QCAD 1 compatibility:
         if (s.font=="txt" && qAbs(alignmentPoint.x)<RS::PointTolerance && qAbs(alignmentPoint.y)<RS::PointTolerance) {
-            textData.setAlignmentPoint(position);
+            textBasedData.setAlignmentPoint(position);
         }
         else {
-            textData.setAlignmentPoint(alignmentPoint);
+            textBasedData.setAlignmentPoint(alignmentPoint);
         }
     }
 
-    QSharedPointer<RTextEntity> entity(new RTextEntity(document, textData));
+    return textBasedData;
+};
+
+/**
+ * Implementation of the method which handles
+ * texts (TEXT).
+ */
+void RDxfImporter::addText(const DL_TextData& data) {
+    RTextBasedData d = getTextBasedData(data);
+    QSharedPointer<RTextEntity> entity(new RTextEntity(document, RTextData(d)));
     importEntity(entity);
 }
+
+/**
+ * Implementation of the method which handles
+ * block attributes (ATTRIB).
+ */
+void RDxfImporter::addAttribute(const DL_AttributeData& data) {
+    RTextBasedData d = getTextBasedData(data);
+    QSharedPointer<RAttributeEntity> entity(new RAttributeEntity(document, RAttributeData(d, getCurrentBlockId(), data.tag.c_str())));
+    importEntity(entity);
+}
+
 
 RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
     RVector defP(data.dpx, data.dpy);

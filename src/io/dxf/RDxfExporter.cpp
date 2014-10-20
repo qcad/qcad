@@ -25,6 +25,7 @@
 #include <QFont>
 
 #include "RArcEntity.h"
+#include "RAttributeEntity.h"
 #include "RBlockReferenceEntity.h"
 #include "RCircleEntity.h"
 #include "RColor.h"
@@ -185,7 +186,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     for (int i=0; i<entityIds.size(); i++) {
         REntity::Id id = entityIds[i];
         QSharedPointer<REntity> entity = document->queryEntityDirect(id);
-        QSharedPointer<RTextEntity> textEntity = entity.dynamicCast<RTextEntity>();
+        QSharedPointer<RTextBasedEntity> textEntity = entity.dynamicCast<RTextBasedEntity>();
         if (textEntity.isNull()) {
             continue;
         }
@@ -637,6 +638,9 @@ void RDxfExporter::writeEntity(const REntity& e) {
     case RS::EntityText:
         writeText(dynamic_cast<const RTextEntity&>(e));
         break;
+    case RS::EntityAttribute:
+        writeAttribute(dynamic_cast<const RAttributeEntity&>(e));
+        break;
 
     case RS::EntityDimAligned:
     case RS::EntityDimAngular:
@@ -876,86 +880,8 @@ void RDxfExporter::writeSpline(const RSplineEntity& sp) {
     }
 }
 
-/**
- * Writes the given text entity to the file.
- */
-void RDxfExporter::writeText(const RTextEntity& t) {
-    //if (dxf.getVersion()==DL_Codes::AC1009) {
-        /*
-        if (t.getNumberOfLines()>1) {
-            // split up text into single lines:
-            RS_PtrList<RS_Entity> lineList;
+DL_TextData RDxfExporter::getTextData(const RTextBasedData& t, const QString& styleName) {
 
-            RS_Modification modification(*currentContainer);
-            modification.explodeTextIntoLines(t, lineList);
-
-            for (int i=0; i<lineList.size(); ++i) {
-                if (lineList.at(i)->rtti()==RS2::EntityText) {
-                    writeText(dynamic_cast<RS_Text*>(lineList.at(i)));
-                }
-                else {
-                    RS_DEBUG->print(RS_Debug::D_ERROR,
-                        "RS_FilterDxf::writeText: "
-                        "non-text entity found after splitting "
-                        "text up into lines.");
-                }
-            }
-        }
-        else {
-            int hJust=0;
-            int vJust=0;
-            if (t->getHAlign()==RS2::HAlignLeft) {
-                hJust=0;
-            } else if (t->getHAlign()==RS2::HAlignCenter) {
-                hJust=1;
-            } else if (t->getHAlign()==RS2::HAlignRight) {
-                hJust=2;
-            }
-            if (t->getVAlign()==RS2::VAlignTop) {
-                vJust=3;
-            } else if (t->getVAlign()==RS2::VAlignMiddle) {
-                vJust=2;
-            } else if (t->getVAlign()==RS2::VAlignBottom) {
-                vJust=1;
-            }
-            dxf.writeText(
-                *dw,
-                DL_TextData(t->getInsertionPoint().x,
-                            t->getInsertionPoint().y,
-                            0.0,
-                            t->getInsertionPoint().x,
-                            t->getInsertionPoint().y,
-                            0.0,
-                            t->getHeight(),
-                            0.8,
-                            0,
-                            hJust, vJust,
-                            (const char*)toDxfString(
-                                t->getText(), formatType).toUtf8(),
-                            (const char*)RDxfExporter::escapeUnicode(t->getStyle()),
-                            t->getAngle()),
-                attributes);
-        }
-        return;
-    }
-    */
-
-    if (t.isSimple()) {
-        writeSimpleText(t);
-    }
-    else {
-        writeMText(t);
-    }
-}
-
-void RDxfExporter::writeSimpleText(const RTextEntity& t) {
-    REntity::Id id = t.getId();
-    if (!textStyles.contains(id)) {
-        qWarning() << "RDxfExporter::writeSimpleText: "
-            << "no style for entity with ID: " << id;
-        return;
-    }
-    QString styleName = textStyles.value(t.getId());
     DL_TextData data(
                 t.getPosition().x,
                 t.getPosition().y,
@@ -1006,17 +932,53 @@ void RDxfExporter::writeSimpleText(const RTextEntity& t) {
         }
     }
 
+    return data;
+}
+
+QString RDxfExporter::getStyleName(const RTextBasedEntity& t) {
+    REntity::Id id = t.getId();
+    if (!textStyles.contains(id)) {
+        qWarning() << "RDxfExporter::getStyleName: "
+            << "no style for entity with ID: " << id;
+        qDebug() << "Styles:";
+        qDebug() << textStyles;
+        return QString();
+    }
+    return textStyles.value(t.getId());
+}
+
+/**
+ * Writes the given text entity to the file.
+ */
+void RDxfExporter::writeText(const RTextEntity& t) {
+    if (t.isSimple()) {
+        writeSimpleText(t);
+    }
+    else {
+        writeMText(t);
+    }
+}
+
+void RDxfExporter::writeAttribute(const RAttributeEntity& t) {
+    DL_TextData tData = getTextData(t.getData(), getStyleName(t));
+    DL_AttributeData data(tData, (const char*)RDxfExporter::escapeUnicode(t.getTag()));
+    dxf.writeAttribute(*dw, data, attributes);
+}
+
+void RDxfExporter::writeSimpleText(const RTextEntity& t) {
+    DL_TextData data = getTextData(t.getData(), getStyleName(t));
     dxf.writeText(*dw, data, attributes);
 }
 
 void RDxfExporter::writeMText(const RTextEntity& t) {
-    REntity::Id id = t.getId();
-    if (!textStyles.contains(id)) {
-        qWarning() << "RDxfExporter::writeMText: "
-            << "no style for entity with ID: " << id;
-        return;
-    }
-    QString styleName = textStyles.value(t.getId());
+//    REntity::Id id = t.getId();
+//    if (!textStyles.contains(id)) {
+//        qWarning() << "RDxfExporter::writeMText: "
+//            << "no style for entity with ID: " << id;
+//        return;
+//    }
+//    QString styleName = textStyles.value(t.getId());
+    QString styleName = getStyleName(t);
 
     int attachmentPoint=1;
     switch (t.getHAlign()) {
@@ -1652,7 +1614,7 @@ DL_Attributes RDxfExporter::getEntityAttributes(const REntity& entity) {
     return attrib;
 }
 
-DL_StyleData RDxfExporter::getStyle(const RTextEntity& entity) {
+DL_StyleData RDxfExporter::getStyle(const RTextBasedEntity& entity) {
     QString name = QString("textstyle%1").arg(textStyleCounter++);
     return DL_StyleData((const char*)RDxfExporter::escapeUnicode(name),
         0,    // flags

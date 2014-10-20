@@ -860,6 +860,45 @@ struct DXFLIB_EXPORT DL_TextData {
 };
 
 
+/**
+ * Block attribute data.
+ */
+struct DXFLIB_EXPORT DL_AttributeData : public DL_TextData {
+    DL_AttributeData(const DL_TextData& tData, const std::string& tag)
+        : DL_TextData(tData), tag(tag) {
+
+    }
+
+    /**
+     * Constructor.
+     * Parameters: see member variables.
+     */
+    DL_AttributeData(double ipx, double ipy, double ipz,
+                double apx, double apy, double apz,
+                double height, double xScaleFactor,
+                int textGenerationFlags,
+                int hJustification,
+                int vJustification,
+                const std::string& tag,
+                const std::string& text,
+                const std::string& style,
+                double angle)
+        : DL_TextData(ipx, ipy, ipz,
+                apx, apy, apz,
+                height, xScaleFactor,
+                textGenerationFlags,
+                hJustification,
+                vJustification,
+                text,
+                style,
+                angle),
+          tag(tag) {
+    }
+
+    /*! Tag. */
+    std::string tag;
+};
+
 
 /**
  * Generic Dimension Data.

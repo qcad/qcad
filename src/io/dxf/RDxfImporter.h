@@ -97,7 +97,9 @@ private:
     virtual void addTextStyle(const DL_StyleData& data);
     virtual void addMTextChunk(const std::string& text);
     virtual void addMText(const DL_MTextData& data);
+    RTextBasedData getTextBasedData(const DL_TextData& data);
     virtual void addText(const DL_TextData& data);
+    virtual void addAttribute(const DL_AttributeData& data);
     virtual RDimensionData convDimensionData(const DL_DimensionData& data);
     virtual void addDimAlign(const DL_DimensionData& data, const DL_DimAlignedData& edata);
     virtual void addDimLinear(const DL_DimensionData& data, const DL_DimLinearData& edata);
