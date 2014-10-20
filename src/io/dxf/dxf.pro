@@ -1,3 +1,4 @@
+CONFIG += plugin
 TARGET = qcaddxf
 include( ../../../shared.pri )
 
@@ -15,13 +16,13 @@ SOURCES = \
     RDxfPlugin.cpp
 TEMPLATE = lib
 DEFINES += QCADDXF_LIBRARY
+LIBS += -lqcadcore -lqcadentity -ldxflib -lqcadoperations
 r_static_libs {
+    CONFIG -= plugin
     CONFIG += staticlib
 }
 else {
     DESTDIR = ../../../plugins
-    CONFIG += plugin
 }
-LIBS += -lqcadcore -lqcadentity -ldxflib -lqcadoperations
 
 POST_TARGETDEPS += ../../../$$ROUTDIR/$${RLIBPRE}dxflib$${RLIBPOST}

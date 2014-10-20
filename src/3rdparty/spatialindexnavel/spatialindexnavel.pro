@@ -5,7 +5,6 @@ r_static_libs {
     CONFIG += staticlib
 }
 else {
-    DESTDIR = ../../../plugins
     CONFIG += plugin
 }
 

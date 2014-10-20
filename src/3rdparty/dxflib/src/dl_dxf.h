@@ -165,7 +165,7 @@ public:
     void addMText(DL_CreationInterface* creationInterface);
     void addText(DL_CreationInterface* creationInterface);
 
-    void addAttrib(DL_CreationInterface* creationInterface);
+    void addAttribute(DL_CreationInterface* creationInterface);
 
     DL_DimensionData getDimData();
     void addDimLinear(DL_CreationInterface* creationInterface);
@@ -258,8 +258,11 @@ public:
                     const DL_MTextData& data,
                     const DL_Attributes& attrib);
     void writeText(DL_WriterA& dw,
-                    const DL_TextData& data,
-                    const DL_Attributes& attrib);
+                   const DL_TextData& data,
+                   const DL_Attributes& attrib);
+    void writeAttribute(DL_WriterA& dw,
+                   const DL_AttributeData& data,
+                   const DL_Attributes& attrib);
     void writeDimStyleOverrides(DL_WriterA& dw,
                              const DL_DimensionData& data);
     void writeDimAligned(DL_WriterA& dw,
