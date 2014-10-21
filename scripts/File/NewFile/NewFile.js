@@ -213,8 +213,10 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
     }
 
     appWin.subWindowActivated(mdiChild);
-    mdiChild.updatesEnabled = true;
-    Viewport.updateViewports(viewports);
+    if (!isDeleted(mdiChild)) {
+        mdiChild.updatesEnabled = true;
+        Viewport.updateViewports(viewports);
+    }
 
     if (isOpen) {
         for (var k=0; k<NewFile.postOpenActions.length; k++) {

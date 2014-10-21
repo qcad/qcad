@@ -28,6 +28,7 @@
 #include "RDocumentInterface.h"
 #include "RGuiAction.h"
 #include "RMainWindowQt.h"
+#include "RMdiArea.h"
 #include "RMdiChildQt.h"
 #include "RScriptHandler.h"
 #include "RSelectionChangedEvent.h"
@@ -45,7 +46,7 @@ RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
 //#endif
 
     if (hasMdiArea) {
-        mdiArea = new QMdiArea(this);
+        mdiArea = new RMdiArea(this);
         mdiArea->setViewMode(QMdiArea::TabbedView);
         mdiArea->setObjectName("MdiArea");
         setCentralWidget(mdiArea);
@@ -64,6 +65,11 @@ RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
         else {
             qDebug() << "tabBar is NULL";
         }
+
+        //tabBar->setFixedWidth(tabBar->wi);
+
+        //QPushButton* pb = new QPushButton(tabBar);
+        //pb->setFixedSize(20,20);
     }
     setWindowTitle("RMainWindowQt");
 
@@ -362,7 +368,7 @@ RMdiChildQt* RMainWindowQt::getMdiChild() {
     return dynamic_cast<RMdiChildQt*> (currentSubWindow);
 }
 
-QMdiArea* RMainWindowQt::getMdiArea() {
+RMdiArea* RMainWindowQt::getMdiArea() {
     return mdiArea;
 }
 

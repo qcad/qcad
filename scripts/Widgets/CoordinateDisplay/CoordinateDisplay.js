@@ -27,6 +27,7 @@ function CoordinateDisplay() {
 CoordinateDisplay.init = function(basePath) {
     var widget = WidgetFactory.createWidget(basePath, "CoordinateDisplay.ui");
 
+    widget.visible = RSettings.getBoolValue("StatusBar/CoordinateDisplay", true);
     EAction.addToStatusBar(widget, 100);
 
     var lAbs = widget.findChild("Abs");

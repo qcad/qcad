@@ -17,12 +17,12 @@
  * along with QCAD.
  */
 #include <QtGui>
-#include <QMdiArea>
 
 #include "RDebug.h"
 #include "RDocumentInterface.h"
 #include "RGraphicsViewQt.h"
 #include "RMainWindowQt.h"
+#include "RMdiArea.h"
 #include "RMdiChildQt.h"
 #include "RRulerQt.h"
 #include "RScriptHandler.h"
@@ -132,7 +132,7 @@ void RMdiChildQt::closeEvent(QCloseEvent* closeEvent) {
 #ifndef Q_OS_WIN32
     // part of the workaround for QMdiArea bug
     // with events filtering through all stacked windows:
-    QMdiArea* mdiArea = RMainWindowQt::getMainWindow()->getMdiArea();
+    RMdiArea* mdiArea = RMainWindowQt::getMainWindow()->getMdiArea();
     QMdiSubWindow* child =  mdiArea->currentSubWindow();
     QList<QMdiSubWindow *> children = mdiArea->subWindowList(QMdiArea::ActivationHistoryOrder);
     int index = children.indexOf(child);

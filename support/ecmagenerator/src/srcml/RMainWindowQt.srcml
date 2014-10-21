@@ -54,6 +54,8 @@ dir="./gui" filename="RMainWindowQt.h">
   <class_decl>class 
   <name>RLayerListener</name>;</class_decl>
   <class_decl>class 
+  <name>RMdiArea</name>;</class_decl>
+  <class_decl>class 
   <name>RMdiChildQt</name>;</class_decl>
   <class_decl>class 
   <name>RNewDocumentListener</name>;</class_decl>
@@ -347,7 +349,7 @@ dir="./gui" filename="RMainWindowQt.h">
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
-  <name>QMdiArea</name>*</type>
+  <name>RMdiArea</name>*</type>
   <name>getMdiArea</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
@@ -842,7 +844,7 @@ dir="./gui" filename="RMainWindowQt.h">
   <decl_stmt>
   <decl>
     <type>
-    <name>QMdiArea</name>*</type>
+    <name>RMdiArea</name>*</type>
     <name>mdiArea</name>
   </decl>;</decl_stmt>
   <comment type="line">//private:</comment>

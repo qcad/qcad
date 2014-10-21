@@ -141,9 +141,4 @@ InputPreferences.updatePreview = function() {
 };
 
 InputPreferences.applyPreferences = function(doc) {
-    //var appWin = EAction.getMainWindow();
-    //var coordinateDisplayWidget = appWin.findChild("CoordinateDisplay");
-    //if (coordinateDisplayWidget) {
-        //coordinateDisplayWidget.setProperty("UpdatePreferences", true);
-    //}
 };

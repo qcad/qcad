@@ -1264,11 +1264,13 @@ EAction.addToStatusBar = function(widget, sortOrder) {
     }
 
     var separator;
-    if (RS.getSystemId() == "osx") {
+    if (RS.getSystemId() === "osx") {
         separator = new QFrame();
         separator.frameShape = QFrame.VLine;
         separator.frameShadow = QFrame.Sunken;
         separator.setProperty("SortOrder", sortOrder + 1);
+        separator.objectName = widget.objectName + "Separator";
+        separator.visible = widget.visible;
     }
 
     if (index >= maxIndex) {

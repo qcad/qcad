@@ -49,8 +49,8 @@ public:
     virtual void trimEndPoint(const RVector& p) = 0;
 
     /**
-     * \param coord Clicked coordiante
-     * \param trimPoint Trim start point or end point to this coordiante.
+     * \param coord Clicked coordinate
+     * \param trimPoint Trim start point or end point to this coordinate.
      */
     virtual RS::Ending getTrimEnd(const RVector& coord, const RVector& trimPoint) = 0;
 

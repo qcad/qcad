@@ -38,6 +38,7 @@ class RDocumentInterface;
 class RFocusListener;
 class RGraphicsView;
 class RLayerListener;
+class RMdiArea;
 class RMdiChildQt;
 class RNewDocumentListener;
 class RPenListener;
@@ -85,7 +86,7 @@ public:
 
     RMdiChildQt* getMdiChild();
     QTabBar* getTabBar();
-    QMdiArea* getMdiArea();
+    RMdiArea* getMdiArea();
 
     virtual void cancelProgress();
     virtual void setProgress(int value);
@@ -155,7 +156,7 @@ protected slots:
     void suspendAndResume(QMdiSubWindow* mdiChild);
 
 protected:
-    QMdiArea* mdiArea;
+    RMdiArea* mdiArea;
 
 //private:
 //    bool objectWasDestroyed;

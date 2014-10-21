@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>473</width>
-    <height>246</height>
+    <width>608</width>
+    <height>567</height>
    </rect>
   </property>
   <property name="horizontalScrollBarPolicy">
@@ -24,8 +24,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>471</width>
-     <height>244</height>
+     <width>606</width>
+     <height>565</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -34,7 +34,7 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <layout class="QVBoxLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <widget class="RFontChooserWidget" name="Font" native="true">
       <property name="font">
@@ -46,6 +46,45 @@
       <property name="label" stdset="0">
        <string>Status Bar Font:</string>
       </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Status Bar Widgets</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QCheckBox" name="CoordinateDisplay">
+         <property name="text">
+          <string>Coordinate display</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="MouseDisplay">
+         <property name="text">
+          <string>Mouse display</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="SelectionDisplay">
+         <property name="text">
+          <string>Selection display</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
     <item>

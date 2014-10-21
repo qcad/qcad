@@ -18,6 +18,7 @@ SOURCES += \
     RListWidget.cpp \
     RMainWindowQt.cpp \
     RMathLineEdit.cpp \
+    RMdiArea.cpp \
     RMdiChildQt.cpp \
     RRulerQt.cpp \
     RTextEdit.cpp \
@@ -43,6 +44,7 @@ HEADERS += \
     RListWidget.h \
     RMainWindowQt.h \
     RMathLineEdit.h \
+    RMdiArea.h \
     RMdiChildQt.h \
     RRulerQt.h \
     RTextEdit.h \

@@ -34,6 +34,7 @@ MouseDisplay.init = function(basePath) {
     var appWin = EAction.getMainWindow();
     appWin.rightMouseTip.connect(md, "setRightMouseTip");
     appWin.leftMouseTip.connect(md, "setLeftMouseTip");
+    md.formWidget.visible = RSettings.getBoolValue("StatusBar/MouseDisplay", true);
     EAction.addToStatusBar(md.formWidget, 200);
 };
 

@@ -32,6 +32,7 @@ SelectionDisplay.init = function(basePath) {
     var adapter = new RSelectionListenerAdapter();
     appWin.addSelectionListener(adapter);
     adapter.selectionChanged.connect(sd, "selectionChanged");
+    sd.widget.visible = RSettings.getBoolValue("StatusBar/SelectionDisplay", true);
     EAction.addToStatusBar(sd.widget, 300);
 };
 

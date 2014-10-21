@@ -109,6 +109,7 @@
 #include <QTextEdit>
 #include <QThread>
 #include <QToolBar>
+#include <QToolButton>
 #include <QTreeWidget>
 #include <QTreeWidgetItem>
 #include <QUrl>
@@ -254,6 +255,7 @@ Q_DECLARE_METATYPE(QTextCodec*)
 Q_DECLARE_METATYPE(QTextEdit*)
 Q_DECLARE_METATYPE(QThread*)
 Q_DECLARE_METATYPE(QToolBar*)
+Q_DECLARE_METATYPE(QToolButton*)
 Q_DECLARE_METATYPE(QTransform*)
 Q_DECLARE_METATYPE(QTreeWidget*)
 Q_DECLARE_METATYPE(QTreeWidgetItem*)

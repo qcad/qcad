@@ -436,8 +436,8 @@ void RGraphicsView::centerToBox(const RBox& box) {
 
 
 /**
- * \return Four vectors with the coordiantes of the four corners of the
- *      view mapped to scene coordiantes.
+ * \return Four vectors with the coordinates of the four corners of the
+ *      view mapped to scene coordinates.
  */
 QList<RVector> RGraphicsView::mapCornersFromView() const {
     QList<RVector> ret;
@@ -689,7 +689,7 @@ void RGraphicsView::setNavigationAction(RAction* action) {
  *
  * \param range Maximum distance in pixels.
  *
- * \return The closest referecene point in model coordiantes.
+ * \return The closest referecene point in model coordinates.
  */
 RVector RGraphicsView::getClosestReferencePoint(const RVector& screenPosition,
         int range) {

@@ -37,21 +37,26 @@ StatusBar.applyPreferences = function(doc, mdiChild) {
     var appWin = RMainWindowQt.getMainWindow();
 
     var statusBar = appWin.statusBar();
-    var w;
-    w = statusBar.findChild("Abs");
-    w.font = RSettings.getStatusBarFont();
-    w = statusBar.findChild("Rel");
-    w.font = RSettings.getStatusBarFont();
-    w = statusBar.findChild("AbsPol");
-    w.font = RSettings.getStatusBarFont();
-    w = statusBar.findChild("RelPol");
-    w.font = RSettings.getStatusBarFont();
+    var w, i;
 
-    w = statusBar.findChild("Right");
-    w.font = RSettings.getStatusBarFont();
-    w = statusBar.findChild("Left");
-    w.font = RSettings.getStatusBarFont();
+    var widgetNames = ["Abs", "Rel", "AbsPol", "RelPol", "Right", "Left", "SelectionText"];
+    for (i=0; i<widgetNames.length; i++) {
+        w = statusBar.findChild(widgetNames[i]);
+        w.font = RSettings.getStatusBarFont();
+    }
 
     w = statusBar.findChild("SelectionText");
     w.font = RSettings.getStatusBarFont();
+
+    widgetNames = ["CoordinateDisplay", "MouseDisplay", "SelectionDisplay"];
+    for (i=0; i<widgetNames.length; i++) {
+        var widgetName = widgetNames[i];
+
+        w = statusBar.findChild(widgetName);
+        w.visible = RSettings.getBoolValue("StatusBar/" + widgetName, true);
+        w = statusBar.findChild(widgetName + "Separator");
+        if (!isNull(w)) {
+            w.visible = RSettings.getBoolValue("StatusBar/" + widgetName, true);
+        }
+    }
 };

@@ -10,6 +10,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RFocusListener" />
   <class_decl name="RGraphicsView" />
   <class_decl name="RLayerListener" />
+  <class_decl name="RMdiArea" />
   <class_decl name="RMdiChildQt" />
   <class_decl name="RNewDocumentListener" />
   <class_decl name="RPenListener" />
@@ -153,7 +154,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getMdiArea" cppName="getMdiArea"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="QMdiArea *" isPureVirtual="false" />
+      <variant returnType="RMdiArea *" isPureVirtual="false" />
     </method>
     <method name="cancelProgress" cppName="cancelProgress"
     specifier="public" isStatic="false" isVirtual="true"

@@ -28,21 +28,32 @@ TabBar.init = function(basePath) {
     }
 
     var tabBar = appWin.getTabBar();
-    if (!isNull(tabBar)) {
-        tabBar.elideMode = Qt.ElideRight;
-        tabBar.tabsClosable = true;
-        tabBar.usesScrollButtons = true;
-        tabBar.contextMenuPolicy = Qt.NoContextMenu;
-        // somewhat buggy:
-        //tabBar.movable = true;
-
-        if (RSettings.getQtVersion().startsWith("4.7.")) {
-            // starting with Qt 4.8, this is no longer necessary:
-            tabBar.tabCloseRequested.connect(function(tabIndex) {
-                tabBar.setCurrentIndex(tabIndex);
-                var closeEvent = new RCloseCurrentEvent();
-                QCoreApplication.postEvent(appWin, closeEvent);
-            });
-        }
+    if (isNull(tabBar)) {
+        return;
     }
+
+    var mdiArea = appWin.getMdiArea();
+    if (isNull(mdiArea)) {
+        return;
+    }
+
+    tabBar.elideMode = Qt.ElideRight;
+    tabBar.tabsClosable = true;
+    tabBar.usesScrollButtons = true;
+    tabBar.contextMenuPolicy = Qt.NoContextMenu;
+    // somewhat buggy:
+    //tabBar.movable = true;
+
+    if (RSettings.getQtVersion().startsWith("4.7.")) {
+        // starting with Qt 4.8, this is no longer necessary:
+        tabBar.tabCloseRequested.connect(function(tabIndex) {
+            tabBar.setCurrentIndex(tabIndex);
+            var closeEvent = new RCloseCurrentEvent();
+            QCoreApplication.postEvent(appWin, closeEvent);
+        });
+    }
+
+//    var button = mdiArea.getAddTabButton();
+//    var action = RGuiAction.getByScriptFile("scripts/File/NewFile/NewFile.js");
+//    button.setDefaultAction(action);
 };

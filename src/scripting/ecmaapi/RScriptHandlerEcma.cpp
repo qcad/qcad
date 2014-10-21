@@ -164,6 +164,7 @@
 #include "REcmaMath.h"
 #include "REcmaMatrix.h"
 #include "REcmaMathLineEdit.h"
+#include "REcmaMdiArea.h"
 #include "REcmaMdiChildQt.h"
 #include "REcmaMemoryStorage.h"
 #include "REcmaMixedOperation.h"
@@ -609,6 +610,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaMainWindow::init(*engine);
     REcmaMainWindowQt::init(*engine);
+    REcmaMdiArea::init(*engine);
     REcmaMdiChildQt::init(*engine);
 
     REcmaAction::init(*engine);

@@ -25,6 +25,8 @@
             
                 #include "RLayerListener.h"
             
+                #include "RMdiArea.h"
+            
                 #include "RMdiChildQt.h"
             
                 #include "RNewDocumentListener.h"
@@ -5393,11 +5395,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMdiArea *'
-    QMdiArea * cppResult =
+    // return type 'RMdiArea *'
+    RMdiArea * cppResult =
         
                self->getMdiArea();
-        // return type: QMdiArea *
+        // return type: RMdiArea *
                 // QObject
                 result = engine->newQObject(cppResult);
             

@@ -129,6 +129,7 @@ HEADERS += \
     $$PWD/REcmaMath.h \
     $$PWD/REcmaMathLineEdit.h \
     $$PWD/REcmaMatrix.h \
+    $$PWD/REcmaMdiArea.h \
     $$PWD/REcmaMdiChildQt.h \
     $$PWD/REcmaMemoryStorage.h \
     $$PWD/REcmaMessageHandler.h \
@@ -254,6 +255,7 @@ HEADERS += \
     $$PWD/REcmaShellGraphicsViewQt.h \
     $$PWD/REcmaShellListView.h \
     $$PWD/REcmaShellListWidget.h \
+    $$PWD/REcmaShellMdiArea.h \
     $$PWD/REcmaShellPropertyEditor.h \
     $$PWD/REcmaShellRestrictAngleLength.h \
     $$PWD/REcmaShellRunner.h \
@@ -457,6 +459,7 @@ SOURCES += \
     $$PWD/REcmaMath.cpp \
     $$PWD/REcmaMathLineEdit.cpp \
     $$PWD/REcmaMatrix.cpp \
+    $$PWD/REcmaMdiArea.cpp \
     $$PWD/REcmaMdiChildQt.cpp \
     $$PWD/REcmaMemoryStorage.cpp \
     $$PWD/REcmaMessageHandler.cpp \
@@ -582,6 +585,7 @@ SOURCES += \
     $$PWD/REcmaShellGraphicsViewQt.cpp \
     $$PWD/REcmaShellListView.cpp \
     $$PWD/REcmaShellListWidget.cpp \
+    $$PWD/REcmaShellMdiArea.cpp \
     $$PWD/REcmaShellPropertyEditor.cpp \
     $$PWD/REcmaShellRestrictAngleLength.cpp \
     $$PWD/REcmaShellRunner.cpp \
