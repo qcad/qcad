@@ -61,30 +61,7 @@ void RLinetypeCombo::reinit() {
         }
 
         v.setValue<RLinetypePattern>(p);
-        QString desc; //= p.getDescription();
-//        QRegExp onlyPattern("[_\\. ]*");
-//        if (desc.isEmpty()) {
-//            desc = p.getName();
-//        }
-//        else if (onlyPattern.indexIn(desc)==0) {
-        if (p.getDescription().isEmpty()) {
-            desc = p.getName();
-        }
-        else {
-            desc = p.getName() + " - " + p.getDescription();
-        }
-//        }
-//        QString name, prev;
-//        int k = desc.lastIndexOf(QRegExp("[^_\\. ]"));
-//        if (k!=-1) {
-//            name = desc.mid(0, k);
-//            prev = desc.mid(k);
-//            //prev.replace('.', QChar(0x00B7));
-//            //prev.replace('_', QChar(0x2014));
-//        }
-        //RLinetypeCombo::tr((const char*)d.toUtf8())
-        //addItem(p.getIcon(), name + prev, v);
-        addItem(p.getIcon(), desc, v);
+        addItem(p.getIcon(), p.getLabel(), v);
     }
 
     if (!onlyFixed) {

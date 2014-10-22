@@ -1613,6 +1613,24 @@ dir="./core" filename="RMemoryStorage.h">
   <function_decl>
   <type>
     <name>virtual</name>
+    <name>QString</name>
+  </type>
+  <name>getLinetypeLabel</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RLinetype</name>::
+        <name>Id</name></name>
+      </type>
+      <name>linetypeId</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
     <name>QSet
     <argument_list>&lt;
     <argument>

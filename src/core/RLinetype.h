@@ -83,6 +83,10 @@ public:
         pattern.setDescription(d);
     }
 
+    QString getLabel() const {
+        return pattern.getLabel();
+    }
+
     bool isValid() const;
 
     //static QList<QPair<QString, RLinetype> > getList(bool onlyFixed = false);

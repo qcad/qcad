@@ -198,10 +198,7 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
 //                if (!noAttributes) {
 //                    attr.setChoices(document->getLinetypeNames());
 //                }
-                QString desc = document->getLinetypeDescription(getData().getLinetypeId());
-                if (desc.isEmpty()) {
-                    desc = document->getLinetypeName(getData().getLinetypeId());
-                }
+                QString desc = document->getLinetypeLabel(getData().getLinetypeId());
                 return qMakePair(QVariant(desc), attr);
             }
         }

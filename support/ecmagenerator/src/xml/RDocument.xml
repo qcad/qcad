@@ -884,6 +884,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="linetypeId" isConst="false" />
       </variant>
     </method>
+    <method name="getLinetypeLabel" cppName="getLinetypeLabel"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="RLinetype::Id" typeName="RLinetype::Id"
+        name="linetypeId" isConst="false" />
+      </variant>
+    </method>
     <method name="getLinetypeNames" cppName="getLinetypeNames"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

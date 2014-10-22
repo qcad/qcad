@@ -264,6 +264,7 @@ public:
     }
     QString getLinetypeName(RLinetype::Id linetypeId) const;
     QString getLinetypeDescription(RLinetype::Id linetypeId) const;
+    QString getLinetypeLabel(RLinetype::Id linetypeId) const;
     QSet<QString> getLinetypeNames() const;
     QList<RLinetypePattern> getLinetypePatterns() const;
     bool isByLayer(RLinetype::Id linetypeId) const;

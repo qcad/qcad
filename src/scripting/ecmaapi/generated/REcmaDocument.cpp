@@ -279,6 +279,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypeDescription, "getLinetypeDescription");
             
+            REcmaHelper::registerFunction(&engine, proto, getLinetypeLabel, "getLinetypeLabel");
+            
             REcmaHelper::registerFunction(&engine, proto, getLinetypeNames, "getLinetypeNames");
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypePatterns, "getLinetypePatterns");
@@ -8268,6 +8270,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getLinetypeDescription", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getLinetypeLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getLinetypeLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getLinetypeLabel";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getLinetypeLabel", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLinetype::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLinetype::Id
+                    a0 =
+                    (RLinetype::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLinetypeLabel(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getLinetypeLabel().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getLinetypeLabel", context, engine);
             return result;
         }
          QScriptValue

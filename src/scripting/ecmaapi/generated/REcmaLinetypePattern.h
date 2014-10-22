@@ -67,6 +67,9 @@
         setDescription
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getIcon
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

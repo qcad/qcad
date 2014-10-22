@@ -65,6 +65,9 @@
         setDescription
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

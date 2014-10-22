@@ -235,6 +235,15 @@ void RLinetypePattern::setDescription(const QString& d) {
     description = d;
 }
 
+QString RLinetypePattern::getLabel() const {
+    if (description.isEmpty()) {
+        return name;
+    }
+    else {
+        return name + " - " + description;
+    }
+}
+
 QIcon RLinetypePattern::getIcon() const {
     // TODO:
     return QIcon();

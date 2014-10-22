@@ -336,6 +336,7 @@ public:
 
     virtual QString getLinetypeName(RLinetype::Id linetypeId) const = 0;
     virtual QString getLinetypeDescription(RLinetype::Id linetypeId) const = 0;
+    virtual QString getLinetypeLabel(RLinetype::Id linetypeId) const = 0;
     virtual QSet<QString> getLinetypeNames() const = 0;
     virtual QList<RLinetypePattern> getLinetypePatterns() const = 0;
     virtual RLinetype::Id getLinetypeId(const QString& linetypeName) const = 0;

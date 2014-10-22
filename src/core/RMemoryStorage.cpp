@@ -1249,6 +1249,14 @@ QString RMemoryStorage::getLinetypeDescription(RLinetype::Id linetypeId) const {
     return l->getDescription();
 }
 
+QString RMemoryStorage::getLinetypeLabel(RLinetype::Id linetypeId) const {
+    QSharedPointer<RLinetype> l = queryLinetypeDirect(linetypeId);
+    if (l.isNull()) {
+        return QString();
+    }
+    return l->getLabel();
+}
+
 QSet<QString> RMemoryStorage::getLinetypeNames() const {
     QSet<QString> ret;
     QHash<RObject::Id, QSharedPointer<RLinetype> >::const_iterator it;

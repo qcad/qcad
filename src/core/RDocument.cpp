@@ -606,6 +606,10 @@ QString RDocument::getLinetypeDescription(RLinetype::Id linetypeId) const {
     return storage.getLinetypeDescription(linetypeId);
 }
 
+QString RDocument::getLinetypeLabel(RLinetype::Id linetypeId) const {
+    return storage.getLinetypeLabel(linetypeId);
+}
+
 RLinetype::Id RDocument::getLinetypeId(const QString& linetypeName) const {
     return storage.getLinetypeId(linetypeName);
 }

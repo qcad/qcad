@@ -82,6 +82,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setDescription, "setDescription");
             
+            REcmaHelper::registerFunction(&engine, proto, getLabel, "getLabel");
+            
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -648,6 +650,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinetype::setDescription", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetype::getLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetype::getLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetype::getLabel";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetype* self = 
+                        getSelf("getLabel", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLabel();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetype.getLabel().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetype::getLabel", context, engine);
             return result;
         }
          QScriptValue

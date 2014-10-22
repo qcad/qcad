@@ -236,6 +236,13 @@ dir="./core" filename="RLinetypePattern.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>QString</name>
+  </type>
+  <name>getLabel</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
     <name>QIcon</name>
   </type>
   <name>getIcon</name>

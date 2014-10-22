@@ -67,6 +67,9 @@ public:
     void setName(const QString& n);
     QString getDescription() const;
     void setDescription(const QString& d);
+
+    QString getLabel() const;
+
     QIcon getIcon() const;
     QList<double> getPattern() const;
     double getPatternLength() const;

@@ -321,6 +321,14 @@ QString RLinkedStorage::getLinetypeDescription(RLinetype::Id linetypeId) const {
     return ret;
 }
 
+QString RLinkedStorage::getLinetypeLabel(RLinetype::Id linetypeId) const {
+    QString ret = RMemoryStorage::getLinetypeLabel(linetypeId);
+    if (ret.isNull()) {
+        ret = backStorage->getLinetypeLabel(linetypeId);
+    }
+    return ret;
+}
+
 RLinetype::Id RLinkedStorage::getLinetypeId(const QString& linetypeName) const {
     RLinetype::Id ret = RMemoryStorage::getLinetypeId(linetypeName);
     if (ret==RLinetype::INVALID_ID) {

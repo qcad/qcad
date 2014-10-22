@@ -261,6 +261,9 @@
         getLinetypeDescription
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLinetypeLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLinetypeNames
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

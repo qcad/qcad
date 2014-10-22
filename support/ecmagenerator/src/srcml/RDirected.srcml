@@ -122,9 +122,9 @@ dir="./core/math" filename="RDirected.h">
     </decl>
   </param>)</parameter_list>
   <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \param coord Clicked coordiante *
+  <comment type="block">/** * \param coord Clicked coordinate *
   \param trimPoint Trim start point or end point to this
-  coordiante. */</comment>
+  coordinate. */</comment>
   <function_decl>
   <type>
     <name>virtual</name>
