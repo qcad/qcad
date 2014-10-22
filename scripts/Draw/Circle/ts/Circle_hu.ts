@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>Circle</name>
     <message>
         <location filename="../Circle.js" line="+67"/>
         <source>Circle Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Kör eszköztár</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show circle tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Kör eszköztár megmutatása</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Kör</translation>
     </message>
 </context>
 </TS>

@@ -210,7 +210,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+77"/>
         <source>Block</source>
         <translation>Lohko</translation>
     </message>
@@ -218,7 +218,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+61"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -259,7 +259,7 @@
         <translation>Kulma</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+48"/>
+        <location filename="../src/core/REntity.cpp" line="+49"/>
         <source>Type</source>
         <translation>Tyyppi</translation>
     </message>
@@ -277,6 +277,11 @@
         <location line="+1"/>
         <source>Linetype</source>
         <translation>Viivatyyppi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linetype Scale</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -348,7 +353,7 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+48"/>
+        <location filename="../src/core/RLayer.cpp" line="+52"/>
         <source>Name</source>
         <translation>Nimi</translation>
     </message>
@@ -381,109 +386,98 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+47"/>
         <source>By Layer</source>
-        <translation>Tason mukaan</translation>
+        <translation type="vanished">Tason mukaan</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>By Block</source>
-        <translation>Lohkon mukaan</translation>
+        <translation type="vanished">Lohkon mukaan</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Continuous</source>
-        <translation>Jatkuva</translation>
+        <translation type="vanished">Jatkuva</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot</source>
-        <translation>Piste</translation>
+        <translation type="vanished">Piste</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot (small)</source>
-        <translation>Piste (pieni)</translation>
+        <translation type="vanished">Piste (pieni)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot (large)</source>
-        <translation>Piste (suuri)</translation>
+        <translation type="vanished">Piste (suuri)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash</source>
-        <translation>Katkoviiva</translation>
+        <translation type="vanished">Katkoviiva</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash (small)</source>
-        <translation>Katkoviiva (pieni)</translation>
+        <translation type="vanished">Katkoviiva (pieni)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash (large)</source>
-        <translation>Katkoviiva (suuri)</translation>
+        <translation type="vanished">Katkoviiva (suuri)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot</source>
-        <translation>Katkopisteviiva</translation>
+        <translation type="vanished">Katkopisteviiva</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot (small)</source>
-        <translation>Katkopisteviiva (pieni)</translation>
+        <translation type="vanished">Katkopisteviiva (pieni)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot (large)</source>
-        <translation>Katkopisteviiva (suuri)</translation>
+        <translation type="vanished">Katkopisteviiva (suuri)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide</source>
-        <translation>Jaa</translation>
+        <translation type="vanished">Jaa</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide (small)</source>
-        <translation>Jaa (pieni)</translation>
+        <translation type="vanished">Jaa (pieni)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide (large)</source>
-        <translation>Jaa (suuri)</translation>
+        <translation type="vanished">Jaa (suuri)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
-        <translation>Keskipiste</translation>
+        <translation type="vanished">Keskipiste</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center (small)</source>
-        <translation>Keskipiste (pieni)</translation>
+        <translation type="vanished">Keskipiste (pieni)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center (large)</source>
-        <translation>Keskipiste (suuri)</translation>
+        <translation type="vanished">Keskipiste (suuri)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border</source>
-        <translation>Reuna</translation>
+        <translation type="vanished">Reuna</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border (small)</source>
-        <translation>Reuna (pieni)</translation>
+        <translation type="vanished">Reuna (pieni)</translation>
+    </message>
+    <message>
+        <source>Border (large)</source>
+        <translation type="vanished">Reuna (suuri)</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLinetype.cpp" line="+86"/>
+        <source>Name</source>
+        <translation type="unfinished">Nimi</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Border (large)</source>
-        <translation>Reuna (suuri)</translation>
+        <source>Description</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -627,7 +621,7 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+35"/>
+        <location filename="../src/core/RObject.cpp" line="+36"/>
         <source>Custom</source>
         <translation>Mukautettu</translation>
     </message>
@@ -635,6 +629,11 @@
         <location line="+1"/>
         <source>Handle</source>
         <translation>Kahva</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

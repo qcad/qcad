@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>CreateBlock</name>
     <message>
         <location filename="../CreateBlock.js" line="+53"/>
         <source>Reference Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Referencia pont</translation>
     </message>
     <message>
         <location filename="../CreateBlockInit.js" line="+4"/>
         <source>&amp;Create Block from Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Blokk létrehozása kijelölésből</translation>
     </message>
 </context>
 </TS>

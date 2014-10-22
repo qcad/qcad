@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>File</name>
     <message>
-        <location filename="../File.js" line="+53"/>
+        <location filename="../File.js" line="+70"/>
+        <source>File Tools</source>
+        <translation>Ferramentas de arquivo</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show file tools</source>
+        <translation>Ferramentas de arquivo</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>&amp;File</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

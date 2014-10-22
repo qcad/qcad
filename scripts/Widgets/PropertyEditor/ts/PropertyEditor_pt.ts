@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -35,7 +35,7 @@ Tipo de linha:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+190"/>
+        <location filename="../PropertyEditor.js" line="+186"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -50,13 +50,13 @@ Documento carregado: %1</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+147"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Não seleção</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Geometry</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -80,7 +80,7 @@ Não entidades de dimensão com posições etiqueta personalizada selecionada.</
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+148"/>
+        <location line="+153"/>
         <source>Index</source>
         <translatorcomment>--google--
 Indentar nó
@@ -103,7 +103,7 @@ Fecha todas as janelas</translatorcomment>
         <translation>Todos</translation>
     </message>
     <message>
-        <location line="+606"/>
+        <location line="+610"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -113,7 +113,7 @@ Fecha todas as janelas</translatorcomment>
         <translation type="obsolete">Adicionar propriedade personalizada</translation>
     </message>
     <message>
-        <location line="-585"/>
+        <location line="-589"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicionar uma propriedade personalizada para os objetos selecionados</translation>
     </message>
@@ -237,8 +237,8 @@ Por favor verifique as permissões.</translatorcomment>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+295"/>
-        <location line="+32"/>
+        <location line="+299"/>
+        <location line="+35"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--
@@ -264,13 +264,18 @@ Preferências Gerais do Aplicativo
         <translation>Geral</translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+103"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Move a seleção para uma nova camada</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+97"/>
+        <source>Linetype Scale:</source>
+        <translation>Escala de tipo de linha:</translation>
+    </message>
+    <message>
+        <location line="-107"/>
         <source>Handle:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--</translatorcomment>

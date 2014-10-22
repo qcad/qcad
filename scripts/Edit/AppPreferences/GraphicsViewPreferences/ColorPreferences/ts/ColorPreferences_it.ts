@@ -31,24 +31,138 @@ Visualizzazione grafica</translatorcomment>
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+35"/>
+        <location filename="../PreferencesPage.ui" line="+32"/>
+        <source>Graphics View</source>
+        <translation>Visualizzazione grafica</translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>Background:</source>
         <translation>Sfondo:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <source>Cursor</source>
+        <translation>Cursore</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Crosshairs:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Reticolo:</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Inactive Crosshairs:</source>
-        <translatorcomment>--google--</translatorcomment>
+        <location line="+36"/>
+        <source>Inactive crosshairs:</source>
         <translation>Reticolo inattivo:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <source>Origin</source>
+        <translation>Origine</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Relative zero:</source>
+        <translation>Zero relativo:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Grid</source>
+        <translation>Griglia</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Meta grid:</source>
+        <translation>Meta griglia:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Selection</source>
+        <translation>Selezione</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Primary selection color:</source>
+        <translation>Colore primario per la selezione:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Use secondary selection color</source>
+        <translation>Usa colore secondario di selezione</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Secondary selection color:</source>
+        <translation>Colore secondario di selezione:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Draggable reference points:</source>
+        <translation>Punti di riferimento:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Selection box border:</source>
+        <translation>Confine finestra di selezione:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Selection box fill:</source>
+        <translation>Finestra di selezione:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Cross-selection box fill:</source>
+        <translation>Finestra di selezione interseca:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Snap Tools</source>
+        <translation>Strumenti snap</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Snap label:</source>
+        <translation>Etichetta aggancia:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Info Tools</source>
+        <translation>Strumenti info</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Measurements and labels:</source>
+        <translation>Misure ed etichette:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Drawing Tools</source>
+        <translation>Strumenti di disegno</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Auxiliary shapes:</source>
+        <translation>Forme ausiliaria:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Zoom Tools</source>
+        <translation>Strumenti zoom</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Zoom box border:</source>
+        <translation>Confine finestra di selezione:</translation>
+    </message>
+    <message>
+        <source>Inactive Crosshairs:</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="vanished">Reticolo inattivo:</translation>
+    </message>
+    <message>
+        <location line="-538"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -56,18 +170,16 @@ Origine:</translatorcomment>
         <translation>Origine:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Relative Zero:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Zero relativo:</translation>
+        <translation type="vanished">Zero relativo:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Reference Point:</source>
-        <translation>Punto di riferimento:</translation>
+        <translation type="vanished">Punto di riferimento:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+81"/>
         <source>Grid:</source>
         <translatorcomment>--ignored colon--
 --file: it.po--
@@ -76,64 +188,54 @@ Meta griglia:
         <translation>Griglia:</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Meta Grid:</source>
-        <translation>Meta griglia:</translation>
+        <translation type="vanished">Meta griglia:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Zoom Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Finestra di zoom:</translation>
+        <translation type="vanished">Finestra di zoom:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: it3.po--</translatorcomment>
-        <translation>Selezione:</translation>
+        <translation type="vanished">Selezione:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection Box Border:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Confine finestra di selezione:</translation>
+        <translation type="vanished">Confine finestra di selezione:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Finestra di selezione:</translation>
+        <translation type="vanished">Finestra di selezione:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Cross Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Finestra di selezione interseca:</translation>
+        <translation type="vanished">Finestra di selezione interseca:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Auxiliary Shapes:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Forme ausiliaria:</translation>
+        <translation type="vanished">Forme ausiliaria:</translation>
     </message>
     <message>
-        <location line="+67"/>
         <source>Info Label Background:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Sfondo di etichetta informazioni:</translation>
+        <translation type="vanished">Sfondo di etichetta informazioni:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Info Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Testo di etichetta informazioni:</translation>
+        <translation type="vanished">Testo di etichetta informazioni:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Measurement Tools:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Strumenti di misurazione:</translation>
+        <translation type="vanished">Strumenti di misurazione:</translation>
     </message>
 </context>
 </TS>

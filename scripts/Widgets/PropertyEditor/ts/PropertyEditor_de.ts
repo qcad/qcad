@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -26,7 +26,7 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+190"/>
+        <location filename="../PropertyEditor.js" line="+186"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
@@ -36,12 +36,12 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+147"/>
         <source>No Selection</source>
         <translation>Keine Selektion</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Geometry</source>
         <translation>Geometrie</translation>
     </message>
@@ -51,7 +51,7 @@
         <translation>Abhängige Objekte</translation>
     </message>
     <message>
-        <location line="+165"/>
+        <location line="+170"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -66,7 +66,7 @@
         <translation>Alle</translation>
     </message>
     <message>
-        <location line="+606"/>
+        <location line="+610"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -103,7 +103,7 @@
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-585"/>
+        <location line="-589"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -140,8 +140,8 @@
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+295"/>
-        <location line="+32"/>
+        <location line="+299"/>
+        <location line="+35"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Eigenschaften Editor</translation>
@@ -157,9 +157,14 @@
         <translation>Allgemein</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+93"/>
         <source>Handle:</source>
         <translation>Handle:</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Linetype Scale:</source>
+        <translation>Linientypskalierung:</translation>
     </message>
     <message>
         <source>Layer:</source>
@@ -182,12 +187,12 @@
         <translation type="obsolete">Reihenfolge:</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-97"/>
         <source>Move Selection to a New Layer</source>
         <translation>Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-888"/>
+        <location filename="../PropertyEditor.js" line="-900"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

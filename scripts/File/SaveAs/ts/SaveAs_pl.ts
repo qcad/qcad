@@ -43,7 +43,7 @@ Zachowaj jako &amp;szablon...</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+55"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

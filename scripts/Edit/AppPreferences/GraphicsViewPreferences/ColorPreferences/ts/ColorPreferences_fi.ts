@@ -17,89 +17,163 @@
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+35"/>
+        <location filename="../PreferencesPage.ui" line="+32"/>
+        <source>Graphics View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>Background:</source>
         <translation>Tausta:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <source>Cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Crosshairs:</source>
         <translation>Ristikko:</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Inactive Crosshairs:</source>
+        <location line="+36"/>
+        <source>Inactive crosshairs:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <source>Origin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Relative zero:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Grid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Meta grid:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Primary selection color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Use secondary selection color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Secondary selection color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Draggable reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Selection box border:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Selection box fill:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Cross-selection box fill:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Snap Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Snap label:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Info Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Measurements and labels:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Drawing Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Auxiliary shapes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Zoom Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Zoom box border:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-538"/>
         <source>Origin:</source>
         <translation>Nollakohta:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Relative Zero:</source>
-        <translation>Relatiivinen Nolla:</translation>
+        <translation type="vanished">Relatiivinen Nolla:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Reference Point:</source>
-        <translation>Referenssipiste:</translation>
+        <translation type="vanished">Referenssipiste:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+81"/>
         <source>Grid:</source>
         <translation>Ruudukko:</translation>
     </message>
     <message>
-        <location line="+30"/>
-        <source>Meta Grid:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
         <source>Zoom Box:</source>
-        <translation>Suurennuslaatikko:</translation>
+        <translation type="vanished">Suurennuslaatikko:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection:</source>
-        <translation>Valinta:</translation>
+        <translation type="vanished">Valinta:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection Box Border:</source>
-        <translation>Valintalaatikon Raja:</translation>
+        <translation type="vanished">Valintalaatikon Raja:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection Box:</source>
-        <translation>Valintalaatikko:</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Cross Selection Box:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Auxiliary Shapes:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+67"/>
-        <source>Info Label Background:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Info Label Font:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Measurement Tools:</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Valintalaatikko:</translation>
     </message>
 </context>
 </TS>

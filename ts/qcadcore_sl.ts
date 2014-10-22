@@ -210,7 +210,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+77"/>
         <source>Block</source>
         <translation>Element</translation>
     </message>
@@ -218,7 +218,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+61"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -259,7 +259,7 @@
         <translation>Kot</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+48"/>
+        <location filename="../src/core/REntity.cpp" line="+49"/>
         <source>Type</source>
         <translation>Tip</translation>
     </message>
@@ -277,6 +277,11 @@
         <location line="+1"/>
         <source>Linetype</source>
         <translation>Tip črte</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linetype Scale</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -348,7 +353,7 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+48"/>
+        <location filename="../src/core/RLayer.cpp" line="+52"/>
         <source>Name</source>
         <translation>Ime</translation>
     </message>
@@ -381,109 +386,98 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+47"/>
         <source>By Layer</source>
-        <translation>Po plasti</translation>
+        <translation type="vanished">Po plasti</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>By Block</source>
-        <translation>Po elementu</translation>
+        <translation type="vanished">Po elementu</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Continuous</source>
-        <translation>Neprekinjeno</translation>
+        <translation type="vanished">Neprekinjeno</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot</source>
-        <translation>Pika</translation>
+        <translation type="vanished">Pika</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot (small)</source>
-        <translation>Pika (majhna)</translation>
+        <translation type="vanished">Pika (majhna)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot (large)</source>
-        <translation>Pika (velika)</translation>
+        <translation type="vanished">Pika (velika)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash</source>
-        <translation>Črtica</translation>
+        <translation type="vanished">Črtica</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash (small)</source>
-        <translation>Črtica (majhna)</translation>
+        <translation type="vanished">Črtica (majhna)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash (large)</source>
-        <translation>Črtica (velika)</translation>
+        <translation type="vanished">Črtica (velika)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot</source>
-        <translation>Črtica Pika</translation>
+        <translation type="vanished">Črtica Pika</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot (small)</source>
-        <translation>Črtica Pika (majhna)</translation>
+        <translation type="vanished">Črtica Pika (majhna)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot (large)</source>
-        <translation>Črtica Pika (velika)</translation>
+        <translation type="vanished">Črtica Pika (velika)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide</source>
-        <translation>Delilna</translation>
+        <translation type="vanished">Delilna</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide (small)</source>
-        <translation>Delilna (majhna)</translation>
+        <translation type="vanished">Delilna (majhna)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide (large)</source>
-        <translation>Delilna (velika)</translation>
+        <translation type="vanished">Delilna (velika)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
-        <translation>Srednjica</translation>
+        <translation type="vanished">Srednjica</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center (small)</source>
-        <translation>Srednjica (majhna)</translation>
+        <translation type="vanished">Srednjica (majhna)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center (large)</source>
-        <translation>Srednjica (velika)</translation>
+        <translation type="vanished">Srednjica (velika)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border</source>
-        <translation>Rob</translation>
+        <translation type="vanished">Rob</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border (small)</source>
-        <translation>Rob (majhna)</translation>
+        <translation type="vanished">Rob (majhna)</translation>
+    </message>
+    <message>
+        <source>Border (large)</source>
+        <translation type="vanished">Rob (velika)</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLinetype.cpp" line="+86"/>
+        <source>Name</source>
+        <translation type="unfinished">Ime</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Border (large)</source>
-        <translation>Rob (velika)</translation>
+        <source>Description</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -627,7 +621,7 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+35"/>
+        <location filename="../src/core/RObject.cpp" line="+36"/>
         <source>Custom</source>
         <translation>Po meri</translation>
     </message>
@@ -635,6 +629,11 @@
         <location line="+1"/>
         <source>Handle</source>
         <translation>Identifikator</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

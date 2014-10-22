@@ -34,7 +34,7 @@
         <translation>Ni bil najden noben filter. Prekinjam...</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+55"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>

@@ -338,7 +338,7 @@
           </size>
          </property>
          <property name="text">
-          <string>First selection color:</string>
+          <string>Primary selection color:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -366,9 +366,9 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QCheckBox" name="s">
+        <widget class="QCheckBox" name="UseSecondarySelectionColor">
          <property name="text">
-          <string>Use second selection color</string>
+          <string>Use secondary selection color</string>
          </property>
         </widget>
        </item>
@@ -376,7 +376,7 @@
         <widget class="QWidget" name="widget" native="true"/>
        </item>
        <item row="2" column="0">
-        <widget class="QLabel" name="SecondSelectionColorLabel">
+        <widget class="QLabel" name="SecondarySelectionColorLabel">
          <property name="minimumSize">
           <size>
            <width>250</width>
@@ -384,7 +384,7 @@
           </size>
          </property>
          <property name="text">
-          <string>Second selection color:</string>
+          <string>Secondary selection color:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -392,7 +392,7 @@
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="RColorCombo" name="SecondSelectionColor">
+        <widget class="RColorCombo" name="SecondarySelectionColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
          </property>
@@ -767,9 +767,9 @@
  <resources/>
  <connections>
   <connection>
-   <sender>s</sender>
+   <sender>UseSecondarySelectionColor</sender>
    <signal>toggled(bool)</signal>
-   <receiver>SecondSelectionColorLabel</receiver>
+   <receiver>SecondarySelectionColorLabel</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -783,9 +783,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>s</sender>
+   <sender>UseSecondarySelectionColor</sender>
    <signal>toggled(bool)</signal>
-   <receiver>SecondSelectionColor</receiver>
+   <receiver>SecondarySelectionColor</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">

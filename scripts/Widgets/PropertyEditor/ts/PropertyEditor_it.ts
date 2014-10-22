@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -27,12 +27,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+348"/>
+        <location filename="../PropertyEditor.js" line="+355"/>
         <source>Geometry</source>
         <translation>Geometria</translation>
     </message>
     <message>
-        <location line="+290"/>
+        <location line="+295"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
@@ -61,7 +61,7 @@
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-448"/>
+        <location line="-464"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -76,7 +76,7 @@ Versione:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+147"/>
         <source>No Selection</source>
         <translatorcomment>--ignored case--
 --file: photivo_it.ts--
@@ -84,7 +84,7 @@ Nessuna selezione</translatorcomment>
         <translation>Nessuna selezione</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Dependent Entities</source>
         <translation>Entità dipendenti</translation>
     </message>
@@ -94,7 +94,7 @@ Nessuna selezione</translatorcomment>
         <translation>Personalizzato</translation>
     </message>
     <message>
-        <location line="+148"/>
+        <location line="+153"/>
         <source>Index</source>
         <translation>Indice</translation>
     </message>
@@ -109,7 +109,7 @@ Nessuna selezione</translatorcomment>
         <translation>Tutto</translation>
     </message>
     <message>
-        <location line="+606"/>
+        <location line="+610"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -139,7 +139,7 @@ Specifica la base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-449"/>
+        <location line="-453"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -160,8 +160,8 @@ Specifica la base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+295"/>
-        <location line="+32"/>
+        <location line="+299"/>
+        <location line="+35"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Editor delle proprietà</translation>
@@ -179,13 +179,18 @@ Specifica la base</translatorcomment>
         <translation>Generale</translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+103"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Sposta la selezione ad un nuovo layer</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+97"/>
+        <source>Linetype Scale:</source>
+        <translation>Scala del tipo di linea:</translation>
+    </message>
+    <message>
+        <location line="-107"/>
         <source>Handle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Maniglia:</translation>

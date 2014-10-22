@@ -34,7 +34,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+55"/>
         <source>Format:</source>
         <translation type="unfinished"></translation>
     </message>

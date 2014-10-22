@@ -25,7 +25,7 @@
     </message>
     <message>
         <location line="+6"/>
-        <source>Shortcut Prefix Character: </source>
+        <source>Shortcut Prefix Character:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

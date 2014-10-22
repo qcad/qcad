@@ -341,10 +341,10 @@ Cinza Claro</translatorcomment>
         <translation type="obsolete">Bloco referenciado</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+76"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+78"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+61"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -409,7 +409,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Ângulo</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+48"/>
+        <location filename="../src/core/REntity.cpp" line="+49"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -446,6 +446,11 @@ Lista de Camadas</translatorcomment>
         <source>Linetype</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Tipo de linha</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linetype Scale</source>
+        <translation>Escala de tipo de linha</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -524,7 +529,7 @@ Abre diálogo de cores</translatorcomment>
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+48"/>
+        <location filename="../src/core/RLayer.cpp" line="+52"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
@@ -557,181 +562,170 @@ Abre diálogo de cores</translatorcomment>
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+47"/>
         <source>By Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Pela Camada</translatorcomment>
-        <translation>Pela Camada</translation>
+        <translation type="vanished">Pela Camada</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Pelo Carimbo</translatorcomment>
-        <translation>Pelo bloco</translation>
+        <translation type="vanished">Pelo bloco</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Continuous</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Contínuo</translatorcomment>
-        <translation>Contínuo</translation>
+        <translation type="vanished">Contínuo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Pontos de &amp;grade:
 Pontilhado</translatorcomment>
-        <translation>Pontilhado</translation>
+        <translation type="vanished">Pontilhado</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Pontilhado (pequeno)
 Traço Ponto (pequeno)</translatorcomment>
-        <translation>Pontilhado (pequeno)</translation>
+        <translation type="vanished">Pontilhado (pequeno)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Pontilhado (grande)
 Traço Ponto (grande)</translatorcomment>
-        <translation>Pontilhado (grande)</translation>
+        <translation type="vanished">Pontilhado (grande)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Tracejado
 Tracejado (pequeno)</translatorcomment>
-        <translation>Tracejado</translation>
+        <translation type="vanished">Tracejado</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Tracejado (pequeno)</translatorcomment>
-        <translation>Tracejado (pequeno)</translation>
+        <translation type="vanished">Tracejado (pequeno)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Tracejado (grande)</translatorcomment>
-        <translation>Tracejado (grande)</translation>
+        <translation type="vanished">Tracejado (grande)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Traço Ponto
 Traço Ponto (pequeno)</translatorcomment>
-        <translation>Traço Ponto</translation>
+        <translation type="vanished">Traço Ponto</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Traço Ponto (pequeno)</translatorcomment>
-        <translation>Traço Ponto (pequeno)</translation>
+        <translation type="vanished">Traço Ponto (pequeno)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Traço Ponto (grande)</translatorcomment>
-        <translation>Traço Ponto (grande)</translation>
+        <translation type="vanished">Traço Ponto (grande)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 &amp;Divida
 Separação</translatorcomment>
-        <translation>Separação</translation>
+        <translation type="vanished">Separação</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Separação (pequeno)</translatorcomment>
-        <translation>Separação (pequeno)</translation>
+        <translation type="vanished">Separação (pequeno)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Separação (grande)</translatorcomment>
-        <translation>Separação (grande)</translation>
+        <translation type="vanished">Separação (grande)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 &amp;Centro, Ponto, Ângulos
 Arco com Centro, Ponto, Ângulos</translatorcomment>
-        <translation>Centro</translation>
+        <translation type="vanished">Centro</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Centro (pequeno)</translatorcomment>
-        <translation>Centro (pequeno)</translation>
+        <translation type="vanished">Centro (pequeno)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Centro (grande)</translatorcomment>
-        <translation>Centro (grande)</translation>
+        <translation type="vanished">Centro (grande)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Limite
 Borda
 Borda (pequeno)</translatorcomment>
-        <translation>Limite</translation>
+        <translation type="vanished">Limite</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Borda (pequeno)</translatorcomment>
-        <translation>Borda (pequeno)</translation>
+        <translation type="vanished">Borda (pequeno)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Borda (grande)</translatorcomment>
-        <translation>Borda (grande)</translation>
+        <translation type="vanished">Borda (grande)</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLinetype.cpp" line="+86"/>
+        <source>Name</source>
+        <translation>Nome</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Description</source>
+        <translation>Descrição</translation>
     </message>
 </context>
 <context>
@@ -957,7 +951,7 @@ Unidade Padrão:
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+35"/>
+        <location filename="../src/core/RObject.cpp" line="+36"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -974,6 +968,11 @@ Configurar...</translatorcomment>
 Desenhar Alças
 Mover manualmente</translatorcomment>
         <translation>Ângulo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation>Protegida</translation>
     </message>
 </context>
 </TS>

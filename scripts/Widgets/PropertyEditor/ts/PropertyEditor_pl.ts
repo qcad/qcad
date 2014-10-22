@@ -35,7 +35,7 @@ Typ linii:
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+190"/>
+        <location filename="../PropertyEditor.js" line="+186"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">* Różni *</translation>
@@ -50,13 +50,13 @@ Wersja: </translatorcomment>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+147"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">No Selection</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Geometry</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -80,7 +80,7 @@ Własne filtry</translatorcomment>
         <translation type="unfinished">Niestandardowy</translation>
     </message>
     <message>
-        <location line="+148"/>
+        <location line="+153"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -105,7 +105,7 @@ Czy chcesz zamknąć plik
         <translation type="unfinished">Wszystkie</translation>
     </message>
     <message>
-        <location line="+606"/>
+        <location line="+610"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -115,7 +115,7 @@ Czy chcesz zamknąć plik
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="-585"/>
+        <location line="-589"/>
         <source>Add custom property to selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -228,8 +228,8 @@ Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
         <translation type="unfinished">Nie</translation>
     </message>
     <message>
-        <location line="+295"/>
-        <location line="+32"/>
+        <location line="+299"/>
+        <location line="+35"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--
@@ -255,13 +255,18 @@ General Punctuation</translatorcomment>
         <translation type="unfinished">Ogólny</translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+103"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przenieś zaznaczenie do nowej warstwy</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+97"/>
+        <source>Linetype Scale:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-107"/>
         <source>Handle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Uchwyt:</translation>

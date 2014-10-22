@@ -64,7 +64,7 @@
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+94"/>
         <source>Untitled %1</source>
         <translation>Senza titolo %1</translation>
     </message>

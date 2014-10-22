@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>DimAligned</name>
     <message>
         <location filename="../DimAligned.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Első segédvonal kezdőpontja</translation>
     </message>
     <message>
         <location line="+9"/>

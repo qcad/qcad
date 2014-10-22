@@ -28,14 +28,132 @@
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+261"/>
         <source>Selection:</source>
-        <translation>Auswahl:</translation>
+        <translation type="vanished">Auswahl:</translation>
     </message>
     <message>
-        <location line="-226"/>
+        <location filename="../PreferencesPage.ui" line="+32"/>
+        <source>Graphics View</source>
+        <translation>Grafikansicht</translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>Background:</source>
         <translation>Hintergrund:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Cursor</source>
+        <translation>Zeiger</translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Inactive crosshairs:</source>
+        <translation>Inaktives Fadenkreuz:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Origin</source>
+        <translation>Ursprung</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Relative zero:</source>
+        <translation>Relativer Nullpunkt:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Grid</source>
+        <translation>Raster</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Meta grid:</source>
+        <translation>Meta Raster:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Selection</source>
+        <translation>Selektion</translation>
+    </message>
+    <message>
+        <source>First selection color:</source>
+        <translation type="vanished">Erste Farbe für Selektion:</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Primary selection color:</source>
+        <translation>Primäre Farbe für Selektion:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Use secondary selection color</source>
+        <translation>Sekundäre Farbe für Selektion verwenden</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Secondary selection color:</source>
+        <translation>Sekundäre Farbe für Selektion:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Draggable reference points:</source>
+        <translation>Referenzpunkte:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Selection box border:</source>
+        <translation>Auswahlbox (Rand):</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Selection box fill:</source>
+        <translation>Auswahlbox:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Cross-selection box fill:</source>
+        <translation>Kreuzende Auswahlbox:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Snap Tools</source>
+        <translation>Fangwerkzeuge</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Snap label:</source>
+        <translation>Fang Hinweis:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Info Tools</source>
+        <translation>Infowerkzeuge</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Measurements and labels:</source>
+        <translation>Masse und Beschriftung:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Drawing Tools</source>
+        <translation>Zeichnungswerkzeuge</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Auxiliary shapes:</source>
+        <translation>Hilfsobjekte:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Zoom Tools</source>
+        <translation>Zoomwerkzeuge</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Zoom box border:</source>
+        <translation>Auswahlbox (Rand):</translation>
     </message>
     <message>
         <source>Crosshair:</source>
@@ -54,79 +172,67 @@
         <translation type="obsolete">Inaktives Fadenkreuz:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="-619"/>
         <source>Crosshairs:</source>
         <translation>Fadenkreuz:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Inactive Crosshairs:</source>
-        <translation>Inaktives Fadenkreuz:</translation>
+        <translation type="vanished">Inaktives Fadenkreuz:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+81"/>
         <source>Origin:</source>
         <translation>Nullpunkt:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Relative Zero:</source>
-        <translation>Relativer Nullpunkt:</translation>
+        <translation type="vanished">Relativer Nullpunkt:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Reference Point:</source>
-        <translation>Referenzpunkt:</translation>
+        <translation type="vanished">Referenzpunkt:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+81"/>
         <source>Grid:</source>
         <translation>Raster:</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Meta Grid:</source>
-        <translation>Meta Raster:</translation>
+        <translation type="vanished">Meta Raster:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Zoom Box:</source>
-        <translation>Zoombox:</translation>
+        <translation type="vanished">Zoombox:</translation>
     </message>
     <message>
-        <location line="+54"/>
         <source>Selection Box Border:</source>
-        <translation>Auswahlbox (Rand):</translation>
+        <translation type="vanished">Auswahlbox (Rand):</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection Box:</source>
-        <translation>Auswahlbox:</translation>
+        <translation type="vanished">Auswahlbox:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Cross Selection Box:</source>
-        <translation>Kreuzende Auswahlbox:</translation>
+        <translation type="vanished">Kreuzende Auswahlbox:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Auxiliary Shapes:</source>
-        <translation>Hilfsobjekte:</translation>
+        <translation type="vanished">Hilfsobjekte:</translation>
     </message>
     <message>
-        <location line="+67"/>
         <source>Info Label Background:</source>
-        <translation>Hintergrund Info Beschriftung:</translation>
+        <translation type="vanished">Hintergrund Info Beschriftung:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Info Label Font:</source>
-        <translation>Schrift Info Beschriftung:</translation>
+        <translation type="vanished">Schrift Info Beschriftung:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Measurement Tools:</source>
-        <translation>Messwerkzeuge:</translation>
+        <translation type="vanished">Messwerkzeuge:</translation>
     </message>
 </context>
 </TS>

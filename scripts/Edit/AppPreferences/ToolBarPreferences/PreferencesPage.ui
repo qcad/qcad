@@ -119,7 +119,7 @@
       <item>
        <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>Shortcut Prefix Character: </string>
+         <string>Shortcut Prefix Character:</string>
         </property>
        </widget>
       </item>
@@ -141,7 +141,7 @@
          <bool>false</bool>
         </property>
         <property name="inputMask">
-         <string notr="true">X; </string>
+         <string notr="true">X</string>
         </property>
         <property name="text">
          <string notr="true">,</string>

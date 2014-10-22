@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>ToolBar</name>
     <message>
@@ -25,8 +25,12 @@
     </message>
     <message>
         <location line="+6"/>
+        <source>Shortcut Prefix Character:</source>
+        <translation>Tastenkürzel Präfixzeichen:</translation>
+    </message>
+    <message>
         <source>Shortcut Prefix Character: </source>
-        <translation>Tastenkürzel Präfix Zeichen:</translation>
+        <translation>Tastenkürzel Präfixzeichen:</translation>
     </message>
 </context>
 <context>

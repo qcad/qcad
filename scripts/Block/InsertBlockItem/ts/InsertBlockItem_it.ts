@@ -66,7 +66,7 @@
         <translation>Sovrascrivere i blocchi</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="+87"/>
+        <location filename="../InsertBlockItem.js" line="+88"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Rettificato nome non valido blocco &apos;%1&apos;</translation>
     </message>

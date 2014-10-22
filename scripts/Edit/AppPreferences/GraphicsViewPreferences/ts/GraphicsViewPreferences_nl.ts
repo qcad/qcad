@@ -5,6 +5,16 @@
     <name>GraphicsView</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
+        <source>Origin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Show large origin axis</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Rulers and Scrollbars</source>
         <translation type="unfinished"></translation>
     </message>
@@ -65,21 +75,26 @@
     </message>
     <message>
         <location line="+9"/>
+        <source>Auto switch to screen based linetypes in model view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Scale linetype patterns by line weight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="-36"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Auto switch linetypes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+72"/>
         <source>Performance</source>
         <translation type="unfinished"></translation>
     </message>

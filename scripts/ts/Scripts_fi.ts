@@ -4,7 +4,7 @@
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../DefaultAction.js" line="+86"/>
+        <location filename="../DefaultAction.js" line="+89"/>
         <source>Select entity or region</source>
         <translation type="unfinished"></translation>
     </message>
@@ -78,7 +78,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+567"/>
+        <location line="+604"/>
         <source>Entity is on a locked layer.</source>
         <translation type="unfinished"></translation>
     </message>

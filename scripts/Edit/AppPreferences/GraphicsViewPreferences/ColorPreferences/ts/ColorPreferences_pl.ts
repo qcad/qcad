@@ -22,7 +22,12 @@ Kolory
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+35"/>
+        <location filename="../PreferencesPage.ui" line="+32"/>
+        <source>Graphics View</source>
+        <translation type="unfinished">Graphics View</translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>Background:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -32,37 +37,144 @@ Tło okna:</translatorcomment>
         <translation type="unfinished">Tło:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <source>Cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Crosshairs:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Krzyżyk:</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Inactive Crosshairs:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nieaktywne Krzyżyk:</translation>
+        <location line="+36"/>
+        <source>Inactive crosshairs:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <source>Origin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Relative zero:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Grid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Meta grid:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Primary selection color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Use secondary selection color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Secondary selection color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Draggable reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Selection box border:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Selection box fill:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Cross-selection box fill:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Snap Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Snap label:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Info Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Measurements and labels:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Drawing Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Auxiliary shapes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Zoom Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Zoom box border:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inactive Crosshairs:</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Nieaktywne Krzyżyk:</translation>
+    </message>
+    <message>
+        <location line="-538"/>
         <source>Origin:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pochodzenie:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Relative Zero:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Względna Zero:</translation>
+        <translation type="obsolete">Względna Zero:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Reference Point:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Punkt odniesienia:</translation>
+        <translation type="obsolete">Punkt odniesienia:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+81"/>
         <source>Grid:</source>
         <translatorcomment>--ignored colon--
 --file: designer_pl.ts--
@@ -71,67 +183,57 @@ Meta-siatka:</translatorcomment>
         <translation type="unfinished">Siatka:</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Meta Grid:</source>
         <translatorcomment>--google--
 &amp;Meta-siatka:
 Meta-siatka:</translatorcomment>
-        <translation type="unfinished">Siatka Meta:</translation>
+        <translation type="obsolete">Siatka Meta:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Zoom Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Box Zoom:</translation>
+        <translation type="obsolete">Box Zoom:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--</translatorcomment>
-        <translation type="unfinished">Wybrane strony:</translation>
+        <translation type="obsolete">Wybrane strony:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection Box Border:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Border Box Selection:</translation>
+        <translation type="obsolete">Border Box Selection:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Box Selection:</translation>
+        <translation type="obsolete">Box Selection:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Cross Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Krzyż pole wyboru:</translation>
+        <translation type="obsolete">Krzyż pole wyboru:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Auxiliary Shapes:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pomocnicze Kształty:</translation>
+        <translation type="obsolete">Pomocnicze Kształty:</translation>
     </message>
     <message>
-        <location line="+67"/>
         <source>Info Label Background:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Tło Label Info:</translation>
+        <translation type="obsolete">Tło Label Info:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Info Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Font Label Info:</translation>
+        <translation type="obsolete">Font Label Info:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Measurement Tools:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narzędzia pomiarowe:</translation>
+        <translation type="obsolete">Narzędzia pomiarowe:</translation>
     </message>
 </context>
 </TS>

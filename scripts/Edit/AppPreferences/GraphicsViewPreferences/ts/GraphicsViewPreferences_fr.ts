@@ -4,7 +4,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+51"/>
         <source>Rulers and Scrollbars</source>
         <translation>Règles et barres de défilement</translation>
     </message>
@@ -54,7 +54,17 @@
         <translation type="obsolete">Échelle de la meta grille automatiquement</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-64"/>
+        <source>Origin</source>
+        <translation>Origine</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Show large origin axis</source>
+        <translation>Montrer réticule grande</translation>
+    </message>
+    <message>
+        <location line="+71"/>
         <source>Auto Zoom</source>
         <translation>Zoom automatique</translation>
     </message>
@@ -85,21 +95,30 @@
     </message>
     <message>
         <location line="+9"/>
+        <source>Auto switch to screen based linetypes in model view</source>
+        <translation>Utiliser automatiquement les types de lignes sur écran en vue du modèle</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Scale linetype patterns by line weight</source>
+        <translation>Escaladez les motifs de ligne basés sur l&apos;épaisseur de ligne</translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Échelle du motif de l&apos;épaisseur de ligne 0.00mm:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="-36"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Utiliser automatiquement les types de lignes sur écran en vue du modèle</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Auto switch linetypes</source>
-        <translation>Ajuster automatiquement les types de ligne</translation>
+        <translation type="vanished">Ajuster automatiquement les types de ligne</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+72"/>
         <source>Performance</source>
         <translation>Performance</translation>
     </message>

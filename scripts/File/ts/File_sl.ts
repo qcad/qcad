@@ -4,7 +4,17 @@
 <context>
     <name>File</name>
     <message>
-        <location filename="../File.js" line="+53"/>
+        <location filename="../File.js" line="+70"/>
+        <source>File Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show file tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>&amp;File</source>
         <translation>&amp;Datoteka</translation>
     </message>

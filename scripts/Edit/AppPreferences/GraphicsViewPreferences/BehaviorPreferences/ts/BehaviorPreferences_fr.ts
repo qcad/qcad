@@ -31,5 +31,30 @@
         <source>Double-click on block reference opens block</source>
         <translation>Double-cliquez sur une référence de bloc pour ouvrir le bloc</translation>
     </message>
+    <message>
+        <location line="+13"/>
+        <source>Right-Click</source>
+        <translation>Clic-droit</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Right-click to deselect entities</source>
+        <translation>Clic-droit pour désélectionner des entités</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Cursor Range</source>
+        <translation>Gamme de curseur de souris</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Cursor range for snap:</source>
+        <translation>Gamme de curseur de souris pour accrochage :</translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Cursor range for picking entities:</source>
+        <translation>Gamme de curseur pour capter des entités :</translation>
+    </message>
 </context>
 </TS>

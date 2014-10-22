@@ -4,12 +4,12 @@
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../LayerList.js" line="+219"/>
+        <location filename="../LayerList.js" line="+222"/>
         <source>&amp;Layer List</source>
         <translation>Lista &amp;layer</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+55"/>
         <source>Layer List</source>
         <translation>Lista layer</translation>
     </message>

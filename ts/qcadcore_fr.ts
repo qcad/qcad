@@ -326,7 +326,7 @@ Autres...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+77"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_fr.ts--
@@ -343,7 +343,7 @@ Liste des blocs</translatorcomment>
     <message>
         <location line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+61"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -414,7 +414,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Angle</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+48"/>
+        <location filename="../src/core/REntity.cpp" line="+49"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -445,6 +445,11 @@ Liste des calques</translatorcomment>
 Type de ligne par défaut
 Type de ligne</translatorcomment>
         <translation>Type de ligne</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linetype Scale</source>
+        <translation>Échelle du type de ligne</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -523,7 +528,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+48"/>
+        <location filename="../src/core/RLayer.cpp" line="+52"/>
         <source>Name</source>
         <translation>Nom</translation>
     </message>
@@ -556,183 +561,172 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+47"/>
         <source>By Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Par calque</translatorcomment>
-        <translation>Par calque</translation>
+        <translation type="vanished">Par calque</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Par bloc</translatorcomment>
-        <translation>Par bloc</translation>
+        <translation type="vanished">Par bloc</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Continuous</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Continu</translatorcomment>
-        <translation>Continu</translation>
+        <translation type="vanished">Continu</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot</source>
         <translatorcomment>--exact match--
 --file: Input_fr.ts--
 Points de la g&amp;rille :
 Points de la g&amp;rille
 Points de la grille :</translatorcomment>
-        <translation>Point</translation>
+        <translation type="vanished">Point</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Point (petit)
 Tiret-point (petit)</translatorcomment>
-        <translation>Point (petit)</translation>
+        <translation type="vanished">Point (petit)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Point (grand)
 Tiret-point (grand)</translatorcomment>
-        <translation>Point (grand)</translation>
+        <translation type="vanished">Point (grand)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Tiret
 Tiret (petit)</translatorcomment>
-        <translation>Tiret</translation>
+        <translation type="vanished">Tiret</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Tiret (petit)</translatorcomment>
-        <translation>Tiret (petit)</translation>
+        <translation type="vanished">Tiret (petit)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Tiret (grand)</translatorcomment>
-        <translation>Tiret (grand)</translation>
+        <translation type="vanished">Tiret (grand)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Tiret-point
 Tiret-point (petit)</translatorcomment>
-        <translation>Tiret-point</translation>
+        <translation type="vanished">Tiret-point</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Tiret-point (petit)</translatorcomment>
-        <translation>Tiret-point (petit)</translation>
+        <translation type="vanished">Tiret-point (petit)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Tiret-point (grand)</translatorcomment>
-        <translation>Tiret-point (grand)</translation>
+        <translation type="vanished">Tiret-point (grand)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide</source>
         <translatorcomment>--exact match--
 --file: Divide_fr.ts--
 &amp;Division
 Division
 Divise les entités</translatorcomment>
-        <translation>Division</translation>
+        <translation type="vanished">Division</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Division (petite)</translatorcomment>
-        <translation>Division (petite)</translation>
+        <translation type="vanished">Division (petite)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Division (grande)</translatorcomment>
-        <translation>Division (grande)</translation>
+        <translation type="vanished">Division (grande)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
 &amp;Centre, point, angles
 Centre, point, angles
 Indiquer le centre</translatorcomment>
-        <translation>Centré</translation>
+        <translation type="vanished">Centré</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Centre (petit)</translatorcomment>
-        <translation>Centre (petit)</translation>
+        <translation type="vanished">Centre (petit)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Centre (grand)</translatorcomment>
-        <translation>Centre (grand)</translation>
+        <translation type="vanished">Centre (grand)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Bordure
 Bordure (petite)</translatorcomment>
-        <translation>Bordure</translation>
+        <translation type="vanished">Bordure</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Bordure (petite)</translatorcomment>
-        <translation>Bordure (petite)</translation>
+        <translation type="vanished">Bordure (petite)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Bordure (grande)</translatorcomment>
-        <translation>Bordure (grande)</translation>
+        <translation type="vanished">Bordure (grande)</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLinetype.cpp" line="+86"/>
+        <source>Name</source>
+        <translation>Nom</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Description</source>
+        <translation>Description</translation>
     </message>
 </context>
 <context>
@@ -959,7 +953,7 @@ Valeurs par &amp;défaut</translatorcomment>
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+35"/>
+        <location filename="../src/core/RObject.cpp" line="+36"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -975,6 +969,11 @@ Personnalisé</translatorcomment>
 Séquence ambiguë %1 non traitée
 Poignée du slider</translatorcomment>
         <translation>Poignée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation>Protégé</translation>
     </message>
 </context>
 </TS>

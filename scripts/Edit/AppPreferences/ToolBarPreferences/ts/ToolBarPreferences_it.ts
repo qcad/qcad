@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>ToolBar</name>
     <message>
@@ -21,12 +21,12 @@
     <message>
         <location line="+22"/>
         <source>Options Toolbar</source>
-        <translation>Barre degli strumenti</translation>
+        <translation>Opzioni barra degli strumenti</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Shortcut Prefix Character: </source>
-        <translation>Scorciatoia prefisso carattere:</translation>
+        <source>Shortcut Prefix Character:</source>
+        <translation>Tasto di scelta rapida prefisso:</translation>
     </message>
 </context>
 <context>

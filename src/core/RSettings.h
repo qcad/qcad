@@ -154,7 +154,7 @@ public:
     static bool isXDataEnabled();
 
     static bool getAutoScaleLinetypePatterns();
-    static bool getUseSecondSelectionColor();
+    static bool getUseSecondarySelectionColor();
     static bool getUseSolidLineSelection();
 
 private:
@@ -181,7 +181,7 @@ private:
     static int limitZoomAndScroll;
     static int autoScaleLinetypePattern;
     static int useSolidLineSelection;
-    static int useSecondSelectionColor;
+    static int useSecondarySelectionColor;
     static double arcAngleLengthThreshold;
     static QStringList recentFiles;
     static QLocale* numberLocale;

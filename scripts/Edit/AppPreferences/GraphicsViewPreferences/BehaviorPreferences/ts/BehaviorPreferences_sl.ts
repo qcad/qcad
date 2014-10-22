@@ -31,5 +31,30 @@
         <source>Double-click on block reference opens block</source>
         <translation>Dvoklik na blokovno referenco odpre blok</translation>
     </message>
+    <message>
+        <location line="+13"/>
+        <source>Right-Click</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Right-click to deselect entities</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Cursor Range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Cursor range for snap:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Cursor range for picking entities:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

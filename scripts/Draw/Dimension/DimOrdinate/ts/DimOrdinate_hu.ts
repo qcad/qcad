@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>DimOrdinate</name>
     <message>
         <location filename="../DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation type="unfinished"></translation>
+        <translation>Tulajdonság helyzete</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation type="unfinished"></translation>
+        <translation>Mutató végpontja</translation>
     </message>
     <message>
         <location filename="../DimOrdinateInit.js" line="+2"/>

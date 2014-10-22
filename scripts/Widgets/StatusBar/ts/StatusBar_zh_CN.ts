@@ -9,6 +9,26 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Status Bar Widgets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Coordinate display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Mouse display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Selection display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../StatusBar.js" line="+27"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>

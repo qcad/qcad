@@ -53,7 +53,7 @@ int RSettings::concurrentDrawing = -1;
 int RSettings::previewEntities = -1;
 int RSettings::limitZoomAndScroll = -1;
 int RSettings::autoScaleLinetypePattern = -1;
-int RSettings::useSecondSelectionColor = -1;
+int RSettings::useSecondarySelectionColor = -1;
 int RSettings::useSolidLineSelection = -1;
 double RSettings::arcAngleLengthThreshold = -1;
 QStringList RSettings::recentFiles;
@@ -804,11 +804,11 @@ bool RSettings::getAutoScaleLinetypePatterns() {
     return (bool)autoScaleLinetypePattern;
 }
 
-bool RSettings::getUseSecondSelectionColor() {
-    if (useSecondSelectionColor==-1) {
-        useSecondSelectionColor = getValue("GraphicsView/UseSecondSelectionColor", QVariant(false)).toBool();
+bool RSettings::getUseSecondarySelectionColor() {
+    if (useSecondarySelectionColor==-1) {
+        useSecondarySelectionColor = getValue("GraphicsView/UseSecondarySelectionColor", QVariant(false)).toBool();
     }
-    return (bool)useSecondSelectionColor;
+    return (bool)useSecondarySelectionColor;
 }
 
 bool RSettings::getUseSolidLineSelection() {
@@ -844,7 +844,7 @@ void RSettings::resetCache() {
     previewEntities = -1;
     limitZoomAndScroll = -1;
     autoScaleLinetypePattern = -1;
-    useSecondSelectionColor = -1;
+    useSecondarySelectionColor = -1;
     useSolidLineSelection = -1;
     arcAngleLengthThreshold = -1;
     cache.clear();

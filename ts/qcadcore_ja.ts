@@ -214,10 +214,10 @@
         <translation type="obsolete">参照ブロック</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+76"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+78"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+61"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -258,7 +258,7 @@
         <translation>角度</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+48"/>
+        <location filename="../src/core/REntity.cpp" line="+49"/>
         <source>Type</source>
         <translation>タイプ</translation>
     </message>
@@ -282,6 +282,11 @@
         <location line="+1"/>
         <source>Linetype</source>
         <translation>ラインタイプ</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linetype Scale</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -353,7 +358,7 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+48"/>
+        <location filename="../src/core/RLayer.cpp" line="+52"/>
         <source>Name</source>
         <translation>画層名</translation>
     </message>
@@ -386,109 +391,98 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+47"/>
         <source>By Layer</source>
-        <translation>画層による</translation>
+        <translation type="vanished">画層による</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>By Block</source>
-        <translation>ブロックによる</translation>
+        <translation type="vanished">ブロックによる</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Continuous</source>
-        <translation>連続</translation>
+        <translation type="vanished">連続</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot</source>
-        <translation>点</translation>
+        <translation type="vanished">点</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot (small)</source>
-        <translation>点（小）</translation>
+        <translation type="vanished">点（小）</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot (large)</source>
-        <translation>点（大）</translation>
+        <translation type="vanished">点（大）</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash</source>
-        <translation>ダッシュ</translation>
+        <translation type="vanished">ダッシュ</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash (small)</source>
-        <translation>ダッシュ（小）</translation>
+        <translation type="vanished">ダッシュ（小）</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash (large)</source>
-        <translation>ダッシュ（大）</translation>
+        <translation type="vanished">ダッシュ（大）</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot</source>
-        <translation>ダッシュドット</translation>
+        <translation type="vanished">ダッシュドット</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot (small)</source>
-        <translation>ダッシュドット（小）</translation>
+        <translation type="vanished">ダッシュドット（小）</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot (large)</source>
-        <translation>ダッシュドット（大）</translation>
+        <translation type="vanished">ダッシュドット（大）</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide</source>
-        <translation>分割</translation>
+        <translation type="vanished">分割</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide (small)</source>
-        <translation>分割（小）</translation>
+        <translation type="vanished">分割（小）</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide (large)</source>
-        <translation>分割（大）</translation>
+        <translation type="vanished">分割（大）</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
-        <translation>センター</translation>
+        <translation type="vanished">センター</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center (small)</source>
-        <translation>センター（小）</translation>
+        <translation type="vanished">センター（小）</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center (large)</source>
-        <translation>センター（大）</translation>
+        <translation type="vanished">センター（大）</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border</source>
-        <translation>ボーダー</translation>
+        <translation type="vanished">ボーダー</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border (small)</source>
-        <translation>ボーダー（小）</translation>
+        <translation type="vanished">ボーダー（小）</translation>
+    </message>
+    <message>
+        <source>Border (large)</source>
+        <translation type="vanished">ボーダー（大）</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLinetype.cpp" line="+86"/>
+        <source>Name</source>
+        <translation type="unfinished">画層名</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Border (large)</source>
-        <translation>ボーダー（大）</translation>
+        <source>Description</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -632,7 +626,7 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+35"/>
+        <location filename="../src/core/RObject.cpp" line="+36"/>
         <source>Custom</source>
         <translation>カスタム</translation>
     </message>
@@ -640,6 +634,11 @@
         <location line="+1"/>
         <source>Handle</source>
         <translation>ハンドル</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

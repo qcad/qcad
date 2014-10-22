@@ -17,89 +17,191 @@
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+35"/>
+        <location filename="../PreferencesPage.ui" line="+32"/>
+        <source>Graphics View</source>
+        <translation type="unfinished">グラフィックスビュー</translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>Background:</source>
         <translation>背景:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <source>Cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Crosshairs:</source>
         <translation>十字線:</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Inactive Crosshairs:</source>
-        <translation>非アクティブな十字線:</translation>
+        <location line="+36"/>
+        <source>Inactive crosshairs:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <source>Origin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Relative zero:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Grid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Meta grid:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Primary selection color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Use secondary selection color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Secondary selection color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Draggable reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Selection box border:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Selection box fill:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Cross-selection box fill:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Snap Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Snap label:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Info Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Measurements and labels:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Drawing Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Auxiliary shapes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Zoom Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Zoom box border:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inactive Crosshairs:</source>
+        <translation type="vanished">非アクティブな十字線:</translation>
+    </message>
+    <message>
+        <location line="-538"/>
         <source>Origin:</source>
         <translation>原点:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Relative Zero:</source>
-        <translation>相対ゼロ:</translation>
+        <translation type="vanished">相対ゼロ:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Reference Point:</source>
-        <translation>基準点:</translation>
+        <translation type="vanished">基準点:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+81"/>
         <source>Grid:</source>
         <translation>グリッド:</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Meta Grid:</source>
-        <translation>メタグリッド:</translation>
+        <translation type="vanished">メタグリッド:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Zoom Box:</source>
-        <translation>ズームボックス:</translation>
+        <translation type="vanished">ズームボックス:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection:</source>
-        <translation>選択:</translation>
+        <translation type="vanished">選択:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection Box Border:</source>
-        <translation>選択ボックスの境界:</translation>
+        <translation type="vanished">選択ボックスの境界:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection Box:</source>
-        <translation>選択ボックス:</translation>
+        <translation type="vanished">選択ボックス:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Cross Selection Box:</source>
-        <translation>クロスセレクションボックス:</translation>
+        <translation type="vanished">クロスセレクションボックス:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Auxiliary Shapes:</source>
-        <translation>補助輪郭:</translation>
+        <translation type="vanished">補助輪郭:</translation>
     </message>
     <message>
-        <location line="+67"/>
         <source>Info Label Background:</source>
-        <translation>情報ラベル背景:</translation>
+        <translation type="vanished">情報ラベル背景:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Info Label Font:</source>
-        <translation>情報ラベルフォント:</translation>
+        <translation type="vanished">情報ラベルフォント:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Measurement Tools:</source>
-        <translation>計測ツール:</translation>
+        <translation type="vanished">計測ツール:</translation>
     </message>
 </context>
 </TS>

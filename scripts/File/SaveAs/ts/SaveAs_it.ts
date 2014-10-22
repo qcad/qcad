@@ -24,7 +24,7 @@
         <translation>Non sono stati trovati filtri di exportazione. Interruzione...</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+55"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>

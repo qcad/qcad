@@ -4,7 +4,7 @@
 <context>
     <name>InsertBlockItem</name>
     <message>
-        <location filename="../InsertBlockItem.js" line="+87"/>
+        <location filename="../InsertBlockItem.js" line="+88"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>無効なブロック名は&apos;%1&apos;に調整されました</translation>
     </message>

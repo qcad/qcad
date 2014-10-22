@@ -4,7 +4,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+51"/>
         <source>Rulers and Scrollbars</source>
         <translation>Los reglas y las barras de desplazamiento</translation>
     </message>
@@ -54,7 +54,17 @@
         <translation type="obsolete">Escalar rejilla meta automáticamente</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-64"/>
+        <source>Origin</source>
+        <translation>Origen</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Show large origin axis</source>
+        <translation>Mostrar retículo grande</translation>
+    </message>
+    <message>
+        <location line="+71"/>
         <source>Auto Zoom</source>
         <translation>Zoom automático</translation>
     </message>
@@ -85,21 +95,30 @@
     </message>
     <message>
         <location line="+9"/>
+        <source>Auto switch to screen based linetypes in model view</source>
+        <translation>Usar automáticamente los tipos de línea base de la pantalla de visualización del modelo</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Scale linetype patterns by line weight</source>
+        <translation>Escalar los patrones de línea basado en el grosor de línea</translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Escala del patrón de grosor de 0.00mm:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="-36"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Usar automáticamente los tipos de línea base de la pantalla de visualización del modelo</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Auto switch linetypes</source>
-        <translation>Ajusta automáticamente los tipos de línea</translation>
+        <translation type="vanished">Ajusta automáticamente los tipos de línea</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+72"/>
         <source>Performance</source>
         <translation>Rendimiento</translation>
     </message>

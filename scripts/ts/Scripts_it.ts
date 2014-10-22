@@ -4,7 +4,7 @@
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../DefaultAction.js" line="+86"/>
+        <location filename="../DefaultAction.js" line="+89"/>
         <source>Select entity or region</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Selezionare entità o regione</translation>
@@ -86,7 +86,7 @@
         <translation>Strumenti CAD</translation>
     </message>
     <message>
-        <location line="+567"/>
+        <location line="+604"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entità è su un layer bloccato.</translation>

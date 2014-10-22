@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>File</name>
     <message>
-        <location filename="../File.js" line="+53"/>
+        <location filename="../File.js" line="+70"/>
+        <source>File Tools</source>
+        <translation>Outils de fichier</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show file tools</source>
+        <translation>Outils de fichier</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>&amp;File</source>
         <translation>&amp;Fichier</translation>
     </message>

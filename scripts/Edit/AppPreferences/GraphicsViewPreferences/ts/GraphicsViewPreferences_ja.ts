@@ -4,7 +4,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+51"/>
         <source>Rulers and Scrollbars</source>
         <translation>定規及びスクロールバー</translation>
     </message>
@@ -54,7 +54,17 @@
         <translation type="obsolete">自動スケールメタグリッド</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-64"/>
+        <source>Origin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Show large origin axis</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+71"/>
         <source>Auto Zoom</source>
         <translation>オートズーム</translation>
     </message>
@@ -85,21 +95,30 @@
     </message>
     <message>
         <location line="+9"/>
+        <source>Auto switch to screen based linetypes in model view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Scale linetype patterns by line weight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>線の太さのパターン·スケール 0.00mm:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="-36"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Auto switch linetypes</source>
-        <translation>ラインタイプの自動切り替え</translation>
+        <translation type="vanished">ラインタイプの自動切り替え</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+72"/>
         <source>Performance</source>
         <translation>パフォーマンス</translation>
     </message>

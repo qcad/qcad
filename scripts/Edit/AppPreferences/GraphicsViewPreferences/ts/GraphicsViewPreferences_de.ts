@@ -4,7 +4,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+51"/>
         <source>Rulers and Scrollbars</source>
         <translation>Massstäbe und Bildlaufleisten</translation>
     </message>
@@ -54,7 +54,17 @@
         <translation type="obsolete">Metaraster automatisch skalieren</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-64"/>
+        <source>Origin</source>
+        <translation>Ursprung</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Show large origin axis</source>
+        <translation>Grosses Fadenkreuz</translation>
+    </message>
+    <message>
+        <location line="+71"/>
         <source>Auto Zoom</source>
         <translation>Auto Ansicht</translation>
     </message>
@@ -85,21 +95,30 @@
     </message>
     <message>
         <location line="+9"/>
+        <source>Auto switch to screen based linetypes in model view</source>
+        <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Scale linetype patterns by line weight</source>
+        <translation>Linienmuster skalieren basierend auf Linienbreite</translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Linientypskalierung für Linienstärke 0.00mm:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="-36"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Auto switch linetypes</source>
-        <translation>Linientypen automatisch umschalten</translation>
+        <translation type="vanished">Linientypen automatisch umschalten</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+72"/>
         <source>Performance</source>
         <translation>Leistung</translation>
     </message>

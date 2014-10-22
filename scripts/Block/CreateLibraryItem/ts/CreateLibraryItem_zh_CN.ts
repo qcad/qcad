@@ -9,7 +9,7 @@
         <translation>参考点</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+26"/>
         <source>Save library item as...</source>
         <translation>将库中的项目保存为</translation>
     </message>

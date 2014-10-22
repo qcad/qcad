@@ -4,7 +4,7 @@
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../DefaultAction.js" line="+86"/>
+        <location filename="../DefaultAction.js" line="+89"/>
         <source>Select entity or region</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Sélectionnez l&apos;entité ou de la région</translation>
@@ -90,7 +90,7 @@
         <translation>Outils de CAO</translation>
     </message>
     <message>
-        <location line="+567"/>
+        <location line="+604"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entité est sur un calque verrouillé.</translation>

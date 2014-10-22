@@ -4025,7 +4025,7 @@
     // return type 'bool'
     bool cppResult =
         RSettings::
-       getUseSecondSelectionColor();
+       getUseSecondarySelectionColor();
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);

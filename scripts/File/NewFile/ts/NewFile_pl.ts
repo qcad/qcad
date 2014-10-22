@@ -76,7 +76,7 @@ Nie można otworzyć pliku %1! Zostaje on opuszczony</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+94"/>
         <source>Untitled %1</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Untitled</translation>

@@ -214,7 +214,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+77"/>
         <source>Block</source>
         <translation>Block</translation>
     </message>
@@ -225,7 +225,7 @@
     <message>
         <location line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+61"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
         <source>X</source>
         <translation>X</translation>
     </message>
@@ -267,7 +267,7 @@
         <translation>Winkel</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+48"/>
+        <location filename="../src/core/REntity.cpp" line="+49"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
@@ -285,6 +285,11 @@
         <location line="+1"/>
         <source>Linetype</source>
         <translation>Linientyp</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linetype Scale</source>
+        <translation>Linientypskalierung</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -356,7 +361,7 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+48"/>
+        <location filename="../src/core/RLayer.cpp" line="+52"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
@@ -389,109 +394,98 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+47"/>
         <source>By Layer</source>
-        <translation>Von Layer</translation>
+        <translation type="vanished">Von Layer</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>By Block</source>
-        <translation>Von Block</translation>
+        <translation type="vanished">Von Block</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Continuous</source>
-        <translation>Durchgehend</translation>
+        <translation type="vanished">Durchgehend</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot</source>
-        <translation>Gepunktet</translation>
+        <translation type="vanished">Gepunktet</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot (small)</source>
-        <translation>Gepunktet (klein)</translation>
+        <translation type="vanished">Gepunktet (klein)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot (large)</source>
-        <translation>Gepunktet (gross)</translation>
+        <translation type="vanished">Gepunktet (gross)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash</source>
-        <translation>Gestrichelt</translation>
+        <translation type="vanished">Gestrichelt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash (small)</source>
-        <translation>Gestrichelt (klein)</translation>
+        <translation type="vanished">Gestrichelt (klein)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash (large)</source>
-        <translation>Gestrichelt (gross)</translation>
+        <translation type="vanished">Gestrichelt (gross)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot</source>
-        <translation>Strich Punkt</translation>
+        <translation type="vanished">Strich Punkt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot (small)</source>
-        <translation>Strich Punkt (klein)</translation>
+        <translation type="vanished">Strich Punkt (klein)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot (large)</source>
-        <translation>Strich Punkt (gross)</translation>
+        <translation type="vanished">Strich Punkt (gross)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide</source>
-        <translation>Trennen</translation>
+        <translation type="vanished">Trennen</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide (small)</source>
-        <translation>Trennung (klein)</translation>
+        <translation type="vanished">Trennung (klein)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide (large)</source>
-        <translation>Trennung (gross)</translation>
+        <translation type="vanished">Trennung (gross)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
-        <translation>Zentrum</translation>
+        <translation type="vanished">Zentrum</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center (small)</source>
-        <translation>Mittellinie (klein)</translation>
+        <translation type="vanished">Mittellinie (klein)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center (large)</source>
-        <translation>Mittellinie (gross)</translation>
+        <translation type="vanished">Mittellinie (gross)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border</source>
-        <translation>Rahmen</translation>
+        <translation type="vanished">Rahmen</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border (small)</source>
-        <translation>Rahmen (klein)</translation>
+        <translation type="vanished">Rahmen (klein)</translation>
+    </message>
+    <message>
+        <source>Border (large)</source>
+        <translation type="vanished">Rahmen (gross)</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLinetype.cpp" line="+86"/>
+        <source>Name</source>
+        <translation>Name</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Border (large)</source>
-        <translation>Rahmen (gross)</translation>
+        <source>Description</source>
+        <translation>Beschreibung</translation>
     </message>
 </context>
 <context>
@@ -635,7 +629,7 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+35"/>
+        <location filename="../src/core/RObject.cpp" line="+36"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -643,6 +637,11 @@
         <location line="+1"/>
         <source>Handle</source>
         <translation>Handle</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation>Geschützt</translation>
     </message>
 </context>
 </TS>

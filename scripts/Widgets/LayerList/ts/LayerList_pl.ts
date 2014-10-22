@@ -4,13 +4,13 @@
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../LayerList.js" line="+219"/>
+        <location filename="../LayerList.js" line="+222"/>
         <source>&amp;Layer List</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Lista warstwa</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+55"/>
         <source>Layer List</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

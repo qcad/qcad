@@ -4,7 +4,7 @@
 <context>
     <name>SelectionDisplay</name>
     <message>
-        <location filename="../SelectionDisplay.js" line="+56"/>
+        <location filename="../SelectionDisplay.js" line="+57"/>
         <source>No selected entities.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Não entidades selecionadas.</translation>

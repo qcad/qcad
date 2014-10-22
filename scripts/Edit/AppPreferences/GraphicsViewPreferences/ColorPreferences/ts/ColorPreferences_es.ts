@@ -31,25 +31,143 @@ Ver gráficos</translatorcomment>
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+35"/>
+        <location filename="../PreferencesPage.ui" line="+32"/>
+        <source>Graphics View</source>
+        <translation>Ver gráficos</translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>Background:</source>
         <translation>Fondo:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <source>Cursor</source>
+        <translation>Cursor</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Crosshairs:</source>
         <translatorcomment>--ignored colon--
 --file: sketch_es.po--</translatorcomment>
         <translation>Retículo:</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Inactive Crosshairs:</source>
-        <translatorcomment>--google--</translatorcomment>
+        <location line="+36"/>
+        <source>Inactive crosshairs:</source>
         <translation>Retículo inactivo:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <source>Origin</source>
+        <translation>Origen</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Relative zero:</source>
+        <translation>Cero relativo:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Grid</source>
+        <translation>Rejilla</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Meta grid:</source>
+        <translation>Meta rejilla:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Selection</source>
+        <translation>Selección</translation>
+    </message>
+    <message>
+        <source>First selection color:</source>
+        <translation type="obsolete">En primer lugar el color para la selección</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Primary selection color:</source>
+        <translation>Color principal de la selección:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Use secondary selection color</source>
+        <translation>Utilice color secundaria de selección</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Secondary selection color:</source>
+        <translation>Color secundaria de selección:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Draggable reference points:</source>
+        <translation>Puntos de referencia:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Selection box border:</source>
+        <translation>Borde del cuadro de selección:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Selection box fill:</source>
+        <translation>Cuadro de selección:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Cross-selection box fill:</source>
+        <translation>Cuadro de selección de captura:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Snap Tools</source>
+        <translation>Herramientas de forzar</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Snap label:</source>
+        <translation>Etiqueta forzar cursor:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Info Tools</source>
+        <translation>Herramientas info</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Measurements and labels:</source>
+        <translation>Mediciones y etiquetas:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Drawing Tools</source>
+        <translation>Herramientas de dibujo</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Auxiliary shapes:</source>
+        <translation>Formas auxiliares:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Zoom Tools</source>
+        <translation>Herramientas de zoom</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Zoom box border:</source>
+        <translation>Borde del cuadro de selección:</translation>
+    </message>
+    <message>
+        <source>Inactive Crosshairs:</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="vanished">Retículo inactivo:</translation>
+    </message>
+    <message>
+        <location line="-538"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--
@@ -57,18 +175,16 @@ Origen:</translatorcomment>
         <translation>Origen:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Relative Zero:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cero relativo:</translation>
+        <translation type="vanished">Cero relativo:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Reference Point:</source>
-        <translation>Punto de referencia:</translation>
+        <translation type="vanished">Punto de referencia:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+81"/>
         <source>Grid:</source>
         <translatorcomment>--ignored colon--
 --file: sketch_es.po--
@@ -77,64 +193,54 @@ Meta cuadrícula
         <translation>Rejilla:</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Meta Grid:</source>
-        <translation>Meta rejilla:</translation>
+        <translation type="vanished">Meta rejilla:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Zoom Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cuadro de zoom:</translation>
+        <translation type="vanished">Cuadro de zoom:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: grassmods_es.po--</translatorcomment>
-        <translation>Selección:</translation>
+        <translation type="vanished">Selección:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection Box Border:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Borde del cuadro de selección:</translation>
+        <translation type="vanished">Borde del cuadro de selección:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cuadro de selección:</translation>
+        <translation type="vanished">Cuadro de selección:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Cross Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cuadro de selección de captura:</translation>
+        <translation type="vanished">Cuadro de selección de captura:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Auxiliary Shapes:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Formas auxiliares:</translation>
+        <translation type="vanished">Formas auxiliares:</translation>
     </message>
     <message>
-        <location line="+67"/>
         <source>Info Label Background:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Fondo de la etiqueta Información:</translation>
+        <translation type="vanished">Fondo de la etiqueta Información:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Info Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Fuente de la etiqueta Información:</translation>
+        <translation type="vanished">Fuente de la etiqueta Información:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Measurement Tools:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Herramientas de medición:</translation>
+        <translation type="vanished">Herramientas de medición:</translation>
     </message>
 </context>
 </TS>

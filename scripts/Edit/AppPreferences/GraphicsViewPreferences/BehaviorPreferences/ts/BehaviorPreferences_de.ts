@@ -31,5 +31,30 @@
         <source>Double-click on block reference opens block</source>
         <translation>Doppelklick auf Blockreferenz öffnet Block</translation>
     </message>
+    <message>
+        <location line="+13"/>
+        <source>Right-Click</source>
+        <translation>Rechtsklick</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Right-click to deselect entities</source>
+        <translation>Rechtsklick zum Deselektieren von Objekten</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Cursor Range</source>
+        <translation>Zeigerreichweite</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Cursor range for snap:</source>
+        <translation>Zeigerreichweite für Fangen:</translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Cursor range for picking entities:</source>
+        <translation>Zeigerreichweite für Objektwahl:</translation>
+    </message>
 </context>
 </TS>

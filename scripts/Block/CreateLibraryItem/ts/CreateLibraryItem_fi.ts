@@ -9,7 +9,7 @@
         <translation>Referenssipiste</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+26"/>
         <source>Save library item as...</source>
         <translation>Tallenna kirjastokohde nimellä...</translation>
     </message>

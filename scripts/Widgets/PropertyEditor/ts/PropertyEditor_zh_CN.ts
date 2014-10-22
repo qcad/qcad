@@ -22,7 +22,7 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+190"/>
+        <location filename="../PropertyEditor.js" line="+186"/>
         <source>*VARIES*</source>
         <translation type="unfinished"></translation>
     </message>
@@ -32,12 +32,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+147"/>
         <source>No Selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Geometry</source>
         <translation type="unfinished"></translation>
     </message>
@@ -52,7 +52,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+148"/>
+        <location line="+153"/>
         <source>Index</source>
         <translation type="unfinished"></translation>
     </message>
@@ -92,13 +92,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+295"/>
+        <location line="+299"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+32"/>
+        <location line="+35"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation type="unfinished"></translation>
@@ -114,12 +114,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+103"/>
         <source>Move Selection to a New Layer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+97"/>
+        <source>Linetype Scale:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-107"/>
         <source>Handle:</source>
         <translation type="unfinished"></translation>
     </message>

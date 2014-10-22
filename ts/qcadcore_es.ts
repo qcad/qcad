@@ -331,7 +331,7 @@ Otros...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+75"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+77"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_es.ts--
@@ -348,7 +348,7 @@ Lista de bloques</translatorcomment>
     <message>
         <location line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+61"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -419,7 +419,7 @@ Introduzca ángulo en línea de cota:</translatorcomment>
         <translation>Ángulo</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+48"/>
+        <location filename="../src/core/REntity.cpp" line="+49"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -451,6 +451,11 @@ Lista de Capas</translatorcomment>
 Tipo de línea por defecto
 Tipo de línea</translatorcomment>
         <translation>Tipo de línea</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linetype Scale</source>
+        <translation>Escala de tipo de línea</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -529,7 +534,7 @@ Colores
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+48"/>
+        <location filename="../src/core/RLayer.cpp" line="+52"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
@@ -562,182 +567,171 @@ Colores
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+47"/>
         <source>By Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Por Capa</translatorcomment>
-        <translation>Por Capa</translation>
+        <translation type="vanished">Por Capa</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Por Bloque</translatorcomment>
-        <translation>Por Bloque</translation>
+        <translation type="vanished">Por Bloque</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Continuous</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Contínua
 CONTROL CONTINUADO</translatorcomment>
-        <translation>Contínua</translation>
+        <translation type="vanished">Contínua</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
 Puntos de cuad&amp;rícula:
 Puntos de cuad&amp;rícula
 Puntos de cuadrícula:</translatorcomment>
-        <translation>Puntos</translation>
+        <translation type="vanished">Puntos</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Puntos juntos
 Punto raya (pequeña)</translatorcomment>
-        <translation>Puntos (juntos)</translation>
+        <translation type="vanished">Puntos (juntos)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Puntos separados
 Punto raya (grande)</translatorcomment>
-        <translation>Puntos (separados)</translation>
+        <translation type="vanished">Puntos (separados)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Raya
 Raya (pequeña)</translatorcomment>
-        <translation>Raya</translation>
+        <translation type="vanished">Raya</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Raya (pequeña)</translatorcomment>
-        <translation>Raya (pequeña)</translation>
+        <translation type="vanished">Raya (pequeña)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Raya (grande)</translatorcomment>
-        <translation>Raya (grande)</translation>
+        <translation type="vanished">Raya (grande)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Punto raya
 Punto raya (pequeña)</translatorcomment>
-        <translation>Punto raya</translation>
+        <translation type="vanished">Punto raya</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Punto raya (pequeña)</translatorcomment>
-        <translation>Punto raya (pequeña)</translation>
+        <translation type="vanished">Punto raya (pequeña)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dash Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Punto raya (grande)</translatorcomment>
-        <translation>Punto raya (grande)</translation>
+        <translation type="vanished">Punto raya (grande)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide</source>
         <translatorcomment>--exact match--
 --file: Divide_es.ts--
 Raya 2 puntos
 Partir</translatorcomment>
-        <translation>Partir</translation>
+        <translation type="vanished">Partir</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Raya 2 puntos (pequeña)</translatorcomment>
-        <translation>Raya 2 puntos (pequeña)</translation>
+        <translation type="vanished">Raya 2 puntos (pequeña)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Divide (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Raya 2 puntos (grande)</translatorcomment>
-        <translation>Raya 2 puntos (grande)</translation>
+        <translation type="vanished">Raya 2 puntos (grande)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: es.po--
 Arco: centro, punto, ángulos
 &amp;Centro, Punto, Angulo</translatorcomment>
-        <translation>Centro</translation>
+        <translation type="vanished">Centro</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Rayas larga corta (pequeño)</translatorcomment>
-        <translation>Rayas larga corta (pequeño)</translation>
+        <translation type="vanished">Rayas larga corta (pequeño)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Rayas larga corta (grande)</translatorcomment>
-        <translation>Rayas larga corta (grande)</translation>
+        <translation type="vanished">Rayas larga corta (grande)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
 Borde
 2 rayas 1 punto (pequeño)</translatorcomment>
-        <translation>Borde</translation>
+        <translation type="vanished">Borde</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 2 rayas 1 punto (pequeño)</translatorcomment>
-        <translation>2 rayas 1 punto (pequeño)</translation>
+        <translation type="vanished">2 rayas 1 punto (pequeño)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Border (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 2 rayas 1 punto (grande)</translatorcomment>
-        <translation>2 rayas 1 punto (grande)</translation>
+        <translation type="vanished">2 rayas 1 punto (grande)</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLinetype.cpp" line="+86"/>
+        <source>Name</source>
+        <translation>Nombre</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Description</source>
+        <translation>Descripción</translation>
     </message>
 </context>
 <context>
@@ -963,7 +957,7 @@ Unidad por defecto:</translatorcomment>
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+35"/>
+        <location filename="../src/core/RObject.cpp" line="+36"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -980,6 +974,11 @@ Personalizado</translatorcomment>
 Secuencia ambigua %1 no tratada
 Asa del deslizador</translatorcomment>
         <translation>Handle</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation>Protegida</translation>
     </message>
 </context>
 </TS>

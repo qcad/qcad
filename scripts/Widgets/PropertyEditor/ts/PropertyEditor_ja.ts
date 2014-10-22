@@ -22,7 +22,7 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+190"/>
+        <location filename="../PropertyEditor.js" line="+186"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
@@ -32,12 +32,12 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+147"/>
         <source>No Selection</source>
         <translation>選択なし</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Geometry</source>
         <translation>ジオメトリ</translation>
     </message>
@@ -52,7 +52,7 @@
         <translation>カスタム</translation>
     </message>
     <message>
-        <location line="+148"/>
+        <location line="+153"/>
         <source>Index</source>
         <translation>目次</translation>
     </message>
@@ -67,7 +67,7 @@
         <translation>全て</translation>
     </message>
     <message>
-        <location line="+606"/>
+        <location line="+610"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -76,7 +76,7 @@
         <translation type="obsolete">カスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="-585"/>
+        <location line="-589"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
@@ -101,8 +101,8 @@
         <translation>いいえ</translation>
     </message>
     <message>
-        <location line="+295"/>
-        <location line="+32"/>
+        <location line="+299"/>
+        <location line="+35"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>プロパティエディタ</translation>
@@ -118,12 +118,17 @@
         <translation>全般</translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+103"/>
         <source>Move Selection to a New Layer</source>
         <translation>選択内容を新規画層に移動</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+97"/>
+        <source>Linetype Scale:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-107"/>
         <source>Handle:</source>
         <translation>扱い:</translation>
     </message>

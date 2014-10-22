@@ -24,7 +24,7 @@
         <translation>Sem filtros de exportação foram encontrados. Abortar...</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+55"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: pt.po--

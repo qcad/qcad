@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -34,12 +34,12 @@ Tipo de línea:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+348"/>
+        <location filename="../PropertyEditor.js" line="+355"/>
         <source>Geometry</source>
         <translation>Geometría</translation>
     </message>
     <message>
-        <location line="+290"/>
+        <location line="+295"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -68,7 +68,7 @@ Tipo de línea:</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-448"/>
+        <location line="-464"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -83,7 +83,7 @@ Versión:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+147"/>
         <source>No Selection</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--
@@ -92,7 +92,7 @@ Seleccin nula</translatorcomment>
         <translation>Seleccin nula</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Dependent Entities</source>
         <translation>Entidades dependientes</translation>
     </message>
@@ -102,7 +102,7 @@ Seleccin nula</translatorcomment>
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+148"/>
+        <location line="+153"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: qgis_es.ts--
@@ -127,7 +127,7 @@ Mosaico horizontal
         <translation>Todo</translation>
     </message>
     <message>
-        <location line="+606"/>
+        <location line="+610"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -157,7 +157,7 @@ Seleccione entidad base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-449"/>
+        <location line="-453"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -178,8 +178,8 @@ Seleccione entidad base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+295"/>
-        <location line="+32"/>
+        <location line="+299"/>
+        <location line="+35"/>
         <location line="+12"/>
         <source>Property Editor</source>
         <translation>Editor de propiedades</translation>
@@ -197,13 +197,18 @@ Seleccione entidad base</translatorcomment>
         <translation>General</translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+103"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Mueve la selección a una nueva capa</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+97"/>
+        <source>Linetype Scale:</source>
+        <translation>Escala de tipo de línea:</translation>
+    </message>
+    <message>
+        <location line="-107"/>
         <source>Handle:</source>
         <translatorcomment>--ignored colon--
 --file: es.po--</translatorcomment>

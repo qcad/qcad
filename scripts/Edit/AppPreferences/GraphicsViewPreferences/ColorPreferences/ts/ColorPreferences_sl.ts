@@ -17,89 +17,191 @@
 <context>
     <name>GraphicsViewColors</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+35"/>
+        <location filename="../PreferencesPage.ui" line="+32"/>
+        <source>Graphics View</source>
+        <translation type="unfinished">Videz grafike</translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>Background:</source>
         <translation>Ozadje:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <source>Cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Crosshairs:</source>
         <translation>Kazalni križec:</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Inactive Crosshairs:</source>
-        <translation>Neaktivni kazalni križec:</translation>
+        <location line="+36"/>
+        <source>Inactive crosshairs:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <source>Origin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Relative zero:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Grid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Meta grid:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Primary selection color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Use secondary selection color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Secondary selection color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Draggable reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Selection box border:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Selection box fill:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Cross-selection box fill:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Snap Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Snap label:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Info Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Measurements and labels:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Drawing Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Auxiliary shapes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Zoom Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Zoom box border:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inactive Crosshairs:</source>
+        <translation type="vanished">Neaktivni kazalni križec:</translation>
+    </message>
+    <message>
+        <location line="-538"/>
         <source>Origin:</source>
         <translation>Izhodišče:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Relative Zero:</source>
-        <translation>Relativna ničla:</translation>
+        <translation type="vanished">Relativna ničla:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Reference Point:</source>
-        <translation>Referenčna točka:</translation>
+        <translation type="vanished">Referenčna točka:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+81"/>
         <source>Grid:</source>
         <translation>Mreža:</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Meta Grid:</source>
-        <translation>Tabelarična mreža:</translation>
+        <translation type="vanished">Tabelarična mreža:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Zoom Box:</source>
-        <translation>Polje za povečavo:</translation>
+        <translation type="vanished">Polje za povečavo:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection:</source>
-        <translation>Izbor:</translation>
+        <translation type="vanished">Izbor:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection Box Border:</source>
-        <translation>Rob okvirja izbire:</translation>
+        <translation type="vanished">Rob okvirja izbire:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Selection Box:</source>
-        <translation>Okvir izbire:</translation>
+        <translation type="vanished">Okvir izbire:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Cross Selection Box:</source>
-        <translation>Navzkrižni okvir izbire:</translation>
+        <translation type="vanished">Navzkrižni okvir izbire:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Auxiliary Shapes:</source>
-        <translation>Pomožne oblike:</translation>
+        <translation type="vanished">Pomožne oblike:</translation>
     </message>
     <message>
-        <location line="+67"/>
         <source>Info Label Background:</source>
-        <translation>Ozadje informacijskih napisov:</translation>
+        <translation type="vanished">Ozadje informacijskih napisov:</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Info Label Font:</source>
-        <translation>Pisava informacijskih napisov:</translation>
+        <translation type="vanished">Pisava informacijskih napisov:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Measurement Tools:</source>
-        <translation>Merilna orodja:</translation>
+        <translation type="vanished">Merilna orodja:</translation>
     </message>
 </context>
 </TS>

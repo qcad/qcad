@@ -71,7 +71,7 @@ Sem Título</translatorcomment>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+94"/>
         <source>Untitled %1</source>
         <translation>Sem título %1</translation>
     </message>

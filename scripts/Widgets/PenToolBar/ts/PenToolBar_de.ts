@@ -9,7 +9,7 @@
         <translation>Stift</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+64"/>
         <source>Reset to Defaults</source>
         <translation>Zurücksetzen</translation>
     </message>
