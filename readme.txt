@@ -1,6 +1,6 @@
-QCAD 3.6
+QCAD
 
-This is QCAD version 3.6.
+This is QCAD version 3.7.
 
 QCAD is an application for computer aided drafting (CAD) in two dimensions (2D).
 
