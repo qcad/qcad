@@ -32,10 +32,13 @@ BrowseUserManual.prototype.beginEvent = function() {
     var dir = "en";
 
     if (locale.language()===QLocale.German) {
-        dir = "de"
+        dir = "de";
     }
     else if (locale.language()===QLocale.Japanese) {
-        dir = "ja"
+        dir = "ja";
+    }
+    else if (locale.language()===QLocale.Slovenian) {
+        dir = "sl";
     }
 
     Help.openUrl(
