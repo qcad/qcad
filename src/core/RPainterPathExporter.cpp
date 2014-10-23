@@ -25,7 +25,7 @@ void RPainterPathExporter::exportLineSegment(const RLine& line) {
         }
         else {
             // Qt won't export a zero length line as point:
-            path.moveTo(line.getStartPoint()-RVector(0.0001,0);
+            path.moveTo(line.getStartPoint()-RVector(0.0001,0));
             path.lineTo(line.getEndPoint()+RVector(0.0001, 0));
         }
     }
