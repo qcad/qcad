@@ -501,10 +501,6 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape) {
 }
 
 QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
-//    QList<RPainterPath> ret;
-//    ret.append(getPainterPath(draft));
-//    return ret;
-
     if (!dirty) {
         // cached painter path represents hatch in current draft mode (draft or normal):
         if (draft==gotDraft) {
@@ -577,7 +573,6 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
     // add boundary to painter path as well (debugging):
     //clippedPattern.addPath(boundaryPath);
 
-    int timeOut = RSettings::getIntValue("GraphicsView/MaxHatchTime", 5000);
     QTime timer;
     timer.start();
 
@@ -724,12 +719,13 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
             // line split up into segments, cut at contour intersections:
             QList<RLine> segments = getSegments(unclippedLine);
 
-            RPainterPathExporter e;
-            e.setLineweight(RLineweight::Weight000);
+            RPainterPathExporter ppExporter;
+            ppExporter.setExportZeroLinesAsPoints(false);
+            ppExporter.setLineweight(RLineweight::Weight100);
             if (!patternLine.dashes.isEmpty()) {
                 RLinetypePattern pat;
                 pat.set(patternLine.dashes);
-                e.setLinetypePattern(pat);
+                ppExporter.setLinetypePattern(pat);
             }
 
             // copy segments that are inside contour into hatch pattern:
@@ -741,8 +737,8 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
                     if (side==RS::RightHand) {
                         offset*=-1;
                     }
-                    e.exportLine(segments[si], offset);
-                    RPainterPath path = e.getPainterPath();
+                    ppExporter.exportLine(segments[si], offset);
+                    RPainterPath path = ppExporter.getPainterPath();
 
                     if (!path.isEmpty()) {
                         //clippedPattern.addPath(path);
@@ -752,12 +748,15 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
                 }
             }
 
-            if (timer.elapsed()>timeOut) {
-                qWarning() << "RHatchData::getPainterPaths: hatch pattern too dense. hatch pattern generation aborted...";
-                painterPaths.clear();
-                dirty = false;
-                gotDraft = draft;
-                return painterPaths;
+            if (timer.elapsed()>2000) {
+                int timeOut = RSettings::getIntValue("GraphicsView/MaxHatchTime", 5000);
+                if (timer.elapsed()>timeOut) {
+                    qWarning() << "RHatchData::getPainterPaths: hatch pattern too dense. hatch pattern generation aborted (timeout set to " << timeOut << ")...";
+                    painterPaths.clear();
+                    dirty = false;
+                    gotDraft = draft;
+                    return painterPaths;
+                }
             }
         }
     }

@@ -20,7 +20,14 @@
 
 void RPainterPathExporter::exportLineSegment(const RLine& line) {
     if (line.getLength()<RS::PointTolerance) {
-        path.addPoint(line.getStartPoint());
+        if (exportZeroLinesAsPoints) {
+            path.addPoint(line.getStartPoint());
+        }
+        else {
+            // Qt won't export a zero length line as point:
+            path.moveTo(line.getStartPoint()-RVector(0.0001);
+            path.lineTo(line.getEndPoint()+RVector(0.0001, 0));
+        }
     }
     else {
         path.moveTo(line.getStartPoint());

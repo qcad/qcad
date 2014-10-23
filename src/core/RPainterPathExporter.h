@@ -30,6 +30,8 @@
 
 class QCADCORE_EXPORT RPainterPathExporter : public RExporter {
 public:
+    RPainterPathExporter() : RExporter(), exportZeroLinesAsPoints(true) { }
+
     virtual void exportLineSegment(const RLine& line);
     virtual void exportXLine(const RXLine& xLine) {
         Q_UNUSED(xLine)
@@ -50,9 +52,13 @@ public:
     }
 
     RPainterPath getPainterPath();
+    void setExportZeroLinesAsPoints(bool on) {
+        exportZeroLinesAsPoints = on;
+    }
 
 private:
     RPainterPath path;
+    bool exportZeroLinesAsPoints;
 };
 
 #endif

@@ -98,7 +98,11 @@ QList<QPair<QString, RPattern*> > RPattern::loadAllFrom(const QString& fileName)
             patternLine.offset.y = parts.at(4).toDouble();
 
             for (int i=5; i<parts.length(); i++) {
-                patternLine.dashes.append(parts.at(i).toDouble());
+                double dash = parts.at(i).toDouble();
+//                if (dash>=0.0 && dash<RS::PointTolerance) {
+//                    dash = 0.01;
+//                }
+                patternLine.dashes.append(dash);
             }
 
             pattern->patternLines.append(patternLine);

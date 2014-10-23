@@ -347,25 +347,25 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(const QS
             }
 
             if (dashes.count() > 0) {
-                for (int i = 0; i < dashes.count(); i++) {
-                    if (dashes.at(i) == 0) {
-                        // subtract half of 0.1 (0.05) from previous space
-                        // and following space (if any)
-                        // The spaces are negative numbers so we add 0.05
-                        if (i == 0) {
-                            dashes.replace(i, 0.1);
-                            dashes.replace(i + 1, dashes.at(i + 1) + 0.1);
-                        } else if (i > 0 && i < dashes.count() - 1) {
-                            dashes.replace(i - 1, dashes.at(i - 1) + 0.05);
-                            dashes.replace(i, 0.1);
-                            dashes.replace(i + 1, dashes.at(i + 1) + 0.05);
-                        } else if (i == dashes.count() - 1) {
-                            dashes.replace(i - 1, dashes.at(i - 1) + 0.1);
-                            dashes.replace(i, 0.1);
-                        }
+//                for (int i = 0; i < dashes.count(); i++) {
+//                    if (dashes.at(i) == 0) {
+//                        // subtract half of 0.1 (0.05) from previous space
+//                        // and following space (if any)
+//                        // The spaces are negative numbers so we add 0.05
+//                        if (i == 0) {
+//                            dashes.replace(i, 0.1);
+//                            dashes.replace(i + 1, dashes.at(i + 1) + 0.1);
+//                        } else if (i > 0 && i < dashes.count() - 1) {
+//                            dashes.replace(i - 1, dashes.at(i - 1) + 0.05);
+//                            dashes.replace(i, 0.1);
+//                            dashes.replace(i + 1, dashes.at(i + 1) + 0.05);
+//                        } else if (i == dashes.count() - 1) {
+//                            dashes.replace(i - 1, dashes.at(i - 1) + 0.1);
+//                            dashes.replace(i, 0.1);
+//                        }
 
-                    }
-                }
+//                    }
+//                }
                 ltpattern->set(dashes);
             }
         }
