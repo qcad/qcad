@@ -160,7 +160,7 @@ HatchDialog.prototype.patternChanged = function() {
     }
 
     var data = new RHatchData(radioSolid.checked, 1.0, angle, patternName);
-    data.setLineweight(RLineweight.Weight000);
+    data.setLineweight(RLineweight.Weight015);
     var bgColor = RSettings.getColor("GraphicsViewColors/BackgroundColor", new RColor("black"));
     if (bgColor.lightness()>200) {
         data.setColor(new RColor("black"));
