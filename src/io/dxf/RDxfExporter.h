@@ -109,8 +109,9 @@ public:
         Q_UNUSED(arc)
     }
 
-    virtual void exportLineSegment(const RLine& line) {
+    virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE) {
         Q_UNUSED(line)
+        Q_UNUSED(angle)
     }
 
     virtual void exportXLine(const RXLine& xLine) {

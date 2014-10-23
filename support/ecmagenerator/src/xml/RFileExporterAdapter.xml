@@ -79,6 +79,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RLine &amp;" typeName="RLine" name=""
         isConst="true" />
+        <arg type="double" typeName="double" name=""
+        hasDefault="true" default="RNANDOUBLE" isConst="false" />
       </variant>
     </method>
     <method name="exportTriangle" cppName="exportTriangle"

@@ -401,6 +401,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="true">
         <arg type="RLine &amp;" typeName="RLine" name="line"
         isConst="true" />
+        <arg type="double" typeName="double" name="angle"
+        hasDefault="true" default="RNANDOUBLE" isConst="false" />
       </variant>
     </method>
     <method name="exportXLine" cppName="exportXLine"

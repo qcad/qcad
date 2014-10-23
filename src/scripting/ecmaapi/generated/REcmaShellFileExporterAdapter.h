@@ -70,7 +70,8 @@
     
     
       void exportLineSegment(
-                const RLine & arg1
+                const RLine & arg1, double arg2
+        = RNANDOUBLE
             );
         
     

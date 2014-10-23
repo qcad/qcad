@@ -223,7 +223,7 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getAutoScaleLinetypePatterns, "getAutoScaleLinetypePatterns");
             
-            REcmaHelper::registerFunction(&engine, &ctor, getUseSecondSelectionColor, "getUseSecondSelectionColor");
+            REcmaHelper::registerFunction(&engine, &ctor, getUseSecondarySelectionColor, "getUseSecondarySelectionColor");
             
             REcmaHelper::registerFunction(&engine, &ctor, getUseSolidLineSelection, "getUseSolidLineSelection");
             
@@ -4003,12 +4003,12 @@
             return result;
         }
          QScriptValue
-        REcmaSettings::getUseSecondSelectionColor
+        REcmaSettings::getUseSecondarySelectionColor
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSettings::getUseSecondSelectionColor", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getUseSecondSelectionColor";
+            //REcmaHelper::functionStart("REcmaSettings::getUseSecondarySelectionColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getUseSecondarySelectionColor";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
@@ -4035,10 +4035,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getUseSecondSelectionColor().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getUseSecondarySelectionColor().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSettings::getUseSecondSelectionColor", context, engine);
+            //REcmaHelper::functionEnd("REcmaSettings::getUseSecondarySelectionColor", context, engine);
             return result;
         }
          QScriptValue

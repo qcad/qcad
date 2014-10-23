@@ -809,13 +809,15 @@ void RExporter::exportLine(const RLine& line, double offset) {
         return;
     }
 
+    double angle = line.getAngle();
+
     RLinetypePattern p = getLinetypePattern();
 
     // continuous line or
     // we are in draft mode or
     // QCAD is configured to show screen based line patterns
     if (!p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
-        exportLineSegment(line);
+        exportLineSegment(line, angle);
         return;
     }
 
@@ -825,11 +827,10 @@ void RExporter::exportLine(const RLine& line, double offset) {
     // avoid huge number of small segments due to very fine 
     // pattern or long lines:
     if (patternLength<RS::PointTolerance || length / patternLength > 5000) {
-        exportLineSegment(line);
+        exportLineSegment(line, angle);
         return;
     }
 
-    double angle = line.getAngle();
     RVector* vp = NULL;
     vp = new RVector[p.getNumDashes()];
     for (int i = 0; i < p.getNumDashes(); ++i) {
@@ -869,12 +870,12 @@ void RExporter::exportLine(const RLine& line, double offset) {
                 }
 
                 // ignore zero length lines at line ends:
-                if (l.getLength()>RS::PointTolerance) {
-                    exportLineSegment(l);
-                }
+                //if (l.getLength()>RS::PointTolerance) {
+                    exportLineSegment(l, angle);
+                //}
                 break;
             }
-            exportLineSegment(RLine(p1, p2));
+            exportLineSegment(RLine(p1, p2), angle);
         }
 
         // dash, no gap. note that a dash can have a length of 0.0 (point):
@@ -922,10 +923,10 @@ void RExporter::exportLine(const RLine& line, double offset) {
             }
             if (l.getLength()>RS::PointTolerance) {
                 // ignore zero length lines at line ends:
-                exportLineSegment(l);
+                exportLineSegment(l, angle);
             }
         } else {
-            exportLineSegment(RLine(p1, p2));
+            exportLineSegment(RLine(p1, p2), angle);
         }
     }
 
@@ -992,11 +993,11 @@ void RExporter::exportArc(const RArc& arc, double offset) {
             }
             arcSegments.append(RArc(normalArc.getCenter(), normalArc.getRadius(), a1, a2));
         }
-        if (p.getDashLengthAt(i) > 0) {
+        if (p.getDashLengthAt(i) >= 0.0) {
             // dash, no gap
-            if (total + p.getDashLengthAt(i) > 0) {
+            if (total + p.getDashLengthAt(i) >= 0.0) {
                 a1 = cursor;
-                if (total < 0 || !dashFound) {
+                if (total < 0.0 || !dashFound) {
                     a1 = normalArc.startAngle;
                 }
                 a2 = cursor + vp[i];
@@ -1082,32 +1083,32 @@ void RExporter::exportArcSegment(const RArc& arc) {
     RVector ci;
     double a;
 
-    if(!arc.isReversed()) {
+    if (!arc.isReversed()) {
         // Arc Counterclockwise:
         if(a1>a2-RS::AngleTolerance) {
             a2+=2*M_PI;
         }
-        for(a=a1+aStep; a<=a2; a+=aStep) {
+        for (a=a1+aStep; a<=a2; a+=aStep) {
             ci.x = center.x + cos(a) * radius;
             ci.y = center.y + sin(a) * radius;
             //path.lineTo(RVector(ci.x, ci.y));
-            this->exportLineSegment(RLine(prev, ci));
+            this->exportLineSegment(RLine(prev, ci), a+M_PI_2);
             prev = ci;
         }
     } else {
         // Arc Clockwise:
-        if(a1<a2+RS::AngleTolerance) {
+        if (a1<a2+RS::AngleTolerance) {
             a2-=2*M_PI;
         }
-        for(a=a1-aStep; a>=a2; a-=aStep) {
+        for (a=a1-aStep; a>=a2; a-=aStep) {
             ci.x = center.x + cos(a) * radius;
             ci.y = center.y + sin(a) * radius;
-            this->exportLineSegment(RLine(prev, ci));
+            this->exportLineSegment(RLine(prev, ci), a+M_PI_2);
             //path.lineTo(RVector(cix, ciy));
             prev = ci;
         }
     }
-    this->exportLineSegment(RLine(prev, arc.getEndPoint()));
+    this->exportLineSegment(RLine(prev, arc.getEndPoint()), arc.getEndAngle()+M_PI_2);
     //path.lineTo(arc.getEndPoint());
 }
 

@@ -293,6 +293,17 @@ filename="RFileExporterAdapter.h">
         <name>const</name>
         <name>RLine</name>&amp;</type>
       </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>double</name>
+      </type>=
+      <init>
+        <expr>
+          <name>RNANDOUBLE</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <block>{}</block>
   </function>

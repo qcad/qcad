@@ -508,8 +508,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="getUseSecondSelectionColor"
-    cppName="getUseSecondSelectionColor" specifier="public"
+    <method name="getUseSecondarySelectionColor"
+    cppName="getUseSecondarySelectionColor" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>

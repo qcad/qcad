@@ -647,12 +647,29 @@ dir="./io/dxf" filename="RDxfExporter.h">
         <name>RLine</name>&amp;</type>
         <name>line</name>
       </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>angle</name>=
+      <init>
+        <expr>
+          <name>RNANDOUBLE</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <block>{ 
     <macro>
       <name>Q_UNUSED</name>
       <argument_list>(
       <argument>line</argument>)</argument_list>
+    </macro>
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>angle</argument>)</argument_list>
     </macro>}</block>
   </function>
   <function>

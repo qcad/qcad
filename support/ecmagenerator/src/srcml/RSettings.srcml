@@ -958,7 +958,7 @@ dir="./core" filename="RSettings.h">
     <name>static</name>
     <name>bool</name>
   </type>
-  <name>getUseSecondSelectionColor</name>
+  <name>getUseSecondarySelectionColor</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -1115,7 +1115,7 @@ dir="./core" filename="RSettings.h">
       <name>static</name>
       <name>int</name>
     </type>
-    <name>useSecondSelectionColor</name>
+    <name>useSecondarySelectionColor</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

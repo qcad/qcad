@@ -292,7 +292,7 @@
         getAutoScaleLinetypePatterns
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getUseSecondSelectionColor
+        getUseSecondarySelectionColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getUseSolidLineSelection

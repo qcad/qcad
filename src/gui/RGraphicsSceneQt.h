@@ -80,7 +80,7 @@ public:
     virtual void exportSpline(const RSpline& spline, double offset = RNANDOUBLE);
 
     virtual void exportArcSegment(const RArc& arc);
-    virtual void exportLineSegment(const RLine& line);
+    virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE);
     virtual void exportXLine(const RXLine& xLine);
     virtual void exportRay(const RRay& ray);
     virtual void exportTriangle(const RTriangle& triangle);

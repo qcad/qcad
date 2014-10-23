@@ -18,17 +18,22 @@
  */
 #include "RPainterPathExporter.h"
 
-void RPainterPathExporter::exportLineSegment(const RLine& line) {
+void RPainterPathExporter::exportLineSegment(const RLine& line, double angle) {
     if (line.getLength()<RS::PointTolerance) {
         if (exportZeroLinesAsPoints) {
             path.addPoint(line.getStartPoint());
         }
         else {
             // Qt won't export a zero length line as point:
-            path.moveTo(line.getStartPoint()-RVector(0.01,0));
-            path.lineTo(line.getEndPoint()+RVector(0.01, 0));
-            path.moveTo(line.getStartPoint()-RVector(0,0.01));
-            path.lineTo(line.getEndPoint()+RVector(0, 0.01));
+            // e.g. dot in a dash/dot line:
+            RVector startPoint = line.startPoint - RVector::createPolar(0.01, angle);
+            RVector endPoint = line.endPoint + RVector::createPolar(0.01, angle);
+            path.moveTo(startPoint);
+            path.lineTo(endPoint);
+//            path.moveTo(line.getStartPoint()-RVector(0.01,0));
+//            path.lineTo(line.getEndPoint()+RVector(0.01, 0));
+//            path.moveTo(line.getStartPoint()-RVector(0,0.01));
+//            path.lineTo(line.getEndPoint()+RVector(0, 0.01));
         }
     }
     else {

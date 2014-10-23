@@ -267,9 +267,12 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc) {
     }
 
     // arc threshold is configurable (FS#1012):
-    if (arc.getAngleLength()<RSettings::getArcAngleLengthThreshold()) {
-        currentPainterPath.moveTo(arc.getStartPoint());
-        currentPainterPath.lineTo(arc.getEndPoint());
+    if (arc.getAngleLength(true)<=RSettings::getArcAngleLengthThreshold()) {
+        // Qt won't export a zero length line as point:
+        RVector startPoint = arc.getStartPoint() - RVector::createPolar(0.01, arc.getStartAngle());
+        RVector endPoint = arc.getEndPoint() + RVector::createPolar(0.01, arc.getStartAngle());
+        currentPainterPath.moveTo(startPoint);
+        currentPainterPath.lineTo(endPoint);
         return;
     }
 
@@ -295,8 +298,17 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc) {
     }
 }
 
-void RGraphicsSceneQt::exportLineSegment(const RLine& line) {
+void RGraphicsSceneQt::exportLineSegment(const RLine& line, double angle) {
     Q_ASSERT(currentPainterPath.isValid());
+
+    if (line.getLength()<RS::PointTolerance && !RMath::isNaN(angle)) {
+        // Qt won't export a zero length line as point:
+        RVector startPoint = line.startPoint - RVector::createPolar(0.01, angle);
+        RVector endPoint = line.endPoint + RVector::createPolar(0.01, angle);
+        currentPainterPath.moveTo(startPoint);
+        currentPainterPath.lineTo(endPoint);
+        return;
+    }
 
     // add new painter path with current entity ID:
     if ((currentPainterPath.currentPosition() - QPointF(line.startPoint.x, line.startPoint.y)).manhattanLength() > RS::PointTolerance) {

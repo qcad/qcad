@@ -155,7 +155,7 @@ public:
      * from the standard implementation of exportLine for every dash in a
      * dashed line.
      */
-    virtual void exportLineSegment(const RLine& line) = 0;
+    virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE) = 0;
 
     /**
      * Exports an infinite line. Used for xlines (construction lines).
