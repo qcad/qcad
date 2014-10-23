@@ -451,6 +451,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RArc &amp;" typeName="RArc" name="arc"
         isConst="true" />
+        <arg type="bool" typeName="bool" name="allowForZeroLength"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="exportEllipse" cppName="exportEllipse"

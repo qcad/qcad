@@ -277,6 +277,17 @@ filename="RFileExporterAdapter.h">
         <name>const</name>
         <name>RArc</name>&amp;</type>
       </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>=
+      <init>
+        <expr>
+          <name>false</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <block>{}</block>
   </function>

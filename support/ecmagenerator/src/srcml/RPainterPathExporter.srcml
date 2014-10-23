@@ -175,12 +175,29 @@ dir="./core" filename="RPainterPathExporter.h">
         <name>RArc</name>&amp;</type>
         <name>arc</name>
       </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>allowForZeroLength</name>=
+      <init>
+        <expr>
+          <name>false</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <block>{ 
     <macro>
       <name>Q_UNUSED</name>
       <argument_list>(
       <argument>arc</argument>)</argument_list>
+    </macro>
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>allowForZeroLength</argument>)</argument_list>
     </macro>}</block>
   </function>
   <function>

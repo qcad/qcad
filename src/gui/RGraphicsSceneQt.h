@@ -79,7 +79,7 @@ public:
     void exportPolylineFill(const RPolyline& polyline);
     virtual void exportSpline(const RSpline& spline, double offset = RNANDOUBLE);
 
-    virtual void exportArcSegment(const RArc& arc);
+    virtual void exportArcSegment(const RArc& arc, bool allowForZeroLength = false);
     virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE);
     virtual void exportXLine(const RXLine& xLine);
     virtual void exportRay(const RRay& ray);

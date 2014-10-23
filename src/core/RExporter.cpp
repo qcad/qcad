@@ -1029,19 +1029,19 @@ void RExporter::exportArc(const RArc& arc, double offset) {
     if (arc.isReversed()) {
         for (int i=arcSegments.length()-1; i>=0; i--) {
             arcSegments[i].reverse();
-            exportArcSegment(arcSegments[i]);
+            exportArcSegment(arcSegments[i], true);
         }
     }
     else {
         for (int i=0; i<arcSegments.length(); i++) {
-            exportArcSegment(arcSegments[i]);
+            exportArcSegment(arcSegments[i], true);
         }
     }
 
     delete[] vp;
 }
 
-void RExporter::exportArcSegment(const RArc& arc) {
+void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
     double segmentLength;
     if (pixelSizeHint>0.0) {
         // approximate arc with segments with the length of 2 pixels:

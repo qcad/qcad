@@ -176,7 +176,7 @@ public:
 
     virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE);
 
-    virtual void exportArcSegment(const RArc& arc);
+    virtual void exportArcSegment(const RArc& arc, bool allowForZeroLength = false);
 
     virtual void exportEllipse(const REllipse& ellipse, double offset = RNANDOUBLE);
 

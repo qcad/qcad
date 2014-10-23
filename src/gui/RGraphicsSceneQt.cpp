@@ -258,7 +258,7 @@ void RGraphicsSceneQt::exportSpline(const RSpline& spline, double offset) {
     }
 }
 
-void RGraphicsSceneQt::exportArcSegment(const RArc& arc) {
+void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
     Q_ASSERT(currentPainterPath.isValid());
 
     if (arc.getRadius()<RS::PointTolerance) {
@@ -267,7 +267,7 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc) {
     }
 
     // arc threshold is configurable (FS#1012):
-    if (arc.getAngleLength(true)<=RSettings::getArcAngleLengthThreshold()) {
+    if (arc.getAngleLength(allowForZeroLength)<=RSettings::getArcAngleLengthThreshold()) {
         // Qt won't export a zero length line as point:
         RVector startPoint = arc.getStartPoint() - RVector::createPolar(0.01, arc.getStartAngle());
         RVector endPoint = arc.getEndPoint() + RVector::createPolar(0.01, arc.getStartAngle());
@@ -294,7 +294,7 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc) {
     }
     else {
         currentPainterPath.setAutoRegen(true);
-        RGraphicsScene::exportArcSegment(arc);
+        RGraphicsScene::exportArcSegment(arc, allowForZeroLength);
     }
 }
 

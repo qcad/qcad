@@ -371,7 +371,7 @@
     
     
       void REcmaShellFileExporterAdapter::exportArcSegment(
-                const RArc & arg1
+                const RArc & arg1, bool arg2
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportArcSegment", engine);
@@ -384,7 +384,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportArcSegment";
@@ -397,7 +397,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportArcSegment(
-                            arg1
+                            arg1, arg2
                         );
 
                         // block recursion again:
@@ -424,6 +424,15 @@
         
             // const reference argument - make a new object:
             new RArc(arg1)
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        arg2
         )
       
                             )

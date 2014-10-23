@@ -64,7 +64,8 @@
     
     
       void exportArcSegment(
-                const RArc & arg1
+                const RArc & arg1, bool arg2
+        =  false
             );
         
     

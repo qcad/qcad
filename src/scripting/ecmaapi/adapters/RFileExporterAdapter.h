@@ -69,7 +69,7 @@ public:
     }
 
     virtual void exportPoint(const RPoint&) {}
-    virtual void exportArcSegment(const RArc&) {}
+    virtual void exportArcSegment(const RArc&, bool=false) {}
     virtual void exportLineSegment(const RLine&, double=RNANDOUBLE) {}
     virtual void exportTriangle(const RTriangle&) {}
     virtual void exportXLine(const RXLine&) {}

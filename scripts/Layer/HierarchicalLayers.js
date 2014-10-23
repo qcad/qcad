@@ -20,8 +20,6 @@
 function HierarchicalLayers() {
 }
 
-HierarchicalLayers.prototype = {};
-
 HierarchicalLayers.separator = " ... ";
 
 HierarchicalLayers.getChildLayerNames = function(doc, layerName) {

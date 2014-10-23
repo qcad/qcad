@@ -44,8 +44,9 @@ public:
     virtual void exportPoint(const RPoint& point) {
         Q_UNUSED(point)
     }
-    virtual void exportArcSegment(const RArc& arc) {
+    virtual void exportArcSegment(const RArc& arc, bool allowForZeroLength = false) {
         Q_UNUSED(arc)
+        Q_UNUSED(allowForZeroLength)
     }
     virtual void exportTriangle(const RTriangle& triangle) {
         Q_UNUSED(triangle)
