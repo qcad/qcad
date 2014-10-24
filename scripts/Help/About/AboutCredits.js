@@ -18,7 +18,8 @@ var credits =
                               "Modify > Break out Manual<br>" +
                               "View > Display Distance/Angle<br>" +
                               "<i>Significant contributions to:</i><br>" +
-                              "Draw > Line > Line from 2 Points"
+                              "Draw > Line > Line from 2 Points<br>" +
+                              "Custom linetype support, loading .pat files<br>"
                               ],
         [ "Tamas Tevesz",     "Port to FreeBSD,<br>" +
                               "various improvements and fixes." ],
