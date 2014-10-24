@@ -19,7 +19,7 @@ var credits =
                               "View > Display Distance/Angle<br>" +
                               "<i>Significant contributions to:</i><br>" +
                               "Draw > Line > Line from 2 Points<br>" +
-                              "Custom linetype support, loading .pat files<br>"
+                              "Custom linetype support, loading .lin files<br>"
                               ],
         [ "Tamas Tevesz",     "Port to FreeBSD,<br>" +
                               "various improvements and fixes." ],
