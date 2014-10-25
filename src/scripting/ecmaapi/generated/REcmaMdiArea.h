@@ -47,6 +47,15 @@
     static  QScriptValue
         getAddTabButton
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateTabBar
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateTabBarSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        activateTab
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

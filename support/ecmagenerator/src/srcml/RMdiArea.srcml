@@ -31,8 +31,9 @@ dir="./gui" filename="RMdiArea.h">
   <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
   <class_decl>class 
   <name>QToolButton</name>;</class_decl>
-  <comment type="block">/** * MDI area with add tab button. * *
-  \ingroup gui * \scriptable * \generateScriptShell */</comment>
+  <comment type="block">/** * MDI area with tabbar that features
+  add tab button. * * \ingroup gui * \scriptable *
+  \generateScriptShell */</comment>
   <class>class 
   <macro>
     <name>QCADGUI_EXPORT</name>
@@ -74,7 +75,34 @@ dir="./gui" filename="RMdiArea.h">
     <expr>
       <name>addTabButton</name>
     </expr>;</return>}</block>
-  </function>
+  </function></public>
+  <public>public slots: 
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>updateTabBar</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>updateTabBarSize</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>activateTab</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>i</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <label>
   <name>signals</name>:</label>
   <function_decl>
@@ -86,6 +114,7 @@ dir="./gui" filename="RMdiArea.h">
   <protected>protected: 
   <function_decl>
   <type>
+    <name>virtual</name>
     <name>void</name>
   </type>
   <name>resizeEvent</name>
@@ -96,8 +125,36 @@ dir="./gui" filename="RMdiArea.h">
       <name>QResizeEvent</name>*</type>
       <name>event</name>
     </decl>
-  </param>)</parameter_list>;</function_decl></protected>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>showEvent</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>QShowEvent</name>*</type>
+      <name>event</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <comment type="line">// virtual void changeEvent(QEvent*
+  event);</comment></protected>
   <private>private: 
+  <decl_stmt>
+  <decl>
+    <type>
+    <name>QTabBar</name>*</type>
+    <name>tabBarOri</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+    <name>QTabBar</name>*</type>
+    <name>tabBar</name>
+  </decl>;</decl_stmt>
   <decl_stmt>
   <decl>
     <type>

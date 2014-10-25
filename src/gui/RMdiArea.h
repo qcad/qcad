@@ -26,9 +26,10 @@
 #include <QMetaType>
 
 class QToolButton;
+class RMdiChildQt;
 
 /**
- * MDI area with add tab button.
+ * MDI area with tabbar that features add tab button.
  *
  * \ingroup gui
  * \scriptable
@@ -45,13 +46,21 @@ public:
         return addTabButton;
     }
 
+public slots:
+    void updateTabBar(RMdiChildQt* child = NULL);
+    void updateTabBarSize();
+    void closeTab(int i);
+    void activateTab(int i);
+
 signals:
     void addTabClicked();
 
 protected:
-    void resizeEvent(QResizeEvent* event);
+    virtual void resizeEvent(QResizeEvent* event);
 
 private:
+    QTabBar* tabBarOri;
+    QTabBar* tabBar;
     QToolButton* addTabButton;
 };
 

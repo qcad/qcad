@@ -146,6 +146,183 @@
         
     
     
+      void REcmaShellMdiArea::updateTabBar(
+                
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellMdiArea::updateTabBar", engine);
+                QScriptValue _q_function = __qtscript_self.property("updateTabBar");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=0*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RMdiArea::updateTabBar";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RMdiArea::updateTabBar(
+                            
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::updateTabBar", engine);
+
+                        
+                } else {
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                            _q_function.call(__qtscript_self)
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::updateTabBar", engine);
+
+                    
+                }
+            }
+        
+    
+    
+      void REcmaShellMdiArea::updateTabBarSize(
+                
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellMdiArea::updateTabBarSize", engine);
+                QScriptValue _q_function = __qtscript_self.property("updateTabBarSize");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=0*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RMdiArea::updateTabBarSize";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RMdiArea::updateTabBarSize(
+                            
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::updateTabBarSize", engine);
+
+                        
+                } else {
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                            _q_function.call(__qtscript_self)
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::updateTabBarSize", engine);
+
+                    
+                }
+            }
+        
+    
+    
+      void REcmaShellMdiArea::activateTab(
+                int i
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellMdiArea::activateTab", engine);
+                QScriptValue _q_function = __qtscript_self.property("activateTab");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=1*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RMdiArea::activateTab";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RMdiArea::activateTab(
+                            i
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::activateTab", engine);
+
+                        
+                } else {
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: int, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        i
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::activateTab", engine);
+
+                    
+                }
+            }
+        
+    
+    
       void REcmaShellMdiArea::resizeEvent(
                 QResizeEvent * event
             ) {
@@ -216,6 +393,77 @@
             }
         
     
+    
+      void REcmaShellMdiArea::showEvent(
+                QShowEvent * event
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellMdiArea::showEvent", engine);
+                QScriptValue _q_function = __qtscript_self.property("showEvent");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=1*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RMdiArea::showEvent";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RMdiArea::showEvent(
+                            event
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::showEvent", engine);
+
+                        
+                } else {
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                        // temporary make protected function scriptable, only from the context of this function call:
+                        QScriptValue proto = engine->defaultPrototype(qMetaTypeId<RMdiArea*>());
+                        REcmaHelper::registerFunction(engine, &proto, showEvent, "showEvent");
+                        
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: QShowEvent *, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        event
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::showEvent", engine);
+
+                    
+                }
+            }
+        
+    
   
 
     // protected methods (only available for ECMA shell classes) (generated by xsl2xpp.xsl):
@@ -279,6 +527,68 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaShellMdiArea::resizeEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShellMdiArea::showEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShellMdiArea::showEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShellMdiArea::showEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // protected function: can only be called from ECMA shell:
+                    REcmaShellMdiArea* self = 
+                        getSelfShell("", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QShowEvent * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    QShowEvent * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<QShowEvent >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMdiArea: Argument 0 is not of type QShowEvent *QShowEvent *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->RMdiArea::showEvent(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMdiArea.showEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShellMdiArea::showEvent", context, engine);
             return result;
         }
         

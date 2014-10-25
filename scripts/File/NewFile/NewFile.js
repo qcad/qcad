@@ -244,7 +244,9 @@ NewFile.updateTitle = function(mdiChild) {
     if (fileName==="") {
         if (mdiChild.windowTitle==="") {
             title = addDirtyFlag(qsTr("Untitled %1").arg(documentCounter));
-            tabBar.setTabToolTip(tabBar.currentIndex, title);
+            if (!isNull(tabBar)) {
+                tabBar.setTabToolTip(tabBar.currentIndex, title);
+            }
             mdiChild.objectName = "Untitled%1".arg(documentCounter);
             documentCounter++;
             mdiChild.setWindowTitle(title);
@@ -262,7 +264,9 @@ NewFile.updateTitle = function(mdiChild) {
         }
 
         mdiChild.objectName = name;
-        tabBar.setTabToolTip(tabBar.currentIndex, fileName);
+        if (!isNull(tabBar)) {
+            tabBar.setTabToolTip(tabBar.currentIndex, fileName);
+        }
         mdiChild.setWindowTitle(title);
     }
 

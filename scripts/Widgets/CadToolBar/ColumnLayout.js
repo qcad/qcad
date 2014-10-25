@@ -120,7 +120,7 @@ ColumnLayout.prototype.setGeometry = function(rect) {
         }
 
         // back button at the top or left:
-        if (itemList[i].objectName == "BackButton") {
+        if (itemList[i].objectName === "BackButton") {
             if (horizontal) {
                 itemList[i].setGeometry(0,0, buttonSize*0.75,height);
                 x+=buttonSize*0.75 + 8;
@@ -135,7 +135,7 @@ ColumnLayout.prototype.setGeometry = function(rect) {
         }
 
         // separator:
-        if (itemList[i].isSeparator!=undefined && itemList[i].isSeparator()) {
+        if (isFunction(itemList[i].isSeparator) && itemList[i].isSeparator()) {
             if (horizontal) {
                 if (y==0) {
                     x+=8;

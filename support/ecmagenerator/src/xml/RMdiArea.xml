@@ -18,11 +18,36 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QToolButton *" isPureVirtual="false" />
     </method>
+    <method name="updateTabBar" cppName="updateTabBar"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="updateTabBarSize" cppName="updateTabBarSize"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="activateTab" cppName="activateTab"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
     <method name="resizeEvent" cppName="resizeEvent"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QResizeEvent *" typeName="QResizeEvent *"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="showEvent" cppName="showEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QShowEvent *" typeName="QShowEvent *"
         name="event" isConst="false" />
       </variant>
     </method>

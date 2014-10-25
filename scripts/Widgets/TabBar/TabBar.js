@@ -53,7 +53,9 @@ TabBar.init = function(basePath) {
         });
     }
 
-//    var button = mdiArea.getAddTabButton();
-//    var action = RGuiAction.getByScriptFile("scripts/File/NewFile/NewFile.js");
-//    button.setDefaultAction(action);
+    if (RSettings.getBoolValue("Appearance/ShowAddTabButton", false)) {
+        var button = mdiArea.getAddTabButton();
+        var action = RGuiAction.getByScriptFile("scripts/File/NewFile/NewFile.js");
+        button.setDefaultAction(action);
+    }
 };
