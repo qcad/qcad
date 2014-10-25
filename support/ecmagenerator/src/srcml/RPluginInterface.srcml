@@ -52,6 +52,9 @@ dir="./core" filename="RPluginInterface.h">
   <name>InitStatus</name>
   <block>{ 
   <expr>
+    <name>GotSplashWindow</name>
+  </expr>, 
+  <expr>
     <name>GotMainWindow</name>
   </expr>, 
   <expr>

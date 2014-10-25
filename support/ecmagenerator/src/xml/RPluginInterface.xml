@@ -8,6 +8,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="true" isScriptable="true">
     <enum name="InitStatus">
+      <value name="GotSplashWindow" />
       <value name="GotMainWindow" />
       <value name="LoadedFiles" />
       <value name="ScriptsExecuted" />

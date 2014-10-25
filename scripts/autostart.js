@@ -534,6 +534,7 @@ function main() {
         }
     }
 
+    RPluginLoader.postInitPlugins(RPluginInterface.GotSplashWindow);
 
     // scan for script add-ons (forced for first start, first start after
     // update, if configured):

@@ -54,6 +54,9 @@
         updateTabBarSize
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        closeTab
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         activateTab
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

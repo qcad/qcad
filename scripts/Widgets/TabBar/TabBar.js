@@ -57,5 +57,6 @@ TabBar.init = function(basePath) {
         var button = mdiArea.getAddTabButton();
         var action = RGuiAction.getByScriptFile("scripts/File/NewFile/NewFile.js");
         button.setDefaultAction(action);
+        button.icon = new QIcon("scripts/Widgets/TabBar/AddTab.svg");
     }
 };

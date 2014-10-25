@@ -41,6 +41,7 @@ class QScriptEngine;
 class QCADCORE_EXPORT RPluginInterface {
 public:
     enum InitStatus {
+        GotSplashWindow,
         GotMainWindow,
         LoadedFiles,
         ScriptsExecuted,

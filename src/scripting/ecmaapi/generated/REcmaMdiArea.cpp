@@ -9,6 +9,8 @@
         
                 #include <QToolButton>
             
+                #include "RMdiChildQt.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaMdiArea::init(QScriptEngine& engine, QScriptValue* proto 
@@ -70,6 +72,8 @@
             REcmaHelper::registerFunction(&engine, proto, updateTabBar, "updateTabBar");
             
             REcmaHelper::registerFunction(&engine, proto, updateTabBarSize, "updateTabBarSize");
+            
+            REcmaHelper::registerFunction(&engine, proto, closeTab, "closeTab");
             
             REcmaHelper::registerFunction(&engine, proto, activateTab, "activateTab");
             
@@ -322,6 +326,38 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject()
+        ) /* type: RMdiChildQt * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RMdiChildQt * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RMdiChildQt >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMdiArea: Argument 0 is not of type RMdiChildQt *RMdiChildQt *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateTabBar(a0);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiArea.updateTabBar().",
                    context);
@@ -371,6 +407,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMdiArea::updateTabBarSize", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMdiArea::closeTab
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMdiArea::closeTab", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMdiArea::closeTab";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMdiArea* self = 
+                        getSelf("closeTab", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->closeTab(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMdiArea.closeTab().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMdiArea::closeTab", context, engine);
             return result;
         }
          QScriptValue

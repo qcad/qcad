@@ -76,6 +76,11 @@
     // enum values:
     
 
+    ctor.setProperty("GotSplashWindow",
+    QScriptValue(RPluginInterface::GotSplashWindow),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("GotMainWindow",
     QScriptValue(RPluginInterface::GotMainWindow),
     QScriptValue::ReadOnly);

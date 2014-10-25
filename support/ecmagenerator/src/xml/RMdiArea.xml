@@ -2,6 +2,7 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="QToolButton" />
+  <class_decl name="RMdiChildQt" />
   <class name="RMdiArea"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="true" sharedPointerSupport="false" isQObject="true"
@@ -21,12 +22,22 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="updateTabBar" cppName="updateTabBar"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RMdiChildQt *" typeName="RMdiChildQt *"
+        name="child" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
     </method>
     <method name="updateTabBarSize" cppName="updateTabBarSize"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="closeTab" cppName="closeTab" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
     </method>
     <method name="activateTab" cppName="activateTab"
     specifier="public" isStatic="false" isVirtual="false"
@@ -40,14 +51,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QResizeEvent *" typeName="QResizeEvent *"
-        name="event" isConst="false" />
-      </variant>
-    </method>
-    <method name="showEvent" cppName="showEvent"
-    specifier="protected" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QShowEvent *" typeName="QShowEvent *"
         name="event" isConst="false" />
       </variant>
     </method>

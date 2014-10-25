@@ -31,6 +31,8 @@ dir="./gui" filename="RMdiArea.h">
   <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
   <class_decl>class 
   <name>QToolButton</name>;</class_decl>
+  <class_decl>class 
+  <name>RMdiChildQt</name>;</class_decl>
   <comment type="block">/** * MDI area with tabbar that features
   add tab button. * * \ingroup gui * \scriptable *
   \generateScriptShell */</comment>
@@ -82,13 +84,38 @@ dir="./gui" filename="RMdiArea.h">
     <name>void</name>
   </type>
   <name>updateTabBar</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+    <name>RMdiChildQt</name>*</type>
+    <name>child</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
   </type>
   <name>updateTabBarSize</name>
   <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>closeTab</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>i</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
@@ -125,23 +152,7 @@ dir="./gui" filename="RMdiArea.h">
       <name>QResizeEvent</name>*</type>
       <name>event</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>showEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QShowEvent</name>*</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">// virtual void changeEvent(QEvent*
-  event);</comment></protected>
+  </param>)</parameter_list>;</function_decl></protected>
   <private>private: 
   <decl_stmt>
   <decl>
