@@ -55,6 +55,7 @@ TabBar.init = function(basePath) {
 
     if (RSettings.getBoolValue("Appearance/ShowAddTabButton", false)) {
         var button = mdiArea.getAddTabButton();
+        button.styleSheet = "border:0px";
         var action = RGuiAction.getByScriptFile("scripts/File/NewFile/NewFile.js");
         button.setDefaultAction(action);
         button.icon = new QIcon("scripts/Widgets/TabBar/AddTab.svg");

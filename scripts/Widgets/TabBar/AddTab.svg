@@ -12,7 +12,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="AddCustomProperty.svg">
+   sodipodi:docname="AddTab.svg">
   <metadata
      id="metadata10">
     <rdf:RDF>
@@ -57,7 +57,7 @@
   <defs
      id="defs4" />
   <path
-     style="fill:#ff0000;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     style="fill:#000000;stroke:none;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
      d="m 216,72 0,144 -144,0 0,80 144,0 0,144 80,0 0,-144 144,0 0,-80 -144,0 0,-144 z"
      id="path2993"
      inkscape:connector-curvature="0"
