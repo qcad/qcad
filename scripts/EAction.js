@@ -916,18 +916,12 @@ EAction.getCadToolBarPanel = function(title, objectName, hasBackButton) {
         cadToolBar.updateIconSize();
         appWin.addToolBar(Qt.LeftToolBarArea, toolBar);
 
-        /*
         toolBar.topLevelChanged.connect(function(onOff) {
-            qDebug("top level: ", onOff);
-            //toolBar.setProperty("verticalWhenFloating", false);
-            //toolBar.updateGeometry();
+            RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
         });
         toolBar.orientationChanged.connect(function(orientation) {
-            qDebug("orientation changed: ", orientation);
-            //toolBar.setProperty("verticalWhenFloating", false);
-            //toolBar.updateGeometry();
+            RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
         });
-        */
     }
 
     return CadToolBar.getPanel(title, objectName, hasBackButton);

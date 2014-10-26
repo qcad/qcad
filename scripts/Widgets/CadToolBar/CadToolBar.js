@@ -71,7 +71,6 @@ CadToolBar.prototype.contextMenuEvent = function(event) {
     if (isNull(appWin)) {
         return;
     }
-    //var cadToolBar = appWin.findChild("CadToolBar");
     var panelName = CadToolBar.getCurrentPanelName();
     if (panelName!=="MainToolsPanel") {
         CadToolBar.showPanel("MainToolsPanel");
@@ -79,67 +78,25 @@ CadToolBar.prototype.contextMenuEvent = function(event) {
     else {
         var menu = new QMenu(this);
         menu.objectName = "ContextMenu";
-        var action = menu.addAction(qsTr("Toggle Handle"));
+//        var action = menu.addAction(qsTr("Toggle Handle"));
         var tb = appWin.findChild("CadQToolBar");
-        action.triggered.connect(function(checked) {
-            tb.movable = !tb.movable;
-        });
-        // TODO: make floating tool bar vertical
-//        if (tb.floating) {
-//            action = menu.addAction(qsTr("Vertical/Horizontal"));
-//            action.triggered.connect(function(checked) {
-//                if (isNull(tb.verticalWhenFloating)) {
-//                    tb.verticalWhenFloating = false;
-//                }
-//                qDebug("tb.verticalWhenFloating: ", tb.verticalWhenFloating);
-//                tb.setProperty("verticalWhenFloating", !tb.verticalWhenFloating);
-//                qDebug("tb.verticalWhenFloating: ", tb.verticalWhenFloating);
-//                //tb.resize(10,10);
-//                //tb.hide();
-//                //tb.show();
-//                //var tbw = appWin.findChild("CadToolBar");
-//                //tbw.updateGeometry();
-//                //var sh = tb.sizeHint;
-//                //qDebug("sh: ", sh);
-//                //tb.resize(sh.height(), sh.width());
-//                //var tb = appWin.findChild("CadQToolBar");
-//                //tb.movable = !tb.movable;
-//                //tb.movable = !tb.movable;
-//            });
-//        }
+//        action.triggered.connect(function(checked) {
+//            tb.movable = !tb.movable;
+//        });
+
+        // force tool bar to be vertical:
+        if (tb.floating) {
+            var action = menu.addAction(qsTr("Vertical/Horizontal"));
+            action.triggered.connect(function(checked) {
+                var verticalWhenFloating = RSettings.getBoolValue("CadToolBar/VerticalWhenFloating", false);
+                RSettings.setValue("CadToolBar/VerticalWhenFloating", !verticalWhenFloating);
+
+                var cadToolBar = appWin.findChild("CadToolBar");
+                CadToolBar.prototype.updateIconSize.call(cadToolBar);
+            });
+        }
         menu.exec(QCursor.pos());
     }
-};
-
-CadToolBar.getSizeHint = function(toolBar, sHint) {
-    var columns = RSettings.getIntValue("CadToolBar/Columns", 2);
-    var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
-
-    var w, h;
-
-    if (toolBar.floating) {
-        //qDebug("sizeHint for floating");
-        w = columns * iconSize * 1.25;
-        h = !isNull(sHint) ? sHint.height() : 0;
-    }
-    else {
-        if (toolBar.orientation===Qt.Horizontal/* && !toolBar.floating*/) {
-            //qDebug("sizeHint for horizontal");
-            //x = 12 * iconSize * 1.25;
-            w = 0; //!isNull(sHint) ? sHint.width() : 0;
-            //h = Math.max(columns * iconSize * 1.25, (!isNull(sHint) ? sHint.height() : 0));
-            h = columns * iconSize * 1.25;
-        }
-        else {
-            //qDebug("sizeHint for vertical");
-            //w = Math.max(columns * iconSize * 1.25, (!isNull(sHint) ? sHint.width() : 0));
-            w = columns * iconSize * 1.25;
-            //y = 12 * iconSize * 1.25;
-            h = 0; //!isNull(sHint) ? sHint.height() : 0;
-        }
-    }
-    //qDebug("sizeHint", w, h);
-    return new QSize(w, h);
 };
 
 CadToolBar.back = function() {
@@ -257,11 +214,21 @@ CadToolBar.prototype.updateIconSize = function() {
     var toolBar = this.parentWidget();
 
     toolBar.iconSize = new QSize(columns*iconSize, columns*iconSize);
-    qDebug("iconSize: ", toolBar.iconSize);
 
-    toolBar.minimumWidth = buttonSize;
-    toolBar.minimumHeight = buttonSize;
-    //this.updateGeometry();
+    // workaround for QToolBar bug (not resizing when layout changes):
+    if (toolBar.floating) {
+        toolBar.resize(toolBar.sizeHint.width(), toolBar.sizeHint.height());
+    }
+};
 
-    //this.setFixedWidth(buttonSize*columns);
+CadToolBar.postInit = function() {
+    var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return;
+    }
+    var toolBar = appWin.findChild("CadQToolBar");
+    if (isNull(toolBar)) {
+        return;
+    }
+    RSettings.setValue("CadToolBar/VerticalWhenFloating", toolBar.size.width() < toolBar.size.height());
 };

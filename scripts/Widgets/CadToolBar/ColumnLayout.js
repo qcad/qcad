@@ -77,44 +77,20 @@ ColumnLayout.getSortOrder = function(item) {
     return undefined;
 };
 
+ColumnLayout.prototype.minimumSize = function() {
+    return this.sizeHint();
+};
+
 ColumnLayout.prototype.sizeHint = function() {
     if (isNull(this.sHint)) {
         return new QSize(0,0);
     }
 
     this.setGeometry();
-    qDebug("this.sHint", this.sHint);
     return this.sHint;
-
-    /*
-//    return new QSize(100,100);
-//    qDebug("size hint: ", CadToolBar.getSizeHint(this.toolBar, this.sHint));
-//    return CadToolBar.getSizeHint(this.toolBar, this.sHint);
-    var columns = RSettings.getIntValue("CadToolBar/Columns", 2);
-    var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
-//    if (this.toolBar.orientation===Qt.Horizontal && !this.toolBar.floating) {
-    if (this.toolBar.orientation===Qt.Horizontal) {
-        return new QSize(this.toolBar.sHint.width(), columns * iconSize * 1.25);
-//        return new QSize(100, 10);
-//        this.sizeHintX = 300;
-//        this.sizeHintY = columns * iconSize * 1.25;
-    }
-    else {
-        return new QSize(columns * iconSize * 1.25, this.toolBar.sHint.height());
-//        this.sizeHintX = columns * iconSize * 1.25;
-//        this.sizeHintY = this.toolBar.floating ? 500 : 300;
-    }
-//    return new QSize(this.sizeHintX, this.sizeHintY);
-    */
 };
 
 ColumnLayout.prototype.setGeometry = function(rect) {
-    qDebug("ColumnLayout.prototype.setGeometry");
-    qDebug("orientation: ", this.toolBar.orientation);
-    //qDebug("movable: ", this.toolBar.movable);
-    qDebug("floating: ", this.toolBar.floating);
-    qDebug("is window: ", this.toolBar.isWindow());
-
     var itemList = this.property("ItemList");
     if (typeof(itemList)=="undefined") {
         return;
@@ -125,24 +101,10 @@ ColumnLayout.prototype.setGeometry = function(rect) {
     var width = this.parentWidget().width;
     var height = this.parentWidget().height;
 
-    //var horizontal = width>height;
-//    var horizontal = (this.toolBar.orientation===Qt.Horizontal && !this.toolBar.floating);
-    //var horizontal = this.toolBar.orientation===Qt.Horizontal;
-    var horizontal = (this.toolBar.orientation===Qt.Horizontal && this.toolBar.verticalWhenFloating!==true);
-    //qDebug("horizontal:", horizontal);
+    var verticalWhenFloating = RSettings.getBoolValue("CadToolBar/VerticalWhenFloating", false);
+    var horizontal = (this.toolBar.orientation===Qt.Horizontal && verticalWhenFloating!==true);
     var w = (horizontal && this.toolBar.movable) ? 2 : 0;
     var h = (!horizontal && this.toolBar.movable) ? 2 : 0;
-    //qDebug("this.toolBar.movable", this.toolBar.movable);
-    //qDebug("this.toolBar.floating", this.toolBar.floating);
-
-//    if (horizontal) {
-//        this.parentWidget().minimumWidth=x+this.buttonSizeX;
-//        this.parentWidget().minimumHeight=2*this.buttonSizeY;
-//    }
-//    else {
-//        this.parentWidget().minimumWidth=2*this.buttonSizeX;
-//        this.parentWidget().minimumHeight=y+this.buttonSizeY;
-//    }
 
     var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
     var buttonSize = iconSize * 1.25;
@@ -225,14 +187,7 @@ ColumnLayout.prototype.setGeometry = function(rect) {
         w+=buttonSize;
     }
 
-    //qDebug("size: ", w, h);
     this.setProperty("sHint", new QSize(w, h));
-    //this.sizeHintX = x;
-    //this.sizeHintY = y;
-//    this.setProperty("sizeHintX", x);
-//    this.setProperty("sizeHintY", y);
-
-    //this.toolBar.updateGeometry();
 };
 
 ColumnLayout.prototype.itemAt = function(index) {
