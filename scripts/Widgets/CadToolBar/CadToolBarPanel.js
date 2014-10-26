@@ -23,7 +23,7 @@ function CadToolBarPanel(parent, hasBackButton) {
     QWidget.call(this, parent);
 
     var layout = new ColumnLayout(
-        this, RSettings.getIntValue("CadToolBar/IconSize", 32) * 1.25
+        this, parent.parentWidget(), RSettings.getIntValue("CadToolBar/IconSize", 32) * 1.25
     );
     this.setLayout(layout);
     this.sizePolicy = new QSizePolicy(
@@ -74,6 +74,7 @@ CadToolBarPanel.prototype.addAction = function(action) {
         //button.arrowType=Qt.LeftArrow;
         button.icon = new QIcon("scripts/Widgets/CadToolBar/Back.svg");
         button.toolTip = qsTr("Back");
+        button.sizePolicy = new QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum);
     }
     ColumnLayout.prototype.addItem.call(this.layout(), button);
 };

@@ -905,16 +905,29 @@ EAction.getCadToolBarPanel = function(title, objectName, hasBackButton) {
     }
 
     var appWin = EAction.getMainWindow();
-    var cadToolBar = appWin.findChild("CadToolBar");
+    var cadToolBar = appWin.findChild("CadQToolBar");
 
     // create CAD toolbar if it does not exist already:
     if (isNull(cadToolBar)) {
-        var dock = new QDockWidget(qsTr("CAD Tools"), appWin);
-        dock.objectName = "CadToolsDock";
-        cadToolBar = new CadToolBar(dock);
-        dock.setWidget(cadToolBar);
-        dock.setTitleBarWidget(new QWidget(null));
-        appWin.addDockWidget(Qt.LeftDockWidgetArea, dock);
+        var toolBar = new QToolBar(qsTr("CAD Tools"), appWin);
+        toolBar.objectName = "CadQToolBar";
+        cadToolBar = new CadToolBar(toolBar);
+        toolBar.addWidget(cadToolBar);
+        cadToolBar.updateIconSize();
+        appWin.addToolBar(Qt.LeftToolBarArea, toolBar);
+
+        /*
+        toolBar.topLevelChanged.connect(function(onOff) {
+            qDebug("top level: ", onOff);
+            //toolBar.setProperty("verticalWhenFloating", false);
+            //toolBar.updateGeometry();
+        });
+        toolBar.orientationChanged.connect(function(orientation) {
+            qDebug("orientation changed: ", orientation);
+            //toolBar.setProperty("verticalWhenFloating", false);
+            //toolBar.updateGeometry();
+        });
+        */
     }
 
     return CadToolBar.getPanel(title, objectName, hasBackButton);

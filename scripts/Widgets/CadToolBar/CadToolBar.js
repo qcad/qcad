@@ -21,7 +21,9 @@ include("CadToolBarPanel.js");
 
 
 /**
- * \todo change to dockable widget instead of toolbar
+ * CAD tool bar with configurable number of columns of tool buttons.
+ *
+ * \param parent A QToolBar
  */
 function CadToolBar(parent) {
     QWidget.call(this, parent);
@@ -77,20 +79,67 @@ CadToolBar.prototype.contextMenuEvent = function(event) {
     else {
         var menu = new QMenu(this);
         menu.objectName = "ContextMenu";
-        var action = menu.addAction(qsTr("Toggle Title Bar"));
+        var action = menu.addAction(qsTr("Toggle Handle"));
+        var tb = appWin.findChild("CadQToolBar");
         action.triggered.connect(function(checked) {
-            var dock = appWin.findChild("CadToolsDock");
-            if (isNull(dock.titleBarWidget())) {
-                // remove title bar (set to empty widget):
-                dock.setTitleBarWidget(new QWidget(null));
-            }
-            else {
-                // show default title bar:
-                dock.setTitleBarWidget(null);
-            }
+            tb.movable = !tb.movable;
         });
+        // TODO: make floating tool bar vertical
+//        if (tb.floating) {
+//            action = menu.addAction(qsTr("Vertical/Horizontal"));
+//            action.triggered.connect(function(checked) {
+//                if (isNull(tb.verticalWhenFloating)) {
+//                    tb.verticalWhenFloating = false;
+//                }
+//                qDebug("tb.verticalWhenFloating: ", tb.verticalWhenFloating);
+//                tb.setProperty("verticalWhenFloating", !tb.verticalWhenFloating);
+//                qDebug("tb.verticalWhenFloating: ", tb.verticalWhenFloating);
+//                //tb.resize(10,10);
+//                //tb.hide();
+//                //tb.show();
+//                //var tbw = appWin.findChild("CadToolBar");
+//                //tbw.updateGeometry();
+//                //var sh = tb.sizeHint;
+//                //qDebug("sh: ", sh);
+//                //tb.resize(sh.height(), sh.width());
+//                //var tb = appWin.findChild("CadQToolBar");
+//                //tb.movable = !tb.movable;
+//                //tb.movable = !tb.movable;
+//            });
+//        }
         menu.exec(QCursor.pos());
     }
+};
+
+CadToolBar.getSizeHint = function(toolBar, sHint) {
+    var columns = RSettings.getIntValue("CadToolBar/Columns", 2);
+    var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
+
+    var w, h;
+
+    if (toolBar.floating) {
+        //qDebug("sizeHint for floating");
+        w = columns * iconSize * 1.25;
+        h = !isNull(sHint) ? sHint.height() : 0;
+    }
+    else {
+        if (toolBar.orientation===Qt.Horizontal/* && !toolBar.floating*/) {
+            //qDebug("sizeHint for horizontal");
+            //x = 12 * iconSize * 1.25;
+            w = 0; //!isNull(sHint) ? sHint.width() : 0;
+            //h = Math.max(columns * iconSize * 1.25, (!isNull(sHint) ? sHint.height() : 0));
+            h = columns * iconSize * 1.25;
+        }
+        else {
+            //qDebug("sizeHint for vertical");
+            //w = Math.max(columns * iconSize * 1.25, (!isNull(sHint) ? sHint.width() : 0));
+            w = columns * iconSize * 1.25;
+            //y = 12 * iconSize * 1.25;
+            h = 0; //!isNull(sHint) ? sHint.height() : 0;
+        }
+    }
+    //qDebug("sizeHint", w, h);
+    return new QSize(w, h);
 };
 
 CadToolBar.back = function() {
@@ -205,7 +254,14 @@ CadToolBar.prototype.updateIconSize = function() {
     var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
     var buttonSize = iconSize * 1.25;
 
-    this.minimumWidth = buttonSize;
-    this.minimumHeight = buttonSize;
-    this.setFixedWidth(buttonSize*columns);
+    var toolBar = this.parentWidget();
+
+    toolBar.iconSize = new QSize(columns*iconSize, columns*iconSize);
+    qDebug("iconSize: ", toolBar.iconSize);
+
+    toolBar.minimumWidth = buttonSize;
+    toolBar.minimumHeight = buttonSize;
+    //this.updateGeometry();
+
+    //this.setFixedWidth(buttonSize*columns);
 };
