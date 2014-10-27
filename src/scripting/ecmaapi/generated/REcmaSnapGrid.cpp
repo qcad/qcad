@@ -15,7 +15,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSnap.h"
-                 void REcmaSnapGrid::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSnapGrid::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

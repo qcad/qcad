@@ -464,7 +464,7 @@
 
 
 <xsl:template name="init">
-    <xsl:value-of select="$static"/> void <xsl:value-of select="$prefix"/>init(QScriptEngine&amp; engine, QScriptValue* proto 
+    <xsl:value-of select="$static"/> void <xsl:value-of select="$prefix"/>initEcma(QScriptEngine&amp; engine, QScriptValue* proto 
     <xsl:choose>
         <xsl:when test="$mode='h'">
             <xsl:text>=NULL</xsl:text>
@@ -506,7 +506,7 @@
         /*
         <xsl:for-each select="baseClass[position() != 1]">
           <xsl:if test="starts-with(@name , 'R') and rs:isClassScriptable(@name)">
-            <xsl:value-of select="concat('REcma', substring(@name,2))"/>::init(engine, proto);
+            <xsl:value-of select="concat('REcma', substring(@name,2))"/>::initEcma(engine, proto);
           </xsl:if>
         </xsl:for-each>
         */

@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaAddObjectsOperation.h"
-                 void REcmaModifyObjectsOperation::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaModifyObjectsOperation::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

@@ -17,7 +17,7 @@
                   #include "REcmaExplodable.h"
                 
                   #include "REcmaDirected.h"
-                 void REcmaSpline::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSpline::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -41,8 +41,8 @@
             }
           
         /*
-        REcmaExplodable::init(engine, proto);
-          REcmaDirected::init(engine, proto);
+        REcmaExplodable::initEcma(engine, proto);
+          REcmaDirected::initEcma(engine, proto);
           
         */
     

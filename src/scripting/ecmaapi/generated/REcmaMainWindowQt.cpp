@@ -49,7 +49,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaMainWindow.h"
-                 void REcmaMainWindowQt::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaMainWindowQt::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -73,7 +73,7 @@
             }
           
         /*
-        REcmaMainWindow::init(engine, proto);
+        REcmaMainWindow::initEcma(engine, proto);
           
         */
     

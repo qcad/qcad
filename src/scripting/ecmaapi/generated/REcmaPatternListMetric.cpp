@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaPatternList.h"
-                 void REcmaPatternListMetric::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaPatternListMetric::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

@@ -9,7 +9,7 @@
         
             
         // includes for base ecma wrapper classes
-         void REcmaColor::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaColor::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

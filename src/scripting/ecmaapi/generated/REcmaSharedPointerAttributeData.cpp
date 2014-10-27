@@ -13,7 +13,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSharedPointerTextBasedData.h"
-                 void REcmaSharedPointerAttributeData::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSharedPointerAttributeData::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

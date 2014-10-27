@@ -11,7 +11,7 @@
             
             
         // includes for base ecma wrapper classes
-         void REcmaFontChooserWidget::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaFontChooserWidget::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

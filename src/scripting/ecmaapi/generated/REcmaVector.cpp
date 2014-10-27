@@ -17,7 +17,7 @@
             
             
         // includes for base ecma wrapper classes
-         void REcmaVector::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaVector::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

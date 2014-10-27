@@ -17,7 +17,7 @@
                   #include "REcmaShape.h"
                 
                   #include "REcmaDirected.h"
-                 void REcmaLine::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaLine::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -41,7 +41,7 @@
             }
           
         /*
-        REcmaDirected::init(engine, proto);
+        REcmaDirected::initEcma(engine, proto);
           
         */
     

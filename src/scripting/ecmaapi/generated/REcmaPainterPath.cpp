@@ -15,7 +15,7 @@
             
             
         // includes for base ecma wrapper classes
-         void REcmaPainterPath::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaPainterPath::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

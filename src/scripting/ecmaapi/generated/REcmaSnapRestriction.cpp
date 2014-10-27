@@ -11,7 +11,7 @@
             
             
         // includes for base ecma wrapper classes
-         void REcmaSnapRestriction::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaSnapRestriction::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

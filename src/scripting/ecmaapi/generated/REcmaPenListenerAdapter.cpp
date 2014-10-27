@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaPenListener.h"
-                 void REcmaPenListenerAdapter::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaPenListenerAdapter::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -35,7 +35,7 @@
             }
           
         /*
-        REcmaPenListener::init(engine, proto);
+        REcmaPenListener::initEcma(engine, proto);
           
         */
     

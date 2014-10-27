@@ -9,7 +9,7 @@
         
             
         // includes for base ecma wrapper classes
-         void REcmaCloseCurrentEvent::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaCloseCurrentEvent::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

@@ -13,7 +13,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaObject.h"
-                 void REcmaLayer::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaLayer::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

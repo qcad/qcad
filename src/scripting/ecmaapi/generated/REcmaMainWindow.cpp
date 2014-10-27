@@ -49,7 +49,7 @@
                   #include "REcmaProgressHandler.h"
                 
                   #include "REcmaMessageHandler.h"
-                 void REcmaMainWindow::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaMainWindow::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -73,7 +73,7 @@
             }
           
         /*
-        REcmaMessageHandler::init(engine, proto);
+        REcmaMessageHandler::initEcma(engine, proto);
           
         */
     

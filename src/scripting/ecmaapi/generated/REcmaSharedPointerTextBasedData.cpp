@@ -15,7 +15,7 @@
                   #include "REcmaSharedPointerEntityData.h"
                 
                   #include "REcmaSharedPointerPainterPathSource.h"
-                 void REcmaSharedPointerTextBasedData::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSharedPointerTextBasedData::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -35,7 +35,7 @@
             qMetaTypeId<REntityDataPointer>()));
           
         /*
-        REcmaPainterPathSource::init(engine, proto);
+        REcmaPainterPathSource::initEcma(engine, proto);
           
         */
     

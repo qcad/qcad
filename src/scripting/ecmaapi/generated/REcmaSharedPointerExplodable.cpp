@@ -9,7 +9,7 @@
         
             
         // includes for base ecma wrapper classes
-         void REcmaSharedPointerExplodable::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaSharedPointerExplodable::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

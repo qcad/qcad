@@ -15,7 +15,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaDimensionEntity.h"
-                 void REcmaDimAlignedEntity::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaDimAlignedEntity::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

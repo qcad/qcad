@@ -13,7 +13,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaViewFocusListener.h"
-                 void REcmaViewFocusListenerAdapter::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaViewFocusListenerAdapter::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

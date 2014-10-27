@@ -99,6 +99,7 @@
 #include <QShowEvent>
 #include <QStaticText>
 #include <QStringList>
+#include <QStyledItemDelegate>
 #include <QStyleOption>
 #include <QStyleOptionViewItem>
 #include <QSwipeGesture>
@@ -242,6 +243,7 @@ Q_DECLARE_METATYPE(QShowEvent*)
 Q_DECLARE_METATYPE(QStaticText*)
 Q_DECLARE_METATYPE(QString)
 Q_DECLARE_METATYPE(QStringList*)
+Q_DECLARE_METATYPE(QStyledItemDelegate*)
 Q_DECLARE_METATYPE(QStyleOption)
 Q_DECLARE_METATYPE(QStyleOption*)
 Q_DECLARE_METATYPE(QStyleOptionViewItem*)

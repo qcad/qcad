@@ -15,7 +15,7 @@
                   #include "REcmaShape.h"
                 
                   #include "REcmaDirected.h"
-                 void REcmaEllipse::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaEllipse::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -39,7 +39,7 @@
             }
           
         /*
-        REcmaDirected::init(engine, proto);
+        REcmaDirected::initEcma(engine, proto);
           
         */
     

@@ -15,7 +15,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaGrid.h"
-                 void REcmaOrthoGrid::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaOrthoGrid::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

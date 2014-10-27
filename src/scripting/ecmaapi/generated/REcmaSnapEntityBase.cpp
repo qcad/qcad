@@ -13,7 +13,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSnap.h"
-                 void REcmaSnapEntityBase::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSnapEntityBase::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

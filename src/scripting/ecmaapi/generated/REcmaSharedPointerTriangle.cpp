@@ -15,7 +15,7 @@
                   #include "REcmaSharedPointerShape.h"
                 
                   #include "REcmaSharedPointerExplodable.h"
-                 void REcmaSharedPointerTriangle::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSharedPointerTriangle::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -35,7 +35,7 @@
             qMetaTypeId<RShapePointer>()));
           
         /*
-        REcmaExplodable::init(engine, proto);
+        REcmaExplodable::initEcma(engine, proto);
           
         */
     

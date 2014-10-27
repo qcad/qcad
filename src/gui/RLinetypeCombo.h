@@ -23,7 +23,6 @@
 #include "gui_global.h"
 
 #include <QComboBox>
-#include <QStyledItemDelegate>
 
 #include "RDocument.h"
 #include "RLinetypePattern.h"
@@ -59,17 +58,6 @@ public slots:
 private:
     bool onlyFixed;
     QList<RLinetypePattern> patterns;
-};
-
-
-class QCADGUI_EXPORT RLinetypeComboDelegate: public QStyledItemDelegate {
-public:
-    RLinetypeComboDelegate(QObject* parent) : QStyledItemDelegate(parent) {}
-
-    void paint(QPainter* painter,
-               const QStyleOptionViewItem& option, const QModelIndex& index) const;
-    QSize sizeHint(const QStyleOptionViewItem& option,
-                   const QModelIndex& index) const;
 };
 
 Q_DECLARE_METATYPE(RLinetypeCombo*)

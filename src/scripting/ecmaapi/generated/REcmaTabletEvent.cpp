@@ -13,7 +13,7 @@
             
             
         // includes for base ecma wrapper classes
-         void REcmaTabletEvent::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaTabletEvent::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

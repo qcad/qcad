@@ -13,7 +13,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSnapRestriction.h"
-                 void REcmaRestrictAngleLength::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaRestrictAngleLength::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

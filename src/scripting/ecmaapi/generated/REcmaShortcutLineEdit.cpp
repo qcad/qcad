@@ -9,7 +9,7 @@
         
             
         // includes for base ecma wrapper classes
-         void REcmaShortcutLineEdit::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaShortcutLineEdit::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

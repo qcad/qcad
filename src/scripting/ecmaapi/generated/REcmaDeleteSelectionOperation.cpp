@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaClipboardOperation.h"
-                 void REcmaDeleteSelectionOperation::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaDeleteSelectionOperation::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

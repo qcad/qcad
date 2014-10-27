@@ -17,7 +17,7 @@
                   #include "REcmaRequireHeap.h"
                 
                   #include "REcmaNonCopyable.h"
-                 void REcmaOperation::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaOperation::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

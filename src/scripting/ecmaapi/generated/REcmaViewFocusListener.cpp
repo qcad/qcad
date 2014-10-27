@@ -11,7 +11,7 @@
             
             
         // includes for base ecma wrapper classes
-         void REcmaViewFocusListener::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaViewFocusListener::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

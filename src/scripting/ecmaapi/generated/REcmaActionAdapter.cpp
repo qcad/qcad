@@ -35,7 +35,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaAction.h"
-                 void REcmaActionAdapter::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaActionAdapter::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaLinetypeList.h"
-                 void REcmaLinetypeListImperial::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaLinetypeListImperial::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

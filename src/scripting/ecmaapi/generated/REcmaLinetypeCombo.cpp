@@ -9,7 +9,7 @@
         
             
         // includes for base ecma wrapper classes
-         void REcmaLinetypeCombo::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaLinetypeCombo::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -68,6 +68,8 @@
             REcmaHelper::registerFunction(&engine, proto, reinit, "reinit");
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypePattern, "getLinetypePattern");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLinetypePatternAt, "getLinetypePatternAt");
             
             REcmaHelper::registerFunction(&engine, proto, setLinetypePattern, "setLinetypePattern");
             
@@ -389,6 +391,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinetypeCombo::getLinetypePattern", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypeCombo::getLinetypePatternAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypeCombo::getLinetypePatternAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::getLinetypePatternAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypeCombo* self = 
+                        getSelf("getLinetypePatternAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLinetypePattern'
+    RLinetypePattern cppResult =
+        
+               self->getLinetypePatternAt(a0);
+        // return type: RLinetypePattern
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.getLinetypePatternAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypeCombo::getLinetypePatternAt", context, engine);
             return result;
         }
          QScriptValue

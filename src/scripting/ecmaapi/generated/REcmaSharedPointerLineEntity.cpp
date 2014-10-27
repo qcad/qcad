@@ -15,7 +15,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSharedPointerEntity.h"
-                 void REcmaSharedPointerLineEntity::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSharedPointerLineEntity::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

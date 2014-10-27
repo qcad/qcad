@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaRequireHeap.h"
-                 void REcmaSpatialIndex::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSpatialIndex::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaStorage.h"
-                 void REcmaMemoryStorage::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaMemoryStorage::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaInterTransactionListener.h"
-                 void REcmaInterTransactionListenerAdapter::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaInterTransactionListenerAdapter::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -35,7 +35,7 @@
             }
           
         /*
-        REcmaInterTransactionListener::init(engine, proto);
+        REcmaInterTransactionListener::initEcma(engine, proto);
           
         */
     

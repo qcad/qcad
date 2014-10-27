@@ -15,7 +15,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaEntity.h"
-                 void REcmaHatchEntity::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaHatchEntity::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

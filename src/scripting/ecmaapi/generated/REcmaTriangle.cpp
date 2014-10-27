@@ -15,7 +15,7 @@
                   #include "REcmaShape.h"
                 
                   #include "REcmaExplodable.h"
-                 void REcmaTriangle::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaTriangle::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -39,7 +39,7 @@
             }
           
         /*
-        REcmaExplodable::init(engine, proto);
+        REcmaExplodable::initEcma(engine, proto);
           
         */
     

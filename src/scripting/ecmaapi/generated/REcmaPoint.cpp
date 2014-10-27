@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaShape.h"
-                 void REcmaPoint::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaPoint::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

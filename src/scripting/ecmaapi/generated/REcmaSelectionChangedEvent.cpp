@@ -9,7 +9,7 @@
         
             
         // includes for base ecma wrapper classes
-         void REcmaSelectionChangedEvent::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaSelectionChangedEvent::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

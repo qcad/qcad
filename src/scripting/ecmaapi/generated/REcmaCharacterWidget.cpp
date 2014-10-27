@@ -13,7 +13,7 @@
             
             
         // includes for base ecma wrapper classes
-         void REcmaCharacterWidget::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaCharacterWidget::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

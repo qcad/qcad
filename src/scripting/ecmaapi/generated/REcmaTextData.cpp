@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaTextBasedData.h"
-                 void REcmaTextData::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaTextData::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

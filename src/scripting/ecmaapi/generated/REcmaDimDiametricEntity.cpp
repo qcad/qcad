@@ -15,7 +15,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaDimensionEntity.h"
-                 void REcmaDimDiametricEntity::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaDimDiametricEntity::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

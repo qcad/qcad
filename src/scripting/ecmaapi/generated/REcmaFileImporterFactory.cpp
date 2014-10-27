@@ -17,7 +17,7 @@
             
             
         // includes for base ecma wrapper classes
-         void REcmaFileImporterFactory::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaFileImporterFactory::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

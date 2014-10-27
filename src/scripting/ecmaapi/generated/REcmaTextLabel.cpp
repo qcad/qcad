@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaPoint.h"
-                 void REcmaTextLabel::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaTextLabel::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

@@ -13,7 +13,7 @@
                   #include "REcmaEntityData.h"
                 
                   #include "REcmaCircle.h"
-                 void REcmaCircleData::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaCircleData::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -37,7 +37,7 @@
             }
           
         /*
-        REcmaCircle::init(engine, proto);
+        REcmaCircle::initEcma(engine, proto);
           
         */
     

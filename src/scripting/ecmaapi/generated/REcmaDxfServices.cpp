@@ -9,7 +9,7 @@
         
             
         // includes for base ecma wrapper classes
-         void REcmaDxfServices::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaDxfServices::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

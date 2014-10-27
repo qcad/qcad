@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaTransformation.h"
-                 void REcmaTranslation::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaTranslation::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

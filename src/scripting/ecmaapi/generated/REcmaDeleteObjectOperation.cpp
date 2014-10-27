@@ -17,7 +17,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaDeleteObjectsOperation.h"
-                 void REcmaDeleteObjectOperation::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaDeleteObjectOperation::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

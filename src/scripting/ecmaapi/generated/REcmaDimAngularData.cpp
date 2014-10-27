@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaDimensionData.h"
-                 void REcmaDimAngularData::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaDimAngularData::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

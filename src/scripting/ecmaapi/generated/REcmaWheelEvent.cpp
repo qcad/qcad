@@ -15,7 +15,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaInputEvent.h"
-                 void REcmaWheelEvent::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaWheelEvent::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -39,7 +39,7 @@
             }
           
         /*
-        REcmaInputEvent::init(engine, proto);
+        REcmaInputEvent::initEcma(engine, proto);
           
         */
     

@@ -13,7 +13,7 @@
                   #include "REcmaEntityData.h"
                 
                   #include "REcmaPainterPathSource.h"
-                 void REcmaHatchData::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaHatchData::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -37,7 +37,7 @@
             }
           
         /*
-        REcmaPainterPathSource::init(engine, proto);
+        REcmaPainterPathSource::initEcma(engine, proto);
           
         */
     

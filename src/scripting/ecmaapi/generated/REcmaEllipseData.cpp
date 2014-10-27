@@ -13,7 +13,7 @@
                   #include "REcmaEntityData.h"
                 
                   #include "REcmaEllipse.h"
-                 void REcmaEllipseData::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaEllipseData::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -37,7 +37,7 @@
             }
           
         /*
-        REcmaEllipse::init(engine, proto);
+        REcmaEllipse::initEcma(engine, proto);
           
         */
     

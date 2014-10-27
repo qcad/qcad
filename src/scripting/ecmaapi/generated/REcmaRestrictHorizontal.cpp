@@ -13,7 +13,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaRestrictOrthogonal.h"
-                 void REcmaRestrictHorizontal::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaRestrictHorizontal::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

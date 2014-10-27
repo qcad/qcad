@@ -17,7 +17,7 @@
                   #include "REcmaRuler.h"
                 
                   #include "REcmaCoordinateListener.h"
-                 void REcmaRulerQt::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaRulerQt::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -41,8 +41,8 @@
             }
           
         /*
-        REcmaRuler::init(engine, proto);
-          REcmaCoordinateListener::init(engine, proto);
+        REcmaRuler::initEcma(engine, proto);
+          REcmaCoordinateListener::initEcma(engine, proto);
           
         */
     

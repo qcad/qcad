@@ -21,7 +21,7 @@
         class QCADECMAAPI_EXPORT REcmaLinetypeCombo {
 
         public:
-      static  void init(QScriptEngine& engine, QScriptValue* proto 
+      static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
     =NULL
     ) 
     ;static  QScriptValue create(QScriptContext* context, QScriptEngine* engine) 
@@ -52,6 +52,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLinetypePattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLinetypePatternAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setLinetypePattern

@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaOperation.h"
-                 void REcmaMoveSelectionOperation::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaMoveSelectionOperation::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

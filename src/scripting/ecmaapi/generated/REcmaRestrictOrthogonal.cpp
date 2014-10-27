@@ -13,7 +13,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSnapRestriction.h"
-                 void REcmaRestrictOrthogonal::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaRestrictOrthogonal::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

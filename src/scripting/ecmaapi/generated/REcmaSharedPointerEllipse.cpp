@@ -15,7 +15,7 @@
                   #include "REcmaSharedPointerShape.h"
                 
                   #include "REcmaSharedPointerDirected.h"
-                 void REcmaSharedPointerEllipse::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSharedPointerEllipse::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -35,7 +35,7 @@
             qMetaTypeId<RShapePointer>()));
           
         /*
-        REcmaDirected::init(engine, proto);
+        REcmaDirected::initEcma(engine, proto);
           
         */
     

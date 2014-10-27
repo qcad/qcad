@@ -103,6 +103,20 @@ dir="./gui" filename="RLinetypeCombo.h">
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>RLinetypePattern</name>
+  </type>
+  <name>getLinetypePatternAt</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>i</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
     <name>void</name>
   </type>
   <name>setLinetypePattern</name>

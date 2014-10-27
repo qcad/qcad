@@ -21,7 +21,7 @@
         class QCADECMAAPI_EXPORT REcmaShape {
 
         public:
-      static  void init(QScriptEngine& engine, QScriptValue* proto 
+      static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
     =NULL
     ) 
     ;static  QScriptValue create(QScriptContext* context, QScriptEngine* engine) 

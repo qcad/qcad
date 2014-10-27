@@ -13,7 +13,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaGraphicsScene.h"
-                 void REcmaGraphicsSceneQt::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaGraphicsSceneQt::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

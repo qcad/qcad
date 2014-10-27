@@ -15,7 +15,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaInputEvent.h"
-                 void REcmaCoordinateEvent::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaCoordinateEvent::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

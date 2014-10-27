@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaExportListener.h"
-                 void REcmaExportListenerAdapter::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaExportListenerAdapter::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -35,7 +35,7 @@
             }
           
         /*
-        REcmaExportListener::init(engine, proto);
+        REcmaExportListener::initEcma(engine, proto);
           
         */
     

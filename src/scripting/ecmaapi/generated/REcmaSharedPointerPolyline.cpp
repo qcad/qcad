@@ -17,7 +17,7 @@
                   #include "REcmaSharedPointerExplodable.h"
                 
                   #include "REcmaSharedPointerDirected.h"
-                 void REcmaSharedPointerPolyline::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSharedPointerPolyline::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -37,8 +37,8 @@
             qMetaTypeId<RShapePointer>()));
           
         /*
-        REcmaExplodable::init(engine, proto);
-          REcmaDirected::init(engine, proto);
+        REcmaExplodable::initEcma(engine, proto);
+          REcmaDirected::initEcma(engine, proto);
           
         */
     

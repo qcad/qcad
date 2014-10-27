@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSpatialIndexVisitor.h"
-                 void REcmaSpatialIndexVisitorAdapter::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSpatialIndexVisitorAdapter::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

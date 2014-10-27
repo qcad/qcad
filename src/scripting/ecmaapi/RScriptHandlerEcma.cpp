@@ -495,364 +495,364 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     classQCoreApplication.setProperty("exit", engine->newFunction(ecmaExit));
 
     // *** do not change the order ***
-    REcmaMath::init(*engine);
-    REcmaMatrix::init(*engine);
-    REcmaStemmer::init(*engine);
-
-    REcmaPropertyTypeId::init(*engine);
-
-    REcmaS::init(*engine);
-    REcmaUnit::init(*engine);
-    REcmaDebug::init(*engine);
-    REcmaSettings::init(*engine);
-    REcmaColor::init(*engine);
-    REcmaLineweight::init(*engine);
-    REcmaThread::init(*engine);
-    REcmaRunner::init(*engine);
-    REcmaLinetypePattern::init(*engine);
-    REcmaPattern::init(*engine);
-    REcmaPatternListMetric::init(*engine);
-    REcmaPatternListImperial::init(*engine);
-    REcmaFontList::init(*engine);
-    REcmaFileCache::init(*engine);
-
-    REcmaVector::init(*engine);
-
-    REcmaImporter::init(*engine);
-    REcmaExporter::init(*engine);
-
-    REcmaShape::init(*engine);
-    REcmaSharedPointerShape::init(*engine);
-    REcmaArc::init(*engine);
-    REcmaSharedPointerArc::init(*engine);
-    REcmaBox::init(*engine);
-    REcmaCircle::init(*engine);
-    REcmaSharedPointerCircle::init(*engine);
-    REcmaEllipse::init(*engine);
-    REcmaSharedPointerEllipse::init(*engine);
-    REcmaLine::init(*engine);
-    REcmaSharedPointerLine::init(*engine);
-    REcmaXLine::init(*engine);
-    REcmaSharedPointerXLine::init(*engine);
-    REcmaRay::init(*engine);
-    REcmaSharedPointerRay::init(*engine);
-    REcmaPoint::init(*engine);
-    REcmaSharedPointerPoint::init(*engine);
-    REcmaPolyline::init(*engine);
-    REcmaSharedPointerPolyline::init(*engine);
-    REcmaSpline::init(*engine);
-    REcmaSharedPointerSpline::init(*engine);
-    REcmaTriangle::init(*engine);
-    REcmaSharedPointerTriangle::init(*engine);
-    REcmaTextLabel::init(*engine);
-    REcmaSharedPointerTextLabel::init(*engine);
-
-    REcmaStorage::init(*engine);
-    REcmaLinkedStorage::init(*engine);
-    REcmaMemoryStorage::init(*engine);
-
-    REcmaDocument::init(*engine);
-    REcmaDocumentInterface::init(*engine);
-
-    REcmaSelectionListener::init(*engine);
-    REcmaSelectionListenerAdapter::init(*engine);
-    REcmaExportListener::init(*engine);
-    REcmaExportListenerAdapter::init(*engine);
-    REcmaImportListener::init(*engine);
-    REcmaImportListenerAdapter::init(*engine);
-    REcmaTransactionListener::init(*engine);
-    REcmaTransactionListenerAdapter::init(*engine);
-    REcmaInterTransactionListener::init(*engine);
-    REcmaInterTransactionListenerAdapter::init(*engine);
-    REcmaSnapListener::init(*engine);
-
-    REcmaGuiAction::init(*engine);
-    REcmaSpatialIndex::init(*engine);
-    REcmaSpatialIndexNavel::init(*engine);
-    REcmaSpatialIndexSimple::init(*engine);
-    REcmaSpatialIndexVisitor::init(*engine);
-    REcmaSpatialIndexVisitorAdapter::init(*engine);
-
-    REcmaGraphicsScene::init(*engine);
-    REcmaGraphicsSceneQt::init(*engine);
-    REcmaPainterPath::init(*engine);
-    REcmaPainterPathDevice::init(*engine);
-
-    REcmaGrid::init(*engine);
-    REcmaOrthoGrid::init(*engine);
-    REcmaRuler::init(*engine);
-    REcmaRulerQt::init(*engine);
-
-    REcmaSnap::init(*engine);
-    REcmaSnapEntityBase::init(*engine);
-    REcmaSnapAuto::init(*engine);
-    REcmaSnapCenter::init(*engine);
-    REcmaSnapDistance::init(*engine);
-    REcmaSnapEnd::init(*engine);
-    REcmaSnapFree::init(*engine);
-    REcmaSnapGrid::init(*engine);
-    REcmaSnapIntersection::init(*engine);
-    REcmaSnapMiddle::init(*engine);
-    REcmaSnapOnEntity::init(*engine);
-    REcmaSnapPerpendicular::init(*engine);
-    REcmaSnapReference::init(*engine);
-
-    REcmaSnapRestriction::init(*engine);
-    REcmaRestrictAngleLength::init(*engine);
-    REcmaRestrictHorizontal::init(*engine);
-    REcmaRestrictVertical::init(*engine);
-    REcmaRestrictOrthogonal::init(*engine);
-    REcmaRestrictOff::init(*engine);
-
-    REcmaGraphicsView::init(*engine);
-    REcmaGraphicsViewImage::init(*engine);
-    REcmaGraphicsViewQt::init(*engine);
-
-    REcmaMainWindow::init(*engine);
-    REcmaMainWindowQt::init(*engine);
-    REcmaMdiArea::init(*engine);
-    REcmaMdiChildQt::init(*engine);
-
-    REcmaAction::init(*engine);
-    REcmaActionAdapter::init(*engine);
-    REcmaNavigationAction::init(*engine);
-    REcmaScriptAction::init(*engine);
-
-    REcmaEventFilter::init(*engine);
-
-    REcmaTerminateEvent::init(*engine);
-    REcmaInputEvent::init(*engine);
-    REcmaMouseEvent::init(*engine);
-    REcmaWheelEvent::init(*engine);
-    REcmaTabletEvent::init(*engine);
-    REcmaCloseCurrentEvent::init(*engine);
-
-    REcmaCommandEvent::init(*engine);
-    REcmaCoordinateEvent::init(*engine);
-    REcmaEntityPickEvent::init(*engine);
-    REcmaCoordinateListener::init(*engine);
-    REcmaCoordinateListenerAdapter::init(*engine);
-
-    REcmaObject::init(*engine);
-    REcmaSharedPointerObject::init(*engine);
-    REcmaEntity::init(*engine);
-    REcmaSharedPointerEntity::init(*engine);
-    REcmaLayer::init(*engine);
-    REcmaSharedPointerLayer::init(*engine);
-    REcmaBlock::init(*engine);
-    REcmaSharedPointerBlock::init(*engine);
-    REcmaView::init(*engine);
-    REcmaSharedPointerView::init(*engine);
-    REcmaLinetype::init(*engine);
-    REcmaSharedPointerLinetype::init(*engine);
-    REcmaUcs::init(*engine);
-    REcmaSharedPointerUcs::init(*engine);
-
-    REcmaEntityData::init(*engine);
-
-    REcmaBlockReferenceData::init(*engine);
-    REcmaBlockReferenceEntity::init(*engine);
-    REcmaSharedPointerBlockReferenceEntity::init(*engine);
-
-    REcmaPointData::init(*engine);
-    REcmaPointEntity::init(*engine);
-    REcmaSharedPointerPointEntity::init(*engine);
-
-    REcmaLineData::init(*engine);
-    REcmaLineEntity::init(*engine);
-    REcmaSharedPointerLineEntity::init(*engine);
-
-    REcmaXLineData::init(*engine);
-    REcmaXLineEntity::init(*engine);
-    REcmaSharedPointerXLineEntity::init(*engine);
-
-    REcmaRayData::init(*engine);
-    REcmaRayEntity::init(*engine);
-    REcmaSharedPointerRayEntity::init(*engine);
-
-    REcmaCircleData::init(*engine);
-    REcmaCircleEntity::init(*engine);
-    REcmaSharedPointerCircleEntity::init(*engine);
-
-    REcmaArcData::init(*engine);
-    REcmaArcEntity::init(*engine);
-    REcmaSharedPointerArcEntity::init(*engine);
-
-    REcmaEllipseData::init(*engine);
-    REcmaEllipseEntity::init(*engine);
-    REcmaSharedPointerEllipseEntity::init(*engine);
-
-    REcmaPolylineData::init(*engine);
-    REcmaPolylineEntity::init(*engine);
-    REcmaSharedPointerPolylineEntity::init(*engine);
-
-    REcmaSolidData::init(*engine);
-    REcmaSolidEntity::init(*engine);
-    REcmaSharedPointerSolidEntity::init(*engine);
-
-    REcmaTraceData::init(*engine);
-    REcmaTraceEntity::init(*engine);
-    REcmaSharedPointerTraceEntity::init(*engine);
-
-    REcmaViewportData::init(*engine);
-    REcmaViewportEntity::init(*engine);
-    REcmaSharedPointerViewportEntity::init(*engine);
-
-    REcmaSplineData::init(*engine);
-    REcmaSplineEntity::init(*engine);
-    REcmaSharedPointerSplineEntity::init(*engine);
-
-    REcmaTextBasedData::init(*engine);
-    REcmaTextBasedEntity::init(*engine);
-    REcmaSharedPointerTextBasedData::init(*engine);
-    REcmaSharedPointerTextBasedEntity::init(*engine);
-
-    REcmaTextData::init(*engine);
-    REcmaTextEntity::init(*engine);
-    REcmaSharedPointerTextData::init(*engine);
-    REcmaSharedPointerTextEntity::init(*engine);
-
-    REcmaAttributeDefinitionData::init(*engine);
-    REcmaAttributeDefinitionEntity::init(*engine);
-    REcmaSharedPointerAttributeDefinitionEntity::init(*engine);
-
-    REcmaAttributeData::init(*engine);
-    REcmaAttributeEntity::init(*engine);
-    REcmaSharedPointerAttributeEntity::init(*engine);
-
-    REcmaLeaderData::init(*engine);
-    REcmaLeaderEntity::init(*engine);
-    REcmaSharedPointerLeaderEntity::init(*engine);
-
-    REcmaHatchData::init(*engine);
-    REcmaHatchEntity::init(*engine);
-    REcmaSharedPointerHatchEntity::init(*engine);
-
-    REcmaImageData::init(*engine);
-    REcmaImageEntity::init(*engine);
-    REcmaSharedPointerImageEntity::init(*engine);
-
-    REcmaDimensionData::init(*engine);
-    REcmaDimensionEntity::init(*engine);
-    REcmaSharedPointerDimensionEntity::init(*engine);
-
-    REcmaDimLinearData::init(*engine);
-    REcmaDimLinearEntity::init(*engine);
-    REcmaSharedPointerDimLinearEntity::init(*engine);
-
-    REcmaDimAlignedData::init(*engine);
-    REcmaDimAlignedEntity::init(*engine);
-    REcmaSharedPointerDimAlignedEntity::init(*engine);
-
-    REcmaDimAngularData::init(*engine);
-    REcmaDimAngularEntity::init(*engine);
-    REcmaSharedPointerDimAngularEntity::init(*engine);
-
-    REcmaDimDiametricData::init(*engine);
-    REcmaDimDiametricEntity::init(*engine);
-    REcmaSharedPointerDimDiametricEntity::init(*engine);
-
-    REcmaDimRadialData::init(*engine);
-    REcmaDimRadialEntity::init(*engine);
-    REcmaSharedPointerDimRadialEntity::init(*engine);
-
-    REcmaDimRotatedData::init(*engine);
-    REcmaDimRotatedEntity::init(*engine);
-    REcmaSharedPointerDimRotatedEntity::init(*engine);
-
-    REcmaDimOrdinateData::init(*engine);
-    REcmaDimOrdinateEntity::init(*engine);
-    REcmaSharedPointerDimOrdinateEntity::init(*engine);
-
-    REcmaTransaction::init(*engine);
-
-    REcmaFileImporter::init(*engine);
-    REcmaFileImporterAdapter::init(*engine);
-    REcmaFileImporterFactory::init(*engine);
-    REcmaFileImporterFactoryAdapter::init(*engine);
-    REcmaFileImporterRegistry::init(*engine);
-
-    REcmaFileExporter::init(*engine);
-    REcmaFileExporterAdapter::init(*engine);
-    REcmaFileExporterFactory::init(*engine);
-    REcmaFileExporterFactoryAdapter::init(*engine);
-    REcmaFileExporterRegistry::init(*engine);
-
-    REcmaOperation::init(*engine);
-
-    REcmaAddObjectsOperation::init(*engine);
-    REcmaClipboardOperation::init(*engine);
-    REcmaDeleteObjectsOperation::init(*engine);
-
-    REcmaAddObjectOperation::init(*engine);
-    REcmaChangePropertyOperation::init(*engine);
-    REcmaCopyOperation::init(*engine);
-    REcmaDeleteAllEntitiesOperation::init(*engine);
-    REcmaDeleteObjectOperation::init(*engine);
-    REcmaDeleteSelectionOperation::init(*engine);
-    REcmaMixedOperation::init(*engine);
-    REcmaModifyObjectOperation::init(*engine);
-    REcmaModifyObjectsOperation::init(*engine);
-    REcmaMoveReferencePointOperation::init(*engine);
-    REcmaMoveSelectionOperation::init(*engine);
-    REcmaPasteOperation::init(*engine);
-
-    REcmaTransformation::init(*engine);
-
-    REcmaTranslation::init(*engine);
-
-    REcmaCommandLine::init(*engine);
-    REcmaTextEdit::init(*engine);
-    REcmaMathLineEdit::init(*engine);
-    REcmaCharacterWidget::init(*engine);
-    REcmaDockWidget::init(*engine);
-
-    REcmaPropertyListener::init(*engine);
-    REcmaPropertyEditor::init(*engine);
-
-    REcmaListWidget::init(*engine);
-    REcmaTreeWidget::init(*engine);
-    REcmaListView::init(*engine);
-    REcmaLayerListener::init(*engine);
-    REcmaLayerListenerAdapter::init(*engine);
-    REcmaBlockListener::init(*engine);
-    REcmaBlockListenerAdapter::init(*engine);
-    REcmaViewListener::init(*engine);
-    REcmaViewListenerAdapter::init(*engine);
-    REcmaPenListener::init(*engine);
-    REcmaPenListenerAdapter::init(*engine);
-    REcmaColorCombo::init(*engine);
-    REcmaLineweightCombo::init(*engine);
-    REcmaLinetypeCombo::init(*engine);
-    REcmaFontChooserWidget::init(*engine);
-    REcmaFontDatabase::init(*engine);
-
-    REcmaPluginLoader::init(*engine);
-    REcmaPluginInfo::init(*engine);
-    REcmaPluginInterface::init(*engine);
-
-    REcmaFontList::init(*engine);
-
-    REcmaPropertyEvent::init(*engine);
-
-    REcmaPropertyAttributes::init(*engine);
-
-    REcmaFileSystemModel::init(*engine);
+    REcmaMath::initEcma(*engine);
+    REcmaMatrix::initEcma(*engine);
+    REcmaStemmer::initEcma(*engine);
+
+    REcmaPropertyTypeId::initEcma(*engine);
+
+    REcmaS::initEcma(*engine);
+    REcmaUnit::initEcma(*engine);
+    REcmaDebug::initEcma(*engine);
+    REcmaSettings::initEcma(*engine);
+    REcmaColor::initEcma(*engine);
+    REcmaLineweight::initEcma(*engine);
+    REcmaThread::initEcma(*engine);
+    REcmaRunner::initEcma(*engine);
+    REcmaLinetypePattern::initEcma(*engine);
+    REcmaPattern::initEcma(*engine);
+    REcmaPatternListMetric::initEcma(*engine);
+    REcmaPatternListImperial::initEcma(*engine);
+    REcmaFontList::initEcma(*engine);
+    REcmaFileCache::initEcma(*engine);
+
+    REcmaVector::initEcma(*engine);
+
+    REcmaImporter::initEcma(*engine);
+    REcmaExporter::initEcma(*engine);
+
+    REcmaShape::initEcma(*engine);
+    REcmaSharedPointerShape::initEcma(*engine);
+    REcmaArc::initEcma(*engine);
+    REcmaSharedPointerArc::initEcma(*engine);
+    REcmaBox::initEcma(*engine);
+    REcmaCircle::initEcma(*engine);
+    REcmaSharedPointerCircle::initEcma(*engine);
+    REcmaEllipse::initEcma(*engine);
+    REcmaSharedPointerEllipse::initEcma(*engine);
+    REcmaLine::initEcma(*engine);
+    REcmaSharedPointerLine::initEcma(*engine);
+    REcmaXLine::initEcma(*engine);
+    REcmaSharedPointerXLine::initEcma(*engine);
+    REcmaRay::initEcma(*engine);
+    REcmaSharedPointerRay::initEcma(*engine);
+    REcmaPoint::initEcma(*engine);
+    REcmaSharedPointerPoint::initEcma(*engine);
+    REcmaPolyline::initEcma(*engine);
+    REcmaSharedPointerPolyline::initEcma(*engine);
+    REcmaSpline::initEcma(*engine);
+    REcmaSharedPointerSpline::initEcma(*engine);
+    REcmaTriangle::initEcma(*engine);
+    REcmaSharedPointerTriangle::initEcma(*engine);
+    REcmaTextLabel::initEcma(*engine);
+    REcmaSharedPointerTextLabel::initEcma(*engine);
+
+    REcmaStorage::initEcma(*engine);
+    REcmaLinkedStorage::initEcma(*engine);
+    REcmaMemoryStorage::initEcma(*engine);
+
+    REcmaDocument::initEcma(*engine);
+    REcmaDocumentInterface::initEcma(*engine);
+
+    REcmaSelectionListener::initEcma(*engine);
+    REcmaSelectionListenerAdapter::initEcma(*engine);
+    REcmaExportListener::initEcma(*engine);
+    REcmaExportListenerAdapter::initEcma(*engine);
+    REcmaImportListener::initEcma(*engine);
+    REcmaImportListenerAdapter::initEcma(*engine);
+    REcmaTransactionListener::initEcma(*engine);
+    REcmaTransactionListenerAdapter::initEcma(*engine);
+    REcmaInterTransactionListener::initEcma(*engine);
+    REcmaInterTransactionListenerAdapter::initEcma(*engine);
+    REcmaSnapListener::initEcma(*engine);
+
+    REcmaGuiAction::initEcma(*engine);
+    REcmaSpatialIndex::initEcma(*engine);
+    REcmaSpatialIndexNavel::initEcma(*engine);
+    REcmaSpatialIndexSimple::initEcma(*engine);
+    REcmaSpatialIndexVisitor::initEcma(*engine);
+    REcmaSpatialIndexVisitorAdapter::initEcma(*engine);
+
+    REcmaGraphicsScene::initEcma(*engine);
+    REcmaGraphicsSceneQt::initEcma(*engine);
+    REcmaPainterPath::initEcma(*engine);
+    REcmaPainterPathDevice::initEcma(*engine);
+
+    REcmaGrid::initEcma(*engine);
+    REcmaOrthoGrid::initEcma(*engine);
+    REcmaRuler::initEcma(*engine);
+    REcmaRulerQt::initEcma(*engine);
+
+    REcmaSnap::initEcma(*engine);
+    REcmaSnapEntityBase::initEcma(*engine);
+    REcmaSnapAuto::initEcma(*engine);
+    REcmaSnapCenter::initEcma(*engine);
+    REcmaSnapDistance::initEcma(*engine);
+    REcmaSnapEnd::initEcma(*engine);
+    REcmaSnapFree::initEcma(*engine);
+    REcmaSnapGrid::initEcma(*engine);
+    REcmaSnapIntersection::initEcma(*engine);
+    REcmaSnapMiddle::initEcma(*engine);
+    REcmaSnapOnEntity::initEcma(*engine);
+    REcmaSnapPerpendicular::initEcma(*engine);
+    REcmaSnapReference::initEcma(*engine);
+
+    REcmaSnapRestriction::initEcma(*engine);
+    REcmaRestrictAngleLength::initEcma(*engine);
+    REcmaRestrictHorizontal::initEcma(*engine);
+    REcmaRestrictVertical::initEcma(*engine);
+    REcmaRestrictOrthogonal::initEcma(*engine);
+    REcmaRestrictOff::initEcma(*engine);
+
+    REcmaGraphicsView::initEcma(*engine);
+    REcmaGraphicsViewImage::initEcma(*engine);
+    REcmaGraphicsViewQt::initEcma(*engine);
+
+    REcmaMainWindow::initEcma(*engine);
+    REcmaMainWindowQt::initEcma(*engine);
+    REcmaMdiArea::initEcma(*engine);
+    REcmaMdiChildQt::initEcma(*engine);
+
+    REcmaAction::initEcma(*engine);
+    REcmaActionAdapter::initEcma(*engine);
+    REcmaNavigationAction::initEcma(*engine);
+    REcmaScriptAction::initEcma(*engine);
+
+    REcmaEventFilter::initEcma(*engine);
+
+    REcmaTerminateEvent::initEcma(*engine);
+    REcmaInputEvent::initEcma(*engine);
+    REcmaMouseEvent::initEcma(*engine);
+    REcmaWheelEvent::initEcma(*engine);
+    REcmaTabletEvent::initEcma(*engine);
+    REcmaCloseCurrentEvent::initEcma(*engine);
+
+    REcmaCommandEvent::initEcma(*engine);
+    REcmaCoordinateEvent::initEcma(*engine);
+    REcmaEntityPickEvent::initEcma(*engine);
+    REcmaCoordinateListener::initEcma(*engine);
+    REcmaCoordinateListenerAdapter::initEcma(*engine);
+
+    REcmaObject::initEcma(*engine);
+    REcmaSharedPointerObject::initEcma(*engine);
+    REcmaEntity::initEcma(*engine);
+    REcmaSharedPointerEntity::initEcma(*engine);
+    REcmaLayer::initEcma(*engine);
+    REcmaSharedPointerLayer::initEcma(*engine);
+    REcmaBlock::initEcma(*engine);
+    REcmaSharedPointerBlock::initEcma(*engine);
+    REcmaView::initEcma(*engine);
+    REcmaSharedPointerView::initEcma(*engine);
+    REcmaLinetype::initEcma(*engine);
+    REcmaSharedPointerLinetype::initEcma(*engine);
+    REcmaUcs::initEcma(*engine);
+    REcmaSharedPointerUcs::initEcma(*engine);
+
+    REcmaEntityData::initEcma(*engine);
+
+    REcmaBlockReferenceData::initEcma(*engine);
+    REcmaBlockReferenceEntity::initEcma(*engine);
+    REcmaSharedPointerBlockReferenceEntity::initEcma(*engine);
+
+    REcmaPointData::initEcma(*engine);
+    REcmaPointEntity::initEcma(*engine);
+    REcmaSharedPointerPointEntity::initEcma(*engine);
+
+    REcmaLineData::initEcma(*engine);
+    REcmaLineEntity::initEcma(*engine);
+    REcmaSharedPointerLineEntity::initEcma(*engine);
+
+    REcmaXLineData::initEcma(*engine);
+    REcmaXLineEntity::initEcma(*engine);
+    REcmaSharedPointerXLineEntity::initEcma(*engine);
+
+    REcmaRayData::initEcma(*engine);
+    REcmaRayEntity::initEcma(*engine);
+    REcmaSharedPointerRayEntity::initEcma(*engine);
+
+    REcmaCircleData::initEcma(*engine);
+    REcmaCircleEntity::initEcma(*engine);
+    REcmaSharedPointerCircleEntity::initEcma(*engine);
+
+    REcmaArcData::initEcma(*engine);
+    REcmaArcEntity::initEcma(*engine);
+    REcmaSharedPointerArcEntity::initEcma(*engine);
+
+    REcmaEllipseData::initEcma(*engine);
+    REcmaEllipseEntity::initEcma(*engine);
+    REcmaSharedPointerEllipseEntity::initEcma(*engine);
+
+    REcmaPolylineData::initEcma(*engine);
+    REcmaPolylineEntity::initEcma(*engine);
+    REcmaSharedPointerPolylineEntity::initEcma(*engine);
+
+    REcmaSolidData::initEcma(*engine);
+    REcmaSolidEntity::initEcma(*engine);
+    REcmaSharedPointerSolidEntity::initEcma(*engine);
+
+    REcmaTraceData::initEcma(*engine);
+    REcmaTraceEntity::initEcma(*engine);
+    REcmaSharedPointerTraceEntity::initEcma(*engine);
+
+    REcmaViewportData::initEcma(*engine);
+    REcmaViewportEntity::initEcma(*engine);
+    REcmaSharedPointerViewportEntity::initEcma(*engine);
+
+    REcmaSplineData::initEcma(*engine);
+    REcmaSplineEntity::initEcma(*engine);
+    REcmaSharedPointerSplineEntity::initEcma(*engine);
+
+    REcmaTextBasedData::initEcma(*engine);
+    REcmaTextBasedEntity::initEcma(*engine);
+    REcmaSharedPointerTextBasedData::initEcma(*engine);
+    REcmaSharedPointerTextBasedEntity::initEcma(*engine);
+
+    REcmaTextData::initEcma(*engine);
+    REcmaTextEntity::initEcma(*engine);
+    REcmaSharedPointerTextData::initEcma(*engine);
+    REcmaSharedPointerTextEntity::initEcma(*engine);
+
+    REcmaAttributeDefinitionData::initEcma(*engine);
+    REcmaAttributeDefinitionEntity::initEcma(*engine);
+    REcmaSharedPointerAttributeDefinitionEntity::initEcma(*engine);
+
+    REcmaAttributeData::initEcma(*engine);
+    REcmaAttributeEntity::initEcma(*engine);
+    REcmaSharedPointerAttributeEntity::initEcma(*engine);
+
+    REcmaLeaderData::initEcma(*engine);
+    REcmaLeaderEntity::initEcma(*engine);
+    REcmaSharedPointerLeaderEntity::initEcma(*engine);
+
+    REcmaHatchData::initEcma(*engine);
+    REcmaHatchEntity::initEcma(*engine);
+    REcmaSharedPointerHatchEntity::initEcma(*engine);
+
+    REcmaImageData::initEcma(*engine);
+    REcmaImageEntity::initEcma(*engine);
+    REcmaSharedPointerImageEntity::initEcma(*engine);
+
+    REcmaDimensionData::initEcma(*engine);
+    REcmaDimensionEntity::initEcma(*engine);
+    REcmaSharedPointerDimensionEntity::initEcma(*engine);
+
+    REcmaDimLinearData::initEcma(*engine);
+    REcmaDimLinearEntity::initEcma(*engine);
+    REcmaSharedPointerDimLinearEntity::initEcma(*engine);
+
+    REcmaDimAlignedData::initEcma(*engine);
+    REcmaDimAlignedEntity::initEcma(*engine);
+    REcmaSharedPointerDimAlignedEntity::initEcma(*engine);
+
+    REcmaDimAngularData::initEcma(*engine);
+    REcmaDimAngularEntity::initEcma(*engine);
+    REcmaSharedPointerDimAngularEntity::initEcma(*engine);
+
+    REcmaDimDiametricData::initEcma(*engine);
+    REcmaDimDiametricEntity::initEcma(*engine);
+    REcmaSharedPointerDimDiametricEntity::initEcma(*engine);
+
+    REcmaDimRadialData::initEcma(*engine);
+    REcmaDimRadialEntity::initEcma(*engine);
+    REcmaSharedPointerDimRadialEntity::initEcma(*engine);
+
+    REcmaDimRotatedData::initEcma(*engine);
+    REcmaDimRotatedEntity::initEcma(*engine);
+    REcmaSharedPointerDimRotatedEntity::initEcma(*engine);
+
+    REcmaDimOrdinateData::initEcma(*engine);
+    REcmaDimOrdinateEntity::initEcma(*engine);
+    REcmaSharedPointerDimOrdinateEntity::initEcma(*engine);
+
+    REcmaTransaction::initEcma(*engine);
+
+    REcmaFileImporter::initEcma(*engine);
+    REcmaFileImporterAdapter::initEcma(*engine);
+    REcmaFileImporterFactory::initEcma(*engine);
+    REcmaFileImporterFactoryAdapter::initEcma(*engine);
+    REcmaFileImporterRegistry::initEcma(*engine);
+
+    REcmaFileExporter::initEcma(*engine);
+    REcmaFileExporterAdapter::initEcma(*engine);
+    REcmaFileExporterFactory::initEcma(*engine);
+    REcmaFileExporterFactoryAdapter::initEcma(*engine);
+    REcmaFileExporterRegistry::initEcma(*engine);
+
+    REcmaOperation::initEcma(*engine);
+
+    REcmaAddObjectsOperation::initEcma(*engine);
+    REcmaClipboardOperation::initEcma(*engine);
+    REcmaDeleteObjectsOperation::initEcma(*engine);
+
+    REcmaAddObjectOperation::initEcma(*engine);
+    REcmaChangePropertyOperation::initEcma(*engine);
+    REcmaCopyOperation::initEcma(*engine);
+    REcmaDeleteAllEntitiesOperation::initEcma(*engine);
+    REcmaDeleteObjectOperation::initEcma(*engine);
+    REcmaDeleteSelectionOperation::initEcma(*engine);
+    REcmaMixedOperation::initEcma(*engine);
+    REcmaModifyObjectOperation::initEcma(*engine);
+    REcmaModifyObjectsOperation::initEcma(*engine);
+    REcmaMoveReferencePointOperation::initEcma(*engine);
+    REcmaMoveSelectionOperation::initEcma(*engine);
+    REcmaPasteOperation::initEcma(*engine);
+
+    REcmaTransformation::initEcma(*engine);
+
+    REcmaTranslation::initEcma(*engine);
+
+    REcmaCommandLine::initEcma(*engine);
+    REcmaTextEdit::initEcma(*engine);
+    REcmaMathLineEdit::initEcma(*engine);
+    REcmaCharacterWidget::initEcma(*engine);
+    REcmaDockWidget::initEcma(*engine);
+
+    REcmaPropertyListener::initEcma(*engine);
+    REcmaPropertyEditor::initEcma(*engine);
+
+    REcmaListWidget::initEcma(*engine);
+    REcmaTreeWidget::initEcma(*engine);
+    REcmaListView::initEcma(*engine);
+    REcmaLayerListener::initEcma(*engine);
+    REcmaLayerListenerAdapter::initEcma(*engine);
+    REcmaBlockListener::initEcma(*engine);
+    REcmaBlockListenerAdapter::initEcma(*engine);
+    REcmaViewListener::initEcma(*engine);
+    REcmaViewListenerAdapter::initEcma(*engine);
+    REcmaPenListener::initEcma(*engine);
+    REcmaPenListenerAdapter::initEcma(*engine);
+    REcmaColorCombo::initEcma(*engine);
+    REcmaLineweightCombo::initEcma(*engine);
+    REcmaLinetypeCombo::initEcma(*engine);
+    REcmaFontChooserWidget::initEcma(*engine);
+    REcmaFontDatabase::initEcma(*engine);
+
+    REcmaPluginLoader::initEcma(*engine);
+    REcmaPluginInfo::initEcma(*engine);
+    REcmaPluginInterface::initEcma(*engine);
+
+    REcmaFontList::initEcma(*engine);
+
+    REcmaPropertyEvent::initEcma(*engine);
+
+    REcmaPropertyAttributes::initEcma(*engine);
+
+    REcmaFileSystemModel::initEcma(*engine);
 
 #if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
-    REcmaWebView::init(*engine);
+    REcmaWebView::initEcma(*engine);
 #endif
 
-    REcmaFocusListener::init(*engine);
-    REcmaFocusListenerAdapter::init(*engine);
-    REcmaViewFocusListener::init(*engine);
-    REcmaViewFocusListenerAdapter::init(*engine);
+    REcmaFocusListener::initEcma(*engine);
+    REcmaFocusListenerAdapter::initEcma(*engine);
+    REcmaViewFocusListener::initEcma(*engine);
+    REcmaViewFocusListenerAdapter::initEcma(*engine);
 
-    REcmaTextRenderer::init(*engine);
+    REcmaTextRenderer::initEcma(*engine);
 
-    REcmaDxfServices::init(*engine);
+    REcmaDxfServices::initEcma(*engine);
 
-    REcmaAutoLoadEcma::init(*engine);
+    REcmaAutoLoadEcma::initEcma(*engine);
 
 
     // *** end of "do not change the order" ***

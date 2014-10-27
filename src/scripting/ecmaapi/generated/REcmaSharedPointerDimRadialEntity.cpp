@@ -15,7 +15,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSharedPointerDimensionEntity.h"
-                 void REcmaSharedPointerDimRadialEntity::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSharedPointerDimRadialEntity::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

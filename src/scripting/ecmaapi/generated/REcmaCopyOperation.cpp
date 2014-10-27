@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaClipboardOperation.h"
-                 void REcmaCopyOperation::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaCopyOperation::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

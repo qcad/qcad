@@ -13,7 +13,7 @@
                   #include "REcmaNonCopyable.h"
                 
                   #include "REcmaRequireHeap.h"
-                 void REcmaStorage::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaStorage::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

@@ -9,7 +9,7 @@
         
             
         // includes for base ecma wrapper classes
-         void REcmaPatternLine::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaPatternLine::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

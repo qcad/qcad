@@ -13,7 +13,7 @@
                   #include "REcmaEntityData.h"
                 
                   #include "REcmaPolyline.h"
-                 void REcmaLeaderData::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaLeaderData::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -37,7 +37,7 @@
             }
           
         /*
-        REcmaPolyline::init(engine, proto);
+        REcmaPolyline::initEcma(engine, proto);
           
         */
     

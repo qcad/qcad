@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSolidData.h"
-                 void REcmaTraceData::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaTraceData::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

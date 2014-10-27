@@ -9,7 +9,7 @@
         
             
         // includes for base ecma wrapper classes
-         void REcmaFontDatabase::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaFontDatabase::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

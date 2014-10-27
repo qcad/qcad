@@ -15,7 +15,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSnapEntityBase.h"
-                 void REcmaSnapDistance::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSnapDistance::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

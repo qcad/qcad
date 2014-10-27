@@ -11,7 +11,7 @@
             
             
         // includes for base ecma wrapper classes
-         void REcmaBlockListener::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaBlockListener::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

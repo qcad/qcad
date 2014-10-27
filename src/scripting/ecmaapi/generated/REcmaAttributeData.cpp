@@ -13,7 +13,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaTextBasedData.h"
-                 void REcmaAttributeData::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaAttributeData::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

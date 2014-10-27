@@ -27,7 +27,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaGraphicsViewImage.h"
-                 void REcmaGraphicsViewQt::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaGraphicsViewQt::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -51,7 +51,7 @@
             }
           
         /*
-        REcmaGraphicsViewImage::init(engine, proto);
+        REcmaGraphicsViewImage::initEcma(engine, proto);
           
         */
     

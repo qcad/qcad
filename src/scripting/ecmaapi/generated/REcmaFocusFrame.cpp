@@ -9,7 +9,7 @@
         
             
         // includes for base ecma wrapper classes
-         void REcmaFocusFrame::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaFocusFrame::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

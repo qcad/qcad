@@ -11,7 +11,7 @@
             
             
         // includes for base ecma wrapper classes
-         void REcmaCoordinateListener::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaCoordinateListener::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

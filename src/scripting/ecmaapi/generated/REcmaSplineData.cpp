@@ -13,7 +13,7 @@
                   #include "REcmaEntityData.h"
                 
                   #include "REcmaSpline.h"
-                 void REcmaSplineData::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSplineData::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -37,7 +37,7 @@
             }
           
         /*
-        REcmaSpline::init(engine, proto);
+        REcmaSpline::initEcma(engine, proto);
           
         */
     

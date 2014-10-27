@@ -15,7 +15,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSharedPointerTextBasedEntity.h"
-                 void REcmaSharedPointerAttributeEntity::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSharedPointerAttributeEntity::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

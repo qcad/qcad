@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSelectionListener.h"
-                 void REcmaSelectionListenerAdapter::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSelectionListenerAdapter::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -35,7 +35,7 @@
             }
           
         /*
-        REcmaSelectionListener::init(engine, proto);
+        REcmaSelectionListener::initEcma(engine, proto);
           
         */
     

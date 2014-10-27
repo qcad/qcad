@@ -15,7 +15,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaInputEvent.h"
-                 void REcmaEntityPickEvent::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaEntityPickEvent::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

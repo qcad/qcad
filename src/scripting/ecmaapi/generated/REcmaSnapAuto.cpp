@@ -15,7 +15,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSnap.h"
-                 void REcmaSnapAuto::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSnapAuto::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

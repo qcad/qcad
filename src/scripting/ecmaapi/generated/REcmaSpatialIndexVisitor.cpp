@@ -9,7 +9,7 @@
         
             
         // includes for base ecma wrapper classes
-         void REcmaSpatialIndexVisitor::init(QScriptEngine& engine, QScriptValue* proto 
+         void REcmaSpatialIndexVisitor::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

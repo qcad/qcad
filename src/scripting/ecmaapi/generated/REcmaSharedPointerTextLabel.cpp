@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSharedPointerPoint.h"
-                 void REcmaSharedPointerTextLabel::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSharedPointerTextLabel::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

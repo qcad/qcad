@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaPropertyListener.h"
-                 void REcmaPropertyEditor::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaPropertyEditor::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

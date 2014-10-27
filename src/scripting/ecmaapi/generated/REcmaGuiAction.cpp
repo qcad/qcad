@@ -21,7 +21,7 @@
                   #include "REcmaTransactionListener.h"
                 
                   #include "REcmaSelectionListener.h"
-                 void REcmaGuiAction::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaGuiAction::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -45,9 +45,9 @@
             }
           
         /*
-        REcmaFocusListener::init(engine, proto);
-          REcmaTransactionListener::init(engine, proto);
-          REcmaSelectionListener::init(engine, proto);
+        REcmaFocusListener::initEcma(engine, proto);
+          REcmaTransactionListener::initEcma(engine, proto);
+          REcmaSelectionListener::initEcma(engine, proto);
           
         */
     

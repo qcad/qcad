@@ -13,7 +13,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaOperation.h"
-                 void REcmaDeleteAllEntitiesOperation::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaDeleteAllEntitiesOperation::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

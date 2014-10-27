@@ -11,7 +11,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaViewListener.h"
-                 void REcmaViewListenerAdapter::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaViewListenerAdapter::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     
@@ -35,7 +35,7 @@
             }
           
         /*
-        REcmaViewListener::init(engine, proto);
+        REcmaViewListener::initEcma(engine, proto);
           
         */
     

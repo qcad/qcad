@@ -15,7 +15,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaSnap.h"
-                 void REcmaSnapIntersection::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaSnapIntersection::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

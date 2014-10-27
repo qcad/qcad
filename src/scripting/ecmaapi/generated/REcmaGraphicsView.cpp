@@ -25,7 +25,7 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaNonCopyable.h"
-                 void REcmaGraphicsView::init(QScriptEngine& engine, QScriptValue* proto 
+                 void REcmaGraphicsView::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
     

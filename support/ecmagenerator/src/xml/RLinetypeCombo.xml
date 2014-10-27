@@ -29,6 +29,13 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RLinetypePattern"
       isPureVirtual="false" />
     </method>
+    <method name="getLinetypePatternAt"
+    cppName="getLinetypePatternAt" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RLinetypePattern" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
     <method name="setLinetypePattern" cppName="setLinetypePattern"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
