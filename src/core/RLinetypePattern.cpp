@@ -160,6 +160,9 @@ QVector<qreal> RLinetypePattern::getScreenBasedLinetype(bool metric) {
             if (!metric) {
                 dash*=25.4;
             }
+            if (dash<RS::PointTolerance) {
+                dash = 2.0;
+            }
             ret << ceil(dash);
         }
     }
@@ -239,9 +242,39 @@ QString RLinetypePattern::getLabel() const {
     if (description.isEmpty()) {
         return name;
     }
-    else {
-        return name + " - " + description;
+
+//    else {
+//        return name + " - " + description;
+//    }
+
+    //QString desc; //= p.getDescription();
+//    QRegExp onlyPattern("[_\\. ]*");
+//    if (onlyPattern.indexIn(desc)==0) {
+//        if (p.getDescription().isEmpty()) {
+//            desc = p.getName();
+//        }
+//        else {
+//            desc = p.getName() + " - " + p.getDescription();
+//        }
+//    }
+    QString desc = description;
+    QString preview;
+    int k = description.lastIndexOf(QRegExp("[^_\\. ]"));
+    if (k!=-1) {
+        desc = description.mid(0, k+1);
+        preview = description.mid(k+1);
+        //prev.replace('.', QChar(0x00B7));
+        //prev.replace('_', QChar(0x2014));
     }
+
+//    qDebug() << "desc: " << desc;
+//    qDebug() << "preview: " << preview;
+
+    if (desc.isEmpty()) {
+        return name;
+    }
+
+    return desc;
 }
 
 QIcon RLinetypePattern::getIcon() const {

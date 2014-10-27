@@ -254,6 +254,23 @@ function PropertyEditorImpl(basePath) {
     linetypeCombo.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
     linetypeCombo.focusPolicy = Qt.ClickFocus;
 
+
+    //var itemDelegate = new QStyledItemDelegate();
+    //linetypeCombo.setItemDelegate(itemDelegate);
+//    linetypeCombo.styleSheet = ""
+//        + "QComboBox QAbstractItemView::text "
+//        + "{ "
+//        + "  image-position: bottom center; "
+//        + "  image: url(:/scripts/Pro/File/SvgExport/SvgExport.svg)"
+//        + "}"
+//        + "QComboBox QAbstractItemView::item "
+//        + "{ "
+//        + "  min-height: 50px; "
+//        + "  image-position: bottom center; "
+//        + "  image: url(:/scripts/Pro/File/SvgExport/SvgExport.svg)"
+//        + "}";
+
+
     var linetypeScaleEdit = this.widget.findChild("LinetypeScale");
     linetypeScaleEdit.editingFinished.connect(
                 new PropertyWatcher(this, linetypeScaleEdit, REntity.PropertyLinetypeScale),

@@ -16,7 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QAbstractItemView>
 #include <QSize>
+#include <QPainter>
 
 #include "RDebug.h"
 #include "RLinetypeCombo.h"
@@ -26,6 +28,16 @@ RLinetypeCombo::RLinetypeCombo(QWidget* parent) :
     setIconSize(QSize(32, 16));
 
     //init();
+
+    //model()->setData()
+    setItemDelegate(new RLinetypeComboDelegate(this));
+
+    view()->setAlternatingRowColors(true);
+
+    QPalette p = palette();
+    QColor baseColor = p.color(QPalette::Base);
+    p.setColor(QPalette::AlternateBase, baseColor.darker(110));
+    setPalette(p);
 
     connect(this, SIGNAL(currentIndexChanged(int)), this, SLOT(linetypePatternChanged(int)));
 }
@@ -69,10 +81,22 @@ void RLinetypeCombo::reinit() {
     } else {
         setLinetypePattern("CONTINUOUS");
     }
+
+    for (int i=0; i<count(); i++) {
+        setItemData(i, Qt::AlignTop, Qt::TextAlignmentRole);
+    }
 }
 
 RLinetypePattern RLinetypeCombo::getLinetypePattern() {
     return itemData(currentIndex()).value<RLinetypePattern> ();
+}
+
+RLinetypePattern RLinetypeCombo::getLinetypePatternAt(int i) {
+    if (i<0 || i>=count()) {
+        return RLinetypePattern();
+    }
+
+    return itemData(i).value<RLinetypePattern> ();
 }
 
 void RLinetypeCombo::setLinetypePattern(const QString& name) {
@@ -107,4 +131,48 @@ bool RLinetypeCombo::getOnlyFixed() {
 void RLinetypeCombo::setOnlyFixed(bool onlyFixed) {
     this->onlyFixed = onlyFixed;
     reinit();
+}
+
+void RLinetypeComboDelegate::paint(QPainter* painter,
+                                   const QStyleOptionViewItem& option,
+                                   const QModelIndex& index) const {
+
+    QStyledItemDelegate::paint(painter, option, index);
+
+    RLinetypeCombo* combo = dynamic_cast<RLinetypeCombo*>(parent());
+    if (combo==NULL) {
+        return;
+    }
+
+    //painter->drawLine(0,0,100,100);
+    //if (option.state & QStyle::State_Selected) {
+    //    painter->fillRect(option.rect, option.palette.highlight());
+    //}
+//    else {
+//        painter->fillRect(option.rect, Qt::green);
+//    }
+
+    //index.data.setValue();
+
+    //QStyledItemDelegate::paint(painter, option, index);
+
+    qDebug() << "row: " << index.row();
+
+    RLinetypePattern pattern = combo->getLinetypePatternAt(index.row());
+
+    qDebug() << "pat: " << pattern;
+
+    QPen pen;
+    QVector<qreal> p = pattern.getScreenBasedLinetype(true);
+    qDebug() << "p: " << p;
+    pen.setDashPattern(p);
+    painter->setPen(pen);
+    int y = option.rect.center().y() + option.rect.height()/4;
+    int m = 20;
+    painter->drawLine(option.rect.left()+m, y, option.rect.right()-m, y);
+}
+
+QSize RLinetypeComboDelegate::sizeHint(const QStyleOptionViewItem& option,
+                                       const QModelIndex& index) const {
+    return QSize(300,24);
 }
