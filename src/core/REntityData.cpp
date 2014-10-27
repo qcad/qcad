@@ -205,6 +205,13 @@ RLinetypePattern REntityData::getLinetypePattern() const {
 
 /**
  * \return The shortest distance from this entity to the given point.
+ * \param limited Limit lines, arcs at end points, otherwise the orthogonal distance to the unlimited
+ *                line / circle is returned.
+ * \param range This is returned for solid filled entities (solid filled or dense hatches, text entities)
+ *              if the point is on the entity and the distance would be zero.
+ * \param draft Calculate based on draft mode representation of the entity.
+ * \param strictRange If limited, this is the maximum range from either end point of the entity.
+ *                    Zero to only return distances that are strictly orthogonal to the entity.
  */
 double REntityData::getDistanceTo(const RVector& point, bool limited, double range, bool draft, double strictRange) const {
     Q_UNUSED(range);

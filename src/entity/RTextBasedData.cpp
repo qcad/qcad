@@ -174,9 +174,9 @@ RVector RTextBasedData::getPointOnEntity() const {
 double RTextBasedData::getDistanceTo(const RVector& point, bool limited, double range, bool draft, double strictRange) const {
     Q_UNUSED(limited)
     Q_UNUSED(draft)
-    Q_UNUSED(strictRange)
+    Q_UNUSED(range)
     
-    if (!getBoundingBox().grow(range).contains(point)) {
+    if (!getBoundingBox().grow(strictRange).contains(point)) {
         //qDebug() << "RTextBasedData::getDistanceTo: bounding box not in range: " << getBoundingBox();
         return RNANDOUBLE;
     }
@@ -209,9 +209,9 @@ double RTextBasedData::getDistanceTo(const RVector& point, bool limited, double 
 
             // simple characters, exact:
             if (path.contains(QPointF(point.x, point.y))) {
-                if (RMath::isNaN(ret) || range<ret) {
+                if (RMath::isNaN(ret) || strictRange<ret) {
                     // position on top of character, it doesn't get better than that:
-                    ret = range/2.0;
+                    ret = strictRange/2.0;
                     break;
                 }
             }
@@ -222,7 +222,7 @@ double RTextBasedData::getDistanceTo(const RVector& point, bool limited, double 
                     RBox bb = RBox(polygon.boundingRect());
                     if (bb.contains(point)) {
                         // still a chance for a closer match:
-                        ret = range;
+                        ret = strictRange;
                     }
                 }
             }

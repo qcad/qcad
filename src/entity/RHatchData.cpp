@@ -149,7 +149,7 @@ double RHatchData::getDistanceTo(const RVector& point, bool limited, double rang
     Q_UNUSED(limited)
     Q_UNUSED(strictRange)
 
-    if (!getBoundingBox().grow(range).contains(point)) {
+    if (!getBoundingBox().grow(strictRange).contains(point)) {
         return RNANDOUBLE;
     }
 
@@ -163,8 +163,8 @@ double RHatchData::getDistanceTo(const RVector& point, bool limited, double rang
     int comp = getComplexity();
     if (isSolid() || comp>10000 || painterPaths.isEmpty() || draft) {
         if (boundaryPath.contains(QPointF(point.x, point.y))) {
-            if (RMath::isNaN(ret) || range<ret) {
-                ret = range;
+            if (RMath::isNaN(ret) || strictRange<ret) {
+                ret = strictRange;
             }
         }
     }
