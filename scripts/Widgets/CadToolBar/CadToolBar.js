@@ -76,16 +76,12 @@ CadToolBar.prototype.contextMenuEvent = function(event) {
         CadToolBar.showPanel("MainToolsPanel");
     }
     else {
-        var menu = new QMenu(this);
-        menu.objectName = "ContextMenu";
-//        var action = menu.addAction(qsTr("Toggle Handle"));
         var tb = appWin.findChild("CadQToolBar");
-//        action.triggered.connect(function(checked) {
-//            tb.movable = !tb.movable;
-//        });
 
-        // force tool bar to be vertical:
         if (tb.floating) {
+            var menu = new QMenu(this);
+            menu.objectName = "ContextMenu";
+            // force tool bar to be vertical:
             var action = menu.addAction(qsTr("Vertical/Horizontal"));
             action.triggered.connect(function(checked) {
                 var verticalWhenFloating = RSettings.getBoolValue("CadToolBar/VerticalWhenFloating", false);
@@ -94,8 +90,8 @@ CadToolBar.prototype.contextMenuEvent = function(event) {
                 var cadToolBar = appWin.findChild("CadToolBar");
                 CadToolBar.prototype.updateIconSize.call(cadToolBar);
             });
+            menu.exec(QCursor.pos());
         }
-        menu.exec(QCursor.pos());
     }
 };
 
