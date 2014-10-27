@@ -117,7 +117,9 @@ void RMdiArea::updateTabBar(RMdiChildQt* child) {
         tabBar->addTab("");
     }
 
+    //qDebug() << "updating tab bar";
     int remove = 0;
+    int ti = 0;
     for (int i=0; i<qMax(subWindows.length(), tabBar->count()); i++) {
         if (i>=subWindows.length()) {
             remove++;
@@ -135,15 +137,18 @@ void RMdiArea::updateTabBar(RMdiChildQt* child) {
 
         RDocumentInterface* di = subWindow->getDocumentInterface();
         if (di==NULL) {
+            //qDebug() << "updating tab bar: remove";
             remove++;
             continue;
         }
 
-        tabBar->setTabText(i, tabBarOri->tabText(i));
-        tabBar->setTabIcon(i, tabBarOri->tabIcon(i));
-        tabBar->setTabToolTip(i, tabBarOri->tabToolTip(i));
+        //qDebug() << "updating tab bar " << i << ": text: " << tabBarOri->tabText(i);
+        tabBar->setTabText(ti, tabBarOri->tabText(i));
+        tabBar->setTabIcon(ti, tabBarOri->tabIcon(i));
+        tabBar->setTabToolTip(ti, tabBarOri->tabToolTip(i));
         disconnect(subWindow, SIGNAL(modifiedStatusChanged(RMdiChildQt*)), this, SLOT(updateTabBar(RMdiChildQt*)));
         connect(subWindow, SIGNAL(modifiedStatusChanged(RMdiChildQt*)), this, SLOT(updateTabBar(RMdiChildQt*)));
+        ti++;
     }
 
     for (int i=0; i<remove; i++) {
@@ -153,6 +158,7 @@ void RMdiArea::updateTabBar(RMdiChildQt* child) {
     tabBar->setCurrentIndex(tabBarOri->currentIndex());
     //tabBar->setScrollOffset(tabBarOri->scrollOffset());
     tabBar->blockSignals(false);
+    tabBar->update();
 }
 
 void RMdiArea::closeTab(int i) {
