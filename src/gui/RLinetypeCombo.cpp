@@ -156,15 +156,15 @@ void RLinetypeComboDelegate::paint(QPainter* painter,
 
     //QStyledItemDelegate::paint(painter, option, index);
 
-    qDebug() << "row: " << index.row();
+    //qDebug() << "row: " << index.row();
 
     RLinetypePattern pattern = combo->getLinetypePatternAt(index.row());
 
-    qDebug() << "pat: " << pattern;
+    //qDebug() << "pat: " << pattern;
 
     QPen pen;
     QVector<qreal> p = pattern.getScreenBasedLinetype(true);
-    qDebug() << "p: " << p;
+    //qDebug() << "p: " << p;
     pen.setDashPattern(p);
     painter->setPen(pen);
     int y = option.rect.center().y() + option.rect.height()/4;
