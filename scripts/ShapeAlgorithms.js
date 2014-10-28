@@ -1334,6 +1334,18 @@ ShapeAlgorithms.createEllipseInscribedFromLines = function(line1, line2, line3, 
  * http://mathworld.wolfram.com/Ellipse.html
  */
 ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
+    // numbers in this algorithm can get extremely large, so we scale down here
+    // a bit if appropriate:
+    var scale = undefined;
+    var m = RVector.getAverage(v1, v3).getMagnitude();
+    if (m>100.0) {
+        scale = 1.0/m;
+        v1.scale(scale);
+        v2.scale(scale);
+        v3.scale(scale);
+        v4.scale(scale);
+    }
+
     var i;
     var quad = [v1, v2, v3, v4];
 
@@ -1449,7 +1461,7 @@ ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
 
     var ellipse = new REllipse(center, majorPoint, axis2/axis1, 0.0, 2*Math.PI, false);
 
-    // workaround if the formula above does not produce the correct angle
+    // workaround if the algorithm above does not produce the correct angle
     // (90 degrees off):
     for (i=0; i<4; i++) {
         var ips = ellipse.getIntersectionPoints(edges[i], false);
@@ -1459,6 +1471,10 @@ ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
                 break;
             }
         }
+    }
+
+    if (!isNull(scale)) {
+        ellipse.scale(new RVector(1.0/scale,1.0/scale));
     }
 
     return ellipse;
@@ -1814,7 +1830,9 @@ ShapeAlgorithms.transformArc = function(arc, fun) {
     fun(v3);
     fun(v4);
 
+    //var ret = [];
     var ellipse = ShapeAlgorithms.createEllipseInscribedFromVertices(v1, v2, v3, v4);
+    //ret.push(ellipse.copy());
 
     if (isArcShape(arc) || isEllipseShape(arc)) {
         var sp = arc.getStartPoint();
@@ -1836,6 +1854,9 @@ ShapeAlgorithms.transformArc = function(arc, fun) {
             ellipse.setReversed(false);
         }
     }
+
+    //ret.push(ShapeAlgorithms.ellipseToArcCircleEllipse(ellipse));
+    //ret = ret.concat([new RLine(v1, v2), new RLine(v2, v3), new RLine(v3, v4), new RLine(v4, v1)]);
 
     return ShapeAlgorithms.ellipseToArcCircleEllipse(ellipse);
 };

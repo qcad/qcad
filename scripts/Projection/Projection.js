@@ -317,10 +317,8 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
         ret = [];
         for (k=0; k<trimmedShapes.length; k++) {
             shape = trimmedShapes[k];
-            s = this.projectShape(shape, preview, false)[0];
-            if (!isNull(s)) {
-                ret.push(s);
-            }
+            s = this.projectShape(shape, preview, false);
+            ret = ret.concat(s);
         }
         return ret;
     }
@@ -390,7 +388,7 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
         var self=this;
         var ellipse = ShapeAlgorithms.transformArc(shape,
             function(p) {
-                return self.project(p);
+                self.project(p);
             }
         );
         return [ ellipse ];
