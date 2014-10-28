@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -35,34 +35,8 @@ RMdiArea::RMdiArea(QWidget* parent) :
     QMdiArea(parent), tabBarOri(NULL), tabBar(NULL), addTabButton(NULL) {
 
     if (RSettings::getBoolValue("Appearance/ShowAddTabButton", false)) {
-        //addTabButtonWidget = new QWidget(this);
-        //QPalette p = addTabButtonWidget->palette();
-        //p.setColor(QPalette::Background, Qt::red);
-        //addTabButtonWidget->setPalette(p);
-        //QVBoxLayout* layout = new QVBoxLayout(addTabButtonWidget);
-        //layout->setMargin(0);
-        //layout->setSpacing(0);
-        //addTabButtonWidget->setLayout(layout);
-
-//        QTabBar* tb = new QTabBar(addTabButtonWidget);
-//        tb->addTab("");
-//        tb->setCurrentIndex(0);
-//        tb->setUsesScrollButtons(false);
-//        tb->setDocumentMode(true);
-//        layout->addWidget(tb);
-
         addTabButton = new QToolButton(this);
-        //layout->addWidget(addTabButton);
-
-        //addTabButton->setAutoRaise(true);
-        //addTabButton->setFixedSize(20,20);
-        //addTabButton->set
     }
-    //connect(addTabButton, SIGNAL(clicked()), this, SLOT());
-
-    //tabBar->move(0,0);
-
-    //connect(this, SIGNAL(subWindowActivated(QMdiSubWindow*)), this, SLOT(updateTabBar()));
 }
 
 /**
@@ -83,24 +57,7 @@ void RMdiArea::resizeEvent(QResizeEvent* event) {
     }
 
     updateTabBarSize();
-
-    //tabBarOverride->setShape(QTabBar::TriangularNorth);
-    //tabBar->move(0,0);
-    //tabBar->setFixedSize();
-
-//    QTabBar* tabBar = findChild<QTabBar*>();
-    //const QSize tabBarSizeHint = tabBarOri->sizeHint();
-    //int s = tabBarSizeHint.height();
-//    if (addTabButtonWidget!=NULL && tabBar!=NULL) {
-        //addTabButton->setParent(tabBar);
-
-        updateAddButtonLocation();
-        //QRect lastTabRect = tabBar->tabRect(tabBar->count()-1);
-        //addTabButton->move(lastTabRect.right()+10, 0);
-        //addTabButton->move(width()-addTabButton->width(), 0);
-        //addTabButton->raise();
-        //addTabButton->move(width()-s, 0);
-//    }
+    updateAddButtonLocation();
 }
 
 void RMdiArea::updateTabBarSize() {
@@ -124,7 +81,6 @@ void RMdiArea::updateAddButtonLocation() {
         return;
     }
 
-    //addTabButton->setParent(tabBar);
     int r = 0;
     QList<QToolButton*> buttons = tabBar->findChildren<QToolButton*>();
     for (int i=0; i<buttons.length(); i++) {
@@ -135,15 +91,10 @@ void RMdiArea::updateAddButtonLocation() {
     }
     QRect lastTabRect = tabBar->tabRect(tabBar->count()-1);
     r = qMax(lastTabRect.right(), r);
-    //qDebug() << "addTabButtonWidget: " << addTabButtonWidget->sizeHint();
     int s = lastTabRect.height();
-    //addTabButton->setFixedSize(addTabButtonWidget->sizeHint());
     addTabButton->setFixedSize(s, s);
     addTabButton->move(r, 0);
-    //addTabButton->setStyleSheet("QToolButton { border-width: 1px; border-style: outset; border-color: gray; }");
     addTabButton->raise();
-    //QScrollArea* a = findChild<QWidgetSt*>();
-    //a->raise();
 }
 
 void RMdiArea::updateTabBar(RMdiChildQt* child) {
@@ -165,8 +116,6 @@ void RMdiArea::updateTabBar(RMdiChildQt* child) {
         tabBar->show();
         connect(tabBar, SIGNAL(currentChanged(int)), this, SLOT(activateTab(int)));
         connect(tabBar, SIGNAL(tabCloseRequested(int)), this, SLOT(closeTab(int)));
-
-        //addTabButton = new QToolButton(this);
     }
 
     tabBar->blockSignals(true);
@@ -179,7 +128,6 @@ void RMdiArea::updateTabBar(RMdiChildQt* child) {
         tabBar->addTab("");
     }
 
-    //qDebug() << "updating tab bar";
     int remove = 0;
     int ti = 0;
     for (int i=0; i<qMax(subWindows.length(), tabBar->count()); i++) {
@@ -199,12 +147,10 @@ void RMdiArea::updateTabBar(RMdiChildQt* child) {
 
         RDocumentInterface* di = subWindow->getDocumentInterface();
         if (di==NULL) {
-            //qDebug() << "updating tab bar: remove";
             remove++;
             continue;
         }
 
-        //qDebug() << "updating tab bar " << i << ": text: " << tabBarOri->tabText(i);
         tabBar->setTabText(ti, tabBarOri->tabText(i));
         tabBar->setTabIcon(ti, tabBarOri->tabIcon(i));
         tabBar->setTabToolTip(ti, tabBarOri->tabToolTip(i));
@@ -218,37 +164,22 @@ void RMdiArea::updateTabBar(RMdiChildQt* child) {
     }
 
     tabBar->setCurrentIndex(tabBarOri->currentIndex());
-    //tabBar->setScrollOffset(tabBarOri->scrollOffset());
     tabBar->blockSignals(false);
     tabBar->update();
 
     updateAddButtonLocation();
-
-//    if (addTabButton!=NULL) {
-//        addTabButton->move(width()-addTabButton->width(), 0);
-//        addTabButton->raise();
-//    }
-
-    //addTabButton->move(400,0);
 }
 
 void RMdiArea::closeTab(int i) {
-    //RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
-    //RCloseCurrentEvent* closeEvent = new RCloseCurrentEvent();
-    //QCoreApplication::postEvent(appWin, closeEvent);
-
     QList<QMdiSubWindow*> subWindows = subWindowList(CreationOrder);
     if (i>=subWindows.length()) {
         return;
     }
-    //setActiveSubWindow(subWindows[i]);
     subWindows[i]->close();
-    //closeActiveSubWindow();
     updateTabBar();
 }
 
 void RMdiArea::activateTab(int i) {
-    qDebug() << "activateTab: " << i;
     if (i<0) {
         return;
     }
@@ -259,6 +190,5 @@ void RMdiArea::activateTab(int i) {
         return;
     }
     setActiveSubWindow(subWindows[i]);
-    //subWindows[i]->showMaximized();
     tabBar->blockSignals(false);
 }
