@@ -110,7 +110,12 @@ void RMdiArea::updateTabBarSize() {
 
     QRect g = tabBarOri->geometry();
     // make room for add tab button:
-    g.setWidth(g.width()-g.height());
+    if (tabBarOri->tabRect(tabBarOri->count()-1).right() > width()-10) {
+        g.setWidth(g.width()-g.height());
+    }
+    else {
+        g.setWidth(g.width());
+    }
     tabBar->setGeometry(g);
 }
 
