@@ -34,7 +34,9 @@ RMdiArea::RMdiArea(QWidget* parent) :
 
     if (RSettings::getBoolValue("Appearance/ShowAddTabButton", false)) {
         addTabButton = new QToolButton(this);
-        addTabButton->setFixedSize(20,20);
+        addTabButton->setAutoRaise(true);
+        //addTabButton->setFixedSize(20,20);
+        //addTabButton->set
     }
     //connect(addTabButton, SIGNAL(clicked()), this, SLOT());
 
@@ -67,11 +69,17 @@ void RMdiArea::resizeEvent(QResizeEvent* event) {
     //tabBar->setFixedSize();
 
 //    QTabBar* tabBar = findChild<QTabBar*>();
-    const QSize tabBarSizeHint = tabBarOri->sizeHint();
-    int s = tabBarSizeHint.height();
-    if (addTabButton!=NULL) {
-        addTabButton->setFixedSize(s, s);
-        addTabButton->move(width()-s, 0);
+    //const QSize tabBarSizeHint = tabBarOri->sizeHint();
+    //int s = tabBarSizeHint.height();
+    if (addTabButton!=NULL && tabBar!=NULL) {
+        //addTabButton->setParent(tabBar);
+
+        updateAddButtonLocation();
+        //QRect lastTabRect = tabBar->tabRect(tabBar->count()-1);
+        //addTabButton->move(lastTabRect.right()+10, 0);
+        //addTabButton->move(width()-addTabButton->width(), 0);
+        //addTabButton->raise();
+        //addTabButton->move(width()-s, 0);
     }
 }
 
@@ -84,6 +92,27 @@ void RMdiArea::updateTabBarSize() {
     // make room for add tab button:
     g.setWidth(g.width()-g.height());
     tabBar->setGeometry(g);
+}
+
+void RMdiArea::updateAddButtonLocation() {
+    if (addTabButton!=NULL) {
+        //addTabButton->setParent(tabBar);
+        int r = 0;
+        QList<QToolButton*> buttons = tabBar->findChildren<QToolButton*>();
+        for (int i=0; i<buttons.length(); i++) {
+            if (buttons[i]->isVisible()) {
+                qDebug() << "buttons[i]->rect().right(): " << buttons[i]->rect().right();
+                r = qMax(buttons[i]->x()+buttons[i]->width(), r);
+            }
+        }
+        QRect lastTabRect = tabBar->tabRect(tabBar->count()-1);
+        r = qMax(lastTabRect.right(), r);
+        int s = lastTabRect.height();
+        addTabButton->setFixedSize(s, s);
+        addTabButton->move(r, 0);
+        //addTabButton->setStyleSheet("QToolButton { border-width: 1px; border-style: outset; border-color: gray; }");
+        addTabButton->raise();
+    }
 }
 
 void RMdiArea::updateTabBar(RMdiChildQt* child) {
@@ -159,6 +188,15 @@ void RMdiArea::updateTabBar(RMdiChildQt* child) {
     //tabBar->setScrollOffset(tabBarOri->scrollOffset());
     tabBar->blockSignals(false);
     tabBar->update();
+
+    updateAddButtonLocation();
+
+//    if (addTabButton!=NULL) {
+//        addTabButton->move(width()-addTabButton->width(), 0);
+//        addTabButton->raise();
+//    }
+
+    //addTabButton->move(400,0);
 }
 
 void RMdiArea::closeTab(int i) {

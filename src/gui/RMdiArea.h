@@ -49,6 +49,7 @@ public:
 public slots:
     void updateTabBar(RMdiChildQt* child = NULL);
     void updateTabBarSize();
+    void updateAddButtonLocation();
     void closeTab(int i);
     void activateTab(int i);
 
