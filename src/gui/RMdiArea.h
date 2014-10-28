@@ -62,6 +62,7 @@ protected:
 private:
     QTabBar* tabBarOri;
     QTabBar* tabBar;
+    QWidget* addTabButtonWidget;
     QToolButton* addTabButton;
 };
 

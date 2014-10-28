@@ -25,6 +25,8 @@
 #include <QEvent>
 #include <QTabBar>
 #include <QToolButton>
+#include <QVBoxLayout>
+#include <QScrollArea>
 
 /**
  * Default Constructor.
@@ -33,8 +35,26 @@ RMdiArea::RMdiArea(QWidget* parent) :
     QMdiArea(parent), tabBarOri(NULL), tabBar(NULL), addTabButton(NULL) {
 
     if (RSettings::getBoolValue("Appearance/ShowAddTabButton", false)) {
+        //addTabButtonWidget = new QWidget(this);
+        //QPalette p = addTabButtonWidget->palette();
+        //p.setColor(QPalette::Background, Qt::red);
+        //addTabButtonWidget->setPalette(p);
+        //QVBoxLayout* layout = new QVBoxLayout(addTabButtonWidget);
+        //layout->setMargin(0);
+        //layout->setSpacing(0);
+        //addTabButtonWidget->setLayout(layout);
+
+//        QTabBar* tb = new QTabBar(addTabButtonWidget);
+//        tb->addTab("");
+//        tb->setCurrentIndex(0);
+//        tb->setUsesScrollButtons(false);
+//        tb->setDocumentMode(true);
+//        layout->addWidget(tb);
+
         addTabButton = new QToolButton(this);
-        addTabButton->setAutoRaise(true);
+        //layout->addWidget(addTabButton);
+
+        //addTabButton->setAutoRaise(true);
         //addTabButton->setFixedSize(20,20);
         //addTabButton->set
     }
@@ -71,7 +91,7 @@ void RMdiArea::resizeEvent(QResizeEvent* event) {
 //    QTabBar* tabBar = findChild<QTabBar*>();
     //const QSize tabBarSizeHint = tabBarOri->sizeHint();
     //int s = tabBarSizeHint.height();
-    if (addTabButton!=NULL && tabBar!=NULL) {
+//    if (addTabButtonWidget!=NULL && tabBar!=NULL) {
         //addTabButton->setParent(tabBar);
 
         updateAddButtonLocation();
@@ -80,7 +100,7 @@ void RMdiArea::resizeEvent(QResizeEvent* event) {
         //addTabButton->move(width()-addTabButton->width(), 0);
         //addTabButton->raise();
         //addTabButton->move(width()-s, 0);
-    }
+//    }
 }
 
 void RMdiArea::updateTabBarSize() {
@@ -95,24 +115,30 @@ void RMdiArea::updateTabBarSize() {
 }
 
 void RMdiArea::updateAddButtonLocation() {
-    if (addTabButton!=NULL) {
-        //addTabButton->setParent(tabBar);
-        int r = 0;
-        QList<QToolButton*> buttons = tabBar->findChildren<QToolButton*>();
-        for (int i=0; i<buttons.length(); i++) {
-            if (buttons[i]->isVisible()) {
-                qDebug() << "buttons[i]->rect().right(): " << buttons[i]->rect().right();
-                r = qMax(buttons[i]->x()+buttons[i]->width(), r);
-            }
-        }
-        QRect lastTabRect = tabBar->tabRect(tabBar->count()-1);
-        r = qMax(lastTabRect.right(), r);
-        int s = lastTabRect.height();
-        addTabButton->setFixedSize(s, s);
-        addTabButton->move(r, 0);
-        //addTabButton->setStyleSheet("QToolButton { border-width: 1px; border-style: outset; border-color: gray; }");
-        addTabButton->raise();
+    if (addTabButton==NULL || tabBar==NULL) {
+        return;
     }
+
+    //addTabButton->setParent(tabBar);
+    int r = 0;
+    QList<QToolButton*> buttons = tabBar->findChildren<QToolButton*>();
+    for (int i=0; i<buttons.length(); i++) {
+        if (buttons[i]->isVisible()) {
+            qDebug() << "buttons[i]->rect().right(): " << buttons[i]->rect().right();
+            r = qMax(buttons[i]->x()+buttons[i]->width(), r);
+        }
+    }
+    QRect lastTabRect = tabBar->tabRect(tabBar->count()-1);
+    r = qMax(lastTabRect.right(), r);
+    //qDebug() << "addTabButtonWidget: " << addTabButtonWidget->sizeHint();
+    int s = lastTabRect.height();
+    //addTabButton->setFixedSize(addTabButtonWidget->sizeHint());
+    addTabButton->setFixedSize(s, s);
+    addTabButton->move(r, 0);
+    //addTabButton->setStyleSheet("QToolButton { border-width: 1px; border-style: outset; border-color: gray; }");
+    addTabButton->raise();
+    //QScrollArea* a = findChild<QWidgetSt*>();
+    //a->raise();
 }
 
 void RMdiArea::updateTabBar(RMdiChildQt* child) {
@@ -134,6 +160,8 @@ void RMdiArea::updateTabBar(RMdiChildQt* child) {
         tabBar->show();
         connect(tabBar, SIGNAL(currentChanged(int)), this, SLOT(activateTab(int)));
         connect(tabBar, SIGNAL(tabCloseRequested(int)), this, SLOT(closeTab(int)));
+
+        //addTabButton = new QToolButton(this);
     }
 
     tabBar->blockSignals(true);
