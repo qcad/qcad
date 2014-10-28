@@ -1334,20 +1334,21 @@ ShapeAlgorithms.createEllipseInscribedFromLines = function(line1, line2, line3, 
  * http://mathworld.wolfram.com/Ellipse.html
  */
 ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
+    var scale = undefined;
+
+    var i;
+    var quad = [v1, v2, v3, v4];
+
     // numbers in this algorithm can get extremely large, so we scale down here
     // a bit if appropriate:
-    var scale = undefined;
-    var m = RVector.getAverage(v1, v3).getMagnitude();
-    if (m>100.0) {
-        scale = 1.0/m;
+    var extr = new RBox(RVector.getMinimum(quad), RVector.getMaximum(quad));
+    if (extr.getWidth()>100.0 || extr.getHeight()>100.0) {
+        scale = 100.0/Math.max(extr.getWidth(), extr.getHeight());
         v1.scale(scale);
         v2.scale(scale);
         v3.scale(scale);
         v4.scale(scale);
     }
-
-    var i;
-    var quad = [v1, v2, v3, v4];
 
     var edges = [];
     for (i=0; i<4; i++) {
@@ -1362,23 +1363,6 @@ ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
     var y2 = quad[2].y;
     var x3 = quad[3].x;
     var y3 = quad[3].y;
-
-//    var norm = false;
-//    if (Math.abs(x0)>100 && Math.abs(y0)>100 &&
-//        Math.abs(x1)>100 && Math.abs(y1)>100 &&
-//        Math.abs(x1)>100 && Math.abs(y1)>100) {
-
-//        x0 = x0/100;
-//        y0 = y0/100;
-//        x1 = x1/100;
-//        y1 = y1/100;
-//        x2 = x2/100;
-//        y2 = y2/100;
-//        x3 = x3/100;
-//        y3 = y3/100;
-
-//        norm = true;
-//    }
 
     var ma =  x1 * x2 * y3 - x0 * x2 * y3 - x1 * y2 * x3 + x0 * y2 * x3 - x0 * y1 * x3 + y0 * x1 * x3 + x0 * y1 * x2 - y0 * x1 * x2;
     var mb =  x0 * x2 * y3 - x0 * x1 * y3 - x1 * y2 * x3 + y1 * x2 * x3 - y0 * x2 * x3 + y0 * x1 * x3 + x0 * x1 * y2 - x0 * y1 * x2;
