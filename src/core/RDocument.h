@@ -27,6 +27,7 @@
 
 #include "RBlock.h"
 #include "RBlockReferenceEntity.h"
+#include "RDocumentVariables.h"
 #include "REntity.h"
 #include "RNonCopyable.h"
 #include "RRequireHeap.h"
@@ -131,6 +132,8 @@ public:
 
     QSet<REntity::Id> querySelectedEntities();
 
+    QSharedPointer<RDocumentVariables> queryDocumentVariables() const;
+    QSharedPointer<RDocumentVariables> queryDocumentVariablesDirect() const;
     QSharedPointer<RObject> queryObject(RObject::Id objectId) const;
     QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const;
     QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const;
@@ -213,8 +216,10 @@ public:
     QString getFileVersion() const;
 
     QSharedPointer<RLayer> queryCurrentLayer();
-    void setCurrentLayer(RLayer::Id layerId);
-    void setCurrentLayer(const QString& layerName);
+    RTransaction setCurrentLayer(RLayer::Id layerId);
+    RTransaction setCurrentLayer(const QString& layerName);
+    void setCurrentLayer(RTransaction& transaction, RLayer::Id layerId);
+    void setCurrentLayer(RTransaction& transaction, const QString& layerName);
     RLayer::Id getCurrentLayerId();
 
     void setCurrentColor(const RColor& color);

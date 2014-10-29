@@ -123,6 +123,12 @@
         querySelectedEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryDocumentVariables
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryDocumentVariablesDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryObject
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

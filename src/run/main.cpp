@@ -49,6 +49,7 @@
 #include "RDimRadialEntity.h"
 #include "RDimRotatedEntity.h"
 #include "RDimensionEntity.h"
+#include "RDocumentVariables.h"
 #include "REllipseEntity.h"
 #include "RFontList.h"
 #include "RHatchEntity.h"
@@ -200,6 +201,7 @@ int main(int argc, char *argv[]) {
     // init object properties:
     RObject::init();
     REntity::init();
+    RDocumentVariables::init();
 
     RArcEntity::init();
     RBlockReferenceEntity::init();

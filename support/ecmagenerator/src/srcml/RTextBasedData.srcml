@@ -1075,6 +1075,14 @@ dir="./entity" filename="RTextBasedData.h">
       </decl>
     </param>)</parameter_list>
     <block>{ 
+    <if>if 
+    <condition>(
+    <expr>
+    <name>lineSpacingFactor</name>&lt;0</expr>)</condition>
+    <then>
+      <block>{ 
+      <return>return;</return>}</block>
+    </then></if>
     <expr_stmt>
     <expr>
     <name>this</name>-&gt;

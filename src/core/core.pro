@@ -8,6 +8,7 @@ SOURCES += \
     RCoordinateEvent.cpp \
     RDebug.cpp \
     RDocument.cpp \
+    RDocumentVariables.cpp \
     RDocumentInterface.cpp \
     RDxfServices.cpp \
     REntity.cpp \
@@ -117,6 +118,7 @@ HEADERS = \
     RCoordinateListener.h \
     RDebug.h \
     RDocument.h \
+    RDocumentVariables.h \
     RDocumentInterface.h \
     RDxfServices.h \
     REntity.h \

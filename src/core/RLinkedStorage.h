@@ -60,6 +60,7 @@ public:
     virtual QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId);
     virtual QSet<REntity::Id> queryAllBlockReferences();
 
+    //virtual QSharedPointer<RDocumentVariables> queryDocumentVariables() const;
     virtual QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const;
     virtual QSharedPointer<RObject> queryObject(RObject::Id objectId) const;
     virtual QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const;

@@ -162,6 +162,18 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; REntity::Id &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="queryDocumentVariables"
+    cppName="queryDocumentVariables" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RDocumentVariables &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="queryDocumentVariablesDirect"
+    cppName="queryDocumentVariablesDirect" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RDocumentVariables &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="queryObject" cppName="queryObject"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

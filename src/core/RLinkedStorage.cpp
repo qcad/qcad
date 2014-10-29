@@ -118,6 +118,11 @@ QSet<REntity::Id> RLinkedStorage::queryAllBlockReferences() {
             .unite(backStorage->queryAllBlockReferences());
 }
 
+//QSharedPointer<RDocumentVariables> RLinkedStorage::queryDocumentVariables() const {
+//    // TODO?
+//    return RMemoryStorage::queryDocumentVariables();
+//}
+
 QSharedPointer<RObject> RLinkedStorage::queryObject(RObject::Id objectId) const {
     if (!objectMap.contains(objectId)) {
         return backStorage->queryObject(objectId);

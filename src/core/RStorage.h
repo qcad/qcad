@@ -28,6 +28,7 @@
 #include "RBlock.h"
 #include "RBlockReferenceEntity.h"
 #include "RBox.h"
+#include "RDocumentVariables.h"
 #include "REntity.h"
 #include "RLayer.h"
 #include "RLinetype.h"
@@ -162,6 +163,9 @@ public:
      */
     virtual QSet<REntity::Id> queryInfiniteEntities() = 0;
 
+    virtual QSharedPointer<RDocumentVariables> queryDocumentVariables() const = 0;
+    virtual QSharedPointer<RDocumentVariables> queryDocumentVariablesDirect() const = 0;
+
     /**
      * \return A shared pointer to the object with the given \c objectId
      *      or null pointer if the object is no available in this storage.
@@ -234,22 +238,18 @@ public:
     virtual QSharedPointer<RView> queryView(RView::Id viewId) const = 0;
     virtual QSharedPointer<RView> queryView(const QString& viewName) const = 0;
 
-    void setCurrentLayer(RLayer::Id layerId) {
-        //setVariable("CurrentLayer", layerId);
-        currentLayerId = layerId;
-    }
-
-    void setCurrentLayer(const QString& layerName) {
-        RLayer::Id id = getLayerId(layerName);
-        if (id == RLayer::INVALID_ID) {
-            return;
-        }
-        setCurrentLayer(id);
-    }
+    virtual void setCurrentLayer(RLayer::Id layerId);
+    virtual void setCurrentLayer(const QString& layerName);
 
     virtual RLayer::Id getCurrentLayerId() {
         //return (RLayer::Id) getVariable("CurrentLayer").toInt();
-        return currentLayerId;
+        //return currentLayerId;
+        QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
+        if (v.isNull()) {
+            qWarning() << "RStorage::getCurrentLayerId: no variables object found";
+            return RLayer::INVALID_ID;
+        }
+        return v->getCurrentLayerId();
     }
 
     virtual RView::Id getCurrentViewId() {

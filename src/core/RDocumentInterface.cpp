@@ -1742,6 +1742,15 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
             continue;
         }
 
+        QSharedPointer<RDocumentVariables> docVars = object.dynamicCast<RDocumentVariables> ();
+        if (!docVars.isNull()) {
+            ucsHasChanged = true;
+            layerHasChanged = true;
+            blockHasChanged = true;
+            viewHasChanged = true;
+            continue;
+        }
+
         QSharedPointer<REntity> entity = object.dynamicCast<REntity> ();
         if (!entity.isNull()) {
             entityHasChanged = true;
@@ -1856,9 +1865,10 @@ RLinetypePattern RDocumentInterface::getCurrentLinetypePattern() {
  * Sets the current layer based on the given layer name.
  */
 void RDocumentInterface::setCurrentLayer(const QString& layerName) {
-    document.setCurrentLayer(layerName);
+    RTransaction transaction = document.setCurrentLayer(layerName);
     if (RMainWindow::hasMainWindow() && notifyListeners) {
         RMainWindow::getMainWindow()->notifyLayerListeners(this);
+        RMainWindow::getMainWindow()->postTransactionEvent(transaction);
     }
 }
 

@@ -40,6 +40,9 @@ dir="./core" filename="RStorage.h">
   <cpp:file>"RBox.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"RDocumentVariables.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"REntity.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -553,6 +556,32 @@ dir="./core" filename="RStorage.h">
   </type>
   <name>queryInfiniteEntities</name>
   <parameter_list>()</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSharedPointer
+    <argument_list>&lt;
+    <argument>
+      <name>RDocumentVariables</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>queryDocumentVariables</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QSharedPointer
+    <argument_list>&lt;
+    <argument>
+      <name>RDocumentVariables</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>queryDocumentVariablesDirect</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
   <comment type="block">/** * \return A shared pointer to the
   object with the given \c objectId * or null pointer if the object
@@ -1105,88 +1134,38 @@ dir="./core" filename="RStorage.h">
   </param>)</parameter_list>
   <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setCurrentLayer</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RLayer</name>::
-          <name>Id</name></name>
-        </type>
-        <name>layerId</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <comment type="line">//setVariable("CurrentLayer",
-    layerId);</comment>
-    <expr_stmt>
-    <expr>
-    <name>currentLayerId</name>= 
-    <name>layerId</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setCurrentLayer</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>layerName</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <decl_stmt>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>setCurrentLayer</name>
+  <parameter_list>(
+  <param>
     <decl>
-    <type>
-      <name>
-      <name>RLayer</name>::
-      <name>Id</name></name>
-    </type>
-    <name>id</name>=
-    <init>
-      <expr>
-        <call>
-          <name>getLayerId</name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>layerName</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>id</name>== 
-    <name>
-    <name>RLayer</name>::
-    <name>INVALID_ID</name></name></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return;</return>}</block>
-    </then></if>
-    <constructor_decl>
-    <name>setCurrentLayer</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>id</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
+      <type>
+        <name>
+        <name>RLayer</name>::
+        <name>Id</name></name>
+      </type>
+      <name>layerId</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>setCurrentLayer</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>layerName</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <function>
     <type>
       <name>virtual</name>
@@ -1199,10 +1178,56 @@ dir="./core" filename="RStorage.h">
     <block>{ 
     <comment type="line">//return (RLayer::Id)
     getVariable("CurrentLayer").toInt();</comment>
+    <comment type="line">//return currentLayerId;</comment>
+    <decl_stmt>
+    <decl>
+    <type>
+      <name>QSharedPointer
+      <argument_list>&lt;
+      <argument>
+        <name>RDocumentVariables</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>v</name>=
+    <init>
+      <expr>
+        <call>
+          <name>queryDocumentVariablesDirect</name>
+          <argument_list>()</argument_list>
+        </call>
+      </expr>
+    </init></decl>;</decl_stmt>
+    <if>if 
+    <condition>(
+    <expr>
+    <name>v</name>.
+    <call>
+      <name>isNull</name>
+      <argument_list>()</argument_list>
+    </call></expr>)</condition>
+    <then>
+      <block>{ 
+      <expr_stmt>
+      <expr>
+      <call>
+        <name>qWarning</name>
+        <argument_list>()</argument_list>
+      </call>&lt;&lt; "RStorage::getCurrentLayerId: no variables
+      object found"</expr>;</expr_stmt>
+      <return>return 
+      <expr>
+        <name>
+        <name>RLayer</name>::
+        <name>INVALID_ID</name></name>
+      </expr>;</return>}</block>
+    </then></if>
     <return>return 
     <expr>
-      <name>currentLayerId</name>
-    </expr>;</return>}</block>
+    <name>v</name>-&gt;
+    <call>
+      <name>getCurrentLayerId</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
   </function>
   <function>
     <type>

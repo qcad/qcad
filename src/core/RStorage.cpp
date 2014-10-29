@@ -27,7 +27,7 @@ RStorage::RStorage() :
     currentColor(RColor::ByLayer),
     currentLineweight(RLineweight::WeightByLayer),
     currentLinetypeId(RLinetype::INVALID_ID),
-    currentLayerId(RLayer::INVALID_ID),
+    //currentLayerId(RLayer::INVALID_ID),
     currentViewId(RView::INVALID_ID),
     currentBlockId(RBlock::INVALID_ID),
     lastTransactionId(-1) {
@@ -65,6 +65,26 @@ RObject::Handle RStorage::getNewObjectHandle() {
 
 RObject::Handle RStorage::getMaxObjectHandle() {
     return handleCounter;
+}
+
+void RStorage::setCurrentLayer(RLayer::Id layerId) {
+    //currentLayerId = layerId;
+    QSharedPointer<RDocumentVariables> docVars = queryDocumentVariables();
+    if (docVars.isNull())  {
+        return;
+    }
+    docVars->setCurrentLayerId(layerId);
+    RTransaction t(*this, "Setting current layer", true);
+    t.addObject(docVars);
+    t.end(NULL);
+}
+
+void RStorage::setCurrentLayer(const QString& layerName) {
+    RLayer::Id id = getLayerId(layerName);
+    if (id == RLayer::INVALID_ID) {
+        return;
+    }
+    setCurrentLayer(id);
 }
 
 void RStorage::setCurrentColor(const RColor& color) {

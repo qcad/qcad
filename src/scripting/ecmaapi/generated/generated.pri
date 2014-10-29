@@ -57,6 +57,7 @@ HEADERS += \
     $$PWD/REcmaDockWidget.h \
     $$PWD/REcmaDocument.h \
     $$PWD/REcmaDocumentInterface.h \
+    $$PWD/REcmaDocumentVariables.h \
     $$PWD/REcmaDxfServices.h \
     $$PWD/REcmaEllipse.h \
     $$PWD/REcmaEllipseData.h \
@@ -209,6 +210,7 @@ HEADERS += \
     $$PWD/REcmaSharedPointerDimRotatedEntity.h \
     $$PWD/REcmaSharedPointerDimensionEntity.h \
     $$PWD/REcmaSharedPointerDirected.h \
+    $$PWD/REcmaSharedPointerDocumentVariables.h \
     $$PWD/REcmaSharedPointerEllipse.h \
     $$PWD/REcmaSharedPointerEllipseEntity.h \
     $$PWD/REcmaSharedPointerEntity.h \
@@ -387,6 +389,7 @@ SOURCES += \
     $$PWD/REcmaDockWidget.cpp \
     $$PWD/REcmaDocument.cpp \
     $$PWD/REcmaDocumentInterface.cpp \
+    $$PWD/REcmaDocumentVariables.cpp \
     $$PWD/REcmaDxfServices.cpp \
     $$PWD/REcmaEllipse.cpp \
     $$PWD/REcmaEllipseData.cpp \
@@ -539,6 +542,7 @@ SOURCES += \
     $$PWD/REcmaSharedPointerDimRotatedEntity.cpp \
     $$PWD/REcmaSharedPointerDimensionEntity.cpp \
     $$PWD/REcmaSharedPointerDirected.cpp \
+    $$PWD/REcmaSharedPointerDocumentVariables.cpp \
     $$PWD/REcmaSharedPointerEllipse.cpp \
     $$PWD/REcmaSharedPointerEllipseEntity.cpp \
     $$PWD/REcmaSharedPointerEntity.cpp \

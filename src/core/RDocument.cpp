@@ -19,6 +19,7 @@
 #include "RBox.h"
 #include "RDebug.h"
 #include "RDocument.h"
+#include "RDocumentVariables.h"
 #include "RLinetypeListImperial.h"
 #include "RLinetypeListMetric.h"
 #include "RLinkedStorage.h"
@@ -66,6 +67,11 @@ void RDocument::init() {
     RLinkedStorage* ls = dynamic_cast<RLinkedStorage*>(&storage);
     bool storageIsLinked = (ls!=NULL);
 
+    // add document variables object:
+    if (!storageIsLinked /*&& queryDocumentVariables().isNull()*/) {
+        transaction.addObject(QSharedPointer<RDocumentVariables>(new RDocumentVariables(this)));
+    }
+
     // add default line types if not already added (RLinkedStorage):
     if (!storageIsLinked && queryLinetype("BYLAYER").isNull()) {
         transaction.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("BYLAYER", "By Layer"))));
@@ -111,7 +117,9 @@ void RDocument::init() {
     }
 
     if (!storageIsLinked) {
-        setCurrentLayer("0");
+        setCurrentLayer(transaction, "0");
+
+        qDebug() << "current layer: " << queryCurrentLayer()->getName();
 
         setCurrentBlock(RBlock::modelSpaceName);
 
@@ -404,15 +412,15 @@ QVariant RDocument::getVariable(const QString& key, const QVariant& defaultValue
 }
 
 void RDocument::setKnownVariable(RS::KnownVariable key, const QVariant& value) {
-    bool metric = true;
+    bool wasMetric = true;
 
     if (key==RS::INSUNITS) {
-        metric = RUnit::isMetric(getUnit());
+        wasMetric = RUnit::isMetric(getUnit());
     }
 
     storage.setKnownVariable(key, value);
 
-    if (key==RS::INSUNITS && metric!=RUnit::isMetric(getUnit())) {
+    if (key==RS::INSUNITS && wasMetric!=RUnit::isMetric(getUnit())) {
         initLinetypes();
     }
 }
@@ -475,12 +483,33 @@ RLinetypePattern RDocument::getCurrentLinetypePattern() const {
     return storage.getCurrentLinetypePattern();
 }
 
-void RDocument::setCurrentLayer(RLayer::Id layerId) {
-    storage.setCurrentLayer(layerId);
+RTransaction RDocument::setCurrentLayer(RLayer::Id layerId) {
+    RTransaction transaction(getStorage(), "Setting current layer", true);
+    setCurrentLayer(transaction, layerId);
+    transaction.end(this);
+    return transaction;
 }
 
-void RDocument::setCurrentLayer(const QString& layerName) {
-    storage.setCurrentLayer(layerName);
+RTransaction RDocument::setCurrentLayer(const QString& layerName) {
+    RLayer::Id id = getLayerId(layerName);
+    if (id == RLayer::INVALID_ID) {
+        return RTransaction();
+    }
+    return setCurrentLayer(id);
+}
+
+void RDocument::setCurrentLayer(RTransaction& transaction, RLayer::Id layerId) {
+    QSharedPointer<RDocumentVariables> v = queryDocumentVariables();
+    v->setCurrentLayerId(layerId);
+    transaction.addObject(v);
+}
+
+void RDocument::setCurrentLayer(RTransaction& transaction, const QString& layerName) {
+    RLayer::Id id = getLayerId(layerName);
+    if (id == RLayer::INVALID_ID) {
+        return;
+    }
+    setCurrentLayer(transaction, id);
 }
 
 QSharedPointer<RBlock> RDocument::queryCurrentBlock() {
@@ -1118,7 +1147,13 @@ QSet<REntity::Id> RDocument::querySelectedEntities() {
     return storage.querySelectedEntities();
 }
 
+QSharedPointer<RDocumentVariables> RDocument::queryDocumentVariables() const {
+    return storage.queryDocumentVariables();
+}
 
+QSharedPointer<RDocumentVariables> RDocument::queryDocumentVariablesDirect() const {
+    return storage.queryDocumentVariablesDirect();
+}
 
 /**
  * Queries the object with the given ID.

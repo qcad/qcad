@@ -58,6 +58,12 @@
         
     
     
+      void updateAddButtonLocation(
+                
+            );
+        
+    
+    
       void closeTab(
                 int i
             );

@@ -73,6 +73,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, updateTabBarSize, "updateTabBarSize");
             
+            REcmaHelper::registerFunction(&engine, proto, updateAddButtonLocation, "updateAddButtonLocation");
+            
             REcmaHelper::registerFunction(&engine, proto, closeTab, "closeTab");
             
             REcmaHelper::registerFunction(&engine, proto, activateTab, "activateTab");
@@ -407,6 +409,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMdiArea::updateTabBarSize", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMdiArea::updateAddButtonLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMdiArea::updateAddButtonLocation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMdiArea::updateAddButtonLocation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMdiArea* self = 
+                        getSelf("updateAddButtonLocation", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateAddButtonLocation();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMdiArea.updateAddButtonLocation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMdiArea::updateAddButtonLocation", context, engine);
             return result;
         }
          QScriptValue

@@ -37,6 +37,9 @@ dir="./core" filename="RDocument.h">
   <cpp:file>"RBlockReferenceEntity.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>"RDocumentVariables.h"</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>"REntity.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -781,6 +784,28 @@ dir="./core" filename="RDocument.h">
   </type>
   <name>querySelectedEntities</name>
   <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QSharedPointer
+    <argument_list>&lt;
+    <argument>
+      <name>RDocumentVariables</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>queryDocumentVariables</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QSharedPointer
+    <argument_list>&lt;
+    <argument>
+      <name>RDocumentVariables</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>queryDocumentVariablesDirect</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>QSharedPointer
@@ -1698,10 +1723,47 @@ dir="./core" filename="RDocument.h">
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>RTransaction</name>
+  </type>
+  <name>setCurrentLayer</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RLayer</name>::
+        <name>Id</name></name>
+      </type>
+      <name>layerId</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>RTransaction</name>
+  </type>
+  <name>setCurrentLayer</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>layerName</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
     <name>void</name>
   </type>
   <name>setCurrentLayer</name>
   <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RTransaction</name>&amp;</type>
+      <name>transaction</name>
+    </decl>
+  </param>, 
   <param>
     <decl>
       <type>
@@ -1718,6 +1780,13 @@ dir="./core" filename="RDocument.h">
   </type>
   <name>setCurrentLayer</name>
   <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RTransaction</name>&amp;</type>
+      <name>transaction</name>
+    </decl>
+  </param>, 
   <param>
     <decl>
       <type>

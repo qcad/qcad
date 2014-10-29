@@ -26,6 +26,7 @@
 
 #include "RStorage.h"
 #include "RBlockReferenceEntity.h"
+#include "RDocumentVariables.h"
 
 /**
  * Basic memory based storage.
@@ -66,6 +67,8 @@ public:
     virtual QSet<REntity::Id> queryAllBlockReferences();
     //virtual QSet<REntity::Id> queryViewEntities(RView::Id viewId);
 
+    virtual QSharedPointer<RDocumentVariables> queryDocumentVariables() const;
+    virtual QSharedPointer<RDocumentVariables> queryDocumentVariablesDirect() const;
     virtual QSharedPointer<RObject> queryObject(RObject::Id objectId) const;
     virtual QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const;
     virtual QSharedPointer<RObject> queryObjectByHandleDirect(RObject::Handle objectHandle) const;
@@ -179,6 +182,10 @@ protected:
     QHash<RLayer::Id, QSharedPointer<RLayer> > layerMap;
     QHash<RLayer::Id, QSharedPointer<RLinetype> > linetypeMap;
     QHash<int, RTransaction> transactionMap;
+
+    // document wide variables are stored as custom properties in this object:
+    QSharedPointer<RDocumentVariables> documentVariables;
+
     QHash<QString, QVariant> variables;
     QMap<QString, QString> variableCaseMap;
     QHash<RS::KnownVariable, QVariant> knownVariables;

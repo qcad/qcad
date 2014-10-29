@@ -122,9 +122,9 @@ void RGuiAction::initTexts() {
 #endif
 
     // for sort order debugging:
-//    if (getSortOrder()!=-1 && textAndKeycode.indexOf('{')==-1) {
-//        textAndKeycode += QString(" {%1}").arg(getSortOrder());
-//    }
+    if (getSortOrder()!=-1 && textAndKeycode.indexOf('{')==-1) {
+        textAndKeycode += QString(" {%1}").arg(getSortOrder());
+    }
 
     setText(textAndKeycode);
 

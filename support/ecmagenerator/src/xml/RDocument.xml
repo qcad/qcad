@@ -255,6 +255,18 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; REntity::Id &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="queryDocumentVariables"
+    cppName="queryDocumentVariables" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RDocumentVariables &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="queryDocumentVariablesDirect"
+    cppName="queryDocumentVariablesDirect" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RDocumentVariables &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="queryObject" cppName="queryObject"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -642,11 +654,23 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="setCurrentLayer" cppName="setCurrentLayer"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="RTransaction" isPureVirtual="false">
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        isConst="false" />
+      </variant>
+      <variant returnType="RTransaction" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerName" isConst="true" />
+      </variant>
       <variant returnType="void" isPureVirtual="false">
+        <arg type="RTransaction &amp;" typeName="RTransaction"
+        name="transaction" isConst="false" />
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
+        <arg type="RTransaction &amp;" typeName="RTransaction"
+        name="transaction" isConst="false" />
         <arg type="QString &amp;" typeName="QString"
         name="layerName" isConst="true" />
       </variant>

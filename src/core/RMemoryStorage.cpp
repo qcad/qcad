@@ -50,6 +50,7 @@ void RMemoryStorage::clear() {
     layerMap.clear();
     linetypeMap.clear();
     transactionMap.clear();
+    documentVariables.clear();
     variables.clear();
     variableCaseMap.clear();
     knownVariables.clear();
@@ -359,6 +360,17 @@ QSet<REntity::Id> RMemoryStorage::queryViewEntities(RView::Id viewId) {
     return result;
 }
 */
+
+QSharedPointer<RDocumentVariables> RMemoryStorage::queryDocumentVariables() const {
+    if (documentVariables.isNull()) {
+        return QSharedPointer<RDocumentVariables>();
+    }
+    return QSharedPointer<RDocumentVariables>(documentVariables->clone());
+}
+
+QSharedPointer<RDocumentVariables> RMemoryStorage::queryDocumentVariablesDirect() const {
+    return documentVariables;
+}
 
 QSharedPointer<RObject> RMemoryStorage::queryObject(RObject::Id objectId) const {
     if (!objectMap.contains(objectId)) {
@@ -936,6 +948,11 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
 
     if (!linetype.isNull()) {
         linetypeMap[object->getId()] = linetype;
+    }
+
+    QSharedPointer<RDocumentVariables> docVars = object.dynamicCast<RDocumentVariables> ();
+    if (!docVars.isNull()) {
+        documentVariables = docVars;
     }
 
     return true;

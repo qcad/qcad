@@ -412,6 +412,9 @@ dir="./core" filename="RLinkedStorage.h">
   </type>
   <name>queryAllBlockReferences</name>
   <parameter_list>()</parameter_list>;</function_decl>
+  <comment type="line">//virtual
+  QSharedPointer&lt;RDocumentVariables&gt; queryDocumentVariables()
+  const;</comment>
   <function_decl>
   <type>
     <name>virtual</name>
