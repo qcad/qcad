@@ -801,7 +801,9 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         if (pen.style() != Qt::NoPen) {
             if (isPrinting()) {
                 if (hairlineMode) {
-                    pen.setWidthF(0.05 / drawingScale);
+                    //pen.setWidthF(0.05 / drawingScale);
+                    pen.setWidth(1);
+                    pen.setCosmetic(true);
                 }
                 else {
                     // printing: always use real, scaled line weight, no matter
@@ -818,7 +820,9 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
                         }
                         else {
                             if (hairlineMode) {
-                                pen.setWidthF(0.05 / drawingScale);
+                                //pen.setWidthF(0.05 / drawingScale);
+                                pen.setWidth(1);
+                                pen.setCosmetic(true);
                             }
                             else {
                                 pen.setWidthF(pen.widthF() / drawingScale);

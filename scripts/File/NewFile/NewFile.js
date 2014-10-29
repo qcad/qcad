@@ -275,6 +275,11 @@ NewFile.updateTitle = function(mdiChild) {
         (document.isModified() ? " *" : "") +
         " - " + qApp.applicationName
     );
+
+    var mdiArea = EAction.getMdiArea();
+    if (!isNull(mdiArea)) {
+        mdiArea.updateTabBar();
+    }
 };
 
 /**

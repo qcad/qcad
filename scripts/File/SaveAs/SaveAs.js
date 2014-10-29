@@ -130,6 +130,11 @@ SaveAs.prototype.beginEvent = function() {
 
     this.save(fileDialog.selectedFiles()[0], fileDialog.selectedNameFilter(), true);
 
+    var mdiArea = EAction.getMdiArea();
+    if (!isNull(mdiArea)) {
+        mdiArea.updateTabBar();
+    }
+
     this.terminate();
     fileDialog.destroy();
 };

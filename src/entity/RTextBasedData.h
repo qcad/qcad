@@ -205,6 +205,9 @@ public:
     }
 
     void setLineSpacingFactor(double lineSpacingFactor) {
+        if (lineSpacingFactor<0) {
+            return;
+        }
         this->lineSpacingFactor = lineSpacingFactor;
         update();
     }

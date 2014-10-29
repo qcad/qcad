@@ -98,9 +98,14 @@ bool RTextBasedEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().xScale, value, PropertyXScale == propertyTypeId);
     ret = ret || RObject::setMember(getData().bold, value, PropertyBold == propertyTypeId);
     ret = ret || RObject::setMember(getData().italic, value, PropertyItalic == propertyTypeId);
-    ret = ret || RObject::setMember(getData().lineSpacingFactor, value, PropertyLineSpacingFactor == propertyTypeId);
     ret = ret || RObject::setMember((int&)getData().horizontalAlignment, value.value<int>(), PropertyHAlign == propertyTypeId);
     ret = ret || RObject::setMember((int&)getData().verticalAlignment, value.value<int>(), PropertyVAlign == propertyTypeId);
+
+    if (PropertyLineSpacingFactor == propertyTypeId) {
+        if (value.toDouble()>=0.0) {
+            ret = ret || RObject::setMember(getData().lineSpacingFactor, value, true);
+        }
+    }
 
     if (ret) {
         getData().update();
