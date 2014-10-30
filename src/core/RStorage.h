@@ -246,10 +246,12 @@ public:
     virtual QSharedPointer<RView> queryView(RView::Id viewId) const = 0;
     virtual QSharedPointer<RView> queryView(const QString& viewName) const = 0;
 
-    RTransaction setCurrentLayer(RLayer::Id layerId);
-    RTransaction setCurrentLayer(const QString& layerName);
-    void setCurrentLayer(RTransaction& transaction, RLayer::Id layerId);
-    void setCurrentLayer(RTransaction& transaction, const QString& layerName);
+    //RTransaction setCurrentLayer(RLayer::Id layerId);
+    //RTransaction setCurrentLayer(const QString& layerName);
+    //void setCurrentLayer(RTransaction& transaction, RLayer::Id layerId);
+    //void setCurrentLayer(RTransaction& transaction, const QString& layerName);
+    void setCurrentLayer(RLayer::Id layerId, RTransaction* transaction=NULL);
+    void setCurrentLayer(const QString& layerName, RTransaction* transaction=NULL);
 
     virtual RLayer::Id getCurrentLayerId() const;
     virtual RView::Id getCurrentViewId() const {
@@ -304,6 +306,9 @@ public:
         // unlike blocks and layers, the current view can be invalid:
         setCurrentView(id);
     }
+
+    QSharedPointer<RDocumentVariables> startDocumentVariablesTransaction(RTransaction*& transaction, bool& useLocalTransaction);
+    void endDocumentVariablesTransaction(RTransaction* transaction, bool useLocalTransaction, QSharedPointer<RDocumentVariables> docVars);
 
     void setUnit(RS::Unit unit, RTransaction* transaction=NULL);
     //void setUnit(RTransaction& transaction, RS::Unit unit);

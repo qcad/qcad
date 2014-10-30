@@ -1732,9 +1732,17 @@ dir="./core" filename="RDocument.h">
   </type>
   <name>queryCurrentLayer</name>
   <parameter_list>()</parameter_list>;</function_decl>
+  <comment type="line">// RTransaction setCurrentLayer(RLayer::Id
+  layerId);</comment>
+  <comment type="line">// RTransaction setCurrentLayer(const
+  QString&amp; layerName);</comment>
+  <comment type="line">// void setCurrentLayer(RTransaction&amp;
+  transaction, RLayer::Id layerId);</comment>
+  <comment type="line">// void setCurrentLayer(RTransaction&amp;
+  transaction, const QString&amp; layerName);</comment>
   <function_decl>
   <type>
-    <name>RTransaction</name>
+    <name>void</name>
   </type>
   <name>setCurrentLayer</name>
   <parameter_list>(
@@ -1747,20 +1755,17 @@ dir="./core" filename="RDocument.h">
       </type>
       <name>layerId</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RTransaction</name>
-  </type>
-  <name>setCurrentLayer</name>
-  <parameter_list>(
+  </param>, 
   <param>
     <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>layerName</name>
-    </decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -1771,40 +1776,21 @@ dir="./core" filename="RDocument.h">
   <param>
     <decl>
       <type>
-      <name>RTransaction</name>&amp;</type>
-      <name>transaction</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLayer</name>::
-        <name>Id</name></name>
-      </type>
-      <name>layerId</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentLayer</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RTransaction</name>&amp;</type>
-      <name>transaction</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
       <name>const</name>
       <name>QString</name>&amp;</type>
       <name>layerName</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>

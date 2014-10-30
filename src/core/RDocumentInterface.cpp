@@ -1865,10 +1865,11 @@ RLinetypePattern RDocumentInterface::getCurrentLinetypePattern() {
  * Sets the current layer based on the given layer name.
  */
 void RDocumentInterface::setCurrentLayer(const QString& layerName) {
-    RTransaction transaction = document.setCurrentLayer(layerName);
+    document.setCurrentLayer(layerName);
+//    RTransaction transaction =
     if (RMainWindow::hasMainWindow() && notifyListeners) {
         RMainWindow::getMainWindow()->notifyLayerListeners(this);
-        RMainWindow::getMainWindow()->postTransactionEvent(transaction);
+//        RMainWindow::getMainWindow()->postTransactionEvent(transaction);
     }
 }
 

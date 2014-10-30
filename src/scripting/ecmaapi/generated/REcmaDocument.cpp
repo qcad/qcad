@@ -6485,14 +6485,56 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RTransaction'
-    RTransaction cppResult =
-        
+    // return type 'void'
+    
                self->setCurrentLayer(a0);
-        // return type: RTransaction
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayer::Id */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RTransaction * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayer::Id
+                    a0 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument is pointer
+                    RTransaction * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("RDocument: Argument 1 is not of type RTransaction *RTransaction *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCurrentLayer(a0
+        ,
+    a1);
     } else
 
 
@@ -6517,66 +6559,9 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RTransaction'
-    RTransaction cppResult =
-        
-               self->setCurrentLayer(a0);
-        // return type: RTransaction
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RTransaction */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: RLayer::Id */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RTransaction*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RTransaction*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RTransaction.",
-                               context);                    
-                    }
-                    RTransaction 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    RLayer::Id
-                    a1 =
-                    (RLayer::Id)
-                    (int)
-                    context->argument( 1 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
     // return type 'void'
     
-               self->setCurrentLayer(a0
-        ,
-    a1);
+               self->setCurrentLayer(a0);
     } else
 
 
@@ -6584,42 +6569,37 @@
     
     if( context->argumentCount() ==
     2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RTransaction */
-     && (
-            context->argument(1).isString()
+            context->argument(0).isString()
         ) /* type: QString */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RTransaction * */
     
     ){
     // prepare arguments:
     
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RTransaction*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RTransaction*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RTransaction.",
-                               context);                    
-                    }
-                    RTransaction 
-                    a0 = 
-                    *ap0;
-                
                     // argument isStandardType
                     QString
-                    a1 =
+                    a0 =
                     (QString)
                     
-                    context->argument( 1 ).
+                    context->argument( 0 ).
                     toString();
+                
+                    // argument is pointer
+                    RTransaction * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("RDocument: Argument 1 is not of type RTransaction *RTransaction *.", context);                    
+                    }
                 
     // end of arguments
 

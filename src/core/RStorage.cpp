@@ -70,33 +70,51 @@ RObject::Handle RStorage::getMaxObjectHandle() {
     return handleCounter;
 }
 
-RTransaction RStorage::setCurrentLayer(RLayer::Id layerId) {
-    RTransaction transaction(*this, "Setting current layer", true);
-    setCurrentLayer(transaction, layerId);
-    transaction.end();
-    return transaction;
+//RTransaction RStorage::setCurrentLayer(RLayer::Id layerId) {
+//    RTransaction transaction(*this, "Setting current layer", true);
+//    setCurrentLayer(transaction, layerId);
+//    transaction.end();
+//    return transaction;
+//}
+
+//RTransaction RStorage::setCurrentLayer(const QString& layerName) {
+//    RLayer::Id id = getLayerId(layerName);
+//    if (id == RLayer::INVALID_ID) {
+//        return RTransaction();
+//    }
+//    return setCurrentLayer(id);
+//}
+
+//void RStorage::setCurrentLayer(RTransaction& transaction, RLayer::Id layerId) {
+//    QSharedPointer<RDocumentVariables> v = queryDocumentVariables();
+//    v->setCurrentLayerId(layerId);
+//    transaction.addObject(v);
+//}
+
+//void RStorage::setCurrentLayer(RTransaction& transaction, const QString& layerName) {
+//    RLayer::Id id = getLayerId(layerName);
+//    if (id == RLayer::INVALID_ID) {
+//        return;
+//    }
+//    setCurrentLayer(transaction, id);
+//}
+
+void RStorage::setCurrentLayer(RLayer::Id layerId, RTransaction* transaction) {
+    bool useLocalTransaction;
+    QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
+    docVars->setCurrentLayerId(layerId);
+    endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 }
 
-RTransaction RStorage::setCurrentLayer(const QString& layerName) {
-    RLayer::Id id = getLayerId(layerName);
-    if (id == RLayer::INVALID_ID) {
-        return RTransaction();
-    }
-    return setCurrentLayer(id);
-}
-
-void RStorage::setCurrentLayer(RTransaction& transaction, RLayer::Id layerId) {
-    QSharedPointer<RDocumentVariables> v = queryDocumentVariables();
-    v->setCurrentLayerId(layerId);
-    transaction.addObject(v);
-}
-
-void RStorage::setCurrentLayer(RTransaction& transaction, const QString& layerName) {
-    RLayer::Id id = getLayerId(layerName);
-    if (id == RLayer::INVALID_ID) {
+void RStorage::setCurrentLayer(const QString& layerName, RTransaction* transaction) {
+    bool useLocalTransaction;
+    QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
+    RLayer::Id layerId = getLayerId(layerName);
+    if (layerId == RLayer::INVALID_ID) {
         return;
     }
-    setCurrentLayer(transaction, id);
+    docVars->setCurrentLayerId(layerId);
+    endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 }
 
 RLayer::Id RStorage::getCurrentLayerId() const {
@@ -201,16 +219,24 @@ int RStorage::getMinDrawOrder() {
 }
 
 void RStorage::setUnit(RS::Unit unit, RTransaction* transaction) {
-    bool useLocalTransaction = (transaction==NULL);
+    bool useLocalTransaction;
+    QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
+    docVars->setUnit(unit);
+    endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
+}
+
+QSharedPointer<RDocumentVariables> RStorage::startDocumentVariablesTransaction(RTransaction*& transaction, bool& useLocalTransaction) {
+    useLocalTransaction = (transaction==NULL);
 
     if (useLocalTransaction) {
-        transaction = new RTransaction(*this, "Setting unit", true);
+        transaction = new RTransaction(*this, "blah", true);
     }
 
-    QSharedPointer<RDocumentVariables> docVars = queryDocumentVariables();
-    docVars->setUnit(unit);
-    transaction->addObject(docVars);
+    return queryDocumentVariables();
+}
 
+void RStorage::endDocumentVariablesTransaction(RTransaction* transaction, bool useLocalTransaction, QSharedPointer<RDocumentVariables> docVars) {
+    transaction->addObject(docVars);
 
     if (RMainWindow::hasMainWindow()) {
         RMainWindow::getMainWindow()->postTransactionEvent(*transaction,

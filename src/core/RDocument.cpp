@@ -69,7 +69,8 @@ void RDocument::init() {
     bool storageIsLinked = (ls!=NULL);
 
     // add document variables object:
-    if (!storageIsLinked && queryDocumentVariables().isNull()) {
+    //if (!storageIsLinked && queryDocumentVariables().isNull()) {
+    if (queryDocumentVariables().isNull()) {
         transaction.addObject(QSharedPointer<RDocumentVariables>(new RDocumentVariables(this)));
     }
 
@@ -118,7 +119,7 @@ void RDocument::init() {
     }
 
     if (!storageIsLinked) {
-        setCurrentLayer(transaction, "0");
+        setCurrentLayer("0", &transaction);
 
         qDebug() << "current layer: " << queryCurrentLayer()->getName();
 
@@ -323,8 +324,8 @@ void RDocument::setUnit(RS::Unit unit, RTransaction* transaction) {
 
 RS::Unit RDocument::getUnit() const {
     return storage.getUnit();
-    QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
-    return v->getUnit();
+//    QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
+//    return v->getUnit();
 }
 
 bool RDocument::isMetric() const {
@@ -500,38 +501,46 @@ RLinetypePattern RDocument::getCurrentLinetypePattern() const {
     return storage.getCurrentLinetypePattern();
 }
 
-RTransaction RDocument::setCurrentLayer(RLayer::Id layerId) {
-    return storage.setCurrentLayer(layerId);
-//    RTransaction transaction(getStorage(), "Setting current layer", true);
-//    setCurrentLayer(transaction, layerId);
-//    transaction.end(this);
-//    return transaction;
+//RTransaction RDocument::setCurrentLayer(RLayer::Id layerId) {
+//    return storage.setCurrentLayer(layerId);
+////    RTransaction transaction(getStorage(), "Setting current layer", true);
+////    setCurrentLayer(transaction, layerId);
+////    transaction.end(this);
+////    return transaction;
+//}
+
+//RTransaction RDocument::setCurrentLayer(const QString& layerName) {
+//    return storage.setCurrentLayer(layerName);
+////    RLayer::Id id = getLayerId(layerName);
+////    if (id == RLayer::INVALID_ID) {
+////        return RTransaction();
+////    }
+////    return setCurrentLayer(id);
+//}
+
+void RDocument::setCurrentLayer(RLayer::Id layerId, RTransaction* transaction) {
+    storage.setCurrentLayer(layerId, transaction);
 }
 
-RTransaction RDocument::setCurrentLayer(const QString& layerName) {
-    return storage.setCurrentLayer(layerName);
-//    RLayer::Id id = getLayerId(layerName);
-//    if (id == RLayer::INVALID_ID) {
-//        return RTransaction();
-//    }
-//    return setCurrentLayer(id);
+void RDocument::setCurrentLayer(const QString& layerName, RTransaction* transaction) {
+    storage.setCurrentLayer(layerName, transaction);
 }
 
-void RDocument::setCurrentLayer(RTransaction& transaction, RLayer::Id layerId) {
-    storage.setCurrentLayer(transaction, layerId);
-//    QSharedPointer<RDocumentVariables> v = queryDocumentVariables();
-//    v->setCurrentLayerId(layerId);
-//    transaction.addObject(v);
-}
+//void RDocument::setCurrentLayer(RTransaction& transaction, RLayer::Id layerId) {
+//    storage.setCurrentLayer(transaction, layerId);
+////    QSharedPointer<RDocumentVariables> v = queryDocumentVariables();
+////    v->setCurrentLayerId(layerId);
+////    transaction.addObject(v);
+//}
 
-void RDocument::setCurrentLayer(RTransaction& transaction, const QString& layerName) {
-    storage.setCurrentLayer(transaction, layerName);
-//    RLayer::Id id = getLayerId(layerName);
-//    if (id == RLayer::INVALID_ID) {
-//        return;
-//    }
-//    setCurrentLayer(transaction, id);
-}
+//void RDocument::setCurrentLayer(RTransaction& transaction, const QString& layerName) {
+//    storage.setCurrentLayer(transaction, layerName);
+////    RLayer::Id id = getLayerId(layerName);
+////    if (id == RLayer::INVALID_ID) {
+////        return;
+////    }
+////    setCurrentLayer(transaction, id);
+//}
 
 QSharedPointer<RBlock> RDocument::queryCurrentBlock() {
     return storage.queryCurrentBlock();

@@ -1165,9 +1165,17 @@ dir="./core" filename="RStorage.h">
   </param>)</parameter_list>
   <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
+  <comment type="line">//RTransaction setCurrentLayer(RLayer::Id
+  layerId);</comment>
+  <comment type="line">//RTransaction setCurrentLayer(const
+  QString&amp; layerName);</comment>
+  <comment type="line">//void setCurrentLayer(RTransaction&amp;
+  transaction, RLayer::Id layerId);</comment>
+  <comment type="line">//void setCurrentLayer(RTransaction&amp;
+  transaction, const QString&amp; layerName);</comment>
   <function_decl>
   <type>
-    <name>RTransaction</name>
+    <name>void</name>
   </type>
   <name>setCurrentLayer</name>
   <parameter_list>(
@@ -1180,20 +1188,17 @@ dir="./core" filename="RStorage.h">
       </type>
       <name>layerId</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RTransaction</name>
-  </type>
-  <name>setCurrentLayer</name>
-  <parameter_list>(
+  </param>, 
   <param>
     <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>layerName</name>
-    </decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -1204,40 +1209,21 @@ dir="./core" filename="RStorage.h">
   <param>
     <decl>
       <type>
-      <name>RTransaction</name>&amp;</type>
-      <name>transaction</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLayer</name>::
-        <name>Id</name></name>
-      </type>
-      <name>layerId</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentLayer</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RTransaction</name>&amp;</type>
-      <name>transaction</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
       <name>const</name>
       <name>QString</name>&amp;</type>
       <name>layerName</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -1609,6 +1595,63 @@ dir="./core" filename="RStorage.h">
       </decl>
     </param>)</parameter_list>;</constructor_decl>}</block>
   </function>
+  <function_decl>
+  <type>
+    <name>QSharedPointer
+    <argument_list>&lt;
+    <argument>
+      <name>RDocumentVariables</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>startDocumentVariablesTransaction</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RTransaction</name>*&amp;</type>
+      <name>transaction</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>bool</name>&amp;</type>
+      <name>useLocalTransaction</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>endDocumentVariablesTransaction</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RTransaction</name>*</type>
+      <name>transaction</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>useLocalTransaction</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>QSharedPointer
+        <argument_list>&lt;
+        <argument>
+          <name>RDocumentVariables</name>
+        </argument>&gt;</argument_list></name>
+      </type>
+      <name>docVars</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>

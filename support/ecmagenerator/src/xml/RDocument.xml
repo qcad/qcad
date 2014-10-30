@@ -658,25 +658,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="setCurrentLayer" cppName="setCurrentLayer"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RTransaction" isPureVirtual="false">
+      <variant returnType="void" isPureVirtual="false">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
-      </variant>
-      <variant returnType="RTransaction" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString"
-        name="layerName" isConst="true" />
-      </variant>
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RTransaction &amp;" typeName="RTransaction"
-        name="transaction" isConst="false" />
-        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default=" NULL"
         isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RTransaction &amp;" typeName="RTransaction"
-        name="transaction" isConst="false" />
         <arg type="QString &amp;" typeName="QString"
         name="layerName" isConst="true" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default=" NULL"
+        isConst="false" />
       </variant>
     </method>
     <method name="getCurrentLayerId" cppName="getCurrentLayerId"

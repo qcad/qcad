@@ -213,6 +213,12 @@
         setCurrentView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        startDocumentVariablesTransaction
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        endDocumentVariablesTransaction
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setUnit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

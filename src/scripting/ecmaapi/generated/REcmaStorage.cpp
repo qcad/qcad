@@ -179,6 +179,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setCurrentView, "setCurrentView");
             
+            REcmaHelper::registerFunction(&engine, proto, startDocumentVariablesTransaction, "startDocumentVariablesTransaction");
+            
+            REcmaHelper::registerFunction(&engine, proto, endDocumentVariablesTransaction, "endDocumentVariablesTransaction");
+            
             REcmaHelper::registerFunction(&engine, proto, setUnit, "setUnit");
             
             REcmaHelper::registerFunction(&engine, proto, getUnit, "getUnit");
@@ -3115,14 +3119,56 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RTransaction'
-    RTransaction cppResult =
-        
+    // return type 'void'
+    
                self->setCurrentLayer(a0);
-        // return type: RTransaction
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayer::Id */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RTransaction * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayer::Id
+                    a0 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument is pointer
+                    RTransaction * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("RStorage: Argument 1 is not of type RTransaction *RTransaction *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCurrentLayer(a0
+        ,
+    a1);
     } else
 
 
@@ -3147,66 +3193,9 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RTransaction'
-    RTransaction cppResult =
-        
-               self->setCurrentLayer(a0);
-        // return type: RTransaction
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RTransaction */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: RLayer::Id */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RTransaction*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RTransaction*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RStorage: Argument 0 is not of type RTransaction.",
-                               context);                    
-                    }
-                    RTransaction 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    RLayer::Id
-                    a1 =
-                    (RLayer::Id)
-                    (int)
-                    context->argument( 1 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
     // return type 'void'
     
-               self->setCurrentLayer(a0
-        ,
-    a1);
+               self->setCurrentLayer(a0);
     } else
 
 
@@ -3214,42 +3203,37 @@
     
     if( context->argumentCount() ==
     2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RTransaction */
-     && (
-            context->argument(1).isString()
+            context->argument(0).isString()
         ) /* type: QString */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RTransaction * */
     
     ){
     // prepare arguments:
     
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RTransaction*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RTransaction*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RStorage: Argument 0 is not of type RTransaction.",
-                               context);                    
-                    }
-                    RTransaction 
-                    a0 = 
-                    *ap0;
-                
                     // argument isStandardType
                     QString
-                    a1 =
+                    a0 =
                     (QString)
                     
-                    context->argument( 1 ).
+                    context->argument( 0 ).
                     toString();
+                
+                    // argument is pointer
+                    RTransaction * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("RStorage: Argument 1 is not of type RTransaction *RTransaction *.", context);                    
+                    }
                 
     // end of arguments
 
@@ -4144,6 +4128,202 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::setCurrentView", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::startDocumentVariablesTransaction
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::startDocumentVariablesTransaction", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::startDocumentVariablesTransaction";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("startDocumentVariablesTransaction", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTransaction * */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RTransaction * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RStorage: Argument 0 is not of type RTransaction *RTransaction *.", context);                    
+                    }
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDocumentVariables >'
+    QSharedPointer < RDocumentVariables > cppResult =
+        
+               self->startDocumentVariablesTransaction(a0
+        ,
+    a1);
+        // return type: QSharedPointer < RDocumentVariables >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.startDocumentVariablesTransaction().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::startDocumentVariablesTransaction", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::endDocumentVariablesTransaction
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::endDocumentVariablesTransaction", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::endDocumentVariablesTransaction";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("endDocumentVariablesTransaction", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTransaction * */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: QSharedPointer < RDocumentVariables > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RTransaction * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RStorage: Argument 0 is not of type RTransaction *RTransaction *.", context);                    
+                    }
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+                    // argument is SharedPointer
+                    QSharedPointer < RDocumentVariables > 
+                    a2;
+
+                    // argument might be a simple pointer:
+                     RDocumentVariables * o2 = 
+                    qscriptvalue_cast < RDocumentVariables * > (context->argument(2));
+
+                    if (o2!=NULL) {
+                        a2 =
+                        QSharedPointer < RDocumentVariables >(o2->clone());
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RDocumentVariables >*
+                        p2;
+
+                        p2 =
+                        qscriptvalue_cast <QSharedPointer < RDocumentVariables >* > (context->argument(2));
+
+                        if (p2==NULL) {
+                           return REcmaHelper::throwError("RStorage: Argument 2 is not of type  RDocumentVariables .", context);                    
+                        }
+
+                        a2 = *p2;
+
+                           //return REcmaHelper::throwError("RStorage: Argument 2 is not of type  RDocumentVariables .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RDocumentVariables > 
+                    //a2 =
+                    //QSharedPointer < RDocumentVariables >(o2->clone());
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->endDocumentVariablesTransaction(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.endDocumentVariablesTransaction().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::endDocumentVariablesTransaction", context, engine);
             return result;
         }
          QScriptValue

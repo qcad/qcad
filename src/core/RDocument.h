@@ -216,10 +216,12 @@ public:
     QString getFileVersion() const;
 
     QSharedPointer<RLayer> queryCurrentLayer();
-    RTransaction setCurrentLayer(RLayer::Id layerId);
-    RTransaction setCurrentLayer(const QString& layerName);
-    void setCurrentLayer(RTransaction& transaction, RLayer::Id layerId);
-    void setCurrentLayer(RTransaction& transaction, const QString& layerName);
+//    RTransaction setCurrentLayer(RLayer::Id layerId);
+//    RTransaction setCurrentLayer(const QString& layerName);
+//    void setCurrentLayer(RTransaction& transaction, RLayer::Id layerId);
+//    void setCurrentLayer(RTransaction& transaction, const QString& layerName);
+    void setCurrentLayer(RLayer::Id layerId, RTransaction* transaction=NULL);
+    void setCurrentLayer(const QString& layerName, RTransaction* transaction=NULL);
     RLayer::Id getCurrentLayerId();
 
     void setCurrentColor(const RColor& color);
