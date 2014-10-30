@@ -532,7 +532,7 @@ DimensionSettings.updateAngularPreview = function(widgets) {
     widgets["AngularPreview"].text = prev;
 };
 
-DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, document) {
+DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, document, transaction) {
     var widgets = getWidgets(pageWidget);
 
     if (isNull(document)) {
@@ -542,17 +542,17 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
 
     for (var i=0; i<DimensionSettings.dimx.length; i++) {
         var item = DimensionSettings.dimx[i];
-        document.setKnownVariable(item[1], widgets[item[0]].getValue());
+        document.setKnownVariable(item[1], widgets[item[0]].getValue(), transaction);
         widgets[item[0]].setProperty("Saved", true);
     }
 
     // dimension arrow type:
     if (widgets["ArchitecturalTick"].checked) {
-        document.setKnownVariable(RS.DIMTSZ, document.getKnownVariable(RS.DIMASZ));
+        document.setKnownVariable(RS.DIMTSZ, document.getKnownVariable(RS.DIMASZ), transaction);
         //document.setKnownVariable(RS.DIMBLK, "ArchTick");
     }
     else {
-        document.setKnownVariable(RS.DIMTSZ, 0.0);
+        document.setKnownVariable(RS.DIMTSZ, 0.0, transaction);
         //document.setKnownVariable(RS.DIMBLK, "");
     }
     widgets["ArchitecturalTick"].setProperty("Saved", true);
@@ -574,26 +574,26 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
 //    }
 
     // dimension format / precision:
-    document.setKnownVariable(RS.DIMLUNIT, widgets["LinearFormat"].currentIndex+1);
-    document.setKnownVariable(RS.DIMDEC, widgets["LinearPrecision"].currentIndex);
-    document.setKnownVariable(RS.DIMAUNIT, widgets["AngularFormat"].currentIndex);
-    document.setKnownVariable(RS.DIMADEC, widgets["AngularPrecision"].currentIndex);
-    document.setDimensionFont(widgets["DimensionFont"].currentText);
+    document.setKnownVariable(RS.DIMLUNIT, widgets["LinearFormat"].currentIndex+1, transaction);
+    document.setKnownVariable(RS.DIMDEC, widgets["LinearPrecision"].currentIndex, transaction);
+    document.setKnownVariable(RS.DIMAUNIT, widgets["AngularFormat"].currentIndex, transaction);
+    document.setKnownVariable(RS.DIMADEC, widgets["AngularPrecision"].currentIndex, transaction);
+    document.setDimensionFont(widgets["DimensionFont"].currentText, transaction);
 
     // show leading / trailing zeroes:
     if (widgets["LinearShowTrailingZeros"].checked) {
-        document.setKnownVariable(RS.DIMZIN, 0);
+        document.setKnownVariable(RS.DIMZIN, 0, transaction);
     }
     else {
-        document.setKnownVariable(RS.DIMZIN, 8);
+        document.setKnownVariable(RS.DIMZIN, 8, transaction);
     }
     widgets["LinearShowTrailingZeros"].setProperty("Saved", true);
 
     if (widgets["AngularShowTrailingZeros"].checked) {
-        document.setKnownVariable(RS.DIMAZIN, 0);
+        document.setKnownVariable(RS.DIMAZIN, 0, transaction);
     }
     else {
-        document.setKnownVariable(RS.DIMAZIN, 2);
+        document.setKnownVariable(RS.DIMAZIN, 2, transaction);
     }
     widgets["AngularShowTrailingZeros"].setProperty("Saved", true);
 

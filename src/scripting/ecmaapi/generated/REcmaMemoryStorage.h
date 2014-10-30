@@ -289,18 +289,6 @@
         ;static  QScriptValue
         getMaxLineweight
         (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setDimensionFont
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDimensionFont
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setLinetypeScale
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getLinetypeScale
-        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

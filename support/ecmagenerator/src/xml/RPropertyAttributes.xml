@@ -24,6 +24,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Integer" />
       <value name="Redundant" />
       <value name="VisibleToParent" />
+      <value name="KnownVariable" />
     </enum>
     <constructor>
       <variant />

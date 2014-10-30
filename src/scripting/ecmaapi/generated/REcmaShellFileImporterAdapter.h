@@ -90,6 +90,10 @@
         
     
       void setKnownVariable(
+                RS::KnownVariable key, const QVariant & value
+            );
+        
+      void setKnownVariable(
                 RS::KnownVariable key, const RVector & value
             );
         

@@ -387,7 +387,9 @@ public:
         MAXACTVP,
         MIRRTEXT,
         ORTHOMODE,
+        /* Point display mode */
         PDMODE,
+        /* Point display size */
         PDSIZE,
         PELEVATION,
         PELLIPSE,

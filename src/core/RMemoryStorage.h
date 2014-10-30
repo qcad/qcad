@@ -162,11 +162,11 @@ public:
     //virtual void setUnit(RS::Unit unit, RTransaction* transaction = NULL);
     //virtual RS::Unit getUnit() const;
 
-    virtual void setDimensionFont(const QString& f);
-    virtual QString getDimensionFont() const;
+//    virtual void setDimensionFont(const QString& f);
+//    virtual QString getDimensionFont() const;
 
-    virtual void setLinetypeScale(double v);
-    virtual double getLinetypeScale() const;
+//    virtual void setLinetypeScale(double v, RTransaction* transaction);
+//    virtual double getLinetypeScale() const;
 
 protected:
     mutable RBox boundingBox;
@@ -190,8 +190,8 @@ protected:
     QMap<QString, QString> variableCaseMap;
     QHash<RS::KnownVariable, QVariant> knownVariables;
     //RS::Unit unit;
-    QString dimensionFont;
-    double linetypeScale;
+    //QString dimensionFont;
+    //double linetypeScale;
 };
 
 Q_DECLARE_METATYPE(RMemoryStorage*)

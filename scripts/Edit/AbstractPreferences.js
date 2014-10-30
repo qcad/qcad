@@ -261,6 +261,13 @@ AbstractPreferences.prototype.load = function(addOn) {
  * or to a global settings file (this.appPreferences==true).
  */
 AbstractPreferences.prototype.save = function() {
+    var document = undefined;
+    var transaction = undefined;
+    if (!this.appPreferences) {
+        document = EAction.getDocument();
+        transaction = new RTransaction(document.getStorage(), "Apply preferences", true);
+    }
+
     for (var i = 0; i < this.addOns.length; ++i) {
         var addOn = this.addOns[i];
         var widget = addOn.getPreferenceWidget();
@@ -268,16 +275,15 @@ AbstractPreferences.prototype.save = function() {
             continue;
         }
         var className = addOn.getClassName();
-        var document;
-        document = undefined;
-        if (!this.appPreferences) {
-            document = EAction.getDocument();
-        }
 
         if (!isNull(global[className]) && isFunction(global[className].savePreferences)) {
-            global[className].savePreferences(widget, true, document);
+            global[className].savePreferences(widget, true, document, transaction);
         }
         WidgetFactory.saveState(widget, undefined, document);
+    }
+
+    if (!this.appPreferences) {
+        transaction.end();
     }
 
     // check if preference changes require application restart and show

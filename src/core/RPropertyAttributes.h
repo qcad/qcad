@@ -64,7 +64,8 @@ public:
         Custom = 0x2000,                 //!< Property is a map of custom properties
         Integer = 0x4000,                //!< Property is an int (not a double number)
         Redundant = 0x8000,              //!< Property is redundant (e.g. angle for line entities)
-        VisibleToParent = 0x10000        //!< Property can be edited in the context of the parent entity
+        VisibleToParent = 0x10000,       //!< Property can be edited in the context of the parent entity
+        KnownVariable = 0x20000          //!< Property is a known DXF variable
     };
     Q_DECLARE_FLAGS(Options, Option)
 

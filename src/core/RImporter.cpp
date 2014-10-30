@@ -145,6 +145,10 @@ void RImporter::setDocument(RDocument* d) {
     document = d;
 }
 
+void RImporter::setKnownVariable(RS::KnownVariable key, const QVariant& value) {
+    document->setKnownVariable(key, value, &transaction);
+}
+
 void RImporter::setKnownVariable(RS::KnownVariable key, const RVector& value) {
     document->setKnownVariable(key, value, &transaction);
 }

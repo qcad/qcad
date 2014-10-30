@@ -1847,52 +1847,14 @@ dir="./core" filename="RMemoryStorage.h">
   RTransaction* transaction = NULL);</comment>
   <comment type="line">//virtual RS::Unit getUnit()
   const;</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setDimensionFont</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>f</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QString</name>
-  </type>
-  <name>getDimensionFont</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setLinetypeScale</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>double</name>
-  </type>
-  <name>getLinetypeScale</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
+  <comment type="line">// virtual void setDimensionFont(const
+  QString&amp; f);</comment>
+  <comment type="line">// virtual QString getDimensionFont()
+  const;</comment>
+  <comment type="line">// virtual void setLinetypeScale(double v,
+  RTransaction* transaction);</comment>
+  <comment type="line">// virtual double getLinetypeScale()
+  const;</comment></public>
   <protected>protected: 
   <decl_stmt>
   <decl>
@@ -2139,20 +2101,9 @@ dir="./core" filename="RMemoryStorage.h">
     <name>knownVariables</name>
   </decl>;</decl_stmt>
   <comment type="line">//RS::Unit unit;</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>dimensionFont</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>linetypeScale</name>
-  </decl>;</decl_stmt></protected>}</block>;</class>
+  <comment type="line">//QString dimensionFont;</comment>
+  <comment type="line">//double
+  linetypeScale;</comment></protected>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

@@ -75,6 +75,16 @@
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
+            REcmaHelper::registerFunction(&engine, proto, clear, "clear");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCustomPropertyTypeIds, "getCustomPropertyTypeIds");
+            
+            REcmaHelper::registerFunction(&engine, proto, setKnownVariable, "setKnownVariable");
+            
+            REcmaHelper::registerFunction(&engine, proto, getKnownVariable, "getKnownVariable");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasKnownVariable, "hasKnownVariable");
+            
             REcmaHelper::registerFunction(&engine, proto, getCurrentLayerId, "getCurrentLayerId");
             
             REcmaHelper::registerFunction(&engine, proto, setCurrentLayerId, "setCurrentLayerId");
@@ -82,6 +92,14 @@
             REcmaHelper::registerFunction(&engine, proto, getUnit, "getUnit");
             
             REcmaHelper::registerFunction(&engine, proto, setUnit, "setUnit");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLinetypeScale, "getLinetypeScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setLinetypeScale, "setLinetypeScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimensionFont, "getDimensionFont");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimensionFont, "setDimensionFont");
             
             REcmaHelper::registerFunction(&engine, proto, print, "print");
             
@@ -113,6 +131,14 @@
             
             ctor.setProperty("PropertyUnit",
                 qScriptValueFromValue(&engine, RDocumentVariables::PropertyUnit),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyLinetypeScale",
+                qScriptValueFromValue(&engine, RDocumentVariables::PropertyLinetypeScale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimensionFont",
+                qScriptValueFromValue(&engine, RDocumentVariables::PropertyDimensionFont),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -877,6 +903,298 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerDocumentVariables::clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDocumentVariables::clear", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDocumentVariables::clear";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("clear", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clear();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.clear().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::clear", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDocumentVariables::getCustomPropertyTypeIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDocumentVariables::getCustomPropertyTypeIds", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDocumentVariables::getCustomPropertyTypeIds";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("getCustomPropertyTypeIds", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RPropertyTypeId >'
+    QSet < RPropertyTypeId > cppResult =
+        
+               self->getCustomPropertyTypeIds();
+        // return type: QSet < RPropertyTypeId >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getCustomPropertyTypeIds().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::getCustomPropertyTypeIds", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDocumentVariables::setKnownVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDocumentVariables::setKnownVariable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDocumentVariables::setKnownVariable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("setKnownVariable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNumber() || 
+            context->argument(1).isString() || 
+            context->argument(1).isBool() || 
+            context->argument(1).isArray() || 
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
+        ) /* type: QVariant */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable or pointer
+                    QVariant
+                    a1 =
+                    qscriptvalue_cast<
+                    QVariant
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setKnownVariable(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.setKnownVariable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::setKnownVariable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDocumentVariables::getKnownVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDocumentVariables::getKnownVariable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDocumentVariables::getKnownVariable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("getKnownVariable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QVariant'
+    QVariant cppResult =
+        
+               self->getKnownVariable(a0);
+        // return type: QVariant
+                // QVariant:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getKnownVariable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::getKnownVariable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDocumentVariables::hasKnownVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDocumentVariables::hasKnownVariable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDocumentVariables::hasKnownVariable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("hasKnownVariable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasKnownVariable(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.hasKnownVariable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::hasKnownVariable", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerDocumentVariables::getCurrentLayerId
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1082,6 +1400,214 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::setUnit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDocumentVariables::getLinetypeScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDocumentVariables::getLinetypeScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDocumentVariables::getLinetypeScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("getLinetypeScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getLinetypeScale();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getLinetypeScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::getLinetypeScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDocumentVariables::setLinetypeScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDocumentVariables::setLinetypeScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDocumentVariables::setLinetypeScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("setLinetypeScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLinetypeScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.setLinetypeScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::setLinetypeScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDocumentVariables::getDimensionFont
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDocumentVariables::getDimensionFont", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDocumentVariables::getDimensionFont";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("getDimensionFont", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getDimensionFont();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getDimensionFont().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::getDimensionFont", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDocumentVariables::setDimensionFont
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDocumentVariables::setDimensionFont", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDocumentVariables::setDimensionFont";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("setDimensionFont", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimensionFont(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.setDimensionFont().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::setDimensionFont", context, engine);
             return result;
         }
          QScriptValue

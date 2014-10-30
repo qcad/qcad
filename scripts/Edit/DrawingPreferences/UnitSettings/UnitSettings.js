@@ -58,13 +58,13 @@ UnitSettings.initPreferences = function(pageWidget, calledByPrefDialog, document
     }
 };
 
-UnitSettings.savePreferences = function(pageWidget, calledByPrefDialog, document) {
+UnitSettings.savePreferences = function(pageWidget, calledByPrefDialog, document, transaction) {
     if (isNull(document)) {
         return;
     }
 
     var unitCombo = pageWidget.findChild("Unit");
-    document.setUnit(unitCombo.itemData(unitCombo.currentIndex));
+    document.setUnit(unitCombo.itemData(unitCombo.currentIndex), transaction);
     unitCombo.setProperty("Saved", true);
 };
 

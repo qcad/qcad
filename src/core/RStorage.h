@@ -314,10 +314,10 @@ public:
     //void setUnit(RTransaction& transaction, RS::Unit unit);
     RS::Unit getUnit() const;
 
-    virtual void setDimensionFont(const QString& f);
+    virtual void setDimensionFont(const QString& f, RTransaction* transaction=NULL);
     virtual QString getDimensionFont() const;
 
-    virtual void setLinetypeScale(double v);
+    virtual void setLinetypeScale(double v, RTransaction* transaction=NULL);
     virtual double getLinetypeScale() const;
 
     virtual QString getBlockName(RBlock::Id blockId) const = 0;

@@ -60,6 +60,21 @@
         setProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCustomPropertyTypeIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setKnownVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getKnownVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasKnownVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getCurrentLayerId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -70,6 +85,18 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLinetypeScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLinetypeScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimensionFont
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimensionFont
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         print

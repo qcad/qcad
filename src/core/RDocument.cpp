@@ -131,47 +131,47 @@ void RDocument::init() {
         setUnit((RS::Unit)RSettings::getValue("UnitSettings/Unit", RS::None).toInt(), &transaction);
         setLinetypeScale(RSettings::getDoubleValue("LinetypeSettings/Scale", 1.0));
 
-        setKnownVariable(RS::DIMTXT, RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5));
-        setKnownVariable(RS::DIMEXE, RSettings::getDoubleValue("DimensionSettings/DIMEXE", 1.25));
-        setKnownVariable(RS::DIMEXO, RSettings::getDoubleValue("DimensionSettings/DIMEXO", 0.625));
-        setKnownVariable(RS::DIMGAP, RSettings::getDoubleValue("DimensionSettings/DIMGAP", 0.625));
-        setKnownVariable(RS::DIMASZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5));
-        setKnownVariable(RS::DIMSCALE, RSettings::getDoubleValue("DimensionSettings/DIMSCALE", 1.0));
+        setKnownVariable(RS::DIMTXT, RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5), &transaction);
+        setKnownVariable(RS::DIMEXE, RSettings::getDoubleValue("DimensionSettings/DIMEXE", 1.25), &transaction);
+        setKnownVariable(RS::DIMEXO, RSettings::getDoubleValue("DimensionSettings/DIMEXO", 0.625), &transaction);
+        setKnownVariable(RS::DIMGAP, RSettings::getDoubleValue("DimensionSettings/DIMGAP", 0.625), &transaction);
+        setKnownVariable(RS::DIMASZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5), &transaction);
+        setKnownVariable(RS::DIMSCALE, RSettings::getDoubleValue("DimensionSettings/DIMSCALE", 1.0), &transaction);
 
         // arch tick head:
         if (RSettings::getStringValue("DimensionSettings/ArrowStyle", "Arrow")=="Arrow") {
-            setKnownVariable(RS::DIMTSZ, 0.0);
+            setKnownVariable(RS::DIMTSZ, 0.0, &transaction);
         }
 
         // arrow head:
         else {
-            setKnownVariable(RS::DIMTSZ, getKnownVariable(RS::DIMASZ));
+            setKnownVariable(RS::DIMTSZ, getKnownVariable(RS::DIMASZ), &transaction);
         }
 
-        setKnownVariable(RS::DIMLUNIT, RSettings::getIntValue("DimensionSettings/LinearFormat", RS::Decimal));
-        setKnownVariable(RS::DIMDEC, RSettings::getIntValue("DimensionSettings/LinearPrecision", 4));
+        setKnownVariable(RS::DIMLUNIT, RSettings::getIntValue("DimensionSettings/LinearFormat", RS::Decimal), &transaction);
+        setKnownVariable(RS::DIMDEC, RSettings::getIntValue("DimensionSettings/LinearPrecision", 4), &transaction);
 
         // show trailing zeroes:
         if (RSettings::getBoolValue("DimensionSettings/LinearShowTrailingZeros", false)) {
-            setKnownVariable(RS::DIMZIN, 0);
+            setKnownVariable(RS::DIMZIN, 0, &transaction);
         }
 
         // suppress trailing zeroes:
         else {
-            setKnownVariable(RS::DIMZIN, 8);
+            setKnownVariable(RS::DIMZIN, 8, &transaction);
         }
 
-        setKnownVariable(RS::DIMAUNIT, RSettings::getIntValue("DimensionSettings/AngularFormat", RS::DegreesDecimal));
-        setKnownVariable(RS::DIMADEC, RSettings::getIntValue("DimensionSettings/AngularPrecision", 0));
+        setKnownVariable(RS::DIMAUNIT, RSettings::getIntValue("DimensionSettings/AngularFormat", RS::DegreesDecimal), &transaction);
+        setKnownVariable(RS::DIMADEC, RSettings::getIntValue("DimensionSettings/AngularPrecision", 0), &transaction);
 
         // show trailing zeroes:
         if (RSettings::getBoolValue("DimensionSettings/AngularShowTrailingZeros", false)) {
-            setKnownVariable(RS::DIMAZIN, 0);
+            setKnownVariable(RS::DIMAZIN, 0, &transaction);
         }
 
         // suppress trailing zeroes:
         else {
-            setKnownVariable(RS::DIMAZIN, 2);
+            setKnownVariable(RS::DIMAZIN, 2, &transaction);
         }
 
         //  multi page printing settings:
@@ -243,7 +243,7 @@ void RDocument::init() {
             setVariable(s, RSettings::getStringValue(s, "auto"));
         }
 
-        setDimensionFont(RSettings::getStringValue("DimensionSettings/DimensionFont", "Standard"));
+        setDimensionFont(RSettings::getStringValue("DimensionSettings/DimensionFont", "Standard"), &transaction);
 
         // notify new document listeners
         if (RMainWindow::hasMainWindow()) {
@@ -332,16 +332,16 @@ bool RDocument::isMetric() const {
     return RUnit::isMetric(getUnit());
 }
 
-void RDocument::setDimensionFont(const QString& f) {
-    storage.setDimensionFont(f);
+void RDocument::setDimensionFont(const QString& f, RTransaction* transaction) {
+    storage.setDimensionFont(f, transaction);
 }
 
 QString RDocument::getDimensionFont() const {
     return storage.getDimensionFont();
 }
 
-void RDocument::setLinetypeScale(double v) {
-    storage.setLinetypeScale(v);
+void RDocument::setLinetypeScale(double v, RTransaction* transaction) {
+    storage.setLinetypeScale(v, transaction);
 }
 
 double RDocument::getLinetypeScale() const {

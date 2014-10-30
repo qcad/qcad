@@ -294,10 +294,10 @@ public:
 
     bool isMetric() const;
 
-    void setDimensionFont(const QString& f);
+    void setDimensionFont(const QString& f, RTransaction* transaction = NULL);
     QString getDimensionFont() const;
 
-    void setLinetypeScale(double v);
+    void setLinetypeScale(double v, RTransaction* transaction = NULL);
     double getLinetypeScale() const;
 
     RS::LinearFormat getLinearFormat();

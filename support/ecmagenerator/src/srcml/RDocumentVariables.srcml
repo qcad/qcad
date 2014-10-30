@@ -77,49 +77,48 @@ dir="./core" filename="RDocumentVariables.h">
       <name>RPropertyTypeId</name>
     </type>
     <name>PropertyUnit</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
+    <name>PropertyLinetypeScale</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
+    <name>PropertyDimensionFont</name>
   </decl>;</decl_stmt></public>
   <public>public: 
-  <constructor>
-    <name>RDocumentVariables</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RDocument</name>*</type>
-        <name>document</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
+  <constructor_decl>
+  <name>RDocumentVariables</name>
+  <parameter_list>(
+  <param>
+    <decl>
       <type>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </type>
-      <name>objectId</name>=
-      <init>
-        <expr>
-          <name>INVALID_ID</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <member_list>: 
-    <call>
-      <name>RObject</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>document</name>
-        </expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <name>objectId</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{ }</block>
-  </constructor>
+      <name>RDocument</name>*</type>
+      <name>document</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>
+      <name>RObject</name>::
+      <name>Id</name></name>
+    </type>
+    <name>objectId</name>=
+    <init>
+      <expr>
+        <name>INVALID_ID</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</constructor_decl>
   <destructor_decl>
   <specifier>virtual</specifier>
   <name>~RDocumentVariables</name>
@@ -242,6 +241,81 @@ dir="./core" filename="RDocumentVariables.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>clear</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QSet
+    <argument_list>&lt;
+    <argument>
+      <name>RPropertyTypeId</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getCustomPropertyTypeIds</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setKnownVariable</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RS</name>::
+        <name>KnownVariable</name></name>
+      </type>
+      <name>key</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>QVariant</name>
+      </type>
+      <name>value</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QVariant</name>
+  </type>
+  <name>getKnownVariable</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RS</name>::
+        <name>KnownVariable</name></name>
+      </type>
+      <name>key</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>bool</name>
+  </type>
+  <name>hasKnownVariable</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RS</name>::
+        <name>KnownVariable</name></name>
+      </type>
+      <name>key</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function>
     <type>
       <name>
@@ -316,6 +390,72 @@ dir="./core" filename="RDocumentVariables.h">
     <name>unit</name>= 
     <name>u</name></expr>;</expr_stmt>}</block>
   </function>
+  <function>
+    <type>
+      <name>double</name>
+    </type>
+    <name>getLinetypeScale</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>linetypeScale</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setLinetypeScale</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>double</name>
+        </type>
+        <name>s</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>linetypeScale</name>= 
+    <name>s</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>getDimensionFont</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>dimensionFont</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setDimensionFont</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>f</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>dimensionFont</name>= 
+    <name>f</name></expr>;</expr_stmt>}</block>
+  </function>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -353,6 +493,36 @@ dir="./core" filename="RDocumentVariables.h">
       <name>Unit</name></name>
     </type>
     <name>unit</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>linetypeScale</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>dimensionFont</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QHash
+      <argument_list>&lt;
+      <argument>
+        <name>
+        <name>RS</name>::
+        <name>KnownVariable</name></name>
+      </argument>, 
+      <argument>
+        <name>QVariant</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>knownVariables</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

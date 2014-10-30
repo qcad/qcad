@@ -73,6 +73,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
         name="key" isConst="false" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
         <arg type="RVector &amp;" typeName="RVector" name="value"
         isConst="true" />
       </variant>

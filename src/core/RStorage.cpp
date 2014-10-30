@@ -254,20 +254,28 @@ RS::Unit RStorage::getUnit() const {
     return v->getUnit();
 }
 
-void RStorage::setDimensionFont(const QString& f) {
-    setVariable("DimensionSettings/Font", f);
+void RStorage::setDimensionFont(const QString& f, RTransaction* transaction) {
+    bool useLocalTransaction;
+    QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
+    docVars->setDimensionFont(f);
+    endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 }
 
 QString RStorage::getDimensionFont() const {
-    return getVariable("DimensionSettings/Font").toString();
+    QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
+    return v->getDimensionFont();
 }
 
-void RStorage::setLinetypeScale(double v) {
-    setVariable("LinetypeSettings/Scale", v);
+void RStorage::setLinetypeScale(double v, RTransaction* transaction) {
+    bool useLocalTransaction;
+    QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
+    docVars->setLinetypeScale(v);
+    endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 }
 
 double RStorage::getLinetypeScale() const {
-    return getVariable("LinetypeSettings/Scale").toDouble();
+    QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
+    return v->getLinetypeScale();
 }
 
 /**

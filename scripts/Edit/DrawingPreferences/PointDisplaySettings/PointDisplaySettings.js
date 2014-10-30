@@ -125,14 +125,14 @@ PointDisplaySettings.initPreferences = function(pageWidget, calledByPrefDialog, 
 
 };
 
-PointDisplaySettings.savePreferences = function(pageWidget, calledByPrefDialog, document) {
+PointDisplaySettings.savePreferences = function(pageWidget, calledByPrefDialog, document, transaction) {
     if (isNull(document)) {
         return;
     }
 
     var modeEdit = pageWidget.findChild("Mode");
-    document.setKnownVariable(RS.PDMODE, modeEdit.getValue());
+    document.setKnownVariable(RS.PDMODE, modeEdit.getValue(), transaction);
 
     var sizeEdit = pageWidget.findChild("Size");
-    document.setKnownVariable(RS.PDSIZE, sizeEdit.getValue());
+    document.setKnownVariable(RS.PDSIZE, sizeEdit.getValue(), transaction);
 };

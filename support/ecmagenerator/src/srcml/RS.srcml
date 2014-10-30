@@ -951,9 +951,11 @@ dir="./core" filename="RS.h">
   <expr>
     <name>ORTHOMODE</name>
   </expr>, 
+  <comment type="block">/* Point display mode */</comment>
   <expr>
     <name>PDMODE</name>
   </expr>, 
+  <comment type="block">/* Point display size */</comment>
   <expr>
     <name>PDSIZE</name>
   </expr>, 

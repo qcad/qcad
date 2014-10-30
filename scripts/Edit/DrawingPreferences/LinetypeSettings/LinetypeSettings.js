@@ -36,12 +36,12 @@ LinetypeSettings.initPreferences = function(pageWidget, calledByPrefDialog, docu
     }
 };
 
-LinetypeSettings.savePreferences = function(pageWidget, calledByPrefDialog, document) {
+LinetypeSettings.savePreferences = function(pageWidget, calledByPrefDialog, document, transaction) {
     if (isNull(document)) {
         return;
     }
 
     var linetypeScaleEdit = pageWidget.findChild("Scale");
-    document.setLinetypeScale(linetypeScaleEdit.getValue());
+    document.setLinetypeScale(linetypeScaleEdit.getValue(), transaction);
     linetypeScaleEdit.setProperty("Saved", true);
 };

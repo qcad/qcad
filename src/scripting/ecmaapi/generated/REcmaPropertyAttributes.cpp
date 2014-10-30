@@ -229,6 +229,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("KnownVariable",
+    QScriptValue(RPropertyAttributes::KnownVariable),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RPropertyAttributes::Option>(

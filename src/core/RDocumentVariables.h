@@ -39,10 +39,11 @@ public:
     static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyCurrentLayerId;
     static RPropertyTypeId PropertyUnit;
+    static RPropertyTypeId PropertyLinetypeScale;
+    static RPropertyTypeId PropertyDimensionFont;
 
 public:
-    RDocumentVariables(RDocument* document, RObject::Id objectId=INVALID_ID)
-        : RObject(document, objectId) { }
+    RDocumentVariables(RDocument* document, RObject::Id objectId=INVALID_ID);
     virtual ~RDocumentVariables();
 
     static void init();
@@ -63,6 +64,13 @@ public:
     virtual bool setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction=NULL);
 
+    void clear();
+
+    QSet<RPropertyTypeId> getCustomPropertyTypeIds() const;
+    void setKnownVariable(RS::KnownVariable key, QVariant value);
+    QVariant getKnownVariable(RS::KnownVariable key) const;
+    bool hasKnownVariable(RS::KnownVariable key) const;
+
     RLayer::Id getCurrentLayerId() const {
         return currentLayerId;
     }
@@ -79,6 +87,22 @@ public:
         unit = u;
     }
 
+    double getLinetypeScale() const {
+        return linetypeScale;
+    }
+
+    void setLinetypeScale(double s) {
+        linetypeScale = s;
+    }
+
+    QString getDimensionFont() const {
+        return dimensionFont;
+    }
+
+    void setDimensionFont(const QString& f) {
+        dimensionFont = f;
+    }
+
     virtual void print(QDebug dbg) const;
 
 private:
@@ -87,6 +111,9 @@ private:
     //RLayer::Id currentBlockId;
     //...
     RS::Unit unit;
+    double linetypeScale;
+    QString dimensionFont;
+    QHash<RS::KnownVariable, QVariant> knownVariables;
 };
 
 Q_DECLARE_METATYPE(RDocumentVariables*)

@@ -25,9 +25,7 @@
 RMemoryStorage::RMemoryStorage() :
     maxLineweight(RLineweight::Weight000), 
     boundingBoxChanged(true),
-    inTransaction(false), 
-    //unit(RS::None),
-    linetypeScale(1.0) {
+    inTransaction(false) {
 
     setLastTransactionId(-1);
 }
@@ -53,8 +51,10 @@ void RMemoryStorage::clear() {
     documentVariables.clear();
     variables.clear();
     variableCaseMap.clear();
-    knownVariables.clear();
-    linetypeScale = 1.0;
+    if (!documentVariables.isNull()) {
+        documentVariables->clear();
+    }
+    //linetypeScale = 1.0;
     setLastTransactionId(-1);
 }
 
@@ -1172,15 +1172,23 @@ QVariant RMemoryStorage::getVariable(const QString& key) const {
 }
 
 void RMemoryStorage::setKnownVariable(RS::KnownVariable key, const QVariant& value, RTransaction* transaction) {
-    if (key==RS::INSUNITS) {
-        setUnit((RS::Unit)value.toInt(), transaction);
-    }
-    else if (key==RS::LTSCALE) {
-        setLinetypeScale(value.toDouble());
-    }
-    else {
-        knownVariables.insert(key, value);
-    }
+//    if (key==RS::INSUNITS) {
+//        setUnit((RS::Unit)value.toInt(), transaction);
+//    }
+//    else if (key==RS::LTSCALE) {
+//        setLinetypeScale(value.toDouble());
+//    }
+//    else {
+//        //knownVariables.insert(key, value);
+//        if (!documentVariables.isNull()) {
+//            documentVariables->setKnownVariable(key, value);
+//        }
+//    }
+
+    bool useLocalTransaction;
+    QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
+    docVars->setKnownVariable(key, value);
+    endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 
     // dimension settings might affect bounding box:
     boundingBoxChanged = true;
@@ -1188,24 +1196,11 @@ void RMemoryStorage::setKnownVariable(RS::KnownVariable key, const QVariant& val
 }
 
 QVariant RMemoryStorage::getKnownVariable(RS::KnownVariable key) const {
-    if (key==RS::INSUNITS) {
-        return getUnit();
+    if (documentVariables.isNull()) {
+        return QVariant();
     }
-    else if (key==RS::LTSCALE) {
-        return getLinetypeScale();
-    }
-    // if DIMADEC is -1, DIMDEC is used:
-    else if (key==RS::DIMADEC &&
-             knownVariables.contains(RS::DIMDEC) &&
-             knownVariables.value(RS::DIMDEC).toInt()==-1) {
-        return getKnownVariable(RS::DIMDEC);
-    }
-    else if (key==RS::DWGCODEPAGE) {
-        return "ANSI_1252";
-    }
-    else {
-        return knownVariables.value(key);
-    }
+
+    return documentVariables->getKnownVariable(key);
 }
 
 QString RMemoryStorage::getLayerName(RLayer::Id layerId) const {
@@ -1326,21 +1321,21 @@ RLineweight::Lineweight RMemoryStorage::getMaxLineweight() const {
 //    return unit;
 //}
 
-void RMemoryStorage::setDimensionFont(const QString& f) {
-    this->dimensionFont = f;
-    setModified(true);
-}
+//void RMemoryStorage::setDimensionFont(const QString& f) {
+//    this->dimensionFont = f;
+//    setModified(true);
+//}
 
-QString RMemoryStorage::getDimensionFont() const {
-    return dimensionFont;
-}
+//QString RMemoryStorage::getDimensionFont() const {
+//    return dimensionFont;
+//}
 
-void RMemoryStorage::setLinetypeScale(double v) {
-    linetypeScale = v;
-    setModified(true);
-}
+//void RMemoryStorage::setLinetypeScale(double v) {
+//    linetypeScale = v;
+//    setModified(true);
+//}
 
-double RMemoryStorage::getLinetypeScale() const {
-    return linetypeScale;
-}
+//double RMemoryStorage::getLinetypeScale() const {
+//    return linetypeScale;
+//}
 
