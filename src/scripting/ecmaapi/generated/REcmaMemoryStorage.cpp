@@ -230,10 +230,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getMaxLineweight, "getMaxLineweight");
             
-            REcmaHelper::registerFunction(&engine, proto, setUnit, "setUnit");
-            
-            REcmaHelper::registerFunction(&engine, proto, getUnit, "getUnit");
-            
             REcmaHelper::registerFunction(&engine, proto, setDimensionFont, "setDimensionFont");
             
             REcmaHelper::registerFunction(&engine, proto, getDimensionFont, "getDimensionFont");
@@ -5034,6 +5030,76 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNumber() || 
+            context->argument(1).isString() || 
+            context->argument(1).isBool() || 
+            context->argument(1).isArray() || 
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
+        ) /* type: QVariant */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RTransaction * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable or pointer
+                    QVariant
+                    a1 =
+                    qscriptvalue_cast<
+                    QVariant
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                
+                    // argument is pointer
+                    RTransaction * a2 = NULL;
+
+                    a2 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(2)
+                        );
+                    
+                    if (a2==NULL && 
+                        !context->argument(2).isNull()) {
+                        return REcmaHelper::throwError("RMemoryStorage: Argument 2 is not of type RTransaction *RTransaction *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setKnownVariable(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.setKnownVariable().",
                    context);
@@ -6352,110 +6418,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::getMaxLineweight", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaMemoryStorage::setUnit
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaMemoryStorage::setUnit", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::setUnit";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RMemoryStorage* self = 
-                        getSelf("setUnit", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: RS::Unit */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    RS::Unit
-                    a0 =
-                    (RS::Unit)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setUnit(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.setUnit().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaMemoryStorage::setUnit", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaMemoryStorage::getUnit
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaMemoryStorage::getUnit", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::getUnit";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RMemoryStorage* self = 
-                        getSelf("getUnit", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RS::Unit'
-    RS::Unit cppResult =
-        
-               self->getUnit();
-        // return type: RS::Unit
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.getUnit().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaMemoryStorage::getUnit", context, engine);
             return result;
         }
          QScriptValue

@@ -1713,7 +1713,7 @@ RTransaction RDocumentInterface::applyOperation(const ROperation* operation) {
 
     objectChangeEvent(objectIds);
 
-    if (RMainWindow::hasMainWindow() && !isClipboard()) {
+    if (RMainWindow::hasMainWindow() && notifyListeners) {
         RMainWindow::getMainWindow()->postTransactionEvent(transaction,
                     transaction.hasOnlyChanges(), operation->getEntityTypeFilter());
     }
@@ -1799,7 +1799,7 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
     }
 
     // notify listeners if this is not the clipboard document interface:
-    if (RMainWindow::hasMainWindow() && this!=clipboard && notifyListeners) {
+    if (RMainWindow::hasMainWindow() && notifyListeners) {
         if (ucsHasChanged) {
             RMainWindow::getMainWindow()->notifyUcsListeners(this);
         }
@@ -1957,6 +1957,7 @@ QString RDocumentInterface::getCurrentUcsName() {
 RDocumentInterface& RDocumentInterface::getClipboard() {
     if (clipboard==NULL) {
         clipboard = new RDocumentInterface(RDocument::getClipboard());
+        clipboard->setNotifyListeners(false);
     }
 
     return *clipboard;

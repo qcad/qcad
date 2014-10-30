@@ -536,6 +536,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="key" isConst="false" />
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default=" NULL"
+        isConst="false" />
       </variant>
     </method>
     <method name="getKnownVariable" cppName="getKnownVariable"
@@ -713,17 +716,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RLineweight::Lineweight"
       isPureVirtual="false" />
-    </method>
-    <method name="setUnit" cppName="setUnit" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RS::Unit" typeName="RS::Unit" name="unit"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="getUnit" cppName="getUnit" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RS::Unit" isPureVirtual="false" />
     </method>
     <method name="setDimensionFont" cppName="setDimensionFont"
     specifier="public" isStatic="false" isVirtual="true"

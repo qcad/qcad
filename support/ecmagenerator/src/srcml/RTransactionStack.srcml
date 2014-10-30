@@ -32,8 +32,6 @@ dir="./core" filename="RTransactionStack.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RTransaction.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RDocument</name>;</class_decl>
   <comment type="block">/** * A transaction stack handles
   transactions on a document. Transactions * are stored in a \ref
   RStorage "storage" implementation. * Transactions can be undone
@@ -54,8 +52,8 @@ dir="./core" filename="RTransactionStack.h">
   <param>
     <decl>
       <type>
-      <name>RDocument</name>&amp;</type>
-      <name>document</name>
+      <name>RStorage</name>&amp;</type>
+      <name>storage</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl>
   <destructor_decl>
@@ -97,8 +95,8 @@ dir="./core" filename="RTransactionStack.h">
   <decl_stmt>
   <decl>
     <type>
-    <name>RDocument</name>&amp;</type>
-    <name>document</name>
+    <name>RStorage</name>&amp;</type>
+    <name>storage</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

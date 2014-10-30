@@ -85,7 +85,7 @@ RTransaction RMixedOperation::apply(RDocument& document, bool preview) const {
             transaction.endCycle();
         }
         else if (getMode(list[i].second, RMixedOperation::Delete)) {
-            transaction.deleteObject(list[i].first, &document);
+            transaction.deleteObject(list[i].first);
         }
         else {
             transaction.addObject(list[i].first,
@@ -94,6 +94,6 @@ RTransaction RMixedOperation::apply(RDocument& document, bool preview) const {
         }
     }
 
-    transaction.end(&document);
+    transaction.end();
     return transaction;
 }

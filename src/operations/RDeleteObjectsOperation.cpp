@@ -41,9 +41,9 @@ RTransaction RDeleteObjectsOperation::apply(RDocument& document, bool preview) c
                     "list contains NULL object";
             continue;
         }
-        transaction.deleteObject(list[i], &document);
+        transaction.deleteObject(list[i]);
     }
-    transaction.end(&document);
+    transaction.end();
     return transaction;
 }
 

@@ -98,6 +98,37 @@ dir="./core" filename="RStorage.h">
     <parameter_list>()</parameter_list>
     <block>{ }</block>
   </destructor>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setDocument</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>RDocument</name>*</type>
+        <name>doc</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>document</name>= 
+    <name>doc</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+    <name>RDocument</name>*</type>
+    <name>getDocument</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>document</name>
+    </expr>;</return>}</block>
+  </function>
   <comment type="block">/** * Resets this storage to its initial,
   empty state. */</comment>
   <function_decl>
@@ -1136,8 +1167,7 @@ dir="./core" filename="RStorage.h">
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
   <type>
-    <name>virtual</name>
-    <name>void</name>
+    <name>RTransaction</name>
   </type>
   <name>setCurrentLayer</name>
   <parameter_list>(
@@ -1153,8 +1183,7 @@ dir="./core" filename="RStorage.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
-    <name>virtual</name>
-    <name>void</name>
+    <name>RTransaction</name>
   </type>
   <name>setCurrentLayer</name>
   <parameter_list>(
@@ -1166,69 +1195,60 @@ dir="./core" filename="RStorage.h">
       <name>layerName</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>
-      <name>RLayer</name>::
-      <name>Id</name></name>
-    </type>
-    <name>getCurrentLayerId</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <comment type="line">//return (RLayer::Id)
-    getVariable("CurrentLayer").toInt();</comment>
-    <comment type="line">//return currentLayerId;</comment>
-    <decl_stmt>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setCurrentLayer</name>
+  <parameter_list>(
+  <param>
     <decl>
-    <type>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RDocumentVariables</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>v</name>=
-    <init>
-      <expr>
-        <call>
-          <name>queryDocumentVariablesDirect</name>
-          <argument_list>()</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>v</name>.
-    <call>
-      <name>isNull</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-      <call>
-        <name>qWarning</name>
-        <argument_list>()</argument_list>
-      </call>&lt;&lt; "RStorage::getCurrentLayerId: no variables
-      object found"</expr>;</expr_stmt>
-      <return>return 
-      <expr>
+      <type>
+      <name>RTransaction</name>&amp;</type>
+      <name>transaction</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
         <name>
         <name>RLayer</name>::
-        <name>INVALID_ID</name></name>
-      </expr>;</return>}</block>
-    </then></if>
-    <return>return 
-    <expr>
-    <name>v</name>-&gt;
-    <call>
-      <name>getCurrentLayerId</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
+        <name>Id</name></name>
+      </type>
+      <name>layerId</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setCurrentLayer</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>RTransaction</name>&amp;</type>
+      <name>transaction</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>layerName</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>
+    <name>RLayer</name>::
+    <name>Id</name></name>
+  </type>
+  <name>getCurrentLayerId</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function>
     <type>
       <name>virtual</name>
@@ -1238,6 +1258,7 @@ dir="./core" filename="RStorage.h">
     </type>
     <name>getCurrentViewId</name>
     <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <comment type="line">//return (RView::Id)
     getVariable("CurrentView").toInt();</comment>
@@ -1267,7 +1288,8 @@ dir="./core" filename="RStorage.h">
     <name>RColor</name>
   </type>
   <name>getCurrentColor</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
@@ -1587,27 +1609,8 @@ dir="./core" filename="RStorage.h">
       </decl>
     </param>)</parameter_list>;</constructor_decl>}</block>
   </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>
-      <name>RView</name>::
-      <name>Id</name></name>
-    </type>
-    <name>getCurrentViewId</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <comment type="line">//return (RView::Id)
-    getVariable("CurrentView").toInt();</comment>
-    <return>return 
-    <expr>
-      <name>currentViewId</name>
-    </expr>;</return>}</block>
-  </function>
   <function_decl>
   <type>
-    <name>virtual</name>
     <name>void</name>
   </type>
   <name>setUnit</name>
@@ -1621,10 +1624,22 @@ dir="./core" filename="RStorage.h">
       </type>
       <name>unit</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
+  <comment type="line">//void setUnit(RTransaction&amp;
+  transaction, RS::Unit unit);</comment>
   <function_decl>
   <type>
-    <name>virtual</name>
     <name>
     <name>RS</name>::
     <name>Unit</name></name>
@@ -2132,6 +2147,17 @@ dir="./core" filename="RStorage.h">
       <name>QVariant</name>&amp;</type>
       <name>value</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>= 0</specifier>;</function_decl>
   <function_decl>
@@ -3292,6 +3318,12 @@ dir="./core" filename="RStorage.h">
     <name>modified</name>
   </decl>;</decl_stmt></protected>
   <private>private: 
+  <decl_stmt>
+  <decl>
+    <type>
+    <name>RDocument</name>*</type>
+    <name>document</name>
+  </decl>;</decl_stmt>
   <decl_stmt>
   <decl>
     <type>

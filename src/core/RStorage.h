@@ -57,6 +57,14 @@ public:
     RStorage();
     virtual ~RStorage() { }
 
+    void setDocument(RDocument* doc) {
+        document = doc;
+    }
+
+    RDocument* getDocument() const {
+        return document;
+    }
+
     /**
      * Resets this storage to its initial, empty state.
      */
@@ -238,27 +246,19 @@ public:
     virtual QSharedPointer<RView> queryView(RView::Id viewId) const = 0;
     virtual QSharedPointer<RView> queryView(const QString& viewName) const = 0;
 
-    virtual void setCurrentLayer(RLayer::Id layerId);
-    virtual void setCurrentLayer(const QString& layerName);
+    RTransaction setCurrentLayer(RLayer::Id layerId);
+    RTransaction setCurrentLayer(const QString& layerName);
+    void setCurrentLayer(RTransaction& transaction, RLayer::Id layerId);
+    void setCurrentLayer(RTransaction& transaction, const QString& layerName);
 
-    virtual RLayer::Id getCurrentLayerId() {
-        //return (RLayer::Id) getVariable("CurrentLayer").toInt();
-        //return currentLayerId;
-        QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
-        if (v.isNull()) {
-            qWarning() << "RStorage::getCurrentLayerId: no variables object found";
-            return RLayer::INVALID_ID;
-        }
-        return v->getCurrentLayerId();
-    }
-
-    virtual RView::Id getCurrentViewId() {
+    virtual RLayer::Id getCurrentLayerId() const;
+    virtual RView::Id getCurrentViewId() const {
         //return (RView::Id) getVariable("CurrentView").toInt();
         return currentViewId;
     }
 
     virtual void setCurrentColor(const RColor& color);
-    virtual RColor getCurrentColor();
+    virtual RColor getCurrentColor() const;
 
     void setCurrentLineweight(RLineweight::Lineweight lw);
     virtual RLineweight::Lineweight getCurrentLineweight() const;
@@ -305,13 +305,9 @@ public:
         setCurrentView(id);
     }
 
-    virtual RView::Id getCurrentViewId() const {
-        //return (RView::Id) getVariable("CurrentView").toInt();
-        return currentViewId;
-    }
-
-    virtual void setUnit(RS::Unit unit);
-    virtual RS::Unit getUnit() const;
+    void setUnit(RS::Unit unit, RTransaction* transaction=NULL);
+    //void setUnit(RTransaction& transaction, RS::Unit unit);
+    RS::Unit getUnit() const;
 
     virtual void setDimensionFont(const QString& f);
     virtual QString getDimensionFont() const;
@@ -358,7 +354,7 @@ public:
         return value.isValid();
     }
 
-    virtual void setKnownVariable(RS::KnownVariable key, const QVariant& value) = 0;
+    virtual void setKnownVariable(RS::KnownVariable key, const QVariant& value, RTransaction* transaction = NULL) = 0;
     virtual QVariant getKnownVariable(RS::KnownVariable key) const = 0;
 
     /**
@@ -597,6 +593,7 @@ protected:
     bool modified;
 
 private:
+    RDocument* document;
     int maxDrawOrder;
     RObject::Id idCounter;
     RObject::Handle handleCounter;

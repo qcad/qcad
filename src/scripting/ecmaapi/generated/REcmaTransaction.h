@@ -61,6 +61,9 @@
         setExistingLayerDetectionDisabled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setExistingLinetypeDetectionDisabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setBlockRecursionDetectionDisabled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

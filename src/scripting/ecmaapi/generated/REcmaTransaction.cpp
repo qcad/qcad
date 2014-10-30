@@ -11,8 +11,6 @@
             
                 #include "RExporter.h"
             
-                #include "RDocument.h"
-            
             
         // includes for base ecma wrapper classes
          void REcmaTransaction::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -67,6 +65,8 @@
             REcmaHelper::registerFunction(&engine, proto, setExistingBlockDetectionDisabled, "setExistingBlockDetectionDisabled");
             
             REcmaHelper::registerFunction(&engine, proto, setExistingLayerDetectionDisabled, "setExistingLayerDetectionDisabled");
+            
+            REcmaHelper::registerFunction(&engine, proto, setExistingLinetypeDetectionDisabled, "setExistingLinetypeDetectionDisabled");
             
             REcmaHelper::registerFunction(&engine, proto, setBlockRecursionDetectionDisabled, "setBlockRecursionDetectionDisabled");
             
@@ -900,6 +900,61 @@
             return result;
         }
          QScriptValue
+        REcmaTransaction::setExistingLinetypeDetectionDisabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTransaction::setExistingLinetypeDetectionDisabled", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTransaction::setExistingLinetypeDetectionDisabled";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTransaction* self = 
+                        getSelf("setExistingLinetypeDetectionDisabled", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setExistingLinetypeDetectionDisabled(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.setExistingLinetypeDetectionDisabled().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTransaction::setExistingLinetypeDetectionDisabled", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaTransaction::setBlockRecursionDetectionDisabled
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1242,40 +1297,6 @@
 
 
         
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RDocument * */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is pointer
-                    RDocument * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<RDocument >(
-                            context->argument(0)
-                        );
-                    
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RTransaction: Argument 0 is not of type RDocument *RDocument *.", context);                    
-                    }
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->redo(a0);
-    } else
-
-
-        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.redo().",
                    context);
@@ -1320,40 +1341,6 @@
 
 
         
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RDocument * */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is pointer
-                    RDocument * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<RDocument >(
-                            context->argument(0)
-                        );
-                    
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RTransaction: Argument 0 is not of type RDocument *RDocument *.", context);                    
-                    }
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->undo(a0);
-    } else
-
-
-        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.undo().",
                    context);
@@ -1384,34 +1371,16 @@
                 
     
     if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RDocument * */
-    
+    0
     ){
     // prepare arguments:
     
-                    // argument is pointer
-                    RDocument * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<RDocument >(
-                            context->argument(0)
-                        );
-                    
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RTransaction: Argument 0 is not of type RDocument *RDocument *.", context);                    
-                    }
-                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->end(a0);
+               self->end();
     } else
 
 
@@ -2244,14 +2213,9 @@
                 
     
     if( context->argumentCount() ==
-    2 && (
+    1 && (
             context->argument(0).isNumber()
         ) /* type: RObject::Id */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
-        ) /* type: RDocument * */
     
     ){
     // prepare arguments:
@@ -2264,43 +2228,23 @@
                     context->argument( 0 ).
                     toNumber();
                 
-                    // argument is pointer
-                    RDocument * a1 = NULL;
-
-                    a1 = 
-                        REcmaHelper::scriptValueTo<RDocument >(
-                            context->argument(1)
-                        );
-                    
-                    if (a1==NULL && 
-                        !context->argument(1).isNull()) {
-                        return REcmaHelper::throwError("RTransaction: Argument 1 is not of type RDocument *RDocument *.", context);                    
-                    }
-                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->deleteObject(a0
-        ,
-    a1);
+               self->deleteObject(a0);
     } else
 
 
         
     
     if( context->argumentCount() ==
-    2 && (
+    1 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
         ) /* type: QSharedPointer < RObject > */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
-        ) /* type: RDocument * */
     
     ){
     // prepare arguments:
@@ -2339,27 +2283,12 @@
                     //a0 =
                     //QSharedPointer < RObject >(o0->clone());
                 
-                    // argument is pointer
-                    RDocument * a1 = NULL;
-
-                    a1 = 
-                        REcmaHelper::scriptValueTo<RDocument >(
-                            context->argument(1)
-                        );
-                    
-                    if (a1==NULL && 
-                        !context->argument(1).isNull()) {
-                        return REcmaHelper::throwError("RTransaction: Argument 1 is not of type RDocument *RDocument *.", context);                    
-                    }
-                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->deleteObject(a0
-        ,
-    a1);
+               self->deleteObject(a0);
     } else
 
 

@@ -45,6 +45,12 @@
 
     // public methods:
     static  QScriptValue
+        setDocument
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDocument
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

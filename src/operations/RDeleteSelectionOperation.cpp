@@ -32,10 +32,10 @@ RTransaction RDeleteSelectionOperation::apply(RDocument& document, bool preview)
     QSet<REntity::Id> selectedEntities = document.querySelectedEntities();
     QSet<REntity::Id>::iterator it;
     for (it=selectedEntities.begin(); it!=selectedEntities.end(); it++) {
-        transaction.deleteObject(*it, &document);
+        transaction.deleteObject(*it);
     }
 
-    transaction.end(&document);
+    transaction.end();
     return transaction;
 }
 

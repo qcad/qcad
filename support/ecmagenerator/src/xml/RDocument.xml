@@ -24,7 +24,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="initLinetypes" cppName="initLinetypes"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default=" NULL"
+        isConst="false" />
+      </variant>
     </method>
     <method name="getStorage" cppName="getStorage"
     specifier="public" isStatic="false" isVirtual="false"
@@ -994,12 +998,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="key" isConst="false" />
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default=" NULL"
+        isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
         name="key" isConst="false" />
         <arg type="RVector &amp;" typeName="RVector" name="value"
         isConst="true" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default=" NULL"
+        isConst="false" />
       </variant>
     </method>
     <method name="getKnownVariable" cppName="getKnownVariable"
@@ -1017,6 +1027,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RS::Unit" typeName="RS::Unit" name="unit"
+        isConst="false" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default=" NULL"
         isConst="false" />
       </variant>
     </method>

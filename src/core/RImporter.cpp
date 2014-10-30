@@ -42,6 +42,7 @@ RImporter::RImporter(RDocument& document, RMessageHandler* messageHandler, RProg
     transaction.setAllowAll(true);
     transaction.setSpatialIndexDisabled(true);
     transaction.setExistingLayerDetectionDisabled(true);
+    transaction.setExistingLinetypeDetectionDisabled(true);
     transaction.setExistingBlockDetectionDisabled(true);
     transaction.setBlockRecursionDetectionDisabled(true);
     transaction.setKeepHandles(true);
@@ -84,7 +85,7 @@ void RImporter::importObject(RObject* object) {
  * after importing entities into the document.
  */
 void RImporter::endImport() {
-    transaction.end(document);
+    transaction.end();
 
     // ground all directly recursive block references:
     int counter = 0;
@@ -142,4 +143,8 @@ RDocument& RImporter::getDocument() {
 
 void RImporter::setDocument(RDocument* d) {
     document = d;
+}
+
+void RImporter::setKnownVariable(RS::KnownVariable key, const RVector& value) {
+    document->setKnownVariable(key, value, &transaction);
 }

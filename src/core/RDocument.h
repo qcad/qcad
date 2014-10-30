@@ -66,7 +66,7 @@ public:
     virtual ~RDocument();
 
     void init();
-    void initLinetypes();
+    void initLinetypes(RTransaction* transaction=NULL);
 
     RStorage& getStorage();
     const RStorage& getStorage() const;
@@ -282,11 +282,12 @@ public:
     QVariant getVariable(const QString& key, const QVariant& defaultValue = RDEFAULT_QVARIANT, bool useSettings = false) const;
     bool hasVariable(const QString& key) const;
 
-    void setKnownVariable(RS::KnownVariable key, const QVariant& value);
-    void setKnownVariable(RS::KnownVariable key, const RVector& value);
+    void setKnownVariable(RS::KnownVariable key, const QVariant& value, RTransaction* transaction = NULL);
+    void setKnownVariable(RS::KnownVariable key, const RVector& value, RTransaction* transaction = NULL);
     QVariant getKnownVariable(RS::KnownVariable key, const QVariant& defaultValue = RDEFAULT_QVARIANT) const;
 
-    void setUnit(RS::Unit unit);
+    void setUnit(RS::Unit unit, RTransaction* transaction = NULL);
+    //void setUnit(RTransaction& transaction, RS::Unit unit);
     RS::Unit getUnit() const;
 
     bool isMetric() const;

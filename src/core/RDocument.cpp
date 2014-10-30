@@ -48,8 +48,9 @@ RDocument::RDocument(
     RSpatialIndex& spatialIndex)
     : storage(storage),
       spatialIndex(spatialIndex),
-      transactionStack(*this) {
+      transactionStack(storage) {
 
+    storage.setDocument(this);
     init();
 }
 
@@ -68,7 +69,7 @@ void RDocument::init() {
     bool storageIsLinked = (ls!=NULL);
 
     // add document variables object:
-    if (!storageIsLinked /*&& queryDocumentVariables().isNull()*/) {
+    if (!storageIsLinked && queryDocumentVariables().isNull()) {
         transaction.addObject(QSharedPointer<RDocumentVariables>(new RDocumentVariables(this)));
     }
 
@@ -104,7 +105,7 @@ void RDocument::init() {
 
     modelSpaceBlockId = getBlockId(RBlock::modelSpaceName);
 
-    transaction.end(this);
+    transaction.end();
 
     // caching for faster operations:
     QSharedPointer<RLinetype> ltByLayer = queryLinetype("BYLAYER");
@@ -126,7 +127,7 @@ void RDocument::init() {
         setCurrentLinetype("BYLAYER");
 
         // default variables:
-        setUnit((RS::Unit)RSettings::getValue("UnitSettings/Unit", RS::None).toInt());
+        setUnit((RS::Unit)RSettings::getValue("UnitSettings/Unit", RS::None).toInt(), &transaction);
         setLinetypeScale(RSettings::getDoubleValue("LinetypeSettings/Scale", 1.0));
 
         setKnownVariable(RS::DIMTXT, RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5));
@@ -252,8 +253,11 @@ void RDocument::init() {
     }
 }
 
-void RDocument::initLinetypes() {
-    RTransaction t(storage, "", false);
+void RDocument::initLinetypes(RTransaction* transaction) {
+    bool useLocalTransaction = (transaction==NULL);
+    if (useLocalTransaction) {
+        transaction = new RTransaction(storage, "", false);
+    }
 
     // read patterns from file system and add to doc:
     QStringList patlist;
@@ -277,10 +281,14 @@ void RDocument::initLinetypes() {
         //qDebug() << "pattern: " << *pattern;
 
         if (pattern!=NULL) {
-            t.addObject(QSharedPointer<RObject>(new RLinetype(this, *pattern)));
+            transaction->addObject(QSharedPointer<RObject>(new RLinetype(this, *pattern)));
         }
     }
-    t.end(this);
+
+    if (useLocalTransaction) {
+        transaction->end();
+        delete transaction;
+    }
 }
 
 
@@ -303,13 +311,20 @@ RDocument::~RDocument() {
     spatialIndex.doDelete();
 }
 
-void RDocument::setUnit(RS::Unit unit) {
-    storage.setUnit(unit);
-    initLinetypes();
+void RDocument::setUnit(RS::Unit unit, RTransaction* transaction) {
+    storage.setUnit(unit, transaction);
+    initLinetypes(transaction);
 }
+
+//void RDocument::setUnit(RTransaction& transaction, RS::Unit unit) {
+//    storage.setUnit(transaction, unit);
+//    initLinetypes();
+//}
 
 RS::Unit RDocument::getUnit() const {
     return storage.getUnit();
+    QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
+    return v->getUnit();
 }
 
 bool RDocument::isMetric() const {
@@ -411,24 +426,24 @@ QVariant RDocument::getVariable(const QString& key, const QVariant& defaultValue
     return ret;
 }
 
-void RDocument::setKnownVariable(RS::KnownVariable key, const QVariant& value) {
+void RDocument::setKnownVariable(RS::KnownVariable key, const QVariant& value, RTransaction* transaction) {
     bool wasMetric = true;
 
     if (key==RS::INSUNITS) {
         wasMetric = RUnit::isMetric(getUnit());
     }
 
-    storage.setKnownVariable(key, value);
+    storage.setKnownVariable(key, value, transaction);
 
     if (key==RS::INSUNITS && wasMetric!=RUnit::isMetric(getUnit())) {
-        initLinetypes();
+        initLinetypes(transaction);
     }
 }
 
-void RDocument::setKnownVariable(RS::KnownVariable key, const RVector& value) {
+void RDocument::setKnownVariable(RS::KnownVariable key, const RVector& value, RTransaction* transaction) {
     QVariant v;
     v.setValue(value);
-    storage.setKnownVariable(key, v);
+    storage.setKnownVariable(key, v, transaction);
 }
 
 QVariant RDocument::getKnownVariable(RS::KnownVariable key, const QVariant& defaultValue) const {
@@ -445,6 +460,8 @@ QSharedPointer<RLayer> RDocument::queryCurrentLayer() {
 
 RLayer::Id RDocument::getCurrentLayerId() {
     return storage.getCurrentLayerId();
+//    QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
+//    v->getCurrentLayerId();
 }
 
 void RDocument::setCurrentColor(const RColor& color) {
@@ -484,32 +501,36 @@ RLinetypePattern RDocument::getCurrentLinetypePattern() const {
 }
 
 RTransaction RDocument::setCurrentLayer(RLayer::Id layerId) {
-    RTransaction transaction(getStorage(), "Setting current layer", true);
-    setCurrentLayer(transaction, layerId);
-    transaction.end(this);
-    return transaction;
+    return storage.setCurrentLayer(layerId);
+//    RTransaction transaction(getStorage(), "Setting current layer", true);
+//    setCurrentLayer(transaction, layerId);
+//    transaction.end(this);
+//    return transaction;
 }
 
 RTransaction RDocument::setCurrentLayer(const QString& layerName) {
-    RLayer::Id id = getLayerId(layerName);
-    if (id == RLayer::INVALID_ID) {
-        return RTransaction();
-    }
-    return setCurrentLayer(id);
+    return storage.setCurrentLayer(layerName);
+//    RLayer::Id id = getLayerId(layerName);
+//    if (id == RLayer::INVALID_ID) {
+//        return RTransaction();
+//    }
+//    return setCurrentLayer(id);
 }
 
 void RDocument::setCurrentLayer(RTransaction& transaction, RLayer::Id layerId) {
-    QSharedPointer<RDocumentVariables> v = queryDocumentVariables();
-    v->setCurrentLayerId(layerId);
-    transaction.addObject(v);
+    storage.setCurrentLayer(transaction, layerId);
+//    QSharedPointer<RDocumentVariables> v = queryDocumentVariables();
+//    v->setCurrentLayerId(layerId);
+//    transaction.addObject(v);
 }
 
 void RDocument::setCurrentLayer(RTransaction& transaction, const QString& layerName) {
-    RLayer::Id id = getLayerId(layerName);
-    if (id == RLayer::INVALID_ID) {
-        return;
-    }
-    setCurrentLayer(transaction, id);
+    storage.setCurrentLayer(transaction, layerName);
+//    RLayer::Id id = getLayerId(layerName);
+//    if (id == RLayer::INVALID_ID) {
+//        return;
+//    }
+//    setCurrentLayer(transaction, id);
 }
 
 QSharedPointer<RBlock> RDocument::queryCurrentBlock() {

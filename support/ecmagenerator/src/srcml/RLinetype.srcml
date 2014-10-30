@@ -420,6 +420,22 @@ dir="./core" filename="RLinetype.h">
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>print</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>QDebug</name>
+      </type>
+      <name>dbg</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <comment type="line">//private:</comment>
   <comment type="line">// static void init(const QString&amp; cn,
   const RLinetype&amp; c);</comment></public>
@@ -441,29 +457,6 @@ dir="./core" filename="RLinetype.h">
   RLinetype&gt; &gt; list;</comment>
   <comment type="line">//static QMap&lt;RLinetype, QIcon&gt;
   iconMap;</comment></private>}</block>;</class>
-  <function_decl>
-  <type>
-    <name>QCADCORE_EXPORT</name>
-    <name>QDebug</name>
-  </type>
-  <name>operator&lt;&lt;</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QDebug</name>
-      </type>
-      <name>dbg</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLinetype</name>&amp;</type>
-      <name>l</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

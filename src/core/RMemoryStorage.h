@@ -127,7 +127,7 @@ public:
     virtual void setVariable(const QString& key, const QVariant& value, bool overwrite = true);
     virtual QVariant getVariable(const QString& key) const;
 
-    virtual void setKnownVariable(RS::KnownVariable key, const QVariant& value);
+    virtual void setKnownVariable(RS::KnownVariable key, const QVariant& value, RTransaction* transaction = NULL);
     virtual QVariant getKnownVariable(RS::KnownVariable key) const;
 
     virtual QString getLayerName(RLayer::Id layerId) const;
@@ -159,8 +159,8 @@ public:
 
     virtual RLineweight::Lineweight getMaxLineweight() const;
 
-    virtual void setUnit(RS::Unit unit);
-    virtual RS::Unit getUnit() const;
+    //virtual void setUnit(RS::Unit unit, RTransaction* transaction = NULL);
+    //virtual RS::Unit getUnit() const;
 
     virtual void setDimensionFont(const QString& f);
     virtual QString getDimensionFont() const;
@@ -189,7 +189,7 @@ protected:
     QHash<QString, QVariant> variables;
     QMap<QString, QString> variableCaseMap;
     QHash<RS::KnownVariable, QVariant> knownVariables;
-    RS::Unit unit;
+    //RS::Unit unit;
     QString dimensionFont;
     double linetypeScale;
 };

@@ -134,7 +134,18 @@ dir="./core" filename="RDocument.h">
     <name>void</name>
   </type>
   <name>initLinetypes</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
   <name>RStorage</name>&amp;</type>
@@ -2465,6 +2476,17 @@ dir="./core" filename="RDocument.h">
       <name>QVariant</name>&amp;</type>
       <name>value</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -2489,6 +2511,17 @@ dir="./core" filename="RDocument.h">
       <name>RVector</name>&amp;</type>
       <name>value</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -2534,7 +2567,20 @@ dir="./core" filename="RDocument.h">
       </type>
       <name>unit</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>RTransaction</name>*</type>
+    <name>transaction</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
+  <comment type="line">//void setUnit(RTransaction&amp;
+  transaction, RS::Unit unit);</comment>
   <function_decl>
   <type>
     <name>

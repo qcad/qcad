@@ -104,6 +104,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, operator_less, "operator_less");
             
+            REcmaHelper::registerFunction(&engine, proto, print, "print");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RLinetypePointer>(), *proto);
       
@@ -1557,6 +1559,71 @@
             //REcmaHelper::functionEnd("REcmaSharedPointerLinetype::operator<", context, engine);
             return result;
         }
+         QScriptValue
+        REcmaSharedPointerLinetype::print
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLinetype::print", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLinetype::print";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetype* self = 
+                        getSelf("print", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QDebug */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QDebug*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QDebug*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RLinetype: Argument 0 is not of type QDebug*.",
+                               context);                    
+                    }
+                    QDebug& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->print(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetype.print().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLinetype::print", context, engine);
+            return result;
+        }
          QScriptValue REcmaSharedPointerLinetype::toString
     (QScriptContext *context, QScriptEngine *engine)
     
@@ -1566,13 +1633,7 @@
     
     QString result;
     
-            QDebug d(&result);
-            if (self!=NULL) {
-                d << *self;
-            }
-            else {
-                d << "NULL";
-            }
+            result = QString("RLinetypePointer(0x%1)").arg((unsigned long int)self, 0, 16);
         
     return QScriptValue(result);
     }

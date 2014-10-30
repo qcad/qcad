@@ -94,6 +94,9 @@
         ;static  QScriptValue
         operator_less
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        print
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

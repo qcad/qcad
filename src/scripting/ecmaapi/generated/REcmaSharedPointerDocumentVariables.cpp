@@ -79,6 +79,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, setCurrentLayerId, "setCurrentLayerId");
             
+            REcmaHelper::registerFunction(&engine, proto, getUnit, "getUnit");
+            
+            REcmaHelper::registerFunction(&engine, proto, setUnit, "setUnit");
+            
+            REcmaHelper::registerFunction(&engine, proto, print, "print");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDocumentVariablesPointer>(), *proto);
       
@@ -103,6 +109,10 @@
             
             ctor.setProperty("PropertyCurrentLayerId",
                 qScriptValueFromValue(&engine, RDocumentVariables::PropertyCurrentLayerId),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyUnit",
+                qScriptValueFromValue(&engine, RDocumentVariables::PropertyUnit),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -968,6 +978,175 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::setCurrentLayerId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDocumentVariables::getUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDocumentVariables::getUnit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDocumentVariables::getUnit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("getUnit", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::Unit'
+    RS::Unit cppResult =
+        
+               self->getUnit();
+        // return type: RS::Unit
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getUnit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::getUnit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDocumentVariables::setUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDocumentVariables::setUnit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDocumentVariables::setUnit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("setUnit", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::Unit */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::Unit
+                    a0 =
+                    (RS::Unit)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setUnit(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.setUnit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::setUnit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDocumentVariables::print
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDocumentVariables::print", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDocumentVariables::print";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("print", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QDebug */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QDebug*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QDebug*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RDocumentVariables: Argument 0 is not of type QDebug*.",
+                               context);                    
+                    }
+                    QDebug& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->print(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.print().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::print", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerDocumentVariables::toString

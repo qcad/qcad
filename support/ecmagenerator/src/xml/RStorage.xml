@@ -10,6 +10,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
     </constructor>
+    <method name="setDocument" cppName="setDocument"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *" name="doc"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getDocument" cppName="getDocument"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RDocument *" isPureVirtual="false" />
+    </method>
     <method name="clear" cppName="clear" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
@@ -339,13 +352,25 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="setCurrentLayer" cppName="setCurrentLayer"
-    specifier="public" isStatic="false" isVirtual="true"
+    specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="RTransaction" isPureVirtual="false">
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        isConst="false" />
+      </variant>
+      <variant returnType="RTransaction" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerName" isConst="true" />
+      </variant>
       <variant returnType="void" isPureVirtual="false">
+        <arg type="RTransaction &amp;" typeName="RTransaction"
+        name="transaction" isConst="false" />
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
+        <arg type="RTransaction &amp;" typeName="RTransaction"
+        name="transaction" isConst="false" />
         <arg type="QString &amp;" typeName="QString"
         name="layerName" isConst="true" />
       </variant>
@@ -358,7 +383,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getCurrentViewId" cppName="getCurrentViewId"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
-      <variant returnType="RView::Id" isPureVirtual="false" />
       <variant returnType="RView::Id" isPureVirtual="false" />
     </method>
     <method name="setCurrentColor" cppName="setCurrentColor"
@@ -462,14 +486,17 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="setUnit" cppName="setUnit" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RS::Unit" typeName="RS::Unit" name="unit"
+        isConst="false" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default=" NULL"
         isConst="false" />
       </variant>
     </method>
     <method name="getUnit" cppName="getUnit" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RS::Unit" isPureVirtual="false" />
     </method>
     <method name="setDimensionFont" cppName="setDimensionFont"
@@ -677,6 +704,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="key" isConst="false" />
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default=" NULL"
+        isConst="false" />
       </variant>
     </method>
     <method name="getKnownVariable" cppName="getKnownVariable"

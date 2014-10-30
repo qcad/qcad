@@ -16,10 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RDocument.h"
 #include "RSettings.h"
 #include "RStorage.h"
+#include "RMainWindow.h"
 
 RStorage::RStorage() :
+    document(NULL),
     modified(false),
     maxDrawOrder(0),
     idCounter(0),
@@ -67,31 +70,45 @@ RObject::Handle RStorage::getMaxObjectHandle() {
     return handleCounter;
 }
 
-void RStorage::setCurrentLayer(RLayer::Id layerId) {
-    //currentLayerId = layerId;
-    QSharedPointer<RDocumentVariables> docVars = queryDocumentVariables();
-    if (docVars.isNull())  {
-        return;
-    }
-    docVars->setCurrentLayerId(layerId);
-    RTransaction t(*this, "Setting current layer", true);
-    t.addObject(docVars);
-    t.end(NULL);
+RTransaction RStorage::setCurrentLayer(RLayer::Id layerId) {
+    RTransaction transaction(*this, "Setting current layer", true);
+    setCurrentLayer(transaction, layerId);
+    transaction.end();
+    return transaction;
 }
 
-void RStorage::setCurrentLayer(const QString& layerName) {
+RTransaction RStorage::setCurrentLayer(const QString& layerName) {
+    RLayer::Id id = getLayerId(layerName);
+    if (id == RLayer::INVALID_ID) {
+        return RTransaction();
+    }
+    return setCurrentLayer(id);
+}
+
+void RStorage::setCurrentLayer(RTransaction& transaction, RLayer::Id layerId) {
+    QSharedPointer<RDocumentVariables> v = queryDocumentVariables();
+    v->setCurrentLayerId(layerId);
+    transaction.addObject(v);
+}
+
+void RStorage::setCurrentLayer(RTransaction& transaction, const QString& layerName) {
     RLayer::Id id = getLayerId(layerName);
     if (id == RLayer::INVALID_ID) {
         return;
     }
-    setCurrentLayer(id);
+    setCurrentLayer(transaction, id);
+}
+
+RLayer::Id RStorage::getCurrentLayerId() const {
+    QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
+    return v->getCurrentLayerId();
 }
 
 void RStorage::setCurrentColor(const RColor& color) {
     currentColor = color;
 }
 
-RColor RStorage::getCurrentColor() {
+RColor RStorage::getCurrentColor() const {
     return currentColor;
 }
 
@@ -183,12 +200,32 @@ int RStorage::getMinDrawOrder() {
     return minDrawOrder - 1;
 }
 
-void RStorage::setUnit(RS::Unit unit) {
-    setVariable("UnitSettings/Unit", unit);
+void RStorage::setUnit(RS::Unit unit, RTransaction* transaction) {
+    bool useLocalTransaction = (transaction==NULL);
+
+    if (useLocalTransaction) {
+        transaction = new RTransaction(*this, "Setting unit", true);
+    }
+
+    QSharedPointer<RDocumentVariables> docVars = queryDocumentVariables();
+    docVars->setUnit(unit);
+    transaction->addObject(docVars);
+
+
+    if (RMainWindow::hasMainWindow()) {
+        RMainWindow::getMainWindow()->postTransactionEvent(*transaction,
+                    transaction->hasOnlyChanges());
+    }
+
+    if (useLocalTransaction) {
+        transaction->end();
+        delete transaction;
+    }
 }
 
 RS::Unit RStorage::getUnit() const {
-    return (RS::Unit)getVariable("UnitSettings/Unit").toInt();
+    QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
+    return v->getUnit();
 }
 
 void RStorage::setDimensionFont(const QString& f) {
@@ -241,6 +278,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
     dbg.nospace() << "drawing unit: " << s.getUnit() << "\n";
     dbg.nospace() << "dimension font: " << s.getDimensionFont() << "\n";
     dbg.nospace() << "bounding box: " << s.getBoundingBox() << "\n";
+    dbg.nospace() << "document variables: " << *s.queryDocumentVariables() << "\n";
 
     {
         QSet<RLayer::Id> layers = s.queryAllLayers(true);

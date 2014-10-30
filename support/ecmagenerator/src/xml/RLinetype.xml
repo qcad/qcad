@@ -6,7 +6,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class name="RLinetype"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="true" isQObject="false"
-  hasStreamOperator="true" isAbstract="false" isScriptable="true">
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RObject" specifier="public" />
     <constructor>
       <variant>
@@ -130,6 +130,13 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="RLinetype &amp;" typeName="RLinetype"
         name="linetype" isConst="true" />
+      </variant>
+    </method>
+    <method name="print" cppName="print" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QDebug" typeName="QDebug" name="dbg"
+        isConst="false" />
       </variant>
     </method>
     <property name="PropertyName" type="RPropertyTypeId"

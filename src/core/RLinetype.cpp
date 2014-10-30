@@ -218,10 +218,11 @@ bool RLinetype::operator<(const RLinetype & linetype) const {
     return getName().toLower() < linetype.getName().toLower();
 }
 
-/**
- * Stream operator for QDebug
- */
-QDebug operator<<(QDebug dbg, const RLinetype& l) {
-    dbg.nospace() << "RLinetype(" << (RObject&)l << ", " << l.getPattern() << ")";
-    return dbg.space();
+void RLinetype::print(QDebug dbg) const {
+    dbg.nospace() << "RLinetype(";
+    RObject::print(dbg);
+    dbg.nospace()
+        << ", pattern: " << getPattern()
+        << ")";
 }
+

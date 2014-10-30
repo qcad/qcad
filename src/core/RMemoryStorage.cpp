@@ -26,7 +26,7 @@ RMemoryStorage::RMemoryStorage() :
     maxLineweight(RLineweight::Weight000), 
     boundingBoxChanged(true),
     inTransaction(false), 
-    unit(RS::None),
+    //unit(RS::None),
     linetypeScale(1.0) {
 
     setLastTransactionId(-1);
@@ -861,6 +861,8 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
         return false;
     }
 
+    qDebug() << "saveObject: " << *object;
+
     // never allow two layers with identical names, update layer instead:
     QSharedPointer<RLayer> layer = object.dynamicCast<RLayer>();
     if (!layer.isNull()) {
@@ -1169,9 +1171,9 @@ QVariant RMemoryStorage::getVariable(const QString& key) const {
     return variables[variableCaseMap[key.toLower()]];
 }
 
-void RMemoryStorage::setKnownVariable(RS::KnownVariable key, const QVariant& value) {
+void RMemoryStorage::setKnownVariable(RS::KnownVariable key, const QVariant& value, RTransaction* transaction) {
     if (key==RS::INSUNITS) {
-        setUnit((RS::Unit)value.toInt());
+        setUnit((RS::Unit)value.toInt(), transaction);
     }
     else if (key==RS::LTSCALE) {
         setLinetypeScale(value.toDouble());
@@ -1315,14 +1317,14 @@ RLineweight::Lineweight RMemoryStorage::getMaxLineweight() const {
     return maxLineweight;
 }
 
-void RMemoryStorage::setUnit(RS::Unit unit) {
-    this->unit = unit;
-    setModified(true);
-}
+//void RMemoryStorage::setUnit(RS::Unit unit, RTransaction* transaction) {
+//    this->unit = unit;
+//    setModified(true);
+//}
 
-RS::Unit RMemoryStorage::getUnit() const {
-    return unit;
-}
+//RS::Unit RMemoryStorage::getUnit() const {
+//    return unit;
+//}
 
 void RMemoryStorage::setDimensionFont(const QString& f) {
     this->dimensionFont = f;

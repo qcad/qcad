@@ -69,6 +69,14 @@ dir="./core" filename="RDocumentVariables.h">
       <name>RPropertyTypeId</name>
     </type>
     <name>PropertyCurrentLayerId</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
+    <name>PropertyUnit</name>
   </decl>;</decl_stmt></public>
   <public>public: 
   <constructor>
@@ -270,7 +278,60 @@ dir="./core" filename="RDocumentVariables.h">
     <expr>
     <name>currentLayerId</name>= 
     <name>id</name></expr>;</expr_stmt>}</block>
-  </function></public>
+  </function>
+  <function>
+    <type>
+      <name>
+      <name>RS</name>::
+      <name>Unit</name></name>
+    </type>
+    <name>getUnit</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>unit</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setUnit</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>
+          <name>RS</name>::
+          <name>Unit</name></name>
+        </type>
+        <name>u</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>unit</name>= 
+    <name>u</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>print</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>QDebug</name>
+      </type>
+      <name>dbg</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl></public>
   <private>private: 
   <decl_stmt>
   <decl>
@@ -280,6 +341,18 @@ dir="./core" filename="RDocumentVariables.h">
       <name>Id</name></name>
     </type>
     <name>currentLayerId</name>
+  </decl>;</decl_stmt>
+  <comment type="line">// TODO:</comment>
+  <comment type="line">//RLayer::Id currentBlockId;</comment>
+  <comment type="line">//...</comment>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>
+      <name>RS</name>::
+      <name>Unit</name></name>
+    </type>
+    <name>unit</name>
   </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

@@ -30,10 +30,10 @@ RTransaction RDeleteAllEntitiesOperation::apply(RDocument& document, bool previe
 
     QSetIterator<RObject::Id> i(ids);
     while (i.hasNext()) {
-        transaction.deleteObject(i.next(), &document);
+        transaction.deleteObject(i.next());
     }
 
-    transaction.end(&document);
+    transaction.end();
     return transaction;
 }
 

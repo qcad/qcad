@@ -109,6 +109,8 @@ public:
     bool operator!=(const RLinetype & linetype) const;
     bool operator<(const RLinetype & linetype) const;
 
+    virtual void print(QDebug dbg) const;
+
 //private:
 //    static void init(const QString& cn, const RLinetype& c);
 
@@ -123,8 +125,6 @@ private:
     //static QList<QPair<QString, RLinetype> > list;
     //static QMap<RLinetype, QIcon> iconMap;
 };
-
-QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RLinetype& l);
 
 Q_DECLARE_METATYPE(RLinetype)
 Q_DECLARE_METATYPE(RLinetype*)

@@ -34,7 +34,6 @@
 
 class RStorage;
 class RExporter;
-class RDocument;
 
 #define RDEFAULT_QSET_RPROPERTYTYPEID QSet<RPropertyTypeId> ()
 
@@ -109,6 +108,10 @@ public:
         existingLayerDetectionDisabled = on;
     }
 
+    void setExistingLinetypeDetectionDisabled(bool on) {
+        existingLinetypeDetectionDisabled = on;
+    }
+
     void setBlockRecursionDetectionDisabled(bool on) {
         blockRecursionDetectionDisabled = on;
     }
@@ -148,15 +151,15 @@ public:
     /**
      * Redo undone changes.
      */
-    virtual void redo(RDocument* document = NULL);
+    virtual void redo();
 
     /**
      * Reverts a change to the document. After undo() is called, the state of
      * the document should be the same as before redo() was called.
      */
-    virtual void undo(RDocument* document = NULL);
+    virtual void undo();
 
-    void end(RDocument* document);
+    void end();
 
     void updateAffectedBlockReferences();
 
@@ -193,8 +196,8 @@ public:
     void addAffectedObjects(const QSet<RObject::Id>& objectIds);
     void addAffectedObject(QSharedPointer<RObject> object);
 
-    void deleteObject(RObject::Id objectId, RDocument* document);
-    void deleteObject(QSharedPointer<RObject> object, RDocument* document);
+    void deleteObject(RObject::Id objectId);
+    void deleteObject(QSharedPointer<RObject> object);
 
     /**
      * \return Set of object IDs of objects that are affected by
@@ -233,7 +236,7 @@ protected:
     bool addPropertyChange(RObject::Id objectId, const RPropertyChange& propertyChange);
     //void appendChild(RTransaction& t);
 
-    void commit(RDocument* document);
+    void commit();
     void rollback();
 
 protected:
@@ -329,6 +332,11 @@ protected:
      * True to disable detection of existing layers (performance gain).
      */
     bool existingLayerDetectionDisabled;
+
+    /**
+     * True to disable detection of existing linetypes (performance gain).
+     */
+    bool existingLinetypeDetectionDisabled;
 
     /**
      * True to disable block recursion detection (performance gain for loading).

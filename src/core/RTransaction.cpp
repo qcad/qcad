@@ -145,7 +145,8 @@ RTransaction::~RTransaction() {
 /**
  * (Re-)applies this transaction to the document.
  */
-void RTransaction::redo(RDocument* document) {
+void RTransaction::redo() {
+    RDocument* document = storage->getDocument();
     if (document==NULL) {
         return;
     }
@@ -227,7 +228,8 @@ void RTransaction::redo(RDocument* document) {
 /**
  * Undoes this transaction.
  */
-void RTransaction::undo(RDocument* document) {
+void RTransaction::undo() {
+    RDocument* document = storage->getDocument();
     if (document==NULL) {
         return;
     }
@@ -330,15 +332,15 @@ void RTransaction::endCycle() {
 /**
  * Saves this command to the storage of the document.
  */
-void RTransaction::commit(RDocument* document) {
+void RTransaction::commit() {
     if (failed) {
         //qWarning() << "RTransaction::commit: transaction is in state 'failed'";
         //return;
     }
 
     RMainWindow* mainWindow = RMainWindow::getMainWindow();
-    if (mainWindow!=NULL) {
-        mainWindow->notifyInterTransactionListeners(document, this);
+    if (mainWindow!=NULL && storage->getDocument()!=NULL) {
+        mainWindow->notifyInterTransactionListeners(storage->getDocument(), this);
     }
 
     if (affectedObjectIds.size()>0) {
@@ -363,13 +365,13 @@ void RTransaction::rollback() {
     storage->rollbackTransaction();
 }
 
-void RTransaction::end(RDocument* document) {
+void RTransaction::end() {
     // 20111028: always commit for now
     // (paste partly to locked layer: at least paste what can be pasted)
     //if (failed) {
     //    rollback();
     //} else {
-        commit(document);
+        commit();
     //}
 }
 
@@ -420,7 +422,7 @@ bool RTransaction::overwriteBlock(QSharedPointer<RBlock> block) {
         // block references are not deleted,
         // because they no longer reference this block
         // block contents is deleted
-        deleteObject(storage->getBlockId(blockName), block->getDocument());
+        deleteObject(storage->getBlockId(blockName));
     }
 
     // add new block to dest or overwrite block:
@@ -530,7 +532,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         objectStorage->setObjectId(*clone, REntity::INVALID_ID);
         // note that we delete the OLD entity here
         // (old entity is queried from storage since we pass the ID here):
-        deleteObject(entity->getId(), entity->getDocument());
+        deleteObject(entity->getId());
         addObject(clone, useCurrentAttributes, false, modifiedPropertyTypeIds);
 
         // draw order was set to top value automatically by
@@ -588,6 +590,18 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             QSharedPointer<RLayer> existingLayer = layer->getDocument()->queryLayer(layer->getName());
             if (!existingLayer.isNull()) {
                 storage->setObjectId(*layer, existingLayer->getId());
+            }
+        }
+    }
+
+    // if object is a linetype,
+    // look up existing layer based on case insensitive name comparison:
+    if (!existingLinetypeDetectionDisabled && object->getId()==RObject::INVALID_ID) {
+        QSharedPointer<RLinetype> linetype = object.dynamicCast<RLinetype>();
+        if (!linetype.isNull()) {
+            QSharedPointer<RLinetype> existingLinetype = linetype->getDocument()->queryLinetype(linetype->getName());
+            if (!existingLinetype.isNull()) {
+                storage->setObjectId(*linetype, existingLinetype->getId());
             }
         }
     }
@@ -839,13 +853,13 @@ void RTransaction::addAffectedObject(QSharedPointer<RObject> object) {
     affectedObjectIds.append(object->getId());
 }
 
-void RTransaction::deleteObject(RObject::Id objectId, RDocument* document) {
+void RTransaction::deleteObject(RObject::Id objectId) {
     QSharedPointer<RObject> obj = storage->queryObject(objectId);
-    deleteObject(obj, document);
+    deleteObject(obj);
 }
 
-void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* document) {
-    if (storage == NULL || document == NULL) {
+void RTransaction::deleteObject(QSharedPointer<RObject> object) {
+    if (storage == NULL) {
         return;
     }
 
@@ -882,7 +896,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
         QSet<REntity::Id> ids = storage->queryLayerEntities(objectId, true);
         QSetIterator<REntity::Id> it(ids);
         while (it.hasNext()) {
-            deleteObject(it.next(), document);
+            deleteObject(it.next());
         }
 
         // current layer deleted, reset current layer to layer "0":
@@ -904,14 +918,14 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
         QSet<REntity::Id> ids = storage->queryBlockReferences(objectId);
         QSetIterator<REntity::Id> it(ids);
         while (it.hasNext()) {
-            deleteObject(it.next(), document);
+            deleteObject(it.next());
         }
 
         // delete all entities of this block definition:
         ids = storage->queryBlockEntities(objectId);
         it = QSetIterator<REntity::Id>(ids);
         while (it.hasNext()) {
-            deleteObject(it.next(), document);
+            deleteObject(it.next());
         }
 
         // current block deleted, reset current block to model space:
@@ -923,11 +937,11 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
     QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
 
     // if the entity has child entities, delete all child entities (e.g. attributes):
-    if (!entity.isNull() && document->hasChildEntities(entity->getId())) {
-        QSet<REntity::Id> ids = document->queryChildEntities(entity->getId());
+    if (!entity.isNull() && storage->hasChildEntities(entity->getId())) {
+        QSet<REntity::Id> ids = storage->queryChildEntities(entity->getId());
         QSetIterator<REntity::Id> it(ids);
         while (it.hasNext()) {
-            deleteObject(it.next(), document);
+            deleteObject(it.next());
         }
     }
 
@@ -943,18 +957,21 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, RDocument* docum
     addAffectedObject(objectId);
     statusChanges.insert(objectId);
 
-    if (!undoable) {
-        // only remove from si, if not linked storage / preview
-        if (!storageIsLinked && !spatialIndexDisabled && !entity.isNull()) {
-            document->removeFromSpatialIndex(entity);
+    RDocument* document = storage->getDocument();
+    if (document!=NULL) {
+        if (!undoable) {
+            // only remove from si, if not linked storage / preview
+            if (!storageIsLinked && !spatialIndexDisabled && !entity.isNull()) {
+                document->removeFromSpatialIndex(entity);
+            }
+            storage->deleteObject(objectId);
+        } else {
+            // only remove from si, if not linked storage / preview
+            if (!storageIsLinked && !spatialIndexDisabled && !entity.isNull()) {
+                document->removeFromSpatialIndex(entity);
+            }
+            storage->setUndoStatus(objectId, true);
         }
-        storage->deleteObject(objectId);
-    } else {
-        // only remove from si, if not linked storage / preview
-        if (!storageIsLinked && !spatialIndexDisabled && !entity.isNull()) {
-            document->removeFromSpatialIndex(entity);
-        }
-        storage->setUndoStatus(objectId, true);
     }
 }
 

@@ -27,8 +27,6 @@
 #include "RNonCopyable.h"
 #include "RTransaction.h"
 
-class RDocument;
-
 /**
  * A transaction stack handles transactions on a document. Transactions
  * are stored in a \ref RStorage "storage" implementation. 
@@ -38,7 +36,7 @@ class RDocument;
  */
 class QCADCORE_EXPORT RTransactionStack : RNonCopyable {
 public:
-    RTransactionStack(RDocument& document);
+    RTransactionStack(RStorage& storage);
     ~RTransactionStack();
 
     void reset();
@@ -49,7 +47,7 @@ public:
     bool isRedoAvailable() const;
 
 private:
-    RDocument& document;
+    RStorage& storage;
 };
 
 Q_DECLARE_METATYPE(RTransactionStack*)

@@ -69,11 +69,31 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getUnit" cppName="getUnit" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RS::Unit" isPureVirtual="false" />
+    </method>
+    <method name="setUnit" cppName="setUnit" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::Unit" typeName="RS::Unit" name="u"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="print" cppName="print" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QDebug" typeName="QDebug" name="dbg"
+        isConst="false" />
+      </variant>
+    </method>
     <property name="PropertyCustom" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyHandle" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyCurrentLayerId" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyUnit" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

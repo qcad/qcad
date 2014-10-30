@@ -38,6 +38,7 @@ public:
     static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyCurrentLayerId;
+    static RPropertyTypeId PropertyUnit;
 
 public:
     RDocumentVariables(RDocument* document, RObject::Id objectId=INVALID_ID)
@@ -70,8 +71,22 @@ public:
         currentLayerId = id;
     }
 
+    RS::Unit getUnit() const {
+        return unit;
+    }
+
+    void setUnit(RS::Unit u) {
+        unit = u;
+    }
+
+    virtual void print(QDebug dbg) const;
+
 private:
     RLayer::Id currentLayerId;
+    // TODO:
+    //RLayer::Id currentBlockId;
+    //...
+    RS::Unit unit;
 };
 
 Q_DECLARE_METATYPE(RDocumentVariables*)

@@ -71,6 +71,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setDocument, "setDocument");
             
+            REcmaHelper::registerFunction(&engine, proto, setKnownVariable, "setKnownVariable");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RImporter*>(), *proto);
 
@@ -799,6 +801,86 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaImporter::setDocument", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaImporter::setKnownVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaImporter::setKnownVariable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaImporter::setKnownVariable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RImporter* self = 
+                        getSelf("setKnownVariable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RImporter: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setKnownVariable(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RImporter.setKnownVariable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaImporter::setKnownVariable", context, engine);
             return result;
         }
          QScriptValue REcmaImporter::toString

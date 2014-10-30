@@ -119,7 +119,7 @@ RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) cons
         }
 
         if (addedObjects[i].deleteIt) {
-            transaction.deleteObject(addedObjects[i].object, &document);
+            transaction.deleteObject(addedObjects[i].object);
             continue;
         }
 
@@ -130,6 +130,6 @@ RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) cons
         );
     }
 
-    transaction.end(&document);
+    transaction.end();
     return transaction;
 }
