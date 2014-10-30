@@ -59,8 +59,6 @@
 
 #include "REcmaHelper.h"
 
-//int REcmaHelper::shellFunctionCounter = 0;
-
 QScriptValue REcmaHelper::throwError(const QString& message, QScriptContext* context) {
     QScriptContextInfo contextInfo(context);
     return context->throwError(
@@ -71,93 +69,6 @@ QScriptValue REcmaHelper::throwError(const QString& message, QScriptContext* con
            .arg(message)
            .arg(context->backtrace().join("\n")));
 }
-
-//bool REcmaHelper::isRVector(QScriptValue& sv) {}
-
-/*
-// does not compile in release mode with MSVC 2008:
-QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, const QMap<QString, QString>& cppValue) {
-    QVariantMap vm;
-    QMap<QString, QString>::const_iterator it;
-    for (it = cppValue.constBegin(); it!=cppValue.constEnd(); ++it) {
-        //QVariant v;
-        //v.setValue(cppValue.at(i));
-        vm.insert(it.key(), QVariant(it.value()));
-    }
-    return qScriptValueFromValue(engine, vm);
-
-    // // alterative version (compiles in release mode with MSVC 2008):
-    // qDebug() << "REcmaHelper::toScriptValue: QMap<QString, QString>";
-    // QMap<QString, QString> vm;
-    // QMap<QString, QString>::const_iterator it;
-    // for (it = cppValue.constBegin(); it!=cppValue.constEnd(); ++it) {
-    //     vm.insert(it.key(), it.value());
-    // }
-    // return qScriptValueFromValue(engine, vm);
-}
-*/
-
-/*
-QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, const QList<double>& cppValue) {
-    QVariantList vl;
-    for (int i = 0; i < cppValue.size(); ++i) {
-        QVariant v;
-        v.setValue(cppValue.at(i));
-        vl.append(v);
-    }
-    return qScriptValueFromValue(engine, vl);
-}
-
-QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, const QList<RVector>& cppValue) {
-    QVariantList vl;
-    for (int i = 0; i < cppValue.size(); ++i) {
-        QVariant v;
-        v.setValue(cppValue.at(i));
-        vl.append(v);
-    }
-    return qScriptValueFromValue(engine, vl);
-}
-
-QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, const QList<RSpline>& cppValue) {
-    QVariantList vl;
-    for (int i = 0; i < cppValue.size(); ++i) {
-        QVariant v;
-        v.setValue(cppValue.at(i));
-        vl.append(v);
-    }
-    return qScriptValueFromValue(engine, vl);
-}
-
-QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, const QList<QKeySequence>& cppValue) {
-    QVariantList vl;
-    for (int i = 0; i < cppValue.size(); ++i) {
-        QVariant v;
-        v.setValue(cppValue.at(i));
-        vl.append(v);
-    }
-    return qScriptValueFromValue(engine, vl);
-}
-
-QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, const QList<RGraphicsScene*>& cppValue) {
-    QVariantList vl;
-    for (int i = 0; i < cppValue.size(); ++i) {
-        QVariant v;
-        v.setValue(cppValue.at(i));
-        vl.append(v);
-    }
-    return qScriptValueFromValue(engine, vl);
-}
-
-QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, const QList<RGraphicsView*>& cppValue) {
-    QVariantList vl;
-    for (int i = 0; i < cppValue.size(); ++i) {
-        QVariant v;
-        v.setValue(cppValue.at(i));
-        vl.append(v);
-    }
-    return qScriptValueFromValue(engine, vl);
-}
-*/
 
 QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, RGraphicsView* cppValue) {
     RGraphicsViewQt* v = dynamic_cast<RGraphicsViewQt*>(cppValue);
@@ -252,6 +163,8 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RO
     }
 
     QScriptValue v;
+    v = tryCast<RDocumentVariables>(engine, cppValue);
+    if (v.isValid()) return v;
     v = tryCast<RLayer>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RBlock>(engine, cppValue);
@@ -448,11 +361,7 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, RGrid* cppValue) 
 }
 
 QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, const QVariant& cppValue) {
-    //qDebug() << "REcmaHelper::toScriptValue: variant: type: " << cppValue.type();
-    //qDebug() << "REcmaHelper::toScriptValue: variant: type: " << cppValue.typeName();
-
     if (cppValue.canConvert<QList<double> >()) {
-        //qDebug() << "REcmaHelper::toScriptValue: variant: can convert to double list";
         QList<double> res = cppValue.value<QList<double> >();
         return listToScriptValue(engine, res);
     }
@@ -477,13 +386,6 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, const QVariant& c
         return qScriptValueFromValue(engine, cppValue);
         break;
     }
-
-    //if (cppValue.type()==QVariant::List) {
-    //    qDebug() << "REcmaHelper::toScriptValue: list";
-    //    QVariantList res = cppValue.toList();
-    //    return qScriptValueFromValue(engine, res);
-        //return listToScriptValue(engine, res);
-    //}
 }
 
 void REcmaHelper::registerFunction(QScriptEngine* engine, QScriptValue* proto,

@@ -1129,7 +1129,7 @@ EAction.addGuiActionTo = function(action, iface, addToMenu, addToToolBar,
         if (isFunction(iface.getToolBar)) {
             var tb = iface.getToolBar();
             if (!isNull(tb)) {
-                if (!isNull(separator)) {
+                if (!isNull(separator) /*&& tb.actions().length!==0*/) {
                     separator.addToToolBar(tb);
                 }
                 action.addToToolBar(tb);

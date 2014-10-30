@@ -48,26 +48,15 @@ template<class T>
 static T* scriptValueTo(QScriptValue v) {
     // try to cast:
     T* ret = qscriptvalue_cast<T*>(v);
-    //qDebug() << "scriptValueTo: ret: 1: " << (long int)ret;
     if (ret!=NULL) {
         return ret;
     }
-
-    // try to convert to QObject:
-    /*
-    ret = qobject_cast<T*>(v.toQObject());
-    qDebug() << "scriptValueTo: QObject: " << (long int)v.toQObject();
-    if (ret!=NULL) {
-        return ret;
-    }
-    */
 
     // try to cast prototype
     // TODO: check if this makes sense
     if (ret==NULL && !v.isNull()) {
         QScriptValue prototype = v.prototype();
         ret = qscriptvalue_cast<T*>(prototype);
-        //qDebug() << "scriptValueTo: ret: prototype: " << (long int)ret;
     }
 
     // try to cast prototypes of base classes:
@@ -86,8 +75,6 @@ static T* scriptValueTo(QScriptValue v) {
                 break;
             }
 
-            //qDebug() << "base class[" << i << "]: " << baseClass.toString();
-
             ret = qscriptvalue_cast<T*>(v.property(QString("get") + baseClass.toString()).call(v));
 
             if (ret!=NULL) {
@@ -101,30 +88,7 @@ static T* scriptValueTo(QScriptValue v) {
     return ret;
 }
 
-// try to convert the given value to a QObject.
-/*
-template<class T>
-static T* scriptValueToQObject(QScriptValue v) {
-    // try to convert to QObject:
-    T* ret = qobject_cast<T*>(v.toQObject());
-    qDebug() << "scriptValueToQObject: toQObject: " << v.toQObject();
-    qDebug() << "scriptValueToQObject: ret: 1: " << ret;
-
-    if (ret==NULL && !v.isNull()) {
-        QScriptValue prototype = v.prototype();
-        ret = qobject_cast<T*>(prototype.toQObject());
-        qDebug() << "scriptValueToQObject: ret: 2: " << ret;
-    }
-
-    return ret;
-}
-*/
-
 static QScriptValue throwError(const QString& message, QScriptContext* context);
-
-//static QScriptValue toScriptValue(QScriptEngine* engine, const QMap<QString, QString>& cppValue);
-
-//static bool isRVector(QScriptValue& sv);
 
 template<class T1, class T2>
 static QScriptValue pairListToScriptValue(QScriptEngine* engine, const QList<QPair<T1, T2> >& cppValue) {
@@ -134,12 +98,7 @@ static QScriptValue pairListToScriptValue(QScriptEngine* engine, const QList<QPa
         QVariantList vlp;
         QVariant v;
         QPair<T1, T2> item = cppValue.at(i);
-//        if (QString(item.first.typeName())=="RLineweight::Lineweight") {
-//            v.setValue((int)item.first.value<RLineweight::Lineweight>());
-//        }
-//        else {
-            v.setValue(item.first);
-        //}
+        v.setValue(item.first);
         vlp.append(v);
         v.setValue(item.second);
         vlp.append(v);
@@ -150,22 +109,6 @@ static QScriptValue pairListToScriptValue(QScriptEngine* engine, const QList<QPa
 
     return qScriptValueFromValue(engine, vl);
 }
-
-//template<class T1, class T2>
-//static QScriptValue pairToScriptValue(QScriptEngine* engine, const QPair<T1, T2>& cppValue) {
-//    QVariantList vl;
-//    QVariant v;
-//    if (QString(cppValue.first.typeName())=="RLineweight::Lineweight") {
-//        v.setValue((int)cppValue.first.value<RLineweight::Lineweight>());
-//    }
-//    else {
-//        v.setValue(cppValue.first);
-//    }
-//    vl.append(v);
-//    v.setValue(cppValue.second);
-//    vl.append(v);
-//    return qScriptValueFromValue(engine, vl);
-//}
 
 static QScriptValue listToScriptValue(QScriptEngine* engine, const QList<QSharedPointer<RShape> >& cppValue);
 
@@ -181,9 +124,6 @@ static QScriptValue listToScriptValue(QScriptEngine* engine, const QList<T>& cpp
     return qScriptValueFromValue(engine, vl);
 }
 
-//template<>
-//static QScriptValue listToScriptValue<RGraphicsScene*>(QScriptEngine* engine, const QList<RGraphicsScene*>& cppValue);
-
 template<class T>
 static QScriptValue setToScriptValue(QScriptEngine* engine, const QSet<T>& cppValue) {
     QVariantList vl;
@@ -196,14 +136,6 @@ static QScriptValue setToScriptValue(QScriptEngine* engine, const QSet<T>& cppVa
     return qScriptValueFromValue(engine, vl);
 }
 
-/*
-static QScriptValue toScriptValue(QScriptEngine* engine, const QList<double>& cppValue);
-static QScriptValue toScriptValue(QScriptEngine* engine, const QList<RVector>& cppValue);
-static QScriptValue toScriptValue(QScriptEngine* engine, const QList<RSpline>& cppValue);
-static QScriptValue toScriptValue(QScriptEngine* engine, const QList<QKeySequence>& cppValue);
-static QScriptValue toScriptValue(QScriptEngine* engine, const QList<RGraphicsScene*>& cppValue);
-static QScriptValue toScriptValue(QScriptEngine* engine, const QList<RGraphicsView*>& cppValue);
-*/
 static QScriptValue toScriptValue(QScriptEngine* engine, RGraphicsView* cppValue);
 static QScriptValue toScriptValue(QScriptEngine* engine, RGraphicsScene* cppValue);
 static QScriptValue toScriptValue(QScriptEngine* engine, RSnapRestriction* cppValue);
@@ -308,30 +240,6 @@ static QScriptValue tryCast(QScriptEngine* engine, RSnapRestriction* cppValue) {
 static void fromScriptValue(QScriptEngine* engine, QScriptValue scriptValue, QList<QSharedPointer<RShape> >& cppValue);
 static QVariant toVariant(const QSharedPointer<RShape>& cppValue);
 
-/*
-template<class T>
-static void fromScriptValueSP(QScriptEngine* engine, QScriptValue scriptValue, QList<QSharedPointer<T> >& cppValue) {
-    QVariantList vl = engine->fromScriptValue<QVariantList>(scriptValue);
-    for (int i = 0; i < vl.size(); ++i) {
-        qDebug() << "fromScriptValueSP: " << i;
-        QSharedPointer<T> v = vl.at(i).value<QSharedPointer<T> >();
-        if (!v.isNull()) {
-            qDebug() << "fromScriptValueSP: shared pointer";
-            cppValue.append(v);
-        }
-        else {
-            qDebug() << "fromScriptValueSP: no shared pointer";
-            T* p = vl.at(i).value<T*>();
-            if (p!=NULL) {
-                qDebug() << "fromScriptValueSP: normal pointer";
-                QSharedPointer<T> q(p->clone());
-                cppValue.append(q);
-            }
-        }
-    }
-}
-*/
-
 template<class T> 
 static void fromScriptValue(QScriptEngine* engine, QScriptValue scriptValue, QList<T>& cppValue) {
     QVariantList vl = engine->fromScriptValue<QVariantList>(scriptValue);
@@ -360,7 +268,6 @@ static void shellFunctionEnd(const QString& name, QScriptEngine *engine);
 
 static void printStackTrace(QScriptContext* context);
 
-//static int shellFunctionCounter;
 };
 
 template<>

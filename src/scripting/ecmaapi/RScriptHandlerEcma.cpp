@@ -96,6 +96,7 @@
 #include "REcmaDimensionEntity.h"
 #include "REcmaDocument.h"
 #include "REcmaDocumentInterface.h"
+#include "REcmaDocumentVariables.h"
 #include "REcmaDockWidget.h"
 #include "REcmaDxfServices.h"
 #include "REcmaEllipse.h"
@@ -233,6 +234,7 @@
 #include "REcmaSharedPointerDimRadialEntity.h"
 #include "REcmaSharedPointerDimRotatedEntity.h"
 #include "REcmaSharedPointerDimensionEntity.h"
+#include "REcmaSharedPointerDocumentVariables.h"
 #include "REcmaSharedPointerEllipse.h"
 #include "REcmaSharedPointerEllipseEntity.h"
 #include "REcmaSharedPointerEntity.h"
@@ -635,6 +637,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaObject::initEcma(*engine);
     REcmaSharedPointerObject::initEcma(*engine);
+    REcmaDocumentVariables::initEcma(*engine);
+    REcmaSharedPointerDocumentVariables::initEcma(*engine);
     REcmaEntity::initEcma(*engine);
     REcmaSharedPointerEntity::initEcma(*engine);
     REcmaLayer::initEcma(*engine);
