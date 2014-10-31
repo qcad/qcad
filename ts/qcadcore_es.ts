@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>QObject</name>
     <message>
@@ -329,6 +329,29 @@ Otros...</translatorcomment>
     </message>
 </context>
 <context>
+    <name>RDocumentVariables</name>
+    <message>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
+        <source>Current Layer ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Drawing Unit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linetype Scale</source>
+        <translation type="unfinished">Escala de tipo de línea</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension Font</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>REntity</name>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+77"/>
@@ -571,14 +594,14 @@ Colores
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Por Capa</translatorcomment>
-        <translation type="vanished">Por Capa</translation>
+        <translation>Por Capa</translation>
     </message>
     <message>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Por Bloque</translatorcomment>
-        <translation type="vanished">Por Bloque</translation>
+        <translation>Por Bloque</translation>
     </message>
     <message>
         <source>Continuous</source>
@@ -586,7 +609,7 @@ Por Bloque</translatorcomment>
 --file: qcadguiqt_es.ts--
 Contínua
 CONTROL CONTINUADO</translatorcomment>
-        <translation type="vanished">Contínua</translation>
+        <translation>Contínua</translation>
     </message>
     <message>
         <source>Dot</source>
@@ -595,7 +618,7 @@ CONTROL CONTINUADO</translatorcomment>
 Puntos de cuad&amp;rícula:
 Puntos de cuad&amp;rícula
 Puntos de cuadrícula:</translatorcomment>
-        <translation type="vanished">Puntos</translation>
+        <translation>Puntos</translation>
     </message>
     <message>
         <source>Dot (small)</source>
@@ -603,7 +626,7 @@ Puntos de cuadrícula:</translatorcomment>
 --file: qcadguiqt_es.ts--
 Puntos juntos
 Punto raya (pequeña)</translatorcomment>
-        <translation type="vanished">Puntos (juntos)</translation>
+        <translation>Puntos (juntos)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
@@ -611,7 +634,7 @@ Punto raya (pequeña)</translatorcomment>
 --file: qcadguiqt_es.ts--
 Puntos separados
 Punto raya (grande)</translatorcomment>
-        <translation type="vanished">Puntos (separados)</translation>
+        <translation>Puntos (separados)</translation>
     </message>
     <message>
         <source>Dash</source>
@@ -619,21 +642,21 @@ Punto raya (grande)</translatorcomment>
 --file: qcadguiqt_es.ts--
 Raya
 Raya (pequeña)</translatorcomment>
-        <translation type="vanished">Raya</translation>
+        <translation>Raya</translation>
     </message>
     <message>
         <source>Dash (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Raya (pequeña)</translatorcomment>
-        <translation type="vanished">Raya (pequeña)</translation>
+        <translation>Raya (pequeña)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Raya (grande)</translatorcomment>
-        <translation type="vanished">Raya (grande)</translation>
+        <translation>Raya (grande)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
@@ -641,21 +664,21 @@ Raya (grande)</translatorcomment>
 --file: qcadguiqt_es.ts--
 Punto raya
 Punto raya (pequeña)</translatorcomment>
-        <translation type="vanished">Punto raya</translation>
+        <translation>Punto raya</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Punto raya (pequeña)</translatorcomment>
-        <translation type="vanished">Punto raya (pequeña)</translation>
+        <translation>Punto raya (pequeña)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Punto raya (grande)</translatorcomment>
-        <translation type="vanished">Punto raya (grande)</translation>
+        <translation>Punto raya (grande)</translation>
     </message>
     <message>
         <source>Divide</source>
@@ -663,21 +686,21 @@ Punto raya (grande)</translatorcomment>
 --file: Divide_es.ts--
 Raya 2 puntos
 Partir</translatorcomment>
-        <translation type="vanished">Partir</translation>
+        <translation>Partir</translation>
     </message>
     <message>
         <source>Divide (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Raya 2 puntos (pequeña)</translatorcomment>
-        <translation type="vanished">Raya 2 puntos (pequeña)</translation>
+        <translation>Raya 2 puntos (pequeña)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Raya 2 puntos (grande)</translatorcomment>
-        <translation type="vanished">Raya 2 puntos (grande)</translation>
+        <translation>Raya 2 puntos (grande)</translation>
     </message>
     <message>
         <source>Center</source>
@@ -685,21 +708,21 @@ Raya 2 puntos (grande)</translatorcomment>
 --file: es.po--
 Arco: centro, punto, ángulos
 &amp;Centro, Punto, Angulo</translatorcomment>
-        <translation type="vanished">Centro</translation>
+        <translation>Centro</translation>
     </message>
     <message>
         <source>Center (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Rayas larga corta (pequeño)</translatorcomment>
-        <translation type="vanished">Rayas larga corta (pequeño)</translation>
+        <translation>Rayas larga corta (pequeño)</translation>
     </message>
     <message>
         <source>Center (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Rayas larga corta (grande)</translatorcomment>
-        <translation type="vanished">Rayas larga corta (grande)</translation>
+        <translation>Rayas larga corta (grande)</translation>
     </message>
     <message>
         <source>Border</source>
@@ -707,24 +730,24 @@ Rayas larga corta (grande)</translatorcomment>
 --file: qtiplot_es.ts--
 Borde
 2 rayas 1 punto (pequeño)</translatorcomment>
-        <translation type="vanished">Borde</translation>
+        <translation>Borde</translation>
     </message>
     <message>
         <source>Border (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 2 rayas 1 punto (pequeño)</translatorcomment>
-        <translation type="vanished">2 rayas 1 punto (pequeño)</translation>
+        <translation>2 rayas 1 punto (pequeño)</translation>
     </message>
     <message>
         <source>Border (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 2 rayas 1 punto (grande)</translatorcomment>
-        <translation type="vanished">2 rayas 1 punto (grande)</translation>
+        <translation>2 rayas 1 punto (grande)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+86"/>
+        <location filename="../src/core/RLinetype.cpp" line="+48"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
@@ -732,6 +755,163 @@ Borde
         <location line="+1"/>
         <source>Description</source>
         <translation>Descripción</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Metric</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pattern</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RLinetypePattern</name>
+    <message>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+419"/>
+        <source>By Layer</source>
+        <translation>Por Capa</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>By Block</source>
+        <translation>Por Bloque</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Border</source>
+        <translation>Borde</translation>
+    </message>
+    <message>
+        <source>Border (2x)</source>
+        <translation>2 rayas 1 punto (2x)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Center</source>
+        <translation>Centro</translation>
+    </message>
+    <message>
+        <source>Center (2x)</source>
+        <translation>Rayas larga corta (2x)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Dash dot</source>
+        <translation>Punto raya</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Dashed</source>
+        <translation>Raya</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Divide</source>
+        <translation>Partir</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Dot</source>
+        <translation>Puntos</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Phantom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>ISO dash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO dash space</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO long-dash dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO long-dash double-dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO long-dash triple-dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO long-dash short-dash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO long-dash double-short-dash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO dash dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO double-dash dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO dash double-dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO double-dash double-dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO dash triple-dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO double-dash triple-dot</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

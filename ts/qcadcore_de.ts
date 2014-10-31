@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>QObject</name>
     <message>
@@ -212,6 +212,29 @@
     </message>
 </context>
 <context>
+    <name>RDocumentVariables</name>
+    <message>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
+        <source>Current Layer ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Drawing Unit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linetype Scale</source>
+        <translation type="unfinished">Linientypskalierung</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension Font</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>REntity</name>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+77"/>
@@ -395,90 +418,90 @@
     <name>RLinetype</name>
     <message>
         <source>By Layer</source>
-        <translation type="vanished">Von Layer</translation>
+        <translation>Von Layer</translation>
     </message>
     <message>
         <source>By Block</source>
-        <translation type="vanished">Von Block</translation>
+        <translation>Von Block</translation>
     </message>
     <message>
         <source>Continuous</source>
-        <translation type="vanished">Durchgehend</translation>
+        <translation>Durchgehend</translation>
     </message>
     <message>
         <source>Dot</source>
-        <translation type="vanished">Gepunktet</translation>
+        <translation>Gepunktet</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translation type="vanished">Gepunktet (klein)</translation>
+        <translation>Gepunktet (klein)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation type="vanished">Gepunktet (gross)</translation>
+        <translation>Gepunktet (gross)</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translation type="vanished">Gestrichelt</translation>
+        <translation>Gestrichelt</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translation type="vanished">Gestrichelt (klein)</translation>
+        <translation>Gestrichelt (klein)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation type="vanished">Gestrichelt (gross)</translation>
+        <translation>Gestrichelt (gross)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation type="vanished">Strich Punkt</translation>
+        <translation>Strich Punkt</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation type="vanished">Strich Punkt (klein)</translation>
+        <translation>Strich Punkt (klein)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation type="vanished">Strich Punkt (gross)</translation>
+        <translation>Strich Punkt (gross)</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translation type="vanished">Trennen</translation>
+        <translation>Trennen</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translation type="vanished">Trennung (klein)</translation>
+        <translation>Trennung (klein)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translation type="vanished">Trennung (gross)</translation>
+        <translation>Trennung (gross)</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="vanished">Zentrum</translation>
+        <translation>Zentrum</translation>
     </message>
     <message>
         <source>Center (small)</source>
-        <translation type="vanished">Mittellinie (klein)</translation>
+        <translation>Mittellinie (klein)</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translation type="vanished">Mittellinie (gross)</translation>
+        <translation>Mittellinie (gross)</translation>
     </message>
     <message>
         <source>Border</source>
-        <translation type="vanished">Rahmen</translation>
+        <translation>Rahmen</translation>
     </message>
     <message>
         <source>Border (small)</source>
-        <translation type="vanished">Rahmen (klein)</translation>
+        <translation>Rahmen (klein)</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translation type="vanished">Rahmen (gross)</translation>
+        <translation>Rahmen (gross)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+86"/>
+        <location filename="../src/core/RLinetype.cpp" line="+48"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
@@ -486,6 +509,163 @@
         <location line="+1"/>
         <source>Description</source>
         <translation>Beschreibung</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Metric</source>
+        <translation>Metrisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pattern</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RLinetypePattern</name>
+    <message>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+419"/>
+        <source>By Layer</source>
+        <translation>Von Layer</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>By Block</source>
+        <translation>Von Block</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Border</source>
+        <translation>Rahmen</translation>
+    </message>
+    <message>
+        <source>Border (2x)</source>
+        <translation>Rahmen (2x)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Center</source>
+        <translation>Zentrum</translation>
+    </message>
+    <message>
+        <source>Center (2x)</source>
+        <translation>Mittellinie (2x)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Dash dot</source>
+        <translation>Strich Punkt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Dashed</source>
+        <translation>Gestrichelt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Divide</source>
+        <translation>Trennen</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Dot</source>
+        <translation>Gepunktet</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Hidden</source>
+        <translation>Verborgen</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Phantom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>ISO dash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO dash space</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO long-dash dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO long-dash double-dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO long-dash triple-dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO long-dash short-dash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO long-dash double-short-dash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO dash dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO double-dash dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO dash double-dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO double-dash double-dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO dash triple-dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISO double-dash triple-dot</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
