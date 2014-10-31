@@ -106,8 +106,6 @@ void RDocument::init() {
 
     modelSpaceBlockId = getBlockId(RBlock::modelSpaceName);
 
-    transaction.end();
-
     // caching for faster operations:
     QSharedPointer<RLinetype> ltByLayer = queryLinetype("BYLAYER");
     if (!ltByLayer.isNull()) {
@@ -249,9 +247,10 @@ void RDocument::init() {
         if (RMainWindow::hasMainWindow()) {
             RMainWindow::getMainWindow()->notifyNewDocumentListeners(this, &transaction);
         }
-
-        storage.setModified(false);
     }
+
+    transaction.end();
+    storage.setModified(false);
 }
 
 void RDocument::initLinetypes(RTransaction* transaction) {
@@ -1608,10 +1607,12 @@ void RDocument::setModified(bool m) {
 }
 
 void RDocument::copyVariablesFrom(const RDocument& other) {
+    RTransaction transaction(storage, "Copy variables from other document", false);
+
     for (RS::KnownVariable kv=RS::ANGBASE; kv<=RS::MaxKnownVariable; kv=(RS::KnownVariable)(kv+1)) {
         QVariant otherKV = other.getKnownVariable(kv);
         if (otherKV.isValid()) {
-            setKnownVariable(kv, otherKV);
+            setKnownVariable(kv, otherKV, &transaction);
         }
     }
 
@@ -1624,7 +1625,9 @@ void RDocument::copyVariablesFrom(const RDocument& other) {
         }
     }
 
-    setDimensionFont(other.getDimensionFont());
+    setDimensionFont(other.getDimensionFont(), &transaction);
+
+    transaction.end();
 }
 
 RDocument& RDocument::getClipboard() {

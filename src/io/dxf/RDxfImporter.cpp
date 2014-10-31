@@ -99,19 +99,19 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
     textStyles.clear();
 
     // defaults, compatible with other DXF libraries:
-    document->setKnownVariable(RS::INSUNITS, RS::None);
-    document->setKnownVariable(RS::DIMASZ, 0.18);
-    document->setKnownVariable(RS::DIMAUNIT, 0);
-    document->setKnownVariable(RS::DIMAZIN, 0);
-    document->setKnownVariable(RS::DIMDEC, 4);
-    document->setKnownVariable(RS::DIMEXE, 0.18);
-    document->setKnownVariable(RS::DIMEXO, 0.0625);
-    document->setKnownVariable(RS::DIMGAP, 0.09);
-    document->setKnownVariable(RS::DIMLUNIT, 2);
-    document->setKnownVariable(RS::DIMTSZ, 0.0);
-    document->setKnownVariable(RS::DIMTXT, 0.18);
-    document->setKnownVariable(RS::DIMZIN, 0);
-    document->setKnownVariable(RS::LTSCALE, 1);
+    setKnownVariable(RS::INSUNITS, RS::None);
+    setKnownVariable(RS::DIMASZ, 0.18);
+    setKnownVariable(RS::DIMAUNIT, 0);
+    setKnownVariable(RS::DIMAZIN, 0);
+    setKnownVariable(RS::DIMDEC, 4);
+    setKnownVariable(RS::DIMEXE, 0.18);
+    setKnownVariable(RS::DIMEXO, 0.0625);
+    setKnownVariable(RS::DIMGAP, 0.09);
+    setKnownVariable(RS::DIMLUNIT, 2);
+    setKnownVariable(RS::DIMTSZ, 0.0);
+    setKnownVariable(RS::DIMTXT, 0.18);
+    setKnownVariable(RS::DIMZIN, 0);
+    setKnownVariable(RS::LTSCALE, 1);
 
     setCurrentBlockId(document->getModelSpaceBlockId());
 
@@ -1403,7 +1403,7 @@ void RDxfImporter::setVariableVector(const std::string& key,
 
     RS::KnownVariable v = dxfServices.stringToVariable(decode(key.c_str()));
     if (v!=RS::INVALID) {
-        document->setKnownVariable(v, RVector(v1, v2, v3));
+        setKnownVariable(v, RVector(v1, v2, v3));
     }
 }
 
@@ -1411,21 +1411,21 @@ void RDxfImporter::setVariableString(const std::string& key,
                                      const std::string& value, int code) {
     RS::KnownVariable v = dxfServices.stringToVariable(key.c_str());
     if (v!=RS::INVALID) {
-        document->setKnownVariable(v, value.c_str());
+        setKnownVariable(v, value.c_str());
     }
 }
 
 void RDxfImporter::setVariableInt(const std::string& key, int value, int code) {
     RS::KnownVariable v = dxfServices.stringToVariable(key.c_str());
     if (v!=RS::INVALID) {
-        document->setKnownVariable(v, value);
+        setKnownVariable(v, value);
     }
 }
 
 void RDxfImporter::setVariableDouble(const std::string& key, double value, int code) {
     RS::KnownVariable v = dxfServices.stringToVariable(key.c_str());
     if (v!=RS::INVALID) {
-        document->setKnownVariable(v, value);
+        setKnownVariable(v, value);
     }
 }
 

@@ -251,6 +251,9 @@ void RStorage::endDocumentVariablesTransaction(RTransaction* transaction, bool u
 
 RS::Unit RStorage::getUnit() const {
     QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
+    if (v.isNull()) {
+        return RS::None;
+    }
     return v->getUnit();
 }
 

@@ -363,12 +363,16 @@ QSet<REntity::Id> RMemoryStorage::queryViewEntities(RView::Id viewId) {
 
 QSharedPointer<RDocumentVariables> RMemoryStorage::queryDocumentVariables() const {
     if (documentVariables.isNull()) {
+        qWarning() << "RMemoryStorage::queryDocumentVariables: document variables is NULL";
         return QSharedPointer<RDocumentVariables>();
     }
     return QSharedPointer<RDocumentVariables>(documentVariables->clone());
 }
 
 QSharedPointer<RDocumentVariables> RMemoryStorage::queryDocumentVariablesDirect() const {
+    if (documentVariables.isNull()) {
+        qWarning() << "RMemoryStorage::queryDocumentVariablesDirect: document variables is NULL";
+    }
     return documentVariables;
 }
 

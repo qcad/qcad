@@ -430,7 +430,7 @@ bool RLinkedStorage::setUndoStatus(RObject::Id objectId, bool status) {
 }
 
 QVariant RLinkedStorage::getKnownVariable(RS::KnownVariable key) const {
-    if (knownVariables.contains(key)) {
+    if (documentVariables->hasKnownVariable(key)) {
         return RMemoryStorage::getKnownVariable(key);
     }
     return backStorage->getKnownVariable(key);

@@ -188,7 +188,7 @@ protected:
 
     QHash<QString, QVariant> variables;
     QMap<QString, QString> variableCaseMap;
-    QHash<RS::KnownVariable, QVariant> knownVariables;
+    //QHash<RS::KnownVariable, QVariant> knownVariables;
     //RS::Unit unit;
     //QString dimensionFont;
     //double linetypeScale;

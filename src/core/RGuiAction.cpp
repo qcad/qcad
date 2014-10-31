@@ -321,6 +321,7 @@ void RGuiAction::addToWidget(QWidget* w) {
             continue;
         }
         if (getSortOrder() >= 0 && getSortOrder() < a->getSortOrder()) {
+            // TODO: insert separator between two different sub-groups
             w->insertAction(a, this);
             return;
         }
