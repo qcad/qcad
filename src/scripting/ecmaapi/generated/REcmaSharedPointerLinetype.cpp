@@ -128,6 +128,14 @@
                 qScriptValueFromValue(&engine, RLinetype::PropertyDescription),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyMetric",
+                qScriptValueFromValue(&engine, RLinetype::PropertyMetric),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPattern",
+                qScriptValueFromValue(&engine, RLinetype::PropertyPattern),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     

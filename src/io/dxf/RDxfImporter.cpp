@@ -262,8 +262,8 @@ void RDxfImporter::addLinetype(const DL_LinetypeData& data) {
         }
     }
 
-    RLinetypePattern p(name, description, pattern);
-    RDxfServices::autoFixLinetypePattern(document->isMetric(), p);
+    RLinetypePattern p(document->isMetric(), name, description, pattern);
+    RDxfServices::autoFixLinetypePattern(p);
 
 //    for (int i = 0; i < numDashes; i++) {
 //        data.pattern[i] = pattern[i];

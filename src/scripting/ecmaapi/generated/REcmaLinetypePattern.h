@@ -70,7 +70,7 @@
         getLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getIcon
+        isMetric
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getPattern
@@ -110,6 +110,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         load
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        fixName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        initNameMap
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

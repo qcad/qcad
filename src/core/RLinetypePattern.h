@@ -25,15 +25,13 @@
 #include <stdarg.h>
 #include <math.h>
 
+#include <QCoreApplication>
 #include <QMetaType>
 #include <QString>
 #include <QPair>
 #include <QList>
 #include <QVector>
-//#include <QChar>
-//#include <QMap>
-//#include <QPainterPath>
-//#include <QSharedPointer>
+#include <QMap>
 
 
 /**
@@ -44,20 +42,22 @@
  * \copyable
  */
 class QCADCORE_EXPORT RLinetypePattern {
+    Q_DECLARE_TR_FUNCTIONS(RLinetypePattern);
+
 public:
     /**
      * \nonscriptable
      */
-    RLinetypePattern(const QString& name, const QString& description, int num...);
+    RLinetypePattern(bool metric, const QString& name, const QString& description, int num...);
 
-    RLinetypePattern(const QString& name, const QString& description, const QList<double>& dashes);
+    RLinetypePattern(bool metric, const QString& name, const QString& description, const QList<double>& dashes);
 
     void set(const QList<double>& dashes);
 
-    static QList<QPair<QString, RLinetypePattern*> > loadAllFrom(const QString& fileName);
+    static QList<QPair<QString, RLinetypePattern*> > loadAllFrom(bool metric, const QString& fileName);
 
     RLinetypePattern();
-    RLinetypePattern(const QString& name, const QString& description);
+    RLinetypePattern(bool metric, const QString& name, const QString& description);
     RLinetypePattern(const RLinetypePattern& other);
     ~RLinetypePattern();
 
@@ -69,8 +69,10 @@ public:
     void setDescription(const QString& d);
 
     QString getLabel() const;
+    bool isMetric() const {
+        return metric;
+    }
 
-    QIcon getIcon() const;
     QList<double> getPattern() const;
     double getPatternLength() const;
     double getDashLengthAt(int i) const;
@@ -80,7 +82,7 @@ public:
     bool isSymmetrical(int i) const;
     void scale(double factor);
 
-    QVector<qreal> getScreenBasedLinetype(bool metric=true);
+    QVector<qreal> getScreenBasedLinetype();
 
     RLinetypePattern& operator=(const RLinetypePattern& other);
     bool operator==(const RLinetypePattern& other) const;
@@ -88,13 +90,19 @@ public:
     bool isLoaded() { return true; }
     void load() {}
 
+    //static QString fixName(const QString& n);
+    static void initNameMap();
+
 public:
+    bool metric;
     QString name;
     QString description;
     QList<double> pattern;
 
     // internal info about segments at which the pattern is symmetrical:
     bool* symmetrical;
+
+    static QMap<QString, QString> nameMap;
 };
 
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RLinetypePattern& p);

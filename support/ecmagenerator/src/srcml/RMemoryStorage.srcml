@@ -2084,22 +2084,8 @@ dir="./core" filename="RMemoryStorage.h">
     </type>
     <name>variableCaseMap</name>
   </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QHash
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RS</name>::
-        <name>KnownVariable</name></name>
-      </argument>, 
-      <argument>
-        <name>QVariant</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>knownVariables</name>
-  </decl>;</decl_stmt>
+  <comment type="line">//QHash&lt;RS::KnownVariable, QVariant&gt;
+  knownVariables;</comment>
   <comment type="line">//RS::Unit unit;</comment>
   <comment type="line">//QString dimensionFont;</comment>
   <comment type="line">//double

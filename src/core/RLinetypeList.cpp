@@ -32,7 +32,7 @@ void RLinetypeList::init(bool metric, RResourceList<RLinetypePattern>& res) {
         QString fileName = linetypeFileList.at(i);
         QFileInfo fi(fileName);
 
-        QList<QPair<QString, RLinetypePattern*> > linetypes = RLinetypePattern::loadAllFrom(fi.absoluteFilePath());
+        QList<QPair<QString, RLinetypePattern*> > linetypes = RLinetypePattern::loadAllFrom(metric, fi.absoluteFilePath());
         for (int i=0; i<linetypes.size(); i++) {
             res.resMap.insert(linetypes[i].first, linetypes[i].second);
         }

@@ -113,7 +113,7 @@ public:
     static QString escapeUnicode(const QString& str);
     static QString parseUnicode(const QString& str);
 
-    static void autoFixLinetypePattern(bool metric, RLinetypePattern& pattern);
+    static void autoFixLinetypePattern(RLinetypePattern& pattern);
 
 private:
     bool qcad2GotDIMZIN;

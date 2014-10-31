@@ -143,5 +143,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyDescription" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyMetric" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyPattern" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
   </class>
 </unit>

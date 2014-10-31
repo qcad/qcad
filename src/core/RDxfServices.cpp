@@ -2180,17 +2180,19 @@ QString RDxfServices::parseUnicode(const QString& str) {
     return ret;
 }
 
-void RDxfServices::autoFixLinetypePattern(bool metric, RLinetypePattern& pattern) {
-    if (metric) {
-        return;
-    }
+void RDxfServices::autoFixLinetypePattern(RLinetypePattern& pattern) {
+//    if (metric) {
+//        return;
+//    }
 
     RLinetypePattern* pat = RLinetypeListImperial::get(pattern.name);
     if (pat==NULL) {
         return;
     }
 
+    // pattern appears to be metric even though it's in an imperial definition or drawing file:
     if (pattern.getPatternLength()>pat->getPatternLength()*(25.4/2)) {
-        pattern.scale(1/25.4);
+        //pattern.scale(1/25.4);
+        pattern.metric = true;
     }
 }

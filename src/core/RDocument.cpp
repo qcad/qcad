@@ -63,6 +63,9 @@ RDocument::RDocument(
 //}
 
 void RDocument::init() {
+    RS::Unit defaultUnit = (RS::Unit)RSettings::getValue("UnitSettings/Unit", RS::None).toInt();
+    bool metric = RUnit::isMetric(defaultUnit);
+
     RTransaction transaction(storage, "", false);
 
     RLinkedStorage* ls = dynamic_cast<RLinkedStorage*>(&storage);
@@ -76,10 +79,21 @@ void RDocument::init() {
 
     // add default line types if not already added (RLinkedStorage):
     if (!storageIsLinked && queryLinetype("BYLAYER").isNull()) {
-        transaction.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("BYLAYER", "By Layer"))));
-        transaction.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("BYBLOCK", "By Block"))));
-        transaction.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("Continuous", "Solid line"))));
-        //t.addObject(QSharedPointer<RLinetype>(new RLinetype(this, RLinetypePattern("MyDashed", "My Dashed Pattern", 2, 2.0, -2.0))));
+        transaction.addObject(
+            QSharedPointer<RLinetype>(
+                new RLinetype(this, RLinetypePattern(metric, "BYLAYER", "By Layer"))
+            )
+        );
+        transaction.addObject(
+            QSharedPointer<RLinetype>(
+                new RLinetype(this, RLinetypePattern(metric, "BYBLOCK", "By Block"))
+            )
+        );
+        transaction.addObject(
+            QSharedPointer<RLinetype>(
+                new RLinetype(this, RLinetypePattern(metric, "Continuous", "Solid line"))
+            )
+        );
     }
 
     // add default layer:
@@ -119,14 +133,12 @@ void RDocument::init() {
     if (!storageIsLinked) {
         setCurrentLayer("0", &transaction);
 
-        qDebug() << "current layer: " << queryCurrentLayer()->getName();
-
         setCurrentBlock(RBlock::modelSpaceName);
 
         setCurrentLinetype("BYLAYER");
 
         // default variables:
-        setUnit((RS::Unit)RSettings::getValue("UnitSettings/Unit", RS::None).toInt(), &transaction);
+        setUnit(defaultUnit, &transaction);
         setLinetypeScale(RSettings::getDoubleValue("LinetypeSettings/Scale", 1.0));
 
         setKnownVariable(RS::DIMTXT, RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5), &transaction);

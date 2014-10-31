@@ -18,12 +18,13 @@
  */
 #include "RLinetype.h"
 #include "RSettings.h"
+#include "RMetaTypes.h"
 
 
 RPropertyTypeId RLinetype::PropertyName;
 RPropertyTypeId RLinetype::PropertyDescription;
-//QList<QPair<QString, RLinetype> > RLinetype::list;
-//QMap<RLinetype, QIcon> RLinetype::iconMap;
+RPropertyTypeId RLinetype::PropertyMetric;
+RPropertyTypeId RLinetype::PropertyPattern;
 
 RLinetype::RLinetype(RDocument* document) : RObject(document) {
 }
@@ -43,48 +44,11 @@ bool RLinetype::operator!=(const RLinetype & linetype) const{
     return !operator ==(linetype);
 }
 
-//void RLinetype::init() {
-//    RLinetype::PropertyName.generateId(typeid(RLinetype), "", "Name");
-
-//    init(tr("By Layer"), RLinetype(NULL, "BYLAYER"));
-//    init(tr("By Block"), RLinetype(NULL, "BYBLOCK"));
-//    init(tr("Continuous"), RLinetype(NULL, "CONTINUOUS"));
-
-//    // set up linetypes
-//    RLinetypePatternMap::init();
-//}
-
-//void RLinetype::init(const QString& cn, const RLinetype& c) {
-//    list.append(QPair<QString, RLinetype> (cn, c));
-//    iconMap.insert(c, getIcon(c));
-//}
-
-//QList<QPair<QString, RLinetype> > RLinetype::getList(bool onlyFixed) {
-//    if (!onlyFixed) {
-//        return list;
-//    }
-
-//    QList<QPair<QString, RLinetype> > l = list;
-
-//    // remove "By Layer"
-//    l.removeAt(0);
-//    // remove "By Block"
-//    l.removeAt(0);
-
-////  // remove "By Layer"
-////  QString n = RLinetype(RLinetype::ByLayer).getName();
-////  l.removeAll(QPair<QString, RLinetype> (n, RLinetype(RLinetype::ByLayer)));
-////
-////  // remove "By Block"
-////  n = RLinetype(RLinetype::ByBlock).getName();
-////  l.removeAll(QPair<QString, RLinetype> (n, RLinetype(RLinetype::ByBlock)));
-
-//    return l;
-//}
-
 void RLinetype::init() {
     RLinetype::PropertyName.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Name"));
     RLinetype::PropertyDescription.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Description"));
+    RLinetype::PropertyMetric.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Metric"));
+    RLinetype::PropertyPattern.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Pattern"));
 }
 
 bool RLinetype::setProperty(RPropertyTypeId propertyTypeId,
@@ -94,7 +58,9 @@ bool RLinetype::setProperty(RPropertyTypeId propertyTypeId,
 
     bool ret = false;
     ret = RObject::setMember(pattern.name, value, PropertyName == propertyTypeId);
-//  ret = ret || RObject::setProperty(frozen, value, PropertyFrozen == propertyTypeId);
+    ret = RObject::setMember(pattern.description, value, PropertyDescription == propertyTypeId);
+    ret = RObject::setMember(pattern.metric, value, PropertyMetric == propertyTypeId);
+    ret = RObject::setMember(pattern.pattern, value, PropertyPattern == propertyTypeId);
     return ret;
 }
 
@@ -104,6 +70,17 @@ QPair<QVariant, RPropertyAttributes> RLinetype::getProperty(
 
     if (propertyTypeId == PropertyName) {
         return qMakePair(QVariant(pattern.name), RPropertyAttributes());
+    }
+    if (propertyTypeId == PropertyDescription) {
+        return qMakePair(QVariant(pattern.description), RPropertyAttributes());
+    }
+    if (propertyTypeId == PropertyMetric) {
+        return qMakePair(QVariant(pattern.metric), RPropertyAttributes());
+    }
+    if (propertyTypeId == PropertyPattern) {
+        QVariant v;
+        v.setValue(pattern.pattern);
+        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
     }
 
     return qMakePair(QVariant(), RPropertyAttributes());
@@ -117,18 +94,6 @@ bool RLinetype::isValid() const {
     return !pattern.name.isNull();
 }
 
-
-//QString RLinetype::getTitle(const RLinetype& linetype) {
-//    QListIterator<QPair<QString, RLinetype> > i(list);
-//    while (i.hasNext()) {
-//        QPair<QString, RLinetype> p = i.next();
-//        if (p.second == linetype) {
-//            return p.first;
-//        }
-//    }
-//    return "";
-//}
-
 RLinetypePattern RLinetype::getPattern() const {
     return pattern;
 }
@@ -136,83 +101,6 @@ RLinetypePattern RLinetype::getPattern() const {
 void RLinetype::setPattern(const RLinetypePattern& p) {
     pattern = p;
 }
-
-//QIcon RLinetype::getIcon(const RLinetype& linetype) {
-//    if (!RSettings::isGuiEnabled()) {
-//        return QIcon();
-//    }
-
-//    if (iconMap.contains(linetype)) {
-//        return iconMap[linetype];
-//    }
-
-//    if (linetype == RLinetype(NULL, "BYBLOCK")) {
-//        return QIcon(":/qcad/linetype_byblock.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "BYLAYER")) {
-//        return QIcon(":/qcad/linetype_bylayer.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "CONTINUOUS")) {
-//        return QIcon(":/qcad/linetype_continuous.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "DOT")) {
-//        return QIcon(":/qcad/linetype_dot.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "DOT2")) {
-//        return QIcon(":/qcad/linetype_dot2.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "DOTX2")) {
-//        return QIcon(":/qcad/linetype_dotx2.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "DASHED")) {
-//        return QIcon(":/qcad/linetype_dashed.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "DASHED2")) {
-//        return QIcon(":/qcad/linetype_dashed2.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "DASHEDX2")) {
-//        return QIcon(":/qcad/linetype_dashedx2.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "DASHDOT")) {
-//        return QIcon(":/qcad/linetype_dashdot.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "DASHDOT2")) {
-//        return QIcon(":/qcad/linetype_dashdot2.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "DASHDOTX2")) {
-//        return QIcon(":/qcad/linetype_dashdotx2.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "DIVIDE")) {
-//        return QIcon(":/qcad/linetype_divide.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "DIVIDE2")) {
-//        return QIcon(":/qcad/linetype_divide2.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "DIVIDEX2")) {
-//        return QIcon(":/qcad/linetype_dividex2.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "CENTER")) {
-//        return QIcon(":/qcad/linetype_center.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "CENTER2")) {
-//        return QIcon(":/qcad/linetype_center2.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "CENTERX2")) {
-//        return QIcon(":/qcad/linetype_centerx2.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "BORDER")) {
-//        return QIcon(":/qcad/linetype_border.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "BORDER2")) {
-//        return QIcon(":/qcad/linetype_border2.svg");
-//    }
-//    if (linetype == RLinetype(NULL, "BORDERX2")) {
-//        return QIcon(":/qcad/linetype_borderx2.svg");
-//    }
-
-//    // return default bylayer
-//    return QIcon(":/qcad/linetype_bylayer.svg");
-//}
 
 bool RLinetype::operator<(const RLinetype & linetype) const {
     return getName().toLower() < linetype.getName().toLower();

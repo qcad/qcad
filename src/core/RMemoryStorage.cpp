@@ -865,7 +865,7 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
         return false;
     }
 
-    qDebug() << "saveObject: " << *object;
+    //qDebug() << "saveObject: " << *object;
 
     // never allow two layers with identical names, update layer instead:
     QSharedPointer<RLayer> layer = object.dynamicCast<RLayer>();

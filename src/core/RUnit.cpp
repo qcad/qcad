@@ -469,17 +469,25 @@ QString RUnit::formatEngineering(double length, RS::Unit unit,
                                  bool /*showLeadingZeroes*/, bool /*showTrailingZeroes*/,
                                  bool /*onlyPreciseResult*/) {
 
-    if (unit!=RS::Inch) {
+    if (unit!=RS::Inch && unit!=RS::Foot) {
         qWarning() << "RUnit::formatEngineering:"
-                   << "Unit must be set to 'Inch' for engineering format";
+                   << "Unit must be set to 'Inch' or 'Foot' for engineering format";
         return "";
     }
 
     QString ret;
 
-    bool sign = (length<0.0);
-    int feet = (int)floor(fabs(length)/12);
-    double inches = fabs(length) - feet*12;
+    double lengthInch;
+    if (unit==RS::Foot) {
+        lengthInch = length * 12;
+    }
+    else {
+        lengthInch = length;
+    }
+
+    bool sign = (lengthInch<0.0);
+    int feet = (int)floor(fabs(lengthInch)/12);
+    double inches = fabs(lengthInch) - feet*12;
 
     QString sInches = doubleToString(inches, prec);
 
@@ -514,17 +522,26 @@ QString RUnit::formatArchitectural(double length, RS::Unit unit,
                                    int prec, bool showUnit,
                                    bool /*showLeadingZeroes*/, bool /*showTrailingZeroes*/,
                                    bool /*onlyPreciseResult*/) {
-    if (unit!=RS::Inch) {
+    if (unit!=RS::Inch && unit!=RS::Foot) {
         qWarning() << "RUnit::formatArchitectural:"
                    << "Unit must be set to 'Inch' for architectural format";
         return "";
     }
 
     QString ret;
-    bool neg = (length<0.0);
 
-    int feet = (int)floor(fabs(length)/12);
-    double inches = fabs(length) - feet*12;
+    double lengthInch;
+    if (unit==RS::Foot) {
+        lengthInch = length * 12;
+    }
+    else {
+        lengthInch = length;
+    }
+
+    bool neg = (lengthInch<0.0);
+
+    int feet = (int)floor(fabs(lengthInch)/12);
+    double inches = fabs(lengthInch) - feet*12;
 
     QString sInches = formatFractional(inches, RS::Inch, prec, showUnit);
 

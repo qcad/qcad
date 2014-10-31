@@ -31,6 +31,9 @@ dir="./core" filename="RLinetypePattern.h">
   <cpp:file>&lt;math.h&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QCoreApplication&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -44,10 +47,9 @@ dir="./core" filename="RLinetypePattern.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QVector&gt;</cpp:file></cpp:include>
-  <comment type="line">//#include &lt;QChar&gt;</comment>
-  <comment type="line">//#include &lt;QMap&gt;</comment>
-  <comment type="line">//#include &lt;QPainterPath&gt;</comment>
-  <comment type="line">//#include &lt;QSharedPointer&gt;</comment>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
   <comment type="block">/** * Represents a linetype pattern which
   can be used to draw * dashed graphical elements. * * \scriptable
   * \copyable */</comment>
@@ -57,12 +59,24 @@ dir="./core" filename="RLinetypePattern.h">
   </macro>
   <name>RLinetypePattern</name>
   <block>{
-  <private type="default"></private>
+  <private type="default">
+    <constructor_decl>
+    <name>Q_DECLARE_TR_FUNCTIONS</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>RLinetypePattern</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</constructor_decl>
+  </private>
   <public>public: 
   <comment type="block">/** * \nonscriptable */</comment>
   <macro>
     <name>RLinetypePattern</name>
     <argument_list>(
+    <argument>bool metric</argument>, 
     <argument>const QString&amp; name</argument>, 
     <argument>const QString&amp; description</argument>, 
     <argument>int num...</argument>)</argument_list>
@@ -70,6 +84,14 @@ dir="./core" filename="RLinetypePattern.h">
   <constructor_decl>
   <name>RLinetypePattern</name>
   <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>metric</name>
+    </decl>
+  </param>, 
   <param>
     <decl>
       <type>
@@ -137,6 +159,14 @@ dir="./core" filename="RLinetypePattern.h">
   <param>
     <decl>
       <type>
+        <name>bool</name>
+      </type>
+      <name>metric</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
       <name>const</name>
       <name>QString</name>&amp;</type>
       <name>fileName</name>
@@ -148,6 +178,14 @@ dir="./core" filename="RLinetypePattern.h">
   <constructor_decl>
   <name>RLinetypePattern</name>
   <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>metric</name>
+    </decl>
+  </param>, 
   <param>
     <decl>
       <type>
@@ -241,13 +279,19 @@ dir="./core" filename="RLinetypePattern.h">
   <name>getLabel</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QIcon</name>
-  </type>
-  <name>getIcon</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>isMetric</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>metric</name>
+    </expr>;</return>}</block>
+  </function>
   <function_decl>
   <type>
     <name>QList
@@ -356,19 +400,7 @@ dir="./core" filename="RLinetypePattern.h">
     </argument>&gt;</argument_list></name>
   </type>
   <name>getScreenBasedLinetype</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>metric</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
   <name>RLinetypePattern</name>&amp;</type>
@@ -416,8 +448,37 @@ dir="./core" filename="RLinetypePattern.h">
     <name>load</name>
     <parameter_list>()</parameter_list>
     <block>{}</block>
-  </function></public>
+  </function>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QString</name>
+  </type>
+  <name>fixName</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>n</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>initNameMap</name>
+  <parameter_list>()</parameter_list>;</function_decl></public>
   <public>public: 
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>metric</name>
+  </decl>;</decl_stmt>
   <decl_stmt>
   <decl>
     <type>
@@ -450,6 +511,21 @@ dir="./core" filename="RLinetypePattern.h">
     <type>
     <name>bool</name>*</type>
     <name>symmetrical</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>QString</name>
+      </argument>, 
+      <argument>
+        <name>QString</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>nameMap</name>
   </decl>;</decl_stmt></public>}</block>;</class>
   <function_decl>
   <type>

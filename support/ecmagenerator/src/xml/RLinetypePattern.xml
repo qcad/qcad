@@ -7,6 +7,8 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasStreamOperator="true" isAbstract="false" isScriptable="true">
     <constructor>
       <variant>
+        <arg type="bool" typeName="bool" name="metric"
+        isConst="false" />
         <arg type="QString &amp;" typeName="QString" name="name"
         isConst="true" />
         <arg type="QString &amp;" typeName="QString"
@@ -17,6 +19,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
       <variant />
       <variant>
+        <arg type="bool" typeName="bool" name="metric"
+        isConst="false" />
         <arg type="QString &amp;" typeName="QString" name="name"
         isConst="true" />
         <arg type="QString &amp;" typeName="QString"
@@ -40,6 +44,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QList &lt; QPair &lt; QString , RLinetypePattern * &gt; &gt;"
       isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="metric"
+        isConst="false" />
         <arg type="QString &amp;" typeName="QString"
         name="fileName" isConst="true" />
       </variant>
@@ -81,9 +87,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
-    <method name="getIcon" cppName="getIcon" specifier="public"
+    <method name="isMetric" cppName="isMetric" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QIcon" isPureVirtual="false" />
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="getPattern" cppName="getPattern"
     specifier="public" isStatic="false" isVirtual="false"
@@ -140,10 +146,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="getScreenBasedLinetype" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QVector &lt; qreal &gt;"
-      isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="metric"
-        hasDefault="true" default=" true" isConst="false" />
-      </variant>
+      isPureVirtual="false" />
     </method>
     <method name="operator=" cppName="operator=" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -169,5 +172,20 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="fixName" cppName="fixName" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="n"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="initNameMap" cppName="initNameMap"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <property name="nameMap"
+    type="QMap &lt; QString , QString &gt;" isConst="false"
+    isStatic="true" />
   </class>
 </unit>

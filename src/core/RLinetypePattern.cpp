@@ -16,14 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QIcon>
+#include <QMap>
 
 #include "RLinetypePattern.h"
 #include "RMath.h"
 #include "RDebug.h"
 
-RLinetypePattern::RLinetypePattern(const QString& name, const QString& description, int num...)
-    : name(name), description(description), symmetrical(NULL) {
+QMap<QString, QString> RLinetypePattern::nameMap;
+
+
+RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QString& description, int num...)
+    : metric(metric), name(name), description(description), symmetrical(NULL) {
 
     QList<double> dashes;
 
@@ -37,18 +40,18 @@ RLinetypePattern::RLinetypePattern(const QString& name, const QString& descripti
     set(dashes);
 }
 
-RLinetypePattern::RLinetypePattern(const QString& name, const QString& description, const QList<double>& dashes)
-    : name(name), description(description), symmetrical(NULL) {
+RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QString& description, const QList<double>& dashes)
+    : metric(metric), name(name), description(description), symmetrical(NULL) {
 
     set(dashes);
 }
 
 RLinetypePattern::RLinetypePattern() :
-    symmetrical(NULL) {
+    metric(true), symmetrical(NULL) {
 }
 
-RLinetypePattern::RLinetypePattern(const QString& name, const QString& description) :
-    name(name), description(description), symmetrical(NULL) {
+RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QString& description) :
+    metric(metric), name(name), description(description), symmetrical(NULL) {
 }
 
 RLinetypePattern::RLinetypePattern(const RLinetypePattern& other) :
@@ -116,6 +119,7 @@ RLinetypePattern& RLinetypePattern::operator=(const RLinetypePattern& other) {
         pattern.clear();
         symmetrical = NULL;
     }
+    metric = other.metric;
     name = other.name;
     description = other.description;
     return *this;
@@ -126,6 +130,9 @@ bool RLinetypePattern::operator==(const RLinetypePattern& other) const {
         return false;
     }
     if (name.toLower()!=other.name.toLower()) {
+        return false;
+    }
+    if (metric!=other.metric) {
         return false;
     }
 
@@ -151,7 +158,7 @@ void RLinetypePattern::scale(double factor) {
  * \return Line pattern that can be used for a QPen to render screen
  * optimized patterns. Empty vector for continuous.
  */
-QVector<qreal> RLinetypePattern::getScreenBasedLinetype(bool metric) {
+QVector<qreal> RLinetypePattern::getScreenBasedLinetype() {
     QVector<qreal> ret;
 
     if (pattern.length()>1) {
@@ -239,9 +246,9 @@ void RLinetypePattern::setDescription(const QString& d) {
 }
 
 QString RLinetypePattern::getLabel() const {
-    if (description.isEmpty()) {
-        return name;
-    }
+//    if (description.isEmpty()) {
+//        return name;
+//    }
 
 //    else {
 //        return name + " - " + description;
@@ -259,27 +266,55 @@ QString RLinetypePattern::getLabel() const {
 //    }
     QString desc = description;
     QString preview;
-    int k = description.lastIndexOf(QRegExp("[^_\\. ]"));
-    if (k!=-1) {
-        desc = description.mid(0, k+1);
-        preview = description.mid(k+1);
-        //prev.replace('.', QChar(0x00B7));
-        //prev.replace('_', QChar(0x2014));
+    if (!description.isEmpty()) {
+        int k = description.lastIndexOf(QRegExp("[^_\\. ]"));
+        if (k!=-1) {
+            desc = description.mid(0, k+1);
+            preview = description.mid(k+1);
+            //prev.replace('.', QChar(0x00B7));
+            //prev.replace('_', QChar(0x2014));
+        }
+        else {
+            preview = desc;
+            desc = "";
+        }
     }
 
-//    qDebug() << "desc: " << desc;
-//    qDebug() << "preview: " << preview;
+    //qDebug() << "desc: " << desc;
+    //qDebug() << "preview: " << preview;
 
-    if (desc.isEmpty()) {
-        return name;
+//    if (desc.isEmpty()) {
+//        return fixName(name);
+//    }
+
+//    return fixName(desc);
+
+    if (nameMap.isEmpty()) {
+        initNameMap();
     }
 
-    return desc;
-}
+    QString nameUpper = name.toUpper();
+    if (nameMap.contains(nameUpper)) {
+        return nameMap.value(nameUpper);
+    }
 
-QIcon RLinetypePattern::getIcon() const {
-    // TODO:
-    return QIcon();
+//    if (nameUpper.endsWith(" (2x)")) {
+//        QString nx2 = nameUpper+"X2";
+//        nx2.replace(" ", "");
+//        if (nameMap.contains(nx2)) {
+//            return nameMap.value(nx2);
+//        }
+//    }
+
+//    if (nameUpper.endsWith(" (.5x)")) {
+//        QString n2 = nameUpper+"2";
+//        n2.replace(" ", "");
+//        if (nameMap.contains(n2)) {
+//            return nameMap.value(n2);
+//        }
+//    }
+
+    return name;
 }
 
 QList<double> RLinetypePattern::getPattern() const {
@@ -314,7 +349,7 @@ double RLinetypePattern::getLargestGap() const {
 /**
  * Loads all linetype patterns in the given file into memory.
  */
-QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(const QString& fileName) {
+QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool metric, const QString& fileName) {
     qDebug() << "loading patterns from file: " << fileName;
     QList<QPair<QString, RLinetypePattern*> > ret;
 
@@ -355,7 +390,13 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(const QS
             rx.indexIn(line);
             QString name = rx.cap(1);
             QString description = rx.cap(2);
-            ltpattern = new RLinetypePattern(name, description);
+            ltpattern = new RLinetypePattern(metric, name, description);
+
+            // some patterns in the imperial pattern file are actually metric:
+            if (!metric && name.toUpper().startsWith("ACAD_ISO")) {
+                ltpattern->metric = true;
+            }
+
             ret.append(qMakePair(name, ltpattern));
             continue;
         }
@@ -380,25 +421,6 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(const QS
             }
 
             if (dashes.count() > 0) {
-//                for (int i = 0; i < dashes.count(); i++) {
-//                    if (dashes.at(i) == 0) {
-//                        // subtract half of 0.1 (0.05) from previous space
-//                        // and following space (if any)
-//                        // The spaces are negative numbers so we add 0.05
-//                        if (i == 0) {
-//                            dashes.replace(i, 0.1);
-//                            dashes.replace(i + 1, dashes.at(i + 1) + 0.1);
-//                        } else if (i > 0 && i < dashes.count() - 1) {
-//                            dashes.replace(i - 1, dashes.at(i - 1) + 0.05);
-//                            dashes.replace(i, 0.1);
-//                            dashes.replace(i + 1, dashes.at(i + 1) + 0.05);
-//                        } else if (i == dashes.count() - 1) {
-//                            dashes.replace(i - 1, dashes.at(i - 1) + 0.1);
-//                            dashes.replace(i, 0.1);
-//                        }
-
-//                    }
-//                }
                 ltpattern->set(dashes);
             }
         }
@@ -407,12 +429,96 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(const QS
     return ret;
 }
 
+//QString RLinetypePattern::fixName(const QString& name) {
+//    if (nameMap.isEmpty()) {
+//        initNameMap();
+//    }
+
+//    QString n = name.toUpper();
+//    if (nameMap.contains(n)) {
+//        return nameMap.value(n);
+//    }
+
+//    if (n.endsWith(" (2x)")) {
+//        QString nx2 = n+"X2";
+//        nx2.replace(" ", "");
+//        if (nameMap.contains(nx2)) {
+//            return nameMap.value(nx2);
+//        }
+//    }
+
+//    if (n.endsWith(" (.5x)")) {
+//        QString n2 = n+"2";
+//        n2.replace(" ", "");
+//        if (nameMap.contains(n2)) {
+//            return nameMap.value(n2);
+//        }
+//    }
+
+//    return name;
+//}
+
+void RLinetypePattern::initNameMap() {
+    nameMap.insert("BYLAYER", tr("By Layer"));
+    nameMap.insert("BYBLOCK", tr("By Block"));
+
+    nameMap.insert("BORDER", tr("Border"));
+    nameMap.insert("BORDER2", tr("Border") + " (.5x)");
+    nameMap.insert("BORDERX2", tr("Border") + " (2x)");
+
+    nameMap.insert("CENTER", tr("Center"));
+    nameMap.insert("CENTER2", tr("Center") + " (.5x)");
+    nameMap.insert("CENTERX2", tr("Center") + " (2x)");
+
+    nameMap.insert("DASHDOT", tr("Dash dot"));
+    nameMap.insert("DASHDOT2", tr("Dash dot") + " (.5x)");
+    nameMap.insert("DASHDOTX2", tr("Dash dot") + " (2x)");
+
+    nameMap.insert("DASHED", tr("Dashed"));
+    nameMap.insert("DASHED2", tr("Dashed") + " (.5x)");
+    nameMap.insert("DASHEDX2", tr("Dashed") + " (2x)");
+
+    nameMap.insert("DIVIDE", tr("Divide"));
+    nameMap.insert("DIVIDE2", tr("Divide") + " (.5x)");
+    nameMap.insert("DIVIDEX2", tr("Divide") + " (2x)");
+
+    nameMap.insert("DOT", tr("Dot"));
+    nameMap.insert("DOT2", tr("Dot") + " (.5x)");
+    nameMap.insert("DOTX2", tr("Dot") + " (2x)");
+
+    nameMap.insert("HIDDEN", tr("Hidden"));
+    nameMap.insert("HIDDEN2", tr("Hidden") + " (.5x)");
+    nameMap.insert("HIDDENX2", tr("Hidden") + " (2x)");
+
+    nameMap.insert("PHANTOM", tr("Phantom"));
+    nameMap.insert("PHANTOM2", tr("Phantom") + " (.5x)");
+    nameMap.insert("PHANTOMX2", tr("Phantom") + " (2x)");
+
+    nameMap.insert("ACADISO02W100", tr("ISO dash"));
+    nameMap.insert("ACADISO03W100", tr("ISO dash space"));
+    nameMap.insert("ACADISO04W100", tr("ISO long-dash dot"));
+    nameMap.insert("ACADISO05W100", tr("ISO long-dash double-dot"));
+    nameMap.insert("ACADISO06W100", tr("ISO long-dash triple-dot"));
+    nameMap.insert("ACADISO07W100", tr("ISO dot"));
+    nameMap.insert("ACADISO08W100", tr("ISO long-dash short-dash"));
+    nameMap.insert("ACADISO09W100", tr("ISO long-dash double-short-dash"));
+    nameMap.insert("ACADISO10W100", tr("ISO dash dot"));
+    nameMap.insert("ACADISO11W100", tr("ISO double-dash dot"));
+    nameMap.insert("ACADISO12W100", tr("ISO dash double-dot"));
+    nameMap.insert("ACADISO13W100", tr("ISO double-dash double-dot"));
+    nameMap.insert("ACADISO14W100", tr("ISO dash triple-dot"));
+    nameMap.insert("ACADISO15W100", tr("ISO double-dash triple-dot"));
+}
 
 /**
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, const RLinetypePattern& p) {
-    dbg.nospace() << "RLinetypePattern(" << p.getName() << ", " << p.getDescription() << ", " << p.getPatternLength() << ", ";
+    dbg.nospace() << "RLinetypePattern("
+    << (p.isMetric() ? "metric" : "imperial")
+    << ", " << p.getName()
+    << ", " << p.getDescription()
+    << ", " << p.getPatternLength() << ", ";
     for (int i=0;i<p.getNumDashes();++i) {
         if (i!=0) {
             dbg.nospace() << ",";

@@ -28,9 +28,6 @@ RLinetypeCombo::RLinetypeCombo(QWidget* parent) :
     QComboBox(parent), onlyFixed(false) {
     setIconSize(QSize(32, 16));
 
-    //init();
-
-    //model()->setData()
     setItemDelegate(new RLinetypeComboDelegate(this));
 
     view()->setAlternatingRowColors(true);
@@ -74,7 +71,7 @@ void RLinetypeCombo::reinit() {
         }
 
         v.setValue<RLinetypePattern>(p);
-        addItem(p.getIcon(), p.getLabel(), v);
+        addItem(p.getLabel(), v);
     }
 
     if (!onlyFixed) {
@@ -86,6 +83,11 @@ void RLinetypeCombo::reinit() {
     for (int i=0; i<count(); i++) {
         setItemData(i, Qt::AlignTop, Qt::TextAlignmentRole);
     }
+
+//    RLinetypeComboDelegate* d = dynamic_cast<RLinetypeComboDelegate*>(itemDelegate());
+//    if (d!=NULL) {
+//        d->setMetric(doc);
+//    }
 }
 
 RLinetypePattern RLinetypeCombo::getLinetypePattern() {

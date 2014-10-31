@@ -54,6 +54,8 @@ class QCADCORE_EXPORT RLinetype: public RObject {
 public:
     static RPropertyTypeId PropertyName;
     static RPropertyTypeId PropertyDescription;
+    static RPropertyTypeId PropertyMetric;
+    static RPropertyTypeId PropertyPattern;
 
 public:
     RLinetype(RDocument* document=NULL);
@@ -89,8 +91,6 @@ public:
 
     bool isValid() const;
 
-    //static QList<QPair<QString, RLinetype> > getList(bool onlyFixed = false);
-
     virtual QPair<QVariant, RPropertyAttributes> getProperty(
             RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
@@ -102,28 +102,14 @@ public:
     RLinetypePattern getPattern() const;
     void setPattern(const RLinetypePattern& p);
 
-//    static QIcon getIcon(const RLinetype& linetype);
-//  static QString getTitle(const RLinetype& linetype);
-
     bool operator==(const RLinetype & linetype) const;
     bool operator!=(const RLinetype & linetype) const;
     bool operator<(const RLinetype & linetype) const;
 
     virtual void print(QDebug dbg) const;
 
-//private:
-//    static void init(const QString& cn, const RLinetype& c);
-
 private:
     RLinetypePattern pattern;
-    //QString name;
-    //QString description;
-    //int flags;
-    //int numberOfDashes;
-    //double patternLength;
-    //double* pattern;
-    //static QList<QPair<QString, RLinetype> > list;
-    //static QMap<RLinetype, QIcon> iconMap;
 };
 
 Q_DECLARE_METATYPE(RLinetype)

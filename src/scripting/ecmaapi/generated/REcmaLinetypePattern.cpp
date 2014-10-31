@@ -66,7 +66,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLabel, "getLabel");
             
-            REcmaHelper::registerFunction(&engine, proto, getIcon, "getIcon");
+            REcmaHelper::registerFunction(&engine, proto, isMetric, "isMetric");
             
             REcmaHelper::registerFunction(&engine, proto, getPattern, "getPattern");
             
@@ -110,9 +110,17 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, loadAllFrom, "loadAllFrom");
             
+            REcmaHelper::registerFunction(&engine, &ctor, fixName, "fixName");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, initNameMap, "initNameMap");
+            
 
     // static properties:
     
+            ctor.setProperty("nameMap",
+                qScriptValueFromValue(&engine, RLinetypePattern::nameMap),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     
@@ -144,13 +152,13 @@
             // generate constructor variants:
             
     if( context->argumentCount() ==
-        3
+        4
                 && (
                 
                         context->argument(
                         0
-                        ).isString()
-                ) /* type: QString */
+                        ).isBool()
+                ) /* type: bool */
             
                 && (
                 
@@ -163,6 +171,13 @@
                 
                         context->argument(
                         2
+                        ).isString()
+                ) /* type: QString */
+            
+                && (
+                
+                        context->argument(
+                        3
                         ).isArray()
                 ) /* type: QList < double > */
             
@@ -170,12 +185,12 @@
     // prepare arguments:
     
                     // argument isStandardType
-                    QString
+                    bool
                     a0 =
-                    (QString)
+                    (bool)
                     
                     context->argument( 0 ).
-                    toString();
+                    toBool();
                 
                     // argument isStandardType
                     QString
@@ -185,13 +200,21 @@
                     context->argument( 1 ).
                     toString();
                 
+                    // argument isStandardType
+                    QString
+                    a2 =
+                    (QString)
+                    
+                    context->argument( 2 ).
+                    toString();
+                
                     // argument isArray
                     QList < double >
-                    a2;
+                    a3;
                     REcmaHelper::fromScriptValue(
                         engine,
-                        context->argument(2),
-                        a2
+                        context->argument(3),
+                        a3
                     );
                 
     // end of arguments
@@ -206,6 +229,8 @@
     a1
         ,
     a2
+        ,
+    a3
                     );
                 
             result = engine->newVariant(
@@ -232,13 +257,13 @@
     } else 
 
     if( context->argumentCount() ==
-        2
+        3
                 && (
                 
                         context->argument(
                         0
-                        ).isString()
-                ) /* type: QString */
+                        ).isBool()
+                ) /* type: bool */
             
                 && (
                 
@@ -247,16 +272,23 @@
                         ).isString()
                 ) /* type: QString */
             
+                && (
+                
+                        context->argument(
+                        2
+                        ).isString()
+                ) /* type: QString */
+            
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    QString
+                    bool
                     a0 =
-                    (QString)
+                    (bool)
                     
                     context->argument( 0 ).
-                    toString();
+                    toBool();
                 
                     // argument isStandardType
                     QString
@@ -264,6 +296,14 @@
                     (QString)
                     
                     context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a2 =
+                    (QString)
+                    
+                    context->argument( 2 ).
                     toString();
                 
     // end of arguments
@@ -276,6 +316,8 @@
                     a0
         ,
     a1
+        ,
+    a2
                     );
                 
             result = engine->newVariant(
@@ -443,19 +485,30 @@
             
     
     if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isString()
+    2 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(1).isString()
         ) /* type: QString */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    QString
+                    bool
                     a0 =
-                    (QString)
+                    (bool)
                     
                     context->argument( 0 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
                     toString();
                 
     // end of arguments
@@ -464,7 +517,9 @@
     // return type 'QList < QPair < QString , RLinetypePattern * > >'
     QList < QPair < QString , RLinetypePattern * > > cppResult =
         RLinetypePattern::
-       loadAllFrom(a0);
+       loadAllFrom(a0
+        ,
+    a1);
         // return type: QList < QPair < QString , RLinetypePattern * > >
                 // List of Pairs of ...:
                 result = REcmaHelper::pairListToScriptValue(engine, cppResult);
@@ -836,19 +891,19 @@
             return result;
         }
          QScriptValue
-        REcmaLinetypePattern::getIcon
+        REcmaLinetypePattern::isMetric
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLinetypePattern::getIcon", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::getIcon";
+            //REcmaHelper::functionStart("REcmaLinetypePattern::isMetric", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::isMetric";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RLinetypePattern* self = 
-                        getSelf("getIcon", context);
+                        getSelf("isMetric", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -865,23 +920,23 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QIcon'
-    QIcon cppResult =
+    // return type 'bool'
+    bool cppResult =
         
-               self->getIcon();
-        // return type: QIcon
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+               self->isMetric();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
             
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.getIcon().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.isMetric().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLinetypePattern::getIcon", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::isMetric", context, engine);
             return result;
         }
          QScriptValue
@@ -1368,38 +1423,6 @@
 
 
         
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QVector < qreal >'
-    QVector < qreal > cppResult =
-        
-               self->getScreenBasedLinetype(a0);
-        // return type: QVector < qreal >
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.getScreenBasedLinetype().",
                    context);
@@ -1643,6 +1666,90 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinetypePattern::load", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::fixName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::fixName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::fixName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RLinetypePattern::
+       fixName(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.fixName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::fixName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::initNameMap
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::initNameMap", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::initNameMap";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RLinetypePattern::
+       initNameMap();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.initNameMap().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::initNameMap", context, engine);
             return result;
         }
          QScriptValue REcmaLinetypePattern::toString
