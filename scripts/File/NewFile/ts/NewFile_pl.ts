@@ -82,7 +82,7 @@ Nie można otworzyć pliku %1! Zostaje on opuszczony</translatorcomment>
         <translation type="unfinished">Untitled</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>read-only</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -92,7 +92,7 @@ Tylko do odczytu</translatorcomment>
         <translation type="unfinished">Tylko do odczytu</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+48"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Czy chcesz zapisać zmiany wprowadzone w &lt;br&gt; dokument?&apos;&amp;#39;</translation>

@@ -14,7 +14,7 @@
         <translation>Preferenze Disegno</translation>
     </message>
     <message>
-        <location line="+241"/>
+        <location line="+247"/>
         <source>Restart required</source>
         <translation>Riavvio richiesto</translation>
     </message>

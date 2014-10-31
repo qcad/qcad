@@ -4,7 +4,7 @@
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../CadToolBar.js" line="+49"/>
+        <location filename="../CadToolBar.js" line="+51"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -14,9 +14,13 @@
         <translation>CADツールバー</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+34"/>
+        <source>Vertical/Horizontal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Toggle Title Bar</source>
-        <translation>タイトルバー切り替え</translation>
+        <translation type="vanished">タイトルバー切り替え</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

@@ -302,15 +302,14 @@ DimensionSettings.keepProportions = function(value, widgets) {
  */
 DimensionSettings.updateLinearFormatFromUnit = function(widgets) {
     var linearFormat = widgets["LinearFormat"].currentIndex+1;
-    //var drawingUnit = document.getUnit();
-    if (DimensionSettings.unit!=RS.Inch &&
-        (linearFormat==RS.ArchitecturalStacked || linearFormat==RS.Engineering)) {
+    if ((DimensionSettings.unit!==RS.Inch && DimensionSettings.unit!==RS.Foot) &&
+        (linearFormat===RS.ArchitecturalStacked || linearFormat===RS.Engineering)) {
 
         var appWin = EAction.getMainWindow();
         widgets["LinearFormat"].currentIndex = 1;
         QMessageBox.warning(appWin,
                             qsTr("Unit / Format"),
-                            qsTr("The drawing unit must be 'Inch' to display dimension labels in "
+                            qsTr("The drawing unit must be 'Inch' or 'Foot' to display dimension labels in "
                                  + "formats 'Architectural' or 'Engineering'. "
                                  + "Format changed to 'Decimal'."));
     }
@@ -557,21 +556,6 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
     }
     widgets["ArchitecturalTick"].setProperty("Saved", true);
     widgets["Arrow"].setProperty("Saved", true);
-
-    //qDebug("linear format: ", );
-    //qDebug("unit: ", document.getUnit());
-
-//    var linearFormat = widgets["LinearFormat"].currentIndex+1;
-//    var drawingUnit = document.getUnit();
-//    if (linearFormat==RS.ArchitecturalStacked && drawingUnit!=RS.Inch) {
-//        var appWin = EAction.getMainWindow();
-//        document.setUnit(RS.Inch);
-//        QMessageBox.warning(appWin,
-//                            qsTr("Unit / Format"),
-//                            qsTr("The drawing unit must be 'Inch' to display dimension labels in "
-//                                 + "format 'architectural'."
-//                                 + "The drawing unit was changed to Inch automatically."));
-//    }
 
     // dimension format / precision:
     document.setKnownVariable(RS.DIMLUNIT, widgets["LinearFormat"].currentIndex+1, transaction);

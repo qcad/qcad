@@ -115,16 +115,20 @@ Unidades de topógrafo</translatorcomment>
         <translation>Unidades de topógrafo</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+160"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Unidade / format</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>A unidade de desenho deve ser &apos;Inch&apos; para exibir cotas em formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;decimal&apos;.</translation>
+        <translation type="vanished">A unidade de desenho deve ser &apos;Inch&apos; para exibir cotas em formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;decimal&apos;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

@@ -70,14 +70,18 @@
         <translation>測量</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+160"/>
         <source>Unit / Format</source>
         <translation>ユニット/フォーマット</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>寸法ラベルを’建築’または’エンジニアリング’フォーマットで表示するには、図面単位は’インチ’でなければなりません。フォーマットは’小数’に変更されました。</translation>
+        <translation type="vanished">寸法ラベルを’建築’または’エンジニアリング’フォーマットで表示するには、図面単位は’インチ’でなければなりません。フォーマットは’小数’に変更されました。</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

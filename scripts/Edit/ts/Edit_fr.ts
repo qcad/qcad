@@ -14,7 +14,7 @@
         <translation>Préférences de dessin</translation>
     </message>
     <message>
-        <location line="+241"/>
+        <location line="+247"/>
         <source>Restart required</source>
         <translation>Redémarrage nécessaire</translation>
     </message>

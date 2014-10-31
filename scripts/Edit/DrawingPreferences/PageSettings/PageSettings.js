@@ -135,16 +135,6 @@ PageSettings.paperSizes = new Array(
         [ "DLE Envelope", new QSizeF( 110,   220), QPrinter.DLE ]
 );
 
-/*
-PageSettings.paperUnits = new Array(
-        [ "mm",  RS.Millimeter ],
-        [ "cm",  RS.Centimeter ],
-        [ "m",  RS.Meter ],
-        [ "in", RS.Inch ],
-        [ "ft", RS.Foot ]
-);
-*/
-
 /**
  * Called when the user changed the drawing / global paper unit in another
  * preference page.

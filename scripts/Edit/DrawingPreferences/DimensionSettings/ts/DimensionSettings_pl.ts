@@ -113,16 +113,20 @@ Jednostki geometryczne</translatorcomment>
         <translation type="unfinished">Jednostki geometryczne</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+160"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka / Format</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Jednostka rysunek musi być &quot;Cal&amp;quot;, aby wyświetlać etykiety rozmiarom w formatach &amp;quot;Architektonicznych&amp;quot; lub &amp;quot;inżynieria&amp;quot;. Format zmieniony na &amp;quot;Decimal&amp;quot;.</translation>
+        <translation type="obsolete">Jednostka rysunek musi być &quot;Cal&amp;quot;, aby wyświetlać etykiety rozmiarom w formatach &amp;quot;Architektonicznych&amp;quot; lub &amp;quot;inżynieria&amp;quot;. Format zmieniony na &amp;quot;Decimal&amp;quot;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

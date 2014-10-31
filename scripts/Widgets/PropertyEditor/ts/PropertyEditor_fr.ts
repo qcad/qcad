@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr_FR">
+<TS version="2.1" language="fr_FR">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -27,7 +27,7 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+355"/>
+        <location filename="../PropertyEditor.js" line="+372"/>
         <source>Geometry</source>
         <translation>Géométrie</translation>
     </message>
@@ -81,7 +81,7 @@
         <translation type="obsolete">Milieu</translation>
     </message>
     <message>
-        <location line="-1053"/>
+        <location line="-1070"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIABLE*</translation>
@@ -96,7 +96,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation> :</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+164"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Aucune sélection</translation>

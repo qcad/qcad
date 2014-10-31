@@ -4,7 +4,7 @@
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../CadToolBar.js" line="+49"/>
+        <location filename="../CadToolBar.js" line="+51"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14,8 +14,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+31"/>
-        <source>Toggle Title Bar</source>
+        <location line="+34"/>
+        <source>Vertical/Horizontal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

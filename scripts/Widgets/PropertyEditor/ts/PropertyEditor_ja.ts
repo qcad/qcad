@@ -32,7 +32,7 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+164"/>
         <source>No Selection</source>
         <translation>選択なし</translation>
     </message>

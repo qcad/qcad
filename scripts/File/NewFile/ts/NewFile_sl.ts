@@ -65,12 +65,12 @@
         <translation>Brez naslova %1</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>read-only</source>
         <translation>Samo za branje</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+48"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>Želite shranit spremembe v&lt;br&gt;&apos;%1&apos; ?</translation>
     </message>

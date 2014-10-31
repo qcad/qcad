@@ -4,7 +4,7 @@
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../CadToolBar.js" line="+49"/>
+        <location filename="../CadToolBar.js" line="+51"/>
         <source>Widgets</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -19,10 +19,14 @@ Zastępcze widżety</translatorcomment>
         <translation type="unfinished">CAD Toolbar</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+34"/>
+        <source>Vertical/Horizontal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Toggle Title Bar</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przełącz Nagłówek</translation>
+        <translation type="obsolete">Przełącz Nagłówek</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

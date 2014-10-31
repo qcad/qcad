@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -36,7 +36,7 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+164"/>
         <source>No Selection</source>
         <translation>Keine Selektion</translation>
     </message>

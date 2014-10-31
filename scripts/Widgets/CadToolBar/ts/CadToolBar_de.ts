@@ -31,7 +31,7 @@
         <translation>Spalten:</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="+49"/>
+        <location filename="../CadToolBar.js" line="+51"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -41,9 +41,13 @@
         <translation>CAD Werkzeugleiste</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+34"/>
+        <source>Vertical/Horizontal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Toggle Title Bar</source>
-        <translation>Titelleiste anzeigen</translation>
+        <translation type="vanished">Titelleiste anzeigen</translation>
     </message>
     <message>
         <source>CAD Tool Bar</source>

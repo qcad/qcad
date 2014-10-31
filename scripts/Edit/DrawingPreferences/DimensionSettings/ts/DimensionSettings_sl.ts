@@ -70,14 +70,18 @@
         <translation>Geodetske enote</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+160"/>
         <source>Unit / Format</source>
         <translation>Enota / Zapis</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>Enota risbe mora biti v inčih, za prikaz kotiranj ter napisov v arhitekturni ali inžinerski obliki. Zapis spremenljen v desetiški.</translation>
+        <translation type="vanished">Enota risbe mora biti v inčih, za prikaz kotiranj ter napisov v arhitekturni ali inžinerski obliki. Zapis spremenljen v desetiški.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

@@ -32,7 +32,7 @@ Spaziatura Griglia minima (px):</translatorcomment>
         <translation>Colonne:</translation>
     </message>
     <message>
-        <location filename="../CadToolBar.js" line="+49"/>
+        <location filename="../CadToolBar.js" line="+51"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -42,9 +42,13 @@ Spaziatura Griglia minima (px):</translatorcomment>
         <translation>Barra degli strumenti CAD</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+34"/>
+        <source>Vertical/Horizontal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Toggle Title Bar</source>
-        <translation>Mostra barra del titolo</translation>
+        <translation type="vanished">Mostra barra del titolo</translation>
     </message>
     <message>
         <source>CAD Tool Bar</source>

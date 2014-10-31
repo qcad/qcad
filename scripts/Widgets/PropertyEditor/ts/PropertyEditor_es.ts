@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -34,7 +34,7 @@ Tipo de línea:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+355"/>
+        <location filename="../PropertyEditor.js" line="+372"/>
         <source>Geometry</source>
         <translation>Geometría</translation>
     </message>
@@ -68,7 +68,7 @@ Tipo de línea:</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-464"/>
+        <location line="-481"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -83,7 +83,7 @@ Versión:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+164"/>
         <source>No Selection</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--

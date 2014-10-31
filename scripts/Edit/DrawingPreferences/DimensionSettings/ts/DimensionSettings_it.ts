@@ -74,14 +74,18 @@
         <translation>Unità topografiche</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+160"/>
         <source>Unit / Format</source>
         <translation>Unità / formato</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>L&apos;unità di disegno deve essere &apos;Inch&apos; per visualizzare le etichette in formati di dimensione &apos;architettonica&apos; o &apos;Engineering&apos;. Formato cambiato in &apos;decimale&apos;.</translation>
+        <translation type="vanished">L&apos;unità di disegno deve essere &apos;Inch&apos; per visualizzare le etichette in formati di dimensione &apos;architettonica&apos; o &apos;Engineering&apos;. Formato cambiato in &apos;decimale&apos;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

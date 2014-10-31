@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it_IT">
+<TS version="2.1" language="it_IT">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -27,7 +27,7 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+355"/>
+        <location filename="../PropertyEditor.js" line="+372"/>
         <source>Geometry</source>
         <translation>Geometria</translation>
     </message>
@@ -61,7 +61,7 @@
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-464"/>
+        <location line="-481"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -76,7 +76,7 @@ Versione:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+164"/>
         <source>No Selection</source>
         <translatorcomment>--ignored case--
 --file: photivo_it.ts--

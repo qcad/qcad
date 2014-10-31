@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt_PT">
+<TS version="2.1" language="pt_PT">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -50,7 +50,7 @@ Documento carregado: %1</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+164"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Não seleção</translation>

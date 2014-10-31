@@ -14,7 +14,7 @@
         <translation>図面設定</translation>
     </message>
     <message>
-        <location line="+241"/>
+        <location line="+247"/>
         <source>Restart required</source>
         <translation>再起動が必要</translation>
     </message>

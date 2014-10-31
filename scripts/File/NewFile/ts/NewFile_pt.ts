@@ -76,12 +76,12 @@ Sem Título</translatorcomment>
         <translation>Sem título %1</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>read-only</source>
         <translation>Apenas leitura</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+48"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Você deseja salvar as alterações feitas no&lt;br&gt;documento &apos;%1&apos;?</translation>

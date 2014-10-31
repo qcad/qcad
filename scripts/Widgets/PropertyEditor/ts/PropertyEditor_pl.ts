@@ -50,7 +50,7 @@ Wersja: </translatorcomment>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+164"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">No Selection</translation>

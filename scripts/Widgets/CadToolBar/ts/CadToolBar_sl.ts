@@ -4,7 +4,7 @@
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../CadToolBar.js" line="+49"/>
+        <location filename="../CadToolBar.js" line="+51"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -14,9 +14,13 @@
         <translation>CAD vrstica</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+34"/>
+        <source>Vertical/Horizontal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Toggle Title Bar</source>
-        <translation>Preklopi naslovno vrstico</translation>
+        <translation type="vanished">Preklopi naslovno vrstico</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
