@@ -566,8 +566,6 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             return false;
         }
 
-        qDebug() << "current layer ID: " << object->getDocument()->getCurrentLayerId();
-
         Q_ASSERT_X(!object->getDocument()->queryLayerDirect(entity->getLayerId()).isNull(),
             "RTransaction::addObject",
             "layer of entity is NULL");

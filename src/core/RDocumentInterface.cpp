@@ -1656,6 +1656,8 @@ void RDocumentInterface::previewOperation(const ROperation* operation) {
     RLinkedStorage* ls = new RLinkedStorage(document.getStorage());
     RDocument* previewDocument = new RDocument(*ls, *si);
     //previewDocument->setUnit(document.getUnit());
+
+    // copy document settings (unit, current layer, etc) from source doc:
     QSharedPointer<RDocumentVariables> docVars = document.queryDocumentVariables();
     docVars->setDocument(previewDocument);
     ls->saveObject(docVars);
