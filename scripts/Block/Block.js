@@ -144,12 +144,12 @@ Block.editBlock = function(di, blockName) {
 
         blockZoom = view.property("blockZoom");
         if (isNull(blockZoom)) {
-            view.autoZoom();
+            view.autoZoom(-1, true);
             continue;
         }
 
         if (isNull(blockZoom[blockId]) || blockZoom[blockId].length!==2) {
-            view.autoZoom();
+            view.autoZoom(-1, true);
         }
         else {
             view.setFactor(blockZoom[blockId][0]);

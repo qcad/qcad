@@ -97,6 +97,12 @@
         queryAllBlockReferences
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryDocumentVariablesDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryDocumentVariables
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryObjectDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

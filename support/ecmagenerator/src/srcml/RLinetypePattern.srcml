@@ -449,21 +449,8 @@ dir="./core" filename="RLinetypePattern.h">
     <parameter_list>()</parameter_list>
     <block>{}</block>
   </function>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>fixName</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>n</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
+  <comment type="line">//static QString fixName(const QString&amp;
+  n);</comment>
   <function_decl>
   <type>
     <name>static</name>

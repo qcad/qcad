@@ -22,6 +22,10 @@ RLinkedStorage::RLinkedStorage(RStorage& backStorage) :
     RMemoryStorage(),
     backStorage(&backStorage),
     objectIdOffset(1) {
+
+    // copy document settings from original:
+    //QSharedPointer<RDocumentVariables> docVars = QSharedPointer<RDocumentVariables>(new RDocumentVariables(this));
+    //saveObject();
 }
 
 RLinkedStorage::~RLinkedStorage() {
@@ -118,10 +122,13 @@ QSet<REntity::Id> RLinkedStorage::queryAllBlockReferences() {
             .unite(backStorage->queryAllBlockReferences());
 }
 
-//QSharedPointer<RDocumentVariables> RLinkedStorage::queryDocumentVariables() const {
-//    // TODO?
-//    return RMemoryStorage::queryDocumentVariables();
-//}
+QSharedPointer<RDocumentVariables> RLinkedStorage::queryDocumentVariablesDirect() const {
+    return RMemoryStorage::queryDocumentVariablesDirect();
+}
+
+QSharedPointer<RDocumentVariables> RLinkedStorage::queryDocumentVariables() const {
+    return RMemoryStorage::queryDocumentVariables();
+}
 
 QSharedPointer<RObject> RLinkedStorage::queryObject(RObject::Id objectId) const {
     if (!objectMap.contains(objectId)) {

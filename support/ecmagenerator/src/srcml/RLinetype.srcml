@@ -278,8 +278,6 @@ dir="./core" filename="RLinetype.h">
   <name>isValid</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
-  <comment type="line">//static QList&lt;QPair&lt;QString,
-  RLinetype&gt; &gt; getList(bool onlyFixed = false);</comment>
   <function_decl>
   <type>
     <name>virtual</name>
@@ -387,10 +385,6 @@ dir="./core" filename="RLinetype.h">
       <name>p</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
-  <comment type="line">// static QIcon getIcon(const RLinetype&amp;
-  linetype);</comment>
-  <comment type="line">// static QString getTitle(const
-  RLinetype&amp; linetype);</comment>
   <function_decl>
   <type>
     <name>bool</name>
@@ -451,10 +445,7 @@ dir="./core" filename="RLinetype.h">
       <name>dbg</name>
     </decl>
   </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="line">//private:</comment>
-  <comment type="line">// static void init(const QString&amp; cn,
-  const RLinetype&amp; c);</comment></public>
+  <specifier>const</specifier>;</function_decl></public>
   <private>private: 
   <decl_stmt>
   <decl>
@@ -462,17 +453,7 @@ dir="./core" filename="RLinetype.h">
       <name>RLinetypePattern</name>
     </type>
     <name>pattern</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//QString name;</comment>
-  <comment type="line">//QString description;</comment>
-  <comment type="line">//int flags;</comment>
-  <comment type="line">//int numberOfDashes;</comment>
-  <comment type="line">//double patternLength;</comment>
-  <comment type="line">//double* pattern;</comment>
-  <comment type="line">//static QList&lt;QPair&lt;QString,
-  RLinetype&gt; &gt; list;</comment>
-  <comment type="line">//static QMap&lt;RLinetype, QIcon&gt;
-  iconMap;</comment></private>}</block>;</class>
+  </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

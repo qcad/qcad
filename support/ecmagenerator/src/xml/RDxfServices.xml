@@ -268,8 +268,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="autoFixLinetypePattern" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="metric"
-        isConst="false" />
         <arg type="RLinetypePattern &amp;"
         typeName="RLinetypePattern" name="pattern"
         isConst="false" />

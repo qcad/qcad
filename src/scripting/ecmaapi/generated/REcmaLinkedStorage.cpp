@@ -103,6 +103,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryAllBlockReferences, "queryAllBlockReferences");
             
+            REcmaHelper::registerFunction(&engine, proto, queryDocumentVariablesDirect, "queryDocumentVariablesDirect");
+            
+            REcmaHelper::registerFunction(&engine, proto, queryDocumentVariables, "queryDocumentVariables");
+            
             REcmaHelper::registerFunction(&engine, proto, queryObjectDirect, "queryObjectDirect");
             
             REcmaHelper::registerFunction(&engine, proto, queryObject, "queryObject");
@@ -1532,6 +1536,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllBlockReferences", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinkedStorage::queryDocumentVariablesDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryDocumentVariablesDirect", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryDocumentVariablesDirect";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinkedStorage* self = 
+                        getSelf("queryDocumentVariablesDirect", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDocumentVariables >'
+    QSharedPointer < RDocumentVariables > cppResult =
+        
+               self->queryDocumentVariablesDirect();
+        // return type: QSharedPointer < RDocumentVariables >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryDocumentVariablesDirect().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryDocumentVariablesDirect", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinkedStorage::queryDocumentVariables
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryDocumentVariables", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryDocumentVariables";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinkedStorage* self = 
+                        getSelf("queryDocumentVariables", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDocumentVariables >'
+    QSharedPointer < RDocumentVariables > cppResult =
+        
+               self->queryDocumentVariables();
+        // return type: QSharedPointer < RDocumentVariables >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryDocumentVariables().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryDocumentVariables", context, engine);
             return result;
         }
          QScriptValue

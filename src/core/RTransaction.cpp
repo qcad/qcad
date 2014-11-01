@@ -565,7 +565,14 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             fail();
             return false;
         }
+
+        qDebug() << "current layer ID: " << object->getDocument()->getCurrentLayerId();
+
+        Q_ASSERT_X(!object->getDocument()->queryLayerDirect(entity->getLayerId()).isNull(),
+            "RTransaction::addObject",
+            "layer of entity is NULL");
     }
+
 
     // if object is a block definition,
     // look up existing block based on case insensitive name comparison:

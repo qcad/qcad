@@ -2105,52 +2105,39 @@
             
     
     if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
         ) /* type: RLinetypePattern */
     
     ){
     // prepare arguments:
     
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
                     // argument isCopyable and has default constructor and isSimpleClass 
                     RLinetypePattern*
-                    ap1 =
+                    ap0 =
                     qscriptvalue_cast<
                     RLinetypePattern*
                         >(
                         context->argument(
-                        1
+                        0
                         )
                     );
-                    if (ap1 == NULL) {
-                           return REcmaHelper::throwError("RDxfServices: Argument 1 is not of type RLinetypePattern.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDxfServices: Argument 0 is not of type RLinetypePattern.",
                                context);                    
                     }
                     RLinetypePattern 
-                    a1 = 
-                    *ap1;
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     RDxfServices::
-       autoFixLinetypePattern(a0
-        ,
-    a1);
+       autoFixLinetypePattern(a0);
     } else
 
 

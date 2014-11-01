@@ -1610,7 +1610,7 @@ void RDocumentInterface::zoomOut() {
 void RDocumentInterface::autoZoom(int margin) {
     RGraphicsView* view = getGraphicsViewWithFocus();
     if (view != NULL) {
-        view->autoZoom(margin);
+        view->autoZoom(margin, true);
     }
 }
 
@@ -1655,7 +1655,14 @@ void RDocumentInterface::previewOperation(const ROperation* operation) {
     RSpatialIndexSimple* si = new RSpatialIndexSimple();
     RLinkedStorage* ls = new RLinkedStorage(document.getStorage());
     RDocument* previewDocument = new RDocument(*ls, *si);
-    previewDocument->setUnit(document.getUnit());
+    //previewDocument->setUnit(document.getUnit());
+    QSharedPointer<RDocumentVariables> docVars = document.queryDocumentVariables();
+    docVars->setDocument(previewDocument);
+    ls->saveObject(docVars);
+
+//    qDebug() << "prev unit: " << previewDocument->getUnit();
+//    qDebug() << "prev layer: " << previewDocument->getCurrentLayerId();
+//    qDebug() << "prev lintype: " << previewDocument->getCurrentLinetypeId();
 
     RTransaction transaction = operation->apply(*previewDocument, true);
     delete operation;

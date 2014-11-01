@@ -115,6 +115,10 @@ RBox RTextBasedData::getBoundingBox(bool ignoreEmpty) const {
         getPainterPaths(gotDraft);
     }
 
+//    if (!ignoreEmpty && boundingBox.getWidth()<RS::PointTolerance && boundingBox.getHeight()<RS::PointTolerance) {
+//        RDebug::printBacktrace();
+//    }
+
     if (ignoreEmpty && boundingBox.getWidth()<RS::PointTolerance && boundingBox.getHeight()<RS::PointTolerance) {
         return RBox();
     }

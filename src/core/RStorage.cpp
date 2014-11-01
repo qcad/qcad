@@ -229,7 +229,7 @@ QSharedPointer<RDocumentVariables> RStorage::startDocumentVariablesTransaction(R
     useLocalTransaction = (transaction==NULL);
 
     if (useLocalTransaction) {
-        transaction = new RTransaction(*this, "blah", true);
+        transaction = new RTransaction(*this, "Change document setting", true);
     }
 
     return queryDocumentVariables();

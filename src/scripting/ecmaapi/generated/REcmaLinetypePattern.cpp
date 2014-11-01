@@ -110,8 +110,6 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, loadAllFrom, "loadAllFrom");
             
-            REcmaHelper::registerFunction(&engine, &ctor, fixName, "fixName");
-            
             REcmaHelper::registerFunction(&engine, &ctor, initNameMap, "initNameMap");
             
 
@@ -1666,56 +1664,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinetypePattern::load", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaLinetypePattern::fixName
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaLinetypePattern::fixName", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::fixName";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QString'
-    QString cppResult =
-        RLinetypePattern::
-       fixName(a0);
-        // return type: QString
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.fixName().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaLinetypePattern::fixName", context, engine);
             return result;
         }
          QScriptValue

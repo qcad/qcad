@@ -56,6 +56,7 @@ void RLineweightCombo::init() {
     if (!onlyFixed) {
         setLineweight(RLineweight::WeightByLayer);
     } else {
+        // TODO: make configurable:
         setLineweight(RLineweight::Weight025);
     }
 }

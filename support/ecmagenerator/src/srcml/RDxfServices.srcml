@@ -728,14 +728,6 @@ dir="./core" filename="RDxfServices.h">
   <param>
     <decl>
       <type>
-        <name>bool</name>
-      </type>
-      <name>metric</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
       <name>RLinetypePattern</name>&amp;</type>
       <name>pattern</name>
     </decl>

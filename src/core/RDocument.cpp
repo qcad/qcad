@@ -73,7 +73,7 @@ void RDocument::init() {
 
     // add document variables object:
     //if (!storageIsLinked && queryDocumentVariables().isNull()) {
-    if (queryDocumentVariables().isNull()) {
+    if (!storageIsLinked && queryDocumentVariables().isNull()) {
         transaction.addObject(QSharedPointer<RDocumentVariables>(new RDocumentVariables(this)));
     }
 

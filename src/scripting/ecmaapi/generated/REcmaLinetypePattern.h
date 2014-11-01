@@ -112,9 +112,6 @@
         load
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        fixName
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         initNameMap
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

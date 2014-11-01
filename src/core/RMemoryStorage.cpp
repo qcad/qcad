@@ -914,6 +914,11 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
 
     QSharedPointer<REntity> entity = object.dynamicCast<REntity> ();
 
+    if (!entity.isNull()) {
+        Q_ASSERT_X(!queryLayerDirect(entity->getLayerId()).isNull(),
+            "RMemoryStrorage::saveObject", "Layer of entity is NULL");
+    }
+
     // assign new object ID to new objects:
     if (object->getId() == RObject::INVALID_ID) {
         setObjectId(*object, getNewObjectId());
