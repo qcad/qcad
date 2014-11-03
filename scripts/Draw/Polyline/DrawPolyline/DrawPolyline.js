@@ -1,6 +1,8 @@
 /**
  * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
  * 
+ * Various changes added 2014 by Robert S.
+ *
  * This file is part of the QCAD project.
  *
  * QCAD is free software: you can redistribute it and/or modify
@@ -18,6 +20,7 @@
  */
 
 include("../Polyline.js");
+include("scripts/Snap/RestrictAngleLength/RestrictAngleLength.js");
 
 /**
  * \class DrawPolyline
@@ -33,6 +36,7 @@ function DrawPolyline(guiAction) {
     this.radius = 1.0;
     this.prepend = false;
     this.segment = undefined;
+    this.redoList = [];
 
     this.setUiOptions("DrawPolyline.ui");
 }
@@ -51,38 +55,32 @@ DrawPolyline.prototype.beginEvent = function() {
     this.updateButtonStates();
 };
 
-DrawPolyline.prototype.initState = function() {
-    Polyline.prototype.initState.call(this);
+DrawPolyline.prototype.setState = function(state) {
+    Polyline.prototype.setState.call(this, state);
 
+    this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
     this.setCrosshairCursor();
 
-    var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case DrawPolyline.State.SettingFirstVertex:
-        this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
         var trFirstVertex = qsTr("First vertex");
         this.setCommandPrompt(trFirstVertex);
         this.setLeftMouseTip(trFirstVertex);
         this.setRightMouseTip(EAction.trCancel);
         this.segment = undefined;
-        EAction.showSnapTools();
+        this.redoList = [];
         break;
-
     case DrawPolyline.State.SettingNextVertex:
-        this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
         var trNextVertex = qsTr("Next vertex");
         this.setCommandPrompt(trNextVertex);
         this.setLeftMouseTip(trNextVertex);
         this.setRightMouseTip(qsTr("Done"));
-        EAction.showSnapTools();
         break;
     }
+
+    EAction.showSnapTools();
 };
 
-DrawPolyline.prototype.showUiOptions = function(resume) {
-    Draw.prototype.showUiOptions.call(this, resume);
-    this.updateButtonStates();
-};
 
 DrawPolyline.prototype.escapeEvent = function() {
     var di = this.getDocumentInterface();
@@ -102,9 +100,36 @@ DrawPolyline.prototype.escapeEvent = function() {
         }
 
         this.setState(DrawPolyline.State.SettingFirstVertex);
+        this.polylineEntity = undefined;
         this.updateButtonStates();
         break;
     }
+};
+
+DrawPolyline.prototype.keyPressEvent = function(event) {
+    var di = this.getDocumentInterface();
+
+    if ((event.key() === Qt.Key_Enter.valueOf()) || (event.key() === Qt.Key_Return.valueOf())) {
+        if (this.state === DrawPolyline.State.SettingFirstVertex) {
+            var view = di.getLastKnownViewWithFocus();
+            var pos = di.getLastPosition();
+            var e = new RCoordinateEvent(pos, view.getScene(), view.getRGraphicsView());
+            this.pickCoordinate(e, false);
+        }
+    } else {
+        EAction.prototype.keyPressEvent(event);
+    }
+};
+
+DrawPolyline.prototype.showUiOptions = function(resume) {
+    Draw.prototype.showUiOptions.call(this, resume);
+
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var w = optionsToolBar.findChild("Restrict");
+    var guiAction = RGuiAction.getByScriptFile("scripts/Snap/RestrictAngleLength/RestrictAngleLength.js");
+    w.setDefaultAction(guiAction);
+
+    this.updateButtonStates();
 };
 
 DrawPolyline.prototype.pickCoordinate = function(event, preview) {
@@ -208,7 +233,7 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
             op = this.getOperation(false);
             if (!isNull(op)) {
                 this.applyOperation(op);
-                di.setRelativeZero(point);
+                di.setRelativeZero(vertex);
                 this.uncheckArcSegment();
             }
         }
@@ -280,15 +305,16 @@ DrawPolyline.prototype.slotClose = function() {
         return;
     }
 
-    var di = this.getDocumentInterface();
-
     if (this.polylineEntity.countVertices() >= 3) {
+        var di = this.getDocumentInterface();
+        di.setRelativeZero(this.polylineEntity.getVertexAt(0));
         this.polylineEntity.setClosed(true);
         var op = this.getOperation(false);
         if (!isNull(op)) {
             this.applyOperation(op);
-            this.setState(DrawPolyline.State.SettingFirstVertex);
         }
+        this.setState(DrawPolyline.State.SettingFirstVertex);
+        this.polylineEntity = undefined;
     }
     
     this.updateButtonStates();
@@ -302,19 +328,52 @@ DrawPolyline.prototype.slotUndo = function() {
         return;
     }
 
-    var di = this.getDocumentInterface();
-
     if (this.polylineEntity.countVertices() >= 2) {
+        var di = this.getDocumentInterface();
+        var bulge = this.polylineEntity.getBulgeAt(this.polylineEntity.countVertices() - 1);
+        var vertex = this.polylineEntity.getVertexAt(this.polylineEntity.countVertices() - 1);
         this.polylineEntity.removeLastVertex();
+        di.setRelativeZero(this.polylineEntity.getVertexAt(this.polylineEntity.countVertices() - 1));
+        di.clearPreview();
+        var op = this.getOperation(false);
+        if (!isNull(op)) {
+            this.applyOperation(op);
+            // add last vertex and bulge to redoList
+            this.redoList.push(bulge);
+            this.redoList.push(vertex);
+        }
+        this.simulateMouseMoveEvent();
+    }
+
+    this.updateButtonStates();
+};
+
+/**
+ * Called when user clicks the 'Redo' button to redo the last vertex.
+ */
+DrawPolyline.prototype.slotRedo = function() {
+    if (isNull(this.polylineEntity)) {
+        return;
+    }
+
+    if (this.redoList.length >= 2) {
+        var di = this.getDocumentInterface();
+        // redo last vertex and bulge
+        var vertex = this.redoList.pop();
+        var bulge = this.redoList.pop();
+        this.polylineEntity.appendVertex(vertex, bulge);
         di.clearPreview();
         var op = this.getOperation(false);
         if (!isNull(op)) {
             this.applyOperation(op);
         }
+        di.setRelativeZero(vertex);
+        this.simulateMouseMoveEvent();
     }
 
     this.updateButtonStates();
 };
+
 
 /**
  * Called when user toggles 'Arc segment' check box to indicate if the next
@@ -339,6 +398,7 @@ DrawPolyline.prototype.uncheckArcSegment = function() {
     w.checked = false;
 };
 
+
 /**
  * Updates the state (enabled / disabled) of the undo and the close buttons
  * depending on the current progress.
@@ -346,33 +406,32 @@ DrawPolyline.prototype.uncheckArcSegment = function() {
 DrawPolyline.prototype.updateButtonStates = function() {
     var w;
     
-    if (this.state==DrawPolyline.State.SettingFirstVertex) {
+    if (this.state === DrawPolyline.State.SettingFirstVertex) {
         this.uncheckArcSegment();
     }
 
-    if (isNull(this.polylineEntity)) {
-        return;
+    w = objectFromPath("MainWindow::Options::Close");
+    if (!isNull(this.polylineEntity)) {
+      w.enabled = (this.polylineEntity.countVertices() >= 3) ? true : false;
+    } else {
+      w.enabled = false;
     }
 
     w = objectFromPath("MainWindow::Options::Undo");
-    if (this.polylineEntity.countVertices() > 1) {
-        w.enabled = true;
+    if (!isNull(this.polylineEntity)) {
+      w.enabled = (this.polylineEntity.countVertices() >= 2) ? true : false;
     } else {
-        w.enabled = false;
+      w.enabled = false;
     }
-    
-    w = objectFromPath("MainWindow::Options::Close");
-    if (this.polylineEntity.countVertices() < 3) {
-        w.enabled = false;
-    } else {
-        w.enabled = true;
-    }
+
+    w = objectFromPath("MainWindow::Options::Redo");
+    w.enabled = (this.redoList.length >= 2) ? true : false;
 };
 
 DrawPolyline.prototype.getAuxPreview = function() {
     var ret = [];
 
-    if (this.state==DrawPolyline.State.SettingNextVertex) {
+    if (this.state === DrawPolyline.State.SettingNextVertex) {
         if (!isNull(this.center) && !isNull(this.angle)) {
             var v = RVector.createPolar(this.radius, this.angle);
             ret.push(new RLine(this.center, this.center.operator_add(v)));
@@ -380,4 +439,45 @@ DrawPolyline.prototype.getAuxPreview = function() {
     }
 
     return ret;
+};
+
+/**
+ * Allows commands to be entered in command line
+ * Using the 'startsWith' function allows the user to enter only as many characters
+ * as needed to distinguish between commands
+ * In this case only the first character is needed. (But entering 'c', 'cl', 'clo', 'clos'
+ * or 'close' would all invoke the close command. Similarly with undo and redo)
+ */
+DrawPolyline.prototype.commandEvent = function(event) {
+    var str;
+
+    var cmd = event.getCommand();
+    cmd = cmd.toLowerCase();
+
+    str = qsTr("close");
+    if (str.startsWith(cmd)) {
+        this.slotClose();
+        event.accept();
+        return;
+    }
+    str = qsTr("undo");
+    if (str.startsWith(cmd)) {
+        this.slotUndo();
+        event.accept();
+        return;
+    }
+    str = qsTr("redo");
+    if (str.startsWith(cmd)) {
+        this.slotRedo();
+        event.accept();
+        return;
+    }
+    str = qsTr("arc");
+    if (str.startsWith(cmd)) {
+        var ob = objectFromPath("MainWindow::Options::ArcSegment");
+        ob.checked = !ob.checked
+        this.slotArcSegmentChanged(ob.checked);
+        event.accept();
+        return;
+    }
 };
