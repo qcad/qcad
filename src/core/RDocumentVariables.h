@@ -67,7 +67,8 @@ public:
     void clear();
 
     QSet<RPropertyTypeId> getCustomPropertyTypeIds() const;
-    void setKnownVariable(RS::KnownVariable key, QVariant value);
+    void setKnownVariable(RS::KnownVariable key, const RVector& value);
+    void setKnownVariable(RS::KnownVariable key, const QVariant& value);
     QVariant getKnownVariable(RS::KnownVariable key) const;
     bool hasKnownVariable(RS::KnownVariable key) const;
 

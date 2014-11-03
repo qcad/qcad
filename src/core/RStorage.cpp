@@ -102,6 +102,7 @@ RObject::Handle RStorage::getMaxObjectHandle() {
 void RStorage::setCurrentLayer(RLayer::Id layerId, RTransaction* transaction) {
     bool useLocalTransaction;
     QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
+    Q_ASSERT(!docVars.isNull());
     docVars->setCurrentLayerId(layerId);
     endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 }
@@ -109,6 +110,7 @@ void RStorage::setCurrentLayer(RLayer::Id layerId, RTransaction* transaction) {
 void RStorage::setCurrentLayer(const QString& layerName, RTransaction* transaction) {
     bool useLocalTransaction;
     QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
+    Q_ASSERT(!docVars.isNull());
     RLayer::Id layerId = getLayerId(layerName);
     if (layerId == RLayer::INVALID_ID) {
         return;
@@ -119,6 +121,9 @@ void RStorage::setCurrentLayer(const QString& layerName, RTransaction* transacti
 
 RLayer::Id RStorage::getCurrentLayerId() const {
     QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
+    if (v.isNull()) {
+        return RLayer::INVALID_ID;
+    }
     return v->getCurrentLayerId();
 }
 
@@ -221,6 +226,7 @@ int RStorage::getMinDrawOrder() {
 void RStorage::setUnit(RS::Unit unit, RTransaction* transaction) {
     bool useLocalTransaction;
     QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
+    Q_ASSERT(!docVars.isNull());
     docVars->setUnit(unit);
     endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 }
@@ -260,12 +266,16 @@ RS::Unit RStorage::getUnit() const {
 void RStorage::setDimensionFont(const QString& f, RTransaction* transaction) {
     bool useLocalTransaction;
     QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
+    Q_ASSERT(!docVars.isNull());
     docVars->setDimensionFont(f);
     endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 }
 
 QString RStorage::getDimensionFont() const {
     QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
+    if (v.isNull()) {
+        return "Standard";
+    }
     return v->getDimensionFont();
 }
 
@@ -278,6 +288,9 @@ void RStorage::setLinetypeScale(double v, RTransaction* transaction) {
 
 double RStorage::getLinetypeScale() const {
     QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
+    if (v.isNull()) {
+        return 1.0;
+    }
     return v->getLinetypeScale();
 }
 

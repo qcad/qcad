@@ -1181,19 +1181,6 @@ QVariant RMemoryStorage::getVariable(const QString& key) const {
 }
 
 void RMemoryStorage::setKnownVariable(RS::KnownVariable key, const QVariant& value, RTransaction* transaction) {
-//    if (key==RS::INSUNITS) {
-//        setUnit((RS::Unit)value.toInt(), transaction);
-//    }
-//    else if (key==RS::LTSCALE) {
-//        setLinetypeScale(value.toDouble());
-//    }
-//    else {
-//        //knownVariables.insert(key, value);
-//        if (!documentVariables.isNull()) {
-//            documentVariables->setKnownVariable(key, value);
-//        }
-//    }
-
     bool useLocalTransaction;
     QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
     docVars->setKnownVariable(key, value);

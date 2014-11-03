@@ -121,7 +121,13 @@ void RDocumentVariables::clear() {
     knownVariables.clear();
 }
 
-void RDocumentVariables::setKnownVariable(RS::KnownVariable key, QVariant value) {
+void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const RVector& value) {
+    QVariant v;
+    v.setValue(value);
+    knownVariables.insert(key, v);
+}
+
+void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const QVariant& value) {
     if (key==RS::INSUNITS) {
         setUnit((RS::Unit)value.toInt());
     }

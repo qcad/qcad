@@ -394,6 +394,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     globalObject.setProperty("qCritical", engine->newFunction(ecmaCritical));
     globalObject.setProperty("qGray", engine->newFunction(ecmaGray));
 
+    globalObject.setProperty("bt", engine->newFunction(ecmaBacktrace));
     //globalObject.setProperty("attachDebugger", engine->newFunction(ecmaAttachDebugger));
     globalObject.setProperty("detachDebugger", engine->newFunction(ecmaDetachDebugger));
     globalObject.setProperty("collectGarbage", engine->newFunction(ecmaCollectGarbage));
@@ -1476,6 +1477,10 @@ QScriptValue RScriptHandlerEcma::ecmaQObjectGetChildren(QScriptContext* context,
     }
 
     return result;
+}
+
+QScriptValue RScriptHandlerEcma::ecmaBacktrace(QScriptContext* context, QScriptEngine* engine) {
+    REcmaHelper::printStackTrace(context);
 }
 
 QScriptValue RScriptHandlerEcma::ecmaAttachDebugger(QScriptContext* context,

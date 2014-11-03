@@ -67,15 +67,19 @@ void RDocument::init() {
     bool metric = RUnit::isMetric(defaultUnit);
 
     RTransaction transaction(storage, "", false);
+    transaction.setRecordAffectedObjects(false);
+    transaction.setSpatialIndexDisabled(true);
+    transaction.setBlockRecursionDetectionDisabled(true);
 
     RLinkedStorage* ls = dynamic_cast<RLinkedStorage*>(&storage);
     bool storageIsLinked = (ls!=NULL);
 
     // add document variables object:
     //if (!storageIsLinked && queryDocumentVariables().isNull()) {
-    if (!storageIsLinked && queryDocumentVariables().isNull()) {
-        transaction.addObject(QSharedPointer<RDocumentVariables>(new RDocumentVariables(this)));
-    }
+    //if (!storageIsLinked && queryDocumentVariables().isNull()) {
+    //    transaction.addObject(QSharedPointer<RDocumentVariables>(new RDocumentVariables(this)));
+    //}
+    QSharedPointer<RDocumentVariables> docVars = QSharedPointer<RDocumentVariables>(new RDocumentVariables(this));
 
     // add default line types if not already added (RLinkedStorage):
     if (!storageIsLinked && queryLinetype("BYLAYER").isNull()) {
@@ -97,15 +101,17 @@ void RDocument::init() {
     }
 
     // add default layer:
+    QSharedPointer<RLayer> layer0;
     if (!storageIsLinked && queryLayer("0").isNull()) {
-        QSharedPointer<RLayer> layer(
+        layer0 = QSharedPointer<RLayer>(
             new RLayer(
                 this, "0", false, false,
                 RColor(Qt::white), getLinetypeId("CONTINUOUS"),
                 RLineweight::Weight025
             )
         );
-        transaction.addObject(layer);
+        transaction.addObject(layer0);
+        //qDebug() << "id of layer 0: " << getLayerId("0");
     }
 
     // add default block:
@@ -131,57 +137,57 @@ void RDocument::init() {
     }
 
     if (!storageIsLinked) {
-        setCurrentLayer("0", &transaction);
+        docVars->setCurrentLayerId(getLayerId("0"));
 
         setCurrentBlock(RBlock::modelSpaceName);
 
         setCurrentLinetype("BYLAYER");
 
         // default variables:
-        setUnit(defaultUnit, &transaction);
-        setLinetypeScale(RSettings::getDoubleValue("LinetypeSettings/Scale", 1.0));
+        docVars->setUnit(defaultUnit);
+        docVars->setLinetypeScale(RSettings::getDoubleValue("LinetypeSettings/Scale", 1.0));
 
-        setKnownVariable(RS::DIMTXT, RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5), &transaction);
-        setKnownVariable(RS::DIMEXE, RSettings::getDoubleValue("DimensionSettings/DIMEXE", 1.25), &transaction);
-        setKnownVariable(RS::DIMEXO, RSettings::getDoubleValue("DimensionSettings/DIMEXO", 0.625), &transaction);
-        setKnownVariable(RS::DIMGAP, RSettings::getDoubleValue("DimensionSettings/DIMGAP", 0.625), &transaction);
-        setKnownVariable(RS::DIMASZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5), &transaction);
-        setKnownVariable(RS::DIMSCALE, RSettings::getDoubleValue("DimensionSettings/DIMSCALE", 1.0), &transaction);
+        docVars->setKnownVariable(RS::DIMTXT, RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5));
+        docVars->setKnownVariable(RS::DIMEXE, RSettings::getDoubleValue("DimensionSettings/DIMEXE", 1.25));
+        docVars->setKnownVariable(RS::DIMEXO, RSettings::getDoubleValue("DimensionSettings/DIMEXO", 0.625));
+        docVars->setKnownVariable(RS::DIMGAP, RSettings::getDoubleValue("DimensionSettings/DIMGAP", 0.625));
+        docVars->setKnownVariable(RS::DIMASZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5));
+        docVars->setKnownVariable(RS::DIMSCALE, RSettings::getDoubleValue("DimensionSettings/DIMSCALE", 1.0));
 
         // arch tick head:
         if (RSettings::getStringValue("DimensionSettings/ArrowStyle", "Arrow")=="Arrow") {
-            setKnownVariable(RS::DIMTSZ, 0.0, &transaction);
+            docVars->setKnownVariable(RS::DIMTSZ, 0.0);
         }
 
         // arrow head:
         else {
-            setKnownVariable(RS::DIMTSZ, getKnownVariable(RS::DIMASZ), &transaction);
+            docVars->setKnownVariable(RS::DIMTSZ, getKnownVariable(RS::DIMASZ));
         }
 
-        setKnownVariable(RS::DIMLUNIT, RSettings::getIntValue("DimensionSettings/LinearFormat", RS::Decimal), &transaction);
-        setKnownVariable(RS::DIMDEC, RSettings::getIntValue("DimensionSettings/LinearPrecision", 4), &transaction);
+        docVars->setKnownVariable(RS::DIMLUNIT, RSettings::getIntValue("DimensionSettings/LinearFormat", RS::Decimal));
+        docVars->setKnownVariable(RS::DIMDEC, RSettings::getIntValue("DimensionSettings/LinearPrecision", 4));
 
         // show trailing zeroes:
         if (RSettings::getBoolValue("DimensionSettings/LinearShowTrailingZeros", false)) {
-            setKnownVariable(RS::DIMZIN, 0, &transaction);
+            docVars->setKnownVariable(RS::DIMZIN, 0);
         }
 
         // suppress trailing zeroes:
         else {
-            setKnownVariable(RS::DIMZIN, 8, &transaction);
+            docVars->setKnownVariable(RS::DIMZIN, 8);
         }
 
-        setKnownVariable(RS::DIMAUNIT, RSettings::getIntValue("DimensionSettings/AngularFormat", RS::DegreesDecimal), &transaction);
-        setKnownVariable(RS::DIMADEC, RSettings::getIntValue("DimensionSettings/AngularPrecision", 0), &transaction);
+        docVars->setKnownVariable(RS::DIMAUNIT, RSettings::getIntValue("DimensionSettings/AngularFormat", RS::DegreesDecimal));
+        docVars->setKnownVariable(RS::DIMADEC, RSettings::getIntValue("DimensionSettings/AngularPrecision", 0));
 
         // show trailing zeroes:
         if (RSettings::getBoolValue("DimensionSettings/AngularShowTrailingZeros", false)) {
-            setKnownVariable(RS::DIMAZIN, 0, &transaction);
+            docVars->setKnownVariable(RS::DIMAZIN, 0);
         }
 
         // suppress trailing zeroes:
         else {
-            setKnownVariable(RS::DIMAZIN, 2, &transaction);
+            docVars->setKnownVariable(RS::DIMAZIN, 2);
         }
 
         //  multi page printing settings:
@@ -253,13 +259,15 @@ void RDocument::init() {
             setVariable(s, RSettings::getStringValue(s, "auto"));
         }
 
-        setDimensionFont(RSettings::getStringValue("DimensionSettings/DimensionFont", "Standard"), &transaction);
+        docVars->setDimensionFont(RSettings::getStringValue("DimensionSettings/DimensionFont", "Standard"));
 
         // notify new document listeners
         if (RMainWindow::hasMainWindow()) {
             RMainWindow::getMainWindow()->notifyNewDocumentListeners(this, &transaction);
         }
     }
+
+    transaction.addObject(docVars);
 
     transaction.end();
     storage.setModified(false);
@@ -312,6 +320,11 @@ void RDocument::clear() {
     storage.clear();
     spatialIndex.clear();
     transactionStack.reset();
+    QSharedPointer<RDocumentVariables> docVars = queryDocumentVariablesDirect();
+    if (!docVars.isNull()) {
+        //docVars.clear();
+        docVars = QSharedPointer<RDocumentVariables>();
+    }
     RS::Unit u = getUnit();
     init();
     setUnit(u);
