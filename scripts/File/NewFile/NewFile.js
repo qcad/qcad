@@ -110,6 +110,8 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
     var appWin = EAction.getMainWindow();
     var mdiArea = appWin.centralWidget();
 
+    appWin.handleUserMessage(qsTr("Opening drawing:") + " " + fileName + "...");
+
     // create document:
     var storage = new RMemoryStorage();
     var spatialIndex = new RSpatialIndexNavel();
