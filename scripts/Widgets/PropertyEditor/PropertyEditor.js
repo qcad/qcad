@@ -1114,6 +1114,9 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
         if (isOfType(control, RColorCombo)) {
             control.setColor(value);
         }
+        else if (isOfType(control, QFontComboBox)) {
+            activateFont(control, value);
+        }
         else if (isOfType(control, RLineweightCombo)) {
             // custom lineweight: default to ByLayer:
             control.currentIndex = 0;
