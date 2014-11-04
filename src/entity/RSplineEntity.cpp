@@ -158,7 +158,6 @@ QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
                 choices.insert(QString("%1").arg(d));
             }
         }
-        qDebug() << "choices: " << choices;
         attr.setChoices(choices);
         attr.setNumericallySorted(true);
         return qMakePair(QVariant(QString("%1").arg(data.degree)), attr);
