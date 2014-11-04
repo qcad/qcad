@@ -87,6 +87,11 @@ CommandLine.init = function(basePath) {
         c.movePosition(QTextCursor.End);
         teHistory.setTextCursor(c);
         teHistory.ensureCursorVisible();
+
+        var appWin = EAction.getMainWindow();
+        if (!appWin.enabled) {
+            QCoreApplication.processEvents();
+        }
     }
 
     var showTitleBar = RSettings.getBoolValue("Appearance/CommandLineTitleBar", false);

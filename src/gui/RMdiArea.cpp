@@ -153,7 +153,9 @@ void RMdiArea::updateTabBar(RMdiChildQt* child) {
             continue;
         }
 
-        tabBar->setTabText(ti, tabBarOri->tabText(i));
+        QString t = tabBarOri->tabText(i);
+        t.replace("&", "&&");
+        tabBar->setTabText(ti, t);
         tabBar->setTabIcon(ti, tabBarOri->tabIcon(i));
         tabBar->setTabToolTip(ti, tabBarOri->tabToolTip(i));
         disconnect(subWindow, SIGNAL(modifiedStatusChanged(RMdiChildQt*)), this, SLOT(updateTabBar(RMdiChildQt*)));

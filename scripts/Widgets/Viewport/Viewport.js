@@ -79,7 +79,7 @@ Viewport.updateViewports = function(viewports) {
         var vp = viewports[i];
         vp.getEventHandler().viewportChanged();
         var gv = vp.getGraphicsView();
-        gv.autoZoom();
+        gv.autoZoom(-1, true);
     }
 };
 
@@ -458,7 +458,7 @@ EventHandler.prototype.viewportChanged = function() {
     this.hsb.blockSignals(true);
     this.vsb.blockSignals(true);
 
-    var box = this.document.getBoundingBox();
+    var box = this.document.getBoundingBox(true, true);
     var min = box.getMinimum().x * this.graphicsView.getFactor() - 800;
     var max = box.getMaximum().x * this.graphicsView.getFactor()
             - this.graphicsView.getWidth() + 800;

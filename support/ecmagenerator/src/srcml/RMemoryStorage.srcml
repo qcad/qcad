@@ -1885,6 +1885,22 @@ dir="./core" filename="RMemoryStorage.h">
   <decl_stmt>
   <decl>
     <type>
+      <name>mutable</name>
+      <name>bool</name>
+    </type>
+    <name>boundingBoxIgnoreHiddenLayers</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>mutable</name>
+      <name>bool</name>
+    </type>
+    <name>boundingBoxIgnoreEmpty</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
       <name>bool</name>
     </type>
     <name>inTransaction</name>

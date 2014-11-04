@@ -277,8 +277,32 @@ dir="./core" filename="RDocumentVariables.h">
   <param>
     <decl>
       <type>
-        <name>QVariant</name>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>value</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setKnownVariable</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>
+        <name>RS</name>::
+        <name>KnownVariable</name></name>
       </type>
+      <name>key</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QVariant</name>&amp;</type>
       <name>value</name>
     </decl>
   </param>)</parameter_list>;</function_decl>

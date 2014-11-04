@@ -3439,15 +3439,7 @@ dir="./core" filename="RStorage.h">
     </type>
     <name>currentLinetypeId</name>
   </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RLayer</name>::
-      <name>Id</name></name>
-    </type>
-    <name>currentLayerId</name>
-  </decl>;</decl_stmt>
+  <comment type="line">//RLayer::Id currentLayerId;</comment>
   <decl_stmt>
   <decl>
     <type>

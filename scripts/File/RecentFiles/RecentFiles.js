@@ -37,9 +37,6 @@ RecentFiles.getPreferencesCategory = function() {
     return [ qsTr("Load/Save"), qsTr("Recent Files") ];
 };
 
-/*
-*/
-
 RecentFiles.hasShortcuts = function() {
     return false;
 };

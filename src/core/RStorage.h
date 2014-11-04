@@ -605,7 +605,7 @@ private:
     RColor currentColor;
     RLineweight::Lineweight currentLineweight;
     RLinetype::Id currentLinetypeId;
-    RLayer::Id currentLayerId;
+    //RLayer::Id currentLayerId;
     RView::Id currentViewId;
     RBlock::Id currentBlockId;
     int lastTransactionId;

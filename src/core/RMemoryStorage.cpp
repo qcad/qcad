@@ -25,6 +25,8 @@
 RMemoryStorage::RMemoryStorage() :
     maxLineweight(RLineweight::Weight000), 
     boundingBoxChanged(true),
+    //boundingBoxIgnoreHiddenLayers(false),
+    //boundingBoxIgnoreEmpty(false),
     inTransaction(false) {
 
     setLastTransactionId(-1);
@@ -39,7 +41,10 @@ void RMemoryStorage::clear() {
     maxLineweight = RLineweight::Weight000;
     inTransaction = false;
     boundingBoxChanged = true;
-    boundingBox = RBox();
+    boundingBox[0][0] = RBox();
+    boundingBox[0][1] = RBox();
+    boundingBox[1][0] = RBox();
+    boundingBox[1][1] = RBox();
     objectMap.clear();
     objectHandleMap.clear();
     entityMap.clear();
@@ -784,12 +789,16 @@ bool RMemoryStorage::hasSelection() const {
 
 RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) const {
     if (!boundingBoxChanged) {
-        return boundingBox;
+        return boundingBox[ignoreHiddenLayers][ignoreEmpty];
     }
 
     RBlock::Id currentBlockId = getCurrentBlockId();
-    boundingBox = RBox();
+    boundingBox[0][0] = RBox();
+    boundingBox[0][1] = RBox();
+    boundingBox[1][0] = RBox();
+    boundingBox[1][1] = RBox();
     maxLineweight = RLineweight::Weight000;
+
     QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
     for (it = entityMap.constBegin(); it != entityMap.constEnd(); ++it) {
         QSharedPointer<REntity> e = *it;
@@ -797,15 +806,26 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
             continue;
         }
 
-        if (ignoreHiddenLayers) {
+        //if (ignoreHiddenLayers) {
+        bool layerHidden = false;
             QSharedPointer<RLayer> layer = queryLayerDirect(e->getLayerId());
             if (layer.isNull() || layer->isFrozen()) {
-                continue;
+                layerHidden = true;
             }
-        }
+        //}
 
         if (e->getBlockId() == currentBlockId) {
-            boundingBox.growToInclude(e->getBoundingBox(ignoreEmpty));
+            //bb.growToInclude(e->getBoundingBox(ignoreEmpty));
+
+            RBox bb = e->getBoundingBox(false);
+            RBox bbIgnoreEmpty = e->getBoundingBox(true);
+
+            boundingBox[0][0].growToInclude(bb);
+            boundingBox[0][1].growToInclude(bbIgnoreEmpty);
+            if (!layerHidden) {
+                boundingBox[1][0].growToInclude(bb);
+                boundingBox[1][1].growToInclude(bbIgnoreEmpty);
+            }
         }
 
         // resolve line width ByLayer:
@@ -818,15 +838,21 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
         QStack<REntity*> blockRefStack;
 
         RLineweight::Lineweight lw = e->getLineweight(true, blockRefStack);
-        if (!boundingBox.isValid()) {
-            maxLineweight = lw;
-        } else {
+        //if (maxLineweight==RLineweight::Weight000) {
+        //    maxLineweight = lw;
+        //} else {
             maxLineweight = qMax(lw, maxLineweight);
-        }
+        //}
     }
 
     boundingBoxChanged = false;
-    return boundingBox;
+
+//    qDebug() << "\n\nbb: " << boundingBox[0][0];
+//    qDebug() << "bb ignoreEmpty: " << boundingBox[0][1];
+//    qDebug() << "bb ignoreHiddenLayers: " << boundingBox[1][0];
+//    qDebug() << "bb ignoreHiddenLayers, ignoreEmpty: " << boundingBox[1][1];
+
+    return boundingBox[ignoreHiddenLayers][ignoreEmpty];
 }
 
 RBox RMemoryStorage::getSelectionBox() const {

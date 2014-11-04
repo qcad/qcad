@@ -169,9 +169,12 @@ public:
 //    virtual double getLinetypeScale() const;
 
 protected:
-    mutable RBox boundingBox;
     mutable RLineweight::Lineweight maxLineweight;
+
+    mutable RBox boundingBox[2][2];
     mutable bool boundingBoxChanged;
+    //mutable bool boundingBoxIgnoreHiddenLayers;
+    //mutable bool boundingBoxIgnoreEmpty;
 
     bool inTransaction;
     QHash<RObject::Id, QSharedPointer<RObject> > objectMap;

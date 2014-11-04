@@ -26,9 +26,17 @@ RecentFilesMenu.prototype.refresh = function() {
         if (files.length - i < 10) {
             text = "&";
         }
+
+        var fn = fi.fileName().elidedText(this.font, 300);
+        var fp = fi.path().elidedText(this.font, 200);
+
+        // make sure ampersand is not interpreted as shortcut indicator:
+        fn = fn.replace("&", "&&");
+        fp = fp.replace("&", "&&");
+
         text += (files.length - i) + " "
-                + fi.fileName().elidedText(this.font, 300) + " ["
-                + fi.path().elidedText(this.font, 200) + "]";
+                + fn + " ["
+                + fp + "]";
 
         action = new RGuiAction(text, this);
         action.setData(files[i]);

@@ -37,6 +37,7 @@ function DrawPolyline(guiAction) {
     this.prepend = false;
     this.segment = undefined;
     this.redoList = [];
+    this.sweep = 0.0;
 
     this.setUiOptions("DrawPolyline.ui");
 }
@@ -195,6 +196,32 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
                         dir,
                         this.radius);
 
+                // handle sweep here
+                // change end angle
+                // if sweep equals zero then do nothing
+                if (this.sweep < 0.0 || this.sweep > 360.0) {
+                    // print error message
+                    this.sweep = 0.0;
+                }
+                if (this.sweep !== 0.0) {
+                    var curSweep = this.segment.getSweep();
+                    if (curSweep !== this.sweep) {
+                        var startAngle = RMath.rad2deg(this.segment.getStartAngle());
+                        var reversed = this.segment.isReversed();
+                        if (reversed) {
+                            var endAngle = startAngle - this.sweep;
+                            if (endAngle < 0.0) {
+                                endAngle = endAngle + 360.0;
+                            }
+                        } else {
+                            endAngle = startAngle + this.sweep;
+                            if (endAngle > 360.0) {
+                                endAngle = endAngle - 360.0;
+                            }
+                        }
+                        this.segment.setEndAngle(RMath.deg2rad(endAngle));
+                    }
+                }
                 vertex = this.segment.getEndPoint();
 
                 if (this.prepend) {
@@ -388,6 +415,13 @@ DrawPolyline.prototype.slotArcSegmentChanged = function(value) {
  */
 DrawPolyline.prototype.slotRadiusChanged = function(value) {
     this.radius = value;
+};
+
+/**
+ * Called when user enters a sweep for the next arc segment.
+ */
+DrawPolyline.prototype.slotSweepChanged = function(value) {
+    this.sweep = value;
 };
 
 /**

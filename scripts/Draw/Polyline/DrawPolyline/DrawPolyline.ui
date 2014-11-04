@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>447</width>
+    <width>541</width>
     <height>33</height>
    </rect>
   </property>
@@ -115,6 +115,32 @@
     </widget>
    </item>
    <item>
+    <widget class="QLabel" name="sweepLabel">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Sweep</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Sweep">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string notr="true">0.0</string>
+     </property>
+     <property name="angle" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="defaultUnit" stdset="0">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="Line" name="line_3">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -168,6 +194,38 @@
     <hint type="destinationlabel">
      <x>158</x>
      <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ArcSegment</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>sweepLabel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>168</x>
+     <y>16</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>366</x>
+     <y>16</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ArcSegment</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Sweep</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>168</x>
+     <y>16</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>445</x>
+     <y>16</y>
     </hint>
    </hints>
   </connection>
