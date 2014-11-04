@@ -153,12 +153,14 @@ QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
     else if (propertyTypeId == PropertyDegree) {
         RPropertyAttributes attr;
         QSet<QString> choices;
-        if (!data.hasFitPoints()) {
-            choices.insert("1");
-            choices.insert("2");
+        for (int d=1; d<=data.controlPoints.count()-1; d++) {
+            if (d==3 || !data.hasFitPoints()) {
+                choices.insert(QString("%1").arg(d));
+            }
         }
-        choices.insert("3");
+        qDebug() << "choices: " << choices;
         attr.setChoices(choices);
+        attr.setNumericallySorted(true);
         return qMakePair(QVariant(QString("%1").arg(data.degree)), attr);
     }
     else if (propertyTypeId==PropertyLength) {

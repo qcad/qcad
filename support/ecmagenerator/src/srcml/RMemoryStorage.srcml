@@ -1860,14 +1860,6 @@ dir="./core" filename="RMemoryStorage.h">
   <decl>
     <type>
       <name>mutable</name>
-      <name>RBox</name>
-    </type>
-    <name>boundingBox</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
       <name>
       <name>RLineweight</name>::
       <name>Lineweight</name></name>
@@ -1878,26 +1870,28 @@ dir="./core" filename="RMemoryStorage.h">
   <decl>
     <type>
       <name>mutable</name>
+      <name>RBox</name>
+    </type>
+    <name>
+      <name>boundingBox</name>
+      <index>[
+      <expr>2</expr>]</index>
+      <index>[
+      <expr>2</expr>]</index>
+    </name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>mutable</name>
       <name>bool</name>
     </type>
     <name>boundingBoxChanged</name>
   </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
-      <name>bool</name>
-    </type>
-    <name>boundingBoxIgnoreHiddenLayers</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
-      <name>bool</name>
-    </type>
-    <name>boundingBoxIgnoreEmpty</name>
-  </decl>;</decl_stmt>
+  <comment type="line">//mutable bool
+  boundingBoxIgnoreHiddenLayers;</comment>
+  <comment type="line">//mutable bool
+  boundingBoxIgnoreEmpty;</comment>
   <decl_stmt>
   <decl>
     <type>

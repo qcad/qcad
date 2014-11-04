@@ -62,14 +62,27 @@ void RPainterPath::addArc(const RArc& arc) {
 }
 
 void RPainterPath::addSpline(const RSpline& spline) {
-    moveTo(spline.getStartPoint());
     int degree = spline.getDegree();
+    if (degree<=3) {
+        moveTo(spline.getStartPoint());
+    }
 
     QList<RSpline> list = spline.getBezierSegments();
 
     for (int i=0; i<list.count(); i++) {
         QList<RVector> cps = list[i].getControlPoints();
-        if (cps.size()==4 && degree==3) {
+        // very rare splines of degree 4 or 5:
+        if ((cps.size()>=5 && degree==cps.size()-1)) {
+            QList<QSharedPointer<RShape> > segments = spline.getExploded(16);
+            for (int k=0; k<segments.length(); k++) {
+                QSharedPointer<RLine> l = segments[k].dynamicCast<RLine>();
+                if (k==0) {
+                    moveTo(l->getStartPoint());
+                }
+                lineTo(l->getEndPoint());
+            }
+        }
+        else if (cps.size()==4 && degree==3) {
             cubicTo(cps[1], cps[2], cps[3]);
         }
         else if (cps.size()==3 && degree==2) {

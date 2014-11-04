@@ -51,11 +51,16 @@
       <string>Choose Spline Degree</string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <property name="sizeAdjustPolicy">
       <enum>QComboBox::AdjustToContents</enum>
      </property>
+     <item>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+     </item>
      <item>
       <property name="text">
        <string notr="true">2</string>
@@ -64,6 +69,41 @@
      <item>
       <property name="text">
        <string notr="true">3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">7</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">9</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">10</string>
       </property>
      </item>
     </widget>

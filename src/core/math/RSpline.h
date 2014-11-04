@@ -40,7 +40,7 @@ class RSplineProxy;
 #endif
 
 /**
- * Low-level mathematical representation of a 2nd or 3rd degree spline.
+ * Low-level mathematical representation of a spline.
  *
  * The spline may be defined by its control points or by its fit points but
  * not both.

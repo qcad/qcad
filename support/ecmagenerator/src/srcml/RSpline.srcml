@@ -60,9 +60,9 @@ dir="./core/math" filename="RSpline.h">
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
   <comment type="block">/** * Low-level mathematical representation
-  of a 2nd or 3rd degree spline. * * The spline may be defined by
-  its control points or by its fit points but * not both. * *
-  \ingroup math * \scriptable * \sharedPointerSupport * \copyable *
+  of a spline. * * The spline may be defined by its control points
+  or by its fit points but * not both. * * \ingroup math *
+  \scriptable * \sharedPointerSupport * \copyable *
   \hasStreamOperator */</comment>
   <class>class 
   <macro>

@@ -65,7 +65,8 @@ public:
         Integer = 0x4000,                //!< Property is an int (not a double number)
         Redundant = 0x8000,              //!< Property is redundant (e.g. angle for line entities)
         VisibleToParent = 0x10000,       //!< Property can be edited in the context of the parent entity
-        KnownVariable = 0x20000          //!< Property is a known DXF variable
+        KnownVariable = 0x20000,         //!< Property is a known DXF variable
+        NumericallySorted = 0x40000      //!< Sort choices for this property numerically
     };
     Q_DECLARE_FLAGS(Options, Option)
 
@@ -202,6 +203,14 @@ public:
 
     bool isVisibleToParent() const {
         return options.testFlag(VisibleToParent);
+    }
+
+    bool isNumericallySorted() const {
+        return options.testFlag(NumericallySorted);
+    }
+
+    void setNumericallySorted(bool on) {
+        setOption(NumericallySorted, on);
     }
 
     RPropertyTypeId getPropertyTypeId() {

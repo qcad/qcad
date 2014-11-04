@@ -133,6 +133,12 @@
         isVisibleToParent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isNumericallySorted
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setNumericallySorted
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPropertyTypeId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

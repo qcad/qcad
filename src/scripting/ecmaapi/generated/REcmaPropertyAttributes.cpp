@@ -110,6 +110,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, isVisibleToParent, "isVisibleToParent");
             
+            REcmaHelper::registerFunction(&engine, proto, isNumericallySorted, "isNumericallySorted");
+            
+            REcmaHelper::registerFunction(&engine, proto, setNumericallySorted, "setNumericallySorted");
+            
             REcmaHelper::registerFunction(&engine, proto, getPropertyTypeId, "getPropertyTypeId");
             
             REcmaHelper::registerFunction(&engine, proto, setPropertyTypeId, "setPropertyTypeId");
@@ -231,6 +235,11 @@
 
     ctor.setProperty("KnownVariable",
     QScriptValue(RPropertyAttributes::KnownVariable),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("NumericallySorted",
+    QScriptValue(RPropertyAttributes::NumericallySorted),
     QScriptValue::ReadOnly);
 
 
@@ -1957,6 +1966,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::isVisibleToParent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::isNumericallySorted
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::isNumericallySorted", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::isNumericallySorted";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("isNumericallySorted", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isNumericallySorted();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.isNumericallySorted().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::isNumericallySorted", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::setNumericallySorted
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::setNumericallySorted", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::setNumericallySorted";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("setNumericallySorted", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setNumericallySorted(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.setNumericallySorted().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::setNumericallySorted", context, engine);
             return result;
         }
          QScriptValue

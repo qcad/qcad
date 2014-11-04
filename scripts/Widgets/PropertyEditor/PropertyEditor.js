@@ -1044,8 +1044,15 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
     else if (isOfType(control, QComboBox) /*&& propertyTypeId.getId()!==REntity.PropertyLayer.getId()*/) {
         control.clear();
         if (isNull(choices)) {
-            control.addItems(attributes.getChoices());
-            control.model().sort(0);
+            if (attributes.isNumericallySorted()) {
+                var cs = attributes.getChoices();
+                cs.sort(function(a,b) { return parseInt(a) - parseInt(b) });
+                control.addItems(cs);
+            }
+            else {
+                control.addItems(attributes.getChoices());
+                control.model().sort(0);
+            }
         }
         else {
             if (isNull(choicesData)) {

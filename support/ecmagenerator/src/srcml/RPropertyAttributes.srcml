@@ -133,9 +133,13 @@ dir="./core" filename="RPropertyAttributes.h">
   <comment type="line">//!&lt; Property can be edited in the
   context of the parent entity</comment>
   <expr>
-  <name>KnownVariable</name>= 0x20000</expr>
+  <name>KnownVariable</name>= 0x20000</expr>, 
   <comment type="line">//!&lt; Property is a known DXF
-  variable</comment>}</block>;</enum>
+  variable</comment>
+  <expr>
+  <name>NumericallySorted</name>= 0x40000</expr>
+  <comment type="line">//!&lt; Sort choices for this property
+  numerically</comment>}</block>;</enum>
   <macro>
     <name>Q_DECLARE_FLAGS</name>
     <argument_list>(
@@ -932,6 +936,60 @@ dir="./core" filename="RPropertyAttributes.h">
         </expr>
       </argument>)</argument_list>
     </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>isNumericallySorted</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>options</name>.
+    <call>
+      <name>testFlag</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>NumericallySorted</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setNumericallySorted</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>bool</name>
+        </type>
+        <name>on</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <constructor_decl>
+    <name>setOption</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>NumericallySorted</name>
+        </type>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+        <type>
+          <name>on</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</constructor_decl>}</block>
   </function>
   <function>
     <type>

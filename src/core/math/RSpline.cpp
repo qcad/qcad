@@ -975,7 +975,7 @@ bool RSpline::isValid() const {
 #endif
     }
 
-    if (degree<1 || degree>3) {
+    if (degree<1) {
         qDebug() << "RSpline::isValid: spline not valid: degree: " << degree;
         return false;
     }
@@ -1070,7 +1070,7 @@ void RSpline::updateInternal() const {
     dirty = false;
     updateInProgress = true;
 
-    if (degree<1 || degree>3) {
+    if (degree<1) {
         invalidate();
         qWarning() << "RSpline::updateInternal: invalid degree: " << degree;
         updateInProgress = false;

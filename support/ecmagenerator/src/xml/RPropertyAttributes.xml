@@ -25,6 +25,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Redundant" />
       <value name="VisibleToParent" />
       <value name="KnownVariable" />
+      <value name="NumericallySorted" />
     </enum>
     <constructor>
       <variant />
@@ -218,6 +219,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isNumericallySorted"
+    cppName="isNumericallySorted" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setNumericallySorted"
+    cppName="setNumericallySorted" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
     </method>
     <method name="getPropertyTypeId" cppName="getPropertyTypeId"
     specifier="public" isStatic="false" isVirtual="false"
