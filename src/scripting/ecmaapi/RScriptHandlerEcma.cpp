@@ -1481,6 +1481,7 @@ QScriptValue RScriptHandlerEcma::ecmaQObjectGetChildren(QScriptContext* context,
 
 QScriptValue RScriptHandlerEcma::ecmaBacktrace(QScriptContext* context, QScriptEngine* engine) {
     REcmaHelper::printStackTrace(context);
+    return engine->undefinedValue();
 }
 
 QScriptValue RScriptHandlerEcma::ecmaAttachDebugger(QScriptContext* context,
