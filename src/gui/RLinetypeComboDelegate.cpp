@@ -52,7 +52,7 @@ void RLinetypeComboDelegate::paint(QPainter* painter,
 
     QPen pen;
     QVector<qreal> p = pattern.getScreenBasedLinetype();
-    qDebug() << "label: " << pattern.getLabel() << "p: " << p << "metric: " << pattern.isMetric();
+    //qDebug() << "label: " << pattern.getLabel() << "p: " << p << "metric: " << pattern.isMetric();
     pen.setDashPattern(p);
     painter->setPen(pen);
     int y = option.rect.center().y() + option.rect.height()/4;

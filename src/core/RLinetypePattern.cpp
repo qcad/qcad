@@ -495,20 +495,20 @@ void RLinetypePattern::initNameMap() {
     nameMap.insert("PHANTOM2", tr("Phantom") + " (.5x)");
     nameMap.insert("PHANTOMX2", tr("Phantom") + " (2x)");
 
-    nameMap.insert("ACADISO02W100", tr("ISO dash"));
-    nameMap.insert("ACADISO03W100", tr("ISO dash space"));
-    nameMap.insert("ACADISO04W100", tr("ISO long-dash dot"));
-    nameMap.insert("ACADISO05W100", tr("ISO long-dash double-dot"));
-    nameMap.insert("ACADISO06W100", tr("ISO long-dash triple-dot"));
-    nameMap.insert("ACADISO07W100", tr("ISO dot"));
-    nameMap.insert("ACADISO08W100", tr("ISO long-dash short-dash"));
-    nameMap.insert("ACADISO09W100", tr("ISO long-dash double-short-dash"));
-    nameMap.insert("ACADISO10W100", tr("ISO dash dot"));
-    nameMap.insert("ACADISO11W100", tr("ISO double-dash dot"));
-    nameMap.insert("ACADISO12W100", tr("ISO dash double-dot"));
-    nameMap.insert("ACADISO13W100", tr("ISO double-dash double-dot"));
-    nameMap.insert("ACADISO14W100", tr("ISO dash triple-dot"));
-    nameMap.insert("ACADISO15W100", tr("ISO double-dash triple-dot"));
+    nameMap.insert("ACAD_ISO02W100", tr("ISO dash"));
+    nameMap.insert("ACAD_ISO03W100", tr("ISO dash space"));
+    nameMap.insert("ACAD_ISO04W100", tr("ISO long-dash dot"));
+    nameMap.insert("ACAD_ISO05W100", tr("ISO long-dash double-dot"));
+    nameMap.insert("ACAD_ISO06W100", tr("ISO long-dash triple-dot"));
+    nameMap.insert("ACAD_ISO07W100", tr("ISO dot"));
+    nameMap.insert("ACAD_ISO08W100", tr("ISO long-dash short-dash"));
+    nameMap.insert("ACAD_ISO09W100", tr("ISO long-dash double-short-dash"));
+    nameMap.insert("ACAD_ISO10W100", tr("ISO dash dot"));
+    nameMap.insert("ACAD_ISO11W100", tr("ISO double-dash dot"));
+    nameMap.insert("ACAD_ISO12W100", tr("ISO dash double-dot"));
+    nameMap.insert("ACAD_ISO13W100", tr("ISO double-dash double-dot"));
+    nameMap.insert("ACAD_ISO14W100", tr("ISO dash triple-dot"));
+    nameMap.insert("ACAD_ISO15W100", tr("ISO double-dash triple-dot"));
 }
 
 /**
