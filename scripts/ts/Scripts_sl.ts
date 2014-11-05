@@ -78,7 +78,7 @@
         <translation>CAD orodja</translation>
     </message>
     <message>
-        <location line="+617"/>
+        <location line="+620"/>
         <source>Entity is on a locked layer.</source>
         <translation>Entiteta je na zaklenjeni plasti.</translation>
     </message>

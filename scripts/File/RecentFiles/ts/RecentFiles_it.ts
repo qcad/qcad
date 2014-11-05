@@ -8,7 +8,7 @@
         <translation type="obsolete">Cancella elenco</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="+47"/>
+        <location filename="../RecentFilesInit.js" line="+55"/>
         <source>&amp;Clear List</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Cancella elenco</translation>

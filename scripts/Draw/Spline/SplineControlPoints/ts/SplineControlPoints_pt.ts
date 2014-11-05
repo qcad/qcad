@@ -63,7 +63,7 @@ Grau:</translatorcomment>
         <translation>Escolha grau spline</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+70"/>
         <source>Tick for Closed Spline</source>
         <translatorcomment>--google--
 Assinale em chavetas fechadas</translatorcomment>

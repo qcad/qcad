@@ -432,7 +432,7 @@
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+419"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+463"/>
         <source>By Layer</source>
         <translation type="unfinished"></translation>
     </message>

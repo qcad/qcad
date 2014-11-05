@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>CadToolBar</name>
     <message>
@@ -44,11 +44,11 @@ Spaziatura Griglia minima (px):</translatorcomment>
     <message>
         <location line="+34"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Verticale / Orizzontale</translation>
     </message>
     <message>
         <source>Toggle Title Bar</source>
-        <translation type="vanished">Mostra barra del titolo</translation>
+        <translation>Mostra barra del titolo</translation>
     </message>
     <message>
         <source>CAD Tool Bar</source>

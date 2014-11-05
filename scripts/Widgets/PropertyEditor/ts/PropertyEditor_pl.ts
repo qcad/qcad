@@ -105,7 +105,7 @@ Czy chcesz zamknąć plik
         <translation type="unfinished">Wszystkie</translation>
     </message>
     <message>
-        <location line="+610"/>
+        <location line="+620"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -115,7 +115,7 @@ Czy chcesz zamknąć plik
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="-589"/>
+        <location line="-599"/>
         <source>Add custom property to selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -228,7 +228,7 @@ Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
         <translation type="unfinished">Nie</translation>
     </message>
     <message>
-        <location line="+299"/>
+        <location line="+309"/>
         <location line="+35"/>
         <location line="+12"/>
         <source>Property Editor</source>

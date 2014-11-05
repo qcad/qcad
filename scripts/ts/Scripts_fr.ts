@@ -90,7 +90,7 @@
         <translation>Outils de CAO</translation>
     </message>
     <message>
-        <location line="+617"/>
+        <location line="+620"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entité est sur un calque verrouillé.</translation>

@@ -21,7 +21,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+145"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>

@@ -44,7 +44,7 @@
         <translation>Elija grado spline</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+70"/>
         <source>Tick for Closed Spline</source>
         <translation>Spline cerrada</translation>
     </message>

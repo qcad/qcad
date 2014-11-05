@@ -27,7 +27,7 @@
         <translation type="obsolete">3</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+80"/>
         <source>Closed</source>
         <translation>Geschlossen</translation>
     </message>
@@ -52,12 +52,12 @@
         <translation>Spline von Kontrollpunkten</translation>
     </message>
     <message>
-        <location filename="../SplineControlPoints.ui" line="-33"/>
+        <location filename="../SplineControlPoints.ui" line="-73"/>
         <source>Choose Spline Degree</source>
         <translation>Spline Grad wählen</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+70"/>
         <source>Tick for Closed Spline</source>
         <translation>Aktivieren für geschlossene Spline</translation>
     </message>

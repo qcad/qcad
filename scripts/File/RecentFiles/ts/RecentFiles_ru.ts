@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="+47"/>
+        <location filename="../RecentFilesInit.js" line="+55"/>
         <source>&amp;Clear List</source>
         <translation type="unfinished"></translation>
     </message>

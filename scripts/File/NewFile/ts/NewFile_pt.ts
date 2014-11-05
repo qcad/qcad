@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -31,7 +31,12 @@ Sem Título</translatorcomment>
         <translation type="obsolete">Sem título %1 [*]</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="+120"/>
+        <location filename="../NewFile.js" line="+113"/>
+        <source>Opening drawing:</source>
+        <translation>Abrindo o desenho:</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Loading...</source>
         <translation>Carregando...</translation>
     </message>
@@ -71,7 +76,7 @@ Sem Título</translatorcomment>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Untitled %1</source>
         <translation>Sem título %1</translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -33,7 +33,7 @@
         <translation type="obsolete">Unbenannt %1 [*]</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="+120"/>
+        <location filename="../NewFile.js" line="+122"/>
         <source>Loading...</source>
         <translation>Lade...</translation>
     </message>
@@ -55,7 +55,12 @@
 </translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-13"/>
+        <source>Opening drawing:</source>
+        <translation>Zeichnung öffnen:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Cannot open file</source>
         <translation>Kann Datei nicht öffnen</translation>
     </message>
@@ -85,7 +90,7 @@
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Untitled %1</source>
         <translation>Unbenannt %1</translation>
     </message>

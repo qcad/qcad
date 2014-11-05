@@ -67,7 +67,7 @@
         <translation>全て</translation>
     </message>
     <message>
-        <location line="+610"/>
+        <location line="+620"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -76,7 +76,7 @@
         <translation type="obsolete">カスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="-589"/>
+        <location line="-599"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
@@ -101,7 +101,7 @@
         <translation>いいえ</translation>
     </message>
     <message>
-        <location line="+299"/>
+        <location line="+309"/>
         <location line="+35"/>
         <location line="+12"/>
         <source>Property Editor</source>

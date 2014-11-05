@@ -8,5 +8,15 @@
         <source>&amp;Add Layer</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../AddLayer.js" line="+35"/>
+        <source>Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Add Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

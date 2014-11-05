@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -123,12 +123,12 @@ Unidades de topógrafo</translatorcomment>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>A unidade de desenho deve ser &apos;Inch&apos; ou &apos;Foot&apos; para exibir cotas em formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;decimal&apos;.</translation>
     </message>
     <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">A unidade de desenho deve ser &apos;Inch&apos; para exibir cotas em formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;decimal&apos;.</translation>
+        <translation>A unidade de desenho deve ser &apos;Inch&apos; para exibir cotas em formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;decimal&apos;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

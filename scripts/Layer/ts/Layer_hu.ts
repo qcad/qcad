@@ -12,7 +12,7 @@
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+143"/>
+        <location filename="../LayerDialog.js" line="+142"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished"></translation>
     </message>

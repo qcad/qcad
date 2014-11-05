@@ -781,7 +781,7 @@ Margine (Ingrandita)</translatorcomment>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+419"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+463"/>
         <source>By Layer</source>
         <translation>Da Layer</translation>
     </message>
@@ -795,7 +795,7 @@ Margine (Ingrandita)</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation>Margine</translation>
+        <translation>Bordo</translation>
     </message>
     <message>
         <source>Border (2x)</source>
@@ -817,7 +817,7 @@ Margine (Ingrandita)</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation>Trattopunto</translation>
+        <translation>Tratto punto</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -838,91 +838,91 @@ Margine (Ingrandita)</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation>Puntinata</translation>
+        <translation>Punto</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Nascosta</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation type="unfinished"></translation>
+        <translation>Fantasma</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation type="unfinished"></translation>
+        <translation>Tratto ISO</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation type="unfinished"></translation>
+        <translation>Tratto ISO spazio</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Tratto lungo ISO punti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Tratto lungo ISO due punti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Tratto lungo ISO tre punti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Punto ISO</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation type="unfinished"></translation>
+        <translation>Tratto lungo ISO tratto corto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation type="unfinished"></translation>
+        <translation>Tratto lungo ISO due tratti corti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Tratto ISO punto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Due tratti ISO punto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Tratto ISO due punti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Linea doppia ISO punto doppio</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Tratto ISO tre punti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Due tratti ISO tre punti</translation>
     </message>
 </context>
 <context>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -81,11 +81,11 @@
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;unité de dessin doivent être &apos;Inch&apos; ou &apos;Foot&apos; pour afficher des étiquettes de dimension dans des formats &apos;architecturale&apos; ou &apos;ingénierie&apos;. Format changé en &apos;décimal&apos;.</translation>
     </message>
     <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="vanished">L&apos;unité de dessin doivent être &apos;Inch&apos; pour afficher des étiquettes de dimension dans des formats &apos;architecturale&apos; ou &apos;ingénierie&apos;. Format changé en &apos;décimal&apos;.</translation>
+        <translation>L&apos;unité de dessin doivent être &apos;Inch&apos; pour afficher des étiquettes de dimension dans des formats &apos;architecturale&apos; ou &apos;ingénierie&apos;. Format changé en &apos;décimal&apos;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

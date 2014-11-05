@@ -51,7 +51,7 @@ Stopień:</translatorcomment>
         <translation type="unfinished">Wybierz tytuł Spline</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+70"/>
         <source>Tick for Closed Spline</source>
         <translatorcomment>--google--
 Zaznacz aby uzyskać zamknięte krzywe składane</translatorcomment>

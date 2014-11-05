@@ -16,7 +16,7 @@
         <translation type="unfinished">Nowe pliki</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="+47"/>
+        <location filename="../RecentFilesInit.js" line="+55"/>
         <source>&amp;Clear List</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wyczyść listę</translation>

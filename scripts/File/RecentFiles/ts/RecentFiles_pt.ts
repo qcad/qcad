@@ -4,7 +4,7 @@
 <context>
     <name>RecentFiles</name>
     <message>
-        <location filename="../RecentFilesInit.js" line="+47"/>
+        <location filename="../RecentFilesInit.js" line="+55"/>
         <source>&amp;Clear List</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Limpar lista</translation>

@@ -34,7 +34,7 @@
         <translation>Izberi stopnjo krivulje</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+70"/>
         <source>Tick for Closed Spline</source>
         <translation>Označi za zaključeno krivuljo</translation>
     </message>

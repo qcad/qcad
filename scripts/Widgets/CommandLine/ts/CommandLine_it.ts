@@ -30,7 +30,7 @@
         <translation type="obsolete">Non valido coordinate &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+159"/>
+        <location line="+164"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Comando sconosciuto o coordinate o valore non valido: &apos;%1&apos;</translation>
     </message>
@@ -64,12 +64,12 @@
         <translation type="obsolete">Cercando di disegnare o modificare le entità su un layer bloccato.</translation>
     </message>
     <message>
-        <location line="-273"/>
+        <location line="-278"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>Non valido coordinate o distanza &apos;%1&apos;.</translation>
     </message>

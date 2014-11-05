@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>CadToolBar</name>
     <message>
@@ -20,11 +20,11 @@ O seu tema não suporta menus de navegação ou de widgets.</translatorcomment>
     <message>
         <location line="+34"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Vertical / Horizontal</translation>
     </message>
     <message>
         <source>Toggle Title Bar</source>
-        <translation type="vanished">Mostrar barra de título</translation>
+        <translation>Mostrar barra de título</translation>
     </message>
     <message>
         <source>CAD Tool Bar</source>

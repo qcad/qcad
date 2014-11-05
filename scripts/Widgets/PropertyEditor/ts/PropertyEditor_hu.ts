@@ -92,7 +92,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+299"/>
+        <location line="+309"/>
         <location line="+35"/>
         <location line="+12"/>
         <source>Property Editor</source>

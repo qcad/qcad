@@ -97,7 +97,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+299"/>
+        <location line="+309"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>

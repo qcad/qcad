@@ -26,7 +26,12 @@ Nienazwany
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../NewFile.js" line="+120"/>
+        <location filename="../NewFile.js" line="+113"/>
+        <source>Opening drawing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Loading...</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -76,7 +81,7 @@ Nie można otworzyć pliku %1! Zostaje on opuszczony</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Untitled %1</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Untitled</translation>

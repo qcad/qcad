@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../DrawPolyline.js" line="+63"/>
+        <location filename="../DrawPolyline.js" line="+67"/>
         <source>First vertex</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Primeiro vértice</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+8"/>
         <source>Next vertex</source>
         <translatorcomment>--exact match--
 --file: Leader_pt.ts--
@@ -26,6 +26,26 @@ Concluído
 Cópias de segurança de desenhos não salvos foram feitas para os seguintes
 lugares:\</translatorcomment>
         <translation>Concluído</translation>
+    </message>
+    <message>
+        <location line="+413"/>
+        <source>close</source>
+        <translation>close</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>undo</source>
+        <translation>undo</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>redo</source>
+        <translation>redo</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>arc</source>
+        <translation>arc</translation>
     </message>
     <message>
         <location filename="../DrawPolylineInit.js" line="+2"/>
@@ -50,6 +70,11 @@ lugares:\</translatorcomment>
         <translation>Fechar a polilinha</translation>
     </message>
     <message>
+        <location line="+10"/>
+        <source>,, C</source>
+        <translation>,, C</translation>
+    </message>
+    <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
         <translatorcomment>--exact match--
@@ -58,7 +83,41 @@ Desfazer segmento anterior</translatorcomment>
         <translation>Desfazer segmento anterior</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+7"/>
+        <source>,, U</source>
+        <translation>,, U</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Redo Segment</source>
+        <translation>Refaça segmento anterior</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, R</source>
+        <translation>,, R</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Arc with radius:</source>
+        <translation>Segmento de arco com raio:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,, A</source>
+        <translation>,, A</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Sweep</source>
+        <translation>Sweep</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Restrict length or angle</source>
+        <translation>Restringir comprimento ou ângulo</translation>
+    </message>
+    <message>
         <source>Arc segment with radius:</source>
         <translation>Segmento de arco com raio:</translation>
     </message>

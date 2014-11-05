@@ -127,7 +127,7 @@ Mosaico horizontal
         <translation>Todo</translation>
     </message>
     <message>
-        <location line="+610"/>
+        <location line="+620"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -157,7 +157,7 @@ Seleccione entidad base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-453"/>
+        <location line="-463"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -178,7 +178,7 @@ Seleccione entidad base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+299"/>
+        <location line="+309"/>
         <location line="+35"/>
         <location line="+12"/>
         <source>Property Editor</source>

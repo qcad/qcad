@@ -34,7 +34,7 @@
         <translation>スプライン角度を指定</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+70"/>
         <source>Tick for Closed Spline</source>
         <translation>閉じたスプラインへのチェック</translation>
     </message>

@@ -66,7 +66,7 @@
         <translation>Alle</translation>
     </message>
     <message>
-        <location line="+610"/>
+        <location line="+620"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -103,7 +103,7 @@
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-589"/>
+        <location line="-599"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -140,7 +140,7 @@
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+299"/>
+        <location line="+309"/>
         <location line="+35"/>
         <location line="+12"/>
         <source>Property Editor</source>
@@ -192,7 +192,7 @@
         <translation>Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-900"/>
+        <location filename="../PropertyEditor.js" line="-910"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
