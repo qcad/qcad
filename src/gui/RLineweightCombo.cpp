@@ -21,6 +21,7 @@
 
 #include "RDebug.h"
 #include "RLineweightCombo.h"
+#include "RSettings.h"
 
 RLineweightCombo::RLineweightCombo(QWidget *parent) :
     QComboBox(parent), onlyFixed(false) {
@@ -32,8 +33,7 @@ RLineweightCombo::RLineweightCombo(QWidget *parent) :
 }
 
 void RLineweightCombo::lineweightChanged(int index) {
-    if (itemData(index).value<RLineweight::Lineweight> ()
-            == RLineweight::WeightInvalid) {
+    if (itemData(index).value<RLineweight::Lineweight> () == RLineweight::WeightInvalid) {
         return;
     }
     currentLineweight = itemData(index).value<RLineweight::Lineweight> ();
@@ -57,6 +57,7 @@ void RLineweightCombo::init() {
         setLineweight(RLineweight::WeightByLayer);
     } else {
         // TODO: make configurable:
+        //RLineweight::Lineweight lw = RSettings::getIntValue("");
         setLineweight(RLineweight::Weight025);
     }
 }

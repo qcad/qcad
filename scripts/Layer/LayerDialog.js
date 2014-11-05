@@ -55,8 +55,6 @@ LayerDialog.prototype.getLayerName = function(dialog) {
 };
 
 LayerDialog.prototype.show = function() {
-    //var lt;
-    
     this.dialog = WidgetFactory.createDialog("scripts/Layer", "LayerDialog.ui");
     //this.dialog.windowIcon = new QIcon("scripts/Layer/EditLayer/EditLayer.svg");
 
@@ -69,6 +67,7 @@ LayerDialog.prototype.show = function() {
     layerName.textChanged.connect(this, "validate");
     var cbColor = widgets["Color"];
     var cbLineweight = widgets["Lineweight"];
+    cbLineweight.setLineweight(RSettings.getIntValue("Layer/DefaultLineweight", RLineweight.Weight025));
     var cbLinetype = widgets["Linetype"];
     cbLinetype.init(this.document);
 
