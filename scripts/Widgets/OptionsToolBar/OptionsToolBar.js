@@ -36,7 +36,7 @@ OptionsToolBar.postInit = function(basePath) {
     // fixed height to prevent FS#652 (can happen at least on Windows and Linux):
     var h = 38;
     if (RS.getSystemId()==="osx") {
-        h = 42;
+        h = 44;
     }
     optionsToolBar.setFixedHeight(h);
 
