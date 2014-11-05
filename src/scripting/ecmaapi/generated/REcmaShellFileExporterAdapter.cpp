@@ -664,12 +664,12 @@
         
     
     
-      double REcmaShellFileExporterAdapter::getPatternFactor(
-                
+      double REcmaShellFileExporterAdapter::getLineTypePatternScale(
+                const RLinetypePattern & p
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
-                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::getPatternFactor", engine);
-                QScriptValue _q_function = __qtscript_self.property("getPatternFactor");
+                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::getLineTypePatternScale", engine);
+                QScriptValue _q_function = __qtscript_self.property("getLineTypePatternScale");
 
 
 
@@ -678,10 +678,10 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=0*/
+                    || _q_function.property("length").toInt32()!=1*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
-                    //QString cppSig = "RFileExporterAdapter::getPatternFactor";
+                    //QString cppSig = "RFileExporterAdapter::getLineTypePatternScale";
                     
                         // re-enable recursion for calls from C++ into ECMAScript functions
                         // leave it marked as generated though if appropriate:
@@ -691,14 +691,14 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         double ret =
-                        RFileExporterAdapter::getPatternFactor(
-                            
+                        RFileExporterAdapter::getLineTypePatternScale(
+                            p
                         );
 
                         // block recursion again:
                         _q_function.setData(QScriptValue(engine, prev));
 
-                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getPatternFactor", engine);
+                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getLineTypePatternScale", engine);
 
                         
                           return ret;
@@ -712,14 +712,28 @@
                         double
                       >(
                     
-                            _q_function.call(__qtscript_self)
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: RLinetypePattern &, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        
+            // const reference argument - make a new object:
+            new RLinetypePattern(p)
+        )
+      
+                            )
                         
                       )
                     
                     ;
                     _q_function.setData(QScriptValue(engine, prev));
 
-                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getPatternFactor", engine);
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getLineTypePatternScale", engine);
 
                     
                             return res;

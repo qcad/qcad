@@ -114,7 +114,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportXLine, "exportXLine");
             
-            REcmaHelper::registerFunction(&engine, proto, getPatternFactor, "getPatternFactor");
+            REcmaHelper::registerFunction(&engine, proto, getLineTypePatternScale, "getLineTypePatternScale");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RFileExporterAdapter*>(), *proto);
@@ -1154,19 +1154,19 @@
             return result;
         }
          QScriptValue
-        REcmaFileExporterAdapter::getPatternFactor
+        REcmaFileExporterAdapter::getLineTypePatternScale
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileExporterAdapter::getPatternFactor", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterAdapter::getPatternFactor";
+            //REcmaHelper::functionStart("REcmaFileExporterAdapter::getLineTypePatternScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterAdapter::getLineTypePatternScale";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RFileExporterAdapter* self = 
-                        getSelf("getPatternFactor", context);
+                        getSelf("getLineTypePatternScale", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1176,17 +1176,40 @@
                 
     
     if( context->argumentCount() ==
-    0
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLinetypePattern */
+    
     ){
     // prepare arguments:
     
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLinetypePattern*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLinetypePattern*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RFileExporterAdapter: Argument 0 is not of type RLinetypePattern.",
+                               context);                    
+                    }
+                    RLinetypePattern 
+                    a0 = 
+                    *ap0;
+                
     // end of arguments
 
     // call C++ function:
     // return type 'double'
     double cppResult =
         
-               self->getPatternFactor();
+               self->getLineTypePatternScale(a0);
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1196,10 +1219,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterAdapter.getPatternFactor().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterAdapter.getLineTypePatternScale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileExporterAdapter::getPatternFactor", context, engine);
+            //REcmaHelper::functionEnd("REcmaFileExporterAdapter::getLineTypePatternScale", context, engine);
             return result;
         }
          QScriptValue REcmaFileExporterAdapter::toString

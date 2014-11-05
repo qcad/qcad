@@ -116,7 +116,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportImage, "exportImage");
             
-            REcmaHelper::registerFunction(&engine, proto, getPatternFactor, "getPatternFactor");
+            REcmaHelper::registerFunction(&engine, proto, getLineTypePatternScale, "getLineTypePatternScale");
             
             REcmaHelper::registerFunction(&engine, proto, highlightEntity, "highlightEntity");
             
@@ -2096,19 +2096,19 @@
             return result;
         }
          QScriptValue
-        REcmaGraphicsSceneQt::getPatternFactor
+        REcmaGraphicsSceneQt::getLineTypePatternScale
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::getPatternFactor", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::getPatternFactor";
+            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::getLineTypePatternScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::getLineTypePatternScale";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RGraphicsSceneQt* self = 
-                        getSelf("getPatternFactor", context);
+                        getSelf("getLineTypePatternScale", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2118,17 +2118,40 @@
                 
     
     if( context->argumentCount() ==
-    0
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLinetypePattern */
+    
     ){
     // prepare arguments:
     
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLinetypePattern*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLinetypePattern*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 0 is not of type RLinetypePattern.",
+                               context);                    
+                    }
+                    RLinetypePattern 
+                    a0 = 
+                    *ap0;
+                
     // end of arguments
 
     // call C++ function:
     // return type 'double'
     double cppResult =
         
-               self->getPatternFactor();
+               self->getLineTypePatternScale(a0);
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2138,10 +2161,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.getPatternFactor().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.getLineTypePatternScale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::getPatternFactor", context, engine);
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::getLineTypePatternScale", context, engine);
             return result;
         }
          QScriptValue

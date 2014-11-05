@@ -167,7 +167,8 @@ QVector<qreal> RLinetypePattern::getScreenBasedLinetype() {
             if (!metric) {
                 dash*=25.4;
             }
-            if (dash<RS::PointTolerance) {
+            //if (dash<RS::PointTolerance) {
+            if (dash<2.0) {
                 dash = 2.0;
             }
             ret << ceil(dash);

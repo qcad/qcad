@@ -221,7 +221,7 @@ public:
 
     virtual void exportRectangle(const RVector& p1, const RVector& p2);
 
-    virtual double getPatternFactor();
+    virtual double getLineTypePatternScale(const RLinetypePattern& p) const;
 
     QStack<REntity*> getEntityStack();
 

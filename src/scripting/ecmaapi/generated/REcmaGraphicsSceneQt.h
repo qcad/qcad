@@ -116,7 +116,7 @@
         exportImage
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getPatternFactor
+        getLineTypePatternScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         highlightEntity

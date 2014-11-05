@@ -68,7 +68,7 @@
         exportXLine
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getPatternFactor
+        getLineTypePatternScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

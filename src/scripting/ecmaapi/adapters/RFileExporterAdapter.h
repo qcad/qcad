@@ -74,7 +74,7 @@ public:
     virtual void exportTriangle(const RTriangle&) {}
     virtual void exportXLine(const RXLine&) {}
 
-    virtual double getPatternFactor() { return RFileExporter::getPatternFactor(); }
+    virtual double getLineTypePatternScale(const RLinetypePattern& p) const { return RFileExporter::getLineTypePatternScale(p); }
 };
 
 Q_DECLARE_METATYPE(RFileExporterAdapter*)

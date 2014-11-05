@@ -562,10 +562,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="getPatternFactor" cppName="getPatternFactor"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
+    <method name="getLineTypePatternScale"
+    cppName="getLineTypePatternScale" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RLinetypePattern &amp;"
+        typeName="RLinetypePattern" name="p" isConst="true" />
+      </variant>
     </method>
     <method name="getEntityStack" cppName="getEntityStack"
     specifier="public" isStatic="false" isVirtual="false"

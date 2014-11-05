@@ -355,16 +355,30 @@ filename="RFileExporterAdapter.h">
       <name>virtual</name>
       <name>double</name>
     </type>
-    <name>getPatternFactor</name>
-    <parameter_list>()</parameter_list>
+    <name>getLineTypePatternScale</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RLinetypePattern</name>&amp;</type>
+        <name>p</name>
+      </decl>
+    </param>)</parameter_list>
+    <specifier>const</specifier>
     <block>{ 
     <return>return 
     <expr>
       <call>
         <name>
         <name>RFileExporter</name>::
-        <name>getPatternFactor</name></name>
-        <argument_list>()</argument_list>
+        <name>getLineTypePatternScale</name></name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>p</name>
+          </expr>
+        </argument>)</argument_list>
       </call>
     </expr>;</return>}</block>
   </function></public>}</block>;</class>

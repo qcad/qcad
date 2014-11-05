@@ -63,7 +63,7 @@ public:
     virtual ~RGraphicsScene();
 
     RDocumentInterface& getDocumentInterface();
-    QList<RGraphicsView*> getGraphicsViews();
+    QList<RGraphicsView*> getGraphicsViews() const;
 
     virtual void clear();
 

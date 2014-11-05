@@ -821,7 +821,7 @@ void RExporter::exportLine(const RLine& line, double offset) {
         return;
     }
 
-    p.scale(getPatternFactor());
+    p.scale(getLineTypePatternScale(p));
     double patternLength = p.getPatternLength();
 
     // avoid huge number of small segments due to very fine 
@@ -954,7 +954,7 @@ void RExporter::exportArc(const RArc& arc, double offset) {
         return;
     }
 
-    p.scale(getPatternFactor());
+    p.scale(getLineTypePatternScale(p));
 
     double length = normalArc.getLength();
     double patternLength = p.getPatternLength();
@@ -1191,7 +1191,7 @@ void RExporter::exportPolyline(const RPolyline& polyline, double offset) {
     }
 
     if (!continuous) {
-        p.scale(getPatternFactor());
+        p.scale(getLineTypePatternScale(p));
 
         if (RMath::isNaN(offset)) {
             double length = polyline.getLength();
@@ -1211,7 +1211,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
     }
 
     if (!continuous) {
-        p.scale(getPatternFactor());
+        p.scale(getLineTypePatternScale(p));
 
         if (RMath::isNaN(offset)) {
             double length = spline.getLength();
@@ -1237,7 +1237,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
 
     /*
     RLinetypePattern p = getLinetypePattern();
-    p.scale(getPatternFactor());
+    p.scale(getLineTypePatternScale(p));
 
     if (RMath::isNaN(offset)) {
         double length = spline.getLength();
@@ -1343,27 +1343,36 @@ double RExporter::getPatternOffset(double length,
     return offset;
 }
 
-double RExporter::getPatternFactor() {
+double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
     if (document==NULL) {
         return 1.0;
     }
 
     double factor = 1.0;
 
-//    if (!document->isMetric()) {
-//        factor *= 25.4;
-//    }
-
     // document wide linetype scale:
     double docLinetypeScale = document->getKnownVariable(RS::LTSCALE).toDouble();
-
-    // LTSCALE might be zero:
     if (docLinetypeScale>1e-6) {
+        // LTSCALE might be zero:
         factor *= docLinetypeScale;
     }
 
+    //qDebug() << "factor (doc): " << factor;
+
+    // drawing unit scale:
+    if (p.isMetric()) {
+        // metric line type patterns are defined in mm:
+        factor *= RUnit::convert(1.0, RS::Millimeter, document->getUnit());
+    }
+    else {
+        // imperial line type patterns are defined in inches:
+        factor *= RUnit::convert(1.0, RS::Inch, document->getUnit());
+    }
+
+    //qDebug() << "factor (unit): " << factor;
+
     // entity line type scale:
-    REntity* entity = getEntity();
+    const REntity* entity = getEntity();
     if (entity!=NULL) {
         double entityLinetypeScale = entity->getLinetypeScale();
         if (!RMath::fuzzyCompare(entityLinetypeScale, 1.0)) {
@@ -1371,24 +1380,29 @@ double RExporter::getPatternFactor() {
                 factor *= entityLinetypeScale;
             }
         }
+    }
 
-        // optional: automatic scaling by line weight:
-        if (RSettings::getAutoScaleLinetypePatterns()) {
-            if (currentPen.widthF()<1e-6) {
-                // line pattern factor for lines of width 0:
-                int zww = RSettings::getZeroWeightWeight();
-                if (zww<=0) {
-                    zww = 100;
-                }
-                factor *= RUnit::convert(zww/100.0, RS::Millimeter, document->getUnit()) * docLinetypeScale;
+    //qDebug() << "factor (entity): " << factor;
+
+    // optional: automatic scaling by line weight:
+    if (RSettings::getAutoScaleLinetypePatterns()) {
+        if (currentPen.widthF()<1e-6) {
+            // line pattern factor for lines of width 0:
+            int zww = RSettings::getZeroWeightWeight()/100.0;
+            if (zww<=0) {
+                zww = 1.0;
             }
-            else {
-                //qDebug() << "currentPen.widthF(): " << currentPen.widthF();
-                //qDebug() << "currentPen.widthF() mm: " << RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter);
-                factor *= RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter);
-            }
+            //factor *= RUnit::convert(zww/100.0, RS::Millimeter, document->getUnit());
+            factor *= zww;
+        }
+        else {
+            //qDebug() << "currentPen.widthF(): " << currentPen.widthF();
+            //qDebug() << "currentPen.widthF() mm: " << RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter);
+            factor *= RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter);
         }
     }
+
+    //qDebug() << "factor: " << factor;
 
     return factor;
 }

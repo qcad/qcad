@@ -145,6 +145,7 @@ void RDocument::init() {
 
         // default variables:
         docVars->setUnit(defaultUnit);
+        initLinetypes(&transaction);
         docVars->setLinetypeScale(RSettings::getDoubleValue("LinetypeSettings/Scale", 1.0));
 
         docVars->setKnownVariable(RS::DIMTXT, RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5));

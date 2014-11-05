@@ -54,7 +54,7 @@ RDocumentInterface& RGraphicsScene::getDocumentInterface() {
 /**
  * \return List of all views that are attached to this scene.
  */
-QList<RGraphicsView*> RGraphicsScene::getGraphicsViews() {
+QList<RGraphicsView*> RGraphicsScene::getGraphicsViews() const {
     return views;
 }
 

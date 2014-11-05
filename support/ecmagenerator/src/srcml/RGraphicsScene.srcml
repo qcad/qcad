@@ -106,7 +106,8 @@ dir="./core" filename="RGraphicsScene.h">
     RGraphicsView</name>*</argument>&gt;</argument_list></name>
   </type>
   <name>getGraphicsViews</name>
-  <parameter_list>()</parameter_list>;</function_decl>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>virtual</name>

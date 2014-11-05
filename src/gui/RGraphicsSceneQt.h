@@ -58,7 +58,8 @@ public:
     RGraphicsSceneQt(RDocumentInterface& documentInterface);
     virtual ~RGraphicsSceneQt();
 
-    RGraphicsViewImage* getGraphicsView();
+    RGraphicsViewImage* getGraphicsView() const;
+    //RGraphicsViewImage* const getGraphicsView() const;
 
     virtual void clear();
 
@@ -90,7 +91,7 @@ public:
     virtual void exportPainterPaths(const QList<RPainterPath>& paths);
     virtual void exportImage(const RImageData& image);
 
-    virtual double getPatternFactor();
+    virtual double getLineTypePatternScale(const RLinetypePattern& p) const;
     
     virtual void highlightEntity(REntity& entity);
 

@@ -89,8 +89,8 @@
         
     
     
-      double getPatternFactor(
-                
+      double getLineTypePatternScale(
+                const RLinetypePattern & p
             );
         
     

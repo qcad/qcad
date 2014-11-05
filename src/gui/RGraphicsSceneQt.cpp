@@ -44,7 +44,7 @@ RGraphicsSceneQt::RGraphicsSceneQt(RDocumentInterface& documentInterface)
 RGraphicsSceneQt::~RGraphicsSceneQt() {
 }
 
-RGraphicsViewImage* RGraphicsSceneQt::getGraphicsView() {
+RGraphicsViewImage* RGraphicsSceneQt::getGraphicsView() const {
     QList<RGraphicsView*> views = getGraphicsViews();
 
     if (views.count()>=1) {
@@ -53,6 +53,14 @@ RGraphicsViewImage* RGraphicsSceneQt::getGraphicsView() {
 
     return NULL;
 }
+
+//const RGraphicsViewImage* RGraphicsSceneQt::getGraphicsView() const {
+//    if (views.count()>=1) {
+//        return dynamic_cast<const RGraphicsViewImage*>(views.at(0));
+//    }
+
+//    return NULL;
+//}
 
 void RGraphicsSceneQt::clear() {
     RGraphicsScene::clear();
@@ -482,24 +490,27 @@ void RGraphicsSceneQt::exportImage(const RImageData& image) {
 /**
  * \return Pattern scale factor with scale applied if we are printing.
  */
-double RGraphicsSceneQt::getPatternFactor() {
-    double ret = RGraphicsScene::getPatternFactor();
-    RGraphicsViewImage* view = getGraphicsView();
+double RGraphicsSceneQt::getLineTypePatternScale(const RLinetypePattern& p) const {
+    double factor = RGraphicsScene::getLineTypePatternScale(p);
+
+    const RGraphicsViewImage* view = getGraphicsView();
     if (view==NULL) {
-        return ret;
+        return factor;
     }
 
     // see: FS#322 - Line type scaling with print scale factor
     if (view->isPrinting() || view->isPrintPreview()) {
         QVariant scaleVariant = getDocument().getVariable("PageSettings/Scale", QVariant(), true);
         if (!scaleVariant.isValid() || !scaleVariant.canConvert(QVariant::String)) {
-            return ret;
+            return factor;
         }
 
-        ret /= RMath::parseScale(scaleVariant.toString());
+        factor /= RMath::parseScale(scaleVariant.toString());
     }
 
-    return ret;
+    //qDebug() << "scene factor: " << factor;
+
+    return factor;
 }
 
 void RGraphicsSceneQt::unexportEntity(REntity::Id entityId) {
