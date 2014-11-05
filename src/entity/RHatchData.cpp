@@ -948,15 +948,29 @@ RPainterPath RHatchData::getBoundaryPath() const {
                     if (periodic && b==0) {
                         boundaryPath.moveTo(controlPoints[0]);
                     }
-                    if (s.getDegree()==2) {
+                    if (s.getDegree()==1) {
+                        Q_ASSERT(controlPoints.size()==2);
+                        boundaryPath.lineTo(controlPoints[1]);
+                    } else if (s.getDegree()==2) {
                         Q_ASSERT(controlPoints.size()==3);
                         boundaryPath.quadTo(
                                     controlPoints[1], controlPoints[2]);
-
                     } else if (s.getDegree()==3) {
                         Q_ASSERT(controlPoints.size()==4);
                         boundaryPath.cubicTo(controlPoints[1], controlPoints[2], controlPoints[3]);
+                    } else {
+                        Q_ASSERT(controlPoints.size()==s.getDegree()+1);
+                        //boundaryPath.cubicTo(controlPoints[1], controlPoints[2], controlPoints[3]);
+                        QList<QSharedPointer<RShape> > segs = s.getExploded(16);
+                        for (int sc=0; sc<segs.length(); sc++) {
+                            QSharedPointer<RLine> l = segs[sc].dynamicCast<RLine>();
+                            if (l.isNull()) {
+                                continue;
+                            }
+                            boundaryPath.lineTo(l->getEndPoint());
+                        }
                     }
+
                 }
                 cursor = spline->getEndPoint();
                 continue;
