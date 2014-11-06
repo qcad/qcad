@@ -2191,8 +2191,7 @@ void RDxfServices::autoFixLinetypePattern(RLinetypePattern& pattern) {
     }
 
     // pattern appears to be metric even though it's in an imperial definition or drawing file:
-    if (pattern.getPatternLength()>pat->getPatternLength()*(25.4/2)) {
-        //pattern.scale(1/25.4);
+    if (pattern.getPatternLength()>pat->getPatternLength()*(25.4/2) || pattern.name.startsWith("ACAD_ISO")) {
         pattern.metric = true;
     }
 }
