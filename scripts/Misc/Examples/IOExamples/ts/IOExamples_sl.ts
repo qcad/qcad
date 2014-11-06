@@ -4,9 +4,13 @@
 <context>
     <name>IOExamples</name>
     <message>
-        <location filename="../IOExamples.js" line="+52"/>
         <source>&amp;Import / Export</source>
-        <translation>&amp;Izvoz / Uvoz</translation>
+        <translation type="vanished">&amp;Izvoz / Uvoz</translation>
+    </message>
+    <message>
+        <location filename="../IOExamples.js" line="+52"/>
+        <source>&amp;Import/Export</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

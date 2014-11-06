@@ -4,9 +4,13 @@
 <context>
     <name>DrawExamples</name>
     <message>
-        <location filename="../DrawExamples.js" line="+52"/>
         <source>&amp;Drawing</source>
-        <translation>&amp;Risba</translation>
+        <translation type="vanished">&amp;Risba</translation>
+    </message>
+    <message>
+        <location filename="../DrawExamples.js" line="+52"/>
+        <source>&amp;Draw</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

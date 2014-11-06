@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>CadToolBar</name>
     <message>
@@ -47,7 +47,7 @@
     </message>
     <message>
         <source>Toggle Title Bar</source>
-        <translation>Titelleiste anzeigen</translation>
+        <translation type="vanished">Titelleiste anzeigen</translation>
     </message>
     <message>
         <source>CAD Tool Bar</source>

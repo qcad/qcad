@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -85,7 +85,7 @@
     </message>
     <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>La unidad de dibujo debe ser &apos;Inch&apos; para mostrar las etiquetas de dimensión en los formatos &apos;Arquitectónico&apos; o &apos;Ingenieril&apos;. Formato cambiado a &apos;decimal&apos;.</translation>
+        <translation type="vanished">La unidad de dibujo debe ser &apos;Inch&apos; para mostrar las etiquetas de dimensión en los formatos &apos;Arquitectónico&apos; o &apos;Ingenieril&apos;. Formato cambiado a &apos;decimal&apos;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

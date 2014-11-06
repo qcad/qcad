@@ -4,9 +4,13 @@
 <context>
     <name>BlockExamples</name>
     <message>
-        <location filename="../BlockExamples.js" line="+52"/>
         <source>&amp;Blocks</source>
-        <translation>&amp;Bloki</translation>
+        <translation type="vanished">&amp;Bloki</translation>
+    </message>
+    <message>
+        <location filename="../BlockExamples.js" line="+52"/>
+        <source>&amp;Block</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

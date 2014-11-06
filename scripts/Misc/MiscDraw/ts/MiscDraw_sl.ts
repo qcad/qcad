@@ -5,7 +5,7 @@
     <name>MiscDraw</name>
     <message>
         <location filename="../MiscDraw.js" line="+58"/>
-        <source>&amp;Drawing</source>
+        <source>&amp;Draw</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

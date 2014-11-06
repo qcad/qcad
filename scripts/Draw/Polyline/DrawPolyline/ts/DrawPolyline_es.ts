@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>DrawPolyline</name>
     <message>
@@ -104,7 +104,7 @@
     </message>
     <message>
         <source>Arc segment with radius:</source>
-        <translation>Segmento de arco con radio:</translation>
+        <translation type="vanished">Segmento de arco con radio:</translation>
     </message>
     <message>
         <source>Arc segment with radius</source>

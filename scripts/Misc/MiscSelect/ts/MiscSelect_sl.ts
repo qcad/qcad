@@ -5,7 +5,7 @@
     <name>MiscSelect</name>
     <message>
         <location filename="../MiscSelect.js" line="+62"/>
-        <source>&amp;Selection</source>
+        <source>&amp;Select</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

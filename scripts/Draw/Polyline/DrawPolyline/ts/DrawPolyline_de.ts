@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>DrawPolyline</name>
     <message>
@@ -108,7 +108,7 @@
     </message>
     <message>
         <source>Arc segment with radius:</source>
-        <translation>Bogensegment mit Radius:</translation>
+        <translation type="vanished">Bogensegment mit Radius:</translation>
     </message>
     <message>
         <source>Undo Last Segment</source>
