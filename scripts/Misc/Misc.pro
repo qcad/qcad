@@ -3,6 +3,8 @@ SUBDIRS = \
     Examples \
     MiscBlock \
     MiscDraw \
+    MiscIO \
+    MiscModify \
     MiscSelect \
     Screencast \
     Tutorials \

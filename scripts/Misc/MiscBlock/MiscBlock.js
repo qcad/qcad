@@ -40,7 +40,7 @@ MiscBlock.includeBasePath = includeBasePath;
 MiscBlock.getMenu = function() {
     var menu = EAction.getSubMenu(
         Misc.getMenu(),
-        10100,
+        500,
         MiscBlock.getTitle(),
         "MiscBlock"
     );

@@ -1228,7 +1228,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
         //QPen localPen = currentPen;
         //localPen.setStyle();
         //pp.setPen(QPen(Qt::SolidLine));
-        //pp.setPen(currentPain);
+        pp.setPen(currentPen);
         pp.setInheritPen(true);
         pp.addSpline(spline);
         exportPainterPaths(QList<RPainterPath>() << pp);

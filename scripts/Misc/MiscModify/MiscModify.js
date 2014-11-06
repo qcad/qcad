@@ -17,51 +17,40 @@
  * along with QCAD.
  */
 
-/**
- * \defgroup ecma_misc_select Misc selection tools
- * \ingroup ecma_misc
- *
- * \brief This module contains misc selection tool.
- */
 include("../Misc.js");
 
 /**
- * \class MiscSelect
- * \ingroup ecma_misc_select
- *
- * \brief Base class for misc selection tools.
+ * \class MiscModify
+ * \brief Base class for misc modify tools.
  */
-function MiscSelect(guiAction) {
-    Misc.call(this, guiAction);
+function MiscModify(guiAction) {
+    EAction.call(this, guiAction);
 }
 
-MiscSelect.prototype = new Misc();
-MiscSelect.includeBasePath = includeBasePath;
+MiscModify.prototype = new EAction();
+MiscModify.includeBasePath = includeBasePath;
 
-MiscSelect.getMenu = function() {
+MiscModify.getMenu = function() {
     var menu = EAction.getSubMenu(
         Misc.getMenu(),
-        100,
-        MiscSelect.getTitle(),
-        "MiscSelect"
+        400,
+        MiscModify.getTitle(),
+        "MiscModify"
     );
     return menu;
 };
 
-MiscSelect.getToolBar = function() {
-    var tb = EAction.getToolBar(MiscSelect.getTitle(), "MiscSelectToolBar");
+MiscModify.getToolBar = function() {
+    var tb = EAction.getToolBar(MiscModify.getTitle(), "MiscModify");
+    tb.orientation = Qt.Vertical;
     tb.visible = false;
     return tb;
 };
 
-MiscSelect.getCadToolBarPanel = function() {
-    return EAction.getMainCadToolBarPanel();
+MiscModify.getTitle = function() {
+    return qsTr("&Modify");
 };
 
-MiscSelect.getTitle = function() {
-    return qsTr("&Select");
-};
-
-MiscSelect.prototype.getTitle = function() {
-    return MiscSelect.getTitle();
+MiscModify.prototype.getTitle = function() {
+    return MiscModify.getTitle();
 };

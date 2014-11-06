@@ -6,5 +6,5 @@ function init(basePath) {
     action.setDefaultCommands( [ "molimport" ]);
     action.setSortOrder(2360);
     //action.setNoState();
-    EAction.addGuiActionTo(action, IOExamples, true, false, false, false);
+    EAction.addGuiActionTo(action, MiscIO, true, false, false, false);
 }

@@ -25,13 +25,13 @@ include("../IOExamples.js");
  * x2,y2
  * ...
  */
-function ExImportPoints(guiAction) {
+function ImportPoints(guiAction) {
     IOExamples.call(this, guiAction);
 }
 
-ExImportPoints.prototype = new IOExamples();
+ImportPoints.prototype = new IOExamples();
 
-ExImportPoints.prototype.beginEvent = function() {
+ImportPoints.prototype.beginEvent = function() {
     IOExamples.prototype.beginEvent.call(this);
 
     var appWin = EAction.getMainWindow();
@@ -94,12 +94,12 @@ ExImportPoints.prototype.beginEvent = function() {
 };
 
 /**
- * Adds a menu for this action to Examples/Math Examples/ExImportPoints.
+ * Adds a menu for this action to Examples/Math Examples/ImportPoints.
  */
-ExImportPoints.init = function(basePath) {
+ImportPoints.init = function(basePath) {
     var action = new RGuiAction("&Import Points", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
-    action.setScriptFile(basePath + "/ExImportPoints.js");
+    action.setScriptFile(basePath + "/ImportPoints.js");
     action.setSortOrder(10);
     EAction.addGuiActionTo(action, IOExamples, true, false, false);
 };

@@ -17,22 +17,22 @@
  * along with QCAD.
  */
 
-include("../BlockExamples.js");
+include("../MiscBlock.js");
 
 /**
  * This action fixes invalid block names from imported drawings.
  */
-function ExFixBlockNames(guiAction) {
-    BlockExamples.call(this, guiAction);
+function BlockFixNames(guiAction) {
+    MiscBlock.call(this, guiAction);
 }
 
-ExFixBlockNames.prototype = new BlockExamples();
+BlockFixNames.prototype = new MiscBlock();
 
 /**
  * Renames blocks and terminates.
  */
-ExFixBlockNames.prototype.beginEvent = function() {
-    BlockExamples.prototype.beginEvent.call(this);
+BlockFixNames.prototype.beginEvent = function() {
+    MiscBlock.prototype.beginEvent.call(this);
 
     var document = this.getDocument();
     var di = this.getDocumentInterface();
@@ -74,12 +74,12 @@ ExFixBlockNames.prototype.beginEvent = function() {
 };
 
 /**
- * Adds a menu for this action to Examples/Math Examples/ExFixBlockNames.
+ * Adds a menu for this action to Examples/Math Examples/BlockFixNames.
  */
-ExFixBlockNames.init = function(basePath) {
+BlockFixNames.init = function(basePath) {
     var action = new RGuiAction("&Fix Block Names", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
-    action.setScriptFile(basePath + "/ExFixBlockNames.js");
+    action.setScriptFile(basePath + "/BlockFixNames.js");
     action.setSortOrder(20);
-    EAction.addGuiActionTo(action, BlockExamples, true, false, false);
+    EAction.addGuiActionTo(action, MiscBlock, true, false, false);
 };

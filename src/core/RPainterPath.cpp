@@ -71,7 +71,7 @@ void RPainterPath::addSpline(const RSpline& spline) {
 
     for (int i=0; i<list.count(); i++) {
         QList<RVector> cps = list[i].getControlPoints();
-        // very rare splines of degree 4 or 5:
+        // very rare splines of degree >=4:
         if ((cps.size()>=5 && degree==cps.size()-1)) {
             QList<QSharedPointer<RShape> > segments = spline.getExploded(16);
             for (int k=0; k<segments.length(); k++) {

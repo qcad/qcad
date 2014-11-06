@@ -17,19 +17,20 @@
  * along with QCAD.
  */
 
-include("../ModifyExamples.js");
+include("../MiscModify.js");
+include("scripts/ShapeAlgorithms.js");
 
 /**
  * Changes the direction of all (selected) arcs.
  */
-function ExChangeArcDirection(guiAction) {
-    ModifyExamples.call(this, guiAction);
+function SplineToLine(guiAction) {
+    MiscModify.call(this, guiAction);
 }
 
-ExChangeArcDirection.prototype = new ModifyExamples();
+SplineToLine.prototype = new MiscModify();
 
-ExChangeArcDirection.prototype.beginEvent = function() {
-    ModifyExamples.prototype.beginEvent.call(this);
+SplineToLine.prototype.beginEvent = function() {
+    MiscModify.prototype.beginEvent.call(this);
 
     var di = this.getDocumentInterface();
     var document = this.getDocument();
@@ -48,9 +49,16 @@ ExChangeArcDirection.prototype.beginEvent = function() {
         var id = ids[i];
         var entity = document.queryEntity(id);
 
-        if (isArcEntity(entity)) {
-            entity.setReversed(!entity.isReversed());
-            op.addObject(entity);
+        if (isSplineEntity(entity)) {
+            var shape = entity.castToShape();
+            var line = ShapeAlgorithms.splineToLineOrArc(shape, 0.01, true);
+            if (isLineShape(line)) {
+                var newEntity = shapeToEntity(document, line);
+                newEntity.copyAttributesFrom(entity.data());
+
+                op.deleteObject(entity.data());
+                op.addObject(newEntity);
+            }
         }
     }
 
@@ -59,10 +67,10 @@ ExChangeArcDirection.prototype.beginEvent = function() {
     this.terminate();
 };
 
-ExChangeArcDirection.init = function(basePath) {
-    var action = new RGuiAction("Change Arc Direction", RMainWindowQt.getMainWindow());
+SplineToLine.init = function(basePath) {
+    var action = new RGuiAction("Convert straight splines to lines", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
-    action.setScriptFile(basePath + "/ExChangeArcDirection.js");
+    action.setScriptFile(basePath + "/SplineToLine.js");
     action.setSortOrder(200);
-    EAction.addGuiActionTo(action, ModifyExamples, true, false, false);
+    EAction.addGuiActionTo(action, MiscModify, true, false, false);
 };

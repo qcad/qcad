@@ -17,19 +17,19 @@
  * along with QCAD.
  */
 
-include("../IOExamples.js");
+include("../MiscIO.js");
 include("MolImporter.js");
 
 function MolImport(guiAction) {
-    IOExamples.call(this, guiAction);
+    MiscIO.call(this, guiAction);
 }
 
-MolImport.prototype = new IOExamples();
+MolImport.prototype = new MiscIO();
 
 MolImport.basePath = includeBasePath;
 
 MolImport.prototype.beginEvent = function() {
-    IOExamples.prototype.beginEvent.call(this);
+    MiscIO.prototype.beginEvent.call(this);
     
     var lastDir = RSettings.getStringValue(
             "MolImport/Path",

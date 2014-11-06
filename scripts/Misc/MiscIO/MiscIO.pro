@@ -2,4 +2,5 @@ TEMPLATE = subdirs
 
 SUBDIRS = \
     ts \
-    ExChangeFontToArial
+    ImportPoints \
+    MolImport

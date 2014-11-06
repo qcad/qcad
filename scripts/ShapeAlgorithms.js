@@ -1468,29 +1468,35 @@ ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
  * Tries to convert the given spline into one line or arc.
  * \return RArc, RLine or the original RSpline.
  */
-ShapeAlgorithms.splineToLineOrArc = function(spline, tolerance) {
+ShapeAlgorithms.splineToLineOrArc = function(spline, tolerance, linesOnly) {
+    if (isNull(linesOnly)) {
+        linesOnly = false;
+    }
+
     var startPoint = spline.getStartPoint();
     var endPoint = spline.getEndPoint();
     var middlePoint = spline.getMiddlePoint();
     var i, point;
 
-    var arc = RArc.createFrom3Points(startPoint, middlePoint, endPoint);
-    if (arc.isValid()) {
-        var splineIsArc = true;
-        for (i=0.0; i<1.0; i+=0.1) {
-            point = spline.getPointAt(i);
-            if (!arc.isOnShape(point, true, tolerance)) {
-                splineIsArc = false;
-                break;
+    if (!linesOnly) {
+        var arc = RArc.createFrom3Points(startPoint, middlePoint, endPoint);
+        if (arc.isValid()) {
+            var splineIsArc = true;
+            for (i=0.0; i<1.0; i+=0.1) {
+                point = spline.getPointAt(i);
+                if (!arc.isOnShape(point, true, tolerance)) {
+                    splineIsArc = false;
+                    break;
+                }
             }
-        }
 
-        if (splineIsArc && arc.getRadius()>1000.0) {
-            return new RLine(startPoint, endPoint);
-        }
+            if (splineIsArc && arc.getRadius()>1000.0) {
+                return new RLine(startPoint, endPoint);
+            }
 
-        if (splineIsArc) {
-            return arc;
+            if (splineIsArc) {
+                return arc;
+            }
         }
     }
 

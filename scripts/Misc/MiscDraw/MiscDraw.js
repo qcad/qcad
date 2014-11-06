@@ -41,7 +41,7 @@ MiscDraw.includeBasePath = includeBasePath;
 MiscDraw.getMenu = function() {
     var menu = EAction.getSubMenu(
         Misc.getMenu(),
-        10100,
+        200,
         MiscDraw.getTitle(),
         "MiscDraw"
     );
@@ -55,7 +55,7 @@ MiscDraw.getToolBar = function() {
 };
 
 MiscDraw.getTitle = function() {
-    return qsTr("&Drawing");
+    return qsTr("&Draw");
 };
 
 MiscDraw.prototype.getTitle = function() {

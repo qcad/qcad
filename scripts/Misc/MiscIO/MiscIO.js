@@ -18,50 +18,49 @@
  */
 
 /**
- * \defgroup ecma_misc_select Misc selection tools
+ * \defgroup ecma_misc_block Misc I/O related tools
  * \ingroup ecma_misc
  *
- * \brief This module contains misc selection tool.
+ * \brief This module contains misc import export tools..
  */
 include("../Misc.js");
 
 /**
- * \class MiscSelect
- * \ingroup ecma_misc_select
- *
- * \brief Base class for misc selection tools.
+ * \class MiscIO
+ * \ingroup ecma_misc_io
+ * \brief Base class for misc import export tools.
  */
-function MiscSelect(guiAction) {
+function MiscIO(guiAction) {
     Misc.call(this, guiAction);
 }
 
-MiscSelect.prototype = new Misc();
-MiscSelect.includeBasePath = includeBasePath;
+MiscIO.prototype = new Misc();
+MiscIO.includeBasePath = includeBasePath;
 
-MiscSelect.getMenu = function() {
+MiscIO.getMenu = function() {
     var menu = EAction.getSubMenu(
         Misc.getMenu(),
-        100,
-        MiscSelect.getTitle(),
-        "MiscSelect"
+        50,
+        MiscIO.getTitle(),
+        "MiscIO"
     );
     return menu;
 };
 
-MiscSelect.getToolBar = function() {
-    var tb = EAction.getToolBar(MiscSelect.getTitle(), "MiscSelectToolBar");
+MiscIO.getToolBar = function() {
+    var tb = EAction.getToolBar(MiscIO.getTitle(), "MiscIOToolBar");
     tb.visible = false;
     return tb;
 };
 
-MiscSelect.getCadToolBarPanel = function() {
+MiscIO.getCadToolBarPanel = function() {
     return EAction.getMainCadToolBarPanel();
 };
 
-MiscSelect.getTitle = function() {
-    return qsTr("&Select");
+MiscIO.getTitle = function() {
+    return qsTr("&Import/Export");
 };
 
-MiscSelect.prototype.getTitle = function() {
-    return MiscSelect.getTitle();
+MiscIO.prototype.getTitle = function() {
+    return MiscIO.getTitle();
 };
