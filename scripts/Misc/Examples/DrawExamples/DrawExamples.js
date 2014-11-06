@@ -49,7 +49,7 @@ DrawExamples.getToolBar = function() {
 };
 
 DrawExamples.getTitle = function() {
-    return qsTr("&Drawing");
+    return qsTr("&Draw");
 };
 
 DrawExamples.prototype.getTitle = function() {

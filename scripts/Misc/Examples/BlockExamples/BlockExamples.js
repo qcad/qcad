@@ -49,7 +49,7 @@ BlockExamples.getToolBar = function() {
 };
 
 BlockExamples.getTitle = function() {
-    return qsTr("&Blocks");
+    return qsTr("&Block");
 };
 
 BlockExamples.prototype.getTitle = function() {

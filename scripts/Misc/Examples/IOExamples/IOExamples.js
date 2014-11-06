@@ -49,7 +49,7 @@ IOExamples.getToolBar = function() {
 };
 
 IOExamples.getTitle = function() {
-    return qsTr("&Import / Export");
+    return qsTr("&Import/Export");
 };
 
 IOExamples.prototype.getTitle = function() {
