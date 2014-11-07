@@ -1,112 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.0" language="nl_NL">
 <context>
     <name>QObject</name>
     <message>
         <location filename="../src/core/RUnit.cpp" line="+268"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inch</source>
-        <translation type="unfinished"></translation>
+        <translation>Inch</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Foot</source>
-        <translation type="unfinished"></translation>
+        <translation>Voet</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mile</source>
-        <translation type="unfinished"></translation>
+        <translation>Mile</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Millimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Millimeter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Centimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Centimeter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translation type="unfinished"></translation>
+        <translation>Meter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Kilometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Kilometer</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Microinch</source>
-        <translation type="unfinished"></translation>
+        <translation>Microinch</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translation type="unfinished"></translation>
+        <translation>Mil</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translation type="unfinished"></translation>
+        <translation>Yard</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angstrom</source>
-        <translation type="unfinished"></translation>
+        <translation>Angstrom</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Nanometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Nanometer</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Micron</source>
-        <translation type="unfinished"></translation>
+        <translation>Micron</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Decimeter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Decameter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hectometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Hectometer</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Gigameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Gigameter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translation type="unfinished"></translation>
+        <translation>Astro</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translation type="unfinished"></translation>
+        <translation>Lichtjaar</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Parsec</source>
-        <translation type="unfinished"></translation>
+        <translation>Parsec</translation>
     </message>
 </context>
 <context>
@@ -114,97 +114,97 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+411"/>
         <source>By Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Door Laag bepaald</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Door blok bepaald</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Red</source>
-        <translation type="unfinished"></translation>
+        <translation>Rood</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Green</source>
-        <translation type="unfinished"></translation>
+        <translation>Groen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Blue</source>
-        <translation type="unfinished"></translation>
+        <translation>Blauw</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cyan</source>
-        <translation type="unfinished"></translation>
+        <translation>Cyaan</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Magenta</source>
-        <translation type="unfinished"></translation>
+        <translation>Magenta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yellow</source>
-        <translation type="unfinished"></translation>
+        <translation>Geel</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Red</source>
-        <translation type="unfinished"></translation>
+        <translation>Donkerrood</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation type="unfinished"></translation>
+        <translation>Donkergroen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation type="unfinished"></translation>
+        <translation>Donkerblauw</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation type="unfinished"></translation>
+        <translation>Donkercyaan</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation type="unfinished"></translation>
+        <translation>Donkermagenta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation type="unfinished"></translation>
+        <translation>Donkergeel</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>Zwart</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gray</source>
-        <translation type="unfinished"></translation>
+        <translation>Grijs</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Light Gray</source>
-        <translation type="unfinished"></translation>
+        <translation>Lichtgrijs</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>Wit</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Others...</source>
-        <translation type="unfinished"></translation>
+        <translation>Andere..</translation>
     </message>
 </context>
 <context>
@@ -235,7 +235,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+77"/>
         <source>Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -245,28 +245,28 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Positie</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+3"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>X</source>
-        <translation type="unfinished"></translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+3"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Y</source>
-        <translation type="unfinished"></translation>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+3"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -274,52 +274,52 @@
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+3"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Schaal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoek</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+49"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Block ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok ID</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Laag</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijntype</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijntype schaal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lineweight</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijndikte</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Kleur</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekenvolgorde</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -327,42 +327,42 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Boundary</source>
-        <translation type="unfinished"></translation>
+        <translation>Begrenzing</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Links</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Onderkant</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechts</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Bovenkant</translation>
     </message>
     <message>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruiker gedefinieerd</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Breedte</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoogte</translation>
     </message>
 </context>
 <context>
@@ -370,7 +370,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+168"/>
         <source>Requires selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Selectie vereist</translation>
     </message>
 </context>
 <context>
@@ -378,32 +378,32 @@
     <message>
         <location filename="../src/core/RLayer.cpp" line="+52"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Naam</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished"></translation>
+        <translation>Verborgen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Locked</source>
-        <translation type="unfinished"></translation>
+        <translation>Vergrendeld</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Kleur</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijntype</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lineweight</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijndikte</translation>
     </message>
 </context>
 <context>
@@ -411,22 +411,22 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Naam</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Beschrijving</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Metrisch</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Patroon</translation>
     </message>
 </context>
 <context>
@@ -434,138 +434,138 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+463"/>
         <source>By Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Door laag bepaald</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Door blok bepaald</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation type="unfinished"></translation>
+        <translation>Rand</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Middellijn</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Streep punt</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dashed</source>
-        <translation type="unfinished"></translation>
+        <translation>Streep</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation type="unfinished"></translation>
+        <translation>Gescheiden</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Punt</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Verborgen</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation type="unfinished"></translation>
+        <translation>Phantom</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO streep</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO streep met afstand</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO lange streep punt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO lange streep dubbele punt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO lange streep drievoudige punt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO punt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO lang kort streep</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO lang kort kort streep</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO streep punt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dubbele streep, punt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO streep, dubbele punt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dubbele streep, dubbele punt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO streep, drievoudige punt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dubbele streep, drievoudige punt</translation>
     </message>
 </context>
 <context>
@@ -573,137 +573,137 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+34"/>
         <source>By Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Door laag bepaald</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Door blok bepaald</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaard</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.00mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.00mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.05mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.05mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.09mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.09mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.13mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.13mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.15mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.15mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.18mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.18mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.20mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.20mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.25mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.25mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.30mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.30mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.35mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.35mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.40mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.40mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.50mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.50mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.53mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.53mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.60mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.60mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.70mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.70mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.80mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.80mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.90mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.90mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.00mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>1.00mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.06mm</source>
-        <translation type="unfinished"></translation>
+        <translation>1.06mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.20mm</source>
-        <translation type="unfinished"></translation>
+        <translation>1.20mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.40mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>1.40mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.58mm</source>
-        <translation type="unfinished"></translation>
+        <translation>1.58mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.00mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>2.00mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.11mm</source>
-        <translation type="unfinished"></translation>
+        <translation>2.11mm</translation>
     </message>
 </context>
 <context>
@@ -711,17 +711,17 @@
     <message>
         <location filename="../src/core/RObject.cpp" line="+36"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruiker gedefinieerd</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Handle</source>
-        <translation type="unfinished"></translation>
+        <translation>Handle</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Protected</source>
-        <translation type="unfinished"></translation>
+        <translation>Beschermd</translation>
     </message>
 </context>
 </TS>
