@@ -72,6 +72,7 @@ PenToolBar.init = function(basePath) {
     );
 
     var linetypeCombo = penToolBar.findChild("Linetype");
+    linetypeCombo.minimumWidth = 250;
     linetypeCombo.valueChanged.connect(
         function(p) {
             EAction.getDocumentInterface().setCurrentLinetypePattern(p);
