@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Paste", "&Paste"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("Paste", "&Paste"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/Paste.js");
     action.setIcon(basePath + "/Paste.svg");
@@ -9,6 +8,7 @@ function init(basePath) {
         new QKeySequence("p,s")
     ]);
     action.setDefaultCommands(["paste", "ps"]);
-    action.setSortOrder(800);
-    EAction.addGuiActionTo(action, Edit, true, true, false);
+    action.setGroupSortOrder(2300);
+    action.setSortOrder(300);
+    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel"]);
 }

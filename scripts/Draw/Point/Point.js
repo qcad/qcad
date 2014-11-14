@@ -49,9 +49,9 @@ Point.prototype.beginEvent = function() {
 Point.getMenu = function() {
     var menu = EAction.getSubMenu(
         Draw.getMenu(),
-        100,
+        20, 100,
         Point.getTitle(),
-        "point",
+        "DrawPointMenu",
         Point.includeBasePath + "/Point.svg"
     );
     menu.setProperty("scriptFile", Point.includeBasePath + "/Point.js");
@@ -59,7 +59,7 @@ Point.getMenu = function() {
 };
 
 Point.getToolBar = function() {
-    var tb = EAction.getToolBar(Point.getTitle(), "Point");
+    var tb = EAction.getToolBar(Point.getTitle(), "PointToolBar");
     tb.visible = false;
     return tb;
 };
@@ -76,9 +76,10 @@ Point.getCadToolBarPanel = function() {
         action.setStatusTip(qsTr("Show point tools"));
         action.setDefaultShortcut(new QKeySequence("w,p"));
         action.setNoState();
-        action.setProperty("SortOrder", 100);
         action.setDefaultCommands(["pointmenu"]);
-        CadToolBarPanel.prototype.addAction.call(mtb, action);
+        action.setGroupSortOrder(20);
+        action.setSortOrder(100);
+        action.setWidgetNames(["MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(
@@ -110,4 +111,10 @@ Point.addPointsOnLine = function(doc, op, startPoint, endPoint, numberOfPoints) 
     }
     point = new RPointEntity(doc, new RPointData(endPoint));
     op.addObject(point);
+};
+
+Point.init = function() {
+    Point.getMenu();
+    Point.getToolBar();
+    Point.getCadToolBarPanel();
 };

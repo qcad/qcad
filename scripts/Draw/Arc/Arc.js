@@ -40,7 +40,7 @@ Arc.includeBasePath = includeBasePath;
 Arc.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName=="ArcMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ArcMenu") {
         EAction.showCadToolBarPanel("ArcToolsPanel");
         this.terminate();
     }
@@ -48,14 +48,18 @@ Arc.prototype.beginEvent = function() {
 
 Arc.getMenu = function() {
     var menu = EAction.getSubMenu(
-        Draw.getMenu(), 300, Arc.getTitle(), "arc", Arc.includeBasePath + "/Arc.svg"
+        Draw.getMenu(),
+        20, 300,
+        Arc.getTitle(),
+        "DrawArcMenu",
+        Arc.includeBasePath + "/Arc.svg"
     );
     menu.setProperty("scriptFile", Arc.includeBasePath + "/Arc.js");
     return menu;
 };
 
 Arc.getToolBar = function() {
-    var tb = EAction.getToolBar(Arc.getTitle(), "Arc");
+    var tb = EAction.getToolBar(Arc.getTitle(), "ArcToolBar");
     tb.visible = false;
     return tb;
 };
@@ -72,9 +76,10 @@ Arc.getCadToolBarPanel = function() {
         action.setStatusTip(qsTr("Show arc tools"));
         action.setDefaultShortcut(new QKeySequence("w,a"));
         action.setNoState();
-        action.setProperty("SortOrder", 300);
         action.setDefaultCommands(["arcmenu"]);
-        CadToolBarPanel.prototype.addAction.call(mtb, action);
+        action.setGroupSortOrder(20);
+        action.setSortOrder(300);
+        action.setWidgetNames(["MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(Arc.getTitle(), "ArcToolsPanel", true);
@@ -87,4 +92,10 @@ Arc.getTitle = function() {
 
 Arc.prototype.getTitle = function() {
     return Arc.getTitle();
+};
+
+Arc.init = function() {
+    Arc.getMenu();
+    Arc.getToolBar();
+    Arc.getCadToolBarPanel();
 };

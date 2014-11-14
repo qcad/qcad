@@ -20,8 +20,8 @@
 function ColumnLayout(parent, toolBar, buttonSize) {
     QLayout.call(this, parent);
 
-    var columns = RSettings.getIntValue("CadToolBar/Columns", 2);
-    var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
+    //var columns = RSettings.getIntValue("CadToolBar/Columns", 2);
+    //var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
 
     this.setContentsMargins(2,2,2,2);
     this.setProperty("toolBar", toolBar);
@@ -36,28 +36,35 @@ ColumnLayout.prototype = new QLayout();
  *    set.
  */
 ColumnLayout.prototype.addItem = function(item) {
+    var dbg = false;
+    if (this.parent().objectName==="MainToolsPanel") {
+        dbg = true;
+    }
+
     var itemList = this.property("ItemList");
 
     if (typeof(itemList)=="undefined" || itemList.length==0) {
         this.setProperty("ItemList", new Array(item));
+        //if (dbg) qDebug("# ", itemList); bt();
         return;
     }
 
-    var so = ColumnLayout.getSortOrder(item);
+    var so = ColumnLayout.getAccumulatedSortOrder(item, this.parent().objectName);
 
-    if (!isNull(so)) {
+    if (so!==0) {
         for (var i=0; i<itemList.length; ++i) {
             if (typeof(itemList[i].property("SortOrder"))!="number") {
                 continue;
             }
 
-            var so2 = ColumnLayout.getSortOrder(itemList[i]);
+            var so2 = ColumnLayout.getAccumulatedSortOrder(itemList[i], this.parent().objectName);
             if (isNull(so2)) {
                 continue;
             }
             if (so2>so) {
                 itemList.splice(i, 0, item);
                 this.setProperty("ItemList", itemList);
+                //if (dbg) qDebug("# ", itemList); bt();
                 return;
             }
         }
@@ -65,16 +72,33 @@ ColumnLayout.prototype.addItem = function(item) {
 
     itemList.push(item);
     this.setProperty("ItemList", itemList);
+    //if (dbg) qDebug("# ", itemList); bt();
 };
 
-ColumnLayout.getSortOrder = function(item) {
-    if (typeof(item.property("SortOrderCadToolBar"))=="number") {
-        return item.property("SortOrderCadToolBar");
+ColumnLayout.getAccumulatedSortOrder = function(item, objectName) {
+    return ColumnLayout.getSortOrder(item, objectName) + ColumnLayout.getGroupSortOrder(item, objectName)*100000;
+};
+
+ColumnLayout.getSortOrder = function(item, objectName) {
+    var n = "SortOrderOverride" + objectName;
+    if (typeof(item.property(n))=="number") {
+        return item.property(n);
     }
     if (typeof(item.property("SortOrder"))=="number") {
         return item.property("SortOrder");
     }
-    return undefined;
+    return 0;
+};
+
+ColumnLayout.getGroupSortOrder = function(item, objectName) {
+    var n = "GroupSortOrderOverride" + objectName;
+    if (typeof(item.property(n))=="number") {
+        return item.property(n);
+    }
+    if (typeof(item.property("GroupSortOrder"))=="number") {
+        return item.property("GroupSortOrder");
+    }
+    return 0;
 };
 
 ColumnLayout.prototype.minimumSize = function() {
@@ -91,6 +115,11 @@ ColumnLayout.prototype.sizeHint = function() {
 };
 
 ColumnLayout.prototype.setGeometry = function(rect) {
+    var dbg = false;
+    if (this.parent().objectName==="MainToolsPanel") {
+        dbg = true;
+    }
+
     var itemList = this.property("ItemList");
     if (typeof(itemList)=="undefined") {
         return;
@@ -109,11 +138,23 @@ ColumnLayout.prototype.setGeometry = function(rect) {
     var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
     var buttonSize = iconSize * 1.25;
     var c=0;
+    var groupOrder=-1;
+
+    //if (dbg) qDebug("===============");
+    //if (dbg) qDebug(itemList);
 
     for (var i=0; i<itemList.length; ++i) {
 
         if (isOfType(itemList[i], QToolButton)) {
             itemList[i].iconSize = new QSize(iconSize, iconSize);
+//            if (itemList[i]["VisibleOverride"]===false) {
+//                qDebug("item invisible: ", itemList[i].objectName);
+//                continue;
+//            }
+            if (itemList[i].defaultAction().visible===false) {
+                itemList[i].visible = false;
+                continue;
+            }
         }
 
         // back button at the top or left:
@@ -128,11 +169,13 @@ ColumnLayout.prototype.setGeometry = function(rect) {
                 h+=buttonSize*0.75 + 8;
                 w=0;
             }
+//            if (dbg) qDebug("BackButton");
             continue;
         }
 
         // separator:
         if (isFunction(itemList[i].isSeparator) && itemList[i].isSeparator()) {
+//            if (dbg) qDebug("Separator");
             if (horizontal) {
                 if (h==0) {
                     w+=8;
@@ -156,6 +199,7 @@ ColumnLayout.prototype.setGeometry = function(rect) {
             continue;
         }
 
+//        if (dbg) qDebug("Button");
         itemList[i].setGeometry(w,h, buttonSize,buttonSize);
 
         if (horizontal) {
@@ -187,7 +231,12 @@ ColumnLayout.prototype.setGeometry = function(rect) {
         w+=buttonSize;
     }
 
-    this.setProperty("sHint", new QSize(w, h));
+    if (horizontal) {
+        this.setProperty("sHint", new QSize(w, buttonSize*columns));
+    }
+    else {
+        this.setProperty("sHint", new QSize(buttonSize*columns, h));
+    }
 };
 
 ColumnLayout.prototype.itemAt = function(index) {

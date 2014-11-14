@@ -33,9 +33,9 @@ ListenerExamples.includeBasePath = includeBasePath;
 ListenerExamples.getMenu = function() {
     var menu = EAction.getSubMenu(
         Examples.getMenu(),
-        1000,
+        70000, 1000,
         ListenerExamples.getTitle(),
-        "ListenerExamples"
+        "ListenerExamplesMenu"
     );
     return menu;
 };
@@ -53,4 +53,9 @@ ListenerExamples.getTitle = function() {
 
 ListenerExamples.prototype.getTitle = function() {
     return ListenerExamples.getTitle();
+};
+
+ListenerExamples.init = function() {
+    ListenerExamples.getMenu();
+    ListenerExamples.getToolBar();
 };

@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("CutWithReference", "&Cut with Reference"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("CutWithReference", "&Cut with Reference"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/CutWithReference.js");
@@ -10,8 +9,10 @@ function init(basePath) {
         new QKeySequence("r,t")
     ]);
     action.setDefaultCommands(["cutwithreference", "rt"]);
-    action.setSortOrder(1000);
-    EAction.addGuiActionTo(action, Edit, true, true, false, true);
+    action.setGroupSortOrder(2400);
+    action.setSortOrder(100);
+    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel"]);
+
     var appWin = EAction.getMainWindow();
     appWin.addSelectionListener(action);
 }

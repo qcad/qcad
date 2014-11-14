@@ -6,6 +6,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("EllipseCPP", "Draw full ellipse from center, major point and ratio"));
     action.setDefaultShortcut(new QKeySequence("e,p"));
     action.setDefaultCommands(["ellipse", "ep"]);
+    action.setGroupSortOrder(9100);
     action.setSortOrder(100);
-    EAction.addGuiActionTo(action, Ellipse, true, true, true);
+    action.setWidgetNames(["DrawEllipseMenu", "EllipseToolBar", "EllipseToolsPanel"]);
 }

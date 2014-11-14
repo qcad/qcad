@@ -6,6 +6,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("Arc2PR", "Draw arc from 2 points and radius"));
     action.setDefaultShortcut(new QKeySequence("a,d"));
     action.setDefaultCommands(["arcradius", "ad"]);
-    action.setSortOrder(200);
-    EAction.addGuiActionTo(action, Arc, true, true, true, true);
+    action.setGroupSortOrder(7200);
+    action.setSortOrder(100);
+    action.setWidgetNames(["DrawArcMenu", "ArcToolBar", "ArcToolsPanel"]);
 }

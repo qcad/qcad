@@ -24,7 +24,8 @@ void RExamplePlugin::postInit(InitStatus status) {
     //guiAction->setIcon(basePath + "/Line2P.svg");
     //guiAction->setStatusTip(qsTranslate("Line2P", "Draw single line or sequence of lines"));
     //guiAction->setDefaultShortcut(new QKeySequence("l,i"));
-    guiAction->setSortOrder(100000);
+    guiAction->setGroupSortOrder(100000);
+    guiAction->setSortOrder(100);
 
     QMenuBar* menuBar = appWin->menuBar();
     QMenu* menu = menuBar->findChild<QMenu*>("MiscMenu");

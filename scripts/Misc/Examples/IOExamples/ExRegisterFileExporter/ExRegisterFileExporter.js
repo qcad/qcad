@@ -129,6 +129,7 @@ ExRegisterFileExporter.init = function(basePath) {
     var action = new RGuiAction(qsTr("&Register File Exporter"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ExRegisterFileExporter.js");
-    action.setSortOrder(100);
-    EAction.addGuiActionTo(action, IOExamples, true, false, false);
+    action.setGroupSortOrder(71100);
+    action.setSortOrder(200);
+    action.setWidgetNames(["IOExamplesMenu"]);
 };

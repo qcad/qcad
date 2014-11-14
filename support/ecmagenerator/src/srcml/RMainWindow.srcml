@@ -1139,6 +1139,21 @@ dir="./core" filename="RMainWindow.h">
   <name>quit</name>
   <parameter_list>()</parameter_list>
   <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+  <name>virtual</name>
+  <name>QWidget</name>*</type>
+  <name>getChildWidget</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>name</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
   <function>
     <type>
       <name>virtual</name>

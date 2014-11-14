@@ -24,6 +24,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="init" cppName="init" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="formatToolTip" cppName="formatToolTip"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -112,6 +116,96 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="setGroupSortOrderStatic"
+    cppName="setGroupSortOrderStatic" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="a"
+        isConst="false" />
+        <arg type="int" typeName="int" name="sortOrder"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setGroupSortOrderOverrideStatic"
+    cppName="setGroupSortOrderOverrideStatic" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="a"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString"
+        name="widgetName" isConst="true" />
+        <arg type="int" typeName="int" name="sortOrder"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getGroupSortOrderStatic"
+    cppName="getGroupSortOrderStatic" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="a"
+        isConst="true" />
+        <arg type="QWidget *" typeName="QWidget *" name="w"
+        hasDefault="true" default=" NULL" isConst="true" />
+      </variant>
+    </method>
+    <method name="setSortOrderStatic" cppName="setSortOrderStatic"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="a"
+        isConst="false" />
+        <arg type="int" typeName="int" name="sortOrder"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setSortOrderOverrideStatic"
+    cppName="setSortOrderOverrideStatic" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="a"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString"
+        name="widgetName" isConst="true" />
+        <arg type="int" typeName="int" name="sortOrder"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getSortOrderStatic" cppName="getSortOrderStatic"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="a"
+        isConst="true" />
+        <arg type="QWidget *" typeName="QWidget *" name="w"
+        hasDefault="true" default=" NULL" isConst="true" />
+      </variant>
+    </method>
+    <method name="setGroupSortOrder" cppName="setGroupSortOrder"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="sortOrder"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setGroupSortOrderOverride"
+    cppName="setGroupSortOrderOverride" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="widgetName" isConst="true" />
+        <arg type="int" typeName="int" name="sortOrder"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getGroupSortOrder" cppName="getGroupSortOrder"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QWidget *" typeName="QWidget *" name="w"
+        hasDefault="true" default=" NULL" isConst="true" />
+      </variant>
+    </method>
     <method name="setSortOrder" cppName="setSortOrder"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -120,10 +214,23 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="setSortOrderOverride"
+    cppName="setSortOrderOverride" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="widgetName" isConst="true" />
+        <arg type="int" typeName="int" name="sortOrder"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getSortOrder" cppName="getSortOrder"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="int" isPureVirtual="false" />
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QWidget *" typeName="QWidget *" name="w"
+        hasDefault="true" default=" NULL" isConst="true" />
+      </variant>
     </method>
     <method name="addToMenu" cppName="addToMenu" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -140,10 +247,30 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="addToWidget" cppName="addToWidget"
-    specifier="public" isStatic="false" isVirtual="false"
+    <method name="fixSeparators" cppName="fixSeparators"
+    specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
+        <arg type="QWidget *" typeName="QWidget *" name="w"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="addSeparatorToWidget"
+    cppName="addSeparatorToWidget" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="a"
+        isConst="false" />
+        <arg type="QWidget *" typeName="QWidget *" name="w"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addToWidget" cppName="addToWidget"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="a"
+        isConst="false" />
         <arg type="QWidget *" typeName="QWidget *" name="w"
         isConst="false" />
       </variant>
@@ -387,19 +514,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="setSeparatorGroup" cppName="setSeparatorGroup"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="title"
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="getSeparatorGroup" cppName="getSeparatorGroup"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
-    </method>
     <method name="getActions" cppName="getActions"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -502,6 +616,37 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setWidgetNamesStatic"
+    cppName="setWidgetNamesStatic" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="a"
+        isConst="false" />
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="widgetNames" isConst="true" />
+      </variant>
+    </method>
+    <method name="getWidgetNamesStatic"
+    cppName="getWidgetNamesStatic" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="a"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setWidgetNames" cppName="setWidgetNames"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="widgetNames" isConst="true" />
+      </variant>
+    </method>
+    <method name="getWidgetNames" cppName="getWidgetNames"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
     </method>
     <method name="slotTrigger" cppName="slotTrigger"
     specifier="public" isStatic="false" isVirtual="false"

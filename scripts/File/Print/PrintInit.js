@@ -6,6 +6,7 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence(Qt.ControlModifier + Qt.Key_P));
     action.setDefaultCommands(["print"]);
     action.setStatusTip(qsTranslate("Print", "Print current drawing"));
-    action.setSortOrder(3100);
-    EAction.addGuiActionTo(action, File, true, false, false);
+    action.setGroupSortOrder(1600);
+    action.setSortOrder(200);
+    action.setWidgetNames(["FileMenu", "FileToolsPanel"]);
 }

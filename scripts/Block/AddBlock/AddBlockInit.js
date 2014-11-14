@@ -6,6 +6,7 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("b,a"));
     action.setDefaultCommands(["blockadd", "ba"]);
     action.setStatusTip(qsTranslate("AddBlock", "Add new empty block"));
-    action.setSortOrder(1000);
-    EAction.addGuiActionTo(action, Block, true, true, false, true);
+    action.setGroupSortOrder(14200);
+    action.setSortOrder(100);
+    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel"]);
 }

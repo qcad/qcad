@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("DimRotated", "Draw linear dimension at a fixed angle"));
     action.setDefaultShortcut(new QKeySequence("d,l"));
     action.setDefaultCommands(["dimlinear", "dimrotated", "dl"]);
+    action.setGroupSortOrder(12100);
     action.setSortOrder(200);
-    EAction.addGuiActionTo(action, Dimension, true, true, true);
+    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "DimensionToolsPanel"]);
 }

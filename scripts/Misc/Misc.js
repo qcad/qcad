@@ -38,6 +38,15 @@ function Misc(guiAction) {
 Misc.prototype = new EAction();
 Misc.includeBasePath = includeBasePath;
 
+Misc.prototype.beginEvent = function() {
+    EAction.prototype.beginEvent.call(this);
+
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="MiscToolsPanelButton") {
+        EAction.showCadToolBarPanel("MiscToolsPanel");
+        this.terminate();
+    }
+};
+
 Misc.getMenu = function() {
     var menu = EAction.getMenu(Misc.getTitle(), "MiscMenu");
     menu.setProperty("scriptFile", Misc.includeBasePath + "/Misc.js");
@@ -51,7 +60,29 @@ Misc.getToolBar = function() {
 };
 
 Misc.getCadToolBarPanel = function() {
-    return EAction.getMainCadToolBarPanel();
+    var mtb = EAction.getMainCadToolBarPanel();
+    var actionName = "MiscToolsPanelButton";
+    if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
+        var action = new RGuiAction(qsTr("Misc Tools"), mtb);
+        action.setScriptFile(Misc.includeBasePath + "/Misc.js");
+        action.objectName = actionName;
+        action.setRequiresDocument(false);
+        action.setIcon(Misc.includeBasePath + "/Misc.svg");
+        action.setStatusTip(qsTr("Show misc tools"));
+        action.setDefaultShortcut(new QKeySequence("w,c"));
+        action.setNoState();
+        action.setDefaultCommands(["miscmenu"]);
+        action.setGroupSortOrder(80);
+        action.setSortOrder(100);
+        //action.setWidgetNames(["MainToolsPanel"]);
+    }
+
+    var tb = EAction.getCadToolBarPanel(
+        Misc.getTitle(),
+        "MiscToolsPanel",
+        true
+    );
+    return tb;
 };
 
 Misc.getTitle = function() {
@@ -60,4 +91,10 @@ Misc.getTitle = function() {
 
 Misc.prototype.getTitle = function() {
     return Misc.getTitle();
+};
+
+Misc.init = function() {
+    Misc.getMenu();
+    Misc.getToolBar();
+    Misc.getCadToolBarPanel();
 };

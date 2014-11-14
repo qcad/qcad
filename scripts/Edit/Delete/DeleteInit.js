@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Delete", "&Delete"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("Delete", "&Delete"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/Delete.js");
@@ -11,9 +10,11 @@ function init(basePath) {
        new QKeySequence("e,r")
     ]);
     action.setDefaultCommands(["delete", "er"]);
-    action.setSortOrder(400);
     action.setNoState();
-    EAction.addGuiActionTo(action, Edit, true, true, false, true);
+    action.setGroupSortOrder(2200);
+    action.setSortOrder(100);
+    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel"]);
+
     var appWin = EAction.getMainWindow();
     appWin.addSelectionListener(action);
 }

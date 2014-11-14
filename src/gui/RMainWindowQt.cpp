@@ -188,6 +188,14 @@ void RMainWindowQt::updateGuiActions(QMdiSubWindow*) {
     }
 }
 
+void RMainWindowQt::initGuiActions() {
+    QList<RGuiAction*> actions = RGuiAction::getActions();
+    for (int i = 0; i < actions.size(); ++i) {
+        RGuiAction* a = actions.at(i);
+        a->init();
+    }
+}
+
 void RMainWindowQt::suspendAndResume(QMdiSubWindow* mdiChild) {
     Q_UNUSED(mdiChild)
 
@@ -478,6 +486,10 @@ void RMainWindowQt::writeSettings() {
     RSettings::getQSettings()->setValue("Appearance/DockappWindows", saveState());
     RSettings::getQSettings()->setValue("Appearance/FullScreen", isFullScreen());
     RSettings::getQSettings()->setValue("Appearance/StatusBar", statusBar()->isVisible());
+}
+
+QWidget* RMainWindowQt::getChildWidget(const QString& name) {
+    return findChild<QWidget*>(name);
 }
 
 bool RMainWindowQt::event(QEvent* e) {

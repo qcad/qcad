@@ -38,6 +38,15 @@ function Block(guiAction) {
 Block.prototype = new EAction();
 Block.includeBasePath = includeBasePath;
 
+Block.prototype.beginEvent = function() {
+    EAction.prototype.beginEvent.call(this);
+
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="BlockToolsPanelButton") {
+        EAction.showCadToolBarPanel("BlockToolsPanel");
+        this.terminate();
+    }
+};
+
 Block.getMenu = function() {
     var menu = EAction.getMenu(Block.getTitle(), "BlockMenu");
     menu.setProperty("scriptFile", Block.includeBasePath + "/Block.js");
@@ -50,12 +59,44 @@ Block.getToolBar = function() {
     return tb;
 };
 
+Block.getCadToolBarPanel = function() {
+    var mtb = EAction.getMainCadToolBarPanel();
+    var actionName = "BlockToolsPanelButton";
+    if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
+        var action = new RGuiAction(qsTr("Block Tools"), mtb);
+        action.setScriptFile(Block.includeBasePath + "/Block.js");
+        action.objectName = actionName;
+        action.setRequiresDocument(true);
+        action.setIcon(Block.includeBasePath + "/Block.svg");
+        action.setStatusTip(qsTr("Show block tools"));
+        action.setDefaultShortcut(new QKeySequence("w,b"));
+        action.setNoState();
+        action.setDefaultCommands(["blockmenu"]);
+        action.setGroupSortOrder(60);
+        action.setSortOrder(100);
+        //action.setWidgetNames(["MainToolsPanel"]);
+    }
+
+    var tb = EAction.getCadToolBarPanel(
+        Block.getTitle(),
+        "BlockToolsPanel",
+        true
+    );
+    return tb;
+};
+
 Block.getTitle = function() {
     return qsTr("&Block");
 };
 
 Block.prototype.getTitle = function() {
     return Block.getTitle();
+};
+
+Block.init = function() {
+    Block.getMenu();
+    Block.getToolBar();
+    Block.getCadToolBarPanel();
 };
 
 /**

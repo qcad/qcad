@@ -2,7 +2,9 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("BrowseUserManual", "Browse User Manual"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/BrowseUserManual.js");
-    action.setSortOrder(100);
+    action.setIcon(basePath + "/BrowseUserManual.svg");
     action.setNoState();
-    EAction.addGuiActionTo(action, Help, true, false, false);
+    action.setGroupSortOrder(110100);
+    action.setSortOrder(100);
+    action.setWidgetNames(["HelpMenu", "HelpToolBar"]);
 }

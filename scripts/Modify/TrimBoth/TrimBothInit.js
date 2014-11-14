@@ -6,6 +6,7 @@ function init(basePath) {
     action.setIcon(basePath + "/TrimBoth.svg");
     action.setDefaultShortcut(new QKeySequence("t,m"));
     action.setDefaultCommands(["trim2", "extend2", "tm"]);
-    action.setSortOrder(1100);
-    EAction.addGuiActionTo(action, Modify, true, true, true);
+    action.setGroupSortOrder(13200);
+    action.setSortOrder(200);
+    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel"]);
 }

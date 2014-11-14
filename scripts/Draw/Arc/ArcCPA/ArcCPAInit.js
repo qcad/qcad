@@ -6,6 +6,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("ArcCPA", "Draw arc from center, point on arc and angles"));
     action.setDefaultShortcut(new QKeySequence("a,r"));
     action.setDefaultCommands(["arcc", "ar"]);
+    action.setGroupSortOrder(7100);
     action.setSortOrder(100);
-    EAction.addGuiActionTo(action, Arc, true, true, true);
+    action.setWidgetNames(["DrawArcMenu", "ArcToolBar", "ArcToolsPanel"]);
 }

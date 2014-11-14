@@ -6,6 +6,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("Line2P", "Draw single line or sequence of lines"));
     action.setDefaultShortcut(new QKeySequence("l,i"));
     action.setDefaultCommands(["line", "ln", "li", "l"]);
+    action.setGroupSortOrder(6100);
     action.setSortOrder(100);
-    EAction.addGuiActionTo(action, Line, true, true, true);
+    action.setWidgetNames(["DrawLineMenu", "LineToolBar", "LineToolsPanel"]);
 }

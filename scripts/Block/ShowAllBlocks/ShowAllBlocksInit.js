@@ -5,6 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/ShowAllBlocks.svg");
     action.setDefaultShortcut(new QKeySequence("b,s"));
     action.setDefaultCommands(["blockshowAll", "bs"]);
+    action.setGroupSortOrder(14100);
     action.setSortOrder(200);
-    EAction.addGuiActionTo(action, Block, true, true, false);
+    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel"]);
 }

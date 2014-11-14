@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("DimOrdinate", "Draw ordinate dimension"));
     action.setDefaultShortcut(new QKeySequence("d,o"));
     action.setDefaultCommands(["dimordinate", "do"]);
-    action.setSortOrder(500);
-    EAction.addGuiActionTo(action, Dimension, true, true, true, true);
+    action.setGroupSortOrder(12200);
+    action.setSortOrder(100);
+    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "DimensionToolsPanel"]);
 }

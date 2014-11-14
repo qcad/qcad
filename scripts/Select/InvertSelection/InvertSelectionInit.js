@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("InvertSelection", "&Invert Selection"), RMainWindowQt
-            .getMainWindow());
+    var action = new RGuiAction(qsTranslate("InvertSelection", "&Invert Selection"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/InvertSelection.js");
     action.setIcon(basePath + "/InvertSelection.svg");
@@ -8,6 +7,7 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("t,i"));
     action.setDefaultCommands(["selectinvert", "invertselection", "ti"]);
     action.setNoState();
-    action.setSortOrder(300);
-    EAction.addGuiActionTo(action, Select, true, true, true);
+    action.setGroupSortOrder(4100);
+    action.setSortOrder(400);
+    action.setWidgetNames(["SelectMenu", "SelectToolBar", "SelectToolsPanel"]);
 }

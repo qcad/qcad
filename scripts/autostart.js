@@ -601,6 +601,32 @@ function main() {
         include(files[i]);
     }
 
+    //RMainWindow* appWin = RMainWindow::getMainWindow();
+
+    var actions = RGuiAction.getActions();
+    for (var c=0; c<actions.length; ++c) {
+        var a = actions[c];
+        var wns = a.getWidgetNames();
+        for (var k=0; k<wns.length; k++) {
+            var wn = wns[k];
+            var w = appWin.findChild(wn);
+            if (!isNull(w)) {
+                //qDebug("adding action ", a.text, "to widget: ", wn, w);
+                RGuiAction.addToWidget(a, w);
+
+//                if (wn==="LineToolsPanel") {
+//                    w.addAction(a);
+//                }
+            }
+            else {
+                qWarning("RGuiAction::init: Cannot add action to widget: ", wn);
+            }
+        }
+    }
+
+
+    //appWin.initGuiActions();
+    //TODO: appWin.initSeparators();
     appWin.updateGuiActions();
     appWin.acceptDrops = true;
     appWin.dockNestingEnabled = true;

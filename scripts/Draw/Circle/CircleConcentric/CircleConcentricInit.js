@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("CircleConcentric", "Draw concentric circle"));
     action.setDefaultShortcut(new QKeySequence("c,c"));
     action.setDefaultCommands(["circleconcentric", "cc"]);
-    action.setSortOrder(600);
-    EAction.addGuiActionTo(action, Circle, true, true, true, true);
+    action.setGroupSortOrder(8400);
+    action.setSortOrder(100);
+    action.setWidgetNames(["DrawCircleMenu", "CircleToolBar", "CircleToolsPanel"]);
 }

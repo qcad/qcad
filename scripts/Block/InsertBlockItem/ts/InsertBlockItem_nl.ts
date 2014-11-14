@@ -15,7 +15,7 @@
     <message>
         <location filename="../InsertBlockItem.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished"/>
+        <translation>Rotatie:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -25,7 +25,7 @@
     <message>
         <location line="+90"/>
         <source>Scale:</source>
-        <translation type="unfinished"/>
+        <translation>Schaal:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -50,7 +50,7 @@
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished"/>
+        <translation>Lagen overschrijven</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -60,7 +60,7 @@
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished"/>
+        <translation>Blokken overschrijven</translation>
     </message>
     <message>
         <location filename="../InsertBlockItemInit.js" line="+2"/>

@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("SnapFree", "&Free"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("SnapFree", "&Free"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SnapFree.js");
     action.setIcon(basePath + "/SnapFree.svg");
@@ -9,7 +8,10 @@ function init(basePath) {
     action.setSortOrder(100);
     action.setGroup("snaps");
     action.setNoState(true);
+    action.setGroupSortOrder(15000);
+    action.setSortOrder(100);
+    action.setWidgetNames(["SnapMenu", "SnapToolBar", "SnapToolsPanel"]);
+
     var appWin = EAction.getMainWindow();
     appWin.addFocusListener(action);
-    EAction.addGuiActionTo(action, Snap, true, true, true);
 }

@@ -33,9 +33,9 @@ BlockExamples.includeBasePath = includeBasePath;
 BlockExamples.getMenu = function() {
     var menu = EAction.getSubMenu(
         Examples.getMenu(),
-        100,
+        70000, 800,
         BlockExamples.getTitle(),
-        "blockExamples"
+        "BlockExamplesMenu"
         //BlockExamples.includeBasePath + "/BlockExamples.svg"
     );
     return menu;
@@ -54,4 +54,9 @@ BlockExamples.getTitle = function() {
 
 BlockExamples.prototype.getTitle = function() {
     return BlockExamples.getTitle();
+};
+
+BlockExamples.init = function() {
+    BlockExamples.getMenu();
+    BlockExamples.getToolBar();
 };

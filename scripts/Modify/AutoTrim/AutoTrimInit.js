@@ -5,6 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/AutoTrim.svg");
     action.setDefaultShortcut(new QKeySequence("a,x"));
     action.setDefaultCommands(["autotrim", "ax"]);
-    action.setSortOrder(3150);
-    EAction.addGuiActionTo(action, Modify, true, true, true);
+    action.setGroupSortOrder(13400);
+    action.setSortOrder(400);
+    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel"]);
 }

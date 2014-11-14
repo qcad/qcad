@@ -69,7 +69,8 @@ AppPreferences.init = function(basePath) {
     action.setDefaultCommands(["preferences"]);
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/AppPreferences.js");
-    action.setSortOrder(90000);
     action.setNoState();
-    EAction.addGuiActionTo(action, Edit, true, false, false, false);
+    action.setGroupSortOrder(2800);
+    action.setSortOrder(200);
+    action.setWidgetNames(["EditMenu"]);
 };

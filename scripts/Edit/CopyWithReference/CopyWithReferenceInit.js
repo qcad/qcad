@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("CopyWithReference", "&Copy with Reference"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("CopyWithReference", "&Copy with Reference"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/CopyWithReference.js");
@@ -10,8 +9,10 @@ function init(basePath) {
         new QKeySequence("r,c")
     ]);
     action.setDefaultCommands(["copywithreference", "rc"]);
-    action.setSortOrder(1100);
-    EAction.addGuiActionTo(action, Edit, true, true, false);
+    action.setGroupSortOrder(2400);
+    action.setSortOrder(200);
+    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel"]);
+
     var appWin = EAction.getMainWindow();
     appWin.addSelectionListener(action);
 }

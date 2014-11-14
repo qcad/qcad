@@ -1,5 +1,4 @@
 function init(basePath) {
-    var menu = Block.getMenu();
     var action = new RGuiAction(qsTranslate("CreateLibraryItem", "&Create Library Item"), RMainWindowQt.getMainWindow());
     var tip = qsTranslate("CreateLibraryItem", "Create library item from selection");
     action.setToolTip(tip);
@@ -10,8 +9,9 @@ function init(basePath) {
     action.setIcon(basePath + "/CreateLibraryItem.svg");
     action.setDefaultShortcut(new QKeySequence("b,t"));
     action.setDefaultCommands(["librarycreate", "bt"]);
-    action.setSortOrder(3500);
-    EAction.addGuiActionTo(action, Block, true, false, false, true);
+    action.setGroupSortOrder(14600);
+    action.setSortOrder(100);
+    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel"]);
 
     var appWin = EAction.getMainWindow();
     appWin.addSelectionListener(action);

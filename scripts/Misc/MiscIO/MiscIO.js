@@ -40,9 +40,9 @@ MiscIO.includeBasePath = includeBasePath;
 MiscIO.getMenu = function() {
     var menu = EAction.getSubMenu(
         Misc.getMenu(),
-        50,
+        51100, 100,
         MiscIO.getTitle(),
-        "MiscIO"
+        "MiscIOMenu"
     );
     return menu;
 };
@@ -54,7 +54,28 @@ MiscIO.getToolBar = function() {
 };
 
 MiscIO.getCadToolBarPanel = function() {
-    return EAction.getMainCadToolBarPanel();
+    var mtb = Misc.getCadToolBarPanel();
+    var actionName = "MiscIOToolsPanelButton";
+    if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
+        var action = new RGuiAction(qsTr("Misc Import Export Tools"), mtb);
+        action.setScriptFile(MiscIO.includeBasePath + "/MiscIO.js");
+        action.objectName = actionName;
+        action.setRequiresDocument(true);
+        action.setIcon(MiscIO.includeBasePath + "/MiscIO.svg");
+        action.setStatusTip(qsTr("Show misc import export tools"));
+        action.setNoState();
+        action.setDefaultCommands(["misciomenu"]);
+        action.setGroupSortOrder(90);
+        action.setSortOrder(100);
+        action.setWidgetNames(["MiscToolsPanel"]);
+    }
+
+    var tb = EAction.getCadToolBarPanel(
+        MiscIO.getTitle(),
+        "MiscIOToolsPanel",
+        true
+    );
+    return tb;
 };
 
 MiscIO.getTitle = function() {
@@ -63,4 +84,10 @@ MiscIO.getTitle = function() {
 
 MiscIO.prototype.getTitle = function() {
     return MiscIO.getTitle();
+};
+
+MiscIO.init = function() {
+    MiscIO.getMenu();
+    MiscIO.getToolBar();
+    MiscIO.getCadToolBarPanel();
 };

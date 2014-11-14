@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../IOExamples.js");
+include("scripts/EAction.js");
 
 /**
  * This action imports points from a file in the format:
@@ -26,13 +26,13 @@ include("../IOExamples.js");
  * ...
  */
 function ImportPoints(guiAction) {
-    IOExamples.call(this, guiAction);
+    EAction.call(this, guiAction);
 }
 
-ImportPoints.prototype = new IOExamples();
+ImportPoints.prototype = new EAction();
 
 ImportPoints.prototype.beginEvent = function() {
-    IOExamples.prototype.beginEvent.call(this);
+    EAction.prototype.beginEvent.call(this);
 
     var appWin = EAction.getMainWindow();
     var initialPath = QDir.homePath();
@@ -100,6 +100,7 @@ ImportPoints.init = function(basePath) {
     var action = new RGuiAction("&Import Points", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ImportPoints.js");
-    action.setSortOrder(10);
-    EAction.addGuiActionTo(action, IOExamples, true, false, false);
+    action.setGroupSortOrder(52100);
+    action.setSortOrder(100);
+    action.setWidgetNames(["MiscIOMenu", "MiscIOToolBar", "MiscIOToolsPanel"]);
 };

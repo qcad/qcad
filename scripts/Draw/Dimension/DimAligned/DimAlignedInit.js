@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("DimAligned", "Draw aligned dimension"));
     action.setDefaultShortcut(new QKeySequence("d,a"));
     action.setDefaultCommands(["dimaligned", "da"]);
+    action.setGroupSortOrder(12100);
     action.setSortOrder(100);
-    EAction.addGuiActionTo(action, Dimension, true, true, true);
+    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "DimensionToolsPanel"]);
 }

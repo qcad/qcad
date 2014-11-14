@@ -78,6 +78,8 @@ public:
      */
     virtual void initTexts();
 
+    virtual void init();
+
     static QString formatToolTip(const QString& text, const QString& shortcut);
     QString getToolTip(const QString& text, const QString& shortcut);
 
@@ -97,12 +99,28 @@ public:
     void setShortcutText(const QString& text);
     QString getShortcutText();
 
+    static void setGroupSortOrderStatic(QAction* a, int sortOrder);
+    static void setGroupSortOrderOverrideStatic(QAction* a, const QString& widgetName, int sortOrder);
+    static int getGroupSortOrderStatic(const QAction* a, const QWidget* w = NULL);
+
+    static void setSortOrderStatic(QAction* a, int sortOrder);
+    static void setSortOrderOverrideStatic(QAction* a, const QString& widgetName, int sortOrder);
+    static int getSortOrderStatic(const QAction* a, const QWidget* w = NULL);
+
+    void setGroupSortOrder(int sortOrder);
+    void setGroupSortOrderOverride(const QString& widgetName, int sortOrder);
+    int getGroupSortOrder(const QWidget* w = NULL);
+
     void setSortOrder(int sortOrder);
-    int getSortOrder();
+    void setSortOrderOverride(const QString& widgetName, int sortOrder);
+    int getSortOrder(const QWidget* w = NULL);
 
     void addToMenu(QMenu* menu);
     void addToToolBar(QToolBar* tb);
-    void addToWidget(QWidget* w);
+
+    static void fixSeparators(const QWidget* w);
+    static void addSeparatorToWidget(QAction* a, QWidget* w);
+    static void addToWidget(QAction* a, QWidget* w);
 
     /**
      * Sets the action icon to the given icon file.
@@ -271,8 +289,8 @@ public:
     void setGroupDefault(bool on);
     bool isGroupDefault();
 
-    void setSeparatorGroup(const QString& title);
-    QString getSeparatorGroup();
+//    void setSeparatorGroup(const QString& title);
+//    QString getSeparatorGroup();
 
     /**
      * \return List of all instantiated actions.
@@ -298,6 +316,12 @@ public:
     void addArgument(const QString& arg);
     QStringList getArguments();
     void clearArguments();
+
+    static void setWidgetNamesStatic(QAction* a, const QStringList& widgetNames);
+    static QStringList getWidgetNamesStatic(const QAction *a);
+
+    void setWidgetNames(const QStringList& widgetNames);
+    QStringList getWidgetNames() const;
 
 public slots:
     /**
@@ -339,7 +363,8 @@ protected:
     int enabledOverride;
     RDocumentInterface* documentInterface;
 
-    QString separatorGroup;
+    //QString separatorGroup;
+    //QStringList widgetNames;
 };
 
 Q_DECLARE_METATYPE(RGuiAction*)

@@ -21,7 +21,7 @@ include("../MiscModify.js");
 include("scripts/ShapeAlgorithms.js");
 
 /**
- * Changes the direction of all (selected) arcs.
+ * Converts (selected) straight splines to lines.
  */
 function SplineToLine(guiAction) {
     MiscModify.call(this, guiAction);
@@ -71,6 +71,7 @@ SplineToLine.init = function(basePath) {
     var action = new RGuiAction("Convert straight splines to lines", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SplineToLine.js");
+    action.setGroupSortOrder(56100);
     action.setSortOrder(200);
-    EAction.addGuiActionTo(action, MiscModify, true, false, false);
+    action.setWidgetNames(["MiscModifyMenu", "MiscModifyToolBar", "MiscModifyToolsPanel"]);
 };

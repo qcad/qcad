@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("DimAngular", "Draw angular dimension"));
     action.setDefaultShortcut(new QKeySequence("d,n"));
     action.setDefaultCommands(["dimangular", "dn"]);
-    action.setSortOrder(900);
-    EAction.addGuiActionTo(action, Dimension, true, true, true, true);
+    action.setGroupSortOrder(12400);
+    action.setSortOrder(100);
+    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "DimensionToolsPanel"]);
 }

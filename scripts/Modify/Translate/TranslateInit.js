@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Translate", "&Move / Copy"), 
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("Translate", "&Move / Copy"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/Translate.js");
@@ -15,8 +14,10 @@ function init(basePath) {
 
     action.setDefaultShortcut(new QKeySequence("m,v"));
     action.setDefaultCommands(["move", "mv"]);
+    action.setGroupSortOrder(13100);
     action.setSortOrder(100);
-    EAction.addGuiActionTo(action, Modify, true, true, true);
+    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel"]);
+
     var appWin = EAction.getMainWindow();
     appWin.addSelectionListener(action);
 }

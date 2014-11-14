@@ -5,7 +5,7 @@ function init(basePath) {
     action.setScriptFile(basePath + "/SvgImport.js");
     action.setIcon(basePath + "/SvgImport.svg");
     action.setDefaultCommands( [ "svgimport" ]);
-    action.setSortOrder(2300);
-    //action.setNoState();
-    EAction.addGuiActionTo(action, File, true, false, false, false);
+    action.setGroupSortOrder(1300);
+    action.setSortOrder(300);
+    action.setWidgetNames(["FileMenu", "FileToolsPanel"]);
 }

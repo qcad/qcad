@@ -2,4 +2,5 @@ TEMPLATE = subdirs
 
 SUBDIRS = \
     ts \
-    ExLayerWhiteToBlack
+    ExLayerWhiteToBlack \
+    ExLayerCustomProperty

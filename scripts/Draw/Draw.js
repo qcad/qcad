@@ -60,3 +60,9 @@ Draw.getTitle = function() {
 Draw.prototype.getTitle = function() {
     return Draw.getTitle();
 };
+
+Draw.init = function() {
+    Draw.getMenu();
+    Draw.getToolBar();
+    Draw.getCadToolBarPanel();
+};

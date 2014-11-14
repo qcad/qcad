@@ -7,7 +7,8 @@ function init(basePath) {
         action.setDefaultShortcut(new QKeySequence(QKeySequence.Close));
     }
     action.setDefaultCommands(["close"]);
-    action.setSortOrder(1200);
     action.setNoState();
-    EAction.addGuiActionTo(action, File, true);
+    action.setGroupSortOrder(1100);
+    action.setSortOrder(300);
+    action.setWidgetNames(["FileMenu", "FileToolsPanel"]);
 }

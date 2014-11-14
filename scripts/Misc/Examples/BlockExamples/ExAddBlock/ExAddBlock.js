@@ -83,6 +83,7 @@ ExAddBlock.init = function(basePath) {
     var action = new RGuiAction("&Create Block", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExAddBlock.js");
-    action.setSortOrder(10);
-    EAction.addGuiActionTo(action, BlockExamples, true, false, false);
+    action.setGroupSortOrder(79100);
+    action.setSortOrder(100);
+    action.setWidgetNames(["BlockExamplesMenu"]);
 };

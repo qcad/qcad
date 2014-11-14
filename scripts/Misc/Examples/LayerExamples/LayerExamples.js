@@ -33,9 +33,9 @@ LayerExamples.includeBasePath = includeBasePath;
 LayerExamples.getMenu = function() {
     var menu = EAction.getSubMenu(
         Examples.getMenu(),
-        200,
+        70000, 700,
         LayerExamples.getTitle(),
-        "LayerExamples"
+        "LayerExamplesMenu"
     );
     return menu;
 };
@@ -53,4 +53,9 @@ LayerExamples.getTitle = function() {
 
 LayerExamples.prototype.getTitle = function() {
     return LayerExamples.getTitle();
+};
+
+LayerExamples.init = function() {
+    LayerExamples.getMenu();
+    LayerExamples.getToolBar();
 };

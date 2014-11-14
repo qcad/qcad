@@ -5,6 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/BitmapExport.svg");
     action.setDefaultShortcut(new QKeySequence("x,b"));
     action.setDefaultCommands( [ "bitmapexport" ]);
-    action.setSortOrder(2000);
-    EAction.addGuiActionTo(action, File, true, false, false, true);
+    action.setGroupSortOrder(1200);
+    action.setSortOrder(100);
+    action.setWidgetNames(["FileMenu", "FileToolsPanel"]);
 }

@@ -41,18 +41,44 @@ MiscDraw.includeBasePath = includeBasePath;
 MiscDraw.getMenu = function() {
     var menu = EAction.getSubMenu(
         Misc.getMenu(),
-        200,
+        51100, 300,
         MiscDraw.getTitle(),
-        "MiscDraw"
+        "MiscDrawMenu"
     );
     return menu;
 };
 
 MiscDraw.getToolBar = function() {
-    var tb = EAction.getToolBar(MiscDraw.getTitle(), "MiscDrawToolBar");
+    var tb = EAction.getToolBar(qsTr("Misc") + MiscDraw.getTitle(), "MiscDrawToolBar");
     tb.visible = false;
     return tb;
 };
+
+MiscDraw.getCadToolBarPanel = function() {
+    var mtb = Misc.getCadToolBarPanel();
+    var actionName = "MiscDrawToolsPanelButton";
+    if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
+        var action = new RGuiAction(qsTr("Misc Drawing Tools"), mtb);
+        action.setScriptFile(MiscDraw.includeBasePath + "/MiscDraw.js");
+        action.objectName = actionName;
+        action.setRequiresDocument(true);
+        action.setIcon(MiscDraw.includeBasePath + "/MiscDraw.svg");
+        action.setStatusTip(qsTr("Show misc drawing tools"));
+        action.setNoState();
+        action.setDefaultCommands(["miscdrawmenu"]);
+        action.setGroupSortOrder(90);
+        action.setSortOrder(300);
+        action.setWidgetNames(["MiscToolsPanel"]);
+    }
+
+    var tb = EAction.getCadToolBarPanel(
+        MiscDraw.getTitle(),
+        "MiscDrawToolsPanel",
+        true
+    );
+    return tb;
+};
+
 
 MiscDraw.getTitle = function() {
     return qsTr("&Draw");
@@ -60,4 +86,10 @@ MiscDraw.getTitle = function() {
 
 MiscDraw.prototype.getTitle = function() {
     return MiscDraw.getTitle();
+};
+
+MiscDraw.init = function() {
+    MiscDraw.getMenu();
+    MiscDraw.getToolBar();
+    MiscDraw.getCadToolBarPanel();
 };

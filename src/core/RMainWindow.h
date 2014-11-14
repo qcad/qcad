@@ -221,6 +221,8 @@ public:
      */
     virtual void quit() = 0;
 
+    virtual QWidget* getChildWidget(const QString& name) = 0;
+
     virtual void handleUserMessage(const QString& message) {
         qDebug() << message;
     }

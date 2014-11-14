@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("ArcTangential", "Draw arc tangential to base entity"));
     action.setDefaultShortcut(new QKeySequence("a,n"));
     action.setDefaultCommands(["arctangential", "an"]);
-    action.setSortOrder(700);
-    EAction.addGuiActionTo(action, Arc, true, true, true, true);
+    action.setGroupSortOrder(7400);
+    action.setSortOrder(100);
+    action.setWidgetNames(["DrawArcMenu", "ArcToolBar", "ArcToolsPanel"]);
 }

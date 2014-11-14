@@ -4,8 +4,9 @@ function init(basePath) {
     action.setScriptFile(basePath + "/Esc.js");
     action.setDefaultShortcut(new QKeySequence("Escape"));
     action.setDefaultCommands(["escape"]);
-    action.setSortOrder(10000);
     action.setOverride();
     action.setNoState();
-    EAction.addGuiActionTo(action, Edit, true, false, false, true);
+    action.setGroupSortOrder(2700);
+    action.setSortOrder(100);
+    action.setWidgetNames(["EditMenu"]);
 }

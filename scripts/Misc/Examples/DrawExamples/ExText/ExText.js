@@ -68,6 +68,7 @@ ExText.init = function(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExText.js");
     action.setStatusTip(qsTr("Draw text"));
-    action.setSortOrder(3000);
-    EAction.addGuiActionTo(action, DrawExamples, true, false, false);
+    action.setGroupSortOrder(73100);
+    action.setSortOrder(300);
+    action.setWidgetNames(["DrawExamplesMenu"]);
 };

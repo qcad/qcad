@@ -5,6 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/RenameBlock.svg");
     action.setDefaultShortcut(new QKeySequence("b,n"));
     action.setDefaultCommands(["blockrename", "bn"]);
-    action.setSortOrder(2100);
-    EAction.addGuiActionTo(action, Block, true, true);
+    action.setGroupSortOrder(14350);
+    action.setSortOrder(200);
+    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel"]);
 }

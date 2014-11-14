@@ -1,11 +1,11 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("RemoveLayer", "&Remove Layer"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("RemoveLayer", "&Remove Layer"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/RemoveLayer.js");
     action.setIcon(basePath + "/RemoveLayer.svg");
     action.setDefaultShortcut(new QKeySequence("y,r"));
     action.setDefaultCommands(["layerremove", "yr"]);
-    action.setSortOrder(600);
-    EAction.addGuiActionTo(action, Layer, true, true, false, true);
+    action.setGroupSortOrder(14300);
+    action.setSortOrder(100);
+    action.setWidgetNames(["LayerMenu", "LayerToolBar", "LayerToolsPanel"]);
 }

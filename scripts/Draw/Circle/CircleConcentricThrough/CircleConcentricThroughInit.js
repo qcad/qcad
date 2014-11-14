@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("CircleConcentricThrough", "Draw concentric circle through point"));
     action.setDefaultShortcut(new QKeySequence("c,g"));
     action.setDefaultCommands(["circleconcentricthrough", "cg"]);
-    action.setSortOrder(700);
-    EAction.addGuiActionTo(action, Circle, true, true, true);
+    action.setGroupSortOrder(8400);
+    action.setSortOrder(200);
+    action.setWidgetNames(["DrawCircleMenu", "CircleToolBar", "CircleToolsPanel"]);
 }

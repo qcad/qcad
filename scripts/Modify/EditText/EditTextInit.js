@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("EditText", "Edit text"));
     action.setDefaultShortcut(new QKeySequence("m,t"));
     action.setDefaultCommands(["edittext", "modifytext", "mt"]);
-    action.setSortOrder(5000);
-    EAction.addGuiActionTo(action, Modify, true, true, true, true);
+    action.setGroupSortOrder(13500);
+    action.setSortOrder(100);
+    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel"]);
 }

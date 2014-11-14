@@ -325,6 +325,7 @@
 #include "REcmaViewportData.h"
 #include "REcmaViewportEntity.h"
 #include "REcmaWheelEvent.h"
+#include "REcmaWidget.h"
 #include "REcmaXLine.h"
 #include "REcmaXLineData.h"
 #include "REcmaXLineEntity.h"
@@ -569,6 +570,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaInterTransactionListenerAdapter::initEcma(*engine);
     REcmaSnapListener::initEcma(*engine);
 
+    REcmaWidget::initEcma(*engine);
     REcmaGuiAction::initEcma(*engine);
     REcmaSpatialIndex::initEcma(*engine);
     REcmaSpatialIndexNavel::initEcma(*engine);

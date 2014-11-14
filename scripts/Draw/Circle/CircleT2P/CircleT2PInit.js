@@ -6,6 +6,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("CircleT2P", "Draw circle through two points and tangential to one entity"));
     action.setDefaultShortcut(new QKeySequence("c,t,1"));
     action.setDefaultCommands(["circletangent2p", "ct1"]);
-    action.setSortOrder(1000);
-    EAction.addGuiActionTo(action, Circle, true, true, true, true);
+    action.setGroupSortOrder(8500);
+    action.setSortOrder(100);
+    action.setWidgetNames(["DrawCircleMenu", "CircleToolBar", "CircleToolsPanel"]);
 }

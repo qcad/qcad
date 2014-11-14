@@ -33,9 +33,9 @@ DrawExamples.includeBasePath = includeBasePath;
 DrawExamples.getMenu = function() {
     var menu = EAction.getSubMenu(
         Examples.getMenu(),
-        200,
+        70000, 300,
         DrawExamples.getTitle(),
-        "drawExamples"
+        "DrawExamplesMenu"
         //DrawExamples.includeBasePath + "/DrawExamples.svg"
     );
     return menu;
@@ -54,4 +54,9 @@ DrawExamples.getTitle = function() {
 
 DrawExamples.prototype.getTitle = function() {
     return DrawExamples.getTitle();
+};
+
+DrawExamples.init = function() {
+    DrawExamples.getMenu();
+    DrawExamples.getToolBar();
 };

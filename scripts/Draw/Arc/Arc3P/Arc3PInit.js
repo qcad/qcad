@@ -6,6 +6,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("Arc3P", "Draw arc from 3 points"));
     action.setDefaultShortcut(new QKeySequence("a,3"));
     action.setDefaultCommands(["arc3", "a3"]);
-    action.setSortOrder(400);
-    EAction.addGuiActionTo(action, Arc, true, true, true);
+    action.setGroupSortOrder(7200);
+    action.setSortOrder(300);
+    action.setWidgetNames(["DrawArcMenu", "ArcToolBar", "ArcToolsPanel"]);
 }

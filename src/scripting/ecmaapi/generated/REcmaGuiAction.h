@@ -69,6 +69,9 @@
         initTexts
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        init
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         formatToolTip
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -102,7 +105,37 @@
         getShortcutText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setGroupSortOrderStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setGroupSortOrderOverrideStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getGroupSortOrderStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSortOrderStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSortOrderOverrideStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSortOrderStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setGroupSortOrder
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setGroupSortOrderOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getGroupSortOrder
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setSortOrder
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSortOrderOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getSortOrder
@@ -112,6 +145,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addToToolBar
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        fixSeparators
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        addSeparatorToWidget
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addToWidget
@@ -228,12 +267,6 @@
         isGroupDefault
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setSeparatorGroup
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getSeparatorGroup
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getActions
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -271,6 +304,18 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         clearArguments
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setWidgetNamesStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getWidgetNamesStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setWidgetNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getWidgetNames
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         slotTrigger

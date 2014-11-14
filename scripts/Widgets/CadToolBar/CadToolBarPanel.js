@@ -20,7 +20,7 @@
 include("ColumnLayout.js");
 
 function CadToolBarPanel(parent, hasBackButton) {
-    QWidget.call(this, parent);
+    RWidget.call(this, parent);
 
     var layout = new ColumnLayout(
         this, parent.parentWidget(), RSettings.getIntValue("CadToolBar/IconSize", 32) * 1.25
@@ -39,23 +39,46 @@ function CadToolBarPanel(parent, hasBackButton) {
         this.addAction(backAction);
         backAction.triggered.connect(CadToolBar, "back");
     }
+
+    //this.actionAdded.connect(this, "handleNewAction");
 }
 
-CadToolBarPanel.prototype = new QWidget();
+CadToolBarPanel.prototype = new RWidget();
 
 CadToolBarPanel.setBackMenuName = function(panel, name) {
     panel.setProperty("backMenuName", name);
 };
 
+CadToolBarPanel.prototype.toString = function() {
+    return "CadToolBarPanel";
+};
+
+CadToolBarPanel.prototype.insertAction = function(before, action) {
+//    if (action.text==="Line from &2 Points") {
+        //qDebug("insertAction to CAD tool bar: ", action.text);
+//    //}
+    //QWidget.prototype.insertAction.call(this, before, action);
+    this.addAction(action);
+};
+
 CadToolBarPanel.prototype.addAction = function(action) {
+    //if (action.text==="Line from &2 Points") {
+//        qDebug("addAction to CAD tool bar: ", action.text);
+    //}
+
     if (action.isSeparator()) {
+        //if (this.objectName==="LineToolsPanel") qDebug("addAction: separator");
         action.setProperty("SortOrder", action.getSortOrder());
+        action.setProperty("GroupSortOrder", action.getGroupSortOrder());
         ColumnLayout.prototype.addItem.call(this.layout(), action);
         return;
     }
 
     var button = new QToolButton(this);
     button.setDefaultAction(action);
+//    action.changed.connect(function() {
+//        button.setProperty("VisibleOverride", action.visible);
+//    });
     //button.setProperty("SortOrder", sortOrder);
     button.objectName = action.objectName;
     if (button.objectName.endsWith("Action")) {
@@ -64,11 +87,14 @@ CadToolBarPanel.prototype.addAction = function(action) {
     button.objectName+="Button";
     var s = RSettings.getIntValue("CadToolBar/IconSize", 32);
     button.iconSize = new QSize(s, s);
-    if (isFunction(action.getSortOrder)) {
-        button.setProperty("SortOrder", ColumnLayout.getSortOrder(action));
+//    if (isFunction(action.getSortOrder)) {
+//        button.setProperty("SortOrder", ColumnLayout.getSortOrder(action));
+//    }
+    if (isNumber(action.property("GroupSortOrder"))) {
+        button.setProperty("GroupSortOrder", ColumnLayout.getGroupSortOrder(action, this.objectName));
     }
     if (isNumber(action.property("SortOrder"))) {
-        button.setProperty("SortOrder", ColumnLayout.getSortOrder(action));
+        button.setProperty("SortOrder", ColumnLayout.getSortOrder(action, this.objectName));
     }
     if (button.objectName==="BackButton") {
         //button.arrowType=Qt.LeftArrow;
@@ -77,4 +103,10 @@ CadToolBarPanel.prototype.addAction = function(action) {
         button.sizePolicy = new QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum);
     }
     ColumnLayout.prototype.addItem.call(this.layout(), button);
+
+    QWidget.prototype.addAction.call(this, action);
 };
+
+//CadToolBarPanel.prototype.resizeEvent = function(e) {
+//    qDebug("CadToolBarPanel.resizeEvent");
+//};

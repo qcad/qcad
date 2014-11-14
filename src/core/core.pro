@@ -80,6 +80,7 @@ SOURCES += \
     RViewportData.cpp \
     RViewportEntity.cpp \
     RWheelEvent.cpp \
+    RWidget.cpp \
     math/RArc.cpp \
     math/RBox.cpp \
     math/RCircle.cpp \
@@ -225,6 +226,7 @@ HEADERS = \
     RViewportData.h \
     RViewportEntity.h \
     RWheelEvent.h \
+    RWidget.h \
     math/RArc.h \
     math/RBox.h \
     math/RCircle.h \

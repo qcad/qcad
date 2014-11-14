@@ -6,6 +6,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("SplineControlPoints", "Draw spline from control points"));
     action.setDefaultShortcut(new QKeySequence("s,p"));
     action.setDefaultCommands(["spline", "sp"]);
+    action.setGroupSortOrder(10100);
     action.setSortOrder(100);
-    EAction.addGuiActionTo(action, Spline, true, true, true);
+    action.setWidgetNames(["SplineMenu", "SplineToolBar", "SplineToolsPanel"]);
 }

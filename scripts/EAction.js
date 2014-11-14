@@ -751,39 +751,57 @@ EAction.getMenu = function(title, objectName, initFunction) {
  * E.g. "line". \param iconFile Path and file name of icon to use for this
  * submenu.
  */
-EAction.getSubMenu = function(menu, sortOrder, title, objectName, iconFile, addSeparator) {
+EAction.getSubMenu = function(menu, groupSortOrder, sortOrder, title, objectName, iconFile) {
     var subMenu = menu.findChild(objectName);
     if (isNull(subMenu)) {
-        var subMenuActions = menu.actions();
-        var actionBefore = undefined;
-        for (var i = 0; i < subMenuActions.length; ++i) {
-            var so = subMenuActions[i].property("SortOrder");
-            if (!isNull(so) && so > sortOrder) {
-                actionBefore = subMenuActions[i];
-                break;
-            }
-        }
-        subMenu = new QMenu(title, menu);
+        //var action = menu.addMenu(subMenu);
+
+        var action = new RGuiAction(title, RMainWindowQt.getMainWindow());
+        subMenu = new QMenu(title + " {%1,%2}".arg(groupSortOrder).arg(sortOrder), menu);
+        subMenu.objectName = objectName;
         if (!isNull(iconFile)) {
             subMenu.icon = new QIcon(iconFile);
         }
+        action.setMenu(subMenu);
+        RGuiAction.setGroupSortOrderStatic(action, groupSortOrder);
+        RGuiAction.setSortOrderStatic(action, sortOrder);
+        RGuiAction.setWidgetNamesStatic(action, [menu.objectName]);
 
-        var separator;
-        if (addSeparator) {
-            separator = new RGuiAction("", RMainWindowQt.getMainWindow());
-            separator.setSeparator(true);
-            separator.setSortOrder(sortOrder - 1);
-            separator.addToMenu(menu);
-        }
+        // re-add action at correct position:
+        //RGuiAction.addToWidget(action, menu);
 
-        var subMenuAction;
-        if (isNull(actionBefore)) {
-            subMenuAction = menu.addMenu(subMenu);
-        } else {
-            subMenuAction = menu.insertMenu(actionBefore, subMenu);
-        }
-        subMenu.objectName = objectName;
-        subMenuAction.setProperty("SortOrder", sortOrder);
+//        subMenu = new QMenu(title, menu);
+
+//        var subMenuActions = menu.actions();
+//        var actionBefore = undefined;
+//        for (var i = 0; i < subMenuActions.length; ++i) {
+//            var so = subMenuActions[i].property("SortOrder");
+//            if (!isNull(so) && so > sortOrder) {
+//                actionBefore = subMenuActions[i];
+//                break;
+//            }
+//        }
+//        subMenu = new QMenu(title, menu);
+//        if (!isNull(iconFile)) {
+//            subMenu.icon = new QIcon(iconFile);
+//        }
+
+//        var separator;
+//        if (addSeparator) {
+//            separator = new RGuiAction("", RMainWindowQt.getMainWindow());
+//            separator.setSeparator(true);
+//            separator.setSortOrder(sortOrder - 1);
+//            separator.addToMenu(menu);
+//        }
+
+//        var subMenuAction;
+//        if (isNull(actionBefore)) {
+//            subMenuAction = menu.addMenu(subMenu);
+//        } else {
+//            subMenuAction = menu.insertMenu(actionBefore, subMenu);
+//        }
+//        subMenu.objectName = objectName;
+//        subMenuAction.setProperty("SortOrder", sortOrder);
     }
     return subMenu;
 };
@@ -1101,7 +1119,7 @@ EAction.addGuiActionTo = function(action, iface, addToMenu, addToToolBar,
     if (addSeparator) {
         separator = new RGuiAction("", RMainWindowQt.getMainWindow());
         separator.setSeparator(true);
-        separator.setSortOrder(action.getSortOrder() - 1);
+        //separator.setSortOrder(action.getSortOrder() - 1);
     }
 
     if (addToMenu) {
@@ -1144,14 +1162,53 @@ EAction.addGuiActionTo = function(action, iface, addToMenu, addToToolBar,
         if (isFunction(iface.getCadToolBarPanel)) {
             var ctb = iface.getCadToolBarPanel();
             if (!isNull(ctb)) {
-                if (!isNull(separator)) {
-                    CadToolBarPanel.prototype.addAction.call(ctb, separator);
-                }
-                CadToolBarPanel.prototype.addAction.call(ctb, action);
+//                if (!isNull(separator)) {
+//                    CadToolBarPanel.prototype.addAction.call(ctb, separator);
+//                }
+                //CadToolBarPanel.prototype.addAction.call(ctb, action);
+                //ctb.addAction(action);
+                action.addToWidget(ctb);
             }
         }
     }
 };
+
+//EAction.addGuiActionToWidgets = function(action, widgetNames) {
+//    var appWin = EAction.getMainWindow();
+//    var className = action.getScriptClass();
+//    var addToMenu, addToToolBar, addToCadToolBar;
+
+//    if (className.length!==0) {
+//        var key = className + "/VisibleInMenu";
+//        addToMenu = RSettings.getBoolValue(key, addToMenu);
+//        if (!RSettings.hasValue(key)) {
+//            RSettings.setValue(key, addToMenu);
+//        }
+//        key = className + "/VisibleInToolBar";
+//        addToToolBar = RSettings.getBoolValue(key, addToToolBar);
+//        if (!RSettings.hasValue(key)) {
+//            RSettings.setValue(key, addToToolBar);
+//        }
+//        key = className + "/VisibleInCadToolBar";
+//        addToCadToolBar = RSettings.getBoolValue(key, addToCadToolBar);
+//        if (!RSettings.hasValue(key)) {
+//            RSettings.setValue(key, addToCadToolBar);
+//        }
+//    }
+
+//    var i, w;
+//    var oldWidgets = action.associatedWidgets();
+//    for (i=0; i<oldWidgets.length; i++) {
+//        w = oldWidgets[i];
+//        w.removeAction(action);
+//    }
+
+//    for (i=0; i<widgetNames.length; i++) {
+//        var wn = widgetNames[i];
+//        w = appWin.findChild(wn);
+//        action.addToWidget(w);
+//    }
+//};
 
 /**
  * \return The boolean value of the given variable from the document if it

@@ -5,6 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/InfoPositionPolRel.svg");
     action.setDefaultShortcut(new QKeySequence("i,t"));
     action.setDefaultCommands([ "infopospolrel", "it" ]);
-    action.setSortOrder(300);
-    EAction.addGuiActionTo(action, Information, true, true, true);
+    action.setGroupSortOrder(16100);
+    action.setSortOrder(400);
+    action.setWidgetNames(["InformationMenu", "InformationToolBar", "InformationToolsPanel"]);
 }

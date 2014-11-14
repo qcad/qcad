@@ -33,9 +33,9 @@ CommandLineExamples.includeBasePath = includeBasePath;
 CommandLineExamples.getMenu = function() {
     var menu = EAction.getSubMenu(
         Examples.getMenu(),
-        800,
+        70000, 900,
         CommandLineExamples.getTitle(),
-        "CommandLineExamples"
+        "CommandLineExamplesMenu"
     );
     return menu;
 };
@@ -54,3 +54,8 @@ CommandLineExamples.getTitle = function() {
 CommandLineExamples.prototype.getTitle = function() {
     return CommandLineExamples.getTitle();
 };
+
+//CommandLineExamples.init = function() {
+//    CommandLineExamples.getMenu();
+//    CommandLineExamples.getToolBar();
+//};

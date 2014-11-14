@@ -50,6 +50,7 @@ Help.getMenu = function() {
 
 Help.getToolBar = function() {
     var tb = EAction.getToolBar(Help.getTitle(), "HelpToolBar");
+    tb.visible = false;
     return tb;
 };
 
@@ -59,4 +60,9 @@ Help.getTitle = function() {
 
 Help.prototype.getTitle = function() {
     return Help.getTitle();
+};
+
+Help.init = function() {
+    Help.getMenu();
+    Help.getToolBar();
 };

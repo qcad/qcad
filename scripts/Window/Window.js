@@ -100,6 +100,7 @@ Window.getMenu = function() {
 
 Window.getToolBar = function() {
     var tb = EAction.getToolBar(Window.getTitle(), "WindowToolBar");
+    tb.visible = false;
     return tb;
 };
 
@@ -109,4 +110,9 @@ Window.getTitle = function() {
 
 Window.prototype.getTitle = function() {
     return Window.getTitle();
+};
+
+Window.init = function() {
+    Window.getMenu();
+    Window.getToolBar();
 };

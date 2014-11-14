@@ -104,6 +104,8 @@ public:
     virtual bool readSettings();
     virtual void writeSettings();
 
+    virtual QWidget* getChildWidget(const QString& name);
+
 public slots:
     void quit();
     void currentTabChanged(int index);
@@ -151,6 +153,7 @@ protected:
 
 protected slots:
     void updateGuiActions(QMdiSubWindow* mdiChild = NULL);
+    void initGuiActions();
     void updateScenes(QMdiSubWindow* mdiChild);
     void notifyListenersSlot(QMdiSubWindow* mdiChild);
     void suspendAndResume(QMdiSubWindow* mdiChild);

@@ -40,7 +40,7 @@ Circle.includeBasePath = includeBasePath;
 Circle.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName=="CircleMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="CircleToolsPanelButton") {
         EAction.showCadToolBarPanel("CircleToolsPanel");
         this.terminate();
     }
@@ -48,21 +48,25 @@ Circle.prototype.beginEvent = function() {
 
 Circle.getMenu = function() {
     var menu = EAction.getSubMenu(
-        Draw.getMenu(), 400, Circle.getTitle(), "circle", Circle.includeBasePath + "/Circle.svg"
+        Draw.getMenu(),
+        20, 400,
+        Circle.getTitle(),
+        "DrawCircleMenu",
+        Circle.includeBasePath + "/Circle.svg"
     );
     menu.setProperty("scriptFile", Circle.includeBasePath + "/Circle.js");
     return menu;
 };
 
 Circle.getToolBar = function() {
-    var tb = EAction.getToolBar(Circle.getTitle(), "Circle");
+    var tb = EAction.getToolBar(Circle.getTitle(), "CircleToolBar");
     tb.visible = false;
     return tb;
 };
 
 Circle.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "CircleMenu";
+    var actionName = "CircleToolsPanelButton";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Circle Tools"), mtb);
         action.setScriptFile(Circle.includeBasePath + "/Circle.js");
@@ -72,9 +76,10 @@ Circle.getCadToolBarPanel = function() {
         action.setStatusTip(qsTr("Show circle tools"));
         action.setDefaultShortcut(new QKeySequence("w,c"));
         action.setNoState();
-        action.setProperty("SortOrder", 400);
         action.setDefaultCommands(["circlemenu"]);
-        CadToolBarPanel.prototype.addAction.call(mtb, action);
+        action.setGroupSortOrder(20);
+        action.setSortOrder(400);
+        action.setWidgetNames(["MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(Circle.getTitle(), "CircleToolsPanel", true);
@@ -87,4 +92,10 @@ Circle.getTitle = function() {
 
 Circle.prototype.getTitle = function() {
     return Circle.getTitle();
+};
+
+Circle.init = function() {
+    Circle.getMenu();
+    Circle.getToolBar();
+    Circle.getCadToolBarPanel();
 };

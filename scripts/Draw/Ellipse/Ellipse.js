@@ -40,7 +40,7 @@ Ellipse.includeBasePath = includeBasePath;
 Ellipse.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName=="EllipseMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="EllipseToolsPanelButton") {
         EAction.showCadToolBarPanel("EllipseToolsPanel");
         this.terminate();
     }
@@ -49,9 +49,9 @@ Ellipse.prototype.beginEvent = function() {
 Ellipse.getMenu = function() {
     var menu = EAction.getSubMenu(
         Draw.getMenu(), 
-        500, 
+        20, 500,
         Ellipse.getTitle(), 
-        "ellipse", 
+        "DrawEllipseMenu",
         Ellipse.includeBasePath + "/Ellipse.svg"
     );
     menu.setProperty("scriptFile", Ellipse.includeBasePath + "/Ellipse.js");
@@ -59,14 +59,14 @@ Ellipse.getMenu = function() {
 };
 
 Ellipse.getToolBar = function() {
-    var tb = EAction.getToolBar(Ellipse.getTitle(), "Ellipse");
+    var tb = EAction.getToolBar(Ellipse.getTitle(), "EllipseToolBar");
     tb.visible = false;
     return tb;
 };
 
 Ellipse.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "EllipseMenu";
+    var actionName = "EllipseToolsPanelButton";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Ellipse Tools"), mtb);
         action.setScriptFile(Ellipse.includeBasePath + "/Ellipse.js");
@@ -76,9 +76,10 @@ Ellipse.getCadToolBarPanel = function() {
         action.setStatusTip(qsTr("Show ellipse tools"));
         action.setDefaultShortcut(new QKeySequence("w,e"));
         action.setNoState();
-        action.setProperty("SortOrder", 500);
         action.setDefaultCommands(["ellipsemenu"]);
-        CadToolBarPanel.prototype.addAction.call(mtb, action);
+        action.setGroupSortOrder(20);
+        action.setSortOrder(500);
+        action.setWidgetNames(["MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(Ellipse.getTitle(), "EllipseToolsPanel", true);
@@ -91,4 +92,10 @@ Ellipse.getTitle = function() {
 
 Ellipse.prototype.getTitle = function() {
     return Ellipse.getTitle();
+};
+
+Ellipse.init = function() {
+    Ellipse.getMenu();
+    Ellipse.getToolBar();
+    Ellipse.getCadToolBarPanel();
 };

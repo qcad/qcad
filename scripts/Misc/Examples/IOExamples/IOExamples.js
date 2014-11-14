@@ -33,9 +33,9 @@ IOExamples.includeBasePath = includeBasePath;
 IOExamples.getMenu = function() {
     var menu = EAction.getSubMenu(
         Examples.getMenu(),
-        150,
+        70000, 100,
         IOExamples.getTitle(),
-        "ioExamples"
+        "IOExamplesMenu"
         //IOExamples.includeBasePath + "/IOExamples.svg"
     );
     return menu;
@@ -54,4 +54,9 @@ IOExamples.getTitle = function() {
 
 IOExamples.prototype.getTitle = function() {
     return IOExamples.getTitle();
+};
+
+IOExamples.init = function() {
+    IOExamples.getMenu();
+    IOExamples.getToolBar();
 };

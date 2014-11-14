@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("DeselectAll", "&Deselect All"), RMainWindowQt
-            .getMainWindow());
+    var action = new RGuiAction(qsTranslate("DeselectAll", "&Deselect All"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DeselectAll.js");
     action.setIcon(basePath + "/DeselectAll.svg");
@@ -13,6 +12,7 @@ function init(basePath) {
     ]);
     action.setDefaultCommands(["deselectall", "tn"]);
     action.setNoState();
+    action.setGroupSortOrder(4100);
     action.setSortOrder(100);
-    EAction.addGuiActionTo(action, Select, true, true, true);
+    action.setWidgetNames(["SelectMenu", "SelectToolBar", "SelectToolsPanel"]);
 }

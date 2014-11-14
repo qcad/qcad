@@ -33,9 +33,9 @@ QtExamples.includeBasePath = includeBasePath;
 QtExamples.getMenu = function() {
     var menu = EAction.getSubMenu(
         Examples.getMenu(),
-        500,
+        70000, 1100,
         QtExamples.getTitle(),
-        "qtExamples"
+        "QtExamplesMenu"
     );
     return menu;
 };
@@ -53,4 +53,9 @@ QtExamples.getTitle = function() {
 
 QtExamples.prototype.getTitle = function() {
     return QtExamples.getTitle();
+};
+
+QtExamples.init = function() {
+    QtExamples.getMenu();
+    QtExamples.getToolBar();
 };

@@ -6,6 +6,7 @@ function init(basePath) {
     action.setIcon(basePath + "/InfoDistancePP.svg");
     action.setDefaultShortcut(new QKeySequence("i,p"));
     action.setDefaultCommands([ "infodist", "ip" ]);
-    action.setSortOrder(1000);
-    EAction.addGuiActionTo(action, Information, true, true, true, true);
+    action.setGroupSortOrder(16200);
+    action.setSortOrder(100);
+    action.setWidgetNames(["InformationMenu", "InformationToolBar", "InformationToolsPanel"]);
 }

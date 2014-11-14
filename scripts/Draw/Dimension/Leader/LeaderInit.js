@@ -10,6 +10,7 @@ function init(basePath) {
                             new QKeySequence("l,d")
                         ]);
     action.setDefaultCommands(["leader", "dimlea", "de", "ld"]);
-    action.setSortOrder(600);
-    EAction.addGuiActionTo(action, Dimension, true, true, true);
+    action.setGroupSortOrder(12200);
+    action.setSortOrder(200);
+    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "DimensionToolsPanel"]);
 }

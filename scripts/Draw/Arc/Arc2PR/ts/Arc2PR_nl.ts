@@ -15,22 +15,22 @@
     <message>
         <location line="+81"/>
         <source>Invalid radius</source>
-        <translation type="unfinished"/>
+        <translation>Ongeldig radius</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"/>
+        <translation>De twee punten zijn identiek</translation>
     </message>
     <message>
         <location filename="../Arc2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"/>
+        <translation>Radius:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Direction:</source>
-        <translation type="unfinished"/>
+        <translation>Richting:</translation>
     </message>
     <message>
         <location line="+7"/>

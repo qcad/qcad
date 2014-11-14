@@ -9,7 +9,8 @@ function init(basePath) {
         new QKeySequence("Ctrl+T")
     ]);
     action.setDefaultCommands(["new"]);
-    action.setSortOrder(100);
     action.setNoState();
-    EAction.addGuiActionTo(action, File, true, true);
+    action.setGroupSortOrder(1000);
+    action.setSortOrder(100);
+    action.setWidgetNames(["FileMenu", "FileToolBar", "FileToolsPanel"]);
 }

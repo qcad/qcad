@@ -265,6 +265,9 @@
         quit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getChildWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         handleUserMessage
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

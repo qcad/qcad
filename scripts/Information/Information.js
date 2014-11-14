@@ -44,7 +44,7 @@ Information.includeBasePath = includeBasePath;
 Information.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName=="InformationMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="InformationToolsPanelButton") {
         EAction.showCadToolBarPanel("InformationToolsPanel");
         this.terminate();
     }
@@ -258,13 +258,8 @@ Information.getToolBar = function() {
 
 Information.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "InformationMenu";
+    var actionName = "InformationToolsPanelButton";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
-        var separator = new RGuiAction("", RMainWindowQt.getMainWindow());
-        separator.setSeparator(true);
-        separator.setSortOrder(1900);
-        CadToolBarPanel.prototype.addAction.call(mtb, separator);
-
         var action = new RGuiAction(qsTr("Information Tools"), mtb);
         action.setScriptFile(Information.includeBasePath + "/Information.js");
         action.objectName = actionName;
@@ -273,9 +268,10 @@ Information.getCadToolBarPanel = function() {
         action.setStatusTip(qsTr("Show information tools"));
         action.setDefaultShortcut(new QKeySequence("w,i"));
         action.setNoState();
-        action.setProperty("SortOrder", 2000);
         action.setDefaultCommands(["infomenu", "informationmenu", "measuringmenu"]);
-        CadToolBarPanel.prototype.addAction.call(mtb, action);
+        action.setGroupSortOrder(40);
+        action.setSortOrder(200);
+        action.setWidgetNames(["MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(
@@ -292,4 +288,10 @@ Information.getTitle = function() {
 
 Information.prototype.getTitle = function() {
     return Information.getTitle();
+};
+
+Information.init = function() {
+    Information.getMenu();
+    Information.getToolBar();
+    Information.getCadToolBarPanel();
 };
