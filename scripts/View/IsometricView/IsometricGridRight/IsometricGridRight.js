@@ -42,7 +42,7 @@ IsometricGridRight.init = function(basePath) {
     action.setNoState(true);
     action.setGroupSortOrder(3500);
     action.setSortOrder(300);
-    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
+    action.setWidgetNames(["ViewMenu", "IsometricViewToolBar", "ViewToolsPanel"]);
 
     var appWin = EAction.getMainWindow();
     var fl = new ProjectionFocusListener(action, RS.IsoRight);

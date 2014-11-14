@@ -41,7 +41,7 @@ MiscModify.getMenu = function() {
 };
 
 MiscModify.getToolBar = function() {
-    var tb = EAction.getToolBar(MiscModify.getTitle(), "MiscModifyToolBar");
+    var tb = EAction.getToolBar(qsTr("Misc") + " " + MiscModify.getTitle(), "MiscModifyToolBar");
     tb.orientation = Qt.Vertical;
     tb.visible = false;
     return tb;

@@ -40,13 +40,6 @@ LayerExamples.getMenu = function() {
     return menu;
 };
 
-LayerExamples.getToolBar = function() {
-    var tb = EAction.getToolBar(LayerExamples.getTitle(), "LayerExamples");
-    tb.orientation = Qt.Vertical;
-    tb.visible = false;
-    return tb;
-};
-
 LayerExamples.getTitle = function() {
     return qsTr("&Layer");
 };
@@ -57,5 +50,4 @@ LayerExamples.prototype.getTitle = function() {
 
 LayerExamples.init = function() {
     LayerExamples.getMenu();
-    LayerExamples.getToolBar();
 };

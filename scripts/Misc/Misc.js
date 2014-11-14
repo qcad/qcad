@@ -53,12 +53,6 @@ Misc.getMenu = function() {
     return menu;
 };
 
-Misc.getToolBar = function() {
-    var tb = EAction.getToolBar(Misc.getTitle(), "MiscToolBar");
-    tb.visible = false;
-    return tb;
-};
-
 Misc.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
     var actionName = "MiscToolsPanelButton";
@@ -95,6 +89,5 @@ Misc.prototype.getTitle = function() {
 
 Misc.init = function() {
     Misc.getMenu();
-    Misc.getToolBar();
     Misc.getCadToolBarPanel();
 };

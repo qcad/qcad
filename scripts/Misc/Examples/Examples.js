@@ -47,12 +47,6 @@ Examples.getMenu = function() {
     return menu;
 };
 
-Examples.getToolBar = function() {
-    var tb = EAction.getToolBar(Examples.getTitle(), "ExamplesToolBar");
-    tb.visible = false;
-    return tb;
-};
-
 Examples.getCadToolBarPanel = function() {
     return EAction.getMainCadToolBarPanel();
 };
@@ -67,5 +61,4 @@ Examples.prototype.getTitle = function() {
 
 Examples.init = function() {
     Examples.getMenu();
-    Examples.getToolBar();
 };

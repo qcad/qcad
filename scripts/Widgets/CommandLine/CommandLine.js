@@ -63,7 +63,7 @@ CommandLine.init = function(basePath) {
     action.setDefaultCommands(["gm"]);
     action.setGroupSortOrder(3800);
     action.setSortOrder(100);
-    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel", "WidgetsToolBar"]);
+    action.setWidgetNames(["ViewMenu", "WidgetsToolBar", "ViewToolsPanel"]);
 
     var e;
     var formWidget = WidgetFactory.createWidget(basePath, "CommandLine.ui");

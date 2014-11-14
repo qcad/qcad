@@ -40,13 +40,6 @@ CommandLineExamples.getMenu = function() {
     return menu;
 };
 
-CommandLineExamples.getToolBar = function() {
-    var tb = EAction.getToolBar(CommandLineExamples.getTitle(), "CommandLineExamples");
-    tb.orientation = Qt.Vertical;
-    tb.visible = false;
-    return tb;
-};
-
 CommandLineExamples.getTitle = function() {
     return qsTr("&Command Line");
 };
@@ -54,8 +47,3 @@ CommandLineExamples.getTitle = function() {
 CommandLineExamples.prototype.getTitle = function() {
     return CommandLineExamples.getTitle();
 };
-
-//CommandLineExamples.init = function() {
-//    CommandLineExamples.getMenu();
-//    CommandLineExamples.getToolBar();
-//};

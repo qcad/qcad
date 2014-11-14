@@ -48,7 +48,7 @@ MiscIO.getMenu = function() {
 };
 
 MiscIO.getToolBar = function() {
-    var tb = EAction.getToolBar(MiscIO.getTitle(), "MiscIOToolBar");
+    var tb = EAction.getToolBar(qsTr("Misc") + " " + MiscIO.getTitle(), "MiscIOToolBar");
     tb.visible = false;
     return tb;
 };

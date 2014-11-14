@@ -40,13 +40,6 @@ ListenerExamples.getMenu = function() {
     return menu;
 };
 
-ListenerExamples.getToolBar = function() {
-    var tb = EAction.getToolBar(ListenerExamples.getTitle(), "ListenerExamples");
-    tb.orientation = Qt.Vertical;
-    tb.visible = false;
-    return tb;
-};
-
 ListenerExamples.getTitle = function() {
     return qsTr("&Listeners");
 };
@@ -57,5 +50,4 @@ ListenerExamples.prototype.getTitle = function() {
 
 ListenerExamples.init = function() {
     ListenerExamples.getMenu();
-    ListenerExamples.getToolBar();
 };

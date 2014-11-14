@@ -41,13 +41,6 @@ MathExamples.getMenu = function() {
     return menu;
 };
 
-MathExamples.getToolBar = function() {
-    var tb = EAction.getToolBar(MathExamples.getTitle(), "MathExamples");
-    tb.orientation = Qt.Vertical;
-    tb.visible = false;
-    return tb;
-};
-
 MathExamples.getTitle = function() {
     return qsTr("&Mathematics");
 };
@@ -58,5 +51,4 @@ MathExamples.prototype.getTitle = function() {
 
 MathExamples.init = function() {
     MathExamples.getMenu();
-    MathExamples.getToolBar();
 };

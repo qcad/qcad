@@ -48,12 +48,6 @@ Tutorials.getMenu = function() {
     return menu;
 };
 
-Tutorials.getToolBar = function() {
-    var tb = EAction.getToolBar(Tutorials.getTitle(), "TutorialsToolBar");
-    tb.visible = false;
-    return tb;
-};
-
 Tutorials.getCadToolBarPanel = function() {
     return EAction.getMainCadToolBarPanel();
 };
@@ -68,5 +62,4 @@ Tutorials.prototype.getTitle = function() {
 
 Tutorials.init = function() {
     Tutorials.getMenu();
-    Tutorials.getToolBar();
 };

@@ -13,7 +13,7 @@ function init(basePath) {
     action.setDefaultCommands(["gl"]);
     action.setGroupSortOrder(3700);
     action.setSortOrder(300);
-    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel", "WidgetsToolBar"]);
+    action.setWidgetNames(["ViewMenu", "WidgetsToolBar", "ViewToolsPanel"]);
 
     var formWidget = WidgetFactory.createWidget(basePath, "LibraryBrowser.ui");
     var dock = new RDockWidget(qsTranslate("LibraryBrowser", "Library Browser"), appWin);

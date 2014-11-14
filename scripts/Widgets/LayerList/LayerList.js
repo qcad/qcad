@@ -227,7 +227,7 @@ LayerList.init = function(basePath) {
     action.setDefaultCommands(["gy"]);
     action.setGroupSortOrder(3600);
     action.setSortOrder(100);
-    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel", "WidgetsToolBar"]);
+    action.setWidgetNames(["ViewMenu", "WidgetsToolBar", "ViewToolsPanel"]);
 
     var formWidget = WidgetFactory.createWidget(basePath, "LayerList.ui");
     var layout = formWidget.findChild("verticalLayout");

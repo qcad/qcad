@@ -62,8 +62,9 @@ TabBar.init = function(basePath) {
         //button.icon = new QIcon("scripts/Widgets/TabBar/AddTab.svg");
 
         var action = new RGuiAction(fileNewAction.text, RMainWindowQt.getMainWindow());
+        action.setProperty("Configurable", false);
         action.setRequiresDocument(false);
-        action.setScriptFile(fileNewAction.getScriptFile());
+        action.setScriptFile(fileNewAction.getScriptFile(), true);
         action.setIcon("scripts/Widgets/TabBar/AddTab.svg");
         action.setNoState();
 

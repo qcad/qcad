@@ -48,6 +48,10 @@ IsometricView.prototype.getTitle = function() {
     return IsometricView.getTitle();
 };
 
+IsometricView.init = function() {
+    IsometricView.getToolBar();
+};
+
 IsometricView.getGrid = function(view) {
     if (isNull(view)) {
         return undefined;

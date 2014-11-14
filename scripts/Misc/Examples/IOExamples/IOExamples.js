@@ -41,13 +41,6 @@ IOExamples.getMenu = function() {
     return menu;
 };
 
-IOExamples.getToolBar = function() {
-    var tb = EAction.getToolBar(IOExamples.getTitle(), "IOExamples");
-    tb.orientation = Qt.Vertical;
-    tb.visible = false;
-    return tb;
-};
-
 IOExamples.getTitle = function() {
     return qsTr("&Import/Export");
 };
@@ -58,5 +51,4 @@ IOExamples.prototype.getTitle = function() {
 
 IOExamples.init = function() {
     IOExamples.getMenu();
-    IOExamples.getToolBar();
 };

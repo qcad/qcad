@@ -41,13 +41,6 @@ BlockExamples.getMenu = function() {
     return menu;
 };
 
-BlockExamples.getToolBar = function() {
-    var tb = EAction.getToolBar(BlockExamples.getTitle(), "BlockExamples");
-    tb.orientation = Qt.Vertical;
-    tb.visible = false;
-    return tb;
-};
-
 BlockExamples.getTitle = function() {
     return qsTr("&Block");
 };
@@ -58,5 +51,4 @@ BlockExamples.prototype.getTitle = function() {
 
 BlockExamples.init = function() {
     BlockExamples.getMenu();
-    BlockExamples.getToolBar();
 };

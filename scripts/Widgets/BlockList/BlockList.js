@@ -296,7 +296,7 @@ BlockList.init = function(basePath) {
     action.setDefaultShortcut(new QKeySequence("g,b"));
     action.setGroupSortOrder(3600);
     action.setSortOrder(200);
-    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel", "WidgetsToolBar"]);
+    action.setWidgetNames(["ViewMenu", "WidgetsToolBar", "ViewToolsPanel"]);
 
     var formWidget = WidgetFactory.createWidget(basePath, "BlockList.ui");
     var layout = formWidget.findChild("verticalLayout");
