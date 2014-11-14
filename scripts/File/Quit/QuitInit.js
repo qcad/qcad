@@ -1,7 +1,6 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Quit", "&Quit"),
-        RMainWindowQt.getMainWindow());
-    if (RS.getSystemId() == "osx") {
+    var action = new RGuiAction(qsTranslate("Quit", "&Quit"), RMainWindowQt.getMainWindow());
+    if (RS.getSystemId() === "osx") {
         action.disableIcon();
     }
     action.setRequiresDocument(false);
@@ -9,8 +8,10 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence(QKeySequence.Quit));
     action.setDefaultCommands(["quit", "exit"]);
     action.checkable = false;
-    action.setSortOrder(9990);
+    action.setGroupSortOrder(1990);
+    action.setSortOrder(100);
+    action.setWidgetNames(["FileMenu"]);
+
     var appWin = EAction.getMainWindow();
     action.triggered.connect(appWin, "quit");
-    EAction.addGuiActionTo(action, File, true, false, false, true);
 }

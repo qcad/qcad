@@ -40,7 +40,7 @@ Point.includeBasePath = includeBasePath;
 Point.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName=="PointMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="PointMenu") {
         EAction.showCadToolBarPanel("PointToolsPanel");
         this.terminate();
     }

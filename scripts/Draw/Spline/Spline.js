@@ -40,7 +40,7 @@ Spline.includeBasePath = includeBasePath;
 Spline.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName=="SplineMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="SplineMenu") {
         EAction.showCadToolBarPanel("SplineToolsPanel");
         this.terminate();
     }

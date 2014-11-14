@@ -3,7 +3,8 @@ function init(basePath) {
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/About.js");
     action.setIcon(basePath + "/../../qcad_icon.png");
-    action.setSortOrder(2000);
     action.setNoState();
-    EAction.addGuiActionTo(action, Help, true, false, false, true);
+    action.setGroupSortOrder(110990);
+    action.setSortOrder(100);
+    action.setWidgetNames(["HelpMenu"]);
 }

@@ -9,7 +9,8 @@ function init(basePath) {
         new QKeySequence(QKeySequence.ZoomOut)
     ]);
     action.setDefaultCommands(["zoomout"]);
-    action.setSortOrder(200);
     action.setNoState();
-    EAction.addGuiActionTo(action, View, true, true, false);
+    action.setGroupSortOrder(3300);
+    action.setSortOrder(200);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
 }

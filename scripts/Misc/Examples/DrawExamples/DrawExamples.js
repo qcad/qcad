@@ -41,13 +41,6 @@ DrawExamples.getMenu = function() {
     return menu;
 };
 
-DrawExamples.getToolBar = function() {
-    var tb = EAction.getToolBar(DrawExamples.getTitle(), "DrawExamples");
-    tb.orientation = Qt.Vertical;
-    tb.visible = false;
-    return tb;
-};
-
 DrawExamples.getTitle = function() {
     return qsTr("&Draw");
 };
@@ -58,5 +51,4 @@ DrawExamples.prototype.getTitle = function() {
 
 DrawExamples.init = function() {
     DrawExamples.getMenu();
-    DrawExamples.getToolBar();
 };

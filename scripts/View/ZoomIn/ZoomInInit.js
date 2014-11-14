@@ -8,7 +8,8 @@ function init(basePath) {
         new QKeySequence(QKeySequence.ZoomIn)
     ]);
     action.setDefaultCommands(["zoomin"]);
-    action.setSortOrder(100);
     action.setNoState();
-    EAction.addGuiActionTo(action, View, true, true, false, true);
+    action.setGroupSortOrder(3300);
+    action.setSortOrder(100);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
 }

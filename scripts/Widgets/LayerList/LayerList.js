@@ -225,12 +225,9 @@ LayerList.init = function(basePath) {
     action.setIcon(basePath + "/LayerList.svg");
     action.setDefaultShortcut(new QKeySequence("g,y"));
     action.setDefaultCommands(["gy"]);
-    action.setSortOrder(10000);
-    var separator = new RGuiAction("", appWin);
-    separator.setSeparator(true);
-    separator.setSortOrder(action.getSortOrder()-1);
-    separator.addToMenu(View.getMenu());
-    EAction.addGuiActionTo(action, Widgets, true, true, false);
+    action.setGroupSortOrder(3600);
+    action.setSortOrder(100);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel", "WidgetsToolBar"]);
 
     var formWidget = WidgetFactory.createWidget(basePath, "LayerList.ui");
     var layout = formWidget.findChild("verticalLayout");

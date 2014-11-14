@@ -49,7 +49,7 @@ MiscDraw.getMenu = function() {
 };
 
 MiscDraw.getToolBar = function() {
-    var tb = EAction.getToolBar(qsTr("Misc") + MiscDraw.getTitle(), "MiscDrawToolBar");
+    var tb = EAction.getToolBar(qsTr("Misc") + " " + MiscDraw.getTitle(), "MiscDrawToolBar");
     tb.visible = false;
     return tb;
 };

@@ -38,12 +38,13 @@ IsometricGridLeft.init = function(basePath) {
     action.setIcon(basePath + "/IsometricGridLeft.svg");
     action.setDefaultShortcut(new QKeySequence("j,l"));
     action.setDefaultCommands(["isometricgridleft", "jl"]);
-    action.setSortOrder(2030);
     action.setGroup("isometricProjection");
     action.setNoState(true);
+    action.setGroupSortOrder(3500);
+    action.setSortOrder(400);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
 
     var appWin = EAction.getMainWindow();
     var fl = new ProjectionFocusListener(action, RS.IsoLeft);
     appWin.addViewFocusListener(fl);
-    EAction.addGuiActionTo(action, IsometricView, true, true, false, false);
 };

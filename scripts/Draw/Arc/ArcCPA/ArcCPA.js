@@ -226,7 +226,7 @@ ArcCPA.prototype.slotDirectionChanged = function(button) {
         return;
     }
 
-    if (button.objectName=="Clockwise") {
+    if (button.objectName==="Clockwise") {
         this.reversed = true;
     }
     else {

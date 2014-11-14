@@ -40,7 +40,7 @@ Dimension.includeBasePath = includeBasePath;
 Dimension.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName=="DimensionToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="DimensionToolsPanelButton") {
         EAction.showCadToolBarPanel("DimensionToolsPanel");
         this.terminate();
     }

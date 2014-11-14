@@ -56,3 +56,7 @@ Widgets.getTitle = function() {
 Widgets.prototype.getTitle = function() {
     return Widgets.getTitle();
 };
+
+Widgets.init = function() {
+    Widgets.getToolBar();
+};

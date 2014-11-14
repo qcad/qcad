@@ -146,13 +146,13 @@ IsometricGridTop.init = function(basePath) {
     action.setIcon(basePath + "/IsometricGridTop.svg");
     action.setDefaultShortcut(new QKeySequence("j,t"));
     action.setDefaultCommands(["isometricgridtop", "jt"]);
-    action.setSortOrder(2010);
     action.setGroup("isometricProjection");
     action.setNoState(true);
-    //action.setProperty("proj", RS.IsoTop);
+    action.setGroupSortOrder(3500);
+    action.setSortOrder(100);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
 
     var appWin = EAction.getMainWindow();
     var fl = new ProjectionFocusListener(action, RS.IsoTop);
     appWin.addViewFocusListener(fl);
-    EAction.addGuiActionTo(action, IsometricView, true, true, false, false);
 };

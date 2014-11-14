@@ -41,7 +41,7 @@ Polyline.includeBasePath = includeBasePath;
 Polyline.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName=="PolylineToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="PolylineToolsPanelButton") {
         EAction.showCadToolBarPanel("PolylineToolsPanel");
         this.terminate();
     }

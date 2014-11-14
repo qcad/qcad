@@ -1304,10 +1304,9 @@ PropertyEditor.init = function(basePath) {
     action.setIcon(basePath + "/PropertyEditor.svg");
     action.setDefaultShortcut(new QKeySequence("g,p"));
     action.setDefaultCommands(["gp"]);
-    action.setSortOrder(11000);
-    var menu = View.getMenu();
-    menu.addSeparator();
-    EAction.addGuiActionTo(action, Widgets, true, true, false, true);
+    action.setGroupSortOrder(3700);
+    action.setSortOrder(100);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel", "WidgetsToolBar"]);
 
     var pe = new PropertyEditorImpl(basePath);
     var dock = new RDockWidget(qsTr("Property Editor"), appWin);

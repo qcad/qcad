@@ -65,3 +65,8 @@ Tutorials.getTitle = function() {
 Tutorials.prototype.getTitle = function() {
     return Tutorials.getTitle();
 };
+
+Tutorials.init = function() {
+    Tutorials.getMenu();
+    Tutorials.getToolBar();
+};

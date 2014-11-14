@@ -11,8 +11,9 @@ function init(basePath) {
     action.setIcon(basePath + "/LibraryBrowser.svg");
     action.setDefaultShortcut(new QKeySequence("g,l"));
     action.setDefaultCommands(["gl"]);
-    action.setSortOrder(11100);
-    EAction.addGuiActionTo(action, Widgets, true, true, false);
+    action.setGroupSortOrder(3700);
+    action.setSortOrder(300);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel", "WidgetsToolBar"]);
 
     var formWidget = WidgetFactory.createWidget(basePath, "LibraryBrowser.ui");
     var dock = new RDockWidget(qsTranslate("LibraryBrowser", "Library Browser"), appWin);

@@ -89,12 +89,13 @@ LinetypeMode.init = function(basePath) {
     action.setIcon(basePath + "/LinetypeMode.svg");
     action.setDefaultShortcut(new QKeySequence("n,l"));
     action.setDefaultCommands(["screenlinetype", "nl"]);
-    action.setSortOrder(15);
     action.setGroup("viewmodes");
     action.setNoState(true);
+    action.setGroupSortOrder(3100);
+    action.setSortOrder(200);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
 
     var appWin = EAction.getMainWindow();
     var fl = new ToggleLinetypeModeFocusListener(action);
     appWin.addViewFocusListener(fl);
-    EAction.addGuiActionTo(action, View, true, true, false);
-}
+};

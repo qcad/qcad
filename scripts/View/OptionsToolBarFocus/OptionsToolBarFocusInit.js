@@ -7,8 +7,9 @@ function init(basePath) {
     else {
         action.setDefaultShortcut(new QKeySequence(Qt.ControlModifier + Qt.Key_Space));
     }
-    action.setSortOrder(100010);
     action.setNoState(true);
     action.checkable = false;
-    EAction.addGuiActionTo(action, View, true, false, false, false);
+    action.setGroupSortOrder(3900);
+    action.setSortOrder(200);
+    action.setWidgetNames(["ViewMenu"]);
 }

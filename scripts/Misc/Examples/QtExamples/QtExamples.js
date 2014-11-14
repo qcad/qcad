@@ -40,13 +40,6 @@ QtExamples.getMenu = function() {
     return menu;
 };
 
-QtExamples.getToolBar = function() {
-    var tb = EAction.getToolBar(QtExamples.getTitle(), "QtExamples");
-    tb.orientation = Qt.Vertical;
-    tb.visible = false;
-    return tb;
-};
-
 QtExamples.getTitle = function() {
     return qsTr("&Qt");
 };
@@ -57,5 +50,4 @@ QtExamples.prototype.getTitle = function() {
 
 QtExamples.init = function() {
     QtExamples.getMenu();
-    QtExamples.getToolBar();
 };

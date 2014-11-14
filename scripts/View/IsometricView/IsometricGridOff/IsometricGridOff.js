@@ -38,14 +38,15 @@ IsometricGridOff.init = function(basePath) {
     action.setIcon(basePath + "/IsometricGridOff.svg");
     action.setDefaultShortcut(new QKeySequence("j,o"));
     action.setDefaultCommands(["isometricgridoff", "jo"]);
-    action.setSortOrder(2000);
     action.setGroup("isometricProjection");
     action.setNoState(true);
+    action.setGroupSortOrder(3500);
+    action.setSortOrder(100);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
 
     var appWin = EAction.getMainWindow();
     var fl = new ProjectionFocusListener(action, undefined);
     appWin.addViewFocusListener(fl);
-    EAction.addGuiActionTo(action, IsometricView, true, true, false, false);
 
     // add separator only to menu:
     var menu = IsometricView.getMenu();
