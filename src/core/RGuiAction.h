@@ -362,9 +362,6 @@ protected:
     bool iconDisabled;
     int enabledOverride;
     RDocumentInterface* documentInterface;
-
-    //QString separatorGroup;
-    //QStringList widgetNames;
 };
 
 Q_DECLARE_METATYPE(RGuiAction*)

@@ -438,31 +438,7 @@ void RGuiAction::addToWidget(QAction* action, QWidget* w) {
         }
     }
 
-//    bool dbg = false;
-//    if (w->objectName()=="DrawMenu") {
-//        dbg = true;
-//        if (!action->isSeparator()) {
-//            qDebug() << "\n\n\t\tadding action to widget: " << action->text();
-//        }
-//        else {
-//            qDebug() << "\n\n\t\tadding separator to widget: " << action->text();
-//        }
-//    }
-
-    //qDebug() << "widget: " << w->objectName();
-
     RWidget* rw = dynamic_cast<RWidget*>(w);
-//    if (rw!=NULL) {
-//        qDebug() << "got RWidget";
-//    }
-//    else {
-//        qDebug() << "got QWidget";
-//    }
-
-//    if (dbg) qDebug() << "widget has actions: " << w->actions().count();
-
-    //bool gotGroupSibling = false;
-    //int lastGroupSortOrder = 0;
 
     // find existing groups:
     QSet<int> groupSortOrders;
@@ -477,25 +453,12 @@ void RGuiAction::addToWidget(QAction* action, QWidget* w) {
         groupSortOrders.insert(getGroupSortOrderStatic(a, w));
     }
 
-//    if (dbg) qDebug() << "groupSortOrders" <<  groupSortOrders;
-
     QListIterator<QAction*> i(actions);
     while (i.hasNext()) {
         QAction* a = i.next();
         if (a == NULL) {
             continue;
         }
-
-        //lastGroupSortOrder = a->getGroupSortOrder();
-
-        //if (dbg) qDebug() << "action: " << a->objectName();
-
-//        if (a->isSeparator()) {
-//            if (dbg) qDebug() << "add separator";
-//        }
-//        else {
-//            if (dbg) qDebug() << "add button";
-//        }
 
         int actionGroupSortOrder = getGroupSortOrderStatic(action, w);
         int actionSortOrder = getSortOrderStatic(action, w);
@@ -505,7 +468,6 @@ void RGuiAction::addToWidget(QAction* action, QWidget* w) {
 
         // same separator group:
         if (actionGroupSortOrder >= 0 && actionGroupSortOrder == otherGroupSortOrder) {
-            //gotGroupSibling = true;
             if (actionSortOrder >= 0 && actionSortOrder < otherSortOrder) {
                 if (rw) {
                     rw->insertAction(a, action);
@@ -527,37 +489,12 @@ void RGuiAction::addToWidget(QAction* action, QWidget* w) {
             }
 
             if (!action->isSeparator() && !groupSortOrders.contains(actionGroupSortOrder)) {
-//                if (dbg) qDebug() << "add separator: " << actionGroupSortOrder;
                 addSeparatorToWidget(action, w);
             }
-            //else {
-                //if (!isSeparator()) {
-//                    if (dbg) qDebug() << "add button: " << getSortOrder() << "/" << getGroupSortOrder();
-                //}
-            //}
-
-//            if (!gotGroupSibling && !isSeparator()) {
-//                // separator after new group:
-//                if (dbg) qDebug() << "create separator";
-//                RGuiAction* separator = new RGuiAction("", w);
-//                separator->setSeparator(true);
-//                separator->setGroupSortOrder(getGroupSortOrder());
-//                separator->setSortOrder(99999);
-//                separator->addToWidget(w);
-//            }
             fixSeparators(w);
             return;
         }
     }
-
-//    if (getGroupSortOrder()!=lastGroupSortOrder && !isSeparator()) {
-//        if (dbg) qDebug() << "create separator";
-//        RGuiAction* separator = new RGuiAction("", w);
-//        separator->setSeparator(true);
-//        separator->setGroupSortOrder(getGroupSortOrder());
-//        separator->setSortOrder(99999);
-//        separator->addToWidget(w);
-//    }
 
     if (rw) {
         rw->addAction(action);
@@ -567,14 +504,9 @@ void RGuiAction::addToWidget(QAction* action, QWidget* w) {
     }
 
     if (!action->isSeparator() && !groupSortOrders.contains(getGroupSortOrderStatic(action, w))) {
-//        if (dbg) qDebug() << "add separator: " << getGroupSortOrderStatic(action, w);
         addSeparatorToWidget(action, w);
     }
-//    else {
-//        if (!isSeparator()) {
-//            if (dbg) qDebug() << "add button: " << getSortOrder() << "/" << getGroupSortOrder();
-//        }
-//    }
+
     fixSeparators(w);
 }
 
@@ -761,14 +693,6 @@ void RGuiAction::setGroupDefault(bool on) {
 bool RGuiAction::isGroupDefault() {
     return groupDefault;
 }
-
-//void RGuiAction::setSeparatorGroup(const QString& title) {
-//    separatorGroup = title;
-//}
-
-//QString RGuiAction::getSeparatorGroup() {
-//    return separatorGroup;
-//}
 
 /**
  * Triggers the first action in the list of actions that is registered
