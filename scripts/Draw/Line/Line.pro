@@ -10,10 +10,6 @@ SUBDIRS = \
     LineOrthogonalTangent \
     LineParallel \
     LineParallelThrough \
-    LinePolygonCP \
-    LinePolygonPP \
-    LineRectangle \
-    LineRectangleSize \
     LineRelativeAngle \
     LineTangent1 \
     LineTangent2 \

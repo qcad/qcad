@@ -40,6 +40,7 @@ public:
     RWidget(QWidget* parent=0);
     virtual ~RWidget();
 
+    virtual void removeAction(QAction* action);
     virtual void addAction(QAction* action);
     virtual void insertAction(QAction* before, QAction* action);
 

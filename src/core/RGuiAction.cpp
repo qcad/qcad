@@ -419,9 +419,17 @@ void RGuiAction::fixSeparators(const QWidget* w) {
 }
 
 void RGuiAction::addSeparatorToWidget(QAction* a, QWidget* w) {
+    int go = getGroupSortOrderStatic(a, w);
+    QString objectName = QString("Separator%1").arg(go);
+    if (w->findChild<QWidget*>(objectName)!=NULL) {
+        // separator for this group already added
+        return;
+    }
+
     QAction* separator = new RGuiAction("", w);
     separator->setSeparator(true);
-    setGroupSortOrderStatic(separator, getGroupSortOrderStatic(a, w));
+    separator->setObjectName(objectName);
+    setGroupSortOrderStatic(separator, go);
     setSortOrderStatic(separator, 99999);
     addToWidget(separator, w);
 }
@@ -429,6 +437,10 @@ void RGuiAction::addSeparatorToWidget(QAction* a, QWidget* w) {
 void RGuiAction::addToWidget(QAction* action, QWidget* w) {
     if (action==NULL || w==NULL) {
         qWarning("RGuiAction::addToWidget: widget or action is NULL");
+        return;
+    }
+
+    if (w->actions().contains(action)) {
         return;
     }
 
@@ -510,6 +522,20 @@ void RGuiAction::addToWidget(QAction* action, QWidget* w) {
     fixSeparators(w);
 }
 
+void RGuiAction::removeFromWidget(QAction* action, QWidget* w) {
+    if (action==NULL || w==NULL) {
+        qWarning("RGuiAction::removeFromWidget: widget or action is NULL");
+        return;
+    }
+
+    RWidget* rw = dynamic_cast<RWidget*>(w);
+    if (rw) {
+        rw->removeAction(action);
+    }
+    else {
+        w->removeAction(action);
+    }
+}
 
 
 void RGuiAction::updateTransactionListener(RDocument* document, RTransaction* transaction) {

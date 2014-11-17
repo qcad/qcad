@@ -901,8 +901,7 @@ EAction.getBlockToolBar = function() {
  * \return The main (top) CAD toolbar panel.
  */
 EAction.getMainCadToolBarPanel = function() {
-    return EAction.getCadToolBarPanel(qsTr("Main Tools"), "MainToolsPanel",
-            false);
+    return EAction.getCadToolBarPanel(qsTr("Main Tools"), "MainToolsPanel", false);
 };
 
 /**
@@ -932,13 +931,13 @@ EAction.getCadToolBarPanel = function(title, objectName, hasBackButton) {
         cadToolBar = new CadToolBar(toolBar);
         toolBar.addWidget(cadToolBar);
         cadToolBar.updateIconSize();
-        if (RSettings.getStringValue("CadToolBar/Location", "left")==="top") {
-            appWin.addToolBarBreak();
-            appWin.addToolBar(Qt.TopToolBarArea, toolBar);
-        }
-        else {
-            appWin.addToolBar(Qt.LeftToolBarArea, toolBar);
-        }
+//        if (RSettings.getStringValue("CadToolBar/Location", "left")==="top") {
+//            appWin.addToolBarBreak();
+//            appWin.addToolBar(Qt.TopToolBarArea, toolBar);
+//        }
+//        else {
+//            appWin.addToolBar(Qt.LeftToolBarArea, toolBar);
+//        }
 
         toolBar.topLevelChanged.connect(function(onOff) {
             RSettings.setValue("CadToolBar/VerticalWhenFloating", false);

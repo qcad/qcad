@@ -39,6 +39,12 @@
         
     
     
+      void removeAction(
+                QAction * action
+            );
+        
+    
+    
       void addAction(
                 QAction * action
             );

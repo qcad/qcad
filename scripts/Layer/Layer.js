@@ -117,6 +117,19 @@ Layer.showHide = function(show, obj, layerId) {
     di.repaintViews();
 };
 
+Layer.lockUnlock = function(lock, di) {
+    var operation = new RModifyObjectsOperation();
+    var layers = di.getDocument().queryAllLayers();
+    for (var l = 0; l < layers.length; ++l) {
+        var layer = di.getDocument().queryLayer(layers[l]);
+        layer.setLocked(lock);
+        operation.addObject(layer);
+    }
+    di.applyOperation(operation);
+    di.clearPreview();
+    di.repaintViews();
+};
+
 /**
  * Can be reimplemented in derived classes to provide an advanced dialog.
  */

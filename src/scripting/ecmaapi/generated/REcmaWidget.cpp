@@ -63,6 +63,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, removeAction, "removeAction");
+            
             REcmaHelper::registerFunction(&engine, proto, addAction, "addAction");
             
             REcmaHelper::registerFunction(&engine, proto, insertAction, "insertAction");
@@ -231,6 +233,64 @@
 
     // public methods:
      QScriptValue
+        REcmaWidget::removeAction
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaWidget::removeAction", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaWidget::removeAction";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RWidget* self = 
+                        getSelf("removeAction", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeAction(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RWidget.removeAction().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaWidget::removeAction", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaWidget::addAction
         (QScriptContext* context, QScriptEngine* engine) 
         

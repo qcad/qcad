@@ -671,11 +671,7 @@ dir="./core/math" filename="RMath.h">
     </type>
     <name>tolerance</name>=
     <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>AngleTolerance</name></name>
-      </expr>
+      <expr>0.01</expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>

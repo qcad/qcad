@@ -34,15 +34,16 @@ RWidget::RWidget(QWidget* parent) :
 RWidget::~RWidget() {
 }
 
+void RWidget::removeAction(QAction* action) {
+    QWidget::removeAction(action);
+}
 
 void RWidget::addAction(QAction* action) {
-    qDebug() << "RWidget::addAction";
     QWidget::addAction(action);
     //emit actionAdded(action);
 }
 
 void RWidget::insertAction(QAction* before, QAction* action) {
-    qDebug() << "RWidget::insertAction";
     QWidget::insertAction(before, action);
     //emit actionAdded(action);
 }

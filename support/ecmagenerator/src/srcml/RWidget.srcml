@@ -68,6 +68,20 @@ dir="./core" filename="RWidget.h">
     <name>virtual</name>
     <name>void</name>
   </type>
+  <name>removeAction</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>QAction</name>*</type>
+      <name>action</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
   <name>addAction</name>
   <parameter_list>(
   <param>

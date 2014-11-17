@@ -121,6 +121,7 @@ public:
     static void fixSeparators(const QWidget* w);
     static void addSeparatorToWidget(QAction* a, QWidget* w);
     static void addToWidget(QAction* a, QWidget* w);
+    static void removeFromWidget(QAction* a, QWidget* w);
 
     /**
      * Sets the action icon to the given icon file.

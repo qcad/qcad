@@ -156,6 +156,9 @@
         addToWidget
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeFromWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setIcon
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

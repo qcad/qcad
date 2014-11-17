@@ -755,8 +755,13 @@ QString RSettings::getStringValue(const QString& key, const QString& defaultValu
     return ret.toString();
 }
 
-void RSettings::setValue(const QString& key, const QVariant& value) {
+void RSettings::setValue(const QString& key, const QVariant& value, bool overwrite) {
     if (!isInitialized()) {
+        return;
+    }
+
+    if (!overwrite && hasValue(key)) {
+        // value exists and will not be overwritten:
         return;
     }
 

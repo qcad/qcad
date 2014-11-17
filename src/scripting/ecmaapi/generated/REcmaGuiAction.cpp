@@ -267,6 +267,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, addToWidget, "addToWidget");
             
+            REcmaHelper::registerFunction(&engine, &ctor, removeFromWidget, "removeFromWidget");
+            
             REcmaHelper::registerFunction(&engine, &ctor, triggerGroupDefault, "triggerGroupDefault");
             
             REcmaHelper::registerFunction(&engine, &ctor, triggerGroupDefaults, "triggerGroupDefaults");
@@ -2430,6 +2432,71 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::addToWidget", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::removeFromWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::removeFromWidget", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::removeFromWidget";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+     && (
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QWidget * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+            // argument isQObject
+            QWidget *
+            a1 =
+            qobject_cast<
+            QWidget *>
+            ( context->argument(
+            1
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RGuiAction::
+       removeFromWidget(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.removeFromWidget().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::removeFromWidget", context, engine);
             return result;
         }
          QScriptValue

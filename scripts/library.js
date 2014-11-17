@@ -1837,6 +1837,61 @@ function restoreOverrideCursor() {
     }
 }
 
+function addActionsToWidgets() {
+    var actions = RGuiAction.getActions();
+    var widgetTypes = ["Menu", "ToolBar", "Panel"];
+    for (var c=0; c<actions.length; ++c) {
+        var a = actions[c];
+        var className = a.getScriptClass();
+        var wns = a.getWidgetNames();
+
+        for (var k=0; k<wns.length; k++) {
+            var wn = wns[k];
+            if (wn.length===0) {
+                continue;
+            }
+
+            var visibility = true;
+            if (wn[0]==="!") {
+                visibility = false;
+                wn = wn.substring(1);
+            }
+
+            // check tool visibility based on user preferences:
+            if (className.length!==0) {
+                var key;
+
+                for (var j=0; j<widgetTypes.length; j++) {
+                    var widgetType = widgetTypes[j];
+                    var keyPostfix = widgetType;
+                    if (keyPostfix==="Panel") {
+                        keyPostfix = "CadToolBar";
+                    }
+
+                    if (wn.endsWith(widgetType)) {
+                        key = className + "/VisibleIn" + keyPostfix;
+                        visibility = RSettings.getBoolValue(key, visibility);
+                        RSettings.setValue(key, visibility, false);
+                    }
+                }
+            }
+            var w = RMainWindowQt.getMainWindow().findChild(wn);
+            if (!isNull(w)) {
+                if (visibility) {
+                    RGuiAction.addToWidget(a, w);
+                }
+                else {
+                    // action not visible in this widget:
+                    RGuiAction.removeFromWidget(a, w);
+                }
+            }
+            else {
+                qWarning("RGuiAction::init: Cannot add action to widget: ", wn);
+            }
+        }
+    }
+}
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {

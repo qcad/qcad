@@ -117,12 +117,9 @@ public:
     static double getRelativeAngle(double a, double baseAngle);
     static double getAngleDifference(double a1, double a2);
     static double getAngleDifference180(double a1, double a2);
-    static double makeAngleReadable(double angle, bool readable = true,
-            bool* corrected = NULL);
-    static bool isAngleReadable(double angle, double tolerance =
-            RS::AngleTolerance);
-    static bool isSameDirection(double dir1, double dir2, double tol =
-            RS::AngleTolerance);
+    static double makeAngleReadable(double angle, bool readable = true, bool* corrected = NULL);
+    static bool isAngleReadable(double angle, double tolerance = 0.01);
+    static bool isSameDirection(double dir1, double dir2, double tol = RS::AngleTolerance);
     static int absmod(int a, int b);
 
     static QString toFractionString(double v, int maxDenominator);

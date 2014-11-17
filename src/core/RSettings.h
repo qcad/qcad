@@ -139,7 +139,7 @@ public:
     static int getIntValue(const QString& key, int defaultValue);
     static QString getStringValue(const QString& key, const QString& defaultValue);
 
-    static void setValue(const QString& key, const QVariant& value);
+    static void setValue(const QString& key, const QVariant& value, bool overwrite=true);
     static void removeValue(const QString& key);
 
     static void setApplicationName(const QString& n);

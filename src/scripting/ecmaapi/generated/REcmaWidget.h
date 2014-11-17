@@ -45,6 +45,9 @@
 
     // public methods:
     static  QScriptValue
+        removeAction
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addAction
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

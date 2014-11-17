@@ -654,6 +654,27 @@ dir="./core" filename="RGuiAction.h">
       <name>w</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>removeFromWidget</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>QAction</name>*</type>
+      <name>a</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>QWidget</name>*</type>
+      <name>w</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <comment type="block">/** * Sets the action icon to the given
   icon file. */</comment>
   <function_decl>
@@ -1768,10 +1789,7 @@ dir="./core" filename="RGuiAction.h">
     <type>
     <name>RDocumentInterface</name>*</type>
     <name>documentInterface</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//QString separatorGroup;</comment>
-  <comment type="line">//QStringList
-  widgetNames;</comment></protected>}</block>;</class>
+  </decl>;</decl_stmt></protected>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

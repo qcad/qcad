@@ -188,8 +188,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="angle"
         isConst="false" />
         <arg type="double" typeName="double" name="tolerance"
-        hasDefault="true" default="RS :: AngleTolerance"
-        isConst="false" />
+        hasDefault="true" default="0.01" isConst="false" />
       </variant>
     </method>
     <method name="isSameDirection" cppName="isSameDirection"

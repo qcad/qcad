@@ -20,9 +20,6 @@
 function ColumnLayout(parent, toolBar, buttonSize) {
     QLayout.call(this, parent);
 
-    //var columns = RSettings.getIntValue("CadToolBar/Columns", 2);
-    //var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
-
     this.setContentsMargins(2,2,2,2);
     this.setProperty("toolBar", toolBar);
     this.setProperty("sHint", new QSize());
@@ -30,22 +27,38 @@ function ColumnLayout(parent, toolBar, buttonSize) {
 
 ColumnLayout.prototype = new QLayout();
 
+ColumnLayout.prototype.removeAction = function(a) {
+    var itemList = this.property("ItemList");
+
+    var index = -1;
+
+    for (var i=0; i<itemList.length; ++i) {
+        if (!isOfType(itemList[i], QToolButton)) {
+            continue;
+        }
+
+        if (itemList[i].defaultAction()===a) {
+            index = i;
+        }
+    }
+
+    if (index!==-1) {
+        itemList.splice(index, 1);
+    }
+
+    this.setProperty("ItemList", itemList);
+};
+
 /**
  * \param item A widget (e.g. QToolButton) with property "SortOrder" set to the
  *    desired sort order. Or a separator action, also with property "SortOrder"
  *    set.
  */
 ColumnLayout.prototype.addItem = function(item) {
-    var dbg = false;
-    if (this.parent().objectName==="MainToolsPanel") {
-        dbg = true;
-    }
-
     var itemList = this.property("ItemList");
 
-    if (typeof(itemList)=="undefined" || itemList.length==0) {
+    if (typeof(itemList)=="undefined" || itemList.length===0) {
         this.setProperty("ItemList", new Array(item));
-        //if (dbg) qDebug("# ", itemList); bt();
         return;
     }
 
@@ -64,7 +77,6 @@ ColumnLayout.prototype.addItem = function(item) {
             if (so2>so) {
                 itemList.splice(i, 0, item);
                 this.setProperty("ItemList", itemList);
-                //if (dbg) qDebug("# ", itemList); bt();
                 return;
             }
         }
@@ -72,7 +84,6 @@ ColumnLayout.prototype.addItem = function(item) {
 
     itemList.push(item);
     this.setProperty("ItemList", itemList);
-    //if (dbg) qDebug("# ", itemList); bt();
 };
 
 ColumnLayout.getAccumulatedSortOrder = function(item, objectName) {
@@ -144,13 +155,8 @@ ColumnLayout.prototype.setGeometry = function(rect) {
     //if (dbg) qDebug(itemList);
 
     for (var i=0; i<itemList.length; ++i) {
-
         if (isOfType(itemList[i], QToolButton)) {
             itemList[i].iconSize = new QSize(iconSize, iconSize);
-//            if (itemList[i]["VisibleOverride"]===false) {
-//                qDebug("item invisible: ", itemList[i].objectName);
-//                continue;
-//            }
             if (itemList[i].defaultAction().visible===false) {
                 itemList[i].visible = false;
                 continue;
