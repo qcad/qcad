@@ -1,5 +1,4 @@
 function init(basePath) {
-    var menu = Block.getMenu();
     var action = new RGuiAction(qsTranslate("EditFromReference", "E&dit Block from Reference"), RMainWindowQt.getMainWindow());
     action.setToolTip(qsTranslate("EditFromReference", "Edit block based on chosen block reference"));
     action.setRequiresDocument(true);
@@ -7,6 +6,7 @@ function init(basePath) {
     action.setIcon(basePath + "/EditFromReference.svg");
     action.setDefaultShortcut(new QKeySequence("b,d"));
     action.setDefaultCommands(["blockeditfromreference", "bd"]);
-    action.setSortOrder(2300);
-    EAction.addGuiActionTo(action, Block, true, false, false);
+    action.setGroupSortOrder(14350);
+    action.setSortOrder(300);
+    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel"]);
 }

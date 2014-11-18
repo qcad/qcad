@@ -93,6 +93,7 @@ ExDumpPolyline.init = function(basePath) {
     var action = new RGuiAction("&Dump Polyline", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExDumpPolyline.js");
-    action.setSortOrder(20);
-    EAction.addGuiActionTo(action, IOExamples, true, false, false);
+    action.setGroupSortOrder(71100);
+    action.setSortOrder(100);
+    action.setWidgetNames(["IOExamplesMenu"]);
 };

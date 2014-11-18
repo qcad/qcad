@@ -599,6 +599,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="true" />
     </method>
+    <method name="getChildWidget" cppName="getChildWidget"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QWidget *" isPureVirtual="true">
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="handleUserMessage" cppName="handleUserMessage"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

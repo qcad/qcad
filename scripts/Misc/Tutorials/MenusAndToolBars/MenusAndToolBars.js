@@ -17,16 +17,16 @@
  * along with QCAD.
  */
 
-include("../Tutorials.js");
+include("scripts/EAction.js");
  
 function MenusAndToolBars(guiAction) {
-    Tutorials.call(this, guiAction);
+    EAction.call(this, guiAction);
 }
 
-MenusAndToolBars.prototype = new Tutorials();
+MenusAndToolBars.prototype = new EAction();
 
 MenusAndToolBars.prototype.beginEvent = function() {
-    Tutorials.prototype.beginEvent.call(this);
+    EAction.prototype.beginEvent.call(this);
 
     var appWin = EAction.getMainWindow();
     appWin.handleUserMessage("MenusAndToolBars() is running...");
@@ -38,6 +38,7 @@ MenusAndToolBars.init = function(basePath) {
     var action = new RGuiAction("&Menus and Toolbars", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/MenusAndToolBars.js");
-    action.setSortOrder(10);
-    EAction.addGuiActionTo(action, Tutorials, true, false, false);
+    action.setGroupSortOrder(80100);
+    action.setSortOrder(100);
+    action.setWidgetNames(["TutorialsMenu"]);
 };

@@ -80,6 +80,7 @@ BlockFixNames.init = function(basePath) {
     var action = new RGuiAction("&Fix Block Names", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/BlockFixNames.js");
-    action.setSortOrder(20);
-    EAction.addGuiActionTo(action, MiscBlock, true, false, false);
+    action.setGroupSortOrder(60100);
+    action.setSortOrder(100);
+    action.setWidgetNames(["MiscBlockMenu", "MiscBlockToolBar", "MiscBlockToolsPanel"]);
 };

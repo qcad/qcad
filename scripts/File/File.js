@@ -41,7 +41,7 @@ File.includeBasePath = includeBasePath;
 File.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="FileMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="FileToolsPanelButton") {
         EAction.showCadToolBarPanel("FileToolsPanel");
         this.terminate();
     }
@@ -60,24 +60,19 @@ File.getToolBar = function() {
 
 File.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "FileMenu";
+    var actionName = "FileToolsPanelButton";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
-//        var separator = new RGuiAction("", RMainWindowQt.getMainWindow());
-//        separator.setSeparator(true);
-//        separator.setSortOrder(0);
-//        CadToolBarPanel.prototype.addAction.call(mtb, separator);
-
         var action = new RGuiAction(qsTr("File Tools"), mtb);
         action.setScriptFile(File.includeBasePath + "/File.js");
         action.objectName = actionName;
         action.setRequiresDocument(false);
         action.setIcon(File.includeBasePath + "/File.svg");
         action.setStatusTip(qsTr("Show file tools"));
-        action.setDefaultShortcut(new QKeySequence("w,f"));
         action.setNoState();
-        action.setProperty("SortOrder", 1);
         action.setDefaultCommands(["filemenu"]);
-        CadToolBarPanel.prototype.addAction.call(mtb, action);
+        action.setGroupSortOrder(10);
+        action.setSortOrder(100);
+        //action.setWidgetNames(["MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(
@@ -96,6 +91,13 @@ File.getTitle = function() {
 File.prototype.getTitle = function() {
     return File.getTitle();
 };
+
+File.init = function() {
+    File.getMenu();
+    File.getToolBar();
+    File.getCadToolBarPanel();
+};
+
 
 /**
  * Advanced file save as dialog with extension completion.

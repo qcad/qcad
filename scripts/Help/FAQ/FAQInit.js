@@ -3,7 +3,8 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/FAQ.js");
-    action.setSortOrder(400);
     action.setNoState();
-    EAction.addGuiActionTo(action, Help, true, false, false);
+    action.setGroupSortOrder(110200);
+    action.setSortOrder(200);
+    action.setWidgetNames(["HelpMenu"]);
 }

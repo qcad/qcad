@@ -268,6 +268,7 @@ HEADERS += \
     $$PWD/REcmaShellThread.h \
     $$PWD/REcmaShellTreeWidget.h \
     $$PWD/REcmaShellViewFocusListenerAdapter.h \
+    $$PWD/REcmaShellWidget.h \
     $$PWD/REcmaShortcutLineEdit.h \
     $$PWD/REcmaSnap.h \
     $$PWD/REcmaSnapAuto.h \
@@ -327,6 +328,7 @@ HEADERS += \
     $$PWD/REcmaViewportData.h \
     $$PWD/REcmaViewportEntity.h \
     $$PWD/REcmaWheelEvent.h \
+    $$PWD/REcmaWidget.h \
     $$PWD/REcmaXLine.h \
     $$PWD/REcmaXLineData.h \
     $$PWD/REcmaXLineEntity.h
@@ -600,6 +602,7 @@ SOURCES += \
     $$PWD/REcmaShellThread.cpp \
     $$PWD/REcmaShellTreeWidget.cpp \
     $$PWD/REcmaShellViewFocusListenerAdapter.cpp \
+    $$PWD/REcmaShellWidget.cpp \
     $$PWD/REcmaShortcutLineEdit.cpp \
     $$PWD/REcmaSnap.cpp \
     $$PWD/REcmaSnapAuto.cpp \
@@ -659,6 +662,7 @@ SOURCES += \
     $$PWD/REcmaViewportData.cpp \
     $$PWD/REcmaViewportEntity.cpp \
     $$PWD/REcmaWheelEvent.cpp \
+    $$PWD/REcmaWidget.cpp \
     $$PWD/REcmaXLine.cpp \
     $$PWD/REcmaXLineData.cpp \
     $$PWD/REcmaXLineEntity.cpp

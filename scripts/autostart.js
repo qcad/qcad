@@ -600,6 +600,12 @@ function main() {
         include(files[i]);
     }
 
+    //RMainWindow* appWin = RMainWindow::getMainWindow();
+
+    addActionsToWidgets();
+
+    //appWin.initGuiActions();
+    //TODO: appWin.initSeparators();
     appWin.updateGuiActions();
     appWin.acceptDrops = true;
     appWin.dockNestingEnabled = true;

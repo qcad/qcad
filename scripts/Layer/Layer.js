@@ -38,6 +38,15 @@ function Layer(guiAction) {
 Layer.prototype = new EAction();
 Layer.includeBasePath = includeBasePath;
 
+Layer.prototype.beginEvent = function() {
+    EAction.prototype.beginEvent.call(this);
+
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="LayerToolsPanelButton") {
+        EAction.showCadToolBarPanel("LayerToolsPanel");
+        this.terminate();
+    }
+};
+
 Layer.getMenu = function() {
     var menu = EAction.getMenu(Layer.getTitle(), "LayerMenu");
     menu.setProperty("scriptFile", Layer.includeBasePath + "/Layer.js");
@@ -50,12 +59,44 @@ Layer.getToolBar = function() {
     return tb;
 };
 
+Layer.getCadToolBarPanel = function() {
+    var mtb = EAction.getMainCadToolBarPanel();
+    var actionName = "LayerToolsPanelButton";
+    if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
+        var action = new RGuiAction(qsTr("Layer Tools"), mtb);
+        action.setScriptFile(Layer.includeBasePath + "/Layer.js");
+        action.objectName = actionName;
+        action.setRequiresDocument(true);
+        action.setIcon(Layer.includeBasePath + "/Layer.svg");
+        action.setStatusTip(qsTr("Show layer tools"));
+        action.setDefaultShortcut(new QKeySequence("w,y"));
+        action.setNoState();
+        action.setDefaultCommands(["layermenu"]);
+        action.setGroupSortOrder(60);
+        action.setSortOrder(200);
+        //action.setWidgetNames(["MainToolsPanel"]);
+    }
+
+    var tb = EAction.getCadToolBarPanel(
+        Layer.getTitle(),
+        "LayerToolsPanel",
+        true
+    );
+    return tb;
+};
+
 Layer.getTitle = function() {
     return qsTr("&Layer");
 };
 
 Layer.prototype.getTitle = function() {
     return Layer.getTitle();
+};
+
+Layer.init = function() {
+    Layer.getMenu();
+    Layer.getToolBar();
+    Layer.getCadToolBarPanel();
 };
 
 Layer.showHide = function(show, obj, layerId) {
@@ -71,6 +112,19 @@ Layer.showHide = function(show, obj, layerId) {
         operation.addObject(layer);
     }
     var di = obj.getDocumentInterface();
+    di.applyOperation(operation);
+    di.clearPreview();
+    di.repaintViews();
+};
+
+Layer.lockUnlock = function(lock, di) {
+    var operation = new RModifyObjectsOperation();
+    var layers = di.getDocument().queryAllLayers();
+    for (var l = 0; l < layers.length; ++l) {
+        var layer = di.getDocument().queryLayer(layers[l]);
+        layer.setLocked(lock);
+        operation.addObject(layer);
+    }
     di.applyOperation(operation);
     di.clearPreview();
     di.repaintViews();

@@ -93,10 +93,11 @@ ToggleGrid.init = function(basePath) {
     action.setIcon(basePath + "/ToggleGrid.svg");
     action.setDefaultShortcut(new QKeySequence("g,r"));
     action.setNoState(true);
-    action.setSortOrder(20);
+    action.setGroupSortOrder(3200);
+    action.setSortOrder(100);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
 
     var appWin = EAction.getMainWindow();
     var fl = new ToggleGridFocusListener(action);
     appWin.addViewFocusListener(fl);
-    EAction.addGuiActionTo(action, View, true, true, false, true);
 };

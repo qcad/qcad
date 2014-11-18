@@ -229,6 +229,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="getChildWidget" cppName="getChildWidget"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QWidget *" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="quit" cppName="quit" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
@@ -288,6 +296,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="mdiChild" hasDefault="true" default=" NULL"
         isConst="false" />
       </variant>
+    </method>
+    <method name="initGuiActions" cppName="initGuiActions"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="updateScenes" cppName="updateScenes"
     specifier="protected" isStatic="false" isVirtual="false"

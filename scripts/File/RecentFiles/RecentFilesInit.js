@@ -42,31 +42,31 @@ RecentFilesMenu.prototype.refresh = function() {
         action.setData(files[i]);
         action.setRequiresDocument(false);
         action.setScriptFile(this.basePath + "/../OpenFile/OpenFile.js", true);
-        action.setSortOrder(89 - i);
         action.setProperty("hasShortcuts", false);
-        action.addToMenu(this);
+        action.setGroupSortOrder(1500);
+        action.setSortOrder(89 - i);
+        RGuiAction.addToWidget(action, this);
     }
-
-    var separator = new RGuiAction("", this);
-    separator.setSeparator(true);
-    separator.setSortOrder(90);
-    separator.addToMenu(this);
 
     action = new RGuiAction(qsTranslate("RecentFiles", "&Clear List"), this);
     action.setRequiresDocument(false);
     action.setScriptFile(this.basePath + "/RecentFiles.js");
+    action.setGroupSortOrder(1501);
     action.setSortOrder(100);
-    action.addToMenu(this);
+    action.setWidgetNames(["RecentFilesSubMenu"]);
+    RGuiAction.addToWidget(action, this);
 };
 
 function init(basePath) {
     var action = new RGuiAction(qsTranslate("RecentFiles", "Open &Recent"), RMainWindowQt.getMainWindow());
     var submenu = new RecentFilesMenu(basePath);
+    submenu.objectName = "RecentFilesSubMenu";
     File.getMenu().aboutToShow.connect(submenu, "refresh");
     
     action.setRequiresDocument(false);
     action.checkable = false;
     action.setMenu(submenu);
+    action.setGroupSortOrder(1000);
     action.setSortOrder(400);
-    EAction.addGuiActionTo(action, File, true);
+    action.setWidgetNames(["FileMenu"]);
 }

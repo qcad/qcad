@@ -41,7 +41,7 @@ Polyline.includeBasePath = includeBasePath;
 Polyline.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName=="PolylineMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="PolylineToolsPanelButton") {
         EAction.showCadToolBarPanel("PolylineToolsPanel");
         this.terminate();
     }
@@ -50,9 +50,9 @@ Polyline.prototype.beginEvent = function() {
 Polyline.getMenu = function() {
     var menu = EAction.getSubMenu(
         Draw.getMenu(),
-        700,
+        20, 700,
         Polyline.getTitle(),
-        "polyline",
+        "DrawPolylineMenu",
         Polyline.includeBasePath + "/Polyline.svg"
     );
     menu.setProperty("scriptFile", Polyline.includeBasePath + "/Polyline.js");
@@ -60,7 +60,7 @@ Polyline.getMenu = function() {
 };
 
 Polyline.getToolBar = function() {
-    var tb = EAction.getToolBar(Polyline.getTitle(), "Polyline");
+    var tb = EAction.getToolBar(Polyline.getTitle(), "PolylineToolBar");
     tb.orientation = Qt.Vertical;
     tb.visible = false;
     return tb;
@@ -68,7 +68,7 @@ Polyline.getToolBar = function() {
 
 Polyline.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "PolylineMenu";
+    var actionName = "PolylineToolsPanelButton";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Polyline Tools"), mtb);
         action.setScriptFile(Polyline.includeBasePath + "/Polyline.js");
@@ -78,9 +78,10 @@ Polyline.getCadToolBarPanel = function() {
         action.setStatusTip(qsTr("Show polyline tools"));
         action.setDefaultShortcut(new QKeySequence("w,o"));
         action.setNoState();
-        action.setProperty("SortOrder", 700);
-        action.setDefaultCommands(["polylinemenu"]);
-        CadToolBarPanel.prototype.addAction.call(mtb, action);
+        action.setDefaultCommands(["PolylineToolsPanelButton"]);
+        action.setGroupSortOrder(20);
+        action.setSortOrder(700);
+        action.setWidgetNames(["MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(
@@ -97,6 +98,12 @@ Polyline.getTitle = function() {
 
 Polyline.prototype.getTitle = function() {
     return Polyline.getTitle();
+};
+
+Polyline.init = function() {
+    Polyline.getMenu();
+    Polyline.getToolBar();
+    Polyline.getCadToolBarPanel();
 };
 
 Polyline.prototype.getClosestSegment = function(pos) {

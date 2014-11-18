@@ -215,7 +215,7 @@ Arc2PR.prototype.slotDirectionChanged = function(button) {
         return;
     }
 
-    if (button.objectName=="Clockwise") {
+    if (button.objectName==="Clockwise") {
         this.reversed = true;
     }
     else {
@@ -230,7 +230,7 @@ Arc2PR.prototype.slotSolutionChanged = function(button) {
         return;
     }
 
-    if (button.objectName=="Solution2") {
+    if (button.objectName==="Solution2") {
         this.alternativeSolution = true;
     }
     else {

@@ -283,6 +283,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, writeSettings, "writeSettings");
             
+            REcmaHelper::registerFunction(&engine, proto, getChildWidget, "getChildWidget");
+            
             REcmaHelper::registerFunction(&engine, proto, quit, "quit");
             
             REcmaHelper::registerFunction(&engine, proto, currentTabChanged, "currentTabChanged");
@@ -6041,6 +6043,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::writeSettings", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::getChildWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::getChildWidget", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::getChildWidget";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("getChildWidget", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QWidget *'
+    QWidget * cppResult =
+        
+               self->getChildWidget(a0);
+        // return type: QWidget *
+                // QObject
+                result = engine->newQObject(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.getChildWidget().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::getChildWidget", context, engine);
             return result;
         }
          QScriptValue

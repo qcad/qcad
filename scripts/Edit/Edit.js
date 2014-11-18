@@ -38,6 +38,15 @@ function Edit(guiAction) {
 Edit.prototype = new EAction();
 Edit.includeBasePath = includeBasePath;
 
+Edit.prototype.beginEvent = function() {
+    EAction.prototype.beginEvent.call(this);
+
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="EditToolsPanelButton") {
+        EAction.showCadToolBarPanel("EditToolsPanel");
+        this.terminate();
+    }
+};
+
 Edit.getMenu = function() {
     var menu = EAction.getMenu(Edit.getTitle(), "EditMenu");
     menu.setProperty("scriptFile", Edit.includeBasePath + "/Edit.js");
@@ -49,10 +58,42 @@ Edit.getToolBar = function() {
     return tb;
 };
 
+Edit.getCadToolBarPanel = function() {
+    var mtb = EAction.getMainCadToolBarPanel();
+    var actionName = "EditToolsPanelButton";
+    if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
+        var action = new RGuiAction(qsTr("Edit Tools"), mtb);
+        action.setScriptFile(Edit.includeBasePath + "/Edit.js");
+        action.objectName = actionName;
+        action.setRequiresDocument(false);
+        action.setIcon(Edit.includeBasePath + "/Edit.svg");
+        action.setStatusTip(qsTr("Show edit tools"));
+        action.setNoState();
+        action.setDefaultCommands(["editmenu"]);
+        action.setGroupSortOrder(10);
+        action.setSortOrder(200);
+        //action.setWidgetNames(["MainToolsPanel"]);
+    }
+
+    var tb = EAction.getCadToolBarPanel(
+        Edit.getTitle(),
+        "EditToolsPanel",
+        true
+    );
+    return tb;
+};
+
+
 Edit.getTitle = function() {
     return qsTr("&Edit");
 };
 
 Edit.prototype.getTitle = function() {
     return Edit.getTitle();
+};
+
+Edit.init = function() {
+    Edit.getMenu();
+    Edit.getToolBar();
+    Edit.getCadToolBarPanel();
 };

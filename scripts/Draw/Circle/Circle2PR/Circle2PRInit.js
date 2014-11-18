@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("Circle2PR", "Draw circle from 2 points and radius"));
     action.setDefaultShortcut(new QKeySequence("c,d"));
     action.setDefaultCommands(["circleradius", "cd"]);
-    action.setSortOrder(300);
-    EAction.addGuiActionTo(action, Circle, true, true, true, true);
+    action.setGroupSortOrder(8200);
+    action.setSortOrder(100);
+    action.setWidgetNames(["DrawCircleMenu", "CircleToolBar", "CircleToolsPanel"]);
 }

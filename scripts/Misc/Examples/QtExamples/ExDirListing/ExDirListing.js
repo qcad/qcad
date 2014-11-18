@@ -64,6 +64,7 @@ ExDirListing.init = function(basePath) {
     var action = new RGuiAction("&Directory Listing", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ExDirListing.js");
-    action.setSortOrder(10);
-    EAction.addGuiActionTo(action, QtExamples, true, false, false);
+    action.setGroupSortOrder(79600);
+    action.setSortOrder(100);
+    action.setWidgetNames(["QtExamplesMenu"]);
 };

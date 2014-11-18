@@ -102,8 +102,9 @@ ExThreePoints.init = function(basePath) {
     action.setStatusTip(qsTr("Draw three points"));
     action.setDefaultShortcut(new QKeySequence("p,3"));
     action.setDefaultCommands(["point3"]);
-    action.setSortOrder(2000);
-    EAction.addGuiActionTo(action, DrawExamples, true, false, false);
+    action.setGroupSortOrder(73100);
+    action.setSortOrder(400);
+    action.setWidgetNames(["DrawExamplesMenu"]);
 };
 //! [init]
 //! [main]

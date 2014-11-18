@@ -6,6 +6,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("Point1P", "Draw single point"));
     action.setDefaultShortcut(new QKeySequence("p,o"));
     action.setDefaultCommands(["point"]);
+    action.setGroupSortOrder(5000);
     action.setSortOrder(100);
-    EAction.addGuiActionTo(action, Point, true, true, true);
+    action.setWidgetNames(["DrawPointMenu", "PointToolBar", "PointToolsPanel"]);
 }

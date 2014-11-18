@@ -81,8 +81,9 @@ public:
     /**
      * \return Shapes that represent the geometry of this entity.
      */
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const {
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const {
         Q_UNUSED(queryBox)
+        Q_UNUSED(ignoreComplex)
 
         return QList<QSharedPointer<RShape> >();
     }
@@ -91,7 +92,7 @@ public:
      * \return The one shape that is part of this entity which is the
      *      closest to the given position.
      */
-    virtual QSharedPointer<RShape> getClosestShape(const RVector& pos, double range = RNANDOUBLE) const;
+    virtual QSharedPointer<RShape> getClosestShape(const RVector& pos, double range = RNANDOUBLE, bool ignoreComplex = false) const;
 
     virtual RShape* castToShape() {
         return NULL;

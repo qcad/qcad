@@ -28,6 +28,7 @@
 #include "RScriptHandler.h"
 #include "RSettings.h"
 #include "RSingleApplication.h"
+#include "RWidget.h"
 
 
 
@@ -123,7 +124,7 @@ void RGuiAction::initTexts() {
 
     // for sort order debugging:
 //    if (getSortOrder()!=-1 && textAndKeycode.indexOf('{')==-1) {
-//        textAndKeycode += QString(" {%1}").arg(getSortOrder());
+//        textAndKeycode += QString(" {%1,%2}").arg(getGroupSortOrder()).arg(getSortOrder());
 //    }
 
     setText(textAndKeycode);
@@ -270,20 +271,100 @@ bool RGuiAction::isChecked() {
     return QAction::isChecked();
 }
 
-void RGuiAction::setSortOrder(int sortOrder) {
-    this->setProperty("SortOrder", sortOrder);
-
-    // for debugging: setToolTip(QString("[%1]").arg(sortOrder));
-    //initTexts();
+void RGuiAction::setGroupSortOrderStatic(QAction* a, int groupSortOrder) {
+    a->setProperty("GroupSortOrder", groupSortOrder);
 }
 
-int RGuiAction::getSortOrder() {
-    if (property("SortOrder").isValid()) {
-        return this->property("SortOrder").toInt();
-    }
-    else {
+void RGuiAction::setGroupSortOrderOverrideStatic(QAction* a, const QString& widgetName, int groupSortOrder) {
+    QString n = QString("GroupSortOrderOverride") + widgetName;
+    a->setProperty(n.toUtf8(), groupSortOrder);
+}
+
+int RGuiAction::getGroupSortOrderStatic(const QAction* a, const QWidget* w) {
+    if (a==NULL) {
         return -1;
     }
+
+    if (w!=NULL) {
+        QString n = QString("GroupSortOrderOverride") + w->objectName();
+        if (a->property(n.toUtf8()).isValid()) {
+            return a->property(n.toUtf8()).toInt();
+        }
+    }
+    if (a->property("GroupSortOrder").isValid()) {
+        return a->property("GroupSortOrder").toInt();
+    }
+    return -1;
+}
+
+void RGuiAction::setSortOrderStatic(QAction* a, int sortOrder) {
+    a->setProperty("SortOrder", sortOrder);
+}
+
+void RGuiAction::setSortOrderOverrideStatic(QAction* a, const QString& widgetName, int sortOrder) {
+    QString n = QString("SortOrderOverride") + widgetName;
+    a->setProperty(n.toUtf8(), sortOrder);
+}
+
+int RGuiAction::getSortOrderStatic(const QAction* a, const QWidget* w) {
+    if (a==NULL) {
+        return -1;
+    }
+    if (w!=NULL) {
+        QString n = QString("SortOrderOverride") + w->objectName();
+        if (a->property(n.toUtf8()).isValid()) {
+            return a->property(n.toUtf8()).toInt();
+        }
+    }
+    if (a->property("SortOrder").isValid()) {
+        return a->property("SortOrder").toInt();
+    }
+    return -1;
+}
+
+void RGuiAction::setGroupSortOrder(int groupSortOrder) {
+    setGroupSortOrderStatic(this, groupSortOrder);
+}
+
+void RGuiAction::setGroupSortOrderOverride(const QString& widgetName, int groupSortOrder) {
+    setGroupSortOrderOverrideStatic(this, widgetName, groupSortOrder);
+}
+
+int RGuiAction::getGroupSortOrder(const QWidget* w) {
+    return getGroupSortOrderStatic(this, w);
+}
+
+void RGuiAction::setSortOrder(int sortOrder) {
+    setSortOrderStatic(this, sortOrder);
+}
+
+void RGuiAction::setSortOrderOverride(const QString& widgetName, int sortOrder) {
+    setSortOrderOverrideStatic(this, widgetName, sortOrder);
+}
+
+int RGuiAction::getSortOrder(const QWidget* w) {
+    return getSortOrderStatic(this, w);
+}
+
+void RGuiAction::setWidgetNamesStatic(QAction* a, const QStringList& widgetNames) {
+    a->setProperty("WidgetNames", widgetNames);
+}
+
+QStringList RGuiAction::getWidgetNamesStatic(const QAction* a) {
+    if (a->property("WidgetNames").isValid()) {
+        return a->property("WidgetNames").toStringList();
+    }
+    else {
+        return QStringList();
+    }
+}
+
+void RGuiAction::setWidgetNames(const QStringList& widgetNames) {
+    setWidgetNamesStatic(this, widgetNames);
+}
+
+QStringList RGuiAction::getWidgetNames() const {
+    return getWidgetNamesStatic(this);
 }
 
 void RGuiAction::addToMenu(QMenu* menu) {
@@ -292,7 +373,7 @@ void RGuiAction::addToMenu(QMenu* menu) {
         Q_ASSERT(false);
         return;
     }
-    addToWidget(menu);
+    addToWidget(this, menu);
 }
 
 void RGuiAction::addToToolBar(QToolBar* tb) {
@@ -301,35 +382,160 @@ void RGuiAction::addToToolBar(QToolBar* tb) {
         Q_ASSERT(false);
         return;
     }
-    addToWidget(tb);
+    addToWidget(this, tb);
     QWidget* w = tb->widgetForAction(this);
     if (w != NULL) {
         w->setObjectName("ToolButton" + objectName());
     }
 }
 
-void RGuiAction::addToWidget(QWidget* w) {
-    if (w==NULL) {
-        qWarning("RGuiAction::addToWidget: widget is NULL");
-        return;
-    }
+void RGuiAction::fixSeparators(const QWidget* w) {
+    QAction* lastSeparator = NULL;
 
-    QListIterator<QAction*> i(w->actions());
-    while (i.hasNext()) {
-        RGuiAction* a = dynamic_cast<RGuiAction*> (i.next());
+    int highestGroupSortOrder = -1;
+    QList<QAction*> actions = w->actions();
+    for (int i=0; i<actions.length(); i++) {
+        //RGuiAction* a = dynamic_cast<RGuiAction*> (actions[i]);
+        QAction* a = actions[i];
         if (a == NULL) {
             continue;
         }
-        if (getSortOrder() >= 0 && getSortOrder() < a->getSortOrder()) {
-            // TODO: insert separator between two different sub-groups
-            w->insertAction(a, this);
+
+        if (!a->isSeparator()) {
+            continue;
+        }
+
+        a->setVisible(true);
+
+        if (highestGroupSortOrder==-1 || getGroupSortOrderStatic(a, w)>highestGroupSortOrder) {
+            highestGroupSortOrder = getGroupSortOrderStatic(a, w);
+            lastSeparator = a;
+        }
+    }
+
+    if (lastSeparator!=NULL) {
+        lastSeparator->setVisible(false);
+    }
+}
+
+void RGuiAction::addSeparatorToWidget(QAction* a, QWidget* w) {
+    int go = getGroupSortOrderStatic(a, w);
+    QString objectName = QString("Separator%1").arg(go);
+    if (w->findChild<QWidget*>(objectName)!=NULL) {
+        // separator for this group already added
+        return;
+    }
+
+    QAction* separator = new RGuiAction("", w);
+    separator->setSeparator(true);
+    separator->setObjectName(objectName);
+    setGroupSortOrderStatic(separator, go);
+    setSortOrderStatic(separator, 99999);
+    addToWidget(separator, w);
+}
+
+void RGuiAction::addToWidget(QAction* action, QWidget* w) {
+    if (action==NULL || w==NULL) {
+        qWarning("RGuiAction::addToWidget: widget or action is NULL");
+        return;
+    }
+
+    if (w->actions().contains(action)) {
+        return;
+    }
+
+    if (!action->isSeparator()) {
+        if (!action->text().contains("{")) {
+            action->setText(action->text() + QString(" {%1,%2}").arg(getGroupSortOrderStatic(action, w)).arg(getSortOrderStatic(action, w)));
+        }
+    }
+
+    RWidget* rw = dynamic_cast<RWidget*>(w);
+
+    // find existing groups:
+    QSet<int> groupSortOrders;
+    QList<QAction*> actions = w->actions();
+    for (int i=0; i<actions.length(); i++) {
+        //RGuiAction* a = dynamic_cast<RGuiAction*> (actions[i]);
+        QAction* a = actions[i];
+        if (a == NULL) {
+            continue;
+        }
+
+        groupSortOrders.insert(getGroupSortOrderStatic(a, w));
+    }
+
+    QListIterator<QAction*> i(actions);
+    while (i.hasNext()) {
+        QAction* a = i.next();
+        if (a == NULL) {
+            continue;
+        }
+
+        int actionGroupSortOrder = getGroupSortOrderStatic(action, w);
+        int actionSortOrder = getSortOrderStatic(action, w);
+
+        int otherGroupSortOrder = getGroupSortOrderStatic(a, w);
+        int otherSortOrder = getSortOrderStatic(a, w);
+
+        // same separator group:
+        if (actionGroupSortOrder >= 0 && actionGroupSortOrder == otherGroupSortOrder) {
+            if (actionSortOrder >= 0 && actionSortOrder < otherSortOrder) {
+                if (rw) {
+                    rw->insertAction(a, action);
+                }
+                else {
+                    w->insertAction(a, action);
+                }
+                return;
+            }
+        }
+
+        // group before existing group:
+        if (actionGroupSortOrder >= 0 && actionGroupSortOrder < otherGroupSortOrder) {
+            if (rw) {
+                rw->insertAction(a, action);
+            }
+            else {
+                w->insertAction(a, action);
+            }
+
+            if (!action->isSeparator() && !groupSortOrders.contains(actionGroupSortOrder)) {
+                addSeparatorToWidget(action, w);
+            }
+            fixSeparators(w);
             return;
         }
     }
 
-    w->addAction(this);
+    if (rw) {
+        rw->addAction(action);
+    }
+    else {
+        w->addAction(action);
+    }
+
+    if (!action->isSeparator() && !groupSortOrders.contains(getGroupSortOrderStatic(action, w))) {
+        addSeparatorToWidget(action, w);
+    }
+
+    fixSeparators(w);
 }
 
+void RGuiAction::removeFromWidget(QAction* action, QWidget* w) {
+    if (action==NULL || w==NULL) {
+        qWarning("RGuiAction::removeFromWidget: widget or action is NULL");
+        return;
+    }
+
+    RWidget* rw = dynamic_cast<RWidget*>(w);
+    if (rw) {
+        rw->removeAction(action);
+    }
+    else {
+        w->removeAction(action);
+    }
+}
 
 
 void RGuiAction::updateTransactionListener(RDocument* document, RTransaction* transaction) {
@@ -512,14 +718,6 @@ void RGuiAction::setGroupDefault(bool on) {
 
 bool RGuiAction::isGroupDefault() {
     return groupDefault;
-}
-
-void RGuiAction::setSeparatorGroup(const QString& title) {
-    separatorGroup = title;
-}
-
-QString RGuiAction::getSeparatorGroup() {
-    return separatorGroup;
 }
 
 /**
@@ -753,4 +951,19 @@ QStringList RGuiAction::getArguments() {
 
 void RGuiAction::clearArguments() {
     arguments.clear();
+}
+
+void RGuiAction::init() {
+    RMainWindow* appWin = RMainWindow::getMainWindow();
+    QStringList widgetNames = getWidgetNames();
+    for (int i=0; i<widgetNames.length(); i++) {
+        QString wn = widgetNames[i];
+        QWidget* w = appWin->getChildWidget(wn);
+        if (w!=NULL) {
+            addToWidget(this, w);
+        }
+        else {
+            qWarning() << "RGuiAction::init: Cannot add action to widget: " << wn;
+        }
+    }
 }

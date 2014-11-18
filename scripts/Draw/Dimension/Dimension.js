@@ -40,7 +40,7 @@ Dimension.includeBasePath = includeBasePath;
 Dimension.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName=="DimensionMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="DimensionToolsPanelButton") {
         EAction.showCadToolBarPanel("DimensionToolsPanel");
         this.terminate();
     }
@@ -109,7 +109,7 @@ Dimension.getToolBar = function() {
 
 Dimension.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "DimensionMenu";
+    var actionName = "DimensionToolsPanelButton";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Dimension Tools"), mtb);
         action.setScriptFile(Dimension.includeBasePath + "/Dimension.js");
@@ -119,9 +119,10 @@ Dimension.getCadToolBarPanel = function() {
         action.setStatusTip(qsTr("Show dimension tools"));
         action.setDefaultShortcut(new QKeySequence("w,d"));
         action.setNoState();
-        action.setProperty("SortOrder", 1100);
         action.setDefaultCommands(["dimensionmenu"]);
-        CadToolBarPanel.prototype.addAction.call(mtb, action);
+        action.setGroupSortOrder(30);
+        action.setSortOrder(200);
+        action.setWidgetNames(["MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(
@@ -139,6 +140,13 @@ Dimension.getTitle = function() {
 Dimension.prototype.getTitle = function() {
     return Dimension.getTitle();
 };
+
+Dimension.init = function() {
+    Dimension.getMenu();
+    Dimension.getToolBar();
+    Dimension.getCadToolBarPanel();
+};
+
 
 /**
  * Called when the user changes the text in the options toolbar.

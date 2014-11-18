@@ -58,7 +58,7 @@ Projection.State = {
 };
 
 Projection.getToolBar = function() {
-    var tb = EAction.getToolBar(Projection.getTitle(), "Projection");
+    var tb = EAction.getToolBar(Projection.getTitle(), "ProjectionToolBar");
     tb.visible = false;
     return tb;
 };
@@ -67,11 +67,6 @@ Projection.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
     var actionName = "ProjectionMenu";
     if (!isNull(mtb) && isNull(mtb.findChild(actionName))) {
-        var separator = new RGuiAction("", RMainWindowQt.getMainWindow());
-        separator.setSeparator(true);
-        separator.setSortOrder(7900);
-        CadToolBarPanel.prototype.addAction.call(mtb, separator);
-
         var action = new RGuiAction(qsTr("Projection Tools"), mtb);
         action.setScriptFile(Projection.includeBasePath + "/Projection.js");
         action.objectName = actionName;
@@ -80,9 +75,10 @@ Projection.getCadToolBarPanel = function() {
         action.setStatusTip(qsTr("Show projection tools"));
         action.setDefaultShortcut(new QKeySequence("w,j"));
         action.setNoState();
-        action.setProperty("SortOrder", 8000);
         action.setDefaultCommands(["projectmenu"]);
-        CadToolBarPanel.prototype.addAction.call(mtb, action);
+        action.setGroupSortOrder(50);
+        action.setSortOrder(100);
+        action.setWidgetNames(["MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(Projection.getTitle(), "ProjectionToolsPanel", true);
@@ -95,6 +91,11 @@ Projection.getTitle = function() {
 
 Projection.prototype.getTitle = function() {
     return Projection.getTitle();
+};
+
+Projection.init = function() {
+    Projection.getToolBar();
+    Projection.getCadToolBarPanel();
 };
 
 Projection.prototype.beginEvent = function() {

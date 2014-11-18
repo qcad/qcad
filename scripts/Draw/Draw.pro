@@ -9,6 +9,7 @@ SUBDIRS = \
     Line \
     Point \
     Polyline \
+    Shape \
     Spline \
     Text \
     ts

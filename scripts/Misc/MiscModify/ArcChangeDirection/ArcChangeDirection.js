@@ -63,6 +63,7 @@ ArcChangeDirection.init = function(basePath) {
     var action = new RGuiAction("Change Arc Direction", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ArcChangeDirection.js");
-    action.setSortOrder(200);
-    EAction.addGuiActionTo(action, MiscModify, true, false, false);
+    action.setGroupSortOrder(56100);
+    action.setSortOrder(100);
+    action.setWidgetNames(["MiscModifyMenu", "MiscModifyToolBar", "MiscModifyToolsPanel"]);
 };

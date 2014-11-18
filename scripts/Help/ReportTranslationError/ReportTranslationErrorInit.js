@@ -5,7 +5,8 @@ function init(basePath) {
     );
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ReportTranslationError.js");
-    action.setSortOrder(800);
     action.setNoState();
-    EAction.addGuiActionTo(action, Help, true, false, false);
+    action.setGroupSortOrder(110200);
+    action.setSortOrder(600);
+    action.setWidgetNames(["HelpMenu"]);
 }

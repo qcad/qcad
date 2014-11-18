@@ -1,5 +1,4 @@
 function init(basePath) {
-    var menu = Block.getMenu();
     var action = new RGuiAction(qsTranslate("EditBlock", "&Edit Block"), RMainWindowQt.getMainWindow());
     var tip = qsTranslate("EditBlock", "Edit contents of selected block");
     action.setStatusTip(tip);
@@ -9,6 +8,7 @@ function init(basePath) {
     action.setIcon(basePath + "/EditBlock.svg");
     action.setDefaultShortcut(new QKeySequence("b,e"));
     action.setDefaultCommands(["blockedit","be"]);
-    action.setSortOrder(2200);
-    EAction.addGuiActionTo(action, Block, true, true);
+    action.setGroupSortOrder(14350);
+    action.setSortOrder(300);
+    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel"]);
 }

@@ -217,6 +217,34 @@ CadToolBar.prototype.updateIconSize = function() {
     }
 };
 
+CadToolBar.init = function() {
+    var appWin = EAction.getMainWindow();
+//    var toolBar = new QToolBar(qsTr("CAD Tools"), appWin);
+//    toolBar.objectName = "CadQToolBar";
+//    cadToolBar = new CadToolBar(toolBar);
+//    toolBar.addWidget(cadToolBar);
+//    cadToolBar.updateIconSize();
+
+    var toolBar = appWin.findChild("CadQToolBar");
+    if (isNull(toolBar)) {
+        return;
+    }
+    if (RSettings.getStringValue("CadToolBar/Location", "left")==="top") {
+        appWin.addToolBarBreak();
+        appWin.addToolBar(Qt.TopToolBarArea, toolBar);
+    }
+    else {
+        appWin.addToolBar(Qt.LeftToolBarArea, toolBar);
+    }
+
+//    toolBar.topLevelChanged.connect(function(onOff) {
+//        RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
+//    });
+//    toolBar.orientationChanged.connect(function(orientation) {
+//        RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
+//    });
+};
+
 CadToolBar.postInit = function() {
     var appWin = EAction.getMainWindow();
     if (isNull(appWin)) {
@@ -226,5 +254,6 @@ CadToolBar.postInit = function() {
     if (isNull(toolBar)) {
         return;
     }
+
     RSettings.setValue("CadToolBar/VerticalWhenFloating", toolBar.size.width() < toolBar.size.height());
 };

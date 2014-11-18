@@ -9,9 +9,11 @@ function init(basePath) {
        new QKeySequence("o,o")
     ]);
     action.setDefaultCommands(["undo", "oops"]);
-    action.setSortOrder(100);
     action.setNoState();
-    EAction.addGuiActionTo(action, Edit, true, true, false);
+    action.setGroupSortOrder(2100);
+    action.setSortOrder(100);
+    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel"]);
+
     var appWin = EAction.getMainWindow();
     appWin.addTransactionListener(action);
 }

@@ -48,7 +48,7 @@ Line.LineType = {
 Line.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="LineMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="LineToolsPanelButton") {
         EAction.showCadToolBarPanel("LineToolsPanel");
         this.terminate();
     }
@@ -57,9 +57,9 @@ Line.prototype.beginEvent = function() {
 Line.getMenu = function() {
     var menu = EAction.getSubMenu(
         Draw.getMenu(),
-        200,
+        20, 200,
         Line.getTitle(),
-        "line",
+        "DrawLineMenu",
         Line.includeBasePath + "/Line.svg"
     );
     menu.setProperty("scriptFile", Line.includeBasePath + "/Line.js");
@@ -67,14 +67,14 @@ Line.getMenu = function() {
 };
 
 Line.getToolBar = function() {
-    var tb = EAction.getToolBar(Line.getTitle(), "Line");
+    var tb = EAction.getToolBar(Line.getTitle(), "LineToolBar");
     tb.visible = false;
     return tb;
 };
 
 Line.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "LineMenu";
+    var actionName = "LineToolsPanelButton";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Line Tools"), mtb);
         action.setScriptFile(Line.includeBasePath + "/Line.js");
@@ -84,9 +84,10 @@ Line.getCadToolBarPanel = function() {
         action.setStatusTip(qsTr("Show line tools"));
         action.setDefaultShortcut(new QKeySequence("w,l"));
         action.setNoState();
-        action.setProperty("SortOrder", 200);
         action.setDefaultCommands(["linemenu"]);
-        CadToolBarPanel.prototype.addAction.call(mtb, action);
+        action.setGroupSortOrder(20);
+        action.setSortOrder(200);
+        action.setWidgetNames(["MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(
@@ -177,4 +178,10 @@ Line.prototype.slotTypeXLineChanged = function(checked) {
 
 Line.prototype.isRayOrXLine = function() {
     return this.lineType===Line.LineType.Ray || this.lineType===Line.LineType.XLine;
+};
+
+Line.init = function() {
+    Line.getMenu();
+    Line.getToolBar();
+    Line.getCadToolBarPanel();
 };

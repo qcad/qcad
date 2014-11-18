@@ -462,6 +462,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
+        <arg type="bool" typeName="bool" name="ignoreComplex"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="getExploded" cppName="getExploded"
@@ -479,6 +481,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="double" typeName="double" name="range"
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
+        <arg type="bool" typeName="bool" name="ignoreComplex"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="getClosestPointOnEntity"

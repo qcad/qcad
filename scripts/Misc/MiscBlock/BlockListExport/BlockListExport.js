@@ -112,6 +112,7 @@ BlockListExport.init = function(basePath) {
     var action = new RGuiAction("&Export Block List", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/BlockListExport.js");
-    action.setSortOrder(10);
-    EAction.addGuiActionTo(action, MiscBlock, true, false, false);
+    action.setGroupSortOrder(60100);
+    action.setSortOrder(200);
+    action.setWidgetNames(["MiscBlockMenu", "MiscBlockToolBar", "MiscBlockToolsPanel"]);
 };

@@ -40,15 +40,15 @@ MiscBlock.includeBasePath = includeBasePath;
 MiscBlock.getMenu = function() {
     var menu = EAction.getSubMenu(
         Misc.getMenu(),
-        500,
+        51100, 500,
         MiscBlock.getTitle(),
-        "MiscBlock"
+        "MiscBlockMenu"
     );
     return menu;
 };
 
 MiscBlock.getToolBar = function() {
-    var tb = EAction.getToolBar(MiscBlock.getTitle(), "MiscBlockToolBar");
+    var tb = EAction.getToolBar(qsTr("Misc") + " " + MiscBlock.getTitle(), "MiscBlockToolBar");
     tb.visible = false;
     return tb;
 };
@@ -57,10 +57,41 @@ MiscBlock.getCadToolBarPanel = function() {
     return EAction.getMainCadToolBarPanel();
 };
 
+MiscBlock.getCadToolBarPanel = function() {
+    var mtb = Misc.getCadToolBarPanel();
+    var actionName = "MiscBlockToolsPanelButton";
+    if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
+        var action = new RGuiAction(qsTr("Misc Block Tools"), mtb);
+        action.setScriptFile(MiscBlock.includeBasePath + "/MiscBlock.js");
+        action.objectName = actionName;
+        action.setRequiresDocument(true);
+        action.setIcon(MiscBlock.includeBasePath + "/MiscBlock.svg");
+        action.setStatusTip(qsTr("Show misc block tools"));
+        action.setNoState();
+        action.setDefaultCommands(["miscblockmenu"]);
+        action.setGroupSortOrder(90);
+        action.setSortOrder(500);
+        action.setWidgetNames(["MiscToolsPanel"]);
+    }
+
+    var tb = EAction.getCadToolBarPanel(
+        MiscBlock.getTitle(),
+        "MiscBlockToolsPanel",
+        true
+    );
+    return tb;
+};
+
 MiscBlock.getTitle = function() {
     return qsTr("&Block");
 };
 
 MiscBlock.prototype.getTitle = function() {
     return MiscBlock.getTitle();
+};
+
+MiscBlock.init = function() {
+    MiscBlock.getMenu();
+    MiscBlock.getToolBar();
+    MiscBlock.getCadToolBarPanel();
 };

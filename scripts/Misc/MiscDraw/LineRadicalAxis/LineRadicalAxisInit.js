@@ -3,6 +3,7 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/LineRadicalAxis.js");
     action.setIcon(basePath + "/LineRadicalAxis.svg");
-    action.setSortOrder(300);
-    EAction.addGuiActionTo(action, MiscDraw, true, true);
+    action.setGroupSortOrder(54400);
+    action.setSortOrder(100);
+    action.setWidgetNames(["MiscDrawMenu", "MiscDrawToolBar", "MiscDrawToolsPanel"]);
 }

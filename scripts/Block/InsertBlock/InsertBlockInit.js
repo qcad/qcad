@@ -5,6 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/InsertBlock.svg");
     action.setDefaultShortcut(new QKeySequence("b,i"));
     action.setDefaultCommands(["blockinsert", "bi"]);
-    action.setSortOrder(3000);
-    EAction.addGuiActionTo(action, Block, true, false, false, true);
+    action.setGroupSortOrder(14500);
+    action.setSortOrder(100);
+    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel"]);
 }

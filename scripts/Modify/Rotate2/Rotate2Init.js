@@ -7,8 +7,10 @@ function init(basePath) {
     action.setIcon(basePath + "/Rotate2.svg");
     action.setDefaultShortcut(new QKeySequence("r,2"));
     action.setDefaultCommands(["rotate2", "r2"]);
+    action.setGroupSortOrder(13100);
     action.setSortOrder(600);
-    EAction.addGuiActionTo(action, Modify, true, true, true);
+    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel"]);
+
     var appWin = EAction.getMainWindow();
     appWin.addSelectionListener(action);
 }

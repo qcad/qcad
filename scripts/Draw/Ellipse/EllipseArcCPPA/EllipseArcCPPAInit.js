@@ -6,6 +6,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("EllipseArcCPPA", "Draw ellipse arc from center, major point, ratio and angles"));
     action.setDefaultShortcut(new QKeySequence("e,a"));
     action.setDefaultCommands(["ellipsearc", "ea"]);
+    action.setGroupSortOrder(9100);
     action.setSortOrder(200);
-    EAction.addGuiActionTo(action, Ellipse, true, true, true);
+    action.setWidgetNames(["DrawEllipseMenu", "EllipseToolBar", "EllipseToolsPanel"]);
 }

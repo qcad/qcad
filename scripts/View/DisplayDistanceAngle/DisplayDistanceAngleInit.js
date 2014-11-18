@@ -4,9 +4,10 @@ function init(basePath) {
     action.setScriptFile(basePath + "/DisplayDistanceAngle.js");
     action.setIcon(basePath + "/DisplayDistanceAngle.svg");
     action.setDefaultShortcuts([new QKeySequence(Qt.Key_F8.valueOf())]);
-    action.setSortOrder(200000);
     action.setNoState(true);
     action.setOverride();
     action.checkable = false;
-    EAction.addGuiActionTo(action, View, true, false, false, true);
+    action.setGroupSortOrder(3980);
+    action.setSortOrder(100);
+    action.setWidgetNames(["ViewMenu"]);
 }

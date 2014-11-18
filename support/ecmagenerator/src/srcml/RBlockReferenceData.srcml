@@ -327,6 +327,18 @@ dir="./core" filename="RBlockReferenceData.h">
         <name>RDEFAULT_RBOX</name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>ignoreComplex</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <comment type="line">//virtual void setSelected(bool

@@ -70,16 +70,11 @@ MyAction.init = function(basePath) {
     action.setDefaultCommands(["myaction"]);
 
     // Define the sort order of this action. Menus and tool buttons are
-    // ordered by this value:
-    action.setSortOrder(10);
+    // ordered by these values:
+    action.setGroupSortOrder(80100);
+    action.setSortOrder(200);
 
-    // This helper function adds the action to the menu and toolbar
-    // and also creates the menu and toolbar if they don't exist already:
-    EAction.addGuiActionTo(
-        action, 
-        MyScripts,             // class that defines what menu / toolbar to use
-        true,                  // add this action to the menu
-        true,                  // add this action to the toolbar
-        false                  // don't add a separator before this action
-    );
+    // Set list of widgets this action is added to
+    // (menus, tool bars, CAD tool bar panels):
+    action.setWidgetNames(["TutorialsMenu"]);
 };

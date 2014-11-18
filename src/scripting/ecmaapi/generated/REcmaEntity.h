@@ -60,6 +60,12 @@
         getType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isComplex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isDimension
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

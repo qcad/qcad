@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("CircleCR", "Draw circle from center and radius"));
     action.setDefaultShortcut(new QKeySequence("c,r"));
     action.setDefaultCommands(["circlecr", "cr"]);
+    action.setGroupSortOrder(8100);
     action.setSortOrder(200);
-    EAction.addGuiActionTo(action, Circle, true, true, true);
+    action.setWidgetNames(["DrawCircleMenu", "CircleToolBar", "CircleToolsPanel"]);
 }

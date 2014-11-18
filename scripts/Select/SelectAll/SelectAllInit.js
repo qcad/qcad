@@ -11,6 +11,7 @@ function init(basePath) {
     ]);
     action.setDefaultCommands(["selectall", "ta"]);
     action.setNoState();
+    action.setGroupSortOrder(4100);
     action.setSortOrder(200);
-    EAction.addGuiActionTo(action, Select, true, true, true);
+    action.setWidgetNames(["SelectMenu", "SelectToolBar", "SelectToolsPanel"]);
 }

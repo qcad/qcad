@@ -61,12 +61,9 @@ CommandLine.init = function(basePath) {
     action.setIcon(basePath + "/CommandLine.svg");
     action.setDefaultShortcut(new QKeySequence("g,m"));
     action.setDefaultCommands(["gm"]);
-    action.setSortOrder(13000);
-    var separator = new RGuiAction("", appWin);
-    separator.setSeparator(true);
-    separator.setSortOrder(action.getSortOrder()-1);
-    separator.addToMenu(View.getMenu());
-    EAction.addGuiActionTo(action, Widgets, true, true, false);
+    action.setGroupSortOrder(3800);
+    action.setSortOrder(100);
+    action.setWidgetNames(["ViewMenu", "WidgetsToolBar", "ViewToolsPanel"]);
 
     var e;
     var formWidget = WidgetFactory.createWidget(basePath, "CommandLine.ui");

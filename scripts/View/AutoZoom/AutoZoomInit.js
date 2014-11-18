@@ -5,7 +5,8 @@ function init(basePath) {
     action.setIcon(basePath + "/AutoZoom.svg");
     action.setDefaultShortcut(new QKeySequence("z,a"));
     action.setDefaultCommands(["zoomauto", "za"]);
-    action.setSortOrder(300);
     action.setNoState();
-    EAction.addGuiActionTo(action, View, true, true, false);
+    action.setGroupSortOrder(3300);
+    action.setSortOrder(300);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
 }

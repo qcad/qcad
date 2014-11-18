@@ -6,6 +6,7 @@ function init(basePath) {
     action.setIcon(basePath + "/Lengthen.svg");
     action.setDefaultShortcut(new QKeySequence("l,e"));
     action.setDefaultCommands(["lengthen", "shorten", "trimamount", "le"]);
-    action.setSortOrder(1200);
-    EAction.addGuiActionTo(action, Modify, true, true, true);
+    action.setGroupSortOrder(13200);
+    action.setSortOrder(300);
+    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel"]);
 }

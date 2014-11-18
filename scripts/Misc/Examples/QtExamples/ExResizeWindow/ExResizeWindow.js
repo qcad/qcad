@@ -57,6 +57,7 @@ ExResizeWindow.init = function(basePath) {
     var action = new RGuiAction("&Resize Window", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ExResizeWindow.js");
-    action.setSortOrder(20);
-    EAction.addGuiActionTo(action, QtExamples, true, false, false);
+    action.setGroupSortOrder(79600);
+    action.setSortOrder(400);
+    action.setWidgetNames(["QtExamplesMenu"]);
 };

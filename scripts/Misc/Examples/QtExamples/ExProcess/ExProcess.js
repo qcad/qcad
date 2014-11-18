@@ -79,6 +79,7 @@ ExProcess.init = function(basePath) {
     var action = new RGuiAction("&Run process", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ExProcess.js");
-    action.setSortOrder(50);
-    EAction.addGuiActionTo(action, QtExamples, true, false, false);
+    action.setGroupSortOrder(79600);
+    action.setSortOrder(300);
+    action.setWidgetNames(["QtExamplesMenu"]);
 };

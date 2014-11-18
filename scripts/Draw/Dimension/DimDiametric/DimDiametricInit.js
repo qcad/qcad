@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("DimDiametric", "Draw diametric dimension"));
     action.setDefaultShortcut(new QKeySequence("d,d"));
     action.setDefaultCommands(["dimdia", "dimdiametric", "dd"]);
-    action.setSortOrder(800);
-    EAction.addGuiActionTo(action, Dimension, true, true, true);
+    action.setGroupSortOrder(12300);
+    action.setSortOrder(200);
+    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "DimensionToolsPanel"]);
 }

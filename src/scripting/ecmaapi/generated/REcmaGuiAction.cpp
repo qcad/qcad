@@ -107,6 +107,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, initTexts, "initTexts");
             
+            REcmaHelper::registerFunction(&engine, proto, init, "init");
+            
             REcmaHelper::registerFunction(&engine, proto, getToolTip, "getToolTip");
             
             REcmaHelper::registerFunction(&engine, proto, setDocumentInterface, "setDocumentInterface");
@@ -127,15 +129,21 @@
             
             REcmaHelper::registerFunction(&engine, proto, getShortcutText, "getShortcutText");
             
+            REcmaHelper::registerFunction(&engine, proto, setGroupSortOrder, "setGroupSortOrder");
+            
+            REcmaHelper::registerFunction(&engine, proto, setGroupSortOrderOverride, "setGroupSortOrderOverride");
+            
+            REcmaHelper::registerFunction(&engine, proto, getGroupSortOrder, "getGroupSortOrder");
+            
             REcmaHelper::registerFunction(&engine, proto, setSortOrder, "setSortOrder");
+            
+            REcmaHelper::registerFunction(&engine, proto, setSortOrderOverride, "setSortOrderOverride");
             
             REcmaHelper::registerFunction(&engine, proto, getSortOrder, "getSortOrder");
             
             REcmaHelper::registerFunction(&engine, proto, addToMenu, "addToMenu");
             
             REcmaHelper::registerFunction(&engine, proto, addToToolBar, "addToToolBar");
-            
-            REcmaHelper::registerFunction(&engine, proto, addToWidget, "addToWidget");
             
             REcmaHelper::registerFunction(&engine, proto, setIcon, "setIcon");
             
@@ -207,10 +215,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, isGroupDefault, "isGroupDefault");
             
-            REcmaHelper::registerFunction(&engine, proto, setSeparatorGroup, "setSeparatorGroup");
-            
-            REcmaHelper::registerFunction(&engine, proto, getSeparatorGroup, "getSeparatorGroup");
-            
             REcmaHelper::registerFunction(&engine, proto, updateTransactionListener, "updateTransactionListener");
             
             REcmaHelper::registerFunction(&engine, proto, updateSelectionListener, "updateSelectionListener");
@@ -222,6 +226,10 @@
             REcmaHelper::registerFunction(&engine, proto, getArguments, "getArguments");
             
             REcmaHelper::registerFunction(&engine, proto, clearArguments, "clearArguments");
+            
+            REcmaHelper::registerFunction(&engine, proto, setWidgetNames, "setWidgetNames");
+            
+            REcmaHelper::registerFunction(&engine, proto, getWidgetNames, "getWidgetNames");
             
             REcmaHelper::registerFunction(&engine, proto, slotTrigger, "slotTrigger");
             
@@ -241,6 +249,26 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, formatToolTip, "formatToolTip");
             
+            REcmaHelper::registerFunction(&engine, &ctor, setGroupSortOrderStatic, "setGroupSortOrderStatic");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setGroupSortOrderOverrideStatic, "setGroupSortOrderOverrideStatic");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getGroupSortOrderStatic, "getGroupSortOrderStatic");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setSortOrderStatic, "setSortOrderStatic");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setSortOrderOverrideStatic, "setSortOrderOverrideStatic");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getSortOrderStatic, "getSortOrderStatic");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, fixSeparators, "fixSeparators");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, addSeparatorToWidget, "addSeparatorToWidget");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, addToWidget, "addToWidget");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, removeFromWidget, "removeFromWidget");
+            
             REcmaHelper::registerFunction(&engine, &ctor, triggerGroupDefault, "triggerGroupDefault");
             
             REcmaHelper::registerFunction(&engine, &ctor, triggerGroupDefaults, "triggerGroupDefaults");
@@ -258,6 +286,10 @@
             REcmaHelper::registerFunction(&engine, &ctor, getAvailableCommands, "getAvailableCommands");
             
             REcmaHelper::registerFunction(&engine, &ctor, clear, "clear");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setWidgetNamesStatic, "setWidgetNamesStatic");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getWidgetNamesStatic, "getWidgetNamesStatic");
             
 
     // static properties:
@@ -523,6 +555,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::initTexts", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::init
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::init", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::init";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("init", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->init();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.init().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::init", context, engine);
             return result;
         }
          QScriptValue
@@ -1168,6 +1244,694 @@
             return result;
         }
          QScriptValue
+        REcmaGuiAction::setGroupSortOrderStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::setGroupSortOrderStatic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setGroupSortOrderStatic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RGuiAction::
+       setGroupSortOrderStatic(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setGroupSortOrderStatic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::setGroupSortOrderStatic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::setGroupSortOrderOverrideStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::setGroupSortOrderOverrideStatic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setGroupSortOrderOverrideStatic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    int
+                    a2 =
+                    (int)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RGuiAction::
+       setGroupSortOrderOverrideStatic(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setGroupSortOrderOverrideStatic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::setGroupSortOrderOverrideStatic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::getGroupSortOrderStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::getGroupSortOrderStatic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getGroupSortOrderStatic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RGuiAction::
+       getGroupSortOrderStatic(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+     && (
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QWidget * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+            // argument isQObject
+            QWidget *
+            a1 =
+            qobject_cast<
+            QWidget *>
+            ( context->argument(
+            1
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RGuiAction::
+       getGroupSortOrderStatic(a0
+        ,
+    a1);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getGroupSortOrderStatic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::getGroupSortOrderStatic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::setSortOrderStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::setSortOrderStatic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setSortOrderStatic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RGuiAction::
+       setSortOrderStatic(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setSortOrderStatic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::setSortOrderStatic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::setSortOrderOverrideStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::setSortOrderOverrideStatic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setSortOrderOverrideStatic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    int
+                    a2 =
+                    (int)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RGuiAction::
+       setSortOrderOverrideStatic(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setSortOrderOverrideStatic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::setSortOrderOverrideStatic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::getSortOrderStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::getSortOrderStatic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getSortOrderStatic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RGuiAction::
+       getSortOrderStatic(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+     && (
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QWidget * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+            // argument isQObject
+            QWidget *
+            a1 =
+            qobject_cast<
+            QWidget *>
+            ( context->argument(
+            1
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RGuiAction::
+       getSortOrderStatic(a0
+        ,
+    a1);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getSortOrderStatic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::getSortOrderStatic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::setGroupSortOrder
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::setGroupSortOrder", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setGroupSortOrder";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("setGroupSortOrder", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setGroupSortOrder(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setGroupSortOrder().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::setGroupSortOrder", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::setGroupSortOrderOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::setGroupSortOrderOverride", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setGroupSortOrderOverride";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("setGroupSortOrderOverride", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setGroupSortOrderOverride(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setGroupSortOrderOverride().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::setGroupSortOrderOverride", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::getGroupSortOrder
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::getGroupSortOrder", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getGroupSortOrder";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("getGroupSortOrder", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getGroupSortOrder();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QWidget * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QWidget *
+            a0 =
+            qobject_cast<
+            QWidget *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getGroupSortOrder(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getGroupSortOrder().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::getGroupSortOrder", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaGuiAction::setSortOrder
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1223,6 +1987,74 @@
             return result;
         }
          QScriptValue
+        REcmaGuiAction::setSortOrderOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::setSortOrderOverride", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setSortOrderOverride";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("setSortOrderOverride", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSortOrderOverride(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setSortOrderOverride().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::setSortOrderOverride", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaGuiAction::getSortOrder
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1256,6 +2088,42 @@
     int cppResult =
         
                self->getSortOrder();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QWidget * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QWidget *
+            a0 =
+            qobject_cast<
+            QWidget *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getSortOrder(a0);
         // return type: int
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1388,26 +2256,16 @@
             return result;
         }
          QScriptValue
-        REcmaGuiAction::addToWidget
+        REcmaGuiAction::fixSeparators
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::addToWidget", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::addToWidget";
+            //REcmaHelper::functionStart("REcmaGuiAction::fixSeparators", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::fixSeparators";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGuiAction* self = 
-                        getSelf("addToWidget", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
     
     if( context->argumentCount() ==
     1 && (
@@ -1433,8 +2291,138 @@
 
     // call C++ function:
     // return type 'void'
+    RGuiAction::
+       fixSeparators(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.fixSeparators().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::fixSeparators", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::addSeparatorToWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::addSeparatorToWidget", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::addSeparatorToWidget";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
     
-               self->addToWidget(a0);
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+     && (
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QWidget * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+            // argument isQObject
+            QWidget *
+            a1 =
+            qobject_cast<
+            QWidget *>
+            ( context->argument(
+            1
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RGuiAction::
+       addSeparatorToWidget(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.addSeparatorToWidget().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::addSeparatorToWidget", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::addToWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::addToWidget", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::addToWidget";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+     && (
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QWidget * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+            // argument isQObject
+            QWidget *
+            a1 =
+            qobject_cast<
+            QWidget *>
+            ( context->argument(
+            1
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RGuiAction::
+       addToWidget(a0
+        ,
+    a1);
     } else
 
 
@@ -1444,6 +2432,71 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::addToWidget", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::removeFromWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::removeFromWidget", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::removeFromWidget";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+     && (
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QWidget * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+            // argument isQObject
+            QWidget *
+            a1 =
+            qobject_cast<
+            QWidget *>
+            ( context->argument(
+            1
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RGuiAction::
+       removeFromWidget(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.removeFromWidget().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::removeFromWidget", context, engine);
             return result;
         }
          QScriptValue
@@ -3404,110 +4457,6 @@
             return result;
         }
          QScriptValue
-        REcmaGuiAction::setSeparatorGroup
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGuiAction::setSeparatorGroup", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setSeparatorGroup";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGuiAction* self = 
-                        getSelf("setSeparatorGroup", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setSeparatorGroup(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setSeparatorGroup().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setSeparatorGroup", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGuiAction::getSeparatorGroup
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGuiAction::getSeparatorGroup", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getSeparatorGroup";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGuiAction* self = 
-                        getSelf("getSeparatorGroup", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QString'
-    QString cppResult =
-        
-               self->getSeparatorGroup();
-        // return type: QString
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getSeparatorGroup().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getSeparatorGroup", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaGuiAction::getActions
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4314,6 +5263,226 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::clearArguments", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::setWidgetNamesStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::setWidgetNamesStatic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setWidgetNamesStatic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QStringList */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+                    // argument isArray
+                    QStringList
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RGuiAction::
+       setWidgetNamesStatic(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setWidgetNamesStatic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::setWidgetNamesStatic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::getWidgetNamesStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::getWidgetNamesStatic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getWidgetNamesStatic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject()
+        ) /* type: QAction * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QAction *
+            a0 =
+            qobject_cast<
+            QAction *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        RGuiAction::
+       getWidgetNamesStatic(a0);
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getWidgetNamesStatic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::getWidgetNamesStatic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::setWidgetNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::setWidgetNames", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setWidgetNames";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("setWidgetNames", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QStringList */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QStringList
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setWidgetNames(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setWidgetNames().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::setWidgetNames", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::getWidgetNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::getWidgetNames", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getWidgetNames";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("getWidgetNames", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        
+               self->getWidgetNames();
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getWidgetNames().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::getWidgetNames", context, engine);
             return result;
         }
          QScriptValue

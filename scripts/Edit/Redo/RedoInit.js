@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Redo", "&Redo"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("Redo", "&Redo"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresRedoableTransaction(true);
     action.setScriptFile(basePath + "/Redo.js");
@@ -10,9 +9,11 @@ function init(basePath) {
     ]);
     action.setDefaultCommands(["redo", "uu"]);
     action.setIcon(basePath + "/Redo.svg");
-    action.setSortOrder(200);
     action.setNoState();
-    EAction.addGuiActionTo(action, Edit, true, true, false);
+    action.setGroupSortOrder(2100);
+    action.setSortOrder(200);
+    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel"]);
+
     var appWin = EAction.getMainWindow();
     appWin.addTransactionListener(action);
 }

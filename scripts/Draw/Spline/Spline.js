@@ -40,7 +40,7 @@ Spline.includeBasePath = includeBasePath;
 Spline.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName=="SplineMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="SplineMenu") {
         EAction.showCadToolBarPanel("SplineToolsPanel");
         this.terminate();
     }
@@ -49,9 +49,9 @@ Spline.prototype.beginEvent = function() {
 Spline.getMenu = function() {
     var menu = EAction.getSubMenu(
         Draw.getMenu(),
-        600,
+        20, 600,
         Spline.getTitle(),
-        "spline",
+        "SplineMenu",
         Spline.includeBasePath + "/Spline.svg"
     );
     menu.setProperty("scriptFile", Spline.includeBasePath + "/Spline.js");
@@ -59,7 +59,7 @@ Spline.getMenu = function() {
 };
 
 Spline.getToolBar = function() {
-    var tb = EAction.getToolBar(Spline.getTitle(), "Spline");
+    var tb = EAction.getToolBar(Spline.getTitle(), "SplineToolBar");
     tb.orientation = Qt.Vertical;
     tb.visible = false;
     return tb;
@@ -77,9 +77,10 @@ Spline.getCadToolBarPanel = function() {
         action.setStatusTip(qsTr("Show spline tools"));
         action.setDefaultShortcut(new QKeySequence("w,n"));
         action.setNoState();
-        action.setProperty("SortOrder", 600);
         action.setDefaultCommands(["splinemenu"]);
-        CadToolBarPanel.prototype.addAction.call(mtb, action);
+        action.setGroupSortOrder(20);
+        action.setSortOrder(600);
+        action.setWidgetNames(["MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(
@@ -96,4 +97,10 @@ Spline.getTitle = function() {
 
 Spline.prototype.getTitle = function() {
     return Spline.getTitle();
+};
+
+Spline.init = function() {
+    Spline.getMenu();
+    Spline.getToolBar();
+    Spline.getCadToolBarPanel();
 };

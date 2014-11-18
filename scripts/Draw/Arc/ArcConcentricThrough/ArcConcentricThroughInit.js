@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("ArcConcentricThrough", "Draw concentric arc through point"));
     action.setDefaultShortcut(new QKeySequence("a,g"));
     action.setDefaultCommands(["arcconcentricthrough", "ag"]);
-    action.setSortOrder(600);
-    EAction.addGuiActionTo(action, Arc, true, true, true);
+    action.setGroupSortOrder(7300);
+    action.setSortOrder(200);
+    action.setWidgetNames(["DrawArcMenu", "ArcToolBar", "ArcToolsPanel"]);
 }

@@ -162,7 +162,7 @@ public:
         return data.getLoopBoundary(index);
     }
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const {
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const {
         return data.getShapes(queryBox);
     }
 

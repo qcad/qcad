@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="fr_FR">
+<context>
+    <name>Line</name>
+    <message>
+        <location filename="../Line.js" line="+84"/>
+        <source>Show line tools</source>
+        <translation>Afficher les outils de ligne</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>&amp;Line</source>
+        <translation>&amp;Ligne</translation>
+    </message>
+    <message>
+        <location line="-22"/>
+        <source>Line Tools</source>
+        <translation>Outils de ligne</translation>
+    </message>
+    <message>
+        <location filename="../Line.ui" line="+17"/>
+        <source>Line Segment</source>
+        <translation>Segment de ligne</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Infinite Line</source>
+        <translation>Ligne infinie</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Ray</source>
+        <translation>Rayon</translation>
+    </message>
+</context>
+</TS>

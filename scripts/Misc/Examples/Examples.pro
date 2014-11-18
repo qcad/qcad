@@ -8,5 +8,4 @@ SUBDIRS = \
     LayerExamples \
     ListenerExamples \
     MathExamples \
-    ModifyExamples \
     QtExamples

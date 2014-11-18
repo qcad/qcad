@@ -23,7 +23,7 @@
  *
  * \brief This module contains ECMAScript example tutorials.
  */
-include("../Examples.js");
+include("../Misc.js");
 
 /**
  * \class Tutorials
@@ -31,27 +31,21 @@ include("../Examples.js");
  * \brief Base class for all tutorial style examples.
  */
 function Tutorials(guiAction) {
-    Examples.call(this, guiAction);
+    Misc.call(this, guiAction);
 }
 
-Tutorials.prototype = new Examples();
+Tutorials.prototype = new Misc();
 Tutorials.includeBasePath = includeBasePath;
 
 Tutorials.getMenu = function() {
     var menu = EAction.getSubMenu(
-            Examples.getMenu(),
-        10000,
+        Misc.getMenu(),
+        80000, 100,
         Tutorials.getTitle(),
-        "tutorials"
+        "TutorialsMenu"
         //Tutorials.includeBasePath + "/Tutorials.svg"
     );
     return menu;
-};
-
-Tutorials.getToolBar = function() {
-    var tb = EAction.getToolBar(Tutorials.getTitle(), "TutorialsToolBar");
-    tb.visible = false;
-    return tb;
 };
 
 Tutorials.getCadToolBarPanel = function() {
@@ -64,4 +58,8 @@ Tutorials.getTitle = function() {
 
 Tutorials.prototype.getTitle = function() {
     return Tutorials.getTitle();
+};
+
+Tutorials.init = function() {
+    Tutorials.getMenu();
 };

@@ -6,6 +6,7 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("x,d"));
     action.setDefaultCommands(["pdf"]);
     action.setStatusTip(qsTranslate("PdfExport", "Exports the current drawing as PDF"));
-    action.setSortOrder(2500);
-    EAction.addGuiActionTo(action, File, true, false, false, true);
+    action.setGroupSortOrder(1500);
+    action.setSortOrder(100);
+    action.setWidgetNames(["FileMenu", "FileToolsPanel"]);
 }

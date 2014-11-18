@@ -34,7 +34,7 @@ QList<RVector> RSnapPerpendicular::snapEntity(
         return ret;
     }
 
-    QSharedPointer<RShape> shape = entity->getClosestShape(point, queryBox.getWidth()/2);
+    QSharedPointer<RShape> shape = entity->getClosestShape(point, queryBox.getWidth()/2, true);
     if (shape.isNull()) {
         return ret;
     }

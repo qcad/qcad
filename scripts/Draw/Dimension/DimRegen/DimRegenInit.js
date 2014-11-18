@@ -6,9 +6,11 @@ function init(basePath) {
     action.setIcon(basePath + "/DimRegen.svg");
     action.setDefaultShortcut(new QKeySequence("d,s"));
     action.setDefaultCommands(["dimregen", "ds"]);
-    action.setSortOrder(1000);
     action.setNoState();
-    EAction.addGuiActionTo(action, Dimension, true, false, false, true);
+    action.setGroupSortOrder(12500);
+    action.setSortOrder(100);
+    action.setWidgetNames(["DimensionMenu", "DimensionToolBar"]);
+
     var appWin = EAction.getMainWindow();
     appWin.addSelectionListener(action);
 }

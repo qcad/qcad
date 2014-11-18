@@ -6,6 +6,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("Arc2PA", "Draw arc from 2 points and angle"));
     action.setDefaultShortcut(new QKeySequence("a,2"));
     action.setDefaultCommands(["arc2", "a2"]);
-    action.setSortOrder(300);
-    EAction.addGuiActionTo(action, Arc, true, true, true, false);
+    action.setGroupSortOrder(7200);
+    action.setSortOrder(200);
+    action.setWidgetNames(["DrawArcMenu", "ArcToolBar", "ArcToolsPanel"]);
 }

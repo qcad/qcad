@@ -197,7 +197,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
 
         // ignore Qt internal widgets:
         if (typeof(c.objectName)!="undefined" &&
-            c.objectName=="qt_toolbar_ext_button") {
+            c.objectName==="qt_toolbar_ext_button") {
             continue;
         }
 

@@ -6,6 +6,7 @@ function init(basePath) {
     action.setIcon(basePath + "/Bevel.svg");
     action.setDefaultShortcut(new QKeySequence("c,h"));
     action.setDefaultCommands(["bevel", "chamfer", "ch"]);
-    action.setSortOrder(2000);
-    EAction.addGuiActionTo(action, Modify, true, true, true, true);
+    action.setGroupSortOrder(13300);
+    action.setSortOrder(100);
+    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel"]);
 }

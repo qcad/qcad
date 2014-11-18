@@ -5,6 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/Image.svg");
     action.setDefaultShortcut(new QKeySequence("i,m"));
     action.setDefaultCommands(["insertbitmap", "bitmap", "im"]);
-    action.setSortOrder(1300);
-    EAction.addGuiActionTo(action, Draw, true, false, true);
+    action.setGroupSortOrder(30);
+    action.setSortOrder(400);
+    action.setWidgetNames(["DrawMenu", "DrawToolBar", "MainToolsPanel"]);
 }

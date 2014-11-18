@@ -6,7 +6,8 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence(QKeySequence.Open));
     action.setDefaultCommands(["open"]);
     action.setStatusTip(qsTranslate("OpenFile", "Open an existing drawing"));
-    action.setSortOrder(300);
     action.setNoState();
-    EAction.addGuiActionTo(action, File, true, true);
+    action.setGroupSortOrder(1000);
+    action.setSortOrder(300);
+    action.setWidgetNames(["FileMenu", "FileToolBar", "FileToolsPanel"]);
 }

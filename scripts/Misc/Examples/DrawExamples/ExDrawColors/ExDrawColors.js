@@ -64,6 +64,7 @@ ExDrawColors.init = function(basePath) {
     var action = new RGuiAction("Draw &Colors", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExDrawColors.js");
+    action.setGroupSortOrder(73100);
     action.setSortOrder(200);
-    EAction.addGuiActionTo(action, DrawExamples, true, false, false);
+    action.setWidgetNames(["DrawExamplesMenu"]);
 };

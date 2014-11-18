@@ -6,6 +6,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("Text", "Draw text"));
     action.setDefaultShortcut(new QKeySequence("t,e"));
     action.setDefaultCommands(["text", "te"]);
-    action.setSortOrder(1000);
-    EAction.addGuiActionTo(action, Draw, true, false, true, true);
+    action.setGroupSortOrder(30);
+    action.setSortOrder(100);
+    action.setWidgetNames(["DrawMenu", "DrawToolBar", "MainToolsPanel"]);
 }

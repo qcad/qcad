@@ -5,8 +5,9 @@ function init(basePath) {
     action.setIcon(basePath + "/SnapXManual.svg");
     action.setDefaultShortcut(new QKeySequence(".,x"));
     action.setDefaultCommands([".x"]);
-    action.setSortOrder(3500);
     action.setOverride();
     action.setNoState();
-    EAction.addGuiActionTo(action, Snap, true, false, false, true);
+    action.setGroupSortOrder(15700);
+    action.setSortOrder(100);
+    action.setWidgetNames(["SnapMenu"]);
 };

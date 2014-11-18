@@ -6,8 +6,10 @@ function init(basePath) {
     action.setIcon(basePath + "/ZoomToSelection.svg");
     action.setDefaultShortcut(new QKeySequence("z,s"));
     action.setDefaultCommands(["zoomselection", "zs"]);
+    action.setGroupSortOrder(3300);
     action.setSortOrder(400);
-    EAction.addGuiActionTo(action, View, true, true, false);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
+
     var appWin = EAction.getMainWindow();
     appWin.addSelectionListener(action);
 }

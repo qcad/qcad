@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Cut", "&Cut"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("Cut", "&Cut"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/Cut.js");
@@ -10,9 +9,11 @@ function init(basePath) {
         new QKeySequence("c,t")
     ]);
     action.setDefaultCommands(["cut", "ct"]);
-    action.setSortOrder(600);
     action.setNoState();
-    EAction.addGuiActionTo(action, Edit, true, true, false, true);
+    action.setGroupSortOrder(2300);
+    action.setSortOrder(100);
+    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel"]);
+
     var appWin = EAction.getMainWindow();
     appWin.addSelectionListener(action);
 }

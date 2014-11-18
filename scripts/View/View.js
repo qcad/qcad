@@ -38,6 +38,15 @@ function View(guiAction) {
 View.prototype = new EAction();
 View.includeBasePath = includeBasePath;
 
+View.prototype.beginEvent = function() {
+    EAction.prototype.beginEvent.call(this);
+
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ViewToolsPanelButton") {
+        EAction.showCadToolBarPanel("ViewToolsPanel");
+        this.terminate();
+    }
+};
+
 View.getMenu = function() {
     var menu = EAction.getMenu(View.getTitle(), "ViewMenu");
     menu.setProperty("scriptFile", View.includeBasePath + "/View.js");
@@ -49,10 +58,42 @@ View.getToolBar = function() {
     return tb;
 };
 
+View.getCadToolBarPanel = function() {
+    var mtb = EAction.getMainCadToolBarPanel();
+    var actionName = "ViewToolsPanelButton";
+    if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
+        var action = new RGuiAction(qsTr("View Tools"), mtb);
+        action.setScriptFile(View.includeBasePath + "/View.js");
+        action.objectName = actionName;
+        action.setRequiresDocument(false);
+        action.setIcon(View.includeBasePath + "/View.svg");
+        action.setStatusTip(qsTr("Show view tools"));
+        action.setDefaultShortcut(new QKeySequence("w,v"));
+        action.setNoState();
+        action.setDefaultCommands(["viewmenu"]);
+        action.setGroupSortOrder(10);
+        action.setSortOrder(300);
+        //action.setWidgetNames(["MainToolsPanel"]);
+    }
+
+    var tb = EAction.getCadToolBarPanel(
+        View.getTitle(),
+        "ViewToolsPanel",
+        true
+    );
+    return tb;
+};
+
 View.getTitle = function() {
     return qsTr("&View");
 };
 
 View.prototype.getTitle = function() {
     return View.getTitle();
+};
+
+View.init = function() {
+    View.getMenu();
+    View.getToolBar();
+    View.getCadToolBarPanel();
 };

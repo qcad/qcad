@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -21,7 +21,7 @@ include("../MiscModify.js");
 include("scripts/ShapeAlgorithms.js");
 
 /**
- * Changes the direction of all (selected) arcs.
+ * Converts (selected) straight splines to lines.
  */
 function SplineToLine(guiAction) {
     MiscModify.call(this, guiAction);
@@ -68,9 +68,10 @@ SplineToLine.prototype.beginEvent = function() {
 };
 
 SplineToLine.init = function(basePath) {
-    var action = new RGuiAction("Convert straight splines to lines", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction("Convert Straight Splines to Lines", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SplineToLine.js");
+    action.setGroupSortOrder(56100);
     action.setSortOrder(200);
-    EAction.addGuiActionTo(action, MiscModify, true, false, false);
+    action.setWidgetNames(["MiscModifyMenu", "MiscModifyToolBar", "MiscModifyToolsPanel"]);
 };

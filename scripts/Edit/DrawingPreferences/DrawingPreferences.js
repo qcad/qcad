@@ -40,15 +40,15 @@ DrawingPreferences.prototype.beginEvent = function() {
 };
 
 DrawingPreferences.init = function(basePath) {
-    var action = new RGuiAction(qsTr("Drawing &Preferences"),
-            RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("Drawing &Preferences"), RMainWindowQt.getMainWindow());
     action.setDefaultCommands(["drawingpreferences"]);
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DrawingPreferences.js");
     action.setIcon(basePath + "/DrawingPreferences.svg");
     action.setDefaultShortcut(new QKeySequence(Qt.ControlModifier + Qt.Key_I));
     action.setDefaultCommands(["drawingpreferences"]);
-    action.setSortOrder(89000);
     action.setNoState();
-    EAction.addGuiActionTo(action, Edit, true, false, false, true);
+    action.setGroupSortOrder(2800);
+    action.setSortOrder(100);
+    action.setWidgetNames(["EditMenu"]);
 };

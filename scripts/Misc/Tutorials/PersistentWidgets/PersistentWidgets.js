@@ -69,11 +69,11 @@ PersistentWidgets.prototype.beginEvent = function() {
 //! [beginEvent]
 
 PersistentWidgets.init = function(basePath) {
-    var action = new RGuiAction(qsTr("&Persistent Widgets"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Persistent Widgets"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/PersistentWidgets.js");
-    action.setSortOrder(10);
-    EAction.addGuiActionTo(action, Tutorials, true, false, false);
+    action.setGroupSortOrder(80100);
+    action.setSortOrder(200);
+    action.setWidgetNames(["TutorialsMenu"]);
 };
 //! [main]

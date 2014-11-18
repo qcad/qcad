@@ -8,6 +8,7 @@ function init(basePath) {
         [ new QKeySequence("r,m"),
           new QKeySequence("x,t") ]);
     action.setDefaultCommands(["trim", "extend", "rm", "xt"]);
-    action.setSortOrder(1000);
-    EAction.addGuiActionTo(action, Modify, true, true, true, true);
+    action.setGroupSortOrder(13200);
+    action.setSortOrder(100);
+    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel"]);
 }

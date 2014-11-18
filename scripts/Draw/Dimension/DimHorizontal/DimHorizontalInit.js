@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("DimHorizontal", "Draw horizontal dimension"));
     action.setDefaultShortcut(new QKeySequence("d,h"));
     action.setDefaultCommands(["dimhor", "dimhorizontal", "dh"]);
+    action.setGroupSortOrder(12100);
     action.setSortOrder(300);
-    EAction.addGuiActionTo(action, Dimension, true, true, true);
+    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "DimensionToolsPanel"]);
 }

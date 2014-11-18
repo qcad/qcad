@@ -26,7 +26,7 @@ include("../WidgetFactory.js");
  * Creates a dialog to edit the attributes of a layer.
  *
  * \param document RDocument the layer is in.
- * \param block RLayer object to edit or undefined to show a dialog for a new layer.
+ * \param layer RLayer object to edit or undefined to show a dialog for a new layer.
  */
 function LayerDialog(document, layer) {
     this.dialog = null;

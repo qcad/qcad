@@ -53,11 +53,7 @@ ExMainWindow.init = function(basePath) {
     var action = new RGuiAction("&Main Window", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ExMainWindow.js");
-    action.setSortOrder(10);
-    EAction.addGuiActionTo(action, QtExamples, true, false, false);
-
-//    qApp.organizationName = "MyCAD";
-//    qApp.organizationDomain = "MyCAD.org";
-//    qApp.applicationVersion = "1.0.0";
-//    qApp.applicationName = "MyCAD";
+    action.setGroupSortOrder(79600);
+    action.setSortOrder(200);
+    action.setWidgetNames(["QtExamplesMenu"]);
 };

@@ -434,11 +434,14 @@ RVector RTextBasedData::getClosestPointOnEntity(const RVector& point,
     return RVector::invalid;
 }
 
-QList<QSharedPointer<RShape> > RTextBasedData::getShapes(const RBox& queryBox) const {
+QList<QSharedPointer<RShape> > RTextBasedData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
     Q_UNUSED(queryBox);
 
-    //return QList<QSharedPointer<RShape> >();
-    QList<QSharedPointer<RShape> > shapes;
+    QList<QSharedPointer<RShape> > ret;
+
+    if (ignoreComplex) {
+        return ret;
+    }
 
     QList<RPainterPath> paths = getPainterPaths();
     for (int i=0; i<paths.length(); i++) {
@@ -449,10 +452,10 @@ QList<QSharedPointer<RShape> > RTextBasedData::getShapes(const RBox& queryBox) c
             continue;
         }
 
-        shapes.append(path.getShapes());
+        ret.append(path.getShapes());
     }
 
-    return shapes;
+    return ret;
 }
 
 QList<QSharedPointer<RShape> > RTextBasedData::getExploded() const {

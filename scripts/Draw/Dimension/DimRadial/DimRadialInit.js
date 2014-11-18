@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("DimRadial", "Draw radial dimension"));
     action.setDefaultShortcut(new QKeySequence("d,r"));
     action.setDefaultCommands(["dimrad", "dimradial", "dr"]);
-    action.setSortOrder(700);
-    EAction.addGuiActionTo(action, Dimension, true, true, true, true);
+    action.setGroupSortOrder(12300);
+    action.setSortOrder(100);
+    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "DimensionToolsPanel"]);
 }

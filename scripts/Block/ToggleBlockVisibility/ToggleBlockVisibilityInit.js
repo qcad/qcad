@@ -5,6 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/ToggleBlockVisibility.svg");
     action.setDefaultShortcut(new QKeySequence("b,v"));
     action.setDefaultCommands(["blocktogglevisibility", "bv"]);
+    action.setGroupSortOrder(14100);
     action.setSortOrder(100);
-    EAction.addGuiActionTo(action, Block, true, true);
+    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel"]);
 }

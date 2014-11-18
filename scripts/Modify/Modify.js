@@ -44,7 +44,7 @@ Modify.includeBasePath = includeBasePath;
 Modify.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName=="ModifyMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ModifyToolsPanelButton") {
         EAction.showCadToolBarPanel("ModifyToolsPanel");
         this.terminate();
     }
@@ -95,13 +95,8 @@ Modify.getToolBar = function() {
 
 Modify.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "ModifyMenu";
+    var actionName = "ModifyToolsPanelButton";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
-        var separator = new RGuiAction("", RMainWindowQt.getMainWindow());
-        separator.setSeparator(true);
-        separator.setSortOrder(1900);
-        CadToolBarPanel.prototype.addAction.call(mtb, separator);
-
         var action = new RGuiAction(qsTr("Modification Tools"), mtb);
         action.setScriptFile(Modify.includeBasePath + "/Modify.js");
         action.objectName = actionName;
@@ -110,9 +105,10 @@ Modify.getCadToolBarPanel = function() {
         action.setStatusTip(qsTr("Show modification tools"));
         action.setDefaultShortcut(new QKeySequence("w,m"));
         action.setNoState();
-        action.setProperty("SortOrder", 2000);
         action.setDefaultCommands(["modifymenu"]);
-        CadToolBarPanel.prototype.addAction.call(mtb, action);
+        action.setGroupSortOrder(40);
+        action.setSortOrder(100);
+        action.setWidgetNames(["MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(
@@ -129,4 +125,10 @@ Modify.getTitle = function() {
 
 Modify.prototype.getTitle = function() {
     return Modify.getTitle();
+};
+
+Modify.init = function() {
+    Modify.getMenu();
+    Modify.getToolBar();
+    Modify.getCadToolBarPanel();
 };

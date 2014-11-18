@@ -55,12 +55,44 @@ Snap.getToolBar = function() {
     return tb;
 };
 
+Snap.getCadToolBarPanel = function() {
+    var mtb = EAction.getMainCadToolBarPanel();
+    var actionName = "SnapToolsPanelButton";
+    if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
+        var action = new RGuiAction(qsTr("Snap Tools"), mtb);
+        action.setScriptFile(Snap.includeBasePath + "/Snap.js");
+        action.objectName = actionName;
+        action.setRequiresDocument(true);
+        action.setIcon(Snap.includeBasePath + "/Snap.svg");
+        action.setStatusTip(qsTr("Show snap tools"));
+        action.setDefaultShortcut(new QKeySequence("w,s"));
+        action.setNoState();
+        action.setDefaultCommands(["snapmenu"]);
+        action.setGroupSortOrder(40);
+        action.setSortOrder(400);
+        //action.setWidgetNames(["MainToolsPanel"]);
+    }
+
+    var tb = EAction.getCadToolBarPanel(
+        Snap.getTitle(),
+        "SnapToolsPanel",
+        true
+    );
+    return tb;
+};
+
 Snap.getTitle = function() {
     return qsTr("&Snap");
 };
 
 Snap.prototype.getTitle = function() {
     return Snap.getTitle();
+};
+
+Snap.init = function() {
+    Snap.getMenu();
+    Snap.getToolBar();
+    Snap.getCadToolBarPanel();
 };
 
 Snap.prototype.beginEvent = function() {
@@ -71,6 +103,11 @@ Snap.prototype.beginEvent = function() {
 
     if (!isNull(this.getGuiAction())) {
         this.getGuiAction().setChecked(true);
+    }
+
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="SnapToolsPanelButton") {
+        EAction.showCadToolBarPanel("SnapToolsPanel");
+        this.terminate();
     }
 };
 

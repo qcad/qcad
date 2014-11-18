@@ -71,6 +71,7 @@ ExMathSpiral.init = function(basePath) {
     var action = new RGuiAction("&Spiral", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExMathSpiral.js");
+    action.setGroupSortOrder(79700);
     action.setSortOrder(100);
-    EAction.addGuiActionTo(action, MathExamples, true, false, false);
+    action.setWidgetNames(["MathExamplesMenu"]);
 };

@@ -160,7 +160,7 @@ public:
         return this;
     }
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const {
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const {
         Q_UNUSED(queryBox)
 
         // make sure we copy only splines with updated cache:

@@ -3,7 +3,7 @@ TEMPLATE = subdirs
 SUBDIRS = \
     ts \
     Cross \
-    Line2PEx \
+    DrawBoundingBox \
     LineBoxJoint \
     LineDove \
     LineRadicalAxis \

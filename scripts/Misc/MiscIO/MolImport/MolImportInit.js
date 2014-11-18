@@ -4,7 +4,7 @@ function init(basePath) {
     action.setScriptFile(basePath + "/MolImport.js");
     action.setIcon(basePath + "/MolImport.svg");
     action.setDefaultCommands( [ "molimport" ]);
-    action.setSortOrder(2360);
-    //action.setNoState();
-    EAction.addGuiActionTo(action, MiscIO, true, false, false, false);
+    action.setGroupSortOrder(52100);
+    action.setSortOrder(200);
+    action.setWidgetNames(["MiscIOMenu", "MiscIOToolBar", "MiscIOToolsPanel"]);
 }

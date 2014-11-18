@@ -27,10 +27,8 @@
 
 #include "RPluginInfo.h"
 
-//QT_BEGIN_NAMESPACE
 class QString;
 class QScriptEngine;
-//QT_END_NAMESPACE
 
 /**
  * Interface for all C++ QCAD plugins.
@@ -41,11 +39,11 @@ class QScriptEngine;
 class QCADCORE_EXPORT RPluginInterface {
 public:
     enum InitStatus {
-        GotSplashWindow,
-        GotMainWindow,
-        LoadedFiles,
-        ScriptsExecuted,
-        AllDone
+        GotSplashWindow,    /**< Splashscreen showing. */
+        GotMainWindow,      /**< Main window with all tools and menus has been created. */
+        LoadedFiles,        /**< Loaded files given on command line. */
+        ScriptsExecuted,    /**< Executed scripts given on command line. */
+        AllDone             /**< Application is ready and idle. */
     };
 
 public:

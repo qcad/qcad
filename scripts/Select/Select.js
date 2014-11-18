@@ -57,27 +57,6 @@ Select.prototype.beginEvent = function() {
     }
 };
 
-Select.getCadToolBarPanel = function() {
-    var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "SelectMenu";
-    if (!isNull(mtb) && isNull(mtb.findChild(actionName))) {
-        var action = new RGuiAction(qsTr("Selection Tools"), mtb);
-        action.setScriptFile(Select.includeBasePath + "/Select.js");
-        action.objectName = actionName;
-        action.setRequiresDocument(true);
-        action.setIcon(Select.includeBasePath + "/Select.svg");
-        action.setStatusTip(qsTr("Show selection tools"));
-        action.setDefaultShortcut(new QKeySequence("w,s"));
-        action.setNoState();
-        action.setProperty("SortOrder", 2300);
-        action.setDefaultCommands(["selectionmenu"]);
-        CadToolBarPanel.prototype.addAction.call(mtb, action);
-    }
-
-    var tb = EAction.getCadToolBarPanel(qsTr("Selection Tools Panel"), "SelectToolsPanel", true);
-    return tb;
-};
-
 /**
  * Adds the given box as a selection box to the preview.
  * \param di RDocumentInterface
@@ -230,10 +209,38 @@ Select.getToolBar = function() {
     return tb;
 };
 
+Select.getCadToolBarPanel = function() {
+    var mtb = EAction.getMainCadToolBarPanel();
+    var actionName = "SelectMenu";
+    if (!isNull(mtb) && isNull(mtb.findChild(actionName))) {
+        var action = new RGuiAction(qsTr("Selection Tools"), mtb);
+        action.setScriptFile(Select.includeBasePath + "/Select.js");
+        action.objectName = actionName;
+        action.setRequiresDocument(true);
+        action.setIcon(Select.includeBasePath + "/Select.svg");
+        action.setStatusTip(qsTr("Show selection tools"));
+        action.setDefaultShortcut(new QKeySequence("w,s"));
+        action.setNoState();
+        action.setDefaultCommands(["selectionmenu"]);
+        action.setGroupSortOrder(40);
+        action.setSortOrder(400);
+        action.setWidgetNames(["MainToolsPanel"]);
+    }
+
+    var tb = EAction.getCadToolBarPanel(qsTr("Selection Tools Panel"), "SelectToolsPanel", true);
+    return tb;
+};
+
 Select.getTitle = function() {
     return qsTr("&Select");
 };
 
 Select.prototype.getTitle = function() {
     return Select.getTitle();
+};
+
+Select.init = function() {
+    Select.getMenu();
+    Select.getToolBar();
+    Select.getCadToolBarPanel();
 };

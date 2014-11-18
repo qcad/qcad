@@ -7,6 +7,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("Circle2P", "Draw circle from 2 diametrically opposite points"));
     action.setDefaultShortcut(new QKeySequence("c,2"));
     action.setDefaultCommands(["circle2p", "c2"]);
-    action.setSortOrder(400);
-    EAction.addGuiActionTo(action, Circle, true, true, true, true);
+    action.setGroupSortOrder(8300);
+    action.setSortOrder(100);
+    action.setWidgetNames(["DrawCircleMenu", "CircleToolBar", "CircleToolsPanel"]);
 }

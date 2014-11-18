@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RWidget"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QWidget" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        hasDefault="true" default="0" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="removeAction" cppName="removeAction"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="action"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addAction" cppName="addAction" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="action"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="insertAction" cppName="insertAction"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="before"
+        isConst="false" />
+        <arg type="QAction *" typeName="QAction *" name="action"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

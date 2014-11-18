@@ -37,8 +37,8 @@ CommandLineTools.includeBasePath = includeBasePath;
 
 CommandLineTools.getMenu = function() {
     var menu = EAction.getSubMenu(
-            Tutorials.getMenu(),
-        200,
+        Tutorials.getMenu(),
+        0, 200,
         CommandLineTools.getTitle(),
         "commandLineTools",
         CommandLineTools.includeBasePath + "/CommandLineTools.svg"

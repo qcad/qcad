@@ -33,18 +33,11 @@ ListenerExamples.includeBasePath = includeBasePath;
 ListenerExamples.getMenu = function() {
     var menu = EAction.getSubMenu(
         Examples.getMenu(),
-        1000,
+        70000, 1000,
         ListenerExamples.getTitle(),
-        "ListenerExamples"
+        "ListenerExamplesMenu"
     );
     return menu;
-};
-
-ListenerExamples.getToolBar = function() {
-    var tb = EAction.getToolBar(ListenerExamples.getTitle(), "ListenerExamples");
-    tb.orientation = Qt.Vertical;
-    tb.visible = false;
-    return tb;
 };
 
 ListenerExamples.getTitle = function() {
@@ -53,4 +46,8 @@ ListenerExamples.getTitle = function() {
 
 ListenerExamples.prototype.getTitle = function() {
     return ListenerExamples.getTitle();
+};
+
+ListenerExamples.init = function() {
+    ListenerExamples.getMenu();
 };

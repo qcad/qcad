@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>QObject</name>
     <message>
@@ -589,21 +589,21 @@ Abre diálogo de cores</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Pela Camada</translatorcomment>
-        <translation type="vanished">Pela Camada</translation>
+        <translation>Pela Camada</translation>
     </message>
     <message>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Pelo Carimbo</translatorcomment>
-        <translation type="vanished">Pelo bloco</translation>
+        <translation>Pelo bloco</translation>
     </message>
     <message>
         <source>Continuous</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Contínuo</translatorcomment>
-        <translation type="vanished">Contínuo</translation>
+        <translation>Contínuo</translation>
     </message>
     <message>
         <source>Dot</source>
@@ -611,7 +611,7 @@ Contínuo</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Pontos de &amp;grade:
 Pontilhado</translatorcomment>
-        <translation type="vanished">Pontilhado</translation>
+        <translation>Pontilhado</translation>
     </message>
     <message>
         <source>Dot (small)</source>
@@ -619,7 +619,7 @@ Pontilhado</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Pontilhado (pequeno)
 Traço Ponto (pequeno)</translatorcomment>
-        <translation type="vanished">Pontilhado (pequeno)</translation>
+        <translation>Pontilhado (pequeno)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
@@ -627,7 +627,7 @@ Traço Ponto (pequeno)</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Pontilhado (grande)
 Traço Ponto (grande)</translatorcomment>
-        <translation type="vanished">Pontilhado (grande)</translation>
+        <translation>Pontilhado (grande)</translation>
     </message>
     <message>
         <source>Dash</source>
@@ -635,21 +635,21 @@ Traço Ponto (grande)</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Tracejado
 Tracejado (pequeno)</translatorcomment>
-        <translation type="vanished">Tracejado</translation>
+        <translation>Tracejado</translation>
     </message>
     <message>
         <source>Dash (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Tracejado (pequeno)</translatorcomment>
-        <translation type="vanished">Tracejado (pequeno)</translation>
+        <translation>Tracejado (pequeno)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Tracejado (grande)</translatorcomment>
-        <translation type="vanished">Tracejado (grande)</translation>
+        <translation>Tracejado (grande)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
@@ -657,21 +657,21 @@ Tracejado (grande)</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Traço Ponto
 Traço Ponto (pequeno)</translatorcomment>
-        <translation type="vanished">Traço Ponto</translation>
+        <translation>Traço Ponto</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Traço Ponto (pequeno)</translatorcomment>
-        <translation type="vanished">Traço Ponto (pequeno)</translation>
+        <translation>Traço Ponto (pequeno)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Traço Ponto (grande)</translatorcomment>
-        <translation type="vanished">Traço Ponto (grande)</translation>
+        <translation>Traço Ponto (grande)</translation>
     </message>
     <message>
         <source>Divide</source>
@@ -679,21 +679,21 @@ Traço Ponto (grande)</translatorcomment>
 --file: qcadguiqt_pt.ts--
 &amp;Divida
 Separação</translatorcomment>
-        <translation type="vanished">Separação</translation>
+        <translation>Separação</translation>
     </message>
     <message>
         <source>Divide (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Separação (pequeno)</translatorcomment>
-        <translation type="vanished">Separação (pequeno)</translation>
+        <translation>Separação (pequeno)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Separação (grande)</translatorcomment>
-        <translation type="vanished">Separação (grande)</translation>
+        <translation>Separação (grande)</translation>
     </message>
     <message>
         <source>Center</source>
@@ -701,21 +701,21 @@ Separação (grande)</translatorcomment>
 --file: pt_PT.po--
 &amp;Centro, Ponto, Ângulos
 Arco com Centro, Ponto, Ângulos</translatorcomment>
-        <translation type="vanished">Centro</translation>
+        <translation>Centro</translation>
     </message>
     <message>
         <source>Center (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Centro (pequeno)</translatorcomment>
-        <translation type="vanished">Centro (pequeno)</translation>
+        <translation>Centro (pequeno)</translation>
     </message>
     <message>
         <source>Center (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Centro (grande)</translatorcomment>
-        <translation type="vanished">Centro (grande)</translation>
+        <translation>Centro (grande)</translation>
     </message>
     <message>
         <source>Border</source>
@@ -724,21 +724,21 @@ Centro (grande)</translatorcomment>
 Limite
 Borda
 Borda (pequeno)</translatorcomment>
-        <translation type="vanished">Limite</translation>
+        <translation>Limite</translation>
     </message>
     <message>
         <source>Border (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Borda (pequeno)</translatorcomment>
-        <translation type="vanished">Borda (pequeno)</translation>
+        <translation>Borda (pequeno)</translation>
     </message>
     <message>
         <source>Border (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Borda (grande)</translatorcomment>
-        <translation type="vanished">Borda (grande)</translation>
+        <translation>Borda (grande)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -753,12 +753,12 @@ Borda (grande)</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Métrico</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Padrão</translation>
     </message>
 </context>
 <context>
@@ -782,7 +782,7 @@ Borda (grande)</translatorcomment>
     </message>
     <message>
         <source>Border (2x)</source>
-        <translation type="vanished">Borda (2x)</translation>
+        <translation>Borda (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -793,7 +793,7 @@ Borda (grande)</translatorcomment>
     </message>
     <message>
         <source>Center (2x)</source>
-        <translation type="vanished">Centro (2x)</translation>
+        <translation>Centro (2x)</translation>
     </message>
     <message>
         <location line="+2"/>

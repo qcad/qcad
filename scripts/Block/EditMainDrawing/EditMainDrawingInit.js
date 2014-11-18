@@ -1,12 +1,11 @@
 function init(basePath) {
-    var menu = Block.getMenu();
-    var action = new RGuiAction(qsTranslate("EditMainDrawing", "&Return to Main Drawing"), 
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("EditMainDrawing", "&Return to Main Drawing"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/EditMainDrawing.js");
     action.setDefaultShortcut(new QKeySequence("e,m"));
     action.setDefaultCommands(["editmain","em"]);
     action.setIcon(basePath + "/EditMainDrawing.svg");
-    action.setSortOrder(2400);
-    EAction.addGuiActionTo(action, Block, true, true, false);
+    action.setGroupSortOrder(14350);
+    action.setSortOrder(500);
+    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel"]);
 }

@@ -89,12 +89,13 @@ DraftMode.init = function(basePath) {
     action.setIcon(basePath + "/DraftMode.svg");
     action.setDefaultShortcut(new QKeySequence("d,f"));
     action.setDefaultCommands(["draftmode", "df"]);
-    action.setSortOrder(10);
     action.setGroup("viewmodes");
     action.setNoState(true);
+    action.setGroupSortOrder(3100);
+    action.setSortOrder(100);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
 
     var appWin = EAction.getMainWindow();
     var fl = new ToggleDraftModeFocusListener(action);
     appWin.addViewFocusListener(fl);
-    EAction.addGuiActionTo(action, View, true, true, false);
-}
+};

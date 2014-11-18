@@ -40,17 +40,11 @@ Examples.includeBasePath = includeBasePath;
 Examples.getMenu = function() {
     var menu = EAction.getSubMenu(
         Misc.getMenu(),
-        10000,
+        51200, 100,
         Examples.getTitle(),
-        "examples"
+        "ExamplesMenu"
     );
     return menu;
-};
-
-Examples.getToolBar = function() {
-    var tb = EAction.getToolBar(Examples.getTitle(), "ExamplesToolBar");
-    tb.visible = false;
-    return tb;
 };
 
 Examples.getCadToolBarPanel = function() {
@@ -63,4 +57,8 @@ Examples.getTitle = function() {
 
 Examples.prototype.getTitle = function() {
     return Examples.getTitle();
+};
+
+Examples.init = function() {
+    Examples.getMenu();
 };
