@@ -121,7 +121,7 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
     var documentInterface = new RDocumentInterface(document);
 
     if (isOpen) {
-        appWin.setProgressText(qsTr("Loading..."));
+        //appWin.setProgressText(qsTr("Loading..."));
         var errorCode = documentInterface.importFile(fileName, nameFilter);
         if (errorCode !== RDocumentInterface.IoErrorNoError) {
             var dlg = new QMessageBox(QMessageBox.Warning,

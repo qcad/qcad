@@ -98,7 +98,6 @@ Shape.prototype.getTitle = function() {
     return Shape.getTitle();
 };
 
-
 Shape.init = function() {
     Shape.getMenu();
     Shape.getToolBar();

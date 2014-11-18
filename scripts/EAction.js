@@ -1565,17 +1565,50 @@ EAction.prototype.simulateMouseMoveEvent = function() {
 
 EAction.handleUserWarning = function(message) {
     var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return;
+    }
     appWin.handleUserWarning(message);
 };
 
 EAction.handleUserMessage = function(message) {
     var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return;
+    }
     appWin.handleUserMessage(message);
 };
 
 EAction.handleUserCommand = function(message) {
     var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return;
+    }
     appWin.handleUserCommand(message);
+};
+
+EAction.setProgress = function(p) {
+    var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return;
+    }
+    appWin.setProgress(p);
+};
+
+EAction.setProgressText = function(t) {
+    var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return;
+    }
+    appWin.setProgressText(t);
+};
+
+EAction.setProgressEnd = function() {
+    var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return;
+    }
+    appWin.setProgressEnd();
 };
 
 /**
