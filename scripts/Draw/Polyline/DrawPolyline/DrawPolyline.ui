@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>541</width>
-    <height>33</height>
+    <height>50</height>
    </rect>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
@@ -35,7 +35,7 @@
     </widget>
    </item>
    <item>
-    <widget class="Line" name="line">
+    <widget class="Line" name="SeparatorClose">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
@@ -82,7 +82,7 @@
     </widget>
    </item>
    <item>
-    <widget class="Line" name="line_2">
+    <widget class="Line" name="SeparatorRedo">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>

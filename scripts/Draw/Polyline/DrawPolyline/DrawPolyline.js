@@ -56,30 +56,33 @@ DrawPolyline.prototype.beginEvent = function() {
     this.updateButtonStates();
 };
 
-DrawPolyline.prototype.setState = function(state) {
-    Polyline.prototype.setState.call(this, state);
+DrawPolyline.prototype.initState = function(state) {
+    Polyline.prototype.initState.call(this, state);
 
-    this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
     this.setCrosshairCursor();
 
     switch (this.state) {
     case DrawPolyline.State.SettingFirstVertex:
+        // do not move this outside of the case, since inheriting actions
+        // might add more states:
+        this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
         var trFirstVertex = qsTr("First vertex");
         this.setCommandPrompt(trFirstVertex);
         this.setLeftMouseTip(trFirstVertex);
         this.setRightMouseTip(EAction.trCancel);
         this.segment = undefined;
+        EAction.showSnapTools();
         this.redoList = [];
         break;
     case DrawPolyline.State.SettingNextVertex:
+        this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
         var trNextVertex = qsTr("Next vertex");
         this.setCommandPrompt(trNextVertex);
         this.setLeftMouseTip(trNextVertex);
         this.setRightMouseTip(qsTr("Done"));
+        EAction.showSnapTools();
         break;
     }
-
-    EAction.showSnapTools();
 };
 
 
@@ -444,21 +447,24 @@ DrawPolyline.prototype.updateButtonStates = function() {
         this.uncheckArcSegment();
     }
 
-    w = objectFromPath("MainWindow::Options::Close");
+    var optionsToolBar = EAction.getOptionsToolBar();
+    w = optionsToolBar.findChild("Close");
     if (!isNull(this.polylineEntity)) {
-      w.enabled = (this.polylineEntity.countVertices() >= 3) ? true : false;
-    } else {
-      w.enabled = false;
+        w.enabled = (this.polylineEntity.countVertices() >= 3) ? true : false;
+    }
+    else {
+        w.enabled = false;
     }
 
-    w = objectFromPath("MainWindow::Options::Undo");
+    w = optionsToolBar.findChild("Undo");
     if (!isNull(this.polylineEntity)) {
-      w.enabled = (this.polylineEntity.countVertices() >= 2) ? true : false;
-    } else {
-      w.enabled = false;
+        w.enabled = (this.polylineEntity.countVertices() >= 2) ? true : false;
+    }
+    else {
+        w.enabled = false;
     }
 
-    w = objectFromPath("MainWindow::Options::Redo");
+    w = optionsToolBar.findChild("Redo");
     w.enabled = (this.redoList.length >= 2) ? true : false;
 };
 
