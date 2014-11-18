@@ -522,10 +522,6 @@ function main() {
             RSettings.setValue("LibraryBrowser/SourceList", librarySources);
         }
     }
-
-
-    // mark config file with current version number:
-    RSettings.setValue("Application/Version", RSettings.getNumericalVersionString());
     
     // splash:
     var splash;
@@ -540,6 +536,9 @@ function main() {
     }
 
     RPluginLoader.postInitPlugins(RPluginInterface.GotSplashWindow);
+
+    // mark config file with current version number:
+    RSettings.setValue("Application/Version", RSettings.getNumericalVersionString());
 
     // scan for script add-ons (forced for first start, first start after
     // update, if configured):
