@@ -190,6 +190,18 @@ dir="./core" filename="REntityData.h">
           <name>RDEFAULT_RBOX</name>
         </expr>
       </init></decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>ignoreComplex</name>=
+      <init>
+        <expr>
+          <name>false</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <specifier>const</specifier>
     <block>{ 
@@ -197,6 +209,11 @@ dir="./core" filename="REntityData.h">
       <name>Q_UNUSED</name>
       <argument_list>(
       <argument>queryBox</argument>)</argument_list>
+    </macro>
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>ignoreComplex</argument>)</argument_list>
     </macro>
     <return>return 
     <expr>
@@ -245,6 +262,18 @@ dir="./core" filename="REntityData.h">
     <init>
       <expr>
         <name>RNANDOUBLE</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>ignoreComplex</name>=
+    <init>
+      <expr>
+        <name>false</name>
       </expr>
     </init></decl>
   </param>)</parameter_list>

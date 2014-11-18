@@ -54,7 +54,7 @@ public:
         const RVector& oldExtPoint1, const RVector& oldExtPoint2,
         const RVector& newExtPoint1, const RVector& newExtPoint2);
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const;
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const;
     virtual double getMeasuredValue() const;
     virtual QString getAutoLabel() const;
 

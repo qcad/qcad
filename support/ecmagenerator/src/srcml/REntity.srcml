@@ -353,6 +353,42 @@ dir="./core" filename="REntity.h">
       <name>EntityUnknown</name></name>
     </expr>;</return>}</block>
   </function>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>bool</name>
+  </type>
+  <name>isComplex</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>const</name>
+        <name>
+        <name>RS</name>::
+        <name>EntityType</name></name>
+      </type>
+      <name>type</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>bool</name>
+  </type>
+  <name>isDimension</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>const</name>
+        <name>
+        <name>RS</name>::
+        <name>EntityType</name></name>
+      </type>
+      <name>type</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <comment type="block">/** * \return Reference to the data object
   of the entity. */</comment>
   <function_decl>
@@ -1231,6 +1267,18 @@ dir="./core" filename="REntity.h">
           <name>RDEFAULT_RBOX</name>
         </expr>
       </init></decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>ignoreComplex</name>=
+      <init>
+        <expr>
+          <name>false</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <specifier>const</specifier>
     <block>{ 
@@ -1246,6 +1294,11 @@ dir="./core" filename="REntity.h">
       <argument>
         <expr>
           <name>queryBox</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>ignoreComplex</name>
         </expr>
       </argument>)</argument_list>
     </call></expr>;</return>}</block>
@@ -1282,6 +1335,18 @@ dir="./core" filename="REntity.h">
           <name>RNANDOUBLE</name>
         </expr>
       </init></decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>ignoreComplex</name>=
+      <init>
+        <expr>
+          <name>false</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <specifier>const</specifier>
     <block>{ 
@@ -1302,6 +1367,11 @@ dir="./core" filename="REntity.h">
       <argument>
         <expr>
           <name>range</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>ignoreComplex</name>
         </expr>
       </argument>)</argument_list>
     </call></expr>;</return>}</block>

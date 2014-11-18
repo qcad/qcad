@@ -170,7 +170,7 @@ bool RImageData::mirror(const RLine& axis) {
     return true;
 }
 
-QList<QSharedPointer<RShape> > RImageData::getShapes(const RBox& queryBox) const {
+QList<QSharedPointer<RShape> > RImageData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
     Q_UNUSED(queryBox)
 
     QList<QSharedPointer<RShape> > ret;

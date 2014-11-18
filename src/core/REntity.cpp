@@ -43,6 +43,26 @@ RPropertyTypeId REntity::PropertyMaxY;
 REntity::~REntity() {
 }
 
+bool REntity::isComplex(const RS::EntityType type) {
+    return (type==RS::EntityAttributeDefinition ||
+            type==RS::EntityAttribute ||
+            type==RS::EntityHatch ||
+            type==RS::EntityTextBased ||
+            type==RS::EntityText ||
+            isDimension(type));
+}
+
+bool REntity::isDimension(const RS::EntityType type) {
+    return (type==RS::EntityDimension ||
+            type==RS::EntityDimAligned ||
+            type==RS::EntityDimLinear ||
+            type==RS::EntityDimRotated ||
+            type==RS::EntityDimRadial ||
+            type==RS::EntityDimDiametric ||
+            type==RS::EntityDimAngular ||
+            type==RS::EntityDimOrdinate);
+}
+
 void REntity::init() {
     REntity::PropertyCustom.generateId(typeid(REntity), RObject::PropertyCustom);
     REntity::PropertyHandle.generateId(typeid(REntity), RObject::PropertyHandle);

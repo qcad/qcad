@@ -141,6 +141,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
+        <arg type="bool" typeName="bool" name="ignoreComplex"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="getMeasuredValue" cppName="getMeasuredValue"

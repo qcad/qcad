@@ -94,7 +94,7 @@ public:
     virtual bool mirror(const RLine& axis);
     virtual bool stretch(const RPolyline& area, const RVector& offset);
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const;
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const;
     virtual double getMeasuredValue() const;
     virtual QString getAutoLabel() const;
 

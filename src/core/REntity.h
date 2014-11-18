@@ -99,6 +99,9 @@ public:
         return RS::EntityUnknown;
     }
 
+    static bool isComplex(const RS::EntityType type);
+    static bool isDimension(const RS::EntityType type);
+
     /**
      * \return Reference to the data object of the entity.
      */
@@ -315,15 +318,15 @@ public:
     /**
      * \copydoc REntityData::getShapes
      */
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const {
-        return getData().getShapes(queryBox);
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const {
+        return getData().getShapes(queryBox, ignoreComplex);
     }
 
     /**
      * \copydoc REntityData::getClosestShape
      */
-    virtual QSharedPointer<RShape> getClosestShape(const RVector& pos, double range = RNANDOUBLE) const {
-        return getData().getClosestShape(pos, range);
+    virtual QSharedPointer<RShape> getClosestShape(const RVector& pos, double range = RNANDOUBLE, bool ignoreComplex = false) const {
+        return getData().getClosestShape(pos, range, ignoreComplex);
     }
 
     /**

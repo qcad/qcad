@@ -304,7 +304,7 @@ QList<RVector> RBlockReferenceData::getReferencePoints(
     return ret;
 }
 
-QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryBox) const {
+QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
     QList<QSharedPointer<RShape> > ret;
 
     static int recursionDepth=0;
@@ -339,14 +339,22 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
             continue;
         }
 
+        RS::EntityType t = entity->getType();
+
         // ignore attribute definitions since they are not rendered in the
         // context of a block reference:
-        if (entity->getType()==RS::EntityAttributeDefinition) {
+        if (t==RS::EntityAttributeDefinition) {
             continue;
         }
-        if (entity->getType()==RS::EntityAttribute) {
+        if (t==RS::EntityAttribute) {
             continue;
         }
+        if (ignoreComplex) {
+            if (REntity::isComplex(t)) {
+                continue;
+            }
+        }
+
         ret.append(entity->getShapes(queryBox));
     }
 

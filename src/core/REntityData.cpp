@@ -262,7 +262,7 @@ RVector REntityData::getPointOnEntity() const {
  */
 QList<RVector> REntityData::getEndPoints(const RBox& queryBox) const {
     QList<RVector> ret;
-    QList<QSharedPointer<RShape> > shapes = getShapes(queryBox);
+    QList<QSharedPointer<RShape> > shapes = getShapes(queryBox, true);
     for (int i=0; i<shapes.size(); i++) {
         ret.append(shapes.at(i)->getEndPoints());
     }
@@ -275,7 +275,7 @@ QList<RVector> REntityData::getEndPoints(const RBox& queryBox) const {
  */
 QList<RVector> REntityData::getMiddlePoints(const RBox& queryBox) const {
     QList<RVector> ret;
-    QList<QSharedPointer<RShape> > shapes = getShapes(queryBox);
+    QList<QSharedPointer<RShape> > shapes = getShapes(queryBox, true);
     for (int i=0; i<shapes.size(); i++) {
         ret.append(shapes.at(i)->getMiddlePoints());
     }
@@ -288,7 +288,7 @@ QList<RVector> REntityData::getMiddlePoints(const RBox& queryBox) const {
  */
 QList<RVector> REntityData::getCenterPoints(const RBox& queryBox) const {
     QList<RVector> ret;
-    QList<QSharedPointer<RShape> > shapes = getShapes(queryBox);
+    QList<QSharedPointer<RShape> > shapes = getShapes(queryBox, true);
     for (int i=0; i<shapes.size(); i++) {
         ret.append(shapes.at(i)->getCenterPoints());
     }
@@ -301,7 +301,7 @@ QList<RVector> REntityData::getCenterPoints(const RBox& queryBox) const {
  */
 QList<RVector> REntityData::getPointsWithDistanceToEnd(double distance, RS::From from, const RBox& queryBox) const {
     QList<RVector> ret;
-    QList<QSharedPointer<RShape> > shapes = getShapes(queryBox);
+    QList<QSharedPointer<RShape> > shapes = getShapes(queryBox, true);
     for (int i=0; i<shapes.size(); i++) {
         ret.append(shapes.at(i)->getPointsWithDistanceToEnd(distance, from));
     }
@@ -319,7 +319,7 @@ RVector REntityData::getClosestPointOnEntity(const RVector& point,
 
     RVector ret = RVector::invalid;
     double minDist = RMAXDOUBLE;
-    QList<QSharedPointer<RShape> > shapes = getShapes();
+    QList<QSharedPointer<RShape> > shapes = getShapes(RBox(), true);
     for (int i=0; i<shapes.size(); i++) {
         RVector r = shapes.at(i)->getClosestPointOnShape(point, limited);
         double dist = r.getDistanceTo(point);
@@ -396,8 +396,8 @@ QList<RVector> REntityData::getIntersectionPoints(
         const REntityData& other, bool limited, bool same, const RBox& queryBox) const {
 
     QList<RVector> ret;
-    QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox);
-    QList<QSharedPointer<RShape> > shapes2 = other.getShapes(queryBox);
+    QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox, true);
+    QList<QSharedPointer<RShape> > shapes2 = other.getShapes(queryBox, true);
 
     for (int i=0; i<shapes1.size(); i++) {
         for (int k=0; k<shapes2.size(); k++) {
@@ -416,7 +416,7 @@ QList<RVector> REntityData::getIntersectionPoints(
  */
 QList<RVector> REntityData::getIntersectionPoints(const RShape& shape, bool limited, const RBox& queryBox) const {
     QList<RVector> ret;
-    QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox);
+    QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox, true);
     for (int i=0; i<shapes1.size(); i++) {
         ret.append(shapes1.at(i)->getIntersectionPoints(shape, limited));
     }
@@ -499,15 +499,15 @@ bool REntityData::stretch(const RPolyline& area, const RVector& offset) {
  * \return The one shape that is part of this entity which is the
  *      closest to the given position.
  */
-QSharedPointer<RShape> REntityData::getClosestShape(const RVector& pos, double range) const {
+QSharedPointer<RShape> REntityData::getClosestShape(const RVector& pos, double range, bool ignoreComplex) const {
     QSharedPointer<RShape> ret;
 
     QList<QSharedPointer<RShape> > shapes;
     if (RMath::isNaN(range)) {
-        shapes = getShapes();
+        shapes = getShapes(RBox(), ignoreComplex);
     }
     else {
-        shapes = getShapes(RBox(pos, range));
+        shapes = getShapes(RBox(pos, range), ignoreComplex);
     }
 
     // entity not based on shape:

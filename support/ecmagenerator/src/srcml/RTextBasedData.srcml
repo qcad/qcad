@@ -1511,6 +1511,18 @@ dir="./entity" filename="RTextBasedData.h">
         <name>RDEFAULT_RBOX</name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>ignoreComplex</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>
@@ -1559,6 +1571,18 @@ dir="./entity" filename="RTextBasedData.h">
           <name>RNANDOUBLE</name>
         </expr>
       </init></decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>ignoreComplex</name>=
+      <init>
+        <expr>
+          <name>false</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <specifier>const</specifier>
     <block>{ 
@@ -1582,6 +1606,11 @@ dir="./entity" filename="RTextBasedData.h">
         </type>
       </decl>
     </param>)</parameter_list>;</constructor_decl>
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>ignoreComplex</argument>)</argument_list>
+    </macro>
     <return>return 
     <expr>
       <call>

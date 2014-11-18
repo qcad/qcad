@@ -488,6 +488,18 @@ dir="./entity" filename="RSolidData.h">
           <name>RDEFAULT_RBOX</name>
         </expr>
       </init></decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>ignoreComplex</name>=
+      <init>
+        <expr>
+          <name>false</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <specifier>const</specifier>
     <block>{ 

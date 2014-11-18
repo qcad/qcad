@@ -438,18 +438,22 @@ bool RHatchData::stretch(const RPolyline& area, const RVector& offset) {
     return ret;
 }
 
-QList<QSharedPointer<RShape> > RHatchData::getShapes(const RBox& queryBox) const {
+QList<QSharedPointer<RShape> > RHatchData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
     Q_UNUSED(queryBox)
 
-    QList<QSharedPointer<RShape> > shapes;
+    QList<QSharedPointer<RShape> > ret;
+
+    if (ignoreComplex) {
+        return ret;
+    }
 
     QList<RPainterPath> paths = getPainterPaths();
     for (int i=0; i<paths.length(); i++) {
         RPainterPath path = paths[i];
-        shapes.append(path.getShapes());
+        ret.append(path.getShapes());
     }
 
-    return shapes;
+    return ret;
 }
 
 QList<QSharedPointer<RShape> > RHatchData::getExploded() const {

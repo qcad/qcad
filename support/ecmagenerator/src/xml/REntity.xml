@@ -44,6 +44,21 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RS::EntityType" isPureVirtual="false" />
     </method>
+    <method name="isComplex" cppName="isComplex" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="type" isConst="true" />
+      </variant>
+    </method>
+    <method name="isDimension" cppName="isDimension"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="type" isConst="true" />
+      </variant>
+    </method>
     <method name="getData" cppName="getData" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="REntityData &amp;"
@@ -257,6 +272,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
+        <arg type="bool" typeName="bool" name="ignoreComplex"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="getClosestShape" cppName="getClosestShape"
@@ -268,6 +285,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="double" typeName="double" name="range"
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
+        <arg type="bool" typeName="bool" name="ignoreComplex"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="isInside" cppName="isInside" specifier="public"

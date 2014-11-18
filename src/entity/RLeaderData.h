@@ -92,7 +92,7 @@ public:
         return RPolyline::getExploded();
     }
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const {
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const {
         Q_UNUSED(queryBox)
 
         QList<QSharedPointer<RShape> > ret;

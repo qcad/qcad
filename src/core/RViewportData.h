@@ -121,7 +121,7 @@ public:
     virtual bool moveReferencePoint(const RVector& referencePoint, 
         const RVector& targetPoint);
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX) const;
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const;
 
 private:
     int viewportId;
