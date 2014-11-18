@@ -874,6 +874,9 @@ EAction.getOptionsToolBar = function() {
             appWin.addToolBarBreak();
         }
         EAction.optionsToolBar = EAction.getToolBar(qsTr("Options"), "Options");
+        if (!isNull(appWin)) {
+            appWin.addToolBarBreak();
+        }
     }
 
     if (!isNull(EAction.optionsToolBar)) {

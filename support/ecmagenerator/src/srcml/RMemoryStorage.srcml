@@ -1843,6 +1843,13 @@ dir="./core" filename="RMemoryStorage.h">
   <name>getMaxLineweight</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>update</name>
+  <parameter_list>()</parameter_list>;</function_decl>
   <comment type="line">//virtual void setUnit(RS::Unit unit,
   RTransaction* transaction = NULL);</comment>
   <comment type="line">//virtual RS::Unit getUnit()

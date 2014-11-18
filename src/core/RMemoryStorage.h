@@ -159,6 +159,8 @@ public:
 
     virtual RLineweight::Lineweight getMaxLineweight() const;
 
+    virtual void update();
+
     //virtual void setUnit(RS::Unit unit, RTransaction* transaction = NULL);
     //virtual RS::Unit getUnit() const;
 

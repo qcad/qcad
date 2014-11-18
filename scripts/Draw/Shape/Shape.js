@@ -32,6 +32,8 @@ include("../Draw.js");
  */
 function Shape(guiAction) {
     Draw.call(this, guiAction);
+
+    this.createPolyline = false;
 }
 
 Shape.prototype = new Draw();
@@ -102,4 +104,8 @@ Shape.init = function() {
     Shape.getMenu();
     Shape.getToolBar();
     Shape.getCadToolBarPanel();
+};
+
+Shape.prototype.slotCreatePolylineChanged = function(checked) {
+    this.createPolyline = checked;
 };

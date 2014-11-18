@@ -29,6 +29,8 @@ function ShapeRectangle(guiAction) {
 
     this.corner1 = undefined;
     this.corner2 = undefined;
+
+    this.setUiOptions("../Shape.ui");
 }
 
 ShapeRectangle.prototype = new Shape();
@@ -116,23 +118,40 @@ ShapeRectangle.prototype.coordinateEventPreview = function(event) {
 };
 
 ShapeRectangle.prototype.getOperation = function(preview) {
-    var corners = new Array(
+    var corners = [
         new RVector(this.corner1.x, this.corner1.y),
         new RVector(this.corner2.x, this.corner1.y),
         new RVector(this.corner2.x, this.corner2.y),
         new RVector(this.corner1.x, this.corner2.y)
-    );
+    ];
+
     var op = new RAddObjectsOperation();
-    for (var i=0; i<4; ++i) {
-        var line = new RLineEntity(
+
+    if (this.createPolyline) {
+        var pl = new RPolyline();
+        for (var i=0; i<4; ++i) {
+            pl.appendVertex(corners[i]);
+        }
+        pl.setClosed(true);
+        var polyline = new RPolylineEntity(
             this.getDocument(),
-            new RLineData(
-                corners[i],
-                corners[(i+1)%4]
-            )
+            new RPolylineData(pl)
         );
-        op.addObject(line);
+        op.addObject(polyline);
     }
+    else {
+        for (var i=0; i<4; ++i) {
+            var line = new RLineEntity(
+                this.getDocument(),
+                new RLineData(
+                    corners[i],
+                    corners[(i+1)%4]
+                )
+            );
+            op.addObject(line);
+        }
+    }
+
     return op;
 };
 

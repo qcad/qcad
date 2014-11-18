@@ -1475,6 +1475,8 @@ void RDocument::rebuildSpatialIndex() {
             continue;
         }
 
+        entity->update();
+
         QList<RBox> bbs = entity->getBoundingBoxes();
 
         spatialIndex.addToIndex(
@@ -1482,6 +1484,9 @@ void RDocument::rebuildSpatialIndex() {
             bbs
         );
     }
+
+    // clear cached bounding box:
+    storage.update();
 }
 
 void RDocument::removeBlockFromSpatialIndex(RBlock::Id blockId) {

@@ -105,6 +105,7 @@ RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) cons
     RTransaction transaction(document.getStorage(), "Adding object(s)", undoable);
     transaction.setRecordAffectedObjects(recordAffectedObjects);
     transaction.setSpatialIndexDisabled(spatialIndexDisabled);
+    transaction.setAllowInvisible(allowInvisible);
 
     for (int i = 0; i < addedObjects.size(); ++i) {
         if (limitPreview && preview && i>RSettings::getPreviewEntities()) {

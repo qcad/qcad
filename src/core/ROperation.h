@@ -49,6 +49,7 @@ public:
     ) : undoable(undoable), 
         recordAffectedObjects(true),
         spatialIndexDisabled(false),
+        allowInvisible(false),
         entityTypeFilter(entityTypeFilter) {}
     virtual ~ROperation() {
     }
@@ -74,10 +75,15 @@ public:
         spatialIndexDisabled = on;
     }
 
+    void setAllowInvisible(bool on) {
+        allowInvisible = on;
+    }
+
 protected:
     bool undoable;
     bool recordAffectedObjects;
     bool spatialIndexDisabled;
+    bool allowInvisible;
     RS::EntityType entityTypeFilter;
 };
 

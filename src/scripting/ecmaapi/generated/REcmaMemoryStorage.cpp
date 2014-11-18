@@ -230,6 +230,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getMaxLineweight, "getMaxLineweight");
             
+            REcmaHelper::registerFunction(&engine, proto, update, "update");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RMemoryStorage*>(), *proto);
 
@@ -6410,6 +6412,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::getMaxLineweight", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::update
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::update", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::update";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("update", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->update();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.update().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::update", context, engine);
             return result;
         }
          QScriptValue REcmaMemoryStorage::toString

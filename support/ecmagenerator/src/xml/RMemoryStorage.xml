@@ -717,5 +717,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RLineweight::Lineweight"
       isPureVirtual="false" />
     </method>
+    <method name="update" cppName="update" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
   </class>
 </unit>

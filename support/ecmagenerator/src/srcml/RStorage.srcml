@@ -3373,7 +3373,17 @@ dir="./core" filename="RStorage.h">
       <name>RModifiedListener</name>*</type>
       <name>l</name>
     </decl>
-  </param>)</parameter_list>;</function_decl></public>
+  </param>)</parameter_list>;</function_decl>
+  <comment type="block">/** * Clear caches: */</comment>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>update</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </function></public>
   <protected>protected: 
   <decl_stmt>
   <decl>

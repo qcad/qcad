@@ -101,6 +101,10 @@ public:
        return data.getPosition();
     }
 
+    void setPosition(const RVector& pos) {
+        data.setPosition(pos);
+    }
+
     RVector getScaleFactors() const {
         return data.getScaleFactors();
     }

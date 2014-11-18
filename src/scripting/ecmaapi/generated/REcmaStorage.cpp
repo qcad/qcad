@@ -325,6 +325,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, addModifiedListener, "addModifiedListener");
             
+            REcmaHelper::registerFunction(&engine, proto, update, "update");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RStorage*>(), *proto);
 
@@ -9331,6 +9333,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::addModifiedListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::update
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::update", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::update";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("update", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->update();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.update().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::update", context, engine);
             return result;
         }
          QScriptValue REcmaStorage::toString

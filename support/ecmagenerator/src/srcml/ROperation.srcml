@@ -117,6 +117,15 @@ dir="./core" filename="ROperation.h">
       </argument>)</argument_list>
     </call>, 
     <call>
+      <name>allowInvisible</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>false</name>
+        </expr>
+      </argument>)</argument_list>
+    </call>, 
+    <call>
       <name>entityTypeFilter</name>
       <argument_list>(
       <argument>
@@ -221,6 +230,26 @@ dir="./core" filename="ROperation.h">
     <expr>
     <name>spatialIndexDisabled</name>= 
     <name>on</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setAllowInvisible</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>bool</name>
+        </type>
+        <name>on</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>allowInvisible</name>= 
+    <name>on</name></expr>;</expr_stmt>}</block>
   </function></public>
   <protected>protected: 
   <decl_stmt>
@@ -243,6 +272,13 @@ dir="./core" filename="ROperation.h">
       <name>bool</name>
     </type>
     <name>spatialIndexDisabled</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>allowInvisible</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

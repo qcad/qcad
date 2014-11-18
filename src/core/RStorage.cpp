@@ -229,6 +229,7 @@ void RStorage::setUnit(RS::Unit unit, RTransaction* transaction) {
     Q_ASSERT(!docVars.isNull());
     docVars->setUnit(unit);
     endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
+    //boundingBoxChanged =
 }
 
 QSharedPointer<RDocumentVariables> RStorage::startDocumentVariablesTransaction(RTransaction*& transaction, bool& useLocalTransaction) {

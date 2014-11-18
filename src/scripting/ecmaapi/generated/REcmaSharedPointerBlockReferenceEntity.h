@@ -79,6 +79,9 @@
         getPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getScaleFactors
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -79,6 +79,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setSpatialIndexDisabled, "setSpatialIndexDisabled");
             
+            REcmaHelper::registerFunction(&engine, proto, setAllowInvisible, "setAllowInvisible");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<ROperation*>(), *proto);
 
@@ -435,6 +437,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaOperation::setSpatialIndexDisabled", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaOperation::setAllowInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaOperation::setAllowInvisible", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaOperation::setAllowInvisible";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    ROperation* self = 
+                        getSelf("setAllowInvisible", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAllowInvisible(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for ROperation.setAllowInvisible().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaOperation::setAllowInvisible", context, engine);
             return result;
         }
          QScriptValue REcmaOperation::toString

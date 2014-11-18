@@ -32,12 +32,10 @@ dir="./core" filename="RPluginInterface.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RPluginInfo.h"</cpp:file></cpp:include>
-  <comment type="line">//QT_BEGIN_NAMESPACE</comment>
   <class_decl>class 
   <name>QString</name>;</class_decl>
   <class_decl>class 
   <name>QScriptEngine</name>;</class_decl>
-  <comment type="line">//QT_END_NAMESPACE</comment>
   <comment type="block">/** * Interface for all C++ QCAD plugins. *
   * \ingroup core * \scriptable */</comment>
   <class>class 
@@ -54,18 +52,27 @@ dir="./core" filename="RPluginInterface.h">
   <expr>
     <name>GotSplashWindow</name>
   </expr>, 
+  <comment type="block">/**&lt; Splashscreen showing. */</comment>
   <expr>
     <name>GotMainWindow</name>
   </expr>, 
+  <comment type="block">/**&lt; Main window with all tools and
+  menus has been created. */</comment>
   <expr>
     <name>LoadedFiles</name>
   </expr>, 
+  <comment type="block">/**&lt; Loaded files given on command line.
+  */</comment>
   <expr>
     <name>ScriptsExecuted</name>
   </expr>, 
+  <comment type="block">/**&lt; Executed scripts given on command
+  line. */</comment>
   <expr>
     <name>AllDone</name>
-  </expr>}</block>;</enum></public>
+  </expr>
+  <comment type="block">/**&lt; Application is ready and idle.
+  */</comment>}</block>;</enum></public>
   <public>public: 
   <destructor>
     <specifier>virtual</specifier>

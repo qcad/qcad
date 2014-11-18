@@ -828,21 +828,13 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
             }
         }
 
-        // resolve line width ByLayer:
-        //QSharedPointer<RLayer> layer =
-        //        queryLayerDirect(e->getLayerId());
-
         // don't resolve block references, if line weight is ByBlock,
         // the maxLinewidth will be adjusted when the block reference
         // is encountered:
         QStack<REntity*> blockRefStack;
 
         RLineweight::Lineweight lw = e->getLineweight(true, blockRefStack);
-        //if (maxLineweight==RLineweight::Weight000) {
-        //    maxLineweight = lw;
-        //} else {
-            maxLineweight = qMax(lw, maxLineweight);
-        //}
+        maxLineweight = qMax(lw, maxLineweight);
     }
 
     boundingBoxChanged = false;
@@ -1332,6 +1324,10 @@ void RMemoryStorage::setLastTransactionId(int transactionId) {
 
 RLineweight::Lineweight RMemoryStorage::getMaxLineweight() const {
     return maxLineweight;
+}
+
+void RMemoryStorage::update() {
+    boundingBoxChanged = true;
 }
 
 //void RMemoryStorage::setUnit(RS::Unit unit, RTransaction* transaction) {

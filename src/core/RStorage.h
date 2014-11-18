@@ -594,6 +594,11 @@ public:
 
     void addModifiedListener(RModifiedListener* l);
 
+    /**
+     * Clear caches:
+     */
+    virtual void update() {}
+
 protected:
     bool modified;
 

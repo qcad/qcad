@@ -88,6 +88,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPosition, "getPosition");
             
+            REcmaHelper::registerFunction(&engine, proto, setPosition, "setPosition");
+            
             REcmaHelper::registerFunction(&engine, proto, getScaleFactors, "getScaleFactors");
             
             REcmaHelper::registerFunction(&engine, proto, setScaleFactors, "setScaleFactors");
@@ -1426,6 +1428,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlockReferenceEntity::getPosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceEntity::setPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceEntity::setPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceEntity::setPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("setPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPosition(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceEntity::setPosition", context, engine);
             return result;
         }
          QScriptValue
