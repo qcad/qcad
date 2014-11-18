@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("HideAllLayers", "&Hide all Layers"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("HideAllLayers", "&Hide All Layers"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/HideAllLayers.js");
     action.setIcon(basePath + "/HideAllLayers.svg");

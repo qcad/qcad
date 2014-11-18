@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("HideAllBlocks", "&Hide All"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("HideAllBlocks", "&Hide All Blocks"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/HideAllBlocks.js");
     action.setIcon(basePath + "/HideAllBlocks.svg");

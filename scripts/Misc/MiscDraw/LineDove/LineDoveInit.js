@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("LineDove", "&Dovetail joint"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("LineDove", "&Dovetail Joint"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/LineDove.js");
     action.setIcon(basePath + "/LineDove.svg");

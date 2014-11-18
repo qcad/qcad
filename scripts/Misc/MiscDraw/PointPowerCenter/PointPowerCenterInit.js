@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("PointPowerCenter", "Power center of three circles"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("PointPowerCenter", "Power Center of Three Circles"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/PointPowerCenter.js");
     action.setIcon(basePath + "/PointPowerCenter.svg");

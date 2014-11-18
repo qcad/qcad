@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("ShowAllBlocks", "&Show all"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("ShowAllBlocks", "&Show All Blocks"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ShowAllBlocks.js");
     action.setIcon(basePath + "/ShowAllBlocks.svg");

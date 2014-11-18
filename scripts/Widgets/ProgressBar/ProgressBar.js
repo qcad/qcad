@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -25,48 +25,18 @@ function ProgressBar() {
 }
 
 /**
- * Disabled for now. Does not update without calling processEvents which
- * causes problems.
+ * Progress bar widget in status bar.
  */
 ProgressBar.init = function(basePath) {
     ProgressBar.formWidget = WidgetFactory.createWidget(basePath, "ProgressBar.ui");
     ProgressBar.progressBar = ProgressBar.formWidget.findChild("ProgressBar");
     ProgressBar.progressBar.visible = false;
-//    ProgressBar.cancel = ProgressBar.formWidget.findChild("btCancel");
-//    // ProgressBar.cancel.mouseTracking = true;
-//    ProgressBar.cancel.cursor = new QCursor(Qt.ArrowCursor);
-//    ProgressBar.cancel.visible = false;
-//    ProgressBar.cancel.clicked.connect(function() {
-//        appWin.cancelProgress();
-//    });
     var appWin = EAction.getMainWindow();
     appWin.progress.connect(this, "progress");
     appWin.progressEnd.connect(this, "progressEnd");
     appWin.progressText.connect(this, "progressText");
     EAction.addToStatusBar(ProgressBar.formWidget, 1000);
 };
-
-//ProgressBar.progressStart = function(allowCancel) {
-//    if (isNull(ProgressBar.formWidget)) {
-//        return;
-//    }
-////    if (allowCancel == undefined) {
-////        allowCancel = false;
-////    }
-    
-////    ProgressBar.allowCancel = allowCancel;
-////    if (ProgressBar.allowCancel) {
-////        ProgressBar.formWidget = objectFromPath("MainWindow::ProgressBarForm",
-////                ProgressBar.formWidget);
-////        ProgressBar.cancel = ProgressBar.formWidget.findChild("btCancel");
-////        if (!QCoreApplication.arguments().contains("-no-show")) {
-////            ProgressBar.cancel.visible = true;
-////        }
-////    }
-
-//    ProgressBar.progress(0);
-//    //ProgressBar.formWidget.repaint();
-//};
 
 ProgressBar.progress = function(value) {
     if (isNull(ProgressBar.formWidget)) {
@@ -93,7 +63,6 @@ ProgressBar.progressEnd = function() {
     ProgressBar.progressBar.reset();
     ProgressBar.progressText("");
     ProgressBar.progressBar.visible = false;
-    //ProgressBar.cancel.visible = false;
     var appWin = EAction.getMainWindow();
     appWin.enabled = true;
 };

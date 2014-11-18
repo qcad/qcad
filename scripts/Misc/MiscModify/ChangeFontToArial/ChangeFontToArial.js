@@ -62,7 +62,7 @@ ChangeFontToArial.prototype.beginEvent = function() {
 };
 
 ChangeFontToArial.init = function(basePath) {
-    var action = new RGuiAction("Set font to Arial", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction("Set Font to Arial", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(false);
     action.setScriptFile(basePath + "/ChangeFontToArial.js");

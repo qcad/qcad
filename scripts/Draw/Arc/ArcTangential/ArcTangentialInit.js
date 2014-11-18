@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("ArcTangential", "&Tangentially connected"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("ArcTangential", "&Tangentially Connected"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ArcTangential.js");
     action.setIcon(basePath + "/ArcTangential.svg");
