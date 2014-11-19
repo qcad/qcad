@@ -1843,6 +1843,9 @@ function addActionsToWidgets() {
     var widgetTypes = ["Menu", "ToolBar", "Panel"];
     for (var c=0; c<actions.length; ++c) {
         var a = actions[c];
+        if (a.icon.isNull() && !a.isIconDisabled()) {
+            a.setIcon("scripts/Empty.svg");
+        }
         var className = a.getScriptClass();
         var wns = a.getWidgetNames();
 
