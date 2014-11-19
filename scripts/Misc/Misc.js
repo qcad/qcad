@@ -63,12 +63,11 @@ Misc.getCadToolBarPanel = function() {
         action.setRequiresDocument(false);
         action.setIcon(Misc.includeBasePath + "/Misc.svg");
         action.setStatusTip(qsTr("Show misc tools"));
-        action.setDefaultShortcut(new QKeySequence("w,c"));
         action.setNoState();
         action.setDefaultCommands(["miscmenu"]);
         action.setGroupSortOrder(80);
         action.setSortOrder(100);
-        //action.setWidgetNames(["MainToolsPanel"]);
+        action.setWidgetNames(["!MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(

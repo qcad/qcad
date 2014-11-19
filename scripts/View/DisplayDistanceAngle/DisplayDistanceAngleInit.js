@@ -9,5 +9,5 @@ function init(basePath) {
     action.checkable = false;
     action.setGroupSortOrder(3980);
     action.setSortOrder(100);
-    action.setWidgetNames(["ViewMenu"]);
+    action.setWidgetNames(["ViewMenu", "!ViewToolBar", "!ViewToolsPanel"]);
 }

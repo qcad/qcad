@@ -9,5 +9,5 @@ function init(basePath) {
     action.setNoState();
     action.setGroupSortOrder(15700);
     action.setSortOrder(200);
-    action.setWidgetNames(["SnapMenu"]);
+    action.setWidgetNames(["SnapMenu", "!SnapToolBar", "!SnapToolsPanel"]);
 };

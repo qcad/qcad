@@ -9,7 +9,7 @@ function init(basePath) {
     action.setNoState();
     action.setGroupSortOrder(12500);
     action.setSortOrder(100);
-    action.setWidgetNames(["DimensionMenu", "DimensionToolBar"]);
+    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "!DimensionToolsPanel"]);
 
     var appWin = EAction.getMainWindow();
     appWin.addSelectionListener(action);

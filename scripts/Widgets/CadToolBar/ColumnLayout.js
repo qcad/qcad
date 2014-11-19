@@ -30,6 +30,10 @@ ColumnLayout.prototype = new QLayout();
 ColumnLayout.prototype.removeAction = function(a) {
     var itemList = this.property("ItemList");
 
+    if (isNull(itemList)) {
+        return;
+    }
+
     var index = -1;
 
     for (var i=0; i<itemList.length; ++i) {

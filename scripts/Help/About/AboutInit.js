@@ -6,5 +6,5 @@ function init(basePath) {
     action.setNoState();
     action.setGroupSortOrder(110990);
     action.setSortOrder(100);
-    action.setWidgetNames(["HelpMenu"]);
+    action.setWidgetNames(["HelpMenu", "!HelpToolBar"]);
 }

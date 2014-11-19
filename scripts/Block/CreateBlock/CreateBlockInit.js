@@ -14,15 +14,4 @@ function init(basePath) {
 
     var appWin = EAction.getMainWindow();
     appWin.addSelectionListener(action);
-
-//    action.setGroupSortOrder(40);
-//    action.setSortOrder(300);
-//    action.setWidgetNames(["BlockMenu", "BlockToolBar", "MainToolsPanel"]);
-
-//    var ctb = EAction.getMainCadToolBarPanel();
-//    if (!isNull(ctb)) {
-//        // sort order override for cad tool bar only:
-//        //action.setProperty("SortOrderCadToolBar", 2200);
-//        CadToolBarPanel.prototype.addAction.call(ctb, action);
-//    }
 }

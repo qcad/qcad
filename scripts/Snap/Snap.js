@@ -65,12 +65,11 @@ Snap.getCadToolBarPanel = function() {
         action.setRequiresDocument(true);
         action.setIcon(Snap.includeBasePath + "/Snap.svg");
         action.setStatusTip(qsTr("Show snap tools"));
-        action.setDefaultShortcut(new QKeySequence("w,s"));
         action.setNoState();
         action.setDefaultCommands(["snapmenu"]);
         action.setGroupSortOrder(40);
         action.setSortOrder(400);
-        //action.setWidgetNames(["MainToolsPanel"]);
+        action.setWidgetNames(["!MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(

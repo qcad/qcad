@@ -73,7 +73,7 @@ View.getCadToolBarPanel = function() {
         action.setDefaultCommands(["viewmenu"]);
         action.setGroupSortOrder(10);
         action.setSortOrder(300);
-        //action.setWidgetNames(["MainToolsPanel"]);
+        action.setWidgetNames(["!MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(

@@ -7,5 +7,5 @@ function init(basePath) {
     action.setDefaultCommands( [ "bitmapexport" ]);
     action.setGroupSortOrder(1200);
     action.setSortOrder(100);
-    action.setWidgetNames(["FileMenu", "FileToolsPanel"]);
+    action.setWidgetNames(["FileMenu", "!FileToolBar", "FileToolsPanel"]);
 }

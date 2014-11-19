@@ -74,7 +74,7 @@ Layer.getCadToolBarPanel = function() {
         action.setDefaultCommands(["layermenu"]);
         action.setGroupSortOrder(60);
         action.setSortOrder(200);
-        //action.setWidgetNames(["MainToolsPanel"]);
+        action.setWidgetNames(["!MainToolsPanel"]);
     }
 
     var tb = EAction.getCadToolBarPanel(
