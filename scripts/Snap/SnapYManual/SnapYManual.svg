@@ -11,7 +11,7 @@
    height="512"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.48.2 r9819"
    sodipodi:docname="SnapYManual.svg">
   <metadata
      id="metadata34">
@@ -21,7 +21,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -34,17 +34,17 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1440"
-     inkscape:window-height="810"
+     inkscape:window-width="2560"
+     inkscape:window-height="1341"
      id="namedview32"
      showgrid="false"
      inkscape:zoom="1"
      inkscape:cx="167.53846"
      inkscape:cy="300.72533"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g3000" />
+     inkscape:current-layer="g5481" />
   <defs
      id="defs4">
     <marker
@@ -108,33 +108,27 @@
     <g
        id="g5481"
        transform="translate(-1.7800444e-6,-1.3686304e-6)">
-      <text
-         sodipodi:linespacing="125%"
-         id="text3096-9"
-         y="348.35098"
-         x="59.386173"
+      <g
          style="font-size:189.62962341px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Helvetica-Bold;-inkscape-font-specification:Helvetica-Bold"
-         xml:space="preserve"><tspan
-           y="348.35098"
-           x="59.386173"
-           id="tspan3098-4"
-           sodipodi:role="line">1</tspan></text>
+         id="text3096-9">
+        <path
+           d="M 82.904691,332.61024 113.46025,332.61024 113.46025,227.14728 80.219506,233.81395 80.219506,216.77691 113.27506,210.11025 131.97876,210.11025 131.97876,332.61024 162.53432,332.61024 162.53432,348.35098 82.904691,348.35098 82.904691,332.61024"
+           style=""
+           id="path3024" />
+      </g>
       <path
          style="fill:#000000;fill-opacity:1"
          d="m 83.300546,414.6263 a 26.000002,25.500002 0 1 0 52.000004,0 26.000002,25.500002 0 0 0 -52.000004,0 z"
          id="path18-3"
          inkscape:connector-curvature="0" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text3096"
-         y="208.49911"
-         x="256.92728"
+      <g
          style="font-size:189.62962341px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Helvetica-Bold;-inkscape-font-specification:Helvetica-Bold"
-         xml:space="preserve"><tspan
-           y="208.49911"
-           x="256.92728"
-           id="tspan3098"
-           sodipodi:role="line">2</tspan></text>
+         id="text3096">
+        <path
+           d="M 293.31616,192.75837 358.59394,192.75837 358.59394,208.49911 270.81617,208.49911 270.81617,192.75837 C 277.91491,185.41272 287.57539,175.56705 299.79765,163.22134 312.08154,150.81399 319.79758,142.82017 322.94579,139.23986 328.93338,132.51154 333.10004,126.83253 335.44579,122.20282 337.85312,117.51155 339.05682,112.91279 339.0569,108.40653 339.05682,101.06095 336.46423,95.073306 331.27913,90.443563 326.1556,85.814057 319.45808,83.499244 311.18653,83.499119 305.32229,83.499244 299.11859,84.517762 292.57542,86.554675 286.09391,88.591831 279.14948,91.678248 271.74209,95.813933 L 271.74209,76.925045 C 279.27293,73.900489 286.30996,71.61654 292.8532,70.073194 299.39637,68.530124 305.38402,67.75852 310.81616,67.758379 325.13708,67.75852 336.55682,71.338763 345.07542,78.499119 353.59384,85.659736 357.8531,95.227627 357.8532,107.20282 357.8531,112.88193 356.77285,118.28316 354.61246,123.40653 352.5136,128.46833 348.65558,134.45598 343.03838,141.36949 341.49509,143.15968 336.58769,148.34486 328.31616,156.92504 320.0445,165.4436 308.37784,177.38804 293.31616,192.75837"
+           style=""
+           id="path3027" />
+      </g>
       <path
          d="M 409.76973,415.16304 101.53029,414.10956"
          id="path10"
