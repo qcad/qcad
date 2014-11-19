@@ -756,8 +756,9 @@ EAction.getSubMenu = function(menu, groupSortOrder, sortOrder, title, objectName
     if (isNull(subMenu)) {
         //var action = menu.addMenu(subMenu);
 
-        var action = new RGuiAction(title, RMainWindowQt.getMainWindow());
-        subMenu = new QMenu(title + " {%1,%2}".arg(groupSortOrder).arg(sortOrder), menu);
+        var action = new RGuiAction(title, menu);
+        //subMenu = new QMenu(title + " {%1,%2}".arg(groupSortOrder).arg(sortOrder), menu);
+        subMenu = new QMenu(title, menu);
         subMenu.objectName = objectName;
         if (!isNull(iconFile)) {
             subMenu.icon = new QIcon(iconFile);
