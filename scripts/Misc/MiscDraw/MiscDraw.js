@@ -62,7 +62,7 @@ MiscDraw.getCadToolBarPanel = function() {
         action.setScriptFile(MiscDraw.includeBasePath + "/MiscDraw.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
-        action.setIcon(MiscDraw.includeBasePath + "/MiscDraw.svg");
+        //action.setIcon(MiscDraw.includeBasePath + "/MiscDraw.svg");
         action.setStatusTip(qsTr("Show misc drawing tools"));
         action.setNoState();
         action.setDefaultCommands(["miscdrawmenu"]);
