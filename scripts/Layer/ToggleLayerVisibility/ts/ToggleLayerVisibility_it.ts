@@ -4,7 +4,7 @@
 <context>
     <name>ToggleLayerVisibility</name>
     <message>
-        <location filename="../ToggleLayerVisibilityInit.js" line="+3"/>
+        <location filename="../ToggleLayerVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
         <translation>&amp;Interruttore di Visibilità</translation>
     </message>

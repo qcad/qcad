@@ -4,7 +4,7 @@
 <context>
     <name>Select</name>
     <message>
-        <location filename="../Select.js" line="+64"/>
+        <location filename="../Select.js" line="+216"/>
         <source>Selection Tools</source>
         <translatorcomment>--google--
 Mostrar menú &quot;Selección&quot;</translatorcomment>
@@ -16,7 +16,7 @@ Mostrar menú &quot;Selección&quot;</translatorcomment>
         <translation>Mostrar menú &quot;Selección&quot;</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Selection Tools Panel</source>
         <translation>Herramientas de selección</translation>
     </message>
@@ -26,7 +26,7 @@ Mostrar menú &quot;Selección&quot;</translatorcomment>
         <translation type="obsolete">Herramientas de selección</translation>
     </message>
     <message>
-        <location line="+157"/>
+        <location line="+5"/>
         <source>&amp;Select</source>
         <translation>&amp;Seleccionar</translation>
     </message>

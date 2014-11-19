@@ -24,7 +24,7 @@
         <translation>(De-)seleccionar área &amp;rectangular</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>(De-)seleccionar todas las entidades dentro de un rectángulo</translation>

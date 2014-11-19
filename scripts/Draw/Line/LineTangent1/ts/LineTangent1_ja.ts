@@ -29,7 +29,7 @@
         <translation>&amp;T 接線（点と円）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw tangent (point, circle)</source>
         <translation>接線（点と円）を描画</translation>
     </message>

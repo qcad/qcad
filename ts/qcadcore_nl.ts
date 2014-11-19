@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="nl_NL">
+<TS version="2.1" language="nl_NL">
 <context>
     <name>QObject</name>
     <message>
@@ -222,7 +222,7 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lijntype schaal</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -282,7 +282,7 @@
         <translation>Hoek</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+49"/>
+        <location filename="../src/core/REntity.cpp" line="+69"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
@@ -368,7 +368,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+168"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+169"/>
         <source>Requires selection</source>
         <translation>Selectie vereist</translation>
     </message>

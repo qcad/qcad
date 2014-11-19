@@ -172,7 +172,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
     <message>
         <location line="+309"/>
         <location line="+35"/>
-        <location line="+12"/>
+        <location line="+11"/>
         <source>Property Editor</source>
         <translation>Éditeur de propriétés</translation>
     </message>

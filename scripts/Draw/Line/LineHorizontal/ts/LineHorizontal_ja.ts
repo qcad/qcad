@@ -34,7 +34,7 @@
         <translation>&amp;H 水平線</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal line</source>
         <translation>水平線を描画</translation>
     </message>

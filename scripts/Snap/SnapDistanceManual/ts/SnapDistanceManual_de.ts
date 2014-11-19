@@ -42,7 +42,7 @@
         <translation>&amp;Abstand manuell</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Snap distance between 2 points</source>
         <translation>Abstand zwischen zwei Punkten fangen</translation>
     </message>

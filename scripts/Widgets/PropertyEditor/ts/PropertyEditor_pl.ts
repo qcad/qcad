@@ -230,7 +230,7 @@ Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
     <message>
         <location line="+309"/>
         <location line="+35"/>
-        <location line="+12"/>
+        <location line="+11"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--

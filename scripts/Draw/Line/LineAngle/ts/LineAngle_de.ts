@@ -42,7 +42,7 @@
         <translation>Linie mit &amp;Winkel</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line at a given absolute angle</source>
         <translation>Linie mit gegebenem absolutem Winkel</translation>
     </message>

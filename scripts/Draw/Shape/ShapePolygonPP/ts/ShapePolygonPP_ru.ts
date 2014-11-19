@@ -2,17 +2,9 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ru_RU">
 <context>
-    <name>LinePolygonCP</name>
+    <name>ShapePolygonPP</name>
     <message>
-        <location filename="../LinePolygonPP.ui" line="+17"/>
-        <source>Corners:</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>LinePolygonPP</name>
-    <message>
-        <location filename="../LinePolygonPP.js" line="+58"/>
+        <location filename="../ShapePolygonPP.js" line="+58"/>
         <source>First corner</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27,12 +19,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LinePolygonPPInit.js" line="+2"/>
+        <location filename="../ShapePolygonPP.ui" line="+17"/>
+        <source>Corners:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Two Corners)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw regular polygon from two corner points</source>
         <translation type="unfinished"></translation>
     </message>

@@ -76,7 +76,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+418"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -85,7 +85,7 @@ Opcje łuku</translatorcomment>
         <translation type="unfinished">Opcje</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+21"/>
         <source>Block Options</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Opcje Zablokuj</translation>
@@ -97,7 +97,7 @@ Opcje łuku</translatorcomment>
         <translation type="unfinished">Głównymi narzędziami</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>CAD Tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -105,7 +105,7 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Narzędzia CAD</translation>
     </message>
     <message>
-        <location line="+620"/>
+        <location line="+692"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka jest na zablokowanej warstwie.</translation>

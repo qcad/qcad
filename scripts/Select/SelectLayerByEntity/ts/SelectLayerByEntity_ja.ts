@@ -86,7 +86,7 @@
         <translation>&amp;y 画層選択（選択解除）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation>同じ画層の全てのエンティティを選択（選択解除）</translation>
     </message>

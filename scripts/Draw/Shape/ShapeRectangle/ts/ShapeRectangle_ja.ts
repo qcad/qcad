@@ -4,24 +4,43 @@
 <context>
     <name>LineRectangle</name>
     <message>
-        <location filename="../LineRectangle.js" line="+56"/>
         <source>First corner</source>
-        <translation>第１の頂点</translation>
+        <translation type="vanished">第１の頂点</translation>
+    </message>
+    <message>
+        <source>Second corner</source>
+        <translation type="vanished">第２の頂点</translation>
+    </message>
+    <message>
+        <source>&amp;Rectangle</source>
+        <translation type="vanished">&amp;R 長方形</translation>
+    </message>
+    <message>
+        <source>Draw rectangle from two corners</source>
+        <translation type="vanished">２頂点から四角形を描画</translation>
+    </message>
+</context>
+<context>
+    <name>ShapeRectangle</name>
+    <message>
+        <location filename="../ShapeRectangle.js" line="+58"/>
+        <source>First corner</source>
+        <translation type="unfinished">第１の頂点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation>第２の頂点</translation>
+        <translation type="unfinished">第２の頂点</translation>
     </message>
     <message>
-        <location filename="../LineRectangleInit.js" line="+2"/>
+        <location filename="../ShapeRectangleInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translation>&amp;R 長方形</translation>
+        <translation type="unfinished">&amp;R 長方形</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Draw rectangle from two corners</source>
-        <translation>２頂点から四角形を描画</translation>
+        <translation type="unfinished">２頂点から四角形を描画</translation>
     </message>
 </context>
 </TS>

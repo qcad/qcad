@@ -4,9 +4,13 @@
 <context>
     <name>ShowAllBlocks</name>
     <message>
-        <location filename="../ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show all</source>
-        <translation>&amp;Afficher tous</translation>
+        <translation type="vanished">&amp;Afficher tous</translation>
+    </message>
+    <message>
+        <location filename="../ShowAllBlocksInit.js" line="+2"/>
+        <source>&amp;Show All Blocks</source>
+        <translation>Afficher tou&amp;s les blocs</translation>
     </message>
 </context>
 </TS>

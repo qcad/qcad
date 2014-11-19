@@ -34,7 +34,7 @@ Tan&amp;gente (C,C)</translatorcomment>
         <translation>Tan&amp;gente (C,C)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw tangent (circle, circle)</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--

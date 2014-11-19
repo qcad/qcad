@@ -26,7 +26,7 @@ Indique a posição do ponto de Zero Relativo</translatorcomment>
         <translation>Ângulo re&amp;lativo</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line with relative angle to base entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar linha com ângulo relativo</translation>

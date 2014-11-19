@@ -4,7 +4,7 @@
 <context>
     <name>Select</name>
     <message>
-        <location filename="../Select.js" line="+64"/>
+        <location filename="../Select.js" line="+216"/>
         <source>Selection Tools</source>
         <translatorcomment>--google--
 Pokaż menu &quot;Zaznacz&quot;</translatorcomment>
@@ -19,13 +19,13 @@ Pokaż menu &quot;Zaznacz&quot;</translatorcomment>
         <translation type="unfinished">Pokaż menu &quot;Zaznacz&quot;</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Selection Tools Panel</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybór panelu Narzędzia</translation>
     </message>
     <message>
-        <location line="+157"/>
+        <location line="+5"/>
         <source>&amp;Select</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

@@ -24,7 +24,7 @@
         <translation>&amp;Rayado</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw hatch or solid fill</source>
         <translation>Dibuje un sombreado o un relleno sólido</translation>
     </message>

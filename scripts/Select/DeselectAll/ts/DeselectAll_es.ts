@@ -9,7 +9,7 @@
         <translation>Anular todas las selecciones</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Deselect all entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Anular la selección de todas las entidades</translation>

@@ -34,7 +34,7 @@
         <translation>&amp;Delitelj kota</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>Nariši delitev kota na polovice, tretjine, ...</translation>
     </message>

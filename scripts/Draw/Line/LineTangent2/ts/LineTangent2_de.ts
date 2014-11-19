@@ -13,7 +13,7 @@
         <translation>Tan&amp;gente (zwei Kreise)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw tangent (circle, circle)</source>
         <translation>Tangente von Kreis zu Kreis zeichnen</translation>
     </message>

@@ -19,7 +19,7 @@
         <translation>Línea de á&amp;ngulo</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line at a given absolute angle</source>
         <translation>Dibuja una línea en un ángulo fijo</translation>
     </message>

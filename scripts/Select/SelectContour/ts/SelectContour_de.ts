@@ -14,7 +14,7 @@
         <translation>Objekt der Kontur wählen</translation>
     </message>
     <message>
-        <location filename="../SelectContourInit.js" line="+5"/>
+        <location filename="../SelectContourInit.js" line="+4"/>
         <source>(De-)Select connected entities</source>
         <translation>Zusammenhängende Objekte (de-)selektieren</translation>
     </message>

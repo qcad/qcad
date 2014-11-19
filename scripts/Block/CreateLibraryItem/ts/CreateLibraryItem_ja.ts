@@ -14,7 +14,7 @@
         <translation>ライブラリアイテムを名前をつけて保存…</translation>
     </message>
     <message>
-        <location filename="../CreateLibraryItemInit.js" line="+3"/>
+        <location filename="../CreateLibraryItemInit.js" line="+2"/>
         <source>&amp;Create Library Item</source>
         <translation>&amp;C ライブラリアイテムを作成</translation>
     </message>

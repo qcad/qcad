@@ -51,7 +51,7 @@ Wskaż kąt końcowy lub [kąt/długość cięciwy]</translatorcomment>
         <translation type="unfinished">Linia pozioma</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal line</source>
         <translatorcomment>--google--
 Rysuj poziome linie</translatorcomment>

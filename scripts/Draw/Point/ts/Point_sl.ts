@@ -14,7 +14,7 @@
         <translation>Prikaži orodja točke</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Point</source>
         <translation>&amp;Točka</translation>
     </message>

@@ -24,7 +24,7 @@
         <translation>Pravotkotno / Tange&amp;nta</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation>Nariši črto pravokotno na črto in tangentno na krog, lok ali elipso</translation>
     </message>

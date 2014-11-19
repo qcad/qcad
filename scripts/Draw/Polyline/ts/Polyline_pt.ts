@@ -19,7 +19,7 @@ Exibe o menu &quot;Multilinha&quot;</translatorcomment>
         <translation>Exibe o menu &quot;Polilinha&quot;</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Polyline</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

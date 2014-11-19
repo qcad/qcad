@@ -29,7 +29,7 @@
         <translation>&amp;Tangenta (točka, krog)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw tangent (point, circle)</source>
         <translation>Nariši tangento (točka, krog)</translation>
     </message>

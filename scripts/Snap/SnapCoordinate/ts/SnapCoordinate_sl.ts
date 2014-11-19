@@ -39,7 +39,7 @@
         <translation>Relati&amp;vno</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinateInit.js" line="+5"/>
+        <location filename="../SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
         <translation>&amp;Koordinate</translation>
     </message>

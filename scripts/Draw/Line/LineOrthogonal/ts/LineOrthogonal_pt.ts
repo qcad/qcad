@@ -13,7 +13,7 @@ Restrinja &amp;Ortogonal</translatorcomment>
         <translation>&amp;Ortogonal</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line orthogonal to base entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar linha ortogonal à entidade de base</translation>

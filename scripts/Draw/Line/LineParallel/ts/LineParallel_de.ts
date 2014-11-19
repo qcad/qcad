@@ -26,7 +26,7 @@
         <translation>Para&amp;llele (mit Distanz)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation>Parallele zu existierender Linie oder konzentrischer Bogen, Kreis</translation>
     </message>

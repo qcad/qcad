@@ -9,7 +9,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+65"/>
         <source>Reset to Defaults</source>
         <translation type="unfinished"></translation>
     </message>

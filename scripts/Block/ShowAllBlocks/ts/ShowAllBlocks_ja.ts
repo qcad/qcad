@@ -4,9 +4,13 @@
 <context>
     <name>ShowAllBlocks</name>
     <message>
-        <location filename="../ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show all</source>
-        <translation>&amp;S 全て表示</translation>
+        <translation type="vanished">&amp;S 全て表示</translation>
+    </message>
+    <message>
+        <location filename="../ShowAllBlocksInit.js" line="+2"/>
+        <source>&amp;Show All Blocks</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

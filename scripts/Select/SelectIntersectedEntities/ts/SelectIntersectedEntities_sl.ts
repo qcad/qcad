@@ -47,12 +47,12 @@
         <translation>Presek z trenutno izbiro</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntitiesInit.js" line="+3"/>
+        <location filename="../SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
         <translation>(Od-)izberi eintitete v pres&amp;esečišču</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation>(Od-)izberi vse entitete presekane z črto</translation>
     </message>

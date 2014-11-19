@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="nl">
 <context>
@@ -8,7 +9,7 @@
         <translation>Blok referentie kiezen</translation>
     </message>
     <message>
-        <location filename="../EditFromReferenceInit.js" line="+3"/>
+        <location filename="../EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
         <translation>Blok bewerken van re&amp;ferentie</translation>
     </message>

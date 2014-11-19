@@ -14,12 +14,12 @@
         <translation>Zweiter Punkt</translation>
     </message>
     <message>
-        <location filename="../SelectIntersectedEntitiesInit.js" line="+3"/>
+        <location filename="../SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
         <translation>Ge&amp;schnittene Objekte (de-)selektieren</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation>Alle Objekte, die von einer Linie geschnitten werden (de-)selektieren</translation>
     </message>

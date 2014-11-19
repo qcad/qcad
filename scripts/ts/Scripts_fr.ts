@@ -68,12 +68,12 @@
         <translation>Aucun</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+418"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+21"/>
         <source>Block Options</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Options de bloc</translation>
@@ -85,12 +85,12 @@
         <translation>Principaux outils</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>CAD Tools</source>
         <translation>Outils de CAO</translation>
     </message>
     <message>
-        <location line="+620"/>
+        <location line="+692"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entité est sur un calque verrouillé.</translation>

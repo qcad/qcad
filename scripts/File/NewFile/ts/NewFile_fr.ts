@@ -24,17 +24,16 @@
         <translation type="obsolete">Sans titre %1 [*]</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="+113"/>
+        <location filename="../NewFile.js" line="+114"/>
         <source>Opening drawing:</source>
         <translation>Ouverture du dessin :</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Loading...</source>
-        <translation>Chargement...</translation>
+        <translation type="vanished">Chargement...</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+14"/>
         <source>Import Error</source>
         <translation>Erreur d&apos;importation</translation>
     </message>

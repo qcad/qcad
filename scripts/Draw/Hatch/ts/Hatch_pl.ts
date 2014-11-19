@@ -31,7 +31,7 @@ Wzory &amp;kreskowania:</translatorcomment>
         <translation type="unfinished">&amp;Kreskowanie</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw hatch or solid fill</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Remis kreskowania lub stałe wypełnienie</translation>

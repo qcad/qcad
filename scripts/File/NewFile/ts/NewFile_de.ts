@@ -33,12 +33,11 @@
         <translation type="obsolete">Unbenannt %1 [*]</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="+122"/>
         <source>Loading...</source>
-        <translation>Lade...</translation>
+        <translation type="vanished">Lade...</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location filename="../NewFile.js" line="+128"/>
         <source>Import Error</source>
         <translation>Import Fehler</translation>
     </message>
@@ -55,12 +54,12 @@
 </translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-14"/>
         <source>Opening drawing:</source>
         <translation>Zeichnung öffnen:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Cannot open file</source>
         <translation>Kann Datei nicht öffnen</translation>
     </message>

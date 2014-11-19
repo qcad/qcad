@@ -31,7 +31,7 @@ Padrões de &amp;Hachura:</translatorcomment>
         <translation>&amp;Hachura</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw hatch or solid fill</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhe hachura ou preenchimento sólido</translation>

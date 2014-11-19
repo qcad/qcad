@@ -12,7 +12,7 @@
         <translation>&amp;Inverte seleção</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Invert the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Inverter a seleção atual</translation>

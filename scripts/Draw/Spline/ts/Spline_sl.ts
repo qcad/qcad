@@ -14,7 +14,7 @@
         <translation>Prikaži orodja krivulje</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Spline</source>
         <translation>&amp;Krivulja</translation>
     </message>

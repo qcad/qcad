@@ -77,7 +77,7 @@ Wskaż kąt końcowy lub [kąt/długość cięciwy]</translatorcomment>
         <translation type="unfinished">Linia od kąta</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line at a given absolute angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysować linię pod zadanym kątem absolutnym</translation>

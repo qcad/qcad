@@ -95,7 +95,7 @@ Mode de couleur :</translatorcomment>
         <translation>(Dé-)sélectionner &amp;calque</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation>(Dé)sélectionner toutes les entités sur le même calque</translation>
     </message>

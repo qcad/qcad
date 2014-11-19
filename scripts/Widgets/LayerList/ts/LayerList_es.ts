@@ -9,7 +9,7 @@
         <translation>&amp;Lista de capas</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+52"/>
         <source>Layer List</source>
         <translation>Lista de capas</translation>
     </message>

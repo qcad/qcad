@@ -9,7 +9,7 @@
         <translation>选择块引用</translation>
     </message>
     <message>
-        <location filename="../EditFromReferenceInit.js" line="+3"/>
+        <location filename="../EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
         <translation>从引用编辑块(&amp;d)</translation>
     </message>

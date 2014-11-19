@@ -9,8 +9,12 @@
         <translation>Keine Lösung</translation>
     </message>
     <message>
-        <location filename="../PointPowerCenterInit.js" line="+2"/>
         <source>Power center of three circles</source>
+        <translation type="vanished">Potenzzentrum von drei Kreisen</translation>
+    </message>
+    <message>
+        <location filename="../PointPowerCenterInit.js" line="+2"/>
+        <source>Power Center of Three Circles</source>
         <translation>Potenzzentrum von drei Kreisen</translation>
     </message>
 </context>

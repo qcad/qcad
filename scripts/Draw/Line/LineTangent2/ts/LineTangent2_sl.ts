@@ -24,7 +24,7 @@
         <translation>Tan&amp;genta (dva kroga)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw tangent (circle, circle)</source>
         <translation>Nariši tangento (krog, krog)</translation>
     </message>

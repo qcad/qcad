@@ -40,7 +40,7 @@
         <translation>&amp;Tangente (P,C)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw tangent (point, circle)</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--

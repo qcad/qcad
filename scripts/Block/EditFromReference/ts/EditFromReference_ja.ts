@@ -9,7 +9,7 @@
         <translation>参照からブロックを選択</translation>
     </message>
     <message>
-        <location filename="../EditFromReferenceInit.js" line="+3"/>
+        <location filename="../EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
         <translation>&amp;d 参照からブロックを編集</translation>
     </message>

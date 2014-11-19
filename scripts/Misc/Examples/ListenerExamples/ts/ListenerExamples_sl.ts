@@ -4,7 +4,7 @@
 <context>
     <name>ListenerExamples</name>
     <message>
-        <location filename="../ListenerExamples.js" line="+51"/>
+        <location filename="../ListenerExamples.js" line="+44"/>
         <source>&amp;Listeners</source>
         <translation>&amp;Listeners</translation>
     </message>

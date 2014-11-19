@@ -9,7 +9,7 @@
         <translation>Lista &amp;layer</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+52"/>
         <source>Layer List</source>
         <translation>Lista layer</translation>
     </message>

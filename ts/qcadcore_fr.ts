@@ -328,22 +328,22 @@ Autres...</translatorcomment>
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID de la couche actuelle</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Unité de dessin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">Échelle du type de ligne</translation>
+        <translation>Échelle du type de ligne</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Police pour les cotations</translation>
     </message>
 </context>
 <context>
@@ -437,7 +437,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Angle</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+49"/>
+        <location filename="../src/core/REntity.cpp" line="+69"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -542,7 +542,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+168"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+169"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nécessite une sélection</translation>

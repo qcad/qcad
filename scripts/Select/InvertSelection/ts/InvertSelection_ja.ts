@@ -9,7 +9,7 @@
         <translation>&amp;I 選択を反転</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Invert the current selection</source>
         <translation>現在の選択を反転</translation>
     </message>

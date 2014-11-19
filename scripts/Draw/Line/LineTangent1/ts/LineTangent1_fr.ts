@@ -13,7 +13,7 @@
         <translation>&amp;Tangente (point, cercle)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw tangent (point, circle)</source>
         <translation>Dessine une tangente (point à cercle)</translation>
     </message>

@@ -19,12 +19,16 @@
         <translation>Säde:</translation>
     </message>
     <message>
-        <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially connected</source>
-        <translation>Tangenttisesti kytketty</translation>
+        <translation type="vanished">Tangenttisesti kytketty</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../ArcTangentialInit.js" line="+2"/>
+        <source>&amp;Tangentially Connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
         <translation type="unfinished">Piirrä kaari tangentiaalisesti peruskohteeseen</translation>
     </message>

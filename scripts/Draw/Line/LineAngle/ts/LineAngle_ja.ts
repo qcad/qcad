@@ -49,7 +49,7 @@
         <translation>&amp;A 角度指定の線分</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line at a given absolute angle</source>
         <translation>絶対角度から線分を描画</translation>
     </message>

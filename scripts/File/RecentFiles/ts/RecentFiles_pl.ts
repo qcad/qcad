@@ -16,13 +16,13 @@
         <translation type="unfinished">Nowe pliki</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="+55"/>
+        <location filename="../RecentFilesInit.js" line="+51"/>
         <source>&amp;Clear List</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wyczyść listę</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Open &amp;Recent</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Otwórz Najnowsze</translation>

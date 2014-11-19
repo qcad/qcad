@@ -24,7 +24,7 @@
         <translation>Par&amp;allele (durch Punkt)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>Parallele Linie oder konzentrischer Bogen oder Kreis durch gegebenen Punkt</translation>
     </message>

@@ -24,7 +24,7 @@
         <translation>Š&amp;rafura</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw hatch or solid fill</source>
         <translation>Nariši šrafuro ali polnilo</translation>
     </message>

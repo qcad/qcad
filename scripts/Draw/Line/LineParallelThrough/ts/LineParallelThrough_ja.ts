@@ -24,7 +24,7 @@
         <translation>&amp;a 平行線（通過点指定）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>通過点を指定して平行線または同心弧、同心円を描画</translation>
     </message>

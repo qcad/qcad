@@ -4,7 +4,7 @@
 <context>
     <name>Select</name>
     <message>
-        <location filename="../Select.js" line="+64"/>
+        <location filename="../Select.js" line="+216"/>
         <source>Selection Tools</source>
         <translatorcomment>--google--
 Exibe o menu &quot;Seleção&quot;</translatorcomment>
@@ -19,7 +19,7 @@ Exibe o menu &quot;Seleção&quot;</translatorcomment>
         <translation>Exibe o menu &quot;Seleção&quot;</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Selection Tools Panel</source>
         <translation>Ferramentas de seleção</translation>
     </message>
@@ -29,7 +29,7 @@ Exibe o menu &quot;Seleção&quot;</translatorcomment>
         <translation type="obsolete">Ferramentas de seleção</translation>
     </message>
     <message>
-        <location line="+157"/>
+        <location line="+5"/>
         <source>&amp;Select</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

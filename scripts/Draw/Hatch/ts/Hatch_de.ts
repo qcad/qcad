@@ -28,7 +28,7 @@
         <translation>&amp;Schraffur</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw hatch or solid fill</source>
         <translation>Schraffur oder Füllung</translation>
     </message>

@@ -9,9 +9,13 @@
         <translation>Ni rešitve</translation>
     </message>
     <message>
-        <location filename="../PointPowerCenterInit.js" line="+2"/>
         <source>Power center of three circles</source>
-        <translation>Radialno središče treh krogov</translation>
+        <translation type="vanished">Radialno središče treh krogov</translation>
+    </message>
+    <message>
+        <location filename="../PointPowerCenterInit.js" line="+2"/>
+        <source>Power Center of Three Circles</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

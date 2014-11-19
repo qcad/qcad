@@ -5,7 +5,7 @@
     <name>HideAllLayers</name>
     <message>
         <location filename="../HideAllLayersInit.js" line="+2"/>
-        <source>&amp;Hide all Layers</source>
+        <source>&amp;Hide All Layers</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -4,7 +4,7 @@
 <context>
     <name>Modify</name>
     <message>
-        <location filename="../Modify.js" line="+105"/>
+        <location filename="../Modify.js" line="+100"/>
         <source>Modification Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Herramientas de modificación</translation>
@@ -16,7 +16,7 @@
         <translation>Mostrar herramientas de modificación</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modificar</translation>
     </message>

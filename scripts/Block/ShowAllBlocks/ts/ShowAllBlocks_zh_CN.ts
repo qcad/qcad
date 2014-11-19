@@ -4,9 +4,13 @@
 <context>
     <name>ShowAllBlocks</name>
     <message>
-        <location filename="../ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show all</source>
-        <translation>全部显示(&amp;S)</translation>
+        <translation type="vanished">全部显示(&amp;S)</translation>
+    </message>
+    <message>
+        <location filename="../ShowAllBlocksInit.js" line="+2"/>
+        <source>&amp;Show All Blocks</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

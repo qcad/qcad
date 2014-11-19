@@ -19,7 +19,7 @@
         <translation>Par&amp;allela (passante per un punto)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>Disegnare una linea parallela o un arco o cerchio concentrico attraverso un punto</translation>
     </message>

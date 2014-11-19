@@ -9,7 +9,7 @@
         <translation>&amp;L 画層リスト</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+52"/>
         <source>Layer List</source>
         <translation>画層リスト</translation>
     </message>

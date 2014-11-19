@@ -10,7 +10,7 @@
     </message>
     <message>
         <location line="-29"/>
-        <location line="+48"/>
+        <location line="+45"/>
         <location filename="../CommandLine.ui" line="+14"/>
         <source>Command Line</source>
         <translation>コマンドライン</translation>
@@ -49,12 +49,12 @@
         <translation type="obsolete">ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
     <message>
-        <location line="-278"/>
+        <location line="-275"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
-        <location line="+174"/>
+        <location line="+171"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>無効な座標または距離 &apos;%1&apos;.</translation>
     </message>

@@ -34,7 +34,7 @@ Selecione a segunda linha [comprimento/número]</translatorcomment>
         <translation>Ângulo &amp;mediatriz</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhe ângulo bissetriz</translation>

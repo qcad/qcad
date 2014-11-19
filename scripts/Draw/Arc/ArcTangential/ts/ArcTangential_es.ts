@@ -25,12 +25,16 @@
         <translation type="obsolete">&amp;Continuo</translation>
     </message>
     <message>
-        <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially connected</source>
+        <translation type="vanished">&amp;Tangencialmente conectado</translation>
+    </message>
+    <message>
+        <location filename="../ArcTangentialInit.js" line="+2"/>
+        <source>&amp;Tangentially Connected</source>
         <translation>&amp;Tangencialmente conectado</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
         <translation>Dibujar un arco tangente a una entidad de base</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../SelectLayerInit.js" line="+3"/>
+        <location filename="../SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
         <translation>&amp;Seleccionar capa</translation>
     </message>

@@ -4,31 +4,50 @@
 <context>
     <name>LineRectangle</name>
     <message>
-        <location filename="../LineRectangle.js" line="+56"/>
         <source>First corner</source>
         <translatorcomment>--google--
 Wskaż pierwszy wierzchołek</translatorcomment>
+        <translation type="obsolete">Pierwszy zakręt</translation>
+    </message>
+    <message>
+        <source>Second corner</source>
+        <translatorcomment>--google--
+Wskaż drugi wierzchołek</translatorcomment>
+        <translation type="obsolete">Drugi narożnik</translation>
+    </message>
+    <message>
+        <source>&amp;Rectangle</source>
+        <translatorcomment>--exact match--
+--file: qcadguiqt_pl.ts--
+&amp;Prostokąt</translatorcomment>
+        <translation type="obsolete">&amp;Prostokąt</translation>
+    </message>
+    <message>
+        <source>Draw rectangle from two corners</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Narysuj prostokąt od dwóch rogach</translation>
+    </message>
+</context>
+<context>
+    <name>ShapeRectangle</name>
+    <message>
+        <location filename="../ShapeRectangle.js" line="+58"/>
+        <source>First corner</source>
         <translation type="unfinished">Pierwszy zakręt</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translatorcomment>--google--
-Wskaż drugi wierzchołek</translatorcomment>
         <translation type="unfinished">Drugi narożnik</translation>
     </message>
     <message>
-        <location filename="../LineRectangleInit.js" line="+2"/>
+        <location filename="../ShapeRectangleInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_pl.ts--
-&amp;Prostokąt</translatorcomment>
         <translation type="unfinished">&amp;Prostokąt</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Draw rectangle from two corners</source>
-        <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj prostokąt od dwóch rogach</translation>
     </message>
 </context>

@@ -68,7 +68,7 @@
     <message>
         <location line="+0"/>
         <location line="+1108"/>
-        <location filename="../LibraryBrowserInit.js" line="+18"/>
+        <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Explorateur de la bibliothèque</translation>
     </message>
@@ -280,7 +280,7 @@ dans les résultats de recherche :</translation>
         <translation>Descendre</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowserInit.js" line="-10"/>
+        <location filename="../LibraryBrowserInit.js" line="-11"/>
         <source>&amp;Library Browser</source>
         <translation>Explorateur de la &amp;bibliothèque</translation>
     </message>

@@ -16,7 +16,7 @@
         <translation>Para&amp;lelas (com a distância)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhe paralela à linha existente, ou arco ou círculo concêntrico</translation>

@@ -87,7 +87,7 @@ Zastępcze widżety</translatorcomment>
     <message>
         <location line="+0"/>
         <location line="+1108"/>
-        <location filename="../LibraryBrowserInit.js" line="+18"/>
+        <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -273,7 +273,7 @@ Library browser will not be available.</source>
         <translation type="unfinished">Regeneruj Ikony</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowserInit.js" line="-10"/>
+        <location filename="../LibraryBrowserInit.js" line="-11"/>
         <source>&amp;Library Browser</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przeglądarka Library</translation>

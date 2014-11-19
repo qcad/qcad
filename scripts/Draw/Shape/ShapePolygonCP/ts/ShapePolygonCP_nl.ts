@@ -2,9 +2,9 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="nl_NL">
 <context>
-    <name>LinePolygonCP</name>
+    <name>ShapePolygonCP</name>
     <message>
-        <location filename="../LinePolygonCP.js" line="+58"/>
+        <location filename="../ShapePolygonCP.js" line="+58"/>
         <source>Center</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19,17 +19,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LinePolygonCP.ui" line="+17"/>
+        <location filename="../ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LinePolygonCPInit.js" line="+2"/>
+        <location filename="../ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Point)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation type="unfinished"></translation>
     </message>

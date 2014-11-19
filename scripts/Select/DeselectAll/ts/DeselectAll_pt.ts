@@ -12,7 +12,7 @@ De&amp;sseleciona Tudo</translatorcomment>
         <translation>De&amp;sseleciona tudo</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Deselect all entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desmarque todas as entidades</translation>

@@ -4,10 +4,14 @@
 <context>
     <name>ShowAllLayers</name>
     <message>
-        <location filename="../ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show all Layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pokaż wszystkie warstwy</translation>
+        <translation type="obsolete">Pokaż wszystkie warstwy</translation>
+    </message>
+    <message>
+        <location filename="../ShowAllLayersInit.js" line="+2"/>
+        <source>&amp;Show All Layers</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

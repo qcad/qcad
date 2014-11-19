@@ -24,7 +24,7 @@
         <translation>&amp;l 平行線（距離指定）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation>既存の線分または弧、円との平行線を描画</translation>
     </message>

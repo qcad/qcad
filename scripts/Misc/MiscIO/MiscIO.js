@@ -57,12 +57,12 @@ MiscIO.getCadToolBarPanel = function() {
     var mtb = Misc.getCadToolBarPanel();
     var actionName = "MiscIOToolsPanelButton";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
-        var action = new RGuiAction(qsTr("Misc Import Export Tools"), mtb);
+        var action = new RGuiAction(qsTr("Misc Import / Export Tools"), mtb);
         action.setScriptFile(MiscIO.includeBasePath + "/MiscIO.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
         action.setIcon(MiscIO.includeBasePath + "/MiscIO.svg");
-        action.setStatusTip(qsTr("Show misc import export tools"));
+        action.setStatusTip(qsTr("Show misc import / export tools"));
         action.setNoState();
         action.setDefaultCommands(["misciomenu"]);
         action.setGroupSortOrder(90);

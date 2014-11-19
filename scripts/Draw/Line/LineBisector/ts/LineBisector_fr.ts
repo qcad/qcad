@@ -34,7 +34,7 @@
         <translation>&amp;Bissectrice d&apos;un angle</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>Bissectrice d&apos;un angle</translation>
     </message>

@@ -14,7 +14,7 @@ Abertura abortada</translatorcomment>
         <translation>Caneta</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+65"/>
         <source>Reset to Defaults</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Redefinição para os padrões</translation>

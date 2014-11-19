@@ -20,17 +20,16 @@
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../NewFile.js" line="+113"/>
+        <location filename="../NewFile.js" line="+114"/>
         <source>Opening drawing:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Loading...</source>
-        <translation>読込中...</translation>
+        <translation type="vanished">読込中...</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+14"/>
         <source>Import Error</source>
         <translation>インポートエラー</translation>
     </message>

@@ -18,7 +18,7 @@
         <translation>(Des-)selecione &amp;contorno</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>(De-)Select connected entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>(De-)selecione entidades ligadas</translation>

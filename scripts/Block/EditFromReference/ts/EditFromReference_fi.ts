@@ -9,7 +9,7 @@
         <translation>Valitse lohkon referenssipiste</translation>
     </message>
     <message>
-        <location filename="../EditFromReferenceInit.js" line="+3"/>
+        <location filename="../EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
         <translation type="unfinished"></translation>
     </message>

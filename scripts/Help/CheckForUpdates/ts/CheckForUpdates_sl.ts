@@ -20,7 +20,7 @@
         <translation>Samodejno preveri po posodobitvah</translation>
     </message>
     <message>
-        <location filename="../CheckForUpdatesInit.js" line="+7"/>
+        <location filename="../CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
         <translation>Preveri po &amp;posodobitvah...</translation>
     </message>

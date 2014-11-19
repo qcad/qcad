@@ -4,13 +4,17 @@
 <context>
     <name>HideAllBlocks</name>
     <message>
-        <location filename="../HideAllBlocksInit.js" line="+3"/>
         <source>&amp;Hide All</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 &amp;Zablokuj wszystko
 &amp;Ukryj wszystko</translatorcomment>
-        <translation type="unfinished">&amp;Ukryj wszystko</translation>
+        <translation type="obsolete">&amp;Ukryj wszystko</translation>
+    </message>
+    <message>
+        <location filename="../HideAllBlocksInit.js" line="+2"/>
+        <source>&amp;Hide All Blocks</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

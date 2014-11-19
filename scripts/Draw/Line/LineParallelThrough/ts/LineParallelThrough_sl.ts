@@ -24,7 +24,7 @@
         <translation>Vzpo&amp;redno (skozi točko)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>Nariši vzporedno črto ali kocentrični krog skozi dano točko</translation>
     </message>

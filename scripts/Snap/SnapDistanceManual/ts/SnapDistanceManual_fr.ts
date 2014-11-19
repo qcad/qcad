@@ -38,7 +38,7 @@
         <translation>&amp;Distance manuellement</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Snap distance between 2 points</source>
         <translation>Accrochage distance entre deux points</translation>
     </message>

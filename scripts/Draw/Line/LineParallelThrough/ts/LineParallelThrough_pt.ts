@@ -24,7 +24,7 @@ Especifique o ponto</translatorcomment>
         <translation>Paralela (através de ponto)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar linha paralela ou arco ou círculo concêntrico através de um ponto</translation>

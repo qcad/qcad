@@ -34,7 +34,7 @@
         <translation type="unfinished">Tangent (Point, Circle)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw tangent (point, circle)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

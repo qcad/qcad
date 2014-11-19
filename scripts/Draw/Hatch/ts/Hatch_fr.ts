@@ -24,7 +24,7 @@
         <translation>&amp;Hachure</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw hatch or solid fill</source>
         <translation>Dessinez une hachure ou un remplissage uni</translation>
     </message>

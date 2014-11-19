@@ -9,7 +9,7 @@
         <translation>Choisissez la référence de bloc</translation>
     </message>
     <message>
-        <location filename="../EditFromReferenceInit.js" line="+3"/>
+        <location filename="../EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
         <translation>M&amp;odifier le bloc d&apos;une référence</translation>
     </message>

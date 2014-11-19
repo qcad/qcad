@@ -1,11 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="nl">
 <context>
     <name>HideAllBlocks</name>
     <message>
-        <location filename="../HideAllBlocksInit.js" line="+3"/>
         <source>&amp;Hide All</source>
-        <translation>&amp;Verberg alle</translation>
+        <translation type="vanished">&amp;Verberg alle</translation>
+    </message>
+    <message>
+        <location filename="../HideAllBlocksInit.js" line="+2"/>
+        <source>&amp;Hide All Blocks</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

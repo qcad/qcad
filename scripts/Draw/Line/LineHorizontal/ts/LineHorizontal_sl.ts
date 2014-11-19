@@ -34,7 +34,7 @@
         <translation>&amp;Vodoravna črta</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal line</source>
         <translation>Nariši vodoravno črto</translation>
     </message>

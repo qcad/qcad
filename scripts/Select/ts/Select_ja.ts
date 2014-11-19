@@ -4,7 +4,7 @@
 <context>
     <name>Select</name>
     <message>
-        <location filename="../Select.js" line="+64"/>
+        <location filename="../Select.js" line="+216"/>
         <source>Selection Tools</source>
         <translation>選択ツール</translation>
     </message>
@@ -14,12 +14,12 @@
         <translation>選択ツールを表示</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Selection Tools Panel</source>
         <translation>選択ツールパネル</translation>
     </message>
     <message>
-        <location line="+157"/>
+        <location line="+5"/>
         <source>&amp;Select</source>
         <translation>&amp;S 選択</translation>
     </message>

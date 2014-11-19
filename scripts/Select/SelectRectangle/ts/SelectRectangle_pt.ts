@@ -42,7 +42,7 @@ lugares:\</translatorcomment>
         <translation>(De-)selecione área &amp;retangular</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>(De-)selecione todas as entidades dentro de um retângulo</translation>

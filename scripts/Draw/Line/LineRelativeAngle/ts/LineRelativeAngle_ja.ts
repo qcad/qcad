@@ -49,7 +49,7 @@
         <translation>&amp;e 相対角度</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line with relative angle to base entity</source>
         <translation>基礎エントリーとの相対角度で線分を描画</translation>
     </message>

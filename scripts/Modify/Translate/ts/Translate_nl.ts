@@ -19,7 +19,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Move or copy entities once or multiple times</source>
         <translation type="unfinished"></translation>
     </message>

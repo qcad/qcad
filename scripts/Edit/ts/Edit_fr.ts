@@ -37,7 +37,17 @@ pour appliquer les modifications.</translation>
 <context>
     <name>Edit</name>
     <message>
-        <location filename="../Edit.js" line="+53"/>
+        <location filename="../Edit.js" line="+65"/>
+        <source>Edit Tools</source>
+        <translation>Outils d&apos;édition</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show edit tools</source>
+        <translation>Afficher les outils d&apos;édition</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>&amp;Edit</source>
         <translation>&amp;Édition</translation>
     </message>

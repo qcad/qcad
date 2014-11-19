@@ -4,13 +4,17 @@
 <context>
     <name>ShowAllBlocks</name>
     <message>
-        <location filename="../ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show all</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Mostre Todas
 &amp;Mostre todos</translatorcomment>
-        <translation>&amp;Mostre todas</translation>
+        <translation type="vanished">&amp;Mostre todas</translation>
+    </message>
+    <message>
+        <location filename="../ShowAllBlocksInit.js" line="+2"/>
+        <source>&amp;Show All Blocks</source>
+        <translation>&amp;Mostre todos os blocos</translation>
     </message>
 </context>
 </TS>

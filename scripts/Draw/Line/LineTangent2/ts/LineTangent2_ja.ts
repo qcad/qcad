@@ -24,7 +24,7 @@
         <translation>&amp;g 接線（２つの円）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw tangent (circle, circle)</source>
         <translation>接線（２つの円）を描画</translation>
     </message>

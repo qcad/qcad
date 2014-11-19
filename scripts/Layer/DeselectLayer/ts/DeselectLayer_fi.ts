@@ -4,7 +4,7 @@
 <context>
     <name>DeselectLayer</name>
     <message>
-        <location filename="../DeselectLayerInit.js" line="+3"/>
+        <location filename="../DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
         <translation type="unfinished"></translation>
     </message>

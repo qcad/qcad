@@ -9,7 +9,7 @@
         <translation>&amp;Razveljavi izbor</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Deselect all entities</source>
         <translation>Razveljavi izbor vseh entitet</translation>
     </message>

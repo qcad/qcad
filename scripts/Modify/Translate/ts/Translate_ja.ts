@@ -19,7 +19,7 @@
         <translation>&amp;M 移動/コピー</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Move or copy entities once or multiple times</source>
         <translation>１回または複数回の移動またはコピー</translation>
     </message>

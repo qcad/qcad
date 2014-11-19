@@ -4,13 +4,13 @@
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../DrawPolyline.js" line="+67"/>
+        <location filename="../DrawPolyline.js" line="+69"/>
         <source>First vertex</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Primeiro vértice</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Next vertex</source>
         <translatorcomment>--exact match--
 --file: Leader_pt.ts--
@@ -28,7 +28,7 @@ lugares:\</translatorcomment>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location line="+413"/>
+        <location line="+415"/>
         <source>close</source>
         <translation>close</translation>
     </message>

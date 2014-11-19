@@ -4,7 +4,17 @@
 <context>
     <name>Misc</name>
     <message>
-        <location filename="../Misc.js" line="+58"/>
+        <location filename="../Misc.js" line="+60"/>
+        <source>Misc Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show misc tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>&amp;Misc</source>
         <translation type="unfinished"></translation>
     </message>

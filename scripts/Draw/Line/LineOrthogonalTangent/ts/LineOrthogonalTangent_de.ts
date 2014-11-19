@@ -24,7 +24,7 @@
         <translation>Orthogonal / tange&amp;ntial</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation>Linie orthogonal zu Linie und tangential zu Kreis, Bogen oder Ellipse</translation>
     </message>

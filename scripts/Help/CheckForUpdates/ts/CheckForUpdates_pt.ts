@@ -11,7 +11,7 @@
         <translation>Verificar se há atualizações...</translation>
     </message>
     <message>
-        <location filename="../CheckForUpdatesInit.js" line="+7"/>
+        <location filename="../CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Verificar se há &amp;atualizações...</translation>

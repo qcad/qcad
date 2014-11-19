@@ -4,34 +4,51 @@
 <context>
     <name>Line</name>
     <message>
-        <location filename="../Line.js" line="+79"/>
         <source>Line Tools</source>
-        <translation>Orodja črte</translation>
+        <translation type="vanished">Orodja črte</translation>
+    </message>
+    <message>
+        <source>Show line tools</source>
+        <translation type="vanished">Prikaži orodja črte</translation>
+    </message>
+    <message>
+        <source>&amp;Line</source>
+        <translation type="vanished">&amp;Črta</translation>
+    </message>
+    <message>
+        <source>Line Segment</source>
+        <translation type="vanished">Segment črte</translation>
+    </message>
+    <message>
+        <source>Infinite Line</source>
+        <translation type="vanished">Neskončna črta</translation>
+    </message>
+    <message>
+        <source>Ray</source>
+        <translation type="vanished">Poltrak</translation>
+    </message>
+</context>
+<context>
+    <name>Shape</name>
+    <message>
+        <location filename="../Shape.js" line="+73"/>
+        <source>Shape Tools</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show line tools</source>
-        <translation>Prikaži orodja črte</translation>
+        <translation type="unfinished">Prikaži orodja črte</translation>
     </message>
     <message>
-        <location line="+17"/>
-        <source>&amp;Line</source>
-        <translation>&amp;Črta</translation>
+        <location line="+18"/>
+        <source>&amp;Shape</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line.ui" line="+17"/>
-        <source>Line Segment</source>
-        <translation>Segment črte</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Infinite Line</source>
-        <translation>Neskončna črta</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Ray</source>
-        <translation>Poltrak</translation>
+        <location filename="../Shape.ui" line="+17"/>
+        <source>Create polyline</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

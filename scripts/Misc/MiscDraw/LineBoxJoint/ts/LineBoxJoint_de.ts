@@ -24,7 +24,7 @@
         <translation>Finger&amp;zinkung von 2 Punkten</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+4"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation>Fingerzinkung mit Zapfen, Nut oder Schlitz</translation>
     </message>

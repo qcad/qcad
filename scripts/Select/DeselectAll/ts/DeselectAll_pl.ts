@@ -12,7 +12,7 @@ Odznacz w&amp;szystko</translatorcomment>
         <translation type="unfinished">Odznacz w&amp;szystko</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Deselect all entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Odznacz wszystkie podmioty</translation>

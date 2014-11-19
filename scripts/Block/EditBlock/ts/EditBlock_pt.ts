@@ -4,7 +4,7 @@
 <context>
     <name>EditBlock</name>
     <message>
-        <location filename="../EditBlockInit.js" line="+3"/>
+        <location filename="../EditBlockInit.js" line="+2"/>
         <source>&amp;Edit Block</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--

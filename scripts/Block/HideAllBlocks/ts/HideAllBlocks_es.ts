@@ -4,9 +4,13 @@
 <context>
     <name>HideAllBlocks</name>
     <message>
-        <location filename="../HideAllBlocksInit.js" line="+3"/>
         <source>&amp;Hide All</source>
-        <translation>&amp;Bloquear todo</translation>
+        <translation type="vanished">&amp;Bloquear todo</translation>
+    </message>
+    <message>
+        <location filename="../HideAllBlocksInit.js" line="+2"/>
+        <source>&amp;Hide All Blocks</source>
+        <translation>&amp;Ocultar todos los bloques</translation>
     </message>
 </context>
 </TS>

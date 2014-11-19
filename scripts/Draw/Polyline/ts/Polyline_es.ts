@@ -14,7 +14,7 @@
         <translation>Mostrar menú &quot;Polilíneas&quot;</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polilínea</translation>
     </message>

@@ -52,7 +52,7 @@ Współrzędna Y</translatorcomment>
         <translation type="unfinished">Względny</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinateInit.js" line="+5"/>
+        <location filename="../SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

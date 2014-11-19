@@ -4,7 +4,7 @@
 <context>
     <name>Window</name>
     <message>
-        <location filename="../Window.js" line="+107"/>
+        <location filename="../Window.js" line="+108"/>
         <source>&amp;Window</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--

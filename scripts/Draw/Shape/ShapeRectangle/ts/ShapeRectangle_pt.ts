@@ -4,31 +4,50 @@
 <context>
     <name>LineRectangle</name>
     <message>
-        <location filename="../LineRectangle.js" line="+56"/>
         <source>First corner</source>
         <translatorcomment>--google--
 Indique o primeiro vértice</translatorcomment>
+        <translation type="vanished">Primeira ponto de canto</translation>
+    </message>
+    <message>
+        <source>Second corner</source>
+        <translatorcomment>--google--
+Indique o segundo vértice</translatorcomment>
+        <translation type="vanished">Segundo ponto de canto</translation>
+    </message>
+    <message>
+        <source>&amp;Rectangle</source>
+        <translatorcomment>--exact match--
+--file: qcadactions_pt.ts--
+&amp;Retângulo</translatorcomment>
+        <translation type="vanished">&amp;Retângulo</translation>
+    </message>
+    <message>
+        <source>Draw rectangle from two corners</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="vanished">Desenhar retângulo de dois cantos</translation>
+    </message>
+</context>
+<context>
+    <name>ShapeRectangle</name>
+    <message>
+        <location filename="../ShapeRectangle.js" line="+58"/>
+        <source>First corner</source>
         <translation>Primeira ponto de canto</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translatorcomment>--google--
-Indique o segundo vértice</translatorcomment>
         <translation>Segundo ponto de canto</translation>
     </message>
     <message>
-        <location filename="../LineRectangleInit.js" line="+2"/>
+        <location filename="../ShapeRectangleInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translatorcomment>--exact match--
---file: qcadactions_pt.ts--
-&amp;Retângulo</translatorcomment>
         <translation>&amp;Retângulo</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Draw rectangle from two corners</source>
-        <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar retângulo de dois cantos</translation>
     </message>
 </context>

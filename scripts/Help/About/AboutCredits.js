@@ -19,6 +19,7 @@ var credits =
                               "View > Display Distance/Angle<br>" +
                               "<i>Significant contributions to:</i><br>" +
                               "Draw > Line > Line from 2 Points<br>" +
+                              "Draw > Polyline > Draw Polyline<br>" +
                               "Custom linetype support, loading .lin files<br>"
                               ],
         [ "Tamas Tevesz",     "Port to FreeBSD,<br>" +

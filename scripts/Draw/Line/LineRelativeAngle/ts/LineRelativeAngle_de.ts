@@ -38,7 +38,7 @@
         <translation>Position setzen</translation>
     </message>
     <message>
-        <location filename="../LineRelativeAngleInit.js" line="+5"/>
+        <location filename="../LineRelativeAngleInit.js" line="+4"/>
         <source>Draw line with relative angle to base entity</source>
         <translation>Linie mit relativem Winkel zu Basisobjekt</translation>
     </message>

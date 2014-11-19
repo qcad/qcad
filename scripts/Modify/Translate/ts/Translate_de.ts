@@ -19,7 +19,7 @@
         <translation>Zielpunkt</translation>
     </message>
     <message>
-        <location filename="../TranslateInit.js" line="+11"/>
+        <location filename="../TranslateInit.js" line="+10"/>
         <source>Move or copy entities once or multiple times</source>
         <translation>Objekte verschieben oder kopieren</translation>
     </message>

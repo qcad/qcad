@@ -19,7 +19,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Zapisz jako ... elementu biblioteki</translation>
     </message>
     <message>
-        <location filename="../CreateLibraryItemInit.js" line="+3"/>
+        <location filename="../CreateLibraryItemInit.js" line="+2"/>
         <source>&amp;Create Library Item</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Tworzenie elementu biblioteki</translation>

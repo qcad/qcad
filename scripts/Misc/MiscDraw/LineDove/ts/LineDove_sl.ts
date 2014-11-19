@@ -14,12 +14,16 @@
         <translation>Drugi kot</translation>
     </message>
     <message>
-        <location filename="../LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail joint</source>
-        <translation>&amp;Rogljičast spoj</translation>
+        <translation type="vanished">&amp;Rogljičast spoj</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../LineDoveInit.js" line="+2"/>
+        <source>&amp;Dovetail Joint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Draw a dovetail joint</source>
         <translation>Nariši rogljičast spoj</translation>
     </message>

@@ -4,34 +4,51 @@
 <context>
     <name>Line</name>
     <message>
-        <location filename="../Line.js" line="+84"/>
         <source>Show line tools</source>
-        <translation>Mostrar menú &quot;Líneas&quot;</translation>
+        <translation type="vanished">Mostrar menú &quot;Líneas&quot;</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>&amp;Line</source>
-        <translation>&amp;Línea</translation>
+        <translation type="vanished">&amp;Línea</translation>
     </message>
     <message>
-        <location line="-22"/>
         <source>Line Tools</source>
-        <translation>Herramientas de línea</translation>
+        <translation type="vanished">Herramientas de línea</translation>
     </message>
     <message>
-        <location filename="../Line.ui" line="+17"/>
         <source>Line Segment</source>
-        <translation>Segmento de línea</translation>
+        <translation type="vanished">Segmento de línea</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Infinite Line</source>
-        <translation>Línea infinita</translation>
+        <translation type="vanished">Línea infinita</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Ray</source>
-        <translation>Rayo</translation>
+        <translation type="vanished">Rayo</translation>
+    </message>
+</context>
+<context>
+    <name>Shape</name>
+    <message>
+        <location filename="../Shape.js" line="+73"/>
+        <source>Shape Tools</source>
+        <translation>Herramientas de forma</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show line tools</source>
+        <translation>Mostrar herramientas de forma</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>&amp;Shape</source>
+        <translation>&amp;Forma</translation>
+    </message>
+    <message>
+        <location filename="../Shape.ui" line="+17"/>
+        <source>Create polyline</source>
+        <translation>Crear &amp;polilínea</translation>
     </message>
 </context>
 </TS>

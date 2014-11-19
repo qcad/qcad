@@ -8,7 +8,22 @@
         <translation>&amp;Selektion</translation>
     </message>
     <message>
-        <location filename="../MiscSelect.js" line="+62"/>
+        <location filename="../MiscSelect.js" line="+52"/>
+        <source>Misc</source>
+        <translation>Diverses</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Misc Selection Tools</source>
+        <translation>Diverse Selektionswerkzeuge</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show misc selection tools</source>
+        <translation>Diverse Selektionswerkzeuge anzeigen</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>&amp;Select</source>
         <translation>&amp;Selektion</translation>
     </message>

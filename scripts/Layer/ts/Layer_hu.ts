@@ -4,7 +4,17 @@
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../Layer.js" line="+54"/>
+        <location filename="../Layer.js" line="+66"/>
+        <source>Layer Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show layer tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>&amp;Layer</source>
         <translation type="unfinished"></translation>
     </message>

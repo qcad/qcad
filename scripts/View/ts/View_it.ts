@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>Form</name>
     <message>
@@ -17,7 +17,17 @@
 <context>
     <name>View</name>
     <message>
-        <location filename="../View.js" line="+53"/>
+        <location filename="../View.js" line="+65"/>
+        <source>View Tools</source>
+        <translation>Strumenti di visualizzazione</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show view tools</source>
+        <translation>Mostra strumenti di visualizzazione</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>&amp;View</source>
         <translation>&amp;Visualizza</translation>
     </message>

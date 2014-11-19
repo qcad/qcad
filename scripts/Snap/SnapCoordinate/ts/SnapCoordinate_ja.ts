@@ -39,7 +39,7 @@
         <translation>&amp;v 相対座標</translation>
     </message>
     <message>
-        <location filename="../SnapCoordinateInit.js" line="+5"/>
+        <location filename="../SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
         <translation>&amp;C 座標</translation>
     </message>

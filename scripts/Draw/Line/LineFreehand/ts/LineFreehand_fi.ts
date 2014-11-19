@@ -19,7 +19,7 @@
         <translation>Vapaamuotoinen Viiva</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw freehand line</source>
         <translation>Piirrä viivoja käsivaraisesti</translation>
     </message>

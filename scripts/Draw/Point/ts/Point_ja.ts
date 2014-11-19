@@ -14,7 +14,7 @@
         <translation>点ツールを表示</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Point</source>
         <translation>&amp;P 点</translation>
     </message>

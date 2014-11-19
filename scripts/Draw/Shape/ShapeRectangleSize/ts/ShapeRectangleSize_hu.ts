@@ -4,7 +4,25 @@
 <context>
     <name>LineRectangleSize</name>
     <message>
-        <location filename="../LineRectangleSize.js" line="+48"/>
+        <location filename="../ShapeRectangleSize.ui" line="+17"/>
+        <source>&amp;Width:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>&amp;Height:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ShapeRectangleSize</name>
+    <message>
+        <location filename="../ShapeRectangleSize.js" line="+44"/>
         <source>Top Left</source>
         <translation type="unfinished"></translation>
     </message>
@@ -49,32 +67,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+31"/>
         <source>Position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.ui" line="+17"/>
-        <source>&amp;Width:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>&amp;Height:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../LineRectangleSizeInit.js" line="+2"/>
+        <location filename="../ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished"></translation>
     </message>

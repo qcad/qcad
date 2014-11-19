@@ -10,7 +10,7 @@
         <translation>Linha &amp;vertical</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical line</source>
         <translatorcomment>--google--
 Desenhe linhas verticais</translatorcomment>

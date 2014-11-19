@@ -62,7 +62,7 @@
         <translation>(Od-)izberi &amp;pravokotno območje</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation>(Od-)izberi vse entitete znotraj pravokotnika</translation>
     </message>

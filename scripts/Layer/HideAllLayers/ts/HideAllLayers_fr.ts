@@ -4,9 +4,13 @@
 <context>
     <name>HideAllLayers</name>
     <message>
-        <location filename="../HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide all Layers</source>
         <translatorcomment>--google--</translatorcomment>
+        <translation type="vanished">&amp;Masquer tous les calques</translation>
+    </message>
+    <message>
+        <location filename="../HideAllLayersInit.js" line="+2"/>
+        <source>&amp;Hide All Layers</source>
         <translation>&amp;Masquer tous les calques</translation>
     </message>
 </context>

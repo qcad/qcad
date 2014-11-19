@@ -110,7 +110,7 @@ Interseção com a seleção atual</translatorcomment>
         <translation>(Des-)selecione Ca&amp;mada</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation>(De-)selecione todas as entidades na mesma camada</translation>
     </message>

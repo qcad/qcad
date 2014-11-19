@@ -10,7 +10,7 @@
         <translation type="unfinished">Wybierz odniesienie bloku</translation>
     </message>
     <message>
-        <location filename="../EditFromReferenceInit.js" line="+3"/>
+        <location filename="../EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Edytuj blok z opisu</translation>

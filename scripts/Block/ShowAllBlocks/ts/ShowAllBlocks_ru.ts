@@ -5,7 +5,7 @@
     <name>ShowAllBlocks</name>
     <message>
         <location filename="../ShowAllBlocksInit.js" line="+2"/>
-        <source>&amp;Show all</source>
+        <source>&amp;Show All Blocks</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

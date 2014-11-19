@@ -9,7 +9,7 @@
         <translation>Linea &amp;orizzontale</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal line</source>
         <translation>Linea orizzontale</translation>
     </message>

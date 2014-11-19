@@ -4,7 +4,7 @@
 <context>
     <name>SelectBlockReferences</name>
     <message>
-        <location filename="../SelectBlockReferencesInit.js" line="+3"/>
+        <location filename="../SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
         <translation>&amp;Seleziona riferimenti di blocco</translation>
     </message>

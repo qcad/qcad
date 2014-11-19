@@ -9,7 +9,7 @@
         <translation>&amp;Lista de camadas</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+52"/>
         <source>Layer List</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

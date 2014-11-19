@@ -4,12 +4,12 @@
 <context>
     <name>Information</name>
     <message>
-        <location filename="../Information.js" line="+290"/>
+        <location filename="../Information.js" line="+286"/>
         <source>&amp;Info</source>
         <translation>&amp;Info</translation>
     </message>
     <message>
-        <location line="-22"/>
+        <location line="-23"/>
         <source>Information Tools</source>
         <translation>Informationswerkzeuge</translation>
     </message>

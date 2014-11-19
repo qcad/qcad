@@ -24,7 +24,7 @@
         <translation type="unfinished">&amp;Odręczna linia</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw freehand line</source>
         <translatorcomment>--google--
 Rysuj linie odręczne</translatorcomment>

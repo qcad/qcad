@@ -4,7 +4,7 @@
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../DrawPolyline.js" line="+75"/>
+        <location filename="../DrawPolyline.js" line="+79"/>
         <source>Next vertex</source>
         <translation>Nächster Eckpunkt</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Fertig</translation>
     </message>
     <message>
-        <location line="+413"/>
+        <location line="+415"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -38,7 +38,7 @@
         <translation type="obsolete">Letztes Segment rückgängig</translation>
     </message>
     <message>
-        <location line="-442"/>
+        <location line="-446"/>
         <source>First vertex</source>
         <translation>Erster Eckpunkt</translation>
     </message>

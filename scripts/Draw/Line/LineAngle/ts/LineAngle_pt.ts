@@ -28,7 +28,7 @@ Indique a posição [%1]</translatorcomment>
         <translation>Linha de â&amp;ngulo</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line at a given absolute angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhe uma linha em um ângulo absoluto</translation>

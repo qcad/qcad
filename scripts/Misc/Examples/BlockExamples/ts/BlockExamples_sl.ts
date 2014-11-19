@@ -8,7 +8,7 @@
         <translation type="vanished">&amp;Bloki</translation>
     </message>
     <message>
-        <location filename="../BlockExamples.js" line="+52"/>
+        <location filename="../BlockExamples.js" line="+45"/>
         <source>&amp;Block</source>
         <translation type="unfinished"></translation>
     </message>

@@ -52,7 +52,7 @@
         <translation>(Od-)Označi o&amp;bbris</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>(De-)Select connected entities</source>
         <translation>(Od-)Označi staknjene entitete</translation>
     </message>

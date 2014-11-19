@@ -333,22 +333,22 @@ Otros...</translatorcomment>
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID de la capa actual</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Unidad de dibujo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">Escala de tipo de línea</translation>
+        <translation>Escala de tipo de línea</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Fuente de cota</translation>
     </message>
 </context>
 <context>
@@ -442,7 +442,7 @@ Introduzca ángulo en línea de cota:</translatorcomment>
         <translation>Ángulo</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+49"/>
+        <location filename="../src/core/REntity.cpp" line="+69"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -548,7 +548,7 @@ Colores
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+168"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+169"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Requiere una selección</translation>

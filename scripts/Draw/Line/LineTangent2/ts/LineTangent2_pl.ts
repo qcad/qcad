@@ -28,7 +28,7 @@
         <translation type="unfinished">Tangent (dwa koła)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw tangent (circle, circle)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

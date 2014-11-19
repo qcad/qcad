@@ -24,7 +24,7 @@
         <translation>&amp;n 垂線/接線</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation>円、弧、楕円に接する、線分への垂線を描画</translation>
     </message>

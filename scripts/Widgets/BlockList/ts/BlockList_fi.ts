@@ -11,7 +11,7 @@
     <message>
         <location line="+0"/>
         <location line="+37"/>
-        <location line="+34"/>
+        <location line="+35"/>
         <source>Block List</source>
         <translation type="unfinished"></translation>
     </message>

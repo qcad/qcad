@@ -38,7 +38,7 @@
         <translation>Winkel&amp;halbierende</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>Winkelhalbierende, Winkelteilung</translation>
     </message>

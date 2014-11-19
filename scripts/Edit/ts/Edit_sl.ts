@@ -37,7 +37,17 @@ da bodo spremembe začele delovat.</translation>
 <context>
     <name>Edit</name>
     <message>
-        <location filename="../Edit.js" line="+53"/>
+        <location filename="../Edit.js" line="+65"/>
+        <source>Edit Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show edit tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>&amp;Edit</source>
         <translation>&amp;Uredi</translation>
     </message>

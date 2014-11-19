@@ -49,7 +49,7 @@
         <translation>Črta iz &amp;kota</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line at a given absolute angle</source>
         <translation>Nariši črto na danem kotu</translation>
     </message>

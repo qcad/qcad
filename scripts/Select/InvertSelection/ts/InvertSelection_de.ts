@@ -9,7 +9,7 @@
         <translation>Selektion &amp;invertieren</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Invert the current selection</source>
         <translation>Aktuelle Selektion invertieren</translation>
     </message>

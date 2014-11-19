@@ -10,7 +10,7 @@
         <translation type="unfinished">Pionowa linia</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical line</source>
         <translatorcomment>--google--
 Rysuj pionowe linie</translatorcomment>

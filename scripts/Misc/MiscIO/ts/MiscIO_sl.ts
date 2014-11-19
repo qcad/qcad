@@ -4,7 +4,22 @@
 <context>
     <name>MiscIO</name>
     <message>
-        <location filename="../MiscIO.js" line="+61"/>
+        <location filename="../MiscIO.js" line="+51"/>
+        <source>Misc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Misc Import / Export Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show misc import / export tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>&amp;Import/Export</source>
         <translation type="unfinished"></translation>
     </message>

@@ -9,7 +9,7 @@
         <translation>ペン</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+65"/>
         <source>Reset to Defaults</source>
         <translation>初期値に戻す</translation>
     </message>

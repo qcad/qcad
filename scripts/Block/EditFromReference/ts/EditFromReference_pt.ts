@@ -10,7 +10,7 @@
         <translation>Escolha referência de bloco</translation>
     </message>
     <message>
-        <location filename="../EditFromReferenceInit.js" line="+3"/>
+        <location filename="../EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>E&amp;dite bloco o de referência</translation>

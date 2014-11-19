@@ -4,13 +4,13 @@
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../DrawPolyline.js" line="+67"/>
+        <location filename="../DrawPolyline.js" line="+69"/>
         <source>First vertex</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pierwszy wierzchołek</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Next vertex</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Następny wierzchołek</translation>
@@ -26,7 +26,7 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location line="+413"/>
+        <location line="+415"/>
         <source>close</source>
         <translation type="unfinished"></translation>
     </message>

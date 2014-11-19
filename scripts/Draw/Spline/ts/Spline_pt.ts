@@ -16,7 +16,7 @@
         <translation>Ferramentas de splines</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Spline</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--

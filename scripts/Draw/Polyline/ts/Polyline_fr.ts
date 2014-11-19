@@ -14,7 +14,7 @@
         <translation>Afficher les outils de polyligne</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polyligne</translation>
     </message>

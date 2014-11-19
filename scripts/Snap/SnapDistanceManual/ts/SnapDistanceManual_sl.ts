@@ -19,7 +19,7 @@
         <translation>&amp;Navodila za razdaljo</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Snap distance between 2 points</source>
         <translation>Zajemi razdaljo med dvema točkama</translation>
     </message>

@@ -33,7 +33,7 @@ Liczba:</translatorcomment>
         <translation type="unfinished">Równolegle (poprzez Point)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Rysowanie linii równoległej lub koncentryczne łuk lub okrąg przez dany punkt</translation>

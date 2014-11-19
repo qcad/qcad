@@ -20,7 +20,7 @@
         <translation>アップデートの確認を自動的に行う</translation>
     </message>
     <message>
-        <location filename="../CheckForUpdatesInit.js" line="+7"/>
+        <location filename="../CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
         <translation>&amp;U アップデート確認...</translation>
     </message>

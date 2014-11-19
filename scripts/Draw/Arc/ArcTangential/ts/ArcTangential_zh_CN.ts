@@ -19,12 +19,16 @@
         <translation>半径：</translation>
     </message>
     <message>
-        <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially connected</source>
-        <translation>切线连接(&amp;T)</translation>
+        <translation type="vanished">切线连接(&amp;T)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../ArcTangentialInit.js" line="+2"/>
+        <source>&amp;Tangentially Connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
         <translation>在基础实体上画弧切线</translation>
     </message>

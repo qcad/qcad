@@ -9,7 +9,7 @@
         <translation>&amp;V 垂直線</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical line</source>
         <translation>垂直線を描画</translation>
     </message>

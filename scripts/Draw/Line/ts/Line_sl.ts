@@ -14,7 +14,7 @@
         <translation>Prikaži orodja črte</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Line</source>
         <translation>&amp;Črta</translation>
     </message>

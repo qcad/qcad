@@ -9,7 +9,7 @@
         <translation>&amp;Ortogonale</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line orthogonal to base entity</source>
         <translation>Tracciare una linea ortogonale a un entità di base</translation>
     </message>

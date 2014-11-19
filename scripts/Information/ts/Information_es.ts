@@ -4,7 +4,7 @@
 <context>
     <name>Information</name>
     <message>
-        <location filename="../Information.js" line="+268"/>
+        <location filename="../Information.js" line="+263"/>
         <source>Information Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Herramientas de información</translation>
@@ -16,7 +16,7 @@
         <translation>Mostrar herramientas de información</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Info</source>
         <translation>&amp;Información</translation>
     </message>

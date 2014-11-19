@@ -4,7 +4,7 @@
 <context>
     <name>Modify</name>
     <message>
-        <location filename="../Modify.js" line="+105"/>
+        <location filename="../Modify.js" line="+100"/>
         <source>Modification Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narzędzia modyfikacji</translation>
@@ -16,7 +16,7 @@
         <translation type="unfinished">Pokaż narzędzi modyfikacji</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Modify</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

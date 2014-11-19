@@ -59,7 +59,7 @@
         <translation>Škatlast&amp; spoj iz dveh točk</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+4"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation>Nariši škatlast spoj, razpoke, tetive</translation>
     </message>

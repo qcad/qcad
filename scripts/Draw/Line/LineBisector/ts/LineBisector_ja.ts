@@ -34,7 +34,7 @@
         <translation>&amp;B 角の二等分線</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>角の二（または三、四...）等分線を描画</translation>
     </message>

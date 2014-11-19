@@ -59,7 +59,7 @@
         <translation>寸法ツールを表示</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>D&amp;imension</source>
         <translation>&amp;i 寸法</translation>
     </message>

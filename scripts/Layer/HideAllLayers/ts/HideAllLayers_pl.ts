@@ -4,10 +4,14 @@
 <context>
     <name>HideAllLayers</name>
     <message>
-        <location filename="../HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide all Layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Ukryj wszystkie warstwy</translation>
+        <translation type="obsolete">Ukryj wszystkie warstwy</translation>
+    </message>
+    <message>
+        <location filename="../HideAllLayersInit.js" line="+2"/>
+        <source>&amp;Hide All Layers</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

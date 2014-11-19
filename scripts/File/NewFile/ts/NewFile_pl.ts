@@ -26,20 +26,19 @@ Nienazwany
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../NewFile.js" line="+113"/>
+        <location filename="../NewFile.js" line="+114"/>
         <source>Opening drawing:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Loading...</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Ładowanie...</translatorcomment>
-        <translation type="unfinished">Ładowanie...</translation>
+        <translation type="obsolete">Ładowanie...</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+14"/>
         <source>Import Error</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Błąd importu</translation>

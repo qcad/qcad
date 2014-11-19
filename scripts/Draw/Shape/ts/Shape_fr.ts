@@ -4,34 +4,51 @@
 <context>
     <name>Line</name>
     <message>
-        <location filename="../Line.js" line="+84"/>
         <source>Show line tools</source>
-        <translation>Afficher les outils de ligne</translation>
+        <translation type="vanished">Afficher les outils de ligne</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>&amp;Line</source>
-        <translation>&amp;Ligne</translation>
+        <translation type="vanished">&amp;Ligne</translation>
     </message>
     <message>
-        <location line="-22"/>
         <source>Line Tools</source>
-        <translation>Outils de ligne</translation>
+        <translation type="vanished">Outils de ligne</translation>
     </message>
     <message>
-        <location filename="../Line.ui" line="+17"/>
         <source>Line Segment</source>
-        <translation>Segment de ligne</translation>
+        <translation type="vanished">Segment de ligne</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Infinite Line</source>
-        <translation>Ligne infinie</translation>
+        <translation type="vanished">Ligne infinie</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Ray</source>
-        <translation>Rayon</translation>
+        <translation type="vanished">Rayon</translation>
+    </message>
+</context>
+<context>
+    <name>Shape</name>
+    <message>
+        <location filename="../Shape.js" line="+73"/>
+        <source>Shape Tools</source>
+        <translation>Outils de forme</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show line tools</source>
+        <translation>Afficher les outils de forme</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>&amp;Shape</source>
+        <translation>&amp;Forme</translation>
+    </message>
+    <message>
+        <location filename="../Shape.ui" line="+17"/>
+        <source>Create polyline</source>
+        <translation>C&amp;réer polyligne</translation>
     </message>
 </context>
 </TS>

@@ -24,7 +24,7 @@
         <translation>Vzpo&amp;redno (z razdaljo)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation>Nariši vzporednico obstoječi črti ali kocentrični lok, krog</translation>
     </message>

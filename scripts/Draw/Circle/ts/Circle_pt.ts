@@ -4,7 +4,7 @@
 <context>
     <name>Circle</name>
     <message>
-        <location filename="../Circle.js" line="+67"/>
+        <location filename="../Circle.js" line="+71"/>
         <source>Circle Tools</source>
         <translatorcomment>--google--
 Exibe o menu &quot;Círculo&quot;</translatorcomment>
@@ -19,7 +19,7 @@ Exibe o menu &quot;Círculo&quot;</translatorcomment>
         <translation>Exibe o menu &quot;Círculo&quot;</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>&amp;Circle</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

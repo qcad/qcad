@@ -2,10 +2,10 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ru_RU">
 <context>
-    <name>Line</name>
+    <name>Shape</name>
     <message>
-        <location filename="../Line.js" line="+79"/>
-        <source>Line Tools</source>
+        <location filename="../Shape.js" line="+73"/>
+        <source>Shape Tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -14,23 +14,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
-        <source>&amp;Line</source>
+        <location line="+18"/>
+        <source>&amp;Shape</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Line.ui" line="+17"/>
-        <source>Line Segment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Infinite Line</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Ray</source>
+        <location filename="../Shape.ui" line="+17"/>
+        <source>Create polyline</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

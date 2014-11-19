@@ -9,7 +9,7 @@
         <translation>Scegliere il riferimento di blocco</translation>
     </message>
     <message>
-        <location filename="../EditFromReferenceInit.js" line="+3"/>
+        <location filename="../EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
         <translation>M&amp;odifica blocco da un riferimento</translation>
     </message>

@@ -20,11 +20,11 @@
     </message>
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>
-        <source>&amp;Tangentially connected</source>
+        <source>&amp;Tangentially Connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
         <translation type="unfinished"></translation>
     </message>

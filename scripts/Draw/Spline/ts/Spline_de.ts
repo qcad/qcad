@@ -4,12 +4,12 @@
 <context>
     <name>Spline</name>
     <message>
-        <location filename="../Spline.js" line="+94"/>
+        <location filename="../Spline.js" line="+95"/>
         <source>&amp;Spline</source>
         <translation>&amp;Spline</translation>
     </message>
     <message>
-        <location line="-22"/>
+        <location line="-23"/>
         <source>Spline Tools</source>
         <translation>Splinewerkzeuge</translation>
     </message>

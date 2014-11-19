@@ -62,7 +62,7 @@
         <translation>&amp;R 長方形範囲選択（選択解除）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation>四角形の内側のエンティティ全てを選択（選択解除）</translation>
     </message>

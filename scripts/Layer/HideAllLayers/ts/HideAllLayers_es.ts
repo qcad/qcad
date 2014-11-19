@@ -4,8 +4,12 @@
 <context>
     <name>HideAllLayers</name>
     <message>
-        <location filename="../HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide all Layers</source>
+        <translation type="vanished">&amp;Ocultar todas las capas</translation>
+    </message>
+    <message>
+        <location filename="../HideAllLayersInit.js" line="+2"/>
+        <source>&amp;Hide All Layers</source>
         <translation>&amp;Ocultar todas las capas</translation>
     </message>
 </context>

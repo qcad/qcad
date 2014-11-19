@@ -4,12 +4,12 @@
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../DrawPolyline.js" line="+67"/>
+        <location filename="../DrawPolyline.js" line="+69"/>
         <source>First vertex</source>
         <translation>最初の頂点</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Next vertex</source>
         <translation>次の頂点</translation>
     </message>
@@ -19,7 +19,7 @@
         <translation>完了</translation>
     </message>
     <message>
-        <location line="+413"/>
+        <location line="+415"/>
         <source>close</source>
         <translation type="unfinished"></translation>
     </message>

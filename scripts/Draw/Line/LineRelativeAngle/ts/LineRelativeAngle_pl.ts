@@ -62,7 +62,7 @@ Kąt wz&amp;ględny</translatorcomment>
         <translation type="unfinished">Kąt wz&amp;ględny</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line with relative angle to base entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj linię z względnym kątem do jednostki bazowej</translation>

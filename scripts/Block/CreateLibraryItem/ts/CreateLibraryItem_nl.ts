@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="nl">
 <context>
@@ -13,7 +14,7 @@
         <translation>Bibliotheekitem opslaan als...</translation>
     </message>
     <message>
-        <location filename="../CreateLibraryItemInit.js" line="+3"/>
+        <location filename="../CreateLibraryItemInit.js" line="+2"/>
         <source>&amp;Create Library Item</source>
         <translation>Bibliotheekitem &amp;maken</translation>
     </message>

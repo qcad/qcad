@@ -61,7 +61,7 @@
     <message>
         <location line="+0"/>
         <location line="+1108"/>
-        <location filename="../LibraryBrowserInit.js" line="+18"/>
+        <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>ライブラリブラウザ</translation>
     </message>
@@ -200,7 +200,7 @@ Database file: %3
         <translation>&amp;R アイコンを再生成</translation>
     </message>
     <message>
-        <location filename="../LibraryBrowserInit.js" line="-10"/>
+        <location filename="../LibraryBrowserInit.js" line="-11"/>
         <source>&amp;Library Browser</source>
         <translation>&amp;L ライブラリブラウザ</translation>
     </message>

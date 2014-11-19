@@ -52,7 +52,7 @@ Liczba:</translatorcomment>
         <translation type="unfinished">Kąt Dwusieczna</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj kąt bisector, trisector ...</translation>

@@ -4,7 +4,7 @@
 <context>
     <name>CommandLineExamples</name>
     <message>
-        <location filename="../CommandLineExamples.js" line="+51"/>
+        <location filename="../CommandLineExamples.js" line="+44"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Kommandozeile</translation>
     </message>

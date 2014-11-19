@@ -4,7 +4,7 @@
 <context>
     <name>Arc</name>
     <message>
-        <location filename="../Arc.js" line="+67"/>
+        <location filename="../Arc.js" line="+71"/>
         <source>Arc Tools</source>
         <translation>Ív eszköztár</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Ív eszköztár megjelenítése</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>&amp;Arc</source>
         <translation>Körív</translation>
     </message>

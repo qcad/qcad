@@ -32,12 +32,16 @@ Raio</translatorcomment>
         <translation type="obsolete">Co&amp;ntinuar</translation>
     </message>
     <message>
-        <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially connected</source>
+        <translation type="vanished">&amp;Tangencialmente ligado</translation>
+    </message>
+    <message>
+        <location filename="../ArcTangentialInit.js" line="+2"/>
+        <source>&amp;Tangentially Connected</source>
         <translation>&amp;Tangencialmente ligado</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar arco tangente à entidade de base</translation>

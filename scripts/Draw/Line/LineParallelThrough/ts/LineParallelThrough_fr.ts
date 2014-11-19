@@ -19,7 +19,7 @@
         <translation>Par&amp;allèle (par point)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>Tracez une ligne parallèle ou un arc ou cercle concentrique à travers un point</translation>
     </message>

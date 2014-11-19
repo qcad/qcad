@@ -97,7 +97,7 @@
         <translation type="unfinished">(Za/Od)znacz wa&amp;rstwy</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation type="unfinished">(De-) wybrać wszystkie elementy tej samej warstwy</translation>
     </message>

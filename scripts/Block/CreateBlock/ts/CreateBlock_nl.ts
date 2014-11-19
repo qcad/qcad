@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="nl">
 <context>
@@ -8,7 +9,7 @@
         <translation>Referentiepunt</translation>
     </message>
     <message>
-        <location filename="../CreateBlockInit.js" line="+4"/>
+        <location filename="../CreateBlockInit.js" line="+2"/>
         <source>&amp;Create Block from Selection</source>
         <translation>&amp;Maak block uit selectie</translation>
     </message>

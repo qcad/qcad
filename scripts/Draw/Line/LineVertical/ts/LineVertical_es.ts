@@ -9,7 +9,7 @@
         <translation>Línea &amp;vertical</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical line</source>
         <translation>Línea vertical</translation>
     </message>

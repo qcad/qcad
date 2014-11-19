@@ -25,13 +25,17 @@ Promień:</translatorcomment>
         <translation type="unfinished">Promień:</translation>
     </message>
     <message>
-        <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially connected</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Stycznie podłączony</translation>
+        <translation type="obsolete">Stycznie podłączony</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../ArcTangentialInit.js" line="+2"/>
+        <source>&amp;Tangentially Connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj łuk styczny do jednostki bazowej</translation>

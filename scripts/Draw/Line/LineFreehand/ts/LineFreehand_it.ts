@@ -19,7 +19,7 @@
         <translation>&amp;Linea a mano libera</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw freehand line</source>
         <translation>Linea a mano libera</translation>
     </message>

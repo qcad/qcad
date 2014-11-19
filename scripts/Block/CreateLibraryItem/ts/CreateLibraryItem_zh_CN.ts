@@ -14,7 +14,7 @@
         <translation>将库中的项目保存为</translation>
     </message>
     <message>
-        <location filename="../CreateLibraryItemInit.js" line="+3"/>
+        <location filename="../CreateLibraryItemInit.js" line="+2"/>
         <source>&amp;Create Library Item</source>
         <translation>创建库项目(&amp;C)</translation>
     </message>

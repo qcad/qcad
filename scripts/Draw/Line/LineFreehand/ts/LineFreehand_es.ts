@@ -19,7 +19,7 @@
         <translation>&amp;Línea a mano alzada</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw freehand line</source>
         <translation>Línea a mano alzada</translation>
     </message>

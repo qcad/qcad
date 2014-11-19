@@ -14,7 +14,7 @@
         <translation>Tallenna kirjastokohde nimellä...</translation>
     </message>
     <message>
-        <location filename="../CreateLibraryItemInit.js" line="+3"/>
+        <location filename="../CreateLibraryItemInit.js" line="+2"/>
         <source>&amp;Create Library Item</source>
         <translation>Luo Kirjastokohde</translation>
     </message>

@@ -61,7 +61,7 @@
     <message>
         <location line="+0"/>
         <location line="+1108"/>
-        <location filename="../LibraryBrowserInit.js" line="+18"/>
+        <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation type="unfinished"></translation>
     </message>
@@ -196,7 +196,7 @@ Library browser will not be available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LibraryBrowserInit.js" line="-10"/>
+        <location filename="../LibraryBrowserInit.js" line="-11"/>
         <source>&amp;Library Browser</source>
         <translation type="unfinished"></translation>
     </message>

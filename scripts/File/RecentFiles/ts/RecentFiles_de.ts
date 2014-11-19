@@ -8,7 +8,7 @@
         <translation type="obsolete">Liste löschen</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="+55"/>
+        <location filename="../RecentFilesInit.js" line="+51"/>
         <source>&amp;Clear List</source>
         <translation>Liste &amp;löschen</translation>
     </message>
@@ -23,7 +23,7 @@
         <translation>Zuletzt geöffneten Dateien</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="+8"/>
+        <location filename="../RecentFilesInit.js" line="+10"/>
         <source>Open &amp;Recent</source>
         <translation>&amp;Zuletzt geöffneten Dateien</translation>
     </message>

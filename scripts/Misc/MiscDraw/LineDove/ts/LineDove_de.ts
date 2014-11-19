@@ -14,12 +14,16 @@
         <translation>Zweiter Eckpunkt</translation>
     </message>
     <message>
-        <location filename="../LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail joint</source>
+        <translation type="vanished">&amp;Schwalbenschwanzverbindung</translation>
+    </message>
+    <message>
+        <location filename="../LineDoveInit.js" line="+2"/>
+        <source>&amp;Dovetail Joint</source>
         <translation>&amp;Schwalbenschwanzverbindung</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw a dovetail joint</source>
         <translation>Schwalbenschwanzverbindung zeichnen</translation>
     </message>

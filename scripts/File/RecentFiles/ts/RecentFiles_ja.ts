@@ -14,12 +14,12 @@
         <translation>最近使ったファイル</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="+55"/>
+        <location filename="../RecentFilesInit.js" line="+51"/>
         <source>&amp;Clear List</source>
         <translation>&amp;C リストをクリア</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Open &amp;Recent</source>
         <translation>&amp;R 最近使ったファイルを開く</translation>
     </message>

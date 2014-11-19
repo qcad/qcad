@@ -14,7 +14,7 @@
         <translation>Mostra menù &quot;Ellissi&quot;</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Ellisse</translation>
     </message>

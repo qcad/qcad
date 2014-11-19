@@ -24,7 +24,7 @@
         <translation>&amp;H ハッチング</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw hatch or solid fill</source>
         <translation>ハッチングまたは全面色を描画</translation>
     </message>

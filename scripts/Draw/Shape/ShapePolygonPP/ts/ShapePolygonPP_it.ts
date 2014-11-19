@@ -4,15 +4,37 @@
 <context>
     <name>LinePolygonCP</name>
     <message>
-        <location filename="../LinePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Punti dell&apos;angolo:</translation>
+        <translation type="vanished">Punti dell&apos;angolo:</translation>
     </message>
 </context>
 <context>
     <name>LinePolygonPP</name>
     <message>
-        <location filename="../LinePolygonPP.js" line="+58"/>
+        <source>First corner</source>
+        <translation type="vanished">Primo punto dell&apos;angolo</translation>
+    </message>
+    <message>
+        <source>Corner point</source>
+        <translation type="vanished">Punto dell&apos;angolo</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="vanished">Fatto</translation>
+    </message>
+    <message>
+        <source>Polygo&amp;n (Two Corners)</source>
+        <translation type="vanished">Poligo&amp;no (due punti d&apos;angolo)</translation>
+    </message>
+    <message>
+        <source>Draw regular polygon from two corner points</source>
+        <translation type="vanished">Disegnare un poligono regolare da due punti dell&apos;angolo</translation>
+    </message>
+</context>
+<context>
+    <name>ShapePolygonPP</name>
+    <message>
+        <location filename="../ShapePolygonPP.js" line="+58"/>
         <source>First corner</source>
         <translation>Primo punto dell&apos;angolo</translation>
     </message>
@@ -27,12 +49,17 @@
         <translation>Fatto</translation>
     </message>
     <message>
-        <location filename="../LinePolygonPPInit.js" line="+2"/>
+        <location filename="../ShapePolygonPP.ui" line="+17"/>
+        <source>Corners:</source>
+        <translation>Punti dell&apos;angolo:</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Two Corners)</source>
         <translation>Poligo&amp;no (due punti d&apos;angolo)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw regular polygon from two corner points</source>
         <translation>Disegnare un poligono regolare da due punti dell&apos;angolo</translation>
     </message>

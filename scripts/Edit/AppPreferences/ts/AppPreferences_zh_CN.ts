@@ -4,7 +4,7 @@
 <context>
     <name>AppPreferences</name>
     <message>
-        <location filename="../AppPreferences.js" line="+62"/>
+        <location filename="../AppPreferences.js" line="+64"/>
         <source>Application &amp;Preferences</source>
         <translation type="unfinished"></translation>
     </message>

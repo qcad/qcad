@@ -34,7 +34,7 @@
         <translation>&amp;Bisectriz</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>Bisectriz</translation>
     </message>

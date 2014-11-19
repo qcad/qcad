@@ -12,7 +12,7 @@
         <translation type="obsolete">Bearbeitungswerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location filename="../Modify.js" line="+105"/>
+        <location filename="../Modify.js" line="+100"/>
         <source>Modification Tools</source>
         <translation>Bearbeitungswerkzeuge</translation>
     </message>
@@ -22,7 +22,7 @@
         <translation>Bearbeitungswerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modifizieren</translation>
     </message>

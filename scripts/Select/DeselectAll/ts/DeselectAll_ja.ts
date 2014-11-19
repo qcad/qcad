@@ -9,7 +9,7 @@
         <translation>&amp;D 全てを選択解除</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Deselect all entities</source>
         <translation>全てのエンティティを選択解除</translation>
     </message>

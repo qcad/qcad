@@ -5,7 +5,7 @@
     <name>ShowAllLayers</name>
     <message>
         <location filename="../ShowAllLayersInit.js" line="+2"/>
-        <source>&amp;Show all Layers</source>
+        <source>&amp;Show All Layers</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

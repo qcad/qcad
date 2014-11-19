@@ -4,9 +4,13 @@
 <context>
     <name>HideAllLayers</name>
     <message>
-        <location filename="../HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide all Layers</source>
-        <translation>&amp;Skrij vse plasti</translation>
+        <translation type="vanished">&amp;Skrij vse plasti</translation>
+    </message>
+    <message>
+        <location filename="../HideAllLayersInit.js" line="+2"/>
+        <source>&amp;Hide All Layers</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

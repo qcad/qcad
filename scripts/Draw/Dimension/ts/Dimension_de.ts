@@ -63,7 +63,7 @@
         <translation>Bemassungswerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>D&amp;imension</source>
         <translation>Be&amp;massung</translation>
     </message>

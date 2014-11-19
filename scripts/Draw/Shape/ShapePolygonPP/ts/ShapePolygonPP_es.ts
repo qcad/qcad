@@ -4,15 +4,37 @@
 <context>
     <name>LinePolygonCP</name>
     <message>
-        <location filename="../LinePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Puntos de esquina:</translation>
+        <translation type="vanished">Puntos de esquina:</translation>
     </message>
 </context>
 <context>
     <name>LinePolygonPP</name>
     <message>
-        <location filename="../LinePolygonPP.js" line="+58"/>
+        <source>First corner</source>
+        <translation type="vanished">Primer punto de esquina</translation>
+    </message>
+    <message>
+        <source>Corner point</source>
+        <translation type="vanished">Esquina</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="vanished">Terminar</translation>
+    </message>
+    <message>
+        <source>Polygo&amp;n (Two Corners)</source>
+        <translation type="vanished">Polígo&amp;no (dos esquinas)</translation>
+    </message>
+    <message>
+        <source>Draw regular polygon from two corner points</source>
+        <translation type="vanished">Dibuja un polígono regular a partir de dos esquinas</translation>
+    </message>
+</context>
+<context>
+    <name>ShapePolygonPP</name>
+    <message>
+        <location filename="../ShapePolygonPP.js" line="+58"/>
         <source>First corner</source>
         <translation>Primer punto de esquina</translation>
     </message>
@@ -27,12 +49,17 @@
         <translation>Terminar</translation>
     </message>
     <message>
-        <location filename="../LinePolygonPPInit.js" line="+2"/>
+        <location filename="../ShapePolygonPP.ui" line="+17"/>
+        <source>Corners:</source>
+        <translation>Puntos de esquina:</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Two Corners)</source>
         <translation>Polígo&amp;no (dos esquinas)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw regular polygon from two corner points</source>
         <translation>Dibuja un polígono regular a partir de dos esquinas</translation>
     </message>

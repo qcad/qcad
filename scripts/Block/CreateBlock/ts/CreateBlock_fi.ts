@@ -9,7 +9,7 @@
         <translation>Referenssipiste</translation>
     </message>
     <message>
-        <location filename="../CreateBlockInit.js" line="+4"/>
+        <location filename="../CreateBlockInit.js" line="+2"/>
         <source>&amp;Create Block from Selection</source>
         <translation>Luo Lohko Valinnasta</translation>
     </message>

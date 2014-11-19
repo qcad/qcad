@@ -99,7 +99,7 @@
     <message>
         <location line="+0"/>
         <location line="+35"/>
-        <location line="+12"/>
+        <location line="+11"/>
         <source>Property Editor</source>
         <translation type="unfinished"></translation>
     </message>

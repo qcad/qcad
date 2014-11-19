@@ -19,7 +19,7 @@
         <translation>&amp;D 手動距離設定</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Snap distance between 2 points</source>
         <translation>2点間のスナップ距離</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>Modify</name>
     <message>
-        <location filename="../Modify.js" line="+105"/>
+        <location filename="../Modify.js" line="+100"/>
         <source>Modification Tools</source>
         <translation>修正ツール</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>修正ツールを表示</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Modify</source>
         <translation>&amp;M 修正</translation>
     </message>

@@ -77,7 +77,7 @@ Delta Y</translatorcomment>
         <translation>Mostrar as ferramentas cotas</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>D&amp;imension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>D&amp;imensão</translation>

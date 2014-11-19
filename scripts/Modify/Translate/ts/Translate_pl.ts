@@ -28,7 +28,7 @@ Wskaż punkt docelowy</translatorcomment>
         <translation type="unfinished">&amp;Przesuń / kopiuj</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Move or copy entities once or multiple times</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przenoszenie lub kopiowanie jednostek raz lub kilka razy</translation>

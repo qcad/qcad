@@ -4,7 +4,17 @@
 <context>
     <name>Block</name>
     <message>
-        <location filename="../Block.js" line="+54"/>
+        <location filename="../Block.js" line="+66"/>
+        <source>Block Tools</source>
+        <translation>Herramientas de bloque</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show block tools</source>
+        <translation>Mostrar las herramientas de bloque</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>&amp;Block</source>
         <translation>&amp;Bloque</translation>
     </message>

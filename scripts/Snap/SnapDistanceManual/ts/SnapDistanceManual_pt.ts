@@ -38,7 +38,7 @@
         <translation>&amp;Distância manualmente</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Snap distance between 2 points</source>
         <translation>Salto distância entre dois pontos</translation>
     </message>

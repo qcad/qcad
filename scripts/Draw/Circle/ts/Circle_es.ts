@@ -4,7 +4,7 @@
 <context>
     <name>Circle</name>
     <message>
-        <location filename="../Circle.js" line="+67"/>
+        <location filename="../Circle.js" line="+71"/>
         <source>Circle Tools</source>
         <translation>Herramientas círculo</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Mostrar menú &quot;Círculos&quot;</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>&amp;Circle</source>
         <translation>&amp;Círculo</translation>
     </message>

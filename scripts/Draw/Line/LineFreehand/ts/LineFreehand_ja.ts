@@ -19,7 +19,7 @@
         <translation>&amp;F フリーハンド</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw freehand line</source>
         <translation>フリーハンドで描画</translation>
     </message>

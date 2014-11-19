@@ -9,7 +9,7 @@
         <translation>&amp;Orthogonal</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line orthogonal to base entity</source>
         <translation>Linie orthogonal zu einem Basisobjekt</translation>
     </message>

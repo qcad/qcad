@@ -9,7 +9,7 @@
         <translation>Block Referenz wählen</translation>
     </message>
     <message>
-        <location filename="../EditFromReferenceInit.js" line="+4"/>
+        <location filename="../EditFromReferenceInit.js" line="+3"/>
         <source>Edit block based on chosen block reference</source>
         <translation>Block basierend auf Block Referenz bearbeiten</translation>
     </message>

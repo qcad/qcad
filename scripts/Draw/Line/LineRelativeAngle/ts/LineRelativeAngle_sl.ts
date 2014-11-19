@@ -49,7 +49,7 @@
         <translation>R&amp;elativni kot</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line with relative angle to base entity</source>
         <translation>Nariši črto z relativnim kotom na bazno entiteto</translation>
     </message>

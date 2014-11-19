@@ -14,7 +14,7 @@
         <translation>Herramientas de spline</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Spline</source>
         <translation>&amp;Spline</translation>
     </message>

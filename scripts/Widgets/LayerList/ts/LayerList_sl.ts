@@ -9,7 +9,7 @@
         <translation>&amp;Seznam plasti</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+52"/>
         <source>Layer List</source>
         <translation>Seznam plasti</translation>
     </message>

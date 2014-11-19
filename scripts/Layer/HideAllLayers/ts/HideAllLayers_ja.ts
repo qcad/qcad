@@ -4,9 +4,13 @@
 <context>
     <name>HideAllLayers</name>
     <message>
-        <location filename="../HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide all Layers</source>
-        <translation>&amp;H 全ての画層を非表示</translation>
+        <translation type="vanished">&amp;H 全ての画層を非表示</translation>
+    </message>
+    <message>
+        <location filename="../HideAllLayersInit.js" line="+2"/>
+        <source>&amp;Hide All Layers</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

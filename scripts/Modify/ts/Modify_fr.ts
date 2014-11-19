@@ -14,7 +14,7 @@
         <translation type="obsolete">Montrer modifier les outils</translation>
     </message>
     <message>
-        <location filename="../Modify.js" line="+105"/>
+        <location filename="../Modify.js" line="+100"/>
         <source>Modification Tools</source>
         <translation>Outils de modification</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>Montrer les outils de modification</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modifier</translation>
     </message>

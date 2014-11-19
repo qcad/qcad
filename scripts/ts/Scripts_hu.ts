@@ -58,12 +58,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+418"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+21"/>
         <source>Block Options</source>
         <translation type="unfinished"></translation>
     </message>
@@ -73,12 +73,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>CAD Tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+620"/>
+        <location line="+692"/>
         <source>Entity is on a locked layer.</source>
         <translation type="unfinished"></translation>
     </message>

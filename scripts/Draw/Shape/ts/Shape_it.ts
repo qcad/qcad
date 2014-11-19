@@ -4,34 +4,51 @@
 <context>
     <name>Line</name>
     <message>
-        <location filename="../Line.js" line="+84"/>
         <source>Show line tools</source>
-        <translation>Mostra menù &quot;Linee&quot;</translation>
+        <translation type="vanished">Mostra menù &quot;Linee&quot;</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>&amp;Line</source>
-        <translation>&amp;Linea</translation>
+        <translation type="vanished">&amp;Linea</translation>
     </message>
     <message>
-        <location line="-22"/>
         <source>Line Tools</source>
-        <translation>Strumenti linea</translation>
+        <translation type="vanished">Strumenti linea</translation>
     </message>
     <message>
-        <location filename="../Line.ui" line="+17"/>
         <source>Line Segment</source>
-        <translation>Segmento di linea</translation>
+        <translation type="vanished">Segmento di linea</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Infinite Line</source>
-        <translation>Linea infinita</translation>
+        <translation type="vanished">Linea infinita</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Ray</source>
-        <translation>Raggio</translation>
+        <translation type="vanished">Raggio</translation>
+    </message>
+</context>
+<context>
+    <name>Shape</name>
+    <message>
+        <location filename="../Shape.js" line="+73"/>
+        <source>Shape Tools</source>
+        <translation>Strumenti forma</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show line tools</source>
+        <translation>Mostra strumenti forma</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>&amp;Shape</source>
+        <translation>&amp;Forma</translation>
+    </message>
+    <message>
+        <location filename="../Shape.ui" line="+17"/>
+        <source>Create polyline</source>
+        <translation>Creare &amp;polilinea</translation>
     </message>
 </context>
 </TS>

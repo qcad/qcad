@@ -4,8 +4,12 @@
 <context>
     <name>ShowAllLayers</name>
     <message>
-        <location filename="../ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show all Layers</source>
+        <translation type="vanished">&amp;Mostrar todas las capas</translation>
+    </message>
+    <message>
+        <location filename="../ShowAllLayersInit.js" line="+2"/>
+        <source>&amp;Show All Layers</source>
         <translation>&amp;Mostrar todas las capas</translation>
     </message>
 </context>

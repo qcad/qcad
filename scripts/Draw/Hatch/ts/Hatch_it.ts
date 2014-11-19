@@ -24,7 +24,7 @@
         <translation>&amp;Tratteggi</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw hatch or solid fill</source>
         <translation>Disegna un tratteggio o un riempimento uniforme</translation>
     </message>

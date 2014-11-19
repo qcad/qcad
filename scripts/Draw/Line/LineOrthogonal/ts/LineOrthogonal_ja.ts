@@ -34,7 +34,7 @@
         <translation>&amp;O 直交線</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line orthogonal to base entity</source>
         <translation>基礎エンティティからの直交線を描画</translation>
     </message>

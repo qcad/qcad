@@ -19,7 +19,7 @@
         <translation>Loslassen um aufhören zu zeichnen</translation>
     </message>
     <message>
-        <location filename="../LineFreehandInit.js" line="+5"/>
+        <location filename="../LineFreehandInit.js" line="+4"/>
         <source>Draw freehand line</source>
         <translation>Freihandlinie</translation>
     </message>

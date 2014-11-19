@@ -9,7 +9,7 @@
         <translation>&amp;Liste des calques</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+52"/>
         <source>Layer List</source>
         <translation>Liste des calques</translation>
     </message>

@@ -31,17 +31,16 @@ Sem Título</translatorcomment>
         <translation type="obsolete">Sem título %1 [*]</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="+113"/>
+        <location filename="../NewFile.js" line="+114"/>
         <source>Opening drawing:</source>
         <translation>Abrindo o desenho:</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Loading...</source>
-        <translation>Carregando...</translation>
+        <translation type="vanished">Carregando...</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+14"/>
         <source>Import Error</source>
         <translation>Erro de importação</translation>
     </message>

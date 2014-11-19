@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>Examples</name>
     <message>
@@ -15,7 +15,17 @@
 <context>
     <name>Misc</name>
     <message>
-        <location filename="../Misc.js" line="+58"/>
+        <location filename="../Misc.js" line="+60"/>
+        <source>Misc Tools</source>
+        <translation>Diverse Werkzeuge</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Show misc tools</source>
+        <translation>Diverse Werkzeuge anzeigen</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>&amp;Misc</source>
         <translation>&amp;Diverses</translation>
     </message>

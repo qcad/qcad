@@ -107,7 +107,7 @@ Interseca con la selezione corrente</translatorcomment>
         <translation>(De)seleziona la&amp;yer</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation>(De-)seleziona tutte le entità sullo stesso layer</translation>
     </message>

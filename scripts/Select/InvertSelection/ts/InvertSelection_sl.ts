@@ -9,7 +9,7 @@
         <translation>&amp;Negiraj izbor</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Invert the current selection</source>
         <translation>Negiraj tretnutni izbor</translation>
     </message>

@@ -63,7 +63,7 @@
         <translation>Utensili dimensione</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>D&amp;imension</source>
         <translation>&amp;Quota</translation>
     </message>

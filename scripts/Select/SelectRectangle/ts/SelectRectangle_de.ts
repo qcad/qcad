@@ -28,7 +28,7 @@
         <translation>Rechteckigen &amp;Bereich (de-)selektieren</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation>Alle Objekte in einem Rechteck (de-)selektieren</translation>
     </message>

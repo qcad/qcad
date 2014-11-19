@@ -4,7 +4,7 @@
 <context>
     <name>File</name>
     <message>
-        <location filename="../File.js" line="+70"/>
+        <location filename="../File.js" line="+65"/>
         <source>File Tools</source>
         <translation>Herramientas archivo</translation>
     </message>
@@ -19,7 +19,7 @@
         <translation>&amp;Fichero</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+58"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>

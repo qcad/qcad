@@ -12,7 +12,7 @@
         <translation type="unfinished">&amp;Odwróć zaznaczenie</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Invert the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Odwrócić bieżący wybór</translation>

@@ -10,7 +10,7 @@
         <translation type="unfinished">Lista warstwa</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+52"/>
         <source>Layer List</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

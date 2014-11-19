@@ -19,12 +19,16 @@
         <translation>Radij:</translation>
     </message>
     <message>
-        <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially connected</source>
-        <translation>&amp;Tangencialno povezano</translation>
+        <translation type="vanished">&amp;Tangencialno povezano</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../ArcTangentialInit.js" line="+2"/>
+        <source>&amp;Tangentially Connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
         <translation>Izriši lok tangencialno na nosilni element</translation>
     </message>

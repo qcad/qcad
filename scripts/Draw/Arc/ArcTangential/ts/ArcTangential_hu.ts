@@ -19,12 +19,16 @@
         <translation>Sugár:</translation>
     </message>
     <message>
-        <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially connected</source>
-        <translation>Érintők</translation>
+        <translation type="vanished">Érintők</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../ArcTangentialInit.js" line="+2"/>
+        <source>&amp;Tangentially Connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
         <translation>Bázis elemet érintő körív szerkesztése</translation>
     </message>

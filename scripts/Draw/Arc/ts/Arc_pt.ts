@@ -4,7 +4,7 @@
 <context>
     <name>Arc</name>
     <message>
-        <location filename="../Arc.js" line="+67"/>
+        <location filename="../Arc.js" line="+71"/>
         <source>Arc Tools</source>
         <translatorcomment>--google--
 Exibe o menu &quot;Arco&quot;</translatorcomment>
@@ -19,7 +19,7 @@ Exibe o menu &quot;Arco&quot;</translatorcomment>
         <translation>Exibe o menu &quot;Arco&quot;</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>&amp;Arc</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

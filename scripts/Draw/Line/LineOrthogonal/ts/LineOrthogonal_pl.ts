@@ -42,7 +42,7 @@ Ograniczaj &amp;prostopadle</translatorcomment>
         <translation type="unfinished">&amp;Prostopadła</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw line orthogonal to base entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Rysowanie linii prostopadłych do jednostki bazowej</translation>

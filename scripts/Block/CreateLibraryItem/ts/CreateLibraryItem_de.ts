@@ -14,7 +14,7 @@
         <translation>Bibliothekeintrag speichern unter...</translation>
     </message>
     <message>
-        <location filename="../CreateLibraryItemInit.js" line="+3"/>
+        <location filename="../CreateLibraryItemInit.js" line="+2"/>
         <source>&amp;Create Library Item</source>
         <translation>Bibliothekeintrag &amp;erstellen</translation>
     </message>

@@ -9,7 +9,7 @@
         <translation>Stylo</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+65"/>
         <source>Reset to Defaults</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Réinitialisation des paramètres par défaut</translation>

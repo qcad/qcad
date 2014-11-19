@@ -4,22 +4,41 @@
 <context>
     <name>LineRectangle</name>
     <message>
-        <location filename="../LineRectangle.js" line="+56"/>
+        <source>First corner</source>
+        <translation type="vanished">Premier point d&apos;angle</translation>
+    </message>
+    <message>
+        <source>&amp;Rectangle</source>
+        <translation type="vanished">&amp;Rectangle</translation>
+    </message>
+    <message>
+        <source>Second corner</source>
+        <translation type="vanished">Deuxième point d&apos;angle</translation>
+    </message>
+    <message>
+        <source>Draw rectangle from two corners</source>
+        <translation type="vanished">Dessinez un rectangle de deux points d&apos;angle</translation>
+    </message>
+</context>
+<context>
+    <name>ShapeRectangle</name>
+    <message>
+        <location filename="../ShapeRectangle.js" line="+58"/>
         <source>First corner</source>
         <translation>Premier point d&apos;angle</translation>
     </message>
     <message>
-        <location filename="../LineRectangleInit.js" line="+2"/>
-        <source>&amp;Rectangle</source>
-        <translation>&amp;Rectangle</translation>
-    </message>
-    <message>
-        <location filename="../LineRectangle.js" line="+7"/>
+        <location line="+7"/>
         <source>Second corner</source>
         <translation>Deuxième point d&apos;angle</translation>
     </message>
     <message>
-        <location filename="../LineRectangleInit.js" line="+6"/>
+        <location filename="../ShapeRectangleInit.js" line="+2"/>
+        <source>&amp;Rectangle</source>
+        <translation>&amp;Rectangle</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Draw rectangle from two corners</source>
         <translation>Dessinez un rectangle de deux points d&apos;angle</translation>
     </message>

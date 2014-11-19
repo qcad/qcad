@@ -14,7 +14,7 @@
         <translation>Salvar item de biblioteca...</translation>
     </message>
     <message>
-        <location filename="../CreateLibraryItemInit.js" line="+3"/>
+        <location filename="../CreateLibraryItemInit.js" line="+2"/>
         <source>&amp;Create Library Item</source>
         <translation>&amp;Criar item de biblioteca</translation>
     </message>

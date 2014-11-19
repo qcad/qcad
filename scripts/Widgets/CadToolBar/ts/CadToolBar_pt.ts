@@ -71,7 +71,7 @@ Colunas:</translatorcomment>
 <context>
     <name>CadToolBarPanel</name>
     <message>
-        <location filename="../CadToolBarPanel.js" line="+76"/>
+        <location filename="../CadToolBarPanel.js" line="+108"/>
         <source>Back</source>
         <translation>Retorne</translation>
     </message>

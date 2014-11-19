@@ -4,57 +4,47 @@
 <context>
     <name>LineRectangleSize</name>
     <message>
-        <location filename="../LineRectangleSize.js" line="+48"/>
         <source>Top Left</source>
-        <translation>Zgoraj levo</translation>
+        <translation type="vanished">Zgoraj levo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top</source>
-        <translation>Zgoraj</translation>
+        <translation type="vanished">Zgoraj</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top Right</source>
-        <translation>Zgoraj desno</translation>
+        <translation type="vanished">Zgoraj desno</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Left</source>
-        <translation>Levo</translation>
+        <translation type="vanished">Levo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Middle</source>
-        <translation>Sredina</translation>
+        <translation type="vanished">Sredina</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Right</source>
-        <translation>Desno</translation>
+        <translation type="vanished">Desno</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Left</source>
-        <translation>Spodaj levo</translation>
+        <translation type="vanished">Spodaj levo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom</source>
-        <translation>Spodaj</translation>
+        <translation type="vanished">Spodaj</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Right</source>
-        <translation>Spodaj Desno</translation>
+        <translation type="vanished">Spodaj Desno</translation>
     </message>
     <message>
-        <location line="+102"/>
         <source>Position</source>
-        <translation>Pozicija</translation>
+        <translation type="vanished">Pozicija</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSize.ui" line="+17"/>
+        <location filename="../ShapeRectangleSize.ui" line="+17"/>
         <source>&amp;Width:</source>
         <translation>Š&amp;irina:</translation>
     </message>
@@ -69,14 +59,75 @@
         <translation>Referenčna točka:</translation>
     </message>
     <message>
-        <location filename="../LineRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation>Pravokotnik z &amp;merami</translation>
+        <translation type="vanished">Pravokotnik z &amp;merami</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Draw rectangle with position and size</source>
-        <translation>Nariši pravokotnik s pomočjo pozicije in mer</translation>
+        <translation type="vanished">Nariši pravokotnik s pomočjo pozicije in mer</translation>
+    </message>
+</context>
+<context>
+    <name>ShapeRectangleSize</name>
+    <message>
+        <location filename="../ShapeRectangleSize.js" line="+44"/>
+        <source>Top Left</source>
+        <translation type="unfinished">Zgoraj levo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Top</source>
+        <translation type="unfinished">Zgoraj</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Top Right</source>
+        <translation type="unfinished">Zgoraj desno</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Left</source>
+        <translation type="unfinished">Levo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Middle</source>
+        <translation type="unfinished">Sredina</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Right</source>
+        <translation type="unfinished">Desno</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bottom Left</source>
+        <translation type="unfinished">Spodaj levo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bottom</source>
+        <translation type="unfinished">Spodaj</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bottom Right</source>
+        <translation type="unfinished">Spodaj Desno</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Position</source>
+        <translation type="unfinished">Pozicija</translation>
+    </message>
+    <message>
+        <location filename="../ShapeRectangleSizeInit.js" line="+2"/>
+        <source>Rectangle with &amp;Size</source>
+        <translation type="unfinished">Pravokotnik z &amp;merami</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Draw rectangle with position and size</source>
+        <translation type="unfinished">Nariši pravokotnik s pomočjo pozicije in mer</translation>
     </message>
 </context>
 </TS>

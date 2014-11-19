@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="nl">
 <context>
     <name>EditBlock</name>
     <message>
-        <location filename="../EditBlockInit.js" line="+3"/>
+        <location filename="../EditBlockInit.js" line="+2"/>
         <source>&amp;Edit Block</source>
         <translation>Blok b&amp;ewerken</translation>
     </message>

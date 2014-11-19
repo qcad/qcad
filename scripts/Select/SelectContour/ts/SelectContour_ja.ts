@@ -52,7 +52,7 @@
         <translation>&amp;C 輪郭選択（選択解除）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>(De-)Select connected entities</source>
         <translation>結合したエンティティを選択（選択解除）</translation>
     </message>

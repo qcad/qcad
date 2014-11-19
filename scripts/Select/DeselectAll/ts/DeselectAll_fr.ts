@@ -9,7 +9,7 @@
         <translation>Tout &amp;désélectionner</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Deselect all entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Désélectionner toutes les entités</translation>

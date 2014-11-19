@@ -79,7 +79,7 @@ Zrobione
         <translation type="unfinished">(De-) Wybierz obszar prostokątny</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">(De-) Wybierz wszystkie jednostki wewnątrz prostokąta</translation>

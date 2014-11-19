@@ -14,7 +14,7 @@ Otwieranie przerwane</translatorcomment>
         <translation type="unfinished">Pióro</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+65"/>
         <source>Reset to Defaults</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przywróć domyślne</translation>
