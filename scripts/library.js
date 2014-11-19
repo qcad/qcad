@@ -1643,6 +1643,7 @@ function shapeToEntity(document, shape) {
         return new RSolidEntity(document, new RSolidData(shape));
     }
 
+    qWarning("shapeToEntity: unknown shape: ", shape);
     return undefined;
 }
 

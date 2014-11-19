@@ -106,6 +106,43 @@ Shape.init = function() {
     Shape.getCadToolBarPanel();
 };
 
+Shape.prototype.initUiOptions = function(resume) {
+    Draw.prototype.initUiOptions.call(this, resume);
+
+    this.createPolyline = RSettings.getBoolValue(this.settingsGroup + "/CreatePolyline", false);
+
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var w = optionsToolBar.findChild("CreatePolyline");
+    if (!isNull(w)) {
+        w.checked = this.createPolyline;
+    }
+};
+
+Shape.prototype.hideUiOptions = function(saveToSettings) {
+    Draw.prototype.hideUiOptions.call(this, saveToSettings);
+
+    RSettings.setValue(this.settingsGroup + "/CreatePolyline", this.createPolyline);
+};
+
 Shape.prototype.slotCreatePolylineChanged = function(checked) {
     this.createPolyline = checked;
+};
+
+Shape.prototype.getShapes = function(vertices) {
+    var i;
+    if (this.createPolyline) {
+        var pl = new RPolyline();
+        for (i=0; i<vertices.length; ++i) {
+            pl.appendVertex(vertices[i]);
+        }
+        pl.setClosed(true);
+        return [pl];
+    }
+    else {
+        var ret = [];
+        for (i=0; i<vertices.length; ++i) {
+            ret.push(new RLine(vertices[i], vertices[(i+1)%vertices.length]));
+        }
+        return ret;
+    }
 };

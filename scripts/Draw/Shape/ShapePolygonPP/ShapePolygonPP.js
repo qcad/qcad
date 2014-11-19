@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -30,7 +30,7 @@ function ShapePolygonPP(guiAction) {
     this.corner1 = undefined;
     this.corner2 = undefined;
 
-    this.setUiOptions("ShapePolygonPP.ui");
+    this.setUiOptions(["../Shape.ui", "ShapePolygonPP.ui"]);
 }
 
 ShapePolygonPP.prototype = new Shape();
@@ -119,29 +119,34 @@ ShapePolygonPP.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    var c1;
-    var c2 = this.corner1;
+    var c = this.corner1;
+
+    var corners = [];
 
     var len = this.corner1.getDistanceTo(this.corner2);
     var ang1 = this.corner1.getAngleTo(this.corner2);
     var ang = ang1;
 
-    var op = new RAddObjectsOperation();
     for (var n=1; n<=this.numberOfCorners; ++n) {
-        c1 = c2.copy();
         var edge = new RVector();
         edge.setPolar(len, ang);
-        c2 = c1.operator_add(edge);
 
-        var line = new RLineEntity(
-            this.getDocument(),
-            new RLineData(c1, c2)
-        );
+        corners.push(c.copy());
+        c = c.operator_add(edge);
 
-        op.addObject(line);
-
-        // more accurate than incrementing the angle:
+        // more precise than incrementing the angle:
         ang = ang1 + (2*Math.PI)/this.numberOfCorners * n;
+    }
+
+    var op = new RAddObjectsOperation();
+
+    var shapes = this.getShapes(corners);
+    for (var i=0; i<shapes.length; ++i) {
+        var e = shapeToEntity(this.getDocument(), shapes[i]);
+        if (isNull(e)) {
+            continue;
+        }
+        op.addObject(e);
     }
 
     return op;

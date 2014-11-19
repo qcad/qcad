@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -315,8 +315,8 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
     this.optionWidgetActions = [];
 
     if (!isNull(this.getGuiAction()) &&
-            this.getGuiAction().getGroup() !== "snaps" &&
-            this.getGuiAction().getGroup() !== "snaprestrictions") {
+        this.getGuiAction().getGroup() !== "snaps" &&
+        this.getGuiAction().getGroup() !== "snaprestrictions") {
 
         // automatically add icon of current action to toolbar:
         if (!this.getGuiAction().icon.isNull()) {

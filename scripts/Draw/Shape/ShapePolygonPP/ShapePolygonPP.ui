@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ShapePolygonCP</class>
- <widget class="QWidget" name="ShapePolygonCP">
+ <class>ShapePolygonPP</class>
+ <widget class="QWidget" name="ShapePolygonPP">
   <property name="geometry">
    <rect>
     <x>0</x>

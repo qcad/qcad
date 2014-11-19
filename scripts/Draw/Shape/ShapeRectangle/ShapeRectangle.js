@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -127,29 +127,13 @@ ShapeRectangle.prototype.getOperation = function(preview) {
 
     var op = new RAddObjectsOperation();
 
-    if (this.createPolyline) {
-        var pl = new RPolyline();
-        for (var i=0; i<4; ++i) {
-            pl.appendVertex(corners[i]);
+    var shapes = this.getShapes(corners);
+    for (var i=0; i<shapes.length; ++i) {
+        var e = shapeToEntity(this.getDocument(), shapes[i]);
+        if (isNull(e)) {
+            continue;
         }
-        pl.setClosed(true);
-        var polyline = new RPolylineEntity(
-            this.getDocument(),
-            new RPolylineData(pl)
-        );
-        op.addObject(polyline);
-    }
-    else {
-        for (var i=0; i<4; ++i) {
-            var line = new RLineEntity(
-                this.getDocument(),
-                new RLineData(
-                    corners[i],
-                    corners[(i+1)%4]
-                )
-            );
-            op.addObject(line);
-        }
+        op.addObject(e);
     }
 
     return op;

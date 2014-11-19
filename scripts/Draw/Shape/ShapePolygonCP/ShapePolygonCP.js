@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -30,7 +30,7 @@ function ShapePolygonCP(guiAction) {
     this.center = undefined;
     this.corner = undefined;
 
-    this.setUiOptions("ShapePolygonCP.ui");
+    this.setUiOptions(["../Shape.ui", "ShapePolygonCP.ui"]);
 }
 
 ShapePolygonCP.prototype = new Shape();
@@ -120,20 +120,23 @@ ShapePolygonCP.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    var c1;
-    var c2 = this.corner;
+    var corners = [];
+
+    for (var n=1; n<=this.numberOfCorners; ++n) {
+        var c = this.corner.copy();
+        c.rotate((Math.PI*2.0)/this.numberOfCorners*n, this.center);
+        corners.push(c);
+    }
 
     var op = new RAddObjectsOperation();
-    for (var n=1; n<=this.numberOfCorners; ++n) {
-        c1 = c2.copy();
-        c2.rotate((Math.PI*2.0)/this.numberOfCorners, this.center);
 
-        var line = new RLineEntity(
-            this.getDocument(),
-            new RLineData(c1, c2)
-        );
-
-        op.addObject(line);
+    var shapes = this.getShapes(corners);
+    for (var i=0; i<shapes.length; ++i) {
+        var e = shapeToEntity(this.getDocument(), shapes[i]);
+        if (isNull(e)) {
+            continue;
+        }
+        op.addObject(e);
     }
 
     return op;

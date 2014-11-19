@@ -31,20 +31,16 @@ function ShapeRectangleSize(guiAction) {
         SettingPosition : 0
     };
 
-    this.setUiOptions("ShapeRectangleSize.ui");
+    this.setUiOptions(["../Shape.ui", "ShapeRectangleSize.ui"]);
 
     // note: these are not default (default are defined in the .ui file),
     // values are provided here to make this class functional from the start.
     this.pos = undefined;
     this.width = 1;
     this.height = 1;
-    //this.connected = false;
-    
-    // reference point window
-    //this.rpw = undefined;
     
     // [ObjectName], [Shown Text], offset vector
-    this.rbReferencePoints = new Array(
+    this.rbReferencePoints = [
         [ "TopLeft", qsTr("Top Left"), new RVector(-1, 1) ],
         [ "Top", qsTr("Top"), new RVector(0, 1) ],
         [ "TopRight", qsTr("Top Right"), new RVector(1, 1) ],
@@ -54,14 +50,15 @@ function ShapeRectangleSize(guiAction) {
         [ "BottomLeft", qsTr("Bottom Left"), new RVector(-1, -1) ],
         [ "Bottom", qsTr("Bottom"), new RVector(0, -1) ],
         [ "BottomRight", qsTr("Bottom Right"), new RVector(1, -1) ]
-    );
+    ];
     this.referencePoint = this.rbReferencePoints[0][2]; 
 }
 
 ShapeRectangleSize.prototype = new Shape();
 
-ShapeRectangleSize.prototype.initUiOptions = function(resume) {
-    Shape.prototype.initUiOptions.call(this, resume);
+ShapeRectangleSize.prototype.showUiOptions = function(resume, restoreFromSettings) {
+    debugger;
+    Shape.prototype.showUiOptions.call(this, resume, restoreFromSettings);
     
     var optionsToolBar = EAction.getOptionsToolBar();
     var refPointCombo = optionsToolBar.findChild("ReferencePoint");
@@ -69,84 +66,12 @@ ShapeRectangleSize.prototype.initUiOptions = function(resume) {
     for (var i=0; i<this.rbReferencePoints.length; i++) {
         refPointCombo.addItem(this.rbReferencePoints[i][1], this.rbReferencePoints[i][2]);
     }
-
-    //if (!this.connected) {
-    //    refPointCombo.clicked.connect(this, "showReferencePointWidget");
-    //    this.connected = true;
-    //}
-    
-    //var icon = new QIcon(this.basePath + "/Down.svg");
-    //refPointCombo = objectFromPath("MainWindow::Options::ReferencePointButton");
-    //refPointCombo.icon = icon;
 };
 
 ShapeRectangleSize.prototype.beginEvent = function() {
     Shape.prototype.beginEvent.call(this);
     this.setState(this.State.SettingPosition);
 };
-
-/*
-ShapeRectangleSize.prototype.showReferencePointWidget = function() {
-    qDebug("ShapeRectangleSize.prototype.showReferencePointWidget");
-
-    var btRefPoint = objectFromPath("MainWindow::Options::ReferencePointButton");
-    this.rpw = this.createWidget("ReferencePoint.ui");
-    this.rpw.setParent(objectFromPath("MainWindow"));
-    var flags = new Qt.WindowFlags(Qt.Popup);
-    this.rpw.setWindowFlags(flags);
-    var p = btRefPoint.mapToGlobal(new QPoint(0, btRefPoint.height + 2));
-    var icon = new QIcon(this.basePath + "/Up.svg");
-    btRefPoint.icon = icon;
-    // this.rpw.move(p.x, p.y);
-    this.rpw.pos = p;
-    this.rpw.setFixedSize(100, 70);
-    var w = this.rpw.findChild("InnerWidget");
-    w.setFixedSize(90, 60);
-    this.rpw.show();
-    for ( var i = 0; i < this.rbReferencePoints.length; ++i) {
-        var rb = this.rbReferencePoints[i];
-        w = this.rpw.findChild(rb[0]);
-        if (rb[2] == this.referencePoint) {
-            w.checked = true;
-        }
-        w.clicked.connect(this, "setReferencePointSlot");
-    }
-};
-*/
-
-/*
-ShapeRectangleSize.prototype.setReferencePointSlot = function() {
-    if (isNull(this.rpw)) {
-        return;
-    }
-    
-    for (var i = 0; i < this.rbReferencePoints.length; ++i) {
-        var rb = this.rbReferencePoints[i];
-        var w = this.rpw.findChild(rb[0]);
-        if (w.checked) {
-            var tw = objectFromPath("MainWindow::Options::ReferencePointButton");
-            tw.text = rb[1];
-            this.referencePoint = rb[2];
-            break;
-        }
-    }
-    var icon = new QIcon(this.basePath + "/Down.svg");
-    var btRefPoint = objectFromPath("MainWindow::Options::ReferencePointButton");
-    btRefPoint.icon = icon;
-
-    // short delay before closing
-    var date = new Date();
-    var curDate = null;
-    var c = 0;
-    do {
-        curDate = new Date();
-        ++c;
-    } while (curDate - date < 200);
-
-    this.rpw.close();
-    this.update();
-};
-*/
 
 ShapeRectangleSize.prototype.setState = function(state) {
     Shape.prototype.setState.call(this, state);
@@ -192,39 +117,33 @@ ShapeRectangleSize.prototype.getOperation = function(preview) {
     var y = this.pos.y;
     var w2 = this.width / 2;
     var h2 = this.height / 2;
-    var corners = new Array(
+    var corners = [
         new RVector(x - w2, y - h2),
         new RVector(x + w2, y - h2),
         new RVector(x + w2, y + h2),
         new RVector(x - w2, y + h2)
-    );
+    ];
     // apply reference point vector
     for (i = 0; i < corners.length; ++i) {
         corners[i] = new RVector(
-                corners[i].x - w2 * this.referencePoint.x,
-                corners[i].y - h2 * this.referencePoint.y);
+            corners[i].x - w2 * this.referencePoint.x,
+            corners[i].y - h2 * this.referencePoint.y
+        );
     }
 
     var op = new RAddObjectsOperation();
-    for (i = 0; i < 4; ++i) {
-        var line = new RLineEntity(this.getDocument(),
-                new RLineData(corners[i], corners[(i + 1) % 4]));
-        op.addObject(line);
+
+    var shapes = this.getShapes(corners);
+    for (i=0; i<shapes.length; ++i) {
+        var e = shapeToEntity(this.getDocument(), shapes[i]);
+        if (isNull(e)) {
+            continue;
+        }
+        op.addObject(e);
     }
+
     return op;
 };
-
-/*
-ShapeRectangleSize.prototype.update = function() {
-    var di = this.getDocumentInterface();
-    di.clearPreview();
-    var op = this.getOperation(false);
-    if (!isNull(op)) {
-        di.previewOperation(op);
-    }
-    di.repaintViews();
-};
-*/
 
 ShapeRectangleSize.prototype.slotWidthChanged = function(value) {
     this.width = value;

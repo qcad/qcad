@@ -147,7 +147,7 @@ Line.prototype.hideUiOptions = function(saveToSettings) {
     Draw.prototype.hideUiOptions.call(this, saveToSettings);
 
     RSettings.setValue(this.settingsGroup + "/Type", this.lineType);
-}
+};
 
 Line.prototype.typeChanged = function() {
 };
