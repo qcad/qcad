@@ -5,7 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/ToggleLayerVisibility.svg");
     action.setDefaultShortcut(new QKeySequence("y,v"));
     action.setDefaultCommands(["layertogglevisibility", "yv"]);
-    action.setGroupSortOrder(17100);
+    action.setGroupSortOrder(14100);
     action.setSortOrder(100);
     action.setWidgetNames(["LayerMenu", "LayerToolBar", "LayerToolsPanel"]);
 }
