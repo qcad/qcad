@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,7 +22,7 @@ include("../Shape.js");
 /**
  * \class ShapeRectangleSize
  * \brief Rectangle from point and size.
- * \ingroup ecma_draw_line
+ * \ingroup ecma_draw_shape
  */
 function ShapeRectangleSize(guiAction) {
     Shape.call(this, guiAction);

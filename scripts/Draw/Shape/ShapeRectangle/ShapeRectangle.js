@@ -22,7 +22,7 @@ include("../Shape.js");
 /**
  * \class ShapeRectangle
  * \brief Rectangle from two corner points.
- * \ingroup ecma_draw_line
+ * \ingroup ecma_draw_shape
  */
 function ShapeRectangle(guiAction) {
     Shape.call(this, guiAction);

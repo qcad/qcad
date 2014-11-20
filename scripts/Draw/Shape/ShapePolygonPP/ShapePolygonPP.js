@@ -22,7 +22,7 @@ include("../Shape.js");
 /**
  * \class ShapePolygonPP
  * \brief Polygon from two corner points and number of edges.
- * \ingroup ecma_draw_line
+ * \ingroup ecma_draw_shape
  */
 function ShapePolygonPP(guiAction) {
     Shape.call(this, guiAction);

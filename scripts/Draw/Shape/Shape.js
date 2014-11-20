@@ -18,17 +18,18 @@
  */
 
 /**
- * \defgroup ecma_draw_line Shape Drawing Tools
+ * \defgroup ecma_draw_shape Shape Drawing Tools
  * \ingroup ecma_draw
  *
- * \brief This module contains ECMAScript implementations of various line drawing tools.
+ * \brief This module contains ECMAScript implementations of various
+ * shape drawing tools.
  */
 include("../Draw.js");
 
 /**
  * \class Shape
- * \brief Base class for all line drawing tools.
- * \ingroup ecma_draw_line
+ * \brief Base class for all shape drawing tools.
+ * \ingroup ecma_draw_shape
  */
 function Shape(guiAction) {
     Draw.call(this, guiAction);
