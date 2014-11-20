@@ -2,7 +2,7 @@
 <unit xmlns="http://www.sdml.info/srcML/src"
 xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
 dir="./customwidgets" filename="RMathLineEditPlugin.h">
-  <comment type="block">/** * Copyright (c) 2011-2013 by Andrew
+  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
   Mustun. All rights reserved. * * This file is part of the QCAD
   project. * * QCAD is free software: you can redistribute it
   and/or modify * it under the terms of the GNU General Public

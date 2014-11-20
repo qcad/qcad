@@ -59,6 +59,11 @@ RBox::RBox(const RVector& center, double range) {
     c2 = RVector(center.x+range, center.y+range);
 }
 
+RBox::RBox(const RVector& center, double width, double height) {
+    c1 = center - RVector(width, height)/2;
+    c2 = center + RVector(width, height)/2;
+}
+
 bool RBox::isValid() const {
     return (c1.isValid() && c2.isValid());
 }

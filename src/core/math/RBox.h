@@ -46,6 +46,7 @@ public:
     explicit RBox(const QRectF& rect);
     RBox(const RVector& c1, const RVector& c2);
     RBox(const RVector& center, double range);
+    RBox(const RVector& center, double width, double height);
 
     bool isValid() const;
 

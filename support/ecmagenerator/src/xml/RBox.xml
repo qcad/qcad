@@ -24,6 +24,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="range"
         isConst="false" />
       </variant>
+      <variant>
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        isConst="true" />
+        <arg type="double" typeName="double" name="width"
+        isConst="false" />
+        <arg type="double" typeName="double" name="height"
+        isConst="false" />
+      </variant>
     </constructor>
     <method name="isValid" cppName="isValid" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

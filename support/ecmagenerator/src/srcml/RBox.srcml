@@ -2,7 +2,7 @@
 <unit xmlns="http://www.sdml.info/srcML/src"
 xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
 dir="./core/math" filename="RBox.h">
-  <comment type="block">/** * Copyright (c) 2011-2013 by Andrew
+  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
   Mustun. All rights reserved. * * This file is part of the QCAD
   project. * * QCAD is free software: you can redistribute it
   and/or modify * it under the terms of the GNU General Public
@@ -101,6 +101,33 @@ dir="./core/math" filename="RBox.h">
         <name>double</name>
       </type>
       <name>range</name>
+    </decl>
+  </param>)</parameter_list>;</constructor_decl>
+  <constructor_decl>
+  <name>RBox</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>center</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>width</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>height</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl>
   <function_decl>
