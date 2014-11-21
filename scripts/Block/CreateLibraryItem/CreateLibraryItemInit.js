@@ -12,7 +12,4 @@ function init(basePath) {
     action.setGroupSortOrder(14600);
     action.setSortOrder(100);
     action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel"]);
-
-    var appWin = EAction.getMainWindow();
-    appWin.addSelectionListener(action);
 }

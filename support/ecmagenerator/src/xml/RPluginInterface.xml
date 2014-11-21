@@ -9,6 +9,8 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasStreamOperator="false" isAbstract="true" isScriptable="true">
     <enum name="InitStatus">
       <value name="GotSplashWindow" />
+      <value name="AddOnsInitialized" />
+      <value name="ActionsAdded" />
       <value name="GotMainWindow" />
       <value name="LoadedFiles" />
       <value name="ScriptsExecuted" />

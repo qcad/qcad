@@ -6,7 +6,7 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("DrawPolyline", "Draw polyline with line and arc segments"));
     action.setDefaultShortcut(new QKeySequence("p,l"));
     action.setDefaultCommands(["polyline", "pl"]);
-    action.setGroupSortOrder(11100);
+    action.setGroupSortOrder(11010);
     action.setSortOrder(100);
     action.setWidgetNames(["DrawPolylineMenu", "PolylineToolBar", "PolylineToolsPanel"]);
 }

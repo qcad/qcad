@@ -871,26 +871,20 @@ dir="./core" filename="RGuiAction.h">
   <comment type="block">/** * If \c on is true, this action
   requires a selection to operate on. The GUI element(s) * can for
   example be grayed out if no selection is present. */</comment>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setRequiresSelection</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>requiresSelection</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setRequiresSelection</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>on</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <comment type="block">/** * \retval true This action requires an
   selection to be started. * \retval false This action does not
   require a selection to be started. */</comment>

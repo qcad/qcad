@@ -11,7 +11,4 @@ function init(basePath) {
     action.setSortOrder(100);
     action.setSortOrderOverride("MainToolsPanel", 300);
     action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel", "MainToolsPanel"]);
-
-    var appWin = EAction.getMainWindow();
-    appWin.addSelectionListener(action);
 }

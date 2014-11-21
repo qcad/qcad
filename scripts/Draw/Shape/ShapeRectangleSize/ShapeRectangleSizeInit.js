@@ -6,7 +6,7 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("r,s"));
     action.setStatusTip(qsTranslate("ShapeRectangleSize", "Draw rectangle with position and size"));
     action.setDefaultCommands(["rectanglesize", "linerectanglesize", "rs"]);
-    action.setGroupSortOrder(6200);
+    action.setGroupSortOrder(11510);
     action.setSortOrder(200);
     action.setWidgetNames(["DrawShapeMenu", "ShapeToolBar", "ShapeToolsPanel"]);
 }

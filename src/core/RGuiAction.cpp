@@ -271,6 +271,17 @@ bool RGuiAction::isChecked() {
     return QAction::isChecked();
 }
 
+void RGuiAction::setRequiresSelection(bool on) {
+    requiresSelection = on;
+
+    if (requiresSelection) {
+        RMainWindow* mw = RMainWindow::getMainWindow();
+        if (mw) {
+            mw->addSelectionListener(this);
+        }
+    }
+}
+
 void RGuiAction::setGroupSortOrderStatic(QAction* a, int groupSortOrder) {
     a->setProperty("GroupSortOrder", groupSortOrder);
 }
@@ -444,13 +455,11 @@ void RGuiAction::addToWidget(QAction* action, QWidget* w) {
         return;
     }
 
-    /*
     if (!action->isSeparator()) {
         if (!action->text().contains("{")) {
             action->setText(action->text() + QString(" {%1,%2}").arg(getGroupSortOrderStatic(action, w)).arg(getSortOrderStatic(action, w)));
         }
     }
-    */
 
     RWidget* rw = dynamic_cast<RWidget*>(w);
 

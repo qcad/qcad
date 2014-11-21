@@ -81,6 +81,16 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("AddOnsInitialized",
+    QScriptValue(RPluginInterface::AddOnsInitialized),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ActionsAdded",
+    QScriptValue(RPluginInterface::ActionsAdded),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("GotMainWindow",
     QScriptValue(RPluginInterface::GotMainWindow),
     QScriptValue::ReadOnly);

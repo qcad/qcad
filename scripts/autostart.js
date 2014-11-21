@@ -602,10 +602,12 @@ function main() {
 
     //RMainWindow* appWin = RMainWindow::getMainWindow();
 
+    RPluginLoader.postInitPlugins(RPluginInterface.AddOnsInitialized);
+
     addActionsToWidgets();
 
-    //appWin.initGuiActions();
-    //TODO: appWin.initSeparators();
+    RPluginLoader.postInitPlugins(RPluginInterface.ActionsAdded);
+
     appWin.updateGuiActions();
     appWin.acceptDrops = true;
     appWin.dockNestingEnabled = true;

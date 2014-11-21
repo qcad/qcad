@@ -54,6 +54,16 @@ dir="./core" filename="RPluginInterface.h">
   </expr>, 
   <comment type="block">/**&lt; Splashscreen showing. */</comment>
   <expr>
+    <name>AddOnsInitialized</name>
+  </expr>, 
+  <comment type="block">/**&lt; Add ons are initialized, actions
+  created but not added to widgets. */</comment>
+  <expr>
+    <name>ActionsAdded</name>
+  </expr>, 
+  <comment type="block">/**&lt; Actions have been added to widgets.
+  */</comment>
+  <expr>
     <name>GotMainWindow</name>
   </expr>, 
   <comment type="block">/**&lt; Main window with all tools and

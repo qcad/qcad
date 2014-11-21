@@ -9,7 +9,4 @@ function init(basePath) {
     action.setGroupSortOrder(3300);
     action.setSortOrder(400);
     action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
-
-    var appWin = EAction.getMainWindow();
-    appWin.addSelectionListener(action);
 }

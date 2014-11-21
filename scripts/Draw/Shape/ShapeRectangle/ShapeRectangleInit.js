@@ -6,7 +6,7 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("r,e"));
     action.setStatusTip(qsTranslate("ShapeRectangle", "Draw rectangle from two corners"));
     action.setDefaultCommands(["rectangle", "linerectangle", "rect", "re"]);
-    action.setGroupSortOrder(6200);
+    action.setGroupSortOrder(11510);
     action.setSortOrder(100);
     action.setWidgetNames(["DrawShapeMenu", "ShapeToolBar", "ShapeToolsPanel"]);
 }

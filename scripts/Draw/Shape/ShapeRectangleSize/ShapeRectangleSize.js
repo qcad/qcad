@@ -57,7 +57,6 @@ function ShapeRectangleSize(guiAction) {
 ShapeRectangleSize.prototype = new Shape();
 
 ShapeRectangleSize.prototype.showUiOptions = function(resume, restoreFromSettings) {
-    debugger;
     Shape.prototype.showUiOptions.call(this, resume, restoreFromSettings);
     
     var optionsToolBar = EAction.getOptionsToolBar();

@@ -186,9 +186,7 @@ public:
      * If \c on is true, this action requires a selection to operate on. The GUI element(s)
      * can for example be grayed out if no selection is present.
      */
-    void setRequiresSelection(bool on) {
-        requiresSelection = on;
-    }
+    void setRequiresSelection(bool on);
 
     /**
      * \retval true This action requires an selection to be started.
