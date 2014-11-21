@@ -51,7 +51,11 @@ DimensionSettings.updateUnit = function(unit) {
     var unitSymbol = "";
     unitSymbol = RUnit.unitToName(DimensionSettings.unit);
     for (var i=1; i<=5; i++) {
-        widgets["DimUnit" + i].text = unitSymbol;
+        var w = widgets["DimUnit" + i];
+        if (isNull(w)) {
+            continue;
+        }
+        w.text = unitSymbol;
     }
 
     // update previews:
@@ -63,111 +67,123 @@ DimensionSettings.updateUnit = function(unit) {
 DimensionSettings.postInitPreferences = function(pageWidget, calledByPrefDialog, document) {
     if (isNull(document)) {
         var widgets = getWidgets(pageWidget);
-        // update unit labels, preview:
-        //var unit = RSettings.getIntValue("UnitSettings/Unit", RS.Millimeter);
-//        DimensionSettings.updateUnit(unit);
-//        DimensionSettings.updateLinearPrecision(widgets);
-//        DimensionSettings.updateAngularPrecision(widgets);
-
         DimensionSettings.updateLinearPreview(widgets);
         DimensionSettings.updateAngularPreview(widgets);
         return;
     }
 };
 
-DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, document, preferencesAction) {
+DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, document, preferencesAction, unit) {
     var w, list;
     
     DimensionSettings.pageWidget = pageWidget;
+    var settingsName = pageWidget.objectName;
     var widgets = getWidgets(pageWidget);
 
-    // figure out what unit currently applies
-    // (the one from the document, ini file or combo box):
-    var unit;
-    if (!isNull(document)) {
-        // drawing unit:
-        unit = document.getUnit();
-    }
-    else {
-        // global unit:
-        unit = RSettings.getIntValue("UnitSettings/Unit", RS.Millimeter);
-    }
+    if (isNull(unit)) {
+        // figure out what unit currently applies
+        // (the one from the document, ini file or combo box):
+        if (!isNull(document)) {
+            // drawing unit:
+            unit = document.getUnit();
+        }
+        else {
+            // global unit:
+            unit = RSettings.getIntValue("UnitSettings/Unit", RS.Millimeter);
+        }
 
-    // unit might have been changed by user:
-    var unitCombo = objectFromPath("MainWindow::Unit");
-    if (isComboBox(unitCombo)) {
-        unit = unitCombo.itemData(unitCombo.currentIndex);
+        // unit might have been changed by user:
+        var unitCombo = objectFromPath("MainWindow::Unit");
+        if (isComboBox(unitCombo)) {
+            unit = unitCombo.itemData(unitCombo.currentIndex);
+        }
     }
     DimensionSettings.unit = unit;
 
     // connect keep proportions check box:
-    widgets["KeepProportions"].toggled.connect(function(onOff) {
-        if (onOff) {
-            DimensionSettings.keepProportions(widgets["DIMTXT"].getValue(), widgets);
-        }
-    });
-    widgets["DIMTXT"].valueChanged.connect(function(value) {
-        DimensionSettings.keepProportions(value, widgets);
-    });
+    if (!isNull(widgets["KeepProportions"])) {
+        widgets["KeepProportions"].toggled.connect(function(onOff) {
+            if (onOff) {
+                DimensionSettings.keepProportions(widgets["DIMTXT"].getValue(), widgets);
+            }
+        });
+    }
+    if (!isNull(widgets["DIMTXT"])) {
+        widgets["DIMTXT"].valueChanged.connect(function(value) {
+            DimensionSettings.keepProportions(value, widgets);
+        });
+    }
 
     // init linear dimension format combo boxes:
     w = widgets["LinearFormat"];
-    w.addItem(qsTr("Scientific"), RS.Scientific);
-    w.addItem(qsTr("Decimal"), RS.Decimal);
-    w.addItem(qsTr("Engineering"), RS.Engineering);
-    w.addItem(qsTr("Architectural"), RS.ArchitecturalStacked);
-    w.addItem(qsTr("Fractional"), RS.FractionalStacked);
-    w.currentIndex = w.findData(RSettings.getIntValue("DimensionSettings/LinearFormat", RS.Decimal));
-    // unsupported:
-    //w.addItem(qsTr("Architectural"), RS.Architectural);
-    //w.addItem(qsTr("Fractional"), RS.Fractional);
-    //w.addItem(qsTr("Windows Desktop"), RS.WindowsDesktop);
+    if (!isNull(w)) {
+        w.addItem(qsTr("Scientific"), RS.Scientific);
+        w.addItem(qsTr("Decimal"), RS.Decimal);
+        w.addItem(qsTr("Engineering"), RS.Engineering);
+        w.addItem(qsTr("Architectural"), RS.ArchitecturalStacked);
+        w.addItem(qsTr("Fractional"), RS.FractionalStacked);
+        var defaultFormat = RUnit.isMetric(unit) ? RS.Decimal : RS.FractionalStacked;
+        w.currentIndex = w.findData(RSettings.getIntValue(settingsName + "/LinearFormat", defaultFormat));
+        // unsupported:
+        //w.addItem(qsTr("Architectural"), RS.Architectural);
+        //w.addItem(qsTr("Fractional"), RS.Fractional);
+        //w.addItem(qsTr("Windows Desktop"), RS.WindowsDesktop);
 
-    w["activated(int)"].connect(function() {
-        DimensionSettings.updateLinearFormatFromUnit(widgets);
-        DimensionSettings.updateLinearPrecision(widgets);
-        DimensionSettings.updateLinearPreview(widgets);
-    });
+        w["activated(int)"].connect(function() {
+            DimensionSettings.updateLinearFormatFromUnit(widgets);
+            DimensionSettings.updateLinearPrecision(widgets);
+            DimensionSettings.updateLinearPreview(widgets);
+        });
+    }
 
     w = widgets["LinearShowTrailingZeros"];
-    w.stateChanged.connect(function() {
-        DimensionSettings.updateLinearPreview(widgets);
-    });
+    if (!isNull(w)) {
+        w.stateChanged.connect(function() {
+            DimensionSettings.updateLinearPreview(widgets);
+        });
+    }
 
     DimensionSettings.updateLinearPrecision(widgets);
 
     w = widgets["LinearPrecision"];
-    w["activated(int)"].connect(function() {
-        DimensionSettings.updateLinearPreview(widgets);
-    });
-    w.currentIndex = 4;
+    if (!isNull(w)) {
+        w["activated(int)"].connect(function() {
+            DimensionSettings.updateLinearPreview(widgets);
+        });
+        w.currentIndex = 4;
+    }
 
     // init angular dimension format combo boxes:
     w = widgets["AngularFormat"];
-    w.addItem(qsTr("Decimal Degrees"), RS.DegreesDecimal);
-    w.addItem(qsTr("Deg/min/sec"), RS.DegreesMinutesSeconds);
-    w.addItem(qsTr("Gradians"), RS.Gradians);
-    w.addItem(qsTr("Radians"), RS.Radians);
-    w.addItem(qsTr("Surveyor's units"), RS.Surveyors);
-    w.currentIndex = w.findData(RSettings.getIntValue("DimensionSettings/AngularFormat", RS.DegreesDecimal));
+    if (!isNull(w)) {
+        w.addItem(qsTr("Decimal Degrees"), RS.DegreesDecimal);
+        w.addItem(qsTr("Deg/min/sec"), RS.DegreesMinutesSeconds);
+        w.addItem(qsTr("Gradians"), RS.Gradians);
+        w.addItem(qsTr("Radians"), RS.Radians);
+        w.addItem(qsTr("Surveyor's units"), RS.Surveyors);
+        w.currentIndex = w.findData(RSettings.getIntValue(settingsName + "/AngularFormat", RS.DegreesDecimal));
 
-    w["activated(int)"].connect(function() {
-        DimensionSettings.updateAngularPrecision(widgets);
-        DimensionSettings.updateAngularPreview(widgets);
-    });
+        w["activated(int)"].connect(function() {
+            DimensionSettings.updateAngularPrecision(widgets);
+            DimensionSettings.updateAngularPreview(widgets);
+        });
+    }
 
     w = widgets["AngularShowTrailingZeros"];
-    w.stateChanged.connect(function() {
-        DimensionSettings.updateAngularPreview(widgets);
-    });
-
-    DimensionSettings.updateAngularPrecision(widgets);
+    if (!isNull(w)) {
+        w.stateChanged.connect(function() {
+            DimensionSettings.updateAngularPreview(widgets);
+        });
+        DimensionSettings.updateAngularPrecision(widgets);
+    }
 
     w = widgets["AngularPrecision"];
-    w["activated(int)"].connect(function() {
-        DimensionSettings.updateAngularPreview(widgets, document);
-    });
-    w.currentIndex = 0;
+    if (!isNull(w)) {
+        w["activated(int)"].connect(function() {
+            DimensionSettings.updateAngularPreview(widgets, document);
+        });
+        w.currentIndex = 0;
+    }
 
     if (isNull(document)) {
         // update unit labels, preview:
@@ -176,14 +192,20 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
         //DimensionSettings.updateAngularPrecision(widgets);
 
         if (hasPlugin("DWG")) {
-            widgets["DimensionFont"].setProperty("Loaded", true);
-            widgets["DimensionFont"].editable = false;
-            initFontComboBox(widgets["DimensionFont"]);
-            var dimFont = RSettings.getStringValue("DimensionSettings/DimensionFont", "Standard");
-            activateFont(widgets["DimensionFont"], dimFont.isEmpty() ? "Standard" : dimFont);
+            w = widgets["DimensionFont"];
+            if (!isNull(w)) {
+                w.setProperty("Loaded", true);
+                w.editable = false;
+                initFontComboBox(w);
+                var dimFont = RSettings.getStringValue(settingsName + "/DimensionFont", "Standard");
+                activateFont(w, dimFont.isEmpty() ? "Standard" : dimFont);
+            }
         }
         else {
-            widgets["FontGroup"].visible = false;
+            w = widgets["FontGroup"];
+            if (!isNull(w)) {
+                w.visible = false;
+            }
         }
 
         // other global preferences are initialized automatically
@@ -196,8 +218,12 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     for (var i=0; i<DimensionSettings.dimx.length; i++) {
         var item = DimensionSettings.dimx[i];
         w = widgets[item[0]];
+        if (isNull(w)) {
+            continue;
+        }
+
         var dimprop = document.getKnownVariable(item[1], 2.5*item[2]);
-        if (item[1]==RS.DIMTXT) {
+        if (item[1]===RS.DIMTXT) {
             dimtxt = dimprop;
         }
         else {
@@ -212,75 +238,106 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     }
 
     // init keep proportions check box:
-    widgets["KeepProportions"].checked = keepProportions;
-    widgets["KeepProportions"].setProperty("Loaded", true);
+    w = widgets["KeepProportions"];
+    if (!isNull(w)) {
+        w.checked = keepProportions;
+        w.setProperty("Loaded", true);
+    }
 
     // init dimension arrow type:
     var dimblk = document.getKnownVariable(RS.DIMBLK, "");
     var dimtsz = document.getKnownVariable(RS.DIMTSZ, 0.0);
-    if (dimblk.toUpperCase()=="ARCHTICK" || dimtsz > RS.PointTolerance) {
-        widgets["ArchitecturalTick"].checked = true;
+    if (dimblk.toUpperCase()==="ARCHTICK" || dimtsz > RS.PointTolerance) {
+        if (!isNull(widgets["ArchitecturalTick"])) {
+            widgets["ArchitecturalTick"].checked = true;
+        }
     }
     else {
-        widgets["Arrow"].checked = true;
+        if (!isNull(widgets["Arrow"])) {
+            widgets["Arrow"].checked = true;
+        }
     }
-    widgets["ArchitecturalTick"].setProperty("Loaded", true);
-    widgets["Arrow"].setProperty("Loaded", true);
+    if (!isNull(widgets["ArchitecturalTick"])) {
+        widgets["ArchitecturalTick"].setProperty("Loaded", true);
+    }
+    if (!isNull(widgets["Arrow"])) {
+        widgets["Arrow"].setProperty("Loaded", true);
+    }
 
     // init linear dimension format:
     var dimlunit = document.getKnownVariable(RS.DIMLUNIT, RS.Decimal);
     //widgets["LinearFormat"].currentIndex = dimlunit-1;
-    widgets["LinearFormat"].currentIndex = widgets["LinearFormat"].findData(dimlunit);
-    widgets["LinearFormat"].setProperty("Loaded", true);
-    widgets["LinearFormat"]["currentIndexChanged(int)"].connect(function(idx) {
-        var lf = widgets["LinearFormat"].itemData(idx);
-        preferencesAction.linearFormatUpdated(lf);
-    });
-    DimensionSettings.updateLinearPrecision(widgets);
+    w = widgets["LinearFormat"];
+    if (!isNull(w)) {
+        w.currentIndex = widgets["LinearFormat"].findData(dimlunit);
+        w.setProperty("Loaded", true);
+        w["currentIndexChanged(int)"].connect(function(idx) {
+            var lf = w.itemData(idx);
+            preferencesAction.linearFormatUpdated(lf);
+        });
+        DimensionSettings.updateLinearPrecision(widgets);
+    }
 
     // init linear dimension precision:
     var dimdec = document.getKnownVariable(RS.DIMDEC, 4);
-    widgets["LinearPrecision"].currentIndex = dimdec;
-    widgets["LinearPrecision"].setProperty("Loaded", true);
+    w = widgets["LinearPrecision"];
+    if (!isNull(w)) {
+        w.currentIndex = dimdec;
+        w.setProperty("Loaded", true);
+    }
 
     // init angular dimension format:
     var dimaunit = document.getKnownVariable(RS.DIMAUNIT, RS.DegreesDecimal);
-    //widgets["AngularFormat"].currentIndex = dimaunit;
-    widgets["AngularFormat"].currentIndex = widgets["AngularFormat"].findData(dimaunit);
-    widgets["AngularFormat"].setProperty("Loaded", true);
-    DimensionSettings.updateAngularPrecision(widgets);
+    w = widgets["AngularFormat"];
+    if (!isNull(w)) {
+        //w.currentIndex = dimaunit;
+        w.currentIndex = widgets["AngularFormat"].findData(dimaunit);
+        w.setProperty("Loaded", true);
+        DimensionSettings.updateAngularPrecision(widgets);
+    }
 
     // init angular dimension precision:
     var dimadec = document.getKnownVariable(RS.DIMADEC, 0);
-    widgets["AngularPrecision"].currentIndex = dimadec;
-    widgets["AngularPrecision"].setProperty("Loaded", true);
+    w = widgets["AngularPrecision"];
+    if (!isNull(w)) {
+        w.currentIndex = dimadec;
+        w.setProperty("Loaded", true);
+    }
 
     // show leading / trailing zeroes:
     var dimzin = document.getKnownVariable(RS.DIMZIN, 12);
-    widgets["LinearShowTrailingZeros"].checked = !((dimzin & 8) === 8);
-    widgets["LinearShowTrailingZeros"].setProperty("Loaded", true);
+    w = widgets["LinearShowTrailingZeros"];
+    if (!isNull(w)) {
+        w.checked = !((dimzin & 8) === 8);
+        w.setProperty("Loaded", true);
+    }
     var dimazin = document.getKnownVariable(RS.DIMAZIN, 3);
-    widgets["AngularShowTrailingZeros"].checked = !((dimazin & 2) === 2);
-    widgets["AngularShowTrailingZeros"].setProperty("Loaded", true);
+    w = widgets["AngularShowTrailingZeros"];
+    if (!isNull(w)) {
+        w.checked = !((dimazin & 2) === 2);
+        w.setProperty("Loaded", true);
+    }
 
     // update unit labels, preview:
     DimensionSettings.updateUnit(unit);
 
     if (hasPlugin("DWG")) {
-        widgets["DimensionFont"].setProperty("Loaded", true);
-        widgets["DimensionFont"].editable = false;
-        //widgets["DimensionFont"].setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred);
-        initFontComboBox(widgets["DimensionFont"]);
-        var dimFont = document.getDimensionFont();
-        activateFont(widgets["DimensionFont"], dimFont.isEmpty() ? "Standard" : dimFont);
+        w = widgets["DimensionFont"];
+        if (!isNull(w)) {
+            w.setProperty("Loaded", true);
+            w.editable = false;
+            //w.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred);
+            initFontComboBox(w);
+            var dimFont = document.getDimensionFont();
+            activateFont(w, dimFont.isEmpty() ? "Standard" : dimFont);
+        }
     }
     else {
-        widgets["FontGroup"].visible = false;
+        w = widgets["FontGroup"];
+        if (!isNull(w)) {
+            w.visible = false;
+        }
     }
-
-    // update previews:
-    //DimensionSettings.updateLinearPreview(widgets);
-    //DimensionSettings.updateAngularPreview(widgets);
 };
 
 /**
@@ -484,9 +541,9 @@ DimensionSettings.updateAngularPrecision = function(widgets) {
 
 DimensionSettings.updateLinearPreview = function(widgets) {
     var wFormat = widgets["LinearFormat"];
-    var showTrailingZeros = widgets["LinearShowTrailingZeros"].checked;
+    var showTrailingZeros = isNull(widgets["LinearShowTrailingZeros"]) ? false : widgets["LinearShowTrailingZeros"].checked;
     var value = 14.43112351;
-    if (showTrailingZeros===true) {
+    if (showTrailingZeros===true && RUnit.isMetric(DimensionSettings.unit)) {
         value = 10.0;
     }
 
