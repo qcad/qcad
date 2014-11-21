@@ -757,6 +757,7 @@ EAction.getSubMenu = function(menu, groupSortOrder, sortOrder, title, objectName
         //var action = menu.addMenu(subMenu);
 
         var action = new RGuiAction(title, menu);
+        action.objectName = objectName + "Action";
         //subMenu = new QMenu(title + " {%1,%2}".arg(groupSortOrder).arg(sortOrder), menu);
         subMenu = new QMenu(title, menu);
         subMenu.objectName = objectName;

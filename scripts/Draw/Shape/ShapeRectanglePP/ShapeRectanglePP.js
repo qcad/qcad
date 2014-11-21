@@ -20,11 +20,11 @@
 include("../Shape.js");
 
 /**
- * \class ShapeRectangle
+ * \class ShapeRectanglePP
  * \brief Rectangle from two corner points.
  * \ingroup ecma_draw_shape
  */
-function ShapeRectangle(guiAction) {
+function ShapeRectanglePP(guiAction) {
     Shape.call(this, guiAction);
 
     this.corner1 = undefined;
@@ -33,20 +33,20 @@ function ShapeRectangle(guiAction) {
     this.setUiOptions("../Shape.ui");
 }
 
-ShapeRectangle.prototype = new Shape();
+ShapeRectanglePP.prototype = new Shape();
 
-ShapeRectangle.State = {
+ShapeRectanglePP.State = {
     SettingCorner1 : 0,
     SettingCorner2 : 1
 };
 
-ShapeRectangle.prototype.beginEvent = function() {
+ShapeRectanglePP.prototype.beginEvent = function() {
     Shape.prototype.beginEvent.call(this);
 
-    this.setState(ShapeRectangle.State.SettingCorner1);
+    this.setState(ShapeRectanglePP.State.SettingCorner1);
 };
 
-ShapeRectangle.prototype.setState = function(state) {
+ShapeRectanglePP.prototype.setState = function(state) {
     Shape.prototype.setState.call(this, state);
 
     this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
@@ -54,14 +54,14 @@ ShapeRectangle.prototype.setState = function(state) {
 
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
-    case ShapeRectangle.State.SettingCorner1:
+    case ShapeRectanglePP.State.SettingCorner1:
         var trFirstCorner = qsTr("First corner");
         this.setCommandPrompt(trFirstCorner);
         this.setLeftMouseTip(trFirstCorner);
         this.setRightMouseTip(EAction.trCancel);
         break;
 
-    case ShapeRectangle.State.SettingCorner2:
+    case ShapeRectanglePP.State.SettingCorner2:
         var trSecondCorner = qsTr("Second corner");
         this.setCommandPrompt(trSecondCorner);
         this.setLeftMouseTip(trSecondCorner);
@@ -72,43 +72,43 @@ ShapeRectangle.prototype.setState = function(state) {
     EAction.showSnapTools();
 };
 
-ShapeRectangle.prototype.escapeEvent = function() {
+ShapeRectanglePP.prototype.escapeEvent = function() {
     switch (this.state) {
-    case ShapeRectangle.State.SettingCorner1:
+    case ShapeRectanglePP.State.SettingCorner1:
         EAction.prototype.escapeEvent.call(this);
         break;
 
-    case ShapeRectangle.State.SettingCorner2:
-        this.setState(ShapeRectangle.State.SettingCorner1);
+    case ShapeRectanglePP.State.SettingCorner2:
+        this.setState(ShapeRectanglePP.State.SettingCorner1);
         break;
     }
 };
 
-ShapeRectangle.prototype.coordinateEvent = function(event) {
+ShapeRectanglePP.prototype.coordinateEvent = function(event) {
     var di = this.getDocumentInterface();
 
     switch (this.state) {
-    case ShapeRectangle.State.SettingCorner1:
+    case ShapeRectanglePP.State.SettingCorner1:
         this.corner1 = event.getModelPosition();
         di.setRelativeZero(this.corner1);
-        this.setState(ShapeRectangle.State.SettingCorner2);
+        this.setState(ShapeRectanglePP.State.SettingCorner2);
         break;
 
-    case ShapeRectangle.State.SettingCorner2:
+    case ShapeRectanglePP.State.SettingCorner2:
         this.corner2 = event.getModelPosition();
         di.setRelativeZero(this.corner2);
         var op = this.getOperation(false);
         if (!isNull(op)) {
             di.applyOperation(op);
-            this.setState(ShapeRectangle.State.SettingCorner1);
+            this.setState(ShapeRectanglePP.State.SettingCorner1);
         }
         break;
     }
 };
 
-ShapeRectangle.prototype.coordinateEventPreview = function(event) {
+ShapeRectanglePP.prototype.coordinateEventPreview = function(event) {
     switch (this.state) {
-    case ShapeRectangle.State.SettingCorner2:
+    case ShapeRectanglePP.State.SettingCorner2:
         this.corner2 = event.getModelPosition();
         this.updatePreview();
         break;
@@ -117,7 +117,7 @@ ShapeRectangle.prototype.coordinateEventPreview = function(event) {
     }
 };
 
-ShapeRectangle.prototype.getOperation = function(preview) {
+ShapeRectanglePP.prototype.getOperation = function(preview) {
     var corners = [
         new RVector(this.corner1.x, this.corner1.y),
         new RVector(this.corner2.x, this.corner1.y),

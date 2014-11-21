@@ -455,11 +455,11 @@ void RGuiAction::addToWidget(QAction* action, QWidget* w) {
         return;
     }
 
-    if (!action->isSeparator()) {
-        if (!action->text().contains("{")) {
-            action->setText(action->text() + QString(" {%1,%2}").arg(getGroupSortOrderStatic(action, w)).arg(getSortOrderStatic(action, w)));
-        }
-    }
+//    if (!action->isSeparator()) {
+//        if (!action->text().contains("{")) {
+//            action->setText(action->text() + QString(" {%1,%2}").arg(getGroupSortOrderStatic(action, w)).arg(getSortOrderStatic(action, w)));
+//        }
+//    }
 
     RWidget* rw = dynamic_cast<RWidget*>(w);
 

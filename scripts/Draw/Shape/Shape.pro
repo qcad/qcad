@@ -3,5 +3,5 @@ SUBDIRS = \
     ts \
     ShapePolygonCP \
     ShapePolygonPP \
-    ShapeRectangle \
+    ShapeRectanglePP \
     ShapeRectangleSize
