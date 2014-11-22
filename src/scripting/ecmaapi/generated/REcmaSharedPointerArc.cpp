@@ -194,6 +194,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getEndPoint, "getEndPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, getPointAtAngle, "getPointAtAngle");
+            
             REcmaHelper::registerFunction(&engine, proto, getMiddlePoint, "getMiddlePoint");
             
             REcmaHelper::registerFunction(&engine, proto, moveStartPoint, "moveStartPoint");
@@ -3075,6 +3077,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerArc::getEndPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerArc::getPointAtAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerArc::getPointAtAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getPointAtAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArc* self = 
+                        getSelf("getPointAtAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPointAtAngle(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getPointAtAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getPointAtAngle", context, engine);
             return result;
         }
          QScriptValue

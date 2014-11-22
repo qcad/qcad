@@ -377,13 +377,15 @@ RVector RArc::getMiddlePoint() const {
 }
 
 RVector RArc::getStartPoint() const {
-    return RVector(center.x + cos(startAngle) * radius, center.y + sin(
-            startAngle) * radius);
+    return getPointAtAngle(startAngle);
 }
 
 RVector RArc::getEndPoint() const {
-    return RVector(center.x + cos(endAngle) * radius, center.y + sin(
-            endAngle) * radius);
+    return getPointAtAngle(endAngle);
+}
+
+RVector RArc::getPointAtAngle(double a) const {
+    return RVector(center.x + cos(a) * radius, center.y + sin(a) * radius);
 }
 
 bool RArc::isReversed() const {

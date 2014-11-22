@@ -997,7 +997,7 @@ void RExporter::exportArc(const RArc& arc, double offset) {
     bool dashFound = false;
     bool gapFound = false;
     double a1 = normalArc.getStartAngle();
-    double a2;
+    double a2 = 0.0;
     do {
         if (dashFound && !gapFound) {
             if (total + fabs(p.getDashLengthAt(i)) >= length - 1.0e-6) {
@@ -1025,6 +1025,15 @@ void RExporter::exportArc(const RArc& arc, double offset) {
         cursor += vp[i];
         total += fabs(p.getDashLengthAt(i));
         done = total > length;
+
+        if (!done && total>0.0) {
+            // handle shape at end of dash / gap:
+            if (p.hasShapeAt(i)) {
+                QList<RPainterPath> pps = p.getShapeAt(i, normalArc.getPointAtAngle(cursor), cursor+M_PI/2);
+                exportPainterPaths(pps);
+            }
+        }
+
         ++i;
         if (i >= p.getNumDashes()) {
             i = 0;
