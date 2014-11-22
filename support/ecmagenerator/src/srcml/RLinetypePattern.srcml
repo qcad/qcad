@@ -50,6 +50,9 @@ dir="./core" filename="RLinetypePattern.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
   <comment type="block">/** * Represents a linetype pattern which
   can be used to draw * dashed graphical elements. * * \scriptable
   * \copyable */</comment>
@@ -327,6 +330,75 @@ dir="./core" filename="RLinetypePattern.h">
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>int</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getShapeIndices</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>bool</name>
+  </type>
+  <name>hasShapeAt</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>i</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RPainterPath</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getShapeAt</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>i</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>pos</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>angle</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <comment type="line">//QString getShapeCodeAt(int i)
+  const;</comment>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>updateShapes</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
     <name>double</name>
   </type>
   <name>getLargestGap</name>
@@ -490,6 +562,108 @@ dir="./core" filename="RLinetypePattern.h">
       </argument>&gt;</argument_list></name>
     </type>
     <name>pattern</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>int</name>
+      </argument>, 
+      <argument>
+        <name>QList
+        <argument_list>&lt;
+        <argument>
+          <name>RPainterPath</name>
+        </argument>&gt;</argument_list></name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>shapes</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>int</name>
+      </argument>, 
+      <argument>
+        <name>QString</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>shapeTexts</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>int</name>
+      </argument>, 
+      <argument>
+        <name>QString</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>shapeTextStyles</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>int</name>
+      </argument>, 
+      <argument>
+        <name>int</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>shapeNumbers</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>int</name>
+      </argument>, 
+      <argument>
+        <name>double</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>shapeScales</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>int</name>
+      </argument>, 
+      <argument>
+        <name>double</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>shapeRotations</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>int</name>
+      </argument>, 
+      <argument>
+        <name>RVector</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>shapeOffsets</name>
   </decl>;</decl_stmt>
   <comment type="line">// internal info about segments at which the
   pattern is symmetrical:</comment>

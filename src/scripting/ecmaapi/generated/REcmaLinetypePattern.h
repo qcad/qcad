@@ -82,6 +82,18 @@
         getDashLengthAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getShapeIndices
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasShapeAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShapeAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLargestGap
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

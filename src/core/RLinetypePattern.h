@@ -33,6 +33,7 @@
 #include <QVector>
 #include <QMap>
 
+#include "RPainterPath.h"
 
 /**
  * Represents a linetype pattern which can be used to draw
@@ -76,6 +77,12 @@ public:
     QList<double> getPattern() const;
     double getPatternLength() const;
     double getDashLengthAt(int i) const;
+    QList<int> getShapeIndices() const;
+    bool hasShapes() const;
+    bool hasShapeAt(int i) const;
+    QList<RPainterPath> getShapeAt(int i, const RVector& pos, double angle) const;
+    //QString getShapeCodeAt(int i) const;
+    void updateShapes();
     double getLargestGap() const;
     bool hasDashAt(double pos) const;
     double getDelta(double pos) const;
@@ -98,6 +105,14 @@ public:
     QString name;
     QString description;
     QList<double> pattern;
+
+    QMap<int, QList<RPainterPath> > shapes;
+    QMap<int, QString> shapeTexts;
+    QMap<int, QString> shapeTextStyles;
+    QMap<int, int> shapeNumbers;
+    QMap<int, double> shapeScales;
+    QMap<int, double> shapeRotations;
+    QMap<int, RVector> shapeOffsets;
 
     // internal info about segments at which the pattern is symmetrical:
     bool* symmetrical;

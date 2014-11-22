@@ -195,6 +195,7 @@ public:
     QList<RVector> getPoints() const;
 
     void transform(const QTransform& t);
+    void rotate(double angle);
 
     int getElementCount() const;
     double getXAt(int i) const;
@@ -210,6 +211,7 @@ private:
     QBrush brush;
     Modes modes;
     QList<RVector> points;
+    // < 0 for secondary path (e.g. bounding box of text)
     double featureSize;
     double pixelSizeHint;
 };

@@ -392,6 +392,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="rotate" cppName="rotate" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getElementCount" cppName="getElementCount"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

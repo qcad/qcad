@@ -408,6 +408,12 @@ void RPainterPath::transform(const QTransform& t) {
     }
 }
 
+void RPainterPath::rotate(double angle) {
+    QTransform t;
+    t.rotate(RMath::rad2deg(angle));
+    transform(t);
+}
+
 int RPainterPath::getElementCount() const {
     return elementCount();
 }

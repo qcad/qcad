@@ -44,11 +44,8 @@ SOURCES = \
     RSolidEntity.cpp \
     RSplineData.cpp \
     RSplineEntity.cpp \
-    RTextBasedData.cpp \
-    RTextBasedEntity.cpp \
     RTextData.cpp \
     RTextEntity.cpp \
-    RTextRenderer.cpp \
     RTraceData.cpp \
     RTraceEntity.cpp \
     RXLineData.cpp \
@@ -99,11 +96,8 @@ HEADERS = \
     RSolidEntity.h \
     RSplineData.h \
     RSplineEntity.h \
-    RTextBasedData.h \
-    RTextBasedEntity.h \
     RTextData.h \
     RTextEntity.h \
-    RTextRenderer.h \
     RTraceData.h \
     RTraceEntity.h \
     RXLineData.h \

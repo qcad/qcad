@@ -519,6 +519,17 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         return false;
     }
 
+    // TODO: make more generic, so any object can choose to be cloned here:
+    // i.e. if (object.cloneInsteadOfChange()) { ... }
+    QSharedPointer<RLinetype> lt = object.dynamicCast<RLinetype>();
+    if (!lt.isNull() && lt->getId()!=RObject::INVALID_ID) {
+        QSharedPointer<RLinetype> clone = QSharedPointer<RLinetype>(lt->clone());
+        objectStorage->setObjectId(*clone, RObject::INVALID_ID);
+        deleteObject(lt->getId());
+        addObject(clone, useCurrentAttributes, false, modifiedPropertyTypeIds);
+        return true;
+    }
+
     QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
 
     // if object is an existing hatch and we are not just changing a property:

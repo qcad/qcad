@@ -841,7 +841,9 @@ void RExporter::exportLine(const RLine& line, double offset) {
     bool optimizeEnds = false;
     if (RMath::isNaN(offset)) {
         offset = getPatternOffset(length, p);
-        optimizeEnds = true;
+        if (!p.hasShapes()) {
+            optimizeEnds = true;
+        }
     }
     else {
         double num = ceil(offset / patternLength);
@@ -859,9 +861,11 @@ void RExporter::exportLine(const RLine& line, double offset) {
     RLine l;
 
     do {
+        double dashLength = p.getDashLengthAt(i);
+
         if (dashFound && !gapFound) {
             // don't shoot over end of line:
-            if (total + fabs(p.getDashLengthAt(i)) >= length - 1.0e-6) {
+            if (total + fabs(dashLength) >= length - 1.0e-6) {
                 if (optimizeEnds) {
                     l = RLine(p1, line.endPoint);
                 }
@@ -871,7 +875,7 @@ void RExporter::exportLine(const RLine& line, double offset) {
 
                 // ignore zero length lines at line ends:
                 //if (l.getLength()>RS::PointTolerance) {
-                    exportLineSegment(l, angle);
+                exportLineSegment(l, angle);
                 //}
                 break;
             }
@@ -879,9 +883,10 @@ void RExporter::exportLine(const RLine& line, double offset) {
         }
 
         // dash, no gap. note that a dash can have a length of 0.0 (point):
-        if (p.getDashLengthAt(i) > -RS::PointTolerance) {
-            // check if we're on the line already:
-            if (total + p.getDashLengthAt(i) > 0) {
+        if (dashLength > -RS::PointTolerance) {
+            // check if we're on the line already
+            // (since we might start before the line due to pattern offset):
+            if (total + dashLength > 0) {
                 p1 = cursor;
 
                 // no gap at the beginning of the line:
@@ -903,9 +908,17 @@ void RExporter::exportLine(const RLine& line, double offset) {
         }
 
         cursor += vp[i];
-        total += fabs(p.getDashLengthAt(i));
+        total += fabs(dashLength);
 
         done = total > length;
+
+        if (!done && total>0.0) {
+            // handle shape at end of dash / gap:
+            if (p.hasShapeAt(i)) {
+                QList<RPainterPath> pps = p.getShapeAt(i, cursor, angle);
+                exportPainterPaths(pps);
+            }
+        }
 
         ++i;
         if (i >= p.getNumDashes()) {
@@ -1304,8 +1317,7 @@ void RExporter::exportImage(const RImageData& image) {
  * \return Offset to use to apply the given pattern to an entity of the
  *      given length that the pattern is symmetrical.
  */
-double RExporter::getPatternOffset(double length,
-        const RLinetypePattern& pattern) {
+double RExporter::getPatternOffset(double length, const RLinetypePattern& pattern) {
     double optOffset = 0.0;
     double gap = 0.0;
     double maxGap = RMINDOUBLE;

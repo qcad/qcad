@@ -71,6 +71,9 @@ SOURCES += \
     RSpatialIndexSimple.cpp \
     RStorage.cpp \
     RTabletEvent.cpp \
+    RTextBasedData.cpp \
+    RTextBasedEntity.cpp \
+    RTextRenderer.cpp \
     RThread.cpp \
     RTransaction.cpp \
     RTransactionStack.cpp \
@@ -211,6 +214,9 @@ HEADERS = \
     RStorage.h \
     RTabletEvent.h \
     RTerminateEvent.h \
+    RTextBasedData.h \
+    RTextBasedEntity.h \
+    RTextRenderer.h \
     RThread.h \
     RTransaction.h \
     RTransactionEvent.h \

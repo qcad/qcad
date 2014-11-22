@@ -146,12 +146,15 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
                 break;
             }
             dlg.text = text;
+            appWin.handleUserWarning(text);
             dlg.exec();
             RSettings.removeRecentFile(fileName);
             return undefined;
         }
+        else {
+            appWin.handleUserMessage(qsTr("Drawing loaded successfully:") + " " + fileName);
+        }
 
-        appWin.handleUserMessage(qsTr("Opened drawing:") + " " + fileName);
         if (document.getFileVersion().length!==0) {
             appWin.handleUserMessage(qsTr("Format:") + " " + document.getFileVersion());
         }

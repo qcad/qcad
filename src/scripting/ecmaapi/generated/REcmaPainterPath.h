@@ -192,6 +192,9 @@
         transform
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        rotate
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getElementCount
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

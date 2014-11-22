@@ -453,11 +453,12 @@ void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
         }
 
         if (!exportToPreview) {
-            if (draftMode) {
-                addPath(getBlockRefOrEntity()->getId(), path, true);
+            // export into current path (used for complex linetypes):
+            if (currentPainterPath.isValid()) {
+                currentPainterPath.addPath(path);
             }
             else {
-                addPath(getBlockRefOrEntity()->getId(), path, false);
+                addPath(getBlockRefOrEntity()->getId(), path, draftMode);
             }
         }
         else {
