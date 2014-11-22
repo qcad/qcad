@@ -159,11 +159,18 @@ bool RLinetypePattern::operator==(const RLinetypePattern& other) const {
 
 void RLinetypePattern::scale(double factor) {
     for (int i = 0; i < pattern.length(); ++i) {
-//        if (RMath::isNaN(pattern[i])) {
-//            continue;
-//        }
         pattern[i] *= factor;
+        if (shapeScales.contains(i)) {
+            shapeScales[i] *= factor;
+        }
+        else {
+            shapeScales.insert(i, factor);
+        }
+        if (shapeOffsets.contains(i)) {
+            shapeOffsets[i] *= factor;
+        }
     }
+    updateShapes();
 }
 
 /**
