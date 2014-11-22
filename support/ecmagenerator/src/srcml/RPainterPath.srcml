@@ -1354,6 +1354,8 @@ dir="./core" filename="RPainterPath.h">
     </type>
     <name>points</name>
   </decl>;</decl_stmt>
+  <comment type="line">// &lt; 0 for secondary path (e.g. bounding
+  box of text)</comment>
   <decl_stmt>
   <decl>
     <type>

@@ -86,6 +86,11 @@ public:
     double getLargestGap() const;
     bool hasDashAt(double pos) const;
     double getDelta(double pos) const;
+    double getPatternOffset(double length);
+    /**
+     * \nonscriptable
+     */
+    double getPatternOffsetAt(double length, int index, double* gap = NULL, bool end = false);
     bool isSymmetrical(int i) const;
     void scale(double factor);
 
@@ -116,6 +121,7 @@ public:
 
     // internal info about segments at which the pattern is symmetrical:
     bool* symmetrical;
+    bool* symmetricalEnd;
 
     static QMap<QString, QString> nameMap;
 };

@@ -840,7 +840,7 @@ void RExporter::exportLine(const RLine& line, double offset) {
 
     bool optimizeEnds = false;
     if (RMath::isNaN(offset)) {
-        offset = getPatternOffset(length, p);
+        offset = p.getPatternOffset(length);
         if (!p.hasShapes()) {
             optimizeEnds = true;
         }
@@ -986,7 +986,7 @@ void RExporter::exportArc(const RArc& arc, double offset) {
     }
 
     if (RMath::isNaN(offset)) {
-        offset = getPatternOffset(length, p);
+        offset = p.getPatternOffset(length);
     }
 
     QList<RArc> arcSegments;
@@ -1208,7 +1208,7 @@ void RExporter::exportPolyline(const RPolyline& polyline, double offset) {
 
         if (RMath::isNaN(offset)) {
             double length = polyline.getLength();
-            offset = getPatternOffset(length, p);
+            offset = p.getPatternOffset(length);
         }
     }
 
@@ -1228,7 +1228,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
 
         if (RMath::isNaN(offset)) {
             double length = spline.getLength();
-            offset = getPatternOffset(length, p);
+            offset = p.getPatternOffset(length);
         }
         exportExplodable(spline, offset);
     }
@@ -1254,7 +1254,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
 
     if (RMath::isNaN(offset)) {
         double length = spline.getLength();
-        offset = getPatternOffset(length, p);
+        offset = p.getPatternOffset(length);
     }
 
     double currentOffset = offset;
@@ -1311,48 +1311,6 @@ void RExporter::exportBoundingBoxPaths(const QList<RPainterPath>& paths) {
 
 void RExporter::exportImage(const RImageData& image) {
     Q_UNUSED(image)
-}
-
-/**
- * \return Offset to use to apply the given pattern to an entity of the
- *      given length that the pattern is symmetrical.
- */
-double RExporter::getPatternOffset(double length, const RLinetypePattern& pattern) {
-    double optOffset = 0.0;
-    double gap = 0.0;
-    double maxGap = RMINDOUBLE;
-    for (int i = 0; i < pattern.getNumDashes(); ++i) {
-        if (!pattern.isSymmetrical(i)) {
-            continue;
-        }
-        double offset = getPatternOffset(length, pattern, i, &gap);
-        if (gap > maxGap) {
-            maxGap = gap;
-            optOffset = offset;
-//          qDebug(QString("RExporter::getPatternOffset: i=%1").arg(i));
-        }
-    }
-    return optOffset;
-}
-
-double RExporter::getPatternOffset(double length,
-        const RLinetypePattern& pattern, int index, double* gap) {
-    double patternLength = pattern.getPatternLength();
-    if (patternLength<RS::PointTolerance) {
-        return 0.0;
-    }
-
-    double po = fabs(pattern.getDashLengthAt(index)) / 2;
-    for (int i = index - 1; i >= 0; --i) {
-        po += fabs(pattern.getDashLengthAt(i));
-    }
-    double offset = length / 2 - po;
-    int m = (int) RMath::trunc(offset / patternLength);
-    offset -= (m + 1) * patternLength;
-    if (gap != NULL) {
-        *gap = pattern.getDelta(-offset);
-    }
-    return offset;
 }
 
 double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {

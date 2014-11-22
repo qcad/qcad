@@ -235,9 +235,6 @@
         getEntityStack
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getPatternOffset
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         setDraftMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -115,6 +115,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; int &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="hasShapes" cppName="hasShapes" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="hasShapeAt" cppName="hasShapeAt"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -155,6 +159,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
         <arg type="double" typeName="double" name="pos"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getPatternOffset" cppName="getPatternOffset"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="length"
         isConst="false" />
       </variant>
     </method>

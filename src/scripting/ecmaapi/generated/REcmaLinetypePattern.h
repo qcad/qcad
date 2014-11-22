@@ -85,6 +85,9 @@
         getShapeIndices
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasShapeAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -101,6 +104,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDelta
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPatternOffset
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isSymmetrical

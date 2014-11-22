@@ -225,13 +225,6 @@ public:
 
     QStack<REntity*> getEntityStack();
 
-    double getPatternOffset(double length, const RLinetypePattern& pattern);
-    /**
-     * \nonscriptable
-     */
-    double getPatternOffset(double length, const RLinetypePattern& pattern,
-            int index, double* gap = NULL);
-
     void setDraftMode(bool on);
 
     void toggleDraftMode() {

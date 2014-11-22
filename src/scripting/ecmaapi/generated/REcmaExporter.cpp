@@ -209,8 +209,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getEntityStack, "getEntityStack");
             
-            REcmaHelper::registerFunction(&engine, proto, getPatternOffset, "getPatternOffset");
-            
             REcmaHelper::registerFunction(&engine, proto, setDraftMode, "setDraftMode");
             
             REcmaHelper::registerFunction(&engine, proto, toggleDraftMode, "toggleDraftMode");
@@ -5396,91 +5394,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::getEntityStack", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaExporter::getPatternOffset
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaExporter::getPatternOffset", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getPatternOffset";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RExporter* self = 
-                        getSelf("getPatternOffset", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isNumber()
-        ) /* type: double */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
-        ) /* type: RLinetypePattern */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    double
-                    a0 =
-                    (double)
-                    
-                    context->argument( 0 ).
-                    toNumber();
-                
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RLinetypePattern*
-                    ap1 =
-                    qscriptvalue_cast<
-                    RLinetypePattern*
-                        >(
-                        context->argument(
-                        1
-                        )
-                    );
-                    if (ap1 == NULL) {
-                           return REcmaHelper::throwError("RExporter: Argument 1 is not of type RLinetypePattern.",
-                               context);                    
-                    }
-                    RLinetypePattern 
-                    a1 = 
-                    *ap1;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->getPatternOffset(a0
-        ,
-    a1);
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getPatternOffset().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaExporter::getPatternOffset", context, engine);
             return result;
         }
          QScriptValue

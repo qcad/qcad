@@ -343,6 +343,13 @@ dir="./core" filename="RLinetypePattern.h">
   <type>
     <name>bool</name>
   </type>
+  <name>hasShapes</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>bool</name>
+  </type>
   <name>hasShapeAt</name>
   <parameter_list>(
   <param>
@@ -434,6 +441,54 @@ dir="./core" filename="RLinetypePattern.h">
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>double</name>
+  </type>
+  <name>getPatternOffset</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>length</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <comment type="block">/** * \nonscriptable */</comment>
+  <function_decl>
+  <type>
+    <name>double</name>
+  </type>
+  <name>getPatternOffsetAt</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>length</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>index</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>double</name>*</type>
+    <name>gap</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>bool</name>

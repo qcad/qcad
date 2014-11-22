@@ -28,7 +28,7 @@ QMap<QString, QString> RLinetypePattern::nameMap;
 
 
 RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QString& description, int num...)
-    : metric(metric), name(name), description(description), symmetrical(NULL) {
+    : metric(metric), name(name), description(description), symmetrical(NULL), symmetricalEnd(NULL) {
 
     QList<double> dashes;
 
@@ -43,27 +43,30 @@ RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QStri
 }
 
 RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QString& description, const QList<double>& dashes)
-    : metric(metric), name(name), description(description), symmetrical(NULL) {
+    : metric(metric), name(name), description(description), symmetrical(NULL), symmetricalEnd(NULL) {
 
     set(dashes);
 }
 
 RLinetypePattern::RLinetypePattern() :
-    metric(true), symmetrical(NULL) {
+    metric(true), symmetrical(NULL), symmetricalEnd(NULL) {
 }
 
 RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QString& description) :
-    metric(metric), name(name), description(description), symmetrical(NULL) {
+    metric(metric), name(name), description(description), symmetrical(NULL), symmetricalEnd(NULL) {
 }
 
 RLinetypePattern::RLinetypePattern(const RLinetypePattern& other) :
-    symmetrical(NULL) {
+    symmetrical(NULL), symmetricalEnd(NULL) {
     operator =(other);
 }
 
 RLinetypePattern::~RLinetypePattern() {
     if (symmetrical != NULL) {
         delete[] symmetrical;
+    }
+    if (symmetricalEnd != NULL) {
+        delete[] symmetricalEnd;
     }
 }
 
@@ -84,6 +87,9 @@ void RLinetypePattern::set(const QList<double>& dashes) {
     if (symmetrical != NULL) {
         delete[] symmetrical;
     }
+    if (symmetricalEnd != NULL) {
+        delete[] symmetricalEnd;
+    }
 
     pattern = dashes;
 
@@ -92,9 +98,19 @@ void RLinetypePattern::set(const QList<double>& dashes) {
     for (int i = 0; i < num; ++i) {
         symmetrical[i] = true;
         for (int a = 1; a < num; ++a) {
-            if (fabs(pattern[ RMath::absmod((i-a), num) ]
-                            - pattern[ RMath::absmod((i+a), num) ] ) > 0.1) {
+            if (fabs(pattern[ RMath::absmod((i-a), num) ] - pattern[ RMath::absmod((i+a), num) ] ) > 0.1) {
                 symmetrical[i] = false;
+                break;
+            }
+        }
+    }
+
+    symmetricalEnd = new bool[num];
+    for (int i = 0; i < num; ++i) {
+        symmetricalEnd[i] = true;
+        for (int a = 0; a < num; ++a) {
+            if (fabs(pattern[ RMath::absmod((i-a), num) ] - pattern[ RMath::absmod((i+a+1), num) ] ) > 0.1) {
+                symmetricalEnd[i] = false;
                 break;
             }
         }
@@ -109,6 +125,9 @@ RLinetypePattern& RLinetypePattern::operator=(const RLinetypePattern& other) {
     if (symmetrical != NULL) {
         delete symmetrical;
     }
+    if (symmetricalEnd != NULL) {
+        delete symmetricalEnd;
+    }
 
     if (!other.pattern.isEmpty()) {
         pattern = other.pattern;
@@ -117,9 +136,14 @@ RLinetypePattern& RLinetypePattern::operator=(const RLinetypePattern& other) {
         for (int i = 0; i < num; ++i) {
             symmetrical[i] = other.symmetrical[i];
         }
+        symmetricalEnd = new bool[num];
+        for (int i = 0; i < num; ++i) {
+            symmetricalEnd[i] = other.symmetricalEnd[i];
+        }
     } else {
         pattern.clear();
         symmetrical = NULL;
+        symmetricalEnd = NULL;
     }
     shapes = other.shapes;
     shapeTexts = other.shapeTexts;
@@ -149,9 +173,9 @@ bool RLinetypePattern::operator==(const RLinetypePattern& other) const {
         if (pattern[i] != other.pattern[i]) {
             return false;
         }
-        if (symmetrical[i] != other.symmetrical[i]) {
-            return false;
-        }
+//        if (symmetrical[i] != other.symmetrical[i]) {
+//            return false;
+//        }
     }
 
     return true;
@@ -200,6 +224,68 @@ QVector<qreal> RLinetypePattern::getScreenBasedLinetype() {
     return ret;
 }
 
+/**
+ * \return Offset to use to apply the given pattern to an entity of the
+ *      given length that the pattern is symmetrical.
+ */
+double RLinetypePattern::getPatternOffset(double length) {
+    double optOffset = 0.0;
+    double gap = 0.0;
+    double maxGap = RMINDOUBLE;
+    for (int i = 0; i < pattern.length(); ++i) {
+        if (symmetrical[i]) {
+            double offset = getPatternOffsetAt(length, i, &gap, false);
+            qDebug() << "gap at middle of " << i << ": " << gap;
+            if (gap > maxGap) {
+                maxGap = gap;
+                optOffset = offset;
+            }
+        }
+        if (symmetricalEnd[i]) {
+            double offset = getPatternOffsetAt(length, i, &gap, true);
+            qDebug() << "gap at end of " << i << ": " << gap;
+            if (gap > maxGap) {
+                maxGap = gap;
+                optOffset = offset;
+            }
+        }
+    }
+
+    qDebug() << "length: " << length;
+    qDebug() << "gap: " << maxGap;
+    qDebug() << "optOffset: " << optOffset;
+
+    return optOffset;
+}
+
+/**
+ * \return Offset to use for an entity with the given length, so that
+ * the given dash (index) is in the middle of the entity.
+ */
+double RLinetypePattern::getPatternOffsetAt(double length, int index, double* gap, bool end) {
+    double patternLength = getPatternLength();
+    if (patternLength<RS::PointTolerance) {
+        return 0.0;
+    }
+
+    // distance from pattern start to middle of this dash:
+    double po = fabs(getDashLengthAt(index)) / (end ? 1 : 2);
+    for (int i = index - 1; i >= 0; --i) {
+        po += fabs(getDashLengthAt(i));
+    }
+
+    double offset = length / 2 - po;
+    int m = (int) RMath::trunc(offset / patternLength);
+    offset -= (m + 1) * patternLength;
+    if (gap != NULL) {
+        *gap = getDelta(-offset);
+    }
+    return offset;
+}
+
+/**
+ * \return Distance from start of pattern to
+ */
 double RLinetypePattern::getDelta(double pos) const {
     double l = getPatternLength();
     if (pos < 0) {

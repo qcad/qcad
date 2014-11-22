@@ -576,17 +576,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QStack &lt; REntity * &gt;"
       isPureVirtual="false" />
     </method>
-    <method name="getPatternOffset" cppName="getPatternOffset"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false">
-        <arg type="double" typeName="double" name="length"
-        isConst="false" />
-        <arg type="RLinetypePattern &amp;"
-        typeName="RLinetypePattern" name="pattern"
-        isConst="true" />
-      </variant>
-    </method>
     <method name="setDraftMode" cppName="setDraftMode"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

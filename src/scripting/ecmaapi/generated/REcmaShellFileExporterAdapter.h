@@ -437,11 +437,6 @@
             );
         
     
-      double getPatternOffset(
-                double length, const RLinetypePattern & pattern
-            );
-        
-    
       void setDraftMode(
                 bool on
             );
