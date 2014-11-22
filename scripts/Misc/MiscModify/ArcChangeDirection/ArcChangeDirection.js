@@ -50,7 +50,11 @@ ArcChangeDirection.prototype.beginEvent = function() {
 
         if (isArcEntity(entity)) {
             entity.setReversed(!entity.isReversed());
-            op.addObject(entity);
+            var sa = entity.getStartAngle();
+            var ea = entity.getEndAngle();
+            entity.setStartAngle(ea);
+            entity.setEndAngle(sa);
+            op.addObject(entity, false);
         }
     }
 
