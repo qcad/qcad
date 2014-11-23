@@ -336,6 +336,16 @@ double RArc::getSweep() const {
     return ret;
 }
 
+void RArc::setSweep(double s) {
+//    if (reversed) {
+//        endAngle = startAngle - s;
+//    }
+//    else {
+        endAngle = startAngle + s;
+//    }
+    reversed = (s<0.0);
+}
+
 RVector RArc::getCenter() const{
     return center;
 }

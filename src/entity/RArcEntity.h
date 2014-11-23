@@ -60,6 +60,7 @@ public:
 
     static RPropertyTypeId PropertyDiameter;
     static RPropertyTypeId PropertyLength;
+    static RPropertyTypeId PropertySweepAngle;
     static RPropertyTypeId PropertyArea;
 
 public:

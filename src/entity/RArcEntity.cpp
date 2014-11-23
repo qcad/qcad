@@ -41,6 +41,7 @@ RPropertyTypeId RArcEntity::PropertyReversed;
 
 RPropertyTypeId RArcEntity::PropertyDiameter;
 RPropertyTypeId RArcEntity::PropertyLength;
+RPropertyTypeId RArcEntity::PropertySweepAngle;
 RPropertyTypeId RArcEntity::PropertyArea;
 
 RArcEntity::RArcEntity(RDocument* document, const RArcData& data,
@@ -80,6 +81,7 @@ void RArcEntity::init() {
 
     RArcEntity::PropertyDiameter.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Diameter"));
     RArcEntity::PropertyLength.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RArcEntity::PropertySweepAngle.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Sweep Angle"));
     RArcEntity::PropertyArea.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Area"));
 }
 
@@ -109,6 +111,10 @@ bool RArcEntity::setProperty(RPropertyTypeId propertyTypeId,
         data.setLength(value.toDouble());
         ret = true;
     }
+    else if (propertyTypeId==PropertySweepAngle) {
+        data.setSweep(value.toDouble());
+        ret = true;
+    }
     else if (propertyTypeId==PropertyArea) {
         data.setArea(value.toDouble());
         ret = true;
@@ -127,17 +133,17 @@ QPair<QVariant, RPropertyAttributes> RArcEntity::getProperty(
     } else if (propertyTypeId == PropertyRadius) {
         return qMakePair(QVariant(data.radius), RPropertyAttributes());
     } else if (propertyTypeId == PropertyStartAngle) {
-        return qMakePair(QVariant(data.startAngle), RPropertyAttributes(
-                RPropertyAttributes::Angle));
+        return qMakePair(QVariant(data.startAngle), RPropertyAttributes(RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyEndAngle) {
-        return qMakePair(QVariant(data.endAngle), RPropertyAttributes(
-                RPropertyAttributes::Angle));
+        return qMakePair(QVariant(data.endAngle), RPropertyAttributes(RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyReversed) {
         return qMakePair(QVariant(data.reversed), RPropertyAttributes());
     } else if (propertyTypeId == PropertyDiameter) {
         return qMakePair(QVariant(data.getDiameter()), RPropertyAttributes(RPropertyAttributes::Redundant));
     } else if (propertyTypeId == PropertyLength) {
         return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Redundant));
+    } else if (propertyTypeId == PropertySweepAngle) {
+        return qMakePair(QVariant(data.getSweep()), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyArea) {
         return qMakePair(QVariant(data.getArea()), RPropertyAttributes(RPropertyAttributes::Redundant));
     }

@@ -103,6 +103,7 @@ public:
     RS::Side getSideOfPoint(const RVector& point) const;
 
     double getSweep() const;
+    void setSweep(double s);
     double getLength() const;
 
     virtual RVector getStartPoint() const;
