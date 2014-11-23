@@ -172,6 +172,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, rotate, "rotate");
             
+            REcmaHelper::registerFunction(&engine, proto, scale, "scale");
+            
             REcmaHelper::registerFunction(&engine, proto, getElementCount, "getElementCount");
             
             REcmaHelper::registerFunction(&engine, proto, getXAt, "getXAt");
@@ -198,6 +200,16 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, rotateList, "rotateList");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, translateList, "translateList");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, scaleList, "scaleList");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getMinList, "getMinList");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getMaxList, "getMaxList");
+            
 
     // static properties:
     
@@ -3664,6 +3676,74 @@
             return result;
         }
          QScriptValue
+        REcmaPainterPath::scale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::scale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::scale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("scale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->scale(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.scale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::scale", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPainterPath::getElementCount
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4022,6 +4102,310 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::addShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::rotateList
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::rotateList", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::rotateList";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RPainterPath > */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RPainterPath >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RPainterPath::
+       rotateList(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.rotateList().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::rotateList", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::translateList
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::translateList", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::translateList";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RPainterPath > */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RPainterPath >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RPainterPath: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RPainterPath::
+       translateList(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.translateList().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::translateList", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::scaleList
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::scaleList", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::scaleList";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RPainterPath > */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RPainterPath >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RPainterPath::
+       scaleList(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.scaleList().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::scaleList", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::getMinList
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::getMinList", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getMinList";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RPainterPath > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RPainterPath >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        RPainterPath::
+       getMinList(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getMinList().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::getMinList", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::getMaxList
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::getMaxList", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getMaxList";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RPainterPath > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RPainterPath >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        RPainterPath::
+       getMaxList(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getMaxList().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::getMaxList", context, engine);
             return result;
         }
          QScriptValue REcmaPainterPath::toString

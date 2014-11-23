@@ -1288,17 +1288,9 @@
                 
     
     if( context->argumentCount() ==
-    3 && (
+    1 && (
             context->argument(0).isNumber()
         ) /* type: int */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
-        ) /* type: RVector */
-     && (
-            context->argument(2).isNumber()
-        ) /* type: double */
     
     ){
     // prepare arguments:
@@ -1311,43 +1303,13 @@
                     context->argument( 0 ).
                     toNumber();
                 
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RVector*
-                    ap1 =
-                    qscriptvalue_cast<
-                    RVector*
-                        >(
-                        context->argument(
-                        1
-                        )
-                    );
-                    if (ap1 == NULL) {
-                           return REcmaHelper::throwError("RLinetypePattern: Argument 1 is not of type RVector.",
-                               context);                    
-                    }
-                    RVector 
-                    a1 = 
-                    *ap1;
-                
-                    // argument isStandardType
-                    double
-                    a2 =
-                    (double)
-                    
-                    context->argument( 2 ).
-                    toNumber();
-                
     // end of arguments
 
     // call C++ function:
     // return type 'QList < RPainterPath >'
     QList < RPainterPath > cppResult =
         
-               self->getShapeAt(a0
-        ,
-    a1
-        ,
-    a2);
+               self->getShapeAt(a0);
         // return type: QList < RPainterPath >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);

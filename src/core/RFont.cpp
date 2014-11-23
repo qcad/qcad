@@ -183,7 +183,7 @@ bool RFont::load() {
                 if (rx.captureCount()>1) {
                     shapeName = rx.cap(2);
                     shapeName = shapeName.trimmed();
-                    qDebug() << "shapeName: " << shapeName;
+                    //qDebug() << "shapeName: " << shapeName;
                 }
             }
 

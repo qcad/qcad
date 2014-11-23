@@ -195,6 +195,9 @@
         rotate
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        scale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getElementCount
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -211,6 +214,21 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        rotateList
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        translateList
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        scaleList
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMinList
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMaxList
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

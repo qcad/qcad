@@ -254,6 +254,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyLength" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertySweepAngle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyArea" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>

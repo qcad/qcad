@@ -915,8 +915,13 @@ void RExporter::exportLine(const RLine& line, double offset) {
         if (!done && total>0.0) {
             // handle shape at end of dash / gap:
             if (p.hasShapeAt(i)) {
-                QList<RPainterPath> pps = p.getShapeAt(i, cursor, angle);
-                exportPainterPaths(pps);
+                QList<RPainterPath> pps = p.getShapeAt(i);
+                RVector min = RPainterPath::getMinList(pps);
+                //if (min.x>total) {
+                    RPainterPath::rotateList(pps, angle);
+                    RPainterPath::translateList(pps, cursor);
+                    exportPainterPaths(pps);
+                //}
             }
         }
 
@@ -1029,7 +1034,9 @@ void RExporter::exportArc(const RArc& arc, double offset) {
         if (!done && total>0.0) {
             // handle shape at end of dash / gap:
             if (p.hasShapeAt(i)) {
-                QList<RPainterPath> pps = p.getShapeAt(i, normalArc.getPointAtAngle(cursor), cursor+M_PI/2);
+                QList<RPainterPath> pps = p.getShapeAt(i);
+                RPainterPath::rotateList(pps, cursor+M_PI/2);
+                RPainterPath::translateList(pps, normalArc.getPointAtAngle(cursor));
                 exportPainterPaths(pps);
             }
         }

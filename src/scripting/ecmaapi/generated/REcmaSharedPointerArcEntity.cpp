@@ -220,6 +220,10 @@
                 qScriptValueFromValue(&engine, RArcEntity::PropertyLength),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertySweepAngle",
+                qScriptValueFromValue(&engine, RArcEntity::PropertySweepAngle),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyArea",
                 qScriptValueFromValue(&engine, RArcEntity::PropertyArea),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

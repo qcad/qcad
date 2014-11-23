@@ -188,6 +188,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getSweep, "getSweep");
             
+            REcmaHelper::registerFunction(&engine, proto, setSweep, "setSweep");
+            
             REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
             
             REcmaHelper::registerFunction(&engine, proto, getStartPoint, "getStartPoint");
@@ -2930,6 +2932,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerArc::getSweep", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerArc::setSweep
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerArc::setSweep", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::setSweep";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArc* self = 
+                        getSelf("setSweep", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSweep(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setSweep().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerArc::setSweep", context, engine);
             return result;
         }
          QScriptValue

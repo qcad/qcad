@@ -80,7 +80,7 @@ public:
     QList<int> getShapeIndices() const;
     bool hasShapes() const;
     bool hasShapeAt(int i) const;
-    QList<RPainterPath> getShapeAt(int i, const RVector& pos, double angle) const;
+    QList<RPainterPath> getShapeAt(int i) const;
     void updateShapes();
     double getLargestGap() const;
     bool hasDashAt(double pos) const;

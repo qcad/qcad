@@ -378,26 +378,8 @@ dir="./core" filename="RLinetypePattern.h">
       </type>
       <name>i</name>
     </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>pos</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>angle</name>
-    </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
-  <comment type="line">//QString getShapeCodeAt(int i)
-  const;</comment>
   <function_decl>
   <type>
     <name>void</name>

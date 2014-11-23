@@ -633,6 +633,20 @@ dir="./core/math" filename="RArc.h">
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
+    <name>void</name>
+  </type>
+  <name>setSweep</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>s</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
     <name>double</name>
   </type>
   <name>getLength</name>

@@ -465,7 +465,7 @@ QList<int> RLinetypePattern::getShapeIndices() const {
     return shapes.keys();
 }
 
-QList<RPainterPath> RLinetypePattern::getShapeAt(int i, const RVector& pos, double angle) const {
+QList<RPainterPath> RLinetypePattern::getShapeAt(int i) const {
     QList<RPainterPath> ret;
 
     if (shapes.contains(i)) {
@@ -474,8 +474,6 @@ QList<RPainterPath> RLinetypePattern::getShapeAt(int i, const RVector& pos, doub
                 continue;
             }
             RPainterPath pp = shapes[i][k];
-            pp.rotate(angle);
-            pp.translate(pos.x, pos.y);
             ret.append(pp);
         }
 
@@ -514,11 +512,17 @@ void RLinetypePattern::updateShapes() {
             if (textStyle.endsWith(".shx") || textStyle.endsWith(".shp")) {
                 // shape:
                 textStyle = textStyle.left(textStyle.length()-4);
-                qDebug() << "textStyle: " << textStyle;
+                //qDebug() << "textStyle: " << textStyle;
                 RFont* font = RFontList::get(textStyle);
                 if (font) {
                     RPainterPath pp(font->getShape(text));
                     pp.setInheritPen(true);
+                    qDebug() << "scale: " << scale;
+                    pp.scale(scale, scale);
+                    qDebug() << "rotate: " << rotation;
+                    pp.rotate(rotation);
+                    qDebug() << "offset: " << offset;
+                    pp.translate(offset.x, offset.y);
                     qDebug() << "pp: " << pp;
                     shapes.insert(i, QList<RPainterPath>() << pp);
                 }
@@ -617,7 +621,7 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
         // linetype pattern definition:
         else if (ltPattern!=NULL) {
             QStringList parts;
-            QRegExp rx("\\[.*\\]|A|([+-]?\\d+\\.?\\d*)|([+-]?\\d*\\.?\\d+)");
+            QRegExp rx("\\[[^\\]]*\\]|A|([+-]?\\d+\\.?\\d*)|([+-]?\\d*\\.?\\d+)");
 
             int pos = 0;
             while ((pos = rx.indexIn(line, pos))!=-1) {
@@ -629,8 +633,8 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
                 pos += l;
             }
 
-//            qDebug() << "name: " << ltPattern->name;
-//            qDebug() << "parts: " << parts;
+            qDebug() << "name: " << ltPattern->name;
+            qDebug() << "parts: " << parts;
 
             if (parts.isEmpty()) {
                 continue;
@@ -660,7 +664,7 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
                     qDebug() << "all: " << rx.capturedTexts();
                     qDebug() << "count: " << rx.captureCount();
 
-                    int idx = i-1;
+                    int idx = dashes.length()-1;
                     QString text = rx.cap(1);
                     if (text.startsWith("\"") && text.endsWith("\"")) {
                         text = text.mid(1, text.length()-2);
@@ -669,7 +673,7 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
                     ltPattern->shapeTexts.insert(idx, text);
                     ltPattern->shapeTextStyles.insert(idx, rx.cap(2));
                     for (int k=3; k+1<=rx.captureCount(); k+=2) {
-                        QString c = rx.cap(k);
+                        QString c = rx.cap(k).toUpper();
                         double val = rx.cap(k+1).toDouble();
 
                         qDebug() << "cap 1: " << rx.cap(k);
@@ -679,7 +683,7 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
                             ltPattern->shapeScales.insert(idx, val);
                         }
                         if (c=="R") {
-                            ltPattern->shapeRotations.insert(idx, val);
+                            ltPattern->shapeRotations.insert(idx, RMath::deg2rad(val));
                         }
                         if (c=="X") {
                             if (ltPattern->shapeOffsets.contains(idx)) {

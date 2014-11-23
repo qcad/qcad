@@ -196,6 +196,7 @@ public:
 
     void transform(const QTransform& t);
     void rotate(double angle);
+    void scale(double fx, double fy);
 
     int getElementCount() const;
     double getXAt(int i) const;
@@ -204,6 +205,13 @@ public:
     bool isEmpty() const;
 
     void addShape(QSharedPointer<RShape> shape);
+
+    static void rotateList(QList<RPainterPath>& pps, double angle);
+    static void translateList(QList<RPainterPath>& pps, const RVector& offset);
+    static void scaleList(QList<RPainterPath>& pps, double fx, double fy);
+    static RVector getMinList(QList<RPainterPath>& pps);
+    static RVector getMaxList(QList<RPainterPath>& pps);
+
 
 private:
     int zLevel;

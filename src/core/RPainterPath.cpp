@@ -414,6 +414,12 @@ void RPainterPath::rotate(double angle) {
     transform(t);
 }
 
+void RPainterPath::scale(double fx, double fy) {
+    QTransform t;
+    t.scale(fx, fy);
+    transform(t);
+}
+
 int RPainterPath::getElementCount() const {
     return elementCount();
 }
@@ -432,6 +438,54 @@ QPainterPath::ElementType RPainterPath::getTypeAt(int i) const {
 
 bool RPainterPath::isEmpty() const {
     return QPainterPath::isEmpty() && points.isEmpty();
+}
+
+void RPainterPath::rotateList(QList<RPainterPath>& pps, double angle) {
+    for (int i=0; i<pps.length(); i++) {
+        pps[i].rotate(angle);
+    }
+}
+
+void RPainterPath::translateList(QList<RPainterPath>& pps, const RVector& offset) {
+    for (int i=0; i<pps.length(); i++) {
+        pps[i].translate(offset.x, offset.y);
+    }
+}
+
+void RPainterPath::scaleList(QList<RPainterPath>& pps, double fx, double fy) {
+    for (int i=0; i<pps.length(); i++) {
+        pps[i].scale(fx, fy);
+    }
+}
+
+RVector RPainterPath::getMinList(QList<RPainterPath>& pps) {
+    RVector ret = RVector::invalid;
+    for (int i=0; i<pps.length(); i++) {
+        RVector m = pps[i].getBoundingBox().getMinimum();
+        if (!ret.isValid()) {
+            ret = m;
+        }
+        else {
+            ret.x = qMin(ret.x, m.x);
+            ret.y = qMin(ret.y, m.y);
+        }
+    }
+    return ret;
+}
+
+RVector RPainterPath::getMaxList(QList<RPainterPath>& pps) {
+    RVector ret = RVector::invalid;
+    for (int i=0; i<pps.length(); i++) {
+        RVector m = pps[i].getBoundingBox().getMaximum();
+        if (!ret.isValid()) {
+            ret = m;
+        }
+        else {
+            ret.x = qMax(ret.x, m.x);
+            ret.y = qMax(ret.y, m.y);
+        }
+    }
+    return ret;
 }
 
 /**

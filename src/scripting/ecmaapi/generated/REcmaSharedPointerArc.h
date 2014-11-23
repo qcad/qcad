@@ -166,6 +166,9 @@
         getSweep
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setSweep
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
