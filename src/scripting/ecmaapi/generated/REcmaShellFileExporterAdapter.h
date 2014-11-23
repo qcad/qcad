@@ -359,7 +359,13 @@
     
       void exportLine(
                 const RLine & line, double offset
-        = RNANDOUBLE
+        = RNANDOUBLE, bool firstOrLast
+        =  false
+            );
+        
+    
+      void exportLinetypeShape(
+                QList < RPainterPath > & pps, const RLine & line, double total, double length, bool optimizeEnds, double angle, const RVector & cursor
             );
         
     

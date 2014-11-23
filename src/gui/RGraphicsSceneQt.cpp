@@ -186,20 +186,20 @@ void RGraphicsSceneQt::exportPoint(const RPoint& point) {
     }
 }
 
-void RGraphicsSceneQt::exportLine(const RLine& line, double offset) {
+void RGraphicsSceneQt::exportLine(const RLine& line, double offset, bool firstOrLast) {
     bool created = beginPath();
 
-    RGraphicsScene::exportLine(line, offset);
+    RGraphicsScene::exportLine(line, offset, firstOrLast);
 
     if (created) {
         endPath();
     }
 }
 
-void RGraphicsSceneQt::exportArc(const RArc& arc, double offset) {
+void RGraphicsSceneQt::exportArc(const RArc& arc, double offset, bool firstOrLast) {
     bool created = beginPath();
 
-    RGraphicsScene::exportArc(arc, offset);
+    RGraphicsScene::exportArc(arc, offset, firstOrLast);
 
     if (created) {
         endPath();

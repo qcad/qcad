@@ -20,6 +20,7 @@
 #include <QSet>
 
 #include "RArc.h"
+#include "RArcExporter.h"
 #include "RBlockReferenceEntity.h"
 #include "RCircle.h"
 #include "RDebug.h"
@@ -798,7 +799,7 @@ RLinetypePattern RExporter::getLinetypePattern() {
     return currentLinetypePattern;
 }
 
-void RExporter::exportLine(const RLine& line, double offset) {
+void RExporter::exportLine(const RLine& line, double offset, bool firstOrLast) {
     if (!line.isValid()) {
         return;
     }
@@ -838,17 +839,12 @@ void RExporter::exportLine(const RLine& line, double offset) {
                         sin(angle) * fabs(p.getDashLengthAt(i)));
     }
 
-    // true for segments of polylines, splines, ellipses, ...:
-    bool isSubSegment = false;
-    bool optimizeEnds = false;
+    bool optimizeEnds = firstOrLast;
     if (RMath::isNaN(offset)) {
         offset = p.getPatternOffset(length);
-        //if (!p.hasShapes()) {
-            optimizeEnds = true;
-        //}
+        optimizeEnds = true;
     }
     else {
-        isSubSegment = true;
         double num = ceil(offset / patternLength);
         offset -= num * patternLength;
     }
@@ -876,10 +872,7 @@ void RExporter::exportLine(const RLine& line, double offset) {
                     l = RLine(p1, p2);
                 }
 
-                // ignore zero length lines at line ends:
-                //if (l.getLength()>RS::PointTolerance) {
                 exportLineSegment(l, angle);
-                //}
                 break;
             }
             exportLineSegment(RLine(p1, p2), angle);
@@ -919,35 +912,7 @@ void RExporter::exportLine(const RLine& line, double offset) {
             // handle shape at end of dash / gap:
             if (p.hasShapeAt(i)) {
                 QList<RPainterPath> pps = p.getShapeAt(i);
-                RVector min = RPainterPath::getMinList(pps);
-                RVector max = RPainterPath::getMaxList(pps);
-//                qDebug() << "total: " << total;
-//                qDebug() << "offset: " << offset;
-//                qDebug() << "min.x: " << min.x;
-                bool firstShapeOutside = total+min.x<0.0;
-                bool lastShapeOutside = total+max.x>length;
-                if (isSubSegment || (!firstShapeOutside && !lastShapeOutside)) {
-                    RPainterPath::rotateList(pps, angle);
-                    RPainterPath::translateList(pps, cursor);
-                    exportPainterPaths(pps);
-                }
-                else {
-                    if (firstShapeOutside) {
-//                        qDebug("firstShapeOutside");
-                        RVector p = RVector(
-                            cos(angle) * fabs(total+max.x),
-                            sin(angle) * fabs(total+max.x)
-                        );
-                        exportLineSegment(RLine(line.startPoint, line.startPoint+p), angle);
-                    }
-                    if (lastShapeOutside) {
-                        RVector p = RVector(
-                                    cos(angle) * fabs(total+min.x),
-                                    sin(angle) * fabs(total+min.x)
-                                    );
-                        exportLineSegment(RLine(line.startPoint+p, line.endPoint), angle);
-                    }
-                }
+                exportLinetypeShape(pps, line, total, length, optimizeEnds, angle, cursor);
             }
         }
 
@@ -977,11 +942,46 @@ void RExporter::exportLine(const RLine& line, double offset) {
     delete[] vp;
 }
 
-void RExporter::exportArc(const RArc& arc, double offset) {
+void RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line, double total, double length, bool optimizeEnds, double angle, const RVector& cursor) {
+    RVector min = RPainterPath::getMinList(pps);
+    RVector max = RPainterPath::getMaxList(pps);
+    //                qDebug() << "total: " << total;
+    //                qDebug() << "offset: " << offset;
+    //                qDebug() << "min.x: " << min.x;
+    bool firstShapeOutside = total+min.x<0.0;
+    bool lastShapeOutside = total+max.x>length;
+    if (!optimizeEnds || (!firstShapeOutside && !lastShapeOutside)) {
+        RPainterPath::rotateList(pps, angle);
+        RPainterPath::translateList(pps, cursor);
+        exportPainterPaths(pps);
+    }
+    else {
+        if (firstShapeOutside) {
+            //                        qDebug("firstShapeOutside");
+            RVector p = RVector(
+                        cos(angle) * fabs(total+max.x),
+                        sin(angle) * fabs(total+max.x)
+                        );
+            exportLineSegment(RLine(line.startPoint, line.startPoint+p), angle);
+        }
+        if (lastShapeOutside) {
+            RVector p = RVector(
+                        cos(angle) * fabs(total+min.x),
+                        sin(angle) * fabs(total+min.x)
+                        );
+            exportLineSegment(RLine(line.startPoint+p, line.endPoint), angle);
+        }
+    }
+}
+
+void RExporter::exportArc(const RArc& arc, double offset, bool firstOrLast) {
     if (!arc.isValid()) {
         return;
     }
 
+    RArcExporter(*this, arc, offset, firstOrLast);
+
+    /*
     RLinetypePattern p = getLinetypePattern();
 
     if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
@@ -1016,8 +1016,10 @@ void RExporter::exportArc(const RArc& arc, double offset) {
         vp[i] = fabs(p.getDashLengthAt(i)) / normalArc.radius;
     }
 
+    //bool optimizeEnds = false;
     if (RMath::isNaN(offset)) {
         offset = p.getPatternOffset(length);
+        //optimizeEnds = true;
     }
 
     QList<RArc> arcSegments;
@@ -1061,6 +1063,8 @@ void RExporter::exportArc(const RArc& arc, double offset) {
             // handle shape at end of dash / gap:
             if (p.hasShapeAt(i)) {
                 QList<RPainterPath> pps = p.getShapeAt(i);
+//                RVector min = RPainterPath::getMinList(pps);
+//                RVector max = RPainterPath::getMaxList(pps);
                 RPainterPath::rotateList(pps, cursor+M_PI/2);
                 RPainterPath::translateList(pps, normalArc.getPointAtAngle(cursor));
                 exportPainterPaths(pps);
@@ -1094,6 +1098,7 @@ void RExporter::exportArc(const RArc& arc, double offset) {
     }
 
     delete[] vp;
+    */
 }
 
 void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
@@ -1320,18 +1325,19 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
 
 void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
     QList<QSharedPointer<RShape> > sub = explodable.getExploded();
-    QList<QSharedPointer<RShape> >::iterator it;
-    for (it=sub.begin(); it!=sub.end(); ++it) {
-        QSharedPointer<RLine> line = (*it).dynamicCast<RLine>();
+    //QList<QSharedPointer<RShape> >::iterator it;
+    //for (it=sub.begin(); it!=sub.end(); ++it) {
+    for (int i=0; i<sub.length(); i++) {
+        QSharedPointer<RLine> line = sub[i].dynamicCast<RLine>();
         if (!line.isNull()) {
-            exportLine(*line.data(), offset);
+            exportLine(*line.data(), offset, i==0 || i==sub.length()-1);
             offset -= line->getLength();
             continue;
         }
 
-        QSharedPointer<RArc> arc = (*it).dynamicCast<RArc>();
+        QSharedPointer<RArc> arc = sub[i].dynamicCast<RArc>();
         if (!arc.isNull()) {
-            exportArc(*arc.data(), offset);
+            exportArc(*arc.data(), offset, i==0 || i==sub.length()-1);
             offset -= arc->getLength();
             continue;
         }

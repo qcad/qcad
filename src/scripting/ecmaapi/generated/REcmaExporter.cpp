@@ -169,6 +169,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportLine, "exportLine");
             
+            REcmaHelper::registerFunction(&engine, proto, exportLinetypeShape, "exportLinetypeShape");
+            
             REcmaHelper::registerFunction(&engine, proto, exportLineSegment, "exportLineSegment");
             
             REcmaHelper::registerFunction(&engine, proto, exportXLine, "exportXLine");
@@ -3636,11 +3638,234 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLine */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLine*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLine*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RLine.",
+                               context);                    
+                    }
+                    RLine 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportLine(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportLine().",
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::exportLine", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::exportLinetypeShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::exportLinetypeShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::exportLinetypeShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("exportLinetypeShape", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    7 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RPainterPath > */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RLine */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(3).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(4).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(5).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(6).isVariant() || 
+            context->argument(6).isQObject() || 
+            context->argument(6).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RPainterPath >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLine*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RLine*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 1 is not of type RLine.",
+                               context);                    
+                    }
+                    RLine 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a3 =
+                    (double)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a4 =
+                    (bool)
+                    
+                    context->argument( 4 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    double
+                    a5 =
+                    (double)
+                    
+                    context->argument( 5 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap6 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        6
+                        )
+                    );
+                    if (ap6 == NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 6 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a6 = 
+                    *ap6;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportLinetypeShape(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5
+        ,
+    a6);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportLinetypeShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::exportLinetypeShape", context, engine);
             return result;
         }
          QScriptValue

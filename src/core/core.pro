@@ -1,6 +1,7 @@
 include( ../../shared.pri )
 SOURCES += \
     RAction.cpp \
+    RArcExporter.cpp \
     RBlock.cpp \
     RBlockReferenceData.cpp \
     RBlockReferenceEntity.cpp \
@@ -111,6 +112,7 @@ else {
 
 HEADERS = \
     RAction.h \
+    RArcExporter.h \
     RBlock.h \
     RBlockListener.h \
     RBlockReferenceData.h \

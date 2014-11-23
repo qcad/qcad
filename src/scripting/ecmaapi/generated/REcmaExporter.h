@@ -175,6 +175,9 @@
         exportLine
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportLinetypeShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportLineSegment
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

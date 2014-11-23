@@ -99,7 +99,7 @@ public:
 
     virtual void setLinetypeId(RLinetype::Id ltId);
     virtual void setLinetypePattern(const RLinetypePattern& ltPattern);
-    RLinetypePattern getLinetypePattern();
+    virtual RLinetypePattern getLinetypePattern();
 
     virtual REntity* getBlockRefOrEntity();
     virtual REntity* getEntity();
@@ -148,7 +148,9 @@ public:
     /**
      * Exports a line with the current attributes.
      */
-    virtual void exportLine(const RLine& line, double offset = RNANDOUBLE);
+    virtual void exportLine(const RLine& line, double offset = RNANDOUBLE, bool firstOrLast = false);
+
+    virtual void exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line, double total, double length, bool optimizeEnds, double angle, const RVector& cursor);
 
     /**
      * Exports a line segment (a line without pattern). This is called
@@ -174,7 +176,7 @@ public:
 
     virtual void exportCircle(const RCircle& circle);
 
-    virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE);
+    virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE, bool firstOrLast = false);
 
     virtual void exportArcSegment(const RArc& arc, bool allowForZeroLength = false);
 
