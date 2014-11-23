@@ -65,6 +65,16 @@ QPainterPath RFont::getGlyph(const QChar& ch, bool draft) const {
     return QPainterPath();
 }
 
+QPainterPath RFont::getShape(const QString& name) const {
+    if (shapeMap.contains(name)) {
+        return shapeMap.value(name);
+    }
+    if (name.length()==1 && glyphMap.contains(name.at(0))) {
+        return glyphMap.value(name.at(0));
+    }
+    return QPainterPath();
+}
+
 /**
  * Loads the font into memory.
  *
@@ -161,14 +171,20 @@ bool RFont::load() {
         else if (line.at(0)=='[') {
             // uniode character:
             QChar ch;
+            QString shapeName;
 
             // read unicode:
-            QRegExp regexp("[0-9A-Fa-f]{4,4}");
-            regexp.indexIn(line);
-            QString cap = regexp.cap();
-            if (!cap.isNull()) {
-                int uCode = cap.toInt(0, 16);
+            QRegExp rx("\\[([0-9A-Fa-f]{4,4})\\]\s*(.*)?");
+            rx.indexIn(line);
+            //QString cap = regexp.cap();
+            if (rx.captureCount()>0) {
+                int uCode = rx.cap(1).toInt(0, 16);
                 ch = QChar(uCode);
+                if (rx.captureCount()>1) {
+                    shapeName = rx.cap(2);
+                    shapeName = shapeName.trimmed();
+                    qDebug() << "shapeName: " << shapeName;
+                }
             }
 
             // read UTF8 (qcad 1 compatibility)
@@ -270,7 +286,13 @@ bool RFont::load() {
                 }
             } while (!line.isEmpty());
 
-            glyphMap.insert(ch, glyph);
+            if (!shapeName.isEmpty() && shapeName.length()>1) {
+                shapeMap.insert(shapeName, glyph);
+                qDebug() << "shape found: " << shapeName;
+            }
+            else {
+                glyphMap.insert(ch, glyph);
+            }
             if (containsArcs) {
                 glyphDraftMap.insert(ch, glyphDraft);
             }

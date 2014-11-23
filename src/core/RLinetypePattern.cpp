@@ -18,6 +18,7 @@
  */
 #include <QMap>
 
+#include "RFontList.h"
 #include "RLinetypePattern.h"
 #include "RMath.h"
 #include "RTextData.h"
@@ -510,22 +511,37 @@ void RLinetypePattern::updateShapes() {
         }
 
         if (!text.isNull()) {
-            RTextBasedData td(
-                        offset, offset,
-                        scale, 0.0,
-                        RS::VAlignBase, RS::HAlignLeft, RS::LeftToRight, RS::Exact,
-                        1.0,
-                        text,
-                        textStyle,
-                        false, false, rotation, true
-            );
-            RTextRenderer r(td, false, RTextRenderer::PainterPaths);
-            r.render();
-            QList<RPainterPath> pp = r.getPainterPaths();
-            for (int k=0; k<pp.length(); k++) {
-                pp[k].setInheritPen(true);
+            if (textStyle.endsWith(".shx") || textStyle.endsWith(".shp")) {
+                // shape:
+                textStyle = textStyle.left(textStyle.length()-4);
+                qDebug() << "textStyle: " << textStyle;
+                RFont* font = RFontList::get(textStyle);
+                if (font) {
+                    RPainterPath pp(font->getShape(text));
+                    pp.setInheritPen(true);
+                    qDebug() << "pp: " << pp;
+                    shapes.insert(i, QList<RPainterPath>() << pp);
+                }
             }
-            shapes.insert(i, pp);
+            else {
+                // text:
+                RTextBasedData td(
+                    offset, offset,
+                    scale, 0.0,
+                    RS::VAlignBase, RS::HAlignLeft, RS::LeftToRight, RS::Exact,
+                    1.0,
+                    text,
+                    textStyle,
+                    false, false, rotation, true
+                );
+                RTextRenderer r(td, false, RTextRenderer::PainterPaths);
+                r.render();
+                QList<RPainterPath> pp = r.getPainterPaths();
+                for (int k=0; k<pp.length(); k++) {
+                    pp[k].setInheritPen(true);
+                }
+                shapes.insert(i, pp);
+            }
         }
     }
 }
@@ -630,7 +646,7 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
                 if (part.startsWith("[", Qt::CaseInsensitive)) {
                     QRegExp rx(
                         "\\["
-                        "\"(.*)\""   // text
+                        "([^, ]*)"   // text
                         "[, ]*"
                         "([^, ]*)"   // style
                         "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|\\d*\\.\\d+)))?"
@@ -638,13 +654,19 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
                         "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|\\d*\\.\\d+)))?"
                         "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|\\d*\\.\\d+)))?"
                         "\\]");
+                    rx.setCaseSensitivity(Qt::CaseInsensitive);
 
                     rx.indexIn(part);
                     qDebug() << "all: " << rx.capturedTexts();
                     qDebug() << "count: " << rx.captureCount();
 
                     int idx = i-1;
-                    ltPattern->shapeTexts.insert(idx, rx.cap(1));
+                    QString text = rx.cap(1);
+                    if (text.startsWith("\"") && text.endsWith("\"")) {
+                        text = text.mid(1, text.length()-2);
+                    }
+                    qDebug() << "text: " << text;
+                    ltPattern->shapeTexts.insert(idx, text);
                     ltPattern->shapeTextStyles.insert(idx, rx.cap(2));
                     for (int k=3; k+1<=rx.captureCount(); k+=2) {
                         QString c = rx.cap(k);
