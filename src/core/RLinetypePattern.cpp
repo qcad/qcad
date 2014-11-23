@@ -625,7 +625,6 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
             }
 
             QList<double> dashes;
-            //QMap<int, QPainterPath> shapes;
             for (int i = 0; i < parts.length(); i++) {
                 QString part = parts[i];
                 if (part.startsWith("[", Qt::CaseInsensitive)) {
@@ -685,7 +684,6 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
             if (dashes.count() > 0) {
                 ltPattern->set(dashes);
                 ltPattern->updateShapes();
-                //ltpattern->shapes = shapes;
             }
         }
     }
