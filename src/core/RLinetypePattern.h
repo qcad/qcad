@@ -81,7 +81,6 @@ public:
     bool hasShapes() const;
     bool hasShapeAt(int i) const;
     QList<RPainterPath> getShapeAt(int i, const RVector& pos, double angle) const;
-    //QString getShapeCodeAt(int i) const;
     void updateShapes();
     double getLargestGap() const;
     bool hasDashAt(double pos) const;

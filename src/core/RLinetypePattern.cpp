@@ -487,10 +487,6 @@ QList<RPainterPath> RLinetypePattern::getShapeAt(int i, const RVector& pos, doub
     }
 }
 
-//QString RLinetypePattern::getShapeCodeAt(int i) const {
-//    return "[\"HW\",STANDARD,S=2.54,R=0.0,X=-2.54,Y=-1.27]";
-//}
-
 void RLinetypePattern::updateShapes() {
     for (int i=0; i<pattern.length(); i++) {
         QString textStyle;
@@ -638,40 +634,46 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
                         "\"(.*)\""   // text
                         "[, ]*"
                         "([^, ]*)"   // style
-                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*)|(\\d*\\.\\d+)))?"
-                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*)|(\\d*\\.\\d+)))?"
-                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*)|(\\d*\\.\\d+)))?"
-                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*)|(\\d*\\.\\d+)))?"
+                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|\\d*\\.\\d+)))?"
+                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|\\d*\\.\\d+)))?"
+                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|\\d*\\.\\d+)))?"
+                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|\\d*\\.\\d+)))?"
                         "\\]");
 
                     rx.indexIn(part);
+                    qDebug() << "all: " << rx.capturedTexts();
+                    qDebug() << "count: " << rx.captureCount();
 
-                    ltPattern->shapeTexts.insert(i, rx.cap(1));
-                    ltPattern->shapeTextStyles.insert(i, rx.cap(2));
-                    for (int k=3; k+1<rx.captureCount(); k+=2) {
+                    int idx = i-1;
+                    ltPattern->shapeTexts.insert(idx, rx.cap(1));
+                    ltPattern->shapeTextStyles.insert(idx, rx.cap(2));
+                    for (int k=3; k+1<=rx.captureCount(); k+=2) {
                         QString c = rx.cap(k);
                         double val = rx.cap(k+1).toDouble();
 
+                        qDebug() << "cap 1: " << rx.cap(k);
+                        qDebug() << "cap 2: " << rx.cap(k+1);
+
                         if (c=="S") {
-                            ltPattern->shapeScales.insert(i, val);
+                            ltPattern->shapeScales.insert(idx, val);
                         }
                         if (c=="R") {
-                            ltPattern->shapeRotations.insert(i, val);
+                            ltPattern->shapeRotations.insert(idx, val);
                         }
                         if (c=="X") {
-                            if (ltPattern->shapeOffsets.contains(i)) {
-                                ltPattern->shapeOffsets[i].x = val;
+                            if (ltPattern->shapeOffsets.contains(idx)) {
+                                ltPattern->shapeOffsets[idx].x = val;
                             }
                             else {
-                                ltPattern->shapeOffsets.insert(i, RVector(val, 0));
+                                ltPattern->shapeOffsets.insert(idx, RVector(val, 0));
                             }
                         }
                         if (c=="Y") {
-                            if (ltPattern->shapeOffsets.contains(i)) {
-                                ltPattern->shapeOffsets[i].y = val;
+                            if (ltPattern->shapeOffsets.contains(idx)) {
+                                ltPattern->shapeOffsets[idx].y = val;
                             }
                             else {
-                                ltPattern->shapeOffsets.insert(i, RVector(0, val));
+                                ltPattern->shapeOffsets.insert(idx, RVector(0, val));
                             }
                         }
                     }
@@ -770,6 +772,10 @@ void RLinetypePattern::initNameMap() {
     nameMap.insert("ACAD_ISO13W100", tr("ISO double-dash double-dot"));
     nameMap.insert("ACAD_ISO14W100", tr("ISO dash triple-dot"));
     nameMap.insert("ACAD_ISO15W100", tr("ISO double-dash triple-dot"));
+
+    nameMap.insert("HOT_WATER_SUPPLY", tr("Hot Water Supply"));
+    nameMap.insert("HOT_WATER", tr("Hot Water Supply"));
+    nameMap.insert("GAS_LINE", tr("Gas Line"));
 }
 
 /**
