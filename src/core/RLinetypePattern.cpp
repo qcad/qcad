@@ -236,7 +236,7 @@ double RLinetypePattern::getPatternOffset(double length) {
     for (int i = 0; i < pattern.length(); ++i) {
         if (symmetrical[i]) {
             double offset = getPatternOffsetAt(length, i, &gap, false);
-            qDebug() << "gap at middle of " << i << ": " << gap;
+            //qDebug() << "gap at middle of " << i << ": " << gap;
             if (gap > maxGap) {
                 maxGap = gap;
                 optOffset = offset;
@@ -244,7 +244,7 @@ double RLinetypePattern::getPatternOffset(double length) {
         }
         if (symmetricalEnd[i]) {
             double offset = getPatternOffsetAt(length, i, &gap, true);
-            qDebug() << "gap at end of " << i << ": " << gap;
+            //qDebug() << "gap at end of " << i << ": " << gap;
             if (gap > maxGap) {
                 maxGap = gap;
                 optOffset = offset;
@@ -252,9 +252,9 @@ double RLinetypePattern::getPatternOffset(double length) {
         }
     }
 
-    qDebug() << "length: " << length;
-    qDebug() << "gap: " << maxGap;
-    qDebug() << "optOffset: " << optOffset;
+//    qDebug() << "length: " << length;
+//    qDebug() << "gap: " << maxGap;
+//    qDebug() << "optOffset: " << optOffset;
 
     return optOffset;
 }
@@ -517,13 +517,13 @@ void RLinetypePattern::updateShapes() {
                 if (font) {
                     RPainterPath pp(font->getShape(text));
                     pp.setInheritPen(true);
-                    qDebug() << "scale: " << scale;
+                    //qDebug() << "scale: " << scale;
                     pp.scale(scale, scale);
-                    qDebug() << "rotate: " << rotation;
+                    //qDebug() << "rotate: " << rotation;
                     pp.rotate(rotation);
-                    qDebug() << "offset: " << offset;
+                    //qDebug() << "offset: " << offset;
                     pp.translate(offset.x, offset.y);
-                    qDebug() << "pp: " << pp;
+                    //qDebug() << "pp: " << pp;
                     shapes.insert(i, QList<RPainterPath>() << pp);
                 }
             }

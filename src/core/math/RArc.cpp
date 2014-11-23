@@ -337,12 +337,7 @@ double RArc::getSweep() const {
 }
 
 void RArc::setSweep(double s) {
-//    if (reversed) {
-//        endAngle = startAngle - s;
-//    }
-//    else {
-        endAngle = startAngle + s;
-//    }
+    endAngle = startAngle + s;
     reversed = (s<0.0);
 }
 

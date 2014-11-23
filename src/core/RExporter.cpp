@@ -838,14 +838,17 @@ void RExporter::exportLine(const RLine& line, double offset) {
                         sin(angle) * fabs(p.getDashLengthAt(i)));
     }
 
+    // true for segments of polylines, splines, ellipses, ...:
+    bool isSubSegment = false;
     bool optimizeEnds = false;
     if (RMath::isNaN(offset)) {
         offset = p.getPatternOffset(length);
-        if (!p.hasShapes()) {
+        //if (!p.hasShapes()) {
             optimizeEnds = true;
-        }
+        //}
     }
     else {
+        isSubSegment = true;
         double num = ceil(offset / patternLength);
         offset -= num * patternLength;
     }
@@ -917,11 +920,34 @@ void RExporter::exportLine(const RLine& line, double offset) {
             if (p.hasShapeAt(i)) {
                 QList<RPainterPath> pps = p.getShapeAt(i);
                 RVector min = RPainterPath::getMinList(pps);
-                //if (min.x>total) {
+                RVector max = RPainterPath::getMaxList(pps);
+//                qDebug() << "total: " << total;
+//                qDebug() << "offset: " << offset;
+//                qDebug() << "min.x: " << min.x;
+                bool firstShapeOutside = total+min.x<0.0;
+                bool lastShapeOutside = total+max.x>length;
+                if (isSubSegment || (!firstShapeOutside && !lastShapeOutside)) {
                     RPainterPath::rotateList(pps, angle);
                     RPainterPath::translateList(pps, cursor);
                     exportPainterPaths(pps);
-                //}
+                }
+                else {
+                    if (firstShapeOutside) {
+//                        qDebug("firstShapeOutside");
+                        RVector p = RVector(
+                            cos(angle) * fabs(total+max.x),
+                            sin(angle) * fabs(total+max.x)
+                        );
+                        exportLineSegment(RLine(line.startPoint, line.startPoint+p), angle);
+                    }
+                    if (lastShapeOutside) {
+                        RVector p = RVector(
+                                    cos(angle) * fabs(total+min.x),
+                                    sin(angle) * fabs(total+min.x)
+                                    );
+                        exportLineSegment(RLine(line.startPoint+p, line.endPoint), angle);
+                    }
+                }
             }
         }
 
