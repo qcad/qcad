@@ -186,10 +186,10 @@ void RGraphicsSceneQt::exportPoint(const RPoint& point) {
     }
 }
 
-void RGraphicsSceneQt::exportLine(const RLine& line, double offset, bool firstOrLast) {
+double RGraphicsSceneQt::exportLine(const RLine& line, double offset, bool first, bool last) {
     bool created = beginPath();
 
-    RGraphicsScene::exportLine(line, offset, firstOrLast);
+    RGraphicsScene::exportLine(line, offset, first, last);
 
     if (created) {
         endPath();

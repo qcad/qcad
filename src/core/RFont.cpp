@@ -75,6 +75,13 @@ QPainterPath RFont::getShape(const QString& name) const {
     return QPainterPath();
 }
 
+QString RFont::getShapeName(const QChar& ch) const {
+    if (numNameMap.contains(ch)) {
+        return numNameMap.value(ch);
+    }
+    return QString();
+}
+
 /**
  * Loads the font into memory.
  *
@@ -288,6 +295,7 @@ bool RFont::load() {
 
             if (!shapeName.isEmpty() && shapeName.length()>1) {
                 shapeMap.insert(shapeName, glyph);
+                numNameMap.insert(ch, shapeName);
                 qDebug() << "shape found: " << shapeName;
             }
             else {

@@ -73,7 +73,7 @@ public:
     virtual void unexportEntity(REntity::Id entityId);
 
     virtual void exportPoint(const RPoint& point);
-    virtual void exportLine(const RLine& line, double offset = RNANDOUBLE, bool firstOrLast = false);
+    virtual double exportLine(const RLine& line, double offset = RNANDOUBLE, bool first = false, bool last = false);
     virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE, bool firstOrLast = false);
     virtual void exportEllipse(const REllipse& ellipse, double offset = RNANDOUBLE);
     virtual void exportPolyline(const RPolyline& polyline, double offset = RNANDOUBLE);

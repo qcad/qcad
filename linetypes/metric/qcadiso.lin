@@ -102,8 +102,8 @@ A,12,-3,12,-3,0,-3,0,-3,0,-3
 ;;A,6.35,-2.54,[BOX,ltypeshp.shx,x=-2.54,s=2.54],-2.54,25.4
 ;;*TRACKS,Tracks -|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-
 ;;A,3.81,[TRACK1,ltypeshp.shx,s=6.35],3.81
-;;*BATTING,Batting SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
-;;A,.00254,-2.54,[BAT,ltypeshp.shx,x=-2.54,s=2.54],-5.08,[BAT,ltypeshp.shx,r=180,x=2.54,s=2.54],-2.54
+*BATTING,Batting SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+A,.00254,-2.54,[BAT,ltypeshp.shx,x=-2.54,s=2.54],-5.08,[BAT,ltypeshp.shx,r=180,x=2.54,s=2.54],-2.54
 *HOT_WATER_SUPPLY,Hot water supply ---- HW ---- HW ---- HW ----
 A,12.7,-5.08,["HW",STANDARD,S=2.54,R=0.0,X=-2.54,Y=-1.27],-5.08
 *GAS_LINE,Gas line ----GAS----GAS----GAS----GAS----GAS----GAS--

@@ -95,6 +95,16 @@ dir="./core/math" filename="RMath.h">
   std</name>::numeric_limits&lt;double&gt;::quiet_NaN()</cpp:define>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RINFDOUBLE</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RINFDOUBLE</name>
+  <name>
+  std</name>::numeric_limits&lt;double&gt;::infinity()</cpp:define>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
   <comment type="block">/** * Math functions. * * \ingroup math *
   \scriptable */</comment>
   <class>class 

@@ -357,15 +357,11 @@
             );
         
     
-      void exportLine(
+      double exportLine(
                 const RLine & line, double offset
-        = RNANDOUBLE, bool firstOrLast
+        = RNANDOUBLE, bool first
+        =  false, bool last
         =  false
-            );
-        
-    
-      void exportLinetypeShape(
-                QList < RPainterPath > & pps, const RLine & line, double total, double length, bool optimizeEnds, double angle, const RVector & cursor
             );
         
     
@@ -381,7 +377,8 @@
     
       void exportArc(
                 const RArc & arc, double offset
-        = RNANDOUBLE
+        = RNANDOUBLE, bool firstOrLast
+        =  false
             );
         
     
@@ -405,6 +402,10 @@
     
       void exportPainterPaths(
                 const QList < RPainterPath > & paths
+            );
+        
+      void exportPainterPaths(
+                const QList < RPainterPath > & paths, double angle, const RVector & pos
             );
         
     

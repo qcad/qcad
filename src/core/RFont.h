@@ -107,6 +107,11 @@ public:
      */
     QPainterPath getShape(const QString& name) const;
 
+    /**
+     * \nonscriptable
+     */
+    QString getShapeName(const QChar& ch) const;
+
     //int countGlyphs() {
     //    return glyphMap.count();
     //}
@@ -119,6 +124,7 @@ private:
     //! list of glyphs as painter paths (letters)
     QMap<QChar, QPainterPath> glyphMap;
     QMap<QString, QPainterPath> shapeMap;
+    QMap<QChar, QString> numNameMap;
     QMap<QChar, QPainterPath> glyphDraftMap;
 
     //! Font file name

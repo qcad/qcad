@@ -4146,8 +4146,8 @@
             }
         
     
-      void REcmaShellFileExporterAdapter::exportLine(
-                const RLine & line, double offset, bool firstOrLast
+      double REcmaShellFileExporterAdapter::exportLine(
+                const RLine & line, double offset, bool first, bool last
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportLine", engine);
@@ -4160,7 +4160,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=3*/
+                    || _q_function.property("length").toInt32()!=4*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportLine";
@@ -4172,8 +4172,9 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
+                        double ret =
                         RFileExporterAdapter::exportLine(
-                            line, offset, firstOrLast
+                            line, offset, first, last
                         );
 
                         // block recursion again:
@@ -4182,11 +4183,16 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLine", engine);
 
                         
+                          return ret;
+                        
                 } else {
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    double res = qscriptvalue_cast< 
+                        double
+                      >(
                     
                             _q_function.call(__qtscript_self,
                                 QScriptValueList()
@@ -4217,102 +4223,7 @@
     // type: bool, copyable: true
         << qScriptValueFromValue(engine, 
 
-        firstOrLast
-        )
-      
-                            )
-                        
-                    ;
-                    _q_function.setData(QScriptValue(engine, prev));
-
-                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLine", engine);
-
-                    
-                }
-            }
-        
-    
-      void REcmaShellFileExporterAdapter::exportLinetypeShape(
-                QList < RPainterPath > & pps, const RLine & line, double total, double length, bool optimizeEnds, double angle, const RVector & cursor
-            ) {
-                QScriptEngine* engine = __qtscript_self.engine();
-                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportLinetypeShape", engine);
-                QScriptValue _q_function = __qtscript_self.property("exportLinetypeShape");
-
-
-
-                if (!_q_function.isFunction() || 
-                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
-                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
-                    
-                    /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=7*/
-                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
-                    ) {
-                    //QString cppSig = "RFileExporterAdapter::exportLinetypeShape";
-                    
-                        // re-enable recursion for calls from C++ into ECMAScript functions
-                        // leave it marked as generated though if appropriate:
-                        
-                        quint32 prev = _q_function.data().toUInt32();
-                        //if (cppSig!="RGraphicsViewQt::event") {
-                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
-                        //}
-                        RFileExporterAdapter::exportLinetypeShape(
-                            pps, line, total, length, optimizeEnds, angle, cursor
-                        );
-
-                        // block recursion again:
-                        _q_function.setData(QScriptValue(engine, prev));
-
-                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLinetypeShape", engine);
-
-                        
-                } else {
-                    // prevent recursion if script implementation calls base implementation
-                    // mark function as 'in call':
-                    quint32 prev = _q_function.data().toUInt32();
-                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    
-                            _q_function.call(__qtscript_self,
-                                QScriptValueList()
-                                
-
-
-
-    // type: QList < RPainterPath > &, copyable: false
-        // List of ...:
-        << REcmaHelper::listToScriptValue(engine, 
-          pps
-        )
-      
-
-
-
-    // type: RLine &, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        
-            // const reference argument - make a new object:
-            new RLine(line)
-        )
-      
-
-
-
-    // type: double, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        total
-        )
-      
-
-
-
-    // type: double, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        length
+        first
         )
       
 
@@ -4321,37 +4232,21 @@
     // type: bool, copyable: true
         << qScriptValueFromValue(engine, 
 
-        optimizeEnds
-        )
-      
-
-
-
-    // type: double, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        angle
-        )
-      
-
-
-
-    // type: RVector &, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        
-            // const reference argument - make a new object:
-            new RVector(cursor)
+        last
         )
       
                             )
                         
+                      )
+                    
                     ;
                     _q_function.setData(QScriptValue(engine, prev));
 
-                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLinetypeShape", engine);
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLine", engine);
 
                     
+                            return res;
+                          
                 }
             }
         
@@ -4478,7 +4373,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportArc(
-                const RArc & arc, double offset
+                const RArc & arc, double offset, bool firstOrLast
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportArc", engine);
@@ -4491,7 +4386,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=2*/
+                    || _q_function.property("length").toInt32()!=3*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportArc";
@@ -4504,7 +4399,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportArc(
-                            arc, offset
+                            arc, offset, firstOrLast
                         );
 
                         // block recursion again:
@@ -4540,6 +4435,15 @@
         << qScriptValueFromValue(engine, 
 
         offset
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        firstOrLast
         )
       
                             )
@@ -4837,6 +4741,91 @@
         // List of ...:
         << REcmaHelper::listToScriptValue(engine, 
           paths
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportPainterPaths", engine);
+
+                    
+                }
+            }
+        
+      void REcmaShellFileExporterAdapter::exportPainterPaths(
+                const QList < RPainterPath > & paths, double angle, const RVector & pos
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportPainterPaths", engine);
+                QScriptValue _q_function = __qtscript_self.property("exportPainterPaths");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=3*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RFileExporterAdapter::exportPainterPaths";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RFileExporterAdapter::exportPainterPaths(
+                            paths, angle, pos
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportPainterPaths", engine);
+
+                        
+                } else {
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: QList < RPainterPath > &, copyable: false
+        // List of ...:
+        << REcmaHelper::listToScriptValue(engine, 
+          paths
+        )
+      
+
+
+
+    // type: double, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        angle
+        )
+      
+
+
+
+    // type: RVector &, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        
+            // const reference argument - make a new object:
+            new RVector(pos)
         )
       
                             )

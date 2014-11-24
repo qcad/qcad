@@ -277,6 +277,22 @@ dir="./core" filename="RFont.h">
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <comment type="block">/** * \nonscriptable */</comment>
+  <function_decl>
+  <type>
+    <name>QString</name>
+  </type>
+  <name>getShapeName</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QChar</name>&amp;</type>
+      <name>ch</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <comment type="line">//int countGlyphs() {</comment>
   <comment type="line">// return glyphMap.count();</comment>
   <comment type="line">//}</comment>
@@ -313,6 +329,20 @@ dir="./core" filename="RFont.h">
       </argument>&gt;</argument_list></name>
     </type>
     <name>shapeMap</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>QChar</name>
+      </argument>, 
+      <argument>
+        <name>QString</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>numNameMap</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

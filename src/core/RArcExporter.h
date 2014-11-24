@@ -26,7 +26,7 @@ class RArcExporter : public RExporter {
 public:
     RArcExporter(RExporter& exporter, const RArc& arc, double offset, bool firstOrLast);
     virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE);
-    virtual void exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line, double total, double length, bool optimizeEnds, double angle, const RVector& cursor);
+    //virtual void exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line, double total, double length, bool optimizeEnds, double angle, const RVector& cursor);
 
     virtual RLinetypePattern getLinetypePattern() {
         return exporter.getLinetypePattern();
@@ -34,6 +34,12 @@ public:
     double getLineTypePatternScale(const RLinetypePattern& p) const {
         return exporter.getLineTypePatternScale(p);
     }
+
+    virtual void exportPainterPaths(const QList<RPainterPath>& paths) {
+        exporter.exportPainterPaths(paths);
+    }
+
+    virtual void exportPainterPaths(const QList<RPainterPath>& paths, double angle, const RVector& pos);
 
     virtual void exportXLine(const RXLine& xLine) {}
     virtual void exportRay(const RRay& ray) {}

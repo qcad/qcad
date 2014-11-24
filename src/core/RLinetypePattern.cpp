@@ -661,23 +661,23 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
                     rx.setCaseSensitivity(Qt::CaseInsensitive);
 
                     rx.indexIn(part);
-                    qDebug() << "all: " << rx.capturedTexts();
-                    qDebug() << "count: " << rx.captureCount();
+                    //qDebug() << "all: " << rx.capturedTexts();
+                    //qDebug() << "count: " << rx.captureCount();
 
                     int idx = dashes.length()-1;
                     QString text = rx.cap(1);
                     if (text.startsWith("\"") && text.endsWith("\"")) {
                         text = text.mid(1, text.length()-2);
                     }
-                    qDebug() << "text: " << text;
+                    //qDebug() << "text: " << text;
                     ltPattern->shapeTexts.insert(idx, text);
                     ltPattern->shapeTextStyles.insert(idx, rx.cap(2));
                     for (int k=3; k+1<=rx.captureCount(); k+=2) {
                         QString c = rx.cap(k).toUpper();
                         double val = rx.cap(k+1).toDouble();
 
-                        qDebug() << "cap 1: " << rx.cap(k);
-                        qDebug() << "cap 2: " << rx.cap(k+1);
+                        //qDebug() << "cap 1: " << rx.cap(k);
+                        //qDebug() << "cap 2: " << rx.cap(k+1);
 
                         if (c=="S") {
                             ltPattern->shapeScales.insert(idx, val);
@@ -817,11 +817,19 @@ QDebug operator<<(QDebug dbg, const RLinetypePattern& p) {
         }
         dbg.nospace() << p.getDashLengthAt(i);
 
-        if (p.shapeNumbers.contains(i)) {
-            dbg.nospace() << ", num: " << p.shapeNumbers.value(i);
+        bool gotShape = false;
+        if (p.shapeNumbers.contains(i) || p.shapeTexts.contains(i)) {
+            gotShape = true;
+        }
+
+        if (gotShape) {
+            dbg.nospace() << "[";
         }
         if (p.shapeTexts.contains(i)) {
-            dbg.nospace() << ", text: " << p.shapeTexts.value(i);
+            dbg.nospace() << "text: " << p.shapeTexts.value(i);
+        }
+        if (p.shapeNumbers.contains(i)) {
+            dbg.nospace() << ", num: " << p.shapeNumbers.value(i);
         }
         if (p.shapeTextStyles.contains(i)) {
             dbg.nospace() << ", style: " << p.shapeTextStyles.value(i);
@@ -834,6 +842,9 @@ QDebug operator<<(QDebug dbg, const RLinetypePattern& p) {
         }
         if (p.shapeOffsets.contains(i)) {
             dbg.nospace() << ", offset: " << p.shapeOffsets.value(i);
+        }
+        if (gotShape) {
+            dbg.nospace() << "]";
         }
     }
     //dbg.nospace() << ", " << "shapes: " << p.shapes << ", ";

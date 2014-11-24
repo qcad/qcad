@@ -55,6 +55,10 @@
 #define RNANDOUBLE std::numeric_limits<double>::quiet_NaN()
 #endif
 
+#ifndef RINFDOUBLE
+#define RINFDOUBLE std::numeric_limits<double>::infinity()
+#endif
+
 
 /**
  * Math functions.

@@ -148,9 +148,12 @@ public:
     /**
      * Exports a line with the current attributes.
      */
-    virtual void exportLine(const RLine& line, double offset = RNANDOUBLE, bool firstOrLast = false);
+    virtual double exportLine(const RLine& line, double offset = RNANDOUBLE, bool first = false, bool last = false);
 
-    virtual void exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line, double total, double length, bool optimizeEnds, double angle, const RVector& cursor);
+    /**
+     * \nonscriptable
+     */
+    virtual bool exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line, double total, double length, bool optimizeEnds, double angle, const RVector& cursor, bool& isFirst, bool& isLast);
 
     /**
      * Exports a line segment (a line without pattern). This is called
@@ -197,6 +200,8 @@ public:
     virtual void exportPainterPathSource(const RPainterPathSource& pathSource);
 
     virtual void exportPainterPaths(const QList<RPainterPath>& paths);
+    virtual void exportPainterPaths(const QList<RPainterPath>& paths, double angle, const RVector& pos);
+
     virtual void exportBoundingBoxPaths(const QList<RPainterPath>& paths);
 
     virtual void exportImage(const RImageData& image);

@@ -974,7 +974,7 @@ dir="./core" filename="RExporter.h">
   <function_decl>
   <type>
     <name>virtual</name>
-    <name>void</name>
+    <name>double</name>
   </type>
   <name>exportLine</name>
   <parameter_list>(
@@ -1003,17 +1003,30 @@ dir="./core" filename="RExporter.h">
     <type>
       <name>bool</name>
     </type>
-    <name>firstOrLast</name>=
+    <name>first</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>last</name>=
     <init>
       <expr>
         <name>false</name>
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
+  <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
   <type>
     <name>virtual</name>
-    <name>void</name>
+    <name>bool</name>
   </type>
   <name>exportLinetypeShape</name>
   <parameter_list>(
@@ -1074,6 +1087,20 @@ dir="./core" filename="RExporter.h">
       <name>const</name>
       <name>RVector</name>&amp;</type>
       <name>cursor</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>bool</name>&amp;</type>
+      <name>isFirst</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>bool</name>&amp;</type>
+      <name>isLast</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <comment type="block">/** * Exports a line segment (a line
@@ -1201,6 +1228,18 @@ dir="./core" filename="RExporter.h">
     <init>
       <expr>
         <name>RNANDOUBLE</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>firstOrLast</name>=
+    <init>
+      <expr>
+        <name>false</name>
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
@@ -1373,6 +1412,41 @@ dir="./core" filename="RExporter.h">
         <name>RPainterPath</name>
       </argument>&gt;</argument_list></name>&amp;</type>
       <name>paths</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>exportPainterPaths</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>RPainterPath</name>
+      </argument>&gt;</argument_list></name>&amp;</type>
+      <name>paths</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>angle</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>pos</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
