@@ -799,7 +799,6 @@ double RExporter::exportLine(const RLine& line, double offset) {
     RVector cursor(line.getStartPoint() + RVector::createPolar(offset, angle));
     double total = offset;
     double nextTotal;
-    bool firstShape = true;
     bool isGap = false;
     RLine dash;
 
@@ -859,13 +858,7 @@ double RExporter::exportLine(const RLine& line, double offset) {
         // export shape (zigzag, text, etc.) at end of dash / gap:
         if (p.hasShapeAt(i)) {
             QList<RPainterPath> pps = p.getShapeAt(i);
-            //if (exportLinetypeShape(pps, line, total, length, optimizeEnds, angle, cursor, first && firstShape, last && done)) {
-            if (exportLinetypeShape(pps, line, total, length, angle, cursor)) {
-//                if (last) {
-//                    done = true;
-//                }
-                firstShape = false;
-            }
+            exportLinetypeShape(pps, line, total, length, angle, cursor);
         }
 
         ++i;
@@ -882,58 +875,21 @@ double RExporter::exportLine(const RLine& line, double offset) {
 bool RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line, double total, double length, double angle, const RVector& cursor) {
     RVector min = RPainterPath::getMinList(pps);
     RVector max = RPainterPath::getMaxList(pps);
-//    double width = max.x-min.x;
-
-//    bool isFirstRemove = false; //isFirst && total-width < 0.0;
-//    bool isLastRemove = false; //isLast && total+width > length;
-
-//    qDebug() << "########################";
-//    qDebug() << "total: " << total;
-//    qDebug() << "length: " << length;
-//    qDebug() << "min.x: " << min.x;
-//    qDebug() << "max.x: " << max.x;
-//    qDebug() << "width: " << width;
-//    qDebug() << "isFirst: " << isFirstRemove;
-//    qDebug() << "isLast: " << isLastRemove;
     bool isCursorOnLine = line.isOnShape(cursor);
-//    qDebug() << "isCursorOnLine: " << isCursorOnLine;
     double diffBefore = total+min.x;
     double diffAfter = total+max.x-length;
-//    qDebug() << "diffAfter: " << diffAfter;
-//    qDebug() << "diffBefore: " << diffBefore;
     bool shapeOutsideBefore = diffBefore < -RS::PointTolerance;
     bool shapeOutsideAfter = diffAfter > RS::PointTolerance;
-//    qDebug() << "shapeOutsideBefore: " << shapeOutsideBefore;
-//    qDebug() << "shapeOutsideAfter: " << shapeOutsideAfter;
-//    qDebug() << "optmizeEnds: " << optimizeEnds;
     if (isCursorOnLine && (!shapeOutsideBefore && !shapeOutsideAfter)) {
-    //if (!optimizeEnds || (!firstShapeOutside && !lastShapeOutside)) {
-    //if ( (!shapeOutsideBefore && !shapeOutsideAfter) ||
-         // we're at the end of polyline segment:
-         //(!optimizeEnds && !isFirst && shapeOutsideAfter && !shapeOutsideBefore && fabs(diffAfter)<width/2) ||
-         // we're at the start of a polyline segment:
-         //(!optimizeEnds && !isLast && shapeOutsideBefore && !shapeOutsideAfter && fabs(diffBefore)<width/2)
-//         ) {
-//    if (!shapeOutsideBefore && !shapeOutsideAfter) {
-//        qDebug("export pps");
-//        RPainterPath::rotateList(pps, angle);
-//        RPainterPath::translateList(pps, cursor);
         exportPainterPaths(pps, angle, cursor);
         return true;
     }
     else {
-        // line segment too short for a single shape:
-//        if (shapeOutsideBefore && shapeOutsideAfter && (isFirst || isLast)) {
-//            exportLineSegment(RLine(line.startPoint, line.endPoint), angle);
-//            return true;
-//        }
         if (shapeOutsideBefore) {
             // check if first shape is not entirely before the start point of the line:
             if (total + max.x < 0.0) {
-//                qDebug() << "dropping";
                 return false;
             }
-//            qDebug("firstShapeOutside -> draw line");
             RLine l = line;
             if (fabs(total+max.x)<length) {
                 RVector p = RVector(
@@ -948,10 +904,8 @@ bool RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line,
         if (shapeOutsideAfter) {
             // check if last shape is not entirely after the end point of the line:
             if (total + min.x > length) {
-//                qDebug() << "dropping";
                 return false;
             }
-//            qDebug("lastShapeOutside -> draw line");
             RLine l = line;
             if (fabs(total+min.x)>0.0) {
                 RVector p = RVector(
@@ -964,7 +918,6 @@ bool RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line,
             return true;
         }
 
-//        qDebug() << "dropping";
         return false;
     }
 }
@@ -1389,6 +1342,7 @@ void RExporter::exportPainterPathSource(const RPainterPathSource& pathSource) {
 
 void RExporter::exportPainterPaths(const QList<RPainterPath>& paths) {
     Q_UNUSED(paths)
+    // TODO: split up painter paths into line semgents, splines (?), arcs...
 }
 
 void RExporter::exportPainterPaths(const QList<RPainterPath>& paths, double angle, const RVector& pos) {
@@ -1396,7 +1350,6 @@ void RExporter::exportPainterPaths(const QList<RPainterPath>& paths, double angl
     RPainterPath::rotateList(pps, angle);
     RPainterPath::translateList(pps, pos);
     exportPainterPaths(pps);
-    // TODO: split up painter paths into line semgents, splines (?), arcs...
 }
 
 void RExporter::exportBoundingBoxPaths(const QList<RPainterPath>& paths) {

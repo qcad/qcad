@@ -20,6 +20,14 @@
 
 #include "RLinetypeCombo.h"
 #include "RLinetypeComboDelegate.h"
+#include "RPainterPathExporter.h"
+
+QMap<int, QMap<QString, QImage> > RLinetypeComboDelegate::previewCache;
+int RLinetypeComboDelegate::previewHeight = 20;
+
+RLinetypeComboDelegate::RLinetypeComboDelegate(QObject* parent) : QStyledItemDelegate(parent) {
+
+}
 
 void RLinetypeComboDelegate::paint(QPainter* painter,
                                    const QStyleOptionViewItem& option,
@@ -32,35 +40,61 @@ void RLinetypeComboDelegate::paint(QPainter* painter,
         return;
     }
 
-    //painter->drawLine(0,0,100,100);
-    //if (option.state & QStyle::State_Selected) {
-    //    painter->fillRect(option.rect, option.palette.highlight());
-    //}
-//    else {
-//        painter->fillRect(option.rect, Qt::green);
-//    }
-
-    //index.data.setValue();
-
-    //QStyledItemDelegate::paint(painter, option, index);
-
-//    qDebug() << "row: " << index.row();
-
     RLinetypePattern pattern = combo->getLinetypePatternAt(index.row());
 
-//    qDebug() << "pat: " << pattern;
+    QImage img = getPreviewImage(pattern, option.rect.width());
 
-    QPen pen;
-    QVector<qreal> p = pattern.getScreenBasedLinetype();
-    //qDebug() << "label: " << pattern.getLabel() << "p: " << p << "metric: " << pattern.isMetric();
-    pen.setDashPattern(p);
-    painter->setPen(pen);
-    int y = option.rect.center().y() + option.rect.height()/4;
-    int m = 20;
-    painter->drawLine(option.rect.left()+m, y, option.rect.right()-m, y);
+    painter->drawImage(option.rect.left(), option.rect.bottom()-previewHeight, img);
 }
 
 QSize RLinetypeComboDelegate::sizeHint(const QStyleOptionViewItem& option,
                                        const QModelIndex& index) const {
-    return QSize(300,24);
+    return QSize(300,16+previewHeight);
+}
+
+QImage RLinetypeComboDelegate::getPreviewImage(const RLinetypePattern& pattern, int width) {
+    width = width/10*10;
+
+    if (previewCache.contains(width)) {
+        if (previewCache.value(width).contains(pattern.getName())) {
+            return previewCache.value(width).value(pattern.getName());
+        }
+    }
+
+    QImage ret(width, previewHeight, QImage::Format_ARGB32);
+    ret.fill(Qt::transparent);
+
+    if (pattern.isValid()) {
+        RPainterPath pp;
+
+        RPainterPathExporter exp;
+        exp.setExportZeroLinesAsPoints(false);
+        exp.setLinetypePattern(pattern);
+        RLine line(RVector(20,0), RVector(width-20,0));
+        exp.exportLine(line);
+        pp = exp.getPainterPath();
+        if (pp.getBoundingBox().getHeight()>1.0) {
+            double f = previewHeight*0.4 / pp.getBoundingBox().getHeight();
+            RLinetypePattern patternScaled = pattern;
+            patternScaled.scale(f);
+            exp.setLinetypePattern(patternScaled);
+            exp.exportLine(line);
+            pp = exp.getPainterPath();
+        }
+
+        QPainter p(&ret);
+        QTransform t;
+        t.scale(1.0,-1.0);
+        t.translate(0,-previewHeight/2);
+        p.setTransform(t);
+        p.drawPath(pp);
+        p.end();
+    }
+
+    if (!previewCache.contains(width)) {
+        previewCache.insert(width, QMap<QString, QImage>());
+    }
+    previewCache[width].insert(pattern.getName(), ret);
+
+    return ret;
 }

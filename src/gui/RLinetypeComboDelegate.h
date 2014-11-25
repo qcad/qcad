@@ -24,17 +24,25 @@
 
 #include <QStyledItemDelegate>
 
+#include "RLinetypePattern.h"
+
 /**
  * \ingroup gui
  */
 class QCADGUI_EXPORT RLinetypeComboDelegate: public QStyledItemDelegate {
 public:
-    RLinetypeComboDelegate(QObject* parent) : QStyledItemDelegate(parent) {}
+    RLinetypeComboDelegate(QObject* parent);
 
     void paint(QPainter* painter,
                const QStyleOptionViewItem& option, const QModelIndex& index) const;
     QSize sizeHint(const QStyleOptionViewItem& option,
                    const QModelIndex& index) const;
+
+    static QImage getPreviewImage(const RLinetypePattern& pattern, int width);
+
+private:
+    static int previewHeight;
+    static QMap<int, QMap<QString, QImage> > previewCache;
 };
 
 Q_DECLARE_METATYPE(RLinetypeComboDelegate*)

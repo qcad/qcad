@@ -36,6 +36,8 @@ public:
     RPainterPathExporter() : RExporter(), exportZeroLinesAsPoints(true) { }
 
     virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE);
+    virtual void exportPainterPaths(const QList<RPainterPath>& paths);
+
     virtual void exportXLine(const RXLine& xLine) {
         Q_UNUSED(xLine)
     }
@@ -55,6 +57,7 @@ public:
         Q_UNUSED(triangle)
     }
 
+    //void clear();
     RPainterPath getPainterPath();
     void setExportZeroLinesAsPoints(bool on) {
         exportZeroLinesAsPoints = on;

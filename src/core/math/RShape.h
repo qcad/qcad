@@ -131,6 +131,7 @@ public:
      * \return Angle on the entity at the given distance from the start point.
      */
     virtual double getAngleAt(double distance) const {
+        Q_UNUSED(distance)
         return RNANDOUBLE;
     }
 
