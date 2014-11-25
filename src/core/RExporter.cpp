@@ -834,7 +834,7 @@ double RExporter::exportLine(const RLine& line, double offset, bool first, bool 
         return ret;
     }
 
-    qDebug() << "============================================";
+//    qDebug() << "============================================";
 
     RVector* vp = NULL;
     vp = new RVector[p.getNumDashes()];
@@ -843,10 +843,10 @@ double RExporter::exportLine(const RLine& line, double offset, bool first, bool 
                         sin(angle) * fabs(p.getDashLengthAt(i)));
     }
 
-    bool optimizeEnds = false;
+    bool optimizeEnds = true;
     if (RMath::isNaN(offset)) {
         offset = p.getPatternOffset(length);
-        optimizeEnds = true;
+        //optimizeEnds = true;
     }
     else {
         double num = ceil(offset / patternLength);

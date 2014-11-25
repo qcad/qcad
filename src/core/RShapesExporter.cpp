@@ -56,15 +56,14 @@ void RShapesExporter::exportLineSegment(const RLine& line, double angle) {
 //    QPointF p1 = path.pointAtPercent(percentStart);
 //    QPointF p2 = path.pointAtPercent(percentEnd);
 
+    qDebug() << "line segment: " << line;
+
     int i1, i2;
     RVector p1 = getPointAt(line.startPoint.x, &i1);
     RVector p2 = getPointAt(line.endPoint.x, &i2);
 
-    qDebug() << "points: " << p1 << p2;
-
     // zero length (point):
     if (line.getLength()<RS::PointTolerance) {
-        qDebug() << "dot: " << line.getStartPoint();
         exporter.exportLineSegment(RLine(p1, p2), angle);
     }
     else {
@@ -89,6 +88,10 @@ void RShapesExporter::exportPainterPaths(const QList<RPainterPath>& paths, doubl
 //    RVector arcPos = arc.getPointAtAngle(arcAngle);
 
 //    RExporter::exportPainterPaths(paths, arcAngle + M_PI/2, arcPos);
+
+    RVector p = getPointAt(pos.x);
+    double a = getAngleAt(pos.x);
+    RExporter::exportPainterPaths(paths, a, p);
 }
 
 RVector RShapesExporter::getPointAt(double d, int* index) {
@@ -127,6 +130,7 @@ void RShapesExporter::exportShapesBetween(int i1, const RVector& p1, int i2, con
     for (int i=i1; i<=i2; i++) {
         if (i!=i1 && i!=i2) {
             // whole shape is between points:
+            qDebug() << "dash: " << *shapes[i];
             exporter.exportShapeSegment(shapes[i]);
         }
 
@@ -145,7 +149,7 @@ void RShapesExporter::exportShapesBetween(int i1, const RVector& p1, int i2, con
             dir->trimEndPoint(p2);
         }
 
-        //qDebug() << "shape: " << *shape;
+        qDebug() << "dash (part): " << *shape;
 
         exporter.exportShapeSegment(shape);
     }
