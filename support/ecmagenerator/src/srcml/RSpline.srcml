@@ -1150,6 +1150,19 @@ dir="./core/math" filename="RSpline.h">
     <expr>
     <name>splineProxy</name>= 
     <name>p</name></expr>;</expr_stmt>}</block>
+  </function>
+  <comment type="block">/** * \nonscriptable */</comment>
+  <function>
+    <type>
+    <name>static</name>
+    <name>RSplineProxy</name>*</type>
+    <name>getSplineProxy</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>splineProxy</name>
+    </expr>;</return>}</block>
   </function></public>
   <protected>protected: 
   <function_decl>

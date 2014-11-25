@@ -54,8 +54,6 @@ private:
     RExporter& exporter;
     QList<QSharedPointer<RShape> > shapes;
     QList<double> lengthAt;
-//    RPainterPath path;
-//    double length;
 };
 
 #endif

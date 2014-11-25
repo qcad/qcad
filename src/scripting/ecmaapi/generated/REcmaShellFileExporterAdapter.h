@@ -364,9 +364,7 @@
     
       double exportLine(
                 const RLine & line, double offset
-        = RNANDOUBLE, bool first
-        =  false, bool last
-        =  false
+        = RNANDOUBLE
             );
         
     

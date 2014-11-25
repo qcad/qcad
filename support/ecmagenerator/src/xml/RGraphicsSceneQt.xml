@@ -72,10 +72,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="double" typeName="double" name="offset"
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
-        <arg type="bool" typeName="bool" name="first"
-        hasDefault="true" default=" false" isConst="false" />
-        <arg type="bool" typeName="bool" name="last"
-        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="exportArc" cppName="exportArc" specifier="public"

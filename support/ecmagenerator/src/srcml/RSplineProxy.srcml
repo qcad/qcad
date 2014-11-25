@@ -40,6 +40,22 @@ dir="./core/math" filename="RSplineProxy.h">
   <function_decl>
   <type>
     <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>init</name>
+  <parameter_list>()</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>uninit</name>
+  <parameter_list>()</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
     <name>RSpline</name>
   </type>
   <name>updateFromFitPoints</name>
@@ -114,6 +130,30 @@ dir="./core/math" filename="RSplineProxy.h">
       <name>const</name>
       <name>RVector</name>&amp;</type>
       <name>point</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>double</name>
+  </type>
+  <name>getTAtDistance</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RSpline</name>&amp;</type>
+      <name>spline</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>dist</name>
     </decl>
   </param>)</parameter_list>
   <specifier>= 0</specifier>;</function_decl>

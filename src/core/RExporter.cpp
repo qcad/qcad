@@ -298,61 +298,6 @@ void RExporter::setDashPattern(const QVector<qreal>& dashes) {
 }
 
 /**
- * Sets the current export color for entities. The default implementation
- * calls \ref setColor. Exporter implementations may choose to re-implement
- * this method for example to display entities in a different color when
- * they are selected.
- */
-/*
-void RExporter::setEntityColor(float r, float g, float b, float a) {
-    QColor clr;
-    clr.setRgbF(r, g, b, a);
-    setEntityColor(clr);
-}
-
-void RExporter::setEntityColor(const RColor& color) {
-    setColor(color);
-}
-*/
-
-/**
- * \todo remove or refactor
- *
- * Overrides any calls to \ref setColor or \ref setEntityColor. All color
- * changes that are made between a call to this function and a call
- * to \ref unsetOverrideColor have no effect.
- */
-/*
-void RExporter::setFixedColor(float r, float g, float b, float a) {
-    QColor clr;
-    clr.setRgbF(r, g, b, a);
-    setFixedColor(clr);
-}
-
-void RExporter::setFixedColor(const QColor& clr) {
-    setColor(clr);
-    fixedColor = true;
-}
-*/
-
-/**
- * \todo remove or refactor
- *
- * Allows setting of colors after a section of exports with a fixed color.
-void RExporter::unsetFixedColor() {
-    fixedColor = false;
-}
- */
-
-/**
- * \return True if this exporter is currently using a fixed export color
- * (\ref setFixedColor has been called), false otherwise.
-bool RExporter::isColorFixed() {
-    return fixedColor;
-}
- */
-
-/**
  * \return Pointer to the entity that is currently being exported.
  */
 REntity* RExporter::getEntity() {
@@ -799,7 +744,7 @@ RLinetypePattern RExporter::getLinetypePattern() {
     return currentLinetypePattern;
 }
 
-double RExporter::exportLine(const RLine& line, double offset, bool first, bool last) {
+double RExporter::exportLine(const RLine& line, double offset) {
     double ret = RNANDOUBLE;
 
     if (!line.isValid()) {
@@ -834,8 +779,6 @@ double RExporter::exportLine(const RLine& line, double offset, bool first, bool 
         return ret;
     }
 
-//    qDebug() << "============================================";
-
     RVector* vp = NULL;
     vp = new RVector[p.getNumDashes()];
     for (int i = 0; i < p.getNumDashes(); ++i) {
@@ -843,17 +786,13 @@ double RExporter::exportLine(const RLine& line, double offset, bool first, bool 
                         sin(angle) * fabs(p.getDashLengthAt(i)));
     }
 
-    bool optimizeEnds = true;
     if (RMath::isNaN(offset)) {
         offset = p.getPatternOffset(length);
-        //optimizeEnds = true;
     }
     else {
         double num = ceil(offset / patternLength);
         offset -= num * patternLength;
     }
-
-//    qDebug() << "optimizeEnds: " << optimizeEnds;
 
     bool done = false;
     int i = 0;
@@ -921,10 +860,10 @@ double RExporter::exportLine(const RLine& line, double offset, bool first, bool 
         if (p.hasShapeAt(i)) {
             QList<RPainterPath> pps = p.getShapeAt(i);
             //if (exportLinetypeShape(pps, line, total, length, optimizeEnds, angle, cursor, first && firstShape, last && done)) {
-            if (exportLinetypeShape(pps, line, total, length, optimizeEnds, angle, cursor, first, last)) {
-                if (last) {
-                    done = true;
-                }
+            if (exportLinetypeShape(pps, line, total, length, angle, cursor)) {
+//                if (last) {
+//                    done = true;
+//                }
                 firstShape = false;
             }
         }
@@ -940,15 +879,13 @@ double RExporter::exportLine(const RLine& line, double offset, bool first, bool 
     return ret;
 }
 
-bool RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line, double total, double length, bool optimizeEnds, double angle, const RVector& cursor, bool& isFirst, bool& isLast) {
-    //isFirst = isFirst &&
-
+bool RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line, double total, double length, double angle, const RVector& cursor) {
     RVector min = RPainterPath::getMinList(pps);
     RVector max = RPainterPath::getMaxList(pps);
-    double width = max.x-min.x;
+//    double width = max.x-min.x;
 
-    bool isFirstRemove = false; //isFirst && total-width < 0.0;
-    bool isLastRemove = false; //isLast && total+width > length;
+//    bool isFirstRemove = false; //isFirst && total-width < 0.0;
+//    bool isLastRemove = false; //isLast && total+width > length;
 
 //    qDebug() << "########################";
 //    qDebug() << "total: " << total;
@@ -969,11 +906,7 @@ bool RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line,
 //    qDebug() << "shapeOutsideBefore: " << shapeOutsideBefore;
 //    qDebug() << "shapeOutsideAfter: " << shapeOutsideAfter;
 //    qDebug() << "optmizeEnds: " << optimizeEnds;
-    if (isCursorOnLine &&
-        (!isFirstRemove || !shapeOutsideBefore) &&
-        (!isLastRemove || !shapeOutsideAfter) &&
-        (!optimizeEnds || (!shapeOutsideBefore && !shapeOutsideAfter))
-        ) {
+    if (isCursorOnLine && (!shapeOutsideBefore && !shapeOutsideAfter)) {
     //if (!optimizeEnds || (!firstShapeOutside && !lastShapeOutside)) {
     //if ( (!shapeOutsideBefore && !shapeOutsideAfter) ||
          // we're at the end of polyline segment:
@@ -994,7 +927,7 @@ bool RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line,
 //            exportLineSegment(RLine(line.startPoint, line.endPoint), angle);
 //            return true;
 //        }
-        if (shapeOutsideBefore && (optimizeEnds || isFirstRemove)) {
+        if (shapeOutsideBefore) {
             // check if first shape is not entirely before the start point of the line:
             if (total + max.x < 0.0) {
 //                qDebug() << "dropping";
@@ -1012,7 +945,7 @@ bool RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line,
             exportLineSegment(l, angle);
             return true;
         }
-        if (shapeOutsideAfter && (optimizeEnds || isLastRemove)) {
+        if (shapeOutsideAfter) {
             // check if last shape is not entirely after the end point of the line:
             if (total + min.x > length) {
 //                qDebug() << "dropping";

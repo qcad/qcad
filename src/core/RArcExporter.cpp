@@ -26,6 +26,8 @@ RArcExporter::RArcExporter(RExporter& exporter, const RArc& arc, double offset) 
 }
 
 void RArcExporter::exportLineSegment(const RLine& line, double angle) {
+    Q_UNUSED(angle)
+
     RArc a = arc;
     double ang1 = line.getStartPoint().x / arc.getRadius();
     double ang2 = line.getEndPoint().x / arc.getRadius();

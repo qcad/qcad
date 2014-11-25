@@ -149,12 +149,12 @@ public:
     /**
      * Exports a line with the current attributes.
      */
-    virtual double exportLine(const RLine& line, double offset = RNANDOUBLE, bool first = false, bool last = false);
+    virtual double exportLine(const RLine& line, double offset = RNANDOUBLE);
 
     /**
      * \nonscriptable
      */
-    virtual bool exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line, double total, double length, bool optimizeEnds, double angle, const RVector& cursor, bool& isFirst, bool& isLast);
+    virtual bool exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line, double total, double length, double angle, const RVector& cursor);
 
     /**
      * Exports a line segment (a line without pattern). This is called

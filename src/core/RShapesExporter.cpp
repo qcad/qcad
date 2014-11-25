@@ -26,11 +26,6 @@ RShapesExporter::RShapesExporter(RExporter& exporter, const QList<QSharedPointer
     double length = 0.0;
 
     for (int i=0; i<shapes.length(); i++) {
-        //QSharedPointer<RDirected> directed = shapes[i].dynamicCast<RDirected>();
-//        if (i==0 && !directed.isNull()) {
-//            path.moveTo(directed->getStartPoint());
-//        }
-//        path.addShape(shapes[i]);
         length += shapes[i]->getLength();
         lengthAt.append(length);
     }
@@ -48,47 +43,20 @@ RShapesExporter::RShapesExporter(RExporter& exporter, const QList<QSharedPointer
 }
 
 void RShapesExporter::exportLineSegment(const RLine& line, double angle) {
-//    double percentStart = path.percentAtLength(line.startPoint.x);
-//    double percentEnd = path.percentAtLength(line.endPoint.x);
-
-//    qDebug() << "percentages: " << percentStart << percentEnd;
-
-//    QPointF p1 = path.pointAtPercent(percentStart);
-//    QPointF p2 = path.pointAtPercent(percentEnd);
-
-    qDebug() << "line segment: " << line;
-
     int i1, i2;
     RVector p1 = getPointAt(line.startPoint.x, &i1);
     RVector p2 = getPointAt(line.endPoint.x, &i2);
 
-    // zero length (point):
     if (line.getLength()<RS::PointTolerance) {
+        // zero length (point):
         exporter.exportLineSegment(RLine(p1, p2), angle);
     }
     else {
-        //QSharedPointer<RDirected> shape =
         exportShapesBetween(i1, p1, i2, p2);
-        //exporter.exportShapeSegment(shape);
     }
-
-    //exporter.exportLineSegment(RLine(p1, p2));
-
-    //qDebug() << "RShapesExporter::exportLineSegment: " << line;
-//    RArc a = arc;
-//    double ang1 = line.getStartPoint().x / arc.getRadius();
-//    double ang2 = line.getEndPoint().x / arc.getRadius();
-//    a.setStartAngle(arc.getStartAngle() + ang1);
-//    a.setEndAngle(arc.getStartAngle() + ang2);
-//    exporter.exportArcSegment(a, true);
 }
 
 void RShapesExporter::exportPainterPaths(const QList<RPainterPath>& paths, double angle, const RVector& pos) {
-//    double arcAngle = arc.getStartAngle() + pos.x / arc.getRadius();
-//    RVector arcPos = arc.getPointAtAngle(arcAngle);
-
-//    RExporter::exportPainterPaths(paths, arcAngle + M_PI/2, arcPos);
-
     RVector p = getPointAt(pos.x);
     double a = getAngleAt(pos.x);
     RExporter::exportPainterPaths(paths, a, p);
@@ -122,15 +90,9 @@ int RShapesExporter::getShapeAt(double d) {
 }
 
 void RShapesExporter::exportShapesBetween(int i1, const RVector& p1, int i2, const RVector& p2) {
-    //QList<QSharedPointer<RShape> > ret;
-    //double d = (d1+d2)/2;
-    //int i1 = getShapeAt(d1);
-    //int i2 = getShapeAt(d2);
-
     for (int i=i1; i<=i2; i++) {
         if (i!=i1 && i!=i2) {
             // whole shape is between points:
-            qDebug() << "dash: " << *shapes[i];
             exporter.exportShapeSegment(shapes[i]);
         }
 
@@ -148,8 +110,6 @@ void RShapesExporter::exportShapesBetween(int i1, const RVector& p1, int i2, con
             // trim end point:
             dir->trimEndPoint(p2);
         }
-
-        qDebug() << "dash (part): " << *shape;
 
         exporter.exportShapeSegment(shape);
     }

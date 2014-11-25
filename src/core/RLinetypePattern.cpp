@@ -798,8 +798,14 @@ void RLinetypePattern::initNameMap() {
     nameMap.insert("ACAD_ISO15W100", tr("ISO double-dash triple-dot"));
 
     nameMap.insert("HOT_WATER_SUPPLY", tr("Hot Water Supply"));
-    nameMap.insert("HOT_WATER", tr("Hot Water Supply"));
+    nameMap.insert("HOT_WATER", tr("Hot Water"));
     nameMap.insert("GAS_LINE", tr("Gas Line"));
+    nameMap.insert("BATTING", tr("Batting"));
+    nameMap.insert("DRAINAGE", tr("Drainage"));
+    nameMap.insert("ZIGZAG", tr("Zig Zag"));
+    nameMap.insert("TRACKS", tr("Tracks"));
+    nameMap.insert("FENCELINE1", tr("Fenceline 1"));
+    nameMap.insert("FENCELINE2", tr("Fenceline 2"));
 }
 
 /**

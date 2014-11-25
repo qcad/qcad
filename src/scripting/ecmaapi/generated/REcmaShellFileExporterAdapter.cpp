@@ -4213,7 +4213,7 @@
         
     
       double REcmaShellFileExporterAdapter::exportLine(
-                const RLine & line, double offset, bool first, bool last
+                const RLine & line, double offset
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportLine", engine);
@@ -4226,7 +4226,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=4*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportLine";
@@ -4240,7 +4240,7 @@
                         //}
                         double ret =
                         RFileExporterAdapter::exportLine(
-                            line, offset, first, last
+                            line, offset
                         );
 
                         // block recursion again:
@@ -4281,24 +4281,6 @@
         << qScriptValueFromValue(engine, 
 
         offset
-        )
-      
-
-
-
-    // type: bool, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        first
-        )
-      
-
-
-
-    // type: bool, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        last
         )
       
                             )

@@ -399,10 +399,7 @@ dir="./core" filename="RShapesExporter.h">
       </argument>&gt;</argument_list></name>
     </type>
     <name>lengthAt</name>
-  </decl>;</decl_stmt>
-  <comment type="line">// RPainterPath path;</comment>
-  <comment type="line">// double
-  length;</comment></private>}</block>;</class>
+  </decl>;</decl_stmt></private>}</block>;</class>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

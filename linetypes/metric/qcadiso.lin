@@ -96,12 +96,12 @@ A,12,-3,12,-3,0,-3,0,-3,0,-3
 ;;
 ;;  Some of these linetype definitions use fonts/ltypeshp.cxf
 ;;
-;;*FENCELINE1,Fenceline circle ----0-----0----0-----0----0-----0--
-;;A,6.35,-2.54,[CIRC1,ltypeshp.shx,x=-2.54,s=2.54],-2.54,25.4
-;;*FENCELINE2,Fenceline square ----[]-----[]----[]-----[]----[]---
-;;A,6.35,-2.54,[BOX,ltypeshp.shx,x=-2.54,s=2.54],-2.54,25.4
-;;*TRACKS,Tracks -|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-
-;;A,3.81,[TRACK1,ltypeshp.shx,s=6.35],3.81
+*FENCELINE1,Fenceline circle ----0-----0----0-----0----0-----0--
+A,6.35,-2.54,[CIRC1,ltypeshp.shx,x=-2.54,s=2.54],-2.54,25.4
+*FENCELINE2,Fenceline square ----[]-----[]----[]-----[]----[]---
+A,6.35,-2.54,[BOX,ltypeshp.shx,x=-2.54,s=2.54],-2.54,25.4
+*TRACKS,Tracks -|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-
+A,3.81,[TRACK1,ltypeshp.shx,s=6.35],3.81
 *BATTING,Batting SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 A,.00254,-2.54,[BAT,ltypeshp.shx,x=-2.54,s=2.54],-5.08,[BAT,ltypeshp.shx,r=180,x=2.54,s=2.54],-2.54
 *HOT_WATER_SUPPLY,Hot water supply ---- HW ---- HW ---- HW ----
@@ -113,4 +113,4 @@ A,.00254,-5.08,[ZIG,ltypeshp.shx,x=-5.08,s=5.08],-10.16,[ZIG,ltypeshp.shx,r=180,
 
 
 *DRAINAGE,---->---->---->----
-A,4,[RIGHT_ARROW,ltypeshp.shx,s=1.1],4
+A,4,[RIGHT_ARROW,ltypeshp.shx,s=2.54],4

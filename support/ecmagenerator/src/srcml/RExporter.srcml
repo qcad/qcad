@@ -1016,30 +1016,6 @@ dir="./core" filename="RExporter.h">
         <name>RNANDOUBLE</name>
       </expr>
     </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>first</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>last</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>
@@ -1087,14 +1063,6 @@ dir="./core" filename="RExporter.h">
   <param>
     <decl>
       <type>
-        <name>bool</name>
-      </type>
-      <name>optimizeEnds</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
         <name>double</name>
       </type>
       <name>angle</name>
@@ -1106,20 +1074,6 @@ dir="./core" filename="RExporter.h">
       <name>const</name>
       <name>RVector</name>&amp;</type>
       <name>cursor</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>bool</name>&amp;</type>
-      <name>isFirst</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>bool</name>&amp;</type>
-      <name>isLast</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <comment type="block">/** * Exports a line segment (a line
