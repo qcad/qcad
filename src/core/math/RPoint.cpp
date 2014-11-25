@@ -84,6 +84,11 @@ QList<RVector> RPoint::getPointsWithDistanceToEnd(double distance, RS::From from
     return ret;
 }
 
+double RPoint::getAngleAt(double distance) const {
+    Q_UNUSED(distance)
+    return RNANDOUBLE;
+}
+
 RVector RPoint::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     Q_UNUSED(limited)
     Q_UNUSED(strictRange)

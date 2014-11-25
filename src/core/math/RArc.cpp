@@ -393,6 +393,14 @@ RVector RArc::getPointAtAngle(double a) const {
     return RVector(center.x + cos(a) * radius, center.y + sin(a) * radius);
 }
 
+double RArc::getAngleAt(double distance) const {
+    QList<RVector> points = getPointsWithDistanceToEnd(distance, RS::FromStart);
+    if (points.length()!=1) {
+        return RNANDOUBLE;
+    }
+    return center.getAngleTo(points[0]) + (reversed ? -M_PI/2 : M_PI/2);
+}
+
 bool RArc::isReversed() const {
     return reversed;
 }

@@ -74,7 +74,7 @@ public:
 
     virtual void exportPoint(const RPoint& point);
     virtual double exportLine(const RLine& line, double offset = RNANDOUBLE, bool first = false, bool last = false);
-    virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE, bool firstOrLast = false);
+    virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE);
     virtual void exportEllipse(const REllipse& ellipse, double offset = RNANDOUBLE);
     virtual void exportPolyline(const RPolyline& polyline, double offset = RNANDOUBLE);
     void exportPolylineFill(const RPolyline& polyline);

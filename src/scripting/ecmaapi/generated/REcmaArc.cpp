@@ -196,6 +196,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPointAtAngle, "getPointAtAngle");
             
+            REcmaHelper::registerFunction(&engine, proto, getAngleAt, "getAngleAt");
+            
             REcmaHelper::registerFunction(&engine, proto, getMiddlePoint, "getMiddlePoint");
             
             REcmaHelper::registerFunction(&engine, proto, moveStartPoint, "moveStartPoint");
@@ -3197,6 +3199,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaArc::getPointAtAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaArc::getAngleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaArc::getAngleAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaArc::getAngleAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArc* self = 
+                        getSelf("getAngleAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getAngleAt(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getAngleAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaArc::getAngleAt", context, engine);
             return result;
         }
          QScriptValue

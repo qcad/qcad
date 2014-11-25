@@ -140,6 +140,12 @@ QList<RVector> RLine::getPointsWithDistanceToEnd(double distance, RS::From from)
     return ret;
 }
 
+double RLine::getAngleAt(double distance) const {
+    Q_UNUSED(distance)
+
+    return getAngle();
+}
+
 RVector RLine::getVectorTo(const RVector& point, bool limited, double strictRange) const {
 
     RVector ae = endPoint - startPoint;

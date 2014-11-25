@@ -385,6 +385,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="exportShapeSegment" cppName="exportShapeSegment"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSharedPointer &lt; RShape &gt;"
+        typeName="QSharedPointer &lt; RShape &gt;" name="shape"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="exportLine" cppName="exportLine"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -447,8 +456,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="double" typeName="double" name="offset"
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
-        <arg type="bool" typeName="bool" name="firstOrLast"
-        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="exportArcSegment" cppName="exportArcSegment"
@@ -489,6 +496,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="double" typeName="double" name="offset"
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
+      </variant>
+    </method>
+    <method name="exportSplineSegment"
+    cppName="exportSplineSegment" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RSpline &amp;" typeName="RSpline" name="spline"
+        isConst="true" />
       </variant>
     </method>
     <method name="exportPainterPaths" cppName="exportPainterPaths"

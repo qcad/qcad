@@ -16,15 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#ifndef RARCEXPORTER_H
-#define RARCEXPORTER_H
+#ifndef RSHAPESEXPORTER_H
+#define RSHAPESEXPORTER_H
 
-#include "RArc.h"
+#include "RShape.h"
 #include "RExporter.h"
 
-class RArcExporter : public RExporter {
+class RShapesExporter : public RExporter {
 public:
-    RArcExporter(RExporter& exporter, const RArc& arc, double offset);
+    RShapesExporter(RExporter& exporter, const QList<QSharedPointer<RShape> >& shapes, double offset);
     virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE);
 
     virtual RLinetypePattern getLinetypePattern() {
@@ -45,9 +45,17 @@ public:
     virtual void exportPoint(const RPoint& point) {}
     virtual void exportTriangle(const RTriangle& triangle) {}
 
+    RVector getPointAt(double d, int* index = NULL);
+    double getAngleAt(double d);
+    int getShapeAt(double d);
+    void exportShapesBetween(int i1, const RVector& p1, int i2, const RVector& p2);
+
 private:
     RExporter& exporter;
-    RArc arc;
+    QList<QSharedPointer<RShape> > shapes;
+    QList<double> lengthAt;
+//    RPainterPath path;
+//    double length;
 };
 
 #endif

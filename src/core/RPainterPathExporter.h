@@ -28,6 +28,9 @@
 #include "RRay.h"
 #include "RXLine.h"
 
+/**
+ * Exports all exported geometry into one painter path.
+ */
 class QCADCORE_EXPORT RPainterPathExporter : public RExporter {
 public:
     RPainterPathExporter() : RExporter(), exportZeroLinesAsPoints(true) { }

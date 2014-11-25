@@ -969,6 +969,25 @@ dir="./core" filename="RExporter.h">
       <name>shape</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>exportShapeSegment</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>QSharedPointer
+        <argument_list>&lt;
+        <argument>
+          <name>RShape</name>
+        </argument>&gt;</argument_list></name>
+      </type>
+      <name>shape</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <comment type="block">/** * Exports a line with the current
   attributes. */</comment>
   <function_decl>
@@ -1230,18 +1249,6 @@ dir="./core" filename="RExporter.h">
         <name>RNANDOUBLE</name>
       </expr>
     </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>firstOrLast</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -1350,6 +1357,21 @@ dir="./core" filename="RExporter.h">
         <name>RNANDOUBLE</name>
       </expr>
     </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>exportSplineSegment</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RSpline</name>&amp;</type>
+      <name>spline</name>
+    </decl>
   </param>)</parameter_list>;</function_decl>
   <comment type="block">/** * \nonscriptable */</comment>
   <function_decl>

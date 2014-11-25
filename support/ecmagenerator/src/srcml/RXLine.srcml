@@ -253,6 +253,22 @@ dir="./core/math" filename="RXLine.h">
   <function_decl>
   <type>
     <name>virtual</name>
+    <name>double</name>
+  </type>
+  <name>getAngleAt</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>distance</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
     <name>RVector</name>
   </type>
   <name>getVectorTo</name>

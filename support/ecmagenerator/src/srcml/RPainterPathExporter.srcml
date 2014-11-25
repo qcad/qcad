@@ -38,6 +38,8 @@ dir="./core" filename="RPainterPathExporter.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RXLine.h"</cpp:file></cpp:include>
+  <comment type="block">/** * Exports all exported geometry into
+  one painter path. */</comment>
   <class>class 
   <macro>
     <name>QCADCORE_EXPORT</name>

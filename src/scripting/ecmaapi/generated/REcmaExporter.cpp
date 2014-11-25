@@ -167,6 +167,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportShape, "exportShape");
             
+            REcmaHelper::registerFunction(&engine, proto, exportShapeSegment, "exportShapeSegment");
+            
             REcmaHelper::registerFunction(&engine, proto, exportLine, "exportLine");
             
             REcmaHelper::registerFunction(&engine, proto, exportLineSegment, "exportLineSegment");
@@ -188,6 +190,8 @@
             REcmaHelper::registerFunction(&engine, proto, exportPolyline, "exportPolyline");
             
             REcmaHelper::registerFunction(&engine, proto, exportSpline, "exportSpline");
+            
+            REcmaHelper::registerFunction(&engine, proto, exportSplineSegment, "exportSplineSegment");
             
             REcmaHelper::registerFunction(&engine, proto, exportPainterPaths, "exportPainterPaths");
             
@@ -3525,6 +3529,89 @@
             return result;
         }
          QScriptValue
+        REcmaExporter::exportShapeSegment
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::exportShapeSegment", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::exportShapeSegment";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("exportShapeSegment", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < RShape > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < RShape > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RShape * o0 = 
+                    qscriptvalue_cast < RShape * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        QSharedPointer < RShape >(o0->clone());
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RShape >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RShape >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type  RShape .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RExporter: Argument 0 is not of type  RShape .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RShape > 
+                    //a0 =
+                    //QSharedPointer < RShape >(o0->clone());
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportShapeSegment(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportShapeSegment().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::exportShapeSegment", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaExporter::exportLine
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4305,71 +4392,6 @@
 
 
         
-    
-    if( context->argumentCount() ==
-    3 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RArc */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: double */
-     && (
-            context->argument(2).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RArc*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RArc*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RArc.",
-                               context);                    
-                    }
-                    RArc 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    double
-                    a1 =
-                    (double)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    bool
-                    a2 =
-                    (bool)
-                    
-                    context->argument( 2 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->exportArc(a0
-        ,
-    a1
-        ,
-    a2);
-    } else
-
-
-        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportArc().",
                    context);
@@ -4851,6 +4873,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::exportSpline", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::exportSplineSegment
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::exportSplineSegment", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::exportSplineSegment";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("exportSplineSegment", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RSpline */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RSpline*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RSpline*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RSpline.",
+                               context);                    
+                    }
+                    RSpline 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportSplineSegment(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportSplineSegment().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::exportSplineSegment", context, engine);
             return result;
         }
          QScriptValue

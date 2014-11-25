@@ -357,6 +357,11 @@
             );
         
     
+      void exportShapeSegment(
+                QSharedPointer < RShape > shape
+            );
+        
+    
       double exportLine(
                 const RLine & line, double offset
         = RNANDOUBLE, bool first
@@ -377,8 +382,7 @@
     
       void exportArc(
                 const RArc & arc, double offset
-        = RNANDOUBLE, bool firstOrLast
-        =  false
+        = RNANDOUBLE
             );
         
     
@@ -397,6 +401,11 @@
       void exportSpline(
                 const RSpline & spline, double offset
         = RNANDOUBLE
+            );
+        
+    
+      void exportSplineSegment(
+                const RSpline & spline
             );
         
     

@@ -450,6 +450,30 @@ dir="./core/math" filename="RShape.h">
   </param>)</parameter_list>
   <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * \return Angle on the entity at the
+  given distance from the start point. */</comment>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>double</name>
+    </type>
+    <name>getAngleAt</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>double</name>
+        </type>
+        <name>distance</name>
+      </decl>
+    </param>)</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>RNANDOUBLE</name>
+    </expr>;</return>}</block>
+  </function>
   <function_decl>
   <type>
     <name>virtual</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <unit xmlns="http://www.sdml.info/srcML/src"
 xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RArcExporter.h">
+dir="./core" filename="RShapesExporter.h">
   <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
   Mustun. All rights reserved. * * This file is part of the QCAD
   project. * * QCAD is free software: you can redistribute it
@@ -16,18 +16,18 @@ dir="./core" filename="RArcExporter.h">
   License * along with QCAD. */</comment>
   <cpp:ifndef>#
   <cpp:directive>ifndef</cpp:directive>
-  <name>RARCEXPORTER_H</name></cpp:ifndef>
+  <name>RSHAPESEXPORTER_H</name></cpp:ifndef>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
-  <name>RARCEXPORTER_H</name></cpp:define>
+  <name>RSHAPESEXPORTER_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"RArc.h"</cpp:file></cpp:include>
+  <cpp:file>"RShape.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RExporter.h"</cpp:file></cpp:include>
   <class>class 
-  <name>RArcExporter</name>
+  <name>RShapesExporter</name>
   <super>: 
   <specifier>public</specifier>
   <name>RExporter</name></super>
@@ -35,7 +35,7 @@ dir="./core" filename="RArcExporter.h">
   <private type="default"></private>
   <public>public: 
   <constructor_decl>
-  <name>RArcExporter</name>
+  <name>RShapesExporter</name>
   <parameter_list>(
   <param>
     <decl>
@@ -48,8 +48,16 @@ dir="./core" filename="RArcExporter.h">
     <decl>
       <type>
       <name>const</name>
-      <name>RArc</name>&amp;</type>
-      <name>arc</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>QSharedPointer
+        <argument_list>&lt;
+        <argument>
+          <name>RShape</name>
+        </argument>&gt;</argument_list></name>
+      </argument>&gt;</argument_list></name>&amp;</type>
+      <name>shapes</name>
     </decl>
   </param>, 
   <param>
@@ -267,7 +275,98 @@ dir="./core" filename="RArcExporter.h">
       </decl>
     </param>)</parameter_list>
     <block>{}</block>
-  </function></public>
+  </function>
+  <function_decl>
+  <type>
+    <name>RVector</name>
+  </type>
+  <name>getPointAt</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>d</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>int</name>*</type>
+    <name>index</name>=
+    <init>
+      <expr>
+        <name>NULL</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>double</name>
+  </type>
+  <name>getAngleAt</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>d</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>int</name>
+  </type>
+  <name>getShapeAt</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>d</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>exportShapesBetween</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>i1</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>p1</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>i2</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>p2</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>
   <private>private: 
   <decl_stmt>
   <decl>
@@ -278,10 +377,32 @@ dir="./core" filename="RArcExporter.h">
   <decl_stmt>
   <decl>
     <type>
-      <name>RArc</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>QSharedPointer
+        <argument_list>&lt;
+        <argument>
+          <name>RShape</name>
+        </argument>&gt;</argument_list></name>
+      </argument>&gt;</argument_list></name>
     </type>
-    <name>arc</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
+    <name>shapes</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>double</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>lengthAt</name>
+  </decl>;</decl_stmt>
+  <comment type="line">// RPainterPath path;</comment>
+  <comment type="line">// double
+  length;</comment></private>}</block>;</class>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

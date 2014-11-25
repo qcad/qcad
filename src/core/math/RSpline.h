@@ -130,6 +130,7 @@ public:
 
     virtual double getLength() const;
     RVector getPointAt(double t) const;
+    virtual double getAngleAt(double distance) const;
 
     virtual QList<RVector> getEndPoints() const;
     RVector getMiddlePoint() const;
@@ -182,6 +183,13 @@ public:
      */
     static void setSplineProxy(RSplineProxy* p) {
         splineProxy = p;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static RSplineProxy* getSplineProxy() {
+        return splineProxy;
     }
 
 protected:

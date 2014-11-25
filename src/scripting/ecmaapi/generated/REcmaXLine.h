@@ -83,6 +83,9 @@
         getPointsWithDistanceToEnd
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getAngleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVectorTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

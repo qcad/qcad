@@ -18,15 +18,14 @@
  */
 #include "RArcExporter.h"
 
-RArcExporter::RArcExporter(RExporter& exporter, const RArc& arc, double offset, bool firstOrLast) :
+RArcExporter::RArcExporter(RExporter& exporter, const RArc& arc, double offset) :
     RExporter(exporter.getDocument()), exporter(exporter), arc(arc) {
 
     RLine line(RVector(0,0), RVector((arc.reversed ? -1 : 1) * arc.getLength(), 0));
-    exportLine(line, offset, firstOrLast);
+    exportLine(line, offset);
 }
 
 void RArcExporter::exportLineSegment(const RLine& line, double angle) {
-    qDebug() << "RArcExporter::exportLineSegment: " << line;
     RArc a = arc;
     double ang1 = line.getStartPoint().x / arc.getRadius();
     double ang2 = line.getEndPoint().x / arc.getRadius();
@@ -34,55 +33,6 @@ void RArcExporter::exportLineSegment(const RLine& line, double angle) {
     a.setEndAngle(arc.getStartAngle() + ang2);
     exporter.exportArcSegment(a, true);
 }
-
-//void RArcExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line, double total, double length, bool optimizeEnds, double angle, const RVector& cursor) {
-//    double arcAngle = arc.getStartAngle() + cursor.x / arc.getRadius();
-//    RVector arcCursor = arc.getPointAtAngle(arcAngle);
-
-//    qDebug() << "RArcExporter::exportLinetypeShape";
-//    RExporter::exportLinetypeShape(pps, line, total, length, optimizeEnds, arcAngle + M_PI/2.0, arcCursor);
-//    qDebug() << "RArcExporter::exportLinetypeShape: OK";
-
-//    /*
-//    RVector min = RPainterPath::getMinList(pps);
-//    RVector max = RPainterPath::getMaxList(pps);
-//    //                qDebug() << "total: " << total;
-//    //                qDebug() << "offset: " << offset;
-//    //                qDebug() << "min.x: " << min.x;
-//    bool firstShapeOutside = total+min.x<0.0;
-//    bool lastShapeOutside = total+max.x>length;
-//    if (!optimizeEnds || (!firstShapeOutside && !lastShapeOutside)) {
-////        RPainterPath::rotateList(pps, angle);
-////        RPainterPath::translateList(pps, cursor);
-////        exportPainterPaths(pps);
-//        double ang = arc.getStartAngle() + cursor.x / arc.getRadius();
-//        RPainterPath::rotateList(pps, ang + M_PI/2.0);
-//        RPainterPath::translateList(pps, arc.getPointAtAngle(ang));
-//        exporter.exportPainterPaths(pps);
-//    }
-////    else {
-////        if (firstShapeOutside) {
-////            //                        qDebug("firstShapeOutside");
-//////            double ang = (total+max.x) / arc.getRadius();
-//////            RArc a = arc;
-//////            a.setEndAngle(a.getStartAngle() + ang);
-//////            exporter.exportArcSegment(a);
-//////            RVector p = RVector(
-//////                        cos(angle) * fabs(total+max.x),
-//////                        sin(angle) * fabs(total+max.x)
-//////                        );
-//////            exportLineSegment(RLine(line.startPoint, line.startPoint+p), angle);
-////        }
-////        if (lastShapeOutside) {
-////            RVector p = RVector(
-////                        cos(angle) * fabs(total+min.x),
-////                        sin(angle) * fabs(total+min.x)
-////                        );
-////            exportLineSegment(RLine(line.startPoint+p, line.endPoint), angle);
-////        }
-////    }
-//    */
-//}
 
 void RArcExporter::exportPainterPaths(const QList<RPainterPath>& paths, double angle, const RVector& pos) {
     double arcAngle = arc.getStartAngle() + pos.x / arc.getRadius();

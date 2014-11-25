@@ -127,6 +127,13 @@ public:
     virtual QList<RVector> getPointsWithDistanceToEnd(
         double distance, RS::From from = RS::FromAny) const = 0;
 
+    /**
+     * \return Angle on the entity at the given distance from the start point.
+     */
+    virtual double getAngleAt(double distance) const {
+        return RNANDOUBLE;
+    }
+
     virtual RVector getPointAtPercent(double p) const;
 
     virtual bool intersectsWith(const RShape& other, 

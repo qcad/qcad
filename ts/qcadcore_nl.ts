@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.0" language="nl_NL">
 <context>
     <name>QObject</name>
     <message>
@@ -212,22 +212,22 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID actieve laag</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekening eenheid</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">Lijntype schaal</translation>
+        <translation>Lijntype schaal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Bemating lettertype</translation>
     </message>
 </context>
 <context>

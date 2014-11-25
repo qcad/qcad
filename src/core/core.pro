@@ -66,6 +66,7 @@ SOURCES += \
     RScriptHandler.cpp \
     RScriptHandlerRegistry.cpp \
     RSettings.cpp \
+    RShapesExporter.cpp \
     RSingleApplication.cpp \
     RSingleton.cpp \
     RSpatialIndex.cpp \
@@ -206,6 +207,7 @@ HEADERS = \
     RSelectionChangedEvent.h \
     RSelectionListener.h \
     RSettings.h \
+    RShapesExporter.h \
     RSingleApplication.h \
     RSingleton.h \
     RSnap.h \

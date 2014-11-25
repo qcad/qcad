@@ -30,10 +30,10 @@
 #include "RExporter.h"
 #include "RLine.h"
 #include "RLinetype.h"
-//#include "RLinetypePatternMap.h"
 #include "RPainterPathSource.h"
 #include "RPolyline.h"
 #include "RSettings.h"
+#include "RShapesExporter.h"
 #include "RSpline.h"
 #include "RStorage.h"
 #include "RTriangle.h"
@@ -853,7 +853,7 @@ double RExporter::exportLine(const RLine& line, double offset, bool first, bool 
         offset -= num * patternLength;
     }
 
-    qDebug() << "optimizeEnds: " << optimizeEnds;
+//    qDebug() << "optimizeEnds: " << optimizeEnds;
 
     bool done = false;
     int i = 0;
@@ -947,31 +947,31 @@ bool RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line,
     RVector max = RPainterPath::getMaxList(pps);
     double width = max.x-min.x;
 
-    isFirst = isFirst && total-width < 0.0;
-    isLast = isLast && total+width > length;
+    bool isFirstRemove = false; //isFirst && total-width < 0.0;
+    bool isLastRemove = false; //isLast && total+width > length;
 
-    qDebug() << "########################";
-    qDebug() << "total: " << total;
-    qDebug() << "length: " << length;
-    qDebug() << "min.x: " << min.x;
-    qDebug() << "max.x: " << max.x;
-    qDebug() << "width: " << width;
-    qDebug() << "isFirst: " << isFirst;
-    qDebug() << "isLast: " << isLast;
+//    qDebug() << "########################";
+//    qDebug() << "total: " << total;
+//    qDebug() << "length: " << length;
+//    qDebug() << "min.x: " << min.x;
+//    qDebug() << "max.x: " << max.x;
+//    qDebug() << "width: " << width;
+//    qDebug() << "isFirst: " << isFirstRemove;
+//    qDebug() << "isLast: " << isLastRemove;
     bool isCursorOnLine = line.isOnShape(cursor);
-    qDebug() << "isCursorOnLine: " << isCursorOnLine;
+//    qDebug() << "isCursorOnLine: " << isCursorOnLine;
     double diffBefore = total+min.x;
     double diffAfter = total+max.x-length;
-    qDebug() << "diffAfter: " << diffAfter;
-    qDebug() << "diffBefore: " << diffBefore;
+//    qDebug() << "diffAfter: " << diffAfter;
+//    qDebug() << "diffBefore: " << diffBefore;
     bool shapeOutsideBefore = diffBefore < -RS::PointTolerance;
     bool shapeOutsideAfter = diffAfter > RS::PointTolerance;
-    qDebug() << "shapeOutsideBefore: " << shapeOutsideBefore;
-    qDebug() << "shapeOutsideAfter: " << shapeOutsideAfter;
-    qDebug() << "optmizeEnds: " << optimizeEnds;
+//    qDebug() << "shapeOutsideBefore: " << shapeOutsideBefore;
+//    qDebug() << "shapeOutsideAfter: " << shapeOutsideAfter;
+//    qDebug() << "optmizeEnds: " << optimizeEnds;
     if (isCursorOnLine &&
-        (!isFirst || !shapeOutsideBefore) &&
-        (!isLast || !shapeOutsideAfter) &&
+        (!isFirstRemove || !shapeOutsideBefore) &&
+        (!isLastRemove || !shapeOutsideAfter) &&
         (!optimizeEnds || (!shapeOutsideBefore && !shapeOutsideAfter))
         ) {
     //if (!optimizeEnds || (!firstShapeOutside && !lastShapeOutside)) {
@@ -982,7 +982,7 @@ bool RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line,
          //(!optimizeEnds && !isLast && shapeOutsideBefore && !shapeOutsideAfter && fabs(diffBefore)<width/2)
 //         ) {
 //    if (!shapeOutsideBefore && !shapeOutsideAfter) {
-        qDebug("export pps");
+//        qDebug("export pps");
 //        RPainterPath::rotateList(pps, angle);
 //        RPainterPath::translateList(pps, cursor);
         exportPainterPaths(pps, angle, cursor);
@@ -994,13 +994,13 @@ bool RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line,
 //            exportLineSegment(RLine(line.startPoint, line.endPoint), angle);
 //            return true;
 //        }
-        if (shapeOutsideBefore && (optimizeEnds || isFirst)) {
+        if (shapeOutsideBefore && (optimizeEnds || isFirstRemove)) {
             // check if first shape is not entirely before the start point of the line:
             if (total + max.x < 0.0) {
-                qDebug() << "dropping";
+//                qDebug() << "dropping";
                 return false;
             }
-            qDebug("firstShapeOutside -> draw line");
+//            qDebug("firstShapeOutside -> draw line");
             RLine l = line;
             if (fabs(total+max.x)<length) {
                 RVector p = RVector(
@@ -1012,13 +1012,13 @@ bool RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line,
             exportLineSegment(l, angle);
             return true;
         }
-        if (shapeOutsideAfter && (optimizeEnds || isLast)) {
+        if (shapeOutsideAfter && (optimizeEnds || isLastRemove)) {
             // check if last shape is not entirely after the end point of the line:
             if (total + min.x > length) {
-                qDebug() << "dropping";
+//                qDebug() << "dropping";
                 return false;
             }
-            qDebug("lastShapeOutside -> draw line");
+//            qDebug("lastShapeOutside -> draw line");
             RLine l = line;
             if (fabs(total+min.x)>0.0) {
                 RVector p = RVector(
@@ -1031,12 +1031,12 @@ bool RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line,
             return true;
         }
 
-        qDebug() << "dropping";
+//        qDebug() << "dropping";
         return false;
     }
 }
 
-void RExporter::exportArc(const RArc& arc, double offset, bool firstOrLast) {
+void RExporter::exportArc(const RArc& arc, double offset) {
     if (!arc.isValid()) {
         return;
     }
@@ -1057,7 +1057,7 @@ void RExporter::exportArc(const RArc& arc, double offset, bool firstOrLast) {
         return;
     }
 
-    RArcExporter(*this, arc, offset, firstOrLast);
+    RArcExporter(*this, arc, offset);
 
     /*
     p.scale(getLineTypePatternScale(p));
@@ -1329,6 +1329,14 @@ void RExporter::exportPolyline(const RPolyline& polyline, double offset) {
     exportExplodable(polyline, offset);
 }
 
+void RExporter::exportSplineSegment(const RSpline& spline) {
+    RPainterPath pp;
+    pp.setPen(currentPen);
+    pp.setInheritPen(true);
+    pp.addSpline(spline);
+    exportPainterPaths(QList<RPainterPath>() << pp);
+}
+
 void RExporter::exportSpline(const RSpline& spline, double offset) {
     RLinetypePattern p = getLinetypePattern();
 
@@ -1338,13 +1346,15 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
     }
 
     if (!continuous) {
-        p.scale(getLineTypePatternScale(p));
+//        p.scale(getLineTypePatternScale(p));
 
-        if (RMath::isNaN(offset)) {
-            double length = spline.getLength();
-            offset = p.getPatternOffset(length);
-        }
-        exportExplodable(spline, offset);
+//        if (RMath::isNaN(offset)) {
+//            double length = spline.getLength();
+//            offset = p.getPatternOffset(length);
+//        }
+        //exportExplodable(spline, offset);
+
+        RShapesExporter(*this, QList<QSharedPointer<RShape> >() << QSharedPointer<RShape>(spline.clone()), offset);
     }
     else {
         // version <= 3.0.0 was (line interpolation):
@@ -1392,6 +1402,10 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
 
 void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
     QList<QSharedPointer<RShape> > sub = explodable.getExploded();
+
+    RShapesExporter(*this, sub, offset);
+
+    /*
     //QList<QSharedPointer<RShape> >::iterator it;
     //for (it=sub.begin(); it!=sub.end(); ++it) {
 //    bool first = true;
@@ -1433,6 +1447,7 @@ void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
             continue;
         }
     }
+    */
 }
 
 void RExporter::exportPainterPathSource(const RPainterPathSource& pathSource) {
@@ -1585,3 +1600,25 @@ void RExporter::exportShape(QSharedPointer<RShape> shape) {
     }
 }
 
+void RExporter::exportShapeSegment(QSharedPointer<RShape> shape) {
+    if (shape.isNull()) {
+        return;
+    }
+
+    QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
+    if (!line.isNull()) {
+        exportLineSegment(*line.data());
+    }
+
+    QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
+    if (!arc.isNull()) {
+        exportArcSegment(*arc.data());
+    }
+
+    QSharedPointer<RSpline> spline = shape.dynamicCast<RSpline>();
+    if (!spline.isNull()) {
+        exportSplineSegment(*spline.data());
+    }
+
+    // TODO: ellipse
+}

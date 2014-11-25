@@ -158,6 +158,10 @@ QList<RVector> RXLine::getPointsWithDistanceToEnd(double distance, RS::From from
     return QList<RVector>();
 }
 
+double RXLine::getAngleAt(double distance) const {
+    return getAngle();
+}
+
 RVector RXLine::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     Q_UNUSED(limited)
     return getLineShape().getVectorTo(point, false, strictRange);

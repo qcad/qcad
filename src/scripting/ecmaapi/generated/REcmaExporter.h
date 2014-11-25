@@ -172,6 +172,9 @@
         exportShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportShapeSegment
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportLine
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -203,6 +206,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         exportSpline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportSplineSegment
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         exportPainterPaths

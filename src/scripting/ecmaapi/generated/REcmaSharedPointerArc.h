@@ -181,6 +181,9 @@
         getPointAtAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getAngleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getMiddlePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -144,6 +144,7 @@ public:
 
     virtual void exportShapes(const QList<QSharedPointer<RShape> >& shapes);
     virtual void exportShape(QSharedPointer<RShape> shape);
+    virtual void exportShapeSegment(QSharedPointer<RShape> shape);
 
     /**
      * Exports a line with the current attributes.
@@ -179,7 +180,7 @@ public:
 
     virtual void exportCircle(const RCircle& circle);
 
-    virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE, bool firstOrLast = false);
+    virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE);
 
     virtual void exportArcSegment(const RArc& arc, bool allowForZeroLength = false);
 
@@ -188,6 +189,8 @@ public:
     virtual void exportPolyline(const RPolyline& polyline, double offset = RNANDOUBLE);
 
     virtual void exportSpline(const RSpline& spline, double offset = RNANDOUBLE);
+
+    virtual void exportSplineSegment(const RSpline& spline);
 
     /**
      * \nonscriptable

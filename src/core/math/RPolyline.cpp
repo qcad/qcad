@@ -573,6 +573,12 @@ QList<RVector> RPolyline::getPointsWithDistanceToEnd(double distance, RS::From f
     return ret;
 }
 
+double RPolyline::getAngleAt(double distance) const {
+    // not implemented
+    Q_ASSERT(false);
+    return RNANDOUBLE;
+}
+
 RVector RPolyline::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     RVector ret = RVector::invalid;
 

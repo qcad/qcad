@@ -196,10 +196,10 @@ double RGraphicsSceneQt::exportLine(const RLine& line, double offset, bool first
     }
 }
 
-void RGraphicsSceneQt::exportArc(const RArc& arc, double offset, bool firstOrLast) {
+void RGraphicsSceneQt::exportArc(const RArc& arc, double offset) {
     bool created = beginPath();
 
-    RGraphicsScene::exportArc(arc, offset, firstOrLast);
+    RGraphicsScene::exportArc(arc, offset);
 
     if (created) {
         endPath();
