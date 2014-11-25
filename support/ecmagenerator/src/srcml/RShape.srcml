@@ -469,6 +469,11 @@ dir="./core/math" filename="RShape.h">
     </param>)</parameter_list>
     <specifier>const</specifier>
     <block>{ 
+    <macro>
+      <name>Q_UNUSED</name>
+      <argument_list>(
+      <argument>distance</argument>)</argument_list>
+    </macro>
     <return>return 
     <expr>
       <name>RNANDOUBLE</name>

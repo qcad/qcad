@@ -195,8 +195,6 @@ int main(int argc, char *argv[]) {
     RFontList::init();
     RPatternListMetric::init();
     RPatternListImperial::init();
-    RLinetypeListMetric::init();
-    RLinetypeListImperial::init();
 
     // init object properties:
     RObject::init();
@@ -239,6 +237,9 @@ int main(int argc, char *argv[]) {
     RView::init();
 
     RPluginLoader::loadPlugins(true);
+
+    RLinetypeListMetric::init();
+    RLinetypeListImperial::init();
 
     // check for autostart option:
     QString autostartFile;

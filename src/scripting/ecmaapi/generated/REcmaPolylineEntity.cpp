@@ -140,6 +140,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, simplify, "simplify");
             
+            REcmaHelper::registerFunction(&engine, proto, setPolylineGen, "setPolylineGen");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPolylineGen, "getPolylineGen");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RPolylineEntity*>(), *proto);
 
@@ -201,6 +205,10 @@
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyClosed),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyPolylineGen",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyPolylineGen),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyVertexNX",
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyVertexNX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -215,6 +223,10 @@
             
             ctor.setProperty("PropertyBulgeN",
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyBulgeN),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyLength",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyLength),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -2865,6 +2877,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineEntity::simplify", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineEntity::setPolylineGen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineEntity::setPolylineGen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::setPolylineGen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("setPolylineGen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPolylineGen(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.setPolylineGen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::setPolylineGen", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineEntity::getPolylineGen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getPolylineGen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getPolylineGen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("getPolylineGen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getPolylineGen();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getPolylineGen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getPolylineGen", context, engine);
             return result;
         }
          QScriptValue REcmaPolylineEntity::toString

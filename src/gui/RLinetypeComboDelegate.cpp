@@ -73,7 +73,7 @@ QImage RLinetypeComboDelegate::getPreviewImage(const RLinetypePattern& pattern, 
         RLine line(RVector(20,0), RVector(width-20,0));
         exp.exportLine(line);
         pp = exp.getPainterPath();
-        if (pp.getBoundingBox().getHeight()>1.0) {
+        if (pp.getBoundingBox().getHeight()>0.01) {
             double f = previewHeight*0.4 / pp.getBoundingBox().getHeight();
             RLinetypePattern patternScaled = pattern;
             patternScaled.scale(f);

@@ -82,6 +82,9 @@
         getDashLengthAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDashOffsetAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getShapeIndices
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -107,9 +110,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getPatternOffset
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        isSymmetrical
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         scale

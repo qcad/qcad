@@ -52,10 +52,13 @@ public:
     static RPropertyTypeId PropertyDrawOrder;
 
     static RPropertyTypeId PropertyClosed;
+    static RPropertyTypeId PropertyPolylineGen;
     static RPropertyTypeId PropertyVertexNX;
     static RPropertyTypeId PropertyVertexNY;
     static RPropertyTypeId PropertyVertexNZ;
     static RPropertyTypeId PropertyBulgeN;
+
+    static RPropertyTypeId PropertyLength;
 
 public:
     RPolylineEntity(RDocument* document, const RPolylineData& data,
@@ -192,6 +195,13 @@ public:
 
     void simplify(double angleTolerance) {
         data.simplify(angleTolerance);
+    }
+
+    void setPolylineGen(bool on) {
+        data.setPolylineGen(on);
+    }
+    bool getPolylineGen() const {
+        return data.getPolylineGen();
     }
 
 protected:

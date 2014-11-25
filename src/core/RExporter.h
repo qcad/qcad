@@ -186,7 +186,7 @@ public:
 
     virtual void exportEllipse(const REllipse& ellipse, double offset = RNANDOUBLE);
 
-    virtual void exportPolyline(const RPolyline& polyline, double offset = RNANDOUBLE);
+    virtual void exportPolyline(const RPolyline& polyline, bool polylineGen = true, double offset = RNANDOUBLE);
 
     virtual void exportSpline(const RSpline& spline, double offset = RNANDOUBLE);
 

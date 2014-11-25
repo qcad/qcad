@@ -82,7 +82,7 @@ public:
     void writeArc(const RArcEntity& a);
     void writeEllipse(const REllipseEntity& el);
     void writePolyline(const RPolylineEntity& pl);
-    void writePolyline(const RPolyline& pl);
+    void writePolyline(const RPolyline& pl, bool plineGen);
     void writeSpline(const RSplineEntity& sp);
     DL_TextData getTextData(const RTextBasedData& t, const QString& styleName);
     QString getStyleName(const RTextBasedEntity& t);

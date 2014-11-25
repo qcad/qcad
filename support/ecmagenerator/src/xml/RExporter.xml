@@ -480,6 +480,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RPolyline &amp;" typeName="RPolyline"
         name="polyline" isConst="true" />
+        <arg type="bool" typeName="bool" name="polylineGen"
+        hasDefault="true" default=" true" isConst="false" />
         <arg type="double" typeName="double" name="offset"
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
       </variant>

@@ -781,17 +781,17 @@ void RDxfExporter::writeEllipse(const REllipseEntity& el) {
  * Writes the given polyline entity to the file.
  */
 void RDxfExporter::writePolyline(const RPolylineEntity& pl) {
-    writePolyline(pl.getPolylineShape());
+    writePolyline(pl.getPolylineShape(), pl.getPolylineGen());
 }
 
-void RDxfExporter::writePolyline(const RPolyline& pl) {
+void RDxfExporter::writePolyline(const RPolyline& pl, bool plineGen) {
     int count = pl.countVertices();
 
     dxf.writePolyline(
                 *dw,
                 DL_PolylineData(count,
                                 0, 0,
-                                pl.isClosed()*0x1),
+                                pl.isClosed()*0x1 + plineGen*0x80),
                 attributes
                 );
 
@@ -810,10 +810,10 @@ void RDxfExporter::writePolyline(const RPolyline& pl) {
  */
 void RDxfExporter::writeSpline(const RSplineEntity& sp) {
 
-    // split spline into atomic entities for DXF R12:
+    // write spline as polyline for DXF R12:
     if (dxf.getVersion()==DL_Codes::AC1009) {
         int seg = RSettings::getIntValue("Explode/SplineSegments", 64);
-        writePolyline(sp.getData().toPolyline(seg));
+        writePolyline(sp.getData().toPolyline(seg), false);
         return;
     }
 

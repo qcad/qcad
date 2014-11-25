@@ -77,6 +77,7 @@ public:
     QList<double> getPattern() const;
     double getPatternLength() const;
     double getDashLengthAt(int i) const;
+    double getDashOffsetAt(const QList<double>& dashes, int i) const;
     QList<int> getShapeIndices() const;
     bool hasShapes() const;
     bool hasShapeAt(int i) const;
@@ -89,8 +90,7 @@ public:
     /**
      * \nonscriptable
      */
-    double getPatternOffsetAt(double length, int index, double* gap = NULL, bool end = false);
-    bool isSymmetrical(int i) const;
+    double getPatternOffsetAt(double length, double symmetryPos, double* gap = NULL, bool end = false);
     void scale(double factor);
 
     QVector<qreal> getScreenBasedLinetype();
@@ -101,7 +101,6 @@ public:
     bool isLoaded() { return true; }
     void load() {}
 
-    //static QString fixName(const QString& n);
     static void initNameMap();
 
 public:
@@ -119,8 +118,7 @@ public:
     QMap<int, RVector> shapeOffsets;
 
     // internal info about segments at which the pattern is symmetrical:
-    bool* symmetrical;
-    bool* symmetricalEnd;
+    QList<double> symmetries;
 
     static QMap<QString, QString> nameMap;
 };

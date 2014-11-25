@@ -152,6 +152,7 @@ private:
     QStringList lockedLayers;
 
     RPolyline polyline;
+    bool polylinePlineGen;
     RSpline spline;
     RLeaderData leader;
     RHatchData hatch;

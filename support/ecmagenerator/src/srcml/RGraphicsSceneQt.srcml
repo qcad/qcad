@@ -295,6 +295,18 @@ dir="./gui" filename="RGraphicsSceneQt.h">
   <param>
     <decl>
     <type>
+      <name>bool</name>
+    </type>
+    <name>polylineGen</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
       <name>double</name>
     </type>
     <name>offset</name>=

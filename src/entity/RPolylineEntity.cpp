@@ -31,11 +31,15 @@ RPropertyTypeId RPolylineEntity::PropertyLinetypeScale;
 RPropertyTypeId RPolylineEntity::PropertyLineweight;
 RPropertyTypeId RPolylineEntity::PropertyColor;
 RPropertyTypeId RPolylineEntity::PropertyDrawOrder;
+
+RPropertyTypeId RPolylineEntity::PropertyPolylineGen;
 RPropertyTypeId RPolylineEntity::PropertyClosed;
 RPropertyTypeId RPolylineEntity::PropertyVertexNX;
 RPropertyTypeId RPolylineEntity::PropertyVertexNY;
 RPropertyTypeId RPolylineEntity::PropertyVertexNZ;
 RPropertyTypeId RPolylineEntity::PropertyBulgeN;
+
+RPropertyTypeId RPolylineEntity::PropertyLength;
 
 RPolylineEntity::RPolylineEntity(RDocument* document, const RPolylineData& data,
         RObject::Id objectId) :
@@ -63,17 +67,21 @@ void RPolylineEntity::init() {
     RPolylineEntity::PropertyColor.generateId(typeid(RPolylineEntity), REntity::PropertyColor);
     RPolylineEntity::PropertyDrawOrder.generateId(typeid(RPolylineEntity), REntity::PropertyDrawOrder);
 
+    RPolylineEntity::PropertyPolylineGen.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Polyline Pattern"));
     RPolylineEntity::PropertyClosed.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Closed"));
     RPolylineEntity::PropertyVertexNX.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "X"));
     RPolylineEntity::PropertyVertexNY.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RPolylineEntity::PropertyVertexNZ.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"));
     RPolylineEntity::PropertyBulgeN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Bulge"));
+
+    RPolylineEntity::PropertyLength.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
 }
 
 bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
 
     bool ret = REntity::setProperty(propertyTypeId, value, transaction);
+    ret = ret || RObject::setMember(data.polylineGen, value, PropertyPolylineGen == propertyTypeId);
     ret = ret || RObject::setMember(data.closed, value, PropertyClosed == propertyTypeId);
     ret = ret || RObject::setMemberX(data.vertices, value, PropertyVertexNX == propertyTypeId);
     ret = ret || RObject::setMemberY(data.vertices, value, PropertyVertexNY == propertyTypeId);
@@ -89,6 +97,10 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
         QVariant v;
         v.setValue(data.closed);
         return qMakePair(v, RPropertyAttributes());
+    } else if (propertyTypeId == PropertyPolylineGen) {
+            QVariant v;
+            v.setValue(data.polylineGen);
+            return qMakePair(v, RPropertyAttributes());
     } else if (propertyTypeId == PropertyVertexNX) {
         QVariant v;
         v.setValue(RVector::getXList(data.vertices));
@@ -105,7 +117,12 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
         QVariant v;
         v.setValue(data.bulges);
         return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
+    } else if (propertyTypeId == PropertyLength) {
+        QVariant v;
+        v.setValue(data.getLength());
+        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
+
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
@@ -121,7 +138,7 @@ void RPolylineEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
 //    pp.setPen(QPen(Qt::white));
 //    e.exportPainterPaths(QList<RPainterPath>() << pp);
 
-    e.exportPolyline(data);
+    e.exportPolyline(data, data.getPolylineGen());
 }
 
 void RPolylineEntity::print(QDebug dbg) const {

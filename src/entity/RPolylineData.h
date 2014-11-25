@@ -164,6 +164,16 @@ public:
     virtual QList<RVector> getIntersectionPoints(
             const REntityData& other, bool limited = true, bool same = false,
             const RBox& queryBox = RDEFAULT_RBOX) const;
+
+    void setPolylineGen(bool on) {
+        polylineGen = on;
+    }
+    bool getPolylineGen() const {
+        return polylineGen;
+    }
+
+protected:
+    bool polylineGen;
 };
 
 Q_DECLARE_METATYPE(RPolylineData*)

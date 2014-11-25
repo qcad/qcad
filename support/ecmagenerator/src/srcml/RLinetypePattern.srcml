@@ -330,6 +330,21 @@ dir="./core" filename="RLinetypePattern.h">
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
+    <name>double</name>
+  </type>
+  <name>getDashOffsetAt</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>i</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
     <name>QList
     <argument_list>&lt;
     <argument>
@@ -455,9 +470,9 @@ dir="./core" filename="RLinetypePattern.h">
   <param>
     <decl>
       <type>
-        <name>int</name>
+        <name>double</name>
       </type>
-      <name>index</name>
+      <name>symmetryPos</name>
     </decl>
   </param>, 
   <param>
@@ -483,21 +498,7 @@ dir="./core" filename="RLinetypePattern.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isSymmetrical</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>i</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
+  <comment type="line">//bool isSymmetrical(int i) const;</comment>
   <function_decl>
   <type>
     <name>void</name>
@@ -716,17 +717,18 @@ dir="./core" filename="RLinetypePattern.h">
   </decl>;</decl_stmt>
   <comment type="line">// internal info about segments at which the
   pattern is symmetrical:</comment>
+  <comment type="line">//bool* symmetrical;</comment>
+  <comment type="line">//bool* symmetricalEnd;</comment>
   <decl_stmt>
   <decl>
     <type>
-    <name>bool</name>*</type>
-    <name>symmetrical</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>bool</name>*</type>
-    <name>symmetricalEnd</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>double</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>symmetries</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

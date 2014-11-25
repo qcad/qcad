@@ -248,6 +248,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="setPolylineGen" cppName="setPolylineGen"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getPolylineGen" cppName="getPolylineGen"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -277,6 +290,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyClosed" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyPolylineGen" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyVertexNX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyVertexNY" type="RPropertyTypeId"
@@ -284,6 +299,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyVertexNZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyBulgeN" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLength" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

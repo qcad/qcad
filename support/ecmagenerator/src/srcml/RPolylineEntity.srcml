@@ -144,6 +144,14 @@ dir="./entity" filename="RPolylineEntity.h">
       <name>static</name>
       <name>RPropertyTypeId</name>
     </type>
+    <name>PropertyPolylineGen</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
     <name>PropertyVertexNX</name>
   </decl>;</decl_stmt>
   <decl_stmt>
@@ -169,6 +177,14 @@ dir="./entity" filename="RPolylineEntity.h">
       <name>RPropertyTypeId</name>
     </type>
     <name>PropertyBulgeN</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>RPropertyTypeId</name>
+    </type>
+    <name>PropertyLength</name>
   </decl>;</decl_stmt></public>
   <public>public: 
   <constructor_decl>
@@ -1031,6 +1047,50 @@ dir="./entity" filename="RPolylineEntity.h">
         </expr>
       </argument>)</argument_list>
     </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setPolylineGen</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>bool</name>
+        </type>
+        <name>on</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>setPolylineGen</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>on</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>getPolylineGen</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>data</name>.
+    <call>
+      <name>getPolylineGen</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
   </function></public>
   <protected>protected: 
   <function_decl>

@@ -24,12 +24,13 @@
 #include "RTextData.h"
 #include "RTextRenderer.h"
 #include "RDebug.h"
+#include "RPluginLoader.h"
 
 QMap<QString, QString> RLinetypePattern::nameMap;
 
 
 RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QString& description, int num...)
-    : metric(metric), name(name), description(description), symmetrical(NULL), symmetricalEnd(NULL) {
+    : metric(metric), name(name), description(description) {
 
     QList<double> dashes;
 
@@ -44,76 +45,79 @@ RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QStri
 }
 
 RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QString& description, const QList<double>& dashes)
-    : metric(metric), name(name), description(description), symmetrical(NULL), symmetricalEnd(NULL) {
+    : metric(metric), name(name), description(description) {
 
     set(dashes);
 }
 
 RLinetypePattern::RLinetypePattern() :
-    metric(true), symmetrical(NULL), symmetricalEnd(NULL) {
+    metric(true) {
 }
 
 RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QString& description) :
-    metric(metric), name(name), description(description), symmetrical(NULL), symmetricalEnd(NULL) {
+    metric(metric), name(name), description(description) {
 }
 
-RLinetypePattern::RLinetypePattern(const RLinetypePattern& other) :
-    symmetrical(NULL), symmetricalEnd(NULL) {
+RLinetypePattern::RLinetypePattern(const RLinetypePattern& other) {
     operator =(other);
 }
 
 RLinetypePattern::~RLinetypePattern() {
-    if (symmetrical != NULL) {
-        delete[] symmetrical;
-    }
-    if (symmetricalEnd != NULL) {
-        delete[] symmetricalEnd;
-    }
 }
 
-//RLinetypePattern::RLinetypePattern(const QString& name, int num, double* pattern)
-//    : name(name), num(0), pattern(), symmetrical(NULL) {
-
-//    QList<double> dashes;
-
-//    for (int i = 0; i < num; ++i) {
-//        dashes.append(pattern[i]);
-//    }
-
-//    set(dashes);
-//}
-
-
 void RLinetypePattern::set(const QList<double>& dashes) {
-    if (symmetrical != NULL) {
-        delete[] symmetrical;
-    }
-    if (symmetricalEnd != NULL) {
-        delete[] symmetricalEnd;
-    }
-
     pattern = dashes;
 
-    int num = pattern.length();
-    symmetrical = new bool[num];
-    for (int i = 0; i < num; ++i) {
-        symmetrical[i] = true;
-        for (int a = 1; a < num; ++a) {
-            if (fabs(pattern[ RMath::absmod((i-a), num) ] - pattern[ RMath::absmod((i+a), num) ] ) > 0.1) {
-                symmetrical[i] = false;
-                break;
-            }
+    // find symmetries:
+    QList<double> normalizedPattern;
+    for (int i=0; i<pattern.length(); i++) {
+        if (i==0) {
+            normalizedPattern.append(pattern[i]);
+            continue;
+        }
+
+        if ((pattern[i]>=0.0 && pattern[i-1]>=0.0) ||
+            (pattern[i]<0.0 && pattern[i-1]<0.0)) {
+
+            normalizedPattern.last() += pattern[i];
+            continue;
+        }
+
+        normalizedPattern.append(pattern[i]);
+    }
+
+    double normalizedPatternOffset = 0.0;
+    if (normalizedPattern.length()>2) {
+        if (normalizedPattern.last()>=0.0 && normalizedPattern.first()>=0) {
+            normalizedPattern.first() += normalizedPattern.last();
+            normalizedPatternOffset = normalizedPattern.last();
+            normalizedPattern.removeLast();
         }
     }
 
-    symmetricalEnd = new bool[num];
-    for (int i = 0; i < num; ++i) {
-        symmetricalEnd[i] = true;
-        for (int a = 0; a < num; ++a) {
-            if (fabs(pattern[ RMath::absmod((i-a), num) ] - pattern[ RMath::absmod((i+a+1), num) ] ) > 0.1) {
-                symmetricalEnd[i] = false;
+    double len = getPatternLength();
+    int num = normalizedPattern.length();
+    for (int i=0; i<num; i++) {
+        bool sym = true;
+        for (int a = 1; a<num; ++a) {
+            if (fabs(normalizedPattern[ RMath::absmod((i-a), num) ] - normalizedPattern[ RMath::absmod((i+a), num) ] ) > 0.1) {
+                sym = false;
                 break;
             }
+        }
+
+        if (sym) {
+            // add middle of dash to symmetries:
+            double s = getDashOffsetAt(normalizedPattern, i);
+            s = s + fabs(normalizedPattern[i])/2.0;
+            s = s - normalizedPatternOffset;
+            if (s<0.0) {
+                s = len+s;
+            }
+            if (s>len) {
+                s = len-s;
+            }
+            symmetries.append(s);
         }
     }
 }
@@ -123,29 +127,10 @@ RLinetypePattern& RLinetypePattern::operator=(const RLinetypePattern& other) {
         return *this;
     }
 
-    if (symmetrical != NULL) {
-        delete symmetrical;
-    }
-    if (symmetricalEnd != NULL) {
-        delete symmetricalEnd;
-    }
-
-    if (!other.pattern.isEmpty()) {
-        pattern = other.pattern;
-        int num = pattern.length();
-        symmetrical = new bool[num];
-        for (int i = 0; i < num; ++i) {
-            symmetrical[i] = other.symmetrical[i];
-        }
-        symmetricalEnd = new bool[num];
-        for (int i = 0; i < num; ++i) {
-            symmetricalEnd[i] = other.symmetricalEnd[i];
-        }
-    } else {
-        pattern.clear();
-        symmetrical = NULL;
-        symmetricalEnd = NULL;
-    }
+    metric = other.metric;
+    name = other.name;
+    description = other.description;
+    pattern = other.pattern;
     shapes = other.shapes;
     shapeTexts = other.shapeTexts;
     shapeTextStyles = other.shapeTextStyles;
@@ -153,9 +138,7 @@ RLinetypePattern& RLinetypePattern::operator=(const RLinetypePattern& other) {
     shapeScales = other.shapeScales;
     shapeRotations = other.shapeRotations;
     shapeOffsets = other.shapeOffsets;
-    metric = other.metric;
-    name = other.name;
-    description = other.description;
+    symmetries = other.symmetries;
     return *this;
 }
 
@@ -174,9 +157,6 @@ bool RLinetypePattern::operator==(const RLinetypePattern& other) const {
         if (pattern[i] != other.pattern[i]) {
             return false;
         }
-//        if (symmetrical[i] != other.symmetrical[i]) {
-//            return false;
-//        }
     }
 
     return true;
@@ -195,6 +175,9 @@ void RLinetypePattern::scale(double factor) {
             shapeOffsets[i] *= factor;
         }
     }
+    for (int i = 0; i < symmetries.length(); ++i) {
+        symmetries[i] *= factor;
+    }
     updateShapes();
 }
 
@@ -207,14 +190,10 @@ QVector<qreal> RLinetypePattern::getScreenBasedLinetype() {
 
     if (pattern.length()>1) {
         for (int i = 0; i < pattern.length(); ++i) {
-//            if (RMath::isNaN(pattern[i])) {
-//                continue;
-//            }
             double dash = fabs(pattern[i]);
             if (!metric) {
                 dash*=25.4;
             }
-            //if (dash<RS::PointTolerance) {
             if (dash<2.0) {
                 dash = 2.0;
             }
@@ -233,28 +212,13 @@ double RLinetypePattern::getPatternOffset(double length) {
     double optOffset = 0.0;
     double gap = 0.0;
     double maxGap = RMINDOUBLE;
-    for (int i = 0; i < pattern.length(); ++i) {
-        if (symmetrical[i]) {
-            double offset = getPatternOffsetAt(length, i, &gap, false);
-            //qDebug() << "gap at middle of " << i << ": " << gap;
-            if (gap > maxGap) {
-                maxGap = gap;
-                optOffset = offset;
-            }
-        }
-        if (symmetricalEnd[i]) {
-            double offset = getPatternOffsetAt(length, i, &gap, true);
-            //qDebug() << "gap at end of " << i << ": " << gap;
-            if (gap > maxGap) {
-                maxGap = gap;
-                optOffset = offset;
-            }
+    for (int i = 0; i < symmetries.length(); ++i) {
+        double offset = getPatternOffsetAt(length, symmetries[i], &gap, false);
+        if (gap > maxGap) {
+            maxGap = gap;
+            optOffset = offset;
         }
     }
-
-//    qDebug() << "length: " << length;
-//    qDebug() << "gap: " << maxGap;
-//    qDebug() << "optOffset: " << optOffset;
 
     return optOffset;
 }
@@ -263,19 +227,13 @@ double RLinetypePattern::getPatternOffset(double length) {
  * \return Offset to use for an entity with the given length, so that
  * the given dash (index) is in the middle of the entity.
  */
-double RLinetypePattern::getPatternOffsetAt(double length, int index, double* gap, bool end) {
+double RLinetypePattern::getPatternOffsetAt(double length, double symmetryPos, double* gap, bool end) {
     double patternLength = getPatternLength();
     if (patternLength<RS::PointTolerance) {
         return 0.0;
     }
 
-    // distance from pattern start to middle of this dash:
-    double po = fabs(getDashLengthAt(index)) / (end ? 1 : 2);
-    for (int i = index - 1; i >= 0; --i) {
-        po += fabs(getDashLengthAt(i));
-    }
-
-    double offset = length / 2 - po;
+    double offset = length / 2 - symmetryPos;
     int m = (int) RMath::trunc(offset / patternLength);
     offset -= (m + 1) * patternLength;
     if (gap != NULL) {
@@ -316,9 +274,6 @@ bool RLinetypePattern::hasDashAt(double pos) const {
     }
     double total = 0.0;
     for (int i = 0; i < pattern.length(); ++i) {
-//        if (RMath::isNaN(pattern[i])) {
-//            continue;
-//        }
         total += fabs(pattern[i]);
         if (total > pos) {
             return pattern[i] > 0;
@@ -326,13 +281,6 @@ bool RLinetypePattern::hasDashAt(double pos) const {
     }
     qWarning("RLinetypePattern::hasDashAt: invalid pos argument");
     return false;
-}
-
-bool RLinetypePattern::isSymmetrical(int i) const {
-    if (i >= pattern.length()) {
-        return false;
-    }
-    return symmetrical[i];
 }
 
 bool RLinetypePattern::isValid() const {
@@ -360,24 +308,6 @@ void RLinetypePattern::setDescription(const QString& d) {
 }
 
 QString RLinetypePattern::getLabel() const {
-//    if (description.isEmpty()) {
-//        return name;
-//    }
-
-//    else {
-//        return name + " - " + description;
-//    }
-
-    //QString desc; //= p.getDescription();
-//    QRegExp onlyPattern("[_\\. ]*");
-//    if (onlyPattern.indexIn(desc)==0) {
-//        if (p.getDescription().isEmpty()) {
-//            desc = p.getName();
-//        }
-//        else {
-//            desc = p.getName() + " - " + p.getDescription();
-//        }
-//    }
     QString desc = description;
     QString preview;
     if (!description.isEmpty()) {
@@ -385,23 +315,12 @@ QString RLinetypePattern::getLabel() const {
         if (k!=-1) {
             desc = description.mid(0, k+1);
             preview = description.mid(k+1);
-            //prev.replace('.', QChar(0x00B7));
-            //prev.replace('_', QChar(0x2014));
         }
         else {
             preview = desc;
             desc = "";
         }
     }
-
-    //qDebug() << "desc: " << desc;
-    //qDebug() << "preview: " << preview;
-
-//    if (desc.isEmpty()) {
-//        return fixName(name);
-//    }
-
-//    return fixName(desc);
 
     if (nameMap.isEmpty()) {
         initNameMap();
@@ -412,22 +331,6 @@ QString RLinetypePattern::getLabel() const {
         return nameMap.value(nameUpper);
     }
 
-//    if (nameUpper.endsWith(" (2x)")) {
-//        QString nx2 = nameUpper+"X2";
-//        nx2.replace(" ", "");
-//        if (nameMap.contains(nx2)) {
-//            return nameMap.value(nx2);
-//        }
-//    }
-
-//    if (nameUpper.endsWith(" (.5x)")) {
-//        QString n2 = nameUpper+"2";
-//        n2.replace(" ", "");
-//        if (nameMap.contains(n2)) {
-//            return nameMap.value(n2);
-//        }
-//    }
-
     return name;
 }
 
@@ -436,11 +339,8 @@ QList<double> RLinetypePattern::getPattern() const {
 }
 
 double RLinetypePattern::getPatternLength() const {
-    double ret=0;
+    double ret=0.0;
     for (int i=0; i<pattern.length(); ++i) {
-//        if (RMath::isNaN(pattern[i])) {
-//            continue;
-//        }
         ret += fabs(pattern[i]);
     }
     return ret;
@@ -451,6 +351,19 @@ double RLinetypePattern::getDashLengthAt(int i) const {
         return pattern[i];
     }
     return 0.0;
+}
+
+double RLinetypePattern::getDashOffsetAt(const QList<double>& dashes, int i) const {
+    double ret = 0.0;
+
+    if (i<0 || i>=dashes.length()) {
+        return ret;
+    }
+
+    for (int k=0; k<i; k++) {
+        ret += fabs(dashes[k]);
+    }
+    return ret;
 }
 
 bool RLinetypePattern::hasShapes() const {
@@ -553,9 +466,6 @@ void RLinetypePattern::updateShapes() {
 double RLinetypePattern::getLargestGap() const {
     double ret = 0.0;
     for(int i=0;i<pattern.length();++i) {
-//        if (RMath::isNaN(pattern[i])) {
-//            continue;
-//        }
         if (pattern[i]<0.0 && fabs(pattern[i])>ret) {
             ret = fabs(pattern[i]);
         }
@@ -633,9 +543,6 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
                 pos += l;
             }
 
-            qDebug() << "name: " << ltPattern->name;
-            qDebug() << "parts: " << parts;
-
             if (parts.isEmpty()) {
                 continue;
             }
@@ -648,36 +555,37 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
             for (int i = 0; i < parts.length(); i++) {
                 QString part = parts[i];
                 if (part.startsWith("[", Qt::CaseInsensitive)) {
+                    if (!RPluginLoader::hasPlugin("DWG")) {
+                        ret.removeLast();
+                        delete ltPattern;
+                        ltPattern = NULL;
+                        break;
+                    }
+
                     QRegExp rx(
                         "\\["
                         "([^, ]*)"   // text
                         "[, ]*"
                         "([^, ]*)"   // style
-                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|\\d*\\.\\d+)))?"
-                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|\\d*\\.\\d+)))?"
-                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|\\d*\\.\\d+)))?"
-                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|\\d*\\.\\d+)))?"
+                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|[+-]?\\d*\\.\\d+)))?"
+                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|[+-]?\\d*\\.\\d+)))?"
+                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|[+-]?\\d*\\.\\d+)))?"
+                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|[+-]?\\d*\\.\\d+)))?"
                         "\\]");
                     rx.setCaseSensitivity(Qt::CaseInsensitive);
 
                     rx.indexIn(part);
-                    //qDebug() << "all: " << rx.capturedTexts();
-                    //qDebug() << "count: " << rx.captureCount();
 
                     int idx = dashes.length()-1;
                     QString text = rx.cap(1);
                     if (text.startsWith("\"") && text.endsWith("\"")) {
                         text = text.mid(1, text.length()-2);
                     }
-                    //qDebug() << "text: " << text;
                     ltPattern->shapeTexts.insert(idx, text);
                     ltPattern->shapeTextStyles.insert(idx, rx.cap(2));
                     for (int k=3; k+1<=rx.captureCount(); k+=2) {
                         QString c = rx.cap(k).toUpper();
                         double val = rx.cap(k+1).toDouble();
-
-                        //qDebug() << "cap 1: " << rx.cap(k);
-                        //qDebug() << "cap 2: " << rx.cap(k+1);
 
                         if (c=="S") {
                             ltPattern->shapeScales.insert(idx, val);
@@ -707,44 +615,16 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
                 }
             }
 
-            if (dashes.count() > 0) {
+            if (dashes.count() > 0 && ltPattern!=NULL) {
                 ltPattern->set(dashes);
                 ltPattern->updateShapes();
+                qDebug() << "ltpattern: " << *ltPattern;
             }
         }
     }
 
     return ret;
 }
-
-//QString RLinetypePattern::fixName(const QString& name) {
-//    if (nameMap.isEmpty()) {
-//        initNameMap();
-//    }
-
-//    QString n = name.toUpper();
-//    if (nameMap.contains(n)) {
-//        return nameMap.value(n);
-//    }
-
-//    if (n.endsWith(" (2x)")) {
-//        QString nx2 = n+"X2";
-//        nx2.replace(" ", "");
-//        if (nameMap.contains(nx2)) {
-//            return nameMap.value(nx2);
-//        }
-//    }
-
-//    if (n.endsWith(" (.5x)")) {
-//        QString n2 = n+"2";
-//        n2.replace(" ", "");
-//        if (nameMap.contains(n2)) {
-//            return nameMap.value(n2);
-//        }
-//    }
-
-//    return name;
-//}
 
 void RLinetypePattern::initNameMap() {
     nameMap.insert("BYLAYER", tr("By Layer"));
@@ -801,11 +681,13 @@ void RLinetypePattern::initNameMap() {
     nameMap.insert("HOT_WATER", tr("Hot Water"));
     nameMap.insert("GAS_LINE", tr("Gas Line"));
     nameMap.insert("BATTING", tr("Batting"));
-    nameMap.insert("DRAINAGE", tr("Drainage"));
     nameMap.insert("ZIGZAG", tr("Zig Zag"));
     nameMap.insert("TRACKS", tr("Tracks"));
     nameMap.insert("FENCELINE1", tr("Fenceline 1"));
     nameMap.insert("FENCELINE2", tr("Fenceline 2"));
+
+    nameMap.insert("DRAINAGE", tr("Drainage"));
+    nameMap.insert("DRAINAGE2", tr("Drainage Reverse"));
 }
 
 /**
@@ -853,7 +735,7 @@ QDebug operator<<(QDebug dbg, const RLinetypePattern& p) {
             dbg.nospace() << "]";
         }
     }
-    //dbg.nospace() << ", " << "shapes: " << p.shapes << ", ";
+    dbg.nospace() << "\nsymmetries: " << p.symmetries;
     dbg.nospace() << ")";
     return dbg.space();
 }

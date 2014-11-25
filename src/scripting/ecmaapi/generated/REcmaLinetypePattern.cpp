@@ -74,6 +74,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDashLengthAt, "getDashLengthAt");
             
+            REcmaHelper::registerFunction(&engine, proto, getDashOffsetAt, "getDashOffsetAt");
+            
             REcmaHelper::registerFunction(&engine, proto, getShapeIndices, "getShapeIndices");
             
             REcmaHelper::registerFunction(&engine, proto, hasShapes, "hasShapes");
@@ -91,8 +93,6 @@
             REcmaHelper::registerFunction(&engine, proto, getDelta, "getDelta");
             
             REcmaHelper::registerFunction(&engine, proto, getPatternOffset, "getPatternOffset");
-            
-            REcmaHelper::registerFunction(&engine, proto, isSymmetrical, "isSymmetrical");
             
             REcmaHelper::registerFunction(&engine, proto, scale, "scale");
             
@@ -1108,6 +1108,66 @@
             return result;
         }
          QScriptValue
+        REcmaLinetypePattern::getDashOffsetAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::getDashOffsetAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::getDashOffsetAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("getDashOffsetAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDashOffsetAt(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.getDashOffsetAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::getDashOffsetAt", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaLinetypePattern::getShapeIndices
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1596,66 +1656,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinetypePattern::getPatternOffset", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaLinetypePattern::isSymmetrical
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaLinetypePattern::isSymmetrical", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::isSymmetrical";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RLinetypePattern* self = 
-                        getSelf("isSymmetrical", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: int */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    int
-                    a0 =
-                    (int)
-                    
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->isSymmetrical(a0);
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.isSymmetrical().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaLinetypePattern::isSymmetrical", context, engine);
             return result;
         }
          QScriptValue

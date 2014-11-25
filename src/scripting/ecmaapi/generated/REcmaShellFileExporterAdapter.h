@@ -391,7 +391,8 @@
         
     
       void exportPolyline(
-                const RPolyline & polyline, double offset
+                const RPolyline & polyline, bool polylineGen
+        =  true, double offset
         = RNANDOUBLE
             );
         

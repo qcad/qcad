@@ -128,6 +128,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getIntersectionPoints, "getIntersectionPoints");
             
+            REcmaHelper::registerFunction(&engine, proto, setPolylineGen, "setPolylineGen");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPolylineGen, "getPolylineGen");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RPolylineData*>(), *proto);
 
@@ -2441,6 +2445,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineData::getIntersectionPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::setPolylineGen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::setPolylineGen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::setPolylineGen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("setPolylineGen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPolylineGen(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.setPolylineGen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::setPolylineGen", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::getPolylineGen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::getPolylineGen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::getPolylineGen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("getPolylineGen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getPolylineGen();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.getPolylineGen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::getPolylineGen", context, engine);
             return result;
         }
          QScriptValue REcmaPolylineData::toString

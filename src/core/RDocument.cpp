@@ -302,7 +302,17 @@ void RDocument::initLinetypes(RTransaction* transaction) {
         //qDebug() << "pattern: " << *pattern;
 
         if (pattern!=NULL) {
-            transaction->addObject(QSharedPointer<RObject>(new RLinetype(this, *pattern)));
+            QSharedPointer<RLinetype> lt = queryLinetype(name);
+            if (lt.isNull()) {
+                // add new pattern:
+                lt = QSharedPointer<RLinetype>(new RLinetype(this, *pattern));
+            }
+            else {
+                // replace previous pattern (e.g. on unit change):
+                lt->setPattern(*pattern);
+            }
+            qDebug() << "pattern: " << *pattern;
+            transaction->addObject(lt);
         }
     }
 

@@ -97,20 +97,21 @@ A,12,-3,12,-3,0,-3,0,-3,0,-3
 ;;  Some of these linetype definitions use fonts/ltypeshp.cxf
 ;;
 *FENCELINE1,Fenceline circle ----0-----0----0-----0----0-----0--
-A,6.35,-2.54,[CIRC1,ltypeshp.shx,x=-2.54,s=2.54],-2.54,25.4
+A,6.35,-2.54,[CIRC1,ltypeshp.shx,X=-2.54,S=2.54],-2.54,25.4
 *FENCELINE2,Fenceline square ----[]-----[]----[]-----[]----[]---
-A,6.35,-2.54,[BOX,ltypeshp.shx,x=-2.54,s=2.54],-2.54,25.4
+A,6.35,-2.54,[BOX,ltypeshp.shx,X=-2.54,S=2.54],-2.54,25.4
 *TRACKS,Tracks -|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-
-A,3.81,[TRACK1,ltypeshp.shx,s=6.35],3.81
+A,3.81,[TRACK1,ltypeshp.shx,S=6.35],3.81
 *BATTING,Batting SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
-A,.00254,-2.54,[BAT,ltypeshp.shx,x=-2.54,s=2.54],-5.08,[BAT,ltypeshp.shx,r=180,x=2.54,s=2.54],-2.54
+A,.00254,-2.54,[BAT,ltypeshp.shx,X=-2.54,S=2.54],-5.08,[BAT,ltypeshp.shx,R=180,X=2.54,S=2.54],-2.54
 *HOT_WATER_SUPPLY,Hot water supply ---- HW ---- HW ---- HW ----
 A,12.7,-5.08,["HW",STANDARD,S=2.54,R=0.0,X=-2.54,Y=-1.27],-5.08
 *GAS_LINE,Gas line ----GAS----GAS----GAS----GAS----GAS----GAS--
 A,12.7,-5.08,["GAS",STANDARD,S=2.54,R=0.0,X=-2.54,Y=-1.27],-6.35
 *ZIGZAG,Zig zag /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
-A,.00254,-5.08,[ZIG,ltypeshp.shx,x=-5.08,s=5.08],-10.16,[ZIG,ltypeshp.shx,r=180,x=5.08,s=5.08],-5.08
+A,.00254,-5.08,[ZIG,ltypeshp.shx,X=-5.08,S=5.08],-10.16,[ZIG,ltypeshp.shx,R=180,X=5.08,S=5.08],-5.08
 
-
-*DRAINAGE,---->---->---->----
-A,4,[RIGHT_ARROW,ltypeshp.shx,s=2.54],4
+*DRAINAGE,----<----<----<----
+A,5.08,[RIGHT_ARROW,ltypeshp.shx,S=2.54,R=180],5.08
+*DRAINAGE2,---->---->---->----
+A,5.08,[RIGHT_ARROW,ltypeshp.shx,S=2.54],5.08

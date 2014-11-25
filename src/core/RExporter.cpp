@@ -1192,10 +1192,10 @@ void RExporter::exportEllipse(const REllipse& ellipse, double offset) {
     vp.rotate(angle, vc);
     polyline.appendVertex(vp);
 
-    exportPolyline(polyline, offset);
+    exportPolyline(polyline, true, offset);
 }
 
-void RExporter::exportPolyline(const RPolyline& polyline, double offset) {
+void RExporter::exportPolyline(const RPolyline& polyline, bool polylineGen, double offset) {
     RLinetypePattern p = getLinetypePattern();
 
     bool continuous = false;
@@ -1212,7 +1212,24 @@ void RExporter::exportPolyline(const RPolyline& polyline, double offset) {
         }
     }
 
-    exportExplodable(polyline, offset);
+    if (polylineGen) {
+        // pattern along whole polyline:
+        exportExplodable(polyline, offset);
+    }
+    else {
+        // pattern for each individual segment:
+        for (int i=0; i<polyline.countSegments(); i++) {
+            QSharedPointer<RShape> shape = polyline.getSegmentAt(i);
+            QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
+            if (!line.isNull()) {
+                RExporter::exportLine(*line);
+            }
+            QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
+            if (!arc.isNull()) {
+                RExporter::exportArc(*arc);
+            }
+        }
+    }
 }
 
 void RExporter::exportSplineSegment(const RSpline& spline) {

@@ -18,6 +18,7 @@
  */
 #include "RDocument.h"
 #include "RExporter.h"
+#include "RLinetype.h"
 #include "RLinkedStorage.h"
 #include "RMainWindow.h"
 #include "RMemoryStorage.h"
@@ -523,6 +524,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     // i.e. if (object.cloneInsteadOfChange()) { ... }
     QSharedPointer<RLinetype> lt = object.dynamicCast<RLinetype>();
     if (!lt.isNull() && lt->getId()!=RObject::INVALID_ID) {
+        qDebug() << "replace linetype";
         QSharedPointer<RLinetype> clone = QSharedPointer<RLinetype>(lt->clone());
         objectStorage->setObjectId(*clone, RObject::INVALID_ID);
         deleteObject(lt->getId());

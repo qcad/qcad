@@ -216,7 +216,7 @@ void RGraphicsSceneQt::exportEllipse(const REllipse& ellipse, double offset) {
     }
 }
 
-void RGraphicsSceneQt::exportPolyline(const RPolyline& polyline, double offset) {
+void RGraphicsSceneQt::exportPolyline(const RPolyline& polyline, bool polylineGen, double offset) {
     // filling:
     bool created = beginPath();
 
@@ -229,7 +229,7 @@ void RGraphicsSceneQt::exportPolyline(const RPolyline& polyline, double offset) 
     // outline:
     created = beginPath();
 
-    RGraphicsScene::exportPolyline(polyline, offset);
+    RGraphicsScene::exportPolyline(polyline, polylineGen, offset);
 
     if (created) {
         endPath();

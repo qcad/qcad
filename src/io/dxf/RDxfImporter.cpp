@@ -333,6 +333,7 @@ void RDxfImporter::endBlock() {
 void RDxfImporter::endEntity() {
     if (polyline.countVertices()>1) {
         QSharedPointer<RPolylineEntity> entity(new RPolylineEntity(document, RPolylineData(polyline)));
+        entity->setPolylineGen(polylinePlineGen);
         importEntity(entity);
         polyline = RPolyline();
     }
@@ -557,6 +558,7 @@ void RDxfImporter::addCircle(const DL_CircleData& data) {
 void RDxfImporter::addPolyline(const DL_PolylineData& data) {
     polyline = RPolyline();
     polyline.setClosed(data.flags&0x1);
+    polylinePlineGen = data.flags&0x80;
 }
 
 void RDxfImporter::addVertex(const DL_VertexData& data) {

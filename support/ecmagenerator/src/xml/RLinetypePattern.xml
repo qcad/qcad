@@ -109,6 +109,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="i" isConst="false" />
       </variant>
     </method>
+    <method name="getDashOffsetAt" cppName="getDashOffsetAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
     <method name="getShapeIndices" cppName="getShapeIndices"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -164,13 +171,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="double" isPureVirtual="false">
         <arg type="double" typeName="double" name="length"
         isConst="false" />
-      </variant>
-    </method>
-    <method name="isSymmetrical" cppName="isSymmetrical"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false">
-        <arg type="int" typeName="int" name="i" isConst="false" />
       </variant>
     </method>
     <method name="scale" cppName="scale" specifier="public"
