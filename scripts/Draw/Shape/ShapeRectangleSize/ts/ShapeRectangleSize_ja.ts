@@ -115,7 +115,7 @@
         <translation type="unfinished">右下</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+30"/>
         <source>Position</source>
         <translation type="unfinished">位置</translation>
     </message>

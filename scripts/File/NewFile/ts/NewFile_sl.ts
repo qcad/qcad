@@ -54,12 +54,16 @@
         <translation>Datoteka je prazna</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>Opened drawing:</source>
-        <translation>Odprta risba</translation>
+        <location line="+10"/>
+        <source>Drawing loaded successfully:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+2"/>
+        <source>Opened drawing:</source>
+        <translation type="vanished">Odprta risba</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>

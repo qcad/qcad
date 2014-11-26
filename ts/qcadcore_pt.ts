@@ -380,6 +380,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     <message>
         <location line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+70"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>X</source>
         <translatorcomment>--exact match--
@@ -391,6 +392,7 @@ Exportando o desenho...</translatorcomment>
     <message>
         <location line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Y</source>
         <translatorcomment>--exact match--
@@ -403,6 +405,7 @@ Modifique
     <message>
         <location line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Z</source>
         <translatorcomment>Oculte (congele) todos os carimbos
@@ -538,6 +541,79 @@ Abre diálogo de cores</translatorcomment>
         <location line="+1"/>
         <source>Height</source>
         <translation>Altura</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
+        <source>Simple</source>
+        <translation>Simples</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Text Position</source>
+        <translation>Posição do texto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text</source>
+        <translation>Texto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plain Text</source>
+        <translation>Texto simples</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Font Name</source>
+        <translation>Nome da fonte</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text Height</source>
+        <translation>Altura do texto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text Angle</source>
+        <translation>Ângulo do texto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>X Scale</source>
+        <translation>Escala X</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bold</source>
+        <translation>Negrito</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Italic</source>
+        <translation>Itálico</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Line Spacing</source>
+        <translation>Espaçamento de linha</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Alignment</source>
+        <translation>Alinhamento</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Horizontal</source>
+        <translation>Horizontal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Vertical</source>
+        <translation>Vertical</translation>
     </message>
 </context>
 <context>
@@ -764,7 +840,7 @@ Borda (grande)</translatorcomment>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+463"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+629"/>
         <source>By Layer</source>
         <translation>Pela Camada</translation>
     </message>
@@ -906,6 +982,56 @@ Borda (grande)</translatorcomment>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
         <translation>ISO dois traços, ponto triplo</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Hot Water Supply</source>
+        <translation>Água quente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hot Water</source>
+        <translation>Água quente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gas Line</source>
+        <translation>Linha de gás</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Batting</source>
+        <translation>Isolamento</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Zig Zag</source>
+        <translation>Zig Zag</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tracks</source>
+        <translation>Vias</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fenceline 1</source>
+        <translation>Limite 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fenceline 2</source>
+        <translation>Limite 2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Drainage</source>
+        <translation>Drenagem</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Drainage Reverse</source>
+        <translation>Drenagem reverso</translation>
     </message>
 </context>
 <context>

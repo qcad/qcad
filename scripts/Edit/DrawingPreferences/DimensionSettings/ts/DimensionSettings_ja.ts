@@ -20,7 +20,7 @@
         <translation>寸法</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+91"/>
         <source>Scientific</source>
         <translation>科学</translation>
     </message>
@@ -45,7 +45,7 @@
         <translation>分数</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+35"/>
         <source>Decimal Degrees</source>
         <translation>小数角度</translation>
     </message>
@@ -70,7 +70,7 @@
         <translation>測量</translation>
     </message>
     <message>
-        <location line="+160"/>
+        <location line="+205"/>
         <source>Unit / Format</source>
         <translation>ユニット/フォーマット</translation>
     </message>

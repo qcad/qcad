@@ -15,7 +15,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+17"/>
         <source>&amp;Snap</source>
         <translation>&amp;Pritrdi</translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it_IT">
+<TS version="2.1" language="it_IT">
 <context>
     <name>Misc</name>
     <message>
@@ -14,7 +14,7 @@
         <translation>Mostra vari strumenti</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+17"/>
         <source>&amp;Misc</source>
         <translation>&amp;Varie</translation>
     </message>

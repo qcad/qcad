@@ -68,7 +68,7 @@
         <translation>Aucun</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+420"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>

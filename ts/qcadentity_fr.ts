@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>REntity</name>
     <message>
@@ -61,7 +61,7 @@ Hauteur
         <translation>Hauteur</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RArcEntity.cpp" line="+74"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+64"/>
         <location filename="../src/entity/RDimAlignedEntity.cpp" line="+87"/>
         <location line="+4"/>
@@ -97,7 +97,7 @@ Hauteur
         <location filename="../src/entity/RLineEntity.cpp" line="+70"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+67"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+72"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+73"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -107,7 +107,6 @@ Hauteur
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+66"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+70"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+70"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -191,7 +190,6 @@ Indiquer le centre</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -253,7 +251,6 @@ Modifier
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -311,6 +308,7 @@ Inversé</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
@@ -320,6 +318,11 @@ Inversé</translatorcomment>
 Longueur de corde incorrecte
 Indiquer l&apos;angle de fin ou [Longueur de corde/Angle]</translatorcomment>
         <translation>Longueur</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sweep Angle</source>
+        <translation>Angle</translation>
     </message>
     <message>
         <source>Contents</source>
@@ -384,45 +387,37 @@ Met les entités à l&apos;échelle</translatorcomment>
         <translation>Echelle</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
         <translatorcomment>--google--
 Texte simple</translatorcomment>
         <translation>Simple</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Text</source>
         <translation>Texte</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plain Text</source>
         <translation>Texte brut</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Font Name</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nom de police</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text Height</source>
         <translation>Hauteur du texte</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text Angle</source>
         <translation>Angle du texte</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>X Scale</source>
         <translation>Echelle X</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bold</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -431,7 +426,6 @@ Gras</translatorcomment>
         <translation>Gras</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Italic</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -440,7 +434,6 @@ Italique
         <translation>Italique</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Line Spacing</source>
         <translatorcomment>--google--
 Espacement lignes :
@@ -450,8 +443,6 @@ Facteur espacement lignes</translatorcomment>
         <translation>Espacement lignes</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+1"/>
         <source>Alignment</source>
         <translatorcomment>--exact match--
 --file: Text_fr.ts--
@@ -460,7 +451,6 @@ Alignement|Vertical</translatorcomment>
         <translation>Alignement</translation>
     </message>
     <message>
-        <location line="-1"/>
         <source>Horizontal</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -470,7 +460,6 @@ Partage Horizontal
         <translation>Horizontal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Vertical</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -480,7 +469,7 @@ Cotation verticale</translatorcomment>
         <translation>Vertical</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="-1"/>
+        <location filename="../src/entity/RArcEntity.cpp" line="-2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
@@ -498,7 +487,7 @@ Circonférence : %1</translatorcomment>
         <translation>Circonférence</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RArcEntity.cpp" line="+3"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Area</source>
         <translatorcomment>--google--
@@ -573,7 +562,12 @@ Extrémité (x) :</translatorcomment>
         <translation>Point final</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-3"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-7"/>
+        <source>Polyline Pattern</source>
+        <translation>Motif polyligne</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Closed</source>
         <translatorcomment>--exact match--
 --file: SplineControlPoints_fr.ts--
@@ -848,9 +842,6 @@ Tolérance inférieure</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-13"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>

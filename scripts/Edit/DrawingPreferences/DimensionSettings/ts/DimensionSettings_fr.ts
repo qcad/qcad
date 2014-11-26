@@ -24,7 +24,7 @@
         <translation>Valeurs par défaut pour les nouveaux dessins</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+93"/>
         <source>Scientific</source>
         <translation>Scientifique</translation>
     </message>
@@ -49,7 +49,7 @@
         <translation>Fractionnel</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+35"/>
         <source>Decimal Degrees</source>
         <translation>Degrés décimaux</translation>
     </message>
@@ -74,7 +74,7 @@
         <translation>Unités de géomètre</translation>
     </message>
     <message>
-        <location line="+160"/>
+        <location line="+205"/>
         <source>Unit / Format</source>
         <translation>Unité / format</translation>
     </message>

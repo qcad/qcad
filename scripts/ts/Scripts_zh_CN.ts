@@ -58,7 +58,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+420"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>

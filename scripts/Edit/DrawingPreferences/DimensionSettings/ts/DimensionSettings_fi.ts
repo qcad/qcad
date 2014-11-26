@@ -20,7 +20,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+91"/>
         <source>Scientific</source>
         <translation type="unfinished"></translation>
     </message>
@@ -45,7 +45,7 @@
         <translation type="unfinished">Murtoluku</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+35"/>
         <source>Decimal Degrees</source>
         <translation>Desimaaliasteet</translation>
     </message>
@@ -70,7 +70,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+160"/>
+        <location line="+205"/>
         <source>Unit / Format</source>
         <translation>Yksikkö / Muoto</translation>
     </message>

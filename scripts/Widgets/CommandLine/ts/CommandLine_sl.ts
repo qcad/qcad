@@ -21,7 +21,7 @@
         <translation>&amp;Ukazna vrstica</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+143"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>Neveljavna koordinata ali razdalja &apos;%1&apos;.</translation>
     </message>

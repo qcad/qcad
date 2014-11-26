@@ -115,7 +115,7 @@
         <translation type="unfinished">Spodaj Desno</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+30"/>
         <source>Position</source>
         <translation type="unfinished">Pozicija</translation>
     </message>

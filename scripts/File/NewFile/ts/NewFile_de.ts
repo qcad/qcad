@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -34,7 +34,7 @@
     </message>
     <message>
         <source>Loading...</source>
-        <translation type="vanished">Lade...</translation>
+        <translation>Lade...</translation>
     </message>
     <message>
         <location filename="../NewFile.js" line="+128"/>
@@ -79,12 +79,16 @@
         <translation>Datei ist leer.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
+        <source>Drawing loaded successfully:</source>
+        <translation>Zeichnung erfolgreich geladen:</translation>
+    </message>
+    <message>
         <source>Opened drawing:</source>
         <translation>Zeichnung geöffnet:</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+4"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>

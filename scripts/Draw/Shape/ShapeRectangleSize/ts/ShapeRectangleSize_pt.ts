@@ -163,7 +163,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation>Direita abaixo</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+30"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>

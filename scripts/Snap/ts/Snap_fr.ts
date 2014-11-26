@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr_FR">
+<TS version="2.1" language="fr_FR">
 <context>
     <name>Snap</name>
     <message>
@@ -16,7 +16,7 @@
         <translation>Montrer outils de accrochage</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+17"/>
         <source>&amp;Snap</source>
         <translation>&amp;Accrochage</translation>
     </message>

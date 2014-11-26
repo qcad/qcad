@@ -24,7 +24,7 @@
         <translation>Predefiniti per nuovi disegni</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+93"/>
         <source>Scientific</source>
         <translation>Scientifica</translation>
     </message>
@@ -49,7 +49,7 @@
         <translation>Frazionale</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+35"/>
         <source>Decimal Degrees</source>
         <translation>Gradi Decimali</translation>
     </message>
@@ -74,7 +74,7 @@
         <translation>Unità topografiche</translation>
     </message>
     <message>
-        <location line="+160"/>
+        <location line="+205"/>
         <source>Unit / Format</source>
         <translation>Unità / formato</translation>
     </message>

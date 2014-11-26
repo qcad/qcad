@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RArcEntity.cpp" line="+74"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+64"/>
@@ -60,7 +60,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location filename="../src/entity/RLineEntity.cpp" line="+70"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+58"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+67"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+72"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+73"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -70,7 +70,6 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+66"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+70"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+70"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -132,7 +131,6 @@ Exportando o desenho...</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -194,7 +192,6 @@ Modifique
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -262,6 +259,7 @@ Diâmetro (ø)</translatorcomment>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
@@ -271,6 +269,11 @@ Diâmetro (ø)</translatorcomment>
 Não é um comprimento de corda válido
 Indique o ângulo de fim ou [Ângulo/Comprimento da corda]</translatorcomment>
         <translation>Comprimento</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sweep Angle</source>
+        <translation>Ângulo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -510,9 +513,6 @@ Tolerância Inferior</translatorcomment>
         <location line="-13"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-2"/>
-        <location line="+1"/>
-        <location line="+1"/>
         <source>Text Position</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Posição do texto</translation>
@@ -641,7 +641,7 @@ Escalone entidades</translatorcomment>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-2"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -713,7 +713,12 @@ Tamanho da seta:</translatorcomment>
         <translation>Seta</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-4"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-5"/>
+        <source>Polyline Pattern</source>
+        <translation>Padrão multilinha</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Closed</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -826,7 +831,6 @@ Especifique o próximo ponto de controle</translatorcomment>
         <translation>Nó</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
         <translatorcomment>--google--
 &lt;b&gt;P1&lt;/b&gt;: deslocamento simples
@@ -843,38 +847,31 @@ Tem a certeza que quer eliminar todo o conteúdo?</translatorcomment>
         <translation type="obsolete">Conteúdo</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Text</source>
         <translation>Texto</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plain Text</source>
         <translation>Texto simples</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Font Name</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nome da fonte</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text Height</source>
         <translation>Altura do texto</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text Angle</source>
         <translation>Ângulo do texto</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>X Scale</source>
         <translation>Escala X</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bold</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -885,7 +882,6 @@ Negrito</translatorcomment>
         <translation>Negrito</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Italic</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -895,7 +891,6 @@ Itálico Clássico</translatorcomment>
         <translation>Itálico</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Line Spacing</source>
         <translatorcomment>--google--
 Espaçamento de linha:
@@ -905,8 +900,6 @@ Fator de Espaçamento de Linhas</translatorcomment>
         <translation>Espaçamento de linha</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+1"/>
         <source>Alignment</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -915,7 +908,6 @@ Alinhamento|Vertical</translatorcomment>
         <translation>Alinhamento</translation>
     </message>
     <message>
-        <location line="-1"/>
         <source>Horizontal</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -924,7 +916,6 @@ Dimensão horizontal</translatorcomment>
         <translation>Horizontal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Vertical</source>
         <translatorcomment>--exact match--
 --file: pt.po--

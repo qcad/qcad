@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RArcEntity.cpp" line="+74"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+64"/>
@@ -56,7 +56,7 @@
         <location filename="../src/entity/RLineEntity.cpp" line="+70"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+58"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+67"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+72"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+73"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -66,7 +66,6 @@
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+66"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+70"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+70"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -124,7 +123,6 @@
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -181,7 +179,6 @@
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -226,11 +223,17 @@
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
         <translation>Dolžina</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sweep Angle</source>
+        <translation>Kot</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -410,9 +413,6 @@
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-2"/>
-        <location line="+1"/>
-        <location line="+1"/>
         <source>Text Position</source>
         <translation>Pozicija besedila</translation>
     </message>
@@ -516,7 +516,7 @@
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-2"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -565,7 +565,12 @@
         <translation>Puščica</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-4"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-5"/>
+        <source>Polyline Pattern</source>
+        <translation>Vzorec lomljenka</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Closed</source>
         <translation>Zaključeno</translation>
     </message>
@@ -649,7 +654,6 @@
         <translation>Vozlišče</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
         <translation>Preprosto</translation>
     </message>
@@ -658,63 +662,50 @@
         <translation type="obsolete">Vsebina</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Text</source>
         <translation>Besedilo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plain Text</source>
         <translation>Preprosto besedilo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Font Name</source>
         <translation>Ime pisave</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text Height</source>
         <translation>Višina besedila</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text Angle</source>
         <translation>Kot besedila</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>X Scale</source>
         <translation>X Razmerje</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bold</source>
         <translation>Krepko</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Italic</source>
         <translation>Poštevno</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Line Spacing</source>
         <translation>Razmik med vrsticami</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+1"/>
         <source>Alignment</source>
         <translation>Poravnava</translation>
     </message>
     <message>
-        <location line="-1"/>
         <source>Horizontal</source>
         <translation>Vodoravno</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Vertical</source>
         <translation>Navpično</translation>
     </message>

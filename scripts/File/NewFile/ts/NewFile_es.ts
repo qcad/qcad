@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -30,7 +30,7 @@
     </message>
     <message>
         <source>Loading...</source>
-        <translation type="vanished">Cargando...</translation>
+        <translation>Cargando...</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -58,12 +58,16 @@
         <translation>El archivo está vacío.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
+        <source>Drawing loaded successfully:</source>
+        <translation>Dibujo cargó correctamente:</translation>
+    </message>
+    <message>
         <source>Opened drawing:</source>
         <translation>Dibujo Abierto:</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+4"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>

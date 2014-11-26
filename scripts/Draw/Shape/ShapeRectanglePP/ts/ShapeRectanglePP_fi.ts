@@ -2,9 +2,9 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="fi_FI">
 <context>
-    <name>ShapeRectangle</name>
+    <name>ShapeRectanglePP</name>
     <message>
-        <location filename="../ShapeRectangle.js" line="+58"/>
+        <location filename="../ShapeRectanglePP.js" line="+58"/>
         <source>First corner</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ShapeRectangleInit.js" line="+2"/>
+        <location filename="../ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
         <translation type="unfinished"></translation>
     </message>

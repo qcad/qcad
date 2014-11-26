@@ -70,12 +70,12 @@ Nie można otworzyć pliku %1! Zostaje on opuszczony</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>Opened drawing:</source>
+        <location line="+10"/>
+        <source>Drawing loaded successfully:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+4"/>
         <source>Format:</source>
         <translation type="unfinished"></translation>
     </message>

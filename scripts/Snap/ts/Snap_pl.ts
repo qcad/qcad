@@ -16,7 +16,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+17"/>
         <source>&amp;Snap</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

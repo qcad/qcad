@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>QObject</name>
     <message>
@@ -250,6 +250,7 @@
     <message>
         <location line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+70"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>X</source>
         <translation>X</translation>
@@ -257,6 +258,7 @@
     <message>
         <location line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Y</source>
         <translation>Y</translation>
@@ -264,6 +266,7 @@
     <message>
         <location line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Z</source>
         <translation>Z</translation>
@@ -364,6 +367,79 @@
         <source>Height</source>
         <translation>Višina</translation>
     </message>
+    <message>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
+        <source>Simple</source>
+        <translation>Preprosto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Text Position</source>
+        <translation>Pozicija besedila</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text</source>
+        <translation>Tekst</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plain Text</source>
+        <translation>Preprosto besedilo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Font Name</source>
+        <translation>Ime pisave</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text Height</source>
+        <translation>Višina besedila</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text Angle</source>
+        <translation>Kot besedila</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>X Scale</source>
+        <translation>X Razmerje</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bold</source>
+        <translation>Krepko</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Italic</source>
+        <translation>Poštevno</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Line Spacing</source>
+        <translation>Razmik med vrsticami</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Alignment</source>
+        <translation>Poravnava</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Horizontal</source>
+        <translation>Vodoravno</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Vertical</source>
+        <translation>Navpično</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
@@ -410,87 +486,87 @@
     <name>RLinetype</name>
     <message>
         <source>By Layer</source>
-        <translation type="vanished">Po plasti</translation>
+        <translation>Po plasti</translation>
     </message>
     <message>
         <source>By Block</source>
-        <translation type="vanished">Po elementu</translation>
+        <translation>Po elementu</translation>
     </message>
     <message>
         <source>Continuous</source>
-        <translation type="vanished">Neprekinjeno</translation>
+        <translation>Neprekinjeno</translation>
     </message>
     <message>
         <source>Dot</source>
-        <translation type="vanished">Pika</translation>
+        <translation>Pika</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translation type="vanished">Pika (majhna)</translation>
+        <translation>Pika (majhna)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation type="vanished">Pika (velika)</translation>
+        <translation>Pika (velika)</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translation type="vanished">Črtica</translation>
+        <translation>Črtica</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translation type="vanished">Črtica (majhna)</translation>
+        <translation>Črtica (majhna)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation type="vanished">Črtica (velika)</translation>
+        <translation>Črtica (velika)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation type="vanished">Črtica Pika</translation>
+        <translation>Črtica Pika</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation type="vanished">Črtica Pika (majhna)</translation>
+        <translation>Črtica Pika (majhna)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation type="vanished">Črtica Pika (velika)</translation>
+        <translation>Črtica Pika (velika)</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translation type="vanished">Delilna</translation>
+        <translation>Delilna</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translation type="vanished">Delilna (majhna)</translation>
+        <translation>Delilna (majhna)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translation type="vanished">Delilna (velika)</translation>
+        <translation>Delilna (velika)</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="vanished">Srednjica</translation>
+        <translation>Srednjica</translation>
     </message>
     <message>
         <source>Center (small)</source>
-        <translation type="vanished">Srednjica (majhna)</translation>
+        <translation>Srednjica (majhna)</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translation type="vanished">Srednjica (velika)</translation>
+        <translation>Srednjica (velika)</translation>
     </message>
     <message>
         <source>Border</source>
-        <translation type="vanished">Rob</translation>
+        <translation>Rob</translation>
     </message>
     <message>
         <source>Border (small)</source>
-        <translation type="vanished">Rob (majhna)</translation>
+        <translation>Rob (majhna)</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translation type="vanished">Rob (velika)</translation>
+        <translation>Rob (velika)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -510,13 +586,13 @@
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Vzorec</translation>
     </message>
 </context>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+463"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+629"/>
         <source>By Layer</source>
         <translation>Po plasti</translation>
     </message>
@@ -649,6 +725,56 @@
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Hot Water Supply</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hot Water</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gas Line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Batting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Zig Zag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tracks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fenceline 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fenceline 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Drainage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Drainage Reverse</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

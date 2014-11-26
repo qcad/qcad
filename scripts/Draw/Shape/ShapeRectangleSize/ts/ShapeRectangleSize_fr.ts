@@ -115,7 +115,7 @@
         <translation>En bas à droite</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+30"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>

@@ -20,7 +20,7 @@
         <translation>Dimenzija</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+91"/>
         <source>Scientific</source>
         <translation>Znanstveno</translation>
     </message>
@@ -45,7 +45,7 @@
         <translation>Frakcijski</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+35"/>
         <source>Decimal Degrees</source>
         <translation>Stopinje v desetiškem</translation>
     </message>
@@ -70,7 +70,7 @@
         <translation>Geodetske enote</translation>
     </message>
     <message>
-        <location line="+160"/>
+        <location line="+205"/>
         <source>Unit / Format</source>
         <translation>Enota / Zapis</translation>
     </message>

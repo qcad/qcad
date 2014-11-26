@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.0" language="pl_PL">
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RArcEntity.cpp" line="+74"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+64"/>
@@ -56,7 +56,7 @@
         <location filename="../src/entity/RLineEntity.cpp" line="+70"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+58"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+67"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+72"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+73"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -66,7 +66,6 @@
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+66"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+70"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+70"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -124,7 +123,6 @@
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -181,7 +179,6 @@
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -226,11 +223,17 @@
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
         <translation>Długość</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sweep Angle</source>
+        <translation>Kąt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -426,9 +429,6 @@ Wskaż początek drugiej linii rozszerzenia
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-2"/>
-        <location line="+1"/>
-        <location line="+1"/>
         <source>Text Position</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Pozycja tekstu</translation>
@@ -536,7 +536,7 @@ Punkt główny|Y</translatorcomment>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-2"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -586,7 +586,12 @@ Punkt główny|Y</translatorcomment>
         <translation>Strzałka</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-4"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-5"/>
+        <source>Polyline Pattern</source>
+        <translation>Wzór linia łamana</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Closed</source>
         <translation>Zamknięta</translation>
     </message>
@@ -676,7 +681,6 @@ Wskaż następny punkt kontrolny</translatorcomment>
         <translation>Knot</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
         <translation>Prosta</translation>
     </message>
@@ -685,64 +689,51 @@ Wskaż następny punkt kontrolny</translatorcomment>
         <translation type="obsolete">Spis treści</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Text</source>
         <translation>Tekst</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plain Text</source>
         <translation>Zwykły tekst</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Font Name</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nazwa czcionki</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text Height</source>
         <translation>Wysokość tekstu</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text Angle</source>
         <translation>Kąt tekstu</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>X Scale</source>
         <translation>Skala X</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bold</source>
         <translation>Pogrubiony</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Italic</source>
         <translation>Kursywa</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Line Spacing</source>
         <translation>Odstęp między liniami</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+1"/>
         <source>Alignment</source>
         <translation>Wyrównanie</translation>
     </message>
     <message>
-        <location line="-1"/>
         <source>Horizontal</source>
         <translation>Poziomo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Vertical</source>
         <translation>Pionowa</translation>
     </message>

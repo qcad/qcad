@@ -54,12 +54,16 @@
         <translation>ファイルは空です。</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>Opened drawing:</source>
-        <translation>オープンされた図面:</translation>
+        <location line="+10"/>
+        <source>Drawing loaded successfully:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+2"/>
+        <source>Opened drawing:</source>
+        <translation type="vanished">オープンされた図面:</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Format:</source>
         <translation>フォーマット:</translation>
     </message>

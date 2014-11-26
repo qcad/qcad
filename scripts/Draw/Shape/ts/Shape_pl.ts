@@ -29,7 +29,7 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
 <context>
     <name>Shape</name>
     <message>
-        <location filename="../Shape.js" line="+73"/>
+        <location filename="../Shape.js" line="+74"/>
         <source>Shape Tools</source>
         <translation type="unfinished"></translation>
     </message>

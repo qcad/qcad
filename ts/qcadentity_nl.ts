@@ -4,7 +4,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RArcEntity.cpp" line="+74"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+64"/>
@@ -56,7 +56,7 @@
         <location filename="../src/entity/RLineEntity.cpp" line="+70"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+58"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+67"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+72"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+73"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -66,7 +66,6 @@
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+66"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+70"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+70"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -124,7 +123,6 @@
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -181,7 +179,6 @@
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -226,11 +223,17 @@
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
         <translation>Lengte</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sweep Angle</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -410,9 +413,6 @@
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-2"/>
-        <location line="+1"/>
-        <location line="+1"/>
         <source>Text Position</source>
         <translation>Tekst positie</translation>
     </message>
@@ -516,7 +516,7 @@
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-2"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -564,7 +564,12 @@
         <translation>Pijl</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-4"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-5"/>
+        <source>Polyline Pattern</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Closed</source>
         <translation>Gesloten</translation>
     </message>
@@ -648,70 +653,56 @@
         <translation>Knopen</translation>
     </message>
     <message>
-        <location filename="../src/entity/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
-        <translation>Eenvoudig</translation>
+        <translation type="vanished">Eenvoudig</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Text</source>
-        <translation>Tekst</translation>
+        <translation type="vanished">Tekst</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plain Text</source>
-        <translation>Platte tekst</translation>
+        <translation type="vanished">Platte tekst</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Font Name</source>
-        <translation>Lettertype</translation>
+        <translation type="vanished">Lettertype</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text Height</source>
-        <translation>Tekst hoogte</translation>
+        <translation type="vanished">Tekst hoogte</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text Angle</source>
-        <translation>Tekst hoek</translation>
+        <translation type="vanished">Tekst hoek</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>X Scale</source>
-        <translation>X schaal</translation>
+        <translation type="vanished">X schaal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bold</source>
-        <translation>Vetgedrukt</translation>
+        <translation type="vanished">Vetgedrukt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Italic</source>
-        <translation>Cursief</translation>
+        <translation type="vanished">Cursief</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Line Spacing</source>
-        <translation>Regelafstand</translation>
+        <translation type="vanished">Regelafstand</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+1"/>
         <source>Alignment</source>
-        <translation>Opstelling</translation>
+        <translation type="vanished">Opstelling</translation>
     </message>
     <message>
-        <location line="-1"/>
         <source>Horizontal</source>
-        <translation>Horizontaal</translation>
+        <translation type="vanished">Horizontaal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Vertical</source>
-        <translation>Vertikaal</translation>
+        <translation type="vanished">Vertikaal</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>

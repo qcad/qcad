@@ -31,7 +31,26 @@ Wskaż drugi wierzchołek</translatorcomment>
 <context>
     <name>ShapeRectangle</name>
     <message>
-        <location filename="../ShapeRectangle.js" line="+58"/>
+        <source>First corner</source>
+        <translation type="obsolete">Pierwszy zakręt</translation>
+    </message>
+    <message>
+        <source>Second corner</source>
+        <translation type="obsolete">Drugi narożnik</translation>
+    </message>
+    <message>
+        <source>&amp;Rectangle</source>
+        <translation type="obsolete">&amp;Prostokąt</translation>
+    </message>
+    <message>
+        <source>Draw rectangle from two corners</source>
+        <translation type="obsolete">Narysuj prostokąt od dwóch rogach</translation>
+    </message>
+</context>
+<context>
+    <name>ShapeRectanglePP</name>
+    <message>
+        <location filename="../ShapeRectanglePP.js" line="+58"/>
         <source>First corner</source>
         <translation type="unfinished">Pierwszy zakręt</translation>
     </message>
@@ -41,7 +60,7 @@ Wskaż drugi wierzchołek</translatorcomment>
         <translation type="unfinished">Drugi narożnik</translation>
     </message>
     <message>
-        <location filename="../ShapeRectangleInit.js" line="+2"/>
+        <location filename="../ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
         <translation type="unfinished">&amp;Prostokąt</translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.0" language="pl_PL">
 <context>
     <name>QObject</name>
     <message>
@@ -249,6 +249,7 @@
     <message>
         <location line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+70"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>X</source>
         <translation>X</translation>
@@ -256,6 +257,7 @@
     <message>
         <location line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Y</source>
         <translation>Y</translation>
@@ -263,6 +265,7 @@
     <message>
         <location line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Z</source>
         <translation>Z</translation>
@@ -369,6 +372,79 @@
         <source>Height</source>
         <translation>Wysokość</translation>
     </message>
+    <message>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
+        <source>Simple</source>
+        <translation>Prosta</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Text Position</source>
+        <translation>Pozycja tekstu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text</source>
+        <translation>Tekst</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plain Text</source>
+        <translation>Zwykły tekst</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Font Name</source>
+        <translation>Nazwa czcionki</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text Height</source>
+        <translation>Wysokość tekstu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text Angle</source>
+        <translation>Kąt tekstu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>X Scale</source>
+        <translation>Skala X</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bold</source>
+        <translation>Pogrubiony</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Italic</source>
+        <translation>Kursywa</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Line Spacing</source>
+        <translation>Odstęp między liniami</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Alignment</source>
+        <translation>Wyrównanie</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Horizontal</source>
+        <translation>Poziomo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Vertical</source>
+        <translation>Pionowa</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
@@ -416,97 +492,97 @@
     <name>RLinetype</name>
     <message>
         <source>By Layer</source>
-        <translation type="vanished">Według warstwy</translation>
+        <translation>Według warstwy</translation>
     </message>
     <message>
         <source>By Block</source>
-        <translation type="vanished">Według bloku</translation>
+        <translation>Według bloku</translation>
     </message>
     <message>
         <source>Continuous</source>
-        <translation type="vanished">Ciągła</translation>
+        <translation>Ciągła</translation>
     </message>
     <message>
         <source>Dot</source>
-        <translation type="vanished">Kropka</translation>
+        <translation>Kropka</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translation type="vanished">Kropka (mała)</translation>
+        <translation>Kropka (mała)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation type="vanished">Kropka (duża)</translation>
+        <translation>Kropka (duża)</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translation type="vanished">Kreska</translation>
+        <translation>Kreska</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translation type="vanished">Kreska (mała)</translation>
+        <translation>Kreska (mała)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation type="vanished">Kreska (duża)</translation>
+        <translation>Kreska (duża)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation type="vanished">Kreska kropka</translation>
+        <translation>Kreska kropka</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation type="vanished">Kreska kropka (mała)</translation>
+        <translation>Kreska kropka (mała)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation type="vanished">Kreska kropka (duża)</translation>
+        <translation>Kreska kropka (duża)</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translation type="vanished">Podzielona</translation>
+        <translation>Podzielona</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translation type="vanished">Podzielona (mała)</translation>
+        <translation>Podzielona (mała)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translation type="vanished">Podzielona (duża)</translation>
+        <translation>Podzielona (duża)</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="vanished">Środek</translation>
+        <translation>Środek</translation>
     </message>
     <message>
         <source>Center (small)</source>
-        <translation type="vanished">Środek (maly)</translation>
+        <translation>Środek (maly)</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translation type="vanished">Środek (duży)</translation>
+        <translation>Środek (duży)</translation>
     </message>
     <message>
         <source>Border</source>
-        <translation type="vanished">Obwódka</translation>
+        <translation>Obwódka</translation>
     </message>
     <message>
         <source>Border (small)</source>
-        <translation type="vanished">Obwódka (mała)</translation>
+        <translation>Obwódka (mała)</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translation type="vanished">Obwódka (duża)</translation>
+        <translation>Obwódka (duża)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
         <source>Name</source>
-        <translation type="unfinished">Nazwa</translation>
+        <translation>Nazwa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Opis</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -516,62 +592,62 @@
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Wzór</translation>
     </message>
 </context>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+463"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+629"/>
         <source>By Layer</source>
-        <translation type="unfinished">Według warstwy</translation>
+        <translation>Według warstwy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">Według bloku</translation>
+        <translation>Według bloku</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation type="unfinished">Obwódka</translation>
+        <translation>Obwódka</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">Środek</translation>
+        <translation>Środek</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Kreska kropka</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dashed</source>
-        <translation type="unfinished"></translation>
+        <translation>Kreska</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation type="unfinished">Podzielona</translation>
+        <translation>Podzielona</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation type="unfinished">Kropka</translation>
+        <translation>Kropka</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -655,6 +731,56 @@
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Hot Water Supply</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hot Water</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gas Line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Batting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Zig Zag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tracks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fenceline 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fenceline 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Drainage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Drainage Reverse</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
