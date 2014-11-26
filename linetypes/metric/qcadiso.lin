@@ -112,6 +112,6 @@ A,12.7,-5.08,["GAS",STANDARD,S=2.54,R=0.0,X=-2.54,Y=-1.27],-6.35
 A,.00254,-5.08,[ZIG,ltypeshp.shx,X=-5.08,S=5.08],-10.16,[ZIG,ltypeshp.shx,R=180,X=5.08,S=5.08],-5.08
 
 *DRAINAGE,----<----<----<----
-A,5.08,[RIGHT_ARROW,ltypeshp.shx,S=2.54,R=180],5.08
+A,5.08,[RIGHT_ARROW,qcadshp.shx,S=2.54,R=180],5.08
 *DRAINAGE2,---->---->---->----
-A,5.08,[RIGHT_ARROW,ltypeshp.shx,S=2.54],5.08
+A,5.08,[RIGHT_ARROW,qcadshp.shx,S=2.54],5.08

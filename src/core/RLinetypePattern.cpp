@@ -618,7 +618,6 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
             if (dashes.count() > 0 && ltPattern!=NULL) {
                 ltPattern->set(dashes);
                 ltPattern->updateShapes();
-                qDebug() << "ltpattern: " << *ltPattern;
             }
         }
     }

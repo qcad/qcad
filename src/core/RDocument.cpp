@@ -311,7 +311,6 @@ void RDocument::initLinetypes(RTransaction* transaction) {
                 // replace previous pattern (e.g. on unit change):
                 lt->setPattern(*pattern);
             }
-            qDebug() << "pattern: " << *pattern;
             transaction->addObject(lt);
         }
     }
