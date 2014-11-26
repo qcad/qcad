@@ -52,9 +52,9 @@ Paste.prototype.beginEvent = function() {
     this.setState(this.State.SettingPosition);
 };
 
-Paste.prototype.initUiOptions = function(resume) {
-    Edit.prototype.initUiOptions.call(this, resume);
-    var optionsToolBar = EAction.getOptionsToolBar();
+Paste.prototype.initUiOptions = function(resume, optionsToolBar) {
+    Edit.prototype.initUiOptions.call(this, resume, optionsToolBar);
+    //var optionsToolBar = EAction.getOptionsToolBar();
 
     var combo = optionsToolBar.findChild("Scale");
     combo.setCompleter(null);

@@ -118,12 +118,12 @@ Line.prototype.createLineEntity = function(doc, p1, p2) {
     }
 };
 
-Line.prototype.initUiOptions = function(resume) {
-    Draw.prototype.initUiOptions.call(this, resume);
+Line.prototype.initUiOptions = function(resume, optionsToolBar) {
+    Draw.prototype.initUiOptions.call(this, resume, optionsToolBar);
 
     this.lineType = RSettings.getIntValue(this.settingsGroup + "/Type", 0);
 
-    var optionsToolBar = EAction.getOptionsToolBar();
+    //var optionsToolBar = EAction.getOptionsToolBar();
     var wn = "";
     switch (this.lineType) {
     case Line.LineType.Line:

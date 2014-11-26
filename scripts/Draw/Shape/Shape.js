@@ -77,7 +77,7 @@ Shape.getCadToolBarPanel = function() {
         action.setRequiresDocument(true);
         action.setIcon(Shape.includeBasePath + "/Shape.svg");
         action.setStatusTip(qsTr("Show line tools"));
-        action.setDefaultShortcut(new QKeySequence("w,l"));
+        action.setDefaultShortcut(new QKeySequence("w,h"));
         action.setNoState();
         action.setDefaultCommands(["linemenu"]);
         action.setGroupSortOrder(20);
@@ -107,12 +107,12 @@ Shape.init = function() {
     Shape.getCadToolBarPanel();
 };
 
-Shape.prototype.initUiOptions = function(resume) {
-    Draw.prototype.initUiOptions.call(this, resume);
+Shape.prototype.initUiOptions = function(resume, optionsToolBar) {
+    Draw.prototype.initUiOptions.call(this, resume, optionsToolBar);
 
     this.createPolyline = RSettings.getBoolValue(this.settingsGroup + "/CreatePolyline", false);
 
-    var optionsToolBar = EAction.getOptionsToolBar();
+    //var optionsToolBar = EAction.getOptionsToolBar();
     var w = optionsToolBar.findChild("CreatePolyline");
     if (!isNull(w)) {
         w.checked = this.createPolyline;

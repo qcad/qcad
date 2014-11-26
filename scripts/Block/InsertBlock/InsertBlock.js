@@ -86,9 +86,9 @@ InsertBlock.prototype.beginEvent = function() {
     this.setState(InsertBlock.State.SettingPosition);
 };
 
-InsertBlock.prototype.initUiOptions = function(resume) {
-    BlockInsert.prototype.initUiOptions.call(this, resume);
-    var optionsToolBar = EAction.getOptionsToolBar();
+InsertBlock.prototype.initUiOptions = function(resume, optionsToolBar) {
+    BlockInsert.prototype.initUiOptions.call(this, resume, optionsToolBar);
+    //var optionsToolBar = EAction.getOptionsToolBar();
 
     var combo = optionsToolBar.findChild("ScaleX");
     combo.setCompleter(null);

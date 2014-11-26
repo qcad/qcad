@@ -337,7 +337,7 @@ PrintPreview.prototype.showUiOptions = function(resume) {
 /**
  * Initializes the scale combo box in the options toolbar with defaults.
  */
-PrintPreview.prototype.initUiOptions = function(resume) {
+PrintPreview.prototype.initUiOptions = function(resume, optionsToolBar) {
     this.initScaleCombo();
 };
 

@@ -4,7 +4,7 @@ function init(basePath) {
     action.setScriptFile(basePath + "/ShapePolygonCP.js");
     action.setIcon(basePath + "/ShapePolygonCP.svg");
     action.setStatusTip(qsTranslate("ShapePolygonCP", "Draw regular polygon from center and corner point"));
-    action.setDefaultShortcut(new QKeySequence("p,g,1"));
+    action.setDefaultShortcuts([new QKeySequence("p,g,1"), new QKeySequence("h,c")]);
     action.setDefaultCommands(["linepolygon", "polygon", "pg1"]);
     action.setGroupSortOrder(11520);
     action.setSortOrder(100);

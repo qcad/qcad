@@ -49,8 +49,8 @@ Dimension.prototype.beginEvent = function() {
 /**
  * Reimplemented to reset all fields, unless we are resuming.
  */
-Dimension.prototype.initUiOptions = function(resume) {
-    EAction.prototype.initUiOptions.call(this, resume);
+Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
+    EAction.prototype.initUiOptions.call(this, resume, optionsToolBar);
 
     // for some dimensions (e.g. leader), no standard dimensions toolbar
     // is shown:
@@ -58,7 +58,7 @@ Dimension.prototype.initUiOptions = function(resume) {
         return;
     }
 
-    var optionsToolBar = EAction.getOptionsToolBar();
+    //var optionsToolBar = EAction.getOptionsToolBar();
 
     var prefixCombo = optionsToolBar.findChild("Prefix");
     prefixCombo.clear();

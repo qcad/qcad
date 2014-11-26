@@ -374,7 +374,7 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
 
         // give action a chance to initialize toolbar widgets that cannot
         // be initialized in Qt Designer:
-        this.initUiOptions(resume);
+        this.initUiOptions(resume, optionsToolBar);
 
         // restore previously stored state:
         if (restoreFromSettings===true) {
@@ -387,10 +387,10 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
  * Overwrite to initialize combo boxes and other UI elements of the options tool
  * bar.
  */
-EAction.prototype.initUiOptions = function(resume) {
+EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
     var prefixChar = RSettings.getStringValue("ToolBar/PrefixChar", ",");
 
-    var optionsToolBar = EAction.getOptionsToolBar();
+    //var optionsToolBar = EAction.getOptionsToolBar();
     if (isNull(optionsToolBar)) {
         return;
     }
