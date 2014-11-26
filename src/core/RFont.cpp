@@ -181,7 +181,7 @@ bool RFont::load() {
             QString shapeName;
 
             // read unicode:
-            QRegExp rx("\\[([0-9A-Fa-f]{4,4})\\]\s*(.*)?");
+            QRegExp rx("\\[([0-9A-Fa-f]{4,4})\\]\\s*(.*)?");
             rx.indexIn(line);
             //QString cap = regexp.cap();
             if (rx.captureCount()>0) {
