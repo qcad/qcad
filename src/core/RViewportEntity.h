@@ -20,7 +20,7 @@
 #ifndef RVIEWPORTENTITY_H
 #define RVIEWPORTENTITY_H
 
-#include "entity_global.h"
+#include "core_global.h"
 
 #include "REntity.h"
 #include "RViewportData.h"

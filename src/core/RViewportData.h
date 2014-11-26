@@ -20,7 +20,7 @@
 #ifndef RVIEWPORTDATA_H
 #define RVIEWPORTDATA_H
 
-#include "entity_global.h"
+#include "core_global.h"
 
 #include "RBox.h"
 #include "RDocument.h"

@@ -20,7 +20,7 @@
 #ifndef RTEXTBASEDDATA_H
 #define RTEXTBASEDDATA_H
 
-#include "entity_global.h"
+#include "core_global.h"
 
 #include <QTextLayout>
 
@@ -41,7 +41,7 @@ class QTextDocument;
  * \copyable
  * \ingroup entity
  */
-class QCADENTITY_EXPORT RTextBasedData: public REntityData, public RPainterPathSource {
+class QCADCORE_EXPORT RTextBasedData: public REntityData, public RPainterPathSource {
     friend class RTextBasedEntity;
 
 protected:

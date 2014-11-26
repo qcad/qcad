@@ -20,7 +20,7 @@
 #ifndef RTEXTBASEDENTITY_H
 #define RTEXTBASEDENTITY_H
 
-#include "entity_global.h"
+#include "core_global.h"
 
 #include "REntity.h"
 #include "RTextBasedData.h"
@@ -35,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class QCADENTITY_EXPORT RTextBasedEntity: public REntity {
+class QCADCORE_EXPORT RTextBasedEntity: public REntity {
 
     Q_DECLARE_TR_FUNCTIONS(RTextBasedEntity)
 
