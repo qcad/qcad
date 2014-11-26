@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.0" language="nl_NL">
 <context>
     <name>REntity</name>
     <message>
@@ -233,7 +233,7 @@
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoek</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -566,7 +566,7 @@
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-5"/>
         <source>Polyline Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Polylijnpatroon</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -654,55 +654,55 @@
     </message>
     <message>
         <source>Simple</source>
-        <translation type="vanished">Eenvoudig</translation>
+        <translation>Eenvoudig</translation>
     </message>
     <message>
         <source>Text</source>
-        <translation type="vanished">Tekst</translation>
+        <translation>Tekst</translation>
     </message>
     <message>
         <source>Plain Text</source>
-        <translation type="vanished">Platte tekst</translation>
+        <translation>Platte tekst</translation>
     </message>
     <message>
         <source>Font Name</source>
-        <translation type="vanished">Lettertype</translation>
+        <translation>Lettertype</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation type="vanished">Tekst hoogte</translation>
+        <translation>Tekst hoogte</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation type="vanished">Tekst hoek</translation>
+        <translation>Tekst hoek</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation type="vanished">X schaal</translation>
+        <translation>X schaal</translation>
     </message>
     <message>
         <source>Bold</source>
-        <translation type="vanished">Vetgedrukt</translation>
+        <translation>Vetgedrukt</translation>
     </message>
     <message>
         <source>Italic</source>
-        <translation type="vanished">Cursief</translation>
+        <translation>Cursief</translation>
     </message>
     <message>
         <source>Line Spacing</source>
-        <translation type="vanished">Regelafstand</translation>
+        <translation>Regelafstand</translation>
     </message>
     <message>
         <source>Alignment</source>
-        <translation type="vanished">Opstelling</translation>
+        <translation>Opstelling</translation>
     </message>
     <message>
         <source>Horizontal</source>
-        <translation type="vanished">Horizontaal</translation>
+        <translation>Horizontaal</translation>
     </message>
     <message>
         <source>Vertical</source>
-        <translation type="vanished">Vertikaal</translation>
+        <translation>Vertikaal</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
