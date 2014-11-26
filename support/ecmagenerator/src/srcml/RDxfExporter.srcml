@@ -370,6 +370,14 @@ dir="./io/dxf" filename="RDxfExporter.h">
       <name>RPolyline</name>&amp;</type>
       <name>pl</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>plineGen</name>
+    </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>

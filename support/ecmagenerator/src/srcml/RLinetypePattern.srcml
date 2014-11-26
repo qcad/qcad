@@ -337,6 +337,18 @@ dir="./core" filename="RLinetypePattern.h">
   <param>
     <decl>
       <type>
+      <name>const</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>double</name>
+      </argument>&gt;</argument_list></name>&amp;</type>
+      <name>dashes</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
         <name>int</name>
       </type>
       <name>i</name>
@@ -498,7 +510,6 @@ dir="./core" filename="RLinetypePattern.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
-  <comment type="line">//bool isSymmetrical(int i) const;</comment>
   <function_decl>
   <type>
     <name>void</name>
@@ -571,8 +582,6 @@ dir="./core" filename="RLinetypePattern.h">
     <parameter_list>()</parameter_list>
     <block>{}</block>
   </function>
-  <comment type="line">//static QString fixName(const QString&amp;
-  n);</comment>
   <function_decl>
   <type>
     <name>static</name>
@@ -717,8 +726,6 @@ dir="./core" filename="RLinetypePattern.h">
   </decl>;</decl_stmt>
   <comment type="line">// internal info about segments at which the
   pattern is symmetrical:</comment>
-  <comment type="line">//bool* symmetrical;</comment>
-  <comment type="line">//bool* symmetricalEnd;</comment>
   <decl_stmt>
   <decl>
     <type>

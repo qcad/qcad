@@ -1130,19 +1130,31 @@
                 
     
     if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < double > */
+     && (
+            context->argument(1).isNumber()
         ) /* type: int */
     
     ){
     // prepare arguments:
     
+                    // argument isArray
+                    QList < double >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
                     // argument isStandardType
                     int
-                    a0 =
+                    a1 =
                     (int)
                     
-                    context->argument( 0 ).
+                    context->argument( 1 ).
                     toNumber();
                 
     // end of arguments
@@ -1151,7 +1163,9 @@
     // return type 'double'
     double cppResult =
         
-               self->getDashOffsetAt(a0);
+               self->getDashOffsetAt(a0
+        ,
+    a1);
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);

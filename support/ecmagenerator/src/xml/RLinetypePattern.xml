@@ -113,6 +113,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
+        <arg type="QList &lt; double &gt; &amp;"
+        typeName="QList &lt; double &gt;" name="dashes"
+        isConst="true" />
         <arg type="int" typeName="int" name="i" isConst="false" />
       </variant>
     </method>

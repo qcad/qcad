@@ -22,7 +22,7 @@ dir="./core" filename="RTextBasedEntity.h">
   <name>RTEXTBASEDENTITY_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"REntity.h"</cpp:file></cpp:include>
@@ -37,7 +37,7 @@ dir="./core" filename="RTextBasedEntity.h">
   \sharedPointerSupport * \ingroup entity */</comment>
   <class>class 
   <macro>
-    <name>QCADENTITY_EXPORT</name>
+    <name>QCADCORE_EXPORT</name>
   </macro>
   <name>RTextBasedEntity</name>
   <super>: 

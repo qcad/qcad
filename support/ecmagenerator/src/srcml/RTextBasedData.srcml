@@ -22,7 +22,7 @@ dir="./core" filename="RTextBasedData.h">
   <name>RTEXTBASEDDATA_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QTextLayout&gt;</cpp:file></cpp:include>
@@ -50,7 +50,7 @@ dir="./core" filename="RTextBasedData.h">
   */</comment>
   <class>class 
   <macro>
-    <name>QCADENTITY_EXPORT</name>
+    <name>QCADCORE_EXPORT</name>
   </macro>
   <name>RTextBasedData</name>
   <super>: 

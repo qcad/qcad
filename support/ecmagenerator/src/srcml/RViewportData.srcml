@@ -22,7 +22,7 @@ dir="./core" filename="RViewportData.h">
   <name>RVIEWPORTDATA_H</name></cpp:define>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
-  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+  <cpp:file>"core_global.h"</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RBox.h"</cpp:file></cpp:include>
