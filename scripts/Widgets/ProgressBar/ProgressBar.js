@@ -20,56 +20,101 @@
 include("../../WidgetFactory.js");
 
 function ProgressBar() {
-    ProgressBar.formWidget = undefined;
     ProgressBar.progressBar = undefined;
+    ProgressBar.text = "";
 }
 
 /**
  * Progress bar widget in status bar.
  */
 ProgressBar.init = function(basePath) {
-    ProgressBar.formWidget = WidgetFactory.createWidget(basePath, "ProgressBar.ui");
-    ProgressBar.progressBar = ProgressBar.formWidget.findChild("ProgressBar");
-    ProgressBar.progressBar.visible = false;
+    var formWidget = WidgetFactory.createWidget(basePath, "ProgressBar.ui");
+    EAction.addToStatusBar(formWidget, 1000);
+
+    ProgressBar.prepare();
+
+    if (!isNull(ProgressBar.progressBar)) {
+        ProgressBar.progressBar.visible = false;
+    }
+
     var appWin = EAction.getMainWindow();
+    appWin.progressText.connect(this, "setProgressText");
     appWin.progress.connect(this, "progress");
     appWin.progressEnd.connect(this, "progressEnd");
-    appWin.progressText.connect(this, "progressText");
-    EAction.addToStatusBar(ProgressBar.formWidget, 1000);
+};
+
+ProgressBar.prepare = function() {
+    var appWin = EAction.getMainWindow();
+    var statusBar = appWin.statusBar();
+    ProgressBar.progressLabel = statusBar.findChild("ProgressText");
+    ProgressBar.progressBar = statusBar.findChild("ProgressBar");
+    ProgressBar.progressDialog = appWin.findChild("ProgressDialog");
+    ProgressBar.dialogMode = RSettings.getBoolValue("Appearance/ShowProgressDialog", false);
+};
+
+ProgressBar.setProgressText = function(text) {
+    ProgressBar.prepare();
+
+    if (ProgressBar.dialogMode===true) {
+        if (!isNull(ProgressBar.progressDialog)) {
+            ProgressBar.progressDialog.labelText = text;
+        }
+        else {
+            ProgressBar.text = text;
+        }
+    }
+    else {
+        if (!isNull(ProgressBar.progressLabel)) {
+            ProgressBar.progressLabel.text = text;
+        }
+    }
 };
 
 ProgressBar.progress = function(value) {
-    if (isNull(ProgressBar.formWidget)) {
-        return;
-    }
+    ProgressBar.prepare();
 
-    ProgressBar.progressBar = objectFromPath("MainWindow::ProgressBar",
-            ProgressBar.progressBar);
-    if (!QCoreApplication.arguments().contains("-no-show")) {
-        ProgressBar.progressBar.visible = true;
+    if (ProgressBar.dialogMode===true) {
+        if (isNull(ProgressBar.progressDialog)) {
+            ProgressBar.progressDialog = new QProgressDialog(ProgressBar.text, "", 0, 100, EAction.getMainWindow());
+            ProgressBar.progressDialog.objectName = "ProgressDialog";
+            ProgressBar.progressDialog.windowModality = Qt.ApplicationModal;
+            ProgressBar.progressDialog.minimumDuration = 500;
+            ProgressBar.progressDialog.setCancelButton(0);
+        }
+        ProgressBar.progressDialog.value = value;
+        // don't process events if modal dialog does not block user from doing something:
+        if (ProgressBar.progressDialog.visible) {
+            QCoreApplication.processEvents();
+        }
     }
-    ProgressBar.progressBar.value = value;
-
+    else {
+        if (!isNull(ProgressBar.progressBar)) {
+            if (!QCoreApplication.arguments().contains("-no-show")) {
+                ProgressBar.progressBar.visible = true;
+            }
+            ProgressBar.progressBar.value = value;
+        }
+    }
     var appWin = EAction.getMainWindow();
     appWin.enabled = false;
 };
 
 ProgressBar.progressEnd = function() {
-    if (isNull(ProgressBar.formWidget)) {
-        return;
-    }
+    ProgressBar.prepare();
 
-    ProgressBar.progressBar = objectFromPath("MainWindow::ProgressBar", ProgressBar.progressBar);
-    ProgressBar.progressBar.reset();
-    ProgressBar.progressText("");
-    ProgressBar.progressBar.visible = false;
+    if (ProgressBar.dialogMode===true) {
+        if (!isNull(ProgressBar.progressDialog)) {
+            ProgressBar.progressDialog.setValue(100);
+        }
+    }
+    else {
+        if (!isNull(ProgressBar.progressBar)) {
+            ProgressBar.progressBar.reset();
+            ProgressBar.setProgressText("");
+            ProgressBar.progressBar.visible = false;
+        }
+    }
     var appWin = EAction.getMainWindow();
     appWin.enabled = true;
 };
 
-ProgressBar.progressText = function(text) {
-    var lb = objectFromPath("MainWindow::ProgressText");
-    if (!isNull(lb)) {
-        lb.text = text;
-    }
-};

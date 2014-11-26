@@ -86,7 +86,8 @@ CommandLine.init = function(basePath) {
         teHistory.ensureCursorVisible();
 
         var appWin = EAction.getMainWindow();
-        if (!appWin.enabled) {
+        var dlg = appWin.findChild("ProgressDialog");
+        if (!appWin.enabled || (!isNull(dlg) && dlg.visible)) {
             QCoreApplication.processEvents();
         }
     }
