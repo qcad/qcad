@@ -196,6 +196,6 @@ void RDimAngularEntity::print(QDebug dbg) const {
                   << ", extensionLine2Start: " << getData().extensionLine2Start
                   << ", extensionLine2End: " << getData().definitionPoint
                   << ", dimArcPosition: " << getData().dimArcPosition
-                  << ", textData: " << getData().textData
+                  << ", text: " << getData().textData.getText()
                   << ")";
 }
