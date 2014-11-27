@@ -64,6 +64,9 @@ void RShapesExporter::exportPainterPaths(const QList<RPainterPath>& paths, doubl
 
 RVector RShapesExporter::getPointAt(double d, int* index) {
     int i = getShapeAt(d);
+    if (i==-1) {
+        return RVector::invalid;
+    }
     double a = d - (i==0 ? 0.0 : lengthAt[i-1]);
     QList<RVector> points = shapes[i]->getPointsWithDistanceToEnd(a, RS::FromStart);
     Q_ASSERT(points.length()>0);
@@ -75,6 +78,9 @@ RVector RShapesExporter::getPointAt(double d, int* index) {
 
 double RShapesExporter::getAngleAt(double d) {
     int i = getShapeAt(d);
+    if (i<0 || i>shapes.length() || i>lengthAt.length()) {
+        return 0.0;
+    }
     double a = d - (i==0 ? 0.0 : lengthAt[i-1]);
     return shapes[i]->getAngleAt(a);
 }
@@ -87,6 +93,7 @@ int RShapesExporter::getShapeAt(double d) {
             return i;
         }
     }
+    return -1;
 }
 
 void RShapesExporter::exportShapesBetween(int i1, const RVector& p1, int i2, const RVector& p2) {
