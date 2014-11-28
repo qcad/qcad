@@ -765,7 +765,7 @@ double RExporter::exportLine(const RLine& line, double offset) {
     // continuous line or
     // we are in draft mode or
     // QCAD is configured to show screen based line patterns
-    if (!p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+    if (!p.isValid() || p.getNumDashes() <= 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
         exportLineSegment(line, angle);
         return ret;
     }
@@ -930,7 +930,7 @@ void RExporter::exportArc(const RArc& arc, double offset) {
 
     RLinetypePattern p = getLinetypePattern();
 
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
         exportArcSegment(arc);
         return;
     }
@@ -1200,7 +1200,7 @@ void RExporter::exportPolyline(const RPolyline& polyline, bool polylineGen, doub
     RLinetypePattern p = getLinetypePattern();
 
     bool continuous = false;
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
         continuous = true;
     }
 
@@ -1245,7 +1245,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
     RLinetypePattern p = getLinetypePattern();
 
     bool continuous = false;
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() == 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
         continuous = true;
     }
 
@@ -1307,7 +1307,25 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
 void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
     QList<QSharedPointer<RShape> > sub = explodable.getExploded();
 
-    RShapesExporter(*this, sub, offset);
+    RLinetypePattern p = getLinetypePattern();
+    if (!p.isValid() || p.getNumDashes() <= 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+        for (int i=0; i<sub.length(); i++) {
+            QSharedPointer<RLine> lineP = sub[i].dynamicCast<RLine>();
+            if (!lineP.isNull()) {
+                exportLine(*lineP.data());
+                continue;
+            }
+
+            QSharedPointer<RArc> arc = sub[i].dynamicCast<RArc>();
+            if (!arc.isNull()) {
+                exportArc(*arc.data());
+                continue;
+            }
+        }
+        return;
+    }
+
+    RShapesExporter e(*this, sub, offset);
 
     /*
     //QList<QSharedPointer<RShape> >::iterator it;

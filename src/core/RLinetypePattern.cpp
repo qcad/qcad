@@ -697,7 +697,8 @@ QDebug operator<<(QDebug dbg, const RLinetypePattern& p) {
     << (p.isMetric() ? "metric" : "imperial")
     << ", " << p.getName()
     << ", " << p.getDescription()
-    << ", " << p.getPatternLength() << ", ";
+    << ", length: " << p.getPatternLength() << ", "
+    << ", dashes: " << p.getNumDashes() << ", ";
     for (int i=0; i<p.getNumDashes(); ++i) {
         if (i!=0) {
             dbg.nospace() << ",";
