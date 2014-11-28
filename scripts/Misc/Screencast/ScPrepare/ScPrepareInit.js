@@ -2,7 +2,7 @@ function init(basePath) {
     // disabled for now:
     return;
 
-    var action = new RGuiAction("&Prepare Window Position", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Prepare Window Position"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ScPrepare.js");
     action.setSortOrder(50);

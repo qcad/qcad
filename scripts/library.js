@@ -1849,6 +1849,10 @@ function addActionsToWidgets() {
         var className = a.getScriptClass();
         var wns = a.getWidgetNames();
 
+        if (className==="Reset") {
+            debugger;
+        }
+
         for (var k=0; k<wns.length; k++) {
             var wn = wns[k];
             if (wn.length===0) {

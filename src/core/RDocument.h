@@ -67,6 +67,7 @@ public:
 
     void init();
     void initLinetypes(RTransaction* transaction=NULL);
+    QList<QSharedPointer<RObject> > getDefaultLinetypes();
 
     RStorage& getStorage();
     const RStorage& getStorage() const;

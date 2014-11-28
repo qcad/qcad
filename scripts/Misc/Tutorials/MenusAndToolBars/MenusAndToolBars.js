@@ -29,13 +29,13 @@ MenusAndToolBars.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
     var appWin = EAction.getMainWindow();
-    appWin.handleUserMessage("MenusAndToolBars() is running...");
+    appWin.handleUserMessage(qsTr("MenusAndToolBars() is running..."));
     
     this.terminate();
 };
 
 MenusAndToolBars.init = function(basePath) {
-    var action = new RGuiAction("&Menus and Toolbars", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Menus and Toolbars"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/MenusAndToolBars.js");
     action.setGroupSortOrder(80100);

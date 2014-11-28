@@ -22,7 +22,7 @@
 #include "RLinetypeComboDelegate.h"
 #include "RPainterPathExporter.h"
 
-QMap<int, QMap<QString, QImage> > RLinetypeComboDelegate::previewCache;
+//QMap<int, QMap<QString, QImage> > RLinetypeComboDelegate::previewCache;
 int RLinetypeComboDelegate::previewHeight = 20;
 
 RLinetypeComboDelegate::RLinetypeComboDelegate(QObject* parent) : QStyledItemDelegate(parent) {
@@ -52,7 +52,7 @@ QSize RLinetypeComboDelegate::sizeHint(const QStyleOptionViewItem& option,
     return QSize(300,16+previewHeight);
 }
 
-QImage RLinetypeComboDelegate::getPreviewImage(const RLinetypePattern& pattern, int width) {
+QImage RLinetypeComboDelegate::getPreviewImage(const RLinetypePattern& pattern, int width) const {
     width = width/10*10;
 
     if (previewCache.contains(width)) {

@@ -176,15 +176,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="exportPainterPathSource"
-    cppName="exportPainterPathSource" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RPainterPathSource &amp;"
-        typeName="RPainterPathSource" name="pathSource"
-        isConst="true" />
-      </variant>
-    </method>
     <method name="exportPainterPaths" cppName="exportPainterPaths"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

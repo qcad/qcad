@@ -148,6 +148,20 @@ dir="./core" filename="RDocument.h">
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>QSharedPointer
+      <argument_list>&lt;
+      <argument>
+        <name>RObject</name>
+      </argument>&gt;</argument_list></name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getDefaultLinetypes</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
   <name>RStorage</name>&amp;</type>
   <name>getStorage</name>
   <parameter_list>()</parameter_list>;</function_decl>

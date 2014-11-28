@@ -102,7 +102,7 @@ dir="./core" filename="RLinetype.h">
       <name>static</name>
       <name>RPropertyTypeId</name>
     </type>
-    <name>PropertyPattern</name>
+    <name>PropertyPatternString</name>
   </decl>;</decl_stmt></public>
   <public>public: 
   <constructor_decl>
@@ -270,6 +270,50 @@ dir="./core" filename="RLinetype.h">
       <name>getLabel</name>
       <argument_list>()</argument_list>
     </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>QString</name>
+    </type>
+    <name>getPatternString</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <name>pattern</name>.
+    <call>
+      <name>getPatternString</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setPatternString</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QString</name>&amp;</type>
+        <name>s</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>pattern</name>.
+    <call>
+      <name>setPatternString</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>s</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</expr_stmt>}</block>
   </function>
   <function_decl>
   <type>

@@ -45,6 +45,8 @@
 class QCADCORE_EXPORT RLinetypePattern {
     Q_DECLARE_TR_FUNCTIONS(RLinetypePattern);
 
+    friend class RLinetype;
+
 public:
     /**
      * \nonscriptable
@@ -73,11 +75,41 @@ public:
     bool isMetric() const {
         return metric;
     }
+    void setMetric(bool on) {
+        metric = on;
+    }
 
+    bool setPatternString(const QString& patternString);
+    QString getPatternString() const;
     QList<double> getPattern() const;
     double getPatternLength() const;
     double getDashLengthAt(int i) const;
     double getDashOffsetAt(const QList<double>& dashes, int i) const;
+
+    bool hasShapeNumberAt(int i) const;
+    int getShapeNumberAt(int i) const;
+    void setShapeNumberAt(int i, int num);
+
+    bool hasShapeScaleAt(int i) const;
+    double getShapeScaleAt(int i) const;
+    void setShapeScaleAt(int i, double s);
+
+    bool hasShapeRotationAt(int i) const;
+    double getShapeRotationAt(int i) const;
+    void setShapeRotationAt(int i, double r);
+
+    bool hasShapeOffsetAt(int i) const;
+    RVector getShapeOffsetAt(int i) const;
+    void setShapeOffsetAt(int i, const RVector& offset);
+
+    bool hasShapeTextAt(int i) const;
+    QString getShapeTextAt(int i) const;
+    void setShapeTextAt(int i, const QString& s);
+
+    bool hasShapeTextStyleAt(int i) const;
+    QString getShapeTextStyleAt(int i) const;
+    void setShapeTextStyleAt(int i, const QString& s);
+
     QList<int> getShapeIndices() const;
     bool hasShapes() const;
     bool hasShapeAt(int i) const;
@@ -87,6 +119,10 @@ public:
     bool hasDashAt(double pos) const;
     double getDelta(double pos) const;
     double getPatternOffset(double length);
+    QList<double> getSymmetries() const {
+        return symmetries;
+    }
+
     /**
      * \nonscriptable
      */
@@ -103,10 +139,12 @@ public:
 
     static void initNameMap();
 
-public:
+private:
     bool metric;
     QString name;
     QString description;
+    mutable QString patternString;
+
     QList<double> pattern;
 
     QMap<int, QList<RPainterPath> > shapes;

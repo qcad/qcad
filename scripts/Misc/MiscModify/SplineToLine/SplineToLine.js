@@ -68,7 +68,7 @@ SplineToLine.prototype.beginEvent = function() {
 };
 
 SplineToLine.init = function(basePath) {
-    var action = new RGuiAction("Convert Straight Splines to Lines", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("Convert Straight Splines to Lines"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SplineToLine.js");
     action.setGroupSortOrder(56100);

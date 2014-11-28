@@ -61,7 +61,7 @@ ExDrawColors.prototype.beginEvent = function() {
  * Adds a menu for this action.
  */
 ExDrawColors.init = function(basePath) {
-    var action = new RGuiAction("Draw &Colors", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("Draw &Colors"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExDrawColors.js");
     action.setGroupSortOrder(73100);

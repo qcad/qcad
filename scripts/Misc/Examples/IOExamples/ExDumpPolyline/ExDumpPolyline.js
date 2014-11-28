@@ -90,7 +90,7 @@ ExDumpPolyline.isClockwise = function(polyline) {
  * Adds a menu for this action to Examples/Math Examples/ExDumpPolyline.
  */
 ExDumpPolyline.init = function(basePath) {
-    var action = new RGuiAction("&Dump Polyline", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Dump Polyline"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExDumpPolyline.js");
     action.setGroupSortOrder(71100);

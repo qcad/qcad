@@ -66,6 +66,12 @@
         getLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPatternString
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPatternString
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

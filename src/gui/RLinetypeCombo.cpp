@@ -28,8 +28,6 @@ RLinetypeCombo::RLinetypeCombo(QWidget* parent) :
     QComboBox(parent), onlyFixed(false) {
     setIconSize(QSize(32, 16));
 
-    setItemDelegate(new RLinetypeComboDelegate(this));
-
     view()->setAlternatingRowColors(true);
 
     QPalette p = palette();
@@ -54,6 +52,9 @@ void RLinetypeCombo::init(RDocument* doc) {
     if (doc!=NULL) {
         patterns = doc->getLinetypePatterns();
     }
+
+    // change delegate if document changes to clear preview cache:
+    setItemDelegate(new RLinetypeComboDelegate(this));
 
     reinit();
 }

@@ -107,9 +107,6 @@
         exportRectangle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        exportPainterPathSource
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         exportPainterPaths
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -50,7 +50,7 @@ ExMainWindow.prototype.beginEvent = function() {
  * Adds a menu for this action to Examples/Math Examples/ExMainWindow.
  */
 ExMainWindow.init = function(basePath) {
-    var action = new RGuiAction("&Main Window", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Main Window"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ExMainWindow.js");
     action.setGroupSortOrder(79600);

@@ -601,7 +601,7 @@ QSharedPointer<RUcs> RMemoryStorage::queryUcs(const QString& ucsName) const {
     for (it = objectMap.constBegin(); it != objectMap.constEnd(); ++it) {
         QSharedPointer<RUcs> u = it->dynamicCast<RUcs>();
         if (!u.isNull() && u->name==ucsName) {
-            return u;
+            return QSharedPointer<RUcs> (u->clone());
         }
     }
 
@@ -633,7 +633,7 @@ QSharedPointer<RLinetype> RMemoryStorage::queryLinetype(const QString& linetypeN
     for (it = linetypeMap.constBegin(); it != linetypeMap.constEnd(); ++it) {
         QSharedPointer<RLinetype> l = it->dynamicCast<RLinetype>();
         if (!l.isNull() && l->getName().compare(linetypeName, Qt::CaseInsensitive)==0) {
-            return l;
+            return QSharedPointer<RLinetype> (l->clone());
         }
     }
 

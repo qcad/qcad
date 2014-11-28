@@ -92,7 +92,7 @@ ExLayerWhiteToBlack.prototype.beginEvent = function() {
  * Adds a menu for this action.
  */
 ExLayerWhiteToBlack.init = function(basePath) {
-    var action = new RGuiAction("Make all White Layers Black", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("Make all White Layers Black"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExLayerWhiteToBlack.js");
     action.setGroupSortOrder(78100);

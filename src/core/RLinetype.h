@@ -55,7 +55,7 @@ public:
     static RPropertyTypeId PropertyName;
     static RPropertyTypeId PropertyDescription;
     static RPropertyTypeId PropertyMetric;
-    static RPropertyTypeId PropertyPattern;
+    static RPropertyTypeId PropertyPatternString;
 
 public:
     RLinetype(RDocument* document=NULL);
@@ -87,6 +87,14 @@ public:
 
     QString getLabel() const {
         return pattern.getLabel();
+    }
+
+    QString getPatternString() const {
+        return pattern.getPatternString();
+    }
+
+    void setPatternString(const QString& s) {
+        pattern.setPatternString(s);
     }
 
     bool isValid() const;

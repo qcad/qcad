@@ -95,6 +95,7 @@ void RLinetypePattern::set(const QList<double>& dashes) {
         }
     }
 
+    symmetries.clear();
     double len = getPatternLength();
     int num = normalizedPattern.length();
     for (int i=0; i<num; i++) {
@@ -120,6 +121,7 @@ void RLinetypePattern::set(const QList<double>& dashes) {
             symmetries.append(s);
         }
     }
+    patternString = "";
 }
 
 RLinetypePattern& RLinetypePattern::operator=(const RLinetypePattern& other) {
@@ -130,6 +132,7 @@ RLinetypePattern& RLinetypePattern::operator=(const RLinetypePattern& other) {
     metric = other.metric;
     name = other.name;
     description = other.description;
+    patternString = other.patternString;
     pattern = other.pattern;
     shapes = other.shapes;
     shapeTexts = other.shapeTexts;
@@ -179,6 +182,7 @@ void RLinetypePattern::scale(double factor) {
         symmetries[i] *= factor;
     }
     updateShapes();
+    patternString = "";
 }
 
 /**
@@ -334,6 +338,171 @@ QString RLinetypePattern::getLabel() const {
     return name;
 }
 
+/**
+ * Set pattern based on .lin formatted string (e.g. "A,3.81,[TRACK1,ltypeshp.shx,S=6.35],3.81").
+ */
+bool RLinetypePattern::setPatternString(const QString& patternString) {
+    this->patternString = "";
+
+    shapeNumbers.clear();
+    shapeOffsets.clear();
+    shapeRotations.clear();
+    shapeScales.clear();
+    shapeTexts.clear();
+    shapeTextStyles.clear();
+    shapes.clear();
+
+    QStringList parts;
+    QRegExp rx("\\[[^\\]]*\\]|A|([+-]?\\d+\\.?\\d*)|([+-]?\\d*\\.?\\d+)");
+
+    int pos = 0;
+    while ((pos = rx.indexIn(patternString, pos))!=-1) {
+        parts.append(rx.cap(0));
+        int l = rx.matchedLength();
+        if (l==0) {
+            break;
+        }
+        pos += l;
+    }
+
+    if (parts.isEmpty()) {
+        return false;
+    }
+
+    if (parts.at(0).startsWith("A", Qt::CaseInsensitive)) {
+        parts.removeFirst();
+    }
+
+    QList<double> dashes;
+    for (int i = 0; i < parts.length(); i++) {
+        QString part = parts[i];
+        if (part.startsWith("[", Qt::CaseInsensitive)) {
+            if (!RPluginLoader::hasPlugin("DWG")) {
+                return false;
+            }
+
+            QRegExp rx(
+                "\\["
+                "([^, ]*)"   // text
+                "[, ]*"
+                "([^, ]*)"   // style
+                "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|[+-]?\\d*\\.\\d+)))?"
+                "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|[+-]?\\d*\\.\\d+)))?"
+                "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|[+-]?\\d*\\.\\d+)))?"
+                "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|[+-]?\\d*\\.\\d+)))?"
+                "\\]"
+            );
+            rx.setCaseSensitivity(Qt::CaseInsensitive);
+
+            rx.indexIn(part);
+
+            int idx = dashes.length()-1;
+            QString text = rx.cap(1);
+            if (text.startsWith("\"") && text.endsWith("\"")) {
+                text = text.mid(1, text.length()-2);
+            }
+            shapeTexts.insert(idx, text);
+            shapeTextStyles.insert(idx, rx.cap(2));
+            for (int k=3; k+1<=rx.captureCount(); k+=2) {
+                QString c = rx.cap(k).toUpper();
+                double val = rx.cap(k+1).toDouble();
+
+                if (c=="S") {
+                    shapeScales.insert(idx, val);
+                }
+                if (c=="R") {
+                    shapeRotations.insert(idx, RMath::deg2rad(val));
+                }
+                if (c=="X") {
+                    if (shapeOffsets.contains(idx)) {
+                        shapeOffsets[idx].x = val;
+                    }
+                    else {
+                        shapeOffsets.insert(idx, RVector(val, 0));
+                    }
+                }
+                if (c=="Y") {
+                    if (shapeOffsets.contains(idx)) {
+                        shapeOffsets[idx].y = val;
+                    }
+                    else {
+                        shapeOffsets.insert(idx, RVector(0, val));
+                    }
+                }
+            }
+        } else {
+            dashes.append(part.toDouble());
+        }
+    }
+
+    if (dashes.count() > 0) {
+        set(dashes);
+        updateShapes();
+    }
+
+    this->patternString = patternString;
+}
+
+QString RLinetypePattern::getPatternString() const {
+    if (patternString.isEmpty()) {
+        QString buffer = "A"; //(isScaledToFit() ? "S" : "A");
+        for (int i=0; i < getNumDashes(); i++) {
+            buffer += "," + QString("%1").arg(getDashLengthAt(i));
+
+            int shapeNumber  = getShapeNumberAt(i);
+            QString text = getShapeTextAt(i);
+            QString textStyle = getShapeTextStyleAt(i);
+
+            if (shapeNumber==0 && text.isEmpty()) {
+                continue;
+            }
+
+            if (shapeNumber!=0) {
+                buffer += ",[";
+                buffer +=  QString("%1").arg(shapeNumber);
+                buffer += ",";
+                if (!textStyle.isEmpty()) {
+                    buffer += textStyle;
+                }
+                else {
+                    buffer += "NULL style";
+                }
+            }
+            else {
+                buffer += ",[\"";
+                buffer += text;
+                buffer += "\",";
+                if (!textStyle.isEmpty()) {
+                    buffer += textStyle;
+                }
+                else {
+                    buffer += "NULL style";
+                }
+            }
+            if (fabs(getShapeScaleAt(i))>RS::PointTolerance) {
+                buffer += ",S=";
+                buffer += QString("%1").arg(getShapeScaleAt(i));
+            }
+            if (fabs(getShapeRotationAt(i))) {
+                buffer += ",R=";
+                buffer += QString("%1").arg(RMath::rad2deg(getShapeRotationAt(i)));
+            }
+            if (fabs(getShapeOffsetAt(i).x)>RS::PointTolerance) {
+                buffer += ",X=";
+                buffer += QString("%1").arg(getShapeOffsetAt(i).x);
+            }
+            if (fabs(getShapeOffsetAt(i).y)>RS::PointTolerance) {
+                buffer += ",Y=";
+                buffer += QString("%1").arg(getShapeOffsetAt(i).y);
+            }
+            buffer += "]";
+        }
+        patternString = buffer;
+    }
+
+    return patternString;
+}
+
 QList<double> RLinetypePattern::getPattern() const {
     return pattern;
 }
@@ -364,6 +533,102 @@ double RLinetypePattern::getDashOffsetAt(const QList<double>& dashes, int i) con
         ret += fabs(dashes[k]);
     }
     return ret;
+}
+
+bool RLinetypePattern::hasShapeNumberAt(int i) const {
+    return shapeNumbers.contains(i);
+}
+
+int RLinetypePattern::getShapeNumberAt(int i) const {
+    if (!shapeNumbers.contains(i)) {
+        return 0;
+    }
+    return shapeNumbers[i];
+}
+
+void RLinetypePattern::setShapeNumberAt(int i, int num) {
+    shapeNumbers.insert(i, num);
+    patternString = "";
+}
+
+bool RLinetypePattern::hasShapeScaleAt(int i) const {
+    return shapeScales.contains(i);
+}
+
+double RLinetypePattern::getShapeScaleAt(int i) const {
+    if (!shapeScales.contains(i)) {
+        return 0.0;
+    }
+    return shapeScales[i];
+}
+
+void RLinetypePattern::setShapeScaleAt(int i, double s) {
+    shapeScales.insert(i, s);
+    patternString = "";
+}
+
+bool RLinetypePattern::hasShapeRotationAt(int i) const {
+    return shapeRotations.contains(i);
+}
+
+double RLinetypePattern::getShapeRotationAt(int i) const {
+    if (!shapeRotations.contains(i)) {
+        return 0.0;
+    }
+    return shapeRotations[i];
+}
+
+void RLinetypePattern::setShapeRotationAt(int i, double r) {
+    shapeRotations.insert(i, r);
+    patternString = "";
+}
+
+bool RLinetypePattern::hasShapeOffsetAt(int i) const {
+    return shapeOffsets.contains(i);
+}
+
+RVector RLinetypePattern::getShapeOffsetAt(int i) const {
+    if (!shapeOffsets.contains(i)) {
+        return RVector(0,0);
+    }
+    return shapeOffsets[i];
+}
+
+void RLinetypePattern::setShapeOffsetAt(int i, const RVector& offset) {
+    shapeOffsets.insert(i, offset);
+    patternString = "";
+}
+
+bool RLinetypePattern::hasShapeTextAt(int i) const {
+    return shapeTexts.contains(i);
+}
+
+QString RLinetypePattern::getShapeTextAt(int i) const {
+    if (!shapeTexts.contains(i)) {
+        return QString();
+    }
+    return shapeTexts[i];
+}
+
+void RLinetypePattern::setShapeTextAt(int i, const QString& t) {
+    shapeTexts.insert(i, t);
+    patternString = "";
+}
+
+bool RLinetypePattern::hasShapeTextStyleAt(int i) const {
+    return shapeTextStyles.contains(i);
+}
+
+QString RLinetypePattern::getShapeTextStyleAt(int i) const {
+    if (!shapeTextStyles.contains(i)) {
+        return QString();
+    }
+    return shapeTextStyles[i];
+}
+
+void RLinetypePattern::setShapeTextStyleAt(int i, const QString& t) {
+    shapeTextStyles.insert(i, t);
+    patternString = "";
 }
 
 bool RLinetypePattern::hasShapes() const {
@@ -399,7 +664,12 @@ QList<RPainterPath> RLinetypePattern::getShapeAt(int i) const {
     }
 }
 
+/**
+ * Updates the painter paths for the shapes in this pattern.
+ */
 void RLinetypePattern::updateShapes() {
+    shapes.clear();
+
     for (int i=0; i<pattern.length(); i++) {
         QString textStyle;
         QString text;
@@ -528,96 +798,12 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
             continue;
         }
 
-        // linetype pattern definition:
+        // linetype pattern definition ("A,3.81,[TRACK1,ltypeshp.shx,S=6.35],3.81"):
         else if (ltPattern!=NULL) {
-            QStringList parts;
-            QRegExp rx("\\[[^\\]]*\\]|A|([+-]?\\d+\\.?\\d*)|([+-]?\\d*\\.?\\d+)");
-
-            int pos = 0;
-            while ((pos = rx.indexIn(line, pos))!=-1) {
-                parts.append(rx.cap(0));
-                int l = rx.matchedLength();
-                if (l==0) {
-                    break;
-                }
-                pos += l;
-            }
-
-            if (parts.isEmpty()) {
-                continue;
-            }
-
-            if (parts.at(0).startsWith("A", Qt::CaseInsensitive)) {
-                parts.removeFirst();
-            }
-
-            QList<double> dashes;
-            for (int i = 0; i < parts.length(); i++) {
-                QString part = parts[i];
-                if (part.startsWith("[", Qt::CaseInsensitive)) {
-                    if (!RPluginLoader::hasPlugin("DWG")) {
-                        ret.removeLast();
-                        delete ltPattern;
-                        ltPattern = NULL;
-                        break;
-                    }
-
-                    QRegExp rx(
-                        "\\["
-                        "([^, ]*)"   // text
-                        "[, ]*"
-                        "([^, ]*)"   // style
-                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|[+-]?\\d*\\.\\d+)))?"
-                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|[+-]?\\d*\\.\\d+)))?"
-                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|[+-]?\\d*\\.\\d+)))?"
-                        "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|[+-]?\\d*\\.\\d+)))?"
-                        "\\]");
-                    rx.setCaseSensitivity(Qt::CaseInsensitive);
-
-                    rx.indexIn(part);
-
-                    int idx = dashes.length()-1;
-                    QString text = rx.cap(1);
-                    if (text.startsWith("\"") && text.endsWith("\"")) {
-                        text = text.mid(1, text.length()-2);
-                    }
-                    ltPattern->shapeTexts.insert(idx, text);
-                    ltPattern->shapeTextStyles.insert(idx, rx.cap(2));
-                    for (int k=3; k+1<=rx.captureCount(); k+=2) {
-                        QString c = rx.cap(k).toUpper();
-                        double val = rx.cap(k+1).toDouble();
-
-                        if (c=="S") {
-                            ltPattern->shapeScales.insert(idx, val);
-                        }
-                        if (c=="R") {
-                            ltPattern->shapeRotations.insert(idx, RMath::deg2rad(val));
-                        }
-                        if (c=="X") {
-                            if (ltPattern->shapeOffsets.contains(idx)) {
-                                ltPattern->shapeOffsets[idx].x = val;
-                            }
-                            else {
-                                ltPattern->shapeOffsets.insert(idx, RVector(val, 0));
-                            }
-                        }
-                        if (c=="Y") {
-                            if (ltPattern->shapeOffsets.contains(idx)) {
-                                ltPattern->shapeOffsets[idx].y = val;
-                            }
-                            else {
-                                ltPattern->shapeOffsets.insert(idx, RVector(0, val));
-                            }
-                        }
-                    }
-                } else {
-                    dashes.append(part.toDouble());
-                }
-            }
-
-            if (dashes.count() > 0 && ltPattern!=NULL) {
-                ltPattern->set(dashes);
-                ltPattern->updateShapes();
+            if (!ltPattern->setPatternString(line)) {
+                ret.removeLast();
+                delete ltPattern;
+                ltPattern = NULL;
             }
         }
     }
@@ -686,7 +872,7 @@ void RLinetypePattern::initNameMap() {
     nameMap.insert("FENCELINE2", tr("Fenceline 2"));
 
     nameMap.insert("DRAINAGE", tr("Drainage"));
-    nameMap.insert("DRAINAGE2", tr("Drainage Reverse"));
+    nameMap.insert("DRAINAGE2", tr("Drainage Reversed"));
 }
 
 /**
@@ -697,6 +883,7 @@ QDebug operator<<(QDebug dbg, const RLinetypePattern& p) {
     << (p.isMetric() ? "metric" : "imperial")
     << ", " << p.getName()
     << ", " << p.getDescription()
+    << ", string: " << p.getPatternString() << ", "
     << ", length: " << p.getPatternLength() << ", "
     << ", dashes: " << p.getNumDashes() << ", ";
     for (int i=0; i<p.getNumDashes(); ++i) {
@@ -706,36 +893,36 @@ QDebug operator<<(QDebug dbg, const RLinetypePattern& p) {
         dbg.nospace() << p.getDashLengthAt(i);
 
         bool gotShape = false;
-        if (p.shapeNumbers.contains(i) || p.shapeTexts.contains(i)) {
+        if (p.hasShapeNumberAt(i) || p.hasShapeTextAt(i)) {
             gotShape = true;
         }
 
         if (gotShape) {
             dbg.nospace() << "[";
         }
-        if (p.shapeTexts.contains(i)) {
-            dbg.nospace() << "text: " << p.shapeTexts.value(i);
+        if (p.hasShapeTextAt(i)) {
+            dbg.nospace() << "text: " << p.getShapeTextAt(i);
         }
-        if (p.shapeNumbers.contains(i)) {
-            dbg.nospace() << ", num: " << p.shapeNumbers.value(i);
+        if (p.hasShapeNumberAt(i)) {
+            dbg.nospace() << ", num: " << p.getShapeNumberAt(i);
         }
-        if (p.shapeTextStyles.contains(i)) {
-            dbg.nospace() << ", style: " << p.shapeTextStyles.value(i);
+        if (p.hasShapeTextStyleAt(i)) {
+            dbg.nospace() << ", style: " << p.getShapeTextStyleAt(i);
         }
-        if (p.shapeScales.contains(i)) {
-            dbg.nospace() << ", scale: " << p.shapeScales.value(i);
+        if (p.hasShapeScaleAt(i)) {
+            dbg.nospace() << ", scale: " << p.getShapeScaleAt(i);
         }
-        if (p.shapeRotations.contains(i)) {
-            dbg.nospace() << ", rotation: " << p.shapeRotations.value(i);
+        if (p.hasShapeRotationAt(i)) {
+            dbg.nospace() << ", rotation: " << p.getShapeRotationAt(i);
         }
-        if (p.shapeOffsets.contains(i)) {
-            dbg.nospace() << ", offset: " << p.shapeOffsets.value(i);
+        if (p.hasShapeOffsetAt(i)) {
+            dbg.nospace() << ", offset: " << p.getShapeOffsetAt(i);
         }
         if (gotShape) {
             dbg.nospace() << "]";
         }
     }
-    dbg.nospace() << "\nsymmetries: " << p.symmetries;
+    dbg.nospace() << "\nsymmetries: " << p.getSymmetries();
     dbg.nospace() << ")";
     return dbg.space();
 }

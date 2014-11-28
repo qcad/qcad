@@ -84,6 +84,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLabel, "getLabel");
             
+            REcmaHelper::registerFunction(&engine, proto, getPatternString, "getPatternString");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPatternString, "setPatternString");
+            
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -135,8 +139,8 @@
                 qScriptValueFromValue(&engine, RLinetype::PropertyMetric),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
-            ctor.setProperty("PropertyPattern",
-                qScriptValueFromValue(&engine, RLinetype::PropertyPattern),
+            ctor.setProperty("PropertyPatternString",
+                qScriptValueFromValue(&engine, RLinetype::PropertyPatternString),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -709,6 +713,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinetype::getLabel", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetype::getPatternString
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetype::getPatternString", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetype::getPatternString";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetype* self = 
+                        getSelf("getPatternString", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getPatternString();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetype.getPatternString().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetype::getPatternString", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetype::setPatternString
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetype::setPatternString", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetype::setPatternString";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetype* self = 
+                        getSelf("setPatternString", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPatternString(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetype.setPatternString().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetype::setPatternString", context, engine);
             return result;
         }
          QScriptValue

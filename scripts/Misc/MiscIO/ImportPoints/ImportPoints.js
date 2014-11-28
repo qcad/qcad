@@ -97,7 +97,7 @@ ImportPoints.prototype.beginEvent = function() {
  * Adds a menu for this action to Examples/Math Examples/ImportPoints.
  */
 ImportPoints.init = function(basePath) {
-    var action = new RGuiAction("&Import Points", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Import Points"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ImportPoints.js");
     action.setGroupSortOrder(52100);

@@ -51,6 +51,9 @@
         initLinetypes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDefaultLinetypes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getStorage
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

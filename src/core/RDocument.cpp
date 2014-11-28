@@ -280,6 +280,20 @@ void RDocument::initLinetypes(RTransaction* transaction) {
         transaction = new RTransaction(storage, "", false);
     }
 
+    QList<QSharedPointer<RObject> > lts = getDefaultLinetypes();
+    for (int i=0; i<lts.length(); i++) {
+        transaction->addObject(lts[i]);
+    }
+
+    if (useLocalTransaction) {
+        transaction->end();
+        delete transaction;
+    }
+}
+
+QList<QSharedPointer<RObject> > RDocument::getDefaultLinetypes() {
+    QList<QSharedPointer<RObject> > ret;
+
     // read patterns from file system and add to doc:
     QStringList patlist;
     if (RUnit::isMetric(getUnit())) {
@@ -291,15 +305,13 @@ void RDocument::initLinetypes(RTransaction* transaction) {
     for (int i = 0; i < patlist.length(); i++) {
         QString name = patlist[i];
 
-        RLinetypePattern* pattern;
+        RLinetypePattern* pattern = NULL;
         if (RUnit::isMetric(getUnit())) {
             pattern = RLinetypeListMetric::get(name);
         }
         else {
             pattern = RLinetypeListImperial::get(name);
         }
-
-        //qDebug() << "pattern: " << *pattern;
 
         if (pattern!=NULL) {
             QSharedPointer<RLinetype> lt = queryLinetype(name);
@@ -309,16 +321,13 @@ void RDocument::initLinetypes(RTransaction* transaction) {
             }
             else {
                 // replace previous pattern (e.g. on unit change):
-                lt->setPattern(*pattern);
+                lt->setPatternString(pattern->getPatternString());
             }
-            transaction->addObject(lt);
+            ret.append(lt);
         }
     }
 
-    if (useLocalTransaction) {
-        transaction->end();
-        delete transaction;
-    }
+    return ret;
 }
 
 

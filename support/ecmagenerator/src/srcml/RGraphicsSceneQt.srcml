@@ -479,21 +479,8 @@ dir="./gui" filename="RGraphicsSceneQt.h">
       <name>p2</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>exportPainterPathSource</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RPainterPathSource</name>&amp;</type>
-      <name>pathSource</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
+  <comment type="line">//virtual void exportPainterPathSource(const
+  RPainterPathSource&amp; pathSource);</comment>
   <function_decl>
   <type>
     <name>virtual</name>

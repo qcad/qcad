@@ -24,7 +24,7 @@
 RPropertyTypeId RLinetype::PropertyName;
 RPropertyTypeId RLinetype::PropertyDescription;
 RPropertyTypeId RLinetype::PropertyMetric;
-RPropertyTypeId RLinetype::PropertyPattern;
+RPropertyTypeId RLinetype::PropertyPatternString;
 
 RLinetype::RLinetype(RDocument* document) : RObject(document) {
 }
@@ -48,7 +48,7 @@ void RLinetype::init() {
     RLinetype::PropertyName.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Name"));
     RLinetype::PropertyDescription.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Description"));
     RLinetype::PropertyMetric.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Metric"));
-    RLinetype::PropertyPattern.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Pattern"));
+    RLinetype::PropertyPatternString.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Pattern"));
 }
 
 bool RLinetype::setProperty(RPropertyTypeId propertyTypeId,
@@ -60,7 +60,13 @@ bool RLinetype::setProperty(RPropertyTypeId propertyTypeId,
     ret = RObject::setMember(pattern.name, value, PropertyName == propertyTypeId);
     ret = RObject::setMember(pattern.description, value, PropertyDescription == propertyTypeId);
     ret = RObject::setMember(pattern.metric, value, PropertyMetric == propertyTypeId);
-    ret = RObject::setMember(pattern.pattern, value, PropertyPattern == propertyTypeId);
+
+    if (propertyTypeId==PropertyPatternString) {
+        if (pattern.getPatternString()!=value.toString()) {
+            pattern.setPatternString(value.toString());
+            ret = true;
+        }
+    }
     return ret;
 }
 
@@ -77,10 +83,10 @@ QPair<QVariant, RPropertyAttributes> RLinetype::getProperty(
     if (propertyTypeId == PropertyMetric) {
         return qMakePair(QVariant(pattern.metric), RPropertyAttributes());
     }
-    if (propertyTypeId == PropertyPattern) {
+    if (propertyTypeId == PropertyPatternString) {
         QVariant v;
-        v.setValue(pattern.pattern);
-        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
+        v.setValue(pattern.getPatternString());
+        return qMakePair(v, RPropertyAttributes());
     }
 
     return qMakePair(QVariant(), RPropertyAttributes());
@@ -113,4 +119,3 @@ void RLinetype::print(QDebug dbg) const {
         << ", pattern: " << getPattern()
         << ")";
 }
-

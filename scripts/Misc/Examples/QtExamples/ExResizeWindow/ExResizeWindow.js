@@ -54,7 +54,7 @@ ExResizeWindow.prototype.beginEvent = function() {
  * Adds a menu for this action to Examples/Math Examples/ExResizeWindow.
  */
 ExResizeWindow.init = function(basePath) {
-    var action = new RGuiAction("&Resize Window", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Resize Window"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ExResizeWindow.js");
     action.setGroupSortOrder(79600);

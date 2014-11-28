@@ -520,17 +520,17 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         return false;
     }
 
-    // TODO: make more generic, so any object can choose to be cloned here:
-    // i.e. if (object.cloneInsteadOfChange()) { ... }
-    QSharedPointer<RLinetype> lt = object.dynamicCast<RLinetype>();
-    if (!lt.isNull() && lt->getId()!=RObject::INVALID_ID) {
-        qDebug() << "replace linetype";
-        QSharedPointer<RLinetype> clone = QSharedPointer<RLinetype>(lt->clone());
-        objectStorage->setObjectId(*clone, RObject::INVALID_ID);
-        deleteObject(lt->getId());
-        addObject(clone, useCurrentAttributes, false, modifiedPropertyTypeIds);
-        return true;
-    }
+    // TODO: add generic way to allow any object not to be cloned here:
+    // i.e. if (object.cloneInsteadOfUpdate()) { ... }
+//    QSharedPointer<RLinetype> lt = object.dynamicCast<RLinetype>();
+//    if (!lt.isNull() && lt->getId()!=RObject::INVALID_ID) {
+//        qDebug() << "replace linetype";
+//        QSharedPointer<RLinetype> clone = QSharedPointer<RLinetype>(lt->clone());
+//        objectStorage->setObjectId(*clone, RObject::INVALID_ID);
+//        deleteObject(lt->getId());
+//        addObject(clone, useCurrentAttributes, false, modifiedPropertyTypeIds);
+//        return true;
+//    }
 
     QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
 
@@ -613,7 +613,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     }
 
     // if object is a linetype,
-    // look up existing layer based on case insensitive name comparison:
+    // look up existing linetype based on case insensitive name comparison:
     if (!existingLinetypeDetectionDisabled && object->getId()==RObject::INVALID_ID) {
         QSharedPointer<RLinetype> linetype = object.dynamicCast<RLinetype>();
         if (!linetype.isNull()) {
@@ -654,6 +654,9 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             fail();
             return false;
         }
+
+        //qDebug() << "old obj: " << *oldObject;
+        //qDebug() << "new obj: " << *object;
 
         // iterate through all properties of the original object
         // and store the property changes (if any) in this transaction:

@@ -80,7 +80,7 @@ ExAddBlock.prototype.beginEvent = function() {
  * Adds a menu for this action to Examples/Math Examples/ExAddBlock.
  */
 ExAddBlock.init = function(basePath) {
-    var action = new RGuiAction("&Create Block", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Create Block"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExAddBlock.js");
     action.setGroupSortOrder(79100);

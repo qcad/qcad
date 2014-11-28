@@ -454,8 +454,6 @@ void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
             path.setPen(getPen(path));
         }
 
-        qDebug() << path.getPen();
-
         if (!exportToPreview) {
             // export into current path (used for complex linetypes):
             if (currentPainterPath.isValid()) {

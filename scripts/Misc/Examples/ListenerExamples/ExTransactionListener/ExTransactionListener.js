@@ -57,7 +57,7 @@ ExTransactionListener.prototype.beginEvent = function() {
  * Adds a menu for this action to the menu.
  */
 ExTransactionListener.init = function(basePath) {
-    var action = new RGuiAction("&Transaction Listener", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Transaction Listener"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ExTransactionListener.js");
     action.setGroupSortOrder(79500);

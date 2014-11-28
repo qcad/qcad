@@ -38,11 +38,11 @@ public:
     QSize sizeHint(const QStyleOptionViewItem& option,
                    const QModelIndex& index) const;
 
-    static QImage getPreviewImage(const RLinetypePattern& pattern, int width);
+    QImage getPreviewImage(const RLinetypePattern& pattern, int width) const;
 
 private:
     static int previewHeight;
-    static QMap<int, QMap<QString, QImage> > previewCache;
+    mutable QMap<int, QMap<QString, QImage> > previewCache;
 };
 
 Q_DECLARE_METATYPE(RLinetypeComboDelegate*)

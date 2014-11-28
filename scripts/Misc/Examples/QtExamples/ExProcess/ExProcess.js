@@ -76,7 +76,7 @@ ExProcess.prototype.beginEvent = function() {
  * Adds a menu for this action to Examples/Math Examples/ExProcess.
  */
 ExProcess.init = function(basePath) {
-    var action = new RGuiAction("&Run process", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Run process"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ExProcess.js");
     action.setGroupSortOrder(79600);

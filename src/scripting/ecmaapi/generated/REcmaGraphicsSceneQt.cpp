@@ -110,8 +110,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportRectangle, "exportRectangle");
             
-            REcmaHelper::registerFunction(&engine, proto, exportPainterPathSource, "exportPainterPathSource");
-            
             REcmaHelper::registerFunction(&engine, proto, exportPainterPaths, "exportPainterPaths");
             
             REcmaHelper::registerFunction(&engine, proto, exportImage, "exportImage");
@@ -1982,71 +1980,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::exportRectangle", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsSceneQt::exportPainterPathSource
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::exportPainterPathSource", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::exportPainterPathSource";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsSceneQt* self = 
-                        getSelf("exportPainterPathSource", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RPainterPathSource */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is reference
-                    RPainterPathSource*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RPainterPathSource*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 0 is not of type RPainterPathSource*.",
-                               context);                    
-                    }
-                    RPainterPathSource& a0 = *ap0;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->exportPainterPathSource(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.exportPainterPathSource().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::exportPainterPathSource", context, engine);
             return result;
         }
          QScriptValue

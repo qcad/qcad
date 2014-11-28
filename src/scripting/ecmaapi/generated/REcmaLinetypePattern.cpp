@@ -68,6 +68,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, isMetric, "isMetric");
             
+            REcmaHelper::registerFunction(&engine, proto, setMetric, "setMetric");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPatternString, "setPatternString");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPatternString, "getPatternString");
+            
             REcmaHelper::registerFunction(&engine, proto, getPattern, "getPattern");
             
             REcmaHelper::registerFunction(&engine, proto, getPatternLength, "getPatternLength");
@@ -75,6 +81,42 @@
             REcmaHelper::registerFunction(&engine, proto, getDashLengthAt, "getDashLengthAt");
             
             REcmaHelper::registerFunction(&engine, proto, getDashOffsetAt, "getDashOffsetAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasShapeNumberAt, "hasShapeNumberAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getShapeNumberAt, "getShapeNumberAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, setShapeNumberAt, "setShapeNumberAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasShapeScaleAt, "hasShapeScaleAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getShapeScaleAt, "getShapeScaleAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, setShapeScaleAt, "setShapeScaleAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasShapeRotationAt, "hasShapeRotationAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getShapeRotationAt, "getShapeRotationAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, setShapeRotationAt, "setShapeRotationAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasShapeOffsetAt, "hasShapeOffsetAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getShapeOffsetAt, "getShapeOffsetAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, setShapeOffsetAt, "setShapeOffsetAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasShapeTextAt, "hasShapeTextAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getShapeTextAt, "getShapeTextAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, setShapeTextAt, "setShapeTextAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasShapeTextStyleAt, "hasShapeTextStyleAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getShapeTextStyleAt, "getShapeTextStyleAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, setShapeTextStyleAt, "setShapeTextStyleAt");
             
             REcmaHelper::registerFunction(&engine, proto, getShapeIndices, "getShapeIndices");
             
@@ -93,6 +135,8 @@
             REcmaHelper::registerFunction(&engine, proto, getDelta, "getDelta");
             
             REcmaHelper::registerFunction(&engine, proto, getPatternOffset, "getPatternOffset");
+            
+            REcmaHelper::registerFunction(&engine, proto, getSymmetries, "getSymmetries");
             
             REcmaHelper::registerFunction(&engine, proto, scale, "scale");
             
@@ -127,10 +171,6 @@
 
     // static properties:
     
-            ctor.setProperty("nameMap",
-                qScriptValueFromValue(&engine, RLinetypePattern::nameMap),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
 
     // enum values:
     
@@ -950,6 +990,170 @@
             return result;
         }
          QScriptValue
+        REcmaLinetypePattern::setMetric
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::setMetric", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::setMetric";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("setMetric", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setMetric(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.setMetric().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::setMetric", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::setPatternString
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::setPatternString", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::setPatternString";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("setPatternString", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->setPatternString(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.setPatternString().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::setPatternString", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::getPatternString
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::getPatternString", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::getPatternString";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("getPatternString", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getPatternString();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.getPatternString().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::getPatternString", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaLinetypePattern::getPattern
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1179,6 +1383,1146 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinetypePattern::getDashOffsetAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::hasShapeNumberAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::hasShapeNumberAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::hasShapeNumberAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("hasShapeNumberAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasShapeNumberAt(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.hasShapeNumberAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::hasShapeNumberAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::getShapeNumberAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::getShapeNumberAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::getShapeNumberAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("getShapeNumberAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getShapeNumberAt(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.getShapeNumberAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::getShapeNumberAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::setShapeNumberAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::setShapeNumberAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::setShapeNumberAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("setShapeNumberAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setShapeNumberAt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.setShapeNumberAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::setShapeNumberAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::hasShapeScaleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::hasShapeScaleAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::hasShapeScaleAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("hasShapeScaleAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasShapeScaleAt(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.hasShapeScaleAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::hasShapeScaleAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::getShapeScaleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::getShapeScaleAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::getShapeScaleAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("getShapeScaleAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getShapeScaleAt(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.getShapeScaleAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::getShapeScaleAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::setShapeScaleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::setShapeScaleAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::setShapeScaleAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("setShapeScaleAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setShapeScaleAt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.setShapeScaleAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::setShapeScaleAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::hasShapeRotationAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::hasShapeRotationAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::hasShapeRotationAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("hasShapeRotationAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasShapeRotationAt(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.hasShapeRotationAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::hasShapeRotationAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::getShapeRotationAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::getShapeRotationAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::getShapeRotationAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("getShapeRotationAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getShapeRotationAt(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.getShapeRotationAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::getShapeRotationAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::setShapeRotationAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::setShapeRotationAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::setShapeRotationAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("setShapeRotationAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setShapeRotationAt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.setShapeRotationAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::setShapeRotationAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::hasShapeOffsetAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::hasShapeOffsetAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::hasShapeOffsetAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("hasShapeOffsetAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasShapeOffsetAt(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.hasShapeOffsetAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::hasShapeOffsetAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::getShapeOffsetAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::getShapeOffsetAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::getShapeOffsetAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("getShapeOffsetAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getShapeOffsetAt(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.getShapeOffsetAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::getShapeOffsetAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::setShapeOffsetAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::setShapeOffsetAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::setShapeOffsetAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("setShapeOffsetAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RLinetypePattern: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setShapeOffsetAt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.setShapeOffsetAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::setShapeOffsetAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::hasShapeTextAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::hasShapeTextAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::hasShapeTextAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("hasShapeTextAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasShapeTextAt(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.hasShapeTextAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::hasShapeTextAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::getShapeTextAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::getShapeTextAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::getShapeTextAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("getShapeTextAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getShapeTextAt(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.getShapeTextAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::getShapeTextAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::setShapeTextAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::setShapeTextAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::setShapeTextAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("setShapeTextAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setShapeTextAt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.setShapeTextAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::setShapeTextAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::hasShapeTextStyleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::hasShapeTextStyleAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::hasShapeTextStyleAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("hasShapeTextStyleAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasShapeTextStyleAt(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.hasShapeTextStyleAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::hasShapeTextStyleAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::getShapeTextStyleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::getShapeTextStyleAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::getShapeTextStyleAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("getShapeTextStyleAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getShapeTextStyleAt(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.getShapeTextStyleAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::getShapeTextStyleAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::setShapeTextStyleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::setShapeTextStyleAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::setShapeTextStyleAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("setShapeTextStyleAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setShapeTextStyleAt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.setShapeTextStyleAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::setShapeTextStyleAt", context, engine);
             return result;
         }
          QScriptValue
@@ -1670,6 +3014,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinetypePattern::getPatternOffset", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::getSymmetries
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::getSymmetries", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::getSymmetries";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("getSymmetries", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < double >'
+    QList < double > cppResult =
+        
+               self->getSymmetries();
+        // return type: QList < double >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.getSymmetries().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::getSymmetries", context, engine);
             return result;
         }
          QScriptValue

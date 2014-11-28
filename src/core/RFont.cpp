@@ -96,7 +96,7 @@ bool RFont::load() {
     QString path;
 
     // Search for the appropriate font if we only have the name of the font:
-    if (!fileName.toLower().contains(".cxf")) {
+    if (!fileName.toLower().endsWith(".cxf")) {
         QStringList fonts = RS::getFontList();
         for (int i=0; i<fonts.size(); ++i) {
             QString p = fonts.at(i);

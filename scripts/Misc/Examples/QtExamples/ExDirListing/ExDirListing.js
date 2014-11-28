@@ -61,7 +61,7 @@ ExDirListing.prototype.beginEvent = function() {
  * Adds a menu for this action to Examples/Math Examples/ExDirListing.
  */
 ExDirListing.init = function(basePath) {
-    var action = new RGuiAction("&Directory Listing", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Directory Listing"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ExDirListing.js");
     action.setGroupSortOrder(79600);

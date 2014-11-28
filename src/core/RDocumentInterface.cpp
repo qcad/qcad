@@ -1737,6 +1737,7 @@ RTransaction RDocumentInterface::applyOperation(const ROperation* operation) {
  */
 void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
     bool ucsHasChanged = false;
+    bool linetypeHasChanged = false;
     bool layerHasChanged = false;
     bool blockHasChanged = false;
     bool viewHasChanged = false;
@@ -1754,6 +1755,7 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
         QSharedPointer<RDocumentVariables> docVars = object.dynamicCast<RDocumentVariables> ();
         if (!docVars.isNull()) {
             ucsHasChanged = true;
+            linetypeHasChanged = true;
             layerHasChanged = true;
             blockHasChanged = true;
             viewHasChanged = true;
@@ -1770,6 +1772,12 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
         QSharedPointer<RUcs> ucs = object.dynamicCast<RUcs> ();
         if (!ucs.isNull()) {
             ucsHasChanged = true;
+            continue;
+        }
+
+        QSharedPointer<RLinetype> linetype = object.dynamicCast<RLinetype> ();
+        if (!linetype.isNull()) {
+            linetypeHasChanged = true;
             continue;
         }
 
@@ -1812,6 +1820,10 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
         if (ucsHasChanged) {
             RMainWindow::getMainWindow()->notifyUcsListeners(this);
         }
+        if (linetypeHasChanged) {
+            // TODO:
+            //RMainWindow::getMainWindow()->notifyLinetypeListeners(this);
+        }
         if (layerHasChanged) {
             RMainWindow::getMainWindow()->notifyLayerListeners(this);
         }
@@ -1823,7 +1835,7 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
         }
     }
 
-    if (layerHasChanged || blockHasChanged) {
+    if (layerHasChanged || blockHasChanged || linetypeHasChanged) {
         if (allowRegeneration) {
             regenerateScenes(true);
         }

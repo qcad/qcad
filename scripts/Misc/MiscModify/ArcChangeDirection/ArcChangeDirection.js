@@ -64,7 +64,7 @@ ArcChangeDirection.prototype.beginEvent = function() {
 };
 
 ArcChangeDirection.init = function(basePath) {
-    var action = new RGuiAction("Change Arc Direction", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("Change Arc Direction"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ArcChangeDirection.js");
     action.setGroupSortOrder(56100);

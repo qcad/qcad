@@ -77,7 +77,7 @@ BlockFixNames.prototype.beginEvent = function() {
  * Adds a menu for this action to Examples/Math Examples/BlockFixNames.
  */
 BlockFixNames.init = function(basePath) {
-    var action = new RGuiAction("&Fix Block Names", RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Fix Block Names"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/BlockFixNames.js");
     action.setGroupSortOrder(60100);

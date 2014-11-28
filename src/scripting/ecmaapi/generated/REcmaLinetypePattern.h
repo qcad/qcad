@@ -73,6 +73,15 @@
         isMetric
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setMetric
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPatternString
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPatternString
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPattern
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -83,6 +92,60 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDashOffsetAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasShapeNumberAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShapeNumberAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setShapeNumberAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasShapeScaleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShapeScaleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setShapeScaleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasShapeRotationAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShapeRotationAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setShapeRotationAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasShapeOffsetAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShapeOffsetAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setShapeOffsetAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasShapeTextAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShapeTextAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setShapeTextAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasShapeTextStyleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShapeTextStyleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setShapeTextStyleAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getShapeIndices
@@ -110,6 +173,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getPatternOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSymmetries
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         scale

@@ -13,4 +13,6 @@ function init(basePath) {
     action.setGroupSortOrder(2700);
     action.setSortOrder(200);
     action.setWidgetNames(["EditMenu", "ResetToolBar"]);
+
+    RSettings.setValue("Reset/VisibleInToolBar", true);
 }
