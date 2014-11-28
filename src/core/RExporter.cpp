@@ -177,7 +177,8 @@ void RExporter::setPen(const QPen& pen) {
 QPen RExporter::getPen(const RPainterPath& path) {
     QPen pen = currentPen;
 
-    if (draftMode /*|| screenBasedLinetypes*/) {
+    // required for text widths in screen based linetype mode:
+    if (draftMode || screenBasedLinetypes) {
         pen.setWidth(0);
     }
 

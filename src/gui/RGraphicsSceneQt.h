@@ -87,7 +87,7 @@ public:
     virtual void exportTriangle(const RTriangle& triangle);
     virtual void exportRectangle(const RVector& p1, const RVector& p2);
 
-    virtual void exportPainterPathSource(const RPainterPathSource& pathSource);
+    //virtual void exportPainterPathSource(const RPainterPathSource& pathSource);
     virtual void exportPainterPaths(const QList<RPainterPath>& paths);
     virtual void exportImage(const RImageData& image);
 

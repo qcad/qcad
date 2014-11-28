@@ -432,9 +432,9 @@ void RGraphicsSceneQt::exportRectangle(const RVector& p1,
     }
 }
 
-void RGraphicsSceneQt::exportPainterPathSource(const RPainterPathSource& pathSource) {
-    exportPainterPaths(pathSource.getPainterPaths(false));
-}
+//void RGraphicsSceneQt::exportPainterPathSource(const RPainterPathSource& pathSource) {
+//    exportPainterPaths(pathSource.getPainterPaths(false));
+//}
 
 void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
     if (getEntity() == NULL && !exportToPreview) {
@@ -453,6 +453,8 @@ void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
         else {
             path.setPen(getPen(path));
         }
+
+        qDebug() << path.getPen();
 
         if (!exportToPreview) {
             // export into current path (used for complex linetypes):

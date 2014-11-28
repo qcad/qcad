@@ -23,6 +23,8 @@
 RShapesExporter::RShapesExporter(RExporter& exporter, const QList<QSharedPointer<RShape> >& shapes, double offset) :
     RExporter(exporter.getDocument()), exporter(exporter), shapes(shapes) {
 
+
+    //setScreenBasedLinetypes(exporter.getScreenBasedLinetypes());
     double length = 0.0;
 
     for (int i=0; i<shapes.length(); i++) {
