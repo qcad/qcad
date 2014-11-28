@@ -66,6 +66,7 @@ macx {
         QMAKE_OBJECTIVE_CFLAGS_X86 =
         QMAKE_LFLAGS_X86 =
     }
+    QMAKE_CXXFLAGS_X86 += -Werror=return-type
     !macx-clang-libc++ {
         QMAKE_CXXFLAGS += -mmacosx-version-min=10.6
     }
