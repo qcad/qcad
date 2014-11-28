@@ -441,6 +441,8 @@ bool RLinetypePattern::setPatternString(const QString& patternString) {
     }
 
     this->patternString = patternString;
+
+    return true;
 }
 
 QString RLinetypePattern::getPatternString() const {
