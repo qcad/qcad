@@ -157,8 +157,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getCorrectedFileName", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -242,8 +242,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportFile", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -335,6 +335,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportPoint", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -403,6 +405,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportArcSegment", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -480,6 +484,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLineSegment", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -557,6 +563,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportTriangle", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -625,6 +633,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportXLine", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -694,8 +704,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getLineTypePatternScale", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -776,8 +786,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getErrorMessage", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -838,6 +848,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setLayerSource", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -903,6 +915,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setBlockSource", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -968,6 +982,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setProjectionRenderingHint", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1034,8 +1050,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getProjectionRenderingHint", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1096,6 +1112,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setPen", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1164,8 +1182,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getPen", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1240,8 +1258,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getPen", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1302,6 +1320,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setBrush", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1370,8 +1390,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getBrush", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1446,8 +1466,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getBrush", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1508,6 +1528,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setEntityAttributes", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1573,6 +1595,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setStyle", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1638,6 +1662,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setBrushStyle", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1703,6 +1729,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setDashPattern", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1770,6 +1798,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setColor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1861,6 +1891,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setColor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1928,6 +1960,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setLineweight", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1993,6 +2027,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setLinetypeId", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2058,6 +2094,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setLinetypePattern", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2126,8 +2164,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getLinetypePattern", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2189,8 +2227,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getBlockRefOrEntity", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2252,8 +2290,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getEntity", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2315,8 +2353,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::isEntitySelected", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2377,6 +2415,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::startExport", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2430,6 +2470,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::endExport", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2484,8 +2526,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportDocument", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2547,8 +2589,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportDocumentSettings", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2609,6 +2651,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportDocumentSetting", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2685,6 +2729,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLayers", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2738,6 +2784,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBlocks", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2791,6 +2839,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportViews", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2844,6 +2894,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLinetypes", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2897,6 +2949,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLayer", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2961,6 +3015,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLayer", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3026,6 +3082,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBlock", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3090,6 +3148,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBlock", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3155,6 +3215,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportView", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3219,6 +3281,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportView", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3284,6 +3348,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLinetype", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3349,6 +3415,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntities", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3422,6 +3490,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntities", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3488,6 +3558,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntities", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3562,6 +3634,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntity", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3653,6 +3727,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntity", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3736,6 +3812,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::startEntity", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3801,6 +3879,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::endEntity", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3854,6 +3934,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportCurrentEntity", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3928,6 +4010,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::unexportEntity", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3993,6 +4077,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportShapes", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4058,6 +4144,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportShape", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4123,6 +4211,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportShapeSegment", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4189,8 +4279,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLine", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4326,6 +4416,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportCircle", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4393,6 +4485,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportArc", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4469,6 +4563,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEllipse", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4545,6 +4641,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportPolyline", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4630,6 +4728,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportSpline", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4706,6 +4806,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportSplineSegment", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4773,6 +4875,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportPainterPaths", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4837,6 +4941,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportPainterPaths", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4922,6 +5028,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBoundingBoxPaths", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4987,6 +5095,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportImage", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5054,6 +5164,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportQuad", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5154,6 +5266,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportVerticalQuad", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5241,6 +5355,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBox", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5308,6 +5424,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportRectangle", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5387,8 +5505,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getEntityStack", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5449,6 +5567,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setDraftMode", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5514,6 +5634,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::toggleDraftMode", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5568,8 +5690,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getDraftMode", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5630,6 +5752,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setTwoColorSelectedMode", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5696,8 +5820,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getTwoColorSelectedMode", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5758,6 +5882,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setScreenBasedLinetypes", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5823,6 +5949,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::toggleScreenBasedLinetypes", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5877,8 +6005,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getScreenBasedLinetypes", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5940,8 +6068,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::isVisualExporter", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6002,6 +6130,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setVisualExporter", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6068,8 +6198,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getPixelSizeHint", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6130,6 +6260,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setPixelSizeHint", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

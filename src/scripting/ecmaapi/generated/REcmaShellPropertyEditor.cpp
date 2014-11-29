@@ -117,6 +117,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateFromDocument", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -210,6 +212,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateFromObject", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -285,6 +289,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::clearEditor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -339,6 +345,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::propertyChanged", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -432,6 +440,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::listPropertyChanged", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -526,8 +536,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::getGroupTitles", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -590,8 +600,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::getPropertyTitles", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -666,8 +676,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::getPropertyValue", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -742,8 +752,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::getPropertyValue", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -827,8 +837,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::getPropertyAttributes", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -903,8 +913,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::getPropertyAttributes", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -988,8 +998,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::getTypes", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1052,8 +1062,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::getTypeCount", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1128,8 +1138,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::checkType", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1212,6 +1222,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateEditor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1300,6 +1312,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateGui", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1379,6 +1393,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateProperty", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1469,6 +1485,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::removeAllButThese", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

@@ -210,6 +210,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnap::showUiOptions", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -264,6 +266,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnap::hideUiOptions", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -319,8 +323,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnap::getEntityIds", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -383,8 +387,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnap::getStatus", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -447,8 +451,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnap::getLastSnap", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -510,6 +514,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnap::reset", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

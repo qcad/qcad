@@ -104,6 +104,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRunner::doWork", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

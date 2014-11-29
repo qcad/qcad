@@ -115,6 +115,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellWidget::removeAction", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -181,6 +183,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellWidget::addAction", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -247,6 +251,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellWidget::insertAction", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

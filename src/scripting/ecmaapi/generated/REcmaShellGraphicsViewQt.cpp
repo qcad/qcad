@@ -134,6 +134,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::disableGestures", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -188,6 +190,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::repaintView", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -242,6 +246,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::repaintNow", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -297,8 +303,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::hasFocus", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -360,6 +366,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::removeFocus", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -415,8 +423,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getWidth", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -479,8 +487,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getHeight", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -543,8 +551,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getCursor", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -606,6 +614,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setCursor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -670,6 +680,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setCursor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -738,6 +750,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setFocusFrameWidget", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -804,6 +818,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::viewportChangeEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -858,6 +874,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::emitUpdateSnapInfo", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -933,6 +951,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::emitUpdateTextLabel", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1002,8 +1022,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::sizeHint", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1070,8 +1090,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::event", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1150,8 +1170,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::gestureEvent", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1229,6 +1249,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::focusInEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1299,6 +1321,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::focusOutEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1369,6 +1393,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::tabletEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1439,6 +1465,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::mouseMoveEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1509,6 +1537,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::mousePressEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1579,6 +1609,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::mouseReleaseEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1649,6 +1681,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::mouseDoubleClickEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1719,6 +1753,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::wheelEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1789,6 +1825,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::paintEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1859,6 +1897,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::resizeEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1929,6 +1969,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::keyPressEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1999,6 +2041,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::keyReleaseEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2069,6 +2113,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::dragEnterEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2139,6 +2185,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::dropEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2211,6 +2259,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setViewportNumber", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2277,8 +2327,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getViewportNumber", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2339,6 +2389,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setNavigationAction", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2405,8 +2457,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getBox", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2467,6 +2519,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::autoZoom", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2541,6 +2595,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::zoomTo", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2617,6 +2673,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::zoom", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2693,6 +2751,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::centerToBox", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2760,6 +2820,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::centerToPoint", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2827,6 +2889,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setGrid", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2893,8 +2957,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getGrid", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2956,8 +3020,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getFactor", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3030,6 +3094,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setFactor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3105,8 +3171,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getOffset", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3179,6 +3245,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setOffset", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3256,8 +3324,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getBackgroundColor", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3318,6 +3386,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setMargin", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3383,6 +3453,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setColorMode", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3448,6 +3520,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setHairlineMode", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3514,8 +3588,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getHairlineMode", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3577,8 +3651,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getScene", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3640,8 +3714,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getDocument", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3703,8 +3777,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getDocumentInterface", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3765,6 +3839,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setPrinting", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3831,8 +3907,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::isPrinting", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3893,6 +3969,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setPrintPreview", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3959,8 +4037,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::isPrintPreview", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4021,6 +4099,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setPrintPointSize", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4088,6 +4168,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::simulateMouseMoveEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4141,6 +4223,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setTextHeightThresholdOverride", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4207,8 +4291,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getTextHeightThresholdOverride", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4270,8 +4354,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::isGridVisible", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4332,6 +4416,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setGridVisible", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4397,6 +4483,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setScene", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4471,6 +4559,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setBackgroundColor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4538,6 +4628,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::regenerate", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4603,6 +4695,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::updateImage", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4656,6 +4750,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::saveViewport", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4709,6 +4805,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::restoreViewport", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4763,8 +4861,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::mapFromView", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4849,8 +4947,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::mapToView", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4926,8 +5024,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::mapDistanceFromView", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5001,8 +5099,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::mapDistanceToView", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5075,6 +5173,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::resizeImage", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5149,6 +5249,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::paintGridPoint", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5216,6 +5318,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::paintGridLine", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5283,6 +5387,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setPaintOrigin", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5348,6 +5454,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setAntialiasing", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5414,8 +5522,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getAntialiasing", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5476,6 +5584,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setPanOptimization", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5542,8 +5652,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getPanOptimization", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5604,6 +5714,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::paintEntities", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5680,6 +5792,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::paintEntity", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5755,8 +5869,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getBuffer", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5818,8 +5932,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getTransform", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5880,6 +5994,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::emitDecorateBackground", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5945,6 +6061,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::emitDecorateForeground", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6010,6 +6128,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::clearBackground", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6063,6 +6183,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::addToBackground", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6130,6 +6252,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setBackgroundTransform", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6206,6 +6330,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setColorCorrectionOverride", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6272,8 +6398,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getColorCorrectionOverride", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6336,6 +6462,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::clearCaches", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6389,6 +6517,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setDisplayOnlyCurrentUcs", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6455,8 +6585,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::mapCornersFromView", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6518,8 +6648,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getMinimum", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6581,8 +6711,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getMaximum", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6643,6 +6773,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::handleTerminateEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6708,6 +6840,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::handleKeyPressEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6773,6 +6907,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::handleKeyReleaseEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6838,6 +6974,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::handleMouseMoveEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6903,6 +7041,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::handleMousePressEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6968,6 +7108,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::handleMouseReleaseEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7033,6 +7175,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::handleMouseDoubleClickEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7098,6 +7242,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::handleWheelEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7163,6 +7309,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::handleTabletEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7228,6 +7376,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::handleSwipeGestureEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7293,6 +7443,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::handlePanGestureEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7358,6 +7510,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::handlePinchGestureEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7423,6 +7577,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::zoomIn", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7475,6 +7631,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::zoomIn", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7542,6 +7700,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::zoomOut", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7594,6 +7754,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::zoomOut", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7661,6 +7823,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::zoomPrevious", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7715,8 +7879,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::zoomToSelection", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7777,6 +7941,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::pan", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7853,6 +8019,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::startPan", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7907,8 +8075,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getClosestReferencePoint", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7992,8 +8160,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getClosestReferencePoint", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8078,8 +8246,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getClosestEntity", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8182,8 +8350,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getMargin", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8245,8 +8413,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getColorMode", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8308,8 +8476,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getTextLabels", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8370,6 +8538,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::clearTextLabels", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8423,6 +8593,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::addTextLabel", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8491,8 +8663,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getLastKnownMousePosition", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8554,8 +8726,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getCurrentStepScaleFactor", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8616,6 +8788,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setCurrentStepScaleFactor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8682,8 +8856,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::getCurrentStepOffset", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8744,6 +8918,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::setCurrentStepOffset", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8811,6 +8987,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::updateTextHeightThreshold", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8865,8 +9043,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::isPathVisible", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

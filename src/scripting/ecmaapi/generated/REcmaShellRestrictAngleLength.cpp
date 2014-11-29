@@ -133,8 +133,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::restrictSnap", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -221,6 +221,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setBaseAngle", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -287,6 +289,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setAngle", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -353,6 +357,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setBaseLength", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -419,6 +425,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setLength", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -485,6 +493,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setRestrictAngle", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -551,6 +561,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setRestrictLength", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -619,6 +631,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::showUiOptions", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -672,6 +686,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::hideUiOptions", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -726,8 +742,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::getLastSnap", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -788,6 +804,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::reset", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

@@ -131,8 +131,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::importFile", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -219,6 +219,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::startImport", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -272,6 +274,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::endImport", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -325,6 +329,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::importObject", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -390,6 +396,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::setCurrentBlockId", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -456,8 +464,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::getCurrentBlockId", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -519,8 +527,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::getDocument", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -581,6 +589,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::setDocument", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -646,6 +656,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::setKnownVariable", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -721,6 +733,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::setKnownVariable", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

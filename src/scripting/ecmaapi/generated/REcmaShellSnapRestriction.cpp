@@ -187,6 +187,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnapRestriction::showUiOptions", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -241,6 +243,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnapRestriction::hideUiOptions", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -296,8 +300,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnapRestriction::getLastSnap", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -359,6 +363,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnapRestriction::reset", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

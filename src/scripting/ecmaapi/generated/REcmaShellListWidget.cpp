@@ -115,6 +115,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::setIconOffset", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -181,6 +183,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::contextMenuEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -251,6 +255,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::mousePressEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -321,6 +327,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::mouseReleaseEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -391,6 +399,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::mouseMoveEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

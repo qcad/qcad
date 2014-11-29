@@ -115,6 +115,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellThread::start", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -169,6 +171,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellThread::yieldCurrentThread", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -224,8 +228,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellThread::currentThreadAddress", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -288,8 +292,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellThread::currentThreadName", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -352,8 +356,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellThread::currentThread", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -415,6 +419,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellThread::run", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

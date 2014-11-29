@@ -238,10 +238,11 @@ CadToolBar.init = function() {
     }
 
 //    toolBar.topLevelChanged.connect(function(onOff) {
-//        RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
+////        RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
 //    });
 //    toolBar.orientationChanged.connect(function(orientation) {
-//        RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
+////        RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
+//        var chs = toolBar.getChildren();
 //    });
 };
 

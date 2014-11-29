@@ -108,6 +108,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellViewFocusListenerAdapter::updateFocus", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

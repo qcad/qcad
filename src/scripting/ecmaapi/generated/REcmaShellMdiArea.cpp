@@ -120,8 +120,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::getAddTabButton", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -183,6 +183,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::updateTabBar", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -249,6 +251,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::updateTabBarSize", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -303,6 +307,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::updateAddButtonLocation", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -357,6 +363,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::closeTab", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -423,6 +431,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::activateTab", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -489,6 +499,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::resizeEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

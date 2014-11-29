@@ -113,8 +113,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterFactoryAdapter::getFilterStrings", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -177,8 +177,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterFactoryAdapter::canExport", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -262,8 +262,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterFactoryAdapter::instantiate", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

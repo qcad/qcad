@@ -141,6 +141,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::beginEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -195,6 +197,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::setGraphicsView", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -261,6 +265,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::finishEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -315,6 +321,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::suspendEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -369,6 +377,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::resumeEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -423,6 +433,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::escapeEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -477,6 +489,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::keyPressEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -543,6 +557,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::keyReleaseEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -609,6 +625,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::mousePressEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -675,6 +693,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::mouseMoveEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -741,6 +761,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::mouseReleaseEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -807,6 +829,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::mouseDoubleClickEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -873,6 +897,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::wheelEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -939,6 +965,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::tabletEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1005,6 +1033,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::swipeGestureEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1071,6 +1101,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::panGestureEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1137,6 +1169,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::pinchGestureEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1203,6 +1237,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::commandEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1269,6 +1305,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::commandEventPreview", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1335,6 +1373,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::coordinateEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1401,6 +1441,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::coordinateEventPreview", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1467,6 +1509,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::entityPickEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1533,6 +1577,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::entityPickEventPreview", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1599,6 +1645,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::propertyChangeEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1667,6 +1715,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::terminate", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1721,8 +1771,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::isTerminated", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1783,6 +1833,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::setOverride", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1837,8 +1889,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::isOverride", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1899,6 +1951,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::setNoState", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1953,8 +2007,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::hasNoState", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2015,6 +2069,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::setUniqueGroup", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2081,8 +2137,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::getUniqueGroup", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2143,6 +2199,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::setOverrideBase", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2209,8 +2267,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::getOverrideBase", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2272,8 +2330,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::getGuiAction", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2334,6 +2392,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::setGuiAction", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2400,8 +2460,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::getGraphicsScenes", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2463,8 +2523,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::getDocument", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2526,8 +2586,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::getDocumentInterface", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2589,8 +2649,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::getStorage", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2651,6 +2711,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::setDocumentInterface", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2716,6 +2778,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::setClickMode", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2782,8 +2846,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::getClickMode", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2845,8 +2909,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::snap", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

@@ -360,9 +360,14 @@
 
                         //REcmaHelper::shellFunctionEnd("<xsl:value-of select="$ecmaName" />::<xsl:value-of select="../@name" />", engine);
 
-                        <xsl:if test="not(@returnType='void')">
-                          return ret;
-                        </xsl:if>
+                        <xsl:choose>
+                          <xsl:when test="not(@returnType='void')">
+                            return ret;
+                          </xsl:when>
+                          <xsl:otherwise>
+                            return;
+                          </xsl:otherwise>
+                        </xsl:choose>
                       </xsl:otherwise>
                     </xsl:choose>
                 <!--} else {-->

@@ -131,6 +131,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setViewportNumber", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -198,8 +200,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getViewportNumber", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -261,6 +263,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setNavigationAction", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -328,8 +332,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getBox", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -391,6 +395,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::autoZoom", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -466,6 +472,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomTo", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -543,6 +551,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoom", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -620,6 +630,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::centerToBox", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -688,6 +700,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::centerToPoint", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -756,6 +770,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setGrid", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -823,8 +839,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getGrid", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -887,8 +903,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getFactor", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -962,6 +978,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setFactor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1038,8 +1056,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getOffset", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1113,6 +1131,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setOffset", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1191,8 +1211,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getBackgroundColor", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1254,6 +1274,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setMargin", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1320,6 +1342,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setColorMode", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1386,6 +1410,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setHairlineMode", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1453,8 +1479,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getHairlineMode", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1517,8 +1543,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getScene", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1581,8 +1607,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getDocument", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1645,8 +1671,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getDocumentInterface", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1708,6 +1734,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPrinting", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1775,8 +1803,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::isPrinting", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1838,6 +1866,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPrintPreview", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1905,8 +1935,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::isPrintPreview", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -1968,6 +1998,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPrintPointSize", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2036,6 +2068,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::simulateMouseMoveEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2090,6 +2124,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setTextHeightThresholdOverride", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2157,8 +2193,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getTextHeightThresholdOverride", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2221,8 +2257,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::isGridVisible", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2284,6 +2320,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setGridVisible", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2350,6 +2388,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setScene", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2425,6 +2465,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setBackgroundColor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2493,6 +2535,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::regenerate", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2559,6 +2603,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::repaintView", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2613,6 +2659,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::updateImage", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2668,8 +2716,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::hasFocus", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2731,6 +2779,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::removeFocus", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2785,6 +2835,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::saveViewport", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2839,6 +2891,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::restoreViewport", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2894,8 +2948,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::mapFromView", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -2981,8 +3035,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::mapToView", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3059,8 +3113,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::mapDistanceFromView", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3135,8 +3189,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::mapDistanceToView", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3211,8 +3265,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getWidth", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3275,8 +3329,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getHeight", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3338,6 +3392,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::resizeImage", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3413,6 +3469,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintGridPoint", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3481,6 +3539,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintGridLine", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3549,6 +3609,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPaintOrigin", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3615,6 +3677,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setAntialiasing", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3682,8 +3746,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getAntialiasing", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3745,6 +3809,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPanOptimization", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3812,8 +3878,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getPanOptimization", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3875,6 +3941,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintEntities", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -3952,6 +4020,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintEntity", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4028,8 +4098,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getBuffer", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4092,8 +4162,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getTransform", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4155,6 +4225,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitUpdateSnapInfo", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4230,6 +4302,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitUpdateTextLabel", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4298,6 +4372,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitDecorateBackground", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4364,6 +4440,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitDecorateForeground", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4430,6 +4508,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearBackground", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4484,6 +4564,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::addToBackground", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4552,6 +4634,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setBackgroundTransform", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4629,6 +4713,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setColorCorrectionOverride", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4696,8 +4782,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getColorCorrectionOverride", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4760,8 +4846,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getPointSize", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4839,6 +4925,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawDot", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -4918,6 +5006,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawPlus", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5006,6 +5096,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawEx", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5094,6 +5186,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawVBar", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5182,6 +5276,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawCircle", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5270,6 +5366,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawSquare", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5358,6 +5456,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintImage", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5437,6 +5537,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintOrigin", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5507,6 +5609,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintReferencePoint", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5597,6 +5701,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintCursor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5667,6 +5773,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintRelativeZero", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5737,6 +5845,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::invalidate", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5807,6 +5917,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::updateGraphicsBuffer", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5865,6 +5977,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::updateTransformation", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5925,6 +6039,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearCaches", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -5978,6 +6094,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setDisplayOnlyCurrentUcs", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6044,8 +6162,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::mapCornersFromView", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6107,8 +6225,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getMinimum", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6170,8 +6288,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getMaximum", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6232,6 +6350,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleTerminateEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6297,6 +6417,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleKeyPressEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6362,6 +6484,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleKeyReleaseEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6427,6 +6551,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleMouseMoveEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6492,6 +6618,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleMousePressEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6557,6 +6685,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleMouseReleaseEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6622,6 +6752,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleMouseDoubleClickEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6687,6 +6819,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleWheelEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6752,6 +6886,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleTabletEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6817,6 +6953,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleSwipeGestureEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6882,6 +7020,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handlePanGestureEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -6947,6 +7087,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handlePinchGestureEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7012,6 +7154,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::viewportChangeEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7065,6 +7209,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomIn", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7117,6 +7263,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomIn", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7184,6 +7332,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomOut", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7236,6 +7386,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomOut", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7303,6 +7455,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomPrevious", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7357,8 +7511,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomToSelection", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7419,6 +7573,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::pan", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7495,6 +7651,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::startPan", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7549,8 +7707,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getCursor", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7611,6 +7769,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setCursor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7675,6 +7835,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setCursor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7743,8 +7905,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getClosestReferencePoint", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7828,8 +7990,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getClosestReferencePoint", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -7914,8 +8076,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getClosestEntity", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8018,8 +8180,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getMargin", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8081,8 +8243,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getColorMode", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8144,8 +8306,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getTextLabels", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8206,6 +8368,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearTextLabels", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8259,6 +8423,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::addTextLabel", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8327,8 +8493,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getLastKnownMousePosition", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8390,8 +8556,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getCurrentStepScaleFactor", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8452,6 +8618,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setCurrentStepScaleFactor", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8518,8 +8686,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getCurrentStepOffset", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8580,6 +8748,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setCurrentStepOffset", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8647,6 +8817,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::updateTextHeightThreshold", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -8701,8 +8873,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::isPathVisible", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

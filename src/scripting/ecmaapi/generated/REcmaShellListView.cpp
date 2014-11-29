@@ -115,6 +115,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::contextMenuEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -185,6 +187,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::mousePressEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -255,6 +259,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::mouseReleaseEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -325,6 +331,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::mouseMoveEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -395,6 +403,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::dragEnterEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -465,6 +475,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::dragMoveEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -535,6 +547,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::dropEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -605,6 +619,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::startDrag", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -675,6 +691,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::selectionChanged", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -758,6 +776,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::currentChanged", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

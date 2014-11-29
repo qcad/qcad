@@ -147,6 +147,16 @@ ColumnLayout.prototype.setGeometry = function(rect) {
 
     var verticalWhenFloating = RSettings.getBoolValue("CadToolBar/VerticalWhenFloating", false);
     var horizontal = (this.toolBar.orientation===Qt.Horizontal && verticalWhenFloating!==true);
+
+    if (this.property("sHintColumns")===columns &&
+        this.property("sHintWidth")===width &&
+        this.property("sHintHeight")===height &&
+        this.property("sHintVerticalWhenFloating")===verticalWhenFloating &&
+        this.property("sHintHorizontal")===horizontal) {
+
+        return this.sHint;
+    }
+
     var w = (horizontal && this.toolBar.movable) ? 2 : 0;
     var h = (!horizontal && this.toolBar.movable) ? 2 : 0;
 
@@ -187,7 +197,7 @@ ColumnLayout.prototype.setGeometry = function(rect) {
         if (isFunction(itemList[i].isSeparator) && itemList[i].isSeparator()) {
 //            if (dbg) qDebug("Separator");
             if (horizontal) {
-                if (h==0) {
+                if (h===0) {
                     w+=8;
                 }
                 else {
@@ -197,7 +207,7 @@ ColumnLayout.prototype.setGeometry = function(rect) {
                 }
             }
             else {
-                if (w==0) {
+                if (w===0) {
                     h+=8;
                 }
                 else {
@@ -247,6 +257,14 @@ ColumnLayout.prototype.setGeometry = function(rect) {
     else {
         this.setProperty("sHint", new QSize(buttonSize*columns, h));
     }
+
+    // store settings used for calculation, so we don't have to calcuate
+    // size again if not necessary:
+    this.setProperty("sHintColumns", columns);
+    this.setProperty("sHintWidth", width);
+    this.setProperty("sHintHeight", height);
+    this.setProperty("sHintVerticalWhenFloating", verticalWhenFloating);
+    this.setProperty("sHintHorizontal", horizontal);
 };
 
 ColumnLayout.prototype.itemAt = function(index) {

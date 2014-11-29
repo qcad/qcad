@@ -106,6 +106,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSpatialIndexVisitorAdapter::visitData", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -235,6 +237,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSpatialIndexVisitorAdapter::visitNode", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':

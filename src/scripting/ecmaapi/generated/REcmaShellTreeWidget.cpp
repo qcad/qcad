@@ -115,6 +115,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::setSelectableColumn", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -182,8 +184,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::getIndex", engine);
 
                         
-                          return ret;
-                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -266,6 +268,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::contextMenuEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -336,6 +340,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::mousePressEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -406,6 +412,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::mouseReleaseEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
@@ -476,6 +484,8 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::mouseMoveEvent", engine);
 
                         
+                            return;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
