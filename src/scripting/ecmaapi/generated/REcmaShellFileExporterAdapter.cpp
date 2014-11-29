@@ -159,7 +159,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -201,7 +201,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -245,7 +244,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -296,7 +295,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -337,7 +335,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportPoint", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -365,7 +363,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportPoint", engine);
 
                     
-                }
             }
         
     
@@ -406,7 +403,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportArcSegment", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -443,7 +440,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportArcSegment", engine);
 
                     
-                }
             }
         
     
@@ -484,7 +480,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLineSegment", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -521,7 +517,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLineSegment", engine);
 
                     
-                }
             }
         
     
@@ -562,7 +557,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportTriangle", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -590,7 +585,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportTriangle", engine);
 
                     
-                }
             }
         
     
@@ -631,7 +625,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportXLine", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -659,7 +653,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportXLine", engine);
 
                     
-                }
             }
         
     
@@ -703,7 +696,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -738,7 +731,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -786,7 +778,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -807,7 +799,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -847,7 +838,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setLayerSource", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -873,7 +864,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setLayerSource", engine);
 
                     
-                }
             }
         
     
@@ -913,7 +903,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setBlockSource", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -939,7 +929,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setBlockSource", engine);
 
                     
-                }
             }
         
     
@@ -979,7 +968,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setProjectionRenderingHint", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1005,7 +994,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setProjectionRenderingHint", engine);
 
                     
-                }
             }
         
     
@@ -1048,7 +1036,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1069,7 +1057,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1109,7 +1096,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setPen", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1137,7 +1124,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setPen", engine);
 
                     
-                }
             }
         
     
@@ -1180,7 +1166,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1215,7 +1201,6 @@
                     
                             return res;
                           
-                }
             }
         
       QPen REcmaShellFileExporterAdapter::getPen(
@@ -1257,7 +1242,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1278,7 +1263,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1318,7 +1302,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setBrush", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1346,7 +1330,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setBrush", engine);
 
                     
-                }
             }
         
     
@@ -1389,7 +1372,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1424,7 +1407,6 @@
                     
                             return res;
                           
-                }
             }
         
       QBrush REcmaShellFileExporterAdapter::getBrush(
@@ -1466,7 +1448,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1487,7 +1469,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1527,7 +1508,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setEntityAttributes", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1553,7 +1534,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setEntityAttributes", engine);
 
                     
-                }
             }
         
     
@@ -1593,7 +1573,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setStyle", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1619,7 +1599,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setStyle", engine);
 
                     
-                }
             }
         
     
@@ -1659,7 +1638,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setBrushStyle", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1685,7 +1664,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setBrushStyle", engine);
 
                     
-                }
             }
         
     
@@ -1725,7 +1703,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setDashPattern", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1753,7 +1731,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setDashPattern", engine);
 
                     
-                }
             }
         
     
@@ -1793,7 +1770,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setColor", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1846,7 +1823,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setColor", engine);
 
                     
-                }
             }
         
       void REcmaShellFileExporterAdapter::setColor(
@@ -1885,7 +1861,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setColor", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1913,7 +1889,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setColor", engine);
 
                     
-                }
             }
         
     
@@ -1953,7 +1928,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setLineweight", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1979,7 +1954,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setLineweight", engine);
 
                     
-                }
             }
         
     
@@ -2019,7 +1993,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setLinetypeId", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2045,7 +2019,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setLinetypeId", engine);
 
                     
-                }
             }
         
     
@@ -2085,7 +2058,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setLinetypePattern", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2113,7 +2086,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setLinetypePattern", engine);
 
                     
-                }
             }
         
     
@@ -2156,7 +2128,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2177,7 +2149,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -2220,7 +2191,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2241,7 +2212,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -2284,7 +2254,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2305,7 +2275,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -2348,7 +2317,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2369,7 +2338,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -2409,7 +2377,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::startExport", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2423,7 +2391,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::startExport", engine);
 
                     
-                }
             }
         
     
@@ -2463,7 +2430,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::endExport", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2477,7 +2444,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::endExport", engine);
 
                     
-                }
             }
         
     
@@ -2520,7 +2486,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2541,7 +2507,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -2584,7 +2549,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2605,7 +2570,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -2645,7 +2609,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportDocumentSetting", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2682,7 +2646,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportDocumentSetting", engine);
 
                     
-                }
             }
         
     
@@ -2722,7 +2685,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLayers", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2736,7 +2699,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLayers", engine);
 
                     
-                }
             }
         
     
@@ -2776,7 +2738,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBlocks", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2790,7 +2752,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBlocks", engine);
 
                     
-                }
             }
         
     
@@ -2830,7 +2791,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportViews", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2844,7 +2805,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportViews", engine);
 
                     
-                }
             }
         
     
@@ -2884,7 +2844,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLinetypes", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2898,7 +2858,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLinetypes", engine);
 
                     
-                }
             }
         
     
@@ -2938,7 +2897,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLayer", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2964,7 +2923,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLayer", engine);
 
                     
-                }
             }
         
       void REcmaShellFileExporterAdapter::exportLayer(
@@ -3003,7 +2961,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLayer", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3029,7 +2987,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLayer", engine);
 
                     
-                }
             }
         
     
@@ -3069,7 +3026,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBlock", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3095,7 +3052,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBlock", engine);
 
                     
-                }
             }
         
       void REcmaShellFileExporterAdapter::exportBlock(
@@ -3134,7 +3090,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBlock", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3160,7 +3116,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBlock", engine);
 
                     
-                }
             }
         
     
@@ -3200,7 +3155,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportView", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3226,7 +3181,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportView", engine);
 
                     
-                }
             }
         
       void REcmaShellFileExporterAdapter::exportView(
@@ -3265,7 +3219,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportView", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3291,7 +3245,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportView", engine);
 
                     
-                }
             }
         
     
@@ -3331,7 +3284,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLinetype", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3357,7 +3310,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportLinetype", engine);
 
                     
-                }
             }
         
     
@@ -3397,7 +3349,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntities", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3432,7 +3384,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntities", engine);
 
                     
-                }
             }
         
       void REcmaShellFileExporterAdapter::exportEntities(
@@ -3471,7 +3422,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntities", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3499,7 +3450,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntities", engine);
 
                     
-                }
             }
         
       void REcmaShellFileExporterAdapter::exportEntities(
@@ -3538,7 +3488,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntities", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3573,7 +3523,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntities", engine);
 
                     
-                }
             }
         
     
@@ -3613,7 +3562,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntity", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3666,7 +3615,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntity", engine);
 
                     
-                }
             }
         
       void REcmaShellFileExporterAdapter::exportEntity(
@@ -3705,7 +3653,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntity", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3749,7 +3697,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntity", engine);
 
                     
-                }
             }
         
     
@@ -3789,7 +3736,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::startEntity", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3815,7 +3762,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::startEntity", engine);
 
                     
-                }
             }
         
     
@@ -3855,7 +3801,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::endEntity", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3869,7 +3815,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::endEntity", engine);
 
                     
-                }
             }
         
     
@@ -3909,7 +3854,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportCurrentEntity", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3944,7 +3889,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportCurrentEntity", engine);
 
                     
-                }
             }
         
     
@@ -3984,7 +3928,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::unexportEntity", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4010,7 +3954,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::unexportEntity", engine);
 
                     
-                }
             }
         
     
@@ -4050,7 +3993,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportShapes", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4076,7 +4019,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportShapes", engine);
 
                     
-                }
             }
         
     
@@ -4116,7 +4058,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportShape", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4142,7 +4084,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportShape", engine);
 
                     
-                }
             }
         
     
@@ -4182,7 +4123,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportShapeSegment", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4208,7 +4149,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportShapeSegment", engine);
 
                     
-                }
             }
         
     
@@ -4251,7 +4191,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4295,7 +4235,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -4320,7 +4259,7 @@
                     
                         qFatal("RFileExporterAdapter::exportRay is pure virtual.");
                       
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4348,7 +4287,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportRay", engine);
 
                     
-                }
             }
         
     
@@ -4388,7 +4326,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportCircle", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4416,7 +4354,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportCircle", engine);
 
                     
-                }
             }
         
     
@@ -4456,7 +4393,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportArc", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4493,7 +4430,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportArc", engine);
 
                     
-                }
             }
         
     
@@ -4533,7 +4469,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEllipse", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4570,7 +4506,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEllipse", engine);
 
                     
-                }
             }
         
     
@@ -4610,7 +4545,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportPolyline", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4656,7 +4591,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportPolyline", engine);
 
                     
-                }
             }
         
     
@@ -4696,7 +4630,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportSpline", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4733,7 +4667,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportSpline", engine);
 
                     
-                }
             }
         
     
@@ -4773,7 +4706,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportSplineSegment", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4801,7 +4734,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportSplineSegment", engine);
 
                     
-                }
             }
         
     
@@ -4841,7 +4773,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportPainterPaths", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4867,7 +4799,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportPainterPaths", engine);
 
                     
-                }
             }
         
       void REcmaShellFileExporterAdapter::exportPainterPaths(
@@ -4906,7 +4837,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportPainterPaths", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4952,7 +4883,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportPainterPaths", engine);
 
                     
-                }
             }
         
     
@@ -4992,7 +4922,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBoundingBoxPaths", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5018,7 +4948,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBoundingBoxPaths", engine);
 
                     
-                }
             }
         
     
@@ -5058,7 +4987,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportImage", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5086,7 +5015,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportImage", engine);
 
                     
-                }
             }
         
     
@@ -5126,7 +5054,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportQuad", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5187,7 +5115,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportQuad", engine);
 
                     
-                }
             }
         
     
@@ -5227,7 +5154,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportVerticalQuad", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5275,7 +5202,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportVerticalQuad", engine);
 
                     
-                }
             }
         
     
@@ -5315,7 +5241,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBox", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5343,7 +5269,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportBox", engine);
 
                     
-                }
             }
         
     
@@ -5383,7 +5308,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportRectangle", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5422,7 +5347,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportRectangle", engine);
 
                     
-                }
             }
         
     
@@ -5465,7 +5389,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5486,7 +5410,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -5526,7 +5449,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setDraftMode", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5552,7 +5475,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setDraftMode", engine);
 
                     
-                }
             }
         
     
@@ -5592,7 +5514,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::toggleDraftMode", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5606,7 +5528,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::toggleDraftMode", engine);
 
                     
-                }
             }
         
     
@@ -5649,7 +5570,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5670,7 +5591,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -5710,7 +5630,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setTwoColorSelectedMode", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5736,7 +5656,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setTwoColorSelectedMode", engine);
 
                     
-                }
             }
         
     
@@ -5779,7 +5698,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5800,7 +5719,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -5840,7 +5758,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setScreenBasedLinetypes", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5866,7 +5784,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setScreenBasedLinetypes", engine);
 
                     
-                }
             }
         
     
@@ -5906,7 +5823,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::toggleScreenBasedLinetypes", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5920,7 +5837,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::toggleScreenBasedLinetypes", engine);
 
                     
-                }
             }
         
     
@@ -5963,7 +5879,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5984,7 +5900,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -6027,7 +5942,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6048,7 +5963,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -6088,7 +6002,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setVisualExporter", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6114,7 +6028,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setVisualExporter", engine);
 
                     
-                }
             }
         
     
@@ -6157,7 +6070,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6178,7 +6091,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -6218,7 +6130,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setPixelSizeHint", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6244,7 +6156,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setPixelSizeHint", engine);
 
                     
-                }
             }
         
     

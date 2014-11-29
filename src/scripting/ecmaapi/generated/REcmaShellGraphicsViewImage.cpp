@@ -131,7 +131,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setViewportNumber", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -157,7 +157,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setViewportNumber", engine);
 
                     
-                }
             }
         
     
@@ -201,7 +200,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -222,7 +221,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -263,7 +261,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setNavigationAction", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -289,7 +287,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setNavigationAction", engine);
 
                     
-                }
             }
         
     
@@ -333,7 +330,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -354,7 +351,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -395,7 +391,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::autoZoom", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -430,7 +426,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::autoZoom", engine);
 
                     
-                }
             }
         
     
@@ -471,7 +466,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomTo", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -508,7 +503,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomTo", engine);
 
                     
-                }
             }
         
     
@@ -549,7 +543,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoom", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -586,7 +580,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoom", engine);
 
                     
-                }
             }
         
     
@@ -627,7 +620,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::centerToBox", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -655,7 +648,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::centerToBox", engine);
 
                     
-                }
             }
         
     
@@ -696,7 +688,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::centerToPoint", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -724,7 +716,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::centerToPoint", engine);
 
                     
-                }
             }
         
     
@@ -765,7 +756,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setGrid", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -791,7 +782,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setGrid", engine);
 
                     
-                }
             }
         
     
@@ -835,7 +825,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -856,7 +846,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -900,7 +889,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -933,7 +922,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -974,7 +962,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setFactor", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1009,7 +997,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setFactor", engine);
 
                     
-                }
             }
         
     
@@ -1053,7 +1040,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1086,7 +1073,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1127,7 +1113,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setOffset", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1164,7 +1150,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setOffset", engine);
 
                     
-                }
             }
         
     
@@ -1208,7 +1193,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1229,7 +1214,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1270,7 +1254,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setMargin", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1296,7 +1280,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setMargin", engine);
 
                     
-                }
             }
         
     
@@ -1337,7 +1320,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setColorMode", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1363,7 +1346,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setColorMode", engine);
 
                     
-                }
             }
         
     
@@ -1404,7 +1386,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setHairlineMode", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1430,7 +1412,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setHairlineMode", engine);
 
                     
-                }
             }
         
     
@@ -1474,7 +1455,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1495,7 +1476,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1539,7 +1519,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1560,7 +1540,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1604,7 +1583,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1625,7 +1604,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1669,7 +1647,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1690,7 +1668,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1731,7 +1708,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPrinting", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1757,7 +1734,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPrinting", engine);
 
                     
-                }
             }
         
     
@@ -1801,7 +1777,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1822,7 +1798,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1863,7 +1838,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPrintPreview", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1889,7 +1864,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPrintPreview", engine);
 
                     
-                }
             }
         
     
@@ -1933,7 +1907,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1954,7 +1928,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1995,7 +1968,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPrintPointSize", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2023,7 +1996,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPrintPointSize", engine);
 
                     
-                }
             }
         
     
@@ -2064,7 +2036,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::simulateMouseMoveEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2078,7 +2050,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::simulateMouseMoveEvent", engine);
 
                     
-                }
             }
         
     
@@ -2119,7 +2090,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setTextHeightThresholdOverride", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2145,7 +2116,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setTextHeightThresholdOverride", engine);
 
                     
-                }
             }
         
     
@@ -2189,7 +2159,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2210,7 +2180,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -2254,7 +2223,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2275,7 +2244,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -2316,7 +2284,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setGridVisible", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2342,7 +2310,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setGridVisible", engine);
 
                     
-                }
             }
         
     
@@ -2383,7 +2350,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setScene", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2418,7 +2385,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setScene", engine);
 
                     
-                }
             }
         
     
@@ -2459,7 +2425,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setBackgroundColor", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2487,7 +2453,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setBackgroundColor", engine);
 
                     
-                }
             }
         
     
@@ -2528,7 +2493,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::regenerate", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2554,7 +2519,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::regenerate", engine);
 
                     
-                }
             }
         
     
@@ -2595,7 +2559,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::repaintView", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2609,7 +2573,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::repaintView", engine);
 
                     
-                }
             }
         
     
@@ -2650,7 +2613,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::updateImage", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2664,7 +2627,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::updateImage", engine);
 
                     
-                }
             }
         
     
@@ -2708,7 +2670,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2729,7 +2691,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -2770,7 +2731,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::removeFocus", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2784,7 +2745,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::removeFocus", engine);
 
                     
-                }
             }
         
     
@@ -2825,7 +2785,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::saveViewport", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2839,7 +2799,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::saveViewport", engine);
 
                     
-                }
             }
         
     
@@ -2880,7 +2839,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::restoreViewport", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2894,7 +2853,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::restoreViewport", engine);
 
                     
-                }
             }
         
     
@@ -2938,7 +2896,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -2982,7 +2940,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -3026,7 +2983,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3061,7 +3018,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -3105,7 +3061,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3138,7 +3094,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -3182,7 +3137,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3215,7 +3170,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -3259,7 +3213,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3280,7 +3234,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -3324,7 +3277,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3345,7 +3298,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -3386,7 +3338,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::resizeImage", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3421,7 +3373,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::resizeImage", engine);
 
                     
-                }
             }
         
     
@@ -3462,7 +3413,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintGridPoint", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3490,7 +3441,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintGridPoint", engine);
 
                     
-                }
             }
         
     
@@ -3531,7 +3481,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintGridLine", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3559,7 +3509,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintGridLine", engine);
 
                     
-                }
             }
         
     
@@ -3600,7 +3549,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPaintOrigin", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3626,7 +3575,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPaintOrigin", engine);
 
                     
-                }
             }
         
     
@@ -3667,7 +3615,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setAntialiasing", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3693,7 +3641,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setAntialiasing", engine);
 
                     
-                }
             }
         
     
@@ -3737,7 +3684,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3758,7 +3705,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -3799,7 +3745,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPanOptimization", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3825,7 +3771,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setPanOptimization", engine);
 
                     
-                }
             }
         
     
@@ -3869,7 +3814,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3890,7 +3835,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -3931,7 +3875,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintEntities", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -3968,7 +3912,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintEntities", engine);
 
                     
-                }
             }
         
     
@@ -4009,7 +3952,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintEntity", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4044,7 +3987,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintEntity", engine);
 
                     
-                }
             }
         
     
@@ -4088,7 +4030,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4109,7 +4051,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -4153,7 +4094,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4174,7 +4115,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -4215,7 +4155,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitUpdateSnapInfo", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4250,7 +4190,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitUpdateSnapInfo", engine);
 
                     
-                }
             }
         
     
@@ -4291,7 +4230,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitUpdateTextLabel", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4319,7 +4258,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitUpdateTextLabel", engine);
 
                     
-                }
             }
         
     
@@ -4360,7 +4298,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitDecorateBackground", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4386,7 +4324,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitDecorateBackground", engine);
 
                     
-                }
             }
         
     
@@ -4427,7 +4364,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitDecorateForeground", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4453,7 +4390,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitDecorateForeground", engine);
 
                     
-                }
             }
         
     
@@ -4494,7 +4430,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearBackground", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4508,7 +4444,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearBackground", engine);
 
                     
-                }
             }
         
     
@@ -4549,7 +4484,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::addToBackground", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4577,7 +4512,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::addToBackground", engine);
 
                     
-                }
             }
         
     
@@ -4618,7 +4552,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setBackgroundTransform", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4655,7 +4589,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setBackgroundTransform", engine);
 
                     
-                }
             }
         
     
@@ -4696,7 +4629,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setColorCorrectionOverride", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4722,7 +4655,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setColorCorrectionOverride", engine);
 
                     
-                }
             }
         
     
@@ -4766,7 +4698,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4787,7 +4719,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -4831,7 +4762,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4868,7 +4799,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -4909,7 +4839,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawDot", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -4948,7 +4878,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawDot", engine);
 
                     
-                }
             }
         
     
@@ -4989,7 +4918,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawPlus", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5037,7 +4966,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawPlus", engine);
 
                     
-                }
             }
         
     
@@ -5078,7 +5006,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawEx", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5126,7 +5054,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawEx", engine);
 
                     
-                }
             }
         
     
@@ -5167,7 +5094,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawVBar", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5215,7 +5142,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawVBar", engine);
 
                     
-                }
             }
         
     
@@ -5256,7 +5182,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawCircle", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5304,7 +5230,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawCircle", engine);
 
                     
-                }
             }
         
     
@@ -5345,7 +5270,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawSquare", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5393,7 +5318,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::drawSquare", engine);
 
                     
-                }
             }
         
     
@@ -5434,7 +5358,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintImage", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5473,7 +5397,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintImage", engine);
 
                     
-                }
             }
         
     
@@ -5514,7 +5437,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintOrigin", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5544,7 +5467,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintOrigin", engine);
 
                     
-                }
             }
         
     
@@ -5585,7 +5507,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintReferencePoint", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5635,7 +5557,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintReferencePoint", engine);
 
                     
-                }
             }
         
     
@@ -5676,7 +5597,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintCursor", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5706,7 +5627,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintCursor", engine);
 
                     
-                }
             }
         
     
@@ -5747,7 +5667,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintRelativeZero", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5777,7 +5697,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintRelativeZero", engine);
 
                     
-                }
             }
         
     
@@ -5818,7 +5737,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::invalidate", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5848,7 +5767,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::invalidate", engine);
 
                     
-                }
             }
         
     
@@ -5889,7 +5807,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::updateGraphicsBuffer", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5907,7 +5825,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::updateGraphicsBuffer", engine);
 
                     
-                }
             }
         
     
@@ -5948,7 +5865,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::updateTransformation", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -5966,7 +5883,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::updateTransformation", engine);
 
                     
-                }
             }
         
     
@@ -6009,7 +5925,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearCaches", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6023,7 +5939,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearCaches", engine);
 
                     
-                }
             }
         
     
@@ -6063,7 +5978,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setDisplayOnlyCurrentUcs", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6089,7 +6004,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setDisplayOnlyCurrentUcs", engine);
 
                     
-                }
             }
         
     
@@ -6132,7 +6046,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6153,7 +6067,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -6196,7 +6109,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6217,7 +6130,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -6260,7 +6172,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6281,7 +6193,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -6321,7 +6232,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleTerminateEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6347,7 +6258,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleTerminateEvent", engine);
 
                     
-                }
             }
         
     
@@ -6387,7 +6297,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleKeyPressEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6413,7 +6323,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleKeyPressEvent", engine);
 
                     
-                }
             }
         
     
@@ -6453,7 +6362,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleKeyReleaseEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6479,7 +6388,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleKeyReleaseEvent", engine);
 
                     
-                }
             }
         
     
@@ -6519,7 +6427,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleMouseMoveEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6545,7 +6453,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleMouseMoveEvent", engine);
 
                     
-                }
             }
         
     
@@ -6585,7 +6492,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleMousePressEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6611,7 +6518,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleMousePressEvent", engine);
 
                     
-                }
             }
         
     
@@ -6651,7 +6557,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleMouseReleaseEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6677,7 +6583,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleMouseReleaseEvent", engine);
 
                     
-                }
             }
         
     
@@ -6717,7 +6622,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleMouseDoubleClickEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6743,7 +6648,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleMouseDoubleClickEvent", engine);
 
                     
-                }
             }
         
     
@@ -6783,7 +6687,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleWheelEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6809,7 +6713,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleWheelEvent", engine);
 
                     
-                }
             }
         
     
@@ -6849,7 +6752,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleTabletEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6875,7 +6778,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleTabletEvent", engine);
 
                     
-                }
             }
         
     
@@ -6915,7 +6817,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleSwipeGestureEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -6941,7 +6843,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handleSwipeGestureEvent", engine);
 
                     
-                }
             }
         
     
@@ -6981,7 +6882,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handlePanGestureEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7007,7 +6908,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handlePanGestureEvent", engine);
 
                     
-                }
             }
         
     
@@ -7047,7 +6947,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handlePinchGestureEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7073,7 +6973,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::handlePinchGestureEvent", engine);
 
                     
-                }
             }
         
     
@@ -7113,7 +7012,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::viewportChangeEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7127,7 +7026,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::viewportChangeEvent", engine);
 
                     
-                }
             }
         
     
@@ -7167,7 +7065,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomIn", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7181,7 +7079,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomIn", engine);
 
                     
-                }
             }
         
       void REcmaShellGraphicsViewImage::zoomIn(
@@ -7220,7 +7117,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomIn", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7248,7 +7145,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomIn", engine);
 
                     
-                }
             }
         
     
@@ -7288,7 +7184,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomOut", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7302,7 +7198,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomOut", engine);
 
                     
-                }
             }
         
       void REcmaShellGraphicsViewImage::zoomOut(
@@ -7341,7 +7236,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomOut", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7369,7 +7264,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomOut", engine);
 
                     
-                }
             }
         
     
@@ -7409,7 +7303,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomPrevious", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7423,7 +7317,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::zoomPrevious", engine);
 
                     
-                }
             }
         
     
@@ -7466,7 +7359,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7487,7 +7380,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -7527,7 +7419,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::pan", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7564,7 +7456,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::pan", engine);
 
                     
-                }
             }
         
     
@@ -7604,7 +7495,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::startPan", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7618,7 +7509,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::startPan", engine);
 
                     
-                }
             }
         
     
@@ -7661,7 +7551,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7682,7 +7572,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -7722,7 +7611,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setCursor", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7748,7 +7637,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setCursor", engine);
 
                     
-                }
             }
         
       void REcmaShellGraphicsViewImage::setCursor(
@@ -7787,7 +7675,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setCursor", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7815,7 +7703,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setCursor", engine);
 
                     
-                }
             }
         
     
@@ -7858,7 +7745,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7902,7 +7789,6 @@
                     
                             return res;
                           
-                }
             }
         
       RVector REcmaShellGraphicsViewImage::getClosestReferencePoint(
@@ -7944,7 +7830,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -7988,7 +7874,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -8031,7 +7916,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -8093,7 +7978,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -8136,7 +8020,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -8157,7 +8041,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -8200,7 +8083,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -8221,7 +8104,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -8264,7 +8146,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -8285,7 +8167,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -8325,7 +8206,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearTextLabels", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -8339,7 +8220,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearTextLabels", engine);
 
                     
-                }
             }
         
     
@@ -8379,7 +8259,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::addTextLabel", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -8407,7 +8287,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::addTextLabel", engine);
 
                     
-                }
             }
         
     
@@ -8450,7 +8329,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -8471,7 +8350,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -8514,7 +8392,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -8535,7 +8413,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -8575,7 +8452,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setCurrentStepScaleFactor", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -8601,7 +8478,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setCurrentStepScaleFactor", engine);
 
                     
-                }
             }
         
     
@@ -8644,7 +8520,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -8665,7 +8541,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -8705,7 +8580,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setCurrentStepOffset", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -8733,7 +8608,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setCurrentStepOffset", engine);
 
                     
-                }
             }
         
     
@@ -8773,7 +8647,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::updateTextHeightThreshold", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -8787,7 +8661,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::updateTextHeightThreshold", engine);
 
                     
-                }
             }
         
     
@@ -8830,7 +8703,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -8865,7 +8738,6 @@
                     
                             return res;
                           
-                }
             }
         
     

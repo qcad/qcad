@@ -121,7 +121,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnapDistance::showUiOptions", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -135,7 +135,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellSnapDistance::showUiOptions", engine);
 
                     
-                }
             }
         
     
@@ -176,7 +175,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnapDistance::hideUiOptions", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -190,7 +189,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellSnapDistance::hideUiOptions", engine);
 
                     
-                }
             }
         
     
@@ -231,7 +229,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnapDistance::setDistance", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -257,7 +255,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellSnapDistance::setDistance", engine);
 
                     
-                }
             }
         
     
@@ -301,7 +298,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -369,7 +366,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -415,7 +411,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -468,7 +464,6 @@
                     
                             return res;
                           
-                }
             }
         
       RVector REcmaShellSnapDistance::snap(
@@ -510,7 +505,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -576,7 +571,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -621,7 +615,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -642,7 +636,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -685,7 +678,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -706,7 +699,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -749,7 +741,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -770,7 +762,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -810,7 +801,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnapDistance::reset", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -824,7 +815,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellSnapDistance::reset", engine);
 
                     
-                }
             }
         
     

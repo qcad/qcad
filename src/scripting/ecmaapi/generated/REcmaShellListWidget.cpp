@@ -115,7 +115,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::setIconOffset", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -141,7 +141,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::setIconOffset", engine);
 
                     
-                }
             }
         
     
@@ -182,7 +181,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::contextMenuEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -212,7 +211,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::contextMenuEvent", engine);
 
                     
-                }
             }
         
     
@@ -253,7 +251,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::mousePressEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -283,7 +281,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::mousePressEvent", engine);
 
                     
-                }
             }
         
     
@@ -324,7 +321,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::mouseReleaseEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -354,7 +351,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::mouseReleaseEvent", engine);
 
                     
-                }
             }
         
     
@@ -395,7 +391,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::mouseMoveEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -425,7 +421,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListWidget::mouseMoveEvent", engine);
 
                     
-                }
             }
         
     

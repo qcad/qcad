@@ -122,7 +122,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -143,7 +143,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -184,7 +183,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::updateTabBar", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -210,7 +209,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::updateTabBar", engine);
 
                     
-                }
             }
         
     
@@ -251,7 +249,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::updateTabBarSize", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -265,7 +263,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::updateTabBarSize", engine);
 
                     
-                }
             }
         
     
@@ -306,7 +303,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::updateAddButtonLocation", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -320,7 +317,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::updateAddButtonLocation", engine);
 
                     
-                }
             }
         
     
@@ -361,7 +357,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::closeTab", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -387,7 +383,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::closeTab", engine);
 
                     
-                }
             }
         
     
@@ -428,7 +423,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::activateTab", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -454,7 +449,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::activateTab", engine);
 
                     
-                }
             }
         
     
@@ -495,7 +489,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::resizeEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -525,7 +519,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellMdiArea::resizeEvent", engine);
 
                     
-                }
             }
         
     

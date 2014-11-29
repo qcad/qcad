@@ -115,7 +115,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::setSelectableColumn", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -141,7 +141,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::setSelectableColumn", engine);
 
                     
-                }
             }
         
     
@@ -185,7 +184,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -227,7 +226,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -268,7 +266,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::contextMenuEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -298,7 +296,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::contextMenuEvent", engine);
 
                     
-                }
             }
         
     
@@ -339,7 +336,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::mousePressEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -369,7 +366,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::mousePressEvent", engine);
 
                     
-                }
             }
         
     
@@ -410,7 +406,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::mouseReleaseEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -440,7 +436,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::mouseReleaseEvent", engine);
 
                     
-                }
             }
         
     
@@ -481,7 +476,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::mouseMoveEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -511,7 +506,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellTreeWidget::mouseMoveEvent", engine);
 
                     
-                }
             }
         
     

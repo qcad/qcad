@@ -133,7 +133,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -175,7 +175,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -220,7 +219,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::startImport", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -234,7 +233,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::startImport", engine);
 
                     
-                }
             }
         
     
@@ -274,7 +272,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::endImport", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -288,7 +286,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::endImport", engine);
 
                     
-                }
             }
         
     
@@ -328,7 +325,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::importObject", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -354,7 +351,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::importObject", engine);
 
                     
-                }
             }
         
     
@@ -394,7 +390,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::setCurrentBlockId", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -420,7 +416,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::setCurrentBlockId", engine);
 
                     
-                }
             }
         
     
@@ -463,7 +458,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -484,7 +479,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -527,7 +521,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -548,7 +542,6 @@
                     
                             return *res;
                         
-                }
             }
         
     
@@ -588,7 +581,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::setDocument", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -614,7 +607,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::setDocument", engine);
 
                     
-                }
             }
         
     
@@ -654,7 +646,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::setKnownVariable", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -691,7 +683,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::setKnownVariable", engine);
 
                     
-                }
             }
         
       void REcmaShellFileImporterAdapter::setKnownVariable(
@@ -730,7 +721,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::setKnownVariable", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -767,7 +758,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileImporterAdapter::setKnownVariable", engine);
 
                     
-                }
             }
         
     

@@ -104,7 +104,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRunner::doWork", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -118,7 +118,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellRunner::doWork", engine);
 
                     
-                }
             }
         
     

@@ -365,7 +365,8 @@
                         </xsl:if>
                       </xsl:otherwise>
                     </xsl:choose>
-                } else {
+                <!--} else {-->
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -431,7 +432,7 @@
                           </xsl:otherwise>
                         </xsl:choose>
                     </xsl:if>
-                }
+                <!--}-->
             }
         </xsl:otherwise>
     </xsl:choose>

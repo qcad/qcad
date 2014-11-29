@@ -6,7 +6,7 @@
     <message>
         <location filename="../TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Mappa del personaggio</translation>
+        <translation>mappa dei caratteri</translation>
     </message>
 </context>
 <context>

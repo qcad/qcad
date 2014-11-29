@@ -101,7 +101,7 @@
                     
                         qFatal("RSnapRestriction::restrictSnap is pure virtual.");
                       
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -147,7 +147,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -188,7 +187,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnapRestriction::showUiOptions", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -202,7 +201,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellSnapRestriction::showUiOptions", engine);
 
                     
-                }
             }
         
     
@@ -243,7 +241,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnapRestriction::hideUiOptions", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -257,7 +255,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellSnapRestriction::hideUiOptions", engine);
 
                     
-                }
             }
         
     
@@ -301,7 +298,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -322,7 +319,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -363,7 +359,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellSnapRestriction::reset", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -377,7 +373,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellSnapRestriction::reset", engine);
 
                     
-                }
             }
         
     

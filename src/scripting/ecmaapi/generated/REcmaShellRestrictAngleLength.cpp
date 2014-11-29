@@ -135,7 +135,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -181,7 +181,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -222,7 +221,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setBaseAngle", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -248,7 +247,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setBaseAngle", engine);
 
                     
-                }
             }
         
     
@@ -289,7 +287,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setAngle", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -315,7 +313,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setAngle", engine);
 
                     
-                }
             }
         
     
@@ -356,7 +353,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setBaseLength", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -382,7 +379,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setBaseLength", engine);
 
                     
-                }
             }
         
     
@@ -423,7 +419,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setLength", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -449,7 +445,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setLength", engine);
 
                     
-                }
             }
         
     
@@ -490,7 +485,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setRestrictAngle", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -516,7 +511,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setRestrictAngle", engine);
 
                     
-                }
             }
         
     
@@ -557,7 +551,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setRestrictLength", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -583,7 +577,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::setRestrictLength", engine);
 
                     
-                }
             }
         
     
@@ -626,7 +619,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::showUiOptions", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -640,7 +633,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::showUiOptions", engine);
 
                     
-                }
             }
         
     
@@ -680,7 +672,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::hideUiOptions", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -694,7 +686,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::hideUiOptions", engine);
 
                     
-                }
             }
         
     
@@ -737,7 +728,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -758,7 +749,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -798,7 +788,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::reset", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -812,7 +802,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellRestrictAngleLength::reset", engine);
 
                     
-                }
             }
         
     

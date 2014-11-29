@@ -117,7 +117,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateFromDocument", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -170,7 +170,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateFromDocument", engine);
 
                     
-                }
             }
         
     
@@ -211,7 +210,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateFromObject", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -246,7 +245,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateFromObject", engine);
 
                     
-                }
             }
         
     
@@ -287,7 +285,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::clearEditor", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -301,7 +299,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::clearEditor", engine);
 
                     
-                }
             }
         
     
@@ -342,7 +339,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::propertyChanged", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -395,7 +392,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::propertyChanged", engine);
 
                     
-                }
             }
         
     
@@ -436,7 +432,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::listPropertyChanged", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -489,7 +485,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::listPropertyChanged", engine);
 
                     
-                }
             }
         
     
@@ -533,7 +528,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -554,7 +549,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -598,7 +592,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -631,7 +625,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -675,7 +668,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -710,7 +703,6 @@
                     
                             return res;
                           
-                }
             }
         
       QVariant REcmaShellPropertyEditor::getPropertyValue(
@@ -752,7 +744,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -794,7 +786,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -838,7 +829,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -873,7 +864,6 @@
                     
                             return res;
                           
-                }
             }
         
       RPropertyAttributes REcmaShellPropertyEditor::getPropertyAttributes(
@@ -915,7 +905,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -957,7 +947,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1001,7 +990,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1022,7 +1011,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1066,7 +1054,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1099,7 +1087,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1143,7 +1130,7 @@
                         
                           return ret;
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1185,7 +1172,6 @@
                     
                             return res;
                           
-                }
             }
         
     
@@ -1226,7 +1212,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateEditor", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1274,7 +1260,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateEditor", engine);
 
                     
-                }
             }
         
     
@@ -1315,7 +1300,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateGui", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1354,7 +1339,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateGui", engine);
 
                     
-                }
             }
         
     
@@ -1395,7 +1379,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateProperty", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1445,7 +1429,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::updateProperty", engine);
 
                     
-                }
             }
         
     
@@ -1486,7 +1469,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::removeAllButThese", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -1525,7 +1508,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellPropertyEditor::removeAllButThese", engine);
 
                     
-                }
             }
         
     

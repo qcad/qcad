@@ -115,7 +115,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellWidget::removeAction", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -141,7 +141,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellWidget::removeAction", engine);
 
                     
-                }
             }
         
     
@@ -182,7 +181,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellWidget::addAction", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -208,7 +207,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellWidget::addAction", engine);
 
                     
-                }
             }
         
     
@@ -249,7 +247,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellWidget::insertAction", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -284,7 +282,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellWidget::insertAction", engine);
 
                     
-                }
             }
         
     

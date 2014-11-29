@@ -115,7 +115,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::contextMenuEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -145,7 +145,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListView::contextMenuEvent", engine);
 
                     
-                }
             }
         
     
@@ -186,7 +185,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::mousePressEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -216,7 +215,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListView::mousePressEvent", engine);
 
                     
-                }
             }
         
     
@@ -257,7 +255,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::mouseReleaseEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -287,7 +285,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListView::mouseReleaseEvent", engine);
 
                     
-                }
             }
         
     
@@ -328,7 +325,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::mouseMoveEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -358,7 +355,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListView::mouseMoveEvent", engine);
 
                     
-                }
             }
         
     
@@ -399,7 +395,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::dragEnterEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -429,7 +425,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListView::dragEnterEvent", engine);
 
                     
-                }
             }
         
     
@@ -470,7 +465,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::dragMoveEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -500,7 +495,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListView::dragMoveEvent", engine);
 
                     
-                }
             }
         
     
@@ -541,7 +535,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::dropEvent", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -571,7 +565,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListView::dropEvent", engine);
 
                     
-                }
             }
         
     
@@ -612,7 +605,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::startDrag", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -642,7 +635,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListView::startDrag", engine);
 
                     
-                }
             }
         
     
@@ -683,7 +675,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::selectionChanged", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -726,7 +718,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListView::selectionChanged", engine);
 
                     
-                }
             }
         
     
@@ -767,7 +758,7 @@
                         //REcmaHelper::shellFunctionEnd("REcmaShellListView::currentChanged", engine);
 
                         
-                } else {
+                }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
@@ -810,7 +801,6 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellListView::currentChanged", engine);
 
                     
-                }
             }
         
     
