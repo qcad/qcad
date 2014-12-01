@@ -965,6 +965,12 @@ dir="./core" filename="RDocumentInterface.h">
   <type>
     <name>void</name>
   </type>
+  <name>flushTransactions</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>setSnap</name>
   <parameter_list>(
   <param>

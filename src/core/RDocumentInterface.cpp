@@ -1087,6 +1087,19 @@ void RDocumentInterface::redo() {
 }
 
 /**
+ * Flush transactions.
+ */
+void RDocumentInterface::flushTransactions() {
+    document.resetTransactionStack();
+    document.getStorage().deleteTransactionsFrom(0);
+
+    if (RMainWindow::hasMainWindow()) {
+        //RMainWindow::getMainWindow()->postTransactionEvent();
+        RMainWindow::getMainWindow()->notifyTransactionListeners(&document, NULL);
+    }
+}
+
+/**
  * Sets the current snap object.
  * The document interface takes ownership of the object.
  */

@@ -204,6 +204,7 @@ public:
 
     void undo();
     void redo();
+    void flushTransactions();
 
     void setSnap(RSnap* snap);
     RSnap* getSnap();

@@ -214,6 +214,9 @@
         redo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        flushTransactions
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setSnap
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

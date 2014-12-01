@@ -295,7 +295,7 @@ PrintPreview.prototype.showUiOptions = function(resume) {
     scaleCombo.setEditText(scaleString);
     this.slotScaleChanged(scaleString);
     scaleCombo.blockSignals(false);
-    
+
     var action = RGuiAction.getByScriptFile("scripts/Edit/DrawingPreferences/DrawingPreferences.js");
     widgets["ShowMoreOptions"].setDefaultAction(action);
 
@@ -322,7 +322,7 @@ PrintPreview.prototype.showUiOptions = function(resume) {
         widgets["Hairline"].checked=true;
         widgets["Hairline"].blockSignals(false);
     }
-    
+
     widgets["Portrait"].blockSignals(true);
     widgets["Landscape"].blockSignals(true);
     if (Print.getPageOrientationEnum() == QPrinter.Portrait) {

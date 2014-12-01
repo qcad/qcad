@@ -181,6 +181,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, redo, "redo");
             
+            REcmaHelper::registerFunction(&engine, proto, flushTransactions, "flushTransactions");
+            
             REcmaHelper::registerFunction(&engine, proto, setSnap, "setSnap");
             
             REcmaHelper::registerFunction(&engine, proto, getSnap, "getSnap");
@@ -4152,6 +4154,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::redo", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::flushTransactions
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::flushTransactions", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::flushTransactions";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("flushTransactions", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->flushTransactions();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.flushTransactions().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::flushTransactions", context, engine);
             return result;
         }
          QScriptValue

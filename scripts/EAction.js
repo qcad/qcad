@@ -364,7 +364,9 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
                         this.settingsGroup));
 
         // required for undocked options tool bar:
-        optionsToolBar.resize(optionsToolBar.sizeHint.width(), optionsToolBar.height);
+        if (optionsToolBar.floating) {
+            optionsToolBar.resize(optionsToolBar.sizeHint.width(), optionsToolBar.height);
+        }
         wOptions.destroy();
 
         // automatically add separator to toolbar:
@@ -390,7 +392,6 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
 EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
     var prefixChar = RSettings.getStringValue("ToolBar/PrefixChar", ",");
 
-    //var optionsToolBar = EAction.getOptionsToolBar();
     if (isNull(optionsToolBar)) {
         return;
     }
@@ -427,8 +428,6 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
     if (isNull(saveToSettings)) {
         saveToSettings = true;
     }
-    // if (this.optionWidgetActions==undefined ||
-    // isDeleted(this.optionWidgetActions)) {
     if (isNull(this.optionWidgetActions)) {
         return;
     }
@@ -441,6 +440,7 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
     if (isNull(optionsToolBar)) {
         return;
     }
+
     if (saveToSettings) {
         WidgetFactory.saveState(optionsToolBar, this.settingsGroup);
     }
@@ -470,6 +470,7 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
         a.destroy();
     }
 
+
     // delete additional toolbars of this tool if available:
     if (!isNull(this.additionalOptionsToolBars)) {
         for (i = 0; i < this.additionalOptionsToolBars.length; ++i) {
@@ -479,6 +480,11 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
             }
             tb.destroy();
         }
+    }
+
+    // required for undocked options tool bar:
+    if (optionsToolBar.floating) {
+        optionsToolBar.resize(optionsToolBar.sizeHint.width(), optionsToolBar.height);
     }
 
     this.optionWidgetActions = undefined;
