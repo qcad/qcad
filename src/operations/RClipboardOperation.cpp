@@ -486,15 +486,19 @@ QSharedPointer<RLayer> RClipboardOperation::copyLayer(
         bool overwriteLayers,
         RTransaction& transaction) const {
 
+    bool overwriteLinetypes = false;
+
     // add layer the entity is on, if the layer exists it is overwritten
     // if overwriteLayers is true:
-    QSharedPointer<RLayer> srcLayer =
-            src.queryLayer(layerId);
+    QSharedPointer<RLayer> srcLayer = src.queryLayer(layerId);
     if (srcLayer.isNull()) {
         qWarning("RClipboardOperation::copyLayer: "
                  "layer is NULL.");
         return QSharedPointer<RLayer>();
     }
+
+    QSharedPointer<RLinetype> destLinetype = copyLinetype(srcLayer->getLinetypeId(), src, dest, overwriteLinetypes, transaction);
+
     QString srcLayerName = srcLayer->getName();
     QSharedPointer<RLayer> destLayer;
     if (copiedLayers.contains(srcLayerName)) {
@@ -518,6 +522,8 @@ QSharedPointer<RLayer> RClipboardOperation::copyLayer(
 
         copiedLayers.insert(srcLayerName, destLayer);
     }
+
+    destLayer->setLinetypeId(destLinetype->getId());
 
     return destLayer;
 }

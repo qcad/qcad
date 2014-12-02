@@ -64,32 +64,55 @@ QImage RLinetypeComboDelegate::getPreviewImage(const RLinetypePattern& pattern, 
     QImage ret(width, previewHeight, QImage::Format_ARGB32);
     ret.fill(Qt::transparent);
 
-    if (pattern.isValid()) {
-        RPainterPath pp;
+    RPainterPath pp;
 
-        RPainterPathExporter exp;
-        exp.setExportZeroLinesAsPoints(false);
-        exp.setLinetypePattern(pattern);
-        RLine line(RVector(20,0), RVector(width-20,0));
+    RPainterPathExporter exp;
+    exp.setExportZeroLinesAsPoints(false);
+
+    RLinetypePattern patternScaled = pattern;
+
+    // for inch patterns:
+    if (!patternScaled.isMetric()) {
+        patternScaled.scale(25.4);
+    }
+    // for dense patterns:
+    double lg = patternScaled.getLargestGap();
+    if (lg>0.0 && lg<2.0) {
+        patternScaled.scale(4.0/lg);
+    }
+
+    RLine line(RVector(20,0), RVector(width-20,0));
+
+    if (patternScaled.isValid()) {
+        exp.setLinetypePattern(patternScaled);
+    }
+
+    if (!patternScaled.isValid()) {
+        // continuous:
+        pp.moveTo(20,0);
+        pp.lineTo(width-20,0);
+    }
+    else {
         exp.exportLine(line);
         pp = exp.getPainterPath();
-        if (pp.getBoundingBox().getHeight()>0.01) {
-            double f = previewHeight*0.4 / pp.getBoundingBox().getHeight();
-            RLinetypePattern patternScaled = pattern;
-            patternScaled.scale(f);
-            exp.setLinetypePattern(patternScaled);
-            exp.exportLine(line);
-            pp = exp.getPainterPath();
-        }
-
-        QPainter p(&ret);
-        QTransform t;
-        t.scale(1.0,-1.0);
-        t.translate(0,-previewHeight/2);
-        p.setTransform(t);
-        p.drawPath(pp);
-        p.end();
     }
+
+    // line has shapes in it: scale to show shapes:
+    if (patternScaled.isValid() && pp.getBoundingBox().getHeight()>0.01) {
+        double f = previewHeight*0.4 / pp.getBoundingBox().getHeight();
+        patternScaled.scale(f);
+        exp.setLinetypePattern(patternScaled);
+        exp.exportLine(line);
+        pp = exp.getPainterPath();
+    }
+
+    QPainter p(&ret);
+    QTransform t;
+    t.scale(1.0,-1.0);
+    t.translate(0,-previewHeight/2);
+    p.setTransform(t);
+    p.drawPath(pp);
+    p.end();
 
     if (!previewCache.contains(width)) {
         previewCache.insert(width, QMap<QString, QImage>());
