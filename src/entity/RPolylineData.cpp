@@ -33,7 +33,7 @@ RPolylineData::RPolylineData(RDocument* document, const RPolylineData& data)
 }
 
 RPolylineData::RPolylineData(const RPolyline& line) :
-    RPolyline(line) {
+    RPolyline(line), polylineGen(true) {
 }
 
 QList<RBox> RPolylineData::getBoundingBoxes(bool ignoreEmpty) const {
