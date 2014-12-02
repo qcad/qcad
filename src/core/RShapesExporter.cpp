@@ -69,9 +69,13 @@ RVector RShapesExporter::getPointAt(double d, int* index) {
     if (i==-1) {
         return RVector::invalid;
     }
+
     double a = d - (i==0 ? 0.0 : lengthAt[i-1]);
     QList<RVector> points = shapes[i]->getPointsWithDistanceToEnd(a, RS::FromStart);
-    Q_ASSERT(points.length()>0);
+    if (points.isEmpty()) {
+        return RVector::invalid;
+    }
+
     if (index) {
         *index = i;
     }
@@ -88,7 +92,7 @@ double RShapesExporter::getAngleAt(double d) {
 }
 
 int RShapesExporter::getShapeAt(double d) {
-    for (int i=0; i<shapes.length(); i++) {
+    for (int i=0; i<shapes.length() && i<lengthAt.length(); i++) {
         double d1 = (i==0 ? 0.0 : lengthAt[i-1]);
         double d2 = lengthAt[i];
         if (d>=d1 && d<=d2) {

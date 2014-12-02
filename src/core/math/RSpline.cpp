@@ -809,28 +809,25 @@ QList<RVector> RSpline::getPointsWithDistanceToEnd(double distance, RS::From fro
             ret << getPointAt(t);
         }
     }
+    else {
+        // QCAD CE:
+        double length = getLength();
+        if (length<=RS::PointTolerance) {
+            return ret;
+        }
 
-    return ret;
+        if (from==RS::FromStart || from==RS::FromAny) {
+            RVector p = getPointAt(getTMin() + (distance/length*getTDelta()));
+            ret.append(p);
+        }
 
-    /*
-    double length = getLength();
-    if (length<=RS::PointTolerance) {
-        return ret;
-    }
-
-    if (from==RS::FromStart || from==RS::FromAny) {
-
-        RVector p = getPointAt(getTMin() + (distance/length*getTDelta()));
-        ret.append(p);
-    }
-
-    if (from==RS::FromEnd || from==RS::FromAny) {
-        RVector p = getPointAt(getTMin() + ((length-distance)/length*getTDelta()));
-        ret.append(p);
+        if (from==RS::FromEnd || from==RS::FromAny) {
+            RVector p = getPointAt(getTMin() + ((length-distance)/length*getTDelta()));
+            ret.append(p);
+        }
     }
 
     return ret;
-    */
 }
 
 RVector RSpline::getVectorTo(const RVector& point, bool limited, double strictRange) const {

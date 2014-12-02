@@ -1250,15 +1250,20 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
     }
 
     if (!continuous) {
-//        p.scale(getLineTypePatternScale(p));
+        if (getEntity()!=NULL && (getEntity()->getType()!=RS::EntitySpline || RSpline::hasProxy())) {
+            // we have a spline proxy:
+            RShapesExporter(*this, QList<QSharedPointer<RShape> >() << QSharedPointer<RShape>(spline.clone()), offset);
+        }
+        else {
+            // fallback if we don't have a spline proxy:
+            p.scale(getLineTypePatternScale(p));
 
-//        if (RMath::isNaN(offset)) {
-//            double length = spline.getLength();
-//            offset = p.getPatternOffset(length);
-//        }
-        //exportExplodable(spline, offset);
-
-        RShapesExporter(*this, QList<QSharedPointer<RShape> >() << QSharedPointer<RShape>(spline.clone()), offset);
+            if (RMath::isNaN(offset)) {
+                double length = spline.getLength();
+                offset = p.getPatternOffset(length);
+            }
+            exportExplodable(spline, offset);
+        }
     }
     else {
         // version <= 3.0.0 was (line interpolation):
@@ -1274,7 +1279,6 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
         pp.addSpline(spline);
         exportPainterPaths(QList<RPainterPath>() << pp);
     }
-
 
     /*
     RLinetypePattern p = getLinetypePattern();
@@ -1325,51 +1329,31 @@ void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
         return;
     }
 
-    RShapesExporter e(*this, sub, offset);
+    if (getEntity()!=NULL && (getEntity()->getType()!=RS::EntitySpline || RSpline::hasProxy())) {
+        // all explodable entities including splines is we have a spline proxy:
+        RShapesExporter(*this, sub, offset);
+        return;
+    }
 
-    /*
-    //QList<QSharedPointer<RShape> >::iterator it;
-    //for (it=sub.begin(); it!=sub.end(); ++it) {
-//    bool first = true;
+    // use alternative algorithm for splines if we don't have a spline proxy:
     double dist;
-//    QList<RLine> endSegments;
 
     for (int i=0; i<sub.length(); i++) {
         QSharedPointer<RLine> lineP = sub[i].dynamicCast<RLine>();
         if (!lineP.isNull()) {
             RLine line = *lineP.data();
-            dist = exportLine(line, offset, i==0, i==sub.length()-1);
-
-            // whole segment was a gap:
-//            if (RMath::isInf(dist)) {
-//                if (first) {
-//                    exportLineSegment(line);
-//                }
-//                else {
-//                    endSegments.append(line);
-//                }
-//            }
-
-            // first part of the segment was a gap:
-//            else if (!RMath::isNaN(dist)) {
-//                if (first) {
-//                    line.setEndPoint(line.getPointsWithDistanceToEnd(dist, RS::FromStart)[0]);
-//                    exportLineSegment(line);
-//                }
-//            }
-
+            dist = exportLine(line, offset);
             offset -= lineP->getLength();
             continue;
         }
 
         QSharedPointer<RArc> arc = sub[i].dynamicCast<RArc>();
         if (!arc.isNull()) {
-            exportArc(*arc.data(), offset, i==0 || i==sub.length()-1);
+            exportArc(*arc.data(), offset);
             offset -= arc->getLength();
             continue;
         }
     }
-    */
 }
 
 void RExporter::exportPainterPathSource(const RPainterPathSource& pathSource) {
