@@ -322,6 +322,9 @@ QList<QSharedPointer<RObject> > RDocument::getDefaultLinetypes() {
             else {
                 // replace previous pattern (e.g. on unit change):
                 lt->setPatternString(pattern->getPatternString());
+                lt->setMetric(pattern->isMetric());
+                lt->setName(pattern->getName());
+                lt->setDescription(pattern->getDescription());
             }
             ret.append(lt);
         }

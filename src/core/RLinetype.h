@@ -77,6 +77,14 @@ public:
         pattern.setName(n);
     }
 
+    bool isMetric() const {
+        return pattern.isMetric();
+    }
+
+    void setMetric(bool on) {
+        pattern.setMetric(on);
+    }
+
     QString getDescription() const {
         return pattern.getDescription();
     }
