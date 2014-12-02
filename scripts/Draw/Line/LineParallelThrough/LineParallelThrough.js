@@ -32,7 +32,7 @@ function LineParallelThrough(guiAction) {
     this.distance = undefined;
 
     if (!isNull(guiAction)) {
-        this.setUiOptions("LineParallelThrough.ui");
+        this.setUiOptions(["../Line.ui", "LineParallelThrough.ui"]);
     }
 }
 

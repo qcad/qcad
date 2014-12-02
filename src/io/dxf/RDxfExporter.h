@@ -45,12 +45,14 @@ class RMessageHandler;
 class RPointEntity;
 class RPolylineEntity;
 class RProgressHandler;
+class RRayEntity;
 class RSolidEntity;
 class RSplineEntity;
 class RTraceEntity;
 class RTextEntity;
 class RTextBasedData;
 class RTextBasedEntity;
+class RXLineEntity;
 
 
 /**
@@ -78,6 +80,8 @@ public:
     void writeEntity(const REntity& e);
     void writePoint(const RPointEntity& p);
     void writeLine(const RLineEntity& l);
+    void writeXLine(const RXLineEntity& l);
+    void writeRay(const RRayEntity& l);
     void writeCircle(const RCircleEntity& c);
     void writeArc(const RArcEntity& a);
     void writeEllipse(const REllipseEntity& el);

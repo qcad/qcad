@@ -44,12 +44,14 @@
 #include "RLineEntity.h"
 #include "RPointEntity.h"
 #include "RPolylineEntity.h"
+#include "RRayEntity.h"
 #include "RSettings.h"
 #include "RSolidEntity.h"
 #include "RSplineEntity.h"
 #include "RStorage.h"
 #include "RTextEntity.h"
 #include "RTraceEntity.h"
+#include "RXLineEntity.h"
 
 RDxfExporter::RDxfExporter(RDocument& document,
     RMessageHandler* messageHandler,
@@ -617,6 +619,12 @@ void RDxfExporter::writeEntity(const REntity& e) {
     case RS::EntityLine:
         writeLine(dynamic_cast<const RLineEntity&>(e));
         break;
+    case RS::EntityXLine:
+        writeXLine(dynamic_cast<const RXLineEntity&>(e));
+        break;
+    case RS::EntityRay:
+        writeRay(dynamic_cast<const RRayEntity&>(e));
+        break;
     case RS::EntityPolyline:
         writePolyline(dynamic_cast<const RPolylineEntity&>(e));
         break;
@@ -693,7 +701,7 @@ void RDxfExporter::writePoint(const RPointEntity& p) {
 }
 
 /**
- * Writes the given Line( entity to the file.
+ * Writes the given Line entity to the file.
  */
 void RDxfExporter::writeLine(const RLineEntity& l) {
     dxf.writeLine(
@@ -705,6 +713,36 @@ void RDxfExporter::writeLine(const RLineEntity& l) {
                     l.getEndPoint().y,
                     l.getEndPoint().z),
         attributes);
+}
+
+/**
+ * Writes the given XLine entity to the file.
+ */
+void RDxfExporter::writeXLine(const RXLineEntity& l) {
+    dxf.writeXLine(
+                *dw,
+                DL_XLineData(l.getBasePoint().x,
+                             l.getBasePoint().y,
+                             l.getBasePoint().z,
+                             l.getSecondPoint().x - l.getBasePoint().x,
+                             l.getSecondPoint().y - l.getBasePoint().y,
+                             l.getSecondPoint().z - l.getBasePoint().z),
+                attributes);
+}
+
+/**
+ * Writes the given Ray entity to the file.
+ */
+void RDxfExporter::writeRay(const RRayEntity& l) {
+    dxf.writeRay(
+                *dw,
+                DL_RayData(l.getBasePoint().x,
+                           l.getBasePoint().y,
+                           l.getBasePoint().z,
+                           l.getSecondPoint().x - l.getBasePoint().x,
+                           l.getSecondPoint().y - l.getBasePoint().y,
+                           l.getSecondPoint().z - l.getBasePoint().z),
+                attributes);
 }
 
 /**

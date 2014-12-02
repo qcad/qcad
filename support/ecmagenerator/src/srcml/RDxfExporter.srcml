@@ -75,6 +75,8 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <class_decl>class 
   <name>RProgressHandler</name>;</class_decl>
   <class_decl>class 
+  <name>RRayEntity</name>;</class_decl>
+  <class_decl>class 
   <name>RSolidEntity</name>;</class_decl>
   <class_decl>class 
   <name>RSplineEntity</name>;</class_decl>
@@ -86,6 +88,8 @@ dir="./io/dxf" filename="RDxfExporter.h">
   <name>RTextBasedData</name>;</class_decl>
   <class_decl>class 
   <name>RTextBasedEntity</name>;</class_decl>
+  <class_decl>class 
+  <name>RXLineEntity</name>;</class_decl>
   <comment type="block">/** * \brief Exporter for the DXF format,
   based on dxflib. * * \ingroup dxf */</comment>
   <class>class 
@@ -298,6 +302,34 @@ dir="./io/dxf" filename="RDxfExporter.h">
       <type>
       <name>const</name>
       <name>RLineEntity</name>&amp;</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeXLine</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RXLineEntity</name>&amp;</type>
+      <name>l</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>writeRay</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RRayEntity</name>&amp;</type>
       <name>l</name>
     </decl>
   </param>)</parameter_list>;</function_decl>

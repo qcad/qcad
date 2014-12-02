@@ -218,6 +218,12 @@ public:
     void writeLine(DL_WriterA& dw,
                    const DL_LineData& data,
                    const DL_Attributes& attrib);
+    void writeXLine(DL_WriterA& dw,
+                   const DL_XLineData& data,
+                   const DL_Attributes& attrib);
+    void writeRay(DL_WriterA& dw,
+                    const DL_RayData& data,
+                    const DL_Attributes& attrib);
     void writePolyline(DL_WriterA& dw,
                        const DL_PolylineData& data,
                        const DL_Attributes& attrib);

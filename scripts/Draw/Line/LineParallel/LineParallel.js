@@ -35,7 +35,7 @@ function LineParallel(guiAction) {
     this.pos = undefined;
 
     if (!isNull(guiAction)) {
-        this.setUiOptions("LineParallel.ui");
+        this.setUiOptions(["../Line.ui", "LineParallel.ui"]);
     }
 }
 
@@ -148,9 +148,18 @@ LineParallel.prototype.getOperation = function(preview) {
         return undefined;
     }
 
+    var doc = this.getDocument();
+    var e;
     var op = new RAddObjectsOperation();
     for (var i=0; i<parallels.length; ++i) {
-        op.addObject(shapeToEntity(this.getDocument(), parallels[i]));
+        if (isLineBasedShape(parallels[i])) {
+            e = this.createLineEntity(doc, parallels[i].getStartPoint(), parallels[i].getEndPoint());
+        }
+        else {
+            e = shapeToEntity(doc, parallels[i]);
+        }
+
+        op.addObject(e);
     }
     return op;
 };
