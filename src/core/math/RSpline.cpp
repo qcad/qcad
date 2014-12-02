@@ -810,7 +810,7 @@ QList<RVector> RSpline::getPointsWithDistanceToEnd(double distance, RS::From fro
         }
     }
     else {
-        // QCAD CE:
+        // no spline proxy (not precise, but better than nothing in some cases):
         double length = getLength();
         if (length<=RS::PointTolerance) {
             return ret;
