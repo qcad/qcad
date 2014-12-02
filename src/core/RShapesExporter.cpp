@@ -49,6 +49,10 @@ void RShapesExporter::exportLineSegment(const RLine& line, double angle) {
     RVector p1 = getPointAt(line.startPoint.x, &i1);
     RVector p2 = getPointAt(line.endPoint.x, &i2);
 
+    if (!p1.isValid() || !p2.isValid()) {
+        return;
+    }
+
     if (line.getLength()<RS::PointTolerance) {
         // zero length (point):
         exporter.exportLineSegment(RLine(p1, p2), angle);
@@ -66,11 +70,17 @@ void RShapesExporter::exportPainterPaths(const QList<RPainterPath>& paths, doubl
 
 RVector RShapesExporter::getPointAt(double d, int* index) {
     int i = getShapeAt(d);
-    if (i==-1) {
+    if (i<0 || i>=lengthAt.length() || i>=shapes.length()) {
         return RVector::invalid;
     }
 
-    double a = d - (i==0 ? 0.0 : lengthAt[i-1]);
+    double a;
+    if (i==0) {
+        a = d;
+    }
+    else {
+        a = d - lengthAt[i-1];
+    }
     QList<RVector> points = shapes[i]->getPointsWithDistanceToEnd(a, RS::FromStart);
     if (points.isEmpty()) {
         return RVector::invalid;
@@ -92,8 +102,14 @@ double RShapesExporter::getAngleAt(double d) {
 }
 
 int RShapesExporter::getShapeAt(double d) {
-    for (int i=0; i<shapes.length() && i<lengthAt.length(); i++) {
-        double d1 = (i==0 ? 0.0 : lengthAt[i-1]);
+    for (int i=0; i<lengthAt.length(); i++) {
+        double d1;
+        if (i==0) {
+            d1 = 0.0;
+        }
+        else {
+            d1 = lengthAt[i-1];
+        }
         double d2 = lengthAt[i];
         if (d>=d1 && d<=d2) {
             return i;
