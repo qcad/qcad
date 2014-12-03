@@ -29,7 +29,7 @@ RShapesExporter::RShapesExporter(RExporter& exporter, const QList<QSharedPointer
 
     for (int i=0; i<shapes.length(); i++) {
         length += shapes[i]->getLength();
-        lengthAt.append(length);
+        lengthAt.push_back(length);
     }
 
     RLine line(RVector(0,0), RVector(length, 0));
@@ -70,7 +70,7 @@ void RShapesExporter::exportPainterPaths(const QList<RPainterPath>& paths, doubl
 
 RVector RShapesExporter::getPointAt(double d, int* index) {
     int i = getShapeAt(d);
-    if (i<0 || i>=lengthAt.length() || i>=shapes.length()) {
+    if (i<0 || i>=lengthAt.size() || i>=shapes.length()) {
         return RVector::invalid;
     }
 
@@ -94,7 +94,7 @@ RVector RShapesExporter::getPointAt(double d, int* index) {
 
 double RShapesExporter::getAngleAt(double d) {
     int i = getShapeAt(d);
-    if (i<0 || i>shapes.length() || i>lengthAt.length()) {
+    if (i<0 || i>shapes.length() || i>lengthAt.size()) {
         return 0.0;
     }
     double a = d - (i==0 ? 0.0 : lengthAt[i-1]);
@@ -102,7 +102,7 @@ double RShapesExporter::getAngleAt(double d) {
 }
 
 int RShapesExporter::getShapeAt(double d) {
-    for (int i=0; i<lengthAt.length(); i++) {
+    for (int i=0; i<lengthAt.size(); i++) {
         double d1;
         if (i==0) {
             d1 = 0.0;
