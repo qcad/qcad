@@ -269,7 +269,7 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     //widgets["LinearFormat"].currentIndex = dimlunit-1;
     w = widgets["LinearFormat"];
     if (!isNull(w)) {
-        w.currentIndex = widgets["LinearFormat"].findData(dimlunit);
+        w.currentIndex = w.findData(dimlunit);
         w.setProperty("Loaded", true);
         w["currentIndexChanged(int)"].connect(function(idx) {
             var lf = w.itemData(idx);
