@@ -53,7 +53,7 @@ public:
 private:
     RExporter& exporter;
     QList<QSharedPointer<RShape> > shapes;
-    QList<double> lengthAt;
+    std::vector<double> lengthAt;
 };
 
 #endif
