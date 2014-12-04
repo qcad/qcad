@@ -80,6 +80,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setName, "setName");
             
+            REcmaHelper::registerFunction(&engine, proto, isMetric, "isMetric");
+            
+            REcmaHelper::registerFunction(&engine, proto, setMetric, "setMetric");
+            
             REcmaHelper::registerFunction(&engine, proto, getDescription, "getDescription");
             
             REcmaHelper::registerFunction(&engine, proto, setDescription, "setDescription");
@@ -557,6 +561,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerLinetype::setName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerLinetype::isMetric
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLinetype::isMetric", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLinetype::isMetric";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetype* self = 
+                        getSelf("isMetric", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isMetric();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetype.isMetric().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLinetype::isMetric", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerLinetype::setMetric
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLinetype::setMetric", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLinetype::setMetric";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetype* self = 
+                        getSelf("setMetric", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setMetric(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetype.setMetric().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLinetype::setMetric", context, engine);
             return result;
         }
          QScriptValue

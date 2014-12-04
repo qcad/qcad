@@ -122,10 +122,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RVector res = qscriptvalue_cast< 
-                        RVector
-                      >(
-                    
+                    RVector res;
+                      
+                          res = qscriptvalue_cast< 
+                            RVector
+                          >(
+                        
                             _q_function.call(__qtscript_self,
                                 QScriptValueList()
                                 
@@ -330,10 +332,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    QSet < REntity::Id > res = qscriptvalue_cast< 
-                        QSet < REntity::Id >
-                      >(
-                    
+                    QSet < REntity::Id > res;
+                      
+                          res = qscriptvalue_cast< 
+                            QSet < REntity::Id >
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -394,10 +398,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RSnap::Status res = qscriptvalue_cast< 
-                        RSnap::Status
-                      >(
-                    
+                    RSnap::Status res;
+                      
+                          res = qscriptvalue_cast< 
+                            RSnap::Status
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -458,10 +464,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RVector res = qscriptvalue_cast< 
-                        RVector
-                      >(
-                    
+                    RVector res;
+                      
+                          res = qscriptvalue_cast< 
+                            RVector
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )

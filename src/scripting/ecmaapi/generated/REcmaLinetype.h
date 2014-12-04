@@ -57,6 +57,12 @@
         setName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isMetric
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setMetric
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDescription
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

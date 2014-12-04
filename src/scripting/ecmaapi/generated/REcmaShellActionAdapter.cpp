@@ -1778,10 +1778,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    bool res = qscriptvalue_cast< 
-                        bool
-                      >(
-                    
+                    bool res;
+                      
+                          res = qscriptvalue_cast< 
+                            bool
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -1896,10 +1898,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    bool res = qscriptvalue_cast< 
-                        bool
-                      >(
-                    
+                    bool res;
+                      
+                          res = qscriptvalue_cast< 
+                            bool
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -2014,10 +2018,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    bool res = qscriptvalue_cast< 
-                        bool
-                      >(
-                    
+                    bool res;
+                      
+                          res = qscriptvalue_cast< 
+                            bool
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -2144,10 +2150,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    QString res = qscriptvalue_cast< 
-                        QString
-                      >(
-                    
+                    QString res;
+                      
+                          res = qscriptvalue_cast< 
+                            QString
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -2274,10 +2282,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RAction * res = qscriptvalue_cast< 
-                        RAction *
-                      >(
-                    
+                    RAction * res;
+                      
+                          res = qscriptvalue_cast< 
+                            RAction *
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -2337,10 +2347,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RGuiAction * res = qscriptvalue_cast< 
-                        RGuiAction *
-                      >(
-                    
+                    RGuiAction * res;
+                      
+                          res = qscriptvalue_cast< 
+                            RGuiAction *
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -2467,12 +2479,14 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    QList < RGraphicsScene * > res = qscriptvalue_cast< 
-                        QList < RGraphicsScene * >
-                      >(
-                    
+                    QList < RGraphicsScene * > res;
+                      
+                          REcmaHelper::fromScriptValue(engine, 
+                        
                             _q_function.call(__qtscript_self)
                         
+                      , res
+                    
                       )
                     
                     ;
@@ -2530,10 +2544,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RDocument * res = qscriptvalue_cast< 
-                        RDocument *
-                      >(
-                    
+                    RDocument * res;
+                      
+                          res = qscriptvalue_cast< 
+                            RDocument *
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -2593,10 +2609,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RDocumentInterface * res = qscriptvalue_cast< 
-                        RDocumentInterface *
-                      >(
-                    
+                    RDocumentInterface * res;
+                      
+                          res = qscriptvalue_cast< 
+                            RDocumentInterface *
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -2656,10 +2674,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RStorage * res = qscriptvalue_cast< 
-                        RStorage *
-                      >(
-                    
+                    RStorage * res;
+                      
+                          res = qscriptvalue_cast< 
+                            RStorage *
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -2853,10 +2873,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RAction::ClickMode res = qscriptvalue_cast< 
-                        RAction::ClickMode
-                      >(
-                    
+                    RAction::ClickMode res;
+                      
+                          res = qscriptvalue_cast< 
+                            RAction::ClickMode
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -2916,10 +2938,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RVector res = qscriptvalue_cast< 
-                        RVector
-                      >(
-                    
+                    RVector res;
+                      
+                          res = qscriptvalue_cast< 
+                            RVector
+                          >(
+                        
                             _q_function.call(__qtscript_self,
                                 QScriptValueList()
                                 

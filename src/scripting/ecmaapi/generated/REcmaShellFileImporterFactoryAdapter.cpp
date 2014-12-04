@@ -120,10 +120,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    QStringList res = qscriptvalue_cast< 
-                        QStringList
-                      >(
-                    
+                    QStringList res;
+                      
+                          res = qscriptvalue_cast< 
+                            QStringList
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -184,10 +186,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    int res = qscriptvalue_cast< 
-                        int
-                      >(
-                    
+                    int res;
+                      
+                          res = qscriptvalue_cast< 
+                            int
+                          >(
+                        
                             _q_function.call(__qtscript_self,
                                 QScriptValueList()
                                 
@@ -269,10 +273,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RFileImporter * res = qscriptvalue_cast< 
-                        RFileImporter *
-                      >(
-                    
+                    RFileImporter * res;
+                      
+                          res = qscriptvalue_cast< 
+                            RFileImporter *
+                          >(
+                        
                             _q_function.call(__qtscript_self,
                                 QScriptValueList()
                                 

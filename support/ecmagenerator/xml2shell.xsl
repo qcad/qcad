@@ -389,22 +389,29 @@
                         -->
                     </xsl:if>
 
+                    <xsl:variable name="returnTypeStripped">
+                      <xsl:choose>
+                        <xsl:when test="rs:isReference(@returnType)">
+                          <xsl:value-of select="rs:stripReferenceOrPointer(@returnType)" /><xsl:text>*</xsl:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:value-of select="@returnType" /> 
+                        </xsl:otherwise>
+                      </xsl:choose>
+                    </xsl:variable>
+
                     <xsl:if test="not(@returnType='void')">
-
-                      <xsl:variable name="returnTypeStripped">
-                        <xsl:choose>
-                          <xsl:when test="rs:isReference(@returnType)">
-                            <xsl:value-of select="rs:stripReferenceOrPointer(@returnType)" /><xsl:text>*</xsl:text>
-                          </xsl:when>
-                          <xsl:otherwise>
-                            <xsl:value-of select="@returnType" /> 
-                          </xsl:otherwise>
-                        </xsl:choose>
-                      </xsl:variable>
-
-                      <xsl:value-of select="$returnTypeStripped" /> res = qscriptvalue_cast&lt; 
-                        <xsl:value-of select="$returnTypeStripped" />
-                      &gt;(
+                      <xsl:value-of select="$returnTypeStripped" /> res;
+                      <xsl:choose>
+                        <xsl:when test="starts-with($returnTypeStripped, 'QList')">
+                          REcmaHelper::fromScriptValue(engine, 
+                        </xsl:when>
+                        <xsl:otherwise>
+                          res = qscriptvalue_cast&lt; 
+                            <xsl:value-of select="$returnTypeStripped" />
+                          &gt;(
+                        </xsl:otherwise>
+                      </xsl:choose>
                     </xsl:if>
 
                     <xsl:choose>
@@ -419,6 +426,9 @@
                         </xsl:otherwise>
                     </xsl:choose>
 
+                    <xsl:if test="starts-with($returnTypeStripped, 'QList')">
+                      , res
+                    </xsl:if>
                     <xsl:if test="not(@returnType='void')">
                       )
                     </xsl:if>

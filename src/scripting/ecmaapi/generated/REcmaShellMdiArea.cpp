@@ -127,10 +127,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    QToolButton * res = qscriptvalue_cast< 
-                        QToolButton *
-                      >(
-                    
+                    QToolButton * res;
+                      
+                          res = qscriptvalue_cast< 
+                            QToolButton *
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )

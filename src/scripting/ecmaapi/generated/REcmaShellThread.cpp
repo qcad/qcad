@@ -235,10 +235,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    QString res = qscriptvalue_cast< 
-                        QString
-                      >(
-                    
+                    QString res;
+                      
+                          res = qscriptvalue_cast< 
+                            QString
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -299,10 +301,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    QString res = qscriptvalue_cast< 
-                        QString
-                      >(
-                    
+                    QString res;
+                      
+                          res = qscriptvalue_cast< 
+                            QString
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )
@@ -363,10 +367,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RThread * res = qscriptvalue_cast< 
-                        RThread *
-                      >(
-                    
+                    RThread * res;
+                      
+                          res = qscriptvalue_cast< 
+                            RThread *
+                          >(
+                        
                             _q_function.call(__qtscript_self)
                         
                       )

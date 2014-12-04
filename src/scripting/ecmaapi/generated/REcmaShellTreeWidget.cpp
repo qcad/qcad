@@ -191,10 +191,12 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    QModelIndex res = qscriptvalue_cast< 
-                        QModelIndex
-                      >(
-                    
+                    QModelIndex res;
+                      
+                          res = qscriptvalue_cast< 
+                            QModelIndex
+                          >(
+                        
                             _q_function.call(__qtscript_self,
                                 QScriptValueList()
                                 
