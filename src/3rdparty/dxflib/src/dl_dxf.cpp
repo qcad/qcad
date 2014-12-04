@@ -386,6 +386,7 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
                                width,                   // width
                                linetype,                // linetype
                                handle);                 // handle
+        attrib.setInPaperSpace((bool)getIntValue(67, 0));
         attrib.setLinetypeScale(getRealValue(48, 1.0));
         creationInterface->setAttributes(attrib);
 
@@ -472,6 +473,7 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
             break;
 
         case DL_ENTITY_INSERT:
+            printf("insert: code 67: %d\n", getIntValue(67, 0));
             addInsert(creationInterface);
             break;
 

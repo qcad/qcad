@@ -52,7 +52,8 @@ public:
         width(0),
         linetype("BYLAYER"),
         linetypeScale(1.0),
-        handle(-1) {
+        handle(-1),
+        inPaperSpace(false) {
     }
 
     /**
@@ -76,7 +77,8 @@ public:
         width(width),
         linetype(linetype),
         linetypeScale(linetypeScale),
-        handle(-1) {
+        handle(-1),
+        inPaperSpace(false) {
 
     }
     
@@ -102,7 +104,8 @@ public:
         width(width),
         linetype(linetype),
         linetypeScale(1.0),
-        handle(handle) {
+        handle(handle),
+        inPaperSpace(false) {
     }
 
     /**
@@ -189,10 +192,6 @@ public:
         return linetypeScale;
     }
 
-//    void setDashes(const std::vector<double>& dashes) {
-//        this->dashes = dashes;
-//    }
-
     /**
      * @return Line type.
      */
@@ -212,6 +211,14 @@ public:
         return handle;
     }
 
+    void setInPaperSpace(bool on) {
+        inPaperSpace = on;
+    }
+
+    bool isInPaperSpace() {
+        return inPaperSpace;
+    }
+
 private:
     std::string layer;
     int color;
@@ -219,8 +226,10 @@ private:
     int width;
     std::string linetype;
     double linetypeScale;
-//    std::vector<double> dashes;
     int handle;
+
+    // DXF code 67 (true: entity in paper space, false: entity in model space (default):
+    bool inPaperSpace;
 };
 
 #endif

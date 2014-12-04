@@ -458,7 +458,7 @@ void RDxfImporter::importEntity(QSharedPointer<REntity> entity) {
     }
     entity->setLinetypeId(linetypeId);
 
-    // linetype scale:
+    // Linetype scale:
     entity->setLinetypeScale(attributes.getLinetypeScale());
 
     // Width:
@@ -470,7 +470,20 @@ void RDxfImporter::importEntity(QSharedPointer<REntity> entity) {
     }
 
     // Block:
-    entity->setBlockId(getCurrentBlockId());
+    if (attributes.isInPaperSpace()) {
+        RBlock::Id paperSpaceBlockId = document->getBlockId("*Paper_Space");
+        if (paperSpaceBlockId!=RBlock::INVALID_ID) {
+            qDebug() << "entity in paper space";
+            entity->setBlockId(paperSpaceBlockId);
+        }
+        else {
+            qWarning() << "paper space block not found for entity:" << *entity;
+            entity->setBlockId(getCurrentBlockId());
+        }
+    }
+    else {
+        entity->setBlockId(getCurrentBlockId());
+    }
 
     if (RSettings::isXDataEnabled()) {
         // TODO:
@@ -634,6 +647,8 @@ void RDxfImporter::addInsert(const DL_InsertData& data) {
             )
     );
     entity->setCustomProperty("", "block", blockName);
+
+    qDebug() << "insert: paper space: " << attributes.isInPaperSpace();
     importEntity(entity);
 }
 
