@@ -473,7 +473,6 @@ void RDxfImporter::importEntity(QSharedPointer<REntity> entity) {
     if (attributes.isInPaperSpace()) {
         RBlock::Id paperSpaceBlockId = document->getBlockId("*Paper_Space");
         if (paperSpaceBlockId!=RBlock::INVALID_ID) {
-            qDebug() << "entity in paper space";
             entity->setBlockId(paperSpaceBlockId);
         }
         else {
@@ -648,7 +647,6 @@ void RDxfImporter::addInsert(const DL_InsertData& data) {
     );
     entity->setCustomProperty("", "block", blockName);
 
-    qDebug() << "insert: paper space: " << attributes.isInPaperSpace();
     importEntity(entity);
 }
 
