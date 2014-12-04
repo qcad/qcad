@@ -296,7 +296,6 @@ bool RFont::load() {
             if (!shapeName.isEmpty() && shapeName.length()>1) {
                 shapeMap.insert(shapeName, glyph);
                 numNameMap.insert(ch, shapeName);
-                qDebug() << "shape found: " << shapeName;
             }
             else {
                 glyphMap.insert(ch, glyph);
