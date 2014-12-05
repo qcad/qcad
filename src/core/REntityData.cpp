@@ -515,6 +515,10 @@ QSharedPointer<RShape> REntityData::getClosestShape(const RVector& pos, double r
         return ret;
     }
 
+    if (shapes.size()==1) {
+        return shapes[0];
+    }
+
     // entity based on one or more shapes, find closest:
     double minDistance = RMAXDOUBLE;
     QList<QSharedPointer<RShape> >::const_iterator it;

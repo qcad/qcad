@@ -28,7 +28,6 @@ function Divide(guiAction) {
     Modify.call(this, guiAction);
 
     this.entity = undefined;
-    this.shape = undefined;
     // user click position:
     this.pos = undefined;
     this.pos2 = undefined;
@@ -60,7 +59,6 @@ Divide.prototype.setState = function(state) {
     switch (this.state) {
     case Divide.State.ChoosingEntity:
         this.entity = undefined;
-        this.shape = undefined;
         this.pos = undefined;
         this.cutPos = undefined;
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
@@ -129,7 +127,6 @@ Divide.prototype.pickEntity = function(event, preview) {
             (RSpline.hasProxy() && isSplineEntity(entity))) {
 
             this.entity = entity;
-            this.shape = entity.getClosestShape(pos);
 
             if (preview) {
                 this.updatePreview();
@@ -198,13 +195,34 @@ Divide.prototype.pickCoordinate = function(event, preview) {
 };
 
 Divide.prototype.getOperation = function(preview) {
-    if (isNull(this.pos) || isNull(this.entity) || !isShape(this.shape)) {
+    var op = new RMixedOperation();
+
+    var cutPositions = Divide.divide(op, this.pos, this.pos2, this.entity.clone());
+    if (cutPositions.length===0) {
         return undefined;
     }
+    this.cutPos = cutPositions[0];
+    this.cutPos2 = cutPositions[1];
 
-    if (isNull(this.pos2)) {
-        if (isCircleShape(this.shape) || (isEllipseShape(this.shape) && this.shape.isFullEllipse())) {
-            return undefined;
+    return op;
+};
+
+/**
+ * Divides the given entity at the given one or two positions
+ * as part of the given operation.
+ * \return Array of actual cut points.
+ */
+Divide.divide = function(op, pos, pos2, entity) {
+    if (isNull(pos) || isNull(entity)) {
+        return [];
+    }
+
+    entity.dump();
+    var shape = entity.getClosestShape(pos);
+
+    if (isNull(pos2)) {
+        if (isCircleShape(shape) || (isEllipseShape(shape) && shape.isFullEllipse())) {
+            return [];
         }
     }
 
@@ -212,89 +230,90 @@ Divide.prototype.getOperation = function(preview) {
     var angle = undefined;
     var angle2 = undefined;
     var e;
+    var cutPos = undefined;
+    var cutPos2 = undefined;
 
-    var op = new RMixedOperation();
-    if (isCircleShape(this.shape)) {
-        op.deleteObject(this.entity);
-        center = this.shape.getCenter();
-        var radius = this.shape.getRadius();
-        angle = center.getAngleTo(this.pos);
-        angle2 = center.getAngleTo(this.pos2);
+    if (isCircleShape(shape)) {
+        op.deleteObject(entity);
+        center = shape.getCenter();
+        var radius = shape.getRadius();
+        angle = center.getAngleTo(pos);
+        angle2 = center.getAngleTo(pos2);
 
-        this.cutPos = center.operator_add(RVector.createPolar(radius, angle));
-        this.cutPos2 = center.operator_add(RVector.createPolar(radius, angle2));
+        cutPos = center.operator_add(RVector.createPolar(radius, angle));
+        cutPos2 = center.operator_add(RVector.createPolar(radius, angle2));
 
         // introduce tiny gap to make sure full arc is still rendered correctly
         // in other CAD systems:
         var arc = new RArc(
-                this.shape.getCenter(),
-                this.shape.getRadius(),
+                shape.getCenter(),
+                shape.getRadius(),
                 angle,
                 angle2,
                 false);
-        e = new RArcEntity(this.entity.getDocument(), new RArcData(arc));
-        e.copyAttributesFrom(this.entity.data());
+        e = new RArcEntity(entity.getDocument(), new RArcData(arc));
+        e.copyAttributesFrom(entity);
         op.addObject(e, false);
         var arc2 = new RArc(
-                    this.shape.getCenter(),
-                    this.shape.getRadius(),
+                    shape.getCenter(),
+                    shape.getRadius(),
                     angle2,
                     angle,
                     false);
-        e = new RArcEntity(this.entity.getDocument(), new RArcData(arc2));
-        e.copyAttributesFrom(this.entity.data());
+        e = new RArcEntity(entity.getDocument(), new RArcData(arc2));
+        e.copyAttributesFrom(entity.data());
         op.addObject(e, false);
     }
-    else if (isEllipseShape(this.shape) && this.shape.isFullEllipse()) {
-        op.deleteObject(this.entity);
-        center = this.shape.getCenter();
-        var ellipseAngle = this.shape.getAngle();
+    else if (isEllipseShape(shape) && shape.isFullEllipse()) {
+        op.deleteObject(entity);
+        center = shape.getCenter();
+        var ellipseAngle = shape.getAngle();
 
-        angle = center.getAngleTo(this.pos) - ellipseAngle;
-        angle2 = center.getAngleTo(this.pos2) - ellipseAngle;
+        angle = center.getAngleTo(pos) - ellipseAngle;
+        angle2 = center.getAngleTo(pos2) - ellipseAngle;
 
-        this.cutPos = this.shape.getPointAt(angle);
-        this.cutPos2 = this.shape.getPointAt(angle2);
+        cutPos = shape.getPointAt(angle);
+        cutPos2 = shape.getPointAt(angle2);
 
-        var ellipse = this.shape.clone();
+        var ellipse = shape.clone();
         ellipse.setStartParam(ellipse.angleToParam(angle));
         ellipse.setEndParam(ellipse.angleToParam(angle2));
-        e = new REllipseEntity(this.entity.getDocument(), new REllipseData(ellipse));
-        e.copyAttributesFrom(this.entity.data());
+        e = new REllipseEntity(entity.getDocument(), new REllipseData(ellipse));
+        e.copyAttributesFrom(entity.data());
         op.addObject(e, false);
 
-        var ellipse2 = this.shape.clone();
+        var ellipse2 = shape.clone();
         ellipse2.setStartParam(ellipse2.angleToParam(angle2));
         ellipse2.setEndParam(ellipse2.angleToParam(angle));
-        e = new REllipseEntity(this.entity.getDocument(), new REllipseData(ellipse2));
-        e.copyAttributesFrom(this.entity.data());
+        e = new REllipseEntity(entity.getDocument(), new REllipseData(ellipse2));
+        e.copyAttributesFrom(entity);
         op.addObject(e, false);
     }
     else {
-        var shape1 = this.shape.clone();
-        var shape2 = this.shape.clone();
+        var shape1 = shape.clone();
+        var shape2 = shape.clone();
 
-        shape1 = trimEndPoint(shape1, this.pos);
-        this.cutPos = shape1.getEndPoint();
-        shape2 = trimStartPoint(shape2, this.pos);
+        shape1 = trimEndPoint(shape1, pos);
+
+        cutPos = shape1.getEndPoint();
+
+        shape2 = trimStartPoint(shape2, pos);
 
         // modify chosen entity into first part:
-        modifyEntity(op, this.entity.data(), shape1);
-        //this.entity.setShape(shape1);
-        //op.addObject(this.entity, false);
+        modifyEntity(op, entity, shape1);
 
         // add second part as new entity:
         if (isLineBasedShape(shape2) || isArcShape(shape2) ||
             isEllipseShape(shape2) || isSplineShape(shape2)) {
 
-            e = shapeToEntity(this.entity.getDocument(), shape2);
+            e = shapeToEntity(entity.getDocument(), shape2);
             if (!isNull(e)) {
-                e.copyAttributesFrom(this.entity.data());
+                e.copyAttributesFrom(entity);
                 op.addObject(e, false);
             }
         }
     }
-    return op;
+    return [cutPos, cutPos2];
 };
 
 Divide.prototype.getHighlightedEntities = function() {

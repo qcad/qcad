@@ -519,6 +519,10 @@ double RMath::getNormalizedAngle(double a) {
         a += 2*M_PI * n;
     }
 
+    if (a>2*M_PI-RS::AngleTolerance) {
+        a = 0.0;
+    }
+
     return a;
 }
 

@@ -1678,6 +1678,9 @@ function rayToLine(ray) {
     return new RLine(ray.getBasePoint(), ray.getSecondPoint());
 };
 
+/**
+ * Modify the given entity to represent the given shape.
+ */
 function modifyEntity(op, entity, shape) {
     if ((isXLineEntity(entity) && isRayShape(shape)) ||
         (isRayEntity(entity) && isLineShape(shape))) {
