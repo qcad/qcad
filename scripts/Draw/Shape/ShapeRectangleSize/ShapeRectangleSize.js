@@ -45,7 +45,7 @@ function ShapeRectangleSize(guiAction) {
         [ "Top",         qsTr("Top"),          new RVector( 0,  1), Qt.Key_2.valueOf() ],
         [ "TopRight",    qsTr("Top Right"),    new RVector( 1,  1), Qt.Key_3.valueOf() ],
         [ "Left",        qsTr("Left"),         new RVector(-1,  0), Qt.Key_4.valueOf() ],
-        [ "Middle",      qsTr("Middle"),       new RVector( 0,  0), Qt.Key_5.valueOf() ],
+        [ "Middle",      qsTr("Middle"),       new RVector( 0,  0), Qt.Key_5 ],
         [ "Right",       qsTr("Right"),        new RVector( 1,  0), Qt.Key_6.valueOf() ],
         [ "BottomLeft",  qsTr("Bottom Left"),  new RVector(-1, -1), Qt.Key_7.valueOf() ],
         [ "Bottom",      qsTr("Bottom"),       new RVector( 0, -1), Qt.Key_8.valueOf() ],
@@ -61,13 +61,18 @@ ShapeRectangleSize.prototype.showUiOptions = function(resume, restoreFromSetting
     
     var optionsToolBar = EAction.getOptionsToolBar();
     var refPointCombo = optionsToolBar.findChild("ReferencePoint");
+    var shortcuts = [];
 
     for (var i=0; i<this.rbReferencePoints.length; i++) {
+        var str = String.fromCharCode(this.rbReferencePoints[i][3]);
         refPointCombo.addItem(
-            "[" + String.fromCharCode(this.rbReferencePoints[i][3]) + "] " + this.rbReferencePoints[i][1],
+            "[" + str + "] " + this.rbReferencePoints[i][1],
             this.rbReferencePoints[i][2]
         );
+        shortcuts[i] = new QShortcut(new QKeySequence(str), refPointCombo, 0, 0, Qt.WindowShortcut);
+        shortcuts[i].activated.connect(new KeyReactor(i), "activated");
     }
+
 };
 
 ShapeRectangleSize.prototype.beginEvent = function() {
@@ -166,15 +171,28 @@ ShapeRectangleSize.prototype.slotReferencePointChanged = function(value) {
     this.updatePreview(true);
 };
 
-ShapeRectangleSize.prototype.keyPressEvent = function(event) {
+//ShapeRectangleSize.prototype.keyPressEvent = function(event) {
+//    var optionsToolBar = EAction.getOptionsToolBar();
+//    var refPointCombo = optionsToolBar.findChild("ReferencePoint");
+
+//    for (var i=0; i<this.rbReferencePoints.length; i++) {
+//        if (event.key()===this.rbReferencePoints[i][3]) {
+//            this.referencePoint = this.rbReferencePoints[i][2];
+//            refPointCombo.currentIndex = refPointCombo.findData(this.referencePoint);
+//        }
+//    }
+//    this.updatePreview(true);
+//};
+
+/**
+ * Reacts to an assigned shortcut for the given index of the reference point combo box.
+ */
+function KeyReactor(i) {
+    this.i = i;
+}
+
+KeyReactor.prototype.activated = function() {
     var optionsToolBar = EAction.getOptionsToolBar();
     var refPointCombo = optionsToolBar.findChild("ReferencePoint");
-
-    for (var i=0; i<this.rbReferencePoints.length; i++) {
-        if (event.key()===this.rbReferencePoints[i][3]) {
-            this.referencePoint = this.rbReferencePoints[i][2];
-            refPointCombo.currentIndex = refPointCombo.findData(this.referencePoint);
-        }
-    }
-    this.updatePreview(true);
+    refPointCombo.currentIndex = this.i;
 };
