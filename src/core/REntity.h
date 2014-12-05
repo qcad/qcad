@@ -437,6 +437,13 @@ public:
     virtual QList<RVector> getIntersectionPoints(const RShape& shape, bool limited = true, const RBox& queryBox = RDEFAULT_RBOX) const;
 
     /**
+     * Make getIntersectionPoints with shape parameter accessible for script wrappers.
+     */
+    virtual QList<RVector> getIntersectionPointsWithShape(const RShape& shape, bool limited = true, const RBox& queryBox = RDEFAULT_RBOX) const {
+        return getIntersectionPoints(shape, limited, queryBox);
+    }
+
+    /**
      * \copydoc REntityData::moveReferencePoint
      */
     virtual bool moveReferencePoint(

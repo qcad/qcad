@@ -2153,6 +2153,76 @@ dir="./core" filename="REntity.h">
     </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <comment type="block">/** * Make getIntersectionPoints with shape
+  parameter accessible for script wrappers. */</comment>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>RVector</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>getIntersectionPointsWithShape</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RShape</name>&amp;</type>
+        <name>shape</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>bool</name>
+      </type>
+      <name>limited</name>=
+      <init>
+        <expr>
+          <name>true</name>
+        </expr>
+      </init></decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+      <name>const</name>
+      <name>RBox</name>&amp;</type>
+      <name>queryBox</name>=
+      <init>
+        <expr>
+          <name>RDEFAULT_RBOX</name>
+        </expr>
+      </init></decl>
+    </param>)</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>getIntersectionPoints</name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>shape</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>limited</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>queryBox</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
   <comment type="block">/** * \copydoc
   REntityData::moveReferencePoint */</comment>
   <function>
