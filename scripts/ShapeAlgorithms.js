@@ -1850,3 +1850,21 @@ ShapeAlgorithms.transformArc = function(arc, fun) {
 
     return ShapeAlgorithms.ellipseToArcCircleEllipse(ellipse);
 };
+
+/**
+ * \return List of points (RVector) which all lay on the given shape with
+ * the given maximum distance.
+ */
+ShapeAlgorithms.getPointsOnShape = function(shape, distance) {
+    var ret = [];
+    if (isLineShape(shape) || isArcShape(shape)) {
+        var n = Math.floor(shape.getLength() / distance);
+        for (var i=1; i<=n; i++) {
+            var p = shape.getPointsWithDistanceToEnd(distance*i, RS.FromStart);
+            if (p.length===1) {
+                ret.push(p[0]);
+            }
+        }
+    }
+    return ret;
+};
