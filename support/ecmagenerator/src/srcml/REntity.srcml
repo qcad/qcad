@@ -2104,6 +2104,18 @@ dir="./core" filename="REntity.h">
         <name>RDEFAULT_RBOX</name>
       </expr>
     </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>ignoreComplex</name>=
+    <init>
+      <expr>
+        <name>true</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <comment type="block">/** * \copydoc
@@ -2149,6 +2161,18 @@ dir="./core" filename="REntity.h">
     <init>
       <expr>
         <name>RDEFAULT_RBOX</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>ignoreComplex</name>=
+    <init>
+      <expr>
+        <name>true</name>
       </expr>
     </init></decl>
   </param>)</parameter_list>

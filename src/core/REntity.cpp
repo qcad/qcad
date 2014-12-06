@@ -156,7 +156,7 @@ void REntity::copyAttributesFrom(REntity* entity, bool copyBlockId) {
 }
 
 QList<RVector> REntity::getIntersectionPoints(
-        const REntity& other, bool limited, const RBox& queryBox) const {
+        const REntity& other, bool limited, const RBox& queryBox, bool ignoreComplex) const {
 
     bool same = false;
 
@@ -174,11 +174,11 @@ QList<RVector> REntity::getIntersectionPoints(
         }
     }
 
-    return getData().getIntersectionPoints(other.getData(), limited, same, queryBox/*, pos, posOther*/);
+    return getData().getIntersectionPoints(other.getData(), limited, same, queryBox, ignoreComplex);
 }
 
-QList<RVector> REntity::getIntersectionPoints(const RShape& shape, bool limited, const RBox& queryBox) const {
-    return getData().getIntersectionPoints(shape, limited, queryBox);
+QList<RVector> REntity::getIntersectionPoints(const RShape& shape, bool limited, const RBox& queryBox, bool ignoreComplex) const {
+    return getData().getIntersectionPoints(shape, limited, queryBox, ignoreComplex);
 }
 
 QPair<QVariant, RPropertyAttributes> REntity::getProperty(

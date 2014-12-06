@@ -163,7 +163,7 @@ public:
 
     virtual QList<RVector> getIntersectionPoints(
             const REntityData& other, bool limited = true, bool same = false,
-            const RBox& queryBox = RDEFAULT_RBOX) const;
+            const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = true) const;
 
     void setPolylineGen(bool on) {
         polylineGen = on;

@@ -14,7 +14,10 @@ SOURCES = \
     ../autostart.js \
     ../sprintf.js \
     ../map.js \
-    ../DefaultAction.js
+    ../DefaultAction.js \
+    ../lib/hull/grid.js \
+    ../lib/hull/hull.js \
+    ../lib/hull/intersect.js
 OTHER_FILES += ../custom_menu.dox \
     ../memorize_dialog.dox \
     ../scripting.dox \

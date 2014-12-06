@@ -163,9 +163,10 @@ IndexWatcher.prototype.indexChanged = function(index) {
         return;
     }
 
-    var r = view.mapDistanceFromView(5);
 
+    // preview postition in drawing:
     di.clearPreview();
+    var r = view.mapDistanceFromView(10);
     di.addAuxShapeToPreview(new RCircle(new RVector(x, y), r));
     di.addAuxShapeToPreview(new RLine(new RVector(x-r, y), new RVector(x+r, y)));
     di.addAuxShapeToPreview(new RLine(new RVector(x, y-r), new RVector(x, y+r)));
@@ -854,7 +855,7 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
             value = RMath.rad2deg(value);
         }
         var document = EAction.getDocument();
-        if (document.getLinearFormat()===RS.Fractional || document.getLinearFormat()===RS.FractionalStacked) {
+        if (!attributes.isAngleType() && (document.getLinearFormat()===RS.Fractional || document.getLinearFormat()===RS.FractionalStacked)) {
             newText = RUnit.getLabel(value, document, true);
         }
         else {

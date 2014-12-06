@@ -429,12 +429,12 @@ public:
      * \copydoc REntityData::getIntersectionPoints(const REntity&, bool)
      */
     virtual QList<RVector> getIntersectionPoints(
-            const REntity& other, bool limited = true, const RBox& queryBox = RDEFAULT_RBOX) const;
+            const REntity& other, bool limited = true, const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = true) const;
 
     /**
      * \copydoc REntityData::getIntersectionPoints(const RShape&, bool)
      */
-    virtual QList<RVector> getIntersectionPoints(const RShape& shape, bool limited = true, const RBox& queryBox = RDEFAULT_RBOX) const;
+    virtual QList<RVector> getIntersectionPoints(const RShape& shape, bool limited = true, const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = true) const;
 
     /**
      * Make getIntersectionPoints with shape parameter accessible for script wrappers.

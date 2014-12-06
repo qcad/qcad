@@ -433,6 +433,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default=" true" isConst="false" />
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
+        <arg type="bool" typeName="bool" name="ignoreComplex"
+        hasDefault="true" default=" true" isConst="false" />
       </variant>
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false">
@@ -442,6 +444,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default=" true" isConst="false" />
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
+        <arg type="bool" typeName="bool" name="ignoreComplex"
+        hasDefault="true" default=" true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsWithShape"

@@ -76,7 +76,7 @@ bool RPolylineData::moveReferencePoint(const RVector& referencePoint,
  */
 QList<RVector> RPolylineData::getIntersectionPoints(
         const REntityData& other, bool limited, bool same,
-        const RBox& queryBox) const {
+        const RBox& queryBox, bool ignoreComplex) const {
 
     QList<RVector> ret;
 

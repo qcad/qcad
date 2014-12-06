@@ -393,11 +393,11 @@ bool REntityData::intersectsWith(const RShape& shape) const {
  *     from the same entity.
  */
 QList<RVector> REntityData::getIntersectionPoints(
-        const REntityData& other, bool limited, bool same, const RBox& queryBox) const {
+        const REntityData& other, bool limited, bool same, const RBox& queryBox, bool ignoreComplex) const {
 
     QList<RVector> ret;
-    QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox, true);
-    QList<QSharedPointer<RShape> > shapes2 = other.getShapes(queryBox, true);
+    QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox, ignoreComplex);
+    QList<QSharedPointer<RShape> > shapes2 = other.getShapes(queryBox, ignoreComplex);
 
     for (int i=0; i<shapes1.size(); i++) {
         for (int k=0; k<shapes2.size(); k++) {
@@ -414,9 +414,9 @@ QList<RVector> REntityData::getIntersectionPoints(
  * \return Points on entity which are intersection points with the
  *     given shape.
  */
-QList<RVector> REntityData::getIntersectionPoints(const RShape& shape, bool limited, const RBox& queryBox) const {
+QList<RVector> REntityData::getIntersectionPoints(const RShape& shape, bool limited, const RBox& queryBox, bool ignoreComplex) const {
     QList<RVector> ret;
-    QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox, true);
+    QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox, ignoreComplex);
     for (int i=0; i<shapes1.size(); i++) {
         ret.append(shapes1.at(i)->getIntersectionPoints(shape, limited));
     }

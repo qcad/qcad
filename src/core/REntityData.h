@@ -265,10 +265,10 @@ public:
 
     virtual QList<RVector> getIntersectionPoints(
             const REntityData& other, bool limited = true, bool same = false,
-            const RBox& queryBox = RDEFAULT_RBOX) const;
+            const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = true) const;
     virtual QList<RVector> getIntersectionPoints(
             const RShape& shape, bool limited = true,
-            const RBox& queryBox = RDEFAULT_RBOX) const;
+            const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = true) const;
 
     virtual RVector getVectorTo(const RVector& point, bool limited=true, double strictRange = RMAXDOUBLE) const;
 

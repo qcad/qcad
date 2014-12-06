@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 
-include("date.js");
 
 /**
  * Provides a connection to a SQLite database.
