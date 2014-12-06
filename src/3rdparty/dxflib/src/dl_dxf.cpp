@@ -176,7 +176,7 @@ bool DL_Dxf::readDxfGroups(FILE *fp, DL_CreationInterface* creationInterface) {
 
     // Read one group of the DXF file and strip the lines:
     if (DL_Dxf::getStrippedLine(groupCodeTmp, DL_DXF_MAXLINE, fp) &&
-            DL_Dxf::getStrippedLine(groupValue, DL_DXF_MAXLINE, fp) ) {
+            DL_Dxf::getStrippedLine(groupValue, DL_DXF_MAXLINE, fp, false) ) {
 
         groupCode = (unsigned int)toInt(groupCodeTmp);
 
@@ -200,7 +200,7 @@ bool DL_Dxf::readDxfGroups(std::stringstream& stream,
 
     // Read one group of the DXF file and chop the lines:
     if (DL_Dxf::getStrippedLine(groupCodeTmp, DL_DXF_MAXLINE, stream) &&
-            DL_Dxf::getStrippedLine(groupValue, DL_DXF_MAXLINE, stream) ) {
+            DL_Dxf::getStrippedLine(groupValue, DL_DXF_MAXLINE, stream, false) ) {
 
         groupCode = (unsigned int)toInt(groupCodeTmp);
 
@@ -229,7 +229,7 @@ bool DL_Dxf::readDxfGroups(std::stringstream& stream,
  * @todo Is it a problem if line is blank (i.e., newline only)?
  *      Then, when function returns, (s==NULL).
  */
-bool DL_Dxf::getStrippedLine(std::string& s, unsigned int size, FILE *fp) {
+bool DL_Dxf::getStrippedLine(std::string& s, unsigned int size, FILE *fp, bool stripSpace) {
     if (!feof(fp)) {
         // The whole line in the file.  Includes space for NULL.
         char* wholeLine = new char[size];
@@ -243,7 +243,7 @@ bool DL_Dxf::getStrippedLine(std::string& s, unsigned int size, FILE *fp) {
             // Both guaranteed to be NULL terminated.
 
             // Strip leading whitespace and trailing CR/LF.
-            stripWhiteSpace(&line);
+            stripWhiteSpace(&line, stripSpace);
 
             s = line;
             assert(size > s.length());
@@ -264,14 +264,14 @@ bool DL_Dxf::getStrippedLine(std::string& s, unsigned int size, FILE *fp) {
  * Same as above but for stringstreams.
  */
 bool DL_Dxf::getStrippedLine(std::string &s, unsigned int size,
-                            std::stringstream& stream) {
+                            std::stringstream& stream, bool stripSpace) {
 
     if (!stream.eof()) {
         // Only the useful part of the line
         char* line = new char[size+1];
         char* oriLine = line;
         stream.getline(line, size);
-        stripWhiteSpace(&line);
+        stripWhiteSpace(&line, stripSpace);
         s = line;
         assert(size > s.length());
         delete[] oriLine;
@@ -294,21 +294,23 @@ bool DL_Dxf::getStrippedLine(std::string &s, unsigned int size,
  * @retval true if \p s is non-NULL
  * @retval false if \p s is NULL
  */
-bool DL_Dxf::stripWhiteSpace(char** s) {
+bool DL_Dxf::stripWhiteSpace(char** s, bool stripSpace) {
     // last non-NULL char:
     int lastChar = strlen(*s) - 1;
 
     // Is last character CR or LF?
     while ( (lastChar >= 0) &&
             (((*s)[lastChar] == 10) || ((*s)[lastChar] == 13) ||
-             ((*s)[lastChar] == ' ' || ((*s)[lastChar] == '\t'))) ) {
+             (stripSpace && ((*s)[lastChar] == ' ' || ((*s)[lastChar] == '\t')))) ) {
         (*s)[lastChar] = '\0';
         lastChar--;
     }
 
     // Skip whitespace, excluding \n, at beginning of line
-    while ((*s)[0]==' ' || (*s)[0]=='\t') {
-        ++(*s);
+    if (stripSpace) {
+        while ((*s)[0]==' ' || (*s)[0]=='\t') {
+            ++(*s);
+        }
     }
     
     return ((*s) ? true : false);
