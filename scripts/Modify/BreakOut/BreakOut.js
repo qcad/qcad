@@ -186,6 +186,8 @@ BreakOut.prototype.getOperation = function(preview) {
 
     var newSegments = ShapeAlgorithms.autoTrim(shape, otherShapes, this.pos, this.extend);
 
+    qDebug(newSegments);
+
     if (isNull(newSegments)) {
         return undefined;
     }
@@ -222,7 +224,17 @@ BreakOut.prototype.getOperation = function(preview) {
                 op.deleteObject(this.entity);
             }
             else {
-                modifyEntity(op, this.entity.data(), newSegments[2]);
+//                var newSegment = undefined;
+//                for (var k=2; k>=0; k--) {
+//                    newSegment = newSegments[k];
+//                    if (!isNull(newSegment)) {
+//                        break;
+//                    }
+//                }
+
+//                if (!isNull(newSegment)) {
+                    modifyEntity(op, this.entity.data(), newSegments[2]);
+//                }
             }
         }
     }

@@ -364,6 +364,9 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
         }
     }
 
+    qDebug("cutPos1: ", cutPos1);
+    qDebug("cutPos2: ", cutPos2);
+
     var rest1 = undefined;
     var rest2 = undefined;
     var segment = undefined;
@@ -403,9 +406,15 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
 
         if (isValidVector(cutPos2)) {
             rest1 = new RRay(cutPos2, RVector.createPolar(1.0, shape.getDirection2()));
+            if (!isValidVector(cutPos1)) {
+                segment = new RRay(cutPos2, RVector.createPolar(1.0, shape.getDirection1()));
+            }
         }
         if (isValidVector(cutPos1)) {
             rest2 = new RRay(cutPos1, RVector.createPolar(1.0, shape.getDirection1()));
+            if (!isValidVector(cutPos2)) {
+                segment = new RRay(cutPos1, RVector.createPolar(1.0, shape.getDirection2()));
+            }
         }
 
         if (isValidVector(cutPos1) && isValidVector(cutPos2)) {
@@ -420,7 +429,9 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
         rest1 = undefined;
         rest2 = undefined;
 
-        if (cutPos1.isValid() && !RMath.isSameDirection(cutPos2.getAngleTo(cutPos1), shape.getDirection1(), 0.01)) {
+        if (cutPos1.isValid() && cutPos2.isValid() &&
+            !RMath.isSameDirection(cutPos2.getAngleTo(cutPos1), shape.getDirection1(), 0.01)) {
+
             var dummy = cutPos1;
             cutPos1 = cutPos2;
             cutPos2 = dummy;
@@ -428,9 +439,15 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
 
         if (isValidVector(cutPos2)) {
             rest1 = new RLine(shape.getBasePoint(), cutPos2);
+            if (!isValidVector(cutPos1)) {
+                segment = new RRay(cutPos2, RVector.createPolar(1.0, shape.getDirection1()));
+            }
         }
         if (isValidVector(cutPos1)) {
             rest2 = new RRay(cutPos1, RVector.createPolar(1.0, shape.getDirection1()));
+            if (!isValidVector(cutPos2)) {
+                segment = new RLine(shape.getBasePoint(), cutPos1);
+            }
         }
 
         if (isValidVector(cutPos1) && isValidVector(cutPos2)) {

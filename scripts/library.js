@@ -1682,8 +1682,9 @@ function rayToLine(ray) {
  * Modify the given entity to represent the given shape.
  */
 function modifyEntity(op, entity, shape) {
-    if ((isXLineEntity(entity) && isRayShape(shape)) ||
-        (isRayEntity(entity) && isLineShape(shape))) {
+    if ((isXLineEntity(entity) && (isRayShape(shape) || isLineShape(shape))) ||
+        (isRayEntity(entity) && (isXLineShape(shape) || isLineShape(shape))) ||
+        (isLineEntity(entity) && (isXLineShape(shape) || isRayShape(shape)))) {
 
         var e = shapeToEntity(entity.getDocument(), shape);
         e.copyAttributesFrom(entity);
