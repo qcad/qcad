@@ -364,9 +364,6 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
         }
     }
 
-    qDebug("cutPos1: ", cutPos1);
-    qDebug("cutPos2: ", cutPos2);
-
     var rest1 = undefined;
     var rest2 = undefined;
     var segment = undefined;
