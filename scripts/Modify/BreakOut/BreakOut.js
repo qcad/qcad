@@ -186,8 +186,6 @@ BreakOut.prototype.getOperation = function(preview) {
 
     var newSegments = ShapeAlgorithms.autoTrim(shape, otherShapes, this.pos, this.extend);
 
-    qDebug(newSegments);
-
     if (isNull(newSegments)) {
         return undefined;
     }
