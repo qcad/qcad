@@ -188,7 +188,7 @@ BreakOut.prototype.getOperation = function(preview) {
 
     var newSegments = ShapeAlgorithms.autoTrim(shape, otherShapes, this.pos, this.extend);
 
-    //qDebug("newSegments: ", newSegments);
+    qDebug("newSegments: ", newSegments);
 
     if (isNull(newSegments)) {
         return undefined;
@@ -226,8 +226,10 @@ BreakOut.prototype.getOperation = function(preview) {
                 op.deleteObject(this.entity);
             }
             else {
-                this.entity.setShape(newSegments[2]);
-                op.addObject(this.entity, false);
+                qDebug("change entity into: ", newSegments[2]);
+                modifyEntity(op, this.entity.data(), newSegments[2]);
+                //this.entity.setShape(newSegments[2]);
+                //op.addObject(this.entity, false);
             }
         }
     }
