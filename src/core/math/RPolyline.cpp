@@ -411,8 +411,21 @@ bool RPolyline::contains(const RVector& point, bool borderIsInside, double toler
         return borderIsInside;
     }
 
-    QPainterPath pp = toPainterPath();
-    return pp.contains(QPointF(point.x, point.y));
+    if (hasArcSegments()) {
+        QPainterPath pp = toPainterPath();
+        return pp.contains(QPointF(point.x, point.y));
+    }
+
+    int nvert = vertices.size();
+    int i, j;
+    bool c = false;
+    for (i=0, j=nvert-1; i<nvert; j=i++) {
+        if (((vertices[i].y>point.y) != (vertices[j].y>point.y)) &&
+             (point.x < (vertices[j].x-vertices[i].x) * (point.y-vertices[i].y) / (vertices[j].y-vertices[i].y) + vertices[i].x) ) {
+            c = !c;
+        }
+    }
+    return c;
 }
 
 /*
