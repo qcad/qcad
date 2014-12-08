@@ -246,6 +246,12 @@
         isRedoAvailable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        startTransactionGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTransactionGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         resetTransactionStack
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

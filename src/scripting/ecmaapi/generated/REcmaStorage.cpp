@@ -287,6 +287,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setLastTransactionId, "setLastTransactionId");
             
+            REcmaHelper::registerFunction(&engine, proto, startTransactionGroup, "startTransactionGroup");
+            
+            REcmaHelper::registerFunction(&engine, proto, getTransactionGroup, "getTransactionGroup");
+            
             REcmaHelper::registerFunction(&engine, proto, saveTransaction, "saveTransaction");
             
             REcmaHelper::registerFunction(&engine, proto, deleteTransactionsFrom, "deleteTransactionsFrom");
@@ -8228,6 +8232,99 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::setLastTransactionId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::startTransactionGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::startTransactionGroup", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::startTransactionGroup";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("startTransactionGroup", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->startTransactionGroup();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.startTransactionGroup().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::startTransactionGroup", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getTransactionGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getTransactionGroup", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getTransactionGroup";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getTransactionGroup", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getTransactionGroup();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getTransactionGroup().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getTransactionGroup", context, engine);
             return result;
         }
          QScriptValue

@@ -81,6 +81,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAllowInvisible, "setAllowInvisible");
             
+            REcmaHelper::registerFunction(&engine, proto, setTransactionGroup, "setTransactionGroup");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<ROperation*>(), *proto);
 
@@ -492,6 +494,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaOperation::setAllowInvisible", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaOperation::setTransactionGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaOperation::setTransactionGroup", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaOperation::setTransactionGroup";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    ROperation* self = 
+                        getSelf("setTransactionGroup", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setTransactionGroup(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for ROperation.setTransactionGroup().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaOperation::setTransactionGroup", context, engine);
             return result;
         }
          QScriptValue REcmaOperation::toString

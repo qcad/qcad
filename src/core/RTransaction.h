@@ -179,6 +179,20 @@ public:
     }
 
     /**
+     * Set group.
+     */
+    void setGroup(int group) {
+        transactionGroup = group;
+    }
+
+    /**
+     * \return Group of this transaction.
+     */
+    int getGroup() const {
+        return transactionGroup;
+    }
+
+    /**
      * \return Logged text for this transaction.
      */
     QString getText() const {
@@ -249,6 +263,11 @@ protected:
      * Unique ID of this transaction.
      */
     int transactionId;
+
+    /**
+     * Transaction group or -1. Transaction groups are undone / redone together.
+     */
+    int transactionGroup;
 
     /**
      * Log entry for this transaction

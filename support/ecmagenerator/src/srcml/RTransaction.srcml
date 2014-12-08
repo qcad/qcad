@@ -502,6 +502,42 @@ dir="./core" filename="RTransaction.h">
       <name>transactionId</name>
     </expr>;</return>}</block>
   </function>
+  <comment type="block">/** * Set group. */</comment>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setGroup</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>int</name>
+        </type>
+        <name>group</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>transactionGroup</name>= 
+    <name>group</name></expr>;</expr_stmt>}</block>
+  </function>
+  <comment type="block">/** * \return Group of this transaction.
+  */</comment>
+  <function>
+    <type>
+      <name>int</name>
+    </type>
+    <name>getGroup</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>transactionGroup</name>
+    </expr>;</return>}</block>
+  </function>
   <comment type="block">/** * \return Logged text for this
   transaction. */</comment>
   <function>
@@ -840,6 +876,15 @@ dir="./core" filename="RTransaction.h">
       <name>int</name>
     </type>
     <name>transactionId</name>
+  </decl>;</decl_stmt>
+  <comment type="block">/** * Transaction group or -1. Transaction
+  groups are undone / redone together. */</comment>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>int</name>
+    </type>
+    <name>transactionGroup</name>
   </decl>;</decl_stmt>
   <comment type="block">/** * Log entry for this transaction
   */</comment>

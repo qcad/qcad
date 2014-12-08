@@ -41,8 +41,8 @@ public:
 
     void reset();
 
-    RTransaction undo();
-    RTransaction redo();
+    QList<RTransaction> undo();
+    QList<RTransaction> redo();
     bool isUndoAvailable() const;
     bool isRedoAvailable() const;
 

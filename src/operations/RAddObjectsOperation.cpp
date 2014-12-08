@@ -106,6 +106,7 @@ RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) cons
     transaction.setRecordAffectedObjects(recordAffectedObjects);
     transaction.setSpatialIndexDisabled(spatialIndexDisabled);
     transaction.setAllowInvisible(allowInvisible);
+    transaction.setGroup(transactionGroup);
 
     for (int i = 0; i < addedObjects.size(); ++i) {
         if (limitPreview && preview && i>RSettings::getPreviewEntities()) {

@@ -2986,8 +2986,6 @@ dir="./core" filename="RStorage.h">
     <name>getLastTransactionId</name>
     <parameter_list>()</parameter_list>
     <block>{ 
-    <comment type="line">//return
-    getVariable("LastTransaction").toInt();</comment>
     <return>return 
     <expr>
       <name>lastTransactionId</name>
@@ -3014,8 +3012,6 @@ dir="./core" filename="RStorage.h">
       </decl>
     </param>)</parameter_list>
     <block>{ 
-    <comment type="line">//setVariable("LastTransaction",
-    transactionId);</comment>
     <expr_stmt>
     <expr>
     <name>lastTransactionId</name>= 
@@ -3031,6 +3027,50 @@ dir="./core" filename="RStorage.h">
       </decl>
     </param>)</parameter_list>;</constructor_decl>}</block>
   </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>startTransactionGroup</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>
+    lastTransactionGroup</name>++</expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>int</name>
+    </type>
+    <name>getTransactionGroup</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>lastTransactionGroup</name>
+    </expr>;</return>}</block>
+  </function>
+  <comment type="block">/** * \return The ID of the last used
+  transaction group. */</comment>
+  <comment type="line">// virtual int getLastTransactionGroup()
+  {</comment>
+  <comment type="line">// return lastTransactionGroup;</comment>
+  <comment type="line">// }</comment>
+  <comment type="block">/** * Sets the ID of the last created
+  transaction. This is called * when a transaction is undone or
+  redone (the last transaction * id indicates where we are in the
+  transaction stack). * The default implementation sets the
+  variable "LastTransaction". */</comment>
+  <comment type="line">// virtual void setLastTransactionGroup(int
+  transactionGroup) {</comment>
+  <comment type="line">// lastTransactionGroup =
+  transactionGroup;</comment>
+  <comment type="line">// setModified(true);</comment>
+  <comment type="line">// }</comment>
   <comment type="block">/** * Saves the given transaction.
   Transactions need to be stored * for undo / redo functionality.
   */</comment>
@@ -3474,6 +3514,13 @@ dir="./core" filename="RStorage.h">
       <name>int</name>
     </type>
     <name>lastTransactionId</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>int</name>
+    </type>
+    <name>lastTransactionGroup</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

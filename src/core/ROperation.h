@@ -50,7 +50,8 @@ public:
         recordAffectedObjects(true),
         spatialIndexDisabled(false),
         allowInvisible(false),
-        entityTypeFilter(entityTypeFilter) {}
+        entityTypeFilter(entityTypeFilter),
+        transactionGroup(-1) {}
     virtual ~ROperation() {
     }
     
@@ -79,12 +80,17 @@ public:
         allowInvisible = on;
     }
 
+    void setTransactionGroup(int g) {
+        transactionGroup = g;
+    }
+
 protected:
     bool undoable;
     bool recordAffectedObjects;
     bool spatialIndexDisabled;
     bool allowInvisible;
     RS::EntityType entityTypeFilter;
+    int transactionGroup;
 };
 
 Q_DECLARE_METATYPE(ROperation*)

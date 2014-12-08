@@ -767,6 +767,14 @@ bool RDocument::isRedoAvailable() const {
     return transactionStack.isRedoAvailable();
 }
 
+void RDocument::startTransactionGroup() {
+    storage.startTransactionGroup();
+}
+
+int RDocument::getTransactionGroup() const {
+    return storage.getTransactionGroup();
+}
+
 
 /**
  * \return Reference to storage that backs the document.
@@ -1633,7 +1641,7 @@ void RDocument::updateAllEntities() {
  * \return The transaction that was undone. Higher level callers can use
  *   this set to update scenes, views, etc accordingly.
  */
-RTransaction RDocument::undo() {
+QList<RTransaction> RDocument::undo() {
     return transactionStack.undo();
 }
 
@@ -1643,7 +1651,7 @@ RTransaction RDocument::undo() {
  * \return Set of affected entity IDs. Higher level callers can use
  *   this set to update scenes, views, etc accordingly.
  */
-RTransaction RDocument::redo() {
+QList<RTransaction> RDocument::redo() {
     return transactionStack.redo();
 }
 

@@ -1664,13 +1664,21 @@ dir="./core" filename="RDocument.h">
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
-    <name>RTransaction</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RTransaction</name>
+    </argument>&gt;</argument_list></name>
   </type>
   <name>undo</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
-    <name>RTransaction</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RTransaction</name>
+    </argument>&gt;</argument_list></name>
   </type>
   <name>redo</name>
   <parameter_list>()</parameter_list>;</function_decl>
@@ -1686,6 +1694,19 @@ dir="./core" filename="RDocument.h">
     <name>bool</name>
   </type>
   <name>isRedoAvailable</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>startTransactionGroup</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>int</name>
+  </type>
+  <name>getTransactionGroup</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>

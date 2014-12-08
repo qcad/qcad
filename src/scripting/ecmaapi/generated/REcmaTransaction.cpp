@@ -92,6 +92,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getId, "getId");
             
+            REcmaHelper::registerFunction(&engine, proto, setGroup, "setGroup");
+            
+            REcmaHelper::registerFunction(&engine, proto, getGroup, "getGroup");
+            
             REcmaHelper::registerFunction(&engine, proto, getText, "getText");
             
             REcmaHelper::registerFunction(&engine, proto, overwriteBlock, "overwriteBlock");
@@ -1538,6 +1542,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTransaction::getId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTransaction::setGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTransaction::setGroup", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTransaction::setGroup";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTransaction* self = 
+                        getSelf("setGroup", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setGroup(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.setGroup().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTransaction::setGroup", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTransaction::getGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTransaction::getGroup", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTransaction::getGroup";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTransaction* self = 
+                        getSelf("getGroup", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getGroup();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.getGroup().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTransaction::getGroup", context, engine);
             return result;
         }
          QScriptValue

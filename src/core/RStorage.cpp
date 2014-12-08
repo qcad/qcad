@@ -33,7 +33,8 @@ RStorage::RStorage() :
     //currentLayerId(RLayer::INVALID_ID),
     currentViewId(RView::INVALID_ID),
     currentBlockId(RBlock::INVALID_ID),
-    lastTransactionId(-1) {
+    lastTransactionId(-1),
+    lastTransactionGroup(1) {
 }
 
 void RStorage::clear() {

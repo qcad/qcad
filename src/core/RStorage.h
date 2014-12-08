@@ -494,7 +494,6 @@ public:
      * The default implementation reads variable "LastTransaction".
      */
     virtual int getLastTransactionId() {
-        //return getVariable("LastTransaction").toInt();
         return lastTransactionId;
     }
 
@@ -505,11 +504,37 @@ public:
      * The default implementation sets the variable "LastTransaction".
      */
     virtual void setLastTransactionId(int transactionId) {
-        //setVariable("LastTransaction", transactionId);
         lastTransactionId = transactionId;
 
         setModified(true);
     }
+
+    virtual void startTransactionGroup() {
+        lastTransactionGroup++;
+    }
+
+    virtual int getTransactionGroup() const {
+        return lastTransactionGroup;
+    }
+
+    /**
+     * \return The ID of the last used transaction group.
+     */
+//    virtual int getLastTransactionGroup() {
+//        return lastTransactionGroup;
+//    }
+
+    /**
+     * Sets the ID of the last created transaction. This is called
+     * when a transaction is undone or redone (the last transaction
+     * id indicates where we are in the transaction stack).
+     * The default implementation sets the variable "LastTransaction".
+     */
+//    virtual void setLastTransactionGroup(int transactionGroup) {
+//        lastTransactionGroup = transactionGroup;
+
+//        setModified(true);
+//    }
 
     /**
      * Saves the given transaction. Transactions need to be stored
@@ -613,7 +638,9 @@ private:
     //RLayer::Id currentLayerId;
     RView::Id currentViewId;
     RBlock::Id currentBlockId;
+
     int lastTransactionId;
+    int lastTransactionGroup;
 
     QList<RModifiedListener*> modifiedListeners;
 };

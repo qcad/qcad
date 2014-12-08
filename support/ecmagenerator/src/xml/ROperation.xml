@@ -56,5 +56,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="setTransactionGroup"
+    cppName="setTransactionGroup" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="g" isConst="false" />
+      </variant>
+    </method>
   </class>
 </unit>

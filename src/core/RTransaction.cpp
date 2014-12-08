@@ -28,6 +28,7 @@
 RTransaction::RTransaction()
     : storage(NULL),
       transactionId(-1),
+      transactionGroup(-1),
       undoable(true),
       failed(false),
       onlyChanges(true),
@@ -50,6 +51,7 @@ RTransaction::RTransaction()
 RTransaction::RTransaction(RStorage& storage)
     : storage(&storage),
       transactionId(-1),
+      transactionGroup(-1),
       undoable(true),
       failed(false),
       onlyChanges(true),
@@ -80,6 +82,7 @@ RTransaction::RTransaction(
     //RTransaction* parent)
     : storage(&storage),
       transactionId(transactionId),
+      transactionGroup(-1),
       text(text),
       affectedObjectIds(affectedObjectIds),
       propertyChanges(propertyChanges),
@@ -115,6 +118,7 @@ RTransaction::RTransaction(
     //RTransaction* parent)
     : storage(&storage),
       transactionId(-1),
+      transactionGroup(-1),
       text(text),
       undoable(undoable),
       failed(false),
@@ -1008,6 +1012,7 @@ QDebug operator<<(QDebug dbg, RTransaction& t) {
     dbg.nospace() << "RTransaction(";
 
     dbg.nospace() << "id: " << t.getId();
+    dbg.nospace() << ", group: " << t.getGroup();
     dbg.nospace() << ", text: " << t.getText();
 
     {

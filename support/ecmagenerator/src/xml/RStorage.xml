@@ -937,6 +937,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="startTransactionGroup"
+    cppName="startTransactionGroup" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getTransactionGroup"
+    cppName="getTransactionGroup" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
     <method name="saveTransaction" cppName="saveTransaction"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

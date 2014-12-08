@@ -37,6 +37,7 @@ RPasteOperation::RPasteOperation(RDocument& sourceDocument)
 
 RTransaction RPasteOperation::apply(RDocument& document, bool preview) const {
     RTransaction transaction(document.getStorage(), "Inserting object(s)", undoable);
+    transaction.setGroup(transactionGroup);
 
     copy(
         sourceDocument, document,

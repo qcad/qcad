@@ -67,13 +67,21 @@ dir="./core" filename="RTransactionStack.h">
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
-    <name>RTransaction</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RTransaction</name>
+    </argument>&gt;</argument_list></name>
   </type>
   <name>undo</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
-    <name>RTransaction</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RTransaction</name>
+    </argument>&gt;</argument_list></name>
   </type>
   <name>redo</name>
   <parameter_list>()</parameter_list>;</function_decl>

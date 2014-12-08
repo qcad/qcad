@@ -608,11 +608,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="undo" cppName="undo" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RTransaction" isPureVirtual="false" />
+      <variant returnType="QList &lt; RTransaction &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="redo" cppName="redo" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RTransaction" isPureVirtual="false" />
+      <variant returnType="QList &lt; RTransaction &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="isUndoAvailable" cppName="isUndoAvailable"
     specifier="public" isStatic="false" isVirtual="false"
@@ -623,6 +625,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="startTransactionGroup"
+    cppName="startTransactionGroup" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getTransactionGroup"
+    cppName="getTransactionGroup" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
     </method>
     <method name="resetTransactionStack"
     cppName="resetTransactionStack" specifier="public"

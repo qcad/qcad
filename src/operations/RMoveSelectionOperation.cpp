@@ -35,6 +35,7 @@ RMoveSelectionOperation::RMoveSelectionOperation(
 
 RTransaction RMoveSelectionOperation::apply(RDocument& document, bool preview) const {
     RTransaction transaction(document.getStorage(), "Moving reference point");
+    transaction.setGroup(transactionGroup);
 
     QSet<REntity::Id> selectedEntities = document.querySelectedEntities();
     int counter = 0;

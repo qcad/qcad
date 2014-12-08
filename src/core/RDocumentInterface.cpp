@@ -1061,12 +1061,14 @@ bool RDocumentInterface::exportFile(const QString& fileName, const QString& file
 void RDocumentInterface::undo() {
     clearPreview();
 
-    RTransaction t = document.undo();
-    QList<RObject::Id> objectIds = t.getAffectedObjects();
-    objectChangeEvent(objectIds);
+    QList<RTransaction> t = document.undo();
+    for (int i=0; i<t.length(); i++) {
+        QList<RObject::Id> objectIds = t[i].getAffectedObjects();
+        objectChangeEvent(objectIds);
 
-    if (RMainWindow::hasMainWindow()) {
-        RMainWindow::getMainWindow()->postTransactionEvent(t);
+        if (RMainWindow::hasMainWindow()) {
+            RMainWindow::getMainWindow()->postTransactionEvent(t[i]);
+        }
     }
 }
 
@@ -1076,13 +1078,15 @@ void RDocumentInterface::undo() {
 void RDocumentInterface::redo() {
     clearPreview();
 
-    RTransaction t = document.redo();
+    QList<RTransaction> t = document.redo();
 
-    QList<RObject::Id> objectIds = t.getAffectedObjects();
-    objectChangeEvent(objectIds);
+    for (int i=0; i<t.length(); i++) {
+        QList<RObject::Id> objectIds = t[i].getAffectedObjects();
+        objectChangeEvent(objectIds);
 
-    if (RMainWindow::hasMainWindow()) {
-        RMainWindow::getMainWindow()->postTransactionEvent(t);
+        if (RMainWindow::hasMainWindow()) {
+            RMainWindow::getMainWindow()->postTransactionEvent(t[i]);
+        }
     }
 }
 

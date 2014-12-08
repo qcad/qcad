@@ -205,6 +205,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, isRedoAvailable, "isRedoAvailable");
             
+            REcmaHelper::registerFunction(&engine, proto, startTransactionGroup, "startTransactionGroup");
+            
+            REcmaHelper::registerFunction(&engine, proto, getTransactionGroup, "getTransactionGroup");
+            
             REcmaHelper::registerFunction(&engine, proto, resetTransactionStack, "resetTransactionStack");
             
             REcmaHelper::registerFunction(&engine, proto, setFileName, "setFileName");
@@ -6028,13 +6032,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RTransaction'
-    RTransaction cppResult =
+    // return type 'QList < RTransaction >'
+    QList < RTransaction > cppResult =
         
                self->undo();
-        // return type: RTransaction
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QList < RTransaction >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
             
     } else
 
@@ -6077,13 +6081,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RTransaction'
-    RTransaction cppResult =
+    // return type 'QList < RTransaction >'
+    QList < RTransaction > cppResult =
         
                self->redo();
-        // return type: RTransaction
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: QList < RTransaction >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
             
     } else
 
@@ -6192,6 +6196,99 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::isRedoAvailable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::startTransactionGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::startTransactionGroup", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::startTransactionGroup";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("startTransactionGroup", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->startTransactionGroup();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.startTransactionGroup().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::startTransactionGroup", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getTransactionGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getTransactionGroup", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getTransactionGroup";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getTransactionGroup", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getTransactionGroup();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getTransactionGroup().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getTransactionGroup", context, engine);
             return result;
         }
          QScriptValue

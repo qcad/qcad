@@ -153,6 +153,17 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
     </method>
+    <method name="setGroup" cppName="setGroup" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="group"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getGroup" cppName="getGroup" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
     <method name="getText" cppName="getText" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />

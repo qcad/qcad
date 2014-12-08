@@ -100,6 +100,12 @@
         getId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -73,6 +73,7 @@ void RMixedOperation::endCycle() {
 
 RTransaction RMixedOperation::apply(RDocument& document, bool preview) const {
     RTransaction transaction(document.getStorage(), "Adding object(s)", undoable);
+    transaction.setGroup(transactionGroup);
 
     for (int i = 0; i < list.size(); ++i) {
         if (list[i].first.isNull()) {
