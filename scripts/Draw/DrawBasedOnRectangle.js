@@ -60,24 +60,6 @@ DrawBasedOnRectangle.prototype.beginEvent = function() {
     this.setState(0);
 };
 
-//DrawBasedOnRectangle.prototype.suspendEvent = function() {
-//    var optionsToolBar = EAction.getOptionsToolBar();
-//    var refPointCombo = optionsToolBar.findChild("ReferencePoint");
-
-//    if (!isNull(this.referencePointIndex)) {
-//        RSettings.setValue(this.settingsGroup + "/ReferencePoint", this.referencePointIndex);
-//        qDebug("suspend to: ", this.referencePointIndex);
-//    }
-
-//    EAction.prototype.suspendEvent.call(this);
-//};
-
-//DrawBasedOnRectangle.prototype.resumeEvent = function() {
-//    this.referencePointIndex = RSettings.getIntValue(this.settingsGroup + "/ReferencePoint", 4);
-//    qDebug("suspend to: ", refPointCombo.currentIndex);
-//    EAction.prototype.resumeEvent.call(this);
-//};
-
 DrawBasedOnRectangle.prototype.initUiOptions = function(resume, restoreFromSettings) {
     EAction.prototype.initUiOptions.call(this, resume, restoreFromSettings);
 
