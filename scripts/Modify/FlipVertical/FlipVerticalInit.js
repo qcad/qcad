@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("FlipVertical", "Flip verti&cal"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("FlipVertical", "Flip Verti&cal"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/FlipVertical.js");
