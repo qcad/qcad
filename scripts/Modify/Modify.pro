@@ -7,6 +7,8 @@ SUBDIRS = \
     Divide \
     EditText \
     Explode \
+    FlipHorizontal \
+    FlipVertical \
     Lengthen \
     Mirror \
     TranslateRotate \
