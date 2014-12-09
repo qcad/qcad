@@ -50,7 +50,7 @@ function DrawBasedOnRectangle(guiAction) {
         [ "Bottom",      qsTr("Bottom"),       new RVector( 0, -1) ],
         [ "BottomRight", qsTr("Bottom Right"), new RVector( 1, -1) ]
     ];
-    this.referencePointIndex = 4;
+    this.referencePointIndex = undefined;
 }
 
 DrawBasedOnRectangle.prototype = new EAction();
@@ -61,15 +61,39 @@ DrawBasedOnRectangle.prototype.beginEvent = function() {
 };
 
 //DrawBasedOnRectangle.prototype.suspendEvent = function() {
+//    var optionsToolBar = EAction.getOptionsToolBar();
+//    var refPointCombo = optionsToolBar.findChild("ReferencePoint");
 
+//    if (!isNull(this.referencePointIndex)) {
+//        RSettings.setValue(this.settingsGroup + "/ReferencePoint", this.referencePointIndex);
+//        qDebug("suspend to: ", this.referencePointIndex);
+//    }
+
+//    EAction.prototype.suspendEvent.call(this);
 //};
 
-DrawBasedOnRectangle.prototype.showUiOptions = function(resume, restoreFromSettings) {
-    EAction.prototype.showUiOptions.call(this, resume, restoreFromSettings);
+//DrawBasedOnRectangle.prototype.resumeEvent = function() {
+//    this.referencePointIndex = RSettings.getIntValue(this.settingsGroup + "/ReferencePoint", 4);
+//    qDebug("suspend to: ", refPointCombo.currentIndex);
+//    EAction.prototype.resumeEvent.call(this);
+//};
+
+DrawBasedOnRectangle.prototype.initUiOptions = function(resume, restoreFromSettings) {
+    EAction.prototype.initUiOptions.call(this, resume, restoreFromSettings);
+
+    this.referencePointIndex = RSettings.getIntValue(this.settingsGroup + "/ReferencePoint", 4);
     
     var optionsToolBar = EAction.getOptionsToolBar();
     var refPointCombo = optionsToolBar.findChild("ReferencePoint");
-    var shortcuts = [];
+    refPointCombo.blockSignals(true);
+
+    if (isNull(refPointCombo)) {
+        return;
+    }
+    refPointCombo.clear();
+    if (isNull(this.shortcuts)) {
+        this.shortcuts = [];
+    }
 
     for (var i=0; i<this.referencePoints.length; i++) {
         var str = "%1".arg(i+1);
@@ -77,11 +101,20 @@ DrawBasedOnRectangle.prototype.showUiOptions = function(resume, restoreFromSetti
             "[" + str + "] " + this.referencePoints[i][1],
             this.referencePoints[i][2]
         );
-        shortcuts[i] = new QShortcut(new QKeySequence(str), refPointCombo, 0, 0, Qt.WindowShortcut);
-        shortcuts[i].activated.connect(new KeyReactor(i), "activated");
+        if (isNull(this.shortcuts[i])) {
+            this.shortcuts[i] = new QShortcut(new QKeySequence(str), refPointCombo, 0, 0, Qt.WindowShortcut);
+            this.shortcuts[i].activated.connect(new KeyReactor(i), "activated");
+        }
     }
 
-    this.referencePointIndex = RSettings.getIntValue(this.settingsGroup + "/ReferencePoint", 4);
+    if (isNull(this.referencePointIndex) ||
+        this.referencePointIndex<0 ||
+        this.referencePointIndex>this.referencePoints.length-1) {
+
+        this.referencePointIndex = 4;
+    }
+
+    refPointCombo.blockSignals(false);
     refPointCombo.currentIndex = this.referencePointIndex;
 };
 
@@ -134,6 +167,13 @@ DrawBasedOnRectangle.prototype.getOperation = function(preview) {
         new RVector(x + w2, y + h2),
         new RVector(x - w2, y + h2)
     ];
+
+    if (isNull(this.referencePointIndex) ||
+        this.referencePointIndex<0 || this.referencePointIndex>this.referencePoints.length-1) {
+
+        return undefined;
+    }
+
     var referencePoint = this.referencePoints[this.referencePointIndex][2];
     // apply reference point vector
     for (i = 0; i < this.corners.length; ++i) {
@@ -219,6 +259,7 @@ function KeyReactor(i) {
 }
 
 KeyReactor.prototype.activated = function() {
+    qDebug("KeyReactor: ", this.i);
     var optionsToolBar = EAction.getOptionsToolBar();
     var refPointCombo = optionsToolBar.findChild("ReferencePoint");
     refPointCombo.currentIndex = this.i;
