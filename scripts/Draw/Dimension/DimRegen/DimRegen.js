@@ -42,6 +42,7 @@ DimRegen.prototype.beginEvent = function() {
     var counter = 0;
 
     var op = new RModifyObjectsOperation();
+    op.setText(this.getToolTitle());
 
     // reset all text positions of all selected dimension entities:
     for (i=0; i<ids.length; i++) {

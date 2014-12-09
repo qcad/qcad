@@ -62,6 +62,9 @@
         ;static  QScriptValue
         setTransactionGroup
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setText
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

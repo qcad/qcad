@@ -45,6 +45,8 @@ public:
     QList<RTransaction> redo();
     bool isUndoAvailable() const;
     bool isRedoAvailable() const;
+    QString getUndoableTransactionText() const;
+    QString getRedoableTransactionText() const;
 
 private:
     RStorage& storage;

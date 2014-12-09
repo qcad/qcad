@@ -124,20 +124,21 @@ Block.getActiveBlockId = function() {
     return blockId;
 };
 
-Block.showHide = function(show, obj, blockId) {
-    var operation = new RModifyObjectsOperation();
-    var blocks = obj.getDocument().queryAllBlocks();
+Block.showHide = function(show, action, blockId) {
+    var op = new RModifyObjectsOperation();
+    op.setText(action.getToolTitle());
+    var blocks = action.getDocument().queryAllBlocks();
     for (var b = 0; b < blocks.length; ++b) {
-        var block = obj.getDocument().queryBlock(blocks[b]);
-        if (blocks[b] != blockId) {
+        var block = action.getDocument().queryBlock(blocks[b]);
+        if (blocks[b] !== blockId) {
             block.setFrozen(!show);
         } else {
             block.setFrozen(false);
         }
-        operation.addObject(block);
+        op.addObject(block);
     }
-    var di = obj.getDocumentInterface();
-    di.applyOperation(operation);
+    var di = action.getDocumentInterface();
+    di.applyOperation(op);
     di.clearPreview();
     di.repaintViews();
 };

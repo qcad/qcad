@@ -174,6 +174,6 @@ Circle3P.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    return new RAddObjectOperation(entity);
+    return new RAddObjectOperation(entity, this.getToolTitle());
 };
 

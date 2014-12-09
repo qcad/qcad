@@ -175,6 +175,7 @@ ArcTangential.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     op.addObject(new RArcEntity(doc, new RArcData(arc)));
     return op;
 };

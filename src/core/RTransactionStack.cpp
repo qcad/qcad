@@ -53,7 +53,24 @@ bool RTransactionStack::isRedoAvailable() const {
     return true;
 }
 
+QString RTransactionStack::getUndoableTransactionText() const {
+    int lastTransactionId = storage.getLastTransactionId();
 
+    if (lastTransactionId < 0) {
+        return "";
+    }
+    return storage.getTransaction(lastTransactionId).getText();
+}
+
+QString RTransactionStack::getRedoableTransactionText() const {
+    int lastTransactionId = storage.getLastTransactionId();
+    int maxTransactionId = storage.getMaxTransactionId();
+
+    if (lastTransactionId >= maxTransactionId) {
+        return "";
+    }
+    return storage.getTransaction(lastTransactionId+1).getText();
+}
 
 /**
  * Undoes the last transaction.

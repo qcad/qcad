@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ShapeRectangleSize</class>
- <widget class="QWidget" name="ShapeRectangleSize">
+ <class>EllipseRR</class>
+ <widget class="QWidget" name="EllipseRR">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>708</width>
+    <width>785</width>
     <height>46</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
    <item>
-    <widget class="QLabel" name="WidthLabel">
+    <widget class="QLabel" name="MajorRadiusLabel">
      <property name="text">
-      <string>&amp;Width:</string>
+      <string>Major Radius:</string>
      </property>
      <property name="buddy">
       <cstring>Width</cstring>
@@ -29,9 +29,9 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="HeightLabel">
+    <widget class="QLabel" name="MinorRadiusLabel">
      <property name="text">
-      <string>&amp;Height:</string>
+      <string>Minor Radius:</string>
      </property>
      <property name="buddy">
       <cstring>Height</cstring>

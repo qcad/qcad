@@ -144,7 +144,7 @@ Arc2PR.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    return new RAddObjectOperation(entity);
+    return new RAddObjectOperation(entity, this.getToolTitle());
 };
 
 Arc2PR.prototype.getArc2PR = function(preview) {

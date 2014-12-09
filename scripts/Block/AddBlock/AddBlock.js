@@ -42,9 +42,10 @@ AddBlock.prototype.beginEvent = function() {
         return;
     }
     
-    var operation = new RAddObjectOperation(this.block);
+    var op = new RAddObjectOperation(this.block);
+    op.setText(this.getToolTitle());
     var di = this.getDocumentInterface();
-    di.applyOperation(operation);
+    di.applyOperation(op);
     di.clearPreview();
     di.repaintViews();
 

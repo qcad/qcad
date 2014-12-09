@@ -40,10 +40,10 @@ public:
 
     virtual void exportPainterPaths(const QList<RPainterPath>& paths, double angle, const RVector& pos);
 
-    virtual void exportXLine(const RXLine& xLine) {}
-    virtual void exportRay(const RRay& ray) {}
-    virtual void exportPoint(const RPoint& point) {}
-    virtual void exportTriangle(const RTriangle& triangle) {}
+    virtual void exportXLine(const RXLine& ) {}
+    virtual void exportRay(const RRay& ) {}
+    virtual void exportPoint(const RPoint& ) {}
+    virtual void exportTriangle(const RTriangle& ) {}
 
 private:
     RExporter& exporter;

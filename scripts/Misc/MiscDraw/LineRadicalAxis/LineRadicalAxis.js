@@ -168,7 +168,7 @@ LineRadicalAxis.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    return new RAddObjectOperation(entity);
+    return new RAddObjectOperation(entity, this.getToolTitle());
 };
 
 LineRadicalAxis.prototype.getLineRadicalAxis = function(preview) {

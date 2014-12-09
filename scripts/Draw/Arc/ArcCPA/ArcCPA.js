@@ -198,7 +198,7 @@ ArcCPA.prototype.getOperation = function(preview) {
         )
     );
 
-    return new RAddObjectOperation(arc);
+    return new RAddObjectOperation(arc, this.getToolTitle());
 };
 
 ArcCPA.prototype.getAuxPreview = function() {

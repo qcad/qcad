@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Undo", "&Undo"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("Undo", "&Undo") + " [-]", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresUndoableTransaction(true);
     action.setScriptFile(basePath + "/Undo.js");

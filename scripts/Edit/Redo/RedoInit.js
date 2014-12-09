@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Redo", "&Redo"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("Redo", "&Redo") + " [-]", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresRedoableTransaction(true);
     action.setScriptFile(basePath + "/Redo.js");

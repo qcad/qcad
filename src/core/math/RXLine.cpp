@@ -159,6 +159,8 @@ QList<RVector> RXLine::getPointsWithDistanceToEnd(double distance, RS::From from
 }
 
 double RXLine::getAngleAt(double distance) const {
+    Q_UNUSED(distance)
+
     return getAngle();
 }
 
@@ -235,6 +237,9 @@ bool RXLine::reverse() {
 }
 
 bool RXLine::stretch(const RPolyline& area, const RVector& offset) {
+    Q_UNUSED(area)
+    Q_UNUSED(offset)
+
     return false;
 }
 

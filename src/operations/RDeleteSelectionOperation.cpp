@@ -27,7 +27,7 @@ RDeleteSelectionOperation::RDeleteSelectionOperation() {
 }
 
 RTransaction RDeleteSelectionOperation::apply(RDocument& document, bool preview) const {
-    RTransaction transaction(document.getStorage(), "Delete / Cut Selection");
+    RTransaction transaction(document.getStorage(), text);
     transaction.setGroup(transactionGroup);
 
     QSet<REntity::Id> selectedEntities = document.querySelectedEntities();

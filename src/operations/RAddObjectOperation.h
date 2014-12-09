@@ -39,6 +39,8 @@ class RObject;
 class QCADOPERATIONS_EXPORT RAddObjectOperation: public RAddObjectsOperation {
 public:
     RAddObjectOperation() {}
+    RAddObjectOperation(QSharedPointer<RObject> object, const QString& text,
+                        bool useCurrentAttributes = true, bool undoable = true);
     RAddObjectOperation(QSharedPointer<RObject> object,
        bool useCurrentAttributes = true, bool undoable = true);
     virtual ~RAddObjectOperation() {

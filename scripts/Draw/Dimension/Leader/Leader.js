@@ -120,6 +120,7 @@ Leader.prototype.pickCoordinate = function(event, preview) {
             this.leaderEntity.setArrowHead(this.arrowHead);
             this.leaderEntity.appendVertex(point);
             op = new RAddObjectOperation(this.leaderEntity);
+            op.setText(this.getToolTitle());
             this.applyOperation(op);
             di.setRelativeZero(point);
             this.setState(Leader.State.SettingNextVertex);
@@ -189,7 +190,7 @@ Leader.prototype.getOperation = function(preview) {
         }
     }
     else {
-        return new RAddObjectOperation(this.leaderEntity, true, false);
+        return new RAddObjectOperation(this.leaderEntity, this.getToolTitle(), true, false);
     }
 };
 

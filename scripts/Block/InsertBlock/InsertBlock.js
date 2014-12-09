@@ -138,6 +138,7 @@ InsertBlock.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
 
     var blockRef = new RBlockReferenceEntity(
         doc,

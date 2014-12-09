@@ -197,6 +197,7 @@ DrawBasedOnThreeCircles.prototype.getOperation = function(preview) {
 
     var doc = this.getDocument();
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
 
     for (var i=0; i<shapes.length; i++) {
         var entity = shapeToEntity(doc, shapes[i]);

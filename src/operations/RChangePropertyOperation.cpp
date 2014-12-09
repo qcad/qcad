@@ -41,7 +41,7 @@ RChangePropertyOperation::RChangePropertyOperation(
 }
 
 RTransaction RChangePropertyOperation::apply(RDocument& document, bool preview) const {
-    RTransaction transaction(document.getStorage(), "Changing property");
+    RTransaction transaction(document.getStorage(), text);
 
     // 20111110: always allow property changes (e.g. move entity to hidden layer)
     transaction.setAllowInvisible(true);

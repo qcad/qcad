@@ -136,11 +136,10 @@ void RGuiAction::initTexts() {
 
     QString kcs = shortcutText.isEmpty() ? shortcut().toString() : shortcutText;
     if (!kcs.isEmpty()) {
-        QAction::setToolTip(getToolTip(tip, kcs));
+        tip = getToolTip(tip, kcs);
     }
-    else {
-        QAction::setToolTip(tip);
-    }
+
+    QAction::setToolTip(tip);
 }
 
 QString RGuiAction::formatToolTip(const QString& text, const QString& shortcut) {
@@ -455,11 +454,13 @@ void RGuiAction::addToWidget(QAction* action, QWidget* w) {
         return;
     }
 
-//    if (!action->isSeparator()) {
-//        if (!action->text().contains("{")) {
-//            action->setText(action->text() + QString(" {%1,%2}").arg(getGroupSortOrderStatic(action, w)).arg(getSortOrderStatic(action, w)));
-//        }
-//    }
+    if (!action->isSeparator()) {
+        if (QCoreApplication::arguments().contains("-debug-action-order")) {
+            if (!action->text().contains("{")) {
+                action->setText(action->text() + QString(" {%1,%2}").arg(getGroupSortOrderStatic(action, w)).arg(getSortOrderStatic(action, w)));
+            }
+        }
+    }
 
     RWidget* rw = dynamic_cast<RWidget*>(w);
 
@@ -571,6 +572,31 @@ void RGuiAction::updateTransactionListener(RDocument* document, RTransaction* tr
     }
 
     setEnabledOverride(enabled, -1);
+
+    if (requiresUndoableTransaction && document!=NULL) {
+        if (text().contains("[") && text().contains("]")) {
+            QString t = text();
+            QString undoText = document->getTransactionStack().getUndoableTransactionText();
+            if (undoText.isEmpty()) {
+                undoText = "-";
+            }
+            t.replace(QRegExp("\\[[^\\]]*\\]"), "[" + undoText + "]");
+            setText(t);
+        }
+    }
+
+    if (requiresRedoableTransaction && document!=NULL) {
+        if (text().contains("[") && text().contains("]")) {
+            QString t = text();
+            QString redoText = document->getTransactionStack().getRedoableTransactionText();
+            if (redoText.isEmpty()) {
+                redoText = "-";
+            }
+            t.replace(QRegExp("\\[[^\\]]*\\]"), "[" + redoText + "]");
+            setText(t);
+        }
+    }
+
     initTexts();
 }
 

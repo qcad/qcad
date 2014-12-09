@@ -166,7 +166,7 @@ Circle2PR.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    return new RAddObjectOperation(entity);
+    return new RAddObjectOperation(entity, this.getToolTitle());
 };
 
 Circle2PR.prototype.getCircle2PR = function(preview) {

@@ -61,6 +61,6 @@ Point1P.prototype.coordinateEvent = function(event) {
         this.getDocument(),
         new RPointData(pos)
     );
-    var op = new RAddObjectOperation(point);
+    var op = new RAddObjectOperation(point, this.getToolTitle());
     this.getDocumentInterface().applyOperation(op);
 };

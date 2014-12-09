@@ -103,7 +103,7 @@ CircleCR.prototype.getOperation = function(preview) {
         )
     );
 
-    return new RAddObjectOperation(circle);
+    return new RAddObjectOperation(circle, this.getToolTitle());
 };
 
 CircleCR.prototype.applyCommand = function(event, preview) {

@@ -178,6 +178,7 @@ LineBisector.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     for (var n=1; n<=this.number; ++n) {
         var angle = angle1 + (angleDiff / (this.number+1) * n);
 

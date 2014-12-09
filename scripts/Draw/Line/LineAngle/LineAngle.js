@@ -134,7 +134,7 @@ LineAngle.prototype.getOperation = function(preview) {
     }
 
     var line = this.createLineEntity(this.getDocument(), p1, p2);
-    return new RAddObjectOperation(line);
+    return new RAddObjectOperation(line, this.getToolTitle());
 };
 
 LineAngle.prototype.slotAngleChanged = function(value) {

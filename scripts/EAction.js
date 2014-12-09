@@ -1679,6 +1679,14 @@ EAction.prototype.setCommandPrompt = function(prompt) {
     }
 };
 
+EAction.prototype.getToolTitle = function() {
+    var guiAction = this.getGuiAction();
+    if (isNull(guiAction)) {
+        return "";
+    }
+    return guiAction.text.replace("&", "");
+};
+
 EAction.disableCoordinateWidget = function() {
     EAction.enableCoordinateWidget(false);
 };

@@ -33,7 +33,7 @@ void RDeleteObjectsOperation::deleteObject(const QSharedPointer<RObject>& o) {
 }
 
 RTransaction RDeleteObjectsOperation::apply(RDocument& document, bool preview) const {
-    RTransaction transaction(document.getStorage(), "Deleting object(s)", undoable);
+    RTransaction transaction(document.getStorage(), text, undoable);
     transaction.setGroup(transactionGroup);
 
     for (int i = 0; i < list.size(); ++i) {

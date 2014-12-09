@@ -175,7 +175,7 @@ SplineControlPoints.prototype.getOperation = function(preview) {
     return op;
     */
 
-    return new RAddObjectOperation(e);
+    return new RAddObjectOperation(e, this.getToolTitle());
 };
 
 SplineControlPoints.prototype.getAuxPreview = function() {

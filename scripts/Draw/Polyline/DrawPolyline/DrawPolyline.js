@@ -150,7 +150,7 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
 
             var pl = new RPolylineEntity(document, new RPolylineData());
             pl.appendVertex(point);
-            op = new RAddObjectOperation(pl);
+            op = new RAddObjectOperation(pl, this.getToolTitle());
             this.applyOperation(op);
 
             di.setRelativeZero(point);
@@ -302,7 +302,7 @@ DrawPolyline.prototype.getOperation = function(preview) {
         return new RAddObjectOperation(entity, false);
     }
     else {
-        return new RAddObjectOperation(this.polylineEntity, true, false);
+        return new RAddObjectOperation(this.polylineEntity, this.getToolTitle(), true, false);
     }
 };
 

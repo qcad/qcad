@@ -84,6 +84,10 @@ public:
         transactionGroup = g;
     }
 
+    void setText(const QString& t) {
+        text = t;
+    }
+
 protected:
     bool undoable;
     bool recordAffectedObjects;
@@ -91,6 +95,7 @@ protected:
     bool allowInvisible;
     RS::EntityType entityTypeFilter;
     int transactionGroup;
+    QString text;
 };
 
 Q_DECLARE_METATYPE(ROperation*)

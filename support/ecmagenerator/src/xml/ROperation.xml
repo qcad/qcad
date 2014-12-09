@@ -63,5 +63,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="g" isConst="false" />
       </variant>
     </method>
+    <method name="setText" cppName="setText" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="t"
+        isConst="true" />
+      </variant>
+    </method>
   </class>
 </unit>

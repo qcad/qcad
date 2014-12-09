@@ -24,7 +24,7 @@ RDeleteAllEntitiesOperation::RDeleteAllEntitiesOperation(bool undoable) :
 }
 
 RTransaction RDeleteAllEntitiesOperation::apply(RDocument& document, bool preview) const {
-    RTransaction transaction(document.getStorage(), "Deleting object(s)", undoable);
+    RTransaction transaction(document.getStorage(), text, undoable);
     transaction.setGroup(transactionGroup);
 
     QSet<RObject::Id> ids = document.queryAllEntities();

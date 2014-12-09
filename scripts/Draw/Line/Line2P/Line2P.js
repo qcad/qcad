@@ -182,7 +182,7 @@ Line2P.prototype.getOperation = function(preview) {
     }
 
     var e = this.createLineEntity(this.getDocument(), this.point1, this.point2);
-    return new RAddObjectOperation(e);
+    return new RAddObjectOperation(e, this.getToolTitle());
 };
 
 Line2P.prototype.slotClose = function() {

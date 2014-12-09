@@ -43,9 +43,10 @@ ToggleBlockVisibility.prototype.beginEvent = function() {
     var block = this.getDocument().queryBlock(blockId);
     block.setFrozen(!block.isFrozen());
 
-    var operation = new RModifyObjectOperation(block);
+    var op = new RModifyObjectOperation(block);
+    op.setText(this.getToolTitle());
     var di = this.getDocumentInterface();
-    di.applyOperation(operation);
+    di.applyOperation(op);
 
     this.terminate();
 };

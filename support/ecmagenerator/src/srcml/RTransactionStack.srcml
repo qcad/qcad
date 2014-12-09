@@ -98,6 +98,20 @@ dir="./core" filename="RTransactionStack.h">
   </type>
   <name>isRedoAvailable</name>
   <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QString</name>
+  </type>
+  <name>getUndoableTransactionText</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QString</name>
+  </type>
+  <name>getRedoableTransactionText</name>
+  <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl></public>
   <private>private: 
   <decl_stmt>

@@ -224,6 +224,7 @@ LineTangent2.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     op.addObject(this.createLineEntity(doc, tangent.getStartPoint(), tangent.getEndPoint()));
     return op;
 };

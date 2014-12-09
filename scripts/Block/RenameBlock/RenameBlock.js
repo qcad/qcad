@@ -49,9 +49,10 @@ RenameBlock.prototype.beginEvent = function() {
         return;
     }
 
-    var operation = new RAddObjectOperation(newBlock);
+    var op = new RAddObjectOperation(newBlock);
+    op.setText(this.getToolTitle());
     var di = this.getDocumentInterface();
-    di.applyOperation(operation);
+    di.applyOperation(op);
     di.clearPreview();
     di.repaintViews();
 

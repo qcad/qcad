@@ -48,9 +48,10 @@ RemoveBlock.prototype.beginEvent = function() {
 
     var block = this.getDocument().queryBlock(item.text());
 
-    var operation = new RDeleteObjectOperation(block);
+    var op = new RDeleteObjectOperation(block);
+    op.setText(this.getToolTitle());
     var di = this.getDocumentInterface();
-    di.applyOperation(operation);
+    di.applyOperation(op);
     di.clearPreview();
     di.repaintViews();
 

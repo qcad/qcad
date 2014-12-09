@@ -113,6 +113,7 @@ LineFreehand.prototype.mouseReleaseEvent = function(event) {
 
 LineFreehand.prototype.getOperation = function(preview) {
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     op.setLimitPreview(false);
 
     for (var i=0; i<this.pointList.length-1; ++i) {

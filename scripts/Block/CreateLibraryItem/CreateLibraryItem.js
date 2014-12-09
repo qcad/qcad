@@ -70,6 +70,7 @@ CreateLibraryItem.prototype.coordinateEvent = function(event) {
     itemDocumentInterface.setNotifyListeners(false);
 
     var op = new RCopyOperation(pos.getNegated(), document);
+    op.setText(this.getToolTitle());
     itemDocumentInterface.applyOperation(op);
 
     var res = File.getSaveFileName(

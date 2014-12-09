@@ -161,19 +161,20 @@ InsertBlockItem.prototype.pickCoordinate = function(event, preview) {
 
     this.generate();
 
-    var operation = new RPasteOperation(this.docItem);
+    var op = new RPasteOperation(this.docItem);
+    op.setText(this.getToolTitle());
 
-    operation.setOffset(event.getModelPosition());
+    op.setOffset(event.getModelPosition());
     if (!isNull(this.blockName)) {
-        operation.setBlockName(this.blockName);
+        op.setBlockName(this.blockName);
     }
-    operation.setScale(this.scale);
-    operation.setRotation(this.rotation);
-    operation.setFlipHorizontal(this.flipHorizontal);
-    operation.setFlipVertical(this.flipVertical);
-    operation.setToCurrentLayer(this.toCurrentLayer);
-    operation.setOverwriteLayers(this.overwriteLayers);
-    operation.setOverwriteBlocks(this.overwriteBlocks);
+    op.setScale(this.scale);
+    op.setRotation(this.rotation);
+    op.setFlipHorizontal(this.flipHorizontal);
+    op.setFlipVertical(this.flipVertical);
+    op.setToCurrentLayer(this.toCurrentLayer);
+    op.setOverwriteLayers(this.overwriteLayers);
+    op.setOverwriteBlocks(this.overwriteBlocks);
 
     // assign values to attributes:
     var ids = this.docItem.queryAllEntities();
@@ -186,15 +187,15 @@ InsertBlockItem.prototype.pickCoordinate = function(event, preview) {
 
         var tag = attDef.getTag();
         if (!isNull(this.attributes[tag])) {
-            operation.setAttribute(tag, this.attributes[tag]);
+            op.setAttribute(tag, this.attributes[tag]);
         }
     }
 
     if (preview) {
-        di.previewOperation(operation);
+        di.previewOperation(op);
     }
     else {
-        di.applyOperation(operation);
+        di.applyOperation(op);
         di.clearPreview();
         di.repaintViews();
     }

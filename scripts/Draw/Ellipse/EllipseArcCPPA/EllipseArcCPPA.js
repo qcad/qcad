@@ -285,7 +285,7 @@ EllipseArcCPPA.prototype.getOperation = function(preview) {
         new REllipseData(this.getEllipse())
     );
 
-    return new RAddObjectOperation(ellipse);
+    return new RAddObjectOperation(ellipse, this.getToolTitle());
 };
 
 EllipseArcCPPA.prototype.getAuxPreview = function() {

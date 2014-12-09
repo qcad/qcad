@@ -3,4 +3,6 @@ SUBDIRS = \
     ts \
     EllipseArcCPPA \
     EllipseCPP \
-    EllipseInscribedQuad
+    EllipseDD \
+    EllipseInscribedQuad \
+    EllipseRR

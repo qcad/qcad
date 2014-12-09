@@ -151,6 +151,7 @@ LineParallel.prototype.getOperation = function(preview) {
     var doc = this.getDocument();
     var e;
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     for (var i=0; i<parallels.length; ++i) {
         if (isLineBasedShape(parallels[i])) {
             e = this.createLineEntity(doc, parallels[i].getStartPoint(), parallels[i].getEndPoint());

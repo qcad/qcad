@@ -140,7 +140,7 @@ Arc2PA.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    return new RAddObjectOperation(entity);
+    return new RAddObjectOperation(entity, this.getToolTitle());
 };
 
 Arc2PA.prototype.verifyAngle = function() {

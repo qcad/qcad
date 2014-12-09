@@ -227,7 +227,7 @@ LineOrthogonalTangent.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    return new RAddObjectOperation(e);
+    return new RAddObjectOperation(e, this.getToolTitle());
 };
 
 LineOrthogonalTangent.prototype.getTangent = function() {
