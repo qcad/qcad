@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("EllipseCPP", "&Full Ellipse"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("EllipseCPP", "&Full Ellipse with Center, Point, Ratio"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/EllipseCPP.js");
     action.setIcon(basePath + "/EllipseCPP.svg");

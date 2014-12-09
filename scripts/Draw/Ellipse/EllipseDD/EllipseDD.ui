@@ -12,36 +12,43 @@
   </property>
   <layout class="QHBoxLayout">
    <item>
-    <widget class="QLabel" name="MajorRadiusLabel">
+    <widget class="QLabel" name="MajorDiameterLabel">
      <property name="text">
-      <string>Major Radius:</string>
+      <string>Major Diameter:</string>
      </property>
      <property name="buddy">
-      <cstring>Width</cstring>
+      <cstring>MajorDiameter</cstring>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="Width">
+    <widget class="RMathLineEdit" name="MajorDiameter">
      <property name="text">
       <string notr="true">100</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="MinorRadiusLabel">
+    <widget class="QLabel" name="MinorDiameterLabel">
      <property name="text">
-      <string>Minor Radius:</string>
+      <string>Minor Diameter:</string>
      </property>
      <property name="buddy">
-      <cstring>Height</cstring>
+      <cstring>MinorDiameter</cstring>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="Height">
+    <widget class="RMathLineEdit" name="MinorDiameter">
      <property name="text">
       <string notr="true">50</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
      </property>
     </widget>
    </item>
@@ -69,6 +76,13 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="ReferencePointLabel">
      <property name="text">
       <string>Reference Point:</string>
@@ -87,6 +101,16 @@
       <bool>true</bool>
      </property>
     </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="Reset"/>
    </item>
   </layout>
  </widget>

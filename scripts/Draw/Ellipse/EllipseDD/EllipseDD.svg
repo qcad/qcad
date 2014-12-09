@@ -21,7 +21,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,8 +39,8 @@
      id="namedview16"
      showgrid="true"
      inkscape:zoom="1.84375"
-     inkscape:cx="222.0205"
-     inkscape:cy="273.31271"
+     inkscape:cx="157.47813"
+     inkscape:cy="256.49915"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -57,16 +57,6 @@
   </sodipodi:namedview>
   <defs
      id="defs4" />
-  <path
-     d="M 72,376 440,376 440,120"
-     id="path10"
-     inkscape:connector-curvature="0"
-     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:square" />
-  <path
-     d="M 440,120 72,120 72,376"
-     id="path12"
-     inkscape:connector-curvature="0"
-     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:square" />
   <path
      style="fill:#ff0000"
      inkscape:connector-curvature="0"
@@ -93,4 +83,11 @@
      id="path3775"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="cc" />
+  <rect
+     style="opacity:0.25;fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:152"
+     id="rect3756"
+     width="368"
+     height="256"
+     x="72"
+     y="120" />
 </svg>

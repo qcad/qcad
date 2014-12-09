@@ -1,47 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>EllipseRR</class>
- <widget class="QWidget" name="EllipseRR">
+ <class>CircleCD</class>
+ <widget class="QWidget" name="CircleCD">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>785</width>
+    <width>649</width>
     <height>46</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
    <item>
-    <widget class="QLabel" name="MajorRadiusLabel">
+    <widget class="QLabel" name="DiameterLabel">
      <property name="text">
-      <string>Major Radius:</string>
-     </property>
-     <property name="buddy">
-      <cstring>MajorRadius</cstring>
+      <string>Diameter:</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="MajorRadius">
+    <widget class="RMathLineEdit" name="Diameter">
      <property name="text">
-      <string notr="true">100</string>
+      <string notr="true">1</string>
      </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="MinorRadiusLabel">
-     <property name="text">
-      <string>Minor Radius:</string>
+     <property name="angle" stdset="0">
+      <bool>false</bool>
      </property>
-     <property name="buddy">
-      <cstring>MinorRadius</cstring>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="RMathLineEdit" name="MinorRadius">
-     <property name="text">
-      <string notr="true">50</string>
+     <property name="defaultUnit" stdset="0">
+      <number>0</number>
      </property>
     </widget>
    </item>

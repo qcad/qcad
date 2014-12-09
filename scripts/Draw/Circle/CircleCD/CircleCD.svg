@@ -12,7 +12,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="EllipseRR.svg">
+   sodipodi:docname="CircleCD.svg">
   <metadata
      id="metadata18">
     <rdf:RDF>
@@ -34,13 +34,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="2237"
-     inkscape:window-height="1174"
+     inkscape:window-width="1968"
+     inkscape:window-height="1170"
      id="namedview16"
      showgrid="true"
-     inkscape:zoom="1.84375"
-     inkscape:cx="126.0205"
-     inkscape:cy="273.31271"
+     inkscape:zoom="2"
+     inkscape:cx="287.7355"
+     inkscape:cy="266.5"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -58,36 +58,26 @@
   <defs
      id="defs4" />
   <rect
-     style="opacity:0.25;fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:152"
-     id="rect3756"
-     width="368"
-     height="256"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:152;opacity:0.25"
+     id="rect3771"
+     width="352"
+     height="352"
      x="72"
-     y="120" />
+     y="88" />
   <path
      style="fill:#ff0000"
      inkscape:connector-curvature="0"
+     id="path8"
+     d="M 216,264 C 216,246.3264 230.3264,232 248,232 265.6736,232 280,246.3264 280,264 280,281.6736 265.6736,296 248,296 230.3264,296 216,281.6736 216,264 z" />
+  <path
+     d="M 424,264 C 424,361.2021 345.2021,440 248,440 150.7979,440 72,361.2021 72,264 72,166.7979 150.7979,88 248,88 345.2021,88 424,166.7979 424,264 z"
+     id="path12"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:square;stroke-linejoin:round" />
+  <path
+     d="M 136,400 360,128"
      id="path14"
-     d="M 224.00002,247.99998 C 224.00002,230.32639 238.32641,216 256,216 273.67359,216 287.99998,230.32639 287.99998,247.99998 287.99998,265.67357 273.67359,279.99996 256,279.99996 238.32641,279.99996 224.00002,265.67357 224.00002,247.99998 z" />
-  <path
-     sodipodi:type="arc"
-     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:152"
-     id="path2999"
-     sodipodi:cx="256"
-     sodipodi:cy="248"
-     sodipodi:rx="184"
-     sodipodi:ry="128"
-     d="M 440,248 A 184,128 0 1 1 72,248 184,128 0 1 1 440,248 z" />
-  <path
-     style="fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-     d="M 440,248 256,248"
-     id="path3783"
      inkscape:connector-curvature="0"
-     sodipodi:nodetypes="cc" />
-  <path
-     style="fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-     d="M 256,248 256,120"
-     id="path3775"
-     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#ff0000;stroke-width:8"
      sodipodi:nodetypes="cc" />
 </svg>

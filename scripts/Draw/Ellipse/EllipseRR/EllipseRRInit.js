@@ -6,7 +6,7 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("e,d"));
     action.setStatusTip(qsTranslate("EllipseRR", "Draw ellipse with position, major radius and minor radius"));
     action.setDefaultCommands(["ellipseradii", "ed"]);
-    action.setGroupSortOrder(11510);
-    action.setSortOrder(300);
+    action.setGroupSortOrder(9150);
+    action.setSortOrder(100);
     action.setWidgetNames(["DrawEllipseMenu", "EllipseToolBar", "EllipseToolsPanel"]);
 }

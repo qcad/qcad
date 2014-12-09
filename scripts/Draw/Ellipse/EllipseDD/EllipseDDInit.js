@@ -6,7 +6,7 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("e,d"));
     action.setStatusTip(qsTranslate("EllipseDD", "Draw ellipse with position, major diameter and minor diameter"));
     action.setDefaultCommands(["ellipsediameters", "ed"]);
-    action.setGroupSortOrder(11510);
-    action.setSortOrder(300);
+    action.setGroupSortOrder(9150);
+    action.setSortOrder(200);
     action.setWidgetNames(["DrawEllipseMenu", "EllipseToolBar", "EllipseToolsPanel"]);
 }

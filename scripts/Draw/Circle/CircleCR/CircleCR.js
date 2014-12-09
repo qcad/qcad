@@ -18,6 +18,7 @@
  */
 
 include("../Circle.js");
+include("../../DrawBasedOnRectangle.js");
 
 /**
  * \class CircleCR
@@ -25,123 +26,34 @@ include("../Circle.js");
  * \ingroup ecma_draw_circle
  */
 function CircleCR(guiAction) {
-    Circle.call(this, guiAction);
+    DrawBasedOnRectangle.call(this, guiAction);
 
     this.setUiOptions("CircleCR.ui");
 }
 
-CircleCR.prototype = new Circle();
+CircleCR.prototype = new DrawBasedOnRectangle();
 
-CircleCR.State = {
-    SettingCenter : 0
+CircleCR.prototype.getShapes = function(corners) {
+    var circle = new RCircle(RVector.getAverage(corners[0], corners[2]), corners[0].getDistanceTo(corners[1])/2);
+    return [ circle ];
 };
 
-CircleCR.prototype.beginEvent = function() {
-    Circle.prototype.beginEvent.call(this);
-
-    this.setState(CircleCR.State.SettingCenter);
-};
-
-CircleCR.prototype.setState = function(state) {
-    Circle.prototype.setState.call(this, state);
-
-    this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-    this.setCrosshairCursor();
-
-    var appWin = RMainWindowQt.getMainWindow();
-    switch (this.state) {
-    case CircleCR.State.SettingCenter:
-        this.center = undefined;
-
-        this.setCommandPrompt(qsTr("Center or radius"));
-        this.setLeftMouseTip(qsTr("Center"));
-        this.setRightMouseTip(EAction.trCancel);
-        break;
-    }
-
-    EAction.showSnapTools();
-};
-
-CircleCR.prototype.escapeEvent = function() {
-    switch (this.state) {
-    case CircleCR.State.SettingCenter:
-        EAction.prototype.escapeEvent.call(this);
-        break;
-    }
-};
-
-CircleCR.prototype.pickCoordinate = function(event, preview) {
-    var di = this.getDocumentInterface();
-
-    switch (this.state) {
-    case CircleCR.State.SettingCenter:
-        this.center = event.getModelPosition();
-        if (preview) {
-            this.updatePreview();
-        }
-        else {
-            di.setRelativeZero(this.center);
-            var op = this.getOperation(false);
-            if (!isNull(op)) {
-                di.applyOperation(op);
-            }
-        }
-        break;
-    }
-};
-
-CircleCR.prototype.getOperation = function(preview) {
-    if (isNull(this.center) || !isNumber(this.radius)) {
+CircleCR.prototype.getAuxPreview = function() {
+    if (isNull(this.corners) || this.corners.length===0) {
         return undefined;
     }
 
-    var circle = new RCircleEntity(
-        this.getDocument(),
-        new RCircleData(
-            this.center,
-            this.radius
-        )
-    );
+    var ret = [];
 
-    return new RAddObjectOperation(circle, this.getToolTitle());
-};
-
-CircleCR.prototype.applyCommand = function(event, preview) {
-    var di = this.getDocumentInterface();
-
-    var value = RMath.eval(event.getCommand());
-    if (isNaN(value)) {
-        return;
+    for (var i=0; i<this.corners.length; ++i) {
+        ret.push(new RLine(this.corners[i], this.corners[(i+1)%this.corners.length]));
     }
 
-    switch (this.state) {
-    case CircleCR.State.SettingCenter:
-        event.accept();
-        if (preview) {
-            var r = this.radius;
-            this.radius = value;
-            this.updatePreview(true);
-            this.radius = r;
-        }
-        else {
-            //this.radius = value;
-            //this.updateOptionsUi();
-            this.setRadius(event.getCommand());
-        }
-        break;
-    }
-};
-
-CircleCR.prototype.setRadius = function(expr) {
-    var optionsToolBar = EAction.getOptionsToolBar();
-    var w = optionsToolBar.findChild("Radius");
-    if (isQWidget(w)) {
-        w.text = expr;
-    }
+    return ret;
 };
 
 CircleCR.prototype.slotRadiusChanged = function(value) {
-    this.radius = value;
+    this.width = value * 2;
+    this.height = value * 2;
     this.updatePreview(true);
 };
-

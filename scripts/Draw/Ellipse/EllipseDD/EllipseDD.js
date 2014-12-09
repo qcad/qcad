@@ -56,3 +56,13 @@ EllipseDD.prototype.getAuxPreview = function() {
 
     return ret;
 };
+
+EllipseDD.prototype.slotMajorDiameterChanged = function(value) {
+    this.width = value;
+    this.updatePreview(true);
+};
+
+EllipseDD.prototype.slotMinorDiameterChanged = function(value) {
+    this.height = value;
+    this.updatePreview(true);
+};

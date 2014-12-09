@@ -39,7 +39,7 @@ function DrawBasedOnRectangle(guiAction) {
     this.corners = [];
     
     // [ObjectName], [Shown Text], offset vector
-    this.rbReferencePoints = [
+    this.referencePoints = [
         [ "TopLeft",     qsTr("Top Left"),     new RVector(-1,  1) ],
         [ "Top",         qsTr("Top"),          new RVector( 0,  1) ],
         [ "TopRight",    qsTr("Top Right"),    new RVector( 1,  1) ],
@@ -50,7 +50,7 @@ function DrawBasedOnRectangle(guiAction) {
         [ "Bottom",      qsTr("Bottom"),       new RVector( 0, -1) ],
         [ "BottomRight", qsTr("Bottom Right"), new RVector( 1, -1) ]
     ];
-    this.referencePoint = this.rbReferencePoints[0][2];
+    this.referencePointIndex = 4;
 }
 
 DrawBasedOnRectangle.prototype = new EAction();
@@ -60,6 +60,10 @@ DrawBasedOnRectangle.prototype.beginEvent = function() {
     this.setState(0);
 };
 
+//DrawBasedOnRectangle.prototype.suspendEvent = function() {
+
+//};
+
 DrawBasedOnRectangle.prototype.showUiOptions = function(resume, restoreFromSettings) {
     EAction.prototype.showUiOptions.call(this, resume, restoreFromSettings);
     
@@ -67,16 +71,18 @@ DrawBasedOnRectangle.prototype.showUiOptions = function(resume, restoreFromSetti
     var refPointCombo = optionsToolBar.findChild("ReferencePoint");
     var shortcuts = [];
 
-    for (var i=0; i<this.rbReferencePoints.length; i++) {
+    for (var i=0; i<this.referencePoints.length; i++) {
         var str = "%1".arg(i+1);
         refPointCombo.addItem(
-            "[" + str + "] " + this.rbReferencePoints[i][1],
-            this.rbReferencePoints[i][2]
+            "[" + str + "] " + this.referencePoints[i][1],
+            this.referencePoints[i][2]
         );
         shortcuts[i] = new QShortcut(new QKeySequence(str), refPointCombo, 0, 0, Qt.WindowShortcut);
         shortcuts[i].activated.connect(new KeyReactor(i), "activated");
     }
 
+    this.referencePointIndex = RSettings.getIntValue(this.settingsGroup + "/ReferencePoint", 4);
+    refPointCombo.currentIndex = this.referencePointIndex;
 };
 
 DrawBasedOnRectangle.prototype.setState = function(state) {
@@ -128,11 +134,12 @@ DrawBasedOnRectangle.prototype.getOperation = function(preview) {
         new RVector(x + w2, y + h2),
         new RVector(x - w2, y + h2)
     ];
+    var referencePoint = this.referencePoints[this.referencePointIndex][2];
     // apply reference point vector
     for (i = 0; i < this.corners.length; ++i) {
         this.corners[i] = new RVector(
-            this.corners[i].x - w2 * this.referencePoint.x,
-            this.corners[i].y - h2 * this.referencePoint.y
+            this.corners[i].x - w2 * referencePoint.x,
+            this.corners[i].y - h2 * referencePoint.y
         );
     }
     // apply angle:
@@ -180,8 +187,25 @@ DrawBasedOnRectangle.prototype.slotReferencePointChanged = function(value) {
     var optionsToolBar = EAction.getOptionsToolBar();
     var refPointCombo = optionsToolBar.findChild("ReferencePoint");
 
-    this.referencePoint = refPointCombo.itemData(refPointCombo.currentIndex);
+    this.referencePointIndex = refPointCombo.currentIndex;
 
+    this.updatePreview(true);
+};
+
+DrawBasedOnRectangle.prototype.slotReset = function() {
+    var optionsToolBar = EAction.getOptionsToolBar();
+
+    if (isNull(optionsToolBar)) {
+        return;
+    }
+    var refPointCombo = optionsToolBar.findChild("ReferencePoint");
+    if (!isNull(refPointCombo)) {
+        refPointCombo.currentIndex = 4;
+    }
+    var angleEdit = optionsToolBar.findChild("Angle");
+    if (!isNull(angleEdit)) {
+        angleEdit.setValue(0.0);
+    }
     this.updatePreview(true);
 };
 

@@ -17,33 +17,28 @@
  * along with QCAD.
  */
 
-include("../Ellipse.js");
+include("../Circle.js");
 include("../../DrawBasedOnRectangle.js");
-include("scripts/ShapeAlgorithms.js");
 
 /**
- * \class EllipseRR
- * \brief Ellipse from position and radii.
- * \ingroup ecma_draw_ellipse
+ * \class CircleCD
+ * \brief Circle from center and radius.
+ * \ingroup ecma_draw_circle
  */
-function EllipseRR(guiAction) {
+function CircleCD(guiAction) {
     DrawBasedOnRectangle.call(this, guiAction);
 
-    this.setUiOptions("EllipseRR.ui");
+    this.setUiOptions("CircleCD.ui");
 }
 
-EllipseRR.prototype = new DrawBasedOnRectangle();
+CircleCD.prototype = new DrawBasedOnRectangle();
 
-EllipseRR.prototype.getShapes = function(corners) {
-    var lines = [];
-    for (var i=0; i<corners.length; ++i) {
-        lines.push(new RLine(corners[i], corners[(i+1)%corners.length]));
-    }
-    var ellipse = ShapeAlgorithms.createEllipseInscribedFromLines(lines[0], lines[1], lines[2], lines[3]);
-    return [ ellipse ];
+CircleCD.prototype.getShapes = function(corners) {
+    var circle = new RCircle(RVector.getAverage(corners[0], corners[2]), corners[0].getDistanceTo(corners[1])/2);
+    return [ circle ];
 };
 
-EllipseRR.prototype.getAuxPreview = function() {
+CircleCD.prototype.getAuxPreview = function() {
     if (isNull(this.corners) || this.corners.length===0) {
         return undefined;
     }
@@ -57,12 +52,8 @@ EllipseRR.prototype.getAuxPreview = function() {
     return ret;
 };
 
-EllipseRR.prototype.slotMajorRadiusChanged = function(value) {
-    this.width = value * 2;
-    this.updatePreview(true);
-};
-
-EllipseRR.prototype.slotMinorRadiusChanged = function(value) {
-    this.height = value * 2;
+CircleCD.prototype.slotDiameterChanged = function(value) {
+    this.width = value;
+    this.height = value;
     this.updatePreview(true);
 };
