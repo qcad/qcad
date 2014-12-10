@@ -67,11 +67,12 @@ DrawBasedOnRectangle.prototype.initUiOptions = function(resume, restoreFromSetti
     
     var optionsToolBar = EAction.getOptionsToolBar();
     var refPointCombo = optionsToolBar.findChild("ReferencePoint");
-    refPointCombo.blockSignals(true);
 
     if (isNull(refPointCombo)) {
         return;
     }
+
+    refPointCombo.blockSignals(true);
     refPointCombo.clear();
     if (isNull(this.shortcuts)) {
         this.shortcuts = [];
@@ -241,7 +242,6 @@ function KeyReactor(i) {
 }
 
 KeyReactor.prototype.activated = function() {
-    qDebug("KeyReactor: ", this.i);
     var optionsToolBar = EAction.getOptionsToolBar();
     var refPointCombo = optionsToolBar.findChild("ReferencePoint");
     refPointCombo.currentIndex = this.i;
