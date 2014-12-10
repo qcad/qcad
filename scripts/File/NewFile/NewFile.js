@@ -296,6 +296,12 @@ NewFile.updateTitle = function(mdiChild) {
  * Called when the user is about to close the drawing.
  */
 NewFile.closeRequested = function(mdiChild) {
+    // make sure the closing MDI child is the active one
+    // (not the case if inactive tab is closed using close button on tab):
+    var appWin = EAction.getMainWindow();
+    var mdiArea = EAction.getMdiArea();
+    mdiArea.setActiveSubWindow(mdiChild);
+
     var di = mdiChild.getDocumentInterface();
     var document = mdiChild.getDocument();
 
