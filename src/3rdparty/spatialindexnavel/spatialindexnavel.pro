@@ -19,6 +19,11 @@ DEFINES += SPATIALINDEX_CREATE_DLL
     DEFINES += HAVE_BZERO
 }
 
+!win32 {
+    DEFINES += PTHREADS
+    DEFINES += HAVE_PTHREAD_H
+}
+
 CONFIG -= warn_on
 CONFIG += warn_off
 
