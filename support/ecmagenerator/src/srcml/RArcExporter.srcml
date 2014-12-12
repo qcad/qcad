@@ -212,7 +212,6 @@ dir="./core" filename="RArcExporter.h">
         <type>
         <name>const</name>
         <name>RXLine</name>&amp;</type>
-        <name>xLine</name>
       </decl>
     </param>)</parameter_list>
     <block>{}</block>
@@ -229,7 +228,6 @@ dir="./core" filename="RArcExporter.h">
         <type>
         <name>const</name>
         <name>RRay</name>&amp;</type>
-        <name>ray</name>
       </decl>
     </param>)</parameter_list>
     <block>{}</block>
@@ -246,7 +244,6 @@ dir="./core" filename="RArcExporter.h">
         <type>
         <name>const</name>
         <name>RPoint</name>&amp;</type>
-        <name>point</name>
       </decl>
     </param>)</parameter_list>
     <block>{}</block>
@@ -263,7 +260,6 @@ dir="./core" filename="RArcExporter.h">
         <type>
         <name>const</name>
         <name>RTriangle</name>&amp;</type>
-        <name>triangle</name>
       </decl>
     </param>)</parameter_list>
     <block>{}</block>
