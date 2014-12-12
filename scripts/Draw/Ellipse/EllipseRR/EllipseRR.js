@@ -57,12 +57,12 @@ EllipseRR.prototype.getAuxPreview = function() {
     return ret;
 };
 
-EllipseRR.prototype.slotMajorRadiusChanged = function(value) {
+EllipseRR.prototype.slotXRadiusChanged = function(value) {
     this.width = value * 2;
     this.updatePreview(true);
 };
 
-EllipseRR.prototype.slotMinorRadiusChanged = function(value) {
+EllipseRR.prototype.slotYRadiusChanged = function(value) {
     this.height = value * 2;
     this.updatePreview(true);
 };

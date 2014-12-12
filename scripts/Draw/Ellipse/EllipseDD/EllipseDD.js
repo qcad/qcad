@@ -57,12 +57,12 @@ EllipseDD.prototype.getAuxPreview = function() {
     return ret;
 };
 
-EllipseDD.prototype.slotMajorDiameterChanged = function(value) {
+EllipseDD.prototype.slotXDiameterChanged = function(value) {
     this.width = value;
     this.updatePreview(true);
 };
 
-EllipseDD.prototype.slotMinorDiameterChanged = function(value) {
+EllipseDD.prototype.slotYDiameterChanged = function(value) {
     this.height = value;
     this.updatePreview(true);
 };

@@ -7,39 +7,39 @@
     <x>0</x>
     <y>0</y>
     <width>785</width>
-    <height>46</height>
+    <height>50</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
    <item>
-    <widget class="QLabel" name="MajorRadiusLabel">
+    <widget class="QLabel" name="XRadiusLabel">
      <property name="text">
-      <string>Major Radius:</string>
+      <string>X Radius:</string>
      </property>
      <property name="buddy">
-      <cstring>MajorRadius</cstring>
+      <cstring>XRadius</cstring>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="MajorRadius">
+    <widget class="RMathLineEdit" name="XRadius">
      <property name="text">
       <string notr="true">100</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="MinorRadiusLabel">
+    <widget class="QLabel" name="YRadiusLabel">
      <property name="text">
-      <string>Minor Radius:</string>
+      <string>Y Radius:</string>
      </property>
      <property name="buddy">
-      <cstring>MinorRadius</cstring>
+      <cstring>YRadius</cstring>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="MinorRadius">
+    <widget class="RMathLineEdit" name="YRadius">
      <property name="text">
       <string notr="true">50</string>
      </property>

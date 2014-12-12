@@ -289,6 +289,9 @@ Divide.divide = function(op, pos, pos2, entity) {
         e.copyAttributesFrom(entity);
         op.addObject(e, false);
     }
+    else if (isPolylineShape(shape)) {
+        // TODO
+    }
     else {
         var shape1 = shape.clone();
         var shape2 = shape.clone();

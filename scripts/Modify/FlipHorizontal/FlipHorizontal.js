@@ -42,10 +42,10 @@ FlipHorizontal.flip = function(di, horizontally) {
     var center = box.getCenter();
     var axis;
     if (horizontally) {
-        axis = new RLine(center, center.operator_add(new RVector(1,0)));
+        axis = new RLine(center, center.operator_add(new RVector(0,1)));
     }
     else {
-        axis = new RLine(center, center.operator_add(new RVector(0,1)));
+        axis = new RLine(center, center.operator_add(new RVector(1,0)));
     }
 
     var ids = document.querySelectedEntities();
