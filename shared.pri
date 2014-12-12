@@ -56,9 +56,9 @@ win32-msvc2010 {
     CONFIG+=win32-msvc
 }
 
+# building for Mac OS X on the PowerPC platform:
 macx {
     rppc {
-        # building for Mac OS X on the PowerPC platform:
         CONFIG += ppc
         CONFIG -= x86
         QMAKE_CFLAGS_X86 =
@@ -66,9 +66,17 @@ macx {
         QMAKE_OBJECTIVE_CFLAGS_X86 =
         QMAKE_LFLAGS_X86 =
     }
+}
+
+# settings for all Mac OS X builds:
+macx {
     QMAKE_CXXFLAGS_X86 += -Werror=return-type
-    !macx-clang-libc++ {
+    macx-clang* {
         QMAKE_CXXFLAGS += -mmacosx-version-min=10.6
+    }
+
+    contains(QT_VERSION, ^5\\..*\\..*) {
+        QMAKE_LFLAGS += -F/System/Library/Frameworks
     }
 }
 
@@ -110,12 +118,6 @@ else {
     CONFIG += help \
         designer \
         uitools
-}
-
-# required for the navel spatial index lib:
-!win32 {
-    DEFINES += PTHREADS
-    DEFINES += HAVE_PTHREAD_H
 }
 
 CONFIG -= warn_off
