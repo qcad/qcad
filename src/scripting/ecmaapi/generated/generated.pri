@@ -143,6 +143,7 @@ HEADERS += \
     $$PWD/REcmaMoveSelectionOperation.h \
     $$PWD/REcmaNavigationAction.h \
     $$PWD/REcmaNewDocumentListener.h \
+    $$PWD/REcmaNewDocumentListenerAdapter.h \
     $$PWD/REcmaObject.h \
     $$PWD/REcmaOperation.h \
     $$PWD/REcmaOrthoGrid.h \
@@ -477,6 +478,7 @@ SOURCES += \
     $$PWD/REcmaMoveSelectionOperation.cpp \
     $$PWD/REcmaNavigationAction.cpp \
     $$PWD/REcmaNewDocumentListener.cpp \
+    $$PWD/REcmaNewDocumentListenerAdapter.cpp \
     $$PWD/REcmaObject.cpp \
     $$PWD/REcmaOperation.cpp \
     $$PWD/REcmaOrthoGrid.cpp \

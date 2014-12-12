@@ -174,6 +174,8 @@
 #include "REcmaMouseEvent.h"
 #include "REcmaMoveReferencePointOperation.h"
 #include "REcmaMoveSelectionOperation.h"
+#include "REcmaNewDocumentListener.h"
+#include "REcmaNewDocumentListenerAdapter.h"
 #include "REcmaNavigationAction.h"
 #include "REcmaObject.h"
 #include "REcmaOperation.h"
@@ -569,6 +571,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaInterTransactionListener::initEcma(*engine);
     REcmaInterTransactionListenerAdapter::initEcma(*engine);
     REcmaSnapListener::initEcma(*engine);
+    REcmaNewDocumentListener::initEcma(*engine);
+    REcmaNewDocumentListenerAdapter::initEcma(*engine);
 
     REcmaWidget::initEcma(*engine);
     REcmaGuiAction::initEcma(*engine);

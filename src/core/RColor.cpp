@@ -303,6 +303,7 @@ void RColor::init() {
     init(tr("Cyan"), RColor(Qt::cyan));
     init(tr("Magenta"), RColor(Qt::magenta));
     init(tr("Yellow"), RColor(Qt::yellow));
+    init(tr("Orange"), RColor(255,127,0));
     init(tr("Dark Red"), RColor(Qt::darkRed));
     init(tr("Dark Green"), RColor(Qt::darkGreen));
     init(tr("Dark Blue"), RColor(Qt::darkBlue));

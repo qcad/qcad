@@ -889,8 +889,16 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
     QSharedPointer<RLayer> layer = object.dynamicCast<RLayer>();
     if (!layer.isNull()) {
         RLayer::Id id = getLayerId(layer->getName());
-        if (id != RLayer::INVALID_ID) {
+        if (id != RLayer::INVALID_ID && id != layer->getId()) {
             setObjectId(*layer, id);
+
+            // never unprotect an existing protected layer:
+            QSharedPointer<RLayer> existingLayer = queryLayerDirect(id);
+            if (!existingLayer.isNull()) {
+                if (existingLayer->isProtected()) {
+                    layer->setProtected(true);
+                }
+            }
         }
     }
 
@@ -898,7 +906,7 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
     QSharedPointer<RBlock> block = object.dynamicCast<RBlock> ();
     if (!block.isNull()) {
         RBlock::Id id = getBlockId(block->getName());
-        if (id != RBlock::INVALID_ID) {
+        if (id != RBlock::INVALID_ID && id != block->getId()) {
             setObjectId(*block, id);
         }
     }
@@ -907,7 +915,7 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
     QSharedPointer<RLinetype> linetype = object.dynamicCast<RLinetype> ();
     if (!linetype.isNull()) {
         RLinetype::Id id = getLinetypeId(linetype->getName());
-        if (id != RLinetype::INVALID_ID) {
+        if (id != RLinetype::INVALID_ID && id != linetype->getId()) {
             setObjectId(*linetype, id);
         }
     }
