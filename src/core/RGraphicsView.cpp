@@ -203,7 +203,7 @@ bool RGraphicsView::zoomToSelection() {
         return false;
     }
     RBox selectionBox = document->getSelectionBox();
-    if (selectionBox.isValid() && selectionBox.getWidth()>RS::PointTolerance && selectionBox.getHeight()>RS::PointTolerance) {
+    if (selectionBox.isValid() && (selectionBox.getWidth()>RS::PointTolerance || selectionBox.getHeight()>RS::PointTolerance)) {
         zoomTo(selectionBox, getMargin());
         return true;
     }
@@ -280,12 +280,16 @@ void RGraphicsView::zoomTo(const RBox& window, int margin) {
 
     saveViewport();
 
-    RVector f;
+    RVector f(RMAXDOUBLE, RMAXDOUBLE);
     double w = window.getWidth();
     double h = window.getHeight();
 
-    f.x = (getWidth() - 2 * margin) / w;
-    f.y = (getHeight() - 2 * margin) / h;
+    if (w>1.0e-6) {
+        f.x = (getWidth() - 2 * margin) / w;
+    }
+    if (h>1.0e-6) {
+        f.y = (getHeight() - 2 * margin) / h;
+    }
 
     f.x = f.y = qMin(f.x, f.y);
 
