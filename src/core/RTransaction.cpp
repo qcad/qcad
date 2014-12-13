@@ -1010,7 +1010,7 @@ bool RTransaction::isPreview() const {
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, RTransaction& t) {
-    dbg.nospace() << "RTransaction(" << QString("%1").arg((int)&t, 0, 16);
+    dbg.nospace() << "RTransaction(" << QString("%1").arg((long)&t, 0, 16);
 
     dbg.nospace() << ", id: " << t.getId();
     dbg.nospace() << ", group: " << t.getGroup();
