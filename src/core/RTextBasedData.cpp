@@ -351,8 +351,8 @@ bool RTextBasedData::mirror(const RLine& axis) {
         }
     } else {
         if (verticalAlignment==RS::VAlignTop) {
-            verticalAlignment=RS::VAlignBottom;
-        } else if (verticalAlignment==RS::VAlignBottom) {
+            verticalAlignment=RS::VAlignBase;
+        } else if (verticalAlignment==RS::VAlignBase) {
             verticalAlignment=RS::VAlignTop;
         }
     }
