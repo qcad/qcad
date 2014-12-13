@@ -31,7 +31,3 @@ function ArcConcentricThrough(guiAction) {
 }
 
 ArcConcentricThrough.prototype = new LineParallelThrough();
-
-ArcConcentricThrough.prototype.showAppropriateTools = function() {
-    EAction.showArcTools();
-};

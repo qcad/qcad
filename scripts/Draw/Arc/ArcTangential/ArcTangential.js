@@ -62,7 +62,6 @@ ArcTangential.prototype.setState = function(state) {
         this.appendToStartPoint = undefined;
         this.setLeftMouseTip(qsTr("Choose base line or base arc"));
         this.setRightMouseTip(EAction.trCancel);
-        EAction.showArcTools();
         break;
     case ArcTangential.State.SettingEndPoint:
         this.getDocumentInterface().setClickMode(RAction.PickCoordinate);

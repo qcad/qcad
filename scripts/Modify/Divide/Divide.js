@@ -69,7 +69,6 @@ Divide.prototype.setState = function(state) {
             this.setLeftMouseTip(qsTr("Choose line, arc, circle or ellipse"));
         }
         this.setRightMouseTip(EAction.trCancel);
-        EAction.showModificationTools();
         break;
     case Divide.State.SettingPos:
         this.pos = undefined;

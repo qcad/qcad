@@ -72,7 +72,6 @@ LineRelativeAngle.prototype.setState = function(state) {
         this.entity = undefined;
         this.shape = undefined;
         this.pos = undefined;
-        EAction.showLineTools();
         break;
     case LineRelativeAngle.State.SettingPos:
         this.getDocumentInterface().setClickMode(RAction.PickCoordinate);

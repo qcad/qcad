@@ -31,7 +31,3 @@ function CircleConcentricThrough(guiAction) {
 }
 
 CircleConcentricThrough.prototype = new LineParallelThrough();
-
-CircleConcentricThrough.prototype.showAppropriateTools = function() {
-    EAction.showCircleTools();
-};

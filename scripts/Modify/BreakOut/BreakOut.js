@@ -66,7 +66,6 @@ BreakOut.prototype.setState = function(state) {
             }
         }
         this.setRightMouseTip(EAction.trCancel);
-        EAction.showModificationTools();
         break;
     }
 

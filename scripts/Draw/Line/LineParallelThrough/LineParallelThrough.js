@@ -61,7 +61,6 @@ LineParallelThrough.prototype.initState = function() {
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
         this.setLeftMouseTip(qsTr("Choose line, arc or circle"));
         this.setRightMouseTip(EAction.trCancel);
-        this.showAppropriateTools();
         break;
     case LineParallelThrough.State.SettingPos:
         this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
@@ -70,10 +69,6 @@ LineParallelThrough.prototype.initState = function() {
         EAction.showSnapTools();
         break;
     }
-};
-
-LineParallelThrough.prototype.showAppropriateTools = function() {
-    EAction.showLineTools();
 };
 
 LineParallelThrough.prototype.escapeEvent = function() {
