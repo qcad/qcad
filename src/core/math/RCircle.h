@@ -64,7 +64,7 @@ public:
     virtual QList<RVector> getPointsWithDistanceToEnd(
         double distance, RS::From from = RS::FromAny) const;
 
-    virtual double getAngleAt(double distance) const;
+    virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
 
     virtual RVector getVectorTo(const RVector& point,
             bool limited = true, double strictRange = RMAXDOUBLE) const;

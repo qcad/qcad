@@ -49,6 +49,12 @@
 
     // public methods:
     static  QScriptValue
+        setOffsets
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setRotations
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setOffset
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -130,8 +130,9 @@ public:
     /**
      * \return Angle on the entity at the given distance from the start point.
      */
-    virtual double getAngleAt(double distance) const {
+    virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const {
         Q_UNUSED(distance)
+        Q_UNUSED(from)
         return RNANDOUBLE;
     }
 

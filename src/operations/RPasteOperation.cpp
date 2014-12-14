@@ -27,7 +27,6 @@
 RPasteOperation::RPasteOperation(RDocument& sourceDocument)
     : sourceDocument(sourceDocument),
     scale(1.0),
-    rotation(0.0),
     flipHorizontal(false),
     flipVertical(false),
     toCurrentLayer(false),
@@ -39,20 +38,22 @@ RTransaction RPasteOperation::apply(RDocument& document, bool preview) const {
     RTransaction transaction(document.getStorage(), text, undoable);
     transaction.setGroup(transactionGroup);
 
-    copy(
-        sourceDocument, document,
-        offset, scale, rotation, 
-        flipHorizontal, flipVertical,
-        toCurrentLayer, /*toCurrentBlock=*/ true,
-        overwriteLayers, overwriteBlocks,
-        blockName,
-        layerName,
-        transaction,
-        false, false,
-        false,           // toModelSpace (paste to current block, not model space)
-        preview,
-        attributes
-    );
+    for (int i=0; i<offsets.length() && i<rotations.length(); i++) {
+        copy(
+            sourceDocument, document,
+            offsets[i], scale, rotations[i],
+            flipHorizontal, flipVertical,
+            toCurrentLayer, /*toCurrentBlock=*/ true,
+            overwriteLayers && i==0, overwriteBlocks && i==0,
+            blockName,
+            layerName,
+            transaction,
+            false, false,
+            false,           // toModelSpace (paste to current block, not model space)
+            preview,
+            attributes
+        );
+    }
 
     transaction.end();
 
@@ -69,7 +70,7 @@ RPolyline RPasteOperation::getBoundary(double unitFactor) {
         polyline.flipVertical();
     }
     polyline.scale(scale * unitFactor);
-    polyline.rotate(rotation);
-    polyline.move(offset);
+    polyline.rotate(getRotation());
+    polyline.move(getOffset());
     return polyline;
 }

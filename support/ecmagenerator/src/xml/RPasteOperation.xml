@@ -12,6 +12,24 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="sourceDocument" isConst="false" />
       </variant>
     </constructor>
+    <method name="setOffsets" cppName="setOffsets"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="offsets"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setRotations" cppName="setRotations"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; double &gt; &amp;"
+        typeName="QList &lt; double &gt;" name="rotations"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="setOffset" cppName="setOffset" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

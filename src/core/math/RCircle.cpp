@@ -163,8 +163,9 @@ QList<RVector> RCircle::getPointsWithDistanceToEnd(double distance, RS::From fro
     return ret;
 }
 
-double RCircle::getAngleAt(double distance) const {
+double RCircle::getAngleAt(double distance, RS::From from) const {
     Q_UNUSED(distance)
+    Q_UNUSED(from)
 
     return RNANDOUBLE;
 }

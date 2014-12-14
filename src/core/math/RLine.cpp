@@ -129,19 +129,20 @@ QList<RVector> RLine::getPointsWithDistanceToEnd(double distance, RS::From from)
     RVector dv;
     dv.setPolar(distance, a1);
 
-    if (from==RS::FromStart || from==RS::FromAny) {
+    if (from&RS::FromStart) {
         ret.append(startPoint + dv);
     }
 
-    if (from==RS::FromEnd || from==RS::FromAny) {
+    if (from&RS::FromEnd) {
         ret.append(endPoint - dv);
     }
 
     return ret;
 }
 
-double RLine::getAngleAt(double distance) const {
+double RLine::getAngleAt(double distance, RS::From from) const {
     Q_UNUSED(distance)
+    Q_UNUSED(from)
 
     return getAngle();
 }

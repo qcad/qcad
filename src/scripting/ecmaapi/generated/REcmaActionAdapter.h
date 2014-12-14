@@ -116,6 +116,18 @@
         ;static  QScriptValue
         propertyChangeEvent
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setMultiSnapPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setMultiSnapAngles
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updatePreview
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        applyOperation
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

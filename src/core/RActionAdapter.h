@@ -38,6 +38,7 @@ class RWheelEvent;
 class RGuiAction;
 class RStorage;
 class RTabletEvent;
+class ROperation;
 
 /**
  * \brief Abstract base class for all action classes.
@@ -76,6 +77,10 @@ public:
     virtual void entityPickEvent(REntityPickEvent& /*event*/) {}
     virtual void entityPickEventPreview(REntityPickEvent& /*event)*/) {}
     virtual void propertyChangeEvent(RPropertyEvent& /*event*/) {}
+    virtual void setMultiSnapPoints(const QList<RVector>& /*points*/) {}
+    virtual void setMultiSnapAngles(const QList<double>& /*angles*/) {}
+    virtual void updatePreview() {}
+    virtual void applyOperation() {}
 };
 
 Q_DECLARE_METATYPE(RActionAdapter*)

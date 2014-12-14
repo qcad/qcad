@@ -80,7 +80,7 @@ QList<RVector> RRay::getPointsWithDistanceToEnd(double distance, RS::From from) 
     RVector dv;
     dv.setPolar(distance, a1);
 
-    if (from==RS::FromStart || from==RS::FromAny) {
+    if (from&RS::FromStart) {
         ret.append(basePoint + dv);
     }
 

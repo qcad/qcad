@@ -935,7 +935,7 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
             // add line edit or math edit with maximum width:
             if (isOfType(w, QLineEdit) || isOfType(w, RMathLineEdit)) {
                 if (w.maximumWidth>=1024) {
-                    w.maximumWidth = 100;
+                    w.maximumWidth = 75;
                 }
             }
             a = targetWidget.addWidget(w);

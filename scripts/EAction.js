@@ -314,16 +314,17 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
 
     this.optionWidgetActions = [];
 
-    if (!isNull(this.getGuiAction()) &&
-        this.getGuiAction().getGroup() !== "snaps" &&
-        this.getGuiAction().getGroup() !== "snaprestrictions") {
+    var guiAction = this.getGuiAction();
+    if (!isNull(guiAction) &&
+        guiAction.getGroup() !== "snaps" &&
+        guiAction.getGroup() !== "snaprestrictions") {
 
         // automatically add icon of current action to toolbar:
-        if (!this.getGuiAction().icon.isNull()) {
+        if (!guiAction.icon.isNull() && !guiAction.isOverride()) {
             var iconLabel = optionsToolBar.findChild("Icon");
             if (!isNull(iconLabel)) {
-                iconLabel.toolTip = qsTr("Active Tool:") + " " + this.getGuiAction().text.replace("&", "");
-                iconLabel.pixmap = this.getGuiAction().icon.pixmap(
+                iconLabel.toolTip = qsTr("Active Tool:") + " " + guiAction.text.replace("&", "");
+                iconLabel.pixmap = guiAction.icon.pixmap(
                     EAction.getOptionsToolBar().iconSize);
                 iconLabel.setFixedWidth(iconLabel.height + 12);
             }

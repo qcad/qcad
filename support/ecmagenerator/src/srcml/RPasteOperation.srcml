@@ -72,6 +72,56 @@ dir="./operations" filename="RPasteOperation.h">
     <type>
       <name>void</name>
     </type>
+    <name>setOffsets</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QList
+        <argument_list>&lt;
+        <argument>
+          <name>RVector</name>
+        </argument>&gt;</argument_list></name>&amp;</type>
+        <name>offsets</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>this</name>-&gt;
+    <name>offsets</name>= 
+    <name>offsets</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setRotations</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QList
+        <argument_list>&lt;
+        <argument>
+          <name>double</name>
+        </argument>&gt;</argument_list></name>&amp;</type>
+        <name>rotations</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>this</name>-&gt;
+    <name>rotations</name>= 
+    <name>rotations</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
     <name>setOffset</name>
     <parameter_list>(
     <param>
@@ -83,11 +133,35 @@ dir="./operations" filename="RPasteOperation.h">
       </decl>
     </param>)</parameter_list>
     <block>{ 
+    <if>if 
+    <condition>(
+    <expr>
+    <name>this</name>-&gt;
+    <name>offsets</name>.
+    <call>
+      <name>isEmpty</name>
+      <argument_list>()</argument_list>
+    </call></expr>)</condition>
+    <then>
+      <block>{ 
+      <expr_stmt>
+      <expr>
+      <name>this</name>-&gt;
+      <name>offsets</name>&lt;&lt; 
+      <name>offset</name></expr>;</expr_stmt>}</block>
+    </then>
+    <else>else 
+    <block>{ 
     <expr_stmt>
     <expr>
     <name>this</name>-&gt;
-    <name>offset</name>= 
-    <name>offset</name></expr>;</expr_stmt>}</block>
+    <name>
+      <name>offsets</name>
+      <index>[
+      <expr>0</expr>]</index>
+    </name>= 
+    <name>
+    offset</name></expr>;</expr_stmt>}</block></else></if>}</block>
   </function>
   <function>
     <type>
@@ -96,10 +170,34 @@ dir="./operations" filename="RPasteOperation.h">
     <name>getOffset</name>
     <parameter_list>()</parameter_list>
     <block>{ 
+    <if>if 
+    <condition>(
+    <expr>
+    <name>this</name>-&gt;
+    <name>offsets</name>.
+    <call>
+      <name>isEmpty</name>
+      <argument_list>()</argument_list>
+    </call></expr>)</condition>
+    <then>
+      <block>{ 
+      <return>return 
+      <expr>
+        <name>
+        <name>RVector</name>::
+        <name>invalid</name></name>
+      </expr>;</return>}</block>
+    </then>
+    <else>else 
+    <block>{ 
     <return>return 
     <expr>
     <name>this</name>-&gt;
-    <name>offset</name></expr>;</return>}</block>
+    <name>
+      <name>offsets</name>
+      <index>[
+      <expr>0</expr>]</index>
+    </name></expr>;</return>}</block></else></if>}</block>
   </function>
   <function>
     <type>
@@ -149,11 +247,35 @@ dir="./operations" filename="RPasteOperation.h">
       </decl>
     </param>)</parameter_list>
     <block>{ 
+    <if>if 
+    <condition>(
+    <expr>
+    <name>this</name>-&gt;
+    <name>rotations</name>.
+    <call>
+      <name>isEmpty</name>
+      <argument_list>()</argument_list>
+    </call></expr>)</condition>
+    <then>
+      <block>{ 
+      <expr_stmt>
+      <expr>
+      <name>this</name>-&gt;
+      <name>rotations</name>&lt;&lt; 
+      <name>rotation</name></expr>;</expr_stmt>}</block>
+    </then>
+    <else>else 
+    <block>{ 
     <expr_stmt>
     <expr>
     <name>this</name>-&gt;
-    <name>rotation</name>= 
-    <name>rotation</name></expr>;</expr_stmt>}</block>
+    <name>
+      <name>rotations</name>
+      <index>[
+      <expr>0</expr>]</index>
+    </name>= 
+    <name>
+    rotation</name></expr>;</expr_stmt>}</block></else></if>}</block>
   </function>
   <function>
     <type>
@@ -162,10 +284,30 @@ dir="./operations" filename="RPasteOperation.h">
     <name>getRotation</name>
     <parameter_list>()</parameter_list>
     <block>{ 
+    <if>if 
+    <condition>(
+    <expr>
+    <name>this</name>-&gt;
+    <name>rotations</name>.
+    <call>
+      <name>isEmpty</name>
+      <argument_list>()</argument_list>
+    </call></expr>)</condition>
+    <then>
+      <block>{ 
+      <return>return 
+      <expr>0.0</expr>;</return>}</block>
+    </then>
+    <else>else 
+    <block>{ 
     <return>return 
     <expr>
     <name>this</name>-&gt;
-    <name>rotation</name></expr>;</return>}</block>
+    <name>
+      <name>rotations</name>
+      <index>[
+      <expr>0</expr>]</index>
+    </name></expr>;</return>}</block></else></if>}</block>
   </function>
   <function>
     <type>
@@ -490,9 +632,13 @@ dir="./operations" filename="RPasteOperation.h">
   <decl_stmt>
   <decl>
     <type>
-      <name>RVector</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>RVector</name>
+      </argument>&gt;</argument_list></name>
     </type>
-    <name>offset</name>
+    <name>offsets</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>
@@ -504,9 +650,13 @@ dir="./operations" filename="RPasteOperation.h">
   <decl_stmt>
   <decl>
     <type>
-      <name>double</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>double</name>
+      </argument>&gt;</argument_list></name>
     </type>
-    <name>rotation</name>
+    <name>rotations</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

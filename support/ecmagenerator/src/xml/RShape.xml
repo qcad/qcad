@@ -146,6 +146,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="double" isPureVirtual="false">
         <arg type="double" typeName="double" name="distance"
         isConst="false" />
+        <arg type="RS::From" typeName="RS::From" name="from"
+        hasDefault="true" default="RS :: FromStart"
+        isConst="false" />
       </variant>
     </method>
     <method name="getPointAtPercent" cppName="getPointAtPercent"

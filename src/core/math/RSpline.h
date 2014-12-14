@@ -130,7 +130,7 @@ public:
 
     virtual double getLength() const;
     RVector getPointAt(double t) const;
-    virtual double getAngleAt(double distance) const;
+    virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
 
     virtual QList<RVector> getEndPoints() const;
     RVector getMiddlePoint() const;

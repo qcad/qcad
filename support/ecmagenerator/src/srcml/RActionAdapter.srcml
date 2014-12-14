@@ -59,6 +59,8 @@ dir="./core" filename="RActionAdapter.h">
   <name>RStorage</name>;</class_decl>
   <class_decl>class 
   <name>RTabletEvent</name>;</class_decl>
+  <class_decl>class 
+  <name>ROperation</name>;</class_decl>
   <comment type="block">/** * \brief Abstract base class for all
   action classes. * * Action classes handle user interaction with a
   document. A menu, * toolbar button or command usually triggers an
@@ -448,6 +450,66 @@ dir="./core" filename="RActionAdapter.h">
       </decl>
     </param>
     <comment type="block">/*event*/</comment>)</parameter_list>
+    <block>{}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>setMultiSnapPoints</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QList
+        <argument_list>&lt;
+        <argument>
+          <name>RVector</name>
+        </argument>&gt;</argument_list></name>&amp;</type>
+      </decl>
+    </param>
+    <comment type="block">/*points*/</comment>)</parameter_list>
+    <block>{}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>setMultiSnapAngles</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QList
+        <argument_list>&lt;
+        <argument>
+          <name>double</name>
+        </argument>&gt;</argument_list></name>&amp;</type>
+      </decl>
+    </param>
+    <comment type="block">/*angles*/</comment>)</parameter_list>
+    <block>{}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>updatePreview</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>applyOperation</name>
+    <parameter_list>()</parameter_list>
     <block>{}</block>
   </function></public>}</block>;</class>
   <macro>

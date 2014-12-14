@@ -578,17 +578,87 @@ QList<RVector> RPolyline::getPointsWithDistanceToEnd(double distance, RS::From f
     QList<RVector> ret;
 
     QList<QSharedPointer<RShape> > sub = getExploded();
-    QList<QSharedPointer<RShape> >::iterator it;
-    for (it=sub.begin(); it!=sub.end(); ++it) {
-        ret.append((*it)->getPointsWithDistanceToEnd(distance, from));
+
+    if (from&RS::AlongPolyline) {
+        double remainingDist;
+        double len;
+
+        if (from&RS::FromStart) {
+            remainingDist = distance;
+            for (int i=0; i<sub.length(); i++) {
+                len = sub[i]->getLength();
+                if (remainingDist>len) {
+                    remainingDist-=len;
+                }
+                else {
+                    ret.append(sub[i]->getPointsWithDistanceToEnd(remainingDist, RS::FromStart));
+                    break;
+                }
+            }
+        }
+
+        if (from&RS::FromEnd) {
+            remainingDist = distance;
+            for (int i=sub.length()-1; i>=0; i--) {
+                len = sub[i]->getLength();
+                if (remainingDist>len) {
+                    remainingDist-=len;
+                }
+                else {
+                    ret.append(sub[i]->getPointsWithDistanceToEnd(remainingDist, RS::FromEnd));
+                    break;
+                }
+            }
+        }
+    }
+    else {
+        QList<QSharedPointer<RShape> >::iterator it;
+        for (it=sub.begin(); it!=sub.end(); ++it) {
+            ret.append((*it)->getPointsWithDistanceToEnd(distance, from));
+        }
     }
 
     return ret;
 }
 
-double RPolyline::getAngleAt(double distance) const {
-    // not implemented
-    Q_ASSERT(false);
+double RPolyline::getAngleAt(double distance, RS::From from) const {
+    QList<QSharedPointer<RShape> > sub = getExploded();
+
+    if (from&RS::AlongPolyline) {
+        double remainingDist;
+        double len;
+
+        if (from&RS::FromStart) {
+            remainingDist = distance;
+            for (int i=0; i<sub.length(); i++) {
+                len = sub[i]->getLength();
+                if (remainingDist>len) {
+                    remainingDist-=len;
+                }
+                else {
+                    return sub[i]->getAngleAt(remainingDist, RS::FromStart);
+                }
+            }
+        }
+
+        if (from&RS::FromEnd) {
+            remainingDist = distance;
+            for (int i=sub.length()-1; i>=0; i--) {
+                len = sub[i]->getLength();
+                if (remainingDist>len) {
+                    remainingDist-=len;
+                }
+                else {
+                    return sub[i]->getAngleAt(remainingDist, RS::FromEnd);
+                }
+            }
+        }
+    }
+    //else {
+        // not implemented / never used
+    //    Q_ASSERT(false);
+    //}
+
     return RNANDOUBLE;
 }
 

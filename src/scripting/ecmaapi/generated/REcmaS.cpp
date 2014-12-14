@@ -431,6 +431,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("AlongPolyline",
+    QScriptValue(RS::AlongPolyline),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("IsoTop",
     QScriptValue(RS::IsoTop),
     QScriptValue::ReadOnly);

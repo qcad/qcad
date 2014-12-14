@@ -182,9 +182,10 @@ public:
      * End used to specify from which end of a shape to measure a distance.
      */
     enum From {
-        FromStart,
-        FromEnd,
-        FromAny
+        FromStart = 0x1,
+        FromEnd = 0x2,
+        FromAny = 0x3,         /**< Start or end **/
+        AlongPolyline = 0x4
     };
 
     /**

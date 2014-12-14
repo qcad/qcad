@@ -760,8 +760,8 @@ RVector RSpline::getPointAt(double t) const {
 #endif
 }
 
-double RSpline::getAngleAt(double distance) const {
-    QList<RVector> points = getPointsWithDistanceToEnd(distance, RS::FromStart);
+double RSpline::getAngleAt(double distance, RS::From from) const {
+    QList<RVector> points = getPointsWithDistanceToEnd(distance, from);
     if (points.length()!=1) {
         return RNANDOUBLE;
     }
@@ -800,11 +800,11 @@ QList<RVector> RSpline::getPointsWithDistanceToEnd(double distance, RS::From fro
 
     if (splineProxy!=NULL) {
         double t;
-        if (from==RS::FromStart || from==RS::FromAny) {
+        if (from&RS::FromStart) {
             t = splineProxy->getTAtDistance(*this, distance);
             ret << getPointAt(t);
         }
-        if (from==RS::FromEnd || from==RS::FromAny) {
+        if (from&RS::FromEnd) {
             t = splineProxy->getTAtDistance(*this, getLength() - distance);
             ret << getPointAt(t);
         }
@@ -816,12 +816,12 @@ QList<RVector> RSpline::getPointsWithDistanceToEnd(double distance, RS::From fro
             return ret;
         }
 
-        if (from==RS::FromStart || from==RS::FromAny) {
+        if (from&RS::FromStart) {
             RVector p = getPointAt(getTMin() + (distance/length*getTDelta()));
             ret.append(p);
         }
 
-        if (from==RS::FromEnd || from==RS::FromAny) {
+        if (from&RS::FromEnd) {
             RVector p = getPointAt(getTMin() + ((length-distance)/length*getTDelta()));
             ret.append(p);
         }

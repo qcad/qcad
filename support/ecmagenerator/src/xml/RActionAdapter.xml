@@ -13,6 +13,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RGuiAction" />
   <class_decl name="RStorage" />
   <class_decl name="RTabletEvent" />
+  <class_decl name="ROperation" />
   <class name="RActionAdapter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="true" sharedPointerSupport="false" isQObject="false"
@@ -201,6 +202,33 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RPropertyEvent &amp;" typeName="RPropertyEvent"
         name="" isConst="false" />
       </variant>
+    </method>
+    <method name="setMultiSnapPoints" cppName="setMultiSnapPoints"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name=""
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setMultiSnapAngles" cppName="setMultiSnapAngles"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; double &gt; &amp;"
+        typeName="QList &lt; double &gt;" name="" isConst="true" />
+      </variant>
+    </method>
+    <method name="updatePreview" cppName="updatePreview"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="applyOperation" cppName="applyOperation"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
   </class>
 </unit>

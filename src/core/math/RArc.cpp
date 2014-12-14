@@ -393,8 +393,8 @@ RVector RArc::getPointAtAngle(double a) const {
     return RVector(center.x + cos(a) * radius, center.y + sin(a) * radius);
 }
 
-double RArc::getAngleAt(double distance) const {
-    QList<RVector> points = getPointsWithDistanceToEnd(distance, RS::FromStart);
+double RArc::getAngleAt(double distance, RS::From from) const {
+    QList<RVector> points = getPointsWithDistanceToEnd(distance, from);
     if (points.length()!=1) {
         return RNANDOUBLE;
     }
@@ -501,13 +501,13 @@ QList<RVector> RArc::getPointsWithDistanceToEnd(double distance, RS::From from) 
         a2 = getEndAngle() - aDist;
     }
 
-    if (from==RS::FromStart || from==RS::FromAny) {
+    if (from&RS::FromStart) {
         p.setPolar(radius, a1);
         p += center;
         ret.append(p);
     }
 
-    if (from==RS::FromEnd || from==RS::FromAny) {
+    if (from&RS::FromEnd) {
         p.setPolar(radius, a2);
         p += center;
         ret.append(p);
