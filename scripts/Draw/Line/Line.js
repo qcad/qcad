@@ -106,8 +106,8 @@ Line.prototype.getTitle = function() {
     return Line.getTitle();
 };
 
-Line.prototype.createLineEntity = function(doc, p1, p2) {
-    switch (this.lineType) {
+Line.createLineEntity = function(doc, p1, p2, lineType) {
+    switch (lineType) {
     default:
     case Line.LineType.Line:
         return new RLineEntity(doc, new RLineData(p1, p2));
@@ -116,6 +116,10 @@ Line.prototype.createLineEntity = function(doc, p1, p2) {
     case Line.LineType.Ray:
         return new RRayEntity(doc, new RRayData(p1, p2.operator_subtract(p1)));
     }
+};
+
+Line.prototype.createLineEntity = function(doc, p1, p2) {
+    return Line.createLineEntity(doc, p1, p2, this.lineType);
 };
 
 Line.prototype.initUiOptions = function(resume, optionsToolBar) {

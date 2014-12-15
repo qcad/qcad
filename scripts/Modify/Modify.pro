@@ -2,8 +2,8 @@ TEMPLATE = subdirs
 SUBDIRS = \
     AutoTrim \
     Bevel \
-    BreakOutManual \
     BreakOut \
+    BreakOutManual \
     Divide \
     EditText \
     Explode \
@@ -11,7 +11,7 @@ SUBDIRS = \
     FlipVertical \
     Lengthen \
     Mirror \
-    TranslateRotate \
+    Offset \
     Reverse \
     Rotate \
     Rotate2 \
@@ -21,6 +21,7 @@ SUBDIRS = \
     ToBack \
     ToFront \
     Translate \
+    TranslateRotate \
     Trim \
     TrimBoth \
     ts
