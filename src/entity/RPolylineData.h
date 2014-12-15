@@ -154,12 +154,7 @@ public:
         RPolyline::simplify(angleTolerance);
     }
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const {
-        Q_UNUSED(queryBox)
-
-        return QList<QSharedPointer<RShape> >() <<
-                QSharedPointer<RShape>(new RPolyline(*this));
-    }
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const;
 
     virtual QList<RVector> getIntersectionPoints(
             const REntityData& other, bool limited = true, bool same = false,

@@ -96,7 +96,7 @@ LineParallelThrough.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case LineParallelThrough.State.ChoosingEntity:
-        var shape = entity.getClosestShape(pos);
+        var shape = getClosestLineArcCircleShape(entity, pos);
 
         if (isLineBasedShape(shape) ||
             isArcShape(shape) ||

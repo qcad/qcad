@@ -106,7 +106,7 @@ LineRelativeAngle.prototype.pickEntity = function(event, preview) {
         return;
     }
 
-    var shape = entity.getClosestShape(pos);
+    var shape = getClosestLineArcCircleShape(entity, pos);
 
     //if (preview) {
     //    di.highlightEntity(entityId);

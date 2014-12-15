@@ -109,7 +109,7 @@ LineOrthogonalTangent.prototype.pickEntity = function(event, preview) {
         return;
     }
 
-    var shape = entity.getClosestShape(pos);
+    var shape = getClosestLineArcCircleShape(entity, pos);
 
     switch (this.state) {
     case LineOrthogonalTangent.State.ChoosingEntity1:

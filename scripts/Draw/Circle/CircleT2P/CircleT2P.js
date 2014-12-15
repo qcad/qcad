@@ -150,7 +150,7 @@ CircleT2P.prototype.pickEntity = function(event, preview) {
             return;
         }
 
-        shape = entity.getClosestShape(pos);
+        shape = getClosestLineArcCircleShape(entity, pos);
 
         if (!isLineBasedShape(shape) &&
             !isArcShape(shape) &&

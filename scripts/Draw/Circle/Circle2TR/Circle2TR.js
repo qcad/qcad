@@ -107,7 +107,7 @@ Circle2TR.prototype.pickEntity = function(event, preview) {
 
     var shape = undefined;
     if (!isNull(entity)) {
-        shape = entity.getClosestShape(pos);
+        shape = getClosestLineArcCircleShape(entity, pos);
 
         if (!isLineBasedShape(shape) &&
             !isArcShape(shape) &&

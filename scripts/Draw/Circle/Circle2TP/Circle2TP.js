@@ -147,7 +147,7 @@ Circle2TP.prototype.pickEntity = function(event, preview) {
 
     if (this.state!==Circle2TP.State.ChoosingSolution) {
         if (!isNull(entity)) {
-            shape = entity.getClosestShape(pos);
+            shape = getClosestLineArcCircleShape(entity, pos);
 
             if (!isLineBasedShape(shape) &&
                 !isArcShape(shape) &&

@@ -97,7 +97,7 @@ DimDiametric.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case DimDiametric.State.SettingEntity:
-        var shape = entity.getClosestShape(pos);
+        var shape = getClosestLineArcCircleShape(entity, pos);
 
         if (isArcShape(shape) ||
             isCircleShape(shape)) {

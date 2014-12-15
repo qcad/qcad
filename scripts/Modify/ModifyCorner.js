@@ -116,7 +116,7 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
             return;
         }
 
-        var shape = entity.getClosestShape(pos);
+        var shape = getClosestLineArcCircleShape(entity, pos);
 
         if (isLineBasedShape(shape) ||
             isArcShape(shape) ||
@@ -150,7 +150,7 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
             return;
         }
 
-        var shape = entity.getClosestShape(pos);
+        var shape = getClosestLineArcCircleShape(entity, pos);
 
         if (isLineBasedShape(shape) ||
             isArcShape(shape) ||

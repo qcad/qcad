@@ -1647,6 +1647,10 @@ function shapeToEntity(document, shape) {
     return undefined;
 }
 
+function getClosestLineArcCircleShape(entity, pos) {
+    return entity.getClosestShape(pos, Number.NaN, true);
+}
+
 function trimStartPoint(shape, p) {
     shape.trimStartPoint(p);
     if (isXLineShape(shape)) {
