@@ -37,11 +37,12 @@ function Offset(guiAction) {
     this.lineType = undefined;
 
     if (!isNull(guiAction)) {
-        this.setUiOptions("Offset.ui");
+        this.setUiOptions(Offset.includeBasePath + "/Offset.ui");
     }
 }
 
 Offset.prototype = new EAction();
+Offset.includeBasePath = includeBasePath;
 
 Offset.State = {
     ChoosingEntity : 0
@@ -133,12 +134,12 @@ Offset.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    var parallels = ShapeAlgorithms.getOffsetShapes(this.shape, this.distance, this.number, this.pos);
+    var offsetShapes = this.getOffsetShapes();
     if (!preview) {
         this.error = ShapeAlgorithms.error;
     }
 
-    if (isNull(parallels)) {
+    if (isNull(offsetShapes)) {
         return undefined;
     }
 
@@ -146,17 +147,21 @@ Offset.prototype.getOperation = function(preview) {
     var e;
     var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
-    for (var i=0; i<parallels.length; ++i) {
-        if (isLineBasedShape(parallels[i]) && !isNull(this.lineType)) {
-            e = Line.createLineEntity(doc, parallels[i].getStartPoint(), parallels[i].getEndPoint(), this.lineType);
+    for (var i=0; i<offsetShapes.length; ++i) {
+        if (isLineBasedShape(offsetShapes[i]) && !isNull(this.lineType)) {
+            e = Line.createLineEntity(doc, offsetShapes[i].getStartPoint(), offsetShapes[i].getEndPoint(), this.lineType);
         }
         else {
-            e = shapeToEntity(doc, parallels[i]);
+            e = shapeToEntity(doc, offsetShapes[i]);
         }
 
         op.addObject(e);
     }
     return op;
+};
+
+Offset.prototype.getOffsetShapes = function() {
+    return ShapeAlgorithms.getOffsetShapes(this.shape, this.distance, this.number, this.pos);
 };
 
 Offset.prototype.getHighlightedEntities = function() {
