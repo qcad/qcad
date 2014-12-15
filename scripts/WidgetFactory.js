@@ -280,7 +280,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
         if (isOfType(c, RLinetypeCombo)) {
             value = c.getLinetypePattern();
         }
-        if (isOfType(c, QSpinBox)) {
+        if (isOfType(c, QSpinBox) || isOfType(c, QDoubleSpinBox)) {
             value = c.value;
         }
         if (isOfType(c, QListWidget)) {
@@ -459,6 +459,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         if (isNull(value) || isOfType(c, QGroupBox)) {
             // never process internal children of these widgets:
             if (!isOfType(c, QSpinBox) &&
+                !isOfType(c, QDoubleSpinBox) &&
                 !isOfType(c, QComboBox) &&
                 !isOfType(c, QFontComboBox) &&
                 !isOfType(c, QPlainTextEdit) &&
@@ -742,9 +743,16 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             }
             continue;
         }
-        if (isOfType(c, QSpinBox)) {
-            WidgetFactory.connect(c["valueChanged(int)"], signalReceiver, c.objectName);
-            c["valueChanged(int)"].connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+        if (isOfType(c, QSpinBox) || isOfType(c, QDoubleSpinBox)) {
+            if (isOfType(c, QSpinBox)) {
+                WidgetFactory.connect(c["valueChanged(int)"], signalReceiver, c.objectName);
+                c["valueChanged(int)"].connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+            }
+            else {
+                WidgetFactory.connect(c["valueChanged(double)"], signalReceiver, c.objectName);
+                c["valueChanged(double)"].connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+            }
+
             if (isNull(c.defaultValue)) {
                 c.defaultValue = c.value;
                 if (signalReceiver!=undefined) {
