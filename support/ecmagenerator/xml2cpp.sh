@@ -2,11 +2,11 @@
 
 echo "xml to cpp..."
 
-scope="src"
+maxThreads=128
 if [ -z $1 ]; then
-    maxThreads=128
+    scope="src"
 else
-    maxThreads=$1
+    scope="tmp"
 fi
 
 hasNoIndent=0
@@ -15,11 +15,8 @@ hasNoIndent=$?
 
 if [ $scope == "src" ]; then
 	profile="../../src/scripting/ecmaapi/generated/generated.pri"
-else
-    profile="../../testing/scripting/ecmaapi/generated/generated.pri"
+    profile_tmp="generated.pri"
 fi
-
-profile_tmp="generated.pri"
 
 #echo "include( ../../../../shared.pri )" > "$profile_tmp"
 #echo "TEMPLATE = lib" >> "$profile_tmp"
@@ -56,7 +53,12 @@ do
         else
             ecmafile=$(echo $file|sed s/^R/REcma/).$mode
         fi
-        ecmapath=../../$scope/scripting/ecmaapi/generated/$ecmafile
+        if [ $scope == "src" ]
+        then
+            ecmapath=../../$scope/scripting/ecmaapi/generated/$ecmafile
+        else
+            ecmapath=$1/$ecmafile
+        fi
 
         echo "processing $file ($mode)"
         (
@@ -83,37 +85,40 @@ done
 
 wait
 
-for mode in h cpp
-do
-    if [ $mode == "h" ]; then
-        /bin/echo -n "HEADERS +=" >> "$profile_tmp"
-    else
-        echo >> "$profile_tmp"
-        /bin/echo -n "SOURCES +=" >> "$profile_tmp"
-    fi
-
-    for f in ../../$scope/scripting/ecmaapi/generated/*.$mode
+if [ $scope == "src" ]
+then
+    for mode in h cpp
     do
-        file=${f##*/}
-        if [ -s $f ]; then
-            echo " \\" >> "$profile_tmp"
-            /bin/echo -n "    \$\$PWD/$file" >> "$profile_tmp"
+        if [ $mode == "h" ]; then
+            /bin/echo -n "HEADERS +=" >> "$profile_tmp"
+        else
+            echo >> "$profile_tmp"
+            /bin/echo -n "SOURCES +=" >> "$profile_tmp"
         fi
+
+        for f in ../../$scope/scripting/ecmaapi/generated/*.$mode
+        do
+            file=${f##*/}
+            if [ -s $f ]; then
+                echo " \\" >> "$profile_tmp"
+                /bin/echo -n "    \$\$PWD/$file" >> "$profile_tmp"
+            fi
+        done
     done
-done
 
-cat $profile_tmp | grep -v "REcmaWebView" >tmp
-mv tmp $profile_tmp
-echo "!r_mobile {" >> "$profile_tmp"
-echo "    HEADERS += \$\$PWD/REcmaWebView.h" >> "$profile_tmp"
-echo "    SOURCES += \$\$PWD/REcmaWebView.cpp" >> "$profile_tmp"
-echo "}" >> "$profile_tmp"
+    cat $profile_tmp | grep -v "REcmaWebView" >tmp
+    mv tmp $profile_tmp
+    echo "!r_mobile {" >> "$profile_tmp"
+    echo "    HEADERS += \$\$PWD/REcmaWebView.h" >> "$profile_tmp"
+    echo "    SOURCES += \$\$PWD/REcmaWebView.cpp" >> "$profile_tmp"
+    echo "}" >> "$profile_tmp"
 
-diff $profile_tmp $profile
-if [ $? -eq 0 ]; then
-    rm $profile_tmp
-else
-    mv $profile_tmp $profile
+    diff $profile_tmp $profile
+    if [ $? -eq 0 ]; then
+        rm $profile_tmp
+    else
+        mv $profile_tmp $profile
+    fi
 fi
 
 echo "done."

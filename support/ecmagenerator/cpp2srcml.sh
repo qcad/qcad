@@ -10,11 +10,7 @@ else
 	exit 0
 fi
 
-if [ -z $1 ]; then
-    maxThreads=256
-else
-    maxThreads=$1
-fi
+maxThreads=256
 
 src2srcml_output=`src2srcml -h | grep \\\-\\\-output`
 
@@ -28,9 +24,14 @@ fi
 echo $switch
 
 SPATH=$(pwd)
-scope="src"
-
-cd ../../$scope
+if [ -z "$1" ]
+then
+    scope="src"
+    cd "../../$scope"
+else
+    scope="$1"
+    cd "$scope"
+fi
 
 for f in `find . -name "R[A-Z]*.h"`
 do
@@ -40,7 +41,12 @@ do
 	cppfile=${f##*/}
 	if [ ${cppfile:0:5} != "REcma" ]; then
 		basename=${cppfile%%.*}
-		srcmlfile="$scope/srcml/$basename.srcml"
+        if [ $scope = "src" ]
+        then
+            srcmlfile="$scope/srcml/$basename.srcml"
+        else
+            srcmlfile="tmp/srcml/$basename.srcml"
+        fi
 		#if [ $f -nt "$SPATH/$srcmlfile" ]; then
 			echo "processing $cppfile ..."
 			(

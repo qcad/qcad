@@ -1,22 +1,22 @@
 #!/bin/bash
 
-if [ -z $1 ]; then
-    maxThreads=64
-else
-    maxThreads=$1
+maxThreads=64
+
+if [ ! -z $1 ]; then
+    scope="$1"
 fi
 
 echo "Generating script bindings for the QCAD Application Framework..."
 
-sh ./cpp2srcml.sh $maxThreads
+sh ./cpp2srcml.sh $scope
 if [ $? -ne 0 ]; then exit $?; fi
-sh ./srcml2xml.sh $maxThreads
+sh ./srcml2xml.sh $scope
 if [ $? -ne 0 ]; then exit $?; fi
-sh ./xml2shell.sh $maxThreads
+sh ./xml2shell.sh $scope
 if [ $? -ne 0 ]; then exit $?; fi
-sh ./xml2sharedpointersupport.sh $maxThreads
+sh ./xml2sharedpointersupport.sh $scope
 if [ $? -ne 0 ]; then exit $?; fi
-sh ./xml2cpp.sh $maxThreads
+sh ./xml2cpp.sh $scope
 if [ $? -ne 0 ]; then exit $?; fi
 
 echo "done"

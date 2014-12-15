@@ -2,12 +2,12 @@
 
 echo "srcml to xml ..."
 
+maxThreads=128
 SPATH=$(pwd)
-scope="src"
 if [ -z $1 ]; then
-    maxThreads=128
+    scope="src"
 else
-    maxThreads=$1
+    scope="tmp"
 fi
 
 cd $scope/srcml
