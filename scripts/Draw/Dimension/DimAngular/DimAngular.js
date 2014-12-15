@@ -165,7 +165,7 @@ DimAngular.prototype.pickEntity = function(event, preview) {
         break;
 
     case DimAngular.State.SettingSecondEntity:
-        shape = getClosestLineArcCircleShape(entity, pos);
+        shape = getClosestSimpleShape(entity, pos);
 
         if (isLineBasedShape(shape)) {
             this.secondEntity = entity;

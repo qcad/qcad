@@ -217,7 +217,7 @@ Divide.divide = function(op, pos, pos2, entity) {
     }
 
     entity = entity.clone();
-    var shape = getClosestLineArcCircleShape(entity, pos);
+    var shape = getClosestSimpleShape(entity, pos);
 
     if (isNull(pos2)) {
         if (isCircleShape(shape) || (isEllipseShape(shape) && shape.isFullEllipse())) {

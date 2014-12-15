@@ -121,7 +121,7 @@ LineTangent1.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case LineTangent1.State.ChoosingEntity:
-        var shape = getClosestLineArcCircleShape(entity, pos);
+        var shape = getClosestSimpleShape(entity, pos);
 
         if (isArcShape(shape) ||
             isCircleShape(shape) ||

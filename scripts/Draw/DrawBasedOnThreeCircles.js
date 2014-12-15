@@ -127,7 +127,7 @@ DrawBasedOnThreeCircles.prototype.pickEntity = function(event, preview) {
         return;
     }
 
-    var shape = getClosestLineArcCircleShape(entity, pos);
+    var shape = getClosestSimpleShape(entity, pos);
 
     if (!isArcShape(shape) &&
         !isCircleShape(shape)) {

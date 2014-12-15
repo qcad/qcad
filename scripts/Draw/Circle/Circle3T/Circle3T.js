@@ -156,7 +156,7 @@ Circle3T.prototype.pickEntity = function(event, preview) {
 
     if (this.state!==Circle3T.State.ChoosingSolution) {
         if (!isNull(entity)) {
-            shape = getClosestLineArcCircleShape(entity, pos);
+            shape = getClosestSimpleShape(entity, pos);
 
             if (!isLineBasedShape(shape) &&
                 !isArcShape(shape) &&

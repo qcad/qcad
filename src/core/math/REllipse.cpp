@@ -141,7 +141,7 @@ double REllipse::getRadiusAt(double angle) const {
  */
 RVector REllipse::getPointAt(double angle) const {
     RVector v(cos(angle)*getMajorRadius(),
-                   sin(angle)*getMinorRadius());
+              sin(angle)*getMinorRadius());
     v.rotate(getAngle());
     v.move(center);
     return v;

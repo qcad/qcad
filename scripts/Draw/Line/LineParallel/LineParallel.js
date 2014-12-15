@@ -65,7 +65,7 @@ LineParallel.prototype.initState = function() {
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case LineParallel.State.ChoosingEntity:
-        this.setLeftMouseTip(qsTr("Choose line, arc or circle"));
+        this.setLeftMouseTip(qsTr("Choose line, arc, circle or ellipse"));
         break;
     }
 
@@ -98,11 +98,12 @@ LineParallel.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case LineParallel.State.ChoosingEntity:
-        var shape = getClosestLineArcCircleShape(entity, pos);
+        var shape = getClosestSimpleShape(entity, pos);
 
         if (isLineBasedShape(shape) ||
             isArcShape(shape) ||
-            isCircleShape(shape)) {
+            isCircleShape(shape) ||
+            isEllipseShape(shape)) {
 
             this.entity = entity;
             this.shape = shape;
@@ -110,7 +111,7 @@ LineParallel.prototype.pickEntity = function(event, preview) {
         }
         else {
             if (!preview) {
-                EAction.warnNotLineArcCircle();
+                EAction.warnNotLineArcCircleEllipse();
                 break;
             }
         }

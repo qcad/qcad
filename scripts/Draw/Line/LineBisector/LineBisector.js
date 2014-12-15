@@ -109,7 +109,7 @@ LineBisector.prototype.pick = function(event, preview) {
         return;
     }
 
-    var shape = getClosestLineArcCircleShape(entity, pos);
+    var shape = getClosestSimpleShape(entity, pos);
 
     if (!isLineBasedShape(shape)) {
         if (!preview) {

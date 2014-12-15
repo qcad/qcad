@@ -228,6 +228,10 @@ ShapeAlgorithms.getOffsetShapes = function(shape, distance, number, sidePosition
     ShapeAlgorithms.error = undefined;
     var ret = [];
     var i, n;
+    var a,b,d,x,y,t,p;
+    var side;
+    var parallel;
+    var center, insides, inside
 
     if (isLineBasedShape(shape)) {
         var sides = [];
@@ -245,29 +249,28 @@ ShapeAlgorithms.getOffsetShapes = function(shape, distance, number, sidePosition
         }
 
         for (i=0; i<sides.length; i++) {
-            var side = sides[i];
+            side = sides[i];
 
-            var ang;
             if (side===RS.LeftHand) {
-                ang = shape.getAngle() + Math.PI/2.0;
+                a = shape.getAngle() + Math.PI/2.0;
             }
             else {
-                ang = shape.getAngle() - Math.PI/2.0;
+                a = shape.getAngle() - Math.PI/2.0;
             }
 
             var distanceV = new RVector();
 
             for (n=1; n<=number; ++n) {
-                distanceV.setPolar(distance * n, ang);
-                var parallel = shape.clone();
+                distanceV.setPolar(distance * n, a);
+                parallel = shape.clone();
                 parallel.move(distanceV);
                 ret.push(parallel);
             }
         }
     }
     else if (isArcShape(shape) || isCircleShape(shape)) {
-        var center = shape.getCenter();
-        var insides = [];
+        center = shape.getCenter();
+        insides = [];
         if (isVector(sidePosition)) {
             insides.push(center.getDistanceTo(sidePosition) < shape.getRadius());
         }
@@ -291,8 +294,8 @@ ShapeAlgorithms.getOffsetShapes = function(shape, distance, number, sidePosition
         //var inside = (center.getDistanceTo(sidePosition) < shape.getRadius());
 
         for (i=0; i<insides.length; i++) {
-            var inside = insides[i];
-            var d = distance;
+            inside = insides[i];
+            d = distance;
 
             if (inside) {
                 d *= -1;
@@ -316,6 +319,77 @@ ShapeAlgorithms.getOffsetShapes = function(shape, distance, number, sidePosition
                     break;
                 }
                 ret.push(concentric);
+            }
+        }
+    }
+    else if (isEllipseShape(shape)) {
+        center = shape.getCenter();
+
+        insides = [];
+        if (isVector(sidePosition)) {
+            a = center.getAngleTo(sidePosition) - shape.getAngle();
+            t = shape.angleToParam(a);
+            p = shape.getPointAt(t);
+            insides.push(center.getDistanceTo(sidePosition) < center.getDistanceTo(p));
+        }
+        else {
+            if (sidePosition===RS.BothSides) {
+                insides.push(true);
+                insides.push(false);
+            }
+            else {
+                if (!shape.isReversed()) {
+                    if (sidePosition===RS.LeftHand) {
+                        insides.push(true);
+                    }
+                    else {
+                        insides.push(false);
+                    }
+                }
+            }
+        }
+
+        a = shape.getMajorRadius();
+        b = shape.getMinorRadius();
+
+        for (i=0; i<insides.length; i++) {
+            inside = insides[i];
+            d = distance;
+
+            if (inside) {
+                d *= -1;
+            }
+
+            for (n=1; n<=number; ++n) {
+                var spl;
+                if (RSpline.hasProxy()) {
+                    spl = new RSpline();
+                }
+                else {
+                    spl = new RPolyline();
+                }
+
+                var k = d*n;
+                var root, v;
+                for (t=shape.getStartParam(); t<shape.getEndParam()+0.1; t+=0.1) {
+                    if (t>shape.getEndParam()) {
+                        t = shape.getEndParam();
+                    }
+
+                    root = Math.sqrt(a*a * Math.pow(Math.sin(t), 2) + b*b * Math.pow(Math.cos(t), 2));
+                    x = (a + (b * k) / root) * Math.cos(t);
+                    y = (b + (a * k) / root) * Math.sin(t);
+                    v = new RVector(x, y)
+                    v.rotate(shape.getAngle());
+                    v.move(center);
+                    if (isSplineShape(spl)) {
+                        spl.appendFitPoint(v);
+                    }
+                    else {
+                        spl.appendVertex(v);
+                    }
+                }
+                ret.push(spl);
             }
         }
     }

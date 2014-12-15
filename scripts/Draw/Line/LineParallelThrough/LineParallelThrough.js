@@ -59,7 +59,7 @@ LineParallelThrough.prototype.initState = function() {
         this.shape = undefined;
         this.distance = undefined;
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
-        this.setLeftMouseTip(qsTr("Choose line, arc or circle"));
+        this.setLeftMouseTip(qsTr("Choose line, arc, circle or ellipse"));
         this.setRightMouseTip(EAction.trCancel);
         break;
     case LineParallelThrough.State.SettingPos:
@@ -96,11 +96,12 @@ LineParallelThrough.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case LineParallelThrough.State.ChoosingEntity:
-        var shape = getClosestLineArcCircleShape(entity, pos);
+        var shape = getClosestSimpleShape(entity, pos);
 
         if (isLineBasedShape(shape) ||
             isArcShape(shape) ||
-            isCircleShape(shape)) {
+            isCircleShape(shape)  ||
+            isEllipseShape(shape)) {
 
             this.entity = entity;
             this.shape = shape;
@@ -114,7 +115,7 @@ LineParallelThrough.prototype.pickEntity = function(event, preview) {
         }
         else {
             if (!preview) {
-                EAction.warnNotLineArcCircle();
+                EAction.warnNotLineArcCircleEllipse();
                 break;
             }
         }

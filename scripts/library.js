@@ -1647,7 +1647,7 @@ function shapeToEntity(document, shape) {
     return undefined;
 }
 
-function getClosestLineArcCircleShape(entity, pos) {
+function getClosestSimpleShape(entity, pos) {
     return entity.getClosestShape(pos, Number.NaN, true);
 }
 
