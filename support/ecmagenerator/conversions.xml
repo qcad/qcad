@@ -52,6 +52,8 @@
 	<entry key="RS::BooleanOperation" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::FillType" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::Orientation" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::JoinType" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::EndType" value="toNumber()" testFunction="isNumber()" cast="int" />
 
 	<entry key="RLineweight::Lineweight" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RLinetype::Id" value="toNumber()" testFunction="isNumber()" cast="int" />

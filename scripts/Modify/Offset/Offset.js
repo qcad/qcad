@@ -63,11 +63,19 @@ Offset.prototype.initState = function() {
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case Offset.State.ChoosingEntity:
-        this.setLeftMouseTip(qsTr("Choose line, arc, circle or ellipse"));
+        this.setLeftMouseTip(this.getLeftMouseTip());
         break;
     }
 
     this.setRightMouseTip(EAction.trCancel);
+};
+
+Offset.prototype.getLeftMouseTip = function() {
+    return qsTr("Choose line, arc, circle or ellipse");
+};
+
+Offset.prototype.warnUnsupportedShape = function() {
+    EAction.warnNotLineArcCircleEllipse();
 };
 
 Offset.prototype.escapeEvent = function() {
@@ -92,20 +100,17 @@ Offset.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case Offset.State.ChoosingEntity:
-        var shape = getClosestSimpleShape(entity, pos);
+        // TODO: or getClosestSimpleShape(entity, pos) to create parallels of segments
+        var shape = entity.getClosestShape(pos);
 
-        if (isLineBasedShape(shape) ||
-            isArcShape(shape) ||
-            isCircleShape(shape) ||
-            isEllipseShape(shape)) {
-
+        if (this.isShapeSupported(shape)) {
             this.entity = entity;
             this.shape = shape;
             this.pos = pos;
         }
         else {
             if (!preview) {
-                EAction.warnNotLineArcCircleEllipse();
+                this.warnUnsupportedShape();
                 break;
             }
         }
@@ -126,6 +131,13 @@ Offset.prototype.pickEntity = function(event, preview) {
     }
 };
 
+Offset.prototype.isShapeSupported = function(shape) {
+    return isLineBasedShape(shape) ||
+           isArcShape(shape) ||
+           isCircleShape(shape) ||
+           isEllipseShape(shape);
+};
+
 Offset.prototype.getOperation = function(preview) {
     if (isNull(this.pos) || isNull(this.entity) ||
         !isNumber(this.distance) || !isNumber(this.number) ||
@@ -134,7 +146,7 @@ Offset.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    var offsetShapes = this.getOffsetShapes();
+    var offsetShapes = this.getOffsetShapes(preview);
     if (!preview) {
         this.error = ShapeAlgorithms.error;
     }
@@ -160,7 +172,7 @@ Offset.prototype.getOperation = function(preview) {
     return op;
 };
 
-Offset.prototype.getOffsetShapes = function() {
+Offset.prototype.getOffsetShapes = function(preview) {
     return ShapeAlgorithms.getOffsetShapes(this.shape, this.distance, this.number, this.pos);
 };
 

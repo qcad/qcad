@@ -106,6 +106,9 @@
         getVertexAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getVertexIndex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLastVertex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

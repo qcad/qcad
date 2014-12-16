@@ -106,8 +106,9 @@ then
         done
     done
 
-    cat $profile_tmp | grep -v "REcmaWebView" >tmp
-    mv tmp $profile_tmp
+    cat $profile_tmp | grep -v "REcmaWebView" >tmp2
+    mv tmp2 $profile_tmp
+    echo "" >> "$profile_tmp"
     echo "!r_mobile {" >> "$profile_tmp"
     echo "    HEADERS += \$\$PWD/REcmaWebView.h" >> "$profile_tmp"
     echo "    SOURCES += \$\$PWD/REcmaWebView.cpp" >> "$profile_tmp"

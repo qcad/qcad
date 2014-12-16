@@ -668,6 +668,7 @@ SOURCES += \
     $$PWD/REcmaXLine.cpp \
     $$PWD/REcmaXLineData.cpp \
     $$PWD/REcmaXLineEntity.cpp
+
 !r_mobile {
     HEADERS += $$PWD/REcmaWebView.h
     SOURCES += $$PWD/REcmaWebView.cpp

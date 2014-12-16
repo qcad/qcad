@@ -1501,6 +1501,46 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("JoinSquare",
+    QScriptValue(RS::JoinSquare),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("JoinRound",
+    QScriptValue(RS::JoinRound),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("JoinMiter",
+    QScriptValue(RS::JoinMiter),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EndClosedPolygon",
+    QScriptValue(RS::EndClosedPolygon),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EndClosedLine",
+    QScriptValue(RS::EndClosedLine),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EndOpenButt",
+    QScriptValue(RS::EndOpenButt),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EndOpenSquare",
+    QScriptValue(RS::EndOpenSquare),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EndOpenRound",
+    QScriptValue(RS::EndOpenRound),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RS::MessageType>(
@@ -1633,6 +1673,20 @@
         &engine,
         toScriptValueEnumOrientation,
         fromScriptValueEnumOrientation,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RS::JoinType>(
+        &engine,
+        toScriptValueEnumJoinType,
+        fromScriptValueEnumJoinType,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RS::EndType>(
+        &engine,
+        toScriptValueEnumEndType,
+        fromScriptValueEnumEndType,
         ctor.property(QString::fromLatin1("prototype"))
     );
 
@@ -2539,5 +2593,25 @@
     
         {
             out = qvariant_cast<RS::Orientation>(value.toVariant());
+        }
+         QScriptValue REcmaS::toScriptValueEnumJoinType(QScriptEngine* engine, const RS::JoinType& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaS::fromScriptValueEnumJoinType(const QScriptValue& value, RS::JoinType& out)
+    
+        {
+            out = qvariant_cast<RS::JoinType>(value.toVariant());
+        }
+         QScriptValue REcmaS::toScriptValueEnumEndType(QScriptEngine* engine, const RS::EndType& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaS::fromScriptValueEnumEndType(const QScriptValue& value, RS::EndType& out)
+    
+        {
+            out = qvariant_cast<RS::EndType>(value.toVariant());
         }
         

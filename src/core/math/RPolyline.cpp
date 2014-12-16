@@ -183,6 +183,20 @@ RVector RPolyline::getVertexAt(int i) const {
     return vertices.at(i);
 }
 
+int RPolyline::getVertexIndex(const RVector& v, double tolerance) const {
+    for (int i=0; i<vertices.length(); i++) {
+        if (vertices[i].equalsFuzzy(v, tolerance)) {
+            return i;
+        }
+
+        if (vertices[i].equalsFuzzy(v, 0.01)) {
+            qDebug() << "almost match: " << vertices[i].getDistanceTo(v);
+        }
+    }
+
+    return -1;
+}
+
 RVector RPolyline::getLastVertex() const {
     if (vertices.size()==0) {
         return RVector::invalid;

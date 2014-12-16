@@ -122,6 +122,17 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="i" isConst="false" />
       </variant>
     </method>
+    <method name="getVertexIndex" cppName="getVertexIndex"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+        <arg type="double" typeName="double" name="tolerance"
+        hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getLastVertex" cppName="getLastVertex"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

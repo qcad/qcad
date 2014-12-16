@@ -326,6 +326,18 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="CW" />
       <value name="CCW" />
     </enum>
+    <enum name="JoinType">
+      <value name="JoinSquare" />
+      <value name="JoinRound" />
+      <value name="JoinMiter" />
+    </enum>
+    <enum name="EndType">
+      <value name="EndClosedPolygon" />
+      <value name="EndClosedLine" />
+      <value name="EndOpenButt" />
+      <value name="EndOpenSquare" />
+      <value name="EndOpenRound" />
+    </enum>
     <method name="compare" cppName="compare" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">

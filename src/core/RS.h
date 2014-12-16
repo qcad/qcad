@@ -471,6 +471,20 @@ public:
         CCW
     };
 
+    enum JoinType {
+        JoinSquare,
+        JoinRound,
+        JoinMiter
+    };
+
+    enum EndType {
+        EndClosedPolygon,
+        EndClosedLine,
+        EndOpenButt,
+        EndOpenSquare,
+        EndOpenRound
+    };
+
 public:
     static bool compare(const QVariant& v1, const QVariant& v2);
     static bool compare(const QPair<QVariant, RPropertyAttributes>& p1,
@@ -540,6 +554,8 @@ Q_DECLARE_METATYPE(RS::VAlign*)
 Q_DECLARE_METATYPE(RS::BooleanOperation)
 Q_DECLARE_METATYPE(RS::FillType)
 Q_DECLARE_METATYPE(RS::Orientation)
+Q_DECLARE_METATYPE(RS::JoinType)
+Q_DECLARE_METATYPE(RS::EndType)
 Q_DECLARE_METATYPE(QList<RS::EntityType>)
 
 #endif

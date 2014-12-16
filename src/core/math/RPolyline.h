@@ -74,6 +74,7 @@ public:
     QList<RVector> getVertices() const;
     void setVertexAt(int i, const RVector& v);
     RVector getVertexAt(int i) const;
+    int getVertexIndex(const RVector& v, double tolerance=RS::PointTolerance) const;
     RVector getLastVertex() const;
     int countVertices() const;
 

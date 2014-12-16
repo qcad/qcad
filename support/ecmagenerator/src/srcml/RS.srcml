@@ -1170,6 +1170,36 @@ dir="./core" filename="RS.h">
   </expr>, 
   <expr>
     <name>CCW</name>
+  </expr>}</block>;</enum>
+  <enum>enum 
+  <name>JoinType</name>
+  <block>{ 
+  <expr>
+    <name>JoinSquare</name>
+  </expr>, 
+  <expr>
+    <name>JoinRound</name>
+  </expr>, 
+  <expr>
+    <name>JoinMiter</name>
+  </expr>}</block>;</enum>
+  <enum>enum 
+  <name>EndType</name>
+  <block>{ 
+  <expr>
+    <name>EndClosedPolygon</name>
+  </expr>, 
+  <expr>
+    <name>EndClosedLine</name>
+  </expr>, 
+  <expr>
+    <name>EndOpenButt</name>
+  </expr>, 
+  <expr>
+    <name>EndOpenSquare</name>
+  </expr>, 
+  <expr>
+    <name>EndOpenRound</name>
   </expr>}</block>;</enum></public>
   <public>public: 
   <function_decl>
@@ -1691,6 +1721,16 @@ dir="./core" filename="RS.h">
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>RS::Orientation</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::JoinType</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RS::EndType</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

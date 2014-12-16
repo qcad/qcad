@@ -329,6 +329,35 @@ dir="./core/math" filename="RPolyline.h">
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
+    <name>int</name>
+  </type>
+  <name>getVertexIndex</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>v</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>tolerance</name>=
+    <init>
+      <expr>
+        <name>
+        <name>RS</name>::
+        <name>PointTolerance</name></name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
     <name>RVector</name>
   </type>
   <name>getLastVertex</name>
