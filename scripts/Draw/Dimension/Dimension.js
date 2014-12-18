@@ -85,6 +85,8 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
     lowerToleranceLineEdit.text = "";
     WidgetFactory.initLineEdit(lowerToleranceLineEdit, true);
 
+    this.initScaleCombo();
+    
     // if we are resuming, restore previous values (automatic)
     // it not, keep them empty.
     if (!resume) {
@@ -94,6 +96,21 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
         lowerToleranceLineEdit.setProperty("Loaded", true);
     }
 };
+
+Dimension.prototype.initScaleCombo = function() {
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var scaleCombo = optionsToolBar.findChild("Scale");
+    scaleCombo.blockSignals(true);
+    var prev = scaleCombo.currentText;
+    scaleCombo.clear();
+    var scales = this.getScales();
+    for (var i=0; i<scales.length; ++i) {
+        scaleCombo.addItem(scales[i]);
+    }
+    scaleCombo.currentText = prev;
+    scaleCombo.blockSignals(false);
+};
+
 
 Dimension.getMenu = function() {
     var menu = EAction.getMenu(Dimension.getTitle(), "DimensionMenu");
@@ -202,4 +219,17 @@ Dimension.prototype.slotLowerToleranceChanged = function(text) {
     if (!isNull(this.data)) {
         this.data.setLowerTolerance(text);
     }
+};
+
+Dimension.prototype.getScaleString = function() {
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var scaleCombo = optionsToolBar.findChild("Scale");
+    return scaleCombo.currentText;
+};
+
+/**
+ * Parses the given scale string (e.g. "1:2") and returns the scale as number (e.g. 0.5).
+ */
+Dimension.prototype.parseScale = function(scaleString) {
+    return RMath.parseScale(scaleString);
 };
