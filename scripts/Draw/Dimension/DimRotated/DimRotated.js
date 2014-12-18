@@ -160,11 +160,11 @@ DimRotated.prototype.getOperation = function(preview) {
 
     var doc = this.getDocument();
     var scale = this.parseScale(this.getScaleString());
-    var temp_data = this.data;
+    var scaled_data = this.data;
 
-    temp_data.setLinearFactor(1/scale);
+    scaled_data.setLinearFactor(1/scale);
 
-    var entity = new RDimRotatedEntity(doc, temp_data);
+    var entity = new RDimRotatedEntity(doc, scaled_data);
     if (!isEntity(entity)) {
         return undefined;
     }
