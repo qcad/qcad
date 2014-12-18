@@ -129,6 +129,10 @@ void RPolyline::appendShape(const RShape& shape) {
         appendVertex(directed->getStartPoint());
     }
 
+    if (!vertices.last().equalsFuzzy(directed->getStartPoint())) {
+        qWarning("RPolyline::appendShape: arc not connected to polyline");
+    }
+
     appendVertex(directed->getEndPoint());
     setBulgeAt(bulges.size()-2, bulge);
 }
