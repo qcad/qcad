@@ -104,7 +104,9 @@ Q_DECLARE_METATYPE(QNetworkRequest::Priority)
 Q_DECLARE_METATYPE(QNetworkRequest::Attribute)
 Q_DECLARE_METATYPE(QNetworkRequest::LoadControl)
 Q_DECLARE_METATYPE(QList<QByteArray>)
+#ifndef Q_OS_WIN
 Q_DECLARE_METATYPE(QSslConfiguration)
+#endif
 
 static QScriptValue qtscript_create_enum_class_helper(
     QScriptEngine *engine,
@@ -647,8 +649,12 @@ static QScriptValue qtscript_QNetworkRequest_prototype_call(QScriptContext *cont
 
     case 13:
     if (context->argumentCount() == 1) {
+#ifdef Q_OS_WIN
+        qWarning() << "setSslConfiguration: function not available under Windows";
+#else
         QSslConfiguration _q_arg0 = qscriptvalue_cast<QSslConfiguration>(context->argument(0));
         _q_self->setSslConfiguration(_q_arg0);
+#endif
         return context->engine()->undefinedValue();
     }
     break;
@@ -663,8 +669,13 @@ static QScriptValue qtscript_QNetworkRequest_prototype_call(QScriptContext *cont
 
     case 15:
     if (context->argumentCount() == 0) {
+#ifdef Q_OS_WIN
+        qWarning() << "sslConfiguration: function not available under Windows";
+        return context->engine()->undefinedValue();
+#else
         QSslConfiguration _q_result = _q_self->sslConfiguration();
         return qScriptValueFromValue(context->engine(), _q_result);
+#endif
     }
     break;
 
