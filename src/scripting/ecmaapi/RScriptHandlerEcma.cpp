@@ -364,18 +364,15 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     // iterate through module list and break if one module cannot be loaded
     QStringList modules;
 
-#if QT_VERSION >= 0x050000
-    modules << "qt.core" << "qt.gui" << "qt.printsupport" << "qt.widgets" << "qt.uitools" << "qt.webkit"
-            << "qt.webkitwidgets" << "qt.sql" << "qt.xml" << "qt.xmlpatterns";
-#else
-    modules << "qt.core" << "qt.gui" << "qt.uitools" << "qt.webkit" << "qt.sql"
-            << "qt.svg" << "qt.xml" << "qt.xmlpatterns";
-#endif
+//#if QT_VERSION >= 0x050000
+//    modules << "qt.core" << "qt.gui" << "qt.printsupport" << "qt.widgets" << "qt.uitools" << "qt.webkit"
+//            << "qt.webkitwidgets" << "qt.sql" << "qt.xml" << "qt.xmlpatterns";
+//#else
+//    modules << "qt.core" << "qt.gui" << "qt.uitools" << "qt.webkit" << "qt.sql"
+//            << "qt.svg" << "qt.xml" << "qt.xmlpatterns" << "qt.network";
+//#endif
 
-#ifndef Q_OS_WIN32
-    // NOTE: qt.network wrapper does not compile under Windows (SSL problems)
-    modules << "qt.network";
-#endif
+    modules = engine->availableExtensions();
 
     for (int i=0; i<modules.size(); i++) {
         engine->importExtension(modules.at(i));

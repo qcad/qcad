@@ -469,6 +469,29 @@ dir="./core/math" filename="RPolyline.h">
     <name>bool</name>
   </type>
   <name>isLogicallyClosed</name>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+      <name>double</name>
+    </type>
+    <name>tolerance</name>=
+    <init>
+      <expr>
+        <name>
+        <name>RS</name>::
+        <name>PointTolerance</name></name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>
+    <name>RS</name>::
+    <name>Orientation</name></name>
+  </type>
+  <name>getOrientation</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>
   <function_decl>

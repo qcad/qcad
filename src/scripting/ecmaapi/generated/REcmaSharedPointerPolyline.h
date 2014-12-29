@@ -139,6 +139,9 @@
         isLogicallyClosed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getOrientation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         contains
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

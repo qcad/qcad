@@ -976,6 +976,20 @@ dir="./core/math" filename="RArc.h">
       </type>
       <name>segmentLength</name>
     </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>RPolyline</name>
+  </type>
+  <name>approximateWithLinesTan</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>segmentLength</name>
+    </decl>
   </param>)</parameter_list>;</function_decl></public>
   <protected>protected: 
   <function_decl>
