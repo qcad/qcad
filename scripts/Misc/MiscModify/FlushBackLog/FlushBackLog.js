@@ -49,7 +49,7 @@ FlushBackLog.prototype.beginEvent = function() {
 };
 
 FlushBackLog.init = function(basePath) {
-    var action = new RGuiAction(qsTr("Flush back log"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("Flush &Undo History"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(false);
     action.setScriptFile(basePath + "/FlushBackLog.js");
