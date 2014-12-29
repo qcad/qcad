@@ -724,6 +724,62 @@ RPolyline RArc::approximateWithLines(double segmentLength) {
     return polyline;
 }
 
+RPolyline RArc::approximateWithLinesTan(double segmentLength) {
+    RPolyline polyline;
+
+    // avoid a segment length of 0:
+    if (segmentLength<1.0e-6) {
+        segmentLength = 1.0e-6;
+    }
+
+    double a1 = getStartAngle();
+    double a2 = getEndAngle();
+
+    // ideal angle step to satisfy segmentLength:
+    double aStep = segmentLength / radius;
+    int steps = floor(fabs(getSweep()) / aStep);
+    // real angle step:
+    aStep = fabs(getSweep()) / steps;
+    if (fabs(cos(aStep/2))<RS::PointTolerance) {
+        qWarning() << "RArc::approximateWithLinesTan: segmentLenght too coarse to yield meaningful result";
+        polyline.appendVertex(getStartPoint());
+        polyline.appendVertex(getEndPoint());
+        return polyline;
+    }
+    qDebug() << "step: " << steps;
+    qDebug() << "aStep: " << RMath::rad2deg(aStep);
+    double r2 = radius / cos(aStep/2);
+    qDebug() << "r2:" << r2;
+
+    double a, cix, ciy;
+
+    polyline.appendVertex(getStartPoint());
+    if (!reversed) {
+        // Arc Counterclockwise:
+        if (a1>a2-1.0e-10) {
+            a2+=2*M_PI;
+        }
+        for (a=a1+aStep/2; a<a2; a+=aStep) {
+            cix = center.x + cos(a) * r2;
+            ciy = center.y + sin(a) * r2;
+            polyline.appendVertex(RVector(cix, ciy));
+        }
+    } else {
+        // Arc Clockwise:
+        if (a1<a2+1.0e-10) {
+            a2-=2*M_PI;
+        }
+        for (a=a1-aStep/2; a>a2; a-=aStep) {
+            cix = center.x + cos(a) * r2;
+            ciy = center.y + sin(a) * r2;
+            polyline.appendVertex(RVector(cix, ciy));
+        }
+    }
+    polyline.appendVertex(getEndPoint());
+
+    return polyline;
+}
+
 
 void RArc::print(QDebug dbg) const {
     dbg.nospace() << "RArc(";

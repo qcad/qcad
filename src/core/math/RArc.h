@@ -131,6 +131,7 @@ public:
     virtual double getDistanceFromStart(const RVector& p) const;
 
     RPolyline approximateWithLines(double segmentLength);
+    RPolyline approximateWithLinesTan(double segmentLength);
 
 protected:
     virtual void print(QDebug dbg) const;
