@@ -89,7 +89,7 @@ public:
      *
      * \param point the given point
      *
-     * \param limited If false, the shape is treaded as an unlimited
+     * \param limited If false, the shape is treated as an unlimited
      *      shape that extends in a logical way. For example an
      *      unlimited line for a line, full circle for an arc or
      *      a plane for a triangle.
