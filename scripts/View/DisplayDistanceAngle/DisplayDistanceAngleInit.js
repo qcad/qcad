@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("DisplayDistanceAngle", "Display Distance/Angle"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("DisplayDistanceAngle", "Display &Distance/Angle"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DisplayDistanceAngle.js");
     action.setIcon(basePath + "/DisplayDistanceAngle.svg");
