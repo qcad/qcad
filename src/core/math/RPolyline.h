@@ -86,7 +86,8 @@ public:
 
     void setClosed(bool on);
     bool isClosed() const;
-    bool isLogicallyClosed() const;
+    bool isLogicallyClosed(double tolerance=RS::PointTolerance) const;
+    RS::Orientation getOrientation() const;
 
     bool contains(const RVector& point, bool borderIsInside=false, double tolerance=RS::PointTolerance) const;
     // TODO:

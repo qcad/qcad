@@ -264,8 +264,76 @@ bool RPolyline::isClosed() const {
     return closed;
 }
 
-bool RPolyline::isLogicallyClosed() const {
-    return isClosed() || getStartPoint().getDistanceTo(getEndPoint()) < RS::PointTolerance;
+bool RPolyline::isLogicallyClosed(double tolerance) const {
+    return isClosed() || getStartPoint().getDistanceTo(getEndPoint()) < tolerance;
+}
+
+RS::Orientation RPolyline::getOrientation() const {
+    if (!isLogicallyClosed()) {
+        return RS::Any;
+    }
+
+    RVector minV = RVector::invalid;
+    QSharedPointer<RDirected> shapeBefore;
+    QSharedPointer<RDirected> shapeAfter;
+    QSharedPointer<RShape> shape;
+    QSharedPointer<RDirected> previousShape = getSegmentAt(countSegments()-1).dynamicCast<RDirected>();
+
+    // find minimum vertex (lower left corner):
+    QList<QSharedPointer<RShape> > segments = getExploded();
+    for (int i=0; i<segments.length(); i++) {
+        shape = getSegmentAt(i);
+        if (shape.isNull()) {
+            continue;
+        }
+        QSharedPointer<RDirected> directed = shape.dynamicCast<RDirected>();
+        if (directed.isNull()) {
+            continue;
+        }
+
+        RVector v = directed->getStartPoint();
+        if (!minV.isValid() || v.x<minV.x || (v.x==minV.x && v.y<minV.y)) {
+            minV = v;
+            shapeBefore = previousShape;
+            shapeAfter = directed;
+        }
+
+        previousShape = directed;
+    }
+
+    double l;
+    RVector p;
+    QSharedPointer<RArc> arcBefore = shapeBefore.dynamicCast<RArc>();
+    if (!arcBefore.isNull()) {
+        l = arcBefore->getLength();
+        p = arcBefore->getPointsWithDistanceToEnd(l/10, RS::FromStart)[0];
+        shapeBefore = QSharedPointer<RLine>(new RLine(p, arcBefore->getEndPoint()));
+    }
+
+    QSharedPointer<RArc> arcAfter = shapeAfter.dynamicCast<RArc>();
+    if (!arcAfter.isNull()) {
+        l = arcAfter->getLength();
+        p = arcAfter->getPointsWithDistanceToEnd(l/10, RS::FromEnd)[0];
+        shapeAfter = QSharedPointer<RLine>(new RLine(arcAfter->getStartPoint(), p));
+    }
+
+    double xa = shapeBefore->getStartPoint().x;
+    double ya = shapeBefore->getStartPoint().y;
+    double xb = shapeAfter->getStartPoint().x;
+    double yb = shapeAfter->getStartPoint().y;
+    double xc = shapeAfter->getEndPoint().x;
+    double yc = shapeAfter->getEndPoint().y;
+
+    double det = (xb-xa) * (yc-ya) - (xc-xa) * (yb-ya);
+
+    if (det<0.0) {
+        // clockwise:
+        return RS::CW;
+    }
+    else {
+        // counter-clockwise:
+        return RS::CCW;
+    }
 }
 
 /**
@@ -420,7 +488,7 @@ QSharedPointer<RShape> RPolyline::getSegmentAt(int i) const {
  * polyline is not closed (\see setClosed), false is returned.
  */
 bool RPolyline::contains(const RVector& point, bool borderIsInside, double tolerance) const {
-    if (!isLogicallyClosed()) {
+    if (!isLogicallyClosed(tolerance)) {
         return false;
     }
 
@@ -743,7 +811,14 @@ bool RPolyline::mirror(const RLine& axis) {
 bool RPolyline::reverse() {
     RPolyline nPolyline;
     QList<QSharedPointer<RShape> > segments = getExploded();
-    for (int i=segments.count()-1; i>=0; i--) {
+
+    // skip last segment if polyline is closed and add flag instead:
+    int iLast = segments.count()-1;
+    if (isClosed()) {
+        iLast--;
+    }
+
+    for (int i=iLast; i>=0; i--) {
         QSharedPointer<RShape> seg = segments.at(i);
         QSharedPointer<RDirected> directed = seg.dynamicCast<RDirected>();
         directed->reverse();
