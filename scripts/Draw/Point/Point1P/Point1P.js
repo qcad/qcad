@@ -63,6 +63,7 @@ Point1P.prototype.pickCoordinate = function(event, preview) {
         this.updatePreview();
     }
     else {
+        di.setRelativeZero(this.point);
         this.applyOperation();
     }
 };
