@@ -167,7 +167,9 @@ Offset.prototype.getOperation = function(preview) {
             e = shapeToEntity(doc, offsetShapes[i]);
         }
 
-        op.addObject(e);
+        if (!isNull(e)) {
+            op.addObject(e);
+        }
     }
     return op;
 };
