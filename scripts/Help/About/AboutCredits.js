@@ -23,7 +23,10 @@ var credits =
                               "Custom linetype support, loading .lin files<br>"
                               ],
         [ "Tamas Tevesz",     "Port to FreeBSD,<br>" +
-                              "various improvements and fixes." ],
+                              "various improvements and fixes."
+                              ],
+        [ "Weston Schmidt",   "Draw > Dimension > Per-dimension scaling."
+                              ],
     ],
     [
         "Translations",
