@@ -29,7 +29,7 @@ function InfoArcCircleArea(guiAction) {
     this.pi = 3.14159265358979323846;
     this.shape = undefined;
     this.radius1 = undefined;       // major radius for ellipse
-    this.radius2 = undefined;       // minot radius for ellipse
+    this.radius2 = undefined;       // minor radius for ellipse
     this.sectorMode = true;
     this.addEntity = true;
     this.addChord = true;
