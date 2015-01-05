@@ -19,12 +19,12 @@
 
 //! [main]
 //! [include]
-include("../DrawExamples.js");
+include("scripts/EAction.js");
 //! [include]
 
 //! [constructor]
 function ExThreePoints(guiAction) {
-    DrawExamples.call(this, guiAction);
+    EAction.call(this, guiAction);
 }
 //! [constructor]
 
@@ -35,12 +35,12 @@ ExThreePoints.State = {
 //! [State]
 
 //! [inheritance]
-ExThreePoints.prototype = new DrawExamples();
+ExThreePoints.prototype = new EAction();
 //! [inheritance]
 
 //! [setState]
 ExThreePoints.prototype.setState = function(state) {
-    DrawExamples.prototype.setState.call(this, state);
+    EAction.prototype.setState.call(this, state);
 
     // set crosshair cursor for choosing the coordinate:
     this.setCrosshairCursor();
@@ -62,7 +62,7 @@ ExThreePoints.prototype.setState = function(state) {
 
 //! [beginEvent]
 ExThreePoints.prototype.beginEvent = function() {
-    DrawExamples.prototype.beginEvent.call(this);
+    EAction.prototype.beginEvent.call(this);
 
     this.setState(ExThreePoints.State.SettingPosition);
 };
