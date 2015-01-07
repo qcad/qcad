@@ -29,6 +29,7 @@ include("scripts/Draw/Line/Line.js");
 function Offset(guiAction) {
     EAction.call(this, guiAction);
 
+    this.segmentMode = true;
     this.distance = undefined;
     this.number = undefined;
     this.entity = undefined;
@@ -51,6 +52,8 @@ Offset.State = {
 Offset.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
+    qDebug("Offset.prototype.beginEvent");
+
     this.setState(Offset.State.ChoosingEntity);
 };
 
@@ -71,7 +74,14 @@ Offset.prototype.initState = function() {
 };
 
 Offset.prototype.getLeftMouseTip = function() {
-    return qsTr("Choose line, arc, circle or ellipse");
+    return qsTr("Choose line, arc, circle, ellipse or spline");
+};
+
+Offset.prototype.isShapeSupported = function(shape) {
+    return isLineBasedShape(shape) ||
+           isArcShape(shape) ||
+           isCircleShape(shape) ||
+           isEllipseShape(shape);
 };
 
 Offset.prototype.warnUnsupportedShape = function() {
@@ -100,8 +110,14 @@ Offset.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case Offset.State.ChoosingEntity:
-        // TODO: or getClosestSimpleShape(entity, pos) to create parallels of segments
-        var shape = entity.getClosestShape(pos);
+        var shape;
+        if (this.segmentMode) {
+            //  parallel to polyline segment:
+            shape = getClosestSimpleShape(entity, pos);
+        }
+        else {
+            shape = entity.getClosestShape(pos);
+        }
 
         if (this.isShapeSupported(shape)) {
             this.entity = entity;
@@ -129,13 +145,6 @@ Offset.prototype.pickEntity = function(event, preview) {
         }
         break;
     }
-};
-
-Offset.prototype.isShapeSupported = function(shape) {
-    return isLineBasedShape(shape) ||
-           isArcShape(shape) ||
-           isCircleShape(shape) ||
-           isEllipseShape(shape);
 };
 
 Offset.prototype.getOperation = function(preview) {

@@ -4,11 +4,11 @@ function init(basePath) {
     action.setScriptFile(basePath + "/LineParallel.js");
     action.setIcon(basePath + "/LineParallel.svg");
     action.setStatusTip(qsTranslate("LineParallel", "Draw parallel to existing line or concentric arc, circle"));
-    action.setDefaultShortcuts([ new QKeySequence("l,p"), new QKeySequence("p,a"), new QKeySequence("o,f") ]);
+    action.setDefaultShortcuts([ new QKeySequence("l,p"), new QKeySequence("p,a") ]);
     action.setDefaultCommands([
-        "lineparallel", "lineoffset", "offset",
-        "o", "parallel", "par",
-        "lp", "pa", "of"
+        "lineparallel", "lineoffset",
+        "parallel", "par",
+        "lp", "pa"
     ]);
     action.setGroupSortOrder(6400);
     action.setSortOrder(100);

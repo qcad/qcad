@@ -12,6 +12,7 @@ SUBDIRS = \
     Lengthen \
     Mirror \
     Offset \
+    OffsetThrough \
     Reverse \
     Rotate \
     Rotate2 \

@@ -42,6 +42,7 @@ function EAction(guiAction) {
         this.includeBasePath = includeBasePath;
     }
 
+    this.delegate = undefined;
     this.state = undefined;
     this.settingsGroup = undefined;
     this.uiFile = undefined;
@@ -69,6 +70,10 @@ EAction.noRelativeZeroResume = false;
  * Viewer if available.
  */
 EAction.prototype.beginEvent = function() {
+    if (this.delegate) {
+        this.delegate.beginEvent();
+    }
+
     if (this.hasNoState()) {
         return;
     }
