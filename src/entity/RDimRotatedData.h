@@ -61,6 +61,10 @@ public:
 //    virtual bool moveReferencePoint(const RVector& referencePoint,
 //        const RVector& targetPoint);
 
+    virtual void recomputeDefinitionPoint(
+        const RVector& oldExtPoint1, const RVector& oldExtPoint2,
+        const RVector& newExtPoint1, const RVector& newExtPoint2);
+
     virtual bool rotate(double rotation, const RVector& center);
     virtual bool mirror(const RLine& axis);
 

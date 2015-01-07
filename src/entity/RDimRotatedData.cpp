@@ -62,6 +62,25 @@ QList<RVector> RDimRotatedData::getReferencePoints(
     return ret;
 }
 
+void RDimRotatedData::recomputeDefinitionPoint(
+    const RVector& oldExtPoint1, const RVector& oldExtPoint2,
+    const RVector& newExtPoint1, const RVector& newExtPoint2) {
+
+    Q_UNUSED(oldExtPoint1)
+    Q_UNUSED(oldExtPoint2)
+    Q_UNUSED(newExtPoint2)
+
+    RVector dirDim = RVector::createPolar(1.0, rotation);
+
+    // construction line for dimension line
+    RLine dimLine(definitionPoint, definitionPoint + dirDim);
+
+    RVector dimP1 = dimLine.getClosestPointOnShape(newExtPoint1, false);
+    //RVector dimP2 = dimLine.getClosestPointOnShape(extensionPoint2, false);
+
+    definitionPoint = dimP1;
+}
+
 bool RDimRotatedData::rotate(double rotation, const RVector& center) {
     RDimLinearData::rotate(rotation, center);
     //extensionPoint1.rotate(rotation, center);

@@ -57,7 +57,7 @@ public:
 
     virtual bool isValid() const;
 
-    void setDefinitionPoint(const RVector& p) {
+    virtual void setDefinitionPoint(const RVector& p) {
         definitionPoint = p;
         update();
     }
