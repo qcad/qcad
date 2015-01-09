@@ -124,6 +124,7 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
     if (!di.exportFile(fileName, fileVersion)) {
         var text = qsTr("File %1 has not been saved.").arg(fileName);
         appWin.handleUserWarning(text, true);
+        appWin.setProgressText();
         return false;
     }
 
@@ -145,6 +146,8 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
     var tabBar = appWin.getTabBar();
     var menuBar = appWin.menuBar();
     tabBar.setTabToolTip(tabBar.currentIndex, fileName);
+
+    appWin.setProgressText();
 
     return true;
 };
