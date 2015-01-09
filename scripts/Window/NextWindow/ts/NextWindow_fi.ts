@@ -6,7 +6,7 @@
     <message>
         <location filename="../NextWindowInit.js" line="+2"/>
         <source>&amp;Next</source>
-        <translation>Seuraava</translation>
+        <translation>&amp;Seuraava</translation>
     </message>
 </context>
 </TS>

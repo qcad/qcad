@@ -19,7 +19,7 @@ Liczba:</translatorcomment>
         <translation type="unfinished">Koncentryczny (poprzez Point)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle through point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Remis koncentryczny okrąg przez punkt</translation>

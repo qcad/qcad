@@ -38,11 +38,26 @@
         <source>Move entity to desired location</source>
         <translation>Déplacer entité</translation>
     </message>
+    <message>
+        <location line="+311"/>
+        <source>Move Reference Point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Entity</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+57"/>
+        <location filename="../EAction.js" line="+58"/>
         <source>Back</source>
         <translation>Précédent</translation>
     </message>
@@ -52,7 +67,7 @@
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="+267"/>
+        <location line="+272"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Outil actif:</translation>
@@ -68,7 +83,7 @@
         <translation>Aucun</translation>
     </message>
     <message>
-        <location line="+420"/>
+        <location line="+426"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>
@@ -96,7 +111,7 @@
         <translation>Entité est sur un calque verrouillé.</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+85"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entité n&apos;est pas une référence de bloc.</translation>
@@ -142,7 +157,12 @@
         <translation>Entité n&apos;est pas une ligne, un arc, un cercle, une ellipse ou une spline.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entité n&apos;est pas une polyligne.</translation>
@@ -151,7 +171,7 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+307"/>
+        <location filename="../ShapeAlgorithms.js" line="+335"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Rayon chuté en dessous de zéro après %1 cercle(s) concentrique(s).</translation>
@@ -163,7 +183,7 @@
         <translation>Rayon chuté en dessous de zéro, après %1 arc(s) concentrique(s).</translation>
     </message>
     <message>
-        <location line="+463"/>
+        <location line="+555"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -196,7 +216,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+949"/>
+        <location filename="../WidgetFactory.js" line="+957"/>
         <source>Restore defaults</source>
         <translation>Restaurer les valeurs par défaut</translation>
     </message>

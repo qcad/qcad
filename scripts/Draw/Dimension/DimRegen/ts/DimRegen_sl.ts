@@ -4,7 +4,7 @@
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../DimRegen.js" line="+63"/>
+        <location filename="../DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Ni izbrana nobena kotirna entiteta z prilagojeno lokacijo napisa.</translation>
     </message>

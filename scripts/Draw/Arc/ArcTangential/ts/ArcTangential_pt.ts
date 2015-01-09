@@ -21,7 +21,7 @@ Raio</translatorcomment>
         <translation>Escolha linha de base ou arco de base</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Choose end point of arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolham o ponto final do arco</translation>

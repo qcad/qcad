@@ -1,138 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>UnitSettings</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Drawing Unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirtoyksikkö:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paper Unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Paperiyksikkö:</translation>
     </message>
     <message>
         <location filename="../UnitSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset uusille piirroksille</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirtoyksikkö</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Yleistä</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei mitään</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Inch</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuuma</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foot</source>
-        <translation type="unfinished"></translation>
+        <translation>Jalka</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mile</source>
-        <translation type="unfinished"></translation>
+        <translation>Maili</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Millimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Millimetri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Centimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Senttimetri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation type="unfinished"></translation>
+        <translation>Metri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Kilometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Kilometri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Microinch</source>
-        <translation type="unfinished"></translation>
+        <translation>Mikrotuuma</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mil</source>
-        <translation type="unfinished"></translation>
+        <translation>Maili</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaardi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angstrom</source>
-        <translation type="unfinished"></translation>
+        <translation>Ångström</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Nanometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Nanometri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Micron</source>
-        <translation type="unfinished"></translation>
+        <translation>mikrometri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Desimetri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekametri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hectometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Hektometri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gigameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Gigametri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Astro</source>
-        <translation type="unfinished"></translation>
+        <translation>Astronominen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lightyear</source>
-        <translation type="unfinished"></translation>
+        <translation>Valovuosi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Parsec</source>
-        <translation type="unfinished"></translation>
+        <translation>Parsek</translation>
     </message>
 </context>
 </TS>

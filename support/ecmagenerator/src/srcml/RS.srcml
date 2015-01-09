@@ -1200,6 +1200,9 @@ dir="./core" filename="RS.h">
   </expr>, 
   <expr>
     <name>EndOpenRound</name>
+  </expr>, 
+  <expr>
+    <name>EndOpenSingle</name>
   </expr>}</block>;</enum></public>
   <public>public: 
   <function_decl>

@@ -10,7 +10,7 @@
         <translation>Escolha entidade de base</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Set position</source>
         <translatorcomment>--google--
 Especifique a posição do ponto de Zero Relativo

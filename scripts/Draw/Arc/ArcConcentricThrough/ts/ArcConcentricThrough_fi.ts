@@ -11,12 +11,12 @@
     <message>
         <location filename="../ArcConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation type="unfinished">Samankeskintn (&amp;)</translation>
+        <translation>Samankeskinen (&amp;pisteen kautta)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric arc through point</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä samankeskinen kaari pisteen kautta</translation>
     </message>
 </context>
 </TS>

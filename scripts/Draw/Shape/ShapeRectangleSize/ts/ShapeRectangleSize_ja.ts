@@ -44,19 +44,16 @@
         <translation type="vanished">位置</translation>
     </message>
     <message>
-        <location filename="../ShapeRectangleSize.ui" line="+17"/>
         <source>&amp;Width:</source>
-        <translation>&amp;W 幅:</translation>
+        <translation type="vanished">&amp;W 幅:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>&amp;Height:</source>
-        <translation>&amp;H 高さ:</translation>
+        <translation type="vanished">&amp;H 高さ:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Reference Point:</source>
-        <translation>基準点:</translation>
+        <translation type="vanished">基準点:</translation>
     </message>
     <message>
         <source>Rectangle with &amp;Size</source>
@@ -70,54 +67,44 @@
 <context>
     <name>ShapeRectangleSize</name>
     <message>
-        <location filename="../ShapeRectangleSize.js" line="+44"/>
         <source>Top Left</source>
-        <translation type="unfinished">左上</translation>
+        <translation type="obsolete">左上</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished">上</translation>
+        <translation type="obsolete">上</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top Right</source>
-        <translation type="unfinished">右上</translation>
+        <translation type="obsolete">右上</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Left</source>
-        <translation type="unfinished">左</translation>
+        <translation type="obsolete">左</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">中央</translation>
+        <translation type="obsolete">中央</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished">右</translation>
+        <translation type="obsolete">右</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Left</source>
-        <translation type="unfinished">左下</translation>
+        <translation type="obsolete">左下</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished">下</translation>
+        <translation type="obsolete">下</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Right</source>
-        <translation type="unfinished">右下</translation>
+        <translation type="obsolete">右下</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation type="obsolete">位置</translation>
     </message>
     <message>
         <location filename="../ShapeRectangleSizeInit.js" line="+2"/>
@@ -128,6 +115,26 @@
         <location line="+5"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished">位置とサイズを指定して四角形を描画</translation>
+    </message>
+    <message>
+        <location filename="../ShapeRectangleSize.ui" line="+17"/>
+        <source>&amp;Width:</source>
+        <translation type="unfinished">&amp;W 幅:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>&amp;Height:</source>
+        <translation type="unfinished">&amp;H 高さ:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished">基準点:</translation>
     </message>
 </context>
 </TS>

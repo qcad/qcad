@@ -14,14 +14,14 @@
         <translation>Silmukkaa ei suljettu pisteessa %1/%2.</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+66"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Jokaisen rajamuodon tulee olla viiva, kaari, ympyrä, elliptinen kaari, ellipsi, murtoviiva tai splini. Löydetty:</translation>
     </message>
     <message>
         <location filename="../HatchInit.js" line="+2"/>
         <source>&amp;Hatch</source>
-        <translation>Kuviotäyttö</translation>
+        <translation>&amp;Kuviotäyttö</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -69,7 +69,7 @@
     <message>
         <location line="+7"/>
         <source>Scale:</source>
-        <translation>Skaala:</translation>
+        <translation>Mittakaava:</translation>
     </message>
 </context>
 </TS>

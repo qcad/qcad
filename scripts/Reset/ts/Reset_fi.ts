@@ -11,7 +11,7 @@
     <message>
         <location line="+2"/>
         <source>&amp;Reset / Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nollaa / vapauta</translation>
     </message>
 </context>
 </TS>

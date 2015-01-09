@@ -53,7 +53,7 @@
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+58"/>
         <source>Dimension Tools</source>
         <translation>Utensili dimensione</translation>
     </message>
@@ -91,6 +91,16 @@
         <location line="+44"/>
         <source>Lower tolerance</source>
         <translation>Tolleranza inferiore</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Scale</source>
+        <translation>Scala</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Drawing Scale</source>
+        <translation>Disegno in scala</translation>
     </message>
 </context>
 </TS>

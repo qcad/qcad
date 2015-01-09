@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="nl_NL">
+<TS version="2.1" language="nl_NL">
 <context>
     <name>REntity</name>
     <message>
@@ -654,55 +654,55 @@
     </message>
     <message>
         <source>Simple</source>
-        <translation>Eenvoudig</translation>
+        <translation type="vanished">Eenvoudig</translation>
     </message>
     <message>
         <source>Text</source>
-        <translation>Tekst</translation>
+        <translation type="vanished">Tekst</translation>
     </message>
     <message>
         <source>Plain Text</source>
-        <translation>Platte tekst</translation>
+        <translation type="vanished">Platte tekst</translation>
     </message>
     <message>
         <source>Font Name</source>
-        <translation>Lettertype</translation>
+        <translation type="vanished">Lettertype</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation>Tekst hoogte</translation>
+        <translation type="vanished">Tekst hoogte</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation>Tekst hoek</translation>
+        <translation type="vanished">Tekst hoek</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation>X schaal</translation>
+        <translation type="vanished">X schaal</translation>
     </message>
     <message>
         <source>Bold</source>
-        <translation>Vetgedrukt</translation>
+        <translation type="vanished">Vetgedrukt</translation>
     </message>
     <message>
         <source>Italic</source>
-        <translation>Cursief</translation>
+        <translation type="vanished">Cursief</translation>
     </message>
     <message>
         <source>Line Spacing</source>
-        <translation>Regelafstand</translation>
+        <translation type="vanished">Regelafstand</translation>
     </message>
     <message>
         <source>Alignment</source>
-        <translation>Opstelling</translation>
+        <translation type="vanished">Opstelling</translation>
     </message>
     <message>
         <source>Horizontal</source>
-        <translation>Horizontaal</translation>
+        <translation type="vanished">Horizontaal</translation>
     </message>
     <message>
         <source>Vertical</source>
-        <translation>Vertikaal</translation>
+        <translation type="vanished">Vertikaal</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>

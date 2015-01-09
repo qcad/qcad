@@ -31,7 +31,7 @@
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation>Peru Edellinen Segmentti</translation>
+        <translation>Peru edellinen segmentti</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -41,7 +41,7 @@
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation>Uudellen Segmentti</translation>
+        <translation>Uudelleen segmentti</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -56,12 +56,12 @@
     <message>
         <location filename="../Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
-        <translation>Viiva &amp;2 Pisteellä</translation>
+        <translation>Viiva &amp;2 pisteeltä</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
-        <translation>Piirrä yksittäinen viiva tai viivasekvenssi</translation>
+        <translation>Piirrä yksittäinen viiva tai viivasarja</translation>
     </message>
 </context>
 </TS>

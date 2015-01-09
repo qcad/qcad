@@ -14,7 +14,7 @@
         <translation>&amp;t 同心円（通過点指定）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle through point</source>
         <translation>通過点を指定して同心円を描画</translation>
     </message>

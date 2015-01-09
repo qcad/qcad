@@ -10,7 +10,7 @@
         <translation type="unfinished">Wybierz linię bazową lub łuku bazowego</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Choose end point of arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz punkt końcowy łuku</translation>

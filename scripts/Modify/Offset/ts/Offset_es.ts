@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>Offset</name>
     <message>
@@ -26,8 +26,12 @@
     </message>
     <message>
         <location line="+4"/>
+        <source>Offset line, arc, circle, ellipse or polyline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Draw parallel to existing line or concentric arc, circle</source>
-        <translation>Dibujar un paralelo a una línea existente o un arco o círculo concéntrico</translation>
+        <translation type="vanished">Dibujar un paralelo a una línea existente o un arco o círculo concéntrico</translation>
     </message>
     <message>
         <location filename="../Offset.ui" line="+17"/>
@@ -40,8 +44,8 @@
         <translation>&amp;Número:</translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+65"/>
-        <source>Choose line, arc, circle or ellipse</source>
+        <location filename="../Offset.js" line="+77"/>
+        <source>Choose line, arc, circle, ellipse or spline</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

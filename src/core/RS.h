@@ -472,7 +472,7 @@ public:
     };
 
     enum JoinType {
-        JoinSquare,
+        JoinBevel,
         JoinRound,
         JoinMiter
     };
@@ -482,7 +482,8 @@ public:
         EndClosedLine,
         EndOpenButt,
         EndOpenSquare,
-        EndOpenRound
+        EndOpenRound,
+        EndOpenSingle
     };
 
 public:

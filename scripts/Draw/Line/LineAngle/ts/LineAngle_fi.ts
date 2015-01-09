@@ -16,17 +16,17 @@
     <message>
         <location filename="../LineAngle.ui" line="+17"/>
         <source>&amp;Angle:</source>
-        <translation>Kulma:</translation>
+        <translation>&amp;Kulma:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Length:</source>
-        <translation>Pituus:</translation>
+        <translation>&amp;Pituus:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Reference Point:</source>
-        <translation>&amp;Referenssipiste:</translation>
+        <translation>&amp;Vertailupiste:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
-        <translation>Viiva Kulmasta</translation>
+        <translation>Viiva &amp;kulmasta</translation>
     </message>
     <message>
         <location line="+4"/>

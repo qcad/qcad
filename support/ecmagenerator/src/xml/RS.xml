@@ -337,6 +337,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="EndOpenButt" />
       <value name="EndOpenSquare" />
       <value name="EndOpenRound" />
+      <value name="EndOpenSingle" />
     </enum>
     <method name="compare" cppName="compare" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

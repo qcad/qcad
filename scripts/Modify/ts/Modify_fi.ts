@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>Modify</name>
     <message>
@@ -24,12 +24,12 @@
     <message>
         <location filename="../ModifyCorner.js" line="+69"/>
         <source>Choose first entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse ensimmäinen kohde</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose second entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse toinen kohde</translation>
     </message>
 </context>
 <context>
@@ -37,7 +37,7 @@
     <message>
         <location filename="../Transform.js" line="+38"/>
         <source>This tool requires a selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä työkalu tarvitsee valinnan</translation>
     </message>
 </context>
 </TS>

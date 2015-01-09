@@ -33,11 +33,26 @@
         <source>Move entity to desired location</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location line="+311"/>
+        <source>Move Reference Point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Entity</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+57"/>
+        <location filename="../EAction.js" line="+58"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -47,7 +62,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+267"/>
+        <location line="+272"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation type="unfinished"></translation>
@@ -58,7 +73,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+420"/>
+        <location line="+426"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
@@ -83,7 +98,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+85"/>
         <source>Entity is not a block reference.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -123,7 +138,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -131,7 +151,7 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+307"/>
+        <location filename="../ShapeAlgorithms.js" line="+335"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translation type="unfinished"></translation>
     </message>
@@ -141,7 +161,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+463"/>
+        <location line="+555"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation type="unfinished"></translation>
@@ -170,7 +190,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+949"/>
+        <location filename="../WidgetFactory.js" line="+957"/>
         <source>Restore defaults</source>
         <translation type="unfinished"></translation>
     </message>

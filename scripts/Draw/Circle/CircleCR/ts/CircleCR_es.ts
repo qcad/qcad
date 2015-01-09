@@ -4,14 +4,12 @@
 <context>
     <name>CircleCR</name>
     <message>
-        <location filename="../CircleCR.js" line="+56"/>
         <source>Center or radius</source>
-        <translation>Centro o el radio</translation>
+        <translation type="vanished">Centro o el radio</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
-        <translation>Centro</translation>
+        <translation type="vanished">Centro</translation>
     </message>
     <message>
         <source>Circle (Center, &amp;Radius)</source>
@@ -23,7 +21,7 @@
         <translation>Centro, &amp;radio</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and radius</source>
         <translation>Dibuje un círculo en su centro y radio</translation>
     </message>
@@ -31,6 +29,16 @@
         <location filename="../CircleCR.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Radio:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Angle:</source>
+        <translation>Ángulo:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Reference Point:</source>
+        <translation>Punto de referencia:</translation>
     </message>
 </context>
 </TS>

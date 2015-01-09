@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>Scale</name>
     <message>
         <location filename="../Scale.js" line="+71"/>
         <source>Focus point</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohdistuspiste</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Viitepiste</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -64,12 +64,12 @@
     <message>
         <location line="+26"/>
         <source>Factor &amp;y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kerroin &amp;y:</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
     </message>
 </context>
 </TS>

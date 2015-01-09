@@ -20,7 +20,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+100"/>
         <source>Scientific</source>
         <translation type="unfinished"></translation>
     </message>
@@ -45,7 +45,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+32"/>
         <source>Decimal Degrees</source>
         <translation type="unfinished"></translation>
     </message>
@@ -70,7 +70,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+205"/>
+        <location line="+193"/>
         <source>Unit / Format</source>
         <translation type="unfinished"></translation>
     </message>

@@ -9,7 +9,7 @@
         <translation>ベースとなる線分または弧を選択してください</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Choose end point of arc</source>
         <translation>弧の終了点を選択してください</translation>
     </message>

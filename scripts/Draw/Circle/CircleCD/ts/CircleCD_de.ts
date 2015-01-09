@@ -4,33 +4,53 @@
 <context>
     <name>CircleCD</name>
     <message>
-        <location filename="../CircleCD.js" line="+56"/>
         <source>Center or radius</source>
-        <translation>Zentrum oder Radius</translation>
+        <translation type="vanished">Zentrum oder Radius</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
-        <translation>Zentrum</translation>
+        <translation type="vanished">Zentrum</translation>
     </message>
     <message>
         <source>Circle (Center, &amp;Radius)</source>
         <translation type="obsolete">Kreis (Zentrum, &amp;Radius)</translation>
     </message>
     <message>
-        <location filename="../CircleCDInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
-        <translation>Zentrum, &amp;Radius</translation>
+        <translation type="vanished">Zentrum, &amp;Radius</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Draw circle from center and radius</source>
-        <translation>Kreis von Zentrum und Radius</translation>
+        <translation type="vanished">Kreis von Zentrum und Radius</translation>
+    </message>
+    <message>
+        <source>Radius:</source>
+        <translation type="vanished">Radius:</translation>
     </message>
     <message>
         <location filename="../CircleCD.ui" line="+17"/>
-        <source>Radius:</source>
-        <translation>Radius:</translation>
+        <source>Diameter:</source>
+        <translation>Durchmesser:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Angle:</source>
+        <translation>Winkel:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Reference Point:</source>
+        <translation>Referenzpunkt:</translation>
+    </message>
+    <message>
+        <location filename="../CircleCDInit.js" line="+2"/>
+        <source>Center, &amp;Diameter</source>
+        <translation>Zentrum, &amp;Durchmesser</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw circle from center and diameter</source>
+        <translation>Kreis von Zentrum und Durchmesser</translation>
     </message>
 </context>
 </TS>

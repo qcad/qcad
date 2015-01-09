@@ -4,18 +4,16 @@
 <context>
     <name>LineParallelThrough</name>
     <message>
-        <location filename="../LineParallelThrough.js" line="+62"/>
         <source>Choose line, arc or circle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wybierz linię, łuk lub okrąg</translation>
+        <translation type="obsolete">Wybierz linię, łuk lub okrąg</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Specify point</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 Wskaż punkt</translatorcomment>
-        <translation type="unfinished">Wskaż punkt</translation>
+        <translation type="obsolete">Wskaż punkt</translation>
     </message>
     <message>
         <location filename="../LineParallelThrough.ui" line="+17"/>

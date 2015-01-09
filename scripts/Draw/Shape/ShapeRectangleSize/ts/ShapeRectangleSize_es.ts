@@ -52,72 +52,59 @@
         <translation type="vanished">Dibuja un rectángulo con la posición y el tamaño</translation>
     </message>
     <message>
-        <location filename="../ShapeRectangleSize.ui" line="+17"/>
         <source>&amp;Width:</source>
-        <translation>&amp;Anchura:</translation>
+        <translation type="vanished">&amp;Anchura:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>&amp;Height:</source>
-        <translation>&amp;Altura:</translation>
+        <translation type="vanished">&amp;Altura:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Reference Point:</source>
-        <translation>Punto de referencia:</translation>
+        <translation type="vanished">Punto de referencia:</translation>
     </message>
 </context>
 <context>
     <name>ShapeRectangleSize</name>
     <message>
-        <location filename="../ShapeRectangleSize.js" line="+44"/>
         <source>Top Left</source>
-        <translation>Arriba izquierda</translation>
+        <translation type="vanished">Arriba izquierda</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top</source>
-        <translation>Parte superior</translation>
+        <translation type="vanished">Parte superior</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top Right</source>
-        <translation>Arriba derecha</translation>
+        <translation type="vanished">Arriba derecha</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Left</source>
-        <translation>Izquierda</translation>
+        <translation type="vanished">Izquierda</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Middle</source>
-        <translation>Punto medio</translation>
+        <translation type="vanished">Punto medio</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Right</source>
-        <translation>Derecha</translation>
+        <translation type="vanished">Derecha</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Left</source>
-        <translation>Abajo izquierda</translation>
+        <translation type="vanished">Abajo izquierda</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom</source>
-        <translation>Parte inferior</translation>
+        <translation type="vanished">Parte inferior</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Right</source>
-        <translation>Abajo derecha</translation>
+        <translation type="vanished">Abajo derecha</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Position</source>
-        <translation>Posición</translation>
+        <translation type="vanished">Posición</translation>
     </message>
     <message>
         <location filename="../ShapeRectangleSizeInit.js" line="+2"/>
@@ -128,6 +115,26 @@
         <location line="+5"/>
         <source>Draw rectangle with position and size</source>
         <translation>Dibuja un rectángulo con la posición y el tamaño</translation>
+    </message>
+    <message>
+        <location filename="../ShapeRectangleSize.ui" line="+17"/>
+        <source>&amp;Width:</source>
+        <translation type="unfinished">&amp;Anchura:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>&amp;Height:</source>
+        <translation type="unfinished">&amp;Altura:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished">Punto de referencia:</translation>
     </message>
 </context>
 </TS>

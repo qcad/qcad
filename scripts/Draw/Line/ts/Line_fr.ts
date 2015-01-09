@@ -4,7 +4,7 @@
 <context>
     <name>Line</name>
     <message>
-        <location filename="../Line.js" line="+84"/>
+        <location filename="../Line.js" line="+86"/>
         <source>Show line tools</source>
         <translation>Afficher les outils de ligne</translation>
     </message>
@@ -20,6 +20,11 @@
     </message>
     <message>
         <location filename="../Line.ui" line="+17"/>
+        <source>Same Type as Original</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Line Segment</source>
         <translation>Segment de ligne</translation>
     </message>

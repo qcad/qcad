@@ -1,66 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>DefaultAction</name>
     <message>
         <location filename="../DefaultAction.js" line="+89"/>
         <source>Select entity or region</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse kohde tai alue</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirrä kohde tai viite</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Set second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Aseta toinen kulma</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Specify target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Määrittele kohdepiste tai viitepiste</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Specify target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Määrittele valinnan kohdepiste</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Move entity to desired location</source>
+        <translation>Siirrä kohde haluttuun paikkaan</translation>
+    </message>
+    <message>
+        <location line="+311"/>
+        <source>Move Reference Point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Entity</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+57"/>
+        <location filename="../EAction.js" line="+58"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Takaisin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="+267"/>
+        <location line="+272"/>
         <location line="+133"/>
         <source>Active Tool:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiivinen työkalu:</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei mitään</translation>
     </message>
     <message>
-        <location line="+420"/>
+        <location line="+426"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -75,47 +90,47 @@
     <message>
         <location line="+25"/>
         <source>CAD Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>CAD työkalut</translation>
     </message>
     <message>
         <location line="+692"/>
         <source>Entity is on a locked layer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde on lukitussa tasossa.</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+85"/>
         <source>Entity is not a block reference.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole lohkoviite.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole viiva tai kaari.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole viiva.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole kaari tai ympyrä.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole viiva, kaari tai ympyrä.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole kaari, ympyrä tai ellipsi.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole viiva, kaari, ympyrä tai ellipsi.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -123,7 +138,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -131,7 +151,7 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+307"/>
+        <location filename="../ShapeAlgorithms.js" line="+335"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translation type="unfinished"></translation>
     </message>
@@ -141,7 +161,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+463"/>
+        <location line="+555"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation type="unfinished"></translation>
@@ -159,95 +179,95 @@
     <message>
         <location line="+24"/>
         <source>Invalid number of segments: %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Virheellinen määrä segmenttejä %1.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Puutteellinen ellipsi, suurempi / pienempi: %1 / %2.</translation>
     </message>
 </context>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+949"/>
+        <location filename="../WidgetFactory.js" line="+957"/>
         <source>Restore defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Palauta oletusarvot</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Insert Symbol</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää erikoismerkki</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Halkaisija</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation type="unfinished"></translation>
+        <translation>Aste</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation type="unfinished"></translation>
+        <translation>Plus/miinus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>lähes yhtäsuuri kuin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Asymptoottisesti yhtäsuuri kuin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation type="unfinished"></translation>
+        <translation>Pii</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
-        <translation type="unfinished"></translation>
+        <translation>Kertolasku</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation type="unfinished"></translation>
+        <translation>Jakolasku</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation>Neliö</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation type="unfinished"></translation>
+        <translation>Pinottu teksti</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Measured value</source>
-        <translation type="unfinished"></translation>
+        <translation>Mitattu arvo</translation>
     </message>
     <message>
         <location line="+93"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Keski</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -257,33 +277,33 @@
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation>Tasattu</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskellä</translation>
     </message>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>Sovita</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Ylä</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Base</source>
-        <translation type="unfinished"></translation>
+        <translation>Perus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Ala</translation>
     </message>
 </context>
 <context>
@@ -291,17 +311,17 @@
     <message>
         <location filename="../autostart.js" line="+303"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished"></translation>
+        <translation>Lataamassa lisäosia käännökseen...</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Lataamassa lisäosia...</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Määrittelemässä lisäosia...</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -354,47 +374,47 @@
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Lohkoviitteet ja ominaisuudet</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arcs</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaaret</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaari</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ominaisuudet</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Ominaisuus</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation type="unfinished"></translation>
+        <translation>Ominaisuuksien määrittely</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation type="unfinished"></translation>
+        <translation>Ominaisuuksien määrittely</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Ympyrät</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Ympyrä</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -444,47 +464,47 @@
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordinaatan mitta</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Kierretyt mitat</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Kierretty mitta</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Säteittäiset mitat</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Radial Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Säteittäinen mitta</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation>Ellipsit</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Ellipsi</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation type="unfinished"></translation>
+        <translation>Luukut</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Luukku</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -534,47 +554,47 @@
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>Säde</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Pisteet</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Piste</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Polylines</source>
-        <translation type="unfinished"></translation>
+        <translation>Murtoviivat</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Moniviiva</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiinteät</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiinteä</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation type="unfinished"></translation>
+        <translation>Jäljet</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation type="unfinished"></translation>
+        <translation>Jälki</translation>
     </message>
     <message>
         <location line="+2"/>

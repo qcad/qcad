@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>QObject</name>
     <message>
@@ -112,7 +112,7 @@
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+411"/>
+        <location filename="../src/core/RColor.cpp" line="+298"/>
         <source>By Layer</source>
         <translation>Po sloju</translation>
     </message>
@@ -150,6 +150,11 @@
         <location line="+1"/>
         <source>Yellow</source>
         <translation>Rumena</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Orange</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -444,7 +449,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+169"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+168"/>
         <source>Requires selection</source>
         <translation>Zahteva izbor</translation>
     </message>
@@ -486,87 +491,87 @@
     <name>RLinetype</name>
     <message>
         <source>By Layer</source>
-        <translation>Po plasti</translation>
+        <translation type="vanished">Po plasti</translation>
     </message>
     <message>
         <source>By Block</source>
-        <translation>Po elementu</translation>
+        <translation type="vanished">Po elementu</translation>
     </message>
     <message>
         <source>Continuous</source>
-        <translation>Neprekinjeno</translation>
+        <translation type="vanished">Neprekinjeno</translation>
     </message>
     <message>
         <source>Dot</source>
-        <translation>Pika</translation>
+        <translation type="vanished">Pika</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translation>Pika (majhna)</translation>
+        <translation type="vanished">Pika (majhna)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation>Pika (velika)</translation>
+        <translation type="vanished">Pika (velika)</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translation>Črtica</translation>
+        <translation type="vanished">Črtica</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translation>Črtica (majhna)</translation>
+        <translation type="vanished">Črtica (majhna)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation>Črtica (velika)</translation>
+        <translation type="vanished">Črtica (velika)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation>Črtica Pika</translation>
+        <translation type="vanished">Črtica Pika</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation>Črtica Pika (majhna)</translation>
+        <translation type="vanished">Črtica Pika (majhna)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation>Črtica Pika (velika)</translation>
+        <translation type="vanished">Črtica Pika (velika)</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translation>Delilna</translation>
+        <translation type="vanished">Delilna</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translation>Delilna (majhna)</translation>
+        <translation type="vanished">Delilna (majhna)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translation>Delilna (velika)</translation>
+        <translation type="vanished">Delilna (velika)</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation>Srednjica</translation>
+        <translation type="vanished">Srednjica</translation>
     </message>
     <message>
         <source>Center (small)</source>
-        <translation>Srednjica (majhna)</translation>
+        <translation type="vanished">Srednjica (majhna)</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translation>Srednjica (velika)</translation>
+        <translation type="vanished">Srednjica (velika)</translation>
     </message>
     <message>
         <source>Border</source>
-        <translation>Rob</translation>
+        <translation type="vanished">Rob</translation>
     </message>
     <message>
         <source>Border (small)</source>
-        <translation>Rob (majhna)</translation>
+        <translation type="vanished">Rob (majhna)</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translation>Rob (velika)</translation>
+        <translation type="vanished">Rob (velika)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -592,7 +597,7 @@
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+629"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+817"/>
         <source>By Layer</source>
         <translation>Po plasti</translation>
     </message>
@@ -774,7 +779,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Drainage Reverse</source>
+        <source>Drainage Reversed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

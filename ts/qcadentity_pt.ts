@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt_PT">
+<TS version="2.1" language="pt_PT">
 <context>
     <name>REntity</name>
     <message>
@@ -836,7 +836,7 @@ Especifique o próximo ponto de controle</translatorcomment>
 &lt;b&gt;P1&lt;/b&gt;: deslocamento simples
 &lt;abbr title=\&quot;Really Simple Syndication\&quot;&gt;RSS&lt;/abbr&gt; feed para os comentários a este artigo.
 &lt;abbr title=\&quot;Really Simple Syndication\&quot;&gt;RSS&lt;/abbr&gt; feed para os comentários a este artigo</translatorcomment>
-        <translation>Simples</translation>
+        <translation type="vanished">Simples</translation>
     </message>
     <message>
         <source>Contents</source>
@@ -848,28 +848,28 @@ Tem a certeza que quer eliminar todo o conteúdo?</translatorcomment>
     </message>
     <message>
         <source>Text</source>
-        <translation>Texto</translation>
+        <translation type="vanished">Texto</translation>
     </message>
     <message>
         <source>Plain Text</source>
-        <translation>Texto simples</translation>
+        <translation type="vanished">Texto simples</translation>
     </message>
     <message>
         <source>Font Name</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Nome da fonte</translation>
+        <translation type="vanished">Nome da fonte</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation>Altura do texto</translation>
+        <translation type="vanished">Altura do texto</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation>Ângulo do texto</translation>
+        <translation type="vanished">Ângulo do texto</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation>Escala X</translation>
+        <translation type="vanished">Escala X</translation>
     </message>
     <message>
         <source>Bold</source>
@@ -879,7 +879,7 @@ Tornar negrito
 Al_ternar
 Negrito (Ctrl + B)
 Negrito</translatorcomment>
-        <translation>Negrito</translation>
+        <translation type="vanished">Negrito</translation>
     </message>
     <message>
         <source>Italic</source>
@@ -888,7 +888,7 @@ Negrito</translatorcomment>
 [10300-1032F] Itálico Antigo
 Itálico
 Itálico Clássico</translatorcomment>
-        <translation>Itálico</translation>
+        <translation type="vanished">Itálico</translation>
     </message>
     <message>
         <source>Line Spacing</source>
@@ -897,7 +897,7 @@ Espaçamento de linha:
 Espaçamento de Linha &amp;Padrão
 Espaçamento de Linha Padrão
 Fator de Espaçamento de Linhas</translatorcomment>
-        <translation>Espaçamento de linha</translation>
+        <translation type="vanished">Espaçamento de linha</translation>
     </message>
     <message>
         <source>Alignment</source>
@@ -905,7 +905,7 @@ Fator de Espaçamento de Linhas</translatorcomment>
 --file: pt_PT.po--
 Alinhamento
 Alinhamento|Vertical</translatorcomment>
-        <translation>Alinhamento</translation>
+        <translation type="vanished">Alinhamento</translation>
     </message>
     <message>
         <source>Horizontal</source>
@@ -913,7 +913,7 @@ Alinhamento|Vertical</translatorcomment>
 --file: pt.po--
 &amp;Horizontal
 Dimensão horizontal</translatorcomment>
-        <translation>Horizontal</translation>
+        <translation type="vanished">Horizontal</translation>
     </message>
     <message>
         <source>Vertical</source>
@@ -921,7 +921,7 @@ Dimensão horizontal</translatorcomment>
 --file: pt.po--
 &amp;Vertical
 Dimensão vertical</translatorcomment>
-        <translation>Vertical</translation>
+        <translation type="vanished">Vertical</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+86"/>

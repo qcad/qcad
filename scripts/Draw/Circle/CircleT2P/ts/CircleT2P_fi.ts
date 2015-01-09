@@ -25,7 +25,7 @@
     </message>
     <message>
         <location line="+134"/>
-        <location line="+47"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Ei ratkaisua</translation>
     </message>
@@ -37,7 +37,7 @@
     <message>
         <location line="+4"/>
         <source>Draw circle through two points and tangential to one entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä samankeskinen ympyrä kahden pisteen kautta ja yhteen kohteeseen tangentiaalisesti</translation>
     </message>
 </context>
 </TS>

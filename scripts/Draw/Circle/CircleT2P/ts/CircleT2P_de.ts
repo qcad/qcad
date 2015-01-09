@@ -25,7 +25,7 @@
     </message>
     <message>
         <location line="+134"/>
-        <location line="+47"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Keine Lösung</translation>
     </message>

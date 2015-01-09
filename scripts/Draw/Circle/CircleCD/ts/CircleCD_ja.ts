@@ -4,29 +4,49 @@
 <context>
     <name>CircleCD</name>
     <message>
-        <location filename="../CircleCD.js" line="+56"/>
         <source>Center or radius</source>
-        <translation>中心または半径</translation>
+        <translation type="vanished">中心または半径</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
-        <translation>中心</translation>
+        <translation type="vanished">中心</translation>
+    </message>
+    <message>
+        <source>Radius:</source>
+        <translation type="vanished">半径:</translation>
+    </message>
+    <message>
+        <source>Center, &amp;Radius</source>
+        <translation type="vanished">&amp;R 中心、半径</translation>
+    </message>
+    <message>
+        <source>Draw circle from center and radius</source>
+        <translation type="vanished">中心及び半径半径から円を描画</translation>
     </message>
     <message>
         <location filename="../CircleCD.ui" line="+17"/>
-        <source>Radius:</source>
-        <translation>半径:</translation>
+        <source>Diameter:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../CircleCDInit.js" line="+2"/>
-        <source>Center, &amp;Radius</source>
-        <translation>&amp;R 中心、半径</translation>
+        <source>Center, &amp;Diameter</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Draw circle from center and radius</source>
-        <translation>中心及び半径半径から円を描画</translation>
+        <location line="+4"/>
+        <source>Draw circle from center and diameter</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

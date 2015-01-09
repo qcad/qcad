@@ -49,7 +49,7 @@
         <translation>デルタ</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+58"/>
         <source>Dimension Tools</source>
         <translation>寸法ツール</translation>
     </message>
@@ -87,6 +87,16 @@
         <location line="+44"/>
         <source>Lower tolerance</source>
         <translation>許容誤差の下限</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Drawing Scale</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

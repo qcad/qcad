@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>Rotate2</name>
     <message>
         <location filename="../Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensimmäisen kiertämisen keskipiste</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Toisen kiertämisen keskipiste</translation>
     </message>
     <message>
         <location filename="../Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation type="unfinished"></translation>
+        <translation>Kierrä kaksi</translation>
     </message>
 </context>
 <context>
@@ -24,7 +24,7 @@
     <message>
         <location filename="../Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Kierrä kaksi ominaisuudet</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -77,7 +77,7 @@
     <message>
         <location line="+17"/>
         <source>Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopioita:</translation>
     </message>
 </context>
 </TS>

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
         <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää säädetty ominaisuus</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nimi:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arvo:</translation>
     </message>
 </context>
 <context>
@@ -24,114 +24,114 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä Z koordinaatit</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+186"/>
+        <location filename="../PropertyEditor.js" line="+187"/>
         <source>*VARIES*</source>
-        <translation type="unfinished"></translation>
+        <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>:</source>
-        <translation type="unfinished"></translation>
+        <translation>:</translation>
     </message>
     <message>
         <location line="+164"/>
         <source>No Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei valintaa</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Geometry</source>
-        <translation type="unfinished"></translation>
+        <translation>Geometria</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Dependent Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Riippuvaiset kohteet</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokattu</translation>
     </message>
     <message>
         <location line="+153"/>
         <source>Index</source>
-        <translation type="unfinished"></translation>
+        <translation>Hakemisto</translation>
     </message>
     <message>
         <location line="+59"/>
         <source>Remove this property from selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista tämä ominaisuus valituilta kohteilta</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaikki</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Add custom property to selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää säädetty ominaisuus valittuihin kohteisiin</translation>
     </message>
     <message>
         <location line="+136"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>Automaattinen</translation>
     </message>
     <message>
         <location line="+121"/>
         <source>Use auto measurement</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä automaattisia mittauksia</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Kyllä</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei</translation>
     </message>
     <message>
         <location line="+309"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Pienoisohjelmat</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Ominaisuuksien muokkaaminen</translation>
     </message>
     <message>
         <location filename="../PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valinta:</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Yleistä</translation>
     </message>
     <message>
         <location line="+103"/>
         <source>Move Selection to a New Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirrä valinta uuteen tasoon</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>Linetype Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Viivatyypin mittakaava:</translation>
     </message>
     <message>
         <location line="-107"/>
         <source>Handle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Käsittele:</translation>
     </message>
 </context>
 </TS>

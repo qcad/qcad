@@ -9,7 +9,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Choose end point of arc</source>
         <translation type="unfinished"></translation>
     </message>

@@ -1,22 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>CircleConcentricThrough</name>
     <message>
-        <location filename="../CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Número:</translation>
+        <translation type="obsolete">Número:</translation>
     </message>
     <message>
-        <location filename="../CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation>&amp;Concéntrico (a través de un punto)</translation>
+        <translation type="obsolete">&amp;Concéntrico (a través de un punto)</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Draw concentric circle through point</source>
-        <translation>Dibuja un círculo concéntrico a través de un punto</translation>
+        <translation type="obsolete">Dibuja un círculo concéntrico a través de un punto</translation>
+    </message>
+</context>
+<context>
+    <name>EllipseConcentricThrough</name>
+    <message>
+        <location filename="../EllipseConcentricThroughInit.js" line="+2"/>
+        <source>Parallel Curve (&amp;through Point)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw parallel curve to ellipse through point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../EllipseConcentricThrough.ui" line="+17"/>
+        <source>Number:</source>
+        <translation type="unfinished">Número:</translation>
     </message>
 </context>
 </TS>

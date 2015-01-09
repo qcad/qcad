@@ -1,85 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>LineRectangleSize</name>
     <message>
-        <location filename="../ShapeRectangleSize.ui" line="+17"/>
         <source>&amp;Width:</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">&amp;Leveys:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>&amp;Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">&amp;Korkeus:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Viitepiste:</translation>
     </message>
 </context>
 <context>
     <name>ShapeRectangleSize</name>
     <message>
-        <location filename="../ShapeRectangleSize.js" line="+44"/>
         <source>Top Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Ylävasen</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Ylä</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Yläoikea</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Vasen</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Keskellä</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Oikea</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Alavasen</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Ala</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Alaoikea</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Sijainti</translation>
     </message>
     <message>
         <location filename="../ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Suorakulmio &amp;suuruudella</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw rectangle with position and size</source>
+        <translation>Piirrä suorakulmio sijainnin sekä koon perusteella</translation>
+    </message>
+    <message>
+        <location filename="../ShapeRectangleSize.ui" line="+17"/>
+        <source>&amp;Width:</source>
+        <translation type="unfinished">&amp;Leveys:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>&amp;Height:</source>
+        <translation type="unfinished">&amp;Korkeus:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Angle:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished">Viitepiste:</translation>
     </message>
 </context>
 </TS>

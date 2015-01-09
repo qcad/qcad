@@ -35,7 +35,7 @@ Typ linii:
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+186"/>
+        <location filename="../PropertyEditor.js" line="+187"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">* Różni *</translation>

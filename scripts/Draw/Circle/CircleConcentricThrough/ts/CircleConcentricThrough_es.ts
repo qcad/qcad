@@ -14,7 +14,7 @@
         <translation>&amp;Concéntrico (a través de un punto)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle through point</source>
         <translation>Dibuja un círculo concéntrico a través de un punto</translation>
     </message>

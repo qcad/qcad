@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ja_JP">
+<TS version="2.1" language="ja_JP">
 <context>
     <name>Offset</name>
     <message>
@@ -28,12 +28,16 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw parallel to existing line or concentric arc, circle</source>
-        <translation>既存の線分または弧、円との平行線を描画</translation>
+        <source>Offset line, arc, circle, ellipse or polyline</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+65"/>
-        <source>Choose line, arc, circle or ellipse</source>
+        <source>Draw parallel to existing line or concentric arc, circle</source>
+        <translation type="vanished">既存の線分または弧、円との平行線を描画</translation>
+    </message>
+    <message>
+        <location filename="../Offset.js" line="+77"/>
+        <source>Choose line, arc, circle, ellipse or spline</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

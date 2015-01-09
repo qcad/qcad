@@ -11,12 +11,12 @@
     <message>
         <location filename="../CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Samankeskeinen (&amp;pisteen kautta)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle through point</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä samankeskinen ympyrä pisteen kautta</translation>
     </message>
 </context>
 </TS>

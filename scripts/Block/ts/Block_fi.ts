@@ -6,12 +6,12 @@
     <message>
         <location filename="../Block.js" line="+66"/>
         <source>Block Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Lohkotyökalut</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show block tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä lohkotyökalut</translation>
     </message>
     <message>
         <location line="+18"/>

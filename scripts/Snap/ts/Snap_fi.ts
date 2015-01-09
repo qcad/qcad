@@ -12,7 +12,7 @@
     <message>
         <location line="+5"/>
         <source>Show snap tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä snap/pikatyökalut</translation>
     </message>
     <message>
         <location line="+17"/>

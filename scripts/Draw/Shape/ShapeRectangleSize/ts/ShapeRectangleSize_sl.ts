@@ -44,19 +44,16 @@
         <translation type="vanished">Pozicija</translation>
     </message>
     <message>
-        <location filename="../ShapeRectangleSize.ui" line="+17"/>
         <source>&amp;Width:</source>
-        <translation>Š&amp;irina:</translation>
+        <translation type="vanished">Š&amp;irina:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>&amp;Height:</source>
-        <translation>&amp;Višina:</translation>
+        <translation type="vanished">&amp;Višina:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Reference Point:</source>
-        <translation>Referenčna točka:</translation>
+        <translation type="vanished">Referenčna točka:</translation>
     </message>
     <message>
         <source>Rectangle with &amp;Size</source>
@@ -70,54 +67,44 @@
 <context>
     <name>ShapeRectangleSize</name>
     <message>
-        <location filename="../ShapeRectangleSize.js" line="+44"/>
         <source>Top Left</source>
-        <translation type="unfinished">Zgoraj levo</translation>
+        <translation type="obsolete">Zgoraj levo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished">Zgoraj</translation>
+        <translation type="obsolete">Zgoraj</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top Right</source>
-        <translation type="unfinished">Zgoraj desno</translation>
+        <translation type="obsolete">Zgoraj desno</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Left</source>
-        <translation type="unfinished">Levo</translation>
+        <translation type="obsolete">Levo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Sredina</translation>
+        <translation type="obsolete">Sredina</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished">Desno</translation>
+        <translation type="obsolete">Desno</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Left</source>
-        <translation type="unfinished">Spodaj levo</translation>
+        <translation type="obsolete">Spodaj levo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished">Spodaj</translation>
+        <translation type="obsolete">Spodaj</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Right</source>
-        <translation type="unfinished">Spodaj Desno</translation>
+        <translation type="obsolete">Spodaj Desno</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Position</source>
-        <translation type="unfinished">Pozicija</translation>
+        <translation type="obsolete">Pozicija</translation>
     </message>
     <message>
         <location filename="../ShapeRectangleSizeInit.js" line="+2"/>
@@ -128,6 +115,26 @@
         <location line="+5"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished">Nariši pravokotnik s pomočjo pozicije in mer</translation>
+    </message>
+    <message>
+        <location filename="../ShapeRectangleSize.ui" line="+17"/>
+        <source>&amp;Width:</source>
+        <translation type="unfinished">Š&amp;irina:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>&amp;Height:</source>
+        <translation type="unfinished">&amp;Višina:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished">Referenčna točka:</translation>
     </message>
 </context>
 </TS>

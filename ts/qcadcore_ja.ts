@@ -112,7 +112,7 @@
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+411"/>
+        <location filename="../src/core/RColor.cpp" line="+298"/>
         <source>By Layer</source>
         <translation>画層による</translation>
     </message>
@@ -153,6 +153,11 @@
     </message>
     <message>
         <location line="+2"/>
+        <source>Orange</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Dark Red</source>
         <translation>ダークレッド</translation>
     </message>
@@ -449,7 +454,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+169"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+168"/>
         <source>Requires selection</source>
         <translation>選択が必要です</translation>
     </message>
@@ -597,7 +602,7 @@
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+629"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+817"/>
         <source>By Layer</source>
         <translation type="unfinished">画層による</translation>
     </message>
@@ -779,7 +784,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Drainage Reverse</source>
+        <source>Drainage Reversed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

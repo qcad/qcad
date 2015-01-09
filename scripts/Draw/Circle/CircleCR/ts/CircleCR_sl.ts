@@ -4,14 +4,12 @@
 <context>
     <name>CircleCR</name>
     <message>
-        <location filename="../CircleCR.js" line="+56"/>
         <source>Center or radius</source>
-        <translation>Središče ali polmer</translation>
+        <translation type="vanished">Središče ali polmer</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
-        <translation>Središče</translation>
+        <translation type="vanished">Središče</translation>
     </message>
     <message>
         <location filename="../CircleCR.ui" line="+17"/>
@@ -19,12 +17,22 @@
         <translation>Polmer:</translation>
     </message>
     <message>
+        <location line="+27"/>
+        <source>Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
         <translation>Središče, &amp;Polmer</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and radius</source>
         <translation>Nariši krog iz središča ter polmera</translation>
     </message>

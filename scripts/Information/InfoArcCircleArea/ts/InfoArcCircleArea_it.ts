@@ -1,161 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it_IT">
+<TS version="2.1" language="it_IT">
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="67"/>
+        <location filename="../InfoArcCircleArea.js" line="+67"/>
         <source>Select Arc, Circle, Ellipse or Elliptical Arc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="70"/>
+        <location line="+3"/>
         <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="305"/>
-        <location filename="../InfoArcCircleArea.js" line="326"/>
-        <location filename="../InfoArcCircleArea.js" line="350"/>
-        <location filename="../InfoArcCircleArea.js" line="371"/>
-        <location filename="../InfoArcCircleArea.js" line="393"/>
-        <location filename="../InfoArcCircleArea.js" line="415"/>
+        <location line="+235"/>
+        <location line="+21"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+22"/>
+        <location line="+22"/>
         <source>Area = </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="307"/>
-        <location filename="../InfoArcCircleArea.js" line="373"/>
+        <location line="-108"/>
+        <location line="+66"/>
         <source>Circumference = </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="314"/>
+        <location line="-59"/>
         <source>Circle area:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="315"/>
+        <location line="+1"/>
         <source>circumference:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="328"/>
-        <location filename="../InfoArcCircleArea.js" line="352"/>
-        <location filename="../InfoArcCircleArea.js" line="395"/>
-        <location filename="../InfoArcCircleArea.js" line="417"/>
+        <location line="+13"/>
+        <location line="+24"/>
+        <location line="+43"/>
+        <location line="+22"/>
         <source>Length = </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="329"/>
-        <location filename="../InfoArcCircleArea.js" line="396"/>
+        <location line="-88"/>
+        <location line="+67"/>
         <source>Chord = </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="336"/>
-        <location filename="../InfoArcCircleArea.js" line="360"/>
+        <location line="-60"/>
+        <location line="+24"/>
         <source>Ellipse Arc area:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="337"/>
-        <location filename="../InfoArcCircleArea.js" line="361"/>
-        <location filename="../InfoArcCircleArea.js" line="404"/>
-        <location filename="../InfoArcCircleArea.js" line="426"/>
+        <location line="-23"/>
+        <location line="+24"/>
+        <location line="+43"/>
+        <location line="+22"/>
         <source>Arc Length:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="338"/>
-        <location filename="../InfoArcCircleArea.js" line="405"/>
+        <location line="-88"/>
+        <location line="+67"/>
         <source>Chord:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="353"/>
+        <location line="-52"/>
         <source>Distance = </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="362"/>
+        <location line="+9"/>
         <source>Distance:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="381"/>
+        <location line="+19"/>
         <source>Ellipse area:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="382"/>
+        <location line="+1"/>
         <source>Circumference:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="403"/>
-        <location filename="../InfoArcCircleArea.js" line="425"/>
+        <location line="+21"/>
+        <location line="+22"/>
         <source>Arc area:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="418"/>
+        <location line="-7"/>
         <source>Radius = </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="427"/>
+        <location line="+9"/>
         <source>Radius:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.ui" line="17"/>
+        <location filename="../InfoArcCircleArea.ui" line="+17"/>
         <source>Mode:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.ui" line="24"/>
+        <location line="+7"/>
         <source>Calculate Area of Sector</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.ui" line="47"/>
+        <location line="+23"/>
         <source>Calculate Area of Segment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.ui" line="77"/>
+        <location line="+30"/>
         <source>Add:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.ui" line="92"/>
+        <location line="+10"/>
         <source>Add entities to drawing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.ui" line="95"/>
+        <location line="+3"/>
         <source>Entity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.ui" line="108"/>
+        <location line="+13"/>
         <source>Chord</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.ui" line="121"/>
+        <location line="+13"/>
         <source>Add lengths/circumference to drawing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.ui" line="124"/>
+        <location line="+3"/>
         <source>Length</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleAreaInit.js" line="2"/>
+        <location filename="../InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
         <translation type="unfinished"></translation>
     </message>

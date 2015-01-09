@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pl_PL">
+<TS version="2.1" language="pl_PL">
 <context>
     <name>REntity</name>
     <message>
@@ -682,7 +682,7 @@ Wskaż następny punkt kontrolny</translatorcomment>
     </message>
     <message>
         <source>Simple</source>
-        <translation>Prosta</translation>
+        <translation type="vanished">Prosta</translation>
     </message>
     <message>
         <source>Contents</source>
@@ -690,52 +690,52 @@ Wskaż następny punkt kontrolny</translatorcomment>
     </message>
     <message>
         <source>Text</source>
-        <translation>Tekst</translation>
+        <translation type="vanished">Tekst</translation>
     </message>
     <message>
         <source>Plain Text</source>
-        <translation>Zwykły tekst</translation>
+        <translation type="vanished">Zwykły tekst</translation>
     </message>
     <message>
         <source>Font Name</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Nazwa czcionki</translation>
+        <translation type="vanished">Nazwa czcionki</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation>Wysokość tekstu</translation>
+        <translation type="vanished">Wysokość tekstu</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation>Kąt tekstu</translation>
+        <translation type="vanished">Kąt tekstu</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation>Skala X</translation>
+        <translation type="vanished">Skala X</translation>
     </message>
     <message>
         <source>Bold</source>
-        <translation>Pogrubiony</translation>
+        <translation type="vanished">Pogrubiony</translation>
     </message>
     <message>
         <source>Italic</source>
-        <translation>Kursywa</translation>
+        <translation type="vanished">Kursywa</translation>
     </message>
     <message>
         <source>Line Spacing</source>
-        <translation>Odstęp między liniami</translation>
+        <translation type="vanished">Odstęp między liniami</translation>
     </message>
     <message>
         <source>Alignment</source>
-        <translation>Wyrównanie</translation>
+        <translation type="vanished">Wyrównanie</translation>
     </message>
     <message>
         <source>Horizontal</source>
-        <translation>Poziomo</translation>
+        <translation type="vanished">Poziomo</translation>
     </message>
     <message>
         <source>Vertical</source>
-        <translation>Pionowa</translation>
+        <translation type="vanished">Pionowa</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+86"/>

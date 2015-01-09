@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>LineRectangle</name>
     <message>
         <source>First corner</source>
-        <translation>Primer punto de esquina</translation>
+        <translation type="vanished">Primer punto de esquina</translation>
     </message>
     <message>
         <source>&amp;Rectangle</source>
-        <translation>&amp;Rectangulo</translation>
+        <translation type="vanished">&amp;Rectangulo</translation>
     </message>
     <message>
         <source>Second corner</source>
-        <translation>Segunda punto de esquina</translation>
+        <translation type="vanished">Segunda punto de esquina</translation>
     </message>
     <message>
         <source>Draw rectangle from two corners</source>
-        <translation>Dibuja un rectángulo de dos esquinas</translation>
+        <translation type="vanished">Dibuja un rectángulo de dos esquinas</translation>
     </message>
 </context>
 <context>
     <name>ShapeRectangle</name>
     <message>
         <source>First corner</source>
-        <translation>Primer punto de esquina</translation>
+        <translation type="vanished">Primer punto de esquina</translation>
     </message>
     <message>
         <source>Second corner</source>
-        <translation>Segunda punto de esquina</translation>
+        <translation type="vanished">Segunda punto de esquina</translation>
     </message>
     <message>
         <source>&amp;Rectangle</source>
-        <translation>&amp;Rectangulo</translation>
+        <translation type="vanished">&amp;Rectangulo</translation>
     </message>
     <message>
         <source>Draw rectangle from two corners</source>
-        <translation>Dibuja un rectángulo de dos esquinas</translation>
+        <translation type="vanished">Dibuja un rectángulo de dos esquinas</translation>
     </message>
 </context>
 <context>

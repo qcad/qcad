@@ -51,7 +51,7 @@
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translation>Mil</translation>
+        <translation>Maili</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -61,7 +61,7 @@
     <message>
         <location line="+3"/>
         <source>Angstrom</source>
-        <translation>Angstrom</translation>
+        <translation>Ångström</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -96,7 +96,7 @@
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translation>AU</translation>
+        <translation>au</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -112,14 +112,14 @@
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+411"/>
+        <location filename="../src/core/RColor.cpp" line="+298"/>
         <source>By Layer</source>
-        <translation>Tason Mukaan</translation>
+        <translation>Tason mukaan</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Lohkon Mukaan</translation>
+        <translation>Lohkon mukaan</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -139,17 +139,22 @@
     <message>
         <location line="+1"/>
         <source>Cyan</source>
-        <translation>Syaani</translation>
+        <translation>Sinivihreä</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Magenta</source>
-        <translation>Magenta</translation>
+        <translation>Purppura</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yellow</source>
         <translation>Keltainen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Orange</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -169,12 +174,12 @@
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation>Tumma Syaani</translation>
+        <translation>Tumma sinivihreä</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation>Tumma Magenta</translation>
+        <translation>Tumma purppura</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -212,22 +217,22 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Nykyinen tason tunniste</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirtoyksikkö</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Viivatyypin mittakaava</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Mittakaavan fontti</translation>
     </message>
 </context>
 <context>
@@ -292,7 +297,7 @@
     <message>
         <location line="+1"/>
         <source>Block ID</source>
-        <translation>Lohko ID</translation>
+        <translation>Lohkotunniste</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -307,12 +312,12 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Viivatyypin mittakaava</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lineweight</source>
-        <translation>Viivan Paksuus</translation>
+        <translation>Viivan paksuus</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -370,81 +375,81 @@
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
-        <translation type="unfinished"></translation>
+        <translation>Yksinkertainen</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstin sijainti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Teksti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Tavallinen teksti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Font Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjasimen nimi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstin korkeus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstin kulma</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>X mittakaava</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Lihavoitu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Kursiivi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Line Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Riviväli</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>Tasaus</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaakasuunta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>Pystysuunta</translation>
     </message>
 </context>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+169"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+168"/>
         <source>Requires selection</source>
         <translation>Vaatii valinnan</translation>
     </message>
@@ -522,15 +527,15 @@
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation type="vanished">Katkopisteviiva</translation>
+        <translation type="vanished">Katkoviiva - piste</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation type="vanished">Katkopisteviiva (pieni)</translation>
+        <translation type="vanished">Katkoviiva - piste (pieni)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation type="vanished">Katkopisteviiva (suuri)</translation>
+        <translation type="vanished">Katkoviiva - piste (suuri)</translation>
     </message>
     <message>
         <source>Divide</source>
@@ -571,211 +576,215 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
         <source>Name</source>
-        <translation type="unfinished">Nimi</translation>
+        <translation>Nimi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvaus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Metrijärjestelmä</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvio</translation>
     </message>
 </context>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+629"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+817"/>
         <source>By Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Kerroksittain</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Lohkoittain</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation type="unfinished">Reuna</translation>
+        <translation>Raja</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">Keskipiste</translation>
+        <translation>Keskipiste</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Viiva - piste</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dashed</source>
-        <translation type="unfinished"></translation>
+        <translation>Katkoviiva</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation type="unfinished">Jaa</translation>
+        <translation>Jaa</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation type="unfinished">Piste</translation>
+        <translation>Piste</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Piilotettu</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation type="unfinished"></translation>
+        <translation>Haamu</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO ajatusviiva</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO ajatusviiva - välilyönti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO pitkä ajatusviiva - piste</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO pitkä ajatusviiva - tuplapiste</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO pitkäviiva - kolmoispiste</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO piste</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO pitkäviiva - lyhytviiva</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO pitkäviiva - tupla lyhytviiva</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO viiva - piste</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO tuplaviiva - piste</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO viiva - tuplapiste</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO tuplaviiva - tuplapiste</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO ajatusviiva - kolmoispiste</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO pitkä ajatusviiva - kolmoispiste</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hot Water Supply</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuuman veden jakelu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuuma vesi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gas Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaasuputki</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation type="unfinished"></translation>
+        <translation>Vanu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation type="unfinished"></translation>
+        <translation>Siksak kuvio</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation type="unfinished"></translation>
+        <translation>Raidat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Aitalinja 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Aitalinja 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drainage</source>
-        <translation type="unfinished"></translation>
+        <translation>Salaojitus</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Drainage Reverse</source>
+        <source>Drainage Reversed</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drainage Reverse</source>
+        <translation type="vanished">Salaojitus käänteinen</translation>
     </message>
 </context>
 <context>
@@ -931,7 +940,7 @@
     <message>
         <location line="+1"/>
         <source>Protected</source>
-        <translation type="unfinished"></translation>
+        <translation>Suojattu</translation>
     </message>
 </context>
 </TS>

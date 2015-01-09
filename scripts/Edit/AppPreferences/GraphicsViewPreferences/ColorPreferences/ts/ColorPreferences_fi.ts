@@ -6,7 +6,7 @@
     <message>
         <location filename="../ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Graafinen näkymä</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Graafinen näkymä</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -29,7 +29,7 @@
     <message>
         <location line="+33"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohdistin</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -39,107 +39,107 @@
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Epäaktiivi kohdistusristikko:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Alkuperä</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Relative zero:</source>
-        <translation type="unfinished"></translation>
+        <translation>Suhteessa nollaan:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Ristikko</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Meta grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta (kuvaus) ristikko:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Valinta</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensisijainen värivalinta:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä toissijaista värivalintaa:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Toissijainen värivalinta:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vedettävät vertailupisteet:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box border:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valintalaatikon reuna:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valintalaatikon täyttö:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rajavalintalaatikon täyttö:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Pikatyökalut</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Snap label:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pikavalikon nimike:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Info Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Tieto työkalut</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mitat ja etiketit:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrostyökalut</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ylimääräiset muodot:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Zoom Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Suurennustyökalut</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation type="unfinished"></translation>
+        <translation>Suurenna/säädä laatikon reuna:</translation>
     </message>
     <message>
         <location line="-538"/>
@@ -148,11 +148,11 @@
     </message>
     <message>
         <source>Relative Zero:</source>
-        <translation type="vanished">Relatiivinen Nolla:</translation>
+        <translation type="vanished">Suhteellinen nolla:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation type="vanished">Referenssipiste:</translation>
+        <translation type="vanished">Viitepiste:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -169,7 +169,7 @@
     </message>
     <message>
         <source>Selection Box Border:</source>
-        <translation type="vanished">Valintalaatikon Raja:</translation>
+        <translation type="vanished">Valintalaatikon reuna:</translation>
     </message>
     <message>
         <source>Selection Box:</source>

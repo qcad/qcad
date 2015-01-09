@@ -4,7 +4,7 @@
 <context>
     <name>Divide</name>
     <message>
-        <location filename="../Divide.js" line="+68"/>
+        <location filename="../Divide.js" line="+66"/>
         <source>Choose line, arc, circle, ellipse or spline</source>
         <translation>Izberi črto, lok, krog, elipso ali krivuljo</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Izberi črto, lok, krog ali elipso</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Specify point</source>
         <translation>Določi točko</translation>
     </message>

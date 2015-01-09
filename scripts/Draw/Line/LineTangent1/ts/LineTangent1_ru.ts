@@ -19,7 +19,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+58"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translation type="unfinished"></translation>
     </message>

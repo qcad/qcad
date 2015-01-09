@@ -9,7 +9,7 @@
         <translation>Bázis vonal vagy ív megadása</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Choose end point of arc</source>
         <translation>Ív végpont megadása</translation>
     </message>

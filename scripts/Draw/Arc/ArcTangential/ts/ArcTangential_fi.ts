@@ -9,7 +9,7 @@
         <translation>Valitse perusviiva tai peruskaari</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Choose end point of arc</source>
         <translation>Valitse kaaren päätepiste</translation>
     </message>
@@ -25,12 +25,12 @@
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tangentiaalisesti yhdistyneenä</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
-        <translation type="unfinished">Piirrä kaari tangentiaalisesti peruskohteeseen</translation>
+        <translation>Piirrä kaari tangentiaalisesti peruskohteeseen</translation>
     </message>
 </context>
 </TS>

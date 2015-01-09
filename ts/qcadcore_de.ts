@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>QObject</name>
     <message>
@@ -116,7 +116,7 @@
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+411"/>
+        <location filename="../src/core/RColor.cpp" line="+298"/>
         <source>By Layer</source>
         <translation>Von Layer</translation>
     </message>
@@ -157,6 +157,11 @@
     </message>
     <message>
         <location line="+2"/>
+        <source>Orange</source>
+        <translation>Orange</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Dark Red</source>
         <translation>Dunkelrot</translation>
     </message>
@@ -452,7 +457,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+169"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+168"/>
         <source>Requires selection</source>
         <translation>Benötigt Selektion</translation>
     </message>
@@ -494,87 +499,87 @@
     <name>RLinetype</name>
     <message>
         <source>By Layer</source>
-        <translation>Von Layer</translation>
+        <translation type="vanished">Von Layer</translation>
     </message>
     <message>
         <source>By Block</source>
-        <translation>Von Block</translation>
+        <translation type="vanished">Von Block</translation>
     </message>
     <message>
         <source>Continuous</source>
-        <translation>Durchgehend</translation>
+        <translation type="vanished">Durchgehend</translation>
     </message>
     <message>
         <source>Dot</source>
-        <translation>Gepunktet</translation>
+        <translation type="vanished">Gepunktet</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translation>Gepunktet (klein)</translation>
+        <translation type="vanished">Gepunktet (klein)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation>Gepunktet (gross)</translation>
+        <translation type="vanished">Gepunktet (gross)</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translation>Gestrichelt</translation>
+        <translation type="vanished">Gestrichelt</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translation>Gestrichelt (klein)</translation>
+        <translation type="vanished">Gestrichelt (klein)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation>Gestrichelt (gross)</translation>
+        <translation type="vanished">Gestrichelt (gross)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation>Strich Punkt</translation>
+        <translation type="vanished">Strich Punkt</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation>Strich Punkt (klein)</translation>
+        <translation type="vanished">Strich Punkt (klein)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation>Strich Punkt (gross)</translation>
+        <translation type="vanished">Strich Punkt (gross)</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translation>Trennen</translation>
+        <translation type="vanished">Trennen</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translation>Trennung (klein)</translation>
+        <translation type="vanished">Trennung (klein)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translation>Trennung (gross)</translation>
+        <translation type="vanished">Trennung (gross)</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation>Zentrum</translation>
+        <translation type="vanished">Zentrum</translation>
     </message>
     <message>
         <source>Center (small)</source>
-        <translation>Mittellinie (klein)</translation>
+        <translation type="vanished">Mittellinie (klein)</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translation>Mittellinie (gross)</translation>
+        <translation type="vanished">Mittellinie (gross)</translation>
     </message>
     <message>
         <source>Border</source>
-        <translation>Rahmen</translation>
+        <translation type="vanished">Rahmen</translation>
     </message>
     <message>
         <source>Border (small)</source>
-        <translation>Rahmen (klein)</translation>
+        <translation type="vanished">Rahmen (klein)</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translation>Rahmen (gross)</translation>
+        <translation type="vanished">Rahmen (gross)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -600,7 +605,7 @@
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+629"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+817"/>
         <source>By Layer</source>
         <translation>Von Layer</translation>
     </message>
@@ -618,7 +623,7 @@
     </message>
     <message>
         <source>Border (2x)</source>
-        <translation>Rand (2x)</translation>
+        <translation type="vanished">Rand (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -629,7 +634,7 @@
     </message>
     <message>
         <source>Center (2x)</source>
-        <translation>Mitte (2x)</translation>
+        <translation type="vanished">Mitte (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -790,8 +795,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Drainage Reverse</source>
+        <source>Drainage Reversed</source>
         <translation>Entwässerung umgekehrt</translation>
+    </message>
+    <message>
+        <source>Drainage Reverse</source>
+        <translation type="vanished">Entwässerung umgekehrt</translation>
     </message>
 </context>
 <context>

@@ -31,7 +31,7 @@ Dimensão Alinhada</translatorcomment>
         <translation>Padrões para novos desenhos</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+102"/>
         <source>Scientific</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -74,7 +74,7 @@ Fracionais</translatorcomment>
         <translation>Fracionais</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+32"/>
         <source>Decimal Degrees</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -115,7 +115,7 @@ Unidades de topógrafo</translatorcomment>
         <translation>Unidades de topógrafo</translation>
     </message>
     <message>
-        <location line="+205"/>
+        <location line="+193"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Unidade / format</translation>

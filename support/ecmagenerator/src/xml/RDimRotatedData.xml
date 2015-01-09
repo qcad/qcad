@@ -47,6 +47,20 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="recomputeDefinitionPoint"
+    cppName="recomputeDefinitionPoint" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="oldExtPoint1" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="oldExtPoint2" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="newExtPoint1" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="newExtPoint2" isConst="true" />
+      </variant>
+    </method>
     <method name="rotate" cppName="rotate" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">

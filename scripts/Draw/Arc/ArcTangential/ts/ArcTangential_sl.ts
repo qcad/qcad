@@ -9,7 +9,7 @@
         <translation>Izberi nosilno črto ali nosilni lok</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Choose end point of arc</source>
         <translation>Izberi končno točko loka</translation>
     </message>

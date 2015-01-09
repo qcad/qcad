@@ -4,20 +4,18 @@
 <context>
     <name>CircleCR</name>
     <message>
-        <location filename="../CircleCR.js" line="+56"/>
         <source>Center or radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Centro ou raio</translation>
+        <translation type="vanished">Centro ou raio</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 &amp;Centro, ponto, ângulos
 Centro, ponto, ângulos
 Arco com Centro, Ponto, Ângulos</translatorcomment>
-        <translation>Centro</translation>
+        <translation type="vanished">Centro</translation>
     </message>
     <message>
         <source>Circle (Center, &amp;Radius)</source>
@@ -30,7 +28,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <translation>Centro, &amp;raio</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and radius</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar círculo de centro e raio</translation>
@@ -43,6 +41,16 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
 Entre o raio:
 Raio</translatorcomment>
         <translation>Raio:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Angle:</source>
+        <translation>Ângulo:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Reference Point:</source>
+        <translation>Ponto de referência:</translation>
     </message>
 </context>
 </TS>

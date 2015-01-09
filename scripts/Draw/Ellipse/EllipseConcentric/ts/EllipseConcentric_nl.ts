@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.0" language="nl_NL">
 <context>
-    <name>CircleConcentric</name>
+    <name>EllipseConcentric</name>
     <message>
-        <location filename="../CircleConcentric.ui" line="+17"/>
+        <location filename="../EllipseConcentric.ui" line="+17"/>
         <source>Distance:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14,13 +14,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../CircleConcentricInit.js" line="+2"/>
-        <source>&amp;Concentric (with Distance)</source>
+        <location filename="../EllipseConcentricInit.js" line="+2"/>
+        <source>&amp;Parallel Curve (with Distance)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Draw concentric circle</source>
+        <location line="+4"/>
+        <source>Draw parallel curve to ellipse</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

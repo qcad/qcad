@@ -38,11 +38,26 @@
         <source>Move entity to desired location</source>
         <translation>Mover entidade</translation>
     </message>
+    <message>
+        <location line="+311"/>
+        <source>Move Reference Point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Entity</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+57"/>
+        <location filename="../EAction.js" line="+58"/>
         <source>Back</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -60,7 +75,7 @@ Cancelar
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="+267"/>
+        <location line="+272"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Ferramenta de ativos:</translation>
@@ -81,7 +96,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+420"/>
+        <location line="+426"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -116,7 +131,7 @@ Ferramentas CAD</translatorcomment>
         <translation>Entidade está em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+85"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidade não é uma referência de bloco.</translation>
@@ -162,7 +177,12 @@ Ferramentas CAD</translatorcomment>
         <translation>Entidade não é uma linha, um arco, círculo, elipse ou uma spline.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidade não é um polilinha.</translation>
@@ -171,7 +191,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+307"/>
+        <location filename="../ShapeAlgorithms.js" line="+335"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Raio caiu abaixo de 0,0, após %1 círculos concêntricos.</translation>
@@ -183,7 +203,7 @@ Ferramentas CAD</translatorcomment>
         <translation>Raio caiu abaixo de 0,0, após %1 arcos concêntricos.</translation>
     </message>
     <message>
-        <location line="+463"/>
+        <location line="+555"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -216,7 +236,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+949"/>
+        <location filename="../WidgetFactory.js" line="+957"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--

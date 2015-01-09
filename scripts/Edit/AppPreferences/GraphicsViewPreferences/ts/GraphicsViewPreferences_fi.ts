@@ -6,32 +6,32 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Alkuperä</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä suuret alkuperäiset akselit</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rulers and Scrollbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Viivaimet ja vierityspalkit</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä viivaimet</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä vierityspalkit</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Cursor</source>
-        <translation>Kursori</translation>
+        <translation>Kohdistin</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -46,7 +46,7 @@
     <message>
         <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation>Automaattinen Zoomaus</translation>
+        <translation>Automaattinen mittakaava/zoomaus</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -56,7 +56,7 @@
     <message>
         <location line="+57"/>
         <source>Color Adjustment</source>
-        <translation>Värin Säätö</translation>
+        <translation>Värien säätö</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -66,7 +66,7 @@
     <message>
         <location line="+26"/>
         <source>Color lightness threshold:</source>
-        <translation type="unfinished"></translation>
+        <translation>Värivaaleuden kynnys:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -76,22 +76,22 @@
     <message>
         <location line="+9"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation>Automaattisesti vaihda kuvaruudun viivat muotoilunäkymässä</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation type="unfinished"></translation>
+        <translation>Venytä viivatyypin kuvioita viivan paksuuden mukaan</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvion mitta viivapaksuudella 0.00m:</translation>
     </message>
     <message>
         <location line="-36"/>
         <source>Automatically use screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation>Automaattisesti käytä kuvaruudun viivoja muotoilunäkymässä </translation>
     </message>
     <message>
         <source>Auto switch linetypes</source>
@@ -110,12 +110,12 @@
     <message>
         <location line="+58"/>
         <source>Text height display threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstin korkeuden kynnysarvo näytöllä (px):</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation>Näytä kaaret viivoina tämän kulman jälkeen (astetta):</translation>
+        <translation>Näytä kaaret viivoina alle tämänmittaisen kulman (astetta):</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -125,7 +125,7 @@
     <message>
         <location line="+6"/>
         <source>Persistent Selection</source>
-        <translation>Pysyvä Valinta</translation>
+        <translation>Pysyvä valinta</translation>
     </message>
 </context>
 <context>
@@ -133,7 +133,7 @@
     <message>
         <location filename="../GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvanäkymä</translation>
     </message>
     <message>
         <location line="+0"/>

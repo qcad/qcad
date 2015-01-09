@@ -4,9 +4,8 @@
 <context>
     <name>LineParallel</name>
     <message>
-        <location filename="../LineParallel.js" line="+68"/>
         <source>Choose line, arc or circle</source>
-        <translation>線分、弧、円を選択</translation>
+        <translation type="vanished">線分、弧、円を選択</translation>
     </message>
     <message>
         <location filename="../LineParallel.ui" line="+17"/>

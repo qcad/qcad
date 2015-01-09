@@ -19,7 +19,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+97"/>
         <source>Scale:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -29,7 +29,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation type="unfinished"></translation>
     </message>
@@ -39,7 +39,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation type="unfinished"></translation>
     </message>

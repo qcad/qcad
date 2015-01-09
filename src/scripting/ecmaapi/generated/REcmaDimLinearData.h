@@ -50,6 +50,9 @@
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setDefinitionPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setExtensionPoint1
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

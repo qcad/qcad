@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -34,7 +34,7 @@
     </message>
     <message>
         <source>Loading...</source>
-        <translation>Lade...</translation>
+        <translation type="vanished">Lade...</translation>
     </message>
     <message>
         <location filename="../NewFile.js" line="+128"/>
@@ -85,7 +85,7 @@
     </message>
     <message>
         <source>Opened drawing:</source>
-        <translation>Zeichnung geöffnet:</translation>
+        <translation type="vanished">Zeichnung geöffnet:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -103,7 +103,7 @@
         <translation>nur lesen</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>Möchten Sie die gemachten Änderungen in der&lt;br&gt;Zeichnung &apos;%1&apos; speichern?</translation>
     </message>

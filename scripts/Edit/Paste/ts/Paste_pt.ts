@@ -38,7 +38,7 @@ Girar entidades colado&lt;br&gt;por este ângulo</translatorcomment>
         <translation>Girar entidades colado&lt;br&gt;por este ângulo</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+97"/>
         <source>Scale:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -55,7 +55,7 @@ Escala entidades colado&lt;br&gt;por este factor</translatorcomment>
         <translation>Escala entidades colado&lt;br&gt;por este factor</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
@@ -71,7 +71,7 @@ Inverter entidades colada&lt;br&gt;verticalmente</translatorcomment>
         <translation>Inverter entidades colada&lt;br&gt;verticalmente</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--

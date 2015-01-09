@@ -16,12 +16,12 @@
     <message>
         <location line="+2"/>
         <source>All Files</source>
-        <translation>Kaikki Tiedostot</translation>
+        <translation>Kaikki tiedostot</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Import Bitmap</source>
-        <translation>Tuo Bittikartta</translation>
+        <translation>Tuo bittikartta</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
-        <translation>Lisää Bittikartta</translation>
+        <translation>Lisää bittikartta</translation>
     </message>
 </context>
 </TS>

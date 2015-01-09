@@ -6,7 +6,7 @@
     <message>
         <location filename="../InsertBlockItem.js" line="+88"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Säädetty puutteellinen lohkonimi &apos;%1&apos; :een</translation>
     </message>
     <message>
         <location line="+55"/>

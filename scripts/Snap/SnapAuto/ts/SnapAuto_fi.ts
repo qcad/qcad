@@ -21,7 +21,7 @@
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation type="unfinished">Puolivälipisteet</translation>
+        <translation>keskimmäiset pisteet</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -31,12 +31,12 @@
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohtisuora</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference points</source>
-        <translation type="unfinished"></translation>
+        <translation>Viitepisteet</translation>
     </message>
     <message>
         <location line="+10"/>

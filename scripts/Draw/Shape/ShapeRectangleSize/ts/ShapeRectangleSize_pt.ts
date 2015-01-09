@@ -100,72 +100,59 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation type="vanished">Desenhar retângulo com a posição e tamanho</translation>
     </message>
     <message>
-        <location filename="../ShapeRectangleSize.ui" line="+17"/>
         <source>&amp;Width:</source>
-        <translation>&amp;Largura:</translation>
+        <translation type="vanished">&amp;Largura:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>&amp;Height:</source>
-        <translation>&amp;Altura:</translation>
+        <translation type="vanished">&amp;Altura:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Reference Point:</source>
-        <translation>Ponto de referência:</translation>
+        <translation type="vanished">Ponto de referência:</translation>
     </message>
 </context>
 <context>
     <name>ShapeRectangleSize</name>
     <message>
-        <location filename="../ShapeRectangleSize.js" line="+44"/>
         <source>Top Left</source>
-        <translation>Esquerda acima</translation>
+        <translation type="vanished">Esquerda acima</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top</source>
-        <translation>Topo</translation>
+        <translation type="vanished">Topo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top Right</source>
-        <translation>Direita acima</translation>
+        <translation type="vanished">Direita acima</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Left</source>
-        <translation>Esquerda</translation>
+        <translation type="vanished">Esquerda</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Middle</source>
-        <translation>Meio</translation>
+        <translation type="vanished">Meio</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Right</source>
-        <translation>Direita</translation>
+        <translation type="vanished">Direita</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Left</source>
-        <translation>Esquerda abaixo</translation>
+        <translation type="vanished">Esquerda abaixo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom</source>
-        <translation>Fundo</translation>
+        <translation type="vanished">Fundo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Right</source>
-        <translation>Direita abaixo</translation>
+        <translation type="vanished">Direita abaixo</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Position</source>
-        <translation>Posição</translation>
+        <translation type="vanished">Posição</translation>
     </message>
     <message>
         <location filename="../ShapeRectangleSizeInit.js" line="+2"/>
@@ -176,6 +163,26 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location line="+5"/>
         <source>Draw rectangle with position and size</source>
         <translation>Desenhar retângulo com a posição e tamanho</translation>
+    </message>
+    <message>
+        <location filename="../ShapeRectangleSize.ui" line="+17"/>
+        <source>&amp;Width:</source>
+        <translation type="unfinished">&amp;Largura:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>&amp;Height:</source>
+        <translation type="unfinished">&amp;Altura:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished">Ponto de referência:</translation>
     </message>
 </context>
 </TS>

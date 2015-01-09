@@ -36,7 +36,7 @@
     <message>
         <location line="+7"/>
         <source>Center Left of Line P1 - P2</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskitä vasemmalle linjasta P1 - P2</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -47,7 +47,7 @@
     <message>
         <location line="-10"/>
         <source>Center Right of Line P1 - P2</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskitä oikealle linjasta P1 - P2</translation>
     </message>
     <message>
         <location filename="../Circle2PRInit.js" line="+2"/>

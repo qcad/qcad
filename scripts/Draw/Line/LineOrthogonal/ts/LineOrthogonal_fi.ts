@@ -11,7 +11,7 @@
     <message>
         <location line="+20"/>
         <source>&amp;Reference Point:</source>
-        <translation>&amp;Referenssipiste:</translation>
+        <translation>&amp;Viitepiste:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -36,7 +36,7 @@
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to base entity</source>
-        <translation type="unfinished">Piirrä viiva kohtisuorassa perus</translation>
+        <translation>Piirrä viiva kohtisuorassa peruskohdasta</translation>
     </message>
 </context>
 </TS>

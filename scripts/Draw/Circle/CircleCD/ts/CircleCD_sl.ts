@@ -4,29 +4,49 @@
 <context>
     <name>CircleCD</name>
     <message>
-        <location filename="../CircleCD.js" line="+56"/>
         <source>Center or radius</source>
-        <translation>Središče ali polmer</translation>
+        <translation type="vanished">Središče ali polmer</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
-        <translation>Središče</translation>
+        <translation type="vanished">Središče</translation>
+    </message>
+    <message>
+        <source>Radius:</source>
+        <translation type="vanished">Polmer:</translation>
+    </message>
+    <message>
+        <source>Center, &amp;Radius</source>
+        <translation type="vanished">Središče, &amp;Polmer</translation>
+    </message>
+    <message>
+        <source>Draw circle from center and radius</source>
+        <translation type="vanished">Nariši krog iz središča ter polmera</translation>
     </message>
     <message>
         <location filename="../CircleCD.ui" line="+17"/>
-        <source>Radius:</source>
-        <translation>Polmer:</translation>
+        <source>Diameter:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../CircleCDInit.js" line="+2"/>
-        <source>Center, &amp;Radius</source>
-        <translation>Središče, &amp;Polmer</translation>
+        <source>Center, &amp;Diameter</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Draw circle from center and radius</source>
-        <translation>Nariši krog iz središča ter polmera</translation>
+        <location line="+4"/>
+        <source>Draw circle from center and diameter</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

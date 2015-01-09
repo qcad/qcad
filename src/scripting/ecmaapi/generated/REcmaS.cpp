@@ -1501,8 +1501,8 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("JoinSquare",
-    QScriptValue(RS::JoinSquare),
+    ctor.setProperty("JoinBevel",
+    QScriptValue(RS::JoinBevel),
     QScriptValue::ReadOnly);
 
 
@@ -1538,6 +1538,11 @@
 
     ctor.setProperty("EndOpenRound",
     QScriptValue(RS::EndOpenRound),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EndOpenSingle",
+    QScriptValue(RS::EndOpenSingle),
     QScriptValue::ReadOnly);
 
 

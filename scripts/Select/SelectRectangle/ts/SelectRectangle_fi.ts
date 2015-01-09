@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>SelectRectangle</name>
     <message>
         <location filename="../SelectRectangle.js" line="+73"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensimmäinen kulma</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -54,17 +54,17 @@
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Ristikkäisvalinta</translation>
     </message>
     <message>
         <location filename="../SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse (tai peru valinta) suorakulmainen alue</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse (peru valinnat) kaikki kohteet suorakulmion sisältä</translation>
     </message>
 </context>
 </TS>

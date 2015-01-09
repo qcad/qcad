@@ -9,7 +9,7 @@
         <translation>Referencia pont</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+29"/>
         <source>Save library item as...</source>
         <translation>Könyvtárba mentés mint...</translation>
     </message>

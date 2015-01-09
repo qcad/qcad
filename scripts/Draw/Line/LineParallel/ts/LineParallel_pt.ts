@@ -4,10 +4,9 @@
 <context>
     <name>LineParallel</name>
     <message>
-        <location filename="../LineParallel.js" line="+68"/>
         <source>Choose line, arc or circle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha linha, arco ou círculo</translation>
+        <translation type="vanished">Escolha linha, arco ou círculo</translation>
     </message>
     <message>
         <location filename="../LineParallelInit.js" line="+2"/>

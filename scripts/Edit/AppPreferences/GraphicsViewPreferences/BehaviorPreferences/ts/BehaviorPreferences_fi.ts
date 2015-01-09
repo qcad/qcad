@@ -6,7 +6,7 @@
     <message>
         <location filename="../BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished">Kuvanäkymä</translation>
+        <translation>Graafinen näkymä</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -29,32 +29,32 @@
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaksoisnapsaus lohkoviitteessä avaa lohkon</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Right-Click</source>
-        <translation type="unfinished"></translation>
+        <translation>Oikea napsautus</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Oikea napsautus poistaa valinnat</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cursor Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohdistimen alue</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Cursor range for snap:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohdistimen alue napsaukselle:</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Cursor range for picking entities:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohdistimen alue kohteiden poimintaan: </translation>
     </message>
 </context>
 </TS>

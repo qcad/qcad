@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>Mirror</name>
     <message>
@@ -39,12 +39,12 @@
     <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Säilytä alkuperäinen</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
     </message>
 </context>
 </TS>

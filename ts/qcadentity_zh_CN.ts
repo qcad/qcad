@@ -233,7 +233,7 @@
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>覆盖角度</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -566,7 +566,7 @@
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-5"/>
         <source>Polyline Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>多段线样式</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -11,7 +11,7 @@
     <message>
         <location line="+7"/>
         <source>Point on arc or radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Piste kaarella tai säteellä</translation>
     </message>
     <message>
         <location line="+1"/>

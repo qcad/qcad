@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>CadToolBar</name>
     <message>
         <location filename="../CadToolBar.js" line="+51"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Pienoisohjelmat</translation>
     </message>
     <message>
         <location line="+0"/>

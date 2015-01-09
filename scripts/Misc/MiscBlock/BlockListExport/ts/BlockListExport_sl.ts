@@ -13,5 +13,10 @@
         <source>CSV</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location line="+20"/>
+        <source>&amp;Export Block List</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

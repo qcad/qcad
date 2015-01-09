@@ -33,11 +33,26 @@
         <source>Move entity to desired location</source>
         <translation>Objekt verschieben</translation>
     </message>
+    <message>
+        <location line="+311"/>
+        <source>Move Reference Point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Entity</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+57"/>
+        <location filename="../EAction.js" line="+58"/>
         <source>Back</source>
         <translation>Zurück</translation>
     </message>
@@ -47,7 +62,7 @@
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="+267"/>
+        <location line="+272"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -62,7 +77,7 @@
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+420"/>
+        <location line="+426"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -87,7 +102,7 @@
         <translation>Element ist auf gesperrtem Layer.</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+85"/>
         <source>Entity is not a block reference.</source>
         <translation>Element ist keine Block Referenz.</translation>
     </message>
@@ -127,7 +142,12 @@
         <translation>Element ist keine Linie, kein Bogen oder Kreis, keine Ellipse und keine Spline.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation>Element ist keine Polylinie.</translation>
     </message>
@@ -135,7 +155,7 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+307"/>
+        <location filename="../ShapeAlgorithms.js" line="+335"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisen.</translation>
     </message>
@@ -145,7 +165,7 @@
         <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location line="+470"/>
+        <location line="+562"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>
@@ -178,7 +198,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+949"/>
+        <location filename="../WidgetFactory.js" line="+957"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>

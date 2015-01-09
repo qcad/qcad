@@ -1,27 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="zh_CN">
+<TS version="2.0" language="zh_CN">
 <context>
     <name>CircleConcentric</name>
     <message>
-        <location filename="../CircleConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>距离：</translation>
+        <translation type="obsolete">距离：</translation>
+    </message>
+    <message>
+        <source>Number:</source>
+        <translation type="obsolete">数字：</translation>
+    </message>
+    <message>
+        <source>&amp;Concentric (with Distance)</source>
+        <translation type="obsolete">根据距离同心(&amp;C)</translation>
+    </message>
+    <message>
+        <source>Draw concentric circle</source>
+        <translation type="obsolete">画同心圆</translation>
+    </message>
+</context>
+<context>
+    <name>EllipseConcentric</name>
+    <message>
+        <location filename="../EllipseConcentric.ui" line="+17"/>
+        <source>Distance:</source>
+        <translation type="unfinished">距离：</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation>数字：</translation>
+        <translation type="unfinished">数字：</translation>
     </message>
     <message>
-        <location filename="../CircleConcentricInit.js" line="+2"/>
-        <source>&amp;Concentric (with Distance)</source>
-        <translation>根据距离同心(&amp;C)</translation>
+        <location filename="../EllipseConcentricInit.js" line="+2"/>
+        <source>&amp;Parallel Curve (with Distance)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Draw concentric circle</source>
-        <translation>画同心圆</translation>
+        <location line="+4"/>
+        <source>Draw parallel curve to ellipse</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -26,7 +26,7 @@
     <message>
         <location line="+14"/>
         <source>Arrow head</source>
-        <translation type="unfinished">Nuoli</translation>
+        <translation>Nuolenpää</translation>
     </message>
     <message>
         <location filename="../LeaderInit.js" line="+2"/>

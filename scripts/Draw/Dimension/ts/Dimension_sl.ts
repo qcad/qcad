@@ -49,7 +49,7 @@
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+58"/>
         <source>Dimension Tools</source>
         <translation>Orodja dimenzij</translation>
     </message>
@@ -87,6 +87,16 @@
         <location line="+44"/>
         <source>Lower tolerance</source>
         <translation>Spodnja toleranca</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Drawing Scale</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

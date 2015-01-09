@@ -4,11 +4,6 @@
 <context>
     <name>LineParallel</name>
     <message>
-        <location filename="../LineParallel.js" line="+68"/>
-        <source>Choose line, arc or circle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
         <translation type="unfinished"></translation>

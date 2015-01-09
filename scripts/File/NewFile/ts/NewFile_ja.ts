@@ -78,7 +78,7 @@
         <translation>読み込み専用</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>このドキュメントへの変更を保存しますか？&lt;br&gt;&apos;%1&apos;</translation>
     </message>

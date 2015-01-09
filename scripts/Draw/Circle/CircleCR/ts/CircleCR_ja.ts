@@ -4,14 +4,12 @@
 <context>
     <name>CircleCR</name>
     <message>
-        <location filename="../CircleCR.js" line="+56"/>
         <source>Center or radius</source>
-        <translation>中心または半径</translation>
+        <translation type="vanished">中心または半径</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
-        <translation>中心</translation>
+        <translation type="vanished">中心</translation>
     </message>
     <message>
         <location filename="../CircleCR.ui" line="+17"/>
@@ -19,12 +17,22 @@
         <translation>半径:</translation>
     </message>
     <message>
+        <location line="+27"/>
+        <source>Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
         <translation>&amp;R 中心、半径</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and radius</source>
         <translation>中心及び半径半径から円を描画</translation>
     </message>

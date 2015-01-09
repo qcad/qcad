@@ -201,6 +201,7 @@ dir="./entity" filename="RDimensionData.h">
   <specifier>const</specifier>;</function_decl>
   <function>
     <type>
+      <name>virtual</name>
       <name>void</name>
     </type>
     <name>setDefinitionPoint</name>

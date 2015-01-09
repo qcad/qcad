@@ -14,7 +14,7 @@
         <translation>根据点同心(&amp;t)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle through point</source>
         <translation>通过点画同心圆</translation>
     </message>

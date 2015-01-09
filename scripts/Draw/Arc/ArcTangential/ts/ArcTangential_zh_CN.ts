@@ -9,7 +9,7 @@
         <translation>选择基准线或基准弧</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Choose end point of arc</source>
         <translation>选择弧线的结束点</translation>
     </message>

@@ -31,12 +31,12 @@
     <message>
         <location filename="../LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation>Kulman Puolittaja</translation>
+        <translation>Kulman &amp;puolittaja</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirä kulman puolittaja, kolmasosittaja, ...</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="nl_NL">
+<TS version="2.1" language="nl_NL">
 <context>
     <name>QObject</name>
     <message>
@@ -112,7 +112,7 @@
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+411"/>
+        <location filename="../src/core/RColor.cpp" line="+298"/>
         <source>By Layer</source>
         <translation>Door Laag bepaald</translation>
     </message>
@@ -150,6 +150,11 @@
         <location line="+1"/>
         <source>Yellow</source>
         <translation>Geel</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Orange</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -444,7 +449,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+169"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+168"/>
         <source>Requires selection</source>
         <translation>Selectie vereist</translation>
     </message>
@@ -508,7 +513,7 @@
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+629"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+817"/>
         <source>By Layer</source>
         <translation>Door laag bepaald</translation>
     </message>
@@ -690,8 +695,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>Drainage Reversed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Drainage Reverse</source>
-        <translation>Riolering omgekeerd</translation>
+        <translation type="vanished">Riolering omgekeerd</translation>
     </message>
 </context>
 <context>

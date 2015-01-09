@@ -61,6 +61,9 @@
         getReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        recomputeDefinitionPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         rotate
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

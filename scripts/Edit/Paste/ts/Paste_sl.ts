@@ -19,7 +19,7 @@
         <translation>Rotiraj prilepljene entitete&lt;br&gt;za ta kot</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+97"/>
         <source>Scale:</source>
         <translation>Razmerje:</translation>
     </message>
@@ -29,7 +29,7 @@
         <translation>Povečaj/pomanjšaj entitete&lt;br&gt;za ta faktor</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Zrcali prilepljene entitete&lt;br&gt;po vodoravni osi</translation>
     </message>
@@ -39,7 +39,7 @@
         <translation>Zrcali prilepljene entitete&lt;br&gt;po navpični osi</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation>Prilepti vse entitete&lt;br&gt;na trenutno plast&lt;br&gt;namesto na izvorno</translation>
     </message>

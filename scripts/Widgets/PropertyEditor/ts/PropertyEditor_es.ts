@@ -34,7 +34,7 @@ Tipo de línea:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+372"/>
+        <location filename="../PropertyEditor.js" line="+373"/>
         <source>Geometry</source>
         <translation>Geometría</translation>
     </message>

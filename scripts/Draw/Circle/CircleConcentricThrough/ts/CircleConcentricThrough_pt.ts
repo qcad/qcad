@@ -12,7 +12,7 @@ Concêntricos (&amp;através ponto)</translatorcomment>
         <translation>Concêntricos (&amp;através ponto)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle through point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhar círculo concêntrico através do ponto</translation>

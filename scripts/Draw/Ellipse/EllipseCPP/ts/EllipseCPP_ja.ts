@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.0" language="ja_JP">
 <context>
     <name>EllipseCPP</name>
     <message>
-        <location filename="../EllipseCPPInit.js" line="+2"/>
         <source>&amp;Full Ellipse</source>
-        <translation>&amp;F 楕円弧</translation>
+        <translation type="obsolete">&amp;F 楕円弧</translation>
+    </message>
+    <message>
+        <location filename="../EllipseCPPInit.js" line="+2"/>
+        <source>&amp;Full Ellipse with Center, Point, Ratio</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>

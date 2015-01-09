@@ -14,7 +14,7 @@
         <translation>Kocentično (&amp;skozi točko)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle through point</source>
         <translation>Nariši kocentrični krog, skozi točko</translation>
     </message>

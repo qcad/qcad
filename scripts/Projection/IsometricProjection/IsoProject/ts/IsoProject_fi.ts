@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>IsoProject</name>
     <message>
         <location filename="../IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Ylä</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Ala</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasen</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation type="unfinished"></translation>
+        <translation>vasen taka</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Oikea</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation type="unfinished"></translation>
+        <translation>Oikea taka</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Kierrä valintaa vastapäivään ennen projektiota</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Kierrä valintaa myötäpäivään ennen projektiota</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -51,12 +51,12 @@
     <message>
         <location line="+3"/>
         <source>True scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Todellinen asteikko</translation>
     </message>
     <message>
         <location filename="../IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Isometrinen projektio</translation>
     </message>
 </context>
 </TS>

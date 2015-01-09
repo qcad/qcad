@@ -65,7 +65,7 @@ Delta Y</translatorcomment>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+58"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ferramentas cotas</translation>
@@ -122,6 +122,16 @@ Tolerância superior</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Tolerância Inferior</translatorcomment>
         <translation>Tolerância inferior</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Scale</source>
+        <translation>Escala</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Drawing Scale</source>
+        <translation>Escala de desenho</translation>
     </message>
 </context>
 </TS>

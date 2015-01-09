@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -30,7 +30,7 @@
     </message>
     <message>
         <source>Loading...</source>
-        <translation>Cargando...</translation>
+        <translation type="vanished">Cargando...</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -64,7 +64,7 @@
     </message>
     <message>
         <source>Opened drawing:</source>
-        <translation>Dibujo Abierto:</translation>
+        <translation type="vanished">Dibujo Abierto:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -82,7 +82,7 @@
         <translation>Sólo lectura</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>¿Desea guardar los cambios realizados en el&lt;br&gt;documento &apos;%1&apos;?</translation>
     </message>
