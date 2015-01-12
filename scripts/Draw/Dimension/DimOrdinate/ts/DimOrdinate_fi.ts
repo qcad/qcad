@@ -11,7 +11,7 @@
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Johdon päätepiste</translation>
+        <translation>Perusviivan päätepiste</translation>
     </message>
     <message>
         <location filename="../DimOrdinateInit.js" line="+2"/>

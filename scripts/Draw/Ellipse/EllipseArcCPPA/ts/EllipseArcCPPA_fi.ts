@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fi">
+<TS version="2.1" language="fi">
 <context>
     <name>EllipseArcCPPA</name>
     <message>
@@ -46,7 +46,7 @@
     <message>
         <location line="+264"/>
         <source>Invalid major radius.</source>
-        <translation>Virheellinen pääsäde</translation>
+        <translation>Virheellinen pääsäde.</translation>
     </message>
     <message>
         <location line="+10"/>

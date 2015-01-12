@@ -39,8 +39,8 @@ Haluaa palauttaa sen piirroksen?</translation>
         <location line="+4"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation>Nimettömien piirroksien automaattiset %1 varmuuskopiotiedostot löytyivät.
-Haluaa palauttaa ne piirrokset? </translation>
+        <translation>%1 varmuuskopiotiedostot &apos;autosave&apos; löytyivät nimettömille piirroksille.
+Haluaa palauttaa ne piirrokset?</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -50,7 +50,7 @@ Haluaa palauttaa ne piirrokset? </translation>
     <message>
         <location line="+16"/>
         <source>Recovered</source>
-        <translation type="unfinished"></translation>
+        <translation>Palautettu</translation>
     </message>
     <message>
         <location line="+47"/>

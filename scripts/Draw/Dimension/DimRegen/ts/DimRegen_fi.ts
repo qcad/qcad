@@ -6,7 +6,7 @@
     <message>
         <location filename="../DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation>Ei mittasuhdetta valittuna olevaan mukautettuun etikettiin</translation>
+        <translation>Ei mittasuhdetta valittuna olevaan mukautettuun etikettiin.</translation>
     </message>
     <message>
         <location line="+3"/>

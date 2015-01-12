@@ -21,7 +21,7 @@
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation>vasen taka</translation>
+        <translation>Vasen taka</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -46,7 +46,7 @@
     <message>
         <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation type="unfinished"></translation>
+        <translation>Säädä projektio alkuperäiseen kokoonsa (&apos;isometrinen piirros&apos;)</translation>
     </message>
     <message>
         <location line="+3"/>

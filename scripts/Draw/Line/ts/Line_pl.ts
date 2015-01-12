@@ -30,7 +30,7 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
     </message>
     <message>
         <location filename="../Line.ui" line="+17"/>
-        <source>Same Type as Original</source>
+        <source>Same Entity Type as Original</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

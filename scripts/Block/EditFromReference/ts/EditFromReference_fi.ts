@@ -11,7 +11,7 @@
     <message>
         <location filename="../EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation>Muokkaa lohkoa viitteestä </translation>
+        <translation>Muokkaa lohkoa viitteestä</translation>
     </message>
     <message>
         <location line="+1"/>

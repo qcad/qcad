@@ -46,7 +46,7 @@
     <message>
         <location line="+17"/>
         <source>Black / white</source>
-        <translation>Mustavalkoinen</translation>
+        <translation>Musta /valko</translation>
     </message>
 </context>
 </TS>

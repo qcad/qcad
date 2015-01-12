@@ -6,7 +6,7 @@
     <message>
         <location filename="../PdfExportInit.js" line="+2"/>
         <source>P&amp;DF Export</source>
-        <translation>PDF vienti</translation>
+        <translation>P&amp;DF vienti</translation>
     </message>
     <message>
         <location line="+6"/>

@@ -31,7 +31,7 @@
     <message>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
-        <translation type="unfinished"></translation>
+        <translation>Suhteellinen</translation>
     </message>
     <message>
         <location filename="../SnapCoordinatePolarInit.js" line="+2"/>

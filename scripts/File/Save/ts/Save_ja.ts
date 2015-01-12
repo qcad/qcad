@@ -64,7 +64,7 @@
         <translation>ファイル%1は保存されていません。</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Saved drawing:</source>
         <translation>図面が保存されました：</translation>
     </message>

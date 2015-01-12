@@ -31,7 +31,7 @@
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation type="unfinished">Ole hyvä ja valitse asetukset uuteen piirrokseen. Kaikkia näitä asetuksia voi muuttaa myöhemmin ominaisuusvalikosta.</translation>
+        <translation>Ole hyvä ja valitse asetukset uuteen piirrokseen. Kaikkia näitä asetuksia voidaan muuttaa myöhemmin ominaisuusvalikosta.</translation>
     </message>
     <message>
         <location line="+14"/>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../Modify.js" line="+100"/>
         <source>Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Muunnostyökalut</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show modification tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä muunnostyökalut</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Muunna</translation>
     </message>
 </context>
 <context>

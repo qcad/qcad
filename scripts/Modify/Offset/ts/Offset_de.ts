@@ -26,12 +26,16 @@
     <message>
         <location filename="../OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>Versatz (mit Distanz)</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Offset line, arc, circle or ellipse</source>
+        <translation>Linie, Bogen, Kreis oder Ellipse versetzen</translation>
+    </message>
+    <message>
         <source>Offset line, arc, circle, ellipse or polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Linie, Bogen, Kreis, Ellipse oder Polylinie versetzen</translation>
     </message>
     <message>
         <source>Draw parallel to existing line or concentric arc, circle</source>
@@ -50,7 +54,7 @@
     <message>
         <location filename="../Offset.js" line="+77"/>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation type="unfinished"></translation>
+        <translation>Linie, Bogen, Kreis oder Ellipse wählen</translation>
     </message>
 </context>
 </TS>

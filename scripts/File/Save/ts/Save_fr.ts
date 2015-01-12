@@ -44,7 +44,7 @@
         <translation>Procéder?</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+43"/>
         <source>Saved drawing:</source>
         <translation>Dessin enregistré :</translation>
     </message>
@@ -58,7 +58,7 @@
         <translation type="obsolete">Toutes les couleurs personnalisées seront &apos;arrondi&apos; à la couleur la plus proche fixe. Procéder?</translation>
     </message>
     <message>
-        <location line="-28"/>
+        <location line="-29"/>
         <source>Saving...</source>
         <translation>Enregistrement...</translation>
     </message>

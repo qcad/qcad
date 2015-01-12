@@ -31,7 +31,7 @@
     <message>
         <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation>Tiedosto ”%1” on jo olemassa. Haluatko korvata sen?</translation>
+        <translation>Tiedosto &apos;%1&apos; on jo olemassa. Haluatko korvata sen?</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../ArcChangeDirection.js" line="+67"/>
         <source>Change Arc Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Bogenrichtung ändern</translation>
     </message>
 </context>
 </TS>

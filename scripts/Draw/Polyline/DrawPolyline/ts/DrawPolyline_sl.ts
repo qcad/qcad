@@ -4,22 +4,45 @@
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../DrawPolyline.js" line="+69"/>
+        <location filename="../DrawPolyline.js" line="+85"/>
         <source>First vertex</source>
         <translation>Prvi lom</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
+        <source>Select arc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Next vertex</source>
         <translation>Naslednji lom</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
+        <location line="+7"/>
+        <location line="+7"/>
+        <location line="+7"/>
         <source>Done</source>
         <translation>Končano</translation>
     </message>
     <message>
-        <location line="+415"/>
+        <location line="-17"/>
+        <source>Center point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Point on arc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>End point of arc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+573"/>
         <source>close</source>
         <translation type="unfinished"></translation>
     </message>
@@ -36,6 +59,17 @@
     <message>
         <location line="+6"/>
         <source>arc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Invalid radius</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+51"/>
+        <source>The two points are identical</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -70,7 +104,12 @@
     </message>
     <message>
         <location line="+14"/>
-        <source>Arc with radius:</source>
+        <source>Add arc segment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Arc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -79,12 +118,63 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+16"/>
+        <source>Arc Create Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Tangential</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Center Pt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Second Pt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>End Pt, Radius</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>End Pt, Sweep</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <location line="+10"/>
+        <source>Radius</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Sweep</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+10"/>
+        <source>Included angle of arc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Direction: Counterclockwise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Direction: Clockwise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Restrict length or angle</source>
         <translation type="unfinished"></translation>
     </message>

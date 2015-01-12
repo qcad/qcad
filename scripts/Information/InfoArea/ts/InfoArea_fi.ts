@@ -21,7 +21,7 @@
     <message>
         <location line="+1"/>
         <source>circumference:</source>
-        <translation>Ympärysmitta:</translation>
+        <translation>ympärysmitta:</translation>
     </message>
     <message>
         <location filename="../InfoArea.ui" line="+17"/>

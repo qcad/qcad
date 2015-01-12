@@ -16,7 +16,7 @@
     <message>
         <location line="+4"/>
         <source>Draw single point</source>
-        <translation>Piirrä yksittäinen piste </translation>
+        <translation>Piirrä yksittäinen piste</translation>
     </message>
 </context>
 </TS>

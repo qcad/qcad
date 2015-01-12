@@ -6,7 +6,7 @@
     <message>
         <location filename="../SelectIntersectedEntities.js" line="+89"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensimmäinen piste</translation>
     </message>
     <message>
         <location line="+5"/>

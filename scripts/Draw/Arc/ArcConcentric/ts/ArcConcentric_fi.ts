@@ -16,7 +16,7 @@
     <message>
         <location filename="../ArcConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation>&amp;samankeskinen (etäisyyden kanssa)</translation>
+        <translation>&amp;Samankeskinen (etäisyyden kanssa)</translation>
     </message>
     <message>
         <location line="+5"/>

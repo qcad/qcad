@@ -36,12 +36,12 @@
     <message>
         <location filename="../SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Etäisyys käsivaraisesti</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Snap distance between 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation>Napsauta etäisyys 2 pisteen välillä</translation>
     </message>
 </context>
 </TS>

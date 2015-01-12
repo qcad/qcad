@@ -127,7 +127,7 @@
     <message>
         <location line="+1"/>
         <source>Almost equal</source>
-        <translation>lähes yhtäsuuri</translation>
+        <translation>Lähes yhtäsuuri</translation>
     </message>
     <message>
         <location line="+1"/>

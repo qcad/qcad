@@ -6,17 +6,17 @@
     <message>
         <location filename="../Mirror.js" line="+62"/>
         <source>First point of symmetry axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Symmetria-akselin ensimmäinen piste</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Symmetria-akselin toinen piste</translation>
     </message>
     <message>
         <location filename="../MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Peilaa</translation>
     </message>
 </context>
 <context>
@@ -24,17 +24,17 @@
     <message>
         <location filename="../MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Peilisetukset</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopioiden määrä</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pyyhi alkuperäinen</translation>
     </message>
     <message>
         <location line="+10"/>

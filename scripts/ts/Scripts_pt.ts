@@ -41,17 +41,17 @@
     <message>
         <location line="+311"/>
         <source>Move Reference Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover ponto de referência</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover seleção</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover entidade</translation>
     </message>
 </context>
 <context>
@@ -179,7 +179,7 @@ Ferramentas CAD</translatorcomment>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entidade não é uma linha, um arco, círculo, elipse, uma spline ou polilinha.</translation>
     </message>
     <message>
         <location line="+4"/>

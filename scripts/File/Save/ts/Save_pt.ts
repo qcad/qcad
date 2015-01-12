@@ -41,7 +41,7 @@
         <translation>Proceder?</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+43"/>
         <source>Saved drawing:</source>
         <translation>Desenho guardado:</translation>
     </message>
@@ -55,7 +55,7 @@
         <translation type="obsolete">Todas as cores personalizadas serão &apos;arredondado&apos; para a cor mais próxima fixo. Proceder?</translation>
     </message>
     <message>
-        <location line="-28"/>
+        <location line="-29"/>
         <source>Saving...</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

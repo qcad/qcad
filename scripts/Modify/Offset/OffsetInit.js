@@ -3,7 +3,7 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/Offset.js");
     action.setIcon(basePath + "/Offset.svg");
-    action.setStatusTip(qsTranslate("Offset", "Offset line, arc, circle, ellipse or polyline"));
+    action.setStatusTip(qsTranslate("Offset", "Offset line, arc, circle or ellipse"));
     action.setDefaultShortcut(new QKeySequence("o,f"));
     action.setDefaultCommands(["offset", "of"]);
     action.setGroupSortOrder(13150);

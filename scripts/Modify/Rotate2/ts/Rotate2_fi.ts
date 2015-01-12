@@ -29,37 +29,37 @@
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopioiden määrä</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pyyhi alkuperäinen</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Säilytä alkuperäinen</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Useita kopioita</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>Angle (&amp;a):</source>
-        <translation type="unfinished"></translation>
+        <translation>Kulma (&amp;a):</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle (&amp;b):</source>
-        <translation type="unfinished"></translation>
+        <translation>Kulma (&amp;b):</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
     </message>
 </context>
 <context>
@@ -67,12 +67,12 @@
     <message>
         <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensisijainen kulma:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Toissijainen kulma:</translation>
     </message>
     <message>
         <location line="+17"/>

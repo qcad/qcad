@@ -41,17 +41,17 @@
     <message>
         <location line="+311"/>
         <source>Move Reference Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer référence</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer sélection</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer entité</translation>
     </message>
 </context>
 <context>
@@ -159,7 +159,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entité n&apos;est pas une ligne, un arc, un cercle, une ellipse, une spline ou polyligne.</translation>
     </message>
     <message>
         <location line="+4"/>

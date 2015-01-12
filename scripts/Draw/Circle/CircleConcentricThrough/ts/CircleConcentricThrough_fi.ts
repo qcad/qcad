@@ -11,7 +11,7 @@
     <message>
         <location filename="../CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation>Samankeskeinen (&amp;pisteen kautta)</translation>
+        <translation>Samankeskinen (&amp;pisteen kautta)</translation>
     </message>
     <message>
         <location line="+4"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../LineTangent2.js" line="+70"/>
         <source>Choose first circle or arc</source>
-        <translation>Valitse ensimmäinen ympyrä tai kaari </translation>
+        <translation>Valitse ensimmäinen ympyrä tai kaari</translation>
     </message>
     <message>
         <location line="+11"/>

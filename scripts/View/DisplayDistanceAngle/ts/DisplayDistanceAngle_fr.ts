@@ -10,7 +10,7 @@
     <message>
         <location filename="../DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher &amp;distance/angle</translation>
     </message>
 </context>
 </TS>

@@ -119,22 +119,22 @@
     <message>
         <location filename="../ShapeRectangleSize.ui" line="+17"/>
         <source>&amp;Width:</source>
-        <translation type="unfinished">&amp;Anchura:</translation>
+        <translation>&amp;Anchura:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Height:</source>
-        <translation type="unfinished">&amp;Altura:</translation>
+        <translation>&amp;Altura:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ángulo:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Punto de referencia:</translation>
+        <translation>Punto de referencia:</translation>
     </message>
 </context>
 </TS>

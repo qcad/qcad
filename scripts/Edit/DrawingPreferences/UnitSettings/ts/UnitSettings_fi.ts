@@ -97,7 +97,7 @@
     <message>
         <location line="+1"/>
         <source>Micron</source>
-        <translation>mikrometri</translation>
+        <translation>Mikrometri</translation>
     </message>
     <message>
         <location line="+1"/>

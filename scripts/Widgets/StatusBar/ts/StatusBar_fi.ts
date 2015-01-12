@@ -11,7 +11,7 @@
     <message>
         <location line="+7"/>
         <source>Status Bar Widgets</source>
-        <translation>Tilarivin pienoisohjelmat:</translation>
+        <translation>Tilarivin pienoisohjelmat</translation>
     </message>
     <message>
         <location line="+6"/>

@@ -23,9 +23,13 @@
         <translation type="obsolete">Linie</translation>
     </message>
     <message>
-        <location filename="../Line.ui" line="+17"/>
         <source>Same Type as Original</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Gleicher </translation>
+    </message>
+    <message>
+        <location filename="../Line.ui" line="+17"/>
+        <source>Same Entity Type as Original</source>
+        <translation>Gleicher Objekttyp wie Original</translation>
     </message>
     <message>
         <location line="+23"/>

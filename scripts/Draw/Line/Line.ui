@@ -14,7 +14,7 @@
    <item>
     <widget class="QToolButton" name="TypeAuto">
      <property name="toolTip">
-      <string>Same Type as Original</string>
+      <string>Same Entity Type as Original</string>
      </property>
      <property name="icon">
       <iconset>

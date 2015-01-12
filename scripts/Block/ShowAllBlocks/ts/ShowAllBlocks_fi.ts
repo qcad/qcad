@@ -5,12 +5,12 @@
     <name>ShowAllBlocks</name>
     <message>
         <source>&amp;Show all</source>
-        <translation type="vanished">Näytä Kaikki</translation>
+        <translation type="vanished">&amp;Näytä kaikki</translation>
     </message>
     <message>
         <location filename="../ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show All Blocks</source>
-        <translation>Näytä kaikki lohkot</translation>
+        <translation>&amp;Näytä kaikki lohkot</translation>
     </message>
 </context>
 </TS>

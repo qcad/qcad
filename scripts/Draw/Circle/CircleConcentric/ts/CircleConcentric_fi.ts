@@ -16,7 +16,7 @@
     <message>
         <location filename="../CircleConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation>Samankeskeinen (Etäisyydellä)</translation>
+        <translation>Samankeskinen (etäisyydellä)</translation>
     </message>
     <message>
         <location line="+5"/>

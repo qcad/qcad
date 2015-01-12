@@ -6,12 +6,12 @@
     <message>
         <location filename="../Divide.js" line="+66"/>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse viiva, kaari, ympyrä, ellipsi tai käyrä</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse viiva, kaari, ympyrä tai ellipsi</translation>
     </message>
     <message>
         <location line="+10"/>

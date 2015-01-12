@@ -57,7 +57,7 @@
     <message>
         <location line="+5"/>
         <source>Draw circle from 2 points and radius</source>
-        <translation>Piirrä ympyrä kahdesta pisteestä ja säteestä</translation>
+        <translation>Piirrä ympyrä k2:sta pisteestä ja säteestä</translation>
     </message>
 </context>
 </TS>

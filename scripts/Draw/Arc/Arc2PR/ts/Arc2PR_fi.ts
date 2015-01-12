@@ -78,7 +78,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and radius</source>
-        <translation>Piirrä kaari kahdella pisteellä ja säteellä</translation>
+        <translation>Piirrä kaari 2:lla pisteellä ja säteellä</translation>
     </message>
 </context>
 </TS>

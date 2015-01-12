@@ -6,7 +6,7 @@
     <message>
         <location filename="../SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse tasolla oleva kohde</translation>
     </message>
     <message>
         <location filename="../SelectLayerByEntity.ui" line="+17"/>

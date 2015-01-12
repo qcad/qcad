@@ -110,7 +110,7 @@
         <location line="+25"/>
         <location line="+25"/>
         <source>about:blank</source>
-        <translation>Tietoa:tyhjä</translation>
+        <translation>tietoja: tyhjä</translation>
     </message>
     <message>
         <location line="-66"/>

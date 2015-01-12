@@ -59,7 +59,7 @@
     <message>
         <location line="+51"/>
         <source>Meta grid:</source>
-        <translation>Meta (kuvaus) ristikko:</translation>
+        <translation>Meta/kuvaus ristikko:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -74,7 +74,7 @@
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation>Käytä toissijaista värivalintaa:</translation>
+        <translation>Käytä toissijaista värivalintaa</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -99,17 +99,17 @@
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation>Rajavalintalaatikon täyttö:</translation>
+        <translation>Ristivalintalaatikon täyttö:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Snap Tools</source>
-        <translation>Pikatyökalut</translation>
+        <translation>Napsaustyökalut</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Snap label:</source>
-        <translation>Pikavalikon nimike:</translation>
+        <translation>Napsauksen nimike:</translation>
     </message>
     <message>
         <location line="+33"/>

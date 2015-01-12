@@ -374,7 +374,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Määräävä päätepiste</translation>
+        <translation>Peruslinjan päätepiste</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+2"/>

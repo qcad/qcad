@@ -11,7 +11,7 @@
     <message>
         <location filename="../CreateBlockInit.js" line="+2"/>
         <source>&amp;Create Block from Selection</source>
-        <translation>&amp;Luo Lohko Valinnasta</translation>
+        <translation>&amp;Luo lohko valinnasta</translation>
     </message>
 </context>
 </TS>

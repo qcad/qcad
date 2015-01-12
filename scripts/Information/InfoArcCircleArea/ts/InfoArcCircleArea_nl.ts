@@ -4,12 +4,7 @@
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="+67"/>
-        <source>Select Arc, Circle, Ellipse or Elliptical Arc</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location filename="../InfoArcCircleArea.js" line="+70"/>
         <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20,43 +15,19 @@
         <location line="+21"/>
         <location line="+22"/>
         <location line="+22"/>
-        <source>Area = </source>
+        <source>Area</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-108"/>
         <location line="+66"/>
-        <source>Circumference = </source>
+        <source>Circumference</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-59"/>
-        <source>Circle area:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>circumference:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="-37"/>
         <location line="+24"/>
-        <location line="+43"/>
-        <location line="+22"/>
-        <source>Length = </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-88"/>
-        <location line="+67"/>
-        <source>Chord = </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-60"/>
-        <location line="+24"/>
-        <source>Ellipse Arc area:</source>
+        <source>Ellipse arc area:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -64,49 +35,60 @@
         <location line="+24"/>
         <location line="+43"/>
         <location line="+22"/>
-        <source>Arc Length:</source>
+        <source>arc length:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-88"/>
         <location line="+67"/>
-        <source>Chord:</source>
+        <source>chord:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-52"/>
-        <source>Distance = </source>
+        <source>Distance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Distance:</source>
+        <source>distance:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+65"/>
+        <source>radius:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>Radius</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-104"/>
+        <source>Circle area:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-247"/>
+        <source>Choose arc, circle, ellipse or elliptical arc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+248"/>
+        <location line="+67"/>
+        <source>circumference:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-1"/>
         <source>Ellipse area:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Circumference:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-7"/>
-        <source>Radius = </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Radius:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -140,17 +122,23 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location filename="../InfoArcCircleArea.js" line="-96"/>
+        <location line="+67"/>
+        <location filename="../InfoArcCircleArea.ui" line="+13"/>
         <source>Chord</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location filename="../InfoArcCircleArea.ui" line="+13"/>
         <source>Add lengths/circumference to drawing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../InfoArcCircleArea.js" line="-68"/>
+        <location line="+24"/>
+        <location line="+43"/>
+        <location line="+22"/>
+        <location filename="../InfoArcCircleArea.ui" line="+3"/>
         <source>Length</source>
         <translation type="unfinished"></translation>
     </message>

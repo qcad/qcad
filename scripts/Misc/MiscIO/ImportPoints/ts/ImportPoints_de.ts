@@ -16,7 +16,7 @@
     <message>
         <location line="+60"/>
         <source>&amp;Import Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkte &amp;importieren</translation>
     </message>
 </context>
 </TS>

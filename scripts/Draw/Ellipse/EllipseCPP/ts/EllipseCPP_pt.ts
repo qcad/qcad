@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt_PT">
+<TS version="2.1" language="pt_PT">
 <context>
     <name>EllipseCPP</name>
     <message>
         <source>&amp;Full Ellipse</source>
-        <translation type="obsolete">&amp;Elipse</translation>
+        <translation type="vanished">&amp;Elipse</translation>
     </message>
     <message>
         <location filename="../EllipseCPPInit.js" line="+2"/>

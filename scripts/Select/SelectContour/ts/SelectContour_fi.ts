@@ -6,7 +6,7 @@
     <message>
         <location filename="../SelectContour.js" line="+133"/>
         <source>Choose entity of contour</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse kohteen ääriviiva</translation>
     </message>
     <message>
         <location filename="../SelectContour.ui" line="+17"/>

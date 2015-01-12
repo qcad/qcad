@@ -54,7 +54,7 @@
     <message>
         <location line="+54"/>
         <source>Cursor range for picking entities:</source>
-        <translation>Kohdistimen alue kohteiden poimintaan: </translation>
+        <translation>Kohdistimen alue kohteiden poimintaan:</translation>
     </message>
 </context>
 </TS>

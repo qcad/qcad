@@ -11,7 +11,7 @@
     <message>
         <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation>Tiedosto ”%1” on jo olemassa. Haluatko varmasti korvata sen?</translation>
+        <translation>Tiedosto &apos;%1&apos; on jo olemassa. Haluatko varmasti korvata sen?</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -64,7 +64,7 @@
         <translation>Tiedostoa %1 ei ole tallennettu.</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Saved drawing:</source>
         <translation>Tallennettu piirros:</translation>
     </message>

@@ -6,14 +6,14 @@
     <message>
         <location filename="../CommandLine.js" line="+29"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Pienoisohjelmat</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+45"/>
         <location filename="../CommandLine.ui" line="+14"/>
         <source>Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Komentorivi</translation>
     </message>
     <message>
         <location line="-16"/>
@@ -28,7 +28,7 @@
     <message>
         <location line="+19"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
-        <translation>Tuntematon komento tai puutteellinen koordinaatti tai arvo &apos;%1&apos;.</translation>
+        <translation>Tuntematon komento tai puutteellinen koordinaatti tai arvo &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -78,7 +78,7 @@
     <message>
         <location line="+3"/>
         <source>: </source>
-        <translation type="unfinished"></translation>
+        <translation>: </translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

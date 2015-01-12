@@ -6,7 +6,7 @@
     <message>
         <location filename="../FlipHorizontalInit.js" line="+2"/>
         <source>Flip Hori&amp;zontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Retourner hori&amp;zontalement</translation>
     </message>
 </context>
 </TS>

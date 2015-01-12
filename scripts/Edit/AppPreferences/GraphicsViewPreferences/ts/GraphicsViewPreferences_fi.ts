@@ -91,7 +91,7 @@
     <message>
         <location line="-36"/>
         <source>Automatically use screen based linetypes in model view</source>
-        <translation>Automaattisesti käytä kuvaruudun viivoja muotoilunäkymässä </translation>
+        <translation>Automaattisesti käytä kuvaruudun viivoja muotoilunäkymässä</translation>
     </message>
     <message>
         <source>Auto switch linetypes</source>

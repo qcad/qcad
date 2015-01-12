@@ -20,7 +20,7 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Offset line, arc, circle, ellipse or polyline</source>
+        <source>Offset line, arc, circle or ellipse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

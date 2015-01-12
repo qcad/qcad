@@ -3,7 +3,7 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/OffsetThrough.js");
     action.setIcon(basePath + "/OffsetThrough.svg");
-    action.setStatusTip(qsTranslate("OffsetThrough", "Offset line, arc, circle, ellipse or polyline through a given point"));
+    action.setStatusTip(qsTranslate("OffsetThrough", "Offset line, arc, circle or ellipse through point"));
     action.setDefaultShortcut(new QKeySequence("l,g"));
     action.setDefaultCommands(["lineparallelthrough", "lineoffsetthrough", "offsetthrough", "parallelthrough", "lg"]);
     action.setGroupSortOrder(13150);

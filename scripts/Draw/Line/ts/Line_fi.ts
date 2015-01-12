@@ -11,7 +11,7 @@
     <message>
         <location line="+5"/>
         <source>Show line tools</source>
-        <translation>Näytä viivatyökalut </translation>
+        <translation>Näytä viivatyökalut</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -20,7 +20,7 @@
     </message>
     <message>
         <location filename="../Line.ui" line="+17"/>
-        <source>Same Type as Original</source>
+        <source>Same Entity Type as Original</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

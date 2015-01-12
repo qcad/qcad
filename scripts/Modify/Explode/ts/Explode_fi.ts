@@ -67,7 +67,7 @@
     <message>
         <location line="+8"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Lohkot</translation>
     </message>
     <message>
         <location line="+8"/>

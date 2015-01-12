@@ -6,7 +6,7 @@
     <message>
         <location filename="../InfoAngle.js" line="+66"/>
         <source>Specify first line</source>
-        <translation>Määrittele ensimmäinen rivi </translation>
+        <translation>Määrittele ensimmäinen rivi</translation>
     </message>
     <message>
         <location line="+9"/>

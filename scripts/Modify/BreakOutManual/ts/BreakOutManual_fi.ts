@@ -6,7 +6,7 @@
     <message>
         <location filename="../BreakOutManual.js" line="+78"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation>Valitse katkaistava viiva, kaari tai ellipsi segmentti </translation>
+        <translation>Valitse katkaistava viiva, kaari tai ellipsi segmentti</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -38,7 +38,7 @@
     <message>
         <location filename="../BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Keskeytä itse</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../LineRelativeAngle.js" line="+70"/>
         <source>Choose base entity</source>
-        <translation>Valitse peruskoko</translation>
+        <translation>Valitse peruskohde</translation>
     </message>
     <message>
         <location line="+8"/>
