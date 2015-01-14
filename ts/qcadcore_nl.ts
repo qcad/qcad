@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.0" language="nl_NL">
 <context>
     <name>QObject</name>
     <message>
@@ -154,7 +154,7 @@
     <message>
         <location line="+1"/>
         <source>Orange</source>
-        <translation type="unfinished"></translation>
+        <translation>Oranje</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -696,11 +696,11 @@
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>Riolering omgekeerd</translation>
     </message>
     <message>
         <source>Drainage Reverse</source>
-        <translation type="vanished">Riolering omgekeerd</translation>
+        <translation>Riolering omgekeerd</translation>
     </message>
 </context>
 <context>
