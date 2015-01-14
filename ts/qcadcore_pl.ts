@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.0" language="pl_PL">
 <context>
     <name>QObject</name>
     <message>
@@ -154,7 +154,7 @@
     <message>
         <location line="+2"/>
         <source>Orange</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomarańczowy</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -217,12 +217,12 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktywna warstwa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Rysowanie jednostkowe</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -497,87 +497,87 @@
     <name>RLinetype</name>
     <message>
         <source>By Layer</source>
-        <translation type="vanished">Według warstwy</translation>
+        <translation>Według warstwy</translation>
     </message>
     <message>
         <source>By Block</source>
-        <translation type="vanished">Według bloku</translation>
+        <translation>Według bloku</translation>
     </message>
     <message>
         <source>Continuous</source>
-        <translation type="vanished">Ciągła</translation>
+        <translation>Ciągła</translation>
     </message>
     <message>
         <source>Dot</source>
-        <translation type="vanished">Kropka</translation>
+        <translation>Kropka</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translation type="vanished">Kropka (mała)</translation>
+        <translation>Kropka (mała)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation type="vanished">Kropka (duża)</translation>
+        <translation>Kropka (duża)</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translation type="vanished">Kreska</translation>
+        <translation>Kreska</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translation type="vanished">Kreska (mała)</translation>
+        <translation>Kreska (mała)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation type="vanished">Kreska (duża)</translation>
+        <translation>Kreska (duża)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation type="vanished">Kreska kropka</translation>
+        <translation>Kreska kropka</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation type="vanished">Kreska kropka (mała)</translation>
+        <translation>Kreska kropka (mała)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation type="vanished">Kreska kropka (duża)</translation>
+        <translation>Kreska kropka (duża)</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translation type="vanished">Podzielona</translation>
+        <translation>Podzielona</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translation type="vanished">Podzielona (mała)</translation>
+        <translation>Podzielona (mała)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translation type="vanished">Podzielona (duża)</translation>
+        <translation>Podzielona (duża)</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="vanished">Środek</translation>
+        <translation>Środek</translation>
     </message>
     <message>
         <source>Center (small)</source>
-        <translation type="vanished">Środek (maly)</translation>
+        <translation>Środek (maly)</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translation type="vanished">Środek (duży)</translation>
+        <translation>Środek (duży)</translation>
     </message>
     <message>
         <source>Border</source>
-        <translation type="vanished">Obwódka</translation>
+        <translation>Obwódka</translation>
     </message>
     <message>
         <source>Border (small)</source>
-        <translation type="vanished">Obwódka (mała)</translation>
+        <translation>Obwódka (mała)</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translation type="vanished">Obwódka (duża)</translation>
+        <translation>Obwódka (duża)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
