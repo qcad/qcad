@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.0" language="ja_JP">
 <context>
     <name>InfoArcCircleArea</name>
     <message>
         <location filename="../InfoArcCircleArea.js" line="+70"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>完了</translation>
     </message>
     <message>
         <location line="+235"/>
@@ -16,13 +16,13 @@
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation>エリア</translation>
     </message>
     <message>
         <location line="-108"/>
         <location line="+66"/>
         <source>Circumference</source>
-        <translation type="unfinished"></translation>
+        <translation>外周</translation>
     </message>
     <message>
         <location line="-37"/>
@@ -47,22 +47,22 @@
     <message>
         <location line="-52"/>
         <source>Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>距離</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>距離:</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>半径:</translation>
     </message>
     <message>
         <location line="-9"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>半径</translation>
     </message>
     <message>
         <location line="-104"/>
@@ -78,7 +78,7 @@
         <location line="+248"/>
         <location line="+67"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="-1"/>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../InfoArcCircleArea.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>モード:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -109,7 +109,7 @@
     <message>
         <location line="+30"/>
         <source>Add:</source>
-        <translation type="unfinished"></translation>
+        <translation>追加:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -119,7 +119,7 @@
     <message>
         <location line="+3"/>
         <source>Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>エンティティ</translation>
     </message>
     <message>
         <location filename="../InfoArcCircleArea.js" line="-96"/>
@@ -140,7 +140,7 @@
         <location line="+22"/>
         <location filename="../InfoArcCircleArea.ui" line="+3"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>長さ</translation>
     </message>
     <message>
         <location filename="../InfoArcCircleAreaInit.js" line="+2"/>

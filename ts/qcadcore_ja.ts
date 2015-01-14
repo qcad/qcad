@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<TS version="2.0" language="ja">
 <context>
     <name>QObject</name>
     <message>
@@ -154,7 +154,7 @@
     <message>
         <location line="+2"/>
         <source>Orange</source>
-        <translation type="unfinished"></translation>
+        <translation>炎色</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -217,12 +217,12 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished"></translation>
+        <translation>現在のレイヤー</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>図面単位</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -380,75 +380,75 @@
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
-        <translation type="unfinished"></translation>
+        <translation>シンプル</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished"></translation>
+        <translation>テキスト位置</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>テキスト</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation type="unfinished"></translation>
+        <translation>プレーンテキスト</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Font Name</source>
-        <translation type="unfinished"></translation>
+        <translation>フォント名</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation type="unfinished"></translation>
+        <translation>テキストの高さ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>テキスト角度</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>拡大縮小 X</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>太字</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>斜体</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Line Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>行間隔</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>位置合わせ</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>水平</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>垂直</translation>
     </message>
 </context>
 <context>
@@ -496,97 +496,97 @@
     <name>RLinetype</name>
     <message>
         <source>By Layer</source>
-        <translation type="vanished">画層による</translation>
+        <translation>画層による</translation>
     </message>
     <message>
         <source>By Block</source>
-        <translation type="vanished">ブロックによる</translation>
+        <translation>ブロックによる</translation>
     </message>
     <message>
         <source>Continuous</source>
-        <translation type="vanished">連続</translation>
+        <translation>連続</translation>
     </message>
     <message>
         <source>Dot</source>
-        <translation type="vanished">点</translation>
+        <translation>点</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translation type="vanished">点（小）</translation>
+        <translation>点（小）</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation type="vanished">点（大）</translation>
+        <translation>点（大）</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translation type="vanished">ダッシュ</translation>
+        <translation>ダッシュ</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translation type="vanished">ダッシュ（小）</translation>
+        <translation>ダッシュ（小）</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation type="vanished">ダッシュ（大）</translation>
+        <translation>ダッシュ（大）</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation type="vanished">ダッシュドット</translation>
+        <translation>ダッシュドット</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation type="vanished">ダッシュドット（小）</translation>
+        <translation>ダッシュドット（小）</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation type="vanished">ダッシュドット（大）</translation>
+        <translation>ダッシュドット（大）</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translation type="vanished">分割</translation>
+        <translation>分割</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translation type="vanished">分割（小）</translation>
+        <translation>分割（小）</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translation type="vanished">分割（大）</translation>
+        <translation>分割（大）</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="vanished">センター</translation>
+        <translation>センター</translation>
     </message>
     <message>
         <source>Center (small)</source>
-        <translation type="vanished">センター（小）</translation>
+        <translation>センター（小）</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translation type="vanished">センター（大）</translation>
+        <translation>センター（大）</translation>
     </message>
     <message>
         <source>Border</source>
-        <translation type="vanished">ボーダー</translation>
+        <translation>ボーダー</translation>
     </message>
     <message>
         <source>Border (small)</source>
-        <translation type="vanished">ボーダー（小）</translation>
+        <translation>ボーダー（小）</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translation type="vanished">ボーダー（大）</translation>
+        <translation>ボーダー（大）</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
         <source>Name</source>
-        <translation type="unfinished">画層名</translation>
+        <translation>名前</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>詳細</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -596,7 +596,7 @@
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>パターン</translation>
     </message>
 </context>
 <context>
@@ -604,54 +604,54 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+817"/>
         <source>By Layer</source>
-        <translation type="unfinished">画層による</translation>
+        <translation>画層による</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">ブロックによる</translation>
+        <translation>ブロックによる</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation type="unfinished">ボーダー</translation>
+        <translation>ボーダー</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">センター</translation>
+        <translation>センター</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>一点鎖線</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dashed</source>
-        <translation type="unfinished"></translation>
+        <translation>ダッシュ</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation type="unfinished">分割</translation>
+        <translation>二点鎖線</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation type="unfinished">点</translation>
+        <translation>点</translation>
     </message>
     <message>
         <location line="+2"/>

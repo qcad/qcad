@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.0" language="ja_JP">
 <context>
     <name>AbstractPreferences</name>
     <message>
@@ -39,12 +39,12 @@ QCADを再起動してください。</translation>
     <message>
         <location filename="../Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>編集ツール</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show edit tools</source>
-        <translation type="unfinished"></translation>
+        <translation>編集ツールの表示</translation>
     </message>
     <message>
         <location line="+18"/>

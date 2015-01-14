@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.0" language="ja_JP">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -22,11 +22,11 @@
     <message>
         <location filename="../NewFile.js" line="+114"/>
         <source>Opening drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>オープンされた図面:</translation>
     </message>
     <message>
         <source>Loading...</source>
-        <translation type="vanished">読込中...</translation>
+        <translation>読込中...</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -56,11 +56,11 @@
     <message>
         <location line="+10"/>
         <source>Drawing loaded successfully:</source>
-        <translation type="unfinished"></translation>
+        <translation>ロード済み:</translation>
     </message>
     <message>
         <source>Opened drawing:</source>
-        <translation type="vanished">オープンされた図面:</translation>
+        <translation>オープンされた図面:</translation>
     </message>
     <message>
         <location line="+4"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.0" language="ja_JP">
 <context>
     <name>StatusBar</name>
     <message>
@@ -11,12 +11,12 @@
     <message>
         <location line="+7"/>
         <source>Status Bar Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>ステータスバー</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation type="unfinished"></translation>
+        <translation>座標表示</translation>
     </message>
     <message>
         <location line="+10"/>

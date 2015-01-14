@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<TS version="2.0" language="ja">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -77,11 +77,11 @@
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>寸法ラベルを’建築’または’エンジニアリング’フォーマットで表示するには、図面単位は’インチ’でなければなりません。フォーマットは’小数’に変更されました。</translation>
     </message>
     <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="vanished">寸法ラベルを’建築’または’エンジニアリング’フォーマットで表示するには、図面単位は’インチ’でなければなりません。フォーマットは’小数’に変更されました。</translation>
+        <translation>寸法ラベルを’建築’または’エンジニアリング’フォーマットで表示するには、図面単位は’インチ’でなければなりません。フォーマットは’小数’に変更されました。</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

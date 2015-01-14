@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.0" language="ja_JP">
 <context>
     <name>Dimension</name>
     <message>
@@ -91,12 +91,12 @@
     <message>
         <location line="+20"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>スケール</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>図面の縮尺</translation>
     </message>
 </context>
 </TS>

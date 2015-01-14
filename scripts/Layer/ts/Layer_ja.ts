@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<TS version="2.0" language="ja">
 <context>
     <name>Layer</name>
     <message>
         <location filename="../Layer.js" line="+66"/>
         <source>Layer Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>レイヤツール</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show layer tools</source>
-        <translation type="unfinished"></translation>
+        <translation>表示レイヤツール</translation>
     </message>
     <message>
         <location line="+18"/>

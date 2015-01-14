@@ -3,8 +3,8 @@ SUBDIRS = \
     ts \
     EllipseArcCPPA \
     EllipseCPP \
-    EllipseConcentric \
-    EllipseConcentricThrough \
+    EllipseOffset \
+    EllipseOffsetThrough \
     EllipseDD \
     EllipseInscribedQuad \
     EllipseRR

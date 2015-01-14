@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<TS version="2.0" language="ja">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -56,7 +56,7 @@
     <message>
         <location line="-64"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>原点</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -96,7 +96,7 @@
     <message>
         <location line="+9"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -115,7 +115,7 @@
     </message>
     <message>
         <source>Auto switch linetypes</source>
-        <translation type="vanished">ラインタイプの自動切り替え</translation>
+        <translation>ラインタイプの自動切り替え</translation>
     </message>
     <message>
         <location line="+72"/>
