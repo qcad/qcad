@@ -10,9 +10,9 @@ SUBDIRS = qtscript_core \
 	  qtscript_xmlpatterns \
 	  qtscript_uitools
 
-#!win32 {
+!win32 {
     SUBDIRS += qtscript_network
-#}
+}
 
 !unix {
     SUBDIRS += qtscript_phonon
