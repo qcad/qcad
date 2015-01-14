@@ -43,10 +43,16 @@ RTransaction RPasteOperation::apply(RDocument& document, bool preview) const {
         iMax = 10;
     }
 
+    double rotation = 0.0;
+    if (rotations.length()==1) {
+        // same rotation for all pasted instances:
+        rotation = rotations[0];
+    }
+
     for (int i=0; i<iMax; i++) {
         copy(
             sourceDocument, document,
-            offsets[i], scale, i < rotations.length() ? rotations[i] : 0.0,
+            offsets[i], scale, i < rotations.length() ? rotations[i] : rotation,
             flipHorizontal, flipVertical,
             toCurrentLayer, /*toCurrentBlock=*/ true,
             overwriteLayers && i==0, overwriteBlocks && i==0,
