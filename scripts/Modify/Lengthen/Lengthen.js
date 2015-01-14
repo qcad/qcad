@@ -150,7 +150,7 @@ Lengthen.prototype.getOperation = function(preview) {
         this.entity.trimEndPoint(is);
     }
 
-    return new RAddObjectOperation(this.entity, false);
+    return new RAddObjectOperation(this.entity, this.getToolTitle(), false);
 };
 
 Lengthen.prototype.getHighlightedEntities = function() {

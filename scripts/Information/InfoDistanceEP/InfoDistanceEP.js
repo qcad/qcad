@@ -145,6 +145,7 @@ InfoDistanceEP.prototype.pickCoordinate = function(event, preview) {
 
 InfoDistanceEP.prototype.getOperation = function(preview) {
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     this.addInfoLine(op, this.point1, this.point2, preview);
     return op;
 };

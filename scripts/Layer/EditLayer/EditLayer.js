@@ -45,6 +45,7 @@ EditLayer.prototype.beginEvent = function() {
     }
     
     var operation = new RAddObjectsOperation();
+    operation.setText(this.getToolTitle());
     operation.addObject(newLayer);
     this.completeOperation(operation, layer, newLayer);
 

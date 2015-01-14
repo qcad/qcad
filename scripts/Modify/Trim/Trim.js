@@ -197,6 +197,7 @@ Trim.prototype.getOperation = function(preview) {
     }
 
     var op = new RMixedOperation();
+    op.setText(this.getToolTitle());
 
     qDebug(this.limitingEntity, this.limitingShape, this.limitingPos, this.trimEntity, this.trimPos, this.trimBoth);
     var success = Trim.trim(op, this.limitingEntity, this.limitingShape, this.limitingPos, this.trimEntity, this.trimPos, this.trimBoth, preview);

@@ -111,6 +111,7 @@ InfoPosition.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
 
     var di = this.getDocumentInterface();
     var view = di.getLastKnownViewWithFocus();

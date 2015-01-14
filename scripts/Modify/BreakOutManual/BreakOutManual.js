@@ -250,6 +250,7 @@ BreakOutManual.prototype.getOperation = function(preview) {
     }
 
     var op = new RMixedOperation();
+    op.setText(this.getToolTitle());
     var e;
 
     // replace circle with arc:

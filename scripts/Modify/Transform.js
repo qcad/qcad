@@ -94,6 +94,7 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
     }
 
     op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     for (k=1; k<=num; k++) {
         for (i=0; i<ids.length; i++) {
             if (!cache && preview && op.getPreviewCounter()>RSettings.getPreviewEntities()) {

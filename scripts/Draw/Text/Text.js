@@ -108,7 +108,7 @@ Text.prototype.pickCoordinate = function(event, preview) {
         text = new RTextEntity(this.getDocument(), this.textData);
     }
 
-    var op = new RAddObjectOperation(text);
+    var op = new RAddObjectOperation(text, this.getToolTitle());
     if (preview) {
         di.previewOperation(op);
     }

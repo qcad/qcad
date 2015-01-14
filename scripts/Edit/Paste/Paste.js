@@ -93,6 +93,7 @@ Paste.prototype.pickCoordinate = function(event, preview) {
 
 Paste.prototype.getOperation = function(preview) {
     var op = new RPasteOperation(RDocument.getClipboard());
+    op.setText(this.getToolTitle());
     op.setOffset(this.offset);
     op.setScale(this.scale);
     op.setRotation(this.rotation);

@@ -197,8 +197,7 @@ Image.prototype.pickCoordinate = function(event, preview) {
     this.image.setHeight(this.height);
     this.image.setAngle(this.angle);
 
-    var op = new RAddObjectOperation(this.image);
-    op.setText(this.getToolTitle());
+    var op = new RAddObjectOperation(this.image, this.getToolTitle());
     if (preview) {
         this.getDocumentInterface().previewOperation(op);
     }

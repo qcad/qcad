@@ -43,6 +43,7 @@ Round.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
 
     var success = Round.round(
             op,

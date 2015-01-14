@@ -190,6 +190,7 @@ BreakOut.prototype.getOperation = function(preview) {
     }
 
     var op = new RMixedOperation();
+    op.setText(this.getToolTitle());
     var e;
 
     if (isNull(newSegments[0]) && isNull(newSegments[1])) {

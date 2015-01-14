@@ -188,6 +188,7 @@ InfoAngle.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
 
     var sol = this.shape1.getIntersectionPoints(this.shape2.data(), false);
     if (!isNull(sol) && sol.length > 0) {

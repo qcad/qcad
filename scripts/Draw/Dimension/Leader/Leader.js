@@ -119,8 +119,7 @@ Leader.prototype.pickCoordinate = function(event, preview) {
             this.leaderEntity = new RLeaderEntity(document, new RLeaderData());
             this.leaderEntity.setArrowHead(this.arrowHead);
             this.leaderEntity.appendVertex(point);
-            op = new RAddObjectOperation(this.leaderEntity);
-            op.setText(this.getToolTitle());
+            op = new RAddObjectOperation(this.leaderEntity, this.getToolTitle());
             this.applyOperation(op);
             di.setRelativeZero(point);
             this.setState(Leader.State.SettingNextVertex);

@@ -195,6 +195,7 @@ Divide.prototype.pickCoordinate = function(event, preview) {
 
 Divide.prototype.getOperation = function(preview) {
     var op = new RMixedOperation();
+    op.setText(this.getToolTitle());
 
     var cutPositions = Divide.divide(op, this.pos, this.pos2, this.entity);
     if (cutPositions.length===0) {

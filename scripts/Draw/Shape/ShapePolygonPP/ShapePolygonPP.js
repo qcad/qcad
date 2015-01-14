@@ -139,6 +139,7 @@ ShapePolygonPP.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
 
     var shapes = this.getShapes(corners);
     for (var i=0; i<shapes.length; ++i) {

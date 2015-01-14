@@ -39,6 +39,7 @@ Delete.prototype.beginEvent = function() {
 
 Delete.prototype.applyOperation = function() {
     var op = new RDeleteSelectionOperation();
+    op.setText(this.getToolTitle());
     this.getDocumentInterface().applyOperation(op);
 };
 

@@ -109,8 +109,7 @@ Hatch.prototype.beginEvent = function() {
         this.getDocument(),
         this.hatchData
     );
-    var op = new RAddObjectOperation(hatch);
-    op.setText(this.getToolTitle());
+    var op = new RAddObjectOperation(hatch, this.getToolTitle());
     di.applyOperation(op);
 
     this.terminate();

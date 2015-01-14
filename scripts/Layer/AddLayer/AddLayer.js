@@ -45,7 +45,7 @@ AddLayer.prototype.beginEvent = function() {
         return;
     }
 
-    var operation = new RAddObjectOperation(this.layer);
+    var operation = new RAddObjectOperation(this.layer, this.getToolTitle());
     var di = this.getDocumentInterface();
     di.applyOperation(operation);
 

@@ -42,6 +42,7 @@ Explode.prototype.beginEvent = function() {
     var polyline, shapes, shape;
 
     var op = new RMixedOperation();
+    op.setText(this.getToolTitle());
 
     for (i=0; i<ids.length; i++) {
         var id = ids[i];

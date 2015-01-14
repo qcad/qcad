@@ -114,6 +114,7 @@ InfoArcCircleArea.prototype.getOperation = function(preview) {
 
     var di = this.getDocumentInterface();
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     if (this.addEntity) {
         var entClone = this.shape.clone();
         this.addShape(op, entClone, preview);

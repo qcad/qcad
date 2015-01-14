@@ -41,6 +41,7 @@ Bevel.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
 
     var success = Bevel.bevel(
             op,

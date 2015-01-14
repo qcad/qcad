@@ -75,7 +75,8 @@ ClipboardOperation.prototype.getOffset = function() {
  * \return the appropriate operation (copy or cut).
  */
 ClipboardOperation.prototype.getOperation = function(preview) {
-    return new RCopyOperation(this.getOffset(), this.getDocument());
+    var op = new RCopyOperation(this.getOffset(), this.getDocument());
+    return op;
 };
 
 /**
@@ -90,6 +91,7 @@ ClipboardOperation.prototype.applyOperation = function() {
 
     if (this.cut) {
         var op = new RDeleteSelectionOperation();
+        op.setText(this.getToolTitle());
         this.getDocumentInterface().applyOperation(op);
     }
 };

@@ -120,6 +120,7 @@ InfoArea.prototype.getOperation = function(preview) {
 
     var di = this.getDocumentInterface();
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     this.addShape(op, this.polyline, preview);
 
     var view = di.getLastKnownViewWithFocus();
