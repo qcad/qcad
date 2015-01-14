@@ -665,6 +665,8 @@ dir="./core/math" filename="REllipse.h">
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <comment type="line">// virtual double getAngleAt(double
+  distance, RS::From from = RS::FromStart) const;</comment>
   <function_decl>
   <type>
     <name>double</name>

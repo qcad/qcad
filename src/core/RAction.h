@@ -248,8 +248,8 @@ public:
      */
     virtual void propertyChangeEvent(RPropertyEvent& event) = 0;
 
-    virtual void setMultiSnapPoints(const QList<RVector>& points) = 0;
-    virtual void setMultiSnapAngles(const QList<double>& angles) = 0;
+    //virtual void setMultiSnapPoints(const QList<RVector>& points) = 0;
+    //virtual void setMultiSnapAngles(const QList<double>& angles) = 0;
 
     virtual void updatePreview() = 0;
     virtual void applyOperation() = 0;

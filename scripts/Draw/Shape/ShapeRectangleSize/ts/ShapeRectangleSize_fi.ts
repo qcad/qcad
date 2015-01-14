@@ -81,7 +81,7 @@
     <message>
         <location line="+24"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kulma:</translation>
     </message>
     <message>
         <location line="+30"/>

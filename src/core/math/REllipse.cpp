@@ -466,6 +466,27 @@ double REllipse::getSimpsonLength(double a1, double a2) const {
     return (df / 3.0) * sum;
 }
 
+// depends on implementation of getPointsWithDistanceToEnd:
+//double REllipse::getAngleAt(double distance, RS::From from) const {
+//    REllipse normal = *this;
+//    normal.rotate(-getAngle());
+
+//    QList<RVector> points = normal.getPointsWithDistanceToEnd(distance, from);
+//    if (points.length()!=1) {
+//        return RNANDOUBLE;
+//    }
+
+//    RVector p = points[0];
+
+//    double minR = normal.getMinorRadius();
+//    double majR = normal.getMajorRadius();
+
+//    double ret = - ((minR*minR*p.x) / (majR*majR*p.y));
+//    ret+=getAngle();
+//    return ret;
+//}
+
+
 bool REllipse::isReversed() const {
     return reversed;
 }

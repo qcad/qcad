@@ -327,7 +327,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="CCW" />
     </enum>
     <enum name="JoinType">
-      <value name="JoinSquare" />
+      <value name="JoinBevel" />
       <value name="JoinRound" />
       <value name="JoinMiter" />
     </enum>

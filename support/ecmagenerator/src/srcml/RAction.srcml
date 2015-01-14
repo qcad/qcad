@@ -689,46 +689,10 @@ dir="./core" filename="RAction.h">
     </decl>
   </param>)</parameter_list>
   <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setMultiSnapPoints</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>points</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setMultiSnapAngles</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>double</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>angles</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
+  <comment type="line">//virtual void setMultiSnapPoints(const
+  QList&lt;RVector&gt;&amp; points) = 0;</comment>
+  <comment type="line">//virtual void setMultiSnapAngles(const
+  QList&lt;double&gt;&amp; angles) = 0;</comment>
   <function_decl>
   <type>
     <name>virtual</name>

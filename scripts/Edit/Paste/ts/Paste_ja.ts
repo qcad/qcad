@@ -4,7 +4,7 @@
 <context>
     <name>Paste</name>
     <message>
-        <location filename="../Paste.js" line="+71"/>
+        <location filename="../Paste.js" line="+75"/>
         <source>Position</source>
         <translation>位置</translation>
     </message>

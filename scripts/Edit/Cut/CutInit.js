@@ -12,5 +12,5 @@ function init(basePath) {
     action.setNoState();
     action.setGroupSortOrder(2300);
     action.setSortOrder(100);
-    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel"]);
+    action.setWidgetNames(["EditMenu", "!EditToolBar", "EditToolsPanel"]);
 }

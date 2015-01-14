@@ -44,9 +44,13 @@
         <translation>&amp;Numero:</translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+77"/>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation>Scegliere linea, arco, cerchio o ellisse</translation>
+        <translation type="vanished">Scegliere linea, arco, cerchio o ellisse</translation>
+    </message>
+    <message>
+        <location filename="../Offset.js" line="+76"/>
+        <source>Choose line, arc, circle or ellipse</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

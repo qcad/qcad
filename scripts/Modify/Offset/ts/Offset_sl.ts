@@ -36,8 +36,8 @@
         <translation type="vanished">Nariši vzporednico obstoječi črti ali kocentrični lok, krog</translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+77"/>
-        <source>Choose line, arc, circle, ellipse or spline</source>
+        <location filename="../Offset.js" line="+76"/>
+        <source>Choose line, arc, circle or ellipse</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

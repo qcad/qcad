@@ -38,10 +38,15 @@ RTransaction RPasteOperation::apply(RDocument& document, bool preview) const {
     RTransaction transaction(document.getStorage(), text, undoable);
     transaction.setGroup(transactionGroup);
 
-    for (int i=0; i<offsets.length() && i<rotations.length(); i++) {
+    int iMax = offsets.length();
+    if (preview && iMax>10) {
+        iMax = 10;
+    }
+
+    for (int i=0; i<iMax; i++) {
         copy(
             sourceDocument, document,
-            offsets[i], scale, rotations[i],
+            offsets[i], scale, i < rotations.length() ? rotations[i] : 0.0,
             flipHorizontal, flipVertical,
             toCurrentLayer, /*toCurrentBlock=*/ true,
             overwriteLayers && i==0, overwriteBlocks && i==0,

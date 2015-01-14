@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<TS version="2.0" language="fi">
 <context>
     <name>CircleConcentric</name>
     <message>
@@ -25,12 +25,12 @@
     <message>
         <location filename="../EllipseConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">Etäisyys:</translation>
+        <translation>Etäisyys:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation type="unfinished">Numero:</translation>
+        <translation>Numero:</translation>
     </message>
     <message>
         <location filename="../EllipseConcentricInit.js" line="+2"/>

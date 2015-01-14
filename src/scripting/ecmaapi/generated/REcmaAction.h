@@ -172,12 +172,6 @@
         propertyChangeEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setMultiSnapPoints
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setMultiSnapAngles
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         updatePreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

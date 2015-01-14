@@ -14,22 +14,22 @@
     <message>
         <location filename="../DrawBasedOnRectangle.js" line="+43"/>
         <source>Top Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ylävasemmalla</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Ylhäällä</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Yläoikealla</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasemmalla</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -39,27 +39,27 @@
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Oikealla</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alavasen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Alhaalla</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alaoikealle</translation>
     </message>
     <message>
         <location line="+60"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Sijainti</translation>
     </message>
 </context>
 <context>

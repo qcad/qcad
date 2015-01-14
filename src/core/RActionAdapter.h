@@ -77,8 +77,8 @@ public:
     virtual void entityPickEvent(REntityPickEvent& /*event*/) {}
     virtual void entityPickEventPreview(REntityPickEvent& /*event)*/) {}
     virtual void propertyChangeEvent(RPropertyEvent& /*event*/) {}
-    virtual void setMultiSnapPoints(const QList<RVector>& /*points*/) {}
-    virtual void setMultiSnapAngles(const QList<double>& /*angles*/) {}
+    //virtual void setMultiSnapPoints(const QList<RVector>& /*points*/) {}
+    //virtual void setMultiSnapAngles(const QList<double>& /*angles*/) {}
     virtual void updatePreview() {}
     virtual void applyOperation() {}
 };

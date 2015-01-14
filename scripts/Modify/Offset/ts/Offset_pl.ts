@@ -41,8 +41,8 @@
         <translation type="obsolete">Rysuj równolegle do istniejącej linii lub łuku, okręgu koncentrycznym</translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+77"/>
-        <source>Choose line, arc, circle, ellipse or spline</source>
+        <location filename="../Offset.js" line="+76"/>
+        <source>Choose line, arc, circle or ellipse</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

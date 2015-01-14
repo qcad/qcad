@@ -1175,7 +1175,7 @@ dir="./core" filename="RS.h">
   <name>JoinType</name>
   <block>{ 
   <expr>
-    <name>JoinSquare</name>
+    <name>JoinBevel</name>
   </expr>, 
   <expr>
     <name>JoinRound</name>

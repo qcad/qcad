@@ -9,7 +9,7 @@ function init(basePath) {
         new QKeySequence("r,c")
     ]);
     action.setDefaultCommands(["copywithreference", "rc"]);
-    action.setGroupSortOrder(2400);
-    action.setSortOrder(200);
+    action.setGroupSortOrder(2300);
+    action.setSortOrder(250);
     action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel"]);
 }

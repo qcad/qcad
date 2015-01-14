@@ -1,7 +1,5 @@
 #!/bin/bash
 
-maxThreads=64
-
 if [ ! -z $1 ]; then
     scope="$1"
 fi

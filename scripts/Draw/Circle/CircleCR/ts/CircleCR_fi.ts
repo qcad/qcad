@@ -19,12 +19,12 @@
     <message>
         <location line="+27"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kulma:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Viitepiste:</translation>
     </message>
     <message>
         <location filename="../CircleCRInit.js" line="+2"/>

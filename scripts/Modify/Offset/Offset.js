@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -23,7 +23,7 @@ include("scripts/Draw/Line/Line.js");
 
 /**
  * \class Offset
- * \brief Parallel lines, concentric arcs, circles, equidistant ellipses, splines, polylines.
+ * \brief Parallel lines, concentric arcs, circles, equidistant curve to ellipses.
  * \ingroup ecma_modify
  */
 function Offset(guiAction) {
@@ -63,7 +63,6 @@ Offset.prototype.initState = function() {
     this.getDocumentInterface().setClickMode(RAction.PickEntity);
     this.setCrosshairCursor();
 
-    var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case Offset.State.ChoosingEntity:
         this.setLeftMouseTip(this.getLeftMouseTip());
@@ -74,7 +73,7 @@ Offset.prototype.initState = function() {
 };
 
 Offset.prototype.getLeftMouseTip = function() {
-    return qsTr("Choose line, arc, circle, ellipse or spline");
+    return qsTr("Choose line, arc, circle or ellipse");
 };
 
 Offset.prototype.isShapeSupported = function(shape) {

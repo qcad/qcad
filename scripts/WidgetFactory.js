@@ -494,7 +494,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
 //        qDebug("restoring: ", c.objectName);
 //        qDebug("  value: ", value);
 
-//        if (c.objectName==="RampOn") {
+//        if (c.objectName==="Positions") {
 //            debugger;
 //        }
 

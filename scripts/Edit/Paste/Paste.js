@@ -57,9 +57,13 @@ Paste.prototype.initUiOptions = function(resume, optionsToolBar) {
     //var optionsToolBar = EAction.getOptionsToolBar();
 
     var combo = optionsToolBar.findChild("Scale");
-    combo.setCompleter(null);
+    if (!isNull(combo)) {
+        combo.setCompleter(null);
+    }
     combo = optionsToolBar.findChild("Rotation");
-    combo.setCompleter(null);
+    if (!isNull(combo)) {
+        combo.setCompleter(null);
+    }
 };
 
 Paste.prototype.setState = function(state) {

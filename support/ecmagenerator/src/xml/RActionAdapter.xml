@@ -203,23 +203,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="" isConst="false" />
       </variant>
     </method>
-    <method name="setMultiSnapPoints" cppName="setMultiSnapPoints"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QList &lt; RVector &gt; &amp;"
-        typeName="QList &lt; RVector &gt;" name=""
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="setMultiSnapAngles" cppName="setMultiSnapAngles"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QList &lt; double &gt; &amp;"
-        typeName="QList &lt; double &gt;" name="" isConst="true" />
-      </variant>
-    </method>
     <method name="updatePreview" cppName="updatePreview"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>InfoArcCircleArea</name>
     <message>
         <location filename="../InfoArcCircleArea.js" line="+70"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Valmis</translation>
     </message>
     <message>
         <location line="+235"/>
@@ -16,13 +16,13 @@
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Ala</translation>
     </message>
     <message>
         <location line="-108"/>
         <location line="+66"/>
         <source>Circumference</source>
-        <translation type="unfinished"></translation>
+        <translation>Ympärysmitta</translation>
     </message>
     <message>
         <location line="-37"/>
@@ -78,7 +78,7 @@
         <location line="+248"/>
         <location line="+67"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation>ympärysmitta:</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../InfoArcCircleArea.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tila:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -109,7 +109,7 @@
     <message>
         <location line="+30"/>
         <source>Add:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää:</translation>
     </message>
     <message>
         <location line="+10"/>

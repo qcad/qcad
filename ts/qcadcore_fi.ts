@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<TS version="2.0" language="fi">
 <context>
     <name>QObject</name>
     <message>
@@ -154,7 +154,7 @@
     <message>
         <location line="+1"/>
         <source>Orange</source>
-        <translation type="unfinished"></translation>
+        <translation>Oranssi</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -491,87 +491,87 @@
     <name>RLinetype</name>
     <message>
         <source>By Layer</source>
-        <translation type="vanished">Tason mukaan</translation>
+        <translation>Tason mukaan</translation>
     </message>
     <message>
         <source>By Block</source>
-        <translation type="vanished">Lohkon mukaan</translation>
+        <translation>Lohkon mukaan</translation>
     </message>
     <message>
         <source>Continuous</source>
-        <translation type="vanished">Jatkuva</translation>
+        <translation>Jatkuva</translation>
     </message>
     <message>
         <source>Dot</source>
-        <translation type="vanished">Piste</translation>
+        <translation>Piste</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translation type="vanished">Piste (pieni)</translation>
+        <translation>Piste (pieni)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation type="vanished">Piste (suuri)</translation>
+        <translation>Piste (suuri)</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translation type="vanished">Katkoviiva</translation>
+        <translation>Katkoviiva</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translation type="vanished">Katkoviiva (pieni)</translation>
+        <translation>Katkoviiva (pieni)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation type="vanished">Katkoviiva (suuri)</translation>
+        <translation>Katkoviiva (suuri)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation type="vanished">Katkoviiva - piste</translation>
+        <translation>Katkoviiva - piste</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation type="vanished">Katkoviiva - piste (pieni)</translation>
+        <translation>Katkoviiva - piste (pieni)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation type="vanished">Katkoviiva - piste (suuri)</translation>
+        <translation>Katkoviiva - piste (suuri)</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translation type="vanished">Jaa</translation>
+        <translation>Jaa</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translation type="vanished">Jaa (pieni)</translation>
+        <translation>Jaa (pieni)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translation type="vanished">Jaa (suuri)</translation>
+        <translation>Jaa (suuri)</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="vanished">Keskipiste</translation>
+        <translation>Keskipiste</translation>
     </message>
     <message>
         <source>Center (small)</source>
-        <translation type="vanished">Keskipiste (pieni)</translation>
+        <translation>Keskipiste (pieni)</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translation type="vanished">Keskipiste (suuri)</translation>
+        <translation>Keskipiste (suuri)</translation>
     </message>
     <message>
         <source>Border</source>
-        <translation type="vanished">Reuna</translation>
+        <translation>Reuna</translation>
     </message>
     <message>
         <source>Border (small)</source>
-        <translation type="vanished">Reuna (pieni)</translation>
+        <translation>Reuna (pieni)</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translation type="vanished">Reuna (suuri)</translation>
+        <translation>Reuna (suuri)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -780,11 +780,11 @@
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>Salaojitus käänteinen</translation>
     </message>
     <message>
         <source>Drainage Reverse</source>
-        <translation type="vanished">Salaojitus käänteinen</translation>
+        <translation>Salaojitus käänteinen</translation>
     </message>
 </context>
 <context>

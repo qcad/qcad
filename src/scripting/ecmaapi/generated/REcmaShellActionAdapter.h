@@ -183,18 +183,6 @@
         
     
     
-      void setMultiSnapPoints(
-                const QList < RVector > & arg1
-            );
-        
-    
-    
-      void setMultiSnapAngles(
-                const QList < double > & arg1
-            );
-        
-    
-    
       void updatePreview(
                 
             );

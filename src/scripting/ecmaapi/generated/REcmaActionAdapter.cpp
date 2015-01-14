@@ -139,10 +139,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, propertyChangeEvent, "propertyChangeEvent");
             
-            REcmaHelper::registerFunction(&engine, proto, setMultiSnapPoints, "setMultiSnapPoints");
-            
-            REcmaHelper::registerFunction(&engine, proto, setMultiSnapAngles, "setMultiSnapAngles");
-            
             REcmaHelper::registerFunction(&engine, proto, updatePreview, "updatePreview");
             
             REcmaHelper::registerFunction(&engine, proto, applyOperation, "applyOperation");
@@ -1753,118 +1749,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaActionAdapter::propertyChangeEvent", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaActionAdapter::setMultiSnapPoints
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaActionAdapter::setMultiSnapPoints", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaActionAdapter::setMultiSnapPoints";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RActionAdapter* self = 
-                        getSelf("setMultiSnapPoints", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isArray()
-        ) /* type: QList < RVector > */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isArray
-                    QList < RVector >
-                    a0;
-                    REcmaHelper::fromScriptValue(
-                        engine,
-                        context->argument(0),
-                        a0
-                    );
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setMultiSnapPoints(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RActionAdapter.setMultiSnapPoints().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaActionAdapter::setMultiSnapPoints", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaActionAdapter::setMultiSnapAngles
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaActionAdapter::setMultiSnapAngles", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaActionAdapter::setMultiSnapAngles";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RActionAdapter* self = 
-                        getSelf("setMultiSnapAngles", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isArray()
-        ) /* type: QList < double > */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isArray
-                    QList < double >
-                    a0;
-                    REcmaHelper::fromScriptValue(
-                        engine,
-                        context->argument(0),
-                        a0
-                    );
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setMultiSnapAngles(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RActionAdapter.setMultiSnapAngles().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaActionAdapter::setMultiSnapAngles", context, engine);
             return result;
         }
          QScriptValue

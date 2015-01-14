@@ -52,9 +52,13 @@
         <translation>&amp;Anzahl:</translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+77"/>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation>Linie, Bogen, Kreis oder Ellipse wählen</translation>
+        <translation type="vanished">Linie, Bogen, Kreis oder Ellipse wählen</translation>
+    </message>
+    <message>
+        <location filename="../Offset.js" line="+76"/>
+        <source>Choose line, arc, circle or ellipse</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
