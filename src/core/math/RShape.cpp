@@ -1100,6 +1100,9 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
     return ret;
 }
 
+/**
+ * Based on "Hughes and Chraibi (2011-2012), Calculating Ellipse Overlap Areas"
+ */
 QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const REllipse& ellipse2) {
     QList<RVector> ret;
 
@@ -1190,7 +1193,6 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
 
         return ret;
     }
-
 
     // transform ellipse2 to coordinate system of ellipse1:
     RVector centerOffset = -ellipse1Copy.getCenter();
@@ -1382,7 +1384,7 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
 //        for (i = 0; i < 5; i++) {
 //            qDebug() << "py[" << i << "]: " << py[i];
 //        }
-        RMath::getBiQuadRoots (py, r);
+        RMath::getBiQuadRoots(py, r);
         nroots = 4;
     }
     else if (fabs (cy[3]) > 0.0) {
@@ -1392,7 +1394,7 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
             py[3-i] = cy[i]/cy[3];
         }
         py[0] = 1.0;
-        RMath::getCubicRoots (py, r);
+        RMath::getCubicRoots(py, r);
         nroots = 3;
     }
     else if (fabs (cy[2]) > 0.0) {

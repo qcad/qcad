@@ -15,7 +15,7 @@
         <translation>Terminer</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Polygon area:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Superficie du polygone:</translation>

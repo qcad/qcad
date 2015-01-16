@@ -4,7 +4,7 @@
 <context>
     <name>Round</name>
     <message>
-        <location filename="../Round.js" line="+56"/>
+        <location filename="../Round.js" line="+57"/>
         <source>The two entities cannot be rounded.</source>
         <translation>Izbrani eniteti ni mogoče zaokrožit.</translation>
     </message>

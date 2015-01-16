@@ -14,7 +14,7 @@
         <translation>Kontur nicht geschlossen am Punkt %1/%2.</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+65"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Jedes Konturelement muss eine Linie, ein Bogen, ein Kreis, ein Ellipsenbogen, eine Ellipse, eine Polylinie oder Spline sein. Gefunden:</translation>
     </message>

@@ -68,7 +68,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     QList<RBox> queryBoxList;
     bool foundEntities = false;
 
-    for (double r=range/10.0; r<=range+RS::PointTolerance; r+=range/10.0) {
+    for (double r=range/1.0; r<=range+RS::PointTolerance; r+=range/1.0) {
         RBox queryBox(position, r);
         queryBoxList.append(queryBox);
 

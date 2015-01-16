@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="nl_NL">
+<TS version="2.1" language="nl_NL">
 <context>
     <name>QObject</name>
     <message>
@@ -700,7 +700,7 @@
     </message>
     <message>
         <source>Drainage Reverse</source>
-        <translation>Riolering omgekeerd</translation>
+        <translation type="vanished">Riolering omgekeerd</translation>
     </message>
 </context>
 <context>

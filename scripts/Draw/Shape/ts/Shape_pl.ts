@@ -35,8 +35,12 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
     </message>
     <message>
         <location line="+5"/>
+        <source>Show shape tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show line tools</source>
-        <translation type="unfinished">Pokaż menu &quot;Linie&quot;</translation>
+        <translation type="obsolete">Pokaż menu &quot;Linie&quot;</translation>
     </message>
     <message>
         <location line="+18"/>

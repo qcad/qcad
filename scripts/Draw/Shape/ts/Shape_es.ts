@@ -37,8 +37,12 @@
     </message>
     <message>
         <location line="+5"/>
+        <source>Show shape tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show line tools</source>
-        <translation>Mostrar herramientas de forma</translation>
+        <translation type="vanished">Mostrar herramientas de forma</translation>
     </message>
     <message>
         <location line="+18"/>

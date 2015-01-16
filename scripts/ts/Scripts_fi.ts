@@ -36,17 +36,17 @@
     <message>
         <location line="+311"/>
         <source>Move Reference Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirrä viite</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirrä valinta</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirrä kohde</translation>
     </message>
 </context>
 <context>

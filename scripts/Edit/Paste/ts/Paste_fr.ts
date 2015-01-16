@@ -64,7 +64,7 @@
         <translation>Ecraser les blocs</translation>
     </message>
     <message>
-        <location filename="../Paste.js" line="+75"/>
+        <location filename="../Paste.js" line="+76"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>

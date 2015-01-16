@@ -14,7 +14,7 @@
         <translation>Valmis</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Polygon area:</source>
         <translation>Monikulmion ala:</translation>
     </message>

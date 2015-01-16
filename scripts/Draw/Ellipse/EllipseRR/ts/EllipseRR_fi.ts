@@ -6,12 +6,12 @@
     <message>
         <location filename="../EllipseRR.ui" line="+17"/>
         <source>X Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>X säde:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Y Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Y säde:</translation>
     </message>
     <message>
         <location line="+24"/>

@@ -9,7 +9,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+235"/>
+        <location line="+236"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -70,12 +70,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-247"/>
+        <location line="-248"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+248"/>
+        <location line="+249"/>
         <location line="+67"/>
         <source>circumference:</source>
         <translation type="unfinished"></translation>

@@ -28,7 +28,7 @@
         <translation>&amp;Abschrägen</translation>
     </message>
     <message>
-        <location filename="../Bevel.js" line="+54"/>
+        <location filename="../Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
         <translation>Die zwei Objekte können nicht abgeschrägt werden.</translation>
     </message>

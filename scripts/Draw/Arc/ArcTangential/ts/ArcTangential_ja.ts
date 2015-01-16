@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ja_JP">
+<TS version="2.1" language="ja_JP">
 <context>
     <name>ArcTangential</name>
     <message>
@@ -20,7 +20,7 @@
     </message>
     <message>
         <source>&amp;Tangentially connected</source>
-        <translation>&amp;T 接線的接続</translation>
+        <translation type="vanished">&amp;T 接線的接続</translation>
     </message>
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>

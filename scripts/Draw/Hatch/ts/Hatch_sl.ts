@@ -14,7 +14,7 @@
         <translation>Zanka ni zaklučena na točki %1/%2.</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+65"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Vsaka entiteta obrobe mora biti črta, krog, elipsa, lok, lok elipse, lomljenka ali krivulja. Najdeno:</translation>
     </message>

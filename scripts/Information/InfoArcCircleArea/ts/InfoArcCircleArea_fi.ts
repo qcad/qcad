@@ -9,7 +9,7 @@
         <translation>Valmis</translation>
     </message>
     <message>
-        <location line="+235"/>
+        <location line="+236"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -47,22 +47,22 @@
     <message>
         <location line="-52"/>
         <source>Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>Etäisyys</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Etäisyys:</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Säde:</translation>
     </message>
     <message>
         <location line="-9"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Säde</translation>
     </message>
     <message>
         <location line="-104"/>
@@ -70,12 +70,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-247"/>
+        <location line="-248"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+248"/>
+        <location line="+249"/>
         <location line="+67"/>
         <source>circumference:</source>
         <translation>ympärysmitta:</translation>
@@ -119,7 +119,7 @@
     <message>
         <location line="+3"/>
         <source>Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde</translation>
     </message>
     <message>
         <location filename="../InfoArcCircleArea.js" line="-96"/>
@@ -140,7 +140,7 @@
         <location line="+22"/>
         <location filename="../InfoArcCircleArea.ui" line="+3"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Pituus</translation>
     </message>
     <message>
         <location filename="../InfoArcCircleAreaInit.js" line="+2"/>

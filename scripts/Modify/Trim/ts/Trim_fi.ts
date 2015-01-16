@@ -14,7 +14,7 @@
         <translation>Valitse hienosäädettävä kohde</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Kaksi kohdetta eivät leikkaa, tai eivät sovi rajaukseen.</translation>
     </message>

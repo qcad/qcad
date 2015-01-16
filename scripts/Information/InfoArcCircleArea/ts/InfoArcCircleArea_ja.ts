@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ja_JP">
+<TS version="2.1" language="ja_JP">
 <context>
     <name>InfoArcCircleArea</name>
     <message>
@@ -9,7 +9,7 @@
         <translation>完了</translation>
     </message>
     <message>
-        <location line="+235"/>
+        <location line="+236"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -70,12 +70,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-247"/>
+        <location line="-248"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+248"/>
+        <location line="+249"/>
         <location line="+67"/>
         <source>circumference:</source>
         <translation></translation>

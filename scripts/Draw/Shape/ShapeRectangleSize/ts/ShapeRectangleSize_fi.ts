@@ -71,12 +71,12 @@
     <message>
         <location filename="../ShapeRectangleSize.ui" line="+17"/>
         <source>&amp;Width:</source>
-        <translation type="unfinished">&amp;Leveys:</translation>
+        <translation>&amp;Leveys:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Height:</source>
-        <translation type="unfinished">&amp;Korkeus:</translation>
+        <translation>&amp;Korkeus:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -86,7 +86,7 @@
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Viitepiste:</translation>
+        <translation>Viitepiste:</translation>
     </message>
 </context>
 </TS>

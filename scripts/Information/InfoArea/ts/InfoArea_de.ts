@@ -9,7 +9,7 @@
         <translation>Fertig</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Polygon area:</source>
         <translation>Polygonfläche:</translation>
     </message>
@@ -32,7 +32,7 @@
         <translation type="obsolete">Polygonfläche</translation>
     </message>
     <message>
-        <location filename="../InfoArea.js" line="-138"/>
+        <location filename="../InfoArea.js" line="-139"/>
         <source>Set next polygon corner</source>
         <translation>Nächsten Eckpunkt setzen</translation>
     </message>

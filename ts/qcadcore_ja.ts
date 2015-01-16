@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ja">
+<TS version="2.1" language="ja">
 <context>
     <name>QObject</name>
     <message>
@@ -496,87 +496,87 @@
     <name>RLinetype</name>
     <message>
         <source>By Layer</source>
-        <translation>画層による</translation>
+        <translation type="vanished">画層による</translation>
     </message>
     <message>
         <source>By Block</source>
-        <translation>ブロックによる</translation>
+        <translation type="vanished">ブロックによる</translation>
     </message>
     <message>
         <source>Continuous</source>
-        <translation>連続</translation>
+        <translation type="vanished">連続</translation>
     </message>
     <message>
         <source>Dot</source>
-        <translation>点</translation>
+        <translation type="vanished">点</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translation>点（小）</translation>
+        <translation type="vanished">点（小）</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation>点（大）</translation>
+        <translation type="vanished">点（大）</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translation>ダッシュ</translation>
+        <translation type="vanished">ダッシュ</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translation>ダッシュ（小）</translation>
+        <translation type="vanished">ダッシュ（小）</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation>ダッシュ（大）</translation>
+        <translation type="vanished">ダッシュ（大）</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation>ダッシュドット</translation>
+        <translation type="vanished">ダッシュドット</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation>ダッシュドット（小）</translation>
+        <translation type="vanished">ダッシュドット（小）</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation>ダッシュドット（大）</translation>
+        <translation type="vanished">ダッシュドット（大）</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translation>分割</translation>
+        <translation type="vanished">分割</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translation>分割（小）</translation>
+        <translation type="vanished">分割（小）</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translation>分割（大）</translation>
+        <translation type="vanished">分割（大）</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation>センター</translation>
+        <translation type="vanished">センター</translation>
     </message>
     <message>
         <source>Center (small)</source>
-        <translation>センター（小）</translation>
+        <translation type="vanished">センター（小）</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translation>センター（大）</translation>
+        <translation type="vanished">センター（大）</translation>
     </message>
     <message>
         <source>Border</source>
-        <translation>ボーダー</translation>
+        <translation type="vanished">ボーダー</translation>
     </message>
     <message>
         <source>Border (small)</source>
-        <translation>ボーダー（小）</translation>
+        <translation type="vanished">ボーダー（小）</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translation>ボーダー（大）</translation>
+        <translation type="vanished">ボーダー（大）</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>

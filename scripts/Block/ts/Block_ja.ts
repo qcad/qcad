@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ja">
+<TS version="2.1" language="ja">
 <context>
     <name>Block</name>
     <message>
         <location filename="../Block.js" line="+66"/>
         <source>Block Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロックツール</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show block tools</source>
-        <translation type="unfinished"></translation>
+        <translation>表示ブロックツール</translation>
     </message>
     <message>
         <location line="+18"/>

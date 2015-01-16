@@ -34,7 +34,7 @@
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskellä</translation>
     </message>
     <message>
         <location line="+1"/>

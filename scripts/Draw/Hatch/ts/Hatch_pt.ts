@@ -16,7 +16,7 @@
         <translation>Contorno não fechado na ponta %1/%2.</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+65"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Cada entidade de contorno deve ser uma linha, arco, círculo, elipse arco, elipse, polilinha ou spline. Encontrados:</translation>

@@ -47,8 +47,12 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
     </message>
     <message>
         <location line="+5"/>
+        <source>Show shape tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show line tools</source>
-        <translation>Mostrar ferramentas de forma</translation>
+        <translation type="vanished">Mostrar ferramentas de forma</translation>
     </message>
     <message>
         <location line="+18"/>

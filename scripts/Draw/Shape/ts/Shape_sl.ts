@@ -37,8 +37,12 @@
     </message>
     <message>
         <location line="+5"/>
+        <source>Show shape tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show line tools</source>
-        <translation type="unfinished">Prikaži orodja črte</translation>
+        <translation type="obsolete">Prikaži orodja črte</translation>
     </message>
     <message>
         <location line="+18"/>

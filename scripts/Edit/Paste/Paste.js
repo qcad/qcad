@@ -21,13 +21,13 @@ include("../Edit.js");
 
 /**
  * \class Paste
- * \brief Pastes the clipboard contents into the centawin.
+ * \brief Pastes the clipboard contents into the drawing.
  * The target point is specified by the user.
  * \ingroup ecma_edit
  */
 function Paste(guiAction) {
     Edit.call(this, guiAction);
-    this.setUiOptions("Paste.ui");
+    this.setUiOptions(Paste.includeBasePath + "/Paste.ui");
 
     this.offset = new RVector(0,0);
     this.scale = 1.0;
@@ -37,24 +37,25 @@ function Paste(guiAction) {
     this.toCurrentLayer = false;
     this.overwriteLayers = false;
     this.overwriteBlocks = false;
-
-    this.State = {
-        SettingPosition : 0
-    };
+    this.sourceDocument = RDocument.getClipboard();
 }
 
 Paste.prototype = new Edit();
+Paste.includeBasePath = includeBasePath;
+
+Paste.State = {
+    SettingPosition : 0
+};
 
 Paste.prototype.beginEvent = function() {
     Edit.prototype.beginEvent.call(this);
 
     this.di = this.getDocumentInterface();
-    this.setState(this.State.SettingPosition);
+    this.setState(Paste.State.SettingPosition);
 };
 
 Paste.prototype.initUiOptions = function(resume, optionsToolBar) {
     Edit.prototype.initUiOptions.call(this, resume, optionsToolBar);
-    //var optionsToolBar = EAction.getOptionsToolBar();
 
     var combo = optionsToolBar.findChild("Scale");
     if (!isNull(combo)) {
@@ -92,7 +93,7 @@ Paste.prototype.pickCoordinate = function(event, preview) {
 };
 
 Paste.prototype.getOperation = function(preview) {
-    var op = new RPasteOperation(RDocument.getClipboard());
+    var op = new RPasteOperation(this.sourceDocument);
     op.setText(this.getToolTitle());
     op.setOffset(this.offset);
     op.setScale(this.scale);
@@ -103,15 +104,15 @@ Paste.prototype.getOperation = function(preview) {
     op.setOverwriteLayers(this.overwriteLayers);
     op.setOverwriteBlocks(this.overwriteBlocks);
     return op;
-}
+};
 
 Paste.prototype.getAuxPreview = function() {
     var ret = [];
-    var unitFactor = RUnit.convert(1.0, RDocument.getClipboard().getUnit(), this.getDocument().getUnit());
+    var unitFactor = RUnit.convert(1.0, this.sourceDocument.getUnit(), this.getDocument().getUnit());
     var boundary = this.getOperation().getBoundary(unitFactor);
     ret.push(boundary);
     return ret;
-}
+};
 
 Paste.prototype.slotScaleChanged = function(value) {
     var scale = RMath.eval(value);

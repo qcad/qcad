@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ja">
+<TS version="2.1" language="ja">
 <context>
     <name>CadToolBar</name>
     <message>
@@ -20,7 +20,7 @@
     </message>
     <message>
         <source>Toggle Title Bar</source>
-        <translation>タイトルバー切り替え</translation>
+        <translation type="vanished">タイトルバー切り替え</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

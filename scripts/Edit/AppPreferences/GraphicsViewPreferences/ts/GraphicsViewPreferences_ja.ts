@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ja">
+<TS version="2.1" language="ja">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -115,7 +115,7 @@
     </message>
     <message>
         <source>Auto switch linetypes</source>
-        <translation>ラインタイプの自動切り替え</translation>
+        <translation type="vanished">ラインタイプの自動切り替え</translation>
     </message>
     <message>
         <location line="+72"/>

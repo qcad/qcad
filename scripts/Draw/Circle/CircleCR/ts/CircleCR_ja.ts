@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ja_JP">
+<TS version="2.1" language="ja_JP">
 <context>
     <name>CircleCR</name>
     <message>
         <source>Center or radius</source>
-        <translation>中心または半径</translation>
+        <translation type="vanished">中心または半径</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation>中心</translation>
+        <translation type="vanished">中心</translation>
     </message>
     <message>
         <location filename="../CircleCR.ui" line="+17"/>

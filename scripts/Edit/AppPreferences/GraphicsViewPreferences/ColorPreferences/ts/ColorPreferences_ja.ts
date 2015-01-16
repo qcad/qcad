@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ja_JP">
+<TS version="2.1" language="ja_JP">
 <context>
     <name>ColorPreferences</name>
     <message>
@@ -143,7 +143,7 @@
     </message>
     <message>
         <source>Inactive Crosshairs:</source>
-        <translation>非アクティブな十字線:</translation>
+        <translation type="vanished">非アクティブな十字線:</translation>
     </message>
     <message>
         <location line="-538"/>
@@ -152,11 +152,11 @@
     </message>
     <message>
         <source>Relative Zero:</source>
-        <translation>相対ゼロ:</translation>
+        <translation type="vanished">相対ゼロ:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation>基準点:</translation>
+        <translation type="vanished">基準点:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -165,43 +165,43 @@
     </message>
     <message>
         <source>Meta Grid:</source>
-        <translation>メタグリッド:</translation>
+        <translation type="vanished">メタグリッド:</translation>
     </message>
     <message>
         <source>Zoom Box:</source>
-        <translation>ズームボックス:</translation>
+        <translation type="vanished">ズームボックス:</translation>
     </message>
     <message>
         <source>Selection:</source>
-        <translation>選択:</translation>
+        <translation type="vanished">選択:</translation>
     </message>
     <message>
         <source>Selection Box Border:</source>
-        <translation>選択ボックスの境界:</translation>
+        <translation type="vanished">選択ボックスの境界:</translation>
     </message>
     <message>
         <source>Selection Box:</source>
-        <translation>選択ボックス:</translation>
+        <translation type="vanished">選択ボックス:</translation>
     </message>
     <message>
         <source>Cross Selection Box:</source>
-        <translation>クロスセレクションボックス:</translation>
+        <translation type="vanished">クロスセレクションボックス:</translation>
     </message>
     <message>
         <source>Auxiliary Shapes:</source>
-        <translation>補助輪郭:</translation>
+        <translation type="vanished">補助輪郭:</translation>
     </message>
     <message>
         <source>Info Label Background:</source>
-        <translation>情報ラベル背景:</translation>
+        <translation type="vanished">情報ラベル背景:</translation>
     </message>
     <message>
         <source>Info Label Font:</source>
-        <translation>情報ラベルフォント:</translation>
+        <translation type="vanished">情報ラベルフォント:</translation>
     </message>
     <message>
         <source>Measurement Tools:</source>
-        <translation>計測ツール:</translation>
+        <translation type="vanished">計測ツール:</translation>
     </message>
 </context>
 </TS>

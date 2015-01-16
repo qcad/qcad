@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fi">
+<TS version="2.1" language="fi">
 <context>
     <name>CircleCD</name>
     <message>
         <source>Center or radius</source>
-        <translation>Keskipiste tai säde</translation>
+        <translation type="vanished">Keskipiste tai säde</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation>Keskipiste</translation>
+        <translation type="vanished">Keskipiste</translation>
     </message>
     <message>
         <source>Radius:</source>
-        <translation>Säde:</translation>
+        <translation type="vanished">Säde:</translation>
     </message>
     <message>
         <source>Center, &amp;Radius</source>
-        <translation>Keskipiste, &amp;Säde</translation>
+        <translation type="vanished">Keskipiste, &amp;Säde</translation>
     </message>
     <message>
         <source>Draw circle from center and radius</source>
-        <translation>Piirrä ympyrä keskipisteellä ja säteellä</translation>
+        <translation type="vanished">Piirrä ympyrä keskipisteellä ja säteellä</translation>
     </message>
     <message>
         <location filename="../CircleCD.ui" line="+17"/>

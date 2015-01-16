@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ja_JP">
+<TS version="2.1" language="ja_JP">
 <context>
     <name>LinePolygonCP</name>
     <message>
         <source>Corners:</source>
-        <translation>頂点の数:</translation>
+        <translation type="vanished">頂点の数:</translation>
     </message>
 </context>
 <context>
     <name>LinePolygonPP</name>
     <message>
         <source>First corner</source>
-        <translation>第１の頂点</translation>
+        <translation type="vanished">第１の頂点</translation>
     </message>
     <message>
         <source>Corner point</source>
-        <translation>頂点</translation>
+        <translation type="vanished">頂点</translation>
     </message>
     <message>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation>&amp;n 多角形（２頂点）</translation>
+        <translation type="vanished">&amp;n 多角形（２頂点）</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
-        <translation>２頂点から正多角形を描画</translation>
+        <translation type="vanished">２頂点から正多角形を描画</translation>
     </message>
 </context>
 <context>

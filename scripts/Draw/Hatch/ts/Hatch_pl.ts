@@ -16,7 +16,7 @@
         <translation type="unfinished">Pętla nie zamknięta w punkcie /.</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+65"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Każda jednostka musi być granica linia, łuk, okrąg, elipsa, łuk, elipsa, polilinia lub splajn. Znaleziono:</translation>

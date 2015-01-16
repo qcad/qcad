@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ja_JP">
+<TS version="2.1" language="ja_JP">
 <context>
     <name>LineRectangleSize</name>
     <message>
         <source>Top Left</source>
-        <translation>左上</translation>
+        <translation type="vanished">左上</translation>
     </message>
     <message>
         <source>Top</source>
-        <translation>上</translation>
+        <translation type="vanished">上</translation>
     </message>
     <message>
         <source>Top Right</source>
-        <translation>右上</translation>
+        <translation type="vanished">右上</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation>左</translation>
+        <translation type="vanished">左</translation>
     </message>
     <message>
         <source>Middle</source>
-        <translation>中央</translation>
+        <translation type="vanished">中央</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation>右</translation>
+        <translation type="vanished">右</translation>
     </message>
     <message>
         <source>Bottom Left</source>
-        <translation>左下</translation>
+        <translation type="vanished">左下</translation>
     </message>
     <message>
         <source>Bottom</source>
-        <translation>下</translation>
+        <translation type="vanished">下</translation>
     </message>
     <message>
         <source>Bottom Right</source>
-        <translation>右下</translation>
+        <translation type="vanished">右下</translation>
     </message>
     <message>
         <source>Position</source>
-        <translation>位置</translation>
+        <translation type="vanished">位置</translation>
     </message>
     <message>
         <source>&amp;Width:</source>
-        <translation>&amp;W 幅:</translation>
+        <translation type="vanished">&amp;W 幅:</translation>
     </message>
     <message>
         <source>&amp;Height:</source>
-        <translation>&amp;H 高さ:</translation>
+        <translation type="vanished">&amp;H 高さ:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation>基準点:</translation>
+        <translation type="vanished">基準点:</translation>
     </message>
     <message>
         <source>Rectangle with &amp;Size</source>
-        <translation>&amp;S サイズ指定の四角形</translation>
+        <translation type="vanished">&amp;S サイズ指定の四角形</translation>
     </message>
     <message>
         <source>Draw rectangle with position and size</source>
-        <translation>位置とサイズを指定して四角形を描画</translation>
+        <translation type="vanished">位置とサイズを指定して四角形を描画</translation>
     </message>
 </context>
 <context>

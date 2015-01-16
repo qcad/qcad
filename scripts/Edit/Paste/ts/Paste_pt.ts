@@ -4,7 +4,7 @@
 <context>
     <name>Paste</name>
     <message>
-        <location filename="../Paste.js" line="+75"/>
+        <location filename="../Paste.js" line="+76"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

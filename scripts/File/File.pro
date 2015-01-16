@@ -5,6 +5,7 @@ SUBDIRS = \
     AutoSave \
     BitmapExport \
     CloseFile \
+    ImportFile \
     NewFile \
     OpenFile \
     PdfExport \

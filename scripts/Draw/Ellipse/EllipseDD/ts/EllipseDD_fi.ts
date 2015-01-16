@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fi">
+<TS version="2.1" language="fi">
 <context>
     <name>EllipseDD</name>
     <message>
@@ -16,12 +16,12 @@
     <message>
         <location line="+24"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kulma:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Viitepiste:</translation>
     </message>
     <message>
         <location filename="../EllipseDDInit.js" line="+2"/>

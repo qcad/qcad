@@ -10,7 +10,7 @@
     <message>
         <location filename="../Offset.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation>Etäisyys:</translation>
+        <translation>&amp;Etäisyys:</translation>
     </message>
     <message>
         <location line="+23"/>

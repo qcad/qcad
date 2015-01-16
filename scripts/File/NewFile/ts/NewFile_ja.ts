@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ja_JP">
+<TS version="2.1" language="ja_JP">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -26,7 +26,7 @@
     </message>
     <message>
         <source>Loading...</source>
-        <translation>読込中...</translation>
+        <translation type="vanished">読込中...</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -60,7 +60,7 @@
     </message>
     <message>
         <source>Opened drawing:</source>
-        <translation>オープンされた図面:</translation>
+        <translation type="vanished">オープンされた図面:</translation>
     </message>
     <message>
         <location line="+4"/>

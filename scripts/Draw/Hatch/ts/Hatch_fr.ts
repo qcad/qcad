@@ -14,7 +14,7 @@
         <translation>Contour pas fermé au point %1/%2.</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+65"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Chaque objet frontière doit être une ligne, arc, cercle, un arc elliptique, ellipse, polyligne ou une spline. Trouvés:</translation>
     </message>
