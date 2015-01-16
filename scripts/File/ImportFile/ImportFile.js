@@ -1,0 +1,90 @@
+/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */
+
+include("scripts/Edit/Paste/Paste.js");
+
+/**
+ * \class ImportFile
+ * \brief Inserts a file into the drawing.
+ * The target point is specified by the user.
+ * \ingroup ecma_edit
+ */
+function ImportFile(guiAction) {
+    Paste.call(this, guiAction);
+    /*
+    this.setUiOptions("ImportFile.ui");
+    */
+
+    this.sourceDocument = new RDocument(new RMemoryStorage(), new RSpatialIndexNavel());
+    this.sourceDi = new RDocumentInterface(this.sourceDocument);
+}
+
+ImportFile.prototype = new Paste();
+
+ImportFile.prototype.beginEvent = function() {
+    Paste.prototype.beginEvent.call(this);
+
+    var fileDialogInfo = this.getFileName();
+    if (isNull(fileDialogInfo)) {
+        this.terminate();
+        return;
+    }
+
+    this.sourceDi.importFile(fileDialogInfo[0], fileDialogInfo[1], false);
+};
+
+ImportFile.prototype.getFileName = function() {
+    var lastOpenFileDir = RSettings.getStringValue("ImportFile/Path", RSettings.getDocumentsLocation());
+
+    var filters = RFileImporterRegistry.getFilterStrings();
+    if (filters.length===0) {
+        var dlg = new QMessageBox(QMessageBox.Warning,
+                qsTr("No import filters"),
+                "",
+                QMessageBox.OK);
+        dlg.text = qsTr("No import filters have been found. Aborting...");
+        dlg.exec();
+        return undefined;
+    }
+
+    filters = new Array(qsTr("All Files") + " (*)").concat(filters);
+
+    var appWin = EAction.getMainWindow();
+    var fileDialog = new QFileDialog(appWin, qsTr("Import Drawing"), lastOpenFileDir, "");
+    var allFilter = filters[0];
+    fileDialog.setNameFilters(filters);
+    fileDialog.selectNameFilter(allFilter);
+    fileDialog.setOption(QFileDialog.DontUseNativeDialog, false);
+    fileDialog.fileMode = QFileDialog.ExistingFiles;
+    fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
+    if (!fileDialog.exec()) {
+        fileDialog.destroy();
+        return undefined;
+    }
+
+    var files = fileDialog.selectedFiles();
+    if (files.length===0) {
+        fileDialog.destroy();
+        return undefined;
+    }
+
+    RSettings.setValue("ImportFile/Path", fileDialog.directory().absolutePath());
+
+    return [ files[0], fileDialog.selectedNameFilter() ];
+};
