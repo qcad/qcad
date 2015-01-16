@@ -4,29 +4,47 @@
 <context>
     <name>LineParallelThrough</name>
     <message>
-        <location filename="../LineParallelThrough.js" line="+62"/>
         <source>Choose line, arc or circle</source>
-        <translation>Izberite črto, lok ali krog</translation>
+        <translation type="vanished">Izberite črto, lok ali krog</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Specify point</source>
-        <translation>Določite točko</translation>
+        <translation type="vanished">Določite točko</translation>
     </message>
     <message>
-        <location filename="../LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Število:</translation>
+        <translation type="vanished">Število:</translation>
     </message>
     <message>
-        <location filename="../LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
-        <translation>Vzpo&amp;redno (skozi točko)</translation>
+        <translation type="vanished">Vzpo&amp;redno (skozi točko)</translation>
+    </message>
+    <message>
+        <source>Draw parallel line or concentric arc or circle through a given point</source>
+        <translation type="vanished">Nariši vzporedno črto ali kocentrični krog skozi dano točko</translation>
+    </message>
+</context>
+<context>
+    <name>OffsetThrough</name>
+    <message>
+        <location filename="../OffsetThrough.js" line="+67"/>
+        <source>Specify point</source>
+        <translation type="unfinished">Določite točko</translation>
+    </message>
+    <message>
+        <location filename="../OffsetThrough.ui" line="+17"/>
+        <source>Number:</source>
+        <translation type="unfinished">Število:</translation>
+    </message>
+    <message>
+        <location filename="../OffsetThroughInit.js" line="+2"/>
+        <source>Offset (through Point)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw parallel line or concentric arc or circle through a given point</source>
-        <translation>Nariši vzporedno črto ali kocentrični krog skozi dano točko</translation>
+        <source>Offset line, arc, circle or ellipse through point</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

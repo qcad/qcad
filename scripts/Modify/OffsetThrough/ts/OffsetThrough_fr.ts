@@ -4,29 +4,47 @@
 <context>
     <name>LineParallelThrough</name>
     <message>
-        <location filename="../LineParallelThrough.js" line="+62"/>
         <source>Choose line, arc or circle</source>
-        <translation>Choisissez une ligne, arc ou cercle</translation>
+        <translation type="vanished">Choisissez une ligne, arc ou cercle</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Specify point</source>
-        <translation>Indiquer le point</translation>
+        <translation type="vanished">Indiquer le point</translation>
     </message>
     <message>
-        <location filename="../LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
-        <translation>Par&amp;allèle (par point)</translation>
+        <translation type="vanished">Par&amp;allèle (par point)</translation>
+    </message>
+    <message>
+        <source>Draw parallel line or concentric arc or circle through a given point</source>
+        <translation type="vanished">Tracez une ligne parallèle ou un arc ou cercle concentrique à travers un point</translation>
+    </message>
+    <message>
+        <source>Number:</source>
+        <translation type="vanished">Nombre :</translation>
+    </message>
+</context>
+<context>
+    <name>OffsetThrough</name>
+    <message>
+        <location filename="../OffsetThrough.js" line="+67"/>
+        <source>Specify point</source>
+        <translation type="unfinished">Indiquer le point</translation>
+    </message>
+    <message>
+        <location filename="../OffsetThrough.ui" line="+17"/>
+        <source>Number:</source>
+        <translation type="unfinished">Nombre :</translation>
+    </message>
+    <message>
+        <location filename="../OffsetThroughInit.js" line="+2"/>
+        <source>Offset (through Point)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw parallel line or concentric arc or circle through a given point</source>
-        <translation>Tracez une ligne parallèle ou un arc ou cercle concentrique à travers un point</translation>
-    </message>
-    <message>
-        <location filename="../LineParallelThrough.ui" line="+17"/>
-        <source>Number:</source>
-        <translation>Nombre :</translation>
+        <source>Offset line, arc, circle or ellipse through point</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

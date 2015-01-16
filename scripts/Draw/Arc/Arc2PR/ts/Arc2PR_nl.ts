@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl">
+<TS version="2.0" language="nl">
 <context>
     <name>Arc2PR</name>
     <message>
         <location filename="../Arc2PR.js" line="+67"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Startpunt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>Eindpunt</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -36,18 +36,18 @@
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegen de klok in (positief)</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+17"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Richting</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation>Met de klok mee (Negatieve)</translation>
+        <translation>Met de klok mee (negatief)</translation>
     </message>
     <message>
         <location line="+24"/>

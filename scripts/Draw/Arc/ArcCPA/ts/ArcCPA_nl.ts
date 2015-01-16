@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl">
+<TS version="2.0" language="nl">
 <context>
     <name>ArcCPA</name>
     <message>
@@ -36,28 +36,28 @@
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegen de klok in (positief)</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+17"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Richting</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Met de klok mee (negatief)</translation>
     </message>
     <message>
         <location filename="../ArcCPAInit.js" line="+2"/>
         <source>&amp;Center, Point, Angles</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Center, punt, hoeken</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
-        <translation type="unfinished"></translation>
+        <translation>Boog tekenen van centrum, punt op de boog en hoeken</translation>
     </message>
 </context>
 </TS>

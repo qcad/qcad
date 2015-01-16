@@ -4,7 +4,7 @@
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../ImportFile.js" line="+58"/>
+        <location filename="../ImportFile.js" line="+55"/>
         <source>No import filters</source>
         <translation type="unfinished"></translation>
     </message>

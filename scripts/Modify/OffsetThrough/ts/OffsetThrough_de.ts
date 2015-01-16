@@ -4,29 +4,47 @@
 <context>
     <name>LineParallelThrough</name>
     <message>
-        <location filename="../LineParallelThrough.js" line="+68"/>
         <source>Specify point</source>
-        <translation>Punkt angeben</translation>
+        <translation type="vanished">Punkt angeben</translation>
     </message>
     <message>
-        <location filename="../LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Anzahl:</translation>
+        <translation type="vanished">Anzahl:</translation>
     </message>
     <message>
-        <location filename="../LineParallelThrough.js" line="-6"/>
         <source>Choose line, arc or circle</source>
-        <translation>Linie, Bogen oder Kreis wählen</translation>
+        <translation type="vanished">Linie, Bogen oder Kreis wählen</translation>
     </message>
     <message>
-        <location filename="../LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
-        <translation>Par&amp;allele (durch Punkt)</translation>
+        <translation type="vanished">Par&amp;allele (durch Punkt)</translation>
+    </message>
+    <message>
+        <source>Draw parallel line or concentric arc or circle through a given point</source>
+        <translation type="vanished">Parallele Linie oder konzentrischer Bogen oder Kreis durch gegebenen Punkt</translation>
+    </message>
+</context>
+<context>
+    <name>OffsetThrough</name>
+    <message>
+        <location filename="../OffsetThrough.js" line="+67"/>
+        <source>Specify point</source>
+        <translation type="unfinished">Punkt angeben</translation>
+    </message>
+    <message>
+        <location filename="../OffsetThrough.ui" line="+17"/>
+        <source>Number:</source>
+        <translation type="unfinished">Anzahl:</translation>
+    </message>
+    <message>
+        <location filename="../OffsetThroughInit.js" line="+2"/>
+        <source>Offset (through Point)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw parallel line or concentric arc or circle through a given point</source>
-        <translation>Parallele Linie oder konzentrischer Bogen oder Kreis durch gegebenen Punkt</translation>
+        <source>Offset line, arc, circle or ellipse through point</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

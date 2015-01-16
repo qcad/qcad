@@ -2,30 +2,25 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ru_RU">
 <context>
-    <name>LineParallelThrough</name>
+    <name>OffsetThrough</name>
     <message>
-        <location filename="../LineParallelThrough.js" line="+62"/>
-        <source>Choose line, arc or circle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
+        <location filename="../OffsetThrough.js" line="+67"/>
         <source>Specify point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LineParallelThrough.ui" line="+17"/>
+        <location filename="../OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LineParallelThroughInit.js" line="+2"/>
-        <source>Par&amp;allel (through Point)</source>
+        <location filename="../OffsetThroughInit.js" line="+2"/>
+        <source>Offset (through Point)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw parallel line or concentric arc or circle through a given point</source>
+        <source>Offset line, arc, circle or ellipse through point</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

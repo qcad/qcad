@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl">
+<TS version="2.0" language="nl">
 <context>
     <name>Arc2PA</name>
     <message>
         <location filename="../Arc2PA.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Startpunt</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -57,7 +57,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken een boog door twee punten met hoek</translation>
     </message>
 </context>
 </TS>
