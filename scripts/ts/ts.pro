@@ -8,9 +8,7 @@ SOURCES = \
     ../WidgetFactory.js \
     ../ShapeAlgorithms.js \
     ../DbConnection.js \
-    ../diff.js \
     ../library.js \
-    ../stacktrace.js \
     ../autostart.js \
     ../sprintf.js \
     ../map.js \

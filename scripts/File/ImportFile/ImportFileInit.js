@@ -3,7 +3,7 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ImportFile.js");
     action.setIcon(basePath + "/ImportFile.svg");
-    //action.setDefaultShortcut(new QKeySequence(""));
+    action.setDefaultShortcut(new QKeySequence(Qt.ShiftModifier + Qt.ControlModifier + Qt.Key_I));
     action.setDefaultCommands(["import"]);
     action.setGroupSortOrder(1000);
     action.setSortOrder(500);
