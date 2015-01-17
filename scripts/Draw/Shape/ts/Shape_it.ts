@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>Line</name>
     <message>
         <source>Show line tools</source>
-        <translation type="vanished">Mostra menù &quot;Linee&quot;</translation>
+        <translation>Mostra menù &quot;Linee&quot;</translation>
     </message>
     <message>
         <source>&amp;Line</source>
-        <translation type="vanished">&amp;Linea</translation>
+        <translation>&amp;Linea</translation>
     </message>
     <message>
         <source>Line Tools</source>
-        <translation type="vanished">Strumenti linea</translation>
+        <translation>Strumenti linea</translation>
     </message>
     <message>
         <source>Line Segment</source>
-        <translation type="vanished">Segmento di linea</translation>
+        <translation>Segmento di linea</translation>
     </message>
     <message>
         <source>Infinite Line</source>
-        <translation type="vanished">Linea infinita</translation>
+        <translation>Linea infinita</translation>
     </message>
     <message>
         <source>Ray</source>
-        <translation type="vanished">Raggio</translation>
+        <translation>Raggio</translation>
     </message>
 </context>
 <context>
@@ -38,11 +38,11 @@
     <message>
         <location line="+5"/>
         <source>Show shape tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra strumenti forma</translation>
     </message>
     <message>
         <source>Show line tools</source>
-        <translation type="vanished">Mostra strumenti forma</translation>
+        <translation>Mostra strumenti forma</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../Shape.ui" line="+17"/>
         <source>Create polyline</source>
-        <translation>Creare &amp;polilinea</translation>
+        <translation>Creare polilinea</translation>
     </message>
 </context>
 </TS>

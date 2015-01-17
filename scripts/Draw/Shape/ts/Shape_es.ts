@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>Line</name>
     <message>
         <source>Show line tools</source>
-        <translation type="vanished">Mostrar menú &quot;Líneas&quot;</translation>
+        <translation>Mostrar menú &quot;Líneas&quot;</translation>
     </message>
     <message>
         <source>&amp;Line</source>
-        <translation type="vanished">&amp;Línea</translation>
+        <translation>&amp;Línea</translation>
     </message>
     <message>
         <source>Line Tools</source>
-        <translation type="vanished">Herramientas de línea</translation>
+        <translation>Herramientas de línea</translation>
     </message>
     <message>
         <source>Line Segment</source>
-        <translation type="vanished">Segmento de línea</translation>
+        <translation>Segmento de línea</translation>
     </message>
     <message>
         <source>Infinite Line</source>
-        <translation type="vanished">Línea infinita</translation>
+        <translation>Línea infinita</translation>
     </message>
     <message>
         <source>Ray</source>
-        <translation type="vanished">Rayo</translation>
+        <translation>Rayo</translation>
     </message>
 </context>
 <context>
@@ -38,11 +38,11 @@
     <message>
         <location line="+5"/>
         <source>Show shape tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar herramientas de forma</translation>
     </message>
     <message>
         <source>Show line tools</source>
-        <translation type="vanished">Mostrar herramientas de forma</translation>
+        <translation>Mostrar herramientas de forma</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../Shape.ui" line="+17"/>
         <source>Create polyline</source>
-        <translation>Crear &amp;polilínea</translation>
+        <translation>Crear polilínea</translation>
     </message>
 </context>
 </TS>

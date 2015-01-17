@@ -20,17 +20,17 @@
     <message>
         <location filename="../OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>Poikkeama (etäisyydellä)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Poikkeama viivassa, kaaressa, ympyrässä tai ellipsissä</translation>
     </message>
     <message>
         <location filename="../Offset.js" line="+76"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse viiva, kaari, ympyrä tai ellipsi</translation>
     </message>
 </context>
 </TS>

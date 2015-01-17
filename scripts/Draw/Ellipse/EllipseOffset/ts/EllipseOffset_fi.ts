@@ -46,12 +46,12 @@
     <message>
         <location filename="../EllipseOffsetInit.js" line="+2"/>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yhdensuuntainen käyrä (etäisyydellä)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä yhdensuuntainen käyrä ellipsiin</translation>
     </message>
 </context>
 </TS>

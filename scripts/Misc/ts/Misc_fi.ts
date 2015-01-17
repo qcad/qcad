@@ -16,7 +16,7 @@
     <message>
         <location line="+17"/>
         <source>&amp;Misc</source>
-        <translation>Sekalaiset</translation>
+        <translation>&amp;Sekalaiset</translation>
     </message>
 </context>
 </TS>

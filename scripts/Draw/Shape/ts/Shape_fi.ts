@@ -11,7 +11,7 @@
     <message>
         <location line="+5"/>
         <source>Show shape tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä muototyökalut</translation>
     </message>
     <message>
         <source>Show line tools</source>

@@ -31,12 +31,12 @@
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Kääntäen liitetyt kohteet&lt;br&gt;vaakasuoraan</translation>
+        <translation>Käännä liitetyt kohteet&lt;br&gt;vaakasuoraan</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Kääntäen liitetyt kohteet&lt;br&gt;pystysuoraan</translation>
+        <translation>Käännä liitetyt kohteet&lt;br&gt;pystysuoraan</translation>
     </message>
     <message>
         <location line="+21"/>

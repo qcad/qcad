@@ -140,7 +140,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole viiva, kaari, ympyrä, ellipsi, käyrä tai moniviiva.</translation>
     </message>
     <message>
         <location line="+4"/>

@@ -28,7 +28,7 @@
         <location line="-37"/>
         <location line="+24"/>
         <source>Ellipse arc area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ellipsin kaaren alue:</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -36,13 +36,13 @@
         <location line="+43"/>
         <location line="+22"/>
         <source>arc length:</source>
-        <translation type="unfinished"></translation>
+        <translation>kaaren pituus:</translation>
     </message>
     <message>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation type="unfinished"></translation>
+        <translation>jänne:</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -52,7 +52,7 @@
     <message>
         <location line="+9"/>
         <source>distance:</source>
-        <translation>Etäisyys:</translation>
+        <translation>etäisyys:</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -67,12 +67,12 @@
     <message>
         <location line="-104"/>
         <source>Circle area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ympyrän ala:</translation>
     </message>
     <message>
         <location line="-248"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse kaari, ympyrä, ellipsi tai ellipsin kaari</translation>
     </message>
     <message>
         <location line="+249"/>
@@ -83,13 +83,13 @@
     <message>
         <location line="-1"/>
         <source>Ellipse area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ellipsin ala:</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaaren ala:</translation>
     </message>
     <message>
         <location filename="../InfoArcCircleArea.ui" line="+17"/>
@@ -99,12 +99,12 @@
     <message>
         <location line="+7"/>
         <source>Calculate Area of Sector</source>
-        <translation type="unfinished"></translation>
+        <translation>Laske sektorin ala:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Calculate Area of Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Laske segmentin ala</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -114,7 +114,7 @@
     <message>
         <location line="+10"/>
         <source>Add entities to drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää piirrokseen kohteita</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -126,12 +126,12 @@
         <location line="+67"/>
         <location filename="../InfoArcCircleArea.ui" line="+13"/>
         <source>Chord</source>
-        <translation type="unfinished"></translation>
+        <translation>Jänne</translation>
     </message>
     <message>
         <location filename="../InfoArcCircleArea.ui" line="+13"/>
         <source>Add lengths/circumference to drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää etäisyydet/piirroksen ympärysmitta</translation>
     </message>
     <message>
         <location filename="../InfoArcCircleArea.js" line="-68"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaaren/ympyrän/ellipsin ala</translation>
     </message>
 </context>
 </TS>

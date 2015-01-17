@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="nl">
+<TS version="2.1" language="nl">
 <context>
     <name>ShowAllBlocks</name>
     <message>
         <source>&amp;Show all</source>
-        <translation>Alle &amp;tonen</translation>
+        <translation type="vanished">Alle &amp;tonen</translation>
     </message>
     <message>
         <location filename="../ShowAllBlocksInit.js" line="+2"/>

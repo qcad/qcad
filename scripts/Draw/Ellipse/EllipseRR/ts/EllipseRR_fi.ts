@@ -26,12 +26,12 @@
     <message>
         <location filename="../EllipseRRInit.js" line="+2"/>
         <source>Ellipse with &amp;Radii</source>
-        <translation type="unfinished"></translation>
+        <translation>Ellipsi &amp;säteellä</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse with position and radii</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä ellipsi sijainnilla ja säteellä</translation>
     </message>
 </context>
 </TS>

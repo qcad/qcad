@@ -25,12 +25,12 @@
     <message>
         <location filename="../EllipseOffsetThroughInit.js" line="+2"/>
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Yhdensuuntainen käyrä (&amp;pisteen kautta)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse through point</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä yhdensuuntainen käyrä ellipsiin pisteen kautta</translation>
     </message>
 </context>
 </TS>

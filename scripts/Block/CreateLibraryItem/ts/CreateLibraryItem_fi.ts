@@ -6,7 +6,7 @@
     <message>
         <location filename="../CreateLibraryItem.js" line="+49"/>
         <source>Reference Point</source>
-        <translation>Referenssipiste</translation>
+        <translation>Viitepiste</translation>
     </message>
     <message>
         <location line="+29"/>

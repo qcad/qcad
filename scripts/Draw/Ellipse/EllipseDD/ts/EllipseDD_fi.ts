@@ -26,12 +26,12 @@
     <message>
         <location filename="../EllipseDDInit.js" line="+2"/>
         <source>Ellipse with &amp;Diameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Ellipsi &amp;halkaisijoilla</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse with position and diameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä ellipsi sijainnilla ja halkaisijoilla</translation>
     </message>
 </context>
 </TS>
