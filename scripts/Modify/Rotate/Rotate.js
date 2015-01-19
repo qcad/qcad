@@ -31,6 +31,8 @@ function Rotate(guiAction) {
     this.referencePoint = undefined;
     this.targetPoint = undefined;
     this.angle = undefined;
+    this.angleByMouse = false;
+    this.noDialog = false;
 }
 
 Rotate.prototype = new Transform();
@@ -119,10 +121,12 @@ Rotate.prototype.pickCoordinate = function(event, preview) {
             this.centerPoint = event.getModelPosition();
             this.setState(-1);
 
-            if (!this.showDialog()) {
-                // dialog canceled:
-                this.terminate();
-                return;
+            if (!this.noDialog) {
+                if (!this.showDialog()) {
+                    // dialog canceled:
+                    this.terminate();
+                    return;
+                }
             }
 
             // define angle with mouse:

@@ -775,7 +775,7 @@ double RExporter::exportLine(const RLine& line, double offset) {
 
     // avoid huge number of small segments due to very fine 
     // pattern or long lines:
-    if (patternLength<RS::PointTolerance || length / patternLength > 5000) {
+    if (patternLength<RS::PointTolerance || length / patternLength > 500) {
         exportLineSegment(line, angle);
         return ret;
     }
