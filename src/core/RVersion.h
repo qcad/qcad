@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -25,11 +25,11 @@
  * x.x.x   for releases
  * x.x.x.x for snapshots only
  */
-#define R_QCAD_VERSION_STRING "3.7.6.0"
+#define R_QCAD_VERSION_STRING "3.7.6.1"
 
 #define R_QCAD_VERSION_MAJOR    3
 #define R_QCAD_VERSION_MINOR    7
 #define R_QCAD_VERSION_REV      6
-#define R_QCAD_VERSION_BUILD    0
+#define R_QCAD_VERSION_BUILD    1
 
 #endif
