@@ -76,5 +76,5 @@ MyAction.init = function(basePath) {
 
     // Set list of widgets this action is added to
     // (menus, tool bars, CAD tool bar panels):
-    action.setWidgetNames(["TutorialsMenu"]);
+    action.setWidgetNames(["MyScriptsMenu"]);
 };
