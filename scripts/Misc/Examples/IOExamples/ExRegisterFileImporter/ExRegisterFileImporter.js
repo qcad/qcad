@@ -134,7 +134,7 @@ ExRegisterFileImporter.init = function(basePath) {
     var action = new RGuiAction(qsTr("&Register File Importer"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/ExRegisterFileImporter.js");
-    action.setGroupSortOrder(71100);
-    action.setSortOrder(300);
+    action.setGroupSortOrder(71110);
+    action.setSortOrder(200);
     action.setWidgetNames(["IOExamplesMenu"]);
 };
