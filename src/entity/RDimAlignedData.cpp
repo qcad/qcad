@@ -101,7 +101,10 @@ void RDimAlignedData::recomputeDefinitionPoint(
         a-=M_PI/2.0;
     }
     RVector v = RVector::createPolar(d, a);
-    definitionPoint = newExtPoint1 + v;
+    RVector dp = newExtPoint1 + v;
+    if (dp.isValid()) {
+        definitionPoint = dp;
+    }
 }
 
 QList<QSharedPointer<RShape> > RDimAlignedData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
