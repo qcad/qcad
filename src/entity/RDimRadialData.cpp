@@ -131,9 +131,9 @@ QList<QSharedPointer<RShape> > RDimRadialData::getShapes(const RBox& queryBox, b
 
     QList<QSharedPointer<RShape> > ret;
 
-    if (ignoreComplex) {
-        return ret;
-    }
+//    if (ignoreComplex) {
+//        return ret;
+//    }
 
     defaultAngle = 0.0;
 

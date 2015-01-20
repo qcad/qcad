@@ -112,9 +112,9 @@ QList<QSharedPointer<RShape> > RDimAlignedData::getShapes(const RBox& queryBox, 
 
     QList<QSharedPointer<RShape> > ret;
 
-    if (ignoreComplex) {
-        return ret;
-    }
+//    if (ignoreComplex) {
+//        return ret;
+//    }
 
     double dimexo = getDimexo();
     double dimexe = getDimexe();

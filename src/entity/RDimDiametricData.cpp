@@ -132,9 +132,9 @@ QList<QSharedPointer<RShape> > RDimDiametricData::getShapes(const RBox& queryBox
 
     QList<QSharedPointer<RShape> > ret;
 
-    if (ignoreComplex) {
-        return ret;
-    }
+//    if (ignoreComplex) {
+//        return ret;
+//    }
 
     // dimension line:
     ret.append(getDimensionLineShapes(
