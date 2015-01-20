@@ -55,7 +55,6 @@ QList<RVector> RDimRotatedData::getReferencePoints(
 
     QList<RVector> ret = RDimLinearData::getReferencePoints(hint);
 
-    //ret.append(middleOfText);
     ret.append(extensionPoint1);
     ret.append(extensionPoint2);
 
@@ -78,7 +77,9 @@ void RDimRotatedData::recomputeDefinitionPoint(
     RVector dimP1 = dimLine.getClosestPointOnShape(newExtPoint1, false);
     //RVector dimP2 = dimLine.getClosestPointOnShape(extensionPoint2, false);
 
-    definitionPoint = dimP1;
+    if (dimP1.isValid()) {
+        definitionPoint = dimP1;
+    }
 }
 
 bool RDimRotatedData::rotate(double rotation, const RVector& center) {
