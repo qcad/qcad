@@ -40,8 +40,6 @@ RMathLineEdit::RMathLineEdit(QWidget* parent) :
 
     connect(this, SIGNAL(textEdited(QString)),
        this, SLOT(slotTextEdited(QString)));
-
-//    installEventFilter(this);
 }
 
 //int RMathLineEdit::getDefaultUnit() {
@@ -201,11 +199,7 @@ void RMathLineEdit::setToolTip(const QString& toolTip) {
 }
 
 void RMathLineEdit::keyPressEvent(QKeyEvent* event) {
-    if (event->key()==Qt::Key_Escape) {
-        clearFocus();
-        event->accept();
-    }
-    else if (event->key()==Qt::Key_Up) {
+    if (event->key()==Qt::Key_Up) {
         emit upKeyPressed();
     }
     else if (event->key()==Qt::Key_Down) {
@@ -217,40 +211,5 @@ void RMathLineEdit::keyPressEvent(QKeyEvent* event) {
 }
 
 void RMathLineEdit::keyReleaseEvent(QKeyEvent* event) {
-    if (event->key()==Qt::Key_Escape) {
-        event->accept();
-    }
-    else {
-        QLineEdit::keyReleaseEvent(event);
-    }
+    QLineEdit::keyReleaseEvent(event);
 }
-
-//bool RMathLineEdit::eventFilter(QObject* obj, QEvent* event) {
-//    //qDebug() << "eventFilter";
-
-//    if (obj == this) {
-//        //qDebug() << "eventFilter: obj";
-//        //qDebug() << "eventFilter: type: " << event->type();
-//        if (event->type()==QEvent::Shortcut) {
-//            qDebug() << "eventFiler: short";
-//        }
-//        if (event->type()==QEvent::ShortcutOverride) {
-//            qDebug() << "eventFiler: overr";
-//        }
-//        if (event->type()==QEvent::KeyRelease) {
-//            qDebug() << "eventFiler: keyRelease";
-//        }
-//        if (event->type()==QEvent::ShortcutOverride) {
-//            qDebug() << "eventFiler: override";
-//            QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
-//            if (keyEvent->key()==Qt::Key_Escape) {
-//                qDebug() << "eventFiler: esc";
-//                qDebug() << "Ate key overr" << keyEvent->key();
-//                return true;
-//            }
-//        }
-//    }
-
-//    // pass the event on to the parent class
-//    return QLineEdit::eventFilter(obj, event);
-//}

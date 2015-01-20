@@ -28,6 +28,16 @@ Esc.prototype = new Edit();
 Esc.prototype.beginEvent = function() {
     Edit.prototype.beginEvent.call(this);
 
+    var returnFocus = false;
+
+    var w = QApplication.focusWidget();
+
+    // focus in RMathLineEdit (e.g. in options toolbar)
+    // return focus to graphics view:
+    if (isOfType(w, RMathLineEdit)) {
+        returnFocus = true;
+    }
+
     // special case: erase command line text:
     var commandLineEdit = objectFromPath("MainWindow::CommandLine::CommandEdit");
     if (!isNull(commandLineEdit)) {
@@ -38,9 +48,27 @@ Esc.prototype.beginEvent = function() {
                 return;
             }
             else {
-                var appWin = EAction.getMainWindow();
-                appWin.setFocus(Qt.OtherFocusReason);
+                returnFocus = true;
             }
+        }
+    }
+
+    // return focus to graphics view or application window:
+    if (returnFocus) {
+        var view = this.getGraphicsViews();
+        if (!isNull(view) && isFunction(view.getGraphicsViewQt)) {
+            var viewQt = view.getGraphicsViewQt();
+            if (!isNull(viewQt)) {
+                viewQt.setFocus(Qt.OtherFocusReason);
+                this.terminate();
+                return;
+            }
+        }
+        else {
+            var appWin = EAction.getMainWindow();
+            appWin.setFocus(Qt.OtherFocusReason);
+            this.terminate();
+            return;
         }
     }
 
