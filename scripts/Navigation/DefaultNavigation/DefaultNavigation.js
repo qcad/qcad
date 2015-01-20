@@ -70,6 +70,10 @@ DefaultNavigation.prototype.finishEvent = function() {
 DefaultNavigation.prototype.keyPressEvent = function(event) {
     var v = undefined;
 
+    if (event.isAccepted()) {
+        return;
+    }
+
     if (event.key()===Qt.Key_Left.valueOf()) {
         v = new RVector(50, 0);
     } else if (event.key()===Qt.Key_Right.valueOf()) {

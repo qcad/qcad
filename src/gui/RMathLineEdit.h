@@ -83,6 +83,7 @@ public:
 protected:
     virtual void keyPressEvent(QKeyEvent* event);
     virtual void keyReleaseEvent(QKeyEvent* event);
+//    virtual bool eventFilter(QObject* obj, QEvent* event);
 
 public slots:
     void slotTextChanged(const QString& text);
@@ -90,6 +91,8 @@ public slots:
 
 signals:
     void valueChanged(double value, const QString& error);
+    void upKeyPressed();
+    void downKeyPressed();
 
 private:
     QPalette oriPalette;

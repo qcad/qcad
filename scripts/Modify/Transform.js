@@ -27,6 +27,7 @@ function Transform(guiAction) {
     Modify.call(this, guiAction);
     
     this.useCurrentAttributes = false;
+    this.copies = 0;
 }
 
 Transform.prototype = new Modify();

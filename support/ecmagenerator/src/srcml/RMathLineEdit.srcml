@@ -265,7 +265,9 @@ dir="./gui" filename="RMathLineEdit.h">
       <name>QKeyEvent</name>*</type>
       <name>event</name>
     </decl>
-  </param>)</parameter_list>;</function_decl></protected>
+  </param>)</parameter_list>;</function_decl>
+  <comment type="line">// virtual bool eventFilter(QObject* obj,
+  QEvent* event);</comment></protected>
   <public>public slots: 
   <function_decl>
   <type>
@@ -318,7 +320,19 @@ dir="./gui" filename="RMathLineEdit.h">
       <name>QString</name>&amp;</type>
       <name>error</name>
     </decl>
-  </param>)</parameter_list>;</function_decl></public>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>upKeyPressed</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>downKeyPressed</name>
+  <parameter_list>()</parameter_list>;</function_decl></public>
   <private>private: 
   <decl_stmt>
   <decl>
