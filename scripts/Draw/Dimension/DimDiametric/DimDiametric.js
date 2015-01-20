@@ -158,7 +158,12 @@ DimDiametric.prototype.getOperation = function(preview) {
     this.data.setFarChordPoint(RVector.createPolar(radius, angle).operator_add(center));
 
     var doc = this.getDocument();
-    var entity = new RDimDiametricEntity(doc, this.data);
+    var scale = this.parseScale(this.getScaleString());
+    var scaled_data = this.data;
+
+    scaled_data.setLinearFactor(1/scale);
+
+    var entity = new RDimDiametricEntity(doc, scaled_data);
     if (!isEntity(entity)) {
         return undefined;
     }
