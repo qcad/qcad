@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>CircleCD</name>
     <message>
         <source>Center or radius</source>
-        <translation type="vanished">Zentrum oder Radius</translation>
+        <translation>Zentrum oder Radius</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="vanished">Zentrum</translation>
+        <translation>Zentrum</translation>
     </message>
     <message>
         <source>Circle (Center, &amp;Radius)</source>
@@ -17,15 +17,15 @@
     </message>
     <message>
         <source>Center, &amp;Radius</source>
-        <translation type="vanished">Zentrum, &amp;Radius</translation>
+        <translation>Zentrum, &amp;Radius</translation>
     </message>
     <message>
         <source>Draw circle from center and radius</source>
-        <translation type="vanished">Kreis von Zentrum und Radius</translation>
+        <translation>Kreis von Zentrum und Radius</translation>
     </message>
     <message>
         <source>Radius:</source>
-        <translation type="vanished">Radius:</translation>
+        <translation>Radius:</translation>
     </message>
     <message>
         <location filename="../CircleCD.ui" line="+17"/>
