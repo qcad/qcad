@@ -30,11 +30,12 @@ function LineParallel(guiAction) {
     Offset.call(this, guiAction);
 
     if (!isNull(guiAction)) {
-        this.setUiOptions(["../Line.ui", "LineParallel.ui"]);
+        this.setUiOptions([LineParallel.includeBasePath + "/../Line.ui", LineParallel.includeBasePath + "/LineParallel.ui"]);
     }
 }
 
 LineParallel.prototype = new Offset();
+LineParallel.includeBasePath = includeBasePath;
 
 LineParallel.prototype.slotTypeAutoChanged = function(checked) {
     Line.slotTypeAutoChanged(this, checked);

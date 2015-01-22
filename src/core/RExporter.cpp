@@ -755,6 +755,7 @@ double RExporter::exportLine(const RLine& line, double offset) {
     double length = line.getLength();
 
     if (length>1e100 || length<RS::PointTolerance) {
+        qDebug() << "line too long";
         return ret;
     }
 

@@ -189,8 +189,7 @@ RLine RXLine::getClippedLine(const RBox& box) const {
 
     if (sol.length()==2) {
         ret = RLine(sol[0], sol[1]);
-        double diff = RMath::getAngleDifference180(ret.getAngle(), getAngle());
-        if (fabs(diff) > 1.0e-2) {
+        if (!RMath::isSameDirection(ret.getDirection1(), getDirection1(), 1.0e-2)) {
             ret.reverse();
         }
     }

@@ -52,8 +52,6 @@ Offset.State = {
 Offset.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    qDebug("Offset.prototype.beginEvent");
-
     this.setState(Offset.State.ChoosingEntity);
 };
 
@@ -176,10 +174,15 @@ Offset.prototype.getOperation = function(preview) {
         }
 
         if (!isNull(e)) {
-            op.addObject(e);
+            this.addObjectToOperation(op, e);
+//            op.addObject(e);
         }
     }
     return op;
+};
+
+Offset.prototype.addObjectToOperation = function(operation, entity) {
+    operation.addObject(entity);
 };
 
 Offset.prototype.getOffsetShapes = function(preview) {

@@ -64,7 +64,15 @@ bool RRay::reverse() {
 
 RLine RRay::getClippedLine(const RBox& box) const {
     RLine ret = RXLine::getClippedLine(box);
-    ret.setStartPoint(getBasePoint());
+
+    if (box.contains(getBasePoint())) {
+        ret.setStartPoint(getBasePoint());
+    }
+
+    if (!RMath::isSameDirection(getDirection1(), getBasePoint().getAngleTo(ret.getEndPoint()), 0.1)) {
+        ret = getLineShape();
+    }
+
     return ret;
 }
 

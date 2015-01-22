@@ -343,7 +343,13 @@ void RGraphicsSceneQt::exportXLine(const RXLine& xLine) {
 
     // trim line to view box:
     RLine clippedLine = xLine.getClippedLine(box);
-    exportLineSegment(clippedLine);
+
+    double offs = clippedLine.getStartPoint().getDistanceTo(xLine.getBasePoint());
+    if (RMath::isSameDirection(xLine.getBasePoint().getAngleTo(clippedLine.getStartPoint()), xLine.getDirection1())) {
+        offs *= -1;
+    }
+
+    exportLine(clippedLine, offs);
 
     currentPainterPath.setAlwaysRegen(true);
 
@@ -367,7 +373,13 @@ void RGraphicsSceneQt::exportRay(const RRay& ray) {
 
     // trim line to view box:
     RLine clippedLine = ray.getClippedLine(box);
-    exportLineSegment(clippedLine);
+
+    double offs = clippedLine.getStartPoint().getDistanceTo(ray.getBasePoint());
+    if (RMath::isSameDirection(ray.getBasePoint().getAngleTo(clippedLine.getStartPoint()), ray.getDirection1())) {
+        offs *= -1;
+    }
+
+    exportLine(clippedLine, offs);
 
     currentPainterPath.setAlwaysRegen(true);
 
