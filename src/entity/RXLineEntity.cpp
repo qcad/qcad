@@ -43,6 +43,7 @@ RPropertyTypeId RXLineEntity::PropertyDirectionY;
 RPropertyTypeId RXLineEntity::PropertyDirectionZ;
 
 RPropertyTypeId RXLineEntity::PropertyAngle;
+RPropertyTypeId RXLineEntity::PropertyFixedAngle;
 
 
 RXLineEntity::RXLineEntity(RDocument* document, const RXLineData& data,
@@ -82,6 +83,7 @@ void RXLineEntity::init() {
     RXLineEntity::PropertyDirectionZ.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Direction Vector"), QT_TRANSLATE_NOOP("REntity", "Z"));
 
     RXLineEntity::PropertyAngle.generateId(typeid(RXLineEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
+    RXLineEntity::PropertyFixedAngle.generateId(typeid(RXLineEntity), "", QT_TRANSLATE_NOOP("REntity", "Fixed Angle"));
 }
 
 bool RXLineEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -112,9 +114,12 @@ bool RXLineEntity::setProperty(RPropertyTypeId propertyTypeId,
         data.setSecondPoint(v);
         ret = true;
     }
-
     else if (propertyTypeId==PropertyAngle) {
         data.setAngle(value.toDouble());
+        ret = true;
+    }
+    else if (propertyTypeId==PropertyFixedAngle) {
+        data.setFixedAngle(value.toBool());
         ret = true;
     }
 
@@ -124,6 +129,10 @@ bool RXLineEntity::setProperty(RPropertyTypeId propertyTypeId,
 QPair<QVariant, RPropertyAttributes> RXLineEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable,
         bool noAttributes) {
+
+    RPropertyAttributes attFixedAngle;
+    attFixedAngle.setReadOnly(data.fixedAngle);
+
     if (propertyTypeId == PropertyBasePointX) {
         return qMakePair(QVariant(data.basePoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyBasePointY) {
@@ -133,23 +142,29 @@ QPair<QVariant, RPropertyAttributes> RXLineEntity::getProperty(
     }
 
     else if (propertyTypeId == PropertySecondPointX) {
-        return qMakePair(QVariant(data.getSecondPoint().x), RPropertyAttributes(RPropertyAttributes::Redundant));
+        attFixedAngle.setRedundant(true);
+        return qMakePair(QVariant(data.getSecondPoint().x), attFixedAngle);
     } else if (propertyTypeId == PropertySecondPointY) {
-        return qMakePair(QVariant(data.getSecondPoint().y), RPropertyAttributes(RPropertyAttributes::Redundant));
+        attFixedAngle.setRedundant(true);
+        return qMakePair(QVariant(data.getSecondPoint().y), attFixedAngle);
     } else if (propertyTypeId == PropertySecondPointZ) {
-        return qMakePair(QVariant(data.getSecondPoint().z), RPropertyAttributes(RPropertyAttributes::Redundant));
+        attFixedAngle.setRedundant(true);
+        return qMakePair(QVariant(data.getSecondPoint().z), attFixedAngle);
     }
 
     else if (propertyTypeId == PropertyDirectionX) {
-        return qMakePair(QVariant(data.getDirectionVector().x), RPropertyAttributes());
+        return qMakePair(QVariant(data.getDirectionVector().x), attFixedAngle);
     } else if (propertyTypeId == PropertyDirectionY) {
-        return qMakePair(QVariant(data.getDirectionVector().y), RPropertyAttributes());
+        return qMakePair(QVariant(data.getDirectionVector().y), attFixedAngle);
     } else if (propertyTypeId == PropertyDirectionZ) {
-        return qMakePair(QVariant(data.getDirectionVector().z), RPropertyAttributes());
+        return qMakePair(QVariant(data.getDirectionVector().z), attFixedAngle);
     }
 
-    if (propertyTypeId==PropertyAngle) {
+    else if (propertyTypeId==PropertyAngle) {
         return qMakePair(QVariant(data.getAngle()), RPropertyAttributes(RPropertyAttributes::Angle|RPropertyAttributes::Redundant));
+    }
+    else if (propertyTypeId==PropertyFixedAngle) {
+        return qMakePair(QVariant(data.fixedAngle), RPropertyAttributes());
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);

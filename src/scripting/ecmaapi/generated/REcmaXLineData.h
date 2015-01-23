@@ -57,6 +57,12 @@
         getAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasFixedAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setFixedAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -215,6 +215,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="setRedundant" cppName="setRedundant"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="isVisibleToParent" cppName="isVisibleToParent"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -57,6 +57,15 @@ public:
     double getAngle() const {
         return RRay::getAngle();
     }
+
+    bool hasFixedAngle() const {
+        return fixedAngle;
+    }
+
+    void setFixedAngle(bool on) {
+        fixedAngle = on;
+    }
+
     bool reverse() {
         return RRay::reverse();
     }
@@ -91,6 +100,9 @@ public:
         return QList<QSharedPointer<RShape> >() <<
                 QSharedPointer<RShape>(new RRay(*this));
     }
+
+private:
+    bool fixedAngle;
 };
 
 Q_DECLARE_METATYPE(RRayData*)

@@ -76,6 +76,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
             
+            REcmaHelper::registerFunction(&engine, proto, hasFixedAngle, "hasFixedAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, setFixedAngle, "setFixedAngle");
+            
             REcmaHelper::registerFunction(&engine, proto, reverse, "reverse");
             
             REcmaHelper::registerFunction(&engine, proto, getTrimEnd, "getTrimEnd");
@@ -552,6 +556,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaRayData::getAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayData::hasFixedAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayData::hasFixedAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::hasFixedAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayData* self = 
+                        getSelf("hasFixedAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasFixedAngle();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.hasFixedAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayData::hasFixedAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayData::setFixedAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayData::setFixedAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayData::setFixedAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayData* self = 
+                        getSelf("setFixedAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setFixedAngle(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayData.setFixedAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayData::setFixedAngle", context, engine);
             return result;
         }
          QScriptValue

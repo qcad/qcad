@@ -60,6 +60,15 @@ public:
     double getAngle() const {
         return RXLine::getAngle();
     }
+
+    bool hasFixedAngle() const {
+        return fixedAngle;
+    }
+
+    void setFixedAngle(bool on) {
+        fixedAngle = on;
+    }
+
     bool reverse() {
         return RXLine::reverse();
     }
@@ -94,6 +103,9 @@ public:
         return QList<QSharedPointer<RShape> >() <<
                 QSharedPointer<RShape>(new RXLine(*this));
     }
+
+private:
+    bool fixedAngle;
 };
 
 Q_DECLARE_METATYPE(RXLineData*)

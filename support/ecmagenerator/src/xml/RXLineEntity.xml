@@ -133,6 +133,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
+    <method name="hasFixedAngle" cppName="hasFixedAngle"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setFixedAngle" cppName="setFixedAngle"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getDirection1" cppName="getDirection1"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -231,6 +244,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyDirectionZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyAngle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyFixedAngle" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

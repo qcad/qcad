@@ -100,6 +100,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
             
+            REcmaHelper::registerFunction(&engine, proto, hasFixedAngle, "hasFixedAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, setFixedAngle, "setFixedAngle");
+            
             REcmaHelper::registerFunction(&engine, proto, getDirection1, "getDirection1");
             
             REcmaHelper::registerFunction(&engine, proto, getDirection2, "getDirection2");
@@ -211,6 +215,10 @@
             
             ctor.setProperty("PropertyAngle",
                 qScriptValueFromValue(&engine, RXLineEntity::PropertyAngle),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyFixedAngle",
+                qScriptValueFromValue(&engine, RXLineEntity::PropertyFixedAngle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -1807,6 +1815,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaXLineEntity::getAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaXLineEntity::hasFixedAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaXLineEntity::hasFixedAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaXLineEntity::hasFixedAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RXLineEntity* self = 
+                        getSelf("hasFixedAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasFixedAngle();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineEntity.hasFixedAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaXLineEntity::hasFixedAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaXLineEntity::setFixedAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaXLineEntity::setFixedAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaXLineEntity::setFixedAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RXLineEntity* self = 
+                        getSelf("setFixedAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setFixedAngle(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineEntity.setFixedAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaXLineEntity::setFixedAngle", context, engine);
             return result;
         }
          QScriptValue

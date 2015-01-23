@@ -23,7 +23,7 @@ RXLineData::RXLineData() {
 }
 
 RXLineData::RXLineData(RDocument* document, const RXLineData& data)
-    : REntityData(document) {
+    : REntityData(document), fixedAngle(false) {
     *this = data;
     this->document = document;
     if (document!=NULL) {
@@ -32,11 +32,11 @@ RXLineData::RXLineData(RDocument* document, const RXLineData& data)
 }
 
 RXLineData::RXLineData(const RXLine &line) :
-    RXLine(line) {
+    RXLine(line), fixedAngle(false) {
 }
 
 RXLineData::RXLineData(const RVector& basePoint, const RVector& dir) :
-    RXLine(basePoint, dir) {
+    RXLine(basePoint, dir), fixedAngle(false) {
 }
 
 QList<RVector> RXLineData::getReferencePoints(
@@ -45,7 +45,9 @@ QList<RVector> RXLineData::getReferencePoints(
 
     QList<RVector> ret;
     ret.append(basePoint);
-    ret.append(getSecondPoint());
+    if (!hasFixedAngle()) {
+        ret.append(getSecondPoint());
+    }
     return ret;
 }
 

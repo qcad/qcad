@@ -95,6 +95,12 @@
         getAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasFixedAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setFixedAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDirection1
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

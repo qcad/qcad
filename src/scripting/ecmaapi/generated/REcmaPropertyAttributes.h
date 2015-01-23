@@ -130,6 +130,9 @@
         isRedundant
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setRedundant
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isVisibleToParent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

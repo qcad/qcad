@@ -182,6 +182,39 @@ dir="./entity" filename="RXLineData.h">
     <type>
       <name>bool</name>
     </type>
+    <name>hasFixedAngle</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>fixedAngle</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setFixedAngle</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>bool</name>
+        </type>
+        <name>on</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>fixedAngle</name>= 
+    <name>on</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
     <name>reverse</name>
     <parameter_list>()</parameter_list>
     <block>{ 
@@ -475,7 +508,15 @@ dir="./entity" filename="RXLineData.h">
         </call></expr>
       </argument>)</argument_list>
     </call></expr>;</return>}</block>
-  </function></public>}</block>;</class>
+  </function></public>
+  <private>private: 
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>fixedAngle</name>
+  </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

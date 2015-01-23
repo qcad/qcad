@@ -201,6 +201,10 @@ public:
         return options.testFlag(Redundant);
     }
 
+    void setRedundant(bool on) {
+        setOption(Redundant, on);
+    }
+
     bool isVisibleToParent() const {
         return options.testFlag(VisibleToParent);
     }

@@ -108,6 +108,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isRedundant, "isRedundant");
             
+            REcmaHelper::registerFunction(&engine, proto, setRedundant, "setRedundant");
+            
             REcmaHelper::registerFunction(&engine, proto, isVisibleToParent, "isVisibleToParent");
             
             REcmaHelper::registerFunction(&engine, proto, isNumericallySorted, "isNumericallySorted");
@@ -1917,6 +1919,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::isRedundant", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::setRedundant
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::setRedundant", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::setRedundant";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("setRedundant", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setRedundant(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.setRedundant().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::setRedundant", context, engine);
             return result;
         }
          QScriptValue

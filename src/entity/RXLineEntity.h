@@ -61,6 +61,7 @@ public:
     static RPropertyTypeId PropertyDirectionZ;
 
     static RPropertyTypeId PropertyAngle;
+    static RPropertyTypeId PropertyFixedAngle;
 
 public:
     RXLineEntity(RDocument* document, const RXLineData& data,
@@ -125,6 +126,14 @@ public:
 
     double getAngle() const {
         return data.getAngle();
+    }
+
+    bool hasFixedAngle() const {
+        return data.hasFixedAngle();
+    }
+
+    void setFixedAngle(bool on) {
+        data.setFixedAngle(on);
     }
 
     double getDirection1() const {

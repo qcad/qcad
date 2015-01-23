@@ -100,6 +100,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
             
+            REcmaHelper::registerFunction(&engine, proto, hasFixedAngle, "hasFixedAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, setFixedAngle, "setFixedAngle");
+            
             REcmaHelper::registerFunction(&engine, proto, getDirection1, "getDirection1");
             
             REcmaHelper::registerFunction(&engine, proto, getDirection2, "getDirection2");
@@ -211,6 +215,10 @@
             
             ctor.setProperty("PropertyAngle",
                 qScriptValueFromValue(&engine, RRayEntity::PropertyAngle),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyFixedAngle",
+                qScriptValueFromValue(&engine, RRayEntity::PropertyFixedAngle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -1807,6 +1815,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaRayEntity::getAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayEntity::hasFixedAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayEntity::hasFixedAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::hasFixedAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayEntity* self = 
+                        getSelf("hasFixedAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasFixedAngle();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.hasFixedAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayEntity::hasFixedAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRayEntity::setFixedAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRayEntity::setFixedAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::setFixedAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRayEntity* self = 
+                        getSelf("setFixedAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setFixedAngle(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.setFixedAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRayEntity::setFixedAngle", context, engine);
             return result;
         }
          QScriptValue
