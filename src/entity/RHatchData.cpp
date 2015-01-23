@@ -514,11 +514,10 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
 
     painterPaths.clear();
 
-    getBoundaryPath();
-
     // for solids, return boundary path, which can be filled:
     // in draft mode, return boundary path to be shown without fill:
     if (isSolid() || draft) {
+        getBoundaryPath();
         if (draft) {
             boundaryPath.setPen(QPen(Qt::SolidLine));
             boundaryPath.setBrush(QBrush(Qt::NoBrush));
@@ -557,6 +556,8 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
         gotDraft = draft;
         return painterPaths;
     }
+
+    getBoundaryPath();
 
     RPattern pattern = *p;
 

@@ -802,7 +802,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
             if (isPrinting()) {
                 if (hairlineMode) {
                     //pen.setWidthF(0.05 / drawingScale);
-                    pen.setWidth(1);
+                    pen.setWidthF(0.0);
                     pen.setCosmetic(true);
                 }
                 else {
@@ -821,7 +821,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
                         else {
                             if (hairlineMode) {
                                 //pen.setWidthF(0.05 / drawingScale);
-                                pen.setWidth(1);
+                                pen.setWidthF(0.0);
                                 pen.setCosmetic(true);
                             }
                             else {
