@@ -578,6 +578,9 @@ function main() {
     appWin.objectName = "MainWindow";
     appWin.windowTitle = qApp.applicationName;
 
+    // save first start:
+    appWin.setProperty("FirstStart", isFirstStart);
+
     // save locale
     appWin.setProperty("Locale", RSettings.getLocale());
     
