@@ -33,34 +33,6 @@
 class RDocument;
 class RTransaction;
 
-//class QCADCORE_EXPORT RAttributeDefinition : public RText {
-//public:
-//    RAttributeDefinition(const QString& tag, const QString& prompt, const QString& value)
-//        : tag(tag), prompt(prompt), value(value) {}
-
-//    int getId() {
-//        return id;
-//    }
-
-//    QString getTag() {
-//        return tag;
-//    }
-
-//    QString getPrompt() {
-//        return prompt;
-//    }
-
-//    QString getValue() {
-//        return value;
-//    }
-
-//private:
-//    int id;
-//    QString tag;
-//    QString prompt;
-//    QString value;
-//};
-
 /**
  * Represents a block definition in a drawing.
  *
@@ -125,8 +97,6 @@ public:
 
     virtual bool isSelectedForPropertyEditing();
 
-    //void setAttributeDefinition(const RAttributeDefinition& attDef);
-
 public:
     static const QString modelSpaceName;
 
@@ -141,8 +111,6 @@ private:
     bool frozen;
     bool anonymous;
     RVector origin;
-
-    //QList<RAttributeDefinition> attributeDefinitions;
 };
 
 
