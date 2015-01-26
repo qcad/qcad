@@ -43,6 +43,14 @@ MyXmlHandler.prototype.endElement = function(namespaceURI, localName, qName) {
     return true;
 };
 
+/**
+ * Handle character data.
+ */
+MyXmlHandler.prototype.characters = function(str) {
+    EAction.handleUserMessage("CDATA: " + str);
+    return true;
+};
+
 
 
 /**

@@ -71,11 +71,10 @@ ExXmlExport.prototype.beginEvent = function() {
     var stream = new QXmlStreamWriter(file);
     stream.setAutoFormatting(true);
 
-    stream.writeComment("QCAD XML export example");
-
     stream.writeStartDocument();
 
     stream.writeStartElement("QCAD");
+    stream.writeComment("QCAD XML export example");
 
     stream.writeStartElement("tag");
     stream.writeEndElement();
