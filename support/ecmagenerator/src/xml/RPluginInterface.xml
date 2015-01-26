@@ -11,6 +11,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="GotSplashWindow" />
       <value name="AddOnsInitialized" />
       <value name="ActionsAdded" />
+      <value name="GotMainWindowBeforeShow" />
       <value name="GotMainWindow" />
       <value name="LoadedFiles" />
       <value name="ScriptsExecuted" />

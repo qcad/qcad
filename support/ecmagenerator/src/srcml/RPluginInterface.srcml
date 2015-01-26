@@ -64,6 +64,11 @@ dir="./core" filename="RPluginInterface.h">
   <comment type="block">/**&lt; Actions have been added to widgets.
   */</comment>
   <expr>
+    <name>GotMainWindowBeforeShow</name>
+  </expr>, 
+  <comment type="block">/**&lt; Main window created but not shown
+  yet. */</comment>
+  <expr>
     <name>GotMainWindow</name>
   </expr>, 
   <comment type="block">/**&lt; Main window with all tools and

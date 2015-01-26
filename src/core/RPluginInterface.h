@@ -42,6 +42,7 @@ public:
         GotSplashWindow,    /**< Splashscreen showing. */
         AddOnsInitialized,  /**< Add ons are initialized, actions created but not added to widgets. */
         ActionsAdded,       /**< Actions have been added to widgets. */
+        GotMainWindowBeforeShow,      /**< Main window created but not shown yet. */
         GotMainWindow,      /**< Main window with all tools and menus has been created. */
         LoadedFiles,        /**< Loaded files given on command line. */
         ScriptsExecuted,    /**< Executed scripts given on command line. */

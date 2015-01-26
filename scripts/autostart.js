@@ -629,6 +629,8 @@ function main() {
         appWin.readSettings();
     }
 
+    RPluginLoader.postInitPlugins(RPluginInterface.GotMainWindowBeforeShow);
+
     if (!QCoreApplication.arguments().contains("-no-show")) {
         appWin.show();
     }
@@ -646,16 +648,20 @@ function main() {
     if (isFirstStart) {
         var propertyEditorDock = appWin.findChild("PropertyEditorDock");
         if (!isNull(propertyEditorDock)) {
-            propertyEditorDock.floating = true;
-            propertyEditorDock.move(appWin.x + appWin.width + 20, appWin.y);
-            propertyEditorDock.resize(300, appWin.height/3*2);
+            if (propertyEditorDock["Initialized"]!==true) {
+                propertyEditorDock.floating = true;
+                propertyEditorDock.move(appWin.x + appWin.width + 20, appWin.y);
+                propertyEditorDock.resize(300, appWin.height/3*2);
+            }
         }
 
         var libraryBrowserDock = appWin.findChild("LibraryBrowserDock");
         if (!isNull(libraryBrowserDock)) {
-            libraryBrowserDock.floating = true;
-            libraryBrowserDock.move(appWin.x + appWin.width + 20, appWin.y + appWin.height/3*2+20);
-            libraryBrowserDock.resize(300, appWin.height/3-20);
+            if (libraryBrowserDock["Initialized"]!==true) {
+                libraryBrowserDock.floating = true;
+                libraryBrowserDock.move(appWin.x + appWin.width + 20, appWin.y + appWin.height/3*2+20);
+                libraryBrowserDock.resize(300, appWin.height/3-20);
+            }
         }
     }
 
