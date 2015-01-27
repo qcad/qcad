@@ -76,6 +76,7 @@ RVector RSnapIntersection::snap(
     QMap<REntity::Id, QSet<int> >::const_iterator it1;
     for (it1=candidates.begin(); it1!=candidates.end(); it1++) {
         if ((QCursor::pos() - p0).manhattanLength()>mouseThreshold) {
+            lastSnap = RVector::invalid;
             return RVector::invalid;
         }
         QSharedPointer<REntity> e1 = document->queryEntityDirect(it1.key());
@@ -92,6 +93,7 @@ RVector RSnapIntersection::snap(
         QMap<REntity::Id, QSet<int> >::const_iterator it2;
         for (it2=it1; it2!=candidates.end(); it2++) {
             if ((QCursor::pos() - p0).manhattanLength()>mouseThreshold) {
+                lastSnap = RVector::invalid;
                 return RVector::invalid;
             }
             QSharedPointer<REntity> e2 = document->queryEntityDirect(it2.key());
