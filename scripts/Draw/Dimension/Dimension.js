@@ -58,8 +58,6 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
         return;
     }
 
-    //var optionsToolBar = EAction.getOptionsToolBar();
-
     var prefixCombo = optionsToolBar.findChild("Prefix");
     prefixCombo.clear();
     prefixCombo.addItem("(" + qsTr("No prefix") + ")");
