@@ -43,6 +43,8 @@ bool RSnapAuto::pointsOnEntity = false;
 bool RSnapAuto::freePositioning = false;
 
 RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double range) {
+    QPoint p0 = QCursor::pos();
+    int mouseThreshold = RSettings::getMouseThreshold();
     entityIds.clear();
 
     if (RMath::isNaN(range)) {
@@ -94,6 +96,12 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
             }
         }
         lastSnap = RVector::invalid;
+    }
+
+    // interrupted by mouse move:
+    if ((QCursor::pos() - p0).manhattanLength()>mouseThreshold) {
+        status = RSnap::Free;
+        return position;
     }
 
     // end points:
@@ -240,4 +248,6 @@ void RSnapAuto::init(bool force) {
     gridPoints = RSettings::getBoolValue("AutoSnap/GridPoints", true);
     pointsOnEntity = RSettings::getBoolValue("AutoSnap/PointsOnEntity", false);
     freePositioning = RSettings::getBoolValue("AutoSnap/FreePositioning", true);
+
+    initialized = true;
 }

@@ -54,6 +54,7 @@ int RSettings::previewEntities = -1;
 int RSettings::limitZoomAndScroll = -1;
 int RSettings::autoScaleLinetypePattern = -1;
 int RSettings::useSecondarySelectionColor = -1;
+int RSettings::mouseThreshold = -1;
 int RSettings::useSolidLineSelection = -1;
 double RSettings::arcAngleLengthThreshold = -1;
 QStringList RSettings::recentFiles;
@@ -823,6 +824,13 @@ bool RSettings::getUseSolidLineSelection() {
     return (bool)useSolidLineSelection;
 }
 
+int RSettings::getMouseThreshold() {
+    if (mouseThreshold==-1) {
+        mouseThreshold = getValue("GraphicsView/MouseThreshold", QVariant(5)).toInt();
+    }
+    return mouseThreshold;
+}
+
 void RSettings::resetCache() {
     if (rulerFont!=NULL) {
         delete rulerFont;
@@ -852,6 +860,7 @@ void RSettings::resetCache() {
     useSecondarySelectionColor = -1;
     useSolidLineSelection = -1;
     arcAngleLengthThreshold = -1;
+    mouseThreshold = -1;
     cache.clear();
 }
 

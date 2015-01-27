@@ -157,6 +157,8 @@ public:
     static bool getUseSecondarySelectionColor();
     static bool getUseSolidLineSelection();
 
+    static int getMouseThreshold();
+
 private:
     static bool isInitialized();
     static void shortenRecentFiles();
@@ -182,6 +184,7 @@ private:
     static int autoScaleLinetypePattern;
     static int useSolidLineSelection;
     static int useSecondarySelectionColor;
+    static int mouseThreshold;
     static double arcAngleLengthThreshold;
     static QStringList recentFiles;
     static QLocale* numberLocale;
