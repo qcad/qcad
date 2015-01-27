@@ -261,7 +261,7 @@ Divide.divide = function(op, pos, pos2, entity) {
                     angle,
                     false);
         e = new RArcEntity(entity.getDocument(), new RArcData(arc2));
-        e.copyAttributesFrom(entity.data());
+        e.copyAttributesFrom(entity);
         op.addObject(e, false);
     }
     else if (isEllipseShape(shape) && shape.isFullEllipse()) {
@@ -279,7 +279,7 @@ Divide.divide = function(op, pos, pos2, entity) {
         ellipse.setStartParam(ellipse.angleToParam(angle));
         ellipse.setEndParam(ellipse.angleToParam(angle2));
         e = new REllipseEntity(entity.getDocument(), new REllipseData(ellipse));
-        e.copyAttributesFrom(entity.data());
+        e.copyAttributesFrom(entity);
         op.addObject(e, false);
 
         var ellipse2 = shape.clone();
