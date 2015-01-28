@@ -201,8 +201,11 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
         break;
 
     case "polygon":
+        this.svgImporter.importPolygon(atts.value("points"), false);
+        break;
+
     case "polyline":
-        this.svgImporter.importPolygon(atts.value("points"));
+        this.svgImporter.importPolygon(atts.value("points"), true);
         break;
 
     case "line":
@@ -754,14 +757,16 @@ SvgImporter.getArcCenter = function(x1, y1, x2, y2, rx, ry, sweep, isLarge, angl
     return new RVector(x1 - dx3, y1 - dy3);
 };
 
-SvgImporter.prototype.importPolygon = function(pointsData) {
+SvgImporter.prototype.importPolygon = function(pointsData, open) {
     var coordinates = pointsData.trim().split(/[\s,]+/).map(parseFloat);
     for (var i = 0; i < coordinates.length-1; i += 2) {
         var x1 = coordinates[i];
         var y1 = coordinates[i + 1];
         var x2 = coordinates[(i + 2) % coordinates.length];
         var y2 = coordinates[(i + 3) % coordinates.length];
-        this.importLine(x1, y1, x2, y2);
+        if (!open || i!==coordinates.length-2) {
+            this.importLine(x1, y1, x2, y2);
+        }
     }
 };
 
