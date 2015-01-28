@@ -37,9 +37,9 @@
      inkscape:window-height="1151"
      id="namedview12"
      showgrid="true"
-     inkscape:zoom="1.3037281"
-     inkscape:cx="159.7376"
-     inkscape:cy="256"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="182.20606"
+     inkscape:cy="277.5"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -47,7 +47,7 @@
     <inkscape:grid
        type="xygrid"
        id="grid2991"
-       empspacing="8"
+       empspacing="2"
        visible="true"
        enabled="true"
        snapvisiblegridlinesonly="true"
@@ -61,17 +61,34 @@
      inkscape:connector-curvature="0"
      id="path10"
      d="M 424,488 488,488 488,424 424,488 z" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+     id="rect2986"
+     width="256"
+     height="128"
+     x="40"
+     y="344"
+     ry="0" />
   <g
      id="g3055"
-     transform="translate(5e-5,476.00003)">
-    <path
-       id="path3057"
-       transform="translate(200,-497.66563)"
-       d="M 56,104 238.6028,236.6687 168.8547,451.3312 -56.8548,451.3312 -126.6029,236.6687 56,104 z"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:round;stroke-linejoin:round" />
+     transform="translate(6.60562,486.33443)"
+     style="fill:none;stroke:#0000ff">
     <g
        id="g3059"
-       style="fill:#ff0000" />
+       style="fill:none;stroke:#0000ff" />
   </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0"
+     d="M 280,152 216,264 88,264 24,152 88,40 216,40 z"
+     id="path3756"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccccc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0"
+     inkscape:transform-center-x="0.78460969"
+     inkscape:transform-center-y="-22.641016"
+     d="M 488,280 296,280 392,120 z"
+     id="path3759"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccc" />
 </svg>
