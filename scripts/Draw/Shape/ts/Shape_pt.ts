@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt_PT">
+<TS version="2.1" language="pt_PT">
 <context>
     <name>Line</name>
     <message>
@@ -8,14 +8,14 @@
         <translatorcomment>--google--
 Exibe o menu &quot;Multilinha&quot;
 Exibe o menu &quot;Linha&quot;</translatorcomment>
-        <translation>Ferramentas de linha</translation>
+        <translation type="vanished">Ferramentas de linha</translation>
     </message>
     <message>
         <source>Show line tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Exibe o menu &quot;Linha&quot;</translatorcomment>
-        <translation>Exibe o menu &quot;Linha&quot;</translation>
+        <translation type="vanished">Exibe o menu &quot;Linha&quot;</translation>
     </message>
     <message>
         <source>&amp;Line</source>
@@ -23,19 +23,19 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
 --file: qcad_pt.ts--
 &amp;Linha
 &amp;Linear</translatorcomment>
-        <translation>&amp;Linha</translation>
+        <translation type="vanished">&amp;Linha</translation>
     </message>
     <message>
         <source>Line Segment</source>
-        <translation>Segmento de linha</translation>
+        <translation type="vanished">Segmento de linha</translation>
     </message>
     <message>
         <source>Infinite Line</source>
-        <translation>Linha infinita</translation>
+        <translation type="vanished">Linha infinita</translation>
     </message>
     <message>
         <source>Ray</source>
-        <translation>Raio</translation>
+        <translation type="vanished">Raio</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
     </message>
     <message>
         <source>Show line tools</source>
-        <translation>Mostrar ferramentas de forma</translation>
+        <translation type="vanished">Mostrar ferramentas de forma</translation>
     </message>
     <message>
         <location line="+18"/>

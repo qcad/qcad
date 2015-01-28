@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>Line</name>
     <message>
         <source>Show line tools</source>
-        <translation>Mostrar menú &quot;Líneas&quot;</translation>
+        <translation type="vanished">Mostrar menú &quot;Líneas&quot;</translation>
     </message>
     <message>
         <source>&amp;Line</source>
-        <translation>&amp;Línea</translation>
+        <translation type="vanished">&amp;Línea</translation>
     </message>
     <message>
         <source>Line Tools</source>
-        <translation>Herramientas de línea</translation>
+        <translation type="vanished">Herramientas de línea</translation>
     </message>
     <message>
         <source>Line Segment</source>
-        <translation>Segmento de línea</translation>
+        <translation type="vanished">Segmento de línea</translation>
     </message>
     <message>
         <source>Infinite Line</source>
-        <translation>Línea infinita</translation>
+        <translation type="vanished">Línea infinita</translation>
     </message>
     <message>
         <source>Ray</source>
-        <translation>Rayo</translation>
+        <translation type="vanished">Rayo</translation>
     </message>
 </context>
 <context>
@@ -42,7 +42,7 @@
     </message>
     <message>
         <source>Show line tools</source>
-        <translation>Mostrar herramientas de forma</translation>
+        <translation type="vanished">Mostrar herramientas de forma</translation>
     </message>
     <message>
         <location line="+18"/>

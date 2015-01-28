@@ -56,7 +56,7 @@
         <translation type="vanished">Linie, Bogen, Kreis oder Ellipse wählen</translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+76"/>
+        <location filename="../Offset.js" line="+74"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Linie, Bogen, Kreis oder Ellipse wählen</translation>
     </message>

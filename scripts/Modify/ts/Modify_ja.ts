@@ -35,7 +35,7 @@
 <context>
     <name>Transform</name>
     <message>
-        <location filename="../Transform.js" line="+38"/>
+        <location filename="../Transform.js" line="+39"/>
         <source>This tool requires a selection</source>
         <translation>このツールは選択した状態で使用してください</translation>
     </message>

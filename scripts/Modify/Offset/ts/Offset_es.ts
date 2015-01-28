@@ -48,7 +48,7 @@
         <translation type="vanished">Elija línea, arco, círculo o elipse</translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+76"/>
+        <location filename="../Offset.js" line="+74"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Elija línea, arco, círculo o elipse</translation>
     </message>

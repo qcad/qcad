@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>ArcCRA</name>
     <message>
@@ -26,7 +26,7 @@
     </message>
     <message>
         <source>&amp;Tangentially connected</source>
-        <translation>&amp;Tangential anschliessend</translation>
+        <translation type="vanished">&amp;Tangential anschliessend</translation>
     </message>
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>

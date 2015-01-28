@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="nl_NL">
+<TS version="2.1" language="nl_NL">
 <context>
     <name>Circle2TP</name>
     <message>
         <location filename="../Circle2TP.js" line="+76"/>
         <source>First line, arc or circle</source>
-        <translation>Eerste lijn, boog of cirkel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second line, arc or circle</source>
-        <translation>Tweede lijn, boog of cirkel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Point on circle line</source>
-        <translation>Punt op cirkel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation>Kies oplossing</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+135"/>
         <location line="+45"/>
         <source>No solution</source>
-        <translation>Geen oplossing</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Circle2TPInit.js" line="+2"/>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation>Punt, 2 tan&amp;genten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation>Cirkel tangentieel aan twee objecten, door punt</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

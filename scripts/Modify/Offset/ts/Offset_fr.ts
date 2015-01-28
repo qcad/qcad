@@ -48,7 +48,7 @@
         <translation type="vanished">Choisissez ligne, arc, cercle ou ellipse</translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+76"/>
+        <location filename="../Offset.js" line="+74"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Choisissez ligne, arc, cercle ou ellipse</translation>
     </message>

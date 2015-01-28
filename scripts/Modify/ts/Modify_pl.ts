@@ -42,7 +42,7 @@
 <context>
     <name>Transform</name>
     <message>
-        <location filename="../Transform.js" line="+38"/>
+        <location filename="../Transform.js" line="+39"/>
         <source>This tool requires a selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narzędzie to wymaga zaznaczenia</translation>

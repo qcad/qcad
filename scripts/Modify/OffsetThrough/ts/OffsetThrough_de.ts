@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>LineParallelThrough</name>
     <message>
         <source>Specify point</source>
-        <translation>Punkt angeben</translation>
+        <translation type="vanished">Punkt angeben</translation>
     </message>
     <message>
         <source>Number:</source>
-        <translation>Anzahl:</translation>
+        <translation type="vanished">Anzahl:</translation>
     </message>
     <message>
         <source>Choose line, arc or circle</source>
-        <translation>Linie, Bogen oder Kreis wählen</translation>
+        <translation type="vanished">Linie, Bogen oder Kreis wählen</translation>
     </message>
     <message>
         <source>Par&amp;allel (through Point)</source>
-        <translation>Par&amp;allele (durch Punkt)</translation>
+        <translation type="vanished">Par&amp;allele (durch Punkt)</translation>
     </message>
     <message>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
-        <translation>Parallele Linie oder konzentrischer Bogen oder Kreis durch gegebenen Punkt</translation>
+        <translation type="vanished">Parallele Linie oder konzentrischer Bogen oder Kreis durch gegebenen Punkt</translation>
     </message>
 </context>
 <context>

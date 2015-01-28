@@ -43,7 +43,7 @@
 <context>
     <name>Transform</name>
     <message>
-        <location filename="../Transform.js" line="+38"/>
+        <location filename="../Transform.js" line="+39"/>
         <source>This tool requires a selection</source>
         <translation>Dieses Werkzeug benötigt eine Selektion</translation>
     </message>

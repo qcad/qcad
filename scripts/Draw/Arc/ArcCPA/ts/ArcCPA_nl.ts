@@ -11,7 +11,7 @@
     <message>
         <location line="+7"/>
         <source>Point on arc or radius</source>
-        <translation>Punt op boog of straal</translation>
+        <translation>Punt op boog of radius</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -57,7 +57,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
-        <translation>Boog tekenen van middlepunt, punt op de boog en hoeken</translation>
+        <translation>Boog tekenen van centrum, punt op de boog en hoeken</translation>
     </message>
 </context>
 </TS>

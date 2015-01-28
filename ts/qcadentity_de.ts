@@ -41,7 +41,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+58"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+72"/>
-        <location filename="../src/entity/RRayEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RRayEntity.cpp" line="+74"/>
         <location line="+3"/>
         <location line="+4"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+70"/>
@@ -54,7 +54,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RXLineEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="+74"/>
         <location line="+3"/>
         <location line="+4"/>
         <source>X</source>
@@ -745,6 +745,12 @@
         <location line="+1"/>
         <source>Direction Vector</source>
         <translation>Richtung</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
+        <source>Fixed Angle</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

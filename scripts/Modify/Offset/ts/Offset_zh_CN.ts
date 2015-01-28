@@ -24,7 +24,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+76"/>
+        <location filename="../Offset.js" line="+74"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation type="unfinished"></translation>
     </message>

@@ -36,7 +36,7 @@
         <translation type="vanished">既存の線分または弧、円との平行線を描画</translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+76"/>
+        <location filename="../Offset.js" line="+74"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>線分,弧,円または楕円を選択してください</translation>
     </message>
