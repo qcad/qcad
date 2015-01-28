@@ -16,7 +16,7 @@
     <message>
         <location line="+81"/>
         <source>Invalid radius</source>
-        <translation>Ongeldig radius</translation>
+        <translation>Ongeldig straal</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../Arc2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Radius:</translation>
+        <translation>Straal:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -73,12 +73,12 @@
     <message>
         <location filename="../Arc2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation>&amp;2 punten en radius</translation>
+        <translation>&amp;2 punten en straal</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and radius</source>
-        <translation>Teken boog van 2 punten en radius</translation>
+        <translation>Teken boog van 2 punten en straal</translation>
     </message>
 </context>
 </TS>

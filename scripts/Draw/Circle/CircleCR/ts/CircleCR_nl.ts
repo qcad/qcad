@@ -6,27 +6,27 @@
     <message>
         <location filename="../CircleCR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Straal:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoek:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Referentiepunt:</translation>
     </message>
     <message>
         <location filename="../CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Middelpunt, &amp;straal</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Cirkel van middelpunt en straal</translation>
     </message>
 </context>
 </TS>

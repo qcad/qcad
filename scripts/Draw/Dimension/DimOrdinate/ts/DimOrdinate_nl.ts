@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.0" language="nl_NL">
 <context>
     <name>DimOrdinate</name>
     <message>
         <location filename="../DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwijspositie</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation type="unfinished"></translation>
+        <translation>Eindpunt van verwijslijn</translation>
     </message>
     <message>
         <location filename="../DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ordinaat (X/Y)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ordinate dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordinaat maat</translation>
     </message>
 </context>
 </TS>

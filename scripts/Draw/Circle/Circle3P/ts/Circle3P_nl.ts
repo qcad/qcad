@@ -6,27 +6,27 @@
     <message>
         <location filename="../Circle3P.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste punt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Tweede punt</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Third point</source>
-        <translation type="unfinished"></translation>
+        <translation>Derde punt</translation>
     </message>
     <message>
         <location filename="../Circle3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;3 punten</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from 3 points</source>
-        <translation type="unfinished"></translation>
+        <translation>Cirkel van drie punten</translation>
     </message>
 </context>
 </TS>

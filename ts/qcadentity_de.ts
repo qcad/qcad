@@ -750,7 +750,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixierter Winkel</translation>
     </message>
 </context>
 </TS>

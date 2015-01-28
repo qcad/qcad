@@ -6,17 +6,17 @@
     <message>
         <location filename="../Circle.js" line="+71"/>
         <source>Circle Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Cirkel gereedschappen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show circle tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Toon cirkel gereedschappen</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>&amp;Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cirkel</translation>
     </message>
 </context>
 </TS>

@@ -6,27 +6,27 @@
     <message>
         <location filename="../CircleCD.ui" line="+17"/>
         <source>Diameter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diameter:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoek:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Referentiepunt:</translation>
     </message>
     <message>
         <location filename="../CircleCDInit.js" line="+2"/>
         <source>Center, &amp;Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Middelpunt, &amp;diameter</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Cirkel van middelpunt en diameter</translation>
     </message>
 </context>
 </TS>

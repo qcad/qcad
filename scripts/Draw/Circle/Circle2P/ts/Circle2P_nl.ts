@@ -6,27 +6,27 @@
     <message>
         <location filename="../Circle2P.js" line="+58"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste punt</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Tweede punt</translation>
     </message>
     <message>
         <location line="+83"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>De twee punten zijn identiek</translation>
     </message>
     <message>
         <location filename="../Circle2PInit.js" line="+2"/>
         <source>&amp;2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;2 Punten</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from 2 diametrically opposite points</source>
-        <translation type="unfinished"></translation>
+        <translation>Cirkel tekenen van twee diagonaal tegenoverliggende punten</translation>
     </message>
 </context>
 </TS>
