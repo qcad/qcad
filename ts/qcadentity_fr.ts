@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>REntity</name>
     <message>
@@ -390,32 +390,32 @@ Met les entités à l&apos;échelle</translatorcomment>
         <source>Simple</source>
         <translatorcomment>--google--
 Texte simple</translatorcomment>
-        <translation type="vanished">Simple</translation>
+        <translation>Simple</translation>
     </message>
     <message>
         <source>Text</source>
-        <translation type="vanished">Texte</translation>
+        <translation>Texte</translation>
     </message>
     <message>
         <source>Plain Text</source>
-        <translation type="vanished">Texte brut</translation>
+        <translation>Texte brut</translation>
     </message>
     <message>
         <source>Font Name</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Nom de police</translation>
+        <translation>Nom de police</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation type="vanished">Hauteur du texte</translation>
+        <translation>Hauteur du texte</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation type="vanished">Angle du texte</translation>
+        <translation>Angle du texte</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation type="vanished">Echelle X</translation>
+        <translation>Echelle X</translation>
     </message>
     <message>
         <source>Bold</source>
@@ -423,7 +423,7 @@ Texte simple</translatorcomment>
 --file: qt_fr.ts--
 &amp;Gras
 Gras</translatorcomment>
-        <translation type="vanished">Gras</translation>
+        <translation>Gras</translation>
     </message>
     <message>
         <source>Italic</source>
@@ -431,7 +431,7 @@ Gras</translatorcomment>
 --file: qt_fr.ts--
 Italique
 &amp;Italique</translatorcomment>
-        <translation type="vanished">Italique</translation>
+        <translation>Italique</translation>
     </message>
     <message>
         <source>Line Spacing</source>
@@ -440,7 +440,7 @@ Espacement lignes :
 Espace lignes par &amp;défaut
 Espace lignes par défaut
 Facteur espacement lignes</translatorcomment>
-        <translation type="vanished">Espacement lignes</translation>
+        <translation>Espacement lignes</translation>
     </message>
     <message>
         <source>Alignment</source>
@@ -448,7 +448,7 @@ Facteur espacement lignes</translatorcomment>
 --file: Text_fr.ts--
 Alignement
 Alignement|Vertical</translatorcomment>
-        <translation type="vanished">Alignement</translation>
+        <translation>Alignement</translation>
     </message>
     <message>
         <source>Horizontal</source>
@@ -457,7 +457,7 @@ Alignement|Vertical</translatorcomment>
 Partage &amp;Horizontal
 Partage Horizontal
 &amp;Horizontale</translatorcomment>
-        <translation type="vanished">Horizontal</translation>
+        <translation>Horizontal</translation>
     </message>
     <message>
         <source>Vertical</source>
@@ -466,7 +466,7 @@ Partage Horizontal
 &amp;Verticale
 Vertical
 Cotation verticale</translatorcomment>
-        <translation type="vanished">Vertical</translation>
+        <translation>Vertical</translation>
     </message>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="-2"/>
@@ -977,7 +977,7 @@ Point 4|Y</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Angle fixe</translation>
     </message>
 </context>
 </TS>

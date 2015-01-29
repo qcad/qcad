@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>REntity</name>
     <message>
@@ -392,32 +392,32 @@ Scala</translatorcomment>
 --file: it.po--
 Testo semplice
 Esplode gli oggetti selezionati in oggetti piú semplice, o sottrae le facce</translatorcomment>
-        <translation type="vanished">Semplice</translation>
+        <translation>Semplice</translation>
     </message>
     <message>
         <source>Text</source>
-        <translation type="vanished">Testo</translation>
+        <translation>Testo</translation>
     </message>
     <message>
         <source>Plain Text</source>
-        <translation type="vanished">Testo normale</translation>
+        <translation>Testo normale</translation>
     </message>
     <message>
         <source>Font Name</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Nome del font</translation>
+        <translation>Nome del font</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation type="vanished">Altezza Testo</translation>
+        <translation>Altezza Testo</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation type="vanished">Angolo testo</translation>
+        <translation>Angolo testo</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation type="vanished">Scala X</translation>
+        <translation>Scala X</translation>
     </message>
     <message>
         <source>Bold</source>
@@ -426,7 +426,7 @@ Esplode gli oggetti selezionati in oggetti piú semplice, o sottrae le facce</tr
 &amp;Grassetto
 Grassetto
 grassetto</translatorcomment>
-        <translation type="vanished">Grassetto</translation>
+        <translation>Grassetto</translation>
     </message>
     <message>
         <source>Italic</source>
@@ -434,7 +434,7 @@ grassetto</translatorcomment>
 --file: it3.po--
 Old Italic
 Cors&amp;ivo</translatorcomment>
-        <translation type="vanished">Italico</translation>
+        <translation>Italico</translation>
     </message>
     <message>
         <source>Line Spacing</source>
@@ -443,7 +443,7 @@ Interasse linee:
 Interasse Linee Pre&amp;definito
 Interasse Linee Predefinito
 Interlinea</translatorcomment>
-        <translation type="vanished">Interasse linee</translation>
+        <translation>Interasse linee</translation>
     </message>
     <message>
         <source>Alignment</source>
@@ -451,7 +451,7 @@ Interlinea</translatorcomment>
 --file: it.po--
 Allineamento
 Allineamento|Verticale</translatorcomment>
-        <translation type="vanished">Allineamento</translation>
+        <translation>Allineamento</translation>
     </message>
     <message>
         <source>Horizontal</source>
@@ -460,7 +460,7 @@ Allineamento|Verticale</translatorcomment>
 Affianca &amp;Orizzontalmente
 Affianca Orizzontalmente
 &amp;Orizzontale</translatorcomment>
-        <translation type="vanished">Orizzontale</translation>
+        <translation>Orizzontale</translation>
     </message>
     <message>
         <source>Vertical</source>
@@ -468,7 +468,7 @@ Affianca Orizzontalmente
 --file: qgis_it.ts--
 Verticale
 &amp;Verticale</translatorcomment>
-        <translation type="vanished">Verticale</translation>
+        <translation>Verticale</translation>
     </message>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="-2"/>
@@ -988,7 +988,7 @@ Punto 4|Y</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Angolo fisso</translation>
     </message>
 </context>
 </TS>

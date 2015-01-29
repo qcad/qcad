@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>Dimension</name>
     <message>
@@ -80,7 +80,7 @@
     <message>
         <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation>Fixes Mass eingeben oder leerlassen für automatisches Mass</translation>
+        <translation>Fixes Mass eingeben oder leer lassen für automatisches Mass</translation>
     </message>
     <message>
         <location line="+51"/>

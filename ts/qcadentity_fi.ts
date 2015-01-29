@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<TS version="2.0" language="fi">
 <context>
     <name>REntity</name>
     <message>
@@ -612,7 +612,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Kynän kulma</translation>
     </message>
     <message>
         <location filename="../src/entity/RSolidEntity.cpp" line="-13"/>
@@ -690,51 +690,51 @@
     </message>
     <message>
         <source>Simple</source>
-        <translation type="vanished">Yksinkertainen</translation>
+        <translation>Yksinkertainen</translation>
     </message>
     <message>
         <source>Text</source>
-        <translation type="vanished">Teksti</translation>
+        <translation>Teksti</translation>
     </message>
     <message>
         <source>Font Name</source>
-        <translation type="vanished">Kirjasimen nimi</translation>
+        <translation>Kirjasimen nimi</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation type="vanished">Tekstin korkeus</translation>
+        <translation>Tekstin korkeus</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation type="vanished">Tekstin kulma</translation>
+        <translation>Tekstin kulma</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation type="vanished">X Mittakaava</translation>
+        <translation>X Mittakaava</translation>
     </message>
     <message>
         <source>Bold</source>
-        <translation type="vanished">Lihavoitu</translation>
+        <translation>Lihavoitu</translation>
     </message>
     <message>
         <source>Italic</source>
-        <translation type="vanished">Kursivoitu</translation>
+        <translation>Kursivoitu</translation>
     </message>
     <message>
         <source>Line Spacing</source>
-        <translation type="vanished">Riviväli</translation>
+        <translation>Riviväli</translation>
     </message>
     <message>
         <source>Alignment</source>
-        <translation type="vanished">Tasaus</translation>
+        <translation>Tasaus</translation>
     </message>
     <message>
         <source>Horizontal</source>
-        <translation type="vanished">Vaakasuunta</translation>
+        <translation>Vaakasuunta</translation>
     </message>
     <message>
         <source>Vertical</source>
-        <translation type="vanished">Pystysuunta</translation>
+        <translation>Pystysuunta</translation>
     </message>
 </context>
 </TS>
