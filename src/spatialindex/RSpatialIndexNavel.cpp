@@ -139,7 +139,23 @@ void RSpatialIndexNavel::clear() {
     uninit();
     init();
 }
-    
+
+void RSpatialIndexNavel::bulkLoad(const QList<int>& ids, const QList<QList<RBox> >& bbs) {
+    RSiDataStream stream(ids, bbs);
+    uninit();
+
+    buff = SpatialIndex::StorageManager::createNewMemoryStorageManager();
+    SpatialIndex::id_type indexIdentifier;
+    tree = SpatialIndex::RTree::createAndBulkLoadNewRTree(
+            SpatialIndex::RTree::BLM_STR,
+            stream,
+            *buff,
+            0.2, 50, 50,
+            3,
+            SpatialIndex::RTree::RV_RSTAR,
+            indexIdentifier
+    );
+}
     
 /**
  * Adds an item to the index.
@@ -178,12 +194,9 @@ void RSpatialIndexNavel::addToIndex(
     //qDebug() << "\tafter: " << *this << "\n\n";
 }
 
-
 void RSpatialIndexNavel::addToIndex(int id, int pos, const RBox& bb) {
     RSpatialIndex::addToIndex(id, pos, bb);
 }
-
-
 
 /**
  * Internal.

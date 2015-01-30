@@ -1494,6 +1494,9 @@ void RDocument::rebuildSpatialIndex() {
 
     QSet<REntity::Id> result = storage.queryAllEntities(false, true);
 
+    QList<int> allIds;
+    QList<QList<RBox> > allBbs;
+
     QSetIterator<REntity::Id> i(result);
     while (i.hasNext()) {
         QSharedPointer<REntity> entity = storage.queryEntityDirect(i.next());
@@ -1508,11 +1511,15 @@ void RDocument::rebuildSpatialIndex() {
 
         QList<RBox> bbs = entity->getBoundingBoxes();
 
-        spatialIndex.addToIndex(
-            entity->getId(),
-            bbs
-        );
+        allIds.append(entity->getId());
+        allBbs.append(bbs);
+//        spatialIndex.addToIndex(
+//            entity->getId(),
+//            bbs
+//        );
     }
+
+    spatialIndex.bulkLoad(allIds, allBbs);
 
     // clear cached bounding box:
     storage.update();

@@ -51,6 +51,12 @@ int RSpatialIndex::getPos(qint64 siid) {
     return (int)((siid & Q_INT64_C(0xFFFFFFFF00000000)) >> 32);
 }
 
+void RSpatialIndex::bulkLoad(const QList<int>& ids, const QList<QList<RBox> >& bbs) {
+    for (int i=0; i<ids.length() && i<bbs.length(); i++) {
+        addToIndex(ids[i], bbs[i]);
+    }
+}
+
 void RSpatialIndex::addToIndex(int id, const QList<RBox>& bbs) {
     for (int pos = 0; pos < bbs.size(); ++pos) {
         addToIndex(
