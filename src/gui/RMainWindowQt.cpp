@@ -77,6 +77,9 @@ RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
     }
 }
 
+RMainWindowQt::~RMainWindowQt() {
+}
+
 /**
  * Part of the workaround for QMdiArea bug
  * with events filtering through all stacked windows:

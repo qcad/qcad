@@ -61,6 +61,7 @@ Q_OBJECT
 
 public:
     RMainWindowQt(QWidget* parent = 0, bool hasMdiArea = true);
+    virtual ~RMainWindowQt();
     static RMainWindowQt* getMainWindow();
     virtual int getWidth();
     virtual int getHeight();
