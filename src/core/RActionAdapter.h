@@ -52,7 +52,12 @@ class ROperation;
  */
 class QCADCORE_EXPORT RActionAdapter : public RAction {
 public:
-    RActionAdapter(RGuiAction* guiAction=NULL) : RAction(guiAction) {}
+    RActionAdapter(RGuiAction* guiAction=NULL) : RAction(guiAction) {
+//        qDebug() << "RActionAdapter " << QString("0x%1").arg((int)this, 0, 16);
+    }
+    virtual ~RActionAdapter() {
+//        qDebug() << "~RActionAdapter " << QString("0x%1").arg((int)this, 0, 16);
+    }
     virtual void beginEvent() {}
     virtual void setGraphicsView(RGraphicsView* /*view*/) {}
     virtual void finishEvent() {}

@@ -78,6 +78,9 @@ RSingleApplication::RSingleApplication(Display* dpy, const QString &appId, int a
 }
 #endif
 
+RSingleApplication::~RSingleApplication() {
+}
+
 RSingleApplication* RSingleApplication::getInstance() {
     return instance;
 }

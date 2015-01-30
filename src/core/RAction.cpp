@@ -29,7 +29,6 @@
 #include "RMainWindow.h"
 #include "RDocumentInterface.h"
 
-
 RAction::RAction(RGuiAction* guiAction)
   : terminated(false),
     override(false),
@@ -40,11 +39,14 @@ RAction::RAction(RGuiAction* guiAction)
     documentInterface(NULL) {
 
     setGuiAction(guiAction);
+
+//    qDebug() << "RAction " << QString("0x%1").arg((int)this, 0, 16);
 }
 
 
 
 RAction::~RAction() {
+//    qDebug() << "~RAction " << QString("0x%1").arg((int)this, 0, 16);
 }
 
 

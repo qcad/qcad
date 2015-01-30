@@ -41,6 +41,8 @@ public:
     RSingleApplication(Display* dpy, const QString& appId, int argc, char **argv, Qt::HANDLE visual = 0, Qt::HANDLE colormap = 0);
 #endif
 
+    ~RSingleApplication();
+
     static RSingleApplication* getInstance();
 
     bool isRunning();

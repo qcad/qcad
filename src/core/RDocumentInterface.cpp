@@ -254,6 +254,11 @@ RGraphicsView* RDocumentInterface::getGraphicsViewWithFocus() {
  * Sets the action that is active if no other action is active.
  */
 void RDocumentInterface::setDefaultAction(RAction* action) {
+    if (defaultAction!=NULL) {
+        delete defaultAction;
+        defaultAction = NULL;
+    }
+
     defaultAction = action;
 
     if (defaultAction != NULL) {
