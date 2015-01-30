@@ -18,7 +18,7 @@ void RExamplePlugin::postInit(InitStatus status) {
         return;
     }
     RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
-    RGuiAction* guiAction = new RGuiAction("My CPP Action");
+    RGuiAction* guiAction = new RGuiAction("My CPP Action", appWin);
     guiAction->setRequiresDocument(true);
     //guiAction->setScriptFile(basePath + "/Line2P.js");
     //guiAction->setIcon(basePath + "/Line2P.svg");

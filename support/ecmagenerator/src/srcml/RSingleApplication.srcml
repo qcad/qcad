@@ -271,6 +271,9 @@ dir="./core" filename="RSingleApplication.h">
   </param>)</parameter_list>;</constructor_decl>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
+  <destructor_decl>
+  <name>~RSingleApplication</name>
+  <parameter_list>()</parameter_list>;</destructor_decl>
   <function_decl>
   <type>
   <name>static</name>

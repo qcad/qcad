@@ -101,8 +101,20 @@ dir="./core" filename="RActionAdapter.h">
         </expr>
       </argument>)</argument_list>
     </call></member_list>
-    <block>{}</block>
+    <block>{ 
+    <comment type="line">// qDebug() &lt;&lt; "RActionAdapter "
+    &lt;&lt; QString("0x%1").arg((int)this, 0,
+    16);</comment>}</block>
   </constructor>
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RActionAdapter</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <comment type="line">// qDebug() &lt;&lt; "~RActionAdapter "
+    &lt;&lt; QString("0x%1").arg((int)this, 0,
+    16);</comment>}</block>
+  </destructor>
   <function>
     <type>
       <name>virtual</name>

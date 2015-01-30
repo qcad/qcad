@@ -88,6 +88,19 @@
 <xsl:param name="isShell">
     <xsl:value-of select="'false'"/>
 </xsl:param>
+<xsl:param name="ownership">
+    <xsl:choose>
+    <xsl:when test="$name='RMainWindowQt'">
+      <xsl:text>QScriptEngine::QtOwnership</xsl:text>
+    </xsl:when>
+    <xsl:otherwise>
+      <!--
+      <xsl:text>QScriptEngine::AutoOwnership</xsl:text>
+      -->
+      <xsl:text>QScriptEngine::QtOwnership</xsl:text>
+    </xsl:otherwise>
+    </xsl:choose>
+</xsl:param>
 
 
 <!--
@@ -1044,7 +1057,7 @@
             </xsl:choose>
             <xsl:choose>
                 <xsl:when test="$isQObject">
-                    result = engine-&gt;newQObject(context-&gt;thisObject(), cppResult);
+                    result = engine-&gt;newQObject(context-&gt;thisObject(), cppResult, <xsl:value-of select="$ownership"/>);
                 </xsl:when>
                 <xsl:otherwise>
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
@@ -1182,7 +1195,7 @@
             </xsl:when>
             <xsl:when test="rs:isQObject(rs:stripReferenceOrPointer($returnType))">
                 // QObject
-                result = engine-&gt;newQObject(cppResult);
+                result = engine-&gt;newQObject(cppResult, <xsl:value-of select="$ownership"/>);
             </xsl:when>
             <xsl:when test="rs:isPointer($returnType) and rs:isCopyable(rs:stripReferenceOrPointer($returnType))">
                 // pointer, copyable 
@@ -1599,7 +1612,7 @@
         <xsl:value-of select="$static"/> QScriptValue toScriptValue(QScriptEngine *engine,
         <xsl:value-of select="$name" />*
         const &amp;in){
-            QScriptValue s = engine-&gt;newQObject(in, QScriptEngine::QtOwnership,
+            QScriptValue s = engine-&gt;newQObject(in, <xsl:value-of select="$ownership"/>,
             QScriptEngine::PreferExistingWrapperObject);
             /*
             if(s.isNull()){

@@ -117,6 +117,10 @@ dir="./gui" filename="RMainWindowQt.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</constructor_decl>
+  <destructor_decl>
+  <specifier>virtual</specifier>
+  <name>~RMainWindowQt</name>
+  <parameter_list>()</parameter_list>;</destructor_decl>
   <function_decl>
   <type>
   <name>static</name>
