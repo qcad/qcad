@@ -1,28 +1,34 @@
-// Spatial Index Library
-//
-// Copyright (C) 2002 Navel Ltd.
-//
-// This library is free software; you can redistribute it and/or
-// modify it under the terms of the GNU Lesser General Public
-// License as published by the Free Software Foundation; either
-// version 2.1 of the License, or (at your option) any later version.
-//
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-// Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public
-// License along with this library; if not, write to the Free Software
-// Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-//
-//  Email:
-//    mhadji@gmail.com
+/******************************************************************************
+ * Project:  libspatialindex - A C++ library for spatial indexing
+ * Author:   Marios Hadjieleftheriou, mhadji@gmail.com
+ ******************************************************************************
+ * Copyright (c) 2002, Marios Hadjieleftheriou
+ *
+ * All rights reserved.
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included
+ * in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ * DEALINGS IN THE SOFTWARE.
+******************************************************************************/
 
-#include "../../include/SpatialIndex.h"
+#include <spatialindex/SpatialIndex.h>
 
-#undef __USE_BSD
 #include <cstring>
+#include <limits>
 
 using namespace SpatialIndex;
 
@@ -31,12 +37,12 @@ TimeRegion::TimeRegion()
 {
 }
 
-TimeRegion::TimeRegion(const double* pLow, const double* pHigh, const IInterval& ti, size_t dimension)
+TimeRegion::TimeRegion(const double* pLow, const double* pHigh, const IInterval& ti, uint32_t dimension)
 	: Region(pLow, pHigh, dimension), m_startTime(ti.getLowerBound()), m_endTime(ti.getUpperBound())
 {
 }
 
-TimeRegion::TimeRegion(const double* pLow, const double* pHigh, double tStart, double tEnd, size_t dimension)
+TimeRegion::TimeRegion(const double* pLow, const double* pHigh, double tStart, double tEnd, uint32_t dimension)
 	: Region(pLow, pHigh, dimension), m_startTime(tStart), m_endTime(tEnd)
 {
 }
@@ -114,7 +120,7 @@ bool TimeRegion::operator==(const TimeRegion& r) const
 		m_endTime > r.m_endTime + std::numeric_limits<double>::epsilon())
 		return false;
 
-	for (size_t i = 0; i < m_dimension; i++)
+	for (uint32_t i = 0; i < m_dimension; ++i)
 	{
 		if (
 			m_pLow[i] < r.m_pLow[i] - std::numeric_limits<double>::epsilon() ||
@@ -200,17 +206,17 @@ TimeRegion* TimeRegion::clone()
 //
 // ISerializable interface
 //
-size_t TimeRegion::getByteArraySize()
+uint32_t TimeRegion::getByteArraySize()
 {
-	return (sizeof(size_t) + 2 * sizeof(double) + 2 * m_dimension * sizeof(double));
+	return (sizeof(uint32_t) + 2 * sizeof(double) + 2 * m_dimension * sizeof(double));
 }
 
 void TimeRegion::loadFromByteArray(const byte* ptr)
 {
-	size_t dimension;
+	uint32_t dimension;
 
-	memcpy(&dimension, ptr, sizeof(size_t));
-	ptr += sizeof(size_t);
+	memcpy(&dimension, ptr, sizeof(uint32_t));
+	ptr += sizeof(uint32_t);
 	memcpy(&m_startTime, ptr, sizeof(double));
 	ptr += sizeof(double);
 	memcpy(&m_endTime, ptr, sizeof(double));
@@ -223,14 +229,14 @@ void TimeRegion::loadFromByteArray(const byte* ptr)
 	//ptr += m_dimension * sizeof(double);
 }
 
-void TimeRegion::storeToByteArray(byte** data, size_t& len)
+void TimeRegion::storeToByteArray(byte** data, uint32_t& len)
 {
 	len = getByteArraySize();
 	*data = new byte[len];
 	byte* ptr = *data;
 
-	memcpy(ptr, &m_dimension, sizeof(size_t));
-	ptr += sizeof(size_t);
+	memcpy(ptr, &m_dimension, sizeof(uint32_t));
+	ptr += sizeof(uint32_t);
 	memcpy(ptr, &m_startTime, sizeof(double));
 	ptr += sizeof(double);
 	memcpy(ptr, &m_endTime, sizeof(double));
@@ -256,7 +262,7 @@ bool TimeRegion::intersectsShapeInTime(const ITimeShape& in) const
 	throw Tools::IllegalStateException("intersectsShapeInTime: Not implemented yet!");
 }
 
-bool TimeRegion::intersectsShapeInTime(const IInterval& ivI, const ITimeShape& in) const
+bool TimeRegion::intersectsShapeInTime(const IInterval&, const ITimeShape&) const
 {
 	throw Tools::IllegalStateException("intersectsShapeInTime: Not implemented yet!");
 }
@@ -272,7 +278,7 @@ bool TimeRegion::containsShapeInTime(const ITimeShape& in) const
 	throw Tools::IllegalStateException("containsShapeInTime: Not implemented yet!");
 }
 
-bool TimeRegion::containsShapeInTime(const IInterval& ivI, const ITimeShape& in) const
+bool TimeRegion::containsShapeInTime(const IInterval&, const ITimeShape&) const
 {
 	throw Tools::IllegalStateException("containsShapeInTime: Not implemented yet!");
 }
@@ -285,7 +291,7 @@ bool TimeRegion::touchesShapeInTime(const ITimeShape& in) const
 	throw Tools::IllegalStateException("touchesShapeInTime: Not implemented yet!");
 }
 
-bool TimeRegion::touchesShapeInTime(const IInterval& ivI, const ITimeShape& in) const
+bool TimeRegion::touchesShapeInTime(const IInterval&, const ITimeShape&) const
 {
 	throw Tools::IllegalStateException("touchesShapeInTime: Not implemented yet!");
 }
@@ -295,17 +301,17 @@ double TimeRegion::getAreaInTime() const
 	throw Tools::IllegalStateException("getAreaInTime: Not implemented yet!");
 }
 
-double TimeRegion::getAreaInTime(const IInterval& ivI) const
+double TimeRegion::getAreaInTime(const IInterval&) const
 {
 	throw Tools::IllegalStateException("getAreaInTime: Not implemented yet!");
 }
 
-double TimeRegion::getIntersectingAreaInTime(const ITimeShape& r) const
+double TimeRegion::getIntersectingAreaInTime(const ITimeShape&) const
 {
 	throw Tools::IllegalStateException("getIntersectingAreaInTime: Not implemented yet!");
 }
 
-double TimeRegion::getIntersectingAreaInTime(const IInterval& ivI, const ITimeShape& r) const
+double TimeRegion::getIntersectingAreaInTime(const IInterval&, const ITimeShape&) const
 {
 	throw Tools::IllegalStateException("getIntersectingAreaInTime: Not implemented yet!");
 }
@@ -347,7 +353,7 @@ bool TimeRegion::intersectsInterval(const IInterval& ti) const
 	return intersectsInterval(ti.getIntervalType(), ti.getLowerBound(), ti.getUpperBound());
 }
 
-bool TimeRegion::intersectsInterval(Tools::IntervalType t, const double start, const double end) const
+bool TimeRegion::intersectsInterval(Tools::IntervalType, const double start, const double end) const
 {
 	//if (m_startTime != start &&
 	//		(m_startTime >= end || m_endTime <= start)) return false;
@@ -368,10 +374,10 @@ Tools::IntervalType TimeRegion::getIntervalType() const
 	return Tools::IT_RIGHTOPEN;
 }
 
-void TimeRegion::makeInfinite(size_t dimension)
+void TimeRegion::makeInfinite(uint32_t dimension)
 {
 	makeDimension(dimension);
-	for (size_t cIndex = 0; cIndex < m_dimension; cIndex++)
+	for (uint32_t cIndex = 0; cIndex < m_dimension; ++cIndex)
 	{
 		m_pLow[cIndex] = std::numeric_limits<double>::max();
 		m_pHigh[cIndex] = -std::numeric_limits<double>::max();
@@ -381,7 +387,7 @@ void TimeRegion::makeInfinite(size_t dimension)
 	m_endTime = -std::numeric_limits<double>::max();
 }
 
-void TimeRegion::makeDimension(size_t dimension)
+void TimeRegion::makeDimension(uint32_t dimension)
 {
 	if (m_dimension != dimension)
 	{
@@ -398,17 +404,17 @@ void TimeRegion::makeDimension(size_t dimension)
 
 std::ostream& SpatialIndex::operator<<(std::ostream& os, const TimeRegion& r)
 {
-	size_t i;
+	uint32_t i;
 
 	os << "Low: ";
-	for (i = 0; i < r.m_dimension; i++)
+	for (i = 0; i < r.m_dimension; ++i)
 	{
 		os << r.m_pLow[i] << " ";
 	}
 
 	os << ", High: ";
 
-	for (i = 0; i < r.m_dimension; i++)
+	for (i = 0; i < r.m_dimension; ++i)
 	{
 		os << r.m_pHigh[i] << " ";
 	}

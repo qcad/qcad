@@ -1,29 +1,35 @@
-// Spatial Index Library
-//
-// Copyright (C) 2002 Navel Ltd.
-//
-// This library is free software; you can redistribute it and/or
-// modify it under the terms of the GNU Lesser General Public
-// License as published by the Free Software Foundation; either
-// version 2.1 of the License, or (at your option) any later version.
-//
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-// Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public
-// License along with this library; if not, write to the Free Software
-// Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-//
-//  Email:
-//    mhadji@gmail.com
+/******************************************************************************
+ * Project:  libspatialindex - A C++ library for spatial indexing
+ * Author:   Marios Hadjieleftheriou, mhadji@gmail.com
+ ******************************************************************************
+ * Copyright (c) 2002, Marios Hadjieleftheriou
+ *
+ * All rights reserved.
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included
+ * in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ * DEALINGS IN THE SOFTWARE.
+******************************************************************************/
 
 #pragma once
 
-#include "MVRStatistics.h"
-#include "MVRNode.h"
-#include "MVRPointerPoolNode.h"
+#include "Statistics.h"
+#include "Node.h"
+#include "PointerPoolNode.h"
 
 namespace SpatialIndex
 {
@@ -62,7 +68,7 @@ namespace SpatialIndex
 			//
 			// ISpatialIndex interface
 			//
-			virtual void insertData(size_t len, const byte* pData, const IShape& shape, id_type id);
+			virtual void insertData(uint32_t len, const byte* pData, const IShape& shape, id_type id);
 			virtual bool deleteData(const IShape& shape, id_type id);
 			virtual void containsWhatQuery(const IShape& query, IVisitor& v);
 			virtual void intersectsWithQuery(const IShape& query, IVisitor& v);
@@ -82,8 +88,8 @@ namespace SpatialIndex
 			void storeHeader();
 			void loadHeader();
 
-			void insertData_impl(size_t dataLength, byte* pData, TimeRegion& mbr, id_type id);
-			void insertData_impl(size_t dataLength, byte* pData, TimeRegion& mbr, id_type id, size_t level);
+			void insertData_impl(uint32_t dataLength, byte* pData, TimeRegion& mbr, id_type id);
+			void insertData_impl(uint32_t dataLength, byte* pData, TimeRegion& mbr, id_type id, uint32_t level);
 			bool deleteData_impl(const TimeRegion& mbr, id_type id);
 
 			id_type writeNode(Node*);
@@ -104,11 +110,11 @@ namespace SpatialIndex
 
 			double m_fillFactor;
 
-			size_t m_indexCapacity;
+			uint32_t m_indexCapacity;
 
-			size_t m_leafCapacity;
+			uint32_t m_leafCapacity;
 
-			size_t m_nearMinimumOverlapFactor;
+			uint32_t m_nearMinimumOverlapFactor;
 				// The R*-Tree 'p' constant, for calculating nearly minimum overlap cost.
 				// [Beckmann, Kriegel, Schneider, Seeger 'The R*-tree: An efficient and Robust Access Method
 				// for Points and Rectangles, Section 4.1]
@@ -127,7 +133,7 @@ namespace SpatialIndex
 			//double m_strongVersionUnderflow;
 			double m_versionUnderflow;
 
-			size_t m_dimension;
+			uint32_t m_dimension;
 
 			TimeRegion m_infiniteRegion;
 
@@ -148,10 +154,8 @@ namespace SpatialIndex
 			std::vector<Tools::SmartPointer<ICommand> > m_readNodeCommands;
 			std::vector<Tools::SmartPointer<ICommand> > m_deleteNodeCommands;
 
-#ifdef PTHREADS
-			pthread_rwlock_t m_rwLock;
-#else
-			bool m_rwLock;
+#ifdef HAVE_PTHREAD_H
+			pthread_mutex_t m_lock;
 #endif
 
 			class RootEntry
