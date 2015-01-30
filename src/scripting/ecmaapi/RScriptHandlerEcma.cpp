@@ -936,6 +936,10 @@ void RScriptHandlerEcma::doScript(const QString& scriptFile,const QStringList& a
 
     QScriptValue globalObject = engine->globalObject();
 
+    if (isIncluded(engine, fi.completeBaseName())) {
+        return;
+    }
+
     initGlobalVariables(scriptFile);
     if (!arguments.isEmpty()) {
         // set global variable args to (command line) arguments:
@@ -949,6 +953,8 @@ void RScriptHandlerEcma::doScript(const QString& scriptFile,const QStringList& a
     }
 
     eval(contents, scriptFile);
+
+    markIncluded(engine, fi.completeBaseName());
 }
 
 void RScriptHandlerEcma::eval(const QString& script, const QString& fileName) {
@@ -1022,6 +1028,13 @@ void RScriptHandlerEcma::createActionDocumentLevel(const QString& scriptFile,
 
     QString className = QFileInfo(scriptFile).completeBaseName();
     QScriptValue globalObject = getScriptEngine().globalObject();
+
+    globalObject.setProperty("guiAction", engine->toScriptValue(guiAction));
+    globalObject.setProperty("documentInterface", engine->toScriptValue(documentInterface));
+
+    eval("documentInterface.setCurrentAction(new " + className + "(guiAction));");
+
+    /*
     QScriptValue ecmaConstructor = globalObject.property(className);
     if (!(ecmaConstructor.isValid() && ecmaConstructor.isFunction())) {
         getScriptEngine().currentContext()->throwError(
@@ -1061,6 +1074,7 @@ void RScriptHandlerEcma::createActionDocumentLevel(const QString& scriptFile,
     else {
         qDebug() << "RScriptHandlerEcma::createActionDocumentLevel: action is NULL";
     }
+    */
 }
 
 void RScriptHandlerEcma::createActionApplicationLevel(
@@ -1078,6 +1092,13 @@ void RScriptHandlerEcma::createActionApplicationLevel(
 
     QString className = QFileInfo(scriptFile).completeBaseName();
     QScriptValue globalObject = engine->globalObject();
+
+    globalObject.setProperty("guiAction", engine->toScriptValue(guiAction));
+    eval("var a = new " + className + "(guiAction);"
+         "a.beginEvent();"
+         "a.finishEvent();");
+
+    /*
     QScriptValue ecmaConstructor = globalObject.property(className);
     if (!ecmaConstructor.isValid()) {
         qWarning() << "class not found: " << className;
@@ -1121,6 +1142,7 @@ void RScriptHandlerEcma::createActionApplicationLevel(
     else {
         qDebug() << "RScriptHandlerEcma::createActionApplicationLevel: action is NULL / not derived from RAction";
     }
+    */
 }
 
 /**
