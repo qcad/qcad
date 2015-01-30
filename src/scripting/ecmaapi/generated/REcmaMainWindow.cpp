@@ -5018,7 +5018,7 @@
                self->getChildWidget(a0);
         // return type: QWidget *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 

@@ -782,7 +782,7 @@
                self->getGuiAction();
         // return type: RGuiAction *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 

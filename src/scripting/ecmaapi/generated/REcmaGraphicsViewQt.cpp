@@ -307,7 +307,7 @@
                     REcmaShellGraphicsViewQt
                     ();
                 
-                    result = engine->newQObject(context->thisObject(), cppResult);
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
         cppResult->__qtscript_self = result;
     
@@ -354,7 +354,7 @@
                     a0
                     );
                 
-                    result = engine->newQObject(context->thisObject(), cppResult);
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
         cppResult->__qtscript_self = result;
     
@@ -418,7 +418,7 @@
     a1
                     );
                 
-                    result = engine->newQObject(context->thisObject(), cppResult);
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
         cppResult->__qtscript_self = result;
     

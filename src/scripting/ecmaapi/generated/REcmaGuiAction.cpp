@@ -357,7 +357,7 @@
                     a0
                     );
                 
-                    result = engine->newQObject(context->thisObject(), cppResult);
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
     } else 
 
@@ -414,7 +414,7 @@
     a1
                     );
                 
-                    result = engine->newQObject(context->thisObject(), cppResult);
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
     } else 
 
@@ -4582,7 +4582,7 @@
        getByScriptFile(a0);
         // return type: RGuiAction *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 
@@ -4632,7 +4632,7 @@
        getByClassName(a0);
         // return type: RGuiAction *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 

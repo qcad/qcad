@@ -297,6 +297,9 @@
         ;static  QScriptValue
         getUseSolidLineSelection
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMouseThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

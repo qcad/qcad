@@ -160,7 +160,7 @@
                     RMdiChildQt
                     ();
                 
-                    result = engine->newQObject(context->thisObject(), cppResult);
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
     } else 
 
@@ -205,7 +205,7 @@
                     a0
                     );
                 
-                    result = engine->newQObject(context->thisObject(), cppResult);
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
     } else 
 
@@ -468,7 +468,7 @@
                self->getLastKnownViewWithFocus();
         // return type: RGraphicsViewQt *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 

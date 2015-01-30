@@ -227,6 +227,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getUseSolidLineSelection, "getUseSolidLineSelection");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getMouseThreshold, "getMouseThreshold");
+            
 
     // static properties:
     
@@ -4141,6 +4143,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getUseSolidLineSelection", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getMouseThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getMouseThreshold", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getMouseThreshold";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RSettings::
+       getMouseThreshold();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getMouseThreshold().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getMouseThreshold", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

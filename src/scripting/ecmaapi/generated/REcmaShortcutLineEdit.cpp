@@ -153,7 +153,7 @@
                     a0
                     );
                 
-                    result = engine->newQObject(context->thisObject(), cppResult);
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
     } else 
 

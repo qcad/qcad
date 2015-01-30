@@ -356,7 +356,7 @@
                     RMainWindowQt
                     ();
                 
-                    result = engine->newQObject(context->thisObject(), cppResult);
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
     } else 
 
@@ -401,7 +401,7 @@
                     a0
                     );
                 
-                    result = engine->newQObject(context->thisObject(), cppResult);
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
     } else 
 
@@ -463,7 +463,7 @@
     a1
                     );
                 
-                    result = engine->newQObject(context->thisObject(), cppResult);
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
     } else 
 
@@ -4294,7 +4294,7 @@
        getMainWindow();
         // return type: RMainWindowQt *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 
@@ -5305,7 +5305,7 @@
                self->getMdiChild();
         // return type: RMdiChildQt *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 
@@ -5354,7 +5354,7 @@
                self->getTabBar();
         // return type: QTabBar *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 
@@ -5403,7 +5403,7 @@
                self->getMdiArea();
         // return type: RMdiArea *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 
@@ -6092,7 +6092,7 @@
                self->getChildWidget(a0);
         // return type: QWidget *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 
