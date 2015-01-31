@@ -161,7 +161,9 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
         } else {
             range = view.mapDistanceFromView(this.pickRangePixels);
             var strictRange = view.mapDistanceFromView(10);
+            RMouseEvent.setOriginalMousePos(event.globalPos());
             entityId = this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
+            RMouseEvent.resetOriginalMousePos();
             if (entityId !== RObject.INVALID_ID && this.document.isEntityEditable(entityId)) {
                 this.highlightEntity(entityId);
             }

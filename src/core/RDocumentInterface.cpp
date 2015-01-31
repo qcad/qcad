@@ -1159,7 +1159,9 @@ RSnapRestriction* RDocumentInterface::getSnapRestriction() {
  */
 RVector RDocumentInterface::snap(RMouseEvent& event) {
     if (currentSnap!=NULL) {
+        RMouseEvent::setOriginalMousePos(event.globalPos());
         RVector ret = currentSnap->snap(event);
+        RMouseEvent::resetOriginalMousePos();
         if (currentSnapRestriction!=NULL) {
             ret = currentSnapRestriction->restrictSnap(ret, getRelativeZero());
         }

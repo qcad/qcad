@@ -45,6 +45,7 @@ QBuffer* RFileCache::getBuffer(const QString& fileName, bool forceReload) {
     }
 
     if (cache.contains(abs)) {
+        qDebug() << "cache hit:" << fileName;
         return cache[abs];
     }
 

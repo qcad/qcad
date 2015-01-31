@@ -50,6 +50,13 @@ public:
             RGraphicsView& v);
 
     virtual ~RMouseEvent();
+
+    static bool hasMouseMoved();
+    static void resetOriginalMousePos();
+    static void setOriginalMousePos(const QPoint& p);
+
+private:
+    static QPoint oriCursor;
 };
 
 Q_DECLARE_METATYPE(RMouseEvent*)

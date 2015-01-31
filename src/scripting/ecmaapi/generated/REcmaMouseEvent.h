@@ -69,7 +69,16 @@
     
 
     // public methods:
-    static  QScriptValue toString
+    static  QScriptValue
+        hasMouseMoved
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        resetOriginalMousePos
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOriginalMousePos
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RMouseEvent* getSelf(const QString& fName, QScriptContext* context)

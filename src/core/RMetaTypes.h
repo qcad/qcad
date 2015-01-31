@@ -87,6 +87,7 @@
 #include <QPair>
 #include <QPinchGesture>
 #include <QPlainTextEdit>
+#include <QPoint>
 #include <QPointF>
 #include <QPrinter>
 #include <QProcess>
@@ -224,6 +225,7 @@ Q_DECLARE_METATYPE(QPanGesture*)
 Q_DECLARE_METATYPE(QPen*)
 Q_DECLARE_METATYPE(QPinchGesture*)
 Q_DECLARE_METATYPE(QPlainTextEdit*)
+Q_DECLARE_METATYPE(QPoint*)
 Q_DECLARE_METATYPE(QPointF*)
 #if !defined(Q_OS_IOS)
 Q_DECLARE_METATYPE(QPrinter*)

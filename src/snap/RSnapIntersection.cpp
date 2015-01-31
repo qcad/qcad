@@ -59,8 +59,6 @@ RVector RSnapIntersection::snap(
         const QMap<REntity::Id, QSet<int> >& candidates,
         const RBox& queryBox) {
 
-    QPoint p0 = QCursor::pos();
-
     RDocument* document = view.getDocument();
     if (document==NULL) {
         return lastSnap;
@@ -71,11 +69,10 @@ RVector RSnapIntersection::snap(
     lastSnap = RVector::invalid;
     double minDist = RMAXDOUBLE;
     double dist;
-    int mouseThreshold = RSettings::getMouseThreshold();
 
     QMap<REntity::Id, QSet<int> >::const_iterator it1;
     for (it1=candidates.begin(); it1!=candidates.end(); it1++) {
-        if ((QCursor::pos() - p0).manhattanLength()>mouseThreshold) {
+        if (RMouseEvent::hasMouseMoved()) {
             lastSnap = RVector::invalid;
             return RVector::invalid;
         }
@@ -92,7 +89,7 @@ RVector RSnapIntersection::snap(
 
         QMap<REntity::Id, QSet<int> >::const_iterator it2;
         for (it2=it1; it2!=candidates.end(); it2++) {
-            if ((QCursor::pos() - p0).manhattanLength()>mouseThreshold) {
+            if (RMouseEvent::hasMouseMoved()) {
                 lastSnap = RVector::invalid;
                 return RVector::invalid;
             }

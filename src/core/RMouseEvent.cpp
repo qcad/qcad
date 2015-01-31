@@ -22,6 +22,8 @@
 #include "RMouseEvent.h"
 #include "RUcs.h"
 
+QPoint RMouseEvent::oriCursor;
+
 RMouseEvent::RMouseEvent(Type type, const RVector& position,
         Qt::MouseButton button, Qt::MouseButtons buttons,
         Qt::KeyboardModifiers modifiers, RGraphicsScene& s, RGraphicsView& v)
@@ -40,3 +42,17 @@ RMouseEvent::RMouseEvent(const QMouseEvent& mouseEvent, RGraphicsScene& s,
 RMouseEvent::~RMouseEvent() {
 }
 
+bool RMouseEvent::hasMouseMoved() {
+    return (
+        !oriCursor.isNull() &&
+        (oriCursor - QCursor::pos()).manhattanLength()>RSettings::getMouseThreshold()
+    );
+}
+
+void RMouseEvent::resetOriginalMousePos() {
+    oriCursor = QPoint();
+}
+
+void RMouseEvent::setOriginalMousePos(const QPoint& p) {
+    oriCursor = p;
+}

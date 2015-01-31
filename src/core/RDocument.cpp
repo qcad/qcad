@@ -26,6 +26,7 @@
 #include "RMainWindow.h"
 #include "RMath.h"
 #include "RMemoryStorage.h"
+#include "RMouseEvent.h"
 #include "RSettings.h"
 #include "RSpatialIndexSimple.h"
 #include "RStorage.h"
@@ -960,10 +961,13 @@ REntity::Id RDocument::queryClosestXY(
     double strictRange) {
 
     double minDist = RMAXDOUBLE;
-    REntity::Id ret = -1;
+    REntity::Id ret = REntity::INVALID_ID;
 
     QSet<REntity::Id>::iterator it;
     for (it=candidates.begin(); it!=candidates.end(); it++) {
+        if (RMouseEvent::hasMouseMoved()) {
+            return REntity::INVALID_ID;
+        }
         QSharedPointer<REntity> e = queryEntityDirect(*it);
         if (e.isNull()) {
             continue;
@@ -1067,6 +1071,9 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
     //QSet<REntity::Id> outsiders;
     QMap<REntity::Id, QSet<int> >::iterator it;
     for (it=candidates.begin(); it!=candidates.end(); ++it) {
+        if (RMouseEvent::hasMouseMoved()) {
+            return QMap<REntity::Id, QSet<int> >();
+        }
         QSharedPointer<REntity> entity = queryEntityDirect(it.key());
         if (entity.isNull()) {
             //outsiders.insert(*it);

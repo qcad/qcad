@@ -70,6 +70,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
             
+            REcmaHelper::registerFunction(&engine, proto, bulkLoad, "bulkLoad");
+            
             REcmaHelper::registerFunction(&engine, proto, addToIndex, "addToIndex");
             
             REcmaHelper::registerFunction(&engine, proto, removeFromIndex, "removeFromIndex");
@@ -244,6 +246,76 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::clear", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpatialIndexNavel::bulkLoad
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpatialIndexNavel::bulkLoad", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexNavel::bulkLoad";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpatialIndexNavel* self = 
+                        getSelf("bulkLoad", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < int > */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < QList < RBox > > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < int >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isArray
+                    QList < QList < RBox > >
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->bulkLoad(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexNavel.bulkLoad().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::bulkLoad", context, engine);
             return result;
         }
          QScriptValue

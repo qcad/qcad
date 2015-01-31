@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RSiDataStream"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false"
+  isScriptable="false" />
   <class name="RSiGetRegionVisitor"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -17,6 +22,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="clear" cppName="clear" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="bulkLoad" cppName="bulkLoad" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; int &gt; &amp;"
+        typeName="QList &lt; int &gt;" name="ids" isConst="true" />
+        <arg type="QList &lt; QList &lt; RBox &gt; &gt; &amp;"
+        typeName="QList &lt; QList &lt; RBox &gt; &gt;" name="bbs"
+        isConst="true" />
+      </variant>
     </method>
     <method name="addToIndex" cppName="addToIndex"
     specifier="public" isStatic="false" isVirtual="true"

@@ -147,8 +147,45 @@ dir="./core" filename="RMouseEvent.h">
   <destructor_decl>
   <specifier>virtual</specifier>
   <name>~RMouseEvent</name>
-  <parameter_list>
-  ()</parameter_list>;</destructor_decl></public>}</block>;</class>
+  <parameter_list>()</parameter_list>;</destructor_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>bool</name>
+  </type>
+  <name>hasMouseMoved</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>resetOriginalMousePos</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>setOriginalMousePos</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QPoint</name>&amp;</type>
+      <name>p</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>
+  <private>private: 
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>QPoint</name>
+    </type>
+    <name>oriCursor</name>
+  </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

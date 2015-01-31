@@ -101,6 +101,12 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, hasMouseMoved, "hasMouseMoved");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, resetOriginalMousePos, "resetOriginalMousePos");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setOriginalMousePos, "setOriginalMousePos");
+            
 
     // static properties:
     
@@ -823,7 +829,135 @@
     
 
     // public methods:
-     QScriptValue REcmaMouseEvent::toString
+     QScriptValue
+        REcmaMouseEvent::hasMouseMoved
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMouseEvent::hasMouseMoved", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMouseEvent::hasMouseMoved";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RMouseEvent::
+       hasMouseMoved();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMouseEvent.hasMouseMoved().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMouseEvent::hasMouseMoved", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMouseEvent::resetOriginalMousePos
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMouseEvent::resetOriginalMousePos", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMouseEvent::resetOriginalMousePos";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RMouseEvent::
+       resetOriginalMousePos();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMouseEvent.resetOriginalMousePos().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMouseEvent::resetOriginalMousePos", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMouseEvent::setOriginalMousePos
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMouseEvent::setOriginalMousePos", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMouseEvent::setOriginalMousePos";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPoint */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QPoint*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QPoint*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RMouseEvent: Argument 0 is not of type QPoint*.",
+                               context);                    
+                    }
+                    QPoint& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RMouseEvent::
+       setOriginalMousePos(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMouseEvent.setOriginalMousePos().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMouseEvent::setOriginalMousePos", context, engine);
+            return result;
+        }
+         QScriptValue REcmaMouseEvent::toString
     (QScriptContext *context, QScriptEngine *engine)
     
     {

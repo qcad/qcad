@@ -50,6 +50,9 @@
         clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        bulkLoad
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addToIndex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

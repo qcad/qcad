@@ -43,8 +43,6 @@ bool RSnapAuto::pointsOnEntity = false;
 bool RSnapAuto::freePositioning = false;
 
 RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double range) {
-    QPoint p0 = QCursor::pos();
-    int mouseThreshold = RSettings::getMouseThreshold();
     entityIds.clear();
 
     if (RMath::isNaN(range)) {
@@ -99,7 +97,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     }
 
     // interrupted by mouse move:
-    if ((QCursor::pos() - p0).manhattanLength()>mouseThreshold) {
+    if (RMouseEvent::hasMouseMoved()) {
         status = RSnap::Free;
         return position;
     }
