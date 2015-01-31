@@ -20,7 +20,7 @@ dxflib:             GPL version 2.0 or greater.
                     Commercial licenses of dxflib for proprietary use are also available.
 opennurbs:          Public domain (neither copyright nor copyleft apply).
                     See 3rdparty/opennurbs/readme.txt
-spatialindexnavel:  LGPL version 2.1.
-                    See 3rdparty/spatialindexnavel/lgpl-2.1.txt
+spatialindexnavel:  MIT
+                    See 3rdparty/spatialindexnavel/COPYING
 stemmer:            BSD 2-Clause License
                     See 3rdparty/stemmer/bsd-2.txt
