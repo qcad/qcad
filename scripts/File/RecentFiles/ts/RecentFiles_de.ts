@@ -20,12 +20,12 @@
     <message>
         <location line="+0"/>
         <source>Recent Files</source>
-        <translation>Zuletzt geöffneten Dateien</translation>
+        <translation>Zuletzt geöffnete Dateien</translation>
     </message>
     <message>
         <location filename="../RecentFilesInit.js" line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation>&amp;Zuletzt geöffneten Dateien</translation>
+        <translation>&amp;Zuletzt geöffnete Dateien</translation>
     </message>
 </context>
 </TS>
