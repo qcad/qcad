@@ -32,7 +32,7 @@ CommandLine.getPreferencesCategory = function() {
 CommandLine.prototype = new Widgets();
 
 /**
- * Shows / hides the layer list.
+ * Shows / hides the command line widget.
  */
 CommandLine.prototype.beginEvent = function() {
     Widgets.prototype.beginEvent.call(this);

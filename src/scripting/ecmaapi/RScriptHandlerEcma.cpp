@@ -957,7 +957,7 @@ void RScriptHandlerEcma::doScript(const QString& scriptFile,const QStringList& a
     markIncluded(engine, fi.completeBaseName());
 }
 
-void RScriptHandlerEcma::eval(const QString& script, const QString& fileName) {
+QVariant RScriptHandlerEcma::eval(const QString& script, const QString& fileName) {
     QScriptValue err = engine->evaluate(script, fileName);
     if (engine->hasUncaughtException()) {
         qWarning()
@@ -965,6 +965,7 @@ void RScriptHandlerEcma::eval(const QString& script, const QString& fileName) {
                 << err.toString();
         qWarning() << engine->uncaughtExceptionBacktrace().join("\n");
     }
+    return err.toVariant();
 }
 
 RFileImporterAdapter* RScriptHandlerEcma::createFileImporter(const QString& className, RDocument& document) {

@@ -256,6 +256,8 @@ public:
     virtual void setLeftMouseTip(const QString& text = "") = 0;
     virtual void setRightMouseTip(const QString& text = "") = 0;
 
+    QVariant eval(const QString& ext, const QString& script);
+
 protected:
     virtual bool readSettings();
     virtual void writeSettings();

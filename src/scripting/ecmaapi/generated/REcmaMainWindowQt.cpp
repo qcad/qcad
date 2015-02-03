@@ -219,6 +219,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, ucsSetEvent, "ucsSetEvent");
             
+            REcmaHelper::registerFunction(&engine, proto, eval, "eval");
+            
 
     // properties:
     
@@ -4260,6 +4262,79 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::ucsSetEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::eval
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::eval", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::eval";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("eval", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QVariant'
+    QVariant cppResult =
+        
+               self->eval(a0
+        ,
+    a1);
+        // return type: QVariant
+                // QVariant:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.eval().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::eval", context, engine);
             return result;
         }
         

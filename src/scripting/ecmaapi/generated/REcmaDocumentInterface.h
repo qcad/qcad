@@ -420,6 +420,9 @@
         ;static  QScriptValue
         setNotifyListeners
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        eval
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

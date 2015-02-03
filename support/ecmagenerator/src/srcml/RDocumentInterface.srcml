@@ -1882,7 +1882,29 @@ dir="./core" filename="RDocumentInterface.h">
     <expr>
     <name>notifyListeners</name>= 
     <name>on</name></expr>;</expr_stmt>}</block>
-  </function></public>
+  </function>
+  <function_decl>
+  <type>
+    <name>QVariant</name>
+  </type>
+  <name>eval</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>ext</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>script</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>
   <private>private: 
   <function_decl>
   <type>

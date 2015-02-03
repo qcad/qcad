@@ -52,7 +52,7 @@ public:
     QList<QString> getSupportedFileExtensions();
 
     virtual void doScript(const QString& scriptFile,const QStringList& arguments = QStringList());
-    virtual void eval(const QString& script, const QString& fileName = QString());
+    virtual QVariant eval(const QString& script, const QString& fileName = QString());
     virtual RFileImporterAdapter* createFileImporter(const QString& className, RDocument& document);
 
     virtual bool isRunning();

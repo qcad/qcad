@@ -37,6 +37,8 @@
 #include "RExportListener.h"
 #include "RImportListener.h"
 #include "RPropertyListener.h"
+#include "RScriptHandler.h"
+#include "RScriptHandlerRegistry.h"
 #include "RSelectionListener.h"
 #include "RSettings.h"
 #include "RSnapListener.h"
@@ -636,4 +638,12 @@ void RMainWindow::writeSettings() {
     RSettings::getQSettings()->setValue("Appearance/Position.Y", getPositionY());
     RSettings::getQSettings()->setValue("Appearance/Width", getWidth());
     RSettings::getQSettings()->setValue("Appearance/Height", getHeight());
+}
+
+QVariant RMainWindow::eval(const QString& ext, const QString& script) {
+    RScriptHandler* handler = RScriptHandlerRegistry::getGlobalScriptHandler(ext);
+    if (handler==NULL) {
+        return QVariant();
+    }
+    return handler->eval(script);
 }

@@ -128,7 +128,7 @@ dir="./scripting/ecmaapi" filename="RScriptHandlerEcma.h">
   <decl>
     <type>
       <name>virtual</name>
-      <name>void</name>
+      <name>QVariant</name>
     </type>
     <name>eval</name>
     <argument_list>(

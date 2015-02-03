@@ -310,6 +310,8 @@ public:
         notifyListeners = on;
     }
 
+    QVariant eval(const QString& ext, const QString& script);
+
 private:
     void handleClickEvent(RAction& action, RMouseEvent& event);
     void previewClickEvent(RAction& action, RMouseEvent& event);

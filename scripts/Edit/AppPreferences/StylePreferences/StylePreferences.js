@@ -68,6 +68,7 @@ StylePreferences.load = function(file) {
         var str = textStream.readAll();
         appWin.styleSheet = str;
         qDebug("    Style Sheets loaded:", cssFile.fileName());
+        cssFile.close();
     } else {
         qDebug("    Cannot open file:", cssFile.fileName());
     }

@@ -945,5 +945,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="eval" cppName="eval" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="ext"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="script"
+        isConst="true" />
+      </variant>
+    </method>
   </class>
 </unit>

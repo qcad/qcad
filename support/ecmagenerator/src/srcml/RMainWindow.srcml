@@ -1389,7 +1389,29 @@ dir="./core" filename="RMainWindow.h">
       <expr>""</expr>
     </init></decl>
   </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl></public>
+  <specifier>= 0</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QVariant</name>
+  </type>
+  <name>eval</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>ext</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>script</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>
   <protected>protected: 
   <function_decl>
   <type>

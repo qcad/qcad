@@ -2016,3 +2016,11 @@ RGraphicsView* RDocumentInterface::getLastKnownViewWithFocus() {
 void RDocumentInterface::setLastKnownViewWithFocus(RGraphicsView* view) {
     lastKnownViewWithFocus = view;
 }
+
+QVariant RDocumentInterface::eval(const QString& ext, const QString& script) {
+    RScriptHandler* handler = getScriptHandler(ext);
+    if (handler==NULL) {
+        return QVariant();
+    }
+    return handler->eval(script);
+}

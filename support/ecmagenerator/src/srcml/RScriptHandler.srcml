@@ -66,13 +66,13 @@ dir="./core" filename="RScriptHandler.h">
     <name>RScriptHandler</name>
     <parameter_list>()</parameter_list>
     <block>{ }</block>
-  </constructor>; 
+  </constructor>
   <destructor>
     <specifier>virtual</specifier>
     <name>~RScriptHandler</name>
     <parameter_list>()</parameter_list>
     <block>{ }</block>
-  </destructor>; 
+  </destructor>
   <comment type="block">/** * \return The file extensions of script
   files that are supported by * this script handler. */</comment>
   <function_decl>
@@ -150,7 +150,7 @@ dir="./core" filename="RScriptHandler.h">
   <decl>
   <type>
     <name>virtual</name>
-    <name>void</name>
+    <name>QVariant</name>
   </type>
   <name>eval</name>
   <argument_list>(
