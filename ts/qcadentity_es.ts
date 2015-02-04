@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>REntity</name>
     <message>
@@ -382,32 +382,32 @@ E&amp;scala</translatorcomment>
 Texto simple
 Nelder-Mead Simplex
 El plugin no implementa un método %1 necesario para el ajuste simplex.</translatorcomment>
-        <translation>Simple</translation>
+        <translation type="vanished">Simple</translation>
     </message>
     <message>
         <source>Text</source>
-        <translation>Texto</translation>
+        <translation type="vanished">Texto</translation>
     </message>
     <message>
         <source>Plain Text</source>
-        <translation>Texto plano</translation>
+        <translation type="vanished">Texto plano</translation>
     </message>
     <message>
         <source>Font Name</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Nombre de la fuente</translation>
+        <translation type="vanished">Nombre de la fuente</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation>Altura del texto</translation>
+        <translation type="vanished">Altura del texto</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation>Ángulo del texto</translation>
+        <translation type="vanished">Ángulo del texto</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation>Escala X</translation>
+        <translation type="vanished">Escala X</translation>
     </message>
     <message>
         <source>Bold</source>
@@ -415,7 +415,7 @@ El plugin no implementa un método %1 necesario para el ajuste simplex.</transla
 --file: Text_es.ts--
 &amp;Negrita
 Negrita</translatorcomment>
-        <translation>Negrita</translation>
+        <translation type="vanished">Negrita</translation>
     </message>
     <message>
         <source>Italic</source>
@@ -423,7 +423,7 @@ Negrita</translatorcomment>
 --file: Text_es.ts--
 [10300-1032F] Old Italic
 Itálica antigua</translatorcomment>
-        <translation>Cursivo</translation>
+        <translation type="vanished">Cursivo</translation>
     </message>
     <message>
         <source>Line Spacing</source>
@@ -432,7 +432,7 @@ Espaciado de líneas:
 &amp;Espacio entre líneas por defecto
 Espacio entre líneas por defecto
 Factor de Espaciado entre Líneas</translatorcomment>
-        <translation>Espacio entre líneas</translation>
+        <translation type="vanished">Espacio entre líneas</translation>
     </message>
     <message>
         <source>Alignment</source>
@@ -440,7 +440,7 @@ Factor de Espaciado entre Líneas</translatorcomment>
 --file: es.po--
 Alineación
 Alineación@Vertical</translatorcomment>
-        <translation>Alineación</translation>
+        <translation type="vanished">Alineación</translation>
     </message>
     <message>
         <source>Horizontal</source>
@@ -449,7 +449,7 @@ Alineación@Vertical</translatorcomment>
 Mosaico &amp;horizontal
 Mosaico horizontal
 &amp;Horizontal</translatorcomment>
-        <translation>Horizontal</translation>
+        <translation type="vanished">Horizontal</translation>
     </message>
     <message>
         <source>Vertical</source>
@@ -457,7 +457,7 @@ Mosaico horizontal
 --file: es.po--
 Vertical
 &amp;Vertical</translatorcomment>
-        <translation>Vertical</translation>
+        <translation type="vanished">Vertical</translation>
     </message>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="-2"/>

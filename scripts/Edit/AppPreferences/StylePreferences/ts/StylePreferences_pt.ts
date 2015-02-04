@@ -28,7 +28,7 @@ E_stilo: </translatorcomment>
     <message>
         <location line="+22"/>
         <location line="+1"/>
-        <location line="+29"/>
+        <location line="+30"/>
         <location line="+22"/>
         <source>None</source>
         <translation>Nenhum</translation>

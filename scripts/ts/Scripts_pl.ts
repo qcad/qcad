@@ -39,7 +39,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+313"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>

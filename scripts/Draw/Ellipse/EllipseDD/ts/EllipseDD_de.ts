@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>EllipseDD</name>
     <message>
@@ -35,7 +35,7 @@
     </message>
     <message>
         <source>Draw ellipse with position, major diameter and minor diameter</source>
-        <translation>Ellipse mit Position und Durchmessern</translation>
+        <translation type="vanished">Ellipse mit Position und Durchmessern</translation>
     </message>
 </context>
 </TS>

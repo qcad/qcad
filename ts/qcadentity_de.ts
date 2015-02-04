@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>REntity</name>
     <message>
@@ -301,55 +301,55 @@
     </message>
     <message>
         <source>Simple</source>
-        <translation>Einfach</translation>
+        <translation type="vanished">Einfach</translation>
     </message>
     <message>
         <source>Text</source>
-        <translation>Text</translation>
+        <translation type="vanished">Text</translation>
     </message>
     <message>
         <source>Plain Text</source>
-        <translation>Klartext</translation>
+        <translation type="vanished">Klartext</translation>
     </message>
     <message>
         <source>Font Name</source>
-        <translation>Schrift Name</translation>
+        <translation type="vanished">Schrift Name</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation>Text Höhe</translation>
+        <translation type="vanished">Text Höhe</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation>Textwinkel</translation>
+        <translation type="vanished">Textwinkel</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation>X Skalierung</translation>
+        <translation type="vanished">X Skalierung</translation>
     </message>
     <message>
         <source>Bold</source>
-        <translation>Fett</translation>
+        <translation type="vanished">Fett</translation>
     </message>
     <message>
         <source>Italic</source>
-        <translation>Kursiv</translation>
+        <translation type="vanished">Kursiv</translation>
     </message>
     <message>
         <source>Line Spacing</source>
-        <translation>Linienabstand</translation>
+        <translation type="vanished">Linienabstand</translation>
     </message>
     <message>
         <source>Alignment</source>
-        <translation>Ausrichtung</translation>
+        <translation type="vanished">Ausrichtung</translation>
     </message>
     <message>
         <source>Horizontal</source>
-        <translation>Horizontal</translation>
+        <translation type="vanished">Horizontal</translation>
     </message>
     <message>
         <source>Vertical</source>
-        <translation>Vertikal</translation>
+        <translation type="vanished">Vertikal</translation>
     </message>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="-2"/>

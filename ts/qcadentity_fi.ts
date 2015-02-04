@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fi">
+<TS version="2.1" language="fi">
 <context>
     <name>REntity</name>
     <message>
@@ -690,51 +690,51 @@
     </message>
     <message>
         <source>Simple</source>
-        <translation>Yksinkertainen</translation>
+        <translation type="vanished">Yksinkertainen</translation>
     </message>
     <message>
         <source>Text</source>
-        <translation>Teksti</translation>
+        <translation type="vanished">Teksti</translation>
     </message>
     <message>
         <source>Font Name</source>
-        <translation>Kirjasimen nimi</translation>
+        <translation type="vanished">Kirjasimen nimi</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation>Tekstin korkeus</translation>
+        <translation type="vanished">Tekstin korkeus</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation>Tekstin kulma</translation>
+        <translation type="vanished">Tekstin kulma</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation>X Mittakaava</translation>
+        <translation type="vanished">X Mittakaava</translation>
     </message>
     <message>
         <source>Bold</source>
-        <translation>Lihavoitu</translation>
+        <translation type="vanished">Lihavoitu</translation>
     </message>
     <message>
         <source>Italic</source>
-        <translation>Kursivoitu</translation>
+        <translation type="vanished">Kursivoitu</translation>
     </message>
     <message>
         <source>Line Spacing</source>
-        <translation>Riviväli</translation>
+        <translation type="vanished">Riviväli</translation>
     </message>
     <message>
         <source>Alignment</source>
-        <translation>Tasaus</translation>
+        <translation type="vanished">Tasaus</translation>
     </message>
     <message>
         <source>Horizontal</source>
-        <translation>Vaakasuunta</translation>
+        <translation type="vanished">Vaakasuunta</translation>
     </message>
     <message>
         <source>Vertical</source>
-        <translation>Pystysuunta</translation>
+        <translation type="vanished">Pystysuunta</translation>
     </message>
 </context>
 </TS>
