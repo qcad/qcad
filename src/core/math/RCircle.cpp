@@ -29,6 +29,10 @@ RCircle::RCircle() :
     center(RVector::invalid), radius(0.0) {
 }
 
+RCircle::RCircle(double cx, double cy, const double radius) :
+    center(cx, cy), radius(radius) {
+}
+
 RCircle::RCircle(const RVector& center, const double radius) :
     center(center), radius(radius) {
 }

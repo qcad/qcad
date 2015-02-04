@@ -68,6 +68,11 @@ public:
     virtual QVariant eval(const QString& script, const QString& fileName = QString()) = 0;
 
     /**
+     * Evaluates the given script code in a global context.
+     */
+    virtual QVariant evalGlobal(const QString& script, const QString& fileName = QString()) = 0;
+
+    /**
      * Creates a file importer from the given class name and for the given document.
      */
     virtual RFileImporterAdapter* createFileImporter(const QString& className, RDocument& document) = 0;

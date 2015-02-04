@@ -173,6 +173,35 @@ dir="./core" filename="RScriptHandler.h">
   <init>
     <expr>0</expr>
   </init></decl>;</decl_stmt>
+  <comment type="block">/** * Evaluates the given script code in a
+  global context. */</comment>
+  <decl_stmt>
+  <decl>
+  <type>
+    <name>virtual</name>
+    <name>QVariant</name>
+  </type>
+  <name>evalGlobal</name>
+  <argument_list>(
+  <argument>
+    <expr>
+    <name>const</name>
+    <name>QString</name>&amp; 
+    <name>script</name></expr>
+  </argument>, 
+  <argument>
+    <expr>
+    <name>const</name>
+    <name>QString</name>&amp; 
+    <name>fileName</name>= 
+    <call>
+      <name>QString</name>
+      <argument_list>()</argument_list>
+    </call></expr>
+  </argument>)</argument_list>=
+  <init>
+    <expr>0</expr>
+  </init></decl>;</decl_stmt>
   <comment type="block">/** * Creates a file importer from the
   given class name and for the given document. */</comment>
   <function_decl>

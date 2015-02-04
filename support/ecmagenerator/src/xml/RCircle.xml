@@ -10,6 +10,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
       <variant>
+        <arg type="double" typeName="double" name="cx"
+        isConst="false" />
+        <arg type="double" typeName="double" name="cy"
+        isConst="false" />
+        <arg type="double" typeName="double" name="radius"
+        isConst="true" />
+      </variant>
+      <variant>
         <arg type="RVector &amp;" typeName="RVector" name="center"
         isConst="true" />
         <arg type="double" typeName="double" name="radius"

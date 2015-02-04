@@ -33,6 +33,10 @@ RPoint::RPoint() {
 //    this->position = other.position;
 //}
 
+RPoint::RPoint(double x, double y) :
+    position(x, y) {
+}
+
 /**
  * Creates a point object with the given position.
  *

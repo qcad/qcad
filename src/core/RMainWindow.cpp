@@ -645,5 +645,5 @@ QVariant RMainWindow::eval(const QString& ext, const QString& script) {
     if (handler==NULL) {
         return QVariant();
     }
-    return handler->eval(script);
+    return handler->evalGlobal(script);
 }

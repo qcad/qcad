@@ -393,7 +393,7 @@ void REcmaHelper::registerFunction(QScriptEngine* engine, QScriptValue* proto,
 
     QScriptValue f = engine->newFunction(fun);
     f.setData(QScriptValue(engine, uint(0xBABE0000)));
-    proto->setProperty(name, f,  QScriptValue::SkipInEnumeration);
+    proto->setProperty(name, f/*,  QScriptValue::SkipInEnumeration*/);
 }
 
 void REcmaHelper::fromScriptValue(QScriptEngine* engine, QScriptValue scriptValue, QList<QSharedPointer<RShape> >& cppValue) {

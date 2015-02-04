@@ -30,6 +30,11 @@ RLine::RLine() :
     endPoint(RVector::invalid) {
 }
 
+RLine::RLine(double x1, double y1, double x2, double y2) :
+    startPoint(x1, y1),
+    endPoint(x2, y2) {
+}
+
 /**
  * Creates a line object with the given start and end point.
  */

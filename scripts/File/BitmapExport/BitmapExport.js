@@ -48,7 +48,7 @@ BitmapExport.prototype.beginEvent = function() {
 
     var appWin = EAction.getMainWindow();
     if (!res[0]) {
-        print("Error: cannot save file: ", fileName);
+        print("Error: cannot save file: ", bmpFileName);
         print("Error: ", res[1]);
         appWin.handleUserWarning(
                 qsTr("Error while generating Bitmap file '%1': %2")

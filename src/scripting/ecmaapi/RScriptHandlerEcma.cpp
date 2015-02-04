@@ -968,6 +968,15 @@ QVariant RScriptHandlerEcma::eval(const QString& script, const QString& fileName
     return err.toVariant();
 }
 
+QVariant RScriptHandlerEcma::evalGlobal(const QString& script, const QString& fileName) {
+    QScriptContext* context = engine->currentContext();
+    context->setActivationObject(engine->globalObject());
+    context->setThisObject(engine->globalObject());
+
+    QScriptValue err = engine->evaluate(script, fileName);
+    return err.toVariant();
+}
+
 RFileImporterAdapter* RScriptHandlerEcma::createFileImporter(const QString& className, RDocument& document) {
     QScriptValue globalObject = engine->globalObject();
 

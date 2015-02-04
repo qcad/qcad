@@ -38,6 +38,7 @@
 class QCADCORE_EXPORT RPoint: public RShape {
 public:
     RPoint();
+    RPoint(double x, double y);
     RPoint(const RVector& position);
     virtual ~RPoint();
 

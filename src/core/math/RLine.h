@@ -42,6 +42,7 @@ class RPolyline;
 class QCADCORE_EXPORT RLine: public RShape, public RDirected {
 public:
     RLine();
+    RLine(double x1, double y1, double x2, double y2);
     RLine(const RVector& startPoint, const RVector& endPoint);
     RLine(const RVector& startPoint, double angle, double distance);
     virtual ~RLine();

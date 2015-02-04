@@ -62,6 +62,61 @@ dir="./core/math" filename="RArc.h">
   <param>
     <decl>
       <type>
+        <name>double</name>
+      </type>
+      <name>cx</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>cy</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>radius</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>startAngle</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>endAngle</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>reversed</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</constructor_decl>
+  <constructor_decl>
+  <name>RArc</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
       <name>const</name>
       <name>RVector</name>&amp;</type>
       <name>center</name>

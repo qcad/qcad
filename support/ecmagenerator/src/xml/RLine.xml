@@ -12,6 +12,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
       <variant>
+        <arg type="double" typeName="double" name="x1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="x2"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y2"
+        isConst="false" />
+      </variant>
+      <variant>
         <arg type="RVector &amp;" typeName="RVector"
         name="startPoint" isConst="true" />
         <arg type="RVector &amp;" typeName="RVector"

@@ -39,6 +39,7 @@ class RBox;
 class QCADCORE_EXPORT RCircle: public RShape {
 public:
     RCircle();
+    RCircle(double cx, double cy, const double radius);
     RCircle(const RVector& center, const double radius);
     virtual ~RCircle();
 

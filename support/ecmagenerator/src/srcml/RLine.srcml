@@ -65,6 +65,41 @@ dir="./core/math" filename="RLine.h">
   <param>
     <decl>
       <type>
+        <name>double</name>
+      </type>
+      <name>x1</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>y1</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>x2</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>y2</name>
+    </decl>
+  </param>)</parameter_list>;</constructor_decl>
+  <constructor_decl>
+  <name>RLine</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
       <name>const</name>
       <name>RVector</name>&amp;</type>
       <name>startPoint</name>

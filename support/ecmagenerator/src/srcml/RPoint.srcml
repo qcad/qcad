@@ -56,6 +56,25 @@ dir="./core/math" filename="RPoint.h">
   <param>
     <decl>
       <type>
+        <name>double</name>
+      </type>
+      <name>x</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>y</name>
+    </decl>
+  </param>)</parameter_list>;</constructor_decl>
+  <constructor_decl>
+  <name>RPoint</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
       <name>const</name>
       <name>RVector</name>&amp;</type>
       <name>position</name>

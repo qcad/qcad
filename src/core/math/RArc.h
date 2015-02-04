@@ -41,6 +41,8 @@ class RPolyline;
 class QCADCORE_EXPORT RArc: public RShape, public RDirected {
 public:
     RArc();
+    RArc(double cx, double cy, double radius, double startAngle,
+         double endAngle, bool reversed = false);
     RArc(const RVector& center, double radius, double startAngle,
             double endAngle, bool reversed = false);
     virtual ~RArc();

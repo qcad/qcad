@@ -20,6 +20,7 @@
  */
 
 include("scripts/WidgetFactory.js");
+include("scripts/simple.js");
 
 function EcmaScriptShell(guiAction) {
     Widgets.call(this, guiAction);
@@ -67,7 +68,6 @@ EcmaScriptShell.init = function(basePath) {
     action.setSortOrder(10000);
     action.setWidgetNames(["MiscDeveloperMenu", "MiscDeveloperToolBar", "MiscDeveloperToolsPanel"]);
 
-    var e;
     var formWidget = WidgetFactory.createWidget(basePath, "EcmaScriptShell.ui");
     var teHistory = formWidget.findChild("History");
     var leCommand = formWidget.findChild("CommandEdit");
@@ -86,6 +86,8 @@ EcmaScriptShell.init = function(basePath) {
         c.movePosition(QTextCursor.End);
         teHistory.setTextCursor(c);
         teHistory.ensureCursorVisible();
+
+        //qDebug(teHistory.html);
 
         var appWin = EAction.getMainWindow();
         var dlg = appWin.findChild("ProgressDialog");
@@ -117,9 +119,6 @@ EcmaScriptShell.init = function(basePath) {
         }
     );
 
-    //var context = this;
-    //var evalFunction = context.eval;
-
     // user pressed enter, eval command:
     leCommand.commandConfirmed.connect(function(command) {
         leCommand.clear();
@@ -130,14 +129,84 @@ EcmaScriptShell.init = function(basePath) {
             teHistory.setPlainText(buf.slice(-historySize).join("\n"));
         }
 
-        appendAndScroll("ecma> " + command);
+        appendAndScroll("<span style='color:#000000;'>" + Qt.escape("ecma> ") + Qt.escape(command) + "</span>");
 
-        //var res = eval.call(global, command);
-        //var res = EcmaScriptShell.eval(command);
-        var res = RMainWindow.getMainWindow().eval("js", command);
-
-        appendAndScroll(res);
+        var res;
+        try {
+            res = RMainWindow.getMainWindow().eval("js", command);
+            appendAndScroll("<span style='color:#000000;'>" + Qt.escape(res) + "</span>");
+        }
+        catch(e) {
+            appendAndScroll("<span style='color:#cc0000;'>" + Qt.escape(e) + "</span>");
+            //qDebug("error: ", e);
+            //qDebug("error: res:", res);
+        }
 
         leCommand.setFocus();
     });
+
+    // user pressed tab:
+    leCommand.completeCommand.connect(function(command) {
+        // look from cursor pos backwards:
+        //var toComplete = command.substring(0, leCommand.cursorPosition);
+
+        var i2 = leCommand.cursorPosition;
+        var i1 = command.regexLastIndexOf(/[^a-zA-Z0-9_]/, i2) + 1;
+        var i0 = 0;
+        if (i1>2) {
+            i0 = command.regexLastIndexOf(/[^a-zA-Z0-9_]/, i1-2) + 1;
+        }
+
+        var objName = command.substring(i0, i1-1);
+        var toComplete = command.substring(i1, i2);
+
+        var obj = global;
+        if (objName.length>0) {
+            obj = eval(objName);
+        }
+
+        var choices = [];
+
+        //choices = Object.keys(obj);
+        for (var k in obj) {
+            choices.push(k);
+        }
+
+        choices = choices.filter(function(e) { return e.startsWith(toComplete); });
+        if (choices.length === 0) {
+            // nothing to match
+        } else if (choices.length === 1) {
+            // only one match. complete it:
+            //qDebug("inserting:",choices[0].substring(i2-i1));
+            leCommand.insert(choices[0].substring(i2-i1));
+        } else {
+            // suggest multiple choices that match so far:
+            appendAndScroll(choices.join(", "));
+
+            // complete as much as possible:
+            var done = false;
+            var i = toComplete.length;
+            do {
+                for (var k=0; k<choices.length; ++k) {
+                    if (choices[k].length <= i) {
+                        done = true;
+                        break;
+                    }
+
+                    if (choices[k][i] != choices[0][i]) {
+                        done = true;
+                        break;
+                    }
+                }
+                if (!done) {
+                    leCommand.insert(choices[0][i++]);
+                    //command = command.concat(choices[0][i++]);
+                }
+            } while(!done);
+
+            //leCommand.text = command;
+        }
+    });
+
+    leCommand.clearHistory.connect(teHistory, "clear");
 };

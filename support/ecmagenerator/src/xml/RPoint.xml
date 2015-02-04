@@ -9,6 +9,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
       <variant>
+        <arg type="double" typeName="double" name="x"
+        isConst="false" />
+        <arg type="double" typeName="double" name="y"
+        isConst="false" />
+      </variant>
+      <variant>
         <arg type="RVector &amp;" typeName="RVector"
         name="position" isConst="true" />
       </variant>

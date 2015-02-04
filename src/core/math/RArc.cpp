@@ -34,6 +34,15 @@ RArc::RArc() :
     reversed(false) {
 }
 
+RArc::RArc(double cx, double cy, double radius, double startAngle,
+         double endAngle, bool reversed) :
+    center(cx, cy),
+    radius(radius),
+    startAngle(startAngle),
+    endAngle(endAngle),
+    reversed(reversed) {
+}
+
 RArc::RArc(const RVector& center, double radius, double startAngle,
         double endAngle, bool reversed) :
     center(center),

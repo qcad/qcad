@@ -10,6 +10,7 @@ SOURCES = \
     ../DbConnection.js \
     ../library.js \
     ../autostart.js \
+    ../simple.js \
     ../sprintf.js \
     ../map.js \
     ../DefaultAction.js \
