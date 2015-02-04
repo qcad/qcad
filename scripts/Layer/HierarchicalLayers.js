@@ -22,13 +22,20 @@ function HierarchicalLayers() {
 
 HierarchicalLayers.separator = " ... ";
 
-HierarchicalLayers.getChildLayerNames = function(doc, layerName) {
+HierarchicalLayers.getChildLayerNames = function(doc, layerName, recursive) {
+    if (isNull(recursive)) {
+        recursive = true;
+    }
+
     var ret = [];
     var names = doc.getLayerNames();
     for (var i=0; i<names.length; i++) {
         var name = names[i];
-        if (name.startsWith(layerName + HierarchicalLayers.separator)) {
-            ret.push(name);
+        var prefix = layerName + HierarchicalLayers.separator;
+        if (name.startsWith(prefix)) {
+            if (recursive || !name.substring(prefix.length).contains(HierarchicalLayers.separator)) {
+                ret.push(name);
+            }
         }
     }
     return ret;
