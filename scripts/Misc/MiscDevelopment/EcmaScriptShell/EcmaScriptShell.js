@@ -76,9 +76,12 @@ EcmaScriptShell.init = function(basePath) {
     var dock = new RDockWidget(qsTr("Script Shell"), appWin);
     dock.objectName = "EcmaScriptShellDock";
     dock.setWidget(formWidget);
+    
     appWin.addDockWidget(Qt.RightDockWidgetArea, dock);
     dock.shown.connect(function() { action.setChecked(true); });
     dock.hidden.connect(function() { action.setChecked(false); });
+
+    dock.visible = false;
 
     function appendAndScroll(msg) {
         teHistory.append(msg);
