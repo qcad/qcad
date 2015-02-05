@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../ImportFile.js" line="+55"/>
+        <location filename="../ImportFile.js" line="+47"/>
+        <source>Error while importing file %1</source>
+        <translation>Erreur lors de l&apos;importation de fichier %1</translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>No import filters</source>
         <translation>Pas de filtres d&apos;importation</translation>
     </message>
