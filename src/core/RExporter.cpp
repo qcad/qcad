@@ -760,12 +760,16 @@ double RExporter::exportLine(const RLine& line, double offset) {
 
     double angle = line.getAngle();
 
-    RLinetypePattern p = getLinetypePattern();
-
     // continuous line or
     // we are in draft mode or
     // QCAD is configured to show screen based line patterns
-    if (!p.isValid() || p.getNumDashes() <= 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+    if (draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+        exportLineSegment(line, angle);
+        return ret;
+    }
+
+    RLinetypePattern p = getLinetypePattern();
+    if (!p.isValid() || p.getNumDashes() <= 1) {
         exportLineSegment(line, angle);
         return ret;
     }
@@ -928,9 +932,20 @@ void RExporter::exportArc(const RArc& arc, double offset) {
         return;
     }
 
-    RLinetypePattern p = getLinetypePattern();
+    if (getEntity() == NULL || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+        exportArcSegment(arc);
+        return;
+    }
 
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+    RLinetypePattern p = getLinetypePattern();
+    if (!p.isValid() || p.getNumDashes() <= 1) {
+        exportArcSegment(arc);
+        return;
+    }
+
+    p.scale(getLineTypePatternScale(p));
+    double patternLength = p.getPatternLength();
+    if (patternLength<RS::PointTolerance || arc.getLength() / patternLength > 500) {
         exportArcSegment(arc);
         return;
     }
@@ -1246,6 +1261,12 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
 
     bool continuous = false;
     if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+        continuous = true;
+    }
+
+    p.scale(getLineTypePatternScale(p));
+    double patternLength = p.getPatternLength();
+    if (patternLength<RS::PointTolerance || spline.getLength() / patternLength > 500) {
         continuous = true;
     }
 
