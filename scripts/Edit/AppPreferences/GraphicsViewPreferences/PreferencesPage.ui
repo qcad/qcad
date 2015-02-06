@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>567</width>
-    <height>792</height>
+    <height>764</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
      <x>0</x>
      <y>0</y>
      <width>565</width>
-     <height>790</height>
+     <height>762</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -321,9 +321,6 @@
        <string>Performance</string>
       </property>
       <layout class="QFormLayout" name="formLayout_2">
-       <property name="fieldGrowthPolicy">
-        <enum>QFormLayout::FieldsStayAtSizeHint</enum>
-       </property>
        <item row="0" column="0">
         <widget class="QLabel" name="label_15">
          <property name="text">
@@ -460,6 +457,48 @@
          <item>
           <property name="text">
            <string notr="true">5.0</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Display entities with N dashes as continuous:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="DashThreshold">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">500</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">5000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">10000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">100000</string>
           </property>
          </item>
         </widget>

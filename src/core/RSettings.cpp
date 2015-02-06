@@ -57,6 +57,7 @@ int RSettings::useSecondarySelectionColor = -1;
 int RSettings::mouseThreshold = -1;
 int RSettings::useSolidLineSelection = -1;
 double RSettings::arcAngleLengthThreshold = -1;
+int RSettings::dashThreshold = -1;
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
 QString RSettings::applicationNameOverride;
@@ -437,6 +438,13 @@ double RSettings::getArcAngleLengthThreshold() {
         arcAngleLengthThreshold = RMath::deg2rad(getValue("GraphicsView/ArcAngleLengthThreshold", 0.0).toDouble());
     }
     return arcAngleLengthThreshold;
+}
+
+int RSettings::getDashThreshold() {
+    if (dashThreshold==-1) {
+        dashThreshold = getValue("GraphicsView/DashThreshold", 1000).toInt();
+    }
+    return dashThreshold;
 }
 
 QString RSettings::getQtVersion() {
@@ -860,6 +868,7 @@ void RSettings::resetCache() {
     useSecondarySelectionColor = -1;
     useSolidLineSelection = -1;
     arcAngleLengthThreshold = -1;
+    dashThreshold = -1;
     mouseThreshold = -1;
     cache.clear();
 }

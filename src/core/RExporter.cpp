@@ -779,7 +779,7 @@ double RExporter::exportLine(const RLine& line, double offset) {
 
     // avoid huge number of small segments due to very fine 
     // pattern or long lines:
-    if (patternLength<RS::PointTolerance || length / patternLength > 500) {
+    if (patternLength<RS::PointTolerance || length / patternLength > RSettings::getDashThreshold()) {
         exportLineSegment(line, angle);
         return ret;
     }
@@ -945,7 +945,7 @@ void RExporter::exportArc(const RArc& arc, double offset) {
 
     p.scale(getLineTypePatternScale(p));
     double patternLength = p.getPatternLength();
-    if (patternLength<RS::PointTolerance || arc.getLength() / patternLength > 500) {
+    if (patternLength<RS::PointTolerance || arc.getLength() / patternLength > RSettings::getDashThreshold()) {
         exportArcSegment(arc);
         return;
     }
@@ -1266,7 +1266,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
 
     p.scale(getLineTypePatternScale(p));
     double patternLength = p.getPatternLength();
-    if (patternLength<RS::PointTolerance || spline.getLength() / patternLength > 500) {
+    if (patternLength<RS::PointTolerance || spline.getLength() / patternLength > RSettings::getDashThreshold()) {
         continuous = true;
     }
 
