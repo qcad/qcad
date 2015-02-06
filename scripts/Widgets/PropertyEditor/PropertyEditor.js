@@ -1283,8 +1283,8 @@ PropertyEditor.prototype.beginEvent = function() {
     if (!QCoreApplication.arguments().contains("-no-show")) {
         dock.visible = !dock.visible;
     }
-    var linetypeCombo = this.widget.findChild("Linetype");
-    linetypeCombo.init();
+    var linetypeCombo = dock.findChild("Linetype");
+    linetypeCombo.init(EAction.getDocument());
 
 };
 
