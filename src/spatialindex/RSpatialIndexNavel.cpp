@@ -141,6 +141,11 @@ void RSpatialIndexNavel::clear() {
 }
 
 void RSpatialIndexNavel::bulkLoad(const QList<int>& ids, const QList<QList<RBox> >& bbs) {
+    if (ids.isEmpty() || bbs.isEmpty()) {
+        clear();
+        return;
+    }
+
     RSiDataStream stream(ids, bbs);
     uninit();
 

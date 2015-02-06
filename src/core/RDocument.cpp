@@ -1520,10 +1520,6 @@ void RDocument::rebuildSpatialIndex() {
 
         allIds.append(entity->getId());
         allBbs.append(bbs);
-//        spatialIndex.addToIndex(
-//            entity->getId(),
-//            bbs
-//        );
     }
 
     spatialIndex.bulkLoad(allIds, allBbs);
