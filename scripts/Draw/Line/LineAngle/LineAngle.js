@@ -31,6 +31,7 @@ function LineAngle(guiAction) {
     this.angle = undefined;
     this.length = undefined;
     this.referencePoint = undefined;
+    this.fixedAngle = false;
 
     if (!isNull(guiAction)) {
         this.setUiOptions(["../Line.ui", "LineAngle.ui"]);
@@ -88,11 +89,8 @@ LineAngle.prototype.coordinateEventPreview = function(event) {
 };
 
 LineAngle.prototype.getOperation = function(preview) {
-
     if (isNull(this.pos) ||
-        isNull(this.angle) ||
-        isNull(this.length) ||
-        isNull(this.referencePoint)) {
+        isNull(this.angle)) {
         return undefined;
     }
 
@@ -101,11 +99,20 @@ LineAngle.prototype.getOperation = function(preview) {
 
     // for rays / xlines, always use start point as reference
     // with length = 1.0:
-    var referencePoint = this.referencePoint;
-    var length = this.length;
+    var referencePoint;
+    var length;
     if (this.isRayOrXLine()) {
         referencePoint = LineAngle.ReferencePoint.Start;
         length = 1.0;
+    }
+    else {
+        if (isNull(this.length) ||
+            isNull(this.referencePoint)) {
+
+            return undefined;
+        }
+        referencePoint = this.referencePoint;
+        length = this.length;
     }
 
     switch (referencePoint) {
@@ -134,6 +141,9 @@ LineAngle.prototype.getOperation = function(preview) {
     }
 
     var line = this.createLineEntity(this.getDocument(), p1, p2);
+    if (isXLineEntity(line) && this.fixedAngle) {
+        line.setFixedAngle(true);
+    }
     return new RAddObjectOperation(line, this.getToolTitle());
 };
 

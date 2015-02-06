@@ -9,4 +9,6 @@ SUBDIRS = \
     LineRadicalAxis \
     LineSimilarityAxes \
     PointPole \
-    PointPowerCenter
+    PointPowerCenter \
+    XLineHorizontal \
+    XLineVertical
