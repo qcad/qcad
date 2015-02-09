@@ -1211,6 +1211,9 @@ void RExporter::exportEllipse(const REllipse& ellipse, double offset) {
     exportPolyline(polyline, true, offset);
 }
 
+/**
+ * \param polylineGen True: use pattern along whole polyline, False: pattern per segment.
+ */
 void RExporter::exportPolyline(const RPolyline& polyline, bool polylineGen, double offset) {
     RLinetypePattern p = getLinetypePattern();
 
