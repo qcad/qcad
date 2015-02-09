@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -109,13 +109,22 @@
         <translation>Linientypskalierung für Linienstärke 0.00mm:</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="+182"/>
+        <source>Display entities with more than N dashes as continuous:</source>
+        <translation>Gestrichelte Objekte mit mehr als N Strichen ausgezogen darstellen:</translation>
+    </message>
+    <message>
+        <source>Display entities with N dashes as continuous:</source>
+        <translation type="obsolete">Gestrichelte Objekte mit mehr als N Strichen ausgezogen darstellen:</translation>
+    </message>
+    <message>
+        <location line="-218"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
     </message>
     <message>
         <source>Auto switch linetypes</source>
-        <translation type="vanished">Linientypen automatisch umschalten</translation>
+        <translation type="obsolete">Linientypen automatisch umschalten</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -123,7 +132,7 @@
         <translation>Leistung</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
         <source>Number of preview entities:</source>
         <translation>Anzahl Vorschau Objekte:</translation>
     </message>
@@ -142,7 +151,7 @@
         <translation type="obsolete">Anzeigegrenzwert für Texte:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+114"/>
         <source>Selection</source>
         <translation>Selektion</translation>
     </message>

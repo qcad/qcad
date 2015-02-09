@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>ColorPreferences</name>
     <message>
@@ -143,7 +143,7 @@
     </message>
     <message>
         <source>Inactive Crosshairs:</source>
-        <translation type="vanished">Neaktivni kazalni križec:</translation>
+        <translation type="obsolete">Neaktivni kazalni križec:</translation>
     </message>
     <message>
         <location line="-538"/>
@@ -152,11 +152,11 @@
     </message>
     <message>
         <source>Relative Zero:</source>
-        <translation type="vanished">Relativna ničla:</translation>
+        <translation type="obsolete">Relativna ničla:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation type="vanished">Referenčna točka:</translation>
+        <translation type="obsolete">Referenčna točka:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -165,43 +165,43 @@
     </message>
     <message>
         <source>Meta Grid:</source>
-        <translation type="vanished">Tabelarična mreža:</translation>
+        <translation type="obsolete">Tabelarična mreža:</translation>
     </message>
     <message>
         <source>Zoom Box:</source>
-        <translation type="vanished">Polje za povečavo:</translation>
+        <translation type="obsolete">Polje za povečavo:</translation>
     </message>
     <message>
         <source>Selection:</source>
-        <translation type="vanished">Izbor:</translation>
+        <translation type="obsolete">Izbor:</translation>
     </message>
     <message>
         <source>Selection Box Border:</source>
-        <translation type="vanished">Rob okvirja izbire:</translation>
+        <translation type="obsolete">Rob okvirja izbire:</translation>
     </message>
     <message>
         <source>Selection Box:</source>
-        <translation type="vanished">Okvir izbire:</translation>
+        <translation type="obsolete">Okvir izbire:</translation>
     </message>
     <message>
         <source>Cross Selection Box:</source>
-        <translation type="vanished">Navzkrižni okvir izbire:</translation>
+        <translation type="obsolete">Navzkrižni okvir izbire:</translation>
     </message>
     <message>
         <source>Auxiliary Shapes:</source>
-        <translation type="vanished">Pomožne oblike:</translation>
+        <translation type="obsolete">Pomožne oblike:</translation>
     </message>
     <message>
         <source>Info Label Background:</source>
-        <translation type="vanished">Ozadje informacijskih napisov:</translation>
+        <translation type="obsolete">Ozadje informacijskih napisov:</translation>
     </message>
     <message>
         <source>Info Label Font:</source>
-        <translation type="vanished">Pisava informacijskih napisov:</translation>
+        <translation type="obsolete">Pisava informacijskih napisov:</translation>
     </message>
     <message>
         <source>Measurement Tools:</source>
-        <translation type="vanished">Merilna orodja:</translation>
+        <translation type="obsolete">Merilna orodja:</translation>
     </message>
 </context>
 </TS>

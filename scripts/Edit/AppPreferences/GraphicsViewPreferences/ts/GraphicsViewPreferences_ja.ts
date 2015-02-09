@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<TS version="2.0" language="ja">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -109,13 +109,18 @@
         <translation>線の太さのパターン·スケール 0.00mm:</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="+182"/>
+        <source>Display entities with more than N dashes as continuous:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-218"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
     <message>
         <source>Auto switch linetypes</source>
-        <translation type="vanished">ラインタイプの自動切り替え</translation>
+        <translation type="obsolete">ラインタイプの自動切り替え</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -123,7 +128,7 @@
         <translation>パフォーマンス</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
         <source>Number of preview entities:</source>
         <translation>プレビューエンティティの数:</translation>
     </message>
@@ -142,7 +147,7 @@
         <translation type="obsolete">テキスト高さの表示閾値:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+114"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>

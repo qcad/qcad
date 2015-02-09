@@ -2,25 +2,25 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="sl_SI">
 <context>
-    <name>MiscDevelopment</name>
+    <name>BlockListAttributes</name>
     <message>
-        <location filename="../MiscDevelopment.js" line="+51"/>
-        <source>Misc</source>
+        <location filename="../BlockListAttributes.js" line="+47"/>
+        <source>Block:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>Misc Development Tools</source>
+        <location line="+6"/>
+        <source>Block reference ID:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Show misc development tools</source>
+        <location line="+11"/>
+        <source>Block attribute:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
-        <source>De&amp;velopment</source>
+        <location line="+12"/>
+        <source>&amp;List Block Attributes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

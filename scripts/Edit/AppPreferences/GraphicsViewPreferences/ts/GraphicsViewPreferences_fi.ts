@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<TS version="2.0" language="fi">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -89,13 +89,18 @@
         <translation>Kuvion mitta viivapaksuudella 0.00m:</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="+182"/>
+        <source>Display entities with more than N dashes as continuous:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-218"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automaattisesti käytä kuvaruudun viivoja muotoilunäkymässä</translation>
     </message>
     <message>
         <source>Auto switch linetypes</source>
-        <translation type="vanished">Vaihda viivatyyppejä automaattisesti</translation>
+        <translation type="obsolete">Vaihda viivatyyppejä automaattisesti</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -103,7 +108,7 @@
         <translation>Suorituskyky</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
         <source>Number of preview entities:</source>
         <translation>Esikatseltavien kohteiden määrä:</translation>
     </message>
@@ -118,7 +123,7 @@
         <translation>Näytä kaaret viivoina alle tämänmittaisen kulman (astetta):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+114"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>

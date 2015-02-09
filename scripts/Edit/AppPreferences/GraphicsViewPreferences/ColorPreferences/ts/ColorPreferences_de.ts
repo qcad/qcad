@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>ColorPreferences</name>
     <message>
@@ -29,7 +29,7 @@
     <name>GraphicsViewColors</name>
     <message>
         <source>Selection:</source>
-        <translation type="vanished">Auswahl:</translation>
+        <translation type="obsolete">Auswahl:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
@@ -78,7 +78,7 @@
     </message>
     <message>
         <source>First selection color:</source>
-        <translation type="vanished">Erste Farbe für Selektion:</translation>
+        <translation type="obsolete">Erste Farbe für Selektion:</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -178,7 +178,7 @@
     </message>
     <message>
         <source>Inactive Crosshairs:</source>
-        <translation type="vanished">Inaktives Fadenkreuz:</translation>
+        <translation type="obsolete">Inaktives Fadenkreuz:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -187,11 +187,11 @@
     </message>
     <message>
         <source>Relative Zero:</source>
-        <translation type="vanished">Relativer Nullpunkt:</translation>
+        <translation type="obsolete">Relativer Nullpunkt:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation type="vanished">Referenzpunkt:</translation>
+        <translation type="obsolete">Referenzpunkt:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -200,39 +200,39 @@
     </message>
     <message>
         <source>Meta Grid:</source>
-        <translation type="vanished">Meta Raster:</translation>
+        <translation type="obsolete">Meta Raster:</translation>
     </message>
     <message>
         <source>Zoom Box:</source>
-        <translation type="vanished">Zoombox:</translation>
+        <translation type="obsolete">Zoombox:</translation>
     </message>
     <message>
         <source>Selection Box Border:</source>
-        <translation type="vanished">Auswahlbox (Rand):</translation>
+        <translation type="obsolete">Auswahlbox (Rand):</translation>
     </message>
     <message>
         <source>Selection Box:</source>
-        <translation type="vanished">Auswahlbox:</translation>
+        <translation type="obsolete">Auswahlbox:</translation>
     </message>
     <message>
         <source>Cross Selection Box:</source>
-        <translation type="vanished">Kreuzende Auswahlbox:</translation>
+        <translation type="obsolete">Kreuzende Auswahlbox:</translation>
     </message>
     <message>
         <source>Auxiliary Shapes:</source>
-        <translation type="vanished">Hilfsobjekte:</translation>
+        <translation type="obsolete">Hilfsobjekte:</translation>
     </message>
     <message>
         <source>Info Label Background:</source>
-        <translation type="vanished">Hintergrund Info Beschriftung:</translation>
+        <translation type="obsolete">Hintergrund Info Beschriftung:</translation>
     </message>
     <message>
         <source>Info Label Font:</source>
-        <translation type="vanished">Schrift Info Beschriftung:</translation>
+        <translation type="obsolete">Schrift Info Beschriftung:</translation>
     </message>
     <message>
         <source>Measurement Tools:</source>
-        <translation type="vanished">Messwerkzeuge:</translation>
+        <translation type="obsolete">Messwerkzeuge:</translation>
     </message>
 </context>
 </TS>

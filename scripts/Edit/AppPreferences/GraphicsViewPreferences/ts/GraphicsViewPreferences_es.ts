@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -109,13 +109,22 @@
         <translation>Escala del patrón de grosor de 0.00mm:</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="+182"/>
+        <source>Display entities with more than N dashes as continuous:</source>
+        <translation>Mostrar las entidades con más de N guiones como contínua:</translation>
+    </message>
+    <message>
+        <source>Display entities with N dashes as continuous:</source>
+        <translation type="obsolete">Mostrar entidades con guiones N como contínua:</translation>
+    </message>
+    <message>
+        <location line="-218"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Usar automáticamente los tipos de línea base de la pantalla de visualización del modelo</translation>
     </message>
     <message>
         <source>Auto switch linetypes</source>
-        <translation type="vanished">Ajusta automáticamente los tipos de línea</translation>
+        <translation type="obsolete">Ajusta automáticamente los tipos de línea</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -123,7 +132,7 @@
         <translation>Rendimiento</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
         <source>Number of preview entities:</source>
         <translation>Número de entidades previsualizadas:</translation>
     </message>
@@ -142,7 +151,7 @@
         <translation type="obsolete">Mostrar límite para el texto:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+114"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>

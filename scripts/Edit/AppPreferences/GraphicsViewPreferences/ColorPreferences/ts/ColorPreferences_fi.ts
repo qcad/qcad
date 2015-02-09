@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<TS version="2.0" language="fi">
 <context>
     <name>ColorPreferences</name>
     <message>
@@ -148,11 +148,11 @@
     </message>
     <message>
         <source>Relative Zero:</source>
-        <translation type="vanished">Suhteellinen nolla:</translation>
+        <translation type="obsolete">Suhteellinen nolla:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation type="vanished">Viitepiste:</translation>
+        <translation type="obsolete">Viitepiste:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -161,19 +161,19 @@
     </message>
     <message>
         <source>Zoom Box:</source>
-        <translation type="vanished">Suurennuslaatikko:</translation>
+        <translation type="obsolete">Suurennuslaatikko:</translation>
     </message>
     <message>
         <source>Selection:</source>
-        <translation type="vanished">Valinta:</translation>
+        <translation type="obsolete">Valinta:</translation>
     </message>
     <message>
         <source>Selection Box Border:</source>
-        <translation type="vanished">Valintalaatikon reuna:</translation>
+        <translation type="obsolete">Valintalaatikon reuna:</translation>
     </message>
     <message>
         <source>Selection Box:</source>
-        <translation type="vanished">Valintalaatikko:</translation>
+        <translation type="obsolete">Valintalaatikko:</translation>
     </message>
 </context>
 </TS>

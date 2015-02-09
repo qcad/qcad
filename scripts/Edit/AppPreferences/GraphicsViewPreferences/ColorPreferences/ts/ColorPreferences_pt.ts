@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>ColorPreferences</name>
     <message>
@@ -171,7 +171,7 @@ Pano de Fundo do Desenho:</translatorcomment>
     <message>
         <source>Inactive Crosshairs:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Mira inativos:</translation>
+        <translation type="obsolete">Mira inativos:</translation>
     </message>
     <message>
         <location line="-538"/>
@@ -184,7 +184,7 @@ Origem:</translatorcomment>
     <message>
         <source>Relative Zero:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Zero relativo:</translation>
+        <translation type="obsolete">Zero relativo:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
@@ -192,7 +192,7 @@ Origem:</translatorcomment>
 --file: LineAngle_pt.ts--
 Ponto de &amp;referência:
 Ponto de referência:</translatorcomment>
-        <translation type="vanished">Ponto de referência:</translation>
+        <translation type="obsolete">Ponto de referência:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -208,54 +208,54 @@ Meta-grade:</translatorcomment>
         <translatorcomment>--google--
 &amp;Meta-grade:
 Meta-grade:</translatorcomment>
-        <translation type="vanished">Grade meta:</translation>
+        <translation type="obsolete">Grade meta:</translation>
     </message>
     <message>
         <source>Zoom Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Caixa de zoom:</translation>
+        <translation type="obsolete">Caixa de zoom:</translation>
     </message>
     <message>
         <source>Selection:</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Selecção:</translatorcomment>
-        <translation type="vanished">Selecção:</translation>
+        <translation type="obsolete">Selecção:</translation>
     </message>
     <message>
         <source>Selection Box Border:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Borda da caixa de seleção:</translation>
+        <translation type="obsolete">Borda da caixa de seleção:</translation>
     </message>
     <message>
         <source>Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Caixa de seleção:</translation>
+        <translation type="obsolete">Caixa de seleção:</translation>
     </message>
     <message>
         <source>Cross Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Caixa de seleção de captura:</translation>
+        <translation type="obsolete">Caixa de seleção de captura:</translation>
     </message>
     <message>
         <source>Auxiliary Shapes:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Formas auxiliares:</translation>
+        <translation type="obsolete">Formas auxiliares:</translation>
     </message>
     <message>
         <source>Info Label Background:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Fundo de etiqueta info:</translation>
+        <translation type="obsolete">Fundo de etiqueta info:</translation>
     </message>
     <message>
         <source>Info Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Fonte de etiqueta info:</translation>
+        <translation type="obsolete">Fonte de etiqueta info:</translation>
     </message>
     <message>
         <source>Measurement Tools:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Ferramentas de medição:</translation>
+        <translation type="obsolete">Ferramentas de medição:</translation>
     </message>
 </context>
 </TS>

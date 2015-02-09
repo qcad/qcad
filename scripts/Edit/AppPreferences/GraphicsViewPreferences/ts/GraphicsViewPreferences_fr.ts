@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -109,13 +109,22 @@
         <translation>Échelle du motif de l&apos;épaisseur de ligne 0.00mm:</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="+182"/>
+        <source>Display entities with more than N dashes as continuous:</source>
+        <translation>Afficher les entités de plus de N tirets que continu:</translation>
+    </message>
+    <message>
+        <source>Display entities with N dashes as continuous:</source>
+        <translation type="obsolete">Afficher les entités avec N tirets que continu:</translation>
+    </message>
+    <message>
+        <location line="-218"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Utiliser automatiquement les types de lignes sur écran en vue du modèle</translation>
     </message>
     <message>
         <source>Auto switch linetypes</source>
-        <translation type="vanished">Ajuster automatiquement les types de ligne</translation>
+        <translation type="obsolete">Ajuster automatiquement les types de ligne</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -123,7 +132,7 @@
         <translation>Performance</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
         <source>Number of preview entities:</source>
         <translation>Nombre d&apos;entités en aperçu :</translation>
     </message>
@@ -142,7 +151,7 @@
         <translation type="obsolete">Afficher limite pour le texte:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+114"/>
         <source>Selection</source>
         <translation>Sélection</translation>
     </message>

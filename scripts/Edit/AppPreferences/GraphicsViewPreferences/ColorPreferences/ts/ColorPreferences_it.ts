@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>ColorPreferences</name>
     <message>
@@ -159,7 +159,7 @@ Visualizzazione grafica</translatorcomment>
     <message>
         <source>Inactive Crosshairs:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Reticolo inattivo:</translation>
+        <translation type="obsolete">Reticolo inattivo:</translation>
     </message>
     <message>
         <location line="-538"/>
@@ -172,11 +172,11 @@ Origine:</translatorcomment>
     <message>
         <source>Relative Zero:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Zero relativo:</translation>
+        <translation type="obsolete">Zero relativo:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation type="vanished">Punto di riferimento:</translation>
+        <translation type="obsolete">Punto di riferimento:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -189,53 +189,53 @@ Meta griglia:
     </message>
     <message>
         <source>Meta Grid:</source>
-        <translation type="vanished">Meta griglia:</translation>
+        <translation type="obsolete">Meta griglia:</translation>
     </message>
     <message>
         <source>Zoom Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Finestra di zoom:</translation>
+        <translation type="obsolete">Finestra di zoom:</translation>
     </message>
     <message>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: it3.po--</translatorcomment>
-        <translation type="vanished">Selezione:</translation>
+        <translation type="obsolete">Selezione:</translation>
     </message>
     <message>
         <source>Selection Box Border:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Confine finestra di selezione:</translation>
+        <translation type="obsolete">Confine finestra di selezione:</translation>
     </message>
     <message>
         <source>Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Finestra di selezione:</translation>
+        <translation type="obsolete">Finestra di selezione:</translation>
     </message>
     <message>
         <source>Cross Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Finestra di selezione interseca:</translation>
+        <translation type="obsolete">Finestra di selezione interseca:</translation>
     </message>
     <message>
         <source>Auxiliary Shapes:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Forme ausiliaria:</translation>
+        <translation type="obsolete">Forme ausiliaria:</translation>
     </message>
     <message>
         <source>Info Label Background:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Sfondo di etichetta informazioni:</translation>
+        <translation type="obsolete">Sfondo di etichetta informazioni:</translation>
     </message>
     <message>
         <source>Info Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Testo di etichetta informazioni:</translation>
+        <translation type="obsolete">Testo di etichetta informazioni:</translation>
     </message>
     <message>
         <source>Measurement Tools:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Strumenti di misurazione:</translation>
+        <translation type="obsolete">Strumenti di misurazione:</translation>
     </message>
 </context>
 </TS>
