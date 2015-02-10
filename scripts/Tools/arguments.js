@@ -25,21 +25,6 @@
  * \param longFlag E.g. "-output"
  */
 function getArgument(args, shortFlag, longFlag) {
-//    var i = args.indexOf(shortFlag);
-//    if (i!==-1) {
-//        if (i+1 < args.length) {
-//            return args[i+1];
-//        }
-//    }
-
-//    for (var k=0; k<args.length; k++) {
-//        if (args[k].indexOf(longFlag+"=")===0) {
-//            var j=args[k].indexOf("=");
-//            return args[k].substr(j+1);
-//        }
-//    }
-
-//    return undefined;
     var ret = getArguments(args, shortFlag, longFlag);
     if (ret.length===0) {
         return undefined;
@@ -119,15 +104,17 @@ function getColorArgument(args, shortFlag, longFlag, def) {
  * \return True if the given arguments contain one of the given flags.
  */
 function testArgument(args, shortFlag, longFlag) {
-    if (args.indexOf(shortFlag)!==-1) {
+    if (shortFlag!=="" && args.indexOf(shortFlag)!==-1) {
         return true;
     }
-    if (args.indexOf(longFlag)!==-1) {
-        return true;
-    }
-    for (var k=0; k<args.length; k++) {
-        if (args[k].indexOf(longFlag+"=")===0) {
+    if (longFlag!=="") {
+        if (args.indexOf(longFlag)!==-1) {
             return true;
+        }
+        for (var k=0; k<args.length; k++) {
+            if (args[k].indexOf(longFlag+"=")===0) {
+                return true;
+            }
         }
     }
 
