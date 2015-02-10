@@ -50,7 +50,9 @@ Help.getMenu = function() {
 
 Help.getToolBar = function() {
     var tb = EAction.getToolBar(Help.getTitle(), "HelpToolBar");
-    tb.visible = false;
+    if (tb.property("Initialized")!==true) {
+        tb.visible = false;
+    }
     return tb;
 };
 
