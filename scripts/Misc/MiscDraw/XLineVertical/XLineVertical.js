@@ -30,6 +30,7 @@ function XLineVertical(guiAction) {
     this.setUiOptions();
 
     this.angle = Math.PI/2;
+    this.fixedAngle = true;
     this.lineType = Line.LineType.XLine;
 }
 
