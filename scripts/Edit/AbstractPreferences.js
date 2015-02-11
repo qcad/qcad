@@ -365,17 +365,17 @@ AbstractPreferences.prototype.filterTree = function(text) {
  */
 AbstractPreferences.prototype.showPage = function() {
     var items = this.treeWidget.selectedItems();
-    if (items.length != 1) {
+    if (items.length!==1) {
         return;
     }
     var item = items[0];
-    if (item == undefined) {
+    if (isNull(item)) {
         return;
     }
 
     var parent = item.parent();
     var pText = "";
-    while(parent != undefined) {
+    while (!isNull(parent)) {
         pText += parent.text(0) + ": " + pText;
         parent = parent.parent();
     }
@@ -386,10 +386,10 @@ AbstractPreferences.prototype.showPage = function() {
     }
     var i = item.data(0, Qt.UserRole);
     var widget;
-    if (typeof(i) != "undefined") {
+    if (!isNull(i)) {
         var addOn = this.addOns[i];
         widget = addOn.getPreferenceWidget();
-        if (typeof(widget) == "undefined") {
+        if (isNull(widget)) {
             var prefFile = addOn.getPreferenceFile();
             widget = this.createWidget(prefFile);
             this.pageWidget.addWidget(widget);

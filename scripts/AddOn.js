@@ -417,13 +417,13 @@ AddOn.getParentAddOn = function(addOns, addOn) {
 
 /**
  * \return Array of all AddOn objects found.
- * \param rec True for recursive calls
+ * \param dir Used internally for recursive calls
  */
 AddOn.getAddOns = function(dir) {
     var topCall = isNull(dir);
     if (topCall && !isNull(AddOn.addOns)) {
         // return cached list (TODO: breaks app preferences on second call):
-        //return AddOn.addOns;
+        return AddOn.addOns;
     }
 
     var fileMenuList, i, k;
