@@ -820,7 +820,7 @@ bool RSettings::getAutoScaleLinetypePatterns() {
 
 bool RSettings::getUseSecondarySelectionColor() {
     if (useSecondarySelectionColor==-1) {
-        useSecondarySelectionColor = getValue("GraphicsView/UseSecondarySelectionColor", QVariant(false)).toBool();
+        useSecondarySelectionColor = getValue("GraphicsViewColors/UseSecondarySelectionColor", QVariant(false)).toBool();
     }
     return (bool)useSecondarySelectionColor;
 }
