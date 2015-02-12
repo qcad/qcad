@@ -395,7 +395,7 @@ void REcmaHelper::registerFunction(QScriptEngine* engine, QScriptValue* proto,
     f.setData(QScriptValue(engine, uint(0xBABE0000)));
 
     // skip in enumeration - otherwise segfault under windows/msvc:
-    proto->setProperty(name, f,  QScriptValue::SkipInEnumeration);
+    proto->setProperty(name, f,  QScriptValue::ReadOnly | QScriptValue::Undeletable /*| QScriptValue::SkipInEnumeration*/);
 }
 
 void REcmaHelper::fromScriptValue(QScriptEngine* engine, QScriptValue scriptValue, QList<QSharedPointer<RShape> >& cppValue) {
