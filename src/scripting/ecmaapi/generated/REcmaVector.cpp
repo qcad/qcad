@@ -92,6 +92,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setPolar, "setPolar");
             
+            REcmaHelper::registerFunction(&engine, proto, get2D, "get2D");
+            
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
             REcmaHelper::registerFunction(&engine, proto, isInside, "isInside");
@@ -866,6 +868,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::setPolar", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::get2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::get2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::get2D";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("get2D", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->get2D();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.get2D().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::get2D", context, engine);
             return result;
         }
          QScriptValue

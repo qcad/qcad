@@ -226,6 +226,32 @@ dir="./core/math" filename="RVector.h">
       <name>angle</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <function>
+    <type>
+      <name>RVector</name>
+    </type>
+    <name>get2D</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>RVector</name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>x</name>
+          </expr>
+        </argument>,
+        <argument>
+          <expr>
+            <name>y</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
   <function_decl>
   <type>
     <name>bool</name>

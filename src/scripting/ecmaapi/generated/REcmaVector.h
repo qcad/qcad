@@ -57,6 +57,9 @@
         setPolar
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        get2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

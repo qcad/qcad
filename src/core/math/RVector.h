@@ -78,6 +78,10 @@ public:
     }
     void setPolar(double radius, double angle);
 
+    RVector get2D() const {
+        return RVector(x,y);
+    }
+
     bool isValid() const;
 
     bool isInside(const RBox& b) const;
