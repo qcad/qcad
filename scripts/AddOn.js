@@ -458,7 +458,10 @@ AddOn.getAddOns = function(dir) {
                 new QFileInfo("scripts/Widgets"),
                 new QFileInfo("scripts/Misc"),
                 new QFileInfo("scripts/Local"),
-                new QFileInfo(":scripts"),       // scripts wrapped in plugins
+                // scripts wrapped in plugins:
+                new QFileInfo(":scripts"),
+                // local scripts:
+                new QFileInfo(RSettings.getDataLocation() + "/scripts"),
                 new QFileInfo("scripts/Help")
             ];
                 
