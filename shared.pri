@@ -159,5 +159,6 @@ INCLUDEPATH += \
     $$PWD/src/scripting/ecmaapi/adapters \
     $$PWD/src/io/dxf \
     $$PWD/src/spatialindex \
-    $$PWD/src/3rdparty
+    $$PWD/src/3rdparty \
+    $$PWD/src/zip
 

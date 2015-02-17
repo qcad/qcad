@@ -81,6 +81,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getCacheLocation, "getCacheLocation");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getDataLocation, "getDataLocation");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getDesktopLocation, "getDesktopLocation");
             
             REcmaHelper::registerFunction(&engine, &ctor, getDocumentsLocation, "getDocumentsLocation");
@@ -130,6 +132,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, getTextHeightThreshold, "getTextHeightThreshold");
             
             REcmaHelper::registerFunction(&engine, &ctor, getArcAngleLengthThreshold, "getArcAngleLengthThreshold");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getDashThreshold, "getDashThreshold");
             
             REcmaHelper::registerFunction(&engine, &ctor, getQtVersion, "getQtVersion");
             
@@ -869,6 +873,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getCacheLocation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getDataLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getDataLocation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getDataLocation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getDataLocation();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getDataLocation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getDataLocation", context, engine);
             return result;
         }
          QScriptValue
@@ -1877,6 +1920,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getArcAngleLengthThreshold", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getDashThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getDashThreshold", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getDashThreshold";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RSettings::
+       getDashThreshold();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getDashThreshold().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getDashThreshold", context, engine);
             return result;
         }
          QScriptValue

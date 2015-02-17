@@ -79,6 +79,9 @@
         getCacheLocation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDataLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDesktopLocation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -152,6 +155,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getArcAngleLengthThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDashThreshold
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getQtVersion

@@ -217,6 +217,13 @@ dir="./core" filename="RSettings.h">
     <name>static</name>
     <name>QString</name>
   </type>
+  <name>getDataLocation</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QString</name>
+  </type>
   <name>getDesktopLocation</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
@@ -415,6 +422,13 @@ dir="./core" filename="RSettings.h">
     <name>double</name>
   </type>
   <name>getArcAngleLengthThreshold</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>int</name>
+  </type>
+  <name>getDashThreshold</name>
   <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
@@ -1151,6 +1165,14 @@ dir="./core" filename="RSettings.h">
       <name>double</name>
     </type>
     <name>arcAngleLengthThreshold</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>int</name>
+    </type>
+    <name>dashThreshold</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

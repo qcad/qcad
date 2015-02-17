@@ -10,6 +10,8 @@ LIBS += \
     -lqcadgrid \
     -lqcadsnap \
     -lqcadcore \
+    -lqcadzip \
+    -lquazip \
     -lqcadstemmer \
     -lstemmer
 

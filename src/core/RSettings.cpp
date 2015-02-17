@@ -167,6 +167,14 @@ QString RSettings::getCacheLocation() {
 #endif
 }
 
+QString RSettings::getDataLocation() {
+#if QT_VERSION >= 0x050000
+    return RSettings::getStandardLocation(QStandardPaths::DataLocation);
+#else
+    return RSettings::getStandardLocation(QDesktopServices::DataLocation);
+#endif
+}
+
 QString RSettings::getDesktopLocation() {
 #if QT_VERSION >= 0x050000
     return RSettings::getStandardLocation(QStandardPaths::DesktopLocation);
