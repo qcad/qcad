@@ -332,8 +332,7 @@ HEADERS += \
     $$PWD/REcmaWidget.h \
     $$PWD/REcmaXLine.h \
     $$PWD/REcmaXLineData.h \
-    $$PWD/REcmaXLineEntity.h \
-    $$PWD/REcmaZip.h
+    $$PWD/REcmaXLineEntity.h
 SOURCES += \
     $$PWD/REcmaAction.cpp \
     $$PWD/REcmaActionAdapter.cpp \
@@ -668,8 +667,7 @@ SOURCES += \
     $$PWD/REcmaWidget.cpp \
     $$PWD/REcmaXLine.cpp \
     $$PWD/REcmaXLineData.cpp \
-    $$PWD/REcmaXLineEntity.cpp \
-    $$PWD/REcmaZip.cpp
+    $$PWD/REcmaXLineEntity.cpp
 
 !r_mobile {
     HEADERS += $$PWD/REcmaWebView.h
