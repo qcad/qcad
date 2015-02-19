@@ -263,7 +263,7 @@ LayerList.init = function(basePath) {
     widgets["ShowAll"].setDefaultAction(
             RGuiAction.getByScriptFile("scripts/Layer/ShowAllLayers/ShowAllLayers.js"));
     widgets["HideAll"].setDefaultAction(
-            RGuiAction.getByScriptFile("scripts/Layer/HideAllLayers/HideAllLayers.js")); 
+            RGuiAction.getByScriptFile("scripts/Layer/HideAllLayers/HideAllLayers.js"));
     widgets["Add"].setDefaultAction(
             RGuiAction.getByScriptFile("scripts/Layer/AddLayer/AddLayer.js"));
     widgets["Remove"].setDefaultAction(

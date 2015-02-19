@@ -5,8 +5,10 @@ SUBDIRS = \
     DeselectLayer \
     EditLayer \
     HideAllLayers \
+    LockAllLayers \
     RemoveLayer \
     SelectLayer \
     ShowActiveLayer \
     ShowAllLayers \
-    ToggleLayerVisibility
+    ToggleLayerVisibility \
+    UnlockAllLayers
