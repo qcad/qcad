@@ -1099,15 +1099,19 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
         if (aStep>1.0) {
             aStep = 1.0;
         }
-        double minAStep = 2*M_PI/360.0;
-        if (!draftMode) {
-            minAStep /= 4;
+
+        double minAStep = RSettings::getMinArcAngleStep();
+        if (draftMode) {
+            minAStep *= 4;
         }
+        //qDebug() << "minAStep:" << minAStep;
 
         if (aStep<minAStep) {
             aStep = minAStep;
         }
     }
+    //qDebug() << "aStep:" << aStep;
+    //aStep = 0.0001;
     RVector prev = arc.getStartPoint();
     RVector ci;
     double a;

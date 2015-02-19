@@ -99,6 +99,7 @@ public:
     static int getColorThreshold();
     static int getTextHeightThreshold();
     static double getArcAngleLengthThreshold();
+    static double getMinArcAngleStep();
     static int getDashThreshold();
     static QString getQtVersion();
     static bool isQt(int majorVersion);
@@ -188,6 +189,7 @@ private:
     static int useSecondarySelectionColor;
     static int mouseThreshold;
     static double arcAngleLengthThreshold;
+    static double minArcAngleStep;
     static int dashThreshold;
     static QStringList recentFiles;
     static QLocale* numberLocale;
