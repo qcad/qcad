@@ -189,16 +189,20 @@ FirstStart.prototype.changeLanguage = function(code) {
     // paper size combo
     var paperSizeCombo = this.widgets["DefaultPaperSize"];
     PageSettings.initPaperSizeNameCombo(paperSizeCombo);
+
     // default paper size
-    var defaultPrinter = new QPrinter();
-    var paperSize = defaultPrinter.paperSize(QPrinter.Millimeter);
-    defaultPrinter.destroy();
-    // var flags = new Qt.MatchFlags(Qt.MatchExactly);
-    var index = paperSizeCombo.findData(paperSize, Qt.UserRole + 1);
-    if (index==-1) {
-        index = paperSizeCombo.findText("ISO A4");
+    var paperSizeOverride = qApp.property("FirstStartPaperSizeOverride");
+    var index = paperSizeCombo.findText(paperSizeOverride);
+    if (index===-1) {
+        var defaultPrinter = new QPrinter();
+        var paperSize = defaultPrinter.paperSize(QPrinter.Millimeter);
+        defaultPrinter.destroy();
+        index = paperSizeCombo.findData(paperSize, Qt.UserRole + 1);
+        if (index===-1) {
+            index = paperSizeCombo.findText("ISO A4");
+        }
     }
-    if (index==-1) {
+    if (index===-1) {
         index = 0;
     }
     paperSizeCombo.currentIndex = index;
