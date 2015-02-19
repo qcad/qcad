@@ -22,6 +22,10 @@ function HierarchicalLayers() {
 
 HierarchicalLayers.separator = " ... ";
 
+HierarchicalLayers.hasChildLayers = function(doc, layerName) {
+    return HierarchicalLayers.getChildLayerNames(doc, layerName).length!==0;
+};
+
 HierarchicalLayers.getChildLayerNames = function(doc, layerName, recursive) {
     if (isNull(recursive)) {
         recursive = true;

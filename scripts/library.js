@@ -198,6 +198,15 @@ function isQWidget(obj) {
 }
 
 /**
+ * Checks if the given object is a layer.
+ *
+ * \return true if the given object is a layer.
+ */
+function isLayer(obj) {
+    return isOfType(obj, RLayer) || isOfType(obj, RLayerPointer);
+}
+
+/**
  * Checks if the given object is a graphics entity.
  *
  * \return true if the given object is an entity (derived from REntity).
