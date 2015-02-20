@@ -523,7 +523,9 @@ QSharedPointer<RLayer> RClipboardOperation::copyLayer(
         copiedLayers.insert(srcLayerName, destLayer);
     }
 
-    destLayer->setLinetypeId(destLinetype->getId());
+    if (!destLinetype.isNull()) {
+        destLayer->setLinetypeId(destLinetype->getId());
+    }
 
     return destLayer;
 }
