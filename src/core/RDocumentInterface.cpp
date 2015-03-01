@@ -18,6 +18,7 @@
  */
 
 #include <QtNetwork>
+#include <QMutexLocker>
 
 #include "RArc.h"
 #include "RCircle.h"
@@ -58,6 +59,7 @@ RDocumentInterface* RDocumentInterface::clipboard = NULL;
 
 RDocumentInterface::RDocumentInterface(RDocument& document)
   : document(document),
+    actionStackMutex(QMutex::Recursive),
     lastKnownViewWithFocus(NULL),
     defaultAction(NULL),
     currentSnap(NULL),
@@ -377,20 +379,23 @@ void RDocumentInterface::resume() {
     suspended = false;
 }
 
+
 /**
  * Deletes all actions that have been terminated.
  */
 void RDocumentInterface::deleteTerminatedActions() {
     bool removed = false;
 
+    QMutexLocker locker(&actionStackMutex);
     while (currentActions.size()>0 && currentActions.top()->isTerminated()) {
         cursorPosition = RVector::invalid;
         RAction* currentAction = currentActions.top();
+
         currentAction->finishEvent();
         setClickMode(RAction::PickingDisabled);
         // remember GUI action group:
         QString group;
-        if (currentAction->getGuiAction()!=NULL &&
+        if (currentAction->getGuiAction() != NULL &&
             !currentAction->getGuiAction()->getGroup().isEmpty() &&
             currentAction->isOverride()) {
 
@@ -404,6 +409,7 @@ void RDocumentInterface::deleteTerminatedActions() {
             RGuiAction::triggerGroupDefault(group);
         }
         removed = true;
+
     }
 
     // if one or more actions have been terminated, resume previous action
@@ -612,9 +618,9 @@ void RDocumentInterface::repaintViews() {
     if (deleting) {
         return;
     }
-    QList<RGraphicsScene*>::iterator it;
-    for (it=scenes.begin(); it!=scenes.end(); it++) {
-        (*it)->repaintViews();
+
+    for (auto scene : scenes) {
+        scene->repaintViews();
     }
 }
 
@@ -700,6 +706,7 @@ void RDocumentInterface::mouseReleaseEvent(RMouseEvent& event) {
     if (!mouseTrackingEnabled) {
         return;
     }
+
     if (hasCurrentAction()) {
         getCurrentAction()->mouseReleaseEvent(event);
         handleClickEvent(*getCurrentAction(), event);
@@ -718,6 +725,7 @@ void RDocumentInterface::mouseDoubleClickEvent(RMouseEvent& event) {
     if (!mouseTrackingEnabled) {
         return;
     }
+
     if (hasCurrentAction()) {
         getCurrentAction()->mouseDoubleClickEvent(event);
     } else if (defaultAction != NULL) {
@@ -731,6 +739,7 @@ void RDocumentInterface::coordinateEvent(RCoordinateEvent& event) {
     if (!event.isValid()) {
         return;
     }
+
     if (hasCurrentAction()) {
         getCurrentAction()->coordinateEvent(event);
     } else if (defaultAction != NULL) {
@@ -742,6 +751,7 @@ void RDocumentInterface::coordinateEventPreview(RCoordinateEvent& event) {
     if (!event.isValid()) {
         return;
     }
+
     if (hasCurrentAction()) {
         getCurrentAction()->coordinateEventPreview(event);
     } else if (defaultAction != NULL) {
@@ -773,6 +783,7 @@ void RDocumentInterface::commandEventPreview(RCommandEvent& event) {
  * The event type depends on the action's current \ref ClickMode.
  */
 void RDocumentInterface::handleClickEvent(RAction& action, RMouseEvent& event) {
+    // No lock needed for actions
     if (event.button() == Qt::LeftButton && event.modifiers() == Qt::NoModifier) {
         switch (action.getClickMode()) {
         case RAction::PickCoordinate: {

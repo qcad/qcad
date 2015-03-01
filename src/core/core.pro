@@ -287,6 +287,8 @@ linux-g++* {
     LIBS += -lX11
 }
 
+QMAKE_CXXFLAGS += -std=c++11
+
 !win32 {
     include( ../../shared_ts.pri )
 }

@@ -42,6 +42,12 @@ RGraphicsScene::~RGraphicsScene() {
     while (!views.isEmpty()) {
         delete views.takeFirst();
     }
+
+    documentInterface.unregisterScene(*this);
+}
+
+bool RGraphicsScene::operator ==(const RGraphicsScene &other) {
+    return &other == this;
 }
 
 /**
