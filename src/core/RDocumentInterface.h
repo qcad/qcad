@@ -325,6 +325,7 @@ private:
     RAction* defaultAction;
     QStack<RAction*> currentActions;
     QQueue<RAction*> queuedActions;
+    QMutex actionStackMutex;
 
     QList<RCoordinateListener*> coordinateListeners;
 

@@ -62,6 +62,8 @@ public:
     RGraphicsScene(RDocumentInterface& documentInterface);
     virtual ~RGraphicsScene();
 
+    bool operator==(const RGraphicsScene &other);
+
     RDocumentInterface& getDocumentInterface();
     QList<RGraphicsView*> getGraphicsViews() const;
 
