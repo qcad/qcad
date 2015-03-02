@@ -66,7 +66,12 @@ bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
     bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
-    ret = ret || RObject::setMember(data.arrowHead, value, PropertyArrowHead == propertyTypeId);
+    if (PropertyArrowHead == propertyTypeId) {
+        if (value.toBool()==false || data.canHaveArrowHead()) {
+            ret = ret || RObject::setMember(data.arrowHead, value);
+        }
+    }
+//    ret = ret || RObject::setMember(data.arrowHead, value, PropertyArrowHead == propertyTypeId);
     ret = ret || RObject::setMemberX(data.vertices, value, PropertyVertexNX == propertyTypeId);
     ret = ret || RObject::setMemberY(data.vertices, value, PropertyVertexNY == propertyTypeId);
     ret = ret || RObject::setMemberZ(data.vertices, value, PropertyVertexNZ == propertyTypeId);

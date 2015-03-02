@@ -133,6 +133,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getArcAngleLengthThreshold, "getArcAngleLengthThreshold");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getMinArcAngleStep, "getMinArcAngleStep");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getDashThreshold, "getDashThreshold");
             
             REcmaHelper::registerFunction(&engine, &ctor, getQtVersion, "getQtVersion");
@@ -1920,6 +1922,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getArcAngleLengthThreshold", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getMinArcAngleStep
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getMinArcAngleStep", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getMinArcAngleStep";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        RSettings::
+       getMinArcAngleStep();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getMinArcAngleStep().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getMinArcAngleStep", context, engine);
             return result;
         }
          QScriptValue

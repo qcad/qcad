@@ -157,6 +157,9 @@
         getArcAngleLengthThreshold
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getMinArcAngleStep
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDashThreshold
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

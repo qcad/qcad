@@ -60,6 +60,12 @@
         hasArrowHead
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        canHaveArrowHead
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateArrowHead
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getEndPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

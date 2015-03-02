@@ -51,12 +51,17 @@ public:
     double getDimscale() const;
 
     void setArrowHead(bool on) {
-        arrowHead = on;
+        if (on==false || canHaveArrowHead()) {
+            arrowHead = on;
+        }
     }
 
     bool hasArrowHead() const {
         return arrowHead;
     }
+
+    bool canHaveArrowHead() const;
+    bool updateArrowHead();
 
 //    void setPolyline(const RPolyline& polyline) {
 //        *((RPolyline*)this) = polyline;
@@ -87,6 +92,9 @@ public:
 
     virtual bool moveReferencePoint(const RVector& referencePoint, 
         const RVector& targetPoint);
+
+    virtual bool scale(const RVector& scaleFactors, const RVector& center);
+    virtual bool stretch(const RPolyline& area, const RVector& offset);
 
     QList<QSharedPointer<RShape> > getExploded() const {
         return RPolyline::getExploded();

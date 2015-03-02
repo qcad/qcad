@@ -78,6 +78,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasArrowHead, "hasArrowHead");
             
+            REcmaHelper::registerFunction(&engine, proto, canHaveArrowHead, "canHaveArrowHead");
+            
+            REcmaHelper::registerFunction(&engine, proto, updateArrowHead, "updateArrowHead");
+            
             REcmaHelper::registerFunction(&engine, proto, getEndPoint, "getEndPoint");
             
             REcmaHelper::registerFunction(&engine, proto, getStartPoint, "getStartPoint");
@@ -533,6 +537,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLeaderData::hasArrowHead", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderData::canHaveArrowHead
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderData::canHaveArrowHead", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderData::canHaveArrowHead";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderData* self = 
+                        getSelf("canHaveArrowHead", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->canHaveArrowHead();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.canHaveArrowHead().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderData::canHaveArrowHead", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderData::updateArrowHead
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderData::updateArrowHead", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderData::updateArrowHead";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderData* self = 
+                        getSelf("updateArrowHead", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->updateArrowHead();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.updateArrowHead().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderData::updateArrowHead", context, engine);
             return result;
         }
          QScriptValue
