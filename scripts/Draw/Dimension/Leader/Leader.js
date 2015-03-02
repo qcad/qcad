@@ -117,7 +117,6 @@ Leader.prototype.pickCoordinate = function(event, preview) {
             point = event.getModelPosition();
 
             this.leaderEntity = new RLeaderEntity(document, new RLeaderData());
-            this.leaderEntity.setArrowHead(this.arrowHead);
             this.leaderEntity.appendVertex(point);
             op = new RAddObjectOperation(this.leaderEntity, this.getToolTitle());
             this.applyOperation(op);
@@ -146,6 +145,7 @@ Leader.prototype.pickCoordinate = function(event, preview) {
             // append vertex:
             if (!preview) {
                 this.leaderEntity.appendVertex(point);
+                this.leaderEntity.setArrowHead(this.arrowHead);
             }
         }
 
@@ -185,6 +185,7 @@ Leader.prototype.getOperation = function(preview) {
             // of displaying the arrow correctly:
             var ld = this.leaderEntity.clone();
             ld.appendVertex(this.segment.getEndPoint());
+            ld.setArrowHead(this.arrowHead);
             return new RAddObjectOperation(ld, true, false);
         }
     }
