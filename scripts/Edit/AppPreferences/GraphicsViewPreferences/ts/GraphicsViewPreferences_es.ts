@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -114,11 +114,16 @@
         <translation>Mostrar las entidades con más de N guiones como contínua:</translation>
     </message>
     <message>
+        <location line="+42"/>
+        <source>Minimum angle step for rendering arcs (degrees):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Display entities with N dashes as continuous:</source>
         <translation type="obsolete">Mostrar entidades con guiones N como contínua:</translation>
     </message>
     <message>
-        <location line="-218"/>
+        <location line="-260"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Usar automáticamente los tipos de línea base de la pantalla de visualización del modelo</translation>
     </message>
@@ -151,7 +156,7 @@
         <translation type="obsolete">Mostrar límite para el texto:</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+196"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>

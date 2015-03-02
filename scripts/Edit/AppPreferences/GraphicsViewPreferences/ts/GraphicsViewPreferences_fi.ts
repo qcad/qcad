@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fi">
+<TS version="2.1" language="fi">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -123,7 +123,12 @@
         <translation>Näytä kaaret viivoina alle tämänmittaisen kulman (astetta):</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+111"/>
+        <source>Minimum angle step for rendering arcs (degrees):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+85"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>

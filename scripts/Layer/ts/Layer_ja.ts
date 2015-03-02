@@ -47,9 +47,13 @@
         <translation>画層名:</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Pen</source>
-        <translation>ペン</translation>
+        <translation type="vanished">ペン</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Attributes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>

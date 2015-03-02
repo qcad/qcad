@@ -57,6 +57,11 @@ double RLeaderData::getDimscale() const {
     return dimscale;
 }
 
+void RLeaderData::setArrowHead(bool on) {
+    arrowHead = on;
+    updateArrowHead();
+}
+
 /**
  * \return true if this leader can have an arrow head (i.e. first
  * segment is >= DIMASZ * DIMSCALE * 2.

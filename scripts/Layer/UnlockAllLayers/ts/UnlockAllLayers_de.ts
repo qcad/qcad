@@ -8,9 +8,16 @@
         <translation type="vanished">&amp;Alle Layer anzeigen</translation>
     </message>
     <message>
-        <location filename="../ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation>&amp;Alle Layer anzeigen</translation>
+        <translation type="vanished">&amp;Alle Layer anzeigen</translation>
+    </message>
+</context>
+<context>
+    <name>UnlockAllLayers</name>
+    <message>
+        <location filename="../UnlockAllLayersInit.js" line="+2"/>
+        <source>&amp;Unlock All Layers</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -33,9 +33,13 @@
         <translation>Nom du calque :</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Pen</source>
-        <translation>Stylo</translation>
+        <translation type="vanished">Stylo</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Attributes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>

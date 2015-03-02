@@ -8,9 +8,12 @@
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">Pokaż wszystkie warstwy</translation>
     </message>
+</context>
+<context>
+    <name>UnlockAllLayers</name>
     <message>
-        <location filename="../ShowAllLayersInit.js" line="+2"/>
-        <source>&amp;Show All Layers</source>
+        <location filename="../UnlockAllLayersInit.js" line="+2"/>
+        <source>&amp;Unlock All Layers</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -57,14 +57,18 @@ Nazwa warstwy:</translatorcomment>
         <translation type="unfinished">Nazwa warstwy:</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Pen</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Otwieranie ostatniego pliku...
 Otwieranie ostatniego pliku
 Otwieranie przerwane</translatorcomment>
-        <translation type="unfinished">Pióro</translation>
+        <translation type="obsolete">Pióro</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Attributes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>

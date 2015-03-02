@@ -15,5 +15,10 @@
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Hide internal blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

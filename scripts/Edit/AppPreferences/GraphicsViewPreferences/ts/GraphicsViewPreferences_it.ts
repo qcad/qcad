@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it_IT">
+<TS version="2.1" language="it_IT">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -114,7 +114,12 @@
         <translation>Visualizza entità con più di N trattini come continuo:</translation>
     </message>
     <message>
-        <location line="-218"/>
+        <location line="+42"/>
+        <source>Minimum angle step for rendering arcs (degrees):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-260"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Utilizzare automaticamente i tipi di linea a base di schermo in vista del modello</translation>
     </message>
@@ -147,7 +152,7 @@
         <translation type="obsolete">Visualizzare limite per il testo:</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+196"/>
         <source>Selection</source>
         <translation>Selezione</translation>
     </message>

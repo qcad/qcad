@@ -27,9 +27,13 @@
         <translation>Layername:</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Pen</source>
-        <translation>Stift</translation>
+        <translation type="vanished">Stift</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Attributes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>

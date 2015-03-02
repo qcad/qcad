@@ -50,12 +50,7 @@ public:
     double getDimasz() const;
     double getDimscale() const;
 
-    void setArrowHead(bool on) {
-        if (on==false || canHaveArrowHead()) {
-            arrowHead = on;
-        }
-    }
-
+    void setArrowHead(bool on);
     bool hasArrowHead() const {
         return arrowHead;
     }

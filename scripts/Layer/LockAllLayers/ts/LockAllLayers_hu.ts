@@ -2,10 +2,10 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="hu_HU">
 <context>
-    <name>ShowAllLayers</name>
+    <name>LockAllLayers</name>
     <message>
-        <location filename="../ShowAllLayersInit.js" line="+2"/>
-        <source>&amp;Show All Layers</source>
+        <location filename="../LockAllLayersInit.js" line="+2"/>
+        <source>&amp;Lock All Layers</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

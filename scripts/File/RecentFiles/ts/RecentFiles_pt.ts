@@ -27,5 +27,10 @@
         <translatorcomment>--google--</translatorcomment>
         <translation>Abrir archivo &amp;reciente</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Recent files history size:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

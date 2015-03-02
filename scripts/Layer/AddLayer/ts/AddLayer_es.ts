@@ -19,4 +19,12 @@
         <translation>Añadir capa</translation>
     </message>
 </context>
+<context>
+    <name>Layer</name>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+19"/>
+        <source>Default lineweight for new layers:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 </TS>

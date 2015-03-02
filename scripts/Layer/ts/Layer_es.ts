@@ -35,9 +35,13 @@ Capacidad de remuestreo de datos de capa de mapa rster de GRASS</translatorcomme
         <translation>Nombre de capa:</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Pen</source>
-        <translation>Trazador</translation>
+        <translation type="vanished">Trazador</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Attributes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>

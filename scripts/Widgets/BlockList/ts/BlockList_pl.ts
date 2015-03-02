@@ -18,5 +18,10 @@ Lista bloków</translatorcomment>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Hide internal blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

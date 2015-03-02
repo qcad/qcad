@@ -32,9 +32,13 @@
         <translation>Nome del Layer:</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Pen</source>
-        <translation>Penna</translation>
+        <translation type="vanished">Penna</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Attributes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>

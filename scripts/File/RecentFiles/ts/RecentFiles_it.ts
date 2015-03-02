@@ -28,5 +28,10 @@
         <source>Open &amp;Recent</source>
         <translation>Apri &amp;recenti</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Recent files history size:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

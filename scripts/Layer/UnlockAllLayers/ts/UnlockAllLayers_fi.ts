@@ -4,9 +4,16 @@
 <context>
     <name>ShowAllLayers</name>
     <message>
-        <location filename="../ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation>&amp;Näytä kaikki tasot</translation>
+        <translation type="vanished">&amp;Näytä kaikki tasot</translation>
+    </message>
+</context>
+<context>
+    <name>UnlockAllLayers</name>
+    <message>
+        <location filename="../UnlockAllLayersInit.js" line="+2"/>
+        <source>&amp;Unlock All Layers</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

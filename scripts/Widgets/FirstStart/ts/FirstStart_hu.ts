@@ -9,7 +9,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+185"/>
+        <location line="+189"/>
         <source>Black</source>
         <translation type="unfinished"></translation>
     </message>

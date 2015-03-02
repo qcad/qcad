@@ -58,14 +58,18 @@ Nome da camada:</translatorcomment>
         <translation>Nome da camada:</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Pen</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 Abrindo o arquivo recente...
 Abrindo o arquivo recente
 Abertura abortada</translatorcomment>
-        <translation>Caneta</translation>
+        <translation type="vanished">Caneta</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Attributes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>

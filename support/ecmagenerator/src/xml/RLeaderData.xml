@@ -43,6 +43,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="canHaveArrowHead" cppName="canHaveArrowHead"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="updateArrowHead" cppName="updateArrowHead"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getEndPoint" cppName="getEndPoint"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

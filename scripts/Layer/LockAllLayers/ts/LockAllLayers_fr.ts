@@ -2,6 +2,14 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="fr_FR">
 <context>
+    <name>LockAllLayers</name>
+    <message>
+        <location filename="../LockAllLayersInit.js" line="+2"/>
+        <source>&amp;Lock All Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ShowAllLayers</name>
     <message>
         <source>&amp;Show all Layers</source>
@@ -9,9 +17,8 @@
         <translation type="vanished">&amp;Afficher tous les calques</translation>
     </message>
     <message>
-        <location filename="../ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation>&amp;Afficher tous les calques</translation>
+        <translation type="vanished">&amp;Afficher tous les calques</translation>
     </message>
 </context>
 </TS>

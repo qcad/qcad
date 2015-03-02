@@ -2,11 +2,18 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="fi">
 <context>
+    <name>LockAllLayers</name>
+    <message>
+        <location filename="../LockAllLayersInit.js" line="+2"/>
+        <source>&amp;Lock All Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ShowAllLayers</name>
     <message>
-        <location filename="../ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation>&amp;Näytä kaikki tasot</translation>
+        <translation type="vanished">&amp;Näytä kaikki tasot</translation>
     </message>
 </context>
 </TS>

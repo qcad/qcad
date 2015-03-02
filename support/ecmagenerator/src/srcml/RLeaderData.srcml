@@ -139,10 +139,22 @@ dir="./entity" filename="RLeaderData.h">
       </decl>
     </param>)</parameter_list>
     <block>{ 
-    <expr_stmt>
+    <if>if 
+    <condition>(
     <expr>
-    <name>arrowHead</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
+    <name>on</name>==
+    <name>false</name>|| 
+    <call>
+      <name>canHaveArrowHead</name>
+      <argument_list>()</argument_list>
+    </call></expr>)</condition>
+    <then>
+      <block>{ 
+      <expr_stmt>
+      <expr>
+      <name>arrowHead</name>= 
+      <name>on</name></expr>;</expr_stmt>}</block>
+    </then></if>}</block>
   </function>
   <function>
     <type>
@@ -157,6 +169,19 @@ dir="./entity" filename="RLeaderData.h">
       <name>arrowHead</name>
     </expr>;</return>}</block>
   </function>
+  <function_decl>
+  <type>
+    <name>bool</name>
+  </type>
+  <name>canHaveArrowHead</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>bool</name>
+  </type>
+  <name>updateArrowHead</name>
+  <parameter_list>()</parameter_list>;</function_decl>
   <comment type="line">// void setPolyline(const RPolyline&amp;
   polyline) {</comment>
   <comment type="line">// *((RPolyline*)this) = polyline;</comment>

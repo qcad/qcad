@@ -7,9 +7,12 @@
         <source>&amp;Show all Layers</source>
         <translation type="vanished">&amp;Prikaži vse plasti</translation>
     </message>
+</context>
+<context>
+    <name>UnlockAllLayers</name>
     <message>
-        <location filename="../ShowAllLayersInit.js" line="+2"/>
-        <source>&amp;Show All Layers</source>
+        <location filename="../UnlockAllLayersInit.js" line="+2"/>
+        <source>&amp;Unlock All Layers</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -47,9 +47,13 @@
         <translation>Ime plasti:</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Pen</source>
-        <translation>Pisalo</translation>
+        <translation type="vanished">Pisalo</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Attributes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>

@@ -48,7 +48,7 @@
     </message>
     <message>
         <location line="+34"/>
-        <source>Pen</source>
+        <source>Attributes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
