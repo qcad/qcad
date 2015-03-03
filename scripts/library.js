@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * Function stringToDirectDistanceEntry added 2013 by Robert S.
  *
