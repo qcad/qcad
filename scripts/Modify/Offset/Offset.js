@@ -110,7 +110,7 @@ Offset.prototype.pickEntity = function(event, preview) {
         var shape;
         if (this.segmentMode) {
             //  parallel to polyline segment:
-            shape = getClosestSimpleShape(entity, pos);
+            shape = entity.getClosestSimpleShape(pos);
         }
         else {
             shape = entity.getClosestShape(pos);

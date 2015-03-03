@@ -2,7 +2,7 @@
 <unit xmlns="http://www.sdml.info/srcML/src"
 xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
 dir="./core" filename="REntity.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
+  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
   Mustun. All rights reserved. * * This file is part of the QCAD
   project. * * QCAD is free software: you can redistribute it
   and/or modify * it under the terms of the GNU General Public
@@ -1375,6 +1375,64 @@ dir="./core" filename="REntity.h">
         </expr>
       </argument>)</argument_list>
     </call></expr>;</return>}</block>
+  </function>
+  <comment type="block">/** * \copydoc REntityData::getClosestShape
+  */</comment>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>QSharedPointer
+      <argument_list>&lt;
+      <argument>
+        <name>RShape</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>getClosestSimpleShape</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RVector</name>&amp;</type>
+        <name>pos</name>
+      </decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>range</name>=
+      <init>
+        <expr>
+          <name>RNANDOUBLE</name>
+        </expr>
+      </init></decl>
+    </param>)</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>getClosestShape</name>
+        <argument_list>(
+        <argument>
+          <expr>
+            <name>pos</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>range</name>
+          </expr>
+        </argument>, 
+        <argument>
+          <expr>
+            <name>true</name>
+          </expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</return>}</block>
   </function>
   <comment type="block">/** * \copydoc REntityData::isInside
   */</comment>

@@ -330,6 +330,13 @@ public:
     }
 
     /**
+     * \copydoc REntityData::getClosestShape
+     */
+    virtual QSharedPointer<RShape> getClosestSimpleShape(const RVector& pos, double range = RNANDOUBLE) const {
+        return getClosestShape(pos, range, true);
+    }
+
+    /**
      * \copydoc REntityData::isInside
      */
     virtual bool isInside(const RBox& box) const {

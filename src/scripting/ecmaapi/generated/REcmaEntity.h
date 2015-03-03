@@ -153,6 +153,9 @@
         getClosestShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getClosestSimpleShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isInside
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

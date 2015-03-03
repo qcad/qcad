@@ -1680,7 +1680,7 @@ function shapeToEntity(document, shape) {
 }
 
 function getClosestSimpleShape(entity, pos) {
-    return entity.getClosestShape(pos, Number.NaN, true);
+    return entity.getClosestSimpleShape(pos);
 }
 
 function trimStartPoint(shape, p) {

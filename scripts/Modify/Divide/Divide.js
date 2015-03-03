@@ -218,7 +218,7 @@ Divide.divide = function(op, pos, pos2, entity) {
     }
 
     entity = entity.clone();
-    var shape = getClosestSimpleShape(entity, pos);
+    var shape = entity.getClosestSimpleShape(pos);
 
     if (isNull(pos2)) {
         if (isCircleShape(shape) || (isEllipseShape(shape) && shape.isFullEllipse())) {

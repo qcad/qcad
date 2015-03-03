@@ -97,7 +97,7 @@ DimRadial.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case DimRadial.State.SettingEntity:
-        var shape = getClosestSimpleShape(entity, pos);
+        var shape = entity.getClosestSimpleShape(pos);
 
         if (isArcShape(shape) ||
             isCircleShape(shape)) {

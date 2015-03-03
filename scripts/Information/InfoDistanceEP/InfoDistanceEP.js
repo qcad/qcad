@@ -99,7 +99,7 @@ InfoDistanceEP.prototype.pickEntity = function(event, preview) {
     di.highlightEntity(this.entity.getId());
 
     if (!preview) {
-        this.shape = getClosestSimpleShape(entity, pos);
+        this.shape = entity.getClosestSimpleShape(pos);
         this.setState(InfoDistanceEP.State.SettingPoint);
     }
 };

@@ -114,7 +114,7 @@ Trim.prototype.pickEntity = function(event, preview) {
             break;
         }
 
-        var shape = getClosestSimpleShape(entity, pos);
+        var shape = entity.getClosestSimpleShape(pos);
 
         if (!isLineBasedShape(shape) &&
             !isArcShape(shape) &&

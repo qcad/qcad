@@ -106,7 +106,7 @@ LineRadicalAxis.prototype.pickEntity = function(event, preview) {
         return;
     }
 
-    var shape = getClosestSimpleShape(entity, pos);
+    var shape = entity.getClosestSimpleShape(pos);
 
     if (!isArcShape(shape) &&
         !isCircleShape(shape)) {

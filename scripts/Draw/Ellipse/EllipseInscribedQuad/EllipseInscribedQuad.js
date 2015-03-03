@@ -156,7 +156,7 @@ EllipseInscribedQuad.prototype.pickEntity = function(event, preview) {
     var shape = undefined;
 
     if (!isNull(entity)) {
-        shape = getClosestSimpleShape(entity, pos);
+        shape = entity.getClosestSimpleShape(pos);
 
         if (!isLineBasedShape(shape)) {
             if (!preview) {

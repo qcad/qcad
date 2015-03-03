@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -77,7 +77,7 @@ SnapIntersectionManual.prototype.entityPickEvent = function(event) {
     if (this.state===this.State.PickingEntity1) {
         this.entity1 = doc.queryEntity(event.getEntityId());
         if (!this.entity1.isNull()) {
-            this.shape1 = this.entity1.getClosestShape(pos);
+            this.shape1 = this.entity1.getClosestSimpleShape(pos);
             this.entityId1 = event.getEntityId();
             this.state = this.State.PickingEntity2;
         }
@@ -140,7 +140,7 @@ SnapIntersectionManual.prototype.getIntersection = function(event) {
         return RVector.invalid;
     }
     this.entity2 = entity2;
-    this.shape2 = entity2.getClosestShape(position);
+    this.shape2 = entity2.getClosestSimpleShape(position);
     if (this.shape2.isNull()) {
         return RVector.invalid;
     }

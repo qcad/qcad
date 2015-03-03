@@ -755,10 +755,7 @@ RPolyline RArc::approximateWithLinesTan(double segmentLength) {
         polyline.appendVertex(getEndPoint());
         return polyline;
     }
-    qDebug() << "step: " << steps;
-    qDebug() << "aStep: " << RMath::rad2deg(aStep);
     double r2 = radius / cos(aStep/2);
-    qDebug() << "r2:" << r2;
 
     double a, cix, ciy;
 
