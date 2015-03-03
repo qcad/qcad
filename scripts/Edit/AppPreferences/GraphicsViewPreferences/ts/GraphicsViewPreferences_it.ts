@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -116,7 +116,7 @@
     <message>
         <location line="+42"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation>Passo angolo minimo per rendere archi (gradi):</translation>
     </message>
     <message>
         <location line="-260"/>

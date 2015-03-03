@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>RecentFiles</name>
     <message>
@@ -30,7 +30,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Recent files history size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de fichiers récents :</translation>
     </message>
 </context>
 </TS>

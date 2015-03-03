@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -116,7 +116,7 @@
     <message>
         <location line="+42"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation>Minimaler Winkel für Bogensegmentierung in Anzeige (Grad):</translation>
     </message>
     <message>
         <source>Display entities with N dashes as continuous:</source>
