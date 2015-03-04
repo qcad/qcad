@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -135,6 +135,11 @@
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
         <translation>Element ist keine Linie, kein Bogen oder Kreis und keine Ellipse.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
+        <translation>Element ist keine Linie, kein Bogen oder Kreis, keine Ellipse und keine Polylinie.</translation>
     </message>
     <message>
         <location line="+4"/>
