@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>Layer</name>
     <message>
@@ -36,7 +36,7 @@ Capacidad de remuestreo de datos de capa de mapa rster de GRASS</translatorcomme
     </message>
     <message>
         <source>Pen</source>
-        <translation>Trazador</translation>
+        <translation type="vanished">Trazador</translation>
     </message>
     <message>
         <location line="+34"/>

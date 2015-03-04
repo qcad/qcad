@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr_FR">
+<TS version="2.1" language="fr_FR">
 <context>
     <name>LockAllLayers</name>
     <message>
@@ -14,11 +14,11 @@
     <message>
         <source>&amp;Show all Layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Afficher tous les calques</translation>
+        <translation type="vanished">&amp;Afficher tous les calques</translation>
     </message>
     <message>
         <source>&amp;Show All Layers</source>
-        <translation>&amp;Afficher tous les calques</translation>
+        <translation type="vanished">&amp;Afficher tous les calques</translation>
     </message>
 </context>
 </TS>

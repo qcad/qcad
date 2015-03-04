@@ -16,7 +16,7 @@
     <message>
         <location filename="../SnapDistanceManual.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation>Kiinnittymisen etäisyys:</translation>
+        <translation>Poiminnan etäisyys:</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -41,7 +41,7 @@
     <message>
         <location line="+4"/>
         <source>Snap distance between 2 points</source>
-        <translation>Napsauta etäisyys 2 pisteen välillä</translation>
+        <translation>Poimintaetäisyys 2 pisteen välillä</translation>
     </message>
 </context>
 </TS>

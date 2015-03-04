@@ -76,7 +76,7 @@
     <message>
         <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation>Lisää kiinteä nimike tai jätä tyhjäksi automaattiselle nimikkeelle</translation>
+        <translation>Lisää kiinteä selitee tai jätä tyhjäksi automaattiselle selitteelle</translation>
     </message>
     <message>
         <location line="+51"/>

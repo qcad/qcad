@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation>Kiinnittymisen etäisyys:</translation>
+        <translation>Poiminnan etäisyys:</translation>
     </message>
     <message>
         <location filename="../SnapDistanceInit.js" line="+2"/>

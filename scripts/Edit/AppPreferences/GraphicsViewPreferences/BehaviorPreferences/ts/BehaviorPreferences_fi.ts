@@ -49,7 +49,7 @@
     <message>
         <location line="+8"/>
         <source>Cursor range for snap:</source>
-        <translation>Kohdistimen alue napsaukselle:</translation>
+        <translation>Kohdistimen alue poiminnalle:</translation>
     </message>
     <message>
         <location line="+54"/>

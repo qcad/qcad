@@ -13,7 +13,7 @@
     <message>
         <location filename="../UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vapauta taso</translation>
     </message>
 </context>
 </TS>

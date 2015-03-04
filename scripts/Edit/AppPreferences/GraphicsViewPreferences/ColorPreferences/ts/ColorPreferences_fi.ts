@@ -104,12 +104,12 @@
     <message>
         <location line="+33"/>
         <source>Snap Tools</source>
-        <translation>Napsaustyökalut</translation>
+        <translation>Poimintatyökalut</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Snap label:</source>
-        <translation>Napsauksen nimike:</translation>
+        <translation>Poiminnan selite:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -119,7 +119,7 @@
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation>Mitat ja etiketit:</translation>
+        <translation>Mitat ja selitteet:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -148,11 +148,11 @@
     </message>
     <message>
         <source>Relative Zero:</source>
-        <translation type="obsolete">Suhteellinen nolla:</translation>
+        <translation type="vanished">Suhteellinen nolla:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation type="obsolete">Viitepiste:</translation>
+        <translation type="vanished">Viitepiste:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -161,19 +161,19 @@
     </message>
     <message>
         <source>Zoom Box:</source>
-        <translation type="obsolete">Suurennuslaatikko:</translation>
+        <translation type="vanished">Suurennuslaatikko:</translation>
     </message>
     <message>
         <source>Selection:</source>
-        <translation type="obsolete">Valinta:</translation>
+        <translation type="vanished">Valinta:</translation>
     </message>
     <message>
         <source>Selection Box Border:</source>
-        <translation type="obsolete">Valintalaatikon reuna:</translation>
+        <translation type="vanished">Valintalaatikon reuna:</translation>
     </message>
     <message>
         <source>Selection Box:</source>
-        <translation type="obsolete">Valintalaatikko:</translation>
+        <translation type="vanished">Valintalaatikko:</translation>
     </message>
 </context>
 </TS>

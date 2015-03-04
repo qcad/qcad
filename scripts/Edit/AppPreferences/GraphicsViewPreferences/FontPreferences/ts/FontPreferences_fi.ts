@@ -24,12 +24,12 @@
     <message>
         <location line="+16"/>
         <source>Snap Label Font:</source>
-        <translation>Pikaetiketin kirjasin:</translation>
+        <translation>Poiminnan selitteen kirjasin:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info Label Font:</source>
-        <translation>Tieto etiketin pirjasin:</translation>
+        <translation>Tieto selitteen kirjasin:</translation>
     </message>
 </context>
 </TS>

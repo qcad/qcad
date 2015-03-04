@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt_PT">
+<TS version="2.1" language="pt_PT">
 <context>
     <name>Layer</name>
     <message>
@@ -64,7 +64,7 @@ Nome da camada:</translatorcomment>
 Abrindo o arquivo recente...
 Abrindo o arquivo recente
 Abertura abortada</translatorcomment>
-        <translation>Caneta</translation>
+        <translation type="vanished">Caneta</translation>
     </message>
     <message>
         <location line="+34"/>

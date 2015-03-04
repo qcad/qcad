@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>Layer</name>
     <message>
@@ -28,7 +28,7 @@
     </message>
     <message>
         <source>Pen</source>
-        <translation>Stift</translation>
+        <translation type="vanished">Stift</translation>
     </message>
     <message>
         <location line="+34"/>
