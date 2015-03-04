@@ -1,17 +1,20 @@
-/*
- * Copyright (c) 2011-2014 by RibbonSoft, GmbH. All rights reserved.
- * 
+/**
+ * Copyright (c) 2011-2015 by RibbonSoft, GmbH.l rights reserved.
+ *
  * This file is part of the QCAD project.
  *
- * Licensees holding valid QCAD Professional Edition licenses 
- * may use this file in accordance with the QCAD License
- * Agreement provided with the Software.
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- * This file is provided AS IS with NO WARRANTY OF ANY KIND, 
- * INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS 
- * FOR A PARTICULAR PURPOSE.
- * 
- * See http://www.ribbonsoft.com for further details.
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
  */
 
 include("scripts/EAction.js");
