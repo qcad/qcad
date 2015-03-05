@@ -32,9 +32,9 @@ EllipseCPPTest00.prototype = new TdbTest();
 EllipseCPPTest00.prototype.test00 = function() {
     qDebug('running EllipseCPPTest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
-    this.clickOnWidget('MainWindow::LineToolsPanel::LinePolygonCPButton');
-    this.setToolOption('LinePolygonCP/Corners', '8');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
+    this.clickOnWidget('MainWindow::ShapeToolsPanel::ShapePolygonCPButton');
+    this.setToolOption('ShapePolygonCP/Corners', '8');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(19.9, 20.1);
@@ -50,7 +50,7 @@ EllipseCPPTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     var p = new RVector(33.2, 8.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::EllipseMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::EllipseToolsPanelButton');
     this.clickOnWidget('MainWindow::EllipseToolsPanel::EllipseCPPButton');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(19.9, 19.9);

@@ -33,12 +33,12 @@ LengthenTest00.prototype.test00 = function() {
     qDebug('running LengthenTest00.test00()...');
     this.setUp();
     this.importFile('scripts/Modify/Lengthen/Tests/data/lines.dxf');
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(62, 400), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(62, 400), Qt.LeftButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel::ModifyMenuButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::ModifyToolsPanel::LengthenButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::LengthenButton');
     this.setToolOption('Lengthen/Amount',  [ 1, 0 ] );
     this.updateToolOptions();
     this.setZoom(10.123456790123457, new RVector(4.99146, 1.2378, 0) );

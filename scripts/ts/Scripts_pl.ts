@@ -39,7 +39,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+312"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -166,6 +166,11 @@ Narzędzia CAD</translatorcomment>
         <source>Entity is not a line, arc, circle or ellipse.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie linia, łuk, okrąg lub elipsa jest.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>

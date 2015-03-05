@@ -53,7 +53,7 @@
     <message>
         <location line="+34"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ominaisuudet</translation>
     </message>
     <message>
         <location line="+9"/>

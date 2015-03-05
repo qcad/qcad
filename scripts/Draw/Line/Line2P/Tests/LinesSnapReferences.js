@@ -32,7 +32,7 @@ LinesSnapReferences.prototype = new TdbTest();
 LinesSnapReferences.prototype.test00 = function() {
     qDebug('running LinesSnapReferences.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.zoomTo(-28.95, -21.750000000000004, 28.950000000000003, 21.75);
     var p = new RVector(-21, 9);
@@ -70,7 +70,7 @@ LinesSnapReferences.prototype.test00 = function() {
     var p = new RVector(7, 5);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.clickOnWidget('MainWindow::SnapToolsPanel::SnapReferenceButton');
     this.zoomTo(-28.95, -21.750000000000004, 28.950000000000003, 21.75);

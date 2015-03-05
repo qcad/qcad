@@ -43,7 +43,7 @@ Shape.includeBasePath = includeBasePath;
 Shape.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ShapeToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ShapeToolsPanelAction") {
         EAction.showCadToolBarPanel("ShapeToolsPanel");
         this.terminate();
     }
@@ -69,7 +69,7 @@ Shape.getToolBar = function() {
 
 Shape.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "ShapeToolsPanelButton";
+    var actionName = "ShapeToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Shape Tools"), mtb);
         action.setScriptFile(Shape.includeBasePath + "/Shape.js");
@@ -79,7 +79,7 @@ Shape.getCadToolBarPanel = function() {
         action.setStatusTip(qsTr("Show shape tools"));
         action.setDefaultShortcut(new QKeySequence("w,h"));
         action.setNoState();
-        action.setDefaultCommands(["linemenu"]);
+        action.setDefaultCommands(["shapemenu"]);
         action.setGroupSortOrder(20);
         action.setSortOrder(800);
         action.setWidgetNames(["MainToolsPanel"]);

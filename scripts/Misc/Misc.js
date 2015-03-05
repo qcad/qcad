@@ -41,7 +41,7 @@ Misc.includeBasePath = includeBasePath;
 Misc.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="MiscToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="MiscToolsPanelAction") {
         EAction.showCadToolBarPanel("MiscToolsPanel");
         this.terminate();
     }
@@ -55,7 +55,7 @@ Misc.getMenu = function() {
 
 Misc.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "MiscToolsPanelButton";
+    var actionName = "MiscToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Misc Tools"), mtb);
         action.setScriptFile(Misc.includeBasePath + "/Misc.js");

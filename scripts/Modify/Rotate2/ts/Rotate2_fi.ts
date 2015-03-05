@@ -18,6 +18,21 @@
         <source>Rotate T&amp;wo</source>
         <translation>Kierrä kaksi</translation>
     </message>
+    <message>
+        <location filename="../Rotate2.ui" line="+17"/>
+        <source>Primary Angle:</source>
+        <translation type="unfinished">Ensisijainen kulma:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Secondary Angle:</source>
+        <translation type="unfinished">Toissijainen kulma:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Copies:</source>
+        <translation type="unfinished">Kopioita:</translation>
+    </message>
 </context>
 <context>
     <name>Rotate2Options</name>
@@ -65,19 +80,16 @@
 <context>
     <name>TranslateRotate</name>
     <message>
-        <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation>Ensisijainen kulma:</translation>
+        <translation type="vanished">Ensisijainen kulma:</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation>Toissijainen kulma:</translation>
+        <translation type="vanished">Toissijainen kulma:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Copies:</source>
-        <translation>Kopioita:</translation>
+        <translation type="vanished">Kopioita:</translation>
     </message>
 </context>
 </TS>

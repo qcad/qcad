@@ -32,7 +32,7 @@ LineOrthogonalTest00.prototype = new TdbTest();
 LineOrthogonalTest00.prototype.test00 = function() {
     qDebug('running LineOrthogonalTest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(0.8, 18.7);
@@ -52,7 +52,7 @@ LineOrthogonalTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     var p = new RVector(-0.4, 32.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::LineOrthogonalButton');
     this.setToolOption('LineOrthogonal/Length',  [ 4, 0 ] );
     this.updateToolOptions();

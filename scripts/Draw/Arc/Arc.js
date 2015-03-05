@@ -40,7 +40,7 @@ Arc.includeBasePath = includeBasePath;
 Arc.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ArcMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ArcToolsPanelAction") {
         EAction.showCadToolBarPanel("ArcToolsPanel");
         this.terminate();
     }
@@ -66,7 +66,7 @@ Arc.getToolBar = function() {
 
 Arc.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "ArcMenu";
+    var actionName = "ArcToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Arc Tools"), mtb);
         action.setScriptFile(Arc.includeBasePath + "/Arc.js");

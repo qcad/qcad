@@ -32,7 +32,7 @@ ArcCPATest00.prototype = new TdbTest();
 ArcCPATest00.prototype.test00 = function() {
     qDebug('running ArcCPATest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::ArcMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::ArcToolsPanelButton');
     this.clickOnWidget('MainWindow::ArcToolsPanel::ArcCPAButton');
     this.setToolOption('ArcCPA/Direction', 'CounterClockwise');
     this.updateToolOptions();

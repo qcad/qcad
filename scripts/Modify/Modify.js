@@ -44,7 +44,7 @@ Modify.includeBasePath = includeBasePath;
 Modify.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ModifyToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ModifyToolsPanelAction") {
         EAction.showCadToolBarPanel("ModifyToolsPanel");
         this.terminate();
     }
@@ -95,7 +95,7 @@ Modify.getToolBar = function() {
 
 Modify.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "ModifyToolsPanelButton";
+    var actionName = "ModifyToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Modification Tools"), mtb);
         action.setScriptFile(Modify.includeBasePath + "/Modify.js");

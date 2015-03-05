@@ -41,7 +41,7 @@ View.includeBasePath = includeBasePath;
 View.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ViewToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ViewToolsPanelAction") {
         EAction.showCadToolBarPanel("ViewToolsPanel");
         this.terminate();
     }
@@ -60,7 +60,7 @@ View.getToolBar = function() {
 
 View.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "ViewToolsPanelButton";
+    var actionName = "ViewToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("View Tools"), mtb);
         action.setScriptFile(View.includeBasePath + "/View.js");

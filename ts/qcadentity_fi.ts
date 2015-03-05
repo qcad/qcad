@@ -384,7 +384,7 @@
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
-        <translation>Nimike</translation>
+        <translation>Selite</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -419,7 +419,7 @@
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation>Automaattiset nimikkeet</translation>
+        <translation>Automaattiset selitteet</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -434,7 +434,7 @@
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation>Autom. nimikkeen sijainti</translation>
+        <translation>Autom. selitteen sijainti</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>

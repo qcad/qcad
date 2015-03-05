@@ -41,7 +41,7 @@ File.includeBasePath = includeBasePath;
 File.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="FileToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="FileToolsPanelAction") {
         EAction.showCadToolBarPanel("FileToolsPanel");
         this.terminate();
     }
@@ -60,7 +60,7 @@ File.getToolBar = function() {
 
 File.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "FileToolsPanelButton";
+    var actionName = "FileToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("File Tools"), mtb);
         action.setScriptFile(File.includeBasePath + "/File.js");

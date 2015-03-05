@@ -32,9 +32,9 @@ Rotate2Test04.prototype = new TdbTest();
 Rotate2Test04.prototype.test00 = function() {
     qDebug('running Rotate2Test04.test00()...');
     this.setUp();
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(44, 433), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(44, 433), Qt.LeftButton, 0, 0);
     this.importFile('scripts/Modify/Rotate2/Tests/data/spline.dxf');
     this.setZoom(8.504910963276966, new RVector(29.7475, 25.2795, 0) );

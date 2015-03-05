@@ -77,7 +77,7 @@
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>Piirroksen yksikkö pitää olla &apos;tuuma&apos; tai &apos;jalka&apos; jotta näytetään mittanimikkeet muodossa &apos;arkkitehtuurinen&apos; tai &apos;tekninen&apos;. Muoto pitää vaihtaa &apos;desimaaliseksi&apos;.</translation>
+        <translation>Piirroksen yksikkö pitää olla &apos;tuuma&apos; tai &apos;jalka&apos; jotta näytetään mittaselitteet muodossa &apos;arkkitehtuurinen&apos; tai &apos;tekninen&apos;. Muoto vaihdettu &apos;desimaaliseksi&apos;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
@@ -142,12 +142,12 @@
     <message>
         <location line="+6"/>
         <source>Dimension label font:</source>
-        <translation>Mittanimikkeen kirjasin:</translation>
+        <translation>Mittaselitteen kirjasin:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Label Format</source>
-        <translation>Nimikkeen muoto</translation>
+        <translation>Selitteen muoto</translation>
     </message>
     <message>
         <location line="+6"/>

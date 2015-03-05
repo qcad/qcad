@@ -32,7 +32,7 @@ LinesSnapCoordinate.prototype = new TdbTest();
 LinesSnapCoordinate.prototype.test00 = function() {
     qDebug('running LinesSnapCoordinate.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.clickOnWidget('MainWindow::SnapToolsPanel::SnapCoordinateButton');
     this.setToolOption('SnapCoordinate/X',  [ 0, 0 ] );

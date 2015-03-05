@@ -33,9 +33,9 @@ IsoProjectTest01.prototype.test00 = function() {
     qDebug('running IsoProjectTest01.test00()...');
     this.setUp();
     this.importFile('scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_spline.dxf');
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(43, 453), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(43, 453), Qt.LeftButton, 0, 0);
     this.setZoom(5.762495258019454, new RVector(7.22036, 22.0504, 0) );
     var p = new RVector(15.339311, 13.003826);

@@ -55,7 +55,7 @@ MiscDevelopment.getToolBar = function() {
 
 MiscDevelopment.getCadToolBarPanel = function() {
     var mtb = Misc.getCadToolBarPanel();
-    var actionName = "MiscDevelopmentToolsPanelButton";
+    var actionName = "MiscDevelopmentToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Misc Development Tools"), mtb);
         action.setScriptFile(MiscDevelopment.includeBasePath + "/MiscDevelopment.js");

@@ -51,7 +51,7 @@ Select.Mode = {
 Select.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="SelectMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="SelectToolsPanelAction") {
         EAction.showCadToolBarPanel("SelectToolsPanel");
         this.terminate();
     }
@@ -211,7 +211,7 @@ Select.getToolBar = function() {
 
 Select.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "SelectMenu";
+    var actionName = "SelectToolsPanelAction";
     if (!isNull(mtb) && isNull(mtb.findChild(actionName))) {
         var action = new RGuiAction(qsTr("Selection Tools"), mtb);
         action.setScriptFile(Select.includeBasePath + "/Select.js");

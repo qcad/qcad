@@ -32,7 +32,7 @@ LineTangent2Test01.prototype = new TdbTest();
 LineTangent2Test01.prototype.test00 = function() {
     qDebug('running LineTangent2Test01.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::ArcMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::ArcToolsPanelButton');
     this.clickOnWidget('MainWindow::ArcToolsPanel::ArcCPAButton');
     this.setToolOption('ArcCPA/Direction', 'CounterClockwise');
     this.updateToolOptions();
@@ -80,7 +80,7 @@ LineTangent2Test01.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     var p = new RVector(36, 15.3);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::LineTangent2Button');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(23.8, 30.5);

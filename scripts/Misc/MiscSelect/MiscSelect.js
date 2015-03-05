@@ -56,7 +56,7 @@ MiscSelect.getToolBar = function() {
 
 MiscSelect.getCadToolBarPanel = function() {
     var mtb = Misc.getCadToolBarPanel();
-    var actionName = "MiscSelectToolsPanelButton";
+    var actionName = "MiscSelectToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Misc Selection Tools"), mtb);
         action.setScriptFile(MiscSelect.includeBasePath + "/MiscSelect.js");

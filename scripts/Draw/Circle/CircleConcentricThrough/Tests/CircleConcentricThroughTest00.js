@@ -32,7 +32,7 @@ CircleConcentricThroughTest00.prototype = new TdbTest();
 CircleConcentricThroughTest00.prototype.test00 = function() {
     qDebug('running CircleConcentricThroughTest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(27.1, 14.2);
@@ -52,7 +52,7 @@ CircleConcentricThroughTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     var p = new RVector(8.5, 27.8);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::CircleMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::CircleToolsPanelButton');
     this.clickOnWidget('MainWindow::CircleToolsPanel::CircleCPButton');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(9.8, 14.2);
@@ -68,7 +68,7 @@ CircleConcentricThroughTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     var p = new RVector(24.6, 10.6);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::CircleMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::CircleToolsPanelButton');
     this.clickOnWidget('MainWindow::CircleToolsPanel::CircleConcentricThroughButton');
     this.setToolOption('CircleConcentricThrough/Number', '2');
     this.updateToolOptions();

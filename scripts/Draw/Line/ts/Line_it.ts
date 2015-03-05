@@ -9,12 +9,12 @@
         <translation>Mostra menù &quot;Linee&quot;</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+14"/>
         <source>&amp;Line</source>
         <translation>&amp;Linea</translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="-19"/>
         <source>Line Tools</source>
         <translation>Strumenti linea</translation>
     </message>

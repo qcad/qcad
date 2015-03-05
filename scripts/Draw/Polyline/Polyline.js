@@ -41,7 +41,7 @@ Polyline.includeBasePath = includeBasePath;
 Polyline.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="PolylineToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="PolylineToolsPanelAction") {
         EAction.showCadToolBarPanel("PolylineToolsPanel");
         this.terminate();
     }
@@ -68,7 +68,7 @@ Polyline.getToolBar = function() {
 
 Polyline.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "PolylineToolsPanelButton";
+    var actionName = "PolylineToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Polyline Tools"), mtb);
         action.setScriptFile(Polyline.includeBasePath + "/Polyline.js");
@@ -78,7 +78,7 @@ Polyline.getCadToolBarPanel = function() {
         action.setStatusTip(qsTr("Show polyline tools"));
         action.setDefaultShortcut(new QKeySequence("w,o"));
         action.setNoState();
-        action.setDefaultCommands(["PolylineToolsPanelButton"]);
+        action.setDefaultCommands(["polylinemenu"]);
         action.setGroupSortOrder(20);
         action.setSortOrder(700);
         action.setWidgetNames(["MainToolsPanel"]);

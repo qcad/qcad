@@ -36,8 +36,8 @@ DimAngularTest00.prototype.test00 = function() {
     var p = new RVector(47.521756, 33.788159);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.MidButton, 4, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.MidButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel::DimensionMenuButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::DimensionToolsPanel::DimAngularButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::DimensionToolsPanel::DimAngularButton');
     this.setToolOption('Dimension/Prefix', '(No prefix)');
     this.setToolOption('Dimension/Text', '');
     this.setToolOption('Dimension/UpperTolerance', '');

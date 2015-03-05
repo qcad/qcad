@@ -56,7 +56,7 @@ MiscDraw.getToolBar = function() {
 
 MiscDraw.getCadToolBarPanel = function() {
     var mtb = Misc.getCadToolBarPanel();
-    var actionName = "MiscDrawToolsPanelButton";
+    var actionName = "MiscDrawToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Misc Drawing Tools"), mtb);
         action.setScriptFile(MiscDraw.includeBasePath + "/MiscDraw.js");

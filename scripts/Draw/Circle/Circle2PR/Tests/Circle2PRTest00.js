@@ -32,7 +32,7 @@ Circle2PRTest00.prototype = new TdbTest();
 Circle2PRTest00.prototype.test00 = function() {
     qDebug('running Circle2PRTest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(14, 17.3);
@@ -52,7 +52,7 @@ Circle2PRTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     var p = new RVector(3.7, 28.4);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::CircleMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::CircleToolsPanelButton');
     this.clickOnWidget('MainWindow::CircleToolsPanel::Circle2PRButton');
     this.setToolOption('Circle2PR/Radius',  [ 8, 0 ] );
     this.setToolOption('Circle2PR/Solution', 'Solution1');

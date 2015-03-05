@@ -20,6 +20,21 @@
         <source>Rotate T&amp;wo</source>
         <translation>Double &amp;rotation</translation>
     </message>
+    <message>
+        <location filename="../Rotate2.ui" line="+17"/>
+        <source>Primary Angle:</source>
+        <translation>Angle primaire :</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Secondary Angle:</source>
+        <translation>Angle secondaire :</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Copies:</source>
+        <translation>Copies : </translation>
+    </message>
 </context>
 <context>
     <name>Rotate2Dialog</name>
@@ -107,21 +122,18 @@
 <context>
     <name>TranslateRotate</name>
     <message>
-        <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Angle primaire :</translation>
+        <translation type="vanished">Angle primaire :</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Secondary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Angle secondaire :</translation>
+        <translation type="vanished">Angle secondaire :</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Copies:</source>
-        <translation>Copies : </translation>
+        <translation type="vanished">Copies : </translation>
     </message>
 </context>
 </TS>

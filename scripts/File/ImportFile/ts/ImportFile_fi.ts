@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>ImportFile</name>
     <message>
         <location filename="../ImportFile.js" line="+47"/>
         <source>Error while importing file %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Virhe tuotaessa tiedostoa %1</translation>
     </message>
     <message>
         <location line="+12"/>

@@ -34,7 +34,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+312"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -130,6 +130,11 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -32,7 +32,7 @@ Circle3PTest00.prototype = new TdbTest();
 Circle3PTest00.prototype.test00 = function() {
     qDebug('running Circle3PTest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(27.4, 25.7);
@@ -67,7 +67,7 @@ Circle3PTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     var p = new RVector(39.2, 13.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::CircleMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::CircleToolsPanelButton');
     this.clickOnWidget('MainWindow::CircleToolsPanel::Circle3PButton');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(7.8, 14.3);

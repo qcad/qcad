@@ -32,9 +32,9 @@ Rotate2Test03.prototype = new TdbTest();
 Rotate2Test03.prototype.test00 = function() {
     qDebug('running Rotate2Test03.test00()...');
     this.setUp();
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(60, 410), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(60, 410), Qt.LeftButton, 0, 0);
     this.importFile('scripts/Modify/Rotate2/Tests/data/ellipse.dxf');
     this.setZoom(19.176250917513833, new RVector(13.1934, 14.2118, 0) );

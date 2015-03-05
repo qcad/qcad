@@ -39,7 +39,7 @@
         <translation>Déplacer entité</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+312"/>
         <source>Move Reference Point</source>
         <translation>Déplacer référence</translation>
     </message>
@@ -150,6 +150,11 @@
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
         <translation>Entité n&apos;est pas une ligne, un arc, un cercle ou une ellipse.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
+        <translation>Entité n&apos;est pas une ligne, un arc, un cercle, une ellipse ou polyligne.</translation>
     </message>
     <message>
         <location line="+4"/>

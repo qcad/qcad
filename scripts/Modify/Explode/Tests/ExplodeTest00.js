@@ -34,8 +34,8 @@ ExplodeTest00.prototype.test00 = function() {
     this.setUp();
     this.importFile('scripts/Modify/Explode/Tests/data/explodable.dxf');
     this.selectAll();
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel::ModifyMenuButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::ModifyToolsPanel::ExplodeButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::ExplodeButton');
     this.setZoom(10.969860148549158, new RVector(1.32775, 2.35963, 0) );
     this.verifyDrawing('ExplodeTest00_000.dxf');
     this.tearDown();

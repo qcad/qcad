@@ -34,7 +34,7 @@
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+312"/>
         <source>Move Reference Point</source>
         <translation>Referenzpunkt verschieben</translation>
     </message>
@@ -135,6 +135,11 @@
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
         <translation>Element ist keine Linie, kein Bogen oder Kreis und keine Ellipse.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
+        <translation>Element ist keine Linie, kein Bogen oder Kreis, keine Ellipse und keine Polylinie.</translation>
     </message>
     <message>
         <location line="+4"/>

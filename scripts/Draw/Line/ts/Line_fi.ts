@@ -14,7 +14,7 @@
         <translation>Näytä viivatyökalut</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+14"/>
         <source>&amp;Line</source>
         <translation>&amp;Viiva</translation>
     </message>

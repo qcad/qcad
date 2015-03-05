@@ -32,7 +32,7 @@ ArcConcentricTest00.prototype = new TdbTest();
 ArcConcentricTest00.prototype.test00 = function() {
     qDebug('running ArcConcentricTest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::ArcMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::ArcToolsPanelButton');
     this.clickOnWidget('MainWindow::ArcToolsPanel::Arc3PButton');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(10, 10.1);
@@ -53,7 +53,7 @@ ArcConcentricTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     var p = new RVector(3.5, 28.6);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::ArcMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::ArcToolsPanelButton');
     this.clickOnWidget('MainWindow::ArcToolsPanel::ArcConcentricButton');
     this.setToolOption('ArcConcentric/Distance',  [ 1, 0 ] );
     this.setToolOption('ArcConcentric/Number', '2');

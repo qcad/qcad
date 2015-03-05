@@ -50,7 +50,7 @@ Line.LineType = {
 Line.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="LineToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="LineToolsPanelAction") {
         EAction.showCadToolBarPanel("LineToolsPanel");
         this.terminate();
     }
@@ -76,7 +76,7 @@ Line.getToolBar = function() {
 
 Line.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "LineToolsPanelButton";
+    var actionName = "LineToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Line Tools"), mtb);
         action.setScriptFile(Line.includeBasePath + "/Line.js");
@@ -92,11 +92,7 @@ Line.getCadToolBarPanel = function() {
         action.setWidgetNames(["MainToolsPanel"]);
     }
 
-    var tb = EAction.getCadToolBarPanel(
-        Line.getTitle(),
-        "LineToolsPanel",
-        true
-    );
+    var tb = EAction.getCadToolBarPanel(Line.getTitle(), "LineToolsPanel", true);
     return tb;
 };
 

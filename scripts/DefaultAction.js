@@ -288,7 +288,6 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
     if (event.button() === Qt.LeftButton) {
         switch (this.state) {
         case DefaultAction.State.Dragging:
-
             view = event.getGraphicsView();
             range = view.mapDistanceFromView(this.pickRangePixels);
             //range = view.mapDistanceFromView(10);

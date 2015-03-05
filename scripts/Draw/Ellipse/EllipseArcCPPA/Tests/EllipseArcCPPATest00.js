@@ -33,7 +33,7 @@ EllipseArcCPPATest00.prototype.test00 = function() {
     qDebug('running EllipseArcCPPATest00.test00()...');
     this.setUp();
     this.importFile('scripts/Draw/Ellipse/EllipseArcCPPA/Tests/lines.dxf');
-    this.clickOnWidget('MainWindow::MainToolsPanel::EllipseMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::EllipseToolsPanelButton');
     this.clickOnWidget('MainWindow::EllipseToolsPanel::EllipseArcCPPAButton');
     this.setToolOption('EllipseArcCPPA/Direction', 'CounterClockwise');
     this.updateToolOptions();

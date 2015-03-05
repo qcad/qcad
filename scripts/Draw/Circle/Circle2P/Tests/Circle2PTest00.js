@@ -32,7 +32,7 @@ Circle2PTest00.prototype = new TdbTest();
 Circle2PTest00.prototype.test00 = function() {
     qDebug('running Circle2PTest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::CircleMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::CircleToolsPanelButton');
     this.clickOnWidget('MainWindow::CircleToolsPanel::CircleCPButton');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(5, 26.8);

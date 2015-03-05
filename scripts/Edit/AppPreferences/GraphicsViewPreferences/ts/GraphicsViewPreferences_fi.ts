@@ -89,18 +89,13 @@
         <translation>Kuvion mitta viivapaksuudella 0.00m:</translation>
     </message>
     <message>
-        <location line="+182"/>
-        <source>Display entities with more than N dashes as continuous:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-218"/>
+        <location line="-36"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automaattisesti käytä kuvaruudun viivoja muotoilunäkymässä</translation>
     </message>
     <message>
         <source>Auto switch linetypes</source>
-        <translation type="obsolete">Vaihda viivatyyppejä automaattisesti</translation>
+        <translation type="vanished">Vaihda viivatyyppejä automaattisesti</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -123,7 +118,12 @@
         <translation>Näytä kaaret viivoina alle tämänmittaisen kulman (astetta):</translation>
     </message>
     <message>
-        <location line="+111"/>
+        <location line="+69"/>
+        <source>Display entities with more than N dashes as continuous:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+42"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation type="unfinished"></translation>
     </message>

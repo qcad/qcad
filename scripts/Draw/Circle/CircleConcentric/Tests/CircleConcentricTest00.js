@@ -32,7 +32,7 @@ CircleConcentricTest00.prototype = new TdbTest();
 CircleConcentricTest00.prototype.test00 = function() {
     qDebug('running CircleConcentricTest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::CircleMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::CircleToolsPanelButton');
     this.clickOnWidget('MainWindow::CircleToolsPanel::CircleCPButton');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(18.1, 14.8);
@@ -48,7 +48,7 @@ CircleConcentricTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     var p = new RVector(8, 31.1);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::CircleMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::CircleToolsPanelButton');
     this.clickOnWidget('MainWindow::CircleToolsPanel::CircleConcentricButton');
     this.setToolOption('CircleConcentric/Distance',  [ 0.7, 0 ] );
     this.setToolOption('CircleConcentric/Number', '3');

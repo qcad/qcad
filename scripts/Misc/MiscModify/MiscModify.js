@@ -49,7 +49,7 @@ MiscModify.getToolBar = function() {
 
 MiscModify.getCadToolBarPanel = function() {
     var mtb = Misc.getCadToolBarPanel();
-    var actionName = "MiscModifyToolsPanelButton";
+    var actionName = "MiscModifyToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Misc Modification Tools"), mtb);
         action.setScriptFile(MiscModify.includeBasePath + "/MiscModify.js");

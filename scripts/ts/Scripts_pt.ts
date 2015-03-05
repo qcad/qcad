@@ -39,7 +39,7 @@
         <translation>Mover entidade</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+312"/>
         <source>Move Reference Point</source>
         <translation>Mover ponto de referência</translation>
     </message>
@@ -170,6 +170,11 @@ Ferramentas CAD</translatorcomment>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
         <translation>Entidade não é uma linha, um arco, círculo ou elipse.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
+        <translation>Entidade não é uma linha, um arco, círculo, elipse ou polilinha.</translation>
     </message>
     <message>
         <location line="+4"/>
