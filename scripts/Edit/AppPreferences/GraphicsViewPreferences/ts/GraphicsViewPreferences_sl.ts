@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>GraphicsView</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Izhodišče</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži velike izhodiščne osi</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -76,12 +76,12 @@
     <message>
         <location line="+9"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation>Samodejno preklopi na zaslonske črte v prikazu modela</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation type="unfinished"></translation>
+        <translation>Povečuj vzorce črt glede na debelino črte</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -91,12 +91,12 @@
     <message>
         <location line="+182"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži entitete z več kot N pikami kot neprekinjene:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation>Najmanjši kot koraka za izris krivulje (stopinje):</translation>
     </message>
     <message>
         <location line="-260"/>

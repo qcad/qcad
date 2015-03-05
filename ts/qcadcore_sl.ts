@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>QObject</name>
     <message>
@@ -154,7 +154,7 @@
     <message>
         <location line="+1"/>
         <source>Orange</source>
-        <translation type="unfinished"></translation>
+        <translation>Oranžna</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -217,22 +217,22 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID trenutne plasti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Merska enota</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Povečava tipa črte</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Pisava kotiranj</translation>
     </message>
 </context>
 <context>
@@ -312,7 +312,7 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Povečava tipa črte</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -491,87 +491,87 @@
     <name>RLinetype</name>
     <message>
         <source>By Layer</source>
-        <translation type="vanished">Po plasti</translation>
+        <translation>Po plasti</translation>
     </message>
     <message>
         <source>By Block</source>
-        <translation type="vanished">Po elementu</translation>
+        <translation>Po elementu</translation>
     </message>
     <message>
         <source>Continuous</source>
-        <translation type="vanished">Neprekinjeno</translation>
+        <translation>Neprekinjeno</translation>
     </message>
     <message>
         <source>Dot</source>
-        <translation type="vanished">Pika</translation>
+        <translation>Pika</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translation type="vanished">Pika (majhna)</translation>
+        <translation>Pika (majhna)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation type="vanished">Pika (velika)</translation>
+        <translation>Pika (velika)</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translation type="vanished">Črtica</translation>
+        <translation>Črtica</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translation type="vanished">Črtica (majhna)</translation>
+        <translation>Črtica (majhna)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation type="vanished">Črtica (velika)</translation>
+        <translation>Črtica (velika)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation type="vanished">Črtica Pika</translation>
+        <translation>Črtica Pika</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation type="vanished">Črtica Pika (majhna)</translation>
+        <translation>Črtica Pika (majhna)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation type="vanished">Črtica Pika (velika)</translation>
+        <translation>Črtica Pika (velika)</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translation type="vanished">Delilna</translation>
+        <translation>Delilna</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translation type="vanished">Delilna (majhna)</translation>
+        <translation>Delilna (majhna)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translation type="vanished">Delilna (velika)</translation>
+        <translation>Delilna (velika)</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="vanished">Srednjica</translation>
+        <translation>Srednjica</translation>
     </message>
     <message>
         <source>Center (small)</source>
-        <translation type="vanished">Srednjica (majhna)</translation>
+        <translation>Srednjica (majhna)</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translation type="vanished">Srednjica (velika)</translation>
+        <translation>Srednjica (velika)</translation>
     </message>
     <message>
         <source>Border</source>
-        <translation type="vanished">Rob</translation>
+        <translation>Rob</translation>
     </message>
     <message>
         <source>Border (small)</source>
-        <translation type="vanished">Rob (majhna)</translation>
+        <translation>Rob (majhna)</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translation type="vanished">Rob (velika)</translation>
+        <translation>Rob (velika)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -586,7 +586,7 @@
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Mersko</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -653,134 +653,134 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Nevidna</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation type="unfinished"></translation>
+        <translation>Fantomska</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO črtica</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO črtica razmak</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dolga črtica pika</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO doga črtica dvojna pika</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dolga črtica tri pike </translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO pika</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dolga črtica kratka črtica</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dolga črtica dve kratki črtici</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO črtica pika</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dvojna črtica pika</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO črtica dvojna pika</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dvojna črtica dve piki</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO črtica trojna pika</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dvojna črtica tri pike</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hot Water Supply</source>
-        <translation type="unfinished"></translation>
+        <translation>Dovod vroče vode</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation type="unfinished"></translation>
+        <translation>Vroča voda</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gas Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Plinovod</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation type="unfinished"></translation>
+        <translation>Zbito</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation type="unfinished"></translation>
+        <translation>Cik cak</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation type="unfinished"></translation>
+        <translation>Sledi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ograja 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ograja 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drainage</source>
-        <translation type="unfinished"></translation>
+        <translation>Drenaža</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>Drenaža obratna</translation>
     </message>
 </context>
 <context>
@@ -936,7 +936,7 @@
     <message>
         <location line="+1"/>
         <source>Protected</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaščiteno</translation>
     </message>
 </context>
 </TS>

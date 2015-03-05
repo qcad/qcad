@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>BehaviorPreferences</name>
     <message>
@@ -34,27 +34,27 @@
     <message>
         <location line="+13"/>
         <source>Right-Click</source>
-        <translation type="unfinished"></translation>
+        <translation>Desni klik</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Desni klik za odizbor entitet</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cursor Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Območje kurzorja</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Cursor range for snap:</source>
-        <translation type="unfinished"></translation>
+        <translation>Območje kurzorja za lepljenje:</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Cursor range for picking entities:</source>
-        <translation type="unfinished"></translation>
+        <translation>Območje kurzorja za izbor entitet:</translation>
     </message>
 </context>
 </TS>

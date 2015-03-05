@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -22,11 +22,11 @@
     <message>
         <location filename="../NewFile.js" line="+114"/>
         <source>Opening drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpiram risbo:</translation>
     </message>
     <message>
         <source>Loading...</source>
-        <translation type="vanished">Odpiram...</translation>
+        <translation>Odpiram...</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -51,16 +51,16 @@
     <message>
         <location line="+4"/>
         <source>File is empty.</source>
-        <translation>Datoteka je prazna</translation>
+        <translation>Datoteka je prazna.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Drawing loaded successfully:</source>
-        <translation type="unfinished"></translation>
+        <translation>Risba naložena uspešno:</translation>
     </message>
     <message>
         <source>Opened drawing:</source>
-        <translation type="vanished">Odprta risba</translation>
+        <translation>Odprta risba:</translation>
     </message>
     <message>
         <location line="+4"/>

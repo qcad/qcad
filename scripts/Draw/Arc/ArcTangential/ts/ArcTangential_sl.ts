@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>ArcTangential</name>
     <message>
@@ -20,12 +20,12 @@
     </message>
     <message>
         <source>&amp;Tangentially connected</source>
-        <translation type="vanished">&amp;Tangencialno povezano</translation>
+        <translation>&amp;Tangencialno povezano</translation>
     </message>
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tangencialno povezano</translation>
     </message>
     <message>
         <location line="+4"/>
