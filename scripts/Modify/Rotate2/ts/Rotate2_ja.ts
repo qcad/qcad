@@ -18,6 +18,21 @@
         <source>Rotate T&amp;wo</source>
         <translation>&amp;w 回転２</translation>
     </message>
+    <message>
+        <location filename="../Rotate2.ui" line="+17"/>
+        <source>Primary Angle:</source>
+        <translation type="unfinished">主要な角度:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Secondary Angle:</source>
+        <translation type="unfinished">２つ目の角度:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Copies:</source>
+        <translation type="unfinished">コピー:</translation>
+    </message>
 </context>
 <context>
     <name>Rotate2Options</name>
@@ -65,19 +80,16 @@
 <context>
     <name>TranslateRotate</name>
     <message>
-        <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation>主要な角度:</translation>
+        <translation type="vanished">主要な角度:</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation>２つ目の角度:</translation>
+        <translation type="vanished">２つ目の角度:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Copies:</source>
-        <translation>コピー:</translation>
+        <translation type="vanished">コピー:</translation>
     </message>
 </context>
 </TS>

@@ -20,6 +20,21 @@
         <source>Rotate T&amp;wo</source>
         <translation>Rotar a &amp;dos</translation>
     </message>
+    <message>
+        <location filename="../Rotate2.ui" line="+17"/>
+        <source>Primary Angle:</source>
+        <translation type="unfinished">Ángulo primario:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Secondary Angle:</source>
+        <translation type="unfinished">Ángulo secundaria:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Copies:</source>
+        <translation type="unfinished">Copias:</translation>
+    </message>
 </context>
 <context>
     <name>Rotate2Dialog</name>
@@ -112,26 +127,23 @@ Usar capa y los &amp;atributos actual</translatorcomment>
 <context>
     <name>TranslateRotate</name>
     <message>
-        <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ángulo primario:</translation>
+        <translation type="vanished">Ángulo primario:</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Secondary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ángulo secundaria:</translation>
+        <translation type="vanished">Ángulo secundaria:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Copies:</source>
         <translatorcomment>--ignored colon--
 --file: qt_es.ts--
 Copias &amp;Múltiples:
 Copias Múltiples:
 Número de copias:</translatorcomment>
-        <translation>Copias:</translation>
+        <translation type="vanished">Copias:</translation>
     </message>
 </context>
 </TS>

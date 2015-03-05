@@ -14,7 +14,7 @@
         <translation>Linienwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+14"/>
         <source>&amp;Line</source>
         <translation>&amp;Linie</translation>
     </message>

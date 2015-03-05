@@ -4,8 +4,7 @@
 <context>
     <name>Snap</name>
     <message>
-        <location filename="../Snap.js" line="+42"/>
-        <location line="+20"/>
+        <location filename="../Snap.js" line="+57"/>
         <source>Snap Tools</source>
         <translation>Poimintatyökalut</translation>
     </message>

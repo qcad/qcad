@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -39,7 +39,7 @@
         <translation>Mover entidad</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+312"/>
         <source>Move Reference Point</source>
         <translation>Mover punto de referencia</translation>
     </message>

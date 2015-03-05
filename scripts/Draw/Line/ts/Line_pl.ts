@@ -20,7 +20,7 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
         <translation type="unfinished">Pokaż menu &quot;Linie&quot;</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+14"/>
         <source>&amp;Line</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

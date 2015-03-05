@@ -9,7 +9,7 @@
         <translation>Diverses</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+9"/>
         <source>Misc Block Tools</source>
         <translation>Diverse Blockwerkzeuge</translation>
     </message>

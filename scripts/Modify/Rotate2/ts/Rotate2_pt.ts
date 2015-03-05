@@ -23,6 +23,21 @@
 Rotacione &amp;Duas</translatorcomment>
         <translation>Rotacione &amp;duas</translation>
     </message>
+    <message>
+        <location filename="../Rotate2.ui" line="+17"/>
+        <source>Primary Angle:</source>
+        <translation type="unfinished">Ângulo primário:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Secondary Angle:</source>
+        <translation type="unfinished">Ângulo secundário:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Copies:</source>
+        <translation type="unfinished">Cópias:</translation>
+    </message>
 </context>
 <context>
     <name>Rotate2Dialog</name>
@@ -132,25 +147,22 @@ Use camada e &amp;atributos atual</translatorcomment>
 <context>
     <name>TranslateRotate</name>
     <message>
-        <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ângulo primário:</translation>
+        <translation type="vanished">Ângulo primário:</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Secondary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ângulo secundário:</translation>
+        <translation type="vanished">Ângulo secundário:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Copies:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pt.ts--
 Número de cópias:
 Espaço entre cópias:</translatorcomment>
-        <translation>Cópias:</translation>
+        <translation type="vanished">Cópias:</translation>
     </message>
 </context>
 </TS>

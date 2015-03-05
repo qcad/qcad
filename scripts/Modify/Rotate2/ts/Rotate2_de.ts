@@ -18,6 +18,21 @@
         <source>Center of secondary rotation</source>
         <translation>Zentrum der sekundären Rotation</translation>
     </message>
+    <message>
+        <location filename="../Rotate2.ui" line="+17"/>
+        <source>Primary Angle:</source>
+        <translation type="unfinished">Hauptwinkel:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Secondary Angle:</source>
+        <translation type="unfinished">Nebenwinkel:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Copies:</source>
+        <translation type="unfinished">Kopien:</translation>
+    </message>
 </context>
 <context>
     <name>Rotate2Dialog</name>
@@ -116,23 +131,20 @@
         <translation type="obsolete">11</translation>
     </message>
     <message>
-        <location filename="../Rotate2.ui" line="+54"/>
         <source>Copies:</source>
-        <translation>Kopien:</translation>
+        <translation type="vanished">Kopien:</translation>
     </message>
     <message>
-        <location line="-37"/>
         <source>Primary Angle:</source>
-        <translation>Hauptwinkel:</translation>
+        <translation type="vanished">Hauptwinkel:</translation>
     </message>
     <message>
         <source>30</source>
         <translation type="obsolete">30</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation>Nebenwinkel:</translation>
+        <translation type="vanished">Nebenwinkel:</translation>
     </message>
 </context>
 </TS>

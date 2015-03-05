@@ -20,6 +20,21 @@
         <source>Rotate T&amp;wo</source>
         <translation>Doppia &amp;rotazione</translation>
     </message>
+    <message>
+        <location filename="../Rotate2.ui" line="+17"/>
+        <source>Primary Angle:</source>
+        <translation type="unfinished">Angolo primaria:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Secondary Angle:</source>
+        <translation type="unfinished">Angolo secondario:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Copies:</source>
+        <translation type="unfinished">Copie:</translation>
+    </message>
 </context>
 <context>
     <name>Rotate2Dialog</name>
@@ -112,21 +127,18 @@ Usa layer e gli &amp;attributi corrente</translatorcomment>
 <context>
     <name>TranslateRotate</name>
     <message>
-        <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Angolo primaria:</translation>
+        <translation type="vanished">Angolo primaria:</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Secondary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Angolo secondario:</translation>
+        <translation type="vanished">Angolo secondario:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Copies:</source>
-        <translation>Copie:</translation>
+        <translation type="vanished">Copie:</translation>
     </message>
 </context>
 </TS>
