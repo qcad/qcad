@@ -21,17 +21,17 @@
     <message>
         <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="unfinished">Hauptwinkel:</translation>
+        <translation>Hauptwinkel:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation type="unfinished">Nebenwinkel:</translation>
+        <translation>Nebenwinkel:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Copies:</source>
-        <translation type="unfinished">Kopien:</translation>
+        <translation>Kopien:</translation>
     </message>
 </context>
 <context>

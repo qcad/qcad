@@ -26,17 +26,17 @@ Rotacione &amp;Duas</translatorcomment>
     <message>
         <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="unfinished">Ângulo primário:</translation>
+        <translation>Ângulo primário:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation type="unfinished">Ângulo secundário:</translation>
+        <translation>Ângulo secundário:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Copies:</source>
-        <translation type="unfinished">Cópias:</translation>
+        <translation>Cópias:</translation>
     </message>
 </context>
 <context>
