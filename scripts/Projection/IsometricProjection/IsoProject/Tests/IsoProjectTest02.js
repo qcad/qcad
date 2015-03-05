@@ -32,9 +32,9 @@ IsoProjectTest02.prototype = new TdbTest();
 IsoProjectTest02.prototype.test00 = function() {
     qDebug('running IsoProjectTest02.test00()...');
     this.setUp();
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(44, 436), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(44, 436), Qt.LeftButton, 0, 0);
     this.importFile('scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_circle.dxf');
     this.setZoom(6.914994309623345, new RVector(1.69613, 14.7619, 0) );

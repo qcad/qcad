@@ -40,7 +40,7 @@ Point.includeBasePath = includeBasePath;
 Point.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="PointMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="PointToolsPanelAction") {
         EAction.showCadToolBarPanel("PointToolsPanel");
         this.terminate();
     }
@@ -66,7 +66,7 @@ Point.getToolBar = function() {
 
 Point.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "PointMenu";
+    var actionName = "PointToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Point Tools"), mtb);
         action.setScriptFile(Point.includeBasePath + "/Point.js");

@@ -41,7 +41,7 @@ Block.includeBasePath = includeBasePath;
 Block.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="BlockToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="BlockToolsPanelAction") {
         EAction.showCadToolBarPanel("BlockToolsPanel");
         this.terminate();
     }
@@ -61,7 +61,7 @@ Block.getToolBar = function() {
 
 Block.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "BlockToolsPanelButton";
+    var actionName = "BlockToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Block Tools"), mtb);
         action.setScriptFile(Block.includeBasePath + "/Block.js");

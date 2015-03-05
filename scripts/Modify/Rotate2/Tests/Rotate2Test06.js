@@ -32,9 +32,9 @@ Rotate2Test06.prototype = new TdbTest();
 Rotate2Test06.prototype.test00 = function() {
     qDebug('running Rotate2Test06.test00()...');
     this.setUp();
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(60, 419), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(60, 419), Qt.LeftButton, 0, 0);
     this.importFile('scripts/Modify/Rotate2/Tests/data/text.dxf');
     var p = new RVector(9.56801, -0.576721);

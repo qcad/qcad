@@ -40,7 +40,7 @@ Ellipse.includeBasePath = includeBasePath;
 Ellipse.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="EllipseToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="EllipseToolsPanelAction") {
         EAction.showCadToolBarPanel("EllipseToolsPanel");
         this.terminate();
     }
@@ -66,7 +66,7 @@ Ellipse.getToolBar = function() {
 
 Ellipse.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "EllipseToolsPanelButton";
+    var actionName = "EllipseToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Ellipse Tools"), mtb);
         action.setScriptFile(Ellipse.includeBasePath + "/Ellipse.js");

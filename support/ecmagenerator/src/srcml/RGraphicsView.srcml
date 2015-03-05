@@ -1635,7 +1635,7 @@ dir="./core" filename="RGraphicsView.h">
     <type>
       <name>RVector</name>
     </type>
-    <name>lastKnownViewPosition</name>
+    <name>lastKnownScreenPosition</name>
   </decl>;</decl_stmt>
   <comment type="block">/** * Internal list of text labels that
   were added to this view. */</comment>

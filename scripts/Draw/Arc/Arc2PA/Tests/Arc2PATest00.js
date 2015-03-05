@@ -32,7 +32,7 @@ Arc2PATest00.prototype = new TdbTest();
 Arc2PATest00.prototype.test00 = function() {
     qDebug('running Arc2PATest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::ArcMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::ArcToolsPanelButton');
     this.clickOnWidget('MainWindow::ArcToolsPanel::Arc2PAButton');
     this.setToolOption('Arc2PA/Angle',  [ 15, 0 ] );
     this.setToolOption('Arc2PA/Direction', 'CounterClockwise');

@@ -33,9 +33,9 @@ LeaderTest00.prototype.test00 = function() {
     qDebug('running LeaderTest00.test00()...');
     this.setUp();
     this.importFile('scripts/Draw/Dimension/Tests/floor_plan.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel::DimensionMenuButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::DimensionToolsPanel::LeaderButton');
-    this.setToolOption('Leader/ArrowHead', 'false');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::DimensionToolsPanel::LeaderButton');
+    this.setToolOption('Leader/ArrowHead', 'true');
     this.updateToolOptions();
     this.setZoom(8.462355798421374, new RVector(8.07841, 11.8066, 0) );
     var p = new RVector(9.647148, 17.263291);

@@ -33,9 +33,9 @@ IsoProjectTest00.prototype.test00 = function() {
     qDebug('running IsoProjectTest00.test00()...');
     this.setUp();
     this.importFile('scripts/Projection/IsometricProjection/IsoProject/Tests/data/figure.dxf');
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(66, 418), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(66, 418), Qt.LeftButton, 0, 0);
     var p = new RVector(65.990745, 28.855793);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.MidButton, 4, 0);

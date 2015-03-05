@@ -69,7 +69,7 @@ LinesSnapCenter.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
     this.verifyDrawing('LinesSnapCenter_000.dxf');
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.clickOnWidget('MainWindow::SnapToolsPanel::SnapCenterButton');
     this.zoomTo(-28.95, -21.750000000000004, 28.950000000000003, 21.75);

@@ -55,7 +55,7 @@ MiscIO.getToolBar = function() {
 
 MiscIO.getCadToolBarPanel = function() {
     var mtb = Misc.getCadToolBarPanel();
-    var actionName = "MiscIOToolsPanelButton";
+    var actionName = "MiscIOToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Misc Import / Export Tools"), mtb);
         action.setScriptFile(MiscIO.includeBasePath + "/MiscIO.js");

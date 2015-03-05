@@ -40,7 +40,7 @@ Dimension.includeBasePath = includeBasePath;
 Dimension.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="DimensionToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="DimensionToolsPanelAction") {
         EAction.showCadToolBarPanel("DimensionToolsPanel");
         this.terminate();
     }
@@ -124,7 +124,7 @@ Dimension.getToolBar = function() {
 
 Dimension.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "DimensionToolsPanelButton";
+    var actionName = "DimensionToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Dimension Tools"), mtb);
         action.setScriptFile(Dimension.includeBasePath + "/Dimension.js");

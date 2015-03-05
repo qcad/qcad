@@ -33,9 +33,9 @@ IsoProjectTest04.prototype.test00 = function() {
     qDebug('running IsoProjectTest04.test00()...');
     this.setUp();
     this.importFile('scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_ellipse.dxf');
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(61, 425), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(61, 425), Qt.LeftButton, 0, 0);
     this.setZoom(6.914994309623345, new RVector(1.69613, 14.7619, 0) );
     var p = new RVector(15.079008, 11.991533);

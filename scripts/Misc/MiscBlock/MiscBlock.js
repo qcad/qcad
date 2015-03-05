@@ -54,12 +54,8 @@ MiscBlock.getToolBar = function() {
 };
 
 MiscBlock.getCadToolBarPanel = function() {
-    return EAction.getMainCadToolBarPanel();
-};
-
-MiscBlock.getCadToolBarPanel = function() {
     var mtb = Misc.getCadToolBarPanel();
-    var actionName = "MiscBlockToolsPanelButton";
+    var actionName = "MiscBlockToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Misc Block Tools"), mtb);
         action.setScriptFile(MiscBlock.includeBasePath + "/MiscBlock.js");

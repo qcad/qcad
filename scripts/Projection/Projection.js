@@ -65,7 +65,7 @@ Projection.getToolBar = function() {
 
 Projection.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "ProjectionMenu";
+    var actionName = "ProjectionToolsPanelAction";
     if (!isNull(mtb) && isNull(mtb.findChild(actionName))) {
         var action = new RGuiAction(qsTr("Projection Tools"), mtb);
         action.setScriptFile(Projection.includeBasePath + "/Projection.js");
@@ -102,7 +102,7 @@ Projection.prototype.beginEvent = function() {
     Transform.prototype.beginEvent.call(this);
 
     // open menu:
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ProjectionMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ProjectionToolsPanelAction") {
         EAction.showCadToolBarPanel("ProjectionToolsPanel");
         this.terminate();
         return;

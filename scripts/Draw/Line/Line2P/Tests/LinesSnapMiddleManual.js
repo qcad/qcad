@@ -32,7 +32,7 @@ LinesSnapMiddleManual.prototype = new TdbTest();
 LinesSnapMiddleManual.prototype.test00 = function() {
     qDebug('running LinesSnapMiddleManual.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.zoomTo(-28.95, -21.45, 28.95, 21.45);
     var p = new RVector(-20, 0);
@@ -52,7 +52,7 @@ LinesSnapMiddleManual.prototype.test00 = function() {
     this.sendMouseEventToGv(QEvent.MouseButtonPress, new QPoint(343, 326), Qt.RightButton, 2, 0);
     this.sendMouseEventToGv(QEvent.MouseButtonRelease, new QPoint(343, 326), Qt.RightButton, 0, 0);
     this.verifyDrawing('LinesSnapMiddleManual_000.dxf');
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.clickOnWidget('MainWindow::SnapToolsPanel::SnapMiddleManualButton');
     this.zoomTo(-28.95, -21.45, 28.95, 21.45);

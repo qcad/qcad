@@ -52,7 +52,7 @@ RGraphicsView::RGraphicsView(RGraphicsScene* scene) :
     setScene(scene, false);
 
     lastKnownModelPosition = RVector::invalid;
-    lastKnownViewPosition = RVector::invalid;
+    lastKnownScreenPosition = RVector::invalid;
 
     autoScalePatterns = RSettings::getAutoScalePatterns();
 }
@@ -531,8 +531,11 @@ void RGraphicsView::handleKeyReleaseEvent(QKeyEvent& event) {
 
 
 void RGraphicsView::simulateMouseMoveEvent() {
-    if (lastKnownViewPosition.isValid()) {
-        RMouseEvent e(QEvent::MouseMove, lastKnownViewPosition, Qt::NoButton, Qt::NoButton, Qt::NoModifier, *getScene(), *this);
+    if (lastKnownScreenPosition.isValid()) {
+        RMouseEvent e(QEvent::MouseMove, lastKnownScreenPosition, Qt::NoButton, Qt::NoButton, Qt::NoModifier, *getScene(), *this);
+        if (lastKnownModelPosition.isValid()) {
+            e.setModelPosition(lastKnownModelPosition);
+        }
         handleMouseMoveEvent(e);
     }
 }
@@ -544,7 +547,7 @@ void RGraphicsView::simulateMouseMoveEvent() {
  */
 void RGraphicsView::handleMouseMoveEvent(RMouseEvent& event) {
     lastKnownModelPosition = event.getModelPosition();
-    lastKnownViewPosition = event.getScreenPosition();
+    lastKnownScreenPosition = event.getScreenPosition();
     if (scene != NULL) {
         scene->handleMouseMoveEvent(event);
     }
@@ -561,6 +564,8 @@ void RGraphicsView::handleMouseMoveEvent(RMouseEvent& event) {
  * that is attached to this view.
  */
 void RGraphicsView::handleMousePressEvent(RMouseEvent& event) {
+    lastKnownModelPosition = event.getModelPosition();
+    lastKnownScreenPosition = event.getScreenPosition();
     if (scene == NULL) {
         return;
     }
@@ -578,6 +583,8 @@ void RGraphicsView::handleMousePressEvent(RMouseEvent& event) {
  * that is attached to this view.
  */
 void RGraphicsView::handleMouseReleaseEvent(RMouseEvent& event) {
+    lastKnownModelPosition = event.getModelPosition();
+    lastKnownScreenPosition = event.getScreenPosition();
     if (scene == NULL) {
         return;
     }
@@ -593,6 +600,8 @@ void RGraphicsView::handleMouseReleaseEvent(RMouseEvent& event) {
  * that is attached to this view.
  */
 void RGraphicsView::handleMouseDoubleClickEvent(RMouseEvent& event) {
+    lastKnownModelPosition = event.getModelPosition();
+    lastKnownScreenPosition = event.getScreenPosition();
     if (scene == NULL) {
         return;
     }

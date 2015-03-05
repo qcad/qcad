@@ -51,7 +51,7 @@ CircleCPTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     var p = new RVector(32.8, 13.3);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::CircleMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::CircleToolsPanelButton');
     this.clickOnWidget('MainWindow::CircleToolsPanel::CircleCPButton');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(17.7, 22.2);

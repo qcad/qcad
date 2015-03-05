@@ -32,7 +32,7 @@ LinesSnapDistance.prototype = new TdbTest();
 LinesSnapDistance.prototype.test00 = function() {
     qDebug('running LinesSnapDistance.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.zoomTo(-28.95, -21.449999999999996, 28.950000000000003, 21.450000000000006);
     var p = new RVector(-20, 10);

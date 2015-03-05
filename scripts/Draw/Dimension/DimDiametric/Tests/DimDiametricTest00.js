@@ -33,8 +33,8 @@ DimDiametricTest00.prototype.test00 = function() {
     qDebug('running DimDiametricTest00.test00()...');
     this.setUp();
     this.importFile('scripts/Draw/Dimension/Tests/drawing02.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel::DimensionMenuButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::DimensionToolsPanel::DimDiametricButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::DimensionToolsPanel::DimDiametricButton');
     this.setToolOption('Dimension/Prefix', '(No prefix)');
     this.setToolOption('Dimension/Text', '');
     this.setToolOption('Dimension/UpperTolerance', '');

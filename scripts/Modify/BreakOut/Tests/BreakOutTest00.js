@@ -33,8 +33,8 @@ BreakOutTest00.prototype.test00 = function() {
     qDebug('running BreakOutTest00.test00()...');
     this.setUp();
     this.importFile('scripts/Modify/BreakOut/Tests/data/line_arc_circle.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel::ModifyMenuButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::ModifyToolsPanel::BreakOutButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::BreakOutButton');
     this.setToolOption('BreakOut/RemoveSegment', 'true');
     this.updateToolOptions();
     this.setZoom(11.315068493150683, new RVector(-0.863801, 6.13378, 0) );

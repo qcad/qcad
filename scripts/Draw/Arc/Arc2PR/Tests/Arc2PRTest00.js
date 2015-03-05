@@ -32,7 +32,7 @@ Arc2PRTest00.prototype = new TdbTest();
 Arc2PRTest00.prototype.test00 = function() {
     qDebug('running Arc2PRTest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::ArcMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::ArcToolsPanelButton');
     this.clickOnWidget('MainWindow::ArcToolsPanel::Arc2PRButton');
     this.setToolOption('Arc2PR/Radius',  [ 10, 0 ] );
     this.setToolOption('Arc2PR/Direction', 'CounterClockwise');

@@ -32,7 +32,7 @@ DrawPolylineTest01.prototype = new TdbTest();
 DrawPolylineTest01.prototype.test00 = function() {
     qDebug('running DrawPolylineTest01.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::PolylineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::PolylineToolsPanelButton');
     this.clickOnWidget('MainWindow::PolylineToolsPanel::DrawPolylineButton');
     this.setToolOption('DrawPolyline/ArcSegment', 'false');
     this.setToolOption('DrawPolyline/Radius',  [ 6, 0 ] );

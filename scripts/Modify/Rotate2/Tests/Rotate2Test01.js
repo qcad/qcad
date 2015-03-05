@@ -32,9 +32,9 @@ Rotate2Test01.prototype = new TdbTest();
 Rotate2Test01.prototype.test00 = function() {
     qDebug('running Rotate2Test01.test00()...');
     this.setUp();
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(73, 423), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(73, 423), Qt.LeftButton, 0, 0);
     this.importFile('scripts/Modify/Rotate2/Tests/data/line.dxf');
     this.setZoom(14.057239743879641, new RVector(25.6135, 16.7636, 0) );

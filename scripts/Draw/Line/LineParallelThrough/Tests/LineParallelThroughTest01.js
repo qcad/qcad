@@ -33,7 +33,7 @@ LineParallelThroughTest01.prototype.test00 = function() {
     qDebug('running LineParallelThroughTest01.test00()...');
     this.setUp();
     this.importFile('scripts/Draw/Line/LineParallelThrough/Tests/data/polyline.dxf');
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::LineParallelThroughButton');
     this.setToolOption('LineParallelThrough/Number', '1');
     this.updateToolOptions();

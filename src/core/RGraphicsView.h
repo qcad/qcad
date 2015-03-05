@@ -334,7 +334,7 @@ protected:
 
     RVector currentStepOffset;
     RVector lastKnownModelPosition;
-    RVector lastKnownViewPosition;
+    RVector lastKnownScreenPosition;
 
     /**
      * Internal list of text labels that were added to this view.

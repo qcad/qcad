@@ -32,7 +32,7 @@ LineVerticalTest00.prototype = new TdbTest();
 LineVerticalTest00.prototype.test00 = function() {
     qDebug('running LineVerticalTest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::LineVerticalButton');
     this.setToolOption('LineHorizontal/Length',  [ 10, 0 ] );
     this.setToolOption('LineHorizontal/ReferencePoint', 'Start');

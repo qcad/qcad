@@ -96,6 +96,8 @@ dir="./core" filename="RInputEvent.h">
       <name>v</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <comment type="line">//void setScreenPosition(const RVector&amp;
+  v);</comment>
   <comment type="line">// RVector getUcsPosition() const;</comment>
   <function_decl>
   <type>

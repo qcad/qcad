@@ -33,8 +33,8 @@ DimRadialTest00.prototype.test00 = function() {
     qDebug('running DimRadialTest00.test00()...');
     this.setUp();
     this.importFile('scripts/Draw/Dimension/Tests/drawing01.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel::DimensionMenuButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::DimensionToolsPanel::DimRadialButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::DimensionToolsPanel::DimRadialButton');
     this.setToolOption('Dimension/Prefix', '\u00F8 (Diameter)');
     this.setToolOption('Dimension/Text', '');
     this.setToolOption('Dimension/UpperTolerance', '0.1');

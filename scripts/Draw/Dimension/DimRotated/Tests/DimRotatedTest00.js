@@ -33,8 +33,8 @@ DimRotatedTest00.prototype.test00 = function() {
     qDebug('running DimRotatedTest00.test00()...');
     this.setUp();
     this.importFile('scripts/Draw/Dimension/Tests/drawing00.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel::DimensionMenuButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::DimensionToolsPanel::DimRotatedButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::DimensionToolsPanel::DimRotatedButton');
     this.setToolOption('Dimension/Prefix', '(No prefix)');
     this.setToolOption('Dimension/Text', '');
     this.setToolOption('Dimension/UpperTolerance', '');

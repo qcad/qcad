@@ -44,7 +44,7 @@ Information.includeBasePath = includeBasePath;
 Information.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="InformationToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="InformationToolsPanelAction") {
         EAction.showCadToolBarPanel("InformationToolsPanel");
         this.terminate();
     }
@@ -258,7 +258,7 @@ Information.getToolBar = function() {
 
 Information.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "InformationToolsPanelButton";
+    var actionName = "InformationToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Information Tools"), mtb);
         action.setScriptFile(Information.includeBasePath + "/Information.js");

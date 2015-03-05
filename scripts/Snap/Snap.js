@@ -38,11 +38,6 @@ function Snap(guiAction) {
 Snap.prototype = new EAction();
 Snap.includeBasePath = includeBasePath;
 
-Snap.getCadToolBarPanel = function() {
-    var tb = EAction.getCadToolBarPanel(qsTr("Snap Tools"), "SnapToolsPanel", true);
-    return tb;
-};
-
 Snap.getMenu = function() {
     var menu = EAction.getMenu(Snap.getTitle(), "SnapMenu");
     menu.setProperty("scriptFile", Snap.includeBasePath + "/Snap.js");
@@ -57,7 +52,7 @@ Snap.getToolBar = function() {
 
 Snap.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "SnapToolsPanelButton";
+    var actionName = "SnapToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Snap Tools"), mtb);
         action.setScriptFile(Snap.includeBasePath + "/Snap.js");
@@ -104,7 +99,7 @@ Snap.prototype.beginEvent = function() {
         this.getGuiAction().setChecked(true);
     }
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="SnapToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="SnapToolsPanelAction") {
         EAction.showCadToolBarPanel("SnapToolsPanel");
         this.terminate();
     }

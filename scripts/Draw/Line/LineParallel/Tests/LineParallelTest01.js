@@ -33,7 +33,7 @@ LineParallelTest01.prototype.test00 = function() {
     qDebug('running LineParallelTest01.test00()...');
     this.setUp();
     this.importFile('scripts/Draw/Line/LineParallel/Tests/data/polyline.dxf');
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::LineParallelButton');
     this.setToolOption('LineParallel/Distance',  [ 1, 0 ] );
     this.setToolOption('LineParallel/Number', '1');

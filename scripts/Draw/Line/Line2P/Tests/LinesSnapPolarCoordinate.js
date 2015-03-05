@@ -32,7 +32,7 @@ LinesSnapPolarCoordinate.prototype = new TdbTest();
 LinesSnapPolarCoordinate.prototype.test00 = function() {
     qDebug('running LinesSnapPolarCoordinate.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.clickOnWidget('MainWindow::SnapToolsPanel::SnapCoordinatePolarButton');
     this.setToolOption('SnapCoordinatePolar/R',  [ 10, 0 ] );

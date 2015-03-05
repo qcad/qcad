@@ -32,7 +32,7 @@ LineTangent1Test00.prototype = new TdbTest();
 LineTangent1Test00.prototype.test00 = function() {
     qDebug('running LineTangent1Test00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::CircleMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::CircleToolsPanelButton');
     this.clickOnWidget('MainWindow::CircleToolsPanel::CircleCPButton');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(22.3, 14.7);
@@ -48,7 +48,7 @@ LineTangent1Test00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     var p = new RVector(28.8, 13.5);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::LineTangent1Button');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(40, 29.8);

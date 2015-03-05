@@ -32,7 +32,7 @@ LineAngle02.prototype = new TdbTest();
 LineAngle02.prototype.test00 = function() {
     qDebug('running LineAngle02.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::LineAngleButton');
     this.setToolOption('LineAngle/Angle',  [ 33, 0 ] );
     this.setToolOption('LineAngle/Length',  [ 15, 0 ] );

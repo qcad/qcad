@@ -32,7 +32,7 @@ Arc3PTest00.prototype = new TdbTest();
 Arc3PTest00.prototype.test00 = function() {
     qDebug('running Arc3PTest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::ArcMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::ArcToolsPanelButton');
     this.clickOnWidget('MainWindow::ArcToolsPanel::Arc3PButton');
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(20, 29.9);
