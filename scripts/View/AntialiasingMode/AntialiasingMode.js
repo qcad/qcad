@@ -32,7 +32,6 @@ function ToggleAntialiasingModeFocusListener(action) {
 ToggleAntialiasingModeFocusListener.prototype = new RViewFocusListenerAdapter();
 
 ToggleAntialiasingModeFocusListener.prototype.updateFocus = function(view) {
-    qDebug("update focus");
     if (isNull(view)) {
         this.action.checked = false;
         return;
