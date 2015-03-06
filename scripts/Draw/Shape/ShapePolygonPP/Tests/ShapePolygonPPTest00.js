@@ -32,7 +32,7 @@ ShapePolygonPPTest00.prototype = new TdbTest();
 ShapePolygonPPTest00.prototype.test00 = function() {
     qDebug('running ShapePolygonPPTest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::ShapeMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::ShapeToolsPanelButton');
     this.clickOnWidget('MainWindow::ShapeToolsPanel::ShapePolygonPPButton');
     this.setToolOption('ShapePolygonPP/Corners', '3');
     this.updateToolOptions();
