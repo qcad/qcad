@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>LineRectangleSize</name>
     <message>
         <source>Top Left</source>
-        <translation>Zgoraj levo</translation>
+        <translation type="vanished">Zgoraj levo</translation>
     </message>
     <message>
         <source>Top</source>
-        <translation>Zgoraj</translation>
+        <translation type="vanished">Zgoraj</translation>
     </message>
     <message>
         <source>Top Right</source>
-        <translation>Zgoraj desno</translation>
+        <translation type="vanished">Zgoraj desno</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation>Levo</translation>
+        <translation type="vanished">Levo</translation>
     </message>
     <message>
         <source>Middle</source>
-        <translation>Sredina</translation>
+        <translation type="vanished">Sredina</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation>Desno</translation>
+        <translation type="vanished">Desno</translation>
     </message>
     <message>
         <source>Bottom Left</source>
-        <translation>Spodaj levo</translation>
+        <translation type="vanished">Spodaj levo</translation>
     </message>
     <message>
         <source>Bottom</source>
-        <translation>Spodaj</translation>
+        <translation type="vanished">Spodaj</translation>
     </message>
     <message>
         <source>Bottom Right</source>
-        <translation>Spodaj Desno</translation>
+        <translation type="vanished">Spodaj Desno</translation>
     </message>
     <message>
         <source>Position</source>
-        <translation>Pozicija</translation>
+        <translation type="vanished">Pozicija</translation>
     </message>
     <message>
         <source>&amp;Width:</source>
-        <translation>Š&amp;irina:</translation>
+        <translation type="vanished">Š&amp;irina:</translation>
     </message>
     <message>
         <source>&amp;Height:</source>
-        <translation>&amp;Višina:</translation>
+        <translation type="vanished">&amp;Višina:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation>Referenčna točka:</translation>
+        <translation type="vanished">Referenčna točka:</translation>
     </message>
     <message>
         <source>Rectangle with &amp;Size</source>
-        <translation>Pravokotnik z &amp;merami</translation>
+        <translation type="vanished">Pravokotnik z &amp;merami</translation>
     </message>
     <message>
         <source>Draw rectangle with position and size</source>
-        <translation>Nariši pravokotnik s pomočjo pozicije in mer</translation>
+        <translation type="vanished">Nariši pravokotnik s pomočjo pozicije in mer</translation>
     </message>
 </context>
 <context>

@@ -150,7 +150,7 @@ Seleziona Singolo Oggetto</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+332"/>
+        <location filename="../Viewport.js" line="+334"/>
         <source>Grid</source>
         <translation>Griglia</translation>
     </message>

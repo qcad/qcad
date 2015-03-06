@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>CircleCD</name>
     <message>
         <source>Center or radius</source>
-        <translation>Središče ali polmer</translation>
+        <translation type="vanished">Središče ali polmer</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation>Središče</translation>
+        <translation type="vanished">Središče</translation>
     </message>
     <message>
         <source>Radius:</source>
-        <translation>Polmer:</translation>
+        <translation type="vanished">Polmer:</translation>
     </message>
     <message>
         <source>Center, &amp;Radius</source>
-        <translation>Središče, &amp;Polmer</translation>
+        <translation type="vanished">Središče, &amp;Polmer</translation>
     </message>
     <message>
         <source>Draw circle from center and radius</source>
-        <translation>Nariši krog iz središča ter polmera</translation>
+        <translation type="vanished">Nariši krog iz središča ter polmera</translation>
     </message>
     <message>
         <location filename="../CircleCD.ui" line="+17"/>

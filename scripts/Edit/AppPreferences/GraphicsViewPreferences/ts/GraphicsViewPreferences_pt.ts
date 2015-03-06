@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt_PT">
+<TS version="2.1" language="pt_PT">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -130,7 +130,7 @@
     </message>
     <message>
         <source>Antialiasing on by default</source>
-        <translation>Antialiasing ativada por padrão</translation>
+        <translation type="vanished">Antialiasing ativada por padrão</translation>
     </message>
     <message>
         <location line="-342"/>
@@ -143,7 +143,7 @@
     </message>
     <message>
         <source>Performance</source>
-        <translation>Desempenho</translation>
+        <translation type="vanished">Desempenho</translation>
     </message>
     <message>
         <location line="+78"/>

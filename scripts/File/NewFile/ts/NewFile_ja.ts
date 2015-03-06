@@ -68,7 +68,7 @@
         <translation>フォーマット:</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+102"/>
         <source>Untitled %1</source>
         <translation>無題%1</translation>
     </message>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>HideAllBlocks</name>
     <message>
         <source>&amp;Hide All</source>
-        <translation>&amp;Skrij vse</translation>
+        <translation type="vanished">&amp;Skrij vse</translation>
     </message>
     <message>
         <location filename="../HideAllBlocksInit.js" line="+2"/>

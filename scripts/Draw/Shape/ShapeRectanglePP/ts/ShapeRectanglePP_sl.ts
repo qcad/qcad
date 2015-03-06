@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>LineRectangle</name>
     <message>
         <source>First corner</source>
-        <translation>Prvi vogal</translation>
+        <translation type="vanished">Prvi vogal</translation>
     </message>
     <message>
         <source>Second corner</source>
-        <translation>Drugi vogal</translation>
+        <translation type="vanished">Drugi vogal</translation>
     </message>
     <message>
         <source>&amp;Rectangle</source>
-        <translation>&amp;Pravotkotnik</translation>
+        <translation type="vanished">&amp;Pravotkotnik</translation>
     </message>
     <message>
         <source>Draw rectangle from two corners</source>
-        <translation>Nariši pravokotnik iz dveh kotov</translation>
+        <translation type="vanished">Nariši pravokotnik iz dveh kotov</translation>
     </message>
 </context>
 <context>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>DrawPolyline</name>
     <message>
@@ -90,7 +90,7 @@
     </message>
     <message>
         <source>Arc segment with radius:</source>
-        <translation>Segment loka s polmerom:</translation>
+        <translation type="vanished">Segment loka s polmerom:</translation>
     </message>
     <message>
         <location filename="../DrawPolylineInit.js" line="+2"/>
