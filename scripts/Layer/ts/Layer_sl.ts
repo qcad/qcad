@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Layer</name>
     <message>
         <location filename="../Layer.js" line="+66"/>
         <source>Layer Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja plasti</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show layer tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži orodja plasti</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -48,12 +48,12 @@
     </message>
     <message>
         <source>Pen</source>
-        <translation type="vanished">Pisalo</translation>
+        <translation>Pisalo</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Atributi</translation>
     </message>
     <message>
         <location line="+9"/>

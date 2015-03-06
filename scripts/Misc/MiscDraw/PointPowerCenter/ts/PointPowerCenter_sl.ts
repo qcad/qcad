@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>PointPowerCenter</name>
     <message>
@@ -10,12 +10,12 @@
     </message>
     <message>
         <source>Power center of three circles</source>
-        <translation type="vanished">Radialno središče treh krogov</translation>
+        <translation>Radialno središče treh krogov</translation>
     </message>
     <message>
         <location filename="../PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Radialno središče treh krogov</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>AbstractPreferences</name>
     <message>
@@ -39,12 +39,12 @@ da bodo spremembe začele delovat.</translation>
     <message>
         <location filename="../Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja urejanja</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show edit tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži orodja urejanja</translation>
     </message>
     <message>
         <location line="+18"/>

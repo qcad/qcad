@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>DrawPolyline</name>
     <message>
@@ -21,22 +21,22 @@
     <message>
         <location line="+415"/>
         <source>close</source>
-        <translation type="unfinished"></translation>
+        <translation>zapri</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation type="unfinished"></translation>
+        <translation>razveljavi</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation type="unfinished"></translation>
+        <translation>uveljavi</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>arc</source>
-        <translation type="unfinished"></translation>
+        <translation>lok</translation>
     </message>
     <message>
         <location filename="../DrawPolyline.ui" line="+23"/>
@@ -46,7 +46,7 @@
     <message>
         <location line="+10"/>
         <source>,, C</source>
-        <translation type="unfinished"></translation>
+        <translation>,, C</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -56,41 +56,41 @@
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation type="unfinished"></translation>
+        <translation>,, U</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>razveljavi segment</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation type="unfinished"></translation>
+        <translation>,, R</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Arc with radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lok s polmerom:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>,, A</source>
-        <translation type="unfinished"></translation>
+        <translation>,, A</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation type="unfinished"></translation>
+        <translation>Razpon</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Omeji dolžino ali kot</translation>
     </message>
     <message>
         <source>Arc segment with radius:</source>
-        <translation type="vanished">Segment loka s polmerom:</translation>
+        <translation>Segment loka s polmerom:</translation>
     </message>
     <message>
         <location filename="../DrawPolylineInit.js" line="+2"/>

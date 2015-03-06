@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>AddLayer</name>
     <message>
@@ -11,12 +11,12 @@
     <message>
         <location filename="../AddLayer.js" line="+35"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Plast</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj plast</translation>
     </message>
 </context>
 <context>
@@ -24,7 +24,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Default lineweight for new layers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Privzeta debelina črte za nove plasti:</translation>
     </message>
 </context>
 </TS>

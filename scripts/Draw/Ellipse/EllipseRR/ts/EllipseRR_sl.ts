@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>EllipseRR</name>
     <message>
         <location filename="../EllipseRR.ui" line="+17"/>
         <source>X Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>X Polmer:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Y Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Y polmer:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kot:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Referenčna točka:</translation>
     </message>
     <message>
         <location filename="../EllipseRRInit.js" line="+2"/>
         <source>Ellipse with &amp;Radii</source>
-        <translation type="unfinished"></translation>
+        <translation>Elipsa s &amp;polmeri</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse with position and radii</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši elipso iz pozicije ter polmeroma</translation>
     </message>
 </context>
 </TS>

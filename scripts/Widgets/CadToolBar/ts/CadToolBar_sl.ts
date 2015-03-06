@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>CadToolBar</name>
     <message>
@@ -16,11 +16,11 @@
     <message>
         <location line="+34"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Navpično/Vodoravno</translation>
     </message>
     <message>
         <source>Toggle Title Bar</source>
-        <translation type="vanished">Preklopi naslovno vrstico</translation>
+        <translation>Preklopi naslovno vrstico</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

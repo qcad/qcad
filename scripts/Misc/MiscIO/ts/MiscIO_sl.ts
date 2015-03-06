@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>MiscIO</name>
     <message>
         <location filename="../MiscIO.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Razno</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Import / Export Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja raznega uvoza/izvoza</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show misc import / export tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži orodja raznega uvoza/izvoza</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uvozi/Izvozi</translation>
     </message>
 </context>
 </TS>
