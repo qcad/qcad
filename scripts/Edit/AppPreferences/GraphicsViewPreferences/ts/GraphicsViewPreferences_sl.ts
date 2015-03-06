@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -91,7 +91,7 @@
     <message>
         <location line="+36"/>
         <source>Display and Performance</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaz in Optimizacija</translation>
     </message>
     <message>
         <location line="+146"/>
@@ -106,7 +106,7 @@
     <message>
         <location line="+82"/>
         <source>Anti-aliasing on by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Glajenje krivulj privzeto vklopljeno</translation>
     </message>
     <message>
         <location line="-342"/>
@@ -119,7 +119,7 @@
     </message>
     <message>
         <source>Performance</source>
-        <translation type="vanished">Optimizacija</translation>
+        <translation>Optimizacija</translation>
     </message>
     <message>
         <location line="+78"/>
