@@ -128,6 +128,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getHairlineMode, "getHairlineMode");
             
+            REcmaHelper::registerFunction(&engine, proto, setAntialiasing, "setAntialiasing");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAntialiasing, "getAntialiasing");
+            
             REcmaHelper::registerFunction(&engine, proto, getScene, "getScene");
             
             REcmaHelper::registerFunction(&engine, proto, getDocument, "getDocument");
@@ -181,10 +185,6 @@
             REcmaHelper::registerFunction(&engine, proto, paintGridLine, "paintGridLine");
             
             REcmaHelper::registerFunction(&engine, proto, setPaintOrigin, "setPaintOrigin");
-            
-            REcmaHelper::registerFunction(&engine, proto, setAntialiasing, "setAntialiasing");
-            
-            REcmaHelper::registerFunction(&engine, proto, getAntialiasing, "getAntialiasing");
             
             REcmaHelper::registerFunction(&engine, proto, setPanOptimization, "setPanOptimization");
             
@@ -1902,6 +1902,110 @@
             return result;
         }
          QScriptValue
+        REcmaGraphicsViewQt::setAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::setAntialiasing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::setAntialiasing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("setAntialiasing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAntialiasing(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.setAntialiasing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::setAntialiasing", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::getAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::getAntialiasing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::getAntialiasing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("getAntialiasing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getAntialiasing();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.getAntialiasing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::getAntialiasing", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaGraphicsViewQt::getScene
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3528,110 +3632,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewQt::setPaintOrigin", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsViewQt::setAntialiasing
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsViewQt::setAntialiasing", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::setAntialiasing";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsViewQt* self = 
-                        getSelf("setAntialiasing", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setAntialiasing(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.setAntialiasing().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::setAntialiasing", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsViewQt::getAntialiasing
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsViewQt::getAntialiasing", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::getAntialiasing";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsViewQt* self = 
-                        getSelf("getAntialiasing", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->getAntialiasing();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.getAntialiasing().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::getAntialiasing", context, engine);
             return result;
         }
          QScriptValue

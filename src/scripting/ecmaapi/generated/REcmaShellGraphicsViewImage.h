@@ -165,6 +165,18 @@
         
     
     
+      void setAntialiasing(
+                bool on
+            );
+        
+    
+    
+      bool getAntialiasing(
+                
+            );
+        
+    
+    
       RGraphicsScene * getScene(
                 
             );
@@ -356,18 +368,6 @@
     
       void setPaintOrigin(
                 bool val
-            );
-        
-    
-    
-      void setAntialiasing(
-                bool val
-            );
-        
-    
-    
-      bool getAntialiasing(
-                
             );
         
     

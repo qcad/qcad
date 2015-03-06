@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>567</width>
-    <height>806</height>
+    <height>802</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
      <x>0</x>
      <y>0</y>
      <width>565</width>
-     <height>804</height>
+     <height>800</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -318,17 +318,17 @@
     <item>
      <widget class="QGroupBox" name="groupBox_8">
       <property name="title">
-       <string>Performance</string>
+       <string>Display and Performance</string>
       </property>
       <layout class="QFormLayout" name="formLayout_2">
-       <item row="0" column="0">
+       <item row="1" column="0">
         <widget class="QLabel" name="label_15">
          <property name="text">
           <string>Number of preview entities:</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
+       <item row="1" column="1">
         <widget class="QComboBox" name="PreviewEntities">
          <property name="minimumSize">
           <size>
@@ -379,7 +379,7 @@
          </item>
         </widget>
        </item>
-       <item row="1" column="0">
+       <item row="2" column="0">
         <widget class="QLabel" name="label_3">
          <property name="text">
           <string>Text height display threshold (px):</string>
@@ -389,17 +389,17 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
+       <item row="2" column="1">
         <widget class="QSpinBox" name="TextHeightThreshold"/>
        </item>
-       <item row="3" column="0">
+       <item row="4" column="0">
         <widget class="QLabel" name="label_4">
          <property name="text">
           <string>Display arcs as lines below this angle (degrees):</string>
          </property>
         </widget>
        </item>
-       <item row="3" column="1">
+       <item row="4" column="1">
         <widget class="QComboBox" name="ArcAngleLengthThreshold">
          <property name="editable">
           <bool>true</bool>
@@ -461,14 +461,14 @@
          </item>
         </widget>
        </item>
-       <item row="5" column="0">
+       <item row="6" column="0">
         <widget class="QLabel" name="label_6">
          <property name="text">
           <string>Display entities with more than N dashes as continuous:</string>
          </property>
         </widget>
        </item>
-       <item row="5" column="1">
+       <item row="6" column="1">
         <widget class="QComboBox" name="DashThreshold">
          <property name="editable">
           <bool>true</bool>
@@ -503,14 +503,14 @@
          </item>
         </widget>
        </item>
-       <item row="4" column="0">
+       <item row="5" column="0">
         <widget class="QLabel" name="label_7">
          <property name="text">
           <string>Minimum angle step for rendering arcs (degrees):</string>
          </property>
         </widget>
        </item>
-       <item row="4" column="1">
+       <item row="5" column="1">
         <widget class="QComboBox" name="MinArcAngleStep">
          <property name="editable">
           <bool>true</bool>
@@ -583,6 +583,13 @@
            <string notr="true">5</string>
           </property>
          </item>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="Antialiasing">
+         <property name="text">
+          <string>Anti-aliasing on by default</string>
+         </property>
         </widget>
        </item>
       </layout>

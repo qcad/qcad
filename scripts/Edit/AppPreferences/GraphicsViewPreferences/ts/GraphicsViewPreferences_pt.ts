@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -109,7 +109,12 @@
         <translation>Escala padrão para a espessura de linha 0,00mm:</translation>
     </message>
     <message>
-        <location line="+182"/>
+        <location line="+36"/>
+        <source>Display and Performance</source>
+        <translation>Visor e desempenho</translation>
+    </message>
+    <message>
+        <location line="+146"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Mostrar entidades com mais de N traços como contínuo:</translation>
     </message>
@@ -119,7 +124,16 @@
         <translation>Passo ângulo mínimo para prestação de arcos (graus):</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="+82"/>
+        <source>Anti-aliasing on by default</source>
+        <translation>Antialiasing ativada por padrão</translation>
+    </message>
+    <message>
+        <source>Antialiasing on by default</source>
+        <translation>Antialiasing ativada por padrão</translation>
+    </message>
+    <message>
+        <location line="-342"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Usar automaticamente tipos de linha baseado em tela, tendo em vista modelo</translation>
     </message>
@@ -128,12 +142,11 @@
         <translation type="obsolete">Ajustar automaticamente os tipos de linha</translation>
     </message>
     <message>
-        <location line="+72"/>
         <source>Performance</source>
         <translation>Desempenho</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+78"/>
         <source>Number of preview entities:</source>
         <translation>Número de entidades de prévia:</translation>
     </message>
@@ -152,7 +165,7 @@
         <translation type="obsolete">Mostrar limite para o texto:</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+203"/>
         <source>Selection</source>
         <translation>Selecção</translation>
     </message>

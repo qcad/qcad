@@ -192,11 +192,14 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
     mdiChild.showMaximized();
 
     // load ui file and set the MDI content widget:
+    //qDebug("initMdiChild");
     Viewport.initMdiChild(mdiChild, uiFileName);
 
     var viewports = Viewport.getViewports(mdiChild, documentInterface);
     mdiChild.viewports = viewports;
+    //qDebug("initViewports");
     Viewport.initializeViewports(viewports);
+    //qDebug("initViewports: done");
     NewFile.updateTitle(mdiChild);
 
     var idleGuiAction = RGuiAction.getByScriptFile("scripts/Reset/Reset.js");
@@ -219,7 +222,9 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
         QCoreApplication.processEvents();
     }
 
+    //qDebug("subWindowActivated");
     appWin.subWindowActivated(mdiChild);
+    //qDebug("updateViewports");
     if (!isDeleted(mdiChild)) {
         mdiChild.updatesEnabled = true;
         Viewport.updateViewports(viewports);

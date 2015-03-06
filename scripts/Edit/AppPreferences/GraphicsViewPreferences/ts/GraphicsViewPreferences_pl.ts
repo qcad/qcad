@@ -141,7 +141,12 @@ Autozoom
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+182"/>
+        <location line="+36"/>
+        <source>Display and Performance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+146"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -151,18 +156,22 @@ Autozoom
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="+82"/>
+        <source>Anti-aliasing on by default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-342"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+72"/>
         <source>Performance</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wydajność</translation>
+        <translation type="obsolete">Wydajność</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+78"/>
         <source>Number of preview entities:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -185,7 +194,7 @@ Liczba obiektów w podglądzie:</translatorcomment>
         <translation type="obsolete">Wysokość progu Text display:</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+203"/>
         <source>Selection</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

@@ -47,6 +47,7 @@ RGraphicsView::RGraphicsView(RGraphicsScene* scene) :
       textHeightThresholdOverride(-1),
       textHeightThreshold(3),
       viewportNumber(-1),
+      antialiasing(false),
       gridVisible(-1) {
 
     setScene(scene, false);
@@ -941,4 +942,12 @@ void RGraphicsView::updateTextHeightThreshold() {
     else {
         textHeightThreshold = RSettings::getTextHeightThreshold();
     }
+}
+
+void RGraphicsView::setAntialiasing(bool val) {
+    antialiasing = val;
+}
+
+bool RGraphicsView::getAntialiasing() const {
+    return antialiasing;
 }

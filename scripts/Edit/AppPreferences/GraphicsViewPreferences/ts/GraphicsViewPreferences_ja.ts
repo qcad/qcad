@@ -109,7 +109,12 @@
         <translation>線の太さのパターン·スケール 0.00mm:</translation>
     </message>
     <message>
-        <location line="+182"/>
+        <location line="+36"/>
+        <source>Display and Performance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+146"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -119,7 +124,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="+82"/>
+        <source>Anti-aliasing on by default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-342"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
@@ -128,12 +138,11 @@
         <translation type="obsolete">ラインタイプの自動切り替え</translation>
     </message>
     <message>
-        <location line="+72"/>
         <source>Performance</source>
-        <translation>パフォーマンス</translation>
+        <translation type="vanished">パフォーマンス</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+78"/>
         <source>Number of preview entities:</source>
         <translation>プレビューエンティティの数:</translation>
     </message>
@@ -152,7 +161,7 @@
         <translation type="obsolete">テキスト高さの表示閾値:</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+203"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>

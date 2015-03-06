@@ -646,5 +646,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="path" isConst="true" />
       </variant>
     </method>
+    <method name="setAntialiasing" cppName="setAntialiasing"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="val"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getAntialiasing" cppName="getAntialiasing"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
   </class>
 </unit>

@@ -47,7 +47,6 @@ RGraphicsViewImage::RGraphicsViewImage()
       lastFactor(-1.0),
       gridPainter(NULL),
       doPaintOrigin(true),
-      antialiasing(false),
       isSelected(false),
       bgColorLightness(0),
       colorCorrectionOverride(false),
@@ -67,14 +66,6 @@ RGraphicsViewImage::~RGraphicsViewImage() {
 
 void RGraphicsViewImage::setPaintOrigin(bool val) {
     doPaintOrigin = val;
-}
-
-void RGraphicsViewImage::setAntialiasing(bool val) {
-    antialiasing = val;
-}
-
-bool RGraphicsViewImage::getAntialiasing() {
-    return antialiasing;
 }
 
 void RGraphicsViewImage::setBackgroundColor(const QColor& col) {
@@ -724,8 +715,6 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         m.unlock();
         return;
     }
-
-    //sceneQt->setDraftMode(draftMode);
 
     // TODO: PERFORMANCE: don't copy list, only get reference from scene
 

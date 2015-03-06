@@ -137,6 +137,14 @@ public:
         return RGraphicsView::getHairlineMode();
     }
 
+    void setAntialiasing(bool on) {
+        RGraphicsView::setAntialiasing(on);
+    }
+
+    bool getAntialiasing() const {
+        return RGraphicsView::getAntialiasing();
+    }
+
     RGraphicsScene* getScene() {
         return RGraphicsView::getScene();
     }
@@ -223,9 +231,6 @@ public:
 
     void setPaintOrigin(bool val);
 
-    void setAntialiasing(bool val);
-    bool getAntialiasing();
-
     void setPanOptimization(bool on);
     bool getPanOptimization();
 
@@ -306,7 +311,6 @@ protected:
 
     QPainter* gridPainter;
     bool doPaintOrigin;
-    bool antialiasing;
 
     bool isSelected;
     QSet<RObject::Id> selectedIds;

@@ -108,6 +108,12 @@
         getHairlineMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getScene
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -187,12 +193,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setPaintOrigin
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setAntialiasing
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getAntialiasing
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setPanOptimization

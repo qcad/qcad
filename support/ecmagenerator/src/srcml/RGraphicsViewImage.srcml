@@ -666,6 +666,50 @@ dir="./gui" filename="RGraphicsViewImage.h">
   </function>
   <function>
     <type>
+      <name>void</name>
+    </type>
+    <name>setAntialiasing</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>bool</name>
+        </type>
+        <name>on</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <constructor_decl>
+    <name>RGraphicsView::setAntialiasing</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>on</name>
+        </type>
+      </decl>
+    </param>)</parameter_list>;</constructor_decl>}</block>
+  </function>
+  <function>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>getAntialiasing</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <call>
+        <name>
+        <name>RGraphicsView</name>::
+        <name>getAntialiasing</name></name>
+        <argument_list>()</argument_list>
+      </call>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
     <name>RGraphicsScene</name>*</type>
     <name>getScene</name>
     <parameter_list>()</parameter_list>
@@ -1194,26 +1238,6 @@ dir="./gui" filename="RGraphicsViewImage.h">
       <name>val</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setAntialiasing</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>val</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>getAntialiasing</name>
-  <parameter_list>()</parameter_list>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>
@@ -2025,13 +2049,6 @@ dir="./gui" filename="RGraphicsViewImage.h">
       <name>bool</name>
     </type>
     <name>doPaintOrigin</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>antialiasing</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

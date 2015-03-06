@@ -69,7 +69,8 @@ Viewport.initEventHandler = function(viewports) {
 
 Viewport.initializeViewports = function(viewports) {
     for ( var i = 0; i < viewports.length; ++i) {
-        viewports[i].init();
+        var vp = viewports[i];
+        vp.init();
     }
 };
 
@@ -80,12 +81,12 @@ Viewport.updateViewports = function(viewports) {
         vp.getEventHandler().viewportChanged();
         var gv = vp.getGraphicsView();
         gv.autoZoom(-1, true);
+        //gv.setAntialiasing(RSettings.getBoolValue("GraphicsView/Antialiasing", false));
     }
 };
 
 Viewport.initMdiChild = function(mdiChild, uiFileName) {
-    var w = WidgetFactory.createWidget("",
-        Viewport.templateDir + QDir.separator + uiFileName, mdiChild);
+    var w = WidgetFactory.createWidget("", Viewport.templateDir + QDir.separator + uiFileName, mdiChild);
     w.setWindowTitle("");
     mdiChild.setWidget(w);
 };
@@ -140,6 +141,8 @@ Viewport.prototype.init = function() {
     if (isFunction(this.graphicsView.setFocusFrameWidget)) {
         this.graphicsView.setFocusFrameWidget(this.vpWidget);
     }
+
+    this.graphicsView.setAntialiasing(RSettings.getBoolValue("GraphicsView/Antialiasing", false));
 
     var scene = new RGraphicsSceneQt(this.documentInterface);
     // var scene = new RGraphicsSceneGl(this.documentInterface);

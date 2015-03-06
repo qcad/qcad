@@ -89,7 +89,12 @@
         <translation>Povečava vzorca ko je debelina črte 0.00mm:</translation>
     </message>
     <message>
-        <location line="+182"/>
+        <location line="+36"/>
+        <source>Display and Performance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+146"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -99,7 +104,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="+82"/>
+        <source>Anti-aliasing on by default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-342"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Samodejno uporabi zaslonske črte v prikazu modela</translation>
     </message>
@@ -108,12 +118,11 @@
         <translation type="obsolete">Samodejno preklopi način črt</translation>
     </message>
     <message>
-        <location line="+72"/>
         <source>Performance</source>
-        <translation>Optimizacija</translation>
+        <translation type="vanished">Optimizacija</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+78"/>
         <source>Number of preview entities:</source>
         <translation>Število entitet v predogledu:</translation>
     </message>
@@ -132,7 +141,7 @@
         <translation type="obsolete">Prag prikaza višine besedila:</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+203"/>
         <source>Selection</source>
         <translation>Izbor</translation>
     </message>

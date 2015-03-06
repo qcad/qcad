@@ -278,6 +278,9 @@ public:
 
     bool isPathVisible(const RPainterPath& path) const;
 
+    void setAntialiasing(bool val);
+    bool getAntialiasing() const;
+
 protected:
     bool printing;
     bool printPreview;
@@ -346,6 +349,8 @@ protected:
     int textHeightThreshold;
 
     int viewportNumber;
+
+    bool antialiasing;
 
     // grid display flag, cached:
     mutable int gridVisible;

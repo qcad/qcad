@@ -89,7 +89,17 @@
         <translation>Kuvion mitta viivapaksuudella 0.00m:</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="+36"/>
+        <source>Display and Performance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+270"/>
+        <source>Anti-aliasing on by default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-342"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automaattisesti käytä kuvaruudun viivoja muotoilunäkymässä</translation>
     </message>
@@ -98,12 +108,11 @@
         <translation type="vanished">Vaihda viivatyyppejä automaattisesti</translation>
     </message>
     <message>
-        <location line="+72"/>
         <source>Performance</source>
-        <translation>Suorituskyky</translation>
+        <translation type="vanished">Suorituskyky</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+78"/>
         <source>Number of preview entities:</source>
         <translation>Esikatseltavien kohteiden määrä:</translation>
     </message>
@@ -128,7 +137,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+92"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>

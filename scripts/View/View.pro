@@ -1,6 +1,7 @@
 TEMPLATE = subdirs
 SUBDIRS = \
     ts \
+    AntialiasingMode \
     AutoZoom \
     CommandLineFocus \
     DisplayDistanceAngle \
