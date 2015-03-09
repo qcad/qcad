@@ -77,7 +77,6 @@ AntialiasingMode.init = function(basePath) {
     action.setIcon(basePath + "/AntialiasingMode.svg");
     action.setDefaultShortcut(new QKeySequence("n,t"));
     action.setDefaultCommands(["antialiasing", "nt"]);
-    action.setGroup("viewmodes");
     action.setNoState(true);
     action.setGroupSortOrder(3100);
     action.setSortOrder(300);
