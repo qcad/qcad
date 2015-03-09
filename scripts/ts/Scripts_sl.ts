@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -135,7 +135,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entiteta ni črta, lok, krog, elipsa ali lomljenka.</translation>
     </message>
     <message>
         <location line="+4"/>
