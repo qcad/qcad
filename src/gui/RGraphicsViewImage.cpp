@@ -343,6 +343,7 @@ void RGraphicsViewImage::paintGrid(QPaintDevice& device, const QRect& rect) {
     QRectF rf(c1.x, c1.y, c2.x-c1.x, c2.y-c1.y);
 
     gridPainter = initPainter(device, false, false, rect);
+    gridPainter->setRenderHint(QPainter::Antialiasing, false);
     if (!rect.isNull()) {
         gridPainter->setClipRect(rf);
     }
