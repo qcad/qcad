@@ -71,9 +71,7 @@ public:
     virtual bool scale(const RVector& scaleFactors,
                        const RVector& center = RDEFAULT_RVECTOR);
 
-    void setReferencedBlockId(RBlock::Id blockId) {
-        referencedBlockId = blockId;
-    }
+    void setReferencedBlockId(RBlock::Id blockId);
 
     void groundReferencedBlockId() const {
         referencedBlockId = RBlock::INVALID_ID;
@@ -89,35 +87,17 @@ public:
     RVector getPosition() const {
         return position;
     }
-
-    void setPosition(const RVector& p) {
-        position = p;
-    }
+    void setPosition(const RVector& p);
 
     RVector getScaleFactors() const {
         return scaleFactors;
     }
-
-    void setScaleFactors(const RVector& sf) {
-        scaleFactors = sf;
-        if (fabs(scaleFactors.x) < RS::PointTolerance) {
-            scaleFactors.x = 1.0;
-        }
-        if (fabs(scaleFactors.y) < RS::PointTolerance) {
-            scaleFactors.y = 1.0;
-        }
-        if (fabs(scaleFactors.z) < RS::PointTolerance) {
-            scaleFactors.z = 1.0;
-        }
-    }
+    void setScaleFactors(const RVector& sf);
 
     double getRotation() const {
         return rotation;
     }
-
-    void setRotation(double r) {
-        rotation = r;
-    }
+    void setRotation(double r);
 
     virtual void update() const;
     virtual void update(RObject::Id entityId) const;

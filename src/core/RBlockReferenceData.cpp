@@ -45,6 +45,7 @@ void RBlockReferenceData::setReferencedBlockName(const QString& blockName) {
     }
 
     referencedBlockId = document->getBlockId(blockName);
+    update();
 }
 
 QString RBlockReferenceData::getReferencedBlockName() const {
@@ -405,13 +406,40 @@ bool RBlockReferenceData::mirror(const RLine& axis) {
     return true;
 }
 
-bool RBlockReferenceData::scale(
-        const RVector& scaleFactors, const RVector& center) {
-
+bool RBlockReferenceData::scale(const RVector& scaleFactors, const RVector& center) {
     position.scale(scaleFactors, center);
     this->scaleFactors.scale(scaleFactors);
     update();
     return true;
+}
+
+void RBlockReferenceData::setReferencedBlockId(RBlock::Id blockId) {
+    referencedBlockId = blockId;
+    update();
+}
+
+void RBlockReferenceData::setPosition(const RVector& p) {
+    position = p;
+    update();
+}
+
+void RBlockReferenceData::setScaleFactors(const RVector& sf) {
+    scaleFactors = sf;
+    if (fabs(scaleFactors.x) < RS::PointTolerance) {
+        scaleFactors.x = 1.0;
+    }
+    if (fabs(scaleFactors.y) < RS::PointTolerance) {
+        scaleFactors.y = 1.0;
+    }
+    if (fabs(scaleFactors.z) < RS::PointTolerance) {
+        scaleFactors.z = 1.0;
+    }
+    update();
+}
+
+void RBlockReferenceData::setRotation(double r) {
+    rotation = r;
+    update();
 }
 
 void RBlockReferenceData::update() const {
