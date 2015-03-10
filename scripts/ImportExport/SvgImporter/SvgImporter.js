@@ -439,14 +439,17 @@ SvgImporter.prototype.importPath = function(dData) {
 
     for (var i=0; i<segs.length; i++) {
         var seg = segs[i];
-        //qDebug("seg[" + i + "]: ", seg);
+        if (seg.trim().length===0) {
+            continue;
+        }
+
         var cmd = seg.match(/[mlhvcsqtaz]/i);
         if (!cmd) {
             //qDebug("abort...");
             return;
         }
         cmd = cmd[0];
-        var coords = 
+        var coords =
             seg.match(/(([+-]?[0-9][0-9]*\.?[0-9]*)|[+-]?(\.[0-9]+))([Ee][+-]?[0-9]+)?/gi);
         if (coords) {
             coords = coords.map(parseFloat);
