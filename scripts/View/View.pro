@@ -12,7 +12,6 @@ SUBDIRS = \
     PanZoom \
     PreviousView \
     ToggleGrid \
-    ToggleStatusBar \
     ViewToolBars \
     WindowZoom \
     ZoomIn \

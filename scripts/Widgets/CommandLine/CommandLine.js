@@ -19,23 +19,24 @@
  * along with QCAD.
  */
 
-include("../../WidgetFactory.js");
+include("scripts/EAction.js");
+include("scripts/WidgetFactory.js");
 
 function CommandLine(guiAction) {
-    Widgets.call(this, guiAction);
+    EAction.call(this, guiAction);
 }
 
 CommandLine.getPreferencesCategory = function() {
     return [ qsTr("Widgets"), qsTr("Command Line") ];
 };
 
-CommandLine.prototype = new Widgets();
+CommandLine.prototype = new EAction();
 
 /**
  * Shows / hides the command line widget.
  */
 CommandLine.prototype.beginEvent = function() {
-    Widgets.prototype.beginEvent.call(this);
+    EAction.prototype.beginEvent.call(this);
 
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("CommandLineDock");
@@ -45,7 +46,7 @@ CommandLine.prototype.beginEvent = function() {
 };
 
 CommandLine.prototype.finishEvent = function() {
-    Widgets.prototype.finishEvent.call(this);
+    EAction.prototype.finishEvent.call(this);
 
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("CommandLineDock");
@@ -74,6 +75,7 @@ CommandLine.init = function(basePath) {
     var dock = new RDockWidget(qsTr("Command Line"), appWin);
     dock.objectName = "CommandLineDock";
     dock.setWidget(formWidget);
+    //dock.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.MinimumExpanding);
     appWin.addDockWidget(Qt.BottomDockWidgetArea, dock);
     dock.shown.connect(function() { action.setChecked(true); });
     dock.hidden.connect(function() { action.setChecked(false); });

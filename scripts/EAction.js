@@ -1327,52 +1327,12 @@ EAction.getValue = function(varName, defaultValue, document) {
 };
 
 /**
- * Adds the given widgets to the status bar of the application. \param sortOrder
- * Defines the sort order of widgets in the status bar.
+ * Adds the given widgets to the status bar of the application.
+ * \param sortOrder Defines the sort order of widgets in the status bar.
  */
 EAction.addToStatusBar = function(widget, sortOrder) {
-    widget.setProperty("SortOrder", sortOrder);
-    var appWin = EAction.getMainWindow();
-    var statusBar = appWin.statusBar();
-    var list = statusBar.children();
-    var maxSortOrder = 0;
-    var index = 0;
-    var maxIndex = 0;
-
-    for ( var i = 0; i < list.length; ++i) {
-        var w = list[i];
-        var wSortOrder = w.property("SortOrder");
-        if (typeof (wSortOrder) == "number") {
-            if (wSortOrder > maxSortOrder
-                    && wSortOrder < widget.property("SortOrder")) {
-                maxSortOrder = wSortOrder;
-                index = i;
-            }
-            ++maxIndex;
-        }
-    }
-
-    var separator;
-    if (RS.getSystemId() === "osx") {
-        separator = new QFrame();
-        separator.frameShape = QFrame.VLine;
-        separator.frameShadow = QFrame.Sunken;
-        separator.setProperty("SortOrder", sortOrder + 1);
-        separator.objectName = widget.objectName + "Separator";
-        separator.visible = widget.visible;
-    }
-
-    if (index >= maxIndex) {
-        statusBar.addWidget(widget);
-        if (separator) {
-            statusBar.addWidget(separator);
-        }
-    } else {
-        statusBar.insertWidget(index, widget);
-        if (separator) {
-            statusBar.insertWidget(index + 1, separator);
-        }
-    }
+    include("scripts/Widgets/StatusBar/StatusBar.js");
+    StatusBar.addWidget(widget, sortOrder);
 };
 
 EAction.prototype.getScales = function() {
@@ -1706,7 +1666,7 @@ EAction.enableCoordinateWidget = function(enable) {
     if (isNull(appWin)) {
         return;
     }
-    var statusBar = appWin.statusBar();
+    var statusBar = appWin.findChild("StatusBar");
     if (isNull(statusBar)) {
         return;
     }

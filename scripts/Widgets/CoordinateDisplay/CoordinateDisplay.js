@@ -17,18 +17,16 @@
  * along with QCAD.
  */
 
-include("../../WidgetFactory.js");
-include("../../EAction.js");
-
+include("scripts/EAction.js");
+include("scripts/WidgetFactory.js");
+include("scripts/Widgets/StatusBar/StatusBar.js");
 
 function CoordinateDisplay() {
 }
 
-CoordinateDisplay.init = function(basePath) {
+CoordinateDisplay.postInit = function(basePath) {
     var widget = WidgetFactory.createWidget(basePath, "CoordinateDisplay.ui");
-
-    widget.visible = RSettings.getBoolValue("StatusBar/CoordinateDisplay", true);
-    EAction.addToStatusBar(widget, 100);
+    StatusBar.addWidget(widget, 100, RSettings.getBoolValue("StatusBar/CoordinateDisplay", true));
 
     var lAbs = widget.findChild("Abs");
     lAbs.font = RSettings.getStatusBarFont();
@@ -46,7 +44,6 @@ CoordinateDisplay.init = function(basePath) {
     var adapter = new RCoordinateListenerAdapter();
     var appWin = EAction.getMainWindow();
     appWin.addCoordinateListener(adapter);
-    var statusBar = appWin.statusBar();
 
     var counter=0;
     var singleShot = undefined;
@@ -75,7 +72,7 @@ CoordinateDisplay.init = function(basePath) {
         singleShot = new QTimer();
         singleShot.singleShot = true;
         singleShot.timeout.connect(function() {
-            statusBar.clearMessage();
+            StatusBar.clearMessage();
             var absPos = documentInterface.getCursorPosition();
             var relPos = absPos.operator_subtract(documentInterface.getRelativeZero());
 

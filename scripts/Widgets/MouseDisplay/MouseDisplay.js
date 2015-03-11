@@ -17,33 +17,26 @@
  * along with QCAD.
  */
 
-include("../../WidgetFactory.js");
+include("scripts/WidgetFactory.js");
+include("scripts/Widgets/StatusBar/StatusBar.js");
 
 function MouseDisplay() {
-    this.formWidget = undefined;
 }
 
-MouseDisplay.init = function(basePath) {
-    var md = new MouseDisplay();
-    md.formWidget = WidgetFactory.createWidget(basePath, "MouseDisplay.ui");
-    var right = md.formWidget.findChild("Right");
+MouseDisplay.postInit = function(basePath) {
+    var widget = WidgetFactory.createWidget(basePath, "MouseDisplay.ui");
+    StatusBar.addWidget(widget, 200, RSettings.getBoolValue("StatusBar/MouseDisplay", true));
+
+    var right = widget.findChild("Right");
     right.font = RSettings.getStatusBarFont();
-    var left = md.formWidget.findChild("Left");
+    var left = widget.findChild("Left");
     left.font = RSettings.getStatusBarFont();
 
     var appWin = EAction.getMainWindow();
-    appWin.rightMouseTip.connect(md, "setRightMouseTip");
-    appWin.leftMouseTip.connect(md, "setLeftMouseTip");
-    md.formWidget.visible = RSettings.getBoolValue("StatusBar/MouseDisplay", true);
-    EAction.addToStatusBar(md.formWidget, 200);
-};
-
-MouseDisplay.prototype.setRightMouseTip = function(message) {
-    var right = this.formWidget.findChild("Right");
-    right.text = message;
-};
-
-MouseDisplay.prototype.setLeftMouseTip = function(message) {
-    var left = this.formWidget.findChild("Left");
-    left.text = message;
+    appWin.rightMouseTip.connect(function(message) {
+        right.text = message;
+    });
+    appWin.leftMouseTip.connect(function(message) {
+        left.text = message;
+    });
 };

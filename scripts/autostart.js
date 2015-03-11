@@ -689,9 +689,9 @@ function main() {
 
     RPluginLoader.postInitPlugins(RPluginInterface.ScriptsExecuted);
 
-    var statusBar = appWin.statusBar();
-    var action = RGuiAction.getByScriptFile("scripts/View/ToggleStatusBar/ToggleStatusBar.js");
-    action.setChecked(statusBar.visible);
+    //var statusBar = appWin.statusBar();
+    //var action = RGuiAction.getByScriptFile("scripts/View/ToggleStatusBar/ToggleStatusBar.js");
+    //action.setChecked(statusBar.visible);
 
     RPluginLoader.postInitPlugins(RPluginInterface.AllDone);
 

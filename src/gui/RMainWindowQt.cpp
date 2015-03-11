@@ -544,6 +544,11 @@ bool RMainWindowQt::event(QEvent* e) {
         return true;
     }
 
+    if (e->type()==QEvent::StatusTip) {
+        QStatusTipEvent* ste = static_cast<QStatusTipEvent*>(e);
+        qDebug() << "tip: " << ste->tip();
+    }
+
 #if defined(Q_OS_MAC) || defined(Q_OS_WIN32)
     // prevent recursion:
     // (bug, probably in Qt script wrappers: recursion when displaying status tip)
