@@ -546,6 +546,7 @@ bool RMainWindowQt::event(QEvent* e) {
 
     if (e->type()==QEvent::StatusTip) {
         QStatusTipEvent* ste = static_cast<QStatusTipEvent*>(e);
+        // TODO: emit signal to update dock based status bar:
         //qDebug() << "tip: " << ste->tip();
     }
 
