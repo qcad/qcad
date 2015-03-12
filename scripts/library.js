@@ -1921,6 +1921,21 @@ function addActionsToWidgets() {
             }
             var w = RMainWindowQt.getMainWindow().findChild(wn);
             if (!isNull(w)) {
+
+                // workaround for QTBUG-38256 (action not triggered for letter based shortcuts in sub menus)
+                if (RSettings.isQt(5)) {
+                    if (isOfType(w.parentWidget(), QMenu)) {
+                        new QShortcut(a.shortcut, a.parentWidget(), 0, 0,  Qt.WindowShortcut).activated.connect(a, "trigger");
+
+                        // avoid 'Ambiguous shortcut overload' when tool buttons visible:
+                        var sc = a.shortcut.toString();
+                        if (sc.length>0) {
+                            a.setShortcutText(" (" + sc + ")");
+                        }
+                        a.setDefaultShortcuts([]);
+                    }
+                }
+
                 if (visibility) {
                     RGuiAction.addToWidget(a, w);
                 }

@@ -69,9 +69,11 @@ public:
     typedef void (*FactoryFunction)(RGuiAction*);
 
 public:
-    RGuiAction(const QString& text, QObject* parent = 0);
+    RGuiAction(const QString& oriText, QObject* parent = 0);
     virtual ~RGuiAction();
     
+    void setText(const QString& oriText);
+
     /**
      * Initializes the GUI action texts (for menus, tooltips, ...).
      * This function is called whenever the text of the action changes.
@@ -80,11 +82,12 @@ public:
 
     virtual void init();
 
-    static QString formatToolTip(const QString& text, const QString& shortcut);
-    QString getToolTip(const QString& text, const QString& shortcut);
+    static QString formatToolTip(const QString& oriText, const QString& shortcut);
+    QString getToolTip(const QString& oriText, const QString& shortcut);
 
     void setDocumentInterface(RDocumentInterface* di);
     RDocumentInterface* getDocumentInterface();
+
 
     /**
      * Sets the shortcut(s) for this action.
@@ -96,7 +99,7 @@ public:
     void setShortcuts(const QList<QKeySequence>& shortcuts);
     void setDefaultShortcuts(const QList<QKeySequence>& shortcuts);
     QList<QKeySequence> getDefaultShortcuts();
-    void setShortcutText(const QString& text);
+    void setShortcutText(const QString& oriText);
     QString getShortcutText();
 
     static void setGroupSortOrderStatic(QAction* a, int sortOrder);
@@ -339,6 +342,7 @@ protected:
     static QList<RGuiAction*> actions;
 
     FactoryFunction factory;
+    QString oriText;
     QString scriptFile;
     QString mainCommand;
     QStringList commandList;

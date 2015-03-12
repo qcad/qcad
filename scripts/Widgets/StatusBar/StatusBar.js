@@ -38,7 +38,7 @@ StatusBar.init = function(basePath) {
     var action = new RGuiAction(qsTr("&Status Bar"), appWin);
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/StatusBar.js");
-    action.setIcon(basePath + "/StatusBar.svg");
+    //action.setIcon(basePath + "/StatusBar.svg");
     action.setDefaultShortcut(new QKeySequence("g,s"));
     action.setDefaultCommands(["gs"]);
     action.setGroupSortOrder(3800);

@@ -1646,6 +1646,13 @@ dir="./core" filename="RGuiAction.h">
     <type>
       <name>QString</name>
     </type>
+    <name>text</name>
+  </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>QString</name>
+    </type>
     <name>scriptFile</name>
   </decl>;</decl_stmt>
   <decl_stmt>

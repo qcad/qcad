@@ -1146,15 +1146,6 @@ EAction.addGuiActionTo = function(action, iface, addToMenu, addToToolBar,
                     separator.addToMenu(menu);
                 }
                 action.addToMenu(menu);
-
-                // workaround for QTBUG-38256 (action not triggered for letter based shortcuts in sub menus)
-                if (RSettings.isQt(5)) {
-                    if (isOfType(menu.parentWidget(), QMenu)) {
-                        new QShortcut(action.shortcut, action.parentWidget(), 0, 0,  Qt.WindowShortcut).activated.connect(action, "trigger");
-                        // avoid 'Ambiguous shortcut overload' when tool buttons visible:
-                        action.setDefaultShortcuts([]);
-                    }
-                }
             }
         }
     }

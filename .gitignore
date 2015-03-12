@@ -25,6 +25,10 @@
 Makefile
 Makefile.Debug
 Makefile.Release
+Makefile.DeviceDebug
+Makefile.DeviceRelease
+Makefile.SimulatorDebug
+Makefile.SimulatorRelease
 *.pro.user
 .qmake.cache
 .qmake.stash
