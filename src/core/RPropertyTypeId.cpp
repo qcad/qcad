@@ -16,8 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QDebug>
+
 #include "RPropertyTypeId.h"
-#include "RObject.h"
+//#include "RObject.h"
 
 long int RPropertyTypeId::counter = 0;
 const long int RPropertyTypeId::INVALID_ID = -1;
