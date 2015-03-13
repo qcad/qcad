@@ -29,14 +29,25 @@
         <translation>Prikaz izbora</translation>
     </message>
     <message>
-        <location filename="../StatusBar.js" line="+27"/>
+        <location line="+10"/>
+        <source>Progress display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../StatusBar.js" line="+32"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
     <message>
         <location line="+0"/>
+        <location line="+17"/>
         <source>Status Bar</source>
         <translation>Statusna vrstica</translation>
+    </message>
+    <message>
+        <location line="-11"/>
+        <source>&amp;Status Bar</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -4,7 +4,7 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../CommandLine.js" line="+29"/>
+        <location filename="../CommandLine.js" line="+30"/>
         <location line="+45"/>
         <location filename="../CommandLine.ui" line="+14"/>
         <source>Command Line</source>
@@ -30,7 +30,7 @@
         <translation type="obsolete">Invalid coordonner &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+163"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Commande inconnue ou de coordonnées ou une valeur invalide: &apos;%1&apos;</translation>
     </message>
@@ -64,12 +64,12 @@
         <translation type="obsolete">Essayant de tirer ou de modifier des entités sur un calque verrouillé.</translation>
     </message>
     <message>
-        <location line="-276"/>
+        <location line="-277"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+172"/>
+        <location line="+173"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>Invalid coordonner ou distance &apos;%1&apos;.</translation>
     </message>

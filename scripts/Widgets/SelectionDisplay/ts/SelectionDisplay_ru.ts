@@ -4,8 +4,8 @@
 <context>
     <name>SelectionDisplay</name>
     <message>
-        <location filename="../SelectionDisplay.js" line="+57"/>
-        <source>No selected entities.</source>
+        <location filename="../SelectionDisplay.js" line="+58"/>
+        <source>No entities selected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -32,6 +32,11 @@
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SelectionDisplay.ui" line="+26"/>
+        <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

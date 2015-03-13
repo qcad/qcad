@@ -4,7 +4,7 @@
 <context>
     <name>CoordinateDisplay</name>
     <message>
-        <location filename="../CoordinateDisplay.ui" line="+69"/>
+        <location filename="../CoordinateDisplay.ui" line="+66"/>
         <source>Absolute Cartesian Coordinate</source>
         <translatorcomment>--exact match--
 --file: Input_pt.ts--
@@ -13,7 +13,7 @@ Coordenadas cartesianas absolutas:</translatorcomment>
         <translation>Coordenadas cartesianas absolutas</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
         <translatorcomment>--exact match--
 --file: Input_pt.ts--
@@ -22,7 +22,7 @@ Coordenadas polares absoluta:</translatorcomment>
         <translation>Coordenadas polares absoluta</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
         <translatorcomment>--exact match--
 --file: Input_pt.ts--
@@ -31,7 +31,7 @@ Coordenadas cartesianas relativo:</translatorcomment>
         <translation>Coordenadas cartesianas relativo</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+21"/>
         <source>Relative Polar Coordinate</source>
         <translatorcomment>--exact match--
 --file: Input_pt.ts--

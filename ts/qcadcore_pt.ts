@@ -533,7 +533,7 @@ Abre diálogo de cores</translatorcomment>
         <translation>Topo</translation>
     </message>
     <message>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>Personalizado</translation>
     </message>
@@ -624,7 +624,7 @@ Abre diálogo de cores</translatorcomment>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+168"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+179"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Requer a seleção</translation>
@@ -845,7 +845,7 @@ Borda (grande)</translatorcomment>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+817"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+816"/>
         <source>By Layer</source>
         <translation>Pela Camada</translation>
     </message>

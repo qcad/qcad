@@ -358,7 +358,7 @@
         <translation>Bovenkant</translation>
     </message>
     <message>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>Gebruiker gedefinieerd</translation>
     </message>
@@ -449,7 +449,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+168"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+179"/>
         <source>Requires selection</source>
         <translation>Selectie vereist</translation>
     </message>
@@ -513,7 +513,7 @@
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+817"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+816"/>
         <source>By Layer</source>
         <translation>Door laag bepaald</translation>
     </message>

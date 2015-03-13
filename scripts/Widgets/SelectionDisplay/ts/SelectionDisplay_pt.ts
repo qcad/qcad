@@ -4,10 +4,14 @@
 <context>
     <name>SelectionDisplay</name>
     <message>
-        <location filename="../SelectionDisplay.js" line="+57"/>
         <source>No selected entities.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Não entidades selecionadas.</translation>
+        <translation type="vanished">Não entidades selecionadas.</translation>
+    </message>
+    <message>
+        <location filename="../SelectionDisplay.js" line="+58"/>
+        <source>No entities selected.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -65,6 +69,11 @@ Ponto de corte não está na entidade.</translatorcomment>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidades selecionadas:
 %1</translation>
+    </message>
+    <message>
+        <location filename="../SelectionDisplay.ui" line="+26"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

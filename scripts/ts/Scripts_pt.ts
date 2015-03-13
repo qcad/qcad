@@ -125,7 +125,7 @@ Ferramentas CAD</translatorcomment>
         <translation>Ferramentas CAD</translation>
     </message>
     <message>
-        <location line="+692"/>
+        <location line="+643"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidade está em uma camada bloqueada.</translation>

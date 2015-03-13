@@ -547,7 +547,7 @@ Colore G&amp;riglia:</translatorcomment>
         <translation>Sopra</translation>
     </message>
     <message>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>Personalizzato</translation>
     </message>
@@ -638,7 +638,7 @@ Colore G&amp;riglia:</translatorcomment>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+168"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+179"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Richiede selezione</translation>
@@ -862,7 +862,7 @@ Margine (Ingrandita)</translatorcomment>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+817"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+816"/>
         <source>By Layer</source>
         <translation>Da Layer</translation>
     </message>

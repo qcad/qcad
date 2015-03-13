@@ -93,7 +93,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+692"/>
+        <location line="+643"/>
         <source>Entity is on a locked layer.</source>
         <translation type="unfinished"></translation>
     </message>

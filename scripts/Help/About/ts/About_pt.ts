@@ -31,6 +31,11 @@
     </message>
     <message>
         <location line="+5"/>
+        <source>ID:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Description:</source>
         <translation>Descrição:</translation>
     </message>

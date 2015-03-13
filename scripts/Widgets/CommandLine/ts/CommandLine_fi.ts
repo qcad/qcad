@@ -4,7 +4,7 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../CommandLine.js" line="+29"/>
+        <location filename="../CommandLine.js" line="+30"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
@@ -21,7 +21,7 @@
         <translation>&amp;Komentorivi</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>Puutteellinen koordinaatti tai etäisyys &apos;%1&apos;.</translation>
     </message>

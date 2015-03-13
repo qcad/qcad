@@ -4,10 +4,14 @@
 <context>
     <name>SelectionDisplay</name>
     <message>
-        <location filename="../SelectionDisplay.js" line="+57"/>
         <source>No selected entities.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Aucune des entités sélectionnées.</translation>
+        <translation type="vanished">Aucune des entités sélectionnées.</translation>
+    </message>
+    <message>
+        <location filename="../SelectionDisplay.js" line="+58"/>
+        <source>No entities selected.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -66,6 +70,11 @@ Indiquer le premier point de cassure sur une polyligne</translatorcomment>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entités sélectionnées :
 %1.</translation>
+    </message>
+    <message>
+        <location filename="../SelectionDisplay.ui" line="+26"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

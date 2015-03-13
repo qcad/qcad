@@ -4,7 +4,7 @@
 <context>
     <name>AntialiasingMode</name>
     <message>
-        <location filename="../AntialiasingMode.js" line="+75"/>
+        <location filename="../AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
         <translation>&amp;Antialiasing</translation>
     </message>

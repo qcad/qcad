@@ -4,9 +4,13 @@
 <context>
     <name>SelectionDisplay</name>
     <message>
-        <location filename="../SelectionDisplay.js" line="+57"/>
         <source>No selected entities.</source>
-        <translation>エンティティが選択されていません。</translation>
+        <translation type="vanished">エンティティが選択されていません。</translation>
+    </message>
+    <message>
+        <location filename="../SelectionDisplay.js" line="+58"/>
+        <source>No entities selected.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -46,6 +50,11 @@
 %1.</source>
         <translation>選択エンティティ:
 %1.</translation>
+    </message>
+    <message>
+        <location filename="../SelectionDisplay.ui" line="+26"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

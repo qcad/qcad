@@ -358,7 +358,7 @@
         <translation>上部</translation>
     </message>
     <message>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>自定义</translation>
     </message>
@@ -449,7 +449,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+168"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+179"/>
         <source>Requires selection</source>
         <translation>需要选择</translation>
     </message>
@@ -597,7 +597,7 @@
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+817"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+816"/>
         <source>By Layer</source>
         <translation type="unfinished">按图层</translation>
     </message>

@@ -4,22 +4,22 @@
 <context>
     <name>CoordinateDisplay</name>
     <message>
-        <location filename="../CoordinateDisplay.ui" line="+69"/>
+        <location filename="../CoordinateDisplay.ui" line="+66"/>
         <source>Absolute Cartesian Coordinate</source>
         <translation>Absoluuttinen suorakulmainen koodinaatti</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
         <translation>Absoluuttinen napakoordinaatti</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
         <translation>Suhteellinen suorakulmainen koodinaatti</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+21"/>
         <source>Relative Polar Coordinate</source>
         <translation>Suhteellinen napakoordinaatti</translation>
     </message>
