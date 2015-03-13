@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>SelectionDisplay</name>
     <message>
         <source>No selected entities.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">No hay entidades seleccionadas.</translation>
+        <translation>No hay entidades seleccionadas.</translation>
     </message>
     <message>
         <location filename="../SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>No hay entidades seleccionadas.</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -40,7 +40,7 @@ Crea un nuevo bloque de entidades existentes
 Quita la selección a todas las entidades
 Deselecciona todas las entidades
 Deseleccionar en&amp;tidades cruzadas</translatorcomment>
-        <translation type="vanished">Entidades</translation>
+        <translation>Entidades</translation>
     </message>
     <message>
         <source> on </source>
@@ -52,19 +52,19 @@ El punto de corte no esta en la entidad.</translatorcomment>
     </message>
     <message>
         <source>on</source>
-        <translation type="vanished">en</translation>
+        <translation>en</translation>
     </message>
     <message>
         <source>Layer &apos;%1&apos;</source>
         <translatorcomment>--google--
 Capa &apos;%1&apos; transformada con éxito
 No se pudo transformar la capa &apos;%1&apos;</translatorcomment>
-        <translation type="vanished">Capa &apos;%1&apos;</translation>
+        <translation>Capa &apos;%1&apos;</translation>
     </message>
     <message>
         <source>%1 Layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">%1 Capas</translation>
+        <translation>%1 Capas</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -77,7 +77,7 @@ No se pudo transformar la capa &apos;%1&apos;</translatorcomment>
     <message>
         <location filename="../SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
 </context>
 </TS>
