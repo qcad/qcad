@@ -147,6 +147,12 @@ About.prototype.initAboutPlugins = function(webView) {
             }
             html += this.getTableRow(qsTr("Plugin:"), "<b>" + Qt.escape(text) + "</b>", false);
 
+            // ID:
+            text = pluginInfo.get("ID");
+            if (!isNull(text)) {
+                html += this.getTableRow(qsTr("ID:"), text, false);
+            }
+
             // description:
             text = pluginInfo.get("Description");
             if (!isNull(text)) {

@@ -34,7 +34,6 @@ void RLinetypeList::init(bool metric, RResourceList<RLinetypePattern>& res) {
 
         QList<QPair<QString, RLinetypePattern*> > linetypes = RLinetypePattern::loadAllFrom(metric, fi.absoluteFilePath());
         for (int k=0; k<linetypes.size(); k++) {
-            qDebug() << "adding lt to res: " << linetypes[k].first;
             res.resMap.insert(linetypes[k].first, linetypes[k].second);
         }
     }

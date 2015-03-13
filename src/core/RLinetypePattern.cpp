@@ -749,7 +749,6 @@ double RLinetypePattern::getLargestGap() const {
  * Loads all linetype patterns in the given file into memory.
  */
 QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool metric, const QString& fileName) {
-    qDebug() << "loading patterns from file: " << fileName;
     QList<QPair<QString, RLinetypePattern*> > ret;
 
     // Open lin file:
@@ -796,19 +795,18 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
                 ltPattern->metric = true;
             }
 
-            qDebug() << "lt read from file:" << name;
             ret.append(qMakePair(name, ltPattern));
-            //continue;
+            continue;
         }
 
         // linetype pattern definition ("A,3.81,[TRACK1,ltypeshp.shx,S=6.35],3.81"):
-//        else if (ltPattern!=NULL) {
-//            if (!ltPattern->setPatternString(line)) {
-//                ret.removeLast();
-//                delete ltPattern;
-//                ltPattern = NULL;
-//            }
-//        }
+        else if (ltPattern!=NULL) {
+            if (!ltPattern->setPatternString(line)) {
+                ret.removeLast();
+                delete ltPattern;
+                ltPattern = NULL;
+            }
+        }
     }
 
     return ret;

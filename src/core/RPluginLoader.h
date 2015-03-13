@@ -74,7 +74,7 @@ public:
     }
 
     static QString getPluginsPath();
-    static bool hasPlugin(const QString& name);
+    static bool hasPlugin(const QString& id);
 
 private:
     static QList<RPluginInfo> pluginsInfo;
