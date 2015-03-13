@@ -132,7 +132,7 @@ OffsetThrough.prototype.pickCoordinate = function(event, preview) {
     switch (this.state) {
     case OffsetThrough.State.SettingPos:
         this.pos = event.getModelPosition();
-        this.distance = this.shape.getDistanceTo(this.pos, false);
+        this.distance = this.getDistance(this.pos, this.shape);
 
         if (preview) {
             this.updatePreview();
@@ -147,4 +147,6 @@ OffsetThrough.prototype.pickCoordinate = function(event, preview) {
     }
 };
 
-
+OffsetThrough.prototype.getDistance = function(pos, shape) {
+    return shape.getDistanceTo(pos, false);
+};

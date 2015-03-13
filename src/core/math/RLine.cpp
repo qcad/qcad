@@ -164,12 +164,13 @@ RVector RLine::getVectorTo(const RVector& point, bool limited, double strictRang
     double b = RVector::getDotProduct(ap, ae) / RVector::getDotProduct(ae, ae);
 
     if (limited && (b < 0 || b > 1.0)) {
-        // orthogonal to line does not cross line:
+        // orthogonal to line does not cross line, use distance to end point:
         RVector ret = getVectorFromEndpointTo(point);
         if (ret.getMagnitude()<strictRange) {
             return ret;
         }
         else {
+            // not within given range:
             return RVector::invalid;
         }
     }

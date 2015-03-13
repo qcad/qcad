@@ -73,6 +73,9 @@ macx {
     QMAKE_CXXFLAGS_X86 += -Werror=return-type
     macx-clang* {
         QMAKE_CXXFLAGS += -mmacosx-version-min=10.6
+        exists(/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk) {
+            QMAKE_MAC_SDK = macosx10.9
+        }
     }
 
     contains(QT_VERSION, ^5\\..*\\..*) {
