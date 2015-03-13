@@ -296,15 +296,15 @@ QList<QSharedPointer<RObject> > RDocument::getDefaultLinetypes() {
     QList<QSharedPointer<RObject> > ret;
 
     // read patterns from file system and add to doc:
-    QStringList patlist;
+    QStringList patternList;
     if (RUnit::isMetric(getUnit())) {
-        patlist = RLinetypeListMetric::getNames();
+        patternList = RLinetypeListMetric::getNames();
     }
     else {
-        patlist = RLinetypeListImperial::getNames();
+        patternList = RLinetypeListImperial::getNames();
     }
-    for (int i = 0; i < patlist.length(); i++) {
-        QString name = patlist[i];
+    for (int i = 0; i < patternList.length(); i++) {
+        QString name = patternList[i];
 
         RLinetypePattern* pattern = NULL;
         if (RUnit::isMetric(getUnit())) {
