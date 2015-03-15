@@ -115,12 +115,15 @@ Print.prototype.print = function(pdfFile) {
                         }
                     });
 
-        if (RS.getSystemId()==="osx" || RS.getSystemId()==="linux") {
-            Print.printDialog.exec();
-        }
-        else if (RS.getSystemId()==="win") {
+        // Windows:
+        if (RS.getSystemId()==="win") {
             // slot 'dummy' is never called:
             Print.printDialog.open(this, "dummy");
+        }
+
+        // Mac OS X, Linux, various other unices:
+        else {
+            Print.printDialog.exec();
         }
 
         if (Print.cancel===true) {
