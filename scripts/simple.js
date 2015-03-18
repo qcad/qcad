@@ -69,20 +69,38 @@ function getDocument() {
     return di.getDocument();
 }
 
-function addPoint(x, y) {
-    addShape(new RPoint(x, y));
+function addPoint(p1, p2) {
+    if (isNumber(p1)) {
+        addPoint(new RPoint(new RVector(p1, p2)));
+        return;
+    }
+
+    addShape(new RPoint(p1));
 }
 
-function addLine(x1, y1, x2, y2) {
-    addShape(new RLine(x1, y1, x2, y2));
+function addLine(p1, p2, p3, p4) {
+    if (isNumber(p1)) {
+        addLine(new RLine(new RVector(p1, p2), new RVector(p3, p4)));
+        return;
+    }
+
+    addShape(new RLine(p1, p2));
 }
 
-function addArc(cx, cy, radius, a1, a2, rev) {
-    addShape(new RArc(cx, cy, radius, a1, a2, rev));
+function addArc(p1, p2, p3, p4, p5, p6) {
+    if (isNumber(p1)) {
+        addArc(new RVector(p1, p2), p3, p4, p5, p6);
+        return;
+    }
+    addShape(new RArc(p1, p2, p3, p4, p5));
 }
 
-function addCircle(cx, cy, radius) {
-    addShape(new RCircle(cx, cy, radius));
+function addCircle(p1, p2, p3) {
+    if (isNumber(p1)) {
+        addCircle(new RVector(p1, p2), p3);
+        return;
+    }
+    addShape(new RCircle(p1, p2));
 }
 
 /**
