@@ -45,39 +45,43 @@ StatusBar.init = function(basePath) {
     action.setSortOrder(200);
     action.setWidgetNames(["ViewMenu", "!WidgetsToolBar", "!ViewToolsPanel"]);
 
-    if (RSettings.getBoolValue("StatusBar/UseDockWidget", false)===true) {
-        var dock = new RDockWidget(qsTr("Status Bar"), appWin);
-        dock.objectName = "StatusBarDock";
-        dock.minimumHeight = 32;
-        dock.minimumWidth = 400;
-        dock.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred);
-        var splitter = new QSplitter(dock);
+//    if (RSettings.getBoolValue("StatusBar/UseDockWidget", false)===true) {
+//        var dock = new RDockWidget(qsTr("Status Bar"), appWin);
+//        dock.objectName = "StatusBarDock";
+//        dock.setFixedHeight(32);
+//        dock.minimumWidth = 400;
+//        dock.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred);
+        var statusBar = appWin.statusBar();
+        //var splitter = new QSplitter(dock);
+        var splitter = new QSplitter(statusBar);
+        splitter.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Preferred);
         splitter.childrenCollapsible = false;
         splitter.objectName = "StatusBar";
-        dock.setWidget(splitter);
-        var commandLineDock = appWin.findChild("CommandLineDock");
-        appWin.splitDockWidget(commandLineDock, dock, Qt.Vertical);
-        dock.shown.connect(function() { action.setChecked(true); });
-        dock.hidden.connect(function() { action.setChecked(false); });
+//        dock.setWidget(splitter);
+        statusBar.addWidget(splitter, 1000);
+        //var commandLineDock = appWin.findChild("CommandLineDock");
+        //appWin.splitDockWidget(commandLineDock, dock, Qt.Vertical);
+//        dock.shown.connect(function() { action.setChecked(true); });
+//        dock.hidden.connect(function() { action.setChecked(false); });
 
-        dock.setTitleBarWidget(new QWidget(dock));
-    }
-    else {
-        var statusBar = appWin.statusBar();
-        statusBar.objectName = "StatusBar";
-    }
+//        dock.setTitleBarWidget(new QWidget(dock));
+//    }
+//    else {
+//        var statusBar = appWin.statusBar();
+//        statusBar.objectName = "StatusBar";
+//    }
 };
 
 StatusBar.clearMessage = function() {
     var appWin = EAction.getMainWindow();
     var statusBar;
-    if (RSettings.getBoolValue("StatusBar/UseDockWidget", false)===true) {
-        statusBar = appWin.findChild("StatusBar");
-    }
-    else {
+//    if (RSettings.getBoolValue("StatusBar/UseDockWidget", false)===true) {
+//        statusBar = appWin.findChild("StatusBar");
+//    }
+//    else {
         statusBar = appWin.statusBar();
         statusBar.clearMessage();
-    }
+//    }
 };
 
 StatusBar.getStatusBar = function() {
@@ -92,14 +96,14 @@ StatusBar.addWidget = function(widget, sortOrder, visible) {
     var appWin = EAction.getMainWindow();
     var statusBar = appWin.findChild("StatusBar");
     var list = [];
-    if (RSettings.getBoolValue("StatusBar/UseDockWidget", false)===true) {
-        for (i=0; i<statusBar.count(); i++) {
-            list.push(statusBar.widget(i));
-        }
-    }
-    else {
+//    if (RSettings.getBoolValue("StatusBar/UseDockWidget", false)===true) {
+//        for (i=0; i<statusBar.count(); i++) {
+//            list.push(statusBar.widget(i));
+//        }
+//    }
+//    else {
         list = statusBar.children().filter(function(w) { return !isNull(w.property("SortOrder")); } );
-    }
+//    }
 
     var maxSortOrder = 0;
     var index = 0;
@@ -113,31 +117,31 @@ StatusBar.addWidget = function(widget, sortOrder, visible) {
         }
     }
 
-    var separator = undefined;
-    if (RS.getSystemId() === "osx" && RSettings.getBoolValue("StatusBar/UseDockWidget", false)===false) {
-        separator = new QFrame();
-        separator.frameShape = QFrame.VLine;
-        separator.frameShadow = QFrame.Sunken;
-        separator.setProperty("SortOrder", sortOrder + 1);
-        separator.objectName = widget.objectName + "Separator";
-    }
+//    var separator = undefined;
+//    if (RS.getSystemId() === "osx" && RSettings.getBoolValue("StatusBar/UseDockWidget", false)===false) {
+//        separator = new QFrame();
+//        separator.frameShape = QFrame.VLine;
+//        separator.frameShadow = QFrame.Sunken;
+//        separator.setProperty("SortOrder", sortOrder + 1);
+//        separator.objectName = widget.objectName + "Separator";
+//    }
 
     if (index >= list.length) {
         statusBar.addWidget(widget);
-        if (separator) {
-            statusBar.addWidget(separator);
-        }
+//        if (separator) {
+//            statusBar.addWidget(separator);
+//        }
     } else {
         statusBar.insertWidget(index, widget);
-        if (separator) {
-            statusBar.insertWidget(index + 1, separator);
-        }
+//        if (separator) {
+//            statusBar.insertWidget(index + 1, separator);
+//        }
     }
 
     widget.visible = visible;
-    if (separator) {
-        separator.visible = visible;
-    }
+//    if (separator) {
+//        separator.visible = visible;
+//    }
 };
 
 StatusBar.applyPreferences = function(doc, mdiChild) {
@@ -176,12 +180,12 @@ StatusBar.prototype.beginEvent = function() {
 
     var appWin = RMainWindowQt.getMainWindow();
     var widget;
-    if (RSettings.getBoolValue("StatusBar/UseDockWidget", false)===true) {
-        widget = appWin.findChild("StatusBarDock");
-    }
-    else {
+//    if (RSettings.getBoolValue("StatusBar/UseDockWidget", false)===true) {
+//        widget = appWin.findChild("StatusBarDock");
+//    }
+//    else {
         widget = appWin.statusBar();
-    }
+//    }
 
     widget.visible = !widget.visible;
 };
