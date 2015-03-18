@@ -76,6 +76,14 @@ dir="./core" filename="REntityData.h">
   <name>QSet</name>&lt;int&gt;()</cpp:define>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RDEFAULT_TOLERANCE_1E_MIN4</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RDEFAULT_TOLERANCE_1E_MIN4</name>1.0e-4</cpp:define>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
   <comment type="block">/** * Base class for all entity data
   classes. Such classes are * used to separate functionality from
   data. Data objects may * for example be used to perform certain
@@ -340,7 +348,7 @@ dir="./core" filename="REntityData.h">
     </init></decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * \return Vector of bounding boxes that
+  <comment type="block">/** * \return List of bounding boxes that
   contain this entity. * This is used for complex entities such as
   block references * to further optimize algorithms that depend on
   bounding boxes * (e.g. spatial index algorithms). The default
@@ -391,6 +399,22 @@ dir="./core" filename="REntityData.h">
       </argument>)</argument_list>
     </call></expr>;</return>}</block>
   </function>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>RPolyline</name>
+  </type>
+  <name>getHull</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>offset</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <comment type="block">/** * \return True if the entity is
   currently selected. This can for example * influence the color in
   which the entity is exported. */</comment>
@@ -1429,6 +1453,18 @@ dir="./core" filename="REntityData.h">
     <init>
       <expr>
         <name>true</name>
+      </expr>
+    </init></decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>tolerance</name>=
+    <init>
+      <expr>
+        <name>RDEFAULT_TOLERANCE_1E_MIN4</name>
       </expr>
     </init></decl>
   </param>)</parameter_list>

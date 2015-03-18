@@ -51,6 +51,8 @@ public:
         return *this;
     }
 
+    virtual RPolyline getHull(double offset) const;
+
     RVector getStartPoint() const {
         return RLine::getStartPoint();
     }

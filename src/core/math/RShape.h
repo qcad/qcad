@@ -38,7 +38,9 @@ class RPolyline;
 class RSpline;
 class RTriangle;
 
+#ifndef RDEFAULT_TOLERANCE_1E_MIN4
 #define RDEFAULT_TOLERANCE_1E_MIN4 1.0e-4
+#endif
 
 /**
  * Interface for geometrical shape classes.

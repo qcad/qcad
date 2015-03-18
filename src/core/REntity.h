@@ -47,6 +47,10 @@ class RExporter;
 #define RDEFAULT_QSET_INT QSet<int>()
 #endif
 
+#ifndef RDEFAULT_TOLERANCE_1E_MIN4
+#define RDEFAULT_TOLERANCE_1E_MIN4 1.0e-4
+#endif
+
 /**
  * Base class for all entity classes.
  *
@@ -309,6 +313,13 @@ public:
     }
 
     /**
+     * \copydoc REntityData::getHull
+     */
+    virtual RPolyline getHull(double offset) const {
+        return getData().getHull(offset);
+    }
+
+    /**
      * \copydoc REntityData::getIdBoundingBoxes
      */
 //    virtual QList<QPair<REntity::Id, RBox> > getIdBoundingBoxes() const {
@@ -346,8 +357,8 @@ public:
     /**
      * \copydoc REntityData::isOnEntity
      */
-    virtual bool isOnEntity(const RVector& point, bool limited=true) const {
-        return getData().isOnEntity(point, limited);
+    virtual bool isOnEntity(const RVector& point, bool limited=true, double tolerance = RDEFAULT_TOLERANCE_1E_MIN4) const {
+        return getData().isOnEntity(point, limited, tolerance);
     }
 
     /**

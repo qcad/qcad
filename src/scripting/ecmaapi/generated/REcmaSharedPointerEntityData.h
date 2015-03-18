@@ -66,6 +66,9 @@
         getBoundingBoxes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getHull
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isSelected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

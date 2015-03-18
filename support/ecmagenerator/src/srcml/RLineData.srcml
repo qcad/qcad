@@ -124,6 +124,22 @@ dir="./entity" filename="RLineData.h">
     <expr>*
     <name>this</name></expr>;</return>}</block>
   </function>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>RPolyline</name>
+  </type>
+  <name>getHull</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>offset</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function>
     <type>
       <name>RVector</name>

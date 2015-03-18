@@ -339,7 +339,7 @@ dir="./core" filename="RPluginLoader.h">
       <type>
       <name>const</name>
       <name>QString</name>&amp;</type>
-      <name>name</name>
+      <name>id</name>
     </decl>
   </param>)</parameter_list>;</function_decl></public>
   <private>private: 

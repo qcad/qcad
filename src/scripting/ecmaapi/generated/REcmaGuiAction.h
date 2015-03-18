@@ -66,6 +66,9 @@
 
     // public methods:
     static  QScriptValue
+        setText
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         initTexts
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

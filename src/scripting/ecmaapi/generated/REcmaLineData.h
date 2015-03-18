@@ -48,6 +48,9 @@
         getLine
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getHull
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getStartPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

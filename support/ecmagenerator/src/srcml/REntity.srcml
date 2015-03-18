@@ -82,6 +82,14 @@ dir="./core" filename="REntity.h">
   <name>QSet</name>&lt;int&gt;()</cpp:define>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RDEFAULT_TOLERANCE_1E_MIN4</name></cpp:ifndef>
+  <cpp:define>#
+  <cpp:directive>define</cpp:directive>
+  <name>RDEFAULT_TOLERANCE_1E_MIN4</name>1.0e-4</cpp:define>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
   <comment type="block">/** * Base class for all entity classes. *
   * Entities can be exported using an implementor of the exporter *
   interface by calling \ref exportEntity. * * \ingroup core *
@@ -1232,6 +1240,41 @@ dir="./core" filename="REntity.h">
       </argument>)</argument_list>
     </call></expr>;</return>}</block>
   </function>
+  <comment type="block">/** * \copydoc REntityData::getHull
+  */</comment>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>RPolyline</name>
+    </type>
+    <name>getHull</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+          <name>double</name>
+        </type>
+        <name>offset</name>
+      </decl>
+    </param>)</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+    <call>
+      <name>getData</name>
+      <argument_list>()</argument_list>
+    </call>.
+    <call>
+      <name>getHull</name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>offset</name>
+        </expr>
+      </argument>)</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
   <comment type="block">/** * \copydoc
   REntityData::getIdBoundingBoxes */</comment>
   <comment type="line">// virtual QList&lt;QPair&lt;REntity::Id,
@@ -1497,6 +1540,18 @@ dir="./core" filename="REntity.h">
           <name>true</name>
         </expr>
       </init></decl>
+    </param>, 
+    <param>
+      <decl>
+      <type>
+        <name>double</name>
+      </type>
+      <name>tolerance</name>=
+      <init>
+        <expr>
+          <name>RDEFAULT_TOLERANCE_1E_MIN4</name>
+        </expr>
+      </init></decl>
     </param>)</parameter_list>
     <specifier>const</specifier>
     <block>{ 
@@ -1517,6 +1572,11 @@ dir="./core" filename="REntity.h">
       <argument>
         <expr>
           <name>limited</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>tolerance</name>
         </expr>
       </argument>)</argument_list>
     </call></expr>;</return>}</block>

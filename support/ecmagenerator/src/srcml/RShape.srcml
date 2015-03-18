@@ -53,9 +53,14 @@ dir="./core/math" filename="RShape.h">
   <name>RSpline</name>;</class_decl>
   <class_decl>class 
   <name>RTriangle</name>;</class_decl>
+  <cpp:ifndef>#
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RDEFAULT_TOLERANCE_1E_MIN4</name></cpp:ifndef>
   <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>RDEFAULT_TOLERANCE_1E_MIN4</name>1.0e-4</cpp:define>
+  <cpp:endif>#
+  <cpp:directive>endif</cpp:directive></cpp:endif>
   <comment type="block">/** * Interface for geometrical shape
   classes. * * \ingroup math * \scriptable * \sharedPointerSupport
   */</comment>

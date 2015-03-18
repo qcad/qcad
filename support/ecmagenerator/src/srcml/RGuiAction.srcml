@@ -112,7 +112,7 @@ dir="./core" filename="RGuiAction.h">
       <type>
       <name>const</name>
       <name>QString</name>&amp;</type>
-      <name>text</name>
+      <name>oriText</name>
     </decl>
   </param>, 
   <param>
@@ -128,6 +128,20 @@ dir="./core" filename="RGuiAction.h">
   <specifier>virtual</specifier>
   <name>~RGuiAction</name>
   <parameter_list>()</parameter_list>;</destructor_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
+  <name>setText</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>oriText</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <comment type="block">/** * Initializes the GUI action texts (for
   menus, tooltips, ...). * This function is called whenever the
   text of the action changes. */</comment>
@@ -157,7 +171,7 @@ dir="./core" filename="RGuiAction.h">
       <type>
       <name>const</name>
       <name>QString</name>&amp;</type>
-      <name>text</name>
+      <name>oriText</name>
     </decl>
   </param>, 
   <param>
@@ -179,7 +193,7 @@ dir="./core" filename="RGuiAction.h">
       <type>
       <name>const</name>
       <name>QString</name>&amp;</type>
-      <name>text</name>
+      <name>oriText</name>
     </decl>
   </param>, 
   <param>
@@ -296,7 +310,7 @@ dir="./core" filename="RGuiAction.h">
       <type>
       <name>const</name>
       <name>QString</name>&amp;</type>
-      <name>text</name>
+      <name>oriText</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
@@ -1646,7 +1660,7 @@ dir="./core" filename="RGuiAction.h">
     <type>
       <name>QString</name>
     </type>
-    <name>text</name>
+    <name>oriText</name>
   </decl>;</decl_stmt>
   <decl_stmt>
   <decl>

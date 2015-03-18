@@ -105,6 +105,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, setText, "setText");
+            
             REcmaHelper::registerFunction(&engine, proto, initTexts, "initTexts");
             
             REcmaHelper::registerFunction(&engine, proto, init, "init");
@@ -514,6 +516,61 @@
 
     // public methods:
      QScriptValue
+        REcmaGuiAction::setText
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::setText", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setText";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("setText", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setText(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setText().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::setText", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaGuiAction::initTexts
         (QScriptContext* context, QScriptEngine* engine) 
         

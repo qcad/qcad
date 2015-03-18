@@ -70,6 +70,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, getLine, "getLine");
             
+            REcmaHelper::registerFunction(&engine, proto, getHull, "getHull");
+            
             REcmaHelper::registerFunction(&engine, proto, getStartPoint, "getStartPoint");
             
             REcmaHelper::registerFunction(&engine, proto, getEndPoint, "getEndPoint");
@@ -409,6 +411,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLineData::getLine", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLineData::getHull
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLineData::getHull", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLineData::getHull";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLineData* self = 
+                        getSelf("getHull", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPolyline'
+    RPolyline cppResult =
+        
+               self->getHull(a0);
+        // return type: RPolyline
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLineData.getHull().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLineData::getHull", context, engine);
             return result;
         }
          QScriptValue
