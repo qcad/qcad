@@ -71,7 +71,7 @@ function getDocument() {
 
 function addPoint(p1, p2) {
     if (isNumber(p1)) {
-        addPoint(new RPoint(new RVector(p1, p2)));
+        addPoint(new RVector(p1, p2));
         return;
     }
 
@@ -80,7 +80,7 @@ function addPoint(p1, p2) {
 
 function addLine(p1, p2, p3, p4) {
     if (isNumber(p1)) {
-        addLine(new RLine(new RVector(p1, p2), new RVector(p3, p4)));
+        addLine(new RVector(p1, p2), new RVector(p3, p4));
         return;
     }
 

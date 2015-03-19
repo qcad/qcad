@@ -403,6 +403,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     globalObject.setProperty("serialize", engine->newFunction(ecmaSerialize));
     globalObject.setProperty("addApplicationFont", engine->newFunction(ecmaAddApplicationFont));
     globalObject.setProperty("download", engine->newFunction(ecmaDownload));
+    globalObject.setProperty("mSleep", engine->newFunction(ecmaMSleep));
     globalObject.setProperty("qApp", engine->newQObject(dynamic_cast<RSingleApplication*>(qApp)));
 
     // fix Qt wrapper APIs
@@ -1790,7 +1791,6 @@ QScriptValue RScriptHandlerEcma::ecmaQLineEditValidator(QScriptContext* context,
 QScriptValue RScriptHandlerEcma::ecmaMSleep(QScriptContext* context,
         QScriptEngine* engine) {
 
-    Q_ASSERT(false);
     if (context->argumentCount() == 1 && context->argument(0).isNumber()) {
         int val = context->argument(0).toInteger();
         QTime dieTime = QTime::currentTime().addMSecs(val);

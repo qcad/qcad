@@ -54,7 +54,8 @@ StatusBar.init = function(basePath) {
         var statusBar = appWin.statusBar();
         //var splitter = new QSplitter(dock);
         var splitter = new QSplitter(statusBar);
-        splitter.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Preferred);
+        splitter.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed);
+        splitter.setFixedHeight(40);
         splitter.childrenCollapsible = false;
         splitter.objectName = "StatusBar";
 //        dock.setWidget(splitter);

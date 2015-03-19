@@ -23,7 +23,7 @@ include("scripts/WidgetFactory.js");
 include("scripts/simple.js");
 
 function EcmaScriptShell(guiAction) {
-    Widgets.call(this, guiAction);
+    EAction.call(this, guiAction);
 }
 
 /*
@@ -32,13 +32,13 @@ EcmaScriptShell.getPreferencesCategory = function() {
 };
 */
 
-EcmaScriptShell.prototype = new Widgets();
+EcmaScriptShell.prototype = new EAction();
 
 /**
  * Shows / hides the script shell widget.
  */
 EcmaScriptShell.prototype.beginEvent = function() {
-    Widgets.prototype.beginEvent.call(this);
+    EAction.prototype.beginEvent.call(this);
 
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("EcmaScriptShellDock");
@@ -48,7 +48,7 @@ EcmaScriptShell.prototype.beginEvent = function() {
 };
 
 EcmaScriptShell.prototype.finishEvent = function() {
-    Widgets.prototype.finishEvent.call(this);
+    EAction.prototype.finishEvent.call(this);
 
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("EcmaScriptShellDock");
@@ -65,7 +65,7 @@ EcmaScriptShell.init = function(basePath) {
     action.setDefaultShortcut(new QKeySequence("g,e"));
     action.setDefaultCommands(["ge"]);
     action.setGroupSortOrder(3800);
-    action.setSortOrder(10000);
+    action.setSortOrder(100);
     action.setWidgetNames(["MiscDevelopmentMenu", "MiscDevelopmentToolBar", "MiscDevelopmentToolsPanel"]);
 
     var formWidget = WidgetFactory.createWidget(basePath, "EcmaScriptShell.ui");
