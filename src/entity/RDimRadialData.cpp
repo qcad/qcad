@@ -173,16 +173,7 @@ QList<QSharedPointer<RShape> > RDimRadialData::getShapes(const RBox& queryBox, b
     ret.append(QSharedPointer<RShape>(new RLine(definitionPoint, v3)));
 
     // create arrow:
-    //addEntity(createArrow(p2, arrowAngle));
-    //RTriangle arrow = RTriangle::createArrow(chordPoint, arrowAngle, dimasz);
-    //ret.append(QSharedPointer<RShape>(new RTriangle(arrow)));
     ret.append(getArrow(chordPoint, arrowAngle));
-
-    // dimension line:
-    //ret.append(getDimensionLineShapes(
-    //               definitionPoint,
-    //               chordPoint,
-    //               true, true));
 
     RVector distV;
     double textAngle;
