@@ -117,6 +117,10 @@ public:
         return data.getRotation();
     }
 
+    void setRotation(double r) {
+        data.setRotation(r);
+    }
+
     void setReferencedBlockId(RBlock::Id blockId) {
         data.setReferencedBlockId(blockId);
     }

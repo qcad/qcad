@@ -91,6 +91,9 @@
         getRotation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setReferencedBlockId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
