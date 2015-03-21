@@ -10,5 +10,6 @@ SUBDIRS = \
     LineSimilarityAxes \
     PointPole \
     PointPowerCenter \
+    PolylineEquidistantAlt \
     XLineHorizontal \
     XLineVertical

@@ -64,6 +64,8 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
 
     var op, di, ids;
 
+    var doc = this.getDocument();
+
     if (cache) {
         if (!isNull(this.diTrans) && preview) {
             op = new RPasteOperation(this.diTrans.getDocument());
@@ -72,13 +74,13 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
         }
 
         var docTrans = new RDocument(new RMemoryStorage(), new RSpatialIndexNavel());
+        docTrans.copyVariablesFrom(doc);
         this.diTrans = new RDocumentInterface(docTrans);
         this.diTrans.setNotifyListeners(false);
 
-        this.diTrans.applyOperation(new RCopyOperation(new RVector(0,0), this.getDocument()));
-        docTrans.copyVariablesFrom(this.getDocument());
+        this.diTrans.applyOperation(new RCopyOperation(new RVector(0,0), doc));
         di = this.diTrans;
-        ids = di.getDocument().queryAllEntities();
+        ids = this.diTrans.getDocument().queryAllEntities();
 
     }
     else {
