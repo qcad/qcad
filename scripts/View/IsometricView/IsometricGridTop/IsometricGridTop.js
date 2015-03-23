@@ -147,7 +147,7 @@ IsometricGridTop.init = function(basePath) {
     action.setDefaultShortcut(new QKeySequence("j,t"));
     action.setDefaultCommands(["isometricgridtop", "jt"]);
     action.setGroup("isometricProjection");
-    action.setNoState(true);
+    action.setNoState();
     action.setGroupSortOrder(3500);
     action.setSortOrder(100);
     action.setWidgetNames(["ViewMenu", "IsometricViewToolBar", "ViewToolsPanel"]);

@@ -7,7 +7,7 @@ function init(basePath) {
     action.setDefaultCommands(["snapfree", "sf"]);
     action.setSortOrder(100);
     action.setGroup("snaps");
-    action.setNoState(true);
+    action.setNoState();
     action.setGroupSortOrder(15000);
     action.setSortOrder(100);
     action.setWidgetNames(["SnapMenu", "SnapToolBar", "SnapToolsPanel"]);

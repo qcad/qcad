@@ -7,7 +7,7 @@ function init(basePath) {
     else {
         action.setDefaultShortcut(new QKeySequence(Qt.ControlModifier + Qt.Key_Space));
     }
-    action.setNoState(true);
+    action.setNoState();
     action.checkable = false;
     action.setGroupSortOrder(3900);
     action.setSortOrder(200);

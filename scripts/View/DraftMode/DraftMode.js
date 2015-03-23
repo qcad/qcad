@@ -90,7 +90,7 @@ DraftMode.init = function(basePath) {
     action.setDefaultShortcut(new QKeySequence("d,f"));
     action.setDefaultCommands(["draftmode", "df"]);
     action.setGroup("viewmodes");
-    action.setNoState(true);
+    action.setNoState();
     action.setGroupSortOrder(3100);
     action.setSortOrder(100);
     action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);

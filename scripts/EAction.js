@@ -329,8 +329,7 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
             var iconLabel = optionsToolBar.findChild("Icon");
             if (!isNull(iconLabel)) {
                 iconLabel.toolTip = qsTr("Active Tool:") + " " + guiAction.text.replace("&", "");
-                iconLabel.pixmap = guiAction.icon.pixmap(
-                    EAction.getOptionsToolBar().iconSize);
+                iconLabel.pixmap = guiAction.icon.pixmap(EAction.getOptionsToolBar().iconSize);
                 iconLabel.setFixedWidth(iconLabel.height + 12);
             }
         }
@@ -428,7 +427,8 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
  * Hides the UI options of this action.
  * 
  * Usually this function does not need to be called directly by implementing
- * actions. \param saveToSettings if true, the state is saved to settings
+ * actions.
+ * \param saveToSettings if true, the state is saved to settings
  */
 EAction.prototype.hideUiOptions = function(saveToSettings) {
     if (isNull(saveToSettings)) {
