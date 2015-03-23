@@ -141,6 +141,7 @@ public:
     static double getDoubleValue(const QString& key, double defaultValue);
     static int getIntValue(const QString& key, int defaultValue);
     static QString getStringValue(const QString& key, const QString& defaultValue);
+    static QStringList getStringListValue(const QString& key, const QStringList& defaultValue);
 
     static void setValue(const QString& key, const QVariant& value, bool overwrite=true);
     static void removeValue(const QString& key);

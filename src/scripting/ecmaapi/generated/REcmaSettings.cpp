@@ -211,6 +211,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getStringValue, "getStringValue");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getStringListValue, "getStringListValue");
+            
             REcmaHelper::registerFunction(&engine, &ctor, setValue, "setValue");
             
             REcmaHelper::registerFunction(&engine, &ctor, removeValue, "removeValue");
@@ -3721,6 +3723,70 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getStringValue", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getStringListValue
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getStringListValue", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getStringListValue";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QStringList */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isArray
+                    QStringList
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        RSettings::
+       getStringListValue(a0
+        ,
+    a1);
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getStringListValue().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getStringListValue", context, engine);
             return result;
         }
          QScriptValue

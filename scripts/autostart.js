@@ -394,6 +394,16 @@ function postInitAddOns(addOns, splash) {
     }
 }
 
+function uninitAddOns(addOns) {
+    var addOn;
+    var i;
+
+    for (i=0; i<addOns.length; ++i) {
+        addOn = addOns[i];
+        addOn.uninit();
+    }
+}
+
 /**
  * Loads the add-ons and starts QCAD.
  */
@@ -685,6 +695,7 @@ function main() {
 
     RPluginLoader.postInitPlugins(RPluginInterface.LoadedFiles);
 
+
     // execute scripts given on command line:
     execScripts(args);
 
@@ -700,6 +711,8 @@ function main() {
         // start and enter the main application loop:
         QCoreApplication.exec();
     }
+
+    uninitAddOns(addOns);
 
     // don't use RSettings below this point
 

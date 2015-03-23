@@ -76,8 +76,14 @@ CoordinateDisplay.postInit = function(basePath) {
             var absPos = documentInterface.getCursorPosition();
             var relPos = absPos.operator_subtract(documentInterface.getRelativeZero());
 
-            lAbs.setText(coordinateToString(absPos, 4, false, false));
-            lAbsPol.setText(coordinateToString(absPos, 4, false, true));
+            if (absPos.isValid()) {
+                lAbs.setText(coordinateToString(absPos, 4, false, false));
+                lAbsPol.setText(coordinateToString(absPos, 4, false, true));
+            }
+            else {
+                lAbs.setText("-");
+                lAbsPol.setText("-");
+            }
 
             if (relPos.isValid()) {
                 lRel.setText(coordinateToString(relPos, 4, true, false));

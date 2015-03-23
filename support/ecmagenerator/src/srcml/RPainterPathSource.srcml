@@ -1,1 +1,99 @@
-
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src"
+xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
+dir="./entity" filename="RPainterPathSource.h">
+  <comment type="block">/** * Copyright (c) 2011-2013 by Andrew
+  Mustun. All rights reserved. * * This file is part of the QCAD
+  project. * * QCAD is free software: you can redistribute it
+  and/or modify * it under the terms of the GNU General Public
+  License as published by * the Free Software Foundation, either
+  version 3 of the License, or * (at your option) any later
+  version. * * QCAD is distributed in the hope that it will be
+  useful, * but WITHOUT ANY WARRANTY; without even the implied
+  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
+  PURPOSE. See the * GNU General Public License for more details. *
+  * You should have received a copy of the GNU General Public
+  License * along with QCAD. */</comment>
+  <cpp:ifndef># 
+  <cpp:directive>ifndef</cpp:directive>
+  <name>RPAINTERPATHSOURCE_H</name></cpp:ifndef>
+  <cpp:define># 
+  <cpp:directive>define</cpp:directive>
+  <name>RPAINTERPATHSOURCE_H</name></cpp:define>
+  <cpp:include># 
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+  <cpp:include># 
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+  <cpp:include># 
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
+  <comment type="block">/** * Interface for entity data classes
+  that can deliver painter paths. * * \ingroup entity * \scriptable
+  * \sharedPointerSupport */</comment>
+  <class>class 
+  <macro>
+    <name>QCADENTITY_EXPORT</name>
+  </macro>
+  <name>RPainterPathSource</name>
+  <block>{ 
+  <private type="default"></private>
+  <public>public: 
+  <destructor>
+    <specifier>virtual</specifier>
+    <name>~RPainterPathSource</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </destructor>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>QList 
+    <argument_list>&lt; 
+    <argument>
+      <name>RPainterPath</name>
+    </argument>&gt;</argument_list></name>
+  </type>
+  <name>getPainterPaths</name>
+  <parameter_list>( 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>draft</name>= 
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>
+  <specifier>=
+  0</specifier>;</function_decl></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>( 
+    <argument>RPainterPathSource*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>( 
+    <argument>const RPainterPathSource*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>( 
+    <argument>
+    QSharedPointer&lt;RPainterPathSource&gt;</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>( 
+    <argument>
+    QSharedPointer&lt;RPainterPathSource&gt;*</argument>)</argument_list>
+  </macro>
+  <cpp:endif># 
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

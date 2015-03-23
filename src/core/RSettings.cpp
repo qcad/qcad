@@ -780,6 +780,11 @@ QString RSettings::getStringValue(const QString& key, const QString& defaultValu
     return ret.toString();
 }
 
+QStringList RSettings::getStringListValue(const QString& key, const QStringList& defaultValue) {
+    QVariant ret = getValue(key, defaultValue);
+    return ret.toStringList();
+}
+
 void RSettings::setValue(const QString& key, const QVariant& value, bool overwrite) {
     if (!isInitialized()) {
         return;

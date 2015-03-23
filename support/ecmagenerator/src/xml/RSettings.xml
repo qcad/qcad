@@ -462,6 +462,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="defaultValue" isConst="true" />
       </variant>
     </method>
+    <method name="getStringListValue" cppName="getStringListValue"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="defaultValue" isConst="true" />
+      </variant>
+    </method>
     <method name="setValue" cppName="setValue" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

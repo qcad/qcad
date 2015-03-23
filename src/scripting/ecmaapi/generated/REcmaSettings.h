@@ -274,6 +274,9 @@
         getStringValue
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getStringListValue
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setValue
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

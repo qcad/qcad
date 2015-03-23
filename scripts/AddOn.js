@@ -129,9 +129,9 @@ AddOn.prototype.postInitAddOn = function(splash, text) {
     var bak = includeBasePath;
     includeBasePath = path;
 
-    var initFilePath = this.getPostInitFilePath();
-    if (new QFileInfo(initFilePath).exists()) {
-        include(initFilePath);
+    var postInitFilePath = this.getPostInitFilePath();
+    if (new QFileInfo(postInitFilePath).exists()) {
+        include(postInitFilePath);
         postInit(includeBasePath);
     }
     else {
@@ -144,8 +144,26 @@ AddOn.prototype.postInitAddOn = function(splash, text) {
 };
 
 AddOn.prototype.uninit = function() {
+    //var className = this.getClassName();
+    //global[className] = undefined;
     var className = this.getClassName();
-    global[className] = undefined;
+    var path = this.getPath();
+
+    //var bak = includeBasePath;
+    //includeBasePath = path;
+
+    var uninitFilePath = this.getUninitFilePath();
+    if (new QFileInfo(uninitFilePath).exists()) {
+        include(uninitFilePath, className);
+        uninit();
+    }
+    else {
+        if (typeof(global[className])!=='undefined' && isFunction(global[className].uninit)) {
+            global[className].uninit();
+        }
+    }
+
+    //includeBasePath = bak;
 };
 
 /**
@@ -371,6 +389,10 @@ AddOn.prototype.getInitFilePath = function() {
  */
 AddOn.prototype.getPostInitFilePath = function() {
     return this.fileInfo.absolutePath() + QDir.separator + this.fileInfo.completeBaseName() + "PostInit.js";
+};
+
+AddOn.prototype.getUninitFilePath = function() {
+    return this.fileInfo.absolutePath() + QDir.separator + this.fileInfo.completeBaseName() + "Uninit.js";
 };
 
 AddOn.prototype.getBaseName = function() {

@@ -45,47 +45,48 @@ StatusBar.init = function(basePath) {
     action.setSortOrder(200);
     action.setWidgetNames(["ViewMenu", "!WidgetsToolBar", "!ViewToolsPanel"]);
 
-//    if (RSettings.getBoolValue("StatusBar/UseDockWidget", false)===true) {
-//        var dock = new RDockWidget(qsTr("Status Bar"), appWin);
-//        dock.objectName = "StatusBarDock";
-//        dock.setFixedHeight(32);
-//        dock.minimumWidth = 400;
-//        dock.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred);
-        var statusBar = appWin.statusBar();
-        //var splitter = new QSplitter(dock);
-        var splitter = new QSplitter(statusBar);
-        splitter.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed);
-        splitter.setFixedHeight(40);
-        splitter.childrenCollapsible = false;
-        splitter.objectName = "StatusBar";
-//        dock.setWidget(splitter);
-        statusBar.addWidget(splitter, 1000);
-        //var commandLineDock = appWin.findChild("CommandLineDock");
-        //appWin.splitDockWidget(commandLineDock, dock, Qt.Vertical);
-//        dock.shown.connect(function() { action.setChecked(true); });
-//        dock.hidden.connect(function() { action.setChecked(false); });
+    var statusBar = appWin.statusBar();
+    var splitter = new QSplitter(statusBar);
+    splitter.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed);
+    splitter.setFixedHeight(40);
+    splitter.childrenCollapsible = false;
+    splitter.objectName = "StatusBar";
+    statusBar.addWidget(splitter, 1000);
+};
 
-//        dock.setTitleBarWidget(new QWidget(dock));
-//    }
-//    else {
-//        var statusBar = appWin.statusBar();
-//        statusBar.objectName = "StatusBar";
-//    }
+StatusBar.postInit = function() {
+    var statusBarSplitter = StatusBar.getStatusBarSplitter();
+    if (isNull(statusBarSplitter)) {
+        return;
+    }
+    var sl = RSettings.getStringListValue("StatusBar/Sizes", []);
+    var l = [];
+    for (var i=0; i<sl.length; i++) {
+        l.push(parseInt(sl[i]));
+    }
+    statusBarSplitter.setSizes(l);
+};
+
+StatusBar.uninit = function(basePath) {
+    var statusBarSplitter = StatusBar.getStatusBarSplitter();
+    if (isNull(statusBarSplitter)) {
+        return;
+    }
+    var sizes = statusBarSplitter.sizes();
+    var sl = [];
+    for (var i=0; i<sizes.length; i++) {
+        sl.push("%1".arg(sizes[i]));
+    }
+    RSettings.setValue("StatusBar/Sizes", sl);
 };
 
 StatusBar.clearMessage = function() {
     var appWin = EAction.getMainWindow();
-    var statusBar;
-//    if (RSettings.getBoolValue("StatusBar/UseDockWidget", false)===true) {
-//        statusBar = appWin.findChild("StatusBar");
-//    }
-//    else {
-        statusBar = appWin.statusBar();
-        statusBar.clearMessage();
-//    }
+    var statusBar = appWin.statusBar();
+    statusBar.clearMessage();
 };
 
-StatusBar.getStatusBar = function() {
+StatusBar.getStatusBarSplitter = function() {
     var appWin = EAction.getMainWindow();
     return appWin.findChild("StatusBar");
 };
@@ -95,16 +96,11 @@ StatusBar.addWidget = function(widget, sortOrder, visible) {
 
     var i;
     var appWin = EAction.getMainWindow();
-    var statusBar = appWin.findChild("StatusBar");
+    var statusBarSplitter = appWin.findChild("StatusBar");
     var list = [];
-//    if (RSettings.getBoolValue("StatusBar/UseDockWidget", false)===true) {
-//        for (i=0; i<statusBar.count(); i++) {
-//            list.push(statusBar.widget(i));
-//        }
-//    }
-//    else {
-        list = statusBar.children().filter(function(w) { return !isNull(w.property("SortOrder")); } );
-//    }
+    for (i=0; i<statusBarSplitter.count(); i++) {
+        list.push(statusBarSplitter.widget(i));
+    }
 
     var maxSortOrder = 0;
     var index = 0;
@@ -118,42 +114,25 @@ StatusBar.addWidget = function(widget, sortOrder, visible) {
         }
     }
 
-//    var separator = undefined;
-//    if (RS.getSystemId() === "osx" && RSettings.getBoolValue("StatusBar/UseDockWidget", false)===false) {
-//        separator = new QFrame();
-//        separator.frameShape = QFrame.VLine;
-//        separator.frameShadow = QFrame.Sunken;
-//        separator.setProperty("SortOrder", sortOrder + 1);
-//        separator.objectName = widget.objectName + "Separator";
-//    }
-
+    widget.setParent(statusBarSplitter);
     if (index >= list.length) {
-        statusBar.addWidget(widget);
-//        if (separator) {
-//            statusBar.addWidget(separator);
-//        }
+        statusBarSplitter.addWidget(widget);
     } else {
-        statusBar.insertWidget(index, widget);
-//        if (separator) {
-//            statusBar.insertWidget(index + 1, separator);
-//        }
+        statusBarSplitter.insertWidget(index, widget);
     }
 
     widget.visible = visible;
-//    if (separator) {
-//        separator.visible = visible;
-//    }
 };
 
 StatusBar.applyPreferences = function(doc, mdiChild) {
     var appWin = RMainWindowQt.getMainWindow();
 
-    var statusBar = StatusBar.getStatusBar();
+    var statusBarSplitter = StatusBar.getStatusBarSplitter();
     var w, i;
 
     var widgetNames = ["Abs", "Rel", "AbsPol", "RelPol", "Right", "Left", "SelectionText"];
     for (i=0; i<widgetNames.length; i++) {
-        w = statusBar.findChild(widgetNames[i]);
+        w = statusBarSplitter.findChild(widgetNames[i]);
         w.font = RSettings.getStatusBarFont();
     }
 
@@ -161,11 +140,11 @@ StatusBar.applyPreferences = function(doc, mdiChild) {
     for (i=0; i<widgetNames.length; i++) {
         var widgetName = widgetNames[i];
 
-        w = statusBar.findChild(widgetName);
+        w = statusBarSplitter.findChild(widgetName);
         if (!isNull(w)) {
             w.visible = RSettings.getBoolValue("StatusBar/" + widgetName, true);
         }
-        w = statusBar.findChild(widgetName + "Separator");
+        w = statusBarSplitter.findChild(widgetName + "Separator");
         if (!isNull(w)) {
             w.visible = RSettings.getBoolValue("StatusBar/" + widgetName, true);
         }
@@ -180,13 +159,6 @@ StatusBar.prototype.beginEvent = function() {
     }
 
     var appWin = RMainWindowQt.getMainWindow();
-    var widget;
-//    if (RSettings.getBoolValue("StatusBar/UseDockWidget", false)===true) {
-//        widget = appWin.findChild("StatusBarDock");
-//    }
-//    else {
-        widget = appWin.statusBar();
-//    }
-
+    var widget = appWin.statusBar();
     widget.visible = !widget.visible;
 };
