@@ -364,6 +364,7 @@ void RDocumentInterface::resume() {
     }
 
     if (hasCurrentAction()) {
+        //qDebug() << "resume (di resume)";
         getCurrentAction()->resumeEvent();
     }
     else {
@@ -382,6 +383,7 @@ void RDocumentInterface::resume() {
  */
 void RDocumentInterface::deleteTerminatedActions() {
     bool removed = false;
+    bool removedHadNoState = false;
 
     while (currentActions.size()>0 && currentActions.top()->isTerminated()) {
         cursorPosition = RVector::invalid;
@@ -398,6 +400,7 @@ void RDocumentInterface::deleteTerminatedActions() {
         }
 
         currentActions.pop();
+        removedHadNoState = currentAction->hasNoState();
         delete currentAction;
 
         if (!group.isEmpty()) {
@@ -406,9 +409,9 @@ void RDocumentInterface::deleteTerminatedActions() {
         removed = true;
     }
 
-    // if one or more actions have been terminated, resume previous action
+    // if one or more actions (with state) have been terminated, resume previous action
     // or default action:
-    if (removed) {
+    if (removed && !removedHadNoState) {
         if (currentActions.size()>0) {
             currentActions.top()->resumeEvent();
         }
