@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fi">
+<TS version="2.1" language="fi">
 <context>
     <name>Rotate2</name>
     <message>
@@ -81,15 +81,15 @@
     <name>TranslateRotate</name>
     <message>
         <source>Primary Angle:</source>
-        <translation>Ensisijainen kulma:</translation>
+        <translation type="vanished">Ensisijainen kulma:</translation>
     </message>
     <message>
         <source>Secondary Angle:</source>
-        <translation>Toissijainen kulma:</translation>
+        <translation type="vanished">Toissijainen kulma:</translation>
     </message>
     <message>
         <source>Copies:</source>
-        <translation>Kopioita:</translation>
+        <translation type="vanished">Kopioita:</translation>
     </message>
 </context>
 </TS>

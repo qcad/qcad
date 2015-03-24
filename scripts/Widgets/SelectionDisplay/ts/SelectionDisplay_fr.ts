@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr_FR">
+<TS version="2.1" language="fr_FR">
 <context>
     <name>SelectionDisplay</name>
     <message>
         <source>No selected entities.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Aucune des entités sélectionnées.</translation>
+        <translation type="vanished">Aucune des entités sélectionnées.</translation>
     </message>
     <message>
         <location filename="../SelectionDisplay.js" line="+58"/>
@@ -39,7 +39,7 @@
 Crée un nouveau bloc à partir des entités existantes
 Désélectionne toutes les entités
 Désélectionne&amp;r entités coupées</translatorcomment>
-        <translation>entités</translation>
+        <translation type="vanished">entités</translation>
     </message>
     <message>
         <source> on </source>
@@ -51,17 +51,17 @@ Indiquer le premier point de cassure sur une polyligne</translatorcomment>
     </message>
     <message>
         <source>on</source>
-        <translation>sur</translation>
+        <translation type="vanished">sur</translation>
     </message>
     <message>
         <source>Layer &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>calque &apos;%1&apos;</translation>
+        <translation type="vanished">calque &apos;%1&apos;</translation>
     </message>
     <message>
         <source>%1 Layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>%1 calques</translation>
+        <translation type="vanished">%1 calques</translation>
     </message>
     <message>
         <location line="+4"/>

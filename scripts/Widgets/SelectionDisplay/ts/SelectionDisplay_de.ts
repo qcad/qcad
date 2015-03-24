@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>SelectionDisplay</name>
     <message>
         <source>No selected entities.</source>
-        <translation>Keine Objekte selektiert.</translation>
+        <translation type="vanished">Keine Objekte selektiert.</translation>
     </message>
     <message>
         <location filename="../SelectionDisplay.js" line="+58"/>
@@ -34,11 +34,11 @@
     </message>
     <message>
         <source>Entities</source>
-        <translation>Objekte</translation>
+        <translation type="vanished">Objekte</translation>
     </message>
     <message>
         <source>on</source>
-        <translation>auf</translation>
+        <translation type="vanished">auf</translation>
     </message>
     <message>
         <source> on </source>
@@ -46,7 +46,7 @@
     </message>
     <message>
         <source>Layer &apos;%1&apos;</source>
-        <translation>Layer &apos;%1&apos;</translation>
+        <translation type="vanished">Layer &apos;%1&apos;</translation>
     </message>
     <message>
         <source>Layer &quot;%1&quot;</source>
@@ -54,7 +54,7 @@
     </message>
     <message>
         <source>%1 Layers</source>
-        <translation>%1 Layer</translation>
+        <translation type="vanished">%1 Layer</translation>
     </message>
     <message>
         <location line="+4"/>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt_PT">
+<TS version="2.1" language="pt_PT">
 <context>
     <name>SelectionDisplay</name>
     <message>
         <source>No selected entities.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Não entidades selecionadas.</translation>
+        <translation type="vanished">Não entidades selecionadas.</translation>
     </message>
     <message>
         <location filename="../SelectionDisplay.js" line="+58"/>
@@ -38,7 +38,7 @@
         <translatorcomment>--google--
 Crie um novo carimbo a partir de entidades existentes
 Desselecione todas as Entidades</translatorcomment>
-        <translation>Entidades</translation>
+        <translation type="vanished">Entidades</translation>
     </message>
     <message>
         <source> on </source>
@@ -50,17 +50,17 @@ Ponto de corte não está na entidade.</translatorcomment>
     </message>
     <message>
         <source>on</source>
-        <translation>em</translation>
+        <translation type="vanished">em</translation>
     </message>
     <message>
         <source>Layer &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Camada &apos;%1&apos;</translation>
+        <translation type="vanished">Camada &apos;%1&apos;</translation>
     </message>
     <message>
         <source>%1 Layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>%1 Camadas</translation>
+        <translation type="vanished">%1 Camadas</translation>
     </message>
     <message>
         <location line="+4"/>

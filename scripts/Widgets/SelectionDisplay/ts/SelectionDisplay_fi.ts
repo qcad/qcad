@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fi">
+<TS version="2.1" language="fi">
 <context>
     <name>SelectionDisplay</name>
     <message>
         <source>No selected entities.</source>
-        <translation>Ei valittuja kohteita.</translation>
+        <translation type="vanished">Ei valittuja kohteita.</translation>
     </message>
     <message>
         <location filename="../SelectionDisplay.js" line="+58"/>

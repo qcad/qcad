@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fi">
+<TS version="2.1" language="fi">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -105,11 +105,11 @@
     </message>
     <message>
         <source>Auto switch linetypes</source>
-        <translation>Vaihda viivatyyppejä automaattisesti</translation>
+        <translation type="vanished">Vaihda viivatyyppejä automaattisesti</translation>
     </message>
     <message>
         <source>Performance</source>
-        <translation>Suorituskyky</translation>
+        <translation type="vanished">Suorituskyky</translation>
     </message>
     <message>
         <location line="+78"/>
