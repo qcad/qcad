@@ -91,7 +91,7 @@
     <message>
         <location line="+36"/>
         <source>Display and Performance</source>
-        <translation>Prikaz in Optimizacija</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+146"/>
@@ -106,7 +106,7 @@
     <message>
         <location line="+82"/>
         <source>Anti-aliasing on by default</source>
-        <translation>Glajenje krivulj privzeto vklopljeno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-342"/>

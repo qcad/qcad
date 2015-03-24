@@ -8,7 +8,7 @@
         <translation type="obsolete">Formular</translation>
     </message>
     <message>
-        <location filename="../CoordinateDisplay.ui" line="+66"/>
+        <location filename="../CoordinateDisplay.ui" line="+72"/>
         <source>Absolute Cartesian Coordinate</source>
         <translation>Absolute Kartesische Koordinate</translation>
     </message>

@@ -31,7 +31,7 @@
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation>Pantalla progreso</translation>
+        <translation>Pantalla del progreso</translation>
     </message>
     <message>
         <location filename="../StatusBar.js" line="+32"/>
@@ -40,14 +40,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+17"/>
         <source>Status Bar</source>
         <translation>Barra de estado</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="+6"/>
         <source>&amp;Status Bar</source>
-        <translation>&amp;Barra de estado</translation>
+        <translation>Barra de &amp;estado</translation>
     </message>
 </context>
 </TS>

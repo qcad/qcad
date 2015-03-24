@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<TS version="2.0" language="fi">
 <context>
     <name>SelectionDisplay</name>
     <message>
         <source>No selected entities.</source>
-        <translation type="vanished">Ei valittuja kohteita.</translation>
+        <translation>Ei valittuja kohteita.</translation>
     </message>
     <message>
         <location filename="../SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei valittuja kohteita.</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
 </context>
 </TS>

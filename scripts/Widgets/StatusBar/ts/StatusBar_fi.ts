@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<TS version="2.0" language="fi">
 <context>
     <name>StatusBar</name>
     <message>
@@ -40,14 +40,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+17"/>
         <source>Status Bar</source>
         <translation>Tilarivi</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="+6"/>
         <source>&amp;Status Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tilarivi</translation>
     </message>
 </context>
 </TS>

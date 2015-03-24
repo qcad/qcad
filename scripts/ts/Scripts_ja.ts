@@ -314,7 +314,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+303"/>
+        <location filename="../autostart.js" line="+304"/>
         <source>Loading add-on translations...</source>
         <translation>アドオンの翻訳をロード中...</translation>
     </message>

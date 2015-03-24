@@ -6,32 +6,32 @@
     <message>
         <location filename="../LineBisector.js" line="+66"/>
         <source>First line</source>
-        <translation type="unfinished"></translation>
+        <translation>第一条线</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Second line</source>
-        <translation type="unfinished"></translation>
+        <translation>第二条线</translation>
     </message>
     <message>
         <location line="+77"/>
         <source>Lines don&apos;t intersect.</source>
-        <translation type="unfinished"></translation>
+        <translation>线不交叉.</translation>
     </message>
     <message>
         <location filename="../LineBisector.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>长度：</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>编号：</translation>
     </message>
     <message>
         <location filename="../LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation type="unfinished"></translation>
+        <translation>角平分线(&amp;B)</translation>
     </message>
     <message>
         <location line="+4"/>

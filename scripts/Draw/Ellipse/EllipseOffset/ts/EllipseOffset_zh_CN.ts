@@ -41,17 +41,17 @@
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation type="unfinished">数字：</translation>
+        <translation type="unfinished">编号：</translation>
     </message>
     <message>
         <location filename="../EllipseOffsetInit.js" line="+2"/>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>平行曲线（给定距离）(&amp;P)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>绘制椭圆平行曲线</translation>
     </message>
 </context>
 </TS>

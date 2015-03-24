@@ -11,22 +11,22 @@
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>第二延伸线的起点</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation type="unfinished"></translation>
+        <translation>尺寸线位置</translation>
     </message>
     <message>
         <location filename="../DimAlignedInit.js" line="+2"/>
         <source>&amp;Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation>已对齐</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw aligned dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>绘制对齐标注</translation>
     </message>
 </context>
 </TS>

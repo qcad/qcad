@@ -6,32 +6,32 @@
     <message>
         <location filename="../EllipseDD.ui" line="+17"/>
         <source>X Diameter:</source>
-        <translation type="unfinished"></translation>
+        <translation>X 直径：</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Y Diameter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Y 直径：</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>角度：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>参考点：</translation>
     </message>
     <message>
         <location filename="../EllipseDDInit.js" line="+2"/>
         <source>Ellipse with &amp;Diameters</source>
-        <translation type="unfinished"></translation>
+        <translation>椭圆直径(&amp;D)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse with position and diameters</source>
-        <translation type="unfinished"></translation>
+        <translation>由位置及直径绘制椭圆</translation>
     </message>
 </context>
 </TS>

@@ -21,12 +21,12 @@
     <message>
         <location filename="../Circle3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>3 点(&amp;3)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from 3 points</source>
-        <translation type="unfinished"></translation>
+        <translation>3点画圆</translation>
     </message>
 </context>
 </TS>

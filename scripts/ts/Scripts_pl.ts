@@ -408,7 +408,7 @@ Dzielenie (÷)</translatorcomment>
         <translation type="obsolete">Po inicjalizacji wtyczki ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+303"/>
+        <location filename="../autostart.js" line="+304"/>
         <source>Loading add-on translations...</source>
         <translation type="unfinished"></translation>
     </message>

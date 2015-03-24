@@ -6,42 +6,42 @@
     <message>
         <location filename="../Dimension.js" line="+63"/>
         <source>No prefix</source>
-        <translation type="unfinished"></translation>
+        <translation>无前缀</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>半径</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric screw</source>
-        <translation type="unfinished"></translation>
+        <translation>公制螺丝</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>直径</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation type="unfinished"></translation>
+        <translation>正/负</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>约等于</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>渐进等于</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation>正方形</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -51,52 +51,52 @@
     <message>
         <location line="+58"/>
         <source>Dimension Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>尺寸工具</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show dimension tools</source>
-        <translation type="unfinished"></translation>
+        <translation>显示尺寸工具</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>D&amp;imension</source>
-        <translation type="unfinished"></translation>
+        <translation>尺寸(&amp;i)</translation>
     </message>
     <message>
         <location filename="../Dimension.ui" line="+29"/>
         <source>Label:</source>
-        <translation type="unfinished"></translation>
+        <translation>标签：</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Prefix</source>
-        <translation type="unfinished"></translation>
+        <translation>前缀</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation type="unfinished"></translation>
+        <translation>输入固定标签或留空以使用自动标签</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Upper tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>上公差</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Lower tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>下公差</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>缩放</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>绘图的显示比例</translation>
     </message>
 </context>
 </TS>

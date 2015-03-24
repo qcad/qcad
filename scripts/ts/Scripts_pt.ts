@@ -425,7 +425,7 @@ Carregando plugins...</translatorcomment>
         <translation type="obsolete">Pós-inicialização...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+303"/>
+        <location filename="../autostart.js" line="+304"/>
         <source>Loading add-on translations...</source>
         <translation>Carregar add-on traduções...</translation>
     </message>

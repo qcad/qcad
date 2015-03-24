@@ -6,27 +6,27 @@
     <message>
         <location filename="../Hatch.js" line="+55"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>未选中边界.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished"></translation>
+        <translation>环在点 %1/%2 未闭合.</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="unfinished"></translation>
+        <translation>每个边界实体必须是直线，弧，圆，椭圆弧，椭圆，折线或曲线. 发现：</translation>
     </message>
     <message>
         <location filename="../HatchInit.js" line="+2"/>
         <source>&amp;Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>图案填充(&amp;H)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw hatch or solid fill</source>
-        <translation type="unfinished"></translation>
+        <translation>图案或实心填充</translation>
     </message>
 </context>
 <context>
@@ -34,42 +34,42 @@
     <message>
         <location filename="../HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>图案填充</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>类型</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Solid Fill</source>
-        <translation type="unfinished"></translation>
+        <translation>实心填充</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>图案</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>预览</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>模式</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>角度：</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>缩放：</translation>
     </message>
 </context>
 </TS>

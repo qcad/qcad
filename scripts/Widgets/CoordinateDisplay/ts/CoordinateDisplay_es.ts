@@ -4,7 +4,7 @@
 <context>
     <name>CoordinateDisplay</name>
     <message>
-        <location filename="../CoordinateDisplay.ui" line="+66"/>
+        <location filename="../CoordinateDisplay.ui" line="+72"/>
         <source>Absolute Cartesian Coordinate</source>
         <translatorcomment>--exact match--
 --file: Input_es.ts--

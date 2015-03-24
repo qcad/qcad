@@ -40,12 +40,11 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+17"/>
         <source>Status Bar</source>
         <translation>Statuszeile</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="+6"/>
         <source>&amp;Status Bar</source>
         <translation>&amp;Statuszeile</translation>
     </message>

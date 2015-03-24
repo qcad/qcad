@@ -45,7 +45,6 @@ Zastępcze widżety</translatorcomment>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+17"/>
         <source>Status Bar</source>
         <translatorcomment>--google--
 Utwórz pasek stanu
@@ -53,7 +52,7 @@ Usuń pasek stanu</translatorcomment>
         <translation type="unfinished">Status Bar</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="+6"/>
         <source>&amp;Status Bar</source>
         <translation type="unfinished"></translation>
     </message>

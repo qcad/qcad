@@ -66,7 +66,7 @@
     <message>
         <location filename="../InsertBlockItemInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>&amp;I插入块</translation>
+        <translation>插入块(&amp;I)</translation>
     </message>
 </context>
 </TS>

@@ -16,12 +16,12 @@
     <message>
         <location filename="../CircleCPInit.js" line="+2"/>
         <source>&amp;Center, Point</source>
-        <translation type="unfinished"></translation>
+        <translation>圆心，点</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from center and point on circle</source>
-        <translation type="unfinished"></translation>
+        <translation>由圆心和圆弧经过的点画圆</translation>
     </message>
 </context>
 </TS>

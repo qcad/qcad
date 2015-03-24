@@ -6,27 +6,27 @@
     <message>
         <location filename="../CircleCD.ui" line="+17"/>
         <source>Diameter:</source>
-        <translation type="unfinished"></translation>
+        <translation>直径：</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>角度：</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>参考点：</translation>
     </message>
     <message>
         <location filename="../CircleCDInit.js" line="+2"/>
         <source>Center, &amp;Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>圆心，直径</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>由圆心和直径画圆</translation>
     </message>
 </context>
 </TS>

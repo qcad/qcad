@@ -6,12 +6,12 @@
     <message>
         <location filename="../CircleT2P.js" line="+75"/>
         <source>Line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>线，弧或圆</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>First point on circle line</source>
-        <translation type="unfinished"></translation>
+        <translation>圆弧线上的第一点</translation>
     </message>
     <message>
         <location line="+12"/>

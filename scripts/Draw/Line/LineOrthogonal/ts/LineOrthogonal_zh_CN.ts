@@ -6,7 +6,7 @@
     <message>
         <location filename="../LineOrthogonal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>长度：</translation>
     </message>
     <message>
         <location line="+20"/>

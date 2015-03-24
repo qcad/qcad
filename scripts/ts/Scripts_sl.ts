@@ -135,7 +135,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation>Entiteta ni črta, lok, krog, elipsa ali lomljenka.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -314,7 +314,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+303"/>
+        <location filename="../autostart.js" line="+304"/>
         <source>Loading add-on translations...</source>
         <translation>Nalagam prevode dodatkov...</translation>
     </message>

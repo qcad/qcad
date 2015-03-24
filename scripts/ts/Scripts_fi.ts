@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<TS version="2.0" language="fi">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -135,7 +135,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole viiva, kaari, ympyrä, ellipsi tai moniviiva.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -314,7 +314,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+303"/>
+        <location filename="../autostart.js" line="+304"/>
         <source>Loading add-on translations...</source>
         <translation>Lataamassa lisäosia käännökseen...</translation>
     </message>

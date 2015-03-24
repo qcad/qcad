@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<TS version="2.0" language="fi">
 <context>
     <name>Rotate2</name>
     <message>
@@ -16,22 +16,22 @@
     <message>
         <location filename="../Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation>Kierrä kaksi</translation>
+        <translation>Kierrä &amp;kaksi</translation>
     </message>
     <message>
         <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="unfinished">Ensisijainen kulma:</translation>
+        <translation>Ensisijainen kulma:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation type="unfinished">Toissijainen kulma:</translation>
+        <translation>Toissijainen kulma:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Copies:</source>
-        <translation type="unfinished">Kopioita:</translation>
+        <translation>Kopioita:</translation>
     </message>
 </context>
 <context>
@@ -81,15 +81,15 @@
     <name>TranslateRotate</name>
     <message>
         <source>Primary Angle:</source>
-        <translation type="vanished">Ensisijainen kulma:</translation>
+        <translation>Ensisijainen kulma:</translation>
     </message>
     <message>
         <source>Secondary Angle:</source>
-        <translation type="vanished">Toissijainen kulma:</translation>
+        <translation>Toissijainen kulma:</translation>
     </message>
     <message>
         <source>Copies:</source>
-        <translation type="vanished">Kopioita:</translation>
+        <translation>Kopioita:</translation>
     </message>
 </context>
 </TS>
