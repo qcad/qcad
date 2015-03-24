@@ -832,7 +832,7 @@ dir="./core" filename="RDocumentInterface.h">
     <name>IoErrorCode</name></name>
   </type>
   <name>importUrl</name>
-  <parameter_list>(
+  <parameter_list>( 
   <param>
     <decl>
       <type>
@@ -840,6 +840,16 @@ dir="./core" filename="RDocumentInterface.h">
       <name>QUrl</name>&amp;</type>
       <name>url</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+    <name>const</name>
+    <name>QString</name>&amp;</type>
+    <name>nameFilter</name>=
+    <init>
+      <expr>""</expr>
+    </init></decl>
   </param>, 
   <param>
     <decl>

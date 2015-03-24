@@ -406,7 +406,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
         hasDefault="true" default=" true" isConst="false" />
-        <arg type="bool" typeName="bool" name="tolerance"
+        <arg type="double" typeName="double" name="tolerance"
         hasDefault="true" default="RDEFAULT_TOLERANCE_1E_MIN4"
         isConst="false" />
       </variant>

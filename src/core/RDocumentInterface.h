@@ -195,7 +195,8 @@ public:
 
     void setCursor(const QCursor& cursor, bool global = true);
 
-    RDocumentInterface::IoErrorCode importUrl(const QUrl& url, bool notify = true);
+    RDocumentInterface::IoErrorCode importUrl(
+        const QUrl& url, const QString& nameFilter = "", bool notify = true);
     RDocumentInterface::IoErrorCode importFile(
         const QString& fileName, const QString& nameFilter = "", bool notify = true);
 

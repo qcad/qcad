@@ -403,6 +403,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="QUrl &amp;" typeName="QUrl" name="url"
         isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="nameFilter" hasDefault="true" default="&quot;&quot;"
+        isConst="true" />
         <arg type="bool" typeName="bool" name="notify"
         hasDefault="true" default=" true" isConst="false" />
       </variant>

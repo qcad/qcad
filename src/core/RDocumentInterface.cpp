@@ -932,11 +932,12 @@ void RDocumentInterface::ucsSetEvent(const QString& ucsName) {
 }
 
 RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
-        bool notify) {
+        const QString& nameFilter, bool notify) {
     // URL points to local file:
-    if (url.scheme()=="file") {
+    if (url.isLocalFile()) {
         QString filePath = url.toLocalFile();
-        return importFile(filePath, "", notify);
+        qDebug() << "URL is local file";
+        return importFile(filePath, nameFilter, notify);
     }
 
     QNetworkAccessManager* manager = new QNetworkAccessManager();
@@ -944,7 +945,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
     do {
         // dangerous: processing events here allows user to 'interrupt'
         // by sending events (mouse moves, etc)
-        //QApplication::processEvents();
+        QApplication::processEvents();
     } while (reply->isRunning());
     QByteArray data = reply->readAll();
 
@@ -954,7 +955,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
     if (file.open()) {
         file.write(data);
         file.close();
-        return importFile(file.fileName(), "", notify);
+        return importFile(file.fileName(), nameFilter, notify);
     }
     return RDocumentInterface::IoErrorGeneralImportUrlError;
 }
@@ -965,6 +966,11 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
  */
 RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
         const QString& fileName, const QString& nameFilter, bool notify) {
+
+    QUrl url(fileName);
+    if (url.isValid() && !url.scheme().isEmpty() && url.scheme().toUpper()!="FILE") {
+        return importUrl(url, nameFilter, notify);
+    }
 
     RMainWindow* mainWindow = RMainWindow::getMainWindow();
 

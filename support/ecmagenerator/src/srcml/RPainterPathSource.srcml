@@ -14,19 +14,19 @@ dir="./entity" filename="RPainterPathSource.h">
   PURPOSE. See the * GNU General Public License for more details. *
   * You should have received a copy of the GNU General Public
   License * along with QCAD. */</comment>
-  <cpp:ifndef># 
+  <cpp:ifndef>#
   <cpp:directive>ifndef</cpp:directive>
   <name>RPAINTERPATHSOURCE_H</name></cpp:ifndef>
-  <cpp:define># 
+  <cpp:define>#
   <cpp:directive>define</cpp:directive>
   <name>RPAINTERPATHSOURCE_H</name></cpp:define>
-  <cpp:include># 
+  <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"entity_global.h"</cpp:file></cpp:include>
-  <cpp:include># 
+  <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
-  <cpp:include># 
+  <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
   <comment type="block">/** * Interface for entity data classes
@@ -37,7 +37,7 @@ dir="./entity" filename="RPainterPathSource.h">
     <name>QCADENTITY_EXPORT</name>
   </macro>
   <name>RPainterPathSource</name>
-  <block>{ 
+  <block>{
   <private type="default"></private>
   <public>public: 
   <destructor>
@@ -49,20 +49,20 @@ dir="./entity" filename="RPainterPathSource.h">
   <function_decl>
   <type>
     <name>virtual</name>
-    <name>QList 
-    <argument_list>&lt; 
+    <name>QList
+    <argument_list>&lt;
     <argument>
       <name>RPainterPath</name>
     </argument>&gt;</argument_list></name>
   </type>
   <name>getPainterPaths</name>
-  <parameter_list>( 
+  <parameter_list>(
   <param>
     <decl>
     <type>
       <name>bool</name>
     </type>
-    <name>draft</name>= 
+    <name>draft</name>=
     <init>
       <expr>
         <name>false</name>
@@ -74,26 +74,26 @@ dir="./entity" filename="RPainterPathSource.h">
   0</specifier>;</function_decl></public>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
-    <argument_list>( 
+    <argument_list>(
     <argument>RPainterPathSource*</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
-    <argument_list>( 
+    <argument_list>(
     <argument>const RPainterPathSource*</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
-    <argument_list>( 
+    <argument_list>(
     <argument>
     QSharedPointer&lt;RPainterPathSource&gt;</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
-    <argument_list>( 
+    <argument_list>(
     <argument>
     QSharedPointer&lt;RPainterPathSource&gt;*</argument>)</argument_list>
   </macro>
-  <cpp:endif># 
+  <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

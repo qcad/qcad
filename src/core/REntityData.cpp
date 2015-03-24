@@ -372,7 +372,7 @@ RVector REntityData::getVectorTo(const RVector& point, bool limited, double stri
 /**
  * \return True if the given point is on this entity.
  */
-bool REntityData::isOnEntity(const RVector& point, bool limited, bool tolerance) const {
+bool REntityData::isOnEntity(const RVector& point, bool limited, double tolerance) const {
     QList<QSharedPointer<RShape> > shapes = getShapes();
     for (int i=0; i<shapes.size(); i++) {
         if (shapes.at(i)->isOnShape(point, limited, tolerance)) {

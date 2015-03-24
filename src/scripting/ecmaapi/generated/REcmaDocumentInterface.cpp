@@ -3617,7 +3617,65 @@
             context->argument(0).isNull()
         ) /* type: QUrl */
      && (
-            context->argument(1).isBool()
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QUrl*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QUrl*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type QUrl*.",
+                               context);                    
+                    }
+                    QUrl& a0 = *ap0;
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RDocumentInterface::IoErrorCode'
+    RDocumentInterface::IoErrorCode cppResult =
+        
+               self->importUrl(a0
+        ,
+    a1);
+        // return type: RDocumentInterface::IoErrorCode
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QUrl */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isBool()
         ) /* type: bool */
     
     ){
@@ -3640,11 +3698,19 @@
                     QUrl& a0 = *ap0;
                 
                     // argument isStandardType
-                    bool
+                    QString
                     a1 =
-                    (bool)
+                    (QString)
                     
                     context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
                     toBool();
                 
     // end of arguments
@@ -3655,7 +3721,9 @@
         
                self->importUrl(a0
         ,
-    a1);
+    a1
+        ,
+    a2);
         // return type: RDocumentInterface::IoErrorCode
                 // standard Type
                 result = QScriptValue(cppResult);

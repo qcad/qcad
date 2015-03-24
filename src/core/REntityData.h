@@ -288,7 +288,7 @@ public:
         return box.contains(getBoundingBox());
     }
 
-    virtual bool isOnEntity(const RVector& point, bool limited = true, bool tolerance = RDEFAULT_TOLERANCE_1E_MIN4) const;
+    virtual bool isOnEntity(const RVector& point, bool limited = true, double tolerance = RDEFAULT_TOLERANCE_1E_MIN4) const;
 
     virtual bool intersectsWith(const RShape& shape) const;
 

@@ -1459,7 +1459,7 @@ dir="./core" filename="REntityData.h">
   <param>
     <decl>
     <type>
-      <name>bool</name>
+      <name>double</name>
     </type>
     <name>tolerance</name>=
     <init>

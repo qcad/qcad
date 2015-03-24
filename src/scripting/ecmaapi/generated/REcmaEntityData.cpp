@@ -4683,8 +4683,8 @@
             context->argument(1).isBool()
         ) /* type: bool */
      && (
-            context->argument(2).isBool()
-        ) /* type: bool */
+            context->argument(2).isNumber()
+        ) /* type: double */
     
     ){
     // prepare arguments:
@@ -4716,12 +4716,12 @@
                     toBool();
                 
                     // argument isStandardType
-                    bool
+                    double
                     a2 =
-                    (bool)
+                    (double)
                     
                     context->argument( 2 ).
-                    toBool();
+                    toNumber();
                 
     // end of arguments
 
