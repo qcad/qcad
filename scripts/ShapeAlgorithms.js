@@ -55,7 +55,7 @@ ShapeAlgorithms.getClosestShape = function(shapes, position) {
     for (var i=0; i<shapes.length; i++) {
         var s = shapes[i];
         var dist = s.getDistanceTo(position);
-        if (isNull(minDist) || dist<minDist) {
+        if (isNumber(dist) && (isNull(minDist) || dist<minDist)) {
             minDist = dist;
             ret = s;
         }

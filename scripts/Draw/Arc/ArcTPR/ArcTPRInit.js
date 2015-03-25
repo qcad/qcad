@@ -1,13 +1,12 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Circle2TP", "Point, 2 Tan&gents"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("ArcTPR", "&Tangent, Point, Radius"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
-    action.setScriptFile(basePath + "/Circle2TP.js");
-    action.setIcon(basePath + "/Circle2TP.svg");
-    action.setStatusTip(qsTranslate("Circle2TP", "Draw circle tangential to two entities, through point"));
-    action.setDefaultShortcut(new QKeySequence("c,t,2"));
-    action.setDefaultCommands(["circletangent2", "ct2"]);
-    action.setGroupSortOrder(8500);
+    action.setScriptFile(basePath + "/ArcTPR.js");
+    action.setIcon(basePath + "/ArcTPR.svg");
+    action.setStatusTip(qsTranslate("ArcTPR", "Draw arc tangential to entity, through point with radius"));
+    action.setDefaultShortcut(new QKeySequence("a,t"));
+    action.setDefaultCommands(["arctangentpointradius", "at"]);
+    action.setGroupSortOrder(7400);
     action.setSortOrder(200);
-    action.setWidgetNames(["DrawCircleMenu", "CircleToolBar", "CircleToolsPanel"]);
+    action.setWidgetNames(["DrawArcMenu", "ArcToolBar", "ArcToolsPanel"]);
 }

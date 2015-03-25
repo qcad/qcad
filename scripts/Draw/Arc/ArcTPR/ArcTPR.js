@@ -17,47 +17,47 @@
  * along with QCAD.
  */
 
-include("../Circle.js");
-include("scripts/Apollonius.js");
+include("../Arc.js");
 include("scripts/ShapeAlgorithms.js");
 
 /**
- * \class Circle2TP
- * \brief Circle tangential to two entities and through point.
- * \ingroup ecma_draw_circle
+ * \class ArcTPR
+ * \brief Arc tangential to entity, through point with given radius.
+ * \ingroup ecma_draw_arc
  */
-function Circle2TP(guiAction) {
-    Circle.call(this, guiAction);
+function ArcTPR(guiAction) {
+    Arc.call(this, guiAction);
+
+    this.radius = undefined;
 
     this.entity1 = undefined;
     this.shape1 = undefined;
     this.pos1 = undefined;
-    this.entity2 = undefined;
-    this.shape2 = undefined;
-    this.pos2 = undefined;
-    this.pos3 = undefined;
-    this.pos4 = undefined;
+
+    this.pos = undefined;
+    this.posSolution = undefined;
 
     this.candidates = undefined;
+
+    this.setUiOptions("ArcTPR.ui");
 }
 
-Circle2TP.prototype = new Circle();
+ArcTPR.prototype = new Arc();
 
-Circle2TP.State = {
-    ChoosingShape1 : 0,
-    ChoosingShape2 : 1,
-    SettingPoint : 2,
-    ChoosingSolution : 3
+ArcTPR.State = {
+    ChoosingShape : 0,
+    SettingPoint : 1,
+    ChoosingSolution : 2
 };
 
-Circle2TP.prototype.beginEvent = function() {
-    Circle.prototype.beginEvent.call(this);
+ArcTPR.prototype.beginEvent = function() {
+    Arc.prototype.beginEvent.call(this);
 
-    this.setState(Circle2TP.State.ChoosingShape1);
+    this.setState(ArcTPR.State.ChoosingShape);
 };
 
-Circle2TP.prototype.setState = function(state) {
-    Circle.prototype.setState.call(this, state);
+ArcTPR.prototype.setState = function(state) {
+    Arc.prototype.setState.call(this, state);
 
     var di = this.getDocumentInterface();
 
@@ -65,47 +65,35 @@ Circle2TP.prototype.setState = function(state) {
 
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
-    case Circle2TP.State.ChoosingShape1:
+    case ArcTPR.State.ChoosingShape:
         di.setClickMode(RAction.PickEntity);
         this.entity1 = undefined;
         this.shape1 = undefined;
         this.entity2 = undefined;
-        this.shape2 = undefined;
-        this.pos4 = undefined;
+        this.pos = undefined;
+        this.posSolution = undefined;
         this.candidates = undefined;
-        var trFirstEntity = qsTr("First line, arc or circle");
-        this.setCommandPrompt(trFirstEntity);
-        this.setLeftMouseTip(trFirstEntity);
+        var trEntity = qsTr("Choose line, arc, circle or ellipse");
+        this.setCommandPrompt(trEntity);
+        this.setLeftMouseTip(trEntity);
         this.setRightMouseTip(EAction.trCancel);
         break;
 
-    case Circle2TP.State.ChoosingShape2:
-        di.setClickMode(RAction.PickEntity);
-        this.entity2 = undefined;
-        this.shape2 = undefined;
-        this.pos4 = undefined;
-        this.candidates = undefined;
-        var trSecondEntity = qsTr("Second line, arc or circle");
-        this.setCommandPrompt(trSecondEntity);
-        this.setLeftMouseTip(trSecondEntity);
-        this.setRightMouseTip(EAction.trBack);
-        break;
-
-    case Circle2TP.State.SettingPoint:
+    case ArcTPR.State.SettingPoint:
         di.setClickMode(RAction.PickCoordinate);
-        this.pos3 = undefined;
-        this.pos4 = undefined;
+        this.pos = undefined;
+        this.posSolution = undefined;
         this.candidates = undefined;
-        var trPoint = qsTr("Point on circle line");
+        var trPoint = qsTr("Point on arc");
         this.setCommandPrompt(trPoint);
         this.setLeftMouseTip(trPoint);
         this.setRightMouseTip(EAction.trBack);
         EAction.showSnapTools();
         break;
 
-    case Circle2TP.State.ChoosingSolution:
+    case ArcTPR.State.ChoosingSolution:
         di.setClickMode(RAction.PickEntity);
-        this.pos4 = undefined;
+        this.posSolution = undefined;
         var trSolution = qsTr("Choose solution");
         this.setCommandPrompt(trSolution);
         this.setLeftMouseTip(trSolution);
@@ -116,27 +104,23 @@ Circle2TP.prototype.setState = function(state) {
     this.simulateMouseMoveEvent();
 };
 
-Circle2TP.prototype.escapeEvent = function() {
+ArcTPR.prototype.escapeEvent = function() {
     switch (this.state) {
-    case Circle2TP.State.ChoosingShape1:
+    case ArcTPR.State.ChoosingShape:
         EAction.prototype.escapeEvent.call(this);
         break;
 
-    case Circle2TP.State.ChoosingShape2:
-        this.setState(Circle2TP.State.ChoosingShape1);
+    case ArcTPR.State.SettingPoint:
+        this.setState(ArcTPR.State.ChoosingShape);
         break;
 
-    case Circle2TP.State.SettingPoint:
-        this.setState(Circle2TP.State.ChoosingShape2);
-        break;
-
-    case Circle2TP.State.ChoosingSolution:
-        this.setState(Circle2TP.State.SettingPoint);
+    case ArcTPR.State.ChoosingSolution:
+        this.setState(ArcTPR.State.SettingPoint);
         break;
     }
 };
 
-Circle2TP.prototype.pickEntity = function(event, preview) {
+ArcTPR.prototype.pickEntity = function(event, preview) {
     this.error = "";
     var di = this.getDocumentInterface();
     var doc = this.getDocument();
@@ -145,16 +129,17 @@ Circle2TP.prototype.pickEntity = function(event, preview) {
     var pos = event.getModelPosition();
     var shape = undefined;
 
-    if (this.state!==Circle2TP.State.ChoosingSolution) {
+    if (this.state!==ArcTPR.State.ChoosingSolution) {
         if (!isNull(entity)) {
             shape = entity.getClosestSimpleShape(pos);
 
             if (!isLineBasedShape(shape) &&
                 !isArcShape(shape) &&
-                !isCircleShape(shape)) {
+                !isCircleShape(shape) &&
+                !isEllipseShape(shape)) {
 
                 if (!preview) {
-                    EAction.warnNotLineArcCircle();
+                    EAction.warnNotLineArcCircleEllipse();
                     return;
                 }
 
@@ -164,7 +149,7 @@ Circle2TP.prototype.pickEntity = function(event, preview) {
     }
 
     switch (this.state) {
-    case Circle2TP.State.ChoosingShape1:
+    case ArcTPR.State.ChoosingShape:
         this.entity1 = entity;
         this.shape1 = shape;
         this.pos1 = pos;
@@ -173,25 +158,12 @@ Circle2TP.prototype.pickEntity = function(event, preview) {
             this.updatePreview();
         }
         else {
-            this.setState(Circle2TP.State.ChoosingShape2);
+            this.setState(ArcTPR.State.SettingPoint);
         }
         break;
 
-    case Circle2TP.State.ChoosingShape2:
-        this.entity2 = entity;
-        this.shape2 = shape;
-        this.pos2 = pos;
-
-        if (preview) {
-            this.updatePreview();
-        }
-        else {
-            this.setState(Circle2TP.State.SettingPoint);
-        }
-        break;
-
-    case Circle2TP.State.ChoosingSolution:
-        this.pos4 = event.getModelPosition();
+    case ArcTPR.State.ChoosingSolution:
+        this.posSolution = event.getModelPosition();
         if (preview) {
             this.updatePreview();
         }
@@ -199,7 +171,7 @@ Circle2TP.prototype.pickEntity = function(event, preview) {
             var op = this.getOperation(false);
             if (!isNull(op)) {
                 di.applyOperation(op);
-                this.setState(Circle2TP.State.ChoosingShape1);
+                this.setState(ArcTPR.State.ChoosingShape);
             }
         }
         break;
@@ -210,17 +182,17 @@ Circle2TP.prototype.pickEntity = function(event, preview) {
     }
 };
 
-Circle2TP.prototype.pickCoordinate = function(event, preview) {
+ArcTPR.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
     var pos = event.getModelPosition();
 
     switch (this.state) {
-    case Circle2TP.State.SettingPoint:
-        if (isNull(this.pos3) || !pos.equalsFuzzy(this.pos3)) {
+    case ArcTPR.State.SettingPoint:
+        if (isNull(this.pos) || !pos.equalsFuzzy(this.pos)) {
             this.candidates = undefined;
         }
 
-        this.pos3 = pos;
+        this.pos = pos;
 
         if (preview) {
             this.updatePreview();
@@ -231,16 +203,16 @@ Circle2TP.prototype.pickCoordinate = function(event, preview) {
                 // only one solution:
                 if (this.candidates.length===1) {
                     di.applyOperation(op);
-                    this.setState(Circle2TP.State.ChoosingShape1);
+                    this.setState(ArcTPR.State.ChoosingShape);
                 }
                 // multiple solutions:
                 else {
-                    this.setState(Circle2TP.State.ChoosingSolution);
+                    this.setState(ArcTPR.State.ChoosingSolution);
                 }
             }
             // no solution:
             else {
-                this.setState(Circle2TP.State.ChoosingShape1);
+                this.setState(ArcTPR.State.ChoosingShape);
                 this.error = qsTr("No solution");
             }
         }
@@ -252,7 +224,7 @@ Circle2TP.prototype.pickCoordinate = function(event, preview) {
     }
 };
 
-Circle2TP.prototype.getOperation = function(preview) {
+ArcTPR.prototype.getOperation = function(preview) {
     var shape = this.getShapes(preview);
 
     if (isNull(shape)) {
@@ -264,24 +236,39 @@ Circle2TP.prototype.getOperation = function(preview) {
     var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
     for (var i=0; i<shape.length; i++) {
-        var entity = new RCircleEntity(doc, new RCircleData(shape[i]));
+        //var entity = new RCircleEntity(doc, new RCircleData(shape[i]));
+        var entity = shapeToEntity(doc, shape[i]);
         op.addObject(entity);
     }
 
     return op;
 };
 
-Circle2TP.prototype.getShapes = function(preview) {
-    if (isNull(this.shape1) || isNull(this.shape2) || isNull(this.pos3)) {
+ArcTPR.prototype.getShapes = function(preview) {
+    if (isNull(this.shape1) || isNull(this.pos) || isNull(this.radius)) {
         return undefined;
     }
 
     if (isNull(this.candidates)) {
-        var shape3 = new RPoint(this.pos3);
-        this.candidates = Apollonius.getSolutions(this.shape1.data(), this.shape2.data(), shape3);
+        this.candidates = [];
 
-        // filter out lines:
-        this.candidates = ShapeAlgorithms.getCircleShapes(this.candidates);
+        // parallel to shape:
+        var parallels = ShapeAlgorithms.getOffsetShapes(this.shape1, this.radius, 1, this.pos);
+        if (parallels.length===1) {
+            // circle around pos:
+            var circle = new RCircle(this.pos, this.radius);
+
+            // find potential centers for arc:
+            var ips = parallels[0].getIntersectionPoints(circle, false);
+            for (var i=0; i<ips.length; i++) {
+                var ip = ips[i];
+                var p = this.shape1.getClosestPointOnShape(ip, false);
+                var a1 = ip.getAngleTo(p);
+                var a2 = ip.getAngleTo(this.pos);
+                this.candidates.push(new RArc(ip, this.radius, a1, a2, false));
+                this.candidates.push(new RArc(ip, this.radius, a2, a1, false));
+            }
+        }
     }
 
     if (this.candidates.length===0) {
@@ -291,33 +278,35 @@ Circle2TP.prototype.getShapes = function(preview) {
         return undefined;
     }
 
-    // no position yet: return all candidates for preview:
-    if (isNull(this.pos4)) {
+    // no position of solution yet: return all candidates for preview:
+    if (isNull(this.posSolution)) {
         return this.candidates;
     }
 
-    return [ ShapeAlgorithms.getClosestShape(this.candidates, this.pos4) ];
+    return [ ShapeAlgorithms.getClosestShape(this.candidates, this.posSolution) ];
 };
 
-Circle2TP.prototype.getHighlightedEntities = function() {
+ArcTPR.prototype.getHighlightedEntities = function() {
     var ret = [];
     if (isEntity(this.entity1)) {
         ret.push(this.entity1.getId());
     }
-    if (isEntity(this.entity2)) {
-        ret.push(this.entity2.getId());
-    }
     return ret;
 };
 
-Circle2TP.prototype.getAuxPreview = function() {
-    if (isNull(this.shape1) || isNull(this.shape2) || isNull(this.pos3)) {
+ArcTPR.prototype.getAuxPreview = function() {
+    if (isNull(this.shape1) || isNull(this.pos)) {
         return [];
     }
 
-    if (!isNull(this.pos4)) {
+    if (!isNull(this.posSolution)) {
         return this.candidates;
     }
 
     return [];
+};
+
+ArcTPR.prototype.slotRadiusChanged = function(value) {
+    this.radius = value;
+    this.updatePreview(true);
 };

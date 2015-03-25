@@ -1,43 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu">
+<TS version="2.0" language="hu">
 <context>
-    <name>Circle2TP</name>
+    <name>ArcTPR</name>
     <message>
-        <location filename="../Circle2TP.js" line="+76"/>
-        <source>First line, arc or circle</source>
-        <translation>Első vonal, ív vagy kör</translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Second line, arc or circle</source>
-        <translation>Második vonal, ív vagy kör</translation>
+        <location filename="../ArcTPR.js" line="+76"/>
+        <source>Choose line, arc, circle or ellipse</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
-        <source>Point on circle line</source>
-        <translation>Körvonal pontja</translation>
+        <source>Point on arc</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation>Válasszon megoldást</translation>
+        <translation type="unfinished">Válasszon megoldást</translation>
     </message>
     <message>
-        <location line="+135"/>
-        <location line="+45"/>
+        <location line="+119"/>
+        <location line="+60"/>
         <source>No solution</source>
-        <translation>Nincs megoldás</translation>
+        <translation type="unfinished">Nincs megoldás</translation>
     </message>
     <message>
-        <location filename="../Circle2TPInit.js" line="+2"/>
+        <location filename="../ArcTPR.ui" line="+17"/>
+        <source>Radius:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ArcTPRInit.js" line="+2"/>
+        <source>&amp;Tangent, Point, Radius</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw arc tangential to entity, through point with radius</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Circle2TP</name>
+    <message>
+        <source>First line, arc or circle</source>
+        <translation type="obsolete">Első vonal, ív vagy kör</translation>
+    </message>
+    <message>
+        <source>Second line, arc or circle</source>
+        <translation type="obsolete">Második vonal, ív vagy kör</translation>
+    </message>
+    <message>
+        <source>Point on circle line</source>
+        <translation type="obsolete">Körvonal pontja</translation>
+    </message>
+    <message>
+        <source>Choose solution</source>
+        <translation type="obsolete">Válasszon megoldást</translation>
+    </message>
+    <message>
+        <source>No solution</source>
+        <translation type="obsolete">Nincs megoldás</translation>
+    </message>
+    <message>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation>Pont, 2 érintő</translation>
+        <translation type="obsolete">Pont, 2 érintő</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation>Két elemet érintő ponton átmenő kör szerkesztése</translation>
+        <translation type="obsolete">Két elemet érintő ponton átmenő kör szerkesztése</translation>
     </message>
 </context>
 </TS>
