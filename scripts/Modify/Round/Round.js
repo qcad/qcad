@@ -168,8 +168,8 @@ Round.round = function(op, entity1, pos1, entity2, pos2, trim, radius, preview) 
     par1 = par1[0];
     par2 = par2[0];
 
-    this.par1 = par1.clone();
-    this.par2 = par2.clone();
+    //this.par1 = par1.clone();
+    //this.par2 = par2.clone();
 
     var sol2 = shape1.getIntersectionPoints(shape2, false);
     var sol =  par1.getIntersectionPoints(par2, false);
