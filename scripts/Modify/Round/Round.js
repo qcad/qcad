@@ -65,11 +65,11 @@ Round.prototype.getOperation = function(preview) {
  * entity2 and the limitingShape.
  *
  * \param op Operation to use to add new objects and modify objects.
- * \param entity1 First entity which will be bevelled.
+ * \param entity1 First entity which will be rounded.
  * \param pos1 Coordinate that was clicked when the user selected entity1.
- * \param entity2 Second entity which will be bevelled.
+ * \param entity2 Second entity which will be rounded.
  * \param pos2 Coordinate that was clicked when the user selected entity2.
- * \param trim true: Trim both entities to bevel line.
+ * \param trim true: Trim both entities to rounding arc.
  * \param radius Radius of rounding.
  * \param preview Operation is used for preview.
  */

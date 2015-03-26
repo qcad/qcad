@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("CircleT2P", "2 Poin&ts and Tangent"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("CircleT2P", "&Tangent and 2 Points"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/CircleT2P.js");
     action.setIcon(basePath + "/CircleT2P.svg");

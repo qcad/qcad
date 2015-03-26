@@ -283,6 +283,9 @@ public:
             double x1, double y1, double z1,
             double x2, double y2, double z2,
             RSpatialIndexVisitor* dataVisitor = NULL);
+    QList<int> queryIntersectedSimple(const RBox& b) {
+        return RSpatialIndex::queryIntersected(b).keys();
+    }
     virtual QMap<int, QSet<int> > queryContained(
             double x1, double y1, double z1,
             double x2, double y2, double z2,

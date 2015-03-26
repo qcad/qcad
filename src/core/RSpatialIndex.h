@@ -82,6 +82,8 @@ public:
 
     virtual void bulkLoad(const QList<int>& ids, const QList<QList<RBox> >& bbs);
 
+    virtual void bulkLoadSimple(const QList<int>& ids, const QList<RBox>& bbs);
+
     /**
      * Adds a new entry into this spatial index.
      */

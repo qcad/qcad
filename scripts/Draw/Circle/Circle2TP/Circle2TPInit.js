@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Circle2TP", "Point, 2 Tan&gents"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("Circle2TP", "2 Tan&gents and Point"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/Circle2TP.js");
     action.setIcon(basePath + "/Circle2TP.svg");

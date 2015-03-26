@@ -11,5 +11,6 @@ SUBDIRS = \
     CircleCP \
     CircleCR \
     CircleT2P \
+    CircleTPR \
     CircleConcentric \
     CircleConcentricThrough

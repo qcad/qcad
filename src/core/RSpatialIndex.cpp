@@ -57,6 +57,14 @@ void RSpatialIndex::bulkLoad(const QList<int>& ids, const QList<QList<RBox> >& b
     }
 }
 
+void RSpatialIndex::bulkLoadSimple(const QList<int>& ids, const QList<RBox>& bbs) {
+    QList<QList<RBox> > list;
+    for (int i=0; i<bbs.length(); i++) {
+        list.append(QList<RBox>() << bbs[i]);
+    }
+    bulkLoad(ids, list);
+}
+
 void RSpatialIndex::addToIndex(int id, const QList<RBox>& bbs) {
     for (int pos = 0; pos < bbs.size(); ++pos) {
         addToIndex(

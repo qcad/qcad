@@ -39,10 +39,13 @@ function ArcTPR(guiAction) {
 
     this.candidates = undefined;
 
-    this.setUiOptions("ArcTPR.ui");
+    this.fullCircle = false;
+
+    this.setUiOptions(ArcTPR.includeBasePath + "/ArcTPR.ui");
 }
 
 ArcTPR.prototype = new Arc();
+ArcTPR.includeBasePath = includeBasePath;
 
 ArcTPR.State = {
     ChoosingShape : 0,
@@ -262,11 +265,17 @@ ArcTPR.prototype.getShapes = function(preview) {
             var ips = parallels[0].getIntersectionPoints(circle, false);
             for (var i=0; i<ips.length; i++) {
                 var ip = ips[i];
-                var p = this.shape1.getClosestPointOnShape(ip, false);
-                var a1 = ip.getAngleTo(p);
-                var a2 = ip.getAngleTo(this.pos);
-                this.candidates.push(new RArc(ip, this.radius, a1, a2, false));
-                this.candidates.push(new RArc(ip, this.radius, a2, a1, false));
+
+                if (this.fullCircle) {
+                    this.candidates.push(new RCircle(ip, this.radius));
+                }
+                else {
+                    var p = this.shape1.getClosestPointOnShape(ip, false);
+                    var a1 = ip.getAngleTo(p);
+                    var a2 = ip.getAngleTo(this.pos);
+                    this.candidates.push(new RArc(ip, this.radius, a1, a2, false));
+                    this.candidates.push(new RArc(ip, this.radius, a2, a1, false));
+                }
             }
         }
     }

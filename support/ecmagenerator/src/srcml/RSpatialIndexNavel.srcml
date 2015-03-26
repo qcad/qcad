@@ -1879,6 +1879,48 @@ dir="./spatialindex" filename="RSpatialIndexNavel.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
+  <function>
+    <type>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>int</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>queryIntersectedSimple</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RBox</name>&amp;</type>
+        <name>b</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+    <call>
+      <name>
+      <name>RSpatialIndex</name>::
+      <name>queryIntersected</name></name>
+      <argument_list>(
+      <argument>
+        <expr>
+          <name>b</name>
+        </expr>
+      </argument>, 
+      <argument>
+        <expr>
+          <name>dataVisitor</name>
+        </expr>
+      </argument>)</argument_list>
+    </call>.
+    <call>
+      <name>keys</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
   <function_decl>
   <type>
     <name>virtual</name>

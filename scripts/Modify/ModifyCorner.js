@@ -36,13 +36,17 @@ function ModifyCorner(guiAction) {
     this.pos2 = undefined;
 
     this.trim = true;
+
+    this.requiresPoint = false;
+    this.posPoint = undefined;
 }
 
 ModifyCorner.prototype = new Modify();
 
 ModifyCorner.State = {
     ChoosingEntity1 : 0,
-    ChoosingEntity2 : 1
+    ChoosingEntity2 : 1,
+    SettingPoint : 2
 };
 
 ModifyCorner.prototype.beginEvent = function() {
@@ -54,12 +58,12 @@ ModifyCorner.prototype.beginEvent = function() {
 ModifyCorner.prototype.setState = function(state) {
     Modify.prototype.setState.call(this, state);
 
-    this.getDocumentInterface().setClickMode(RAction.PickEntity);
     this.setCrosshairCursor();
 
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case ModifyCorner.State.ChoosingEntity1:
+        this.getDocumentInterface().setClickMode(RAction.PickEntity);
         this.entity1 = undefined;
         this.shape1 = undefined;
         this.pos1 = undefined;
@@ -73,12 +77,22 @@ ModifyCorner.prototype.setState = function(state) {
         break;
 
     case ModifyCorner.State.ChoosingEntity2:
+        this.getDocumentInterface().setClickMode(RAction.PickEntity);
         this.entity2 = undefined;
         this.shape2 = undefined;
         this.pos2 = undefined;
         var trEntity2 = qsTr("Choose second entity");
         this.setCommandPrompt(trEntity2);
         this.setLeftMouseTip(trEntity2);
+        this.setRightMouseTip(EAction.trBack);
+        break;
+
+    case ModifyCorner.State.SettingPoint:
+        this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
+        this.posPoint = undefined;
+        var trPoint = qsTr("Set point");
+        this.setCommandPrompt(trPoint);
+        this.setLeftMouseTip(trPoint);
         this.setRightMouseTip(EAction.trBack);
         break;
     }
@@ -94,6 +108,10 @@ ModifyCorner.prototype.escapeEvent = function() {
 
     case ModifyCorner.State.ChoosingEntity2:
         this.setState(ModifyCorner.State.ChoosingEntity1);
+        break;
+
+    case ModifyCorner.State.SettingPoint:
+        this.setState(ModifyCorner.State.ChoosingEntity2);
         break;
     }
 };
@@ -164,9 +182,13 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
                 this.updatePreview();
             }
             else {
-                di.applyOperation(this.getOperation(false));
-
-                this.setState(ModifyCorner.State.ChoosingEntity1);
+                if (this.requiresPoint) {
+                    this.setState(ModifyCorner.State.SettingPoint);
+                }
+                else {
+                    di.applyOperation(this.getOperation(false));
+                    this.setState(ModifyCorner.State.ChoosingEntity1);
+                }
             }
         }
         else {
@@ -178,6 +200,27 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
             else {
                 EAction.warnNotLineArcCircle();
             }
+        }
+        break;
+    }
+};
+
+ModifyCorner.prototype.pickCoordinate = function(event, preview) {
+    var di = this.getDocumentInterface();
+
+    switch (this.state) {
+    case ModifyCorner.State.SettingPoint:
+        this.posPoint = event.getModelPosition();
+
+        if (preview) {
+            this.updatePreview();
+        }
+        else {
+            var op = this.getOperation(false);
+            if (!isNull(op)) {
+                di.applyOperation(op);
+            }
+            this.setState(ModifyCorner.State.ChoosingEntity1);
         }
         break;
     }

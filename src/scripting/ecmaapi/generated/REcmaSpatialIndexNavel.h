@@ -62,6 +62,9 @@
         queryIntersected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryIntersectedSimple
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryContained
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
