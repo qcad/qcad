@@ -700,6 +700,17 @@ QList<QSharedPointer<RShape> > RSpline::getExploded(int segments) const {
     return exploded;
 }
 
+QList<QSharedPointer<RShape> > RSpline::getExplodedWithSegmentLength(double segmentLength) const {
+    QList<QSharedPointer<RShape> > ret;
+    QList<RSpline> bezierSegments = getBezierSegments();
+    for (int i=0; i<bezierSegments.length(); i++) {
+        double len = bezierSegments[i].getLength();
+        int seg = ceil(len / segmentLength);
+        ret.append(bezierSegments[i].getExploded(seg));
+    }
+    return ret;
+}
+
 RBox RSpline::getBoundingBox() const {
     if (!isValid()) {
         return RBox();

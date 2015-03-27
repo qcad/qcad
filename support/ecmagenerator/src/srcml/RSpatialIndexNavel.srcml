@@ -1909,11 +1909,6 @@ dir="./spatialindex" filename="RSpatialIndexNavel.h">
         <expr>
           <name>b</name>
         </expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <name>dataVisitor</name>
-        </expr>
       </argument>)</argument_list>
     </call>.
     <call>

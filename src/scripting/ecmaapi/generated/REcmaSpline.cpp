@@ -262,6 +262,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
+            REcmaHelper::registerFunction(&engine, proto, getExplodedWithSegmentLength, "getExplodedWithSegmentLength");
+            
             REcmaHelper::registerFunction(&engine, proto, getBezierSegments, "getBezierSegments");
             
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
@@ -4819,6 +4821,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpline::getExploded", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::getExplodedWithSegmentLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::getExplodedWithSegmentLength", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::getExplodedWithSegmentLength";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getExplodedWithSegmentLength", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->getExplodedWithSegmentLength(a0);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getExplodedWithSegmentLength().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::getExplodedWithSegmentLength", context, engine);
             return result;
         }
          QScriptValue

@@ -405,6 +405,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     globalObject.setProperty("download", engine->newFunction(ecmaDownload));
     globalObject.setProperty("mSleep", engine->newFunction(ecmaMSleep));
     globalObject.setProperty("qApp", engine->newQObject(dynamic_cast<RSingleApplication*>(qApp)));
+    //globalObject.setProperty("getShapeIntersections", engine->newFunction(ecmaGetShapeIntersections));
 
     // fix Qt wrapper APIs
     QScriptValue classQObject = globalObject.property("QObject");
@@ -1969,6 +1970,65 @@ QScriptValue RScriptHandlerEcma::ecmaQFileClose(QScriptContext* context, QScript
 
     return engine->undefinedValue();
 }
+
+/*
+QScriptValue RScriptHandlerEcma::ecmaGetShapeIntersections(QScriptContext* context, QScriptEngine* engine) {
+    QList < QSharedPointer < RShape > > shapes;
+    REcmaHelper::fromScriptValue( engine, context->argument(0), shapes );
+
+    qDebug() << "shapes: " << shapes.length();
+
+    QList<int> shapeIndices;
+    QList<RBox> bbs;
+
+    for (int i=0; i<shapes.length(); i++) {
+        shapeIndices.append(i);
+        bbs.append(shapes[i]->getBoundingBox());
+    }
+
+    RSpatialIndexNavel siShapes;
+    siShapes.bulkLoadSimple(shapeIndices, bbs);
+
+    //qDebug("shapes:", shapes);
+
+    qDebug() << "finding intersections";
+    QList<RVector> ips;
+    //RVector ip;
+
+    for (int i1=0; i1<shapes.length(); i1++) {
+        //qDebug() << QString("%1 / %2").arg(i1).arg(shapes.length());
+        QSharedPointer < RShape > shape1 = shapes[i1];
+        RBox bb1 = shape1->getBoundingBox().grow(1.0e-2);
+
+        // query other shapes within range:
+        QList<int> indices2 = siShapes.queryIntersectedSimple(bb1);
+        //qDebug("si query result:", indices2);
+
+        for (int k=0; k<indices2.length(); k++) {
+            int i2 = indices2[k];
+            if (i2<=i1) {
+                continue;
+            }
+            QSharedPointer < RShape > shape2 = shapes[i2];
+
+            QList<RVector> candidates = shape1->getIntersectionPoints(*shape2);
+            //qDebug("candidates:", candidates);
+            for (int d=0; d<candidates.length(); d++) {
+                RVector candidate = candidates[d];
+                QSharedPointer<RDirected> dir = shape1.dynamicCast<RDirected>();
+                if (!dir.isNull() &&
+                    !candidate.equalsFuzzy(dir->getStartPoint()) &&
+                    !candidate.equalsFuzzy(dir->getEndPoint())) {
+
+                    ips.append(candidate);
+                }
+            }
+        }
+    }
+
+    return REcmaHelper::listToScriptValue(engine, ips);
+}
+*/
 
 //QScriptValue RScriptHandlerEcma::ecmaBlockEvents(QScriptContext* context,
 //        QScriptEngine* engine) {

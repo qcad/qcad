@@ -159,6 +159,7 @@ public:
     RPolyline toPolyline(int segments) const;
 
     virtual QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const;
+    QList<QSharedPointer<RShape> > getExplodedWithSegmentLength(double segmentLength) const;
 
     QList<RSpline> getBezierSegments() const;
 

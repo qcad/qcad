@@ -472,6 +472,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getExplodedWithSegmentLength"
+    cppName="getExplodedWithSegmentLength" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="double" typeName="double" name="segmentLength"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getBezierSegments" cppName="getBezierSegments"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
