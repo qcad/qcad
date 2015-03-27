@@ -116,6 +116,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default=" NULL" isConst="false" />
       </variant>
     </method>
+    <method name="queryIntersectedSimple"
+    cppName="queryIntersectedSimple" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; int &gt;"
+      isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="b"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="queryContained" cppName="queryContained"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

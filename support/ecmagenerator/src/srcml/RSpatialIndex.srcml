@@ -391,6 +391,37 @@ dir="./core" filename="RSpatialIndex.h">
       <name>bbs</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>bulkLoadSimple</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>int</name>
+      </argument>&gt;</argument_list></name>&amp;</type>
+      <name>ids</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>RBox</name>
+      </argument>&gt;</argument_list></name>&amp;</type>
+      <name>bbs</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
   <comment type="block">/** * Adds a new entry into this spatial
   index. */</comment>
   <function_decl>

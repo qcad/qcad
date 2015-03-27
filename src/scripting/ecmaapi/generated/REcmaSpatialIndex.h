@@ -60,6 +60,9 @@
         bulkLoad
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        bulkLoadSimple
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addToIndex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
