@@ -204,11 +204,9 @@ Round.round = function(op, entity1, pos1, entity2, pos2, trim, radius, preview) 
         ending1 = trimmed1.getTrimEnd(pos1, is2);
         switch (ending1) {
         case RS.EndingStart:
-            //trimmed1.trimStartPoint(p1);
             trimmed1 = trimStartPoint(trimmed1, p1);
             break;
         case RS.EndingEnd:
-            //trimmed1.trimEndPoint(p1);
             trimmed1 = trimEndPoint(trimmed1, p1);
             break;
         default:
@@ -219,11 +217,9 @@ Round.round = function(op, entity1, pos1, entity2, pos2, trim, radius, preview) 
         ending2 = trimmed2.getTrimEnd(pos2, is2);
         switch (ending2) {
         case RS.EndingStart:
-            //trimmed2.trimStartPoint(p2);
             trimmed2 = trimStartPoint(trimmed2, p2);
             break;
         case RS.EndingEnd:
-            //trimmed2.trimEndPoint(p2);
             trimmed2 = trimEndPoint(trimmed2, p2);
             break;
         default:
