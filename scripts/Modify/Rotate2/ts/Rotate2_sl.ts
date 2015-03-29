@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Rotate2</name>
     <message>
@@ -21,17 +21,17 @@
     <message>
         <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="unfinished">Primarni kot:</translation>
+        <translation>Primarni kot:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation type="unfinished">Sekundarni kot:</translation>
+        <translation>Sekundarni kot:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Copies:</source>
-        <translation type="unfinished">Kopij:</translation>
+        <translation>Kopij:</translation>
     </message>
 </context>
 <context>
@@ -81,15 +81,15 @@
     <name>TranslateRotate</name>
     <message>
         <source>Primary Angle:</source>
-        <translation type="vanished">Primarni kot:</translation>
+        <translation>Primarni kot:</translation>
     </message>
     <message>
         <source>Secondary Angle:</source>
-        <translation type="vanished">Sekundarni kot:</translation>
+        <translation>Sekundarni kot:</translation>
     </message>
     <message>
         <source>Copies:</source>
-        <translation type="vanished">Kopij:</translation>
+        <translation>Kopij:</translation>
     </message>
 </context>
 </TS>
