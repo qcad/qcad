@@ -934,11 +934,13 @@ void RDocumentInterface::ucsSetEvent(const QString& ucsName) {
 RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
         const QString& nameFilter, bool notify) {
     // URL points to local file:
+#if QT_VERSION >= 0x040800
     if (url.isLocalFile()) {
         QString filePath = url.toLocalFile();
         qDebug() << "URL is local file";
         return importFile(filePath, nameFilter, notify);
     }
+#endif
 
     QNetworkAccessManager* manager = new QNetworkAccessManager();
     QNetworkReply* reply = manager->get(QNetworkRequest(url));
@@ -968,7 +970,12 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
         const QString& fileName, const QString& nameFilter, bool notify) {
 
     QUrl url(fileName);
-    if (url.isValid() && !url.scheme().isEmpty() && url.scheme().toUpper()!="FILE") {
+    if (url.isValid() && !url.scheme().isEmpty() && 
+        url.scheme().toUpper()!="FILE" && 
+        url.scheme().length()!=1) {           // windows: scheme is drive letter
+
+        qDebug() << "importing URL:" << fileName;
+        qDebug() << "importing scheme:" << url.scheme();
         return importUrl(url, nameFilter, notify);
     }
 
