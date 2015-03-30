@@ -10,6 +10,7 @@ SUBDIRS = \
     OpenFile \
     PdfExport \
     Print \
+    PrintCurrentView \
     PrintPreview \
     Quit \
     RecentFiles \

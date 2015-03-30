@@ -84,6 +84,7 @@ PrintPreview.prototype.beginEvent = function() {
         this.guiAction.setChecked(true);
     }
 
+    // globals:
     printPreviewRunning = true;
     printPreviewInstance = this;
 
@@ -145,7 +146,7 @@ PrintPreview.prototype.beginEvent = function() {
 PrintPreview.prototype.setState = function(state) {
     DefaultAction.prototype.setState.call(this, state);
 
-    if (this.state == PrintPreview.State.SettingOffset) {
+    if (this.state === PrintPreview.State.SettingOffset) {
         EAction.getDocumentInterface().setClickMode(RAction.PickingDisabled);
         this.setCursor(this.cursor, "PrintPreviewOffsetCursor");
         EAction.showMainTools();
@@ -197,7 +198,7 @@ PrintPreview.prototype.finishEvent = function() {
  * Implements moving of paper (offset).
  */
 PrintPreview.prototype.mousePressEvent = function(event) {
-    if (this.state == PrintPreview.State.SettingOffset) {
+    if (this.state === PrintPreview.State.SettingOffset) {
         if (event.button() == Qt.LeftButton &&
             event.modifiers().valueOf() != Qt.ControlModifier.valueOf()) {
 
@@ -231,7 +232,7 @@ PrintPreview.prototype.mousePressEvent = function(event) {
  * Implements moving of paper (offset).
  */
 PrintPreview.prototype.mouseMoveEvent = function(event) {
-    if (this.state != PrintPreview.State.SettingOffset) {
+    if (this.state !== PrintPreview.State.SettingOffset) {
         DefaultAction.prototype.mouseMoveEvent.call(this, event);
         return;
     }
