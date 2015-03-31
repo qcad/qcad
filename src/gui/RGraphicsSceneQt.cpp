@@ -141,7 +141,15 @@ bool RGraphicsSceneQt::beginPath() {
         currentPainterPath.setPen(localPen);
     }
     else {
-        currentPainterPath.setPen(currentPen);
+        if (getEntity()->getCustomProperty("QCAD", "ScreenWeight", false)==true) {
+            QPen localPen = currentPen;
+            localPen.setCosmetic(true);
+            localPen.setWidth(currentPen.widthF()*10);
+            currentPainterPath.setPen(localPen);
+        }
+        else {
+            currentPainterPath.setPen(currentPen);
+        }
     }
 
     currentPainterPath.setBrush(QBrush(Qt::NoBrush));

@@ -801,32 +801,30 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
                     pen.setWidthF(pen.widthF() / drawingScale);
                 }
             }
-            else {
-                if (isPrintPreview()) {
-                    if (!pen.isCosmetic()) {
-                        // print preview: optimize thin lines to 0 (1 pixel):
-                        if (pen.widthF() * getFactor() / drawingScale < 1.5) {
-                            pen.setWidth(0);
+            else if (isPrintPreview()) {
+                if (!pen.isCosmetic()) {
+                    // print preview: optimize thin lines to 0 (1 pixel):
+                    if (pen.widthF() * getFactor() / drawingScale < 1.5) {
+                        pen.setWidth(0);
+                    }
+                    else {
+                        if (hairlineMode) {
+                            //pen.setWidthF(0.05 / drawingScale);
+                            pen.setWidthF(0.0);
+                            pen.setCosmetic(true);
                         }
                         else {
-                            if (hairlineMode) {
-                                //pen.setWidthF(0.05 / drawingScale);
-                                pen.setWidthF(0.0);
-                                pen.setCosmetic(true);
-                            }
-                            else {
-                                pen.setWidthF(pen.widthF() / drawingScale);
-                            }
+                            pen.setWidthF(pen.widthF() / drawingScale);
                         }
                     }
                 }
-                else {
-                    if (!pen.isCosmetic()) {
-                        // for display, ignore drawing scale and optimize
-                        // thin lines to 0:
-                        if (pen.widthF() * getFactor() < 1.5 && !pen.isCosmetic()) {
-                            pen.setWidth(0);
-                        }
+            }
+            else {
+                if (!pen.isCosmetic()) {
+                    // for display, ignore drawing scale and optimize
+                    // thin lines to 0:
+                    if (pen.widthF() * getFactor() < 1.5) {
+                        pen.setWidth(0);
                     }
                 }
             }
