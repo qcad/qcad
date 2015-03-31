@@ -120,6 +120,8 @@ bool RGraphicsSceneQt::beginPath() {
         }
     }
 
+    REntity* entity = getEntity();
+
     if (draftMode || screenBasedLinetypes || twoColorSelectedMode) {
         QPen localPen = currentPen;
         if (twoColorSelectedMode) {
@@ -141,7 +143,7 @@ bool RGraphicsSceneQt::beginPath() {
         currentPainterPath.setPen(localPen);
     }
     else {
-        if (getEntity()->getCustomProperty("QCAD", "ScreenWeight", false)==true) {
+        if (entity!=NULL && entity->getCustomProperty("QCAD", "ScreenWeight", false)==true) {
             QPen localPen = currentPen;
             localPen.setCosmetic(true);
             localPen.setWidth(currentPen.widthF()*10);
@@ -156,15 +158,13 @@ bool RGraphicsSceneQt::beginPath() {
     currentPainterPath.setPixelSizeHint(pixelSizeHint);
 
     if (!exportToPreview) {
-        if (getEntity()->isSelected()) {
+        if (entity!=NULL && entity->isSelected()) {
             currentPainterPath.setSelected(true);
         }
     }
     else {
-        if (getEntity()!=NULL) {
-            if (getEntity()->getCustomProperty("QCADCAM", "simulation", false)==true) {
-                currentPainterPath.setHighlighted(true);
-            }
+        if (entity!=NULL && entity->getCustomProperty("QCADCAM", "simulation", false)==true) {
+            currentPainterPath.setHighlighted(true);
         }
     }
 
