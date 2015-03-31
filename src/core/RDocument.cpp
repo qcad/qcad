@@ -343,6 +343,8 @@ void RDocument::clear() {
     storage.clear();
     spatialIndex.clear();
     transactionStack.reset();
+
+    // TODO: check if needed (doc vars are reset in init):
     QSharedPointer<RDocumentVariables> docVars = queryDocumentVariablesDirect();
     if (!docVars.isNull()) {
         //docVars.clear();

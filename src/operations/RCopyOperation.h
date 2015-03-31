@@ -44,7 +44,12 @@ public:
     virtual RTransaction apply(RDocument& document, bool preview = false) const;
     virtual void preview(RDocument& document, RExporter& exporter) const;
 
+    void setClear(bool on) {
+        clear = on;
+    }
+
 private:
+    bool clear;
     RVector offset;
     RDocument& src;
 };

@@ -232,6 +232,9 @@ double RDimensionData::getDimexo() const {
     if (document!=NULL) {
         dimexo = document->getKnownVariable(RS::DIMEXO, dimexo).toDouble();
     }
+    else {
+        qWarning() << "RDimensionData::getDimexo: no document";
+    }
 
     return dimexo * getDimscale();
 }
@@ -242,8 +245,11 @@ double RDimensionData::getDimexe() const {
     if (document!=NULL) {
         dimexe = document->getKnownVariable(RS::DIMEXE, dimexe).toDouble();
     }
+    else {
+        qWarning() << "RDimensionData::getDimexe: no document";
+    }
 
-   return dimexe * getDimscale();
+    return dimexe * getDimscale();
 }
 
 double RDimensionData::getDimasz() const {
@@ -251,6 +257,9 @@ double RDimensionData::getDimasz() const {
 
     if (document!=NULL) {
         dimasz = document->getKnownVariable(RS::DIMASZ, dimasz).toDouble();
+    }
+    else {
+        qWarning() << "RDimensionData::getDimasz: no document";
     }
 
     return dimasz * getDimscale();
@@ -262,6 +271,9 @@ double RDimensionData::getDimgap() const {
     if (document!=NULL) {
         dimgap = document->getKnownVariable(RS::DIMGAP, dimgap).toDouble();
     }
+    else {
+        qWarning() << "RDimensionData::getDimgap: no document";
+    }
 
     return dimgap * getDimscale();
 }
@@ -271,6 +283,9 @@ double RDimensionData::getDimtxt() const {
 
     if (document!=NULL) {
         dimtxt = document->getKnownVariable(RS::DIMTXT, dimtxt).toDouble();
+    }
+    else {
+        qWarning() << "RDimensionData::getDimtxt: no document";
     }
 
     return dimtxt * getDimscale();
@@ -282,6 +297,9 @@ bool RDimensionData::useArchTick() const {
     if (document!=NULL) {
         ret = document->getKnownVariable(RS::DIMBLK, "").toString().toLower()=="archtick" ||
               document->getKnownVariable(RS::DIMTSZ, 0.0).toDouble() > RS::PointTolerance;
+    }
+    else {
+        qWarning() << "RDimensionData::useArchTick: no document";
     }
 
     return ret;
@@ -376,11 +394,11 @@ QList<QSharedPointer<RShape> > RDimensionData::getArrow(
     const RVector& position, double direction) const {
 
     QList<QSharedPointer<RShape> > ret;
-    double arrowSize = getDimasz();
+    double dimasz = getDimasz();
 
     // architecture tick:
     if (useArchTick()) {
-        RVector p1(arrowSize/2, arrowSize/2);
+        RVector p1(dimasz/2, dimasz/2);
 
         RLine line(p1, -p1);
         line.rotate(direction, RVector(0,0));
@@ -390,7 +408,7 @@ QList<QSharedPointer<RShape> > RDimensionData::getArrow(
 
     // standard arrow:
     else {
-        RTriangle arrow = RTriangle::createArrow(position, direction, arrowSize);
+        RTriangle arrow = RTriangle::createArrow(position, direction, dimasz);
         ret.append(QSharedPointer<RTriangle>(new RTriangle(arrow)));
     }
 

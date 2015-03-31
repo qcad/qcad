@@ -75,6 +75,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, preview, "preview");
             
+            REcmaHelper::registerFunction(&engine, proto, setClear, "setClear");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RCopyOperation*>(), *proto);
 
@@ -491,6 +493,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaCopyOperation::preview", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCopyOperation::setClear
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCopyOperation::setClear", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setClear";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCopyOperation* self = 
+                        getSelf("setClear", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setClear(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setClear().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCopyOperation::setClear", context, engine);
             return result;
         }
          QScriptValue REcmaCopyOperation::toString

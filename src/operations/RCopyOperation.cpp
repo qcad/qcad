@@ -24,7 +24,7 @@
 
 
 RCopyOperation::RCopyOperation(const RVector& offset, RDocument& src)
-    : offset(offset), src(src) {
+    : clear(true), offset(offset), src(src) {
 }
 
 
@@ -47,7 +47,7 @@ RTransaction RCopyOperation::apply(RDocument& document, bool preview) const {
         QString(),            // layerName
         transaction,
         true,                 // selectionOnly
-        true,                 // clear
+        clear,                // clear
         true,                 // toModelSpace (clipboard root is always model space)
         preview
     );

@@ -79,9 +79,8 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
         this.diTrans.setNotifyListeners(false);
 
         var copyOp = new RCopyOperation(new RVector(0,0), doc);
-        //copyOp.setClear(false);
+        copyOp.setClear(false);
         this.diTrans.applyOperation(copyOp);
-        docTrans.copyVariablesFrom(doc);
         di = this.diTrans;
         ids = this.diTrans.getDocument().queryAllEntities();
     }
