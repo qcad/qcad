@@ -43,6 +43,9 @@ function PrintPreview(guiAction) {
     var mask = new QBitmap(PrintPreview.includeBasePath + "/PrintPreviewOffsetCursorMask.png", "PNG");
     this.cursor = new QCursor(bitmap, mask, 15, 13);
     this.view = undefined;
+    this.saveView = false;
+    this.savedScale = undefined;
+    this.savedOffset = undefined;
 }
 
 PrintPreview.prototype = new DefaultAction();
@@ -78,6 +81,11 @@ PrintPreview.prototype.beginEvent = function() {
         }
         this.terminate();
         return;
+    }
+
+    if (this.saveView===true) {
+        this.savedScale = Print.getScale(this.getDocument());
+        this.savedOffset = Print.getOffset(this.getDocument());
     }
 
     if (!isNull(this.guiAction)) {
@@ -192,6 +200,15 @@ PrintPreview.prototype.finishEvent = function() {
 
     printPreviewRunning = false;
     printPreviewInstance = undefined;
+
+    if (this.saveView===true) {
+        if (!isNull(this.savedScale)) {
+            Print.setScale(this.getDocument(), this.savedScale);
+        }
+        if (!isNull(this.savedOffset)) {
+            Print.setOffset(this.getDocument(), this.savedOffset);
+        }
+    }
 };
 
 /**

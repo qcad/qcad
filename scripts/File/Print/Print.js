@@ -18,6 +18,9 @@
  */
 
 include("../File.js");
+if (typeof(PrintPreview)=="undefined") {
+    include("../PrintPreview/PrintPreview.js");
+}
 if (typeof(PageSettings)=="undefined") {
     include("scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js");
 }
@@ -31,6 +34,10 @@ function Print(guiAction, document, view) {
 
     this.document = document;
     this.view = view;
+
+    // save and restore current view:
+    this.saveView = false;
+
     if (!isNull(view)) {
         this.scene = view.getScene();
     }
@@ -44,10 +51,10 @@ Print.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
 
     // switch to print preview:
-    include("../PrintPreview/PrintPreview.js");
     if (!PrintPreview.isRunning()) {
         var guiAction = RGuiAction.getByScriptFile("scripts/File/PrintPreview/PrintPreview.js");
         var action = new PrintPreview(guiAction);
+        action.saveView = this.saveView;
         action.initialAction = "Print";
         var di = this.getDocumentInterface();
         di.setCurrentAction(action);

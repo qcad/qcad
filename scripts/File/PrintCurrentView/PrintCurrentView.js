@@ -24,6 +24,7 @@ include("../Print/Print.js");
  */
 function PrintCurrentView(guiAction, document, view) {
     Print.call(this, guiAction);
+    this.saveView = true;
 }
 
 PrintCurrentView.prototype = new Print();
@@ -31,17 +32,12 @@ PrintCurrentView.prototype = new Print();
 PrintCurrentView.prototype.beginEvent = function() {
     var appWin = RMainWindowQt.getMainWindow();
     appWin.setProperty("PrintPreview/InitialZoom", "View");
-    this.savedScale = Print.getScale(this.document);
-    this.savedOffset = Print.getOffset(this.document);
 
+    // Print beginEvent switches to print preview:
     Print.prototype.beginEvent.call(this);
 };
 
 PrintCurrentView.prototype.finishEvent = function() {
     var appWin = RMainWindowQt.getMainWindow();
     appWin.setProperty("PrintPreview/InitialZoom", "Stored");
-    Print.setScale(this.savedScale);
-    Print.setOffset(this.savedOffset);
-
-    Print.prototype.finishEvent.call(this);
 };
