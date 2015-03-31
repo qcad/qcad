@@ -78,10 +78,12 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
         this.diTrans = new RDocumentInterface(docTrans);
         this.diTrans.setNotifyListeners(false);
 
-        this.diTrans.applyOperation(new RCopyOperation(new RVector(0,0), doc));
+        var copyOp = new RCopyOperation(new RVector(0,0), doc);
+        //copyOp.setClear(false);
+        this.diTrans.applyOperation(copyOp);
+        docTrans.copyVariablesFrom(doc);
         di = this.diTrans;
         ids = this.diTrans.getDocument().queryAllEntities();
-
     }
     else {
         di = this.getDocumentInterface();
