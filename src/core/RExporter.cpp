@@ -1299,9 +1299,6 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
 
         // performance improvement (using real splines):
         RPainterPath pp;
-        //QPen localPen = currentPen;
-        //localPen.setStyle();
-        //pp.setPen(QPen(Qt::SolidLine));
         pp.setPen(currentPen);
         pp.setInheritPen(true);
         pp.addSpline(spline);
