@@ -645,11 +645,11 @@ QList<RVector> RShape::getIntersectionPointsLC(const RLine& line1,
         sol2 = p + d * t2;
     }
 
-    if (!limited || line1.isOnShape(sol1)) {
+    if (!limited || line1.isOnShape(sol1, true, 1.0e-6)) {
         res.append(sol1);
     }
     if (sol2.isValid()) {
-        if (!limited || line1.isOnShape(sol2)) {
+        if (!limited || line1.isOnShape(sol2, true, 1.0e-6)) {
             res.append(sol2);
         }
     }
