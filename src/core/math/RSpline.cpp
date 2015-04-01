@@ -1341,6 +1341,7 @@ QList<RSpline> RSpline::getBezierSegments() const {
         }
         ret.append(RSpline(ctrlPts, degree));
     }
+    delete dup;
  #endif
 
     return ret;
