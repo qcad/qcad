@@ -462,8 +462,9 @@ void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
         return;
     }
 
+    RPainterPath path;
     for (int i=0; i<paths.size(); i++) {
-        RPainterPath path = paths.at(i);
+        path = paths.at(i);
         path.setZLevel(0);
 
         path.setBrush(getBrush(path));
