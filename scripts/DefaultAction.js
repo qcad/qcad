@@ -392,7 +392,7 @@ DefaultAction.prototype.mousePressEvent = function(event) {
 };
 
 DefaultAction.prototype.mouseDoubleClickEvent = function(event) {
-    if (event.button() == Qt.LeftButton && this.state==DefaultAction.State.Neutral) {
+    if (event.button() == Qt.LeftButton && this.state===DefaultAction.State.Neutral) {
         var view = event.getGraphicsView();
         var range = view.mapDistanceFromView(this.pickRangePixels);
         var strictRange = view.mapDistanceFromView(10);
@@ -403,6 +403,7 @@ DefaultAction.prototype.mouseDoubleClickEvent = function(event) {
 
         this.entityDoubleClicked(entityId, event);
     }
+    EAction.prototype.mouseDoubleClickEvent.call(this, event);
 };
 
 DefaultAction.prototype.escapeEvent = function(event) {

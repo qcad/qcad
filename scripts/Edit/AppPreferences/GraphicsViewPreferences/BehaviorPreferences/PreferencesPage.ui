@@ -52,6 +52,13 @@
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QCheckBox" name="RightDoubleClickToReset">
+         <property name="text">
+          <string>Right double-click to reset</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>

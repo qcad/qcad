@@ -179,6 +179,19 @@ EAction.prototype.mouseReleaseEvent = function(event) {
     }
 };
 
+EAction.prototype.mouseDoubleClickEvent = function(event) {
+    if (event.button() == Qt.RightButton) {
+        // right double-click to reset:
+        if (RSettings.getBoolValue("GraphicsView/RightDoubleClickToReset", false)) {
+            var di = this.getDocumentInterface();
+            if (!isNull(di)) {
+                di.killAllActions();
+            }
+            EAction.showMainTools();
+        }
+    }
+};
+
 /**
  * Sets the UI options toolbar content for this tool. By default, a tool shows
  * the options toolbar defined in "DefaultOptions.ui".
