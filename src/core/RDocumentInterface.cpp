@@ -937,7 +937,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
 #if QT_VERSION >= 0x040800
     if (url.isLocalFile()) {
         QString filePath = url.toLocalFile();
-        qDebug() << "URL is local file";
+        qDebug() << "importing local file:" << filePath;
         return importFile(filePath, nameFilter, notify);
     }
 #endif
@@ -969,14 +969,13 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
 RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
         const QString& fileName, const QString& nameFilter, bool notify) {
 
-    QUrl url(fileName);
-    if (url.isValid() && !url.scheme().isEmpty() && 
-        url.scheme().toUpper()!="FILE" && 
-        url.scheme().length()!=1) {           // windows: scheme is drive letter
+    // TODO: improve detection of downloadable URLs:
+    if (fileName.toLower().startsWith("http://") ||
+        fileName.toLower().startsWith("https://") ||
+        fileName.toLower().startsWith("ftp://")) {
 
         qDebug() << "importing URL:" << fileName;
-        qDebug() << "importing scheme:" << url.scheme();
-        return importUrl(url, nameFilter, notify);
+        return importUrl(QUrl(fileName), nameFilter, notify);
     }
 
     RMainWindow* mainWindow = RMainWindow::getMainWindow();
