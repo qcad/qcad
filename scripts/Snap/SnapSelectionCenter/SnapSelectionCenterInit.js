@@ -6,7 +6,7 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("s,k"));
     action.setDefaultCommands(["snapselectioncenter", "sk"]);
     //action.setGroup("snaps");
-    action.setNoState();
+    action.setNoState(true);
     action.setOverride();
     action.setGroupSortOrder(15560);
     action.setSortOrder(100);

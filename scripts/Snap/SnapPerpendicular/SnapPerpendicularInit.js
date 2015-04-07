@@ -6,7 +6,7 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("s,u"));
     action.setDefaultCommands(["snapperpendicular", "su"]);
     action.setGroup("snaps");
-    action.setNoState();
+    action.setNoState(true);
     action.setGroupSortOrder(15100);
     action.setSortOrder(500);
     action.setWidgetNames(["SnapMenu", "SnapToolBar", "SnapToolsPanel"]);

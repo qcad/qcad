@@ -7,7 +7,7 @@ function init(basePath) {
     action.setDefaultCommands(["restrictoff", "en"]);
     action.setGroup("snaprestrictions");
     action.setGroupDefault(true);
-    action.setNoState();
+    action.setNoState(true);
     action.setGroupSortOrder(15600);
     action.setSortOrder(100);
     action.setWidgetNames(["SnapMenu", "SnapToolBar", "SnapToolsPanel"]);
