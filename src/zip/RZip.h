@@ -35,6 +35,7 @@
 class QCADZIP_EXPORT RZip {
 public:
     static bool unzipFile(const QString& fileName, const QString& path);
+//    static bool loadAsResource(const QString& fileName, const QString& mapRoot);
 };
 
 Q_DECLARE_METATYPE(RZip*)

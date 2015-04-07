@@ -61,6 +61,7 @@ public:
 
     static bool isDeployed();
     static QString getApplicationPath();
+    static QStringList getPluginPaths();
     static QString getPluginPath();
 
     static QString getStandardLocation(int sl);

@@ -408,15 +408,9 @@ function uninitAddOns(addOns) {
  * Loads the add-ons and starts QCAD.
  */
 function main() {
-    qApp.organizationName = "QCAD";
-    qApp.organizationDomain = "QCAD.org";
     if (!isNull(qApp.applicationNameOverride)) {
         qApp.applicationName = qApp.applicationNameOverride;
     }
-    else {
-        qApp.applicationName = "QCAD";
-    }
-    qApp.applicationVersion = RSettings.getVersionString();
 
     var i;
     var filesToOpen = [];

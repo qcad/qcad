@@ -127,6 +127,31 @@ QString RSettings::getApplicationPath() {
     return ret.path();
 }
 
+/**
+ * \return List of all plugin paths for application plugins and add on
+ * plugins in the application data location.
+ */
+QStringList RSettings::getPluginPaths() {
+    QStringList ret;
+
+    ret << RSettings::getPluginPath();
+
+    QDir dataDir(RSettings::getDataLocation());
+    QStringList addOns = dataDir.entryList(QDir::NoDotAndDotDot|QDir::Readable|QDir::Dirs|QDir::Executable, QDir::Name);
+
+    for (int i=0; i<addOns.length(); i++) {
+        if (addOns[i]=="scripts") {
+            continue;
+        }
+        QFileInfo fi(dataDir.absolutePath() + QDir::separator() + addOns[i] + QDir::separator() + "plugins");
+        if (fi.exists()) {
+            ret.append(fi.absolutePath());
+        }
+    }
+
+    return ret;
+}
+
 QString RSettings::getPluginPath() {
     QDir appDir = QDir(getApplicationPath());
 

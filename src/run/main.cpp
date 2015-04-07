@@ -84,7 +84,6 @@ void catchSigPipe(int /*s*/){
 #endif
 
 int main(int argc, char *argv[]) {
-
     // For correct Unicode translation, apply the current system locale:
     setlocale(LC_ALL, "");
     // But use usual conversion for scanf()/sprintf():
@@ -97,6 +96,12 @@ int main(int argc, char *argv[]) {
 #else
     setenv("UNICODEMAP_JP", "cp932", 1);
 #endif
+
+    // these are defaults:
+    qApp->setOrganizationName("QCAD");
+    qApp->setOrganizationDomain("QCAD.org");
+    qApp->setApplicationName("QCAD");
+    qApp->setApplicationVersion(RSettings::getVersionString());
 
     RMainWindow::installMessageHandler();
 #ifdef Q_OS_MAC
@@ -184,12 +189,12 @@ int main(int argc, char *argv[]) {
     QDir::setCurrent(RSettings::getApplicationPath());
 
     // disable Qt library paths to avoid plugins for Qt designer from being found:
-    QString pluginPath = RSettings::getPluginPath();
-    if (pluginPath.isEmpty()) {
-        qWarning() << QString("Folder '%1' does not exist").arg(pluginPath);
+    QStringList pluginPaths = RSettings::getPluginPaths();
+    if (pluginPaths.isEmpty()) {
+        qWarning() << "No plugin paths found";
         return -1;
     }
-    app->setLibraryPaths(QStringList() << pluginPath);
+    app->setLibraryPaths(pluginPaths);
 
     RMath::init();
     RFontList::init();

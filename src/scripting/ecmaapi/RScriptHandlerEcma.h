@@ -117,6 +117,7 @@ public:
     //static QScriptValue ecmaGetOpt(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaAddApplicationFont(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaDownload(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaDownloadToFile(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQSortFilterProxyModelCastToQAbstractItemModel(QScriptContext* context, QScriptEngine* engine);
 //    static QScriptValue ecmaQFontDatabaseFamilies(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQEventCast(QScriptContext* context, QScriptEngine* engine);

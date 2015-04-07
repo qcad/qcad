@@ -480,12 +480,25 @@ AddOn.getAddOns = function(dir) {
                 new QFileInfo("scripts/Widgets"),
                 new QFileInfo("scripts/Misc"),
                 new QFileInfo("scripts/Local"),
-                // scripts wrapped in plugins:
+                // scripts compiled as resources in plugins:
                 new QFileInfo(":scripts"),
                 // local scripts:
                 new QFileInfo(RSettings.getDataLocation() + "/scripts"),
-                new QFileInfo("scripts/Help")
             ];
+
+        // local scripts from installed add-ons:
+        var localAddOns = AddOn.getLocalAddOns();
+
+        for (i=0; i<localAddOns.length; i++) {
+            var localAddOnDir = RSettings.getDataLocation() + "/" + localAddOns[i] + "/scripts";
+            qDebug("adding scripts dir of add-on: ", localAddOnDir);
+            var fi = new QFileInfo(localAddOnDir);
+            if (fi.exists()) {
+                fileMenuList.push(fi);
+            }
+        }
+
+        fileMenuList.push(new QFileInfo("scripts/Help"));
                 
         // append directories not in the list above:
         var menuList = new QDir(dir).entryInfoList(dirFilter, sortFlags);
@@ -532,6 +545,13 @@ AddOn.getAddOns = function(dir) {
     }
 
     return addOns;
+};
+
+AddOn.getLocalAddOns = function() {
+    var dataDir = new QDir(RSettings.getDataLocation());
+    var fs = new QDir.Filters(QDir.NoDotAndDotDot, QDir.Readable, QDir.Dirs, QDir.Executable);
+    var sf = new QDir.SortFlags(QDir.Name);
+    return dataDir.entryList([], fs, sf);
 };
 
 AddOn.isIgnored = function(path) {

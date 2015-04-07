@@ -331,6 +331,7 @@
 #include "REcmaXLine.h"
 #include "REcmaXLineData.h"
 #include "REcmaXLineEntity.h"
+#include "REcmaZip.h"
 
 #if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
 #include "REcmaWebView.h"
@@ -403,6 +404,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     globalObject.setProperty("serialize", engine->newFunction(ecmaSerialize));
     globalObject.setProperty("addApplicationFont", engine->newFunction(ecmaAddApplicationFont));
     globalObject.setProperty("download", engine->newFunction(ecmaDownload));
+    globalObject.setProperty("downloadToFile", engine->newFunction(ecmaDownloadToFile));
     globalObject.setProperty("mSleep", engine->newFunction(ecmaMSleep));
     globalObject.setProperty("qApp", engine->newQObject(dynamic_cast<RSingleApplication*>(qApp)));
     //globalObject.setProperty("getShapeIntersections", engine->newFunction(ecmaGetShapeIntersections));
@@ -863,6 +865,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaDxfServices::initEcma(*engine);
 
     REcmaAutoLoadEcma::initEcma(*engine);
+
+    REcmaZip::initEcma(*engine);
 
 
     // *** end of "do not change the order" ***
@@ -1904,6 +1908,56 @@ QScriptValue RScriptHandlerEcma::ecmaDownload(QScriptContext* context,
         return throwError(
                 "Wrong number/types of arguments for download().",
                 context);
+    }
+}
+
+QScriptValue RScriptHandlerEcma::ecmaDownloadToFile(QScriptContext* context, QScriptEngine* engine) {
+
+    if (context->argumentCount() == 3 &&
+        context->argument(0).isString() &&
+        context->argument(1).isString() &&
+        context->argument(2).isNumber()) {
+
+        QString url = context->argument(0).toString();
+        QString path = context->argument(1).toString();
+        int timeout = context->argument(2).toInteger();
+
+        QNetworkAccessManager manager;
+        QEventLoop loop;
+        QNetworkReply *reply = manager.get(QNetworkRequest(url));
+        QObject::connect(reply, SIGNAL(finished()), &loop, SLOT(quit()));
+
+        // timeout:
+        if (timeout>0) {
+            QTimer::singleShot(timeout, &loop, SLOT(quit()));
+        }
+
+        // run loop:
+        loop.exec();
+
+        if (reply->error()!=QNetworkReply::NoError) {
+            qWarning() << "Cannot download " << url << ": "<< reply->errorString();
+            delete reply;
+            return qScriptValueFromValue(engine, false);
+        }
+
+        QString fileName = QFileInfo(QUrl(url).path()).fileName();
+        QFile f(path + QDir::separator() + fileName);
+        if (!f.open(QIODevice::WriteOnly)) {
+            qWarning() << "Cannot write output file " << path;
+            delete reply;
+            return qScriptValueFromValue(engine, false);
+        }
+
+        f.write(reply->readAll());
+        f.close();
+
+        delete reply;
+        return qScriptValueFromValue(engine, true);
+    } else {
+        return throwError(
+                    "Wrong number/types of arguments for downloadToFile().",
+                    context);
     }
 }
 
