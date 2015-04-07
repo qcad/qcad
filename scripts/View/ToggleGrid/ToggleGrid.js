@@ -92,7 +92,7 @@ ToggleGrid.init = function(basePath) {
     action.setRequiresDocument(true);
     action.setIcon(basePath + "/ToggleGrid.svg");
     action.setDefaultShortcut(new QKeySequence("g,r"));
-    action.setNoState();
+    action.setNoState(true);
     action.setGroupSortOrder(3200);
     action.setSortOrder(100);
     action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);

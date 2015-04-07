@@ -39,7 +39,7 @@ IsometricGridOff.init = function(basePath) {
     action.setDefaultShortcut(new QKeySequence("j,o"));
     action.setDefaultCommands(["isometricgridoff", "jo"]);
     action.setGroup("isometricProjection");
-    action.setNoState();
+    action.setNoState(true);
     action.setGroupSortOrder(3500);
     action.setSortOrder(100);
     action.setWidgetNames(["ViewMenu", "IsometricViewToolBar", "ViewToolsPanel"]);

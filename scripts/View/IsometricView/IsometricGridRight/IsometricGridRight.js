@@ -39,7 +39,7 @@ IsometricGridRight.init = function(basePath) {
     action.setDefaultShortcut(new QKeySequence("j,r"));
     action.setDefaultCommands(["isometricgridright", "jr"]);
     action.setGroup("isometricProjection");
-    action.setNoState();
+    action.setNoState(true);
     action.setGroupSortOrder(3500);
     action.setSortOrder(300);
     action.setWidgetNames(["ViewMenu", "IsometricViewToolBar", "ViewToolsPanel"]);

@@ -90,7 +90,7 @@ LinetypeMode.init = function(basePath) {
     action.setDefaultShortcut(new QKeySequence("n,l"));
     action.setDefaultCommands(["screenlinetype", "nl"]);
     action.setGroup("viewmodes");
-    action.setNoState();
+    action.setNoState(true);
     action.setGroupSortOrder(3100);
     action.setSortOrder(200);
     action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
