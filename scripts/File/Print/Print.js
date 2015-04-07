@@ -18,6 +18,7 @@
  */
 
 include("../File.js");
+include("sprintf.js");
 if (typeof(PrintPreview)=="undefined") {
     include("../PrintPreview/PrintPreview.js");
 }
@@ -1237,7 +1238,38 @@ Print.setPrintCropMarks = function(document, printCropMarks) {
 };
 
 Print.getScaleString = function(document) {
-    return EAction.getStringValue("PageSettings/Scale", "1:1", document);
+    var str = EAction.getStringValue("PageSettings/Scale", "1:1", document);
+
+    // round:
+    if (/^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$/.test(str)) {
+        var v = parseFloat(str);
+        if (v>1) {
+            str = sprintf("%.2f", v);
+        }
+        else if (v>0.1) {
+            str = sprintf("%.3f", v);
+        }
+        else if (v>0.01) {
+            str = sprintf("%.4f", v);
+        }
+        else if (v>0.001) {
+            str = sprintf("%.5f", v);
+        }
+        else if (v>0.0001) {
+            str = sprintf("%.6f", v);
+        }
+        else if (v>0.00001) {
+            str = sprintf("%.7f", v);
+        }
+        else if (v>0.000001) {
+            str = sprintf("%.8f", v);
+        }
+        else {
+            str = sprintf("%.12f", v);
+        }
+    }
+
+    return str;
 };
 
 /**
