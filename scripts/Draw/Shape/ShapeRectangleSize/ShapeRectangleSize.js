@@ -29,11 +29,14 @@ function ShapeRectangleSize(guiAction) {
     DrawBasedOnRectangle.call(this, guiAction);
 
     this.createPolyline = false;
+    //this.includeBasePath = ShapeRectangleSize.includeBasePath;
+    //this.dialogUiFile = "ShapeRectangleSizeDialog.ui";
 
     this.setUiOptions(["../Shape.ui", "ShapeRectangleSize.ui"]);
 }
 
 ShapeRectangleSize.prototype = new DrawBasedOnRectangle();
+ShapeRectangleSize.includeBasePath = includeBasePath;
 
 ShapeRectangleSize.prototype.getShapes = function(corners) {
     return Shape.prototype.getShapes.call(this, corners);

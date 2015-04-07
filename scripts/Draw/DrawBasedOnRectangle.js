@@ -32,6 +32,8 @@ include("Draw.js");
 function DrawBasedOnRectangle(guiAction) {
     EAction.call(this, guiAction);
 
+    this.useDialog = RSettings.getBoolValue("DrawBasedOnRectangle/UseDialog", false);
+    //this.dialogUiFile = "";
     this.pos = undefined;
     this.width = 1;
     this.height = 1;
@@ -54,10 +56,80 @@ function DrawBasedOnRectangle(guiAction) {
 }
 
 DrawBasedOnRectangle.prototype = new EAction();
+DrawBasedOnRectangle.includeBasePath = includeBasePath;
 
 DrawBasedOnRectangle.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
+    if (!this.showDialog()) {
+        this.terminate();
+        return;
+    }
+
     this.setState(0);
+};
+
+/**
+ * Might move to EAction at one point.
+ */
+DrawBasedOnRectangle.prototype.showDialog = function() {
+    if (!this.useDialog) {
+        return;
+    }
+
+//    if (this.dialogUiFile.length===0) {
+//        return;
+//    }
+
+    // collect widgets which are tagged to be moved to the dialog:
+    var i;
+    var widgets = [];
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var children = optionsToolBar.children();
+    for (i = 0; i < children.length; ++i) {
+        var c = children[i];
+        if (c["MoveToDialog"]===true) {
+            widgets.push(c);
+        }
+    }
+
+    if (widgets.length===0) {
+        return;
+    }
+
+    qDebug("show dialog");
+
+    // show dialog and move tool bar widgets to its layout:
+    //var dlg = new QDialog(EAction.getMainWindow());
+    var dialog = WidgetFactory.createDialog(DrawBasedOnRectangle.includeBasePath, "DrawBasedOnRectangleDialog.ui");
+    debugger;
+    var formLayout = dialog.findChild("FormLayout");
+    for (i = 0; i < widgets.length-1; i+=2) {
+        this.moveWidget(widgets[i], dialog);
+        this.moveWidget(widgets[i+1], dialog);
+        formLayout.addRow(widgets[i], widgets[i+1]);
+    }
+
+    var ret = true;
+    if (dialog.exec()) {
+        this.width = dialog.findChild("Width").getValue();
+        this.height = dialog.findChild("Height").getValue();
+        this.angle = dialog.findChild("Angle").getValue();
+    }
+    else {
+        ret = false;
+    }
+
+    dialog.destroy();
+
+    return ret;
+};
+
+DrawBasedOnRectangle.prototype.moveWidget = function(widget, dialog) {
+    widget.setParent(dialog);
+    widget.visible = true;
+    widget.sizePolicy = new QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed);
+    widget.minimumWidth = 50;
+    widget.maximumWidth = 32000;
 };
 
 DrawBasedOnRectangle.prototype.initUiOptions = function(resume, restoreFromSettings) {

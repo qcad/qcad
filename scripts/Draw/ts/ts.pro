@@ -5,3 +5,4 @@ SOURCES = \
     ../Draw.js \
     ../DrawBasedOnRectangle.js \
     ../DrawBasedOnThreeCircles.js
+FORMS = ../DrawBasedOnRectangle.ui
