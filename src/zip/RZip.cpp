@@ -16,8 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QTextStream>
-#include <QResource>
+//#include <QTextStream>
+//#include <QResource>
 
 #include "JlCompress.h"
 
