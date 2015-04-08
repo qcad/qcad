@@ -489,7 +489,6 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
         a.destroy();
     }
 
-
     // delete additional toolbars of this tool if available:
     if (!isNull(this.additionalOptionsToolBars)) {
         for (i = 0; i < this.additionalOptionsToolBars.length; ++i) {
