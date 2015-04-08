@@ -358,6 +358,10 @@ void RGraphicsViewQt::focusOutEvent(QFocusEvent* event) {
     QWidget::focusOutEvent(event);
 }
 
+void RGraphicsViewQt::giveFocus() {
+    QWidget::setFocus(Qt::OtherFocusReason);
+}
+
 bool RGraphicsViewQt::hasFocus() {
     return QWidget::hasFocus();
 }

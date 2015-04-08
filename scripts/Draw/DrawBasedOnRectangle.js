@@ -105,8 +105,18 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
         this.dialog = WidgetFactory.createDialog(DrawBasedOnRectangle.includeBasePath, "DrawBasedOnRectangleDialog.ui");
         this.dialog.windowTitle = this.getToolTitle();
         this.dialog.windowIcon = new QIcon();
+
+        // make sure options are stored in the same place as for dialog less tool:
+        //this.dialog.objectName = optionsToolBar.objectName;
+
         var formLayout = this.dialog.findChild("FormLayout");
         for (i = 0; i < widgets.length; i++) {
+            if (isOfType(widgets[i], QCheckBox)) {
+                this.moveWidget(widgets[i], this.dialog);
+                formLayout.addRow(new QWidget(formLayout), widgets[i]);
+                continue;
+            }
+
             // other widgets are moved to the dialog:
             if (i<widgets.length-1) {
                 this.moveWidget(widgets[i], this.dialog);
@@ -139,15 +149,20 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
         }
     }
 
-    return this.dialog.exec();
+    var ret = this.dialog.exec();
+    WidgetFactory.saveState(this.dialog, "Shape");
+    WidgetFactory.saveState(this.dialog, this.settingsGroup);
+    return ret;
 };
 
 DrawBasedOnRectangle.prototype.moveWidget = function(widget, dialog) {
     widget.setParent(dialog);
+    //widget.sizePolicy = new QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed);
+    widget.sizePolicy = new QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed);
+    //widget.minimumWidth = 50;
+    //widget.minimumHeight = 10;
+    //widget.maximumWidth = 32000;
     widget.visible = true;
-    widget.sizePolicy = new QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed);
-    widget.minimumWidth = 50;
-    widget.maximumWidth = 32000;
 };
 
 DrawBasedOnRectangle.prototype.initUiOptions = function(resume, restoreFromSettings) {

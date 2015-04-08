@@ -127,6 +127,7 @@ public:
     virtual void handleSwipeGestureEvent(QSwipeGesture& gesture);
     virtual void handlePanGestureEvent(QPanGesture& gesture);
     virtual void handlePinchGestureEvent(QPinchGesture& gesture);
+    virtual void giveFocus() = 0;
     /**
      * \return True if this view currently has the focus.
      */

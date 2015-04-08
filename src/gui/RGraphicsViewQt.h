@@ -68,6 +68,7 @@ public:
     virtual void repaintView();
     virtual void repaintNow();
 
+    virtual void giveFocus();
     virtual bool hasFocus();
     virtual void removeFocus();
 

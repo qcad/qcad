@@ -205,6 +205,10 @@ public:
     virtual void repaintView();
     virtual void updateImage();
 
+    virtual void giveFocus() {
+        return;
+    }
+
     virtual bool hasFocus() {
         return true;
     }
