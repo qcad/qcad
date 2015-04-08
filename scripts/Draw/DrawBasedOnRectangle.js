@@ -158,10 +158,10 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
 DrawBasedOnRectangle.prototype.moveWidget = function(widget, dialog) {
     widget.setParent(dialog);
     //widget.sizePolicy = new QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed);
-    widget.sizePolicy = new QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed);
-    //widget.minimumWidth = 50;
+    widget.sizePolicy = new QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed);
+    widget.minimumWidth = 50;
     //widget.minimumHeight = 10;
-    //widget.maximumWidth = 32000;
+    widget.maximumWidth = 32000;
     widget.visible = true;
 };
 
