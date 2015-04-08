@@ -678,8 +678,9 @@ QList<QSharedPointer<RShape> > RSpline::getExploded(int segments) const {
         }
 
         if (prev.isValid()) {
-            RLine* line = new RLine(prev, p1);
-            exploded.append(QSharedPointer<RShape>(line));
+            appendToExploded(RLine(prev, p1));
+//            RLine* line = new RLine(prev, p1);
+//            exploded.append(QSharedPointer<RShape>(line));
         }
         prev = p1;
 
@@ -689,15 +690,36 @@ QList<QSharedPointer<RShape> > RSpline::getExploded(int segments) const {
     p1 = getEndPoint();
     if (!RMath::isNaN(p1.x) && !RMath::isNaN(p1.y)) {
         if (prev.isValid()) {
-            RLine* line = new RLine(prev, p1);
+            appendToExploded(RLine(prev, p1));
+//            RLine* line = new RLine(prev, p1);
             // prevent zero length line at the end:
-            if (line->getLength()>1.0e-4) {
-                exploded.append(QSharedPointer<RShape>(line));
-            }
+//            if (line->getLength()>1.0e-4) {
+//                exploded.append(QSharedPointer<RShape>(line));
+//            }
         }
     }
 
     return exploded;
+}
+
+void RSpline::appendToExploded(const RLine& line) const {
+    if (line.getLength()<1.0e-6) {
+        return;
+    }
+
+    if (!exploded.isEmpty()) {
+        // compare angle of this sement with last segment and
+        // modify last segment if angle is the same (straight line):
+        QSharedPointer<RLine> prev = exploded.last().dynamicCast<RLine>();
+        if (!prev.isNull()) {
+            if (RMath::fuzzyCompare(prev->getAngle(), prev->getStartPoint().getAngleTo(line.getEndPoint()))) {
+                prev->setEndPoint(line.getEndPoint());
+                return;
+            }
+        }
+    }
+
+    exploded.append(QSharedPointer<RShape>(new RLine(line)));
 }
 
 QList<QSharedPointer<RShape> > RSpline::getExplodedWithSegmentLength(double segmentLength) const {
