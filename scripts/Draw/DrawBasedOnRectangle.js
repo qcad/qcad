@@ -97,7 +97,8 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
         }
 
         if (widgets.length===0) {
-            return;
+            // no widgets to show in dialog, return to normal operation without dialog:
+            return true;
         }
 
         // show dialog and move tool bar widgets to its layout:
