@@ -207,6 +207,13 @@ function isQWidget(obj) {
 }
 
 /**
+ * \return true if the given object is a separator (a frame of type vertical line).
+ */
+function isSeparator(obj) {
+    return isOfType(obj, QFrame) && obj.frameShape==QFrame.VLine;
+}
+
+/**
  * Checks if the given object is a layer.
  *
  * \return true if the given object is a layer.

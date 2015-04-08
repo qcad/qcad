@@ -915,7 +915,7 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
         w.setProperty("SettingsGroup", settingsGroup);
 
         // add separator:
-        if (isOfType(w, QFrame) && w.frameShape==QFrame.VLine) {
+        if (isSeparator(w)) {
             a = targetWidget.addSeparator();
             a.objectName = w.objectName + "Action";
             ret.push(a);
