@@ -60,68 +60,85 @@ DrawBasedOnRectangle.includeBasePath = includeBasePath;
 
 DrawBasedOnRectangle.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
-    if (!this.showDialog()) {
-        this.terminate();
-        return;
+
+    if (this.useDialog) {
+        if (!this.showDialog()) {
+            this.terminate();
+            return;
+        }
     }
 
     this.setState(0);
 };
 
+DrawBasedOnRectangle.prototype.finishEvent = function() {
+    if (!isNull(this.dialog)) {
+        this.dialog.destroy();
+    }
+    EAction.prototype.finishEvent.call(this);
+};
+
 /**
- * Might move to EAction at one point.
+ * Show dialog to enter some of the options.
+ * This might move to EAction at one point.
  */
 DrawBasedOnRectangle.prototype.showDialog = function() {
-    if (!this.useDialog) {
-        return;
-    }
+    if (isNull(this.dialog)) {
+        // collect widgets which are tagged to be moved to the dialog:
+        var i, c;
+        var widgets = [];
+        var optionsToolBar = EAction.getOptionsToolBar();
+        var children = optionsToolBar.children();
+        for (i = 0; i < children.length; ++i) {
+            c = children[i];
+            if (c["MoveToDialog"]===true) {
+                widgets.push(c);
+            }
+        }
 
-//    if (this.dialogUiFile.length===0) {
-//        return;
-//    }
+        if (widgets.length===0) {
+            return;
+        }
 
-    // collect widgets which are tagged to be moved to the dialog:
-    var i;
-    var widgets = [];
-    var optionsToolBar = EAction.getOptionsToolBar();
-    var children = optionsToolBar.children();
-    for (i = 0; i < children.length; ++i) {
-        var c = children[i];
-        if (c["MoveToDialog"]===true) {
-            widgets.push(c);
+        // show dialog and move tool bar widgets to its layout:
+        this.dialog = WidgetFactory.createDialog(DrawBasedOnRectangle.includeBasePath, "DrawBasedOnRectangleDialog.ui");
+        this.dialog.windowTitle = this.getToolTitle();
+        this.dialog.windowIcon = new QIcon();
+        var formLayout = this.dialog.findChild("FormLayout");
+        for (i = 0; i < widgets.length; i++) {
+            // other widgets are moved to the dialog:
+            if (i<widgets.length-1) {
+                this.moveWidget(widgets[i], this.dialog);
+                this.moveWidget(widgets[i+1], this.dialog);
+                formLayout.addRow(widgets[i], widgets[i+1]);
+                i++;
+            }
+        }
+
+        // remove double separators:
+        children = optionsToolBar.children();
+        var previousWidgetWasSeparator = false;
+        for (i = 0; i < children.length; ++i) {
+            c = children[i];
+            if (isFunction(c.isSeparator) && c.isSeparator()===true) {
+                if (previousWidgetWasSeparator) {
+                    var idx = this.optionWidgetActions.indexOf(c);
+                    if (idx!==-1) {
+                        // make sure the action is also removed from the list of added actions:
+                        this.optionWidgetActions.splice(idx, 1);
+                    }
+                    c.destroy();
+                }
+
+                previousWidgetWasSeparator = true;
+            }
+            else if (isQWidget(c) && c.objectName.length!==0) {
+                previousWidgetWasSeparator = false;
+            }
         }
     }
 
-    if (widgets.length===0) {
-        return;
-    }
-
-    qDebug("show dialog");
-
-    // show dialog and move tool bar widgets to its layout:
-    //var dlg = new QDialog(EAction.getMainWindow());
-    var dialog = WidgetFactory.createDialog(DrawBasedOnRectangle.includeBasePath, "DrawBasedOnRectangleDialog.ui");
-    debugger;
-    var formLayout = dialog.findChild("FormLayout");
-    for (i = 0; i < widgets.length-1; i+=2) {
-        this.moveWidget(widgets[i], dialog);
-        this.moveWidget(widgets[i+1], dialog);
-        formLayout.addRow(widgets[i], widgets[i+1]);
-    }
-
-    var ret = true;
-    if (dialog.exec()) {
-        this.width = dialog.findChild("Width").getValue();
-        this.height = dialog.findChild("Height").getValue();
-        this.angle = dialog.findChild("Angle").getValue();
-    }
-    else {
-        ret = false;
-    }
-
-    dialog.destroy();
-
-    return ret;
+    return this.dialog.exec();
 };
 
 DrawBasedOnRectangle.prototype.moveWidget = function(widget, dialog) {
@@ -201,6 +218,18 @@ DrawBasedOnRectangle.prototype.pickCoordinate = function(event, preview) {
             di.setRelativeZero(this.pos);
         }
     }
+};
+
+DrawBasedOnRectangle.prototype.keyPressEvent = function(event) {
+    if (this.useDialog) {
+        // enter pressed:
+        if (event.key() === Qt.Key_Enter.valueOf() || event.key() === Qt.Key_Return.valueOf()) {
+            // show dialog to change size and angle:
+            this.showDialog();
+        }
+    }
+
+    EAction.prototype.keyPressEvent(event);
 };
 
 DrawBasedOnRectangle.prototype.getOperation = function(preview) {
