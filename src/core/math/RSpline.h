@@ -194,6 +194,7 @@ public:
     }
 
 protected:
+    void appendToExploded(const RLine& line) const;
     void invalidate() const;
     void updateInternal() const;
     void updateBoundingBox() const;
