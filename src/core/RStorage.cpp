@@ -38,10 +38,17 @@ RStorage::RStorage() :
 }
 
 void RStorage::clear() {
+    modified = false;
     maxDrawOrder = 0;
     idCounter = 0;
     handleCounter = 0;
-    modified = false;
+    currentColor = RColor::ByLayer;
+    currentLineweight = RLineweight::WeightByLayer,
+    currentLinetypeId = RLinetype::INVALID_ID;
+    currentViewId = RView::INVALID_ID;
+    currentBlockId = RBlock::INVALID_ID;
+    lastTransactionId = -1;
+    lastTransactionGroup = 1;
 }
 
 void RStorage::setObjectId(RObject& object, RObject::Id objectId) {

@@ -633,6 +633,10 @@ RPolyline RSpline::toPolyline(int segments) const {
         }
         ret.appendVertex(dir->getEndPoint());
     }
+    if (isClosed()) {
+        ret.setClosed(true);
+    }
+
     return ret;
 }
 

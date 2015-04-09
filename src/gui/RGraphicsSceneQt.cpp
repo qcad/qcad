@@ -146,7 +146,7 @@ bool RGraphicsSceneQt::beginPath() {
         if (entity!=NULL && entity->getCustomProperty("QCAD", "ScreenWeight", false)==true) {
             QPen localPen = currentPen;
             localPen.setCosmetic(true);
-            localPen.setWidth(currentPen.widthF()*10);
+            localPen.setWidthF(entity->getLineweight()/10);
             currentPainterPath.setPen(localPen);
         }
         else {
