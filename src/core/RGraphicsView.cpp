@@ -56,11 +56,14 @@ RGraphicsView::RGraphicsView(RGraphicsScene* scene) :
     lastKnownScreenPosition = RVector::invalid;
 
     autoScalePatterns = RSettings::getAutoScalePatterns();
+
+    RDebug::incCounter("RGraphicsView");
 }
 
 
 
 RGraphicsView::~RGraphicsView() {
+    RDebug::decCounter("RGraphicsView");
     if (navigationAction!=NULL) {
         delete navigationAction;
     }

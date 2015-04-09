@@ -53,6 +53,7 @@ RDocument::RDocument(
 
     storage.setDocument(this);
     init();
+    RDebug::incCounter("RDocument");
 }
 
 //void RDocument::addLinetype(QString name) {
@@ -357,6 +358,7 @@ void RDocument::clear() {
 
 
 RDocument::~RDocument() {
+    RDebug::decCounter("RDocument");
     storage.doDelete();
     spatialIndex.doDelete();
 }

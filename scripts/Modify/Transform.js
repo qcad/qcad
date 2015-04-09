@@ -33,6 +33,10 @@ function Transform(guiAction) {
 Transform.prototype = new Modify();
 Transform.includeBasePath = includeBasePath;
 
+Transform.prototype.finishEvent = function() {
+    this.clearCache();
+};
+
 Transform.prototype.verifySelection = function() {
     var di = this.getDocumentInterface();
     if (!di.hasSelection()) {
@@ -72,6 +76,8 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
             op.setOffset(this.targetPoint)
             return op;
         }
+
+        this.clearCache();
 
         var docTrans = new RDocument(new RMemoryStorage(), new RSpatialIndexNavel());
         docTrans.copyVariablesFrom(doc);
@@ -151,6 +157,10 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
 
 Transform.prototype.clearCache = function() {
     // clear cache:
+    if (!isNull(this.diTrans)) {
+        this.diTrans.destroy();
+    }
+
     this.diTrans = undefined;
     //Modify.prototype.updatePreview.call(this);
 };

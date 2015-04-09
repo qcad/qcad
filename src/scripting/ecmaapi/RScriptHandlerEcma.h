@@ -86,11 +86,6 @@ public:
     static QScriptValue ecmaGray(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQtEscape(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaDestroy(QScriptContext* context, QScriptEngine* engine);
-    static QScriptValue ecmaQPainterDestroy(QScriptContext* context, QScriptEngine* engine);
-    static QScriptValue ecmaQPrinterDestroy(QScriptContext* context, QScriptEngine* engine);
-    static QScriptValue ecmaQImageWriterDestroy(QScriptContext* context, QScriptEngine* engine);
-    static QScriptValue ecmaQXmlResultItemsDestroy(QScriptContext* context, QScriptEngine* engine);
-    static QScriptValue ecmaQXmlStreamWriterDestroy(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQObjectFindChild(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQObjectGetChildren(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQDomNodeAppendChild(QScriptContext* context, QScriptEngine* engine);
@@ -128,6 +123,23 @@ public:
     static bool eventFilter(void *message);
 
     static QScriptValue throwError(const QString& message, QScriptContext* context);
+
+    template<class T>
+    static QScriptValue ecmaObjectDestroy(QScriptContext* context, QScriptEngine* engine) {
+        T* self = qscriptvalue_cast<T*> (context->thisObject());
+
+        if (self == NULL) {
+            return throwError("destroy(): Object is NULL", context);
+        }
+        delete self;
+        self = NULL;
+
+        context->thisObject().setData(engine->nullValue());
+        context->thisObject().prototype().setData(engine->nullValue());
+        context->thisObject().setPrototype(engine->nullValue());
+        context->thisObject().setScriptClass(NULL);
+        return engine->undefinedValue();
+    }
 
 public slots:
     void triggerActionApplicationLevel(const QString& scriptFile) {

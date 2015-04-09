@@ -66,7 +66,7 @@ InsertBlockItem.prototype.beginEvent = function() {
     BlockInsert.prototype.beginEvent.call(this);
 
     var url = this.guiAction.data();
-    this.diItem.importUrl(url, false);
+    this.diItem.importUrl(url, "", false);
 
     if (RSettings.isQt(5)) {
         this.blockName = new QFileInfo(url.toLocalFile()).completeBaseName();

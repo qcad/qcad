@@ -39,16 +39,23 @@ ImportFile.prototype.beginEvent = function() {
 
     var fileDialogInfo = this.getFileName();
     if (isNull(fileDialogInfo)) {
+        this.sourceDi.destroy();
         this.terminate();
         return;
     }
 
     if (this.sourceDi.importFile(fileDialogInfo[0], fileDialogInfo[1], false)!==RDocumentInterface.IoErrorNoError) {
         EAction.handleUserWarning(qsTr("Error while importing file %1").arg(fileDialogInfo[0]));
+        this.sourceDi.destroy();
         this.terminate();
         return;
     }
 };
+
+ImportFile.prototype.finishEvent = function() {
+    this.sourceDi.destroy();
+};
+
 
 ImportFile.prototype.getFileName = function() {
     var lastOpenFileDir = RSettings.getStringValue("ImportFile/Path", RSettings.getDocumentsLocation());

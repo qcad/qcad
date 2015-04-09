@@ -151,6 +151,8 @@ function main() {
             op.setFlipVertical(insert.flipY);
             op.setBlockName(new QFileInfo(src).completeBaseName());
             diDest.applyOperation(op);
+
+            di.destroy();
         }
     }
 
@@ -159,6 +161,8 @@ function main() {
     print("Converting");
     print("  from: " + xmlFile);
     print("  to  : " + outputFile);
+
+    diDest.destroy();
 }
 
 

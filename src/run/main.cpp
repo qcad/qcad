@@ -276,6 +276,11 @@ int main(int argc, char *argv[]) {
     RPatternListImperial::uninit();
     RSingleton::cleanUp();
     RMath::uninit();
+    RDocumentInterface::deleteClipboard();
+
+    RDebug::printCounter("RDocument");
+    RDebug::printCounter("RDocumentInterface");
+    RDebug::printCounter("RGraphicsView");
 
     return ret;
 }

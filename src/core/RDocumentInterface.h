@@ -301,6 +301,7 @@ public:
     void setLastKnownViewWithFocus(RGraphicsView* view);
 
     static RDocumentInterface& getClipboard();
+    static void deleteClipboard();
     bool isClipboard() {
         return this==clipboard;
     }

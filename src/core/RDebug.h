@@ -97,12 +97,17 @@ public:
 
     static void hexDump(const QString& str);
 
+    static void incCounter(const QString& id = 0);
+    static void decCounter(const QString& id = 0);
+    static void printCounter(const QString& id = 0);
+
 private:
 #if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
     static QMap<int, uint64_t> timerMac;
 #else
     static QMap<int, QTime> timer;
 #endif
+    static QMap<QString, int> counter;
 };
 
 Q_DECLARE_METATYPE(RDebug*)

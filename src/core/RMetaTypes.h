@@ -86,6 +86,7 @@
 #include <QPainterPath>
 #include <QPair>
 #include <QPinchGesture>
+#include <QPixmap>
 #include <QPlainTextEdit>
 #include <QPoint>
 #include <QPointF>
@@ -224,6 +225,7 @@ Q_DECLARE_METATYPE(QPaintEvent*)
 Q_DECLARE_METATYPE(QPanGesture*)
 Q_DECLARE_METATYPE(QPen*)
 Q_DECLARE_METATYPE(QPinchGesture*)
+Q_DECLARE_METATYPE(QPixmap*)
 Q_DECLARE_METATYPE(QPlainTextEdit*)
 Q_DECLARE_METATYPE(QPoint*)
 Q_DECLARE_METATYPE(QPointF*)

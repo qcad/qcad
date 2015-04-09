@@ -73,9 +73,12 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
     cursorOverride(false),
     keepPreviewOnce(false),
     mouseTrackingEnabled(true) {
+
+    RDebug::incCounter("RDocumentInterface");
 }
 
 RDocumentInterface::~RDocumentInterface() {
+    RDebug::decCounter("RDocumentInterface");
     deleting = true;
 
     for (int i=currentActions.size()-1; i>=0; i--) {
@@ -2022,6 +2025,13 @@ RDocumentInterface& RDocumentInterface::getClipboard() {
     }
 
     return *clipboard;
+}
+
+void RDocumentInterface::deleteClipboard() {
+    if (clipboard!=NULL) {
+        delete clipboard;
+        clipboard = NULL;
+    }
 }
 
 RGraphicsView* RDocumentInterface::getLastKnownViewWithFocus() {

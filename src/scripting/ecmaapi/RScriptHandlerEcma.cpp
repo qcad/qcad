@@ -439,23 +439,23 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     QScriptValue classQPrinter = globalObject.property("QPrinter");
     classQPrinter.property("prototype").setProperty("destroy",
-            engine->newFunction(ecmaQPrinterDestroy));
+            engine->newFunction(ecmaObjectDestroy<QPrinter>));
 
     QScriptValue classQImageWriter = globalObject.property("QImageWriter");
     classQImageWriter.property("prototype").setProperty("destroy",
-            engine->newFunction(ecmaQImageWriterDestroy));
+            engine->newFunction(ecmaObjectDestroy<QImageWriter>));
 
     QScriptValue classQPainter = globalObject.property("QPainter");
     classQPainter.property("prototype").setProperty("destroy",
-            engine->newFunction(ecmaQPainterDestroy));
+            engine->newFunction(ecmaObjectDestroy<QPainter>));
 
     QScriptValue classQXmlResultItems = globalObject.property("QXmlResultItems");
     classQXmlResultItems.property("prototype").setProperty("destroy",
-            engine->newFunction(ecmaQXmlResultItemsDestroy));
+            engine->newFunction(ecmaObjectDestroy<QXmlResultItems>));
 
     QScriptValue classQXmlStreamWriter = globalObject.property("QXmlStreamWriter");
     classQXmlStreamWriter.property("prototype").setProperty("destroy",
-            engine->newFunction(ecmaQXmlStreamWriterDestroy));
+            engine->newFunction(ecmaObjectDestroy<QXmlStreamWriter>));
 
     QScriptValue classQLayout = globalObject.property("QLayout");
     classQLayout.property("prototype").setProperty("getWidth",
@@ -1574,91 +1574,6 @@ QScriptValue RScriptHandlerEcma::ecmaDestroy(QScriptContext* context,
 
     if (self == NULL) {
         return throwError("RDocument.destroy(): Object is NULL", context);
-    }
-    delete self;
-    self = NULL;
-
-    context->thisObject().setData(engine->nullValue());
-    context->thisObject().prototype().setData(engine->nullValue());
-    context->thisObject().setPrototype(engine->nullValue());
-    context->thisObject().setScriptClass(NULL);
-    return engine->undefinedValue();
-}
-
-QScriptValue RScriptHandlerEcma::ecmaQPrinterDestroy(QScriptContext* context,
-        QScriptEngine* engine) {
-    QPrinter* self = qscriptvalue_cast<QPrinter*> (context->thisObject());
-
-    if (self == NULL) {
-        return throwError("QPrinter.destroy(): Object is NULL", context);
-    }
-    delete self;
-    self = NULL;
-
-    context->thisObject().setData(engine->nullValue());
-    context->thisObject().prototype().setData(engine->nullValue());
-    context->thisObject().setPrototype(engine->nullValue());
-    context->thisObject().setScriptClass(NULL);
-    return engine->undefinedValue();
-}
-
-QScriptValue RScriptHandlerEcma::ecmaQImageWriterDestroy(QScriptContext* context,
-                                                     QScriptEngine* engine) {
-    QImageWriter* self = qscriptvalue_cast<QImageWriter*> (context->thisObject());
-
-    if (self == NULL) {
-        return throwError("QImageWriter.destroy(): Object is NULL", context);
-    }
-    delete self;
-    self = NULL;
-
-    context->thisObject().setData(engine->nullValue());
-    context->thisObject().prototype().setData(engine->nullValue());
-    context->thisObject().setPrototype(engine->nullValue());
-    context->thisObject().setScriptClass(NULL);
-    return engine->undefinedValue();
-}
-
-QScriptValue RScriptHandlerEcma::ecmaQPainterDestroy(QScriptContext* context,
-        QScriptEngine* engine) {
-    QPainter* self = qscriptvalue_cast<QPainter*> (context->thisObject());
-
-    if (self == NULL) {
-        return throwError("QPainter.destroy(): Object is NULL", context);
-    }
-    delete self;
-    self = NULL;
-
-    context->thisObject().setData(engine->nullValue());
-    context->thisObject().prototype().setData(engine->nullValue());
-    context->thisObject().setPrototype(engine->nullValue());
-    context->thisObject().setScriptClass(NULL);
-    return engine->undefinedValue();
-}
-
-QScriptValue RScriptHandlerEcma::ecmaQXmlResultItemsDestroy(QScriptContext* context,
-                                                     QScriptEngine* engine) {
-    QXmlResultItems* self = qscriptvalue_cast<QXmlResultItems*> (context->thisObject());
-
-    if (self == NULL) {
-        return throwError("QXmlResultItems.destroy(): Object is NULL", context);
-    }
-    delete self;
-    self = NULL;
-
-    context->thisObject().setData(engine->nullValue());
-    context->thisObject().prototype().setData(engine->nullValue());
-    context->thisObject().setPrototype(engine->nullValue());
-    context->thisObject().setScriptClass(NULL);
-    return engine->undefinedValue();
-}
-
-QScriptValue RScriptHandlerEcma::ecmaQXmlStreamWriterDestroy(QScriptContext* context,
-                                                            QScriptEngine* engine) {
-    QXmlStreamWriter* self = qscriptvalue_cast<QXmlStreamWriter*> (context->thisObject());
-
-    if (self == NULL) {
-        return throwError("QXmlStreamWriter.destroy(): Object is NULL", context);
     }
     delete self;
     self = NULL;

@@ -29,6 +29,7 @@ QMap<int, uint64_t> RDebug::timerMac;
 #else
 QMap<int, QTime> RDebug::timer;
 #endif
+QMap<QString, int> RDebug::counter;
 
 void RDebug::printBacktrace(const QString& prefix) {
 #if !defined(Q_OS_WIN) && !defined(Q_OS_ANDROID)
@@ -93,4 +94,27 @@ void RDebug::hexDump(const QString& str) {
     for (int i=0; i<ba.length(); i++) {
         qDebug() << QString("0x%1 (%2)").arg((int)ba.at(i), 0, 16).arg(ba.at(i));
     }
+}
+
+void RDebug::incCounter(const QString& id) {
+    if (!counter.contains(id)) {
+        counter[id] = 0;
+    }
+    qDebug() << id << "+";
+    counter[id]++;
+}
+
+void RDebug::decCounter(const QString& id) {
+    if (!counter.contains(id)) {
+        counter[id] = 0;
+    }
+    qDebug() << id << "-";
+    counter[id]--;
+}
+
+void RDebug::printCounter(const QString& id) {
+    if (!counter.contains(id)) {
+        qDebug() << "unknown counter: " << id;
+    }
+    qDebug() << "counter: " << id << ": " << counter[id];
 }
