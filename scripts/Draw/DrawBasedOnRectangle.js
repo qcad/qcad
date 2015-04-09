@@ -112,16 +112,16 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
         var formLayout = this.dialog.findChild("FormLayout");
         for (i = 0; i < widgets.length; i++) {
             if (isOfType(widgets[i], QCheckBox)) {
-                this.moveWidget(widgets[i], this.dialog);
                 formLayout.addRow(new QWidget(formLayout), widgets[i]);
+                this.moveWidget(widgets[i], this.dialog);
                 continue;
             }
 
             // other widgets are moved to the dialog:
             if (i<widgets.length-1) {
+                formLayout.addRow(widgets[i], widgets[i+1]);
                 this.moveWidget(widgets[i], this.dialog);
                 this.moveWidget(widgets[i+1], this.dialog);
-                formLayout.addRow(widgets[i], widgets[i+1]);
                 i++;
             }
         }
@@ -158,10 +158,10 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
 DrawBasedOnRectangle.prototype.moveWidget = function(widget, dialog) {
     widget.setParent(dialog);
     //widget.sizePolicy = new QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed);
-    widget.sizePolicy = new QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed);
-    //widget.minimumWidth = 50;
+    widget.sizePolicy = new QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed);
+    widget.minimumWidth = 50;
     //widget.minimumHeight = 10;
-    //widget.maximumWidth = 32000;
+    widget.maximumWidth = 32000;
     widget.visible = true;
 };
 
