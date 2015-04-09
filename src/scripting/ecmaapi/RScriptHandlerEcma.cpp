@@ -1112,7 +1112,8 @@ void RScriptHandlerEcma::createActionApplicationLevel(
     globalObject.setProperty("guiAction", engine->toScriptValue(guiAction));
     eval("var a = new " + className + "(guiAction);"
          "a.beginEvent();"
-         "a.finishEvent();");
+         "a.finishEvent();"
+         "a.destroy();");
 
     /*
     QScriptValue ecmaConstructor = globalObject.property(className);

@@ -40,12 +40,14 @@ RAction::RAction(RGuiAction* guiAction)
 
     setGuiAction(guiAction);
 
+    RDebug::incCounter("RAction");
 //    qDebug() << "RAction " << QString("0x%1").arg((int)this, 0, 16);
 }
 
 
 
 RAction::~RAction() {
+    RDebug::decCounter("RAction");
 //    qDebug() << "~RAction " << QString("0x%1").arg((int)this, 0, 16);
 }
 

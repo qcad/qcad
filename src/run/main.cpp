@@ -278,6 +278,7 @@ int main(int argc, char *argv[]) {
     RMath::uninit();
     RDocumentInterface::deleteClipboard();
 
+    RDebug::printCounter("RAction");
     RDebug::printCounter("RDocument");
     RDebug::printCounter("RDocumentInterface");
     RDebug::printCounter("RGraphicsView");
