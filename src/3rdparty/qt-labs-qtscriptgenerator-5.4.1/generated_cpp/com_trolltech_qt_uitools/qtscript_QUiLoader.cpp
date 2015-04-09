@@ -6,7 +6,7 @@
 #include <QMetaObject>
 #include <__package_shared.h>
 
-#include <QUILoader>
+#include <QUiLoader>
 #include <QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QActionGroup>
@@ -18,7 +18,7 @@
 #include <QList>
 #include <QObject>
 #include <QStringList>
-#include <QUILoader>
+#include <QUiLoader>
 #include <QtWidgets/QWidget>
 
 #include "qtscriptshell_QUiLoader.h"
