@@ -12,7 +12,7 @@
 #include <QList>
 #include <QObject>
 #include <QStringList>
-#include <QUILoader>
+#include <QUiLoader>
 #include <QEvent>
 #include <QtWidgets/QWidget>
 
