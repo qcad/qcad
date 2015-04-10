@@ -52,12 +52,8 @@ SaveAs.prototype.beginEvent = function() {
 
     var nameFilters = RFileExporterRegistry.getFilterStrings();
     if (nameFilters.length===0) {
-        var dlg = new QMessageBox(QMessageBox.Warning,
-                qsTr("No export filters"),
-                "",
-                QMessageBox.OK);
-        dlg.text = qsTr("No export filters have been found. Aborting...");
-        dlg.exec();
+        var appWin = EAction.getMainWindow();
+        EAction.handleUserWarning(qsTr("No export filters have been found. Aborting..."));
         this.terminate();
         return;
     }

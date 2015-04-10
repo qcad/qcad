@@ -18,6 +18,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="objectId" hasDefault="true"
         default="RObject :: INVALID_ID" isConst="false" />
       </variant>
+      <variant>
+        <arg type="RPointEntity &amp;" typeName="RPointEntity"
+        name="other" isConst="true" />
+      </variant>
     </constructor>
     <method name="init" cppName="init" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

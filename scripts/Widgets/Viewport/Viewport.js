@@ -277,7 +277,6 @@ EventHandler.prototype.updateTextLabel = function(painter, textLabel) {
 EventHandler.prototype.drawInfoLabel = function(painter, textLabel) {
     var pos = textLabel.getPosition();
     var text = textLabel.getText();
-    //var align = textLabel.getAlignment();
 
     var p = this.graphicsView.mapToView(pos);
     // info labels might have individual colors in future
@@ -290,18 +289,9 @@ EventHandler.prototype.drawInfoLabel = function(painter, textLabel) {
         var fm = new QFontMetrics(font);
         var w = fm.width(text)+10;
         var h = fm.height()+10;
+        fm.destroy();
         var flags = new Qt.Alignment(Qt.AlignHCenter | Qt.AlignVCenter);
-        //qDebug(flags);
         painter.setFont(font);
-
-//        var x, y;
-//        var dx = graphicsView.mapDistanceFromView(10);
-//        var dy = graphicsView.mapDistanceFromView(10);
-
-//        if (align&Qt.AlignRight) {
-
-//        }
-
         painter.drawText(p.x - w - 15, p.y + h + 5, w, h, flags, text, null);
     }
 };
@@ -393,6 +383,7 @@ EventHandler.prototype.drawSnapLabel = function(painter, pos, posRestriction, te
     // display distance/angle:
     var display = RSettings.getIntValue("DisplaySettings/DisplayDistanceAngle", 0);
     if (display === 0) {
+        fm.destroy();
         return;
     }
 
@@ -447,6 +438,8 @@ EventHandler.prototype.drawSnapLabel = function(painter, pos, posRestriction, te
                     new Qt.Alignment(Qt.AlignHCenter | Qt.AlignVCenter),
                     text, null);
     }
+
+    fm.destroy();
 };
 
 /**

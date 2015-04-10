@@ -47,6 +47,7 @@
 #include <QFocusEvent>
 #include <QFocusFrame>
 #include <QFont>
+#include <QFontMetrics>
 #include <QFontDatabase>
 #include <QFile>
 #include <QFileIconProvider>
@@ -111,6 +112,7 @@
 #include <QTextCodec>
 #include <QTextEdit>
 #include <QThread>
+#include <QTimer>
 #include <QToolBar>
 #include <QToolButton>
 #include <QTreeWidget>
@@ -181,6 +183,7 @@ Q_DECLARE_METATYPE(QFileSystemModel*)
 Q_DECLARE_METATYPE(QFocusEvent*)
 Q_DECLARE_METATYPE(QFocusFrame*)
 Q_DECLARE_METATYPE(QFont*)
+Q_DECLARE_METATYPE(QFontMetrics*)
 Q_DECLARE_METATYPE(QFontDatabase*)
 Q_DECLARE_METATYPE(QFrame*)
 Q_DECLARE_METATYPE(QGestureEvent*)
@@ -260,6 +263,7 @@ Q_DECLARE_METATYPE(QTextBrowser*)
 Q_DECLARE_METATYPE(QTextCodec*)
 Q_DECLARE_METATYPE(QTextEdit*)
 Q_DECLARE_METATYPE(QThread*)
+Q_DECLARE_METATYPE(QTimer*)
 Q_DECLARE_METATYPE(QToolBar*)
 Q_DECLARE_METATYPE(QToolButton*)
 Q_DECLARE_METATYPE(QTransform*)

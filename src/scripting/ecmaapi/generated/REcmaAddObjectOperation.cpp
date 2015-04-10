@@ -176,8 +176,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        //QSharedPointer < RObject >(o0->clone());
-                        QSharedPointer < RObject >(o0);
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -275,8 +277,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        //QSharedPointer < RObject >(o0->clone());
-                        QSharedPointer < RObject >(o0);
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -391,8 +395,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        //QSharedPointer < RObject >(o0->clone());
-                        QSharedPointer < RObject >(o0);
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -496,8 +502,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        //QSharedPointer < RObject >(o0->clone());
-                        QSharedPointer < RObject >(o0);
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -578,8 +586,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        //QSharedPointer < RObject >(o0->clone());
-                        QSharedPointer < RObject >(o0);
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -677,8 +687,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        //QSharedPointer < RObject >(o0->clone());
-                        QSharedPointer < RObject >(o0);
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work

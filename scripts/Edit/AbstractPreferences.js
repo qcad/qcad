@@ -289,12 +289,11 @@ AbstractPreferences.prototype.save = function() {
     // check if preference changes require application restart and show
     // message if appropriate:
     if (WidgetFactory.requiresRestart===true && this.restartWarningShown === false) {
-        var dlg = new QMessageBox(QMessageBox.Warning,
+        var appWin = EAction.getMainWindow();
+        QMessageBox.warning(appWin,
                 qsTr("Restart required"),
-                "",
-                QMessageBox.OK);
-        dlg.text = qsTr("Please restart QCAD for\nthe preference changes to take effect.");
-        dlg.exec();
+                qsTr("Please restart QCAD for\nthe preference changes to take effect.")
+        );
         this.restartWarningShown = true;
     }
 

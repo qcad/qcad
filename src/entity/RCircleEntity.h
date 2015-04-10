@@ -60,6 +60,7 @@ public:
 public:
     RCircleEntity(RDocument* document, const RCircleData& data,
         RObject::Id objectId = RObject::INVALID_ID);
+    RCircleEntity(const RCircleEntity& other);
     virtual ~RCircleEntity();
 
     static void init();

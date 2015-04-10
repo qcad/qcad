@@ -97,6 +97,9 @@ dir="./core" filename="RMetaTypes.h">
   <cpp:file>&lt;QFont&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QFontMetrics&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QFontDatabase&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -287,6 +290,9 @@ dir="./core" filename="RMetaTypes.h">
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QThread&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QTimer&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QToolBar&gt;</cpp:file></cpp:include>
@@ -586,6 +592,11 @@ dir="./core" filename="RMetaTypes.h">
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>QFont*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>QFontMetrics*</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
@@ -985,6 +996,11 @@ dir="./core" filename="RMetaTypes.h">
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>QThread*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>QTimer*</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

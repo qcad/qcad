@@ -55,6 +55,7 @@ public:
 public:
     RPointEntity(RDocument* document, const RPointData& data,
         RObject::Id objectId = RObject::INVALID_ID);
+    RPointEntity(const RPointEntity& other);
     virtual ~RPointEntity();
 
     static void init();

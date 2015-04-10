@@ -29,6 +29,7 @@ function Paste(guiAction) {
     Edit.call(this, guiAction);
     this.setUiOptions(Paste.includeBasePath + "/Paste.ui");
 
+    this.boundary = undefined;
     this.offset = new RVector(0,0);
     this.scale = 1.0;
     this.rotation = 0.0;
@@ -103,14 +104,16 @@ Paste.prototype.getOperation = function(preview) {
     op.setToCurrentLayer(this.toCurrentLayer);
     op.setOverwriteLayers(this.overwriteLayers);
     op.setOverwriteBlocks(this.overwriteBlocks);
+    var unitFactor = RUnit.convert(1.0, this.sourceDocument.getUnit(), this.getDocument().getUnit());
+    this.boundary = op.getBoundary(unitFactor);
     return op;
 };
 
 Paste.prototype.getAuxPreview = function() {
     var ret = [];
-    var unitFactor = RUnit.convert(1.0, this.sourceDocument.getUnit(), this.getDocument().getUnit());
-    var boundary = this.getOperation().getBoundary(unitFactor);
-    ret.push(boundary);
+    if (!isNull(this.boundary)) {
+        ret.push(this.boundary);
+    }
     return ret;
 };
 

@@ -3487,8 +3487,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        //QSharedPointer < RShape >(o0->clone());
-                        QSharedPointer < RShape >(o0);
+                        
+                          // always clone shape if we expect a shared pointer (might be a simple object on stack):
+                          QSharedPointer < RShape >(o0->clone());
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -3571,8 +3573,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        //QSharedPointer < RShape >(o0->clone());
-                        QSharedPointer < RShape >(o0);
+                        
+                          // always clone shape if we expect a shared pointer (might be a simple object on stack):
+                          QSharedPointer < RShape >(o0->clone());
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work

@@ -20,7 +20,6 @@
 #include <QApplication>
 #include <QCoreApplication>
 #include <QFileInfo>
-#include <QFontMetrics>
 #include <QStringList>
 #include <QTranslator>
 

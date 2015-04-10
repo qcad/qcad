@@ -62,12 +62,7 @@ ImportFile.prototype.getFileName = function() {
 
     var filters = RFileImporterRegistry.getFilterStrings();
     if (filters.length===0) {
-        var dlg = new QMessageBox(QMessageBox.Warning,
-                qsTr("No import filters"),
-                "",
-                QMessageBox.OK);
-        dlg.text = qsTr("No import filters have been found. Aborting...");
-        dlg.exec();
+        EAction.handleUserWarning(qsTr("No import filters have been found. Aborting..."));
         return undefined;
     }
 

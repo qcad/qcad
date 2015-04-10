@@ -148,6 +148,7 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
             dlg.text = text;
             appWin.handleUserWarning(text);
             dlg.exec();
+            dlg.destroy();
             RSettings.removeRecentFile(fileName);
             return undefined;
         }

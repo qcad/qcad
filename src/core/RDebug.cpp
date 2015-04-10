@@ -100,7 +100,7 @@ void RDebug::incCounter(const QString& id) {
     if (!counter.contains(id)) {
         counter[id] = 0;
     }
-    qDebug() << id << "+";
+    //qDebug() << id << "+";
     counter[id]++;
 }
 
@@ -108,13 +108,13 @@ void RDebug::decCounter(const QString& id) {
     if (!counter.contains(id)) {
         counter[id] = 0;
     }
-    qDebug() << id << "-";
+    //qDebug() << id << "-";
     counter[id]--;
 }
 
 void RDebug::printCounter(const QString& id) {
     if (!counter.contains(id)) {
-        qDebug() << "unknown counter: " << id;
+        return;
     }
     qDebug() << "counter: " << id << ": " << counter[id];
 }

@@ -454,6 +454,62 @@
                 
     } else 
 
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RArcEntity */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RArcEntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RArcEntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RArcEntity: Argument 0 is not of type RArcEntity*.",
+                               context);                    
+                    }
+                    RArcEntity& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RArcEntity
+                    * cppResult =
+                    new
+                    RArcEntity
+                    (
+                    a0
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
     {
        return REcmaHelper::throwError(
        QString::fromLatin1("RArcEntity(): no matching constructor found."),

@@ -382,6 +382,62 @@
                 
     } else 
 
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RPointEntity */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RPointEntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPointEntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPointEntity: Argument 0 is not of type RPointEntity*.",
+                               context);                    
+                    }
+                    RPointEntity& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RPointEntity
+                    * cppResult =
+                    new
+                    RPointEntity
+                    (
+                    a0
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
     {
        return REcmaHelper::throwError(
        QString::fromLatin1("RPointEntity(): no matching constructor found."),

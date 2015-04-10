@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include <QFont>
-#include <QFontMetricsF>
 #include <QTextBlock>
 #include <QTextDocument>
 

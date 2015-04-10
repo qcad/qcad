@@ -54,11 +54,9 @@ DirectoryList.prototype.doInit = function(pageWidget, listWidgetName, fileDlgTit
         if (!found) {
             listWidget.addItem(dir);
         } else {
-            var text = qsTr("The folder\n'%1'\nis already in the list.")
-                    .arg(dir);
-            var dlg = new QMessageBox(QMessageBox.Information,
-                    qsTr("Folder not added"), text, QMessageBox.OK);
-            dlg.exec();
+            var text = qsTr("The folder\n'%1'\nis already in the list.").arg(dir);
+            var appWin = EAction.getMainWindow();
+            QMessageBox.information(appWin, qsTr("Folder not added"), text);
         }
         this.checkButtonStatus(listWidget, widgets);
     });

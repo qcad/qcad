@@ -141,13 +141,37 @@ dir="./core" filename="ROperation.h">
         <expr>-1</expr>
       </argument>)</argument_list>
     </call></member_list>
-    <block>{}</block>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+      <call>
+        <name>
+        <name>RDebug</name>::
+        <name>incCounter</name></name>
+        <argument_list>(
+        <argument>
+          <expr>"ROperation"</expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</expr_stmt>}</block>
   </constructor>
   <destructor>
     <specifier>virtual</specifier>
     <name>~ROperation</name>
     <parameter_list>()</parameter_list>
-    <block>{ }</block>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+      <call>
+        <name>
+        <name>RDebug</name>::
+        <name>decCounter</name></name>
+        <argument_list>(
+        <argument>
+          <expr>"ROperation"</expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</expr_stmt>}</block>
   </destructor>
   <comment type="block">/** * Applies this operation to selection
   in the given document. * This is used for both previews and the

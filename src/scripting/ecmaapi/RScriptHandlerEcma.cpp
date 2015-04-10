@@ -437,9 +437,17 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     classQDomNode.property("prototype").setProperty("removeChild",
             engine->newFunction(ecmaQDomNodeRemoveChild));
 
+    QScriptValue classQFontMetrics = globalObject.property("QFontMetrics");
+    classQFontMetrics.property("prototype").setProperty("destroy",
+            engine->newFunction(ecmaObjectDestroy<QFontMetrics>));
+
     QScriptValue classQPrinter = globalObject.property("QPrinter");
     classQPrinter.property("prototype").setProperty("destroy",
             engine->newFunction(ecmaObjectDestroy<QPrinter>));
+
+    QScriptValue classQTimer = globalObject.property("QTimer");
+    classQTimer.property("prototype").setProperty("destroy",
+            engine->newFunction(ecmaObjectDestroy<QTimer>));
 
     QScriptValue classQImageWriter = globalObject.property("QImageWriter");
     classQImageWriter.property("prototype").setProperty("destroy",

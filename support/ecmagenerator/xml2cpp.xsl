@@ -1396,8 +1396,16 @@
 
                     if (o<xsl:value-of select="$index" />!=NULL) {
                         a<xsl:value-of select="$index" /> =
-                        //<xsl:value-of select="$typeName"/>(o<xsl:value-of select="$index" />-&gt;clone());
-                        <xsl:value-of select="$typeName"/>(o<xsl:value-of select="$index" />);
+                        <xsl:choose>
+                        <xsl:when test="contains($typeName, 'RShape')">
+                          // always clone shape if we expect a shared pointer (might be a simple object on stack):
+                          <xsl:value-of select="$typeName"/>(o<xsl:value-of select="$index" />-&gt;clone());
+                        </xsl:when>
+                        <xsl:otherwise>
+                          // never clone RObject based object:
+                          <xsl:value-of select="$typeName"/>(o<xsl:value-of select="$index" />);
+                        </xsl:otherwise>
+                        </xsl:choose>
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer&lt;BaseClass&gt; does not work

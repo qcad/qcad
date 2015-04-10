@@ -65,8 +65,11 @@ CoordinateDisplay.postInit = function(basePath) {
 
         if (!isNull(singleShot)) {
             if (singleShot.active) {
+                // never mind previous update:
                 singleShot.stop();
             }
+            singleShot.destroy();
+            singleShot = undefined;
         }
 
         singleShot = new QTimer();

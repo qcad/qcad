@@ -1316,7 +1316,9 @@ String.prototype.trim = function() {
  * \return New string shortened to the given number of pixels using ellipsis (...).
  */
 String.prototype.elidedText = function(font, pixel) {
-    var t = new QFontMetrics(font).elidedText(this, Qt.ElideMiddle, pixel);
+    var fm = new QFontMetrics(font);
+    var t = fm.elidedText(this, Qt.ElideMiddle, pixel);
+    fm.destroy();
     // replace HORIZONTAL ELLIPSIS (not every GUI font has those):
     t = t.replace(/\u2026/g, '...');
     return t;

@@ -51,8 +51,13 @@ public:
         spatialIndexDisabled(false),
         allowInvisible(false),
         entityTypeFilter(entityTypeFilter),
-        transactionGroup(-1) {}
+        transactionGroup(-1) {
+
+        RDebug::incCounter("ROperation");
+    }
+
     virtual ~ROperation() {
+        RDebug::decCounter("ROperation");
     }
     
     /**
