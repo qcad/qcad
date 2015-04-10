@@ -283,6 +283,8 @@ int main(int argc, char *argv[]) {
     RDebug::printCounter("RDocumentInterface");
     RDebug::printCounter("RGraphicsView");
     RDebug::printCounter("RLineEntity");
+    RDebug::printCounter("RArcEntity");
+    RDebug::printCounter("RAddObjectsOperation");
 
     return ret;
 }

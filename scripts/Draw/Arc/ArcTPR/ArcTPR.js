@@ -210,6 +210,7 @@ ArcTPR.prototype.pickCoordinate = function(event, preview) {
                 }
                 // multiple solutions:
                 else {
+                    op.destroy();
                     this.setState(ArcTPR.State.ChoosingSolution);
                 }
             }
@@ -239,7 +240,6 @@ ArcTPR.prototype.getOperation = function(preview) {
     var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
     for (var i=0; i<shape.length; i++) {
-        //var entity = new RCircleEntity(doc, new RCircleData(shape[i]));
         var entity = shapeToEntity(doc, shape[i]);
         op.addObject(entity);
     }

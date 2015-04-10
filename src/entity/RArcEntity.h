@@ -66,6 +66,7 @@ public:
 public:
     RArcEntity(RDocument* document, const RArcData& data,
         RObject::Id objectId = RObject::INVALID_ID);
+    RArcEntity(const RArcEntity& other);
     virtual ~RArcEntity();
 
     static void init();

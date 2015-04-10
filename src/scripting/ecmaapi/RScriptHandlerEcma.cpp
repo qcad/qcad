@@ -1114,6 +1114,7 @@ void RScriptHandlerEcma::createActionApplicationLevel(
          "a.beginEvent();"
          "a.finishEvent();"
          "a.destroy();");
+         //"if (!isNull(guiAction) && guiAction.hasNoState()) a.destroy();");
 
     /*
     QScriptValue ecmaConstructor = globalObject.property(className);

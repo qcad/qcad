@@ -47,9 +47,16 @@ RPropertyTypeId RArcEntity::PropertyArea;
 RArcEntity::RArcEntity(RDocument* document, const RArcData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
+    RDebug::incCounter("RArcEntity");
+}
+
+RArcEntity::RArcEntity(const RArcEntity& other) : REntity(other) {
+    RDebug::incCounter("RArcEntity");
+    data = other.data;
 }
 
 RArcEntity::~RArcEntity() {
+    RDebug::decCounter("RArcEntity");
 }
 
 void RArcEntity::setShape(const RArc& a) {
