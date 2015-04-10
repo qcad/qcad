@@ -40,7 +40,7 @@ dir="./entity" filename="RSplineData.h">
   <cpp:file>"RVector.h"</cpp:file></cpp:include>
   <comment type="block">/** * Stores and manages all data that
   defines the geometry and * appearance of a spline entity. * *
-  \scriptable * \ingroup entity */</comment>
+  \scriptable * \copyable * \ingroup entity */</comment>
   <class>class 
   <macro>
     <name>QCADENTITY_EXPORT</name>
@@ -823,6 +823,11 @@ dir="./entity" filename="RSplineData.h">
     <block>{ 
     <comment type="line">//RSpline::update();</comment>}</block>
   </function></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RSplineData</argument>)</argument_list>
+  </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

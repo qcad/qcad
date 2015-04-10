@@ -34,6 +34,7 @@
  * appearance of a point entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RPointData: public REntityData, protected RPoint {
@@ -70,6 +71,7 @@ public:
 
 };
 
+Q_DECLARE_METATYPE(RPointData)
 Q_DECLARE_METATYPE(RPointData*)
 Q_DECLARE_METATYPE(const RPointData*)
 Q_DECLARE_METATYPE(QSharedPointer<RPointData>)

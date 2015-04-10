@@ -30,6 +30,7 @@
  * appearance of a ray entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RRayData: public REntityData, protected RRay {
@@ -105,6 +106,7 @@ private:
     bool fixedAngle;
 };
 
+Q_DECLARE_METATYPE(RRayData)
 Q_DECLARE_METATYPE(RRayData*)
 Q_DECLARE_METATYPE(const RRayData*)
 Q_DECLARE_METATYPE(QSharedPointer<RRayData>)

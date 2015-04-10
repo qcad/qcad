@@ -36,6 +36,7 @@
  * appearance of a hatch or solid fill entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RHatchData: public REntityData, public RPainterPathSource {

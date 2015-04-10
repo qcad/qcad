@@ -3,7 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class name="RBlockReferenceData"
-  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="REntityData" specifier="public" />

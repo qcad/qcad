@@ -28,7 +28,7 @@ dir="./entity" filename="RTraceData.h">
   <cpp:file>"RSolidData.h"</cpp:file></cpp:include>
   <comment type="block">/** * Stores and manages all data that
   defines the geometry and * appearance of a trace entity. * *
-  \scriptable * \ingroup entity */</comment>
+  \scriptable * \copyable * \ingroup entity */</comment>
   <class>class 
   <macro>
     <name>QCADENTITY_EXPORT</name>
@@ -104,6 +104,11 @@ dir="./entity" filename="RTraceData.h">
       <name>p4</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RTraceData</argument>)</argument_list>
+  </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

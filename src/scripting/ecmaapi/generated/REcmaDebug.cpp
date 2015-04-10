@@ -67,6 +67,12 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, hexDump, "hexDump");
             
+            REcmaHelper::registerFunction(&engine, &ctor, incCounter, "incCounter");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, decCounter, "decCounter");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, printCounter, "printCounter");
+            
 
     // static properties:
     
@@ -451,6 +457,189 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDebug::hexDump", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDebug::incCounter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDebug::incCounter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDebug::incCounter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RDebug::
+       incCounter();
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RDebug::
+       incCounter(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.incCounter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDebug::incCounter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDebug::decCounter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDebug::decCounter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDebug::decCounter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RDebug::
+       decCounter();
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RDebug::
+       decCounter(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.decCounter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDebug::decCounter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDebug::printCounter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDebug::printCounter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDebug::printCounter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RDebug::
+       printCounter();
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RDebug::
+       printCounter(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.printCounter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDebug::printCounter", context, engine);
             return result;
         }
          QScriptValue REcmaDebug::toString

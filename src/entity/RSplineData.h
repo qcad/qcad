@@ -33,6 +33,7 @@
  * appearance of a spline entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RSplineData: public REntityData, protected RSpline {
@@ -175,6 +176,7 @@ public:
     }
 };
 
+Q_DECLARE_METATYPE(RSplineData)
 Q_DECLARE_METATYPE(RSplineData*)
 Q_DECLARE_METATYPE(const RSplineData*)
 Q_DECLARE_METATYPE(QSharedPointer<RSplineData>)

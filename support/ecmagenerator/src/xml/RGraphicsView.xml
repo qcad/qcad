@@ -233,6 +233,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="gesture" isConst="false" />
       </variant>
     </method>
+    <method name="giveFocus" cppName="giveFocus" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true" />
+    </method>
     <method name="hasFocus" cppName="hasFocus" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="true" />

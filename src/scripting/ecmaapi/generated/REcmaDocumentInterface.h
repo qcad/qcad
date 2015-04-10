@@ -412,6 +412,9 @@
         getClipboard
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        deleteClipboard
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isClipboard
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

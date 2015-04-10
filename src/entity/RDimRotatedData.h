@@ -30,6 +30,7 @@
  * Rotated dimension entity data class.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RDimRotatedData: public RDimLinearData {
@@ -77,6 +78,7 @@ private:
     double rotation;
 };
 
+Q_DECLARE_METATYPE(RDimRotatedData)
 Q_DECLARE_METATYPE(RDimRotatedData*)
 Q_DECLARE_METATYPE(const RDimRotatedData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimRotatedData>)

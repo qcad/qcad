@@ -30,6 +30,7 @@
  * Ordinate dimension entity data class.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RDimOrdinateData: public RDimensionData {
@@ -109,6 +110,7 @@ private:
     bool xType;
 };
 
+Q_DECLARE_METATYPE(RDimOrdinateData)
 Q_DECLARE_METATYPE(RDimOrdinateData*)
 Q_DECLARE_METATYPE(const RDimOrdinateData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimOrdinateData>)

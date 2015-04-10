@@ -186,6 +186,13 @@ dir="./core" filename="RSettings.h">
   <function_decl>
   <type>
     <name>static</name>
+    <name>QStringList</name>
+  </type>
+  <name>getPluginPaths</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
     <name>QString</name>
   </type>
   <name>getPluginPath</name>

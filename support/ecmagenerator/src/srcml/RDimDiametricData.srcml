@@ -33,7 +33,7 @@ dir="./entity" filename="RDimDiametricData.h">
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RVector.h"</cpp:file></cpp:include>
   <comment type="block">/** * Diametric dimension entity data
-  class. * * \scriptable * \ingroup entity */</comment>
+  class. * * \scriptable * \copyable * \ingroup entity */</comment>
   <class>class 
   <macro>
     <name>QCADENTITY_EXPORT</name>
@@ -377,6 +377,11 @@ dir="./entity" filename="RDimDiametricData.h">
     </type>
     <name>chordPoint</name>
   </decl>;</decl_stmt></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RDimDiametricData</argument>)</argument_list>
+  </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

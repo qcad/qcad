@@ -297,7 +297,7 @@
                         return REcmaHelper::throwError("RSolidEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RSolidData*
                     ap1 =
                     qscriptvalue_cast<
@@ -307,11 +307,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSolidEntity: Argument 1 is not of type RSolidData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RSolidEntity: Argument 1 is not of type RSolidData.",
                                context);                    
                     }
-                    RSolidData& a1 = *ap1;
+                    RSolidData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -392,7 +394,7 @@
                         return REcmaHelper::throwError("RSolidEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RSolidData*
                     ap1 =
                     qscriptvalue_cast<
@@ -402,11 +404,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSolidEntity: Argument 1 is not of type RSolidData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RSolidEntity: Argument 1 is not of type RSolidData.",
                                context);                    
                     }
-                    RSolidData& a1 = *ap1;
+                    RSolidData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id

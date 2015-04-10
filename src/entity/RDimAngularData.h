@@ -32,6 +32,7 @@
  * Angular dimension entity data class.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RDimAngularData: public RDimensionData {
@@ -121,6 +122,7 @@ private:
     RVector dimArcPosition;
 };
 
+Q_DECLARE_METATYPE(RDimAngularData)
 Q_DECLARE_METATYPE(RDimAngularData*)
 Q_DECLARE_METATYPE(const RDimAngularData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimAngularData>)

@@ -159,6 +159,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, updateImage, "updateImage");
             
+            REcmaHelper::registerFunction(&engine, proto, giveFocus, "giveFocus");
+            
             REcmaHelper::registerFunction(&engine, proto, hasFocus, "hasFocus");
             
             REcmaHelper::registerFunction(&engine, proto, removeFocus, "removeFocus");
@@ -2848,6 +2850,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewImage::updateImage", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::giveFocus
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::giveFocus", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::giveFocus";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("giveFocus", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->giveFocus();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.giveFocus().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::giveFocus", context, engine);
             return result;
         }
          QScriptValue

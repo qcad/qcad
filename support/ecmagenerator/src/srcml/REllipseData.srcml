@@ -43,7 +43,7 @@ dir="./entity" filename="REllipseData.h">
   <cpp:file>"REllipse.h"</cpp:file></cpp:include>
   <comment type="block">/** * Stores and manages all data that
   defines the geometry and * appearance of an ellipse entity. * *
-  \scriptable * \ingroup entity */</comment>
+  \scriptable * \copyable * \ingroup entity */</comment>
   <class>class 
   <macro>
     <name>QCADENTITY_EXPORT</name>
@@ -631,6 +631,11 @@ dir="./entity" filename="REllipseData.h">
       </argument>)</argument_list>
     </call></expr>;</return>}</block>
   </function></public>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>REllipseData</argument>)</argument_list>
+  </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

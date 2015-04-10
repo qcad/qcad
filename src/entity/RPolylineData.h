@@ -33,6 +33,7 @@
  * appearance of a polyline entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RPolylineData: public REntityData, protected RPolyline {
@@ -171,6 +172,7 @@ protected:
     bool polylineGen;
 };
 
+Q_DECLARE_METATYPE(RPolylineData)
 Q_DECLARE_METATYPE(RPolylineData*)
 Q_DECLARE_METATYPE(const RPolylineData*)
 Q_DECLARE_METATYPE(QSharedPointer<RPolylineData>)

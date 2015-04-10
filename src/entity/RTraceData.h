@@ -29,6 +29,7 @@
  * appearance of a trace entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RTraceData: public RSolidData {
@@ -43,6 +44,7 @@ public:
     RTraceData(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4);
 };
 
+Q_DECLARE_METATYPE(RTraceData)
 Q_DECLARE_METATYPE(RTraceData*)
 Q_DECLARE_METATYPE(const RTraceData*)
 Q_DECLARE_METATYPE(QSharedPointer<RTraceData>)

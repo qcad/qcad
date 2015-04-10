@@ -321,7 +321,7 @@
                         return REcmaHelper::throwError("RSplineEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RSplineData*
                     ap1 =
                     qscriptvalue_cast<
@@ -331,11 +331,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSplineEntity: Argument 1 is not of type RSplineData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RSplineEntity: Argument 1 is not of type RSplineData.",
                                context);                    
                     }
-                    RSplineData& a1 = *ap1;
+                    RSplineData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -416,7 +418,7 @@
                         return REcmaHelper::throwError("RSplineEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RSplineData*
                     ap1 =
                     qscriptvalue_cast<
@@ -426,11 +428,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSplineEntity: Argument 1 is not of type RSplineData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RSplineEntity: Argument 1 is not of type RSplineData.",
                                context);                    
                     }
-                    RSplineData& a1 = *ap1;
+                    RSplineData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id

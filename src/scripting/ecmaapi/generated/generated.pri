@@ -149,7 +149,6 @@ HEADERS += \
     $$PWD/REcmaOrthoGrid.h \
     $$PWD/REcmaPainterPath.h \
     $$PWD/REcmaPainterPathDevice.h \
-    $$PWD/REcmaPainterPathSource.h \
     $$PWD/REcmaPasteOperation.h \
     $$PWD/REcmaPattern.h \
     $$PWD/REcmaPatternLine.h \
@@ -485,7 +484,6 @@ SOURCES += \
     $$PWD/REcmaOrthoGrid.cpp \
     $$PWD/REcmaPainterPath.cpp \
     $$PWD/REcmaPainterPathDevice.cpp \
-    $$PWD/REcmaPainterPathSource.cpp \
     $$PWD/REcmaPasteOperation.cpp \
     $$PWD/REcmaPattern.cpp \
     $$PWD/REcmaPatternLine.cpp \

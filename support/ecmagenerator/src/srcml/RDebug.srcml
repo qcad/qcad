@@ -262,6 +262,57 @@ dir="./core" filename="RDebug.h">
       <name>QString</name>&amp;</type>
       <name>str</name>
     </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>incCounter</name>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+    <name>const</name>
+    <name>QString</name>&amp;</type>
+    <name>id</name>=
+    <init>
+      <expr>0</expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>decCounter</name>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+    <name>const</name>
+    <name>QString</name>&amp;</type>
+    <name>id</name>=
+    <init>
+      <expr>0</expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>printCounter</name>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+    <name>const</name>
+    <name>QString</name>&amp;</type>
+    <name>id</name>=
+    <init>
+      <expr>0</expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl></public>
   <private>private: 
   <cpp:if>#
@@ -318,8 +369,22 @@ dir="./core" filename="RDebug.h">
     <name>timer</name>
   </decl>;</decl_stmt>
   <cpp:endif>#
-  <cpp:directive>
-  endif</cpp:directive></cpp:endif></private>}</block>;</class>
+  <cpp:directive>endif</cpp:directive></cpp:endif>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>static</name>
+      <name>QMap
+      <argument_list>&lt;
+      <argument>
+        <name>QString</name>
+      </argument>, 
+      <argument>
+        <name>int</name>
+      </argument>&gt;</argument_list></name>
+    </type>
+    <name>counter</name>
+  </decl>;</decl_stmt></private>}</block>;</class>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

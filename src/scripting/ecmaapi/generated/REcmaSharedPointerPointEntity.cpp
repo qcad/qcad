@@ -238,7 +238,7 @@
                         return REcmaHelper::throwError("RPointEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPointData*
                     ap1 =
                     qscriptvalue_cast<
@@ -248,11 +248,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RPointEntity: Argument 1 is not of type RPointData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RPointEntity: Argument 1 is not of type RPointData.",
                                context);                    
                     }
-                    RPointData& a1 = *ap1;
+                    RPointData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -333,7 +335,7 @@
                         return REcmaHelper::throwError("RPointEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPointData*
                     ap1 =
                     qscriptvalue_cast<
@@ -343,11 +345,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RPointEntity: Argument 1 is not of type RPointData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RPointEntity: Argument 1 is not of type RPointData.",
                                context);                    
                     }
-                    RPointData& a1 = *ap1;
+                    RPointData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id

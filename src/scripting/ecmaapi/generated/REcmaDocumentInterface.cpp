@@ -331,6 +331,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, getClipboard, "getClipboard");
             
+            REcmaHelper::registerFunction(&engine, &ctor, deleteClipboard, "deleteClipboard");
+            
 
     // static properties:
     
@@ -8502,6 +8504,40 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::getClipboard", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::deleteClipboard
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::deleteClipboard", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::deleteClipboard";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RDocumentInterface::
+       deleteClipboard();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.deleteClipboard().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::deleteClipboard", context, engine);
             return result;
         }
          QScriptValue

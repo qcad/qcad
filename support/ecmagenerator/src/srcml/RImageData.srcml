@@ -46,7 +46,7 @@ dir="./entity" filename="RImageData.h">
   <cpp:file>"RVector.h"</cpp:file></cpp:include>
   <comment type="block">/** * Stores and manages all data that
   defines the geometry and * appearance of a raster image entity. *
-  * \scriptable * \ingroup entity */</comment>
+  * \scriptable * \copyable * \ingroup entity */</comment>
   <class>class 
   <macro>
     <name>QCADENTITY_EXPORT</name>

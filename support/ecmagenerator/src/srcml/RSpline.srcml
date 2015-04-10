@@ -1208,6 +1208,21 @@ dir="./core/math" filename="RSpline.h">
   <type>
     <name>void</name>
   </type>
+  <name>appendToExploded</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RLine</name>&amp;</type>
+      <name>line</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>invalidate</name>
   <parameter_list>()</parameter_list>
   <specifier>const</specifier>;</function_decl>

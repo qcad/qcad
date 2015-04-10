@@ -60,6 +60,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="getPluginPaths" cppName="getPluginPaths"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
     <method name="getPluginPath" cppName="getPluginPath"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

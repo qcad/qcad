@@ -35,6 +35,7 @@
  * appearance of a raster image entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RImageData: public REntityData {

@@ -36,7 +36,7 @@ dir="./entity" filename="RLeaderData.h">
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
   <comment type="block">/** * Leader entity data class. * *
-  \scriptable * \ingroup entity */</comment>
+  \scriptable * \copyable * \ingroup entity */</comment>
   <class>class 
   <macro>
     <name>QCADENTITY_EXPORT</name>
@@ -527,6 +527,11 @@ dir="./entity" filename="RLeaderData.h">
     </type>
     <name>arrowHead</name>
   </decl>;</decl_stmt></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RLeaderData</argument>)</argument_list>
+  </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

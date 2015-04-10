@@ -45,9 +45,17 @@ RPropertyTypeId RLineEntity::PropertyLength;
 RLineEntity::RLineEntity(RDocument* document, const RLineData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
+
+    RDebug::incCounter("RLineEntity");
+}
+
+RLineEntity::RLineEntity(const RLineEntity& other) : REntity(other) {
+    RDebug::incCounter("RLineEntity");
+    data = other.data;
 }
 
 RLineEntity::~RLineEntity() {
+    RDebug::decCounter("RLineEntity");
 }
 
 void RLineEntity::setShape(const RLine& l) {

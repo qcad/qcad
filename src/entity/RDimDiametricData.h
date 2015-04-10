@@ -30,6 +30,7 @@
  * Diametric dimension entity data class.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RDimDiametricData: public RDimensionData {
@@ -82,6 +83,7 @@ private:
     RVector chordPoint;
 };
 
+Q_DECLARE_METATYPE(RDimDiametricData)
 Q_DECLARE_METATYPE(RDimDiametricData*)
 Q_DECLARE_METATYPE(const RDimDiametricData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimDiametricData>)

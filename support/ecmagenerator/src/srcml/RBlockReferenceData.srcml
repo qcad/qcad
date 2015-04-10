@@ -38,8 +38,8 @@ dir="./core" filename="RBlockReferenceData.h">
   <class_decl>class 
   <name>RDocument</name>;</class_decl>
   <comment type="block">/** * Defines the geometry and appearance
-  of a block reference entity. * * \scriptable * \ingroup core
-  */</comment>
+  of a block reference entity. * * \scriptable * \copyable *
+  \ingroup core */</comment>
   <class>class 
   <macro>
     <name>QCADCORE_EXPORT</name>
@@ -735,6 +735,11 @@ dir="./core" filename="RBlockReferenceData.h">
     </type>
     <name>cache</name>
   </decl>;</decl_stmt></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RBlockReferenceData</argument>)</argument_list>
+  </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

@@ -39,7 +39,7 @@ dir="./entity" filename="RDimAngularData.h">
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RVector.h"</cpp:file></cpp:include>
   <comment type="block">/** * Angular dimension entity data class.
-  * * \scriptable * \ingroup entity */</comment>
+  * * \scriptable * \copyable * \ingroup entity */</comment>
   <class>class 
   <macro>
     <name>QCADENTITY_EXPORT</name>
@@ -580,6 +580,11 @@ dir="./entity" filename="RDimAngularData.h">
     </type>
     <name>dimArcPosition</name>
   </decl>;</decl_stmt></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RDimAngularData</argument>)</argument_list>
+  </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

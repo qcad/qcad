@@ -33,6 +33,7 @@
  * appearance of a solid entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RSolidData: public REntityData, protected RPolyline {
@@ -102,6 +103,7 @@ public:
     }
 };
 
+Q_DECLARE_METATYPE(RSolidData)
 Q_DECLARE_METATYPE(RSolidData*)
 Q_DECLARE_METATYPE(const RSolidData*)
 Q_DECLARE_METATYPE(QSharedPointer<RSolidData>)

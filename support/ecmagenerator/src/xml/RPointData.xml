@@ -2,7 +2,7 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class name="RPointData"
-  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="REntityData" specifier="public" />

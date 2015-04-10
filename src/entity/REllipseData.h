@@ -34,6 +34,7 @@
  * appearance of an ellipse entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT REllipseData: public REntityData, protected REllipse {
@@ -129,6 +130,7 @@ public:
     }
 };
 
+Q_DECLARE_METATYPE(REllipseData)
 Q_DECLARE_METATYPE(REllipseData*)
 Q_DECLARE_METATYPE(const REllipseData*)
 Q_DECLARE_METATYPE(QSharedPointer<REllipseData>)

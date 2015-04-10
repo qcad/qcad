@@ -525,6 +525,14 @@ dir="./core" filename="RGraphicsView.h">
       <name>gesture</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>giveFocus</name>
+  <parameter_list>()</parameter_list>
+  <specifier>= 0</specifier>;</function_decl>
   <comment type="block">/** * \return True if this view currently
   has the focus. */</comment>
   <function_decl>

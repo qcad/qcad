@@ -2070,7 +2070,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RImageData*
                     ap0 =
                     qscriptvalue_cast<
@@ -2080,11 +2080,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 0 is not of type RImageData*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 0 is not of type RImageData.",
                                context);                    
                     }
-                    RImageData& a0 = *ap0;
+                    RImageData 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

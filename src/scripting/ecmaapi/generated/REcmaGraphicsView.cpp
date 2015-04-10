@@ -134,6 +134,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, handlePinchGestureEvent, "handlePinchGestureEvent");
             
+            REcmaHelper::registerFunction(&engine, proto, giveFocus, "giveFocus");
+            
             REcmaHelper::registerFunction(&engine, proto, hasFocus, "hasFocus");
             
             REcmaHelper::registerFunction(&engine, proto, removeFocus, "removeFocus");
@@ -2181,6 +2183,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsView::handlePinchGestureEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::giveFocus
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::giveFocus", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::giveFocus";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("giveFocus", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->giveFocus();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.giveFocus().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::giveFocus", context, engine);
             return result;
         }
          QScriptValue

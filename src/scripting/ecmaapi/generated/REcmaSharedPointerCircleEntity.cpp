@@ -260,7 +260,7 @@
                         return REcmaHelper::throwError("RCircleEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RCircleData*
                     ap1 =
                     qscriptvalue_cast<
@@ -270,11 +270,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RCircleEntity: Argument 1 is not of type RCircleData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RCircleEntity: Argument 1 is not of type RCircleData.",
                                context);                    
                     }
-                    RCircleData& a1 = *ap1;
+                    RCircleData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -355,7 +357,7 @@
                         return REcmaHelper::throwError("RCircleEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RCircleData*
                     ap1 =
                     qscriptvalue_cast<
@@ -365,11 +367,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RCircleEntity: Argument 1 is not of type RCircleData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RCircleEntity: Argument 1 is not of type RCircleData.",
                                context);                    
                     }
-                    RCircleData& a1 = *ap1;
+                    RCircleData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id

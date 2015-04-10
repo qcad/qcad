@@ -310,7 +310,7 @@
                         return REcmaHelper::throwError("RArcEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArcData*
                     ap1 =
                     qscriptvalue_cast<
@@ -320,11 +320,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RArcEntity: Argument 1 is not of type RArcData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RArcEntity: Argument 1 is not of type RArcData.",
                                context);                    
                     }
-                    RArcData& a1 = *ap1;
+                    RArcData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -405,7 +407,7 @@
                         return REcmaHelper::throwError("RArcEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArcData*
                     ap1 =
                     qscriptvalue_cast<
@@ -415,11 +417,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RArcEntity: Argument 1 is not of type RArcData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RArcEntity: Argument 1 is not of type RArcData.",
                                context);                    
                     }
-                    RArcData& a1 = *ap1;
+                    RArcData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id

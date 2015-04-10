@@ -193,11 +193,11 @@ TAB_SIZE               = 8
 # will result in a user-defined paragraph with heading "Side Effects:".
 # You can put \n's in the value part of an alias to insert newlines.
 
-ALIASES                = "scriptable=\par Scriptable:\nThis class is wrapped for script environments.\n" \
+ALIASES                = "scriptable=\par Scriptable:\nThis class is available in script environments.\n" \
                          "nonscriptable=\par Non-Scriptable:\nThis function is \e not available in script environments.\n" \
-                         "copyable=\par Copyable:\nScript wrappers of this class should pass objects by reference.\n" \
-                         "hasStreamOperator=\par Stream Operator:\nScript wrappers of this class use the stream operator for the output of toString().\n" \
-                         "sharedPointerSupport=\par Shared Pointer Support:\nScript wrappers of this class support wrapping in QSharedPointer.\n" \
+                         "copyable=\par Copyable:\nObjects are cleaned up automatically by the garbage collector of the script engine.\n" \
+                         "hasStreamOperator=\par Stream Operator:\nObject has a stream operator to present itself as string, for example when using toString() in a script.\n" \
+                         "sharedPointerSupport=\par Shared Pointer Support:\nObjects can be used in QSharedPointer.\n" \
                          "getter{1}=\n Getter function for this property: \ref \1\n" \
                          "setter{1}=\n Setter function for this property: \ref \1\n"
 

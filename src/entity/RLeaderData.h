@@ -31,6 +31,7 @@
  * Leader entity data class.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RLeaderData: public REntityData, protected RPolyline {
@@ -113,6 +114,7 @@ private:
     bool arrowHead;
 };
 
+Q_DECLARE_METATYPE(RLeaderData)
 Q_DECLARE_METATYPE(RLeaderData*)
 Q_DECLARE_METATYPE(const RLeaderData*)
 Q_DECLARE_METATYPE(QSharedPointer<RLeaderData>)

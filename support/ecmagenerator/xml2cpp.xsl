@@ -1396,7 +1396,8 @@
 
                     if (o<xsl:value-of select="$index" />!=NULL) {
                         a<xsl:value-of select="$index" /> =
-                        <xsl:value-of select="$typeName"/>(o<xsl:value-of select="$index" />-&gt;clone());
+                        //<xsl:value-of select="$typeName"/>(o<xsl:value-of select="$index" />-&gt;clone());
+                        <xsl:value-of select="$typeName"/>(o<xsl:value-of select="$index" />);
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer&lt;BaseClass&gt; does not work

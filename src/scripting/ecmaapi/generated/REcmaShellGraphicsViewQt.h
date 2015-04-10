@@ -59,6 +59,12 @@
         
     
     
+      void giveFocus(
+                
+            );
+        
+    
+    
       bool hasFocus(
                 
             );

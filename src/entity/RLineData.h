@@ -33,6 +33,7 @@
  * appearance of a line entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RLineData: public REntityData, protected RLine {
@@ -104,6 +105,7 @@ public:
     }
 };
 
+Q_DECLARE_METATYPE(RLineData)
 Q_DECLARE_METATYPE(RLineData*)
 Q_DECLARE_METATYPE(const RLineData*)
 Q_DECLARE_METATYPE(QSharedPointer<RLineData>)

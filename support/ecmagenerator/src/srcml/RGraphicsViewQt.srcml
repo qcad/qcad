@@ -164,6 +164,13 @@ dir="./gui" filename="RGraphicsViewQt.h">
   <function_decl>
   <type>
     <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>giveFocus</name>
+  <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
     <name>bool</name>
   </type>
   <name>hasFocus</name>

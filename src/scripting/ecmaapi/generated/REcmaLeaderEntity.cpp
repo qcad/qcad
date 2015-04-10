@@ -287,7 +287,7 @@
                         return REcmaHelper::throwError("RLeaderEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLeaderData*
                     ap1 =
                     qscriptvalue_cast<
@@ -297,11 +297,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RLeaderEntity: Argument 1 is not of type RLeaderData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RLeaderEntity: Argument 1 is not of type RLeaderData.",
                                context);                    
                     }
-                    RLeaderData& a1 = *ap1;
+                    RLeaderData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -382,7 +384,7 @@
                         return REcmaHelper::throwError("RLeaderEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLeaderData*
                     ap1 =
                     qscriptvalue_cast<
@@ -392,11 +394,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RLeaderEntity: Argument 1 is not of type RLeaderData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RLeaderEntity: Argument 1 is not of type RLeaderData.",
                                context);                    
                     }
-                    RLeaderData& a1 = *ap1;
+                    RLeaderData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id
@@ -1191,7 +1195,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RLeaderData*
                     ap0 =
                     qscriptvalue_cast<
@@ -1201,11 +1205,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RLeaderEntity: Argument 0 is not of type RLeaderData*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLeaderEntity: Argument 0 is not of type RLeaderData.",
                                context);                    
                     }
-                    RLeaderData& a0 = *ap0;
+                    RLeaderData 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

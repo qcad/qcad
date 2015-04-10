@@ -33,6 +33,7 @@ class RDocument;
  * Defines the geometry and appearance of a block reference entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup core
  */
 class QCADCORE_EXPORT RBlockReferenceData: public REntityData {
@@ -115,6 +116,7 @@ private:
     mutable QMap<REntity::Id, QSharedPointer<REntity> > cache;
 };
 
+Q_DECLARE_METATYPE(RBlockReferenceData)
 Q_DECLARE_METATYPE(RBlockReferenceData*)
 Q_DECLARE_METATYPE(const RBlockReferenceData*)
 Q_DECLARE_METATYPE(QSharedPointer<RBlockReferenceData>)

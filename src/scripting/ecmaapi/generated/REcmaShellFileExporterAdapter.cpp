@@ -5141,7 +5141,7 @@
 
 
 
-    // type: RImageData &, copyable: false
+    // type: RImageData &, copyable: true
         << qScriptValueFromValue(engine, 
 
         

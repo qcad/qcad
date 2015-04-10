@@ -34,6 +34,7 @@
  * appearance of a viewport entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup core
  */
 class QCADCORE_EXPORT RViewportData: public REntityData {
@@ -135,6 +136,7 @@ private:
     RVector viewTarget;
 };
 
+Q_DECLARE_METATYPE(RViewportData)
 Q_DECLARE_METATYPE(RViewportData*)
 Q_DECLARE_METATYPE(const RViewportData*)
 Q_DECLARE_METATYPE(QSharedPointer<RViewportData>)

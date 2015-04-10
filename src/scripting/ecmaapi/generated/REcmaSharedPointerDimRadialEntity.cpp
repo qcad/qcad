@@ -295,7 +295,7 @@
                         return REcmaHelper::throwError("RDimRadialEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimRadialData*
                     ap1 =
                     qscriptvalue_cast<
@@ -305,11 +305,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimRadialEntity: Argument 1 is not of type RDimRadialData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimRadialEntity: Argument 1 is not of type RDimRadialData.",
                                context);                    
                     }
-                    RDimRadialData& a1 = *ap1;
+                    RDimRadialData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -390,7 +392,7 @@
                         return REcmaHelper::throwError("RDimRadialEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimRadialData*
                     ap1 =
                     qscriptvalue_cast<
@@ -400,11 +402,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimRadialEntity: Argument 1 is not of type RDimRadialData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimRadialEntity: Argument 1 is not of type RDimRadialData.",
                                context);                    
                     }
-                    RDimRadialData& a1 = *ap1;
+                    RDimRadialData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id
@@ -1210,7 +1214,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimRadialData*
                     ap0 =
                     qscriptvalue_cast<
@@ -1220,11 +1224,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimRadialEntity: Argument 0 is not of type RDimRadialData*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimRadialEntity: Argument 0 is not of type RDimRadialData.",
                                context);                    
                     }
-                    RDimRadialData& a0 = *ap0;
+                    RDimRadialData 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

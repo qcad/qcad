@@ -43,7 +43,7 @@ dir="./core" filename="RViewportData.h">
   <cpp:file>"RLine.h"</cpp:file></cpp:include>
   <comment type="block">/** * Stores and manages all data that
   defines the geometry and * appearance of a viewport entity. * *
-  \scriptable * \ingroup core */</comment>
+  \scriptable * \copyable * \ingroup core */</comment>
   <class>class 
   <macro>
     <name>QCADCORE_EXPORT</name>
@@ -520,6 +520,11 @@ dir="./core" filename="RViewportData.h">
     </type>
     <name>viewTarget</name>
   </decl>;</decl_stmt></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RViewportData</argument>)</argument_list>
+  </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

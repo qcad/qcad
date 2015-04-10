@@ -249,6 +249,9 @@
         repaintNow
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        giveFocus
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasFocus
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

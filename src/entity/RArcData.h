@@ -34,6 +34,7 @@
  * appearance of an arc entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RArcData: public REntityData, protected RArc {
@@ -121,6 +122,7 @@ public:
     }
 };
 
+Q_DECLARE_METATYPE(RArcData)
 Q_DECLARE_METATYPE(RArcData*)
 Q_DECLARE_METATYPE(const RArcData*)
 Q_DECLARE_METATYPE(QSharedPointer<RArcData>)

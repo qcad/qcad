@@ -1849,6 +1849,13 @@ dir="./core" filename="RDocumentInterface.h">
   <name>RDocumentInterface</name>&amp;</type>
   <name>getClipboard</name>
   <parameter_list>()</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>deleteClipboard</name>
+  <parameter_list>()</parameter_list>;</function_decl>
   <function>
     <type>
       <name>bool</name>

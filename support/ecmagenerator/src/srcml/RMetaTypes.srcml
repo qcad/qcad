@@ -214,6 +214,9 @@ dir="./core" filename="RMetaTypes.h">
   <cpp:file>&lt;QPinchGesture&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
+  <cpp:file>&lt;QPixmap&gt;</cpp:file></cpp:include>
+  <cpp:include>#
+  <cpp:directive>include</cpp:directive>
   <cpp:file>&lt;QPlainTextEdit&gt;</cpp:file></cpp:include>
   <cpp:include>#
   <cpp:directive>include</cpp:directive>
@@ -803,6 +806,11 @@ dir="./core" filename="RMetaTypes.h">
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>QPinchGesture*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>QPixmap*</argument>)</argument_list>
   </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>

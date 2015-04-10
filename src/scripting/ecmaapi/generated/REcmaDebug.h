@@ -57,6 +57,15 @@
         ;static  QScriptValue
         hexDump
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        incCounter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        decCounter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        printCounter
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

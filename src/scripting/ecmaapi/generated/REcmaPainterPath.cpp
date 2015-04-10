@@ -4063,7 +4063,8 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RShape >(o0->clone());
+                        //QSharedPointer < RShape >(o0->clone());
+                        QSharedPointer < RShape >(o0);
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work

@@ -33,6 +33,7 @@
  * appearance of an infinit line (xline) entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RXLineData: public REntityData, protected RXLine {
@@ -108,6 +109,7 @@ private:
     bool fixedAngle;
 };
 
+Q_DECLARE_METATYPE(RXLineData)
 Q_DECLARE_METATYPE(RXLineData*)
 Q_DECLARE_METATYPE(const RXLineData*)
 Q_DECLARE_METATYPE(QSharedPointer<RXLineData>)

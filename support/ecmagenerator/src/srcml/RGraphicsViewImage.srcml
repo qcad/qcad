@@ -1048,6 +1048,16 @@ dir="./gui" filename="RGraphicsViewImage.h">
   <function>
     <type>
       <name>virtual</name>
+      <name>void</name>
+    </type>
+    <name>giveFocus</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>virtual</name>
       <name>bool</name>
     </type>
     <name>hasFocus</name>

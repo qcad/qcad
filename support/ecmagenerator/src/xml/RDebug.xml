@@ -45,5 +45,29 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="incCounter" cppName="incCounter"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="id"
+        hasDefault="true" default="0" isConst="true" />
+      </variant>
+    </method>
+    <method name="decCounter" cppName="decCounter"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="id"
+        hasDefault="true" default="0" isConst="true" />
+      </variant>
+    </method>
+    <method name="printCounter" cppName="printCounter"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="id"
+        hasDefault="true" default="0" isConst="true" />
+      </variant>
+    </method>
   </class>
 </unit>

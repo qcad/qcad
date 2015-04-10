@@ -62,6 +62,7 @@ public:
 public:
     RLineEntity(RDocument* document, const RLineData& data,
         RObject::Id objectId = RObject::INVALID_ID);
+    RLineEntity(const RLineEntity& other);
     virtual ~RLineEntity();
 
     static void init();

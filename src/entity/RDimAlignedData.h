@@ -30,6 +30,7 @@
  * Aligned dimension entity data class.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RDimAlignedData: public RDimLinearData {
@@ -64,6 +65,7 @@ private:
     mutable RVector refDefinitionPoint2;
 };
 
+Q_DECLARE_METATYPE(RDimAlignedData)
 Q_DECLARE_METATYPE(RDimAlignedData*)
 Q_DECLARE_METATYPE(const RDimAlignedData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimAlignedData>)

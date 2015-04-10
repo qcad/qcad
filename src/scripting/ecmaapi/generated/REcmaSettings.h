@@ -70,6 +70,9 @@
         getApplicationPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPluginPaths
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPluginPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

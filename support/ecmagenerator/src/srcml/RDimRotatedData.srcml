@@ -33,7 +33,7 @@ dir="./entity" filename="RDimRotatedData.h">
   <cpp:directive>include</cpp:directive>
   <cpp:file>"RVector.h"</cpp:file></cpp:include>
   <comment type="block">/** * Rotated dimension entity data class.
-  * * \scriptable * \ingroup entity */</comment>
+  * * \scriptable * \copyable * \ingroup entity */</comment>
   <class>class 
   <macro>
     <name>QCADENTITY_EXPORT</name>
@@ -325,6 +325,11 @@ dir="./entity" filename="RDimRotatedData.h">
     </type>
     <name>rotation</name>
   </decl>;</decl_stmt></private>}</block>;</class>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RDimRotatedData</argument>)</argument_list>
+  </macro>
   <macro>
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(

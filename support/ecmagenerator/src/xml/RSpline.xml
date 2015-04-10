@@ -542,6 +542,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="appendToExploded" cppName="appendToExploded"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name="line"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="invalidate" cppName="invalidate"
     specifier="protected" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
