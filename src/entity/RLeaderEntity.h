@@ -58,6 +58,7 @@ public:
 public:
     RLeaderEntity(RDocument* document, const RLeaderData& data,
                       RObject::Id objectId = RObject::INVALID_ID);
+    RLeaderEntity(const RLeaderEntity& other);
     virtual ~RLeaderEntity();
 
     static void init();

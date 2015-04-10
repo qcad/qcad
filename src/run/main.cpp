@@ -282,12 +282,16 @@ int main(int argc, char *argv[]) {
     RDebug::printCounter("RDocument");
     RDebug::printCounter("RDocumentInterface");
     RDebug::printCounter("RGraphicsView");
-    RDebug::printCounter("RPointEntity");
-    RDebug::printCounter("RLineEntity");
-    RDebug::printCounter("RArcEntity");
-    RDebug::printCounter("RCircleEntity");
     RDebug::printCounter("RAddObjectsOperation");
     RDebug::printCounter("ROperation");
+
+    RDebug::printCounter("RPointEntity");
+    RDebug::printCounter("RLineEntity");
+    RDebug::printCounter("RPolylineEntity");
+    RDebug::printCounter("RArcEntity");
+    RDebug::printCounter("RCircleEntity");
+    RDebug::printCounter("RLeaderEntity");
+    RDebug::printCounter("RSplineEntity");
 
     return ret;
 }

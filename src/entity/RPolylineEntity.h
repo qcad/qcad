@@ -63,6 +63,7 @@ public:
 public:
     RPolylineEntity(RDocument* document, const RPolylineData& data,
         RObject::Id objectId = RObject::INVALID_ID);
+    RPolylineEntity(const RPolylineEntity& other);
     virtual ~RPolylineEntity();
 
     static void init();

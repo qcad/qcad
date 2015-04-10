@@ -68,6 +68,7 @@ public:
 public:
     RSplineEntity(RDocument* document, const RSplineData& data,
         RObject::Id objectId = RObject::INVALID_ID);
+    RSplineEntity(const RSplineEntity& other);
     virtual ~RSplineEntity();
 
     static void init();

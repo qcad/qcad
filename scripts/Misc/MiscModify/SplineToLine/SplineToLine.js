@@ -56,7 +56,7 @@ SplineToLine.prototype.beginEvent = function() {
                 var newEntity = shapeToEntity(document, line);
                 newEntity.copyAttributesFrom(entity.data());
 
-                op.deleteObject(entity.data());
+                op.deleteObject(entity.clone());
                 op.addObject(newEntity);
             }
         }

@@ -44,9 +44,16 @@ RPropertyTypeId RPolylineEntity::PropertyLength;
 RPolylineEntity::RPolylineEntity(RDocument* document, const RPolylineData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
+    RDebug::incCounter("RPolylineEntity");
+}
+
+RPolylineEntity::RPolylineEntity(const RPolylineEntity& other) : REntity(other) {
+    RDebug::incCounter("RPolylineEntity");
+    data = other.data;
 }
 
 RPolylineEntity::~RPolylineEntity() {
+    RDebug::decCounter("RPolylineEntity");
 }
 
 void RPolylineEntity::setShape(const RPolyline& l) {

@@ -45,9 +45,16 @@ RPropertyTypeId RSplineEntity::PropertyLength;
 RSplineEntity::RSplineEntity(RDocument* document, const RSplineData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
+    RDebug::incCounter("RSplineEntity");
+}
+
+RSplineEntity::RSplineEntity(const RSplineEntity& other) : REntity(other) {
+    RDebug::incCounter("RSplineEntity");
+    data = other.data;
 }
 
 RSplineEntity::~RSplineEntity() {
+    RDebug::decCounter("RSplineEntity");
 }
 
 void RSplineEntity::init() {
