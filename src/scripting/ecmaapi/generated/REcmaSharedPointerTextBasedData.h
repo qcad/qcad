@@ -20,7 +20,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSharedPointerTextBasedData {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSharedPointerTextBasedData {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

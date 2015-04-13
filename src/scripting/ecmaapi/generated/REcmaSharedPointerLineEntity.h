@@ -20,7 +20,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSharedPointerLineEntity {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSharedPointerLineEntity {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

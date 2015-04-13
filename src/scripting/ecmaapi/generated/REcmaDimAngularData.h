@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaDimAngularData {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaDimAngularData {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

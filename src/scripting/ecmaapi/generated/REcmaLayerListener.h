@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaLayerListener {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaLayerListener {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaMouseEvent {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaMouseEvent {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

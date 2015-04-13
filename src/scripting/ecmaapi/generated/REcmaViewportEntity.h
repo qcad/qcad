@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaViewportEntity {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaViewportEntity {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

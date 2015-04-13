@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaDimAlignedEntity {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaDimAlignedEntity {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

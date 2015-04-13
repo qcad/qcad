@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaDeleteAllEntitiesOperation {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaDeleteAllEntitiesOperation {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

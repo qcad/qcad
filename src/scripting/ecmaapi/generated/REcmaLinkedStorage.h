@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaLinkedStorage {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaLinkedStorage {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

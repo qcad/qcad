@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaTriangle {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaTriangle {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

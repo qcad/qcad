@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaMoveReferencePointOperation {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaMoveReferencePointOperation {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

@@ -20,7 +20,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSharedPointerDimRotatedEntity {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSharedPointerDimRotatedEntity {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

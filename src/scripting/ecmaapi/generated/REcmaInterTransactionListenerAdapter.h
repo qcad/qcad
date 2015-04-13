@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaInterTransactionListenerAdapter {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaInterTransactionListenerAdapter {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

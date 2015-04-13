@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaTabletEvent {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaTabletEvent {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

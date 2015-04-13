@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaFontList {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaFontList {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

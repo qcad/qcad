@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaLinetypeList {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaLinetypeList {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

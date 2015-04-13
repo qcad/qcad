@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaPatternListMetric {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaPatternListMetric {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

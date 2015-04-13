@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaRestrictOrthogonal {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaRestrictOrthogonal {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

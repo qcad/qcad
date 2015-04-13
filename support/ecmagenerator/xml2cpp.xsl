@@ -193,7 +193,11 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT <xsl:value-of select="$ecmaName" /> {
+        class
+        <xsl:if test="$scope='src'">
+        QCADECMAAPI_EXPORT
+        </xsl:if>
+        <xsl:value-of select="$ecmaName" /> {
 
         public:
       </xsl:when>

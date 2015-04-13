@@ -20,7 +20,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSharedPointerPolylineEntity {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSharedPointerPolylineEntity {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaMainWindow {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaMainWindow {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

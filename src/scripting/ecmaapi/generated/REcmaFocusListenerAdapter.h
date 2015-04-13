@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaFocusListenerAdapter {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaFocusListenerAdapter {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

@@ -20,7 +20,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSharedPointerPainterPathSource {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSharedPointerPainterPathSource {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

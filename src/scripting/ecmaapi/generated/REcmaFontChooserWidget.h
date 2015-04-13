@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaFontChooserWidget {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaFontChooserWidget {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

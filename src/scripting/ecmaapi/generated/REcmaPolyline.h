@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaPolyline {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaPolyline {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

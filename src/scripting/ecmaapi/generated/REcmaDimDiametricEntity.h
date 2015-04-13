@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaDimDiametricEntity {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaDimDiametricEntity {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

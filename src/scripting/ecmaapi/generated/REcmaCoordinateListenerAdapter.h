@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaCoordinateListenerAdapter {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaCoordinateListenerAdapter {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

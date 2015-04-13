@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaDimRotatedData {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaDimRotatedData {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
