@@ -125,6 +125,17 @@ static QScriptValue listToScriptValue(QScriptEngine* engine, const QList<T>& cpp
 }
 
 template<class T>
+static QScriptValue vectorToScriptValue(QScriptEngine* engine, const QVector<T>& cppValue) {
+    QVariantList vl;
+    for (int i = 0; i < cppValue.size(); ++i) {
+        QVariant v;
+        v.setValue(cppValue.at(i));
+        vl.append(v);
+    }
+    return qScriptValueFromValue(engine, vl);
+}
+
+template<class T>
 static QScriptValue setToScriptValue(QScriptEngine* engine, const QSet<T>& cppValue) {
     QVariantList vl;
     typename QSet<T>::const_iterator it;
@@ -239,6 +250,14 @@ static QScriptValue tryCast(QScriptEngine* engine, RSnapRestriction* cppValue) {
 
 static void fromScriptValue(QScriptEngine* engine, QScriptValue scriptValue, QList<QSharedPointer<RShape> >& cppValue);
 static QVariant toVariant(const QSharedPointer<RShape>& cppValue);
+
+template<class T>
+static void fromScriptValue(QScriptEngine* engine, QScriptValue scriptValue, QVector<T>& cppValue) {
+    QVariantList vl = engine->fromScriptValue<QVariantList>(scriptValue);
+    for (int i = 0; i < vl.size(); ++i) {
+        cppValue.append(vl.at(i).template value<T>());
+    }
+}
 
 template<class T> 
 static void fromScriptValue(QScriptEngine* engine, QScriptValue scriptValue, QList<T>& cppValue) {

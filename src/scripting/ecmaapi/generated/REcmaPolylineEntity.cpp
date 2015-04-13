@@ -456,6 +456,62 @@
                 
     } else 
 
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RPolylineEntity */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RPolylineEntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPolylineEntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPolylineEntity: Argument 0 is not of type RPolylineEntity*.",
+                               context);                    
+                    }
+                    RPolylineEntity& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RPolylineEntity
+                    * cppResult =
+                    new
+                    RPolylineEntity
+                    (
+                    a0
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
     {
        return REcmaHelper::throwError(
        QString::fromLatin1("RPolylineEntity(): no matching constructor found."),

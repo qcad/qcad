@@ -3155,8 +3155,8 @@
         
                self->getScreenBasedLinetype();
         // return type: QVector < qreal >
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+                // Vector of ...:
+                result = REcmaHelper::vectorToScriptValue(engine, cppResult);
             
     } else
 

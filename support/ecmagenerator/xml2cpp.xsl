@@ -1255,6 +1255,10 @@
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);
             </xsl:when>
+            <xsl:when test="starts-with($returnType, 'QVector')">
+                // Vector of ...:
+                result = REcmaHelper::vectorToScriptValue(engine, cppResult);
+            </xsl:when>
             <xsl:when test="$returnType='QVariant'">
                 // QVariant:
                 result = REcmaHelper::toScriptValue(engine, cppResult);

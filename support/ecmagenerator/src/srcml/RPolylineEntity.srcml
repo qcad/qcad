@@ -221,6 +221,17 @@ dir="./entity" filename="RPolylineEntity.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</constructor_decl>
+  <constructor_decl>
+  <name>RPolylineEntity</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RPolylineEntity</name>&amp;</type>
+      <name>other</name>
+    </decl>
+  </param>)</parameter_list>;</constructor_decl>
   <destructor_decl>
   <specifier>virtual</specifier>
   <name>~RPolylineEntity</name>
