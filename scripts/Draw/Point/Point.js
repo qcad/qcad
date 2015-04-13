@@ -101,12 +101,10 @@ Point.prototype.getTitle = function() {
 Point.addPointsOnLine = function(doc, op, startPoint, endPoint, numberOfPoints) {
     var point = new RPointEntity(doc, new RPointData(startPoint));
     op.addObject(point);
-    var dv = startPoint.operator_subtract(endPoint).operator_divide(
-            numberOfPoints - 1);
+    var dv = startPoint.operator_subtract(endPoint).operator_divide(numberOfPoints - 1);
     var v = startPoint;
     for ( var i = 1; i < numberOfPoints - 1; ++i) {
-        point = new RPointEntity(doc, new RPointData(v.operator_subtract(dv
-                .operator_multiply(i))));
+        point = new RPointEntity(doc, new RPointData(v.operator_subtract(dv.operator_multiply(i))));
         op.addObject(point);
     }
     point = new RPointEntity(doc, new RPointData(endPoint));

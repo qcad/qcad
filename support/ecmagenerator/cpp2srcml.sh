@@ -30,6 +30,8 @@ then
     cd "../../$scope"
 else
     scope="$1"
+    find tmp -name "*.xml" | xargs rm
+    find tmp -name "*.srcml" | xargs rm
     cd "$scope"
 fi
 
