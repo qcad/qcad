@@ -28,7 +28,12 @@
 #include "RUnit.h"
 
 RMathLineEdit::RMathLineEdit(QWidget* parent) :
-    QLineEdit(parent), angle(false), integer(false), value(0.0), noEmit(false) {
+    QLineEdit(parent),
+    angle(false),
+    integer(false),
+    value(0.0),
+    noEmit(false),
+    noResultInToolTip(false) {
 
     oriPalette = palette();
     slotTextChanged(text());
@@ -59,13 +64,25 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
         }
     }
 
-    value = RMath::eval(text);
+    bool hasError = false;
+    bool hasFormula = false;
+
+    if (QRegExp("^[+-]?\\d*\\.?\\d+$").exactMatch(text)) {
+        value = text.toDouble();
+        hasError = false;
+        hasFormula = false;
+    }
+    else {
+        value = RMath::eval(text);
+        hasError = RMath::hasError();
+        hasFormula = true;
+    }
 
     QPalette p = palette();
-    if (RMath::hasError()) {
+    if (hasError) {
         error = RMath::getError();
         //res = defaultValue;
-        // special case: don't report an error for text between * 
+        // special case: don't report an error for text between *
         // (e.g. *VARIES* in property editor)
         if (!(text.startsWith('*') && text.endsWith('*'))) {
             p.setColor(QPalette::Text, QColor(Qt::red));
@@ -116,6 +133,35 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
 //        QTimer::singleShot(2000, resultTip, "hide");
     }*/
 
+    // look up equal sign label and result label to update:
+    if (!objectName().isEmpty()) {
+        QWidget* parent = parentWidget();
+        if (parent!=NULL) {
+            QLabel* lEqual = parent->findChild<QLabel*>(objectName() + "Equal");
+            if (lEqual!=NULL) {
+                lEqual->setVisible(hasFormula);
+            }
+            QLabel* lResult = parent->findChild<QLabel*>(objectName() + "Result");
+            if (lResult!=NULL) {
+                double displayedValue = value;
+                if (isAngle()) {
+                    displayedValue = RMath::rad2deg(displayedValue);
+                }
+                lResult->setVisible(hasFormula);
+                QString l;
+                if (RMath::isNormal(displayedValue)) {
+                    l.sprintf("%.3g", displayedValue);
+                }
+                else {
+                    l = tr("Invalid");
+                }
+                lResult->setText(l);
+                setToolTip("");
+                noResultInToolTip = true;
+            }
+        }
+    }
+
     if (!noEmit) {
         emit valueChanged(value, error);
     }
@@ -127,7 +173,7 @@ void RMathLineEdit::slotTextEdited(const QString& text) {
     slotTextChanged(text);
     noEmit = false;
 
-    if (parentWidget()!=NULL && isVisible()) {
+    if (parentWidget()!=NULL && isVisible() && !noResultInToolTip) {
         QPoint tPos = parentWidget()->mapToGlobal(pos());
         tPos+=QPoint(0, height());
         QToolTip::showText(tPos, toolTip(), this);
@@ -182,6 +228,11 @@ void RMathLineEdit::clearError() {
 
 
 void RMathLineEdit::setToolTip(const QString& toolTip) {
+    if (originalToolTip.isEmpty() && error.isEmpty() && toolTip.isEmpty()) {
+        QLineEdit::setToolTip("");
+        return;
+    }
+
     QLineEdit::setToolTip(
         QString(
             "%1%2"

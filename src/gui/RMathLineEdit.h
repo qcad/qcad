@@ -103,6 +103,7 @@ private:
     QString error;
     QString originalToolTip;
     bool noEmit;
+    bool noResultInToolTip;
     //double defaultValue;
 //    QLabel* resultTip;
 };

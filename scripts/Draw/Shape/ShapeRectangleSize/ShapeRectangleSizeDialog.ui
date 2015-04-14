@@ -12,7 +12,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QGridLayout" name="gridLayout">
+    <layout class="QGridLayout" name="gridLayout" columnstretch="0,2,0,0">
      <item row="0" column="0">
       <widget class="QLabel" name="WidthLabel">
        <property name="text">
@@ -23,30 +23,13 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="RMathLineEdit" name="Width">
+     <item row="2" column="1">
+      <widget class="RMathLineEdit" name="Angle">
        <property name="text">
-        <string notr="true">100</string>
+        <string notr="true">0</string>
        </property>
-       <property name="DefaultFocus" stdset="0">
+       <property name="angle" stdset="0">
         <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="HeightLabel">
-       <property name="text">
-        <string>&amp;Height:</string>
-       </property>
-       <property name="buddy">
-        <cstring>Height</cstring>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="RMathLineEdit" name="Height">
-       <property name="text">
-        <string notr="true">50</string>
        </property>
       </widget>
      </item>
@@ -60,13 +43,90 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
-      <widget class="RMathLineEdit" name="Angle">
+     <item row="1" column="0">
+      <widget class="QLabel" name="HeightLabel">
        <property name="text">
-        <string notr="true">0</string>
+        <string>&amp;Height:</string>
        </property>
-       <property name="angle" stdset="0">
+       <property name="buddy">
+        <cstring>Height</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="RMathLineEdit" name="Width">
+       <property name="text">
+        <string notr="true">100</string>
+       </property>
+       <property name="DefaultFocus" stdset="0">
         <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="RMathLineEdit" name="Height">
+       <property name="text">
+        <string notr="true">50</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="WidthEqual">
+       <property name="text">
+        <string>=</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="WidthResult">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="HeightEqual">
+       <property name="text">
+        <string>=</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLabel" name="HeightResult">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="AngleEqual">
+       <property name="text">
+        <string>=</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLabel" name="AngleResult">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>0</string>
        </property>
       </widget>
      </item>
