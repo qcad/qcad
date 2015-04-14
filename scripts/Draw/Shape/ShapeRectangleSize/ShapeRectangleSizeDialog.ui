@@ -163,7 +163,10 @@
   </customwidget>
  </customwidgets>
  <tabstops>
-  <tabstop>ButtonBox</tabstop>
+  <tabstop>Width</tabstop>
+  <tabstop>Height</tabstop>
+  <tabstop>Angle</tabstop>
+  <tabstop>CreatePolyline</tabstop>
  </tabstops>
  <resources/>
  <connections>
