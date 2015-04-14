@@ -1355,7 +1355,7 @@ void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
     }
 
     if (getEntity()!=NULL && (getEntity()->getType()!=RS::EntitySpline || RSpline::hasProxy())) {
-        // all explodable entities including splines is we have a spline proxy:
+        // all explodable entities including splines if we have a spline proxy:
         RShapesExporter(*this, sub, offset);
         return;
     }

@@ -158,7 +158,8 @@ RVector RLine::getVectorTo(const RVector& point, bool limited, double strictRang
     RVector ap = point - startPoint;
 
     if (ae.getMagnitude2d() < 1.0e-6) {
-        return RVector::invalid;
+        // distance to start point is very small:
+        return RVector(0,0);
     }
 
     double b = RVector::getDotProduct(ap, ae) / RVector::getDotProduct(ae, ae);

@@ -51,6 +51,7 @@ RCircleEntity::RCircleEntity(RDocument* document, const RCircleData& data,
 
 RCircleEntity::RCircleEntity(const RCircleEntity& other) : REntity(other) {
     RDebug::incCounter("RCircleEntity");
+    REntity::operator=(other);
     data = other.data;
 }
 

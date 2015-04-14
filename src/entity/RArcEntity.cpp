@@ -52,6 +52,7 @@ RArcEntity::RArcEntity(RDocument* document, const RArcData& data,
 
 RArcEntity::RArcEntity(const RArcEntity& other) : REntity(other) {
     RDebug::incCounter("RArcEntity");
+    REntity::operator=(other);
     data = other.data;
 }
 

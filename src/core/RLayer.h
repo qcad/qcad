@@ -63,6 +63,7 @@ public:
         RLinetype::Id linetype = RLinetype::INVALID_ID,
         RLineweight::Lineweight lineweight = RLineweight::Weight000);
 
+    RLayer(const RLayer& other);
     virtual ~RLayer();
 
     static void init();

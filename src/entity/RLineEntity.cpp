@@ -51,6 +51,7 @@ RLineEntity::RLineEntity(RDocument* document, const RLineData& data,
 
 RLineEntity::RLineEntity(const RLineEntity& other) : REntity(other) {
     RDebug::incCounter("RLineEntity");
+    REntity::operator=(other);
     data = other.data;
 }
 

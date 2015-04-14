@@ -285,6 +285,8 @@ int main(int argc, char *argv[]) {
     RDebug::printCounter("RAddObjectsOperation");
     RDebug::printCounter("ROperation");
 
+    RDebug::printCounter("RLayer");
+
     RDebug::printCounter("RPointEntity");
     RDebug::printCounter("RLineEntity");
     RDebug::printCounter("RPolylineEntity");

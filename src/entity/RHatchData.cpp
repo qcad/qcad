@@ -580,6 +580,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
 
     QTime timer;
     timer.start();
+    int timeOut = -1;
 
     QList<RPatternLine> patternLines = pattern.getPatternLines();
     for (int i=0; i<patternLines.length(); i++) {
@@ -753,8 +754,10 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
                 }
             }
 
-            if (timer.elapsed()>2000) {
-                int timeOut = RSettings::getIntValue("GraphicsView/MaxHatchTime", 5000);
+            if (timer.elapsed()>500) {
+                if (timeOut==-1) {
+                    timeOut = RSettings::getIntValue("GraphicsView/MaxHatchTime", 2000);
+                }
                 if (timer.elapsed()>timeOut) {
                     qWarning() << "RHatchData::getPainterPaths: hatch pattern too dense. hatch pattern generation aborted (timeout set to " << timeOut << ")...";
                     painterPaths.clear();

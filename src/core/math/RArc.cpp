@@ -529,8 +529,7 @@ RVector RArc::getVectorTo(const RVector& point, bool limited, double strictRange
     Q_UNUSED(strictRange)
 
     double angle = center.getAngleTo(point);
-    if (limited
-            && !RMath::isAngleBetween(angle, startAngle, endAngle, reversed)) {
+    if (limited && !RMath::isAngleBetween(angle, startAngle, endAngle, reversed)) {
         return RVector::invalid;
     }
 

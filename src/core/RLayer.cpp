@@ -34,6 +34,8 @@ RLayer::RLayer() :
         locked(false),
         linetype(RLinetype::INVALID_ID),
         lineweight(RLineweight::WeightInvalid) {
+
+    RDebug::incCounter("RLayer");
 }
 
 RLayer::RLayer(RDocument* document, const QString& name,
@@ -41,9 +43,24 @@ RLayer::RLayer(RDocument* document, const QString& name,
     RLinetype::Id linetype, RLineweight::Lineweight lineweight) :
     RObject(document), name(name.trimmed()), frozen(frozen), locked(locked),
     color(color), linetype(linetype), lineweight(lineweight) {
+
+    RDebug::incCounter("RLayer");
+}
+
+RLayer::RLayer(const RLayer& other) :
+    name(other.name),
+    frozen(other.frozen),
+    locked(other.locked),
+    color(other.color),
+    linetype(other.linetype),
+    lineweight(other.lineweight) {
+
+    RObject::operator=(other);
+    RDebug::incCounter("RLayer");
 }
 
 RLayer::~RLayer() {
+    RDebug::decCounter("RLayer");
 }
 
 void RLayer::init() {

@@ -50,6 +50,7 @@ RSplineEntity::RSplineEntity(RDocument* document, const RSplineData& data,
 
 RSplineEntity::RSplineEntity(const RSplineEntity& other) : REntity(other) {
     RDebug::incCounter("RSplineEntity");
+    REntity::operator=(other);
     data = other.data;
 }
 
