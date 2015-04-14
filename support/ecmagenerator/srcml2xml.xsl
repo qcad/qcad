@@ -131,7 +131,7 @@
 
                         <method name="{$methodName}" cppName="{$methodName}" specifier="{$specifier}">
                             <xsl:attribute name="isStatic">
-                                <xsl:value-of select="boolean(preceding-sibling::srcml:type/srcml:name[text()='static'])"/>
+                                <xsl:value-of select="boolean(preceding-sibling::srcml:type/srcml:name[text()='static']) or boolean(preceding-sibling::srcml:type/srcml:specifier[text()='static'])"/>
                             </xsl:attribute>
                             <xsl:attribute name="isVirtual">
                                 <xsl:value-of select="boolean(preceding-sibling::srcml:type/srcml:name[text()='virtual'])"/>
@@ -214,7 +214,7 @@
              </xsl:attribute>
          </xsl:if>
          <xsl:attribute name="isConst">
-           <xsl:value-of select="boolean(srcml:decl/srcml:type/srcml:name[text()='const'])" />
+           <xsl:value-of select="boolean(srcml:decl/srcml:type/srcml:name[text()='const']) or boolean(srcml:decl/srcml:type/srcml:specifier[text()='const'])" />
          </xsl:attribute>
        </xsl:element>
     </xsl:template>
@@ -262,10 +262,10 @@
                     name="{srcml:decl/srcml:name/text()}"
                     type="{$type}"
                     isConst="true"
-                    isStatic="{boolean(srcml:decl/srcml:type/srcml:name[text()='static'])}"
+                    isStatic="{boolean(srcml:decl/srcml:type/srcml:name[text()='static']) or boolean(srcml:decl/srcml:type/srcml:specifier[text()='static'])}"
                 />
             </xsl:when>
-            <xsl:when test="srcml:decl/srcml:type/srcml:name[text()='static'] and not(srcml:decl/srcml:argument_list)">
+            <xsl:when test="(srcml:decl/srcml:type/srcml:name[text()='static'] or srcml:decl/srcml:type/srcml:specifier[text()='static']) and not(srcml:decl/srcml:argument_list)">
                 <property
                     name="{srcml:decl/srcml:name/text()}"
                     type="{$type}"

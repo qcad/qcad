@@ -27,7 +27,7 @@ include("Draw.js");
  * also supports reference points at the corners, top, left, right, 
  * bottom and middle.
  * 
- * \ingroup ecma_misc_draw
+ * \ingroup ecma_draw
  */
 function DrawBasedOnRectangle(guiAction) {
     EAction.call(this, guiAction);
@@ -61,14 +61,15 @@ DrawBasedOnRectangle.includeBasePath = includeBasePath;
 DrawBasedOnRectangle.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
+    this.setState(0);
+    this.simulateMouseMoveEvent();
+
     if (this.useDialog) {
         if (!this.showDialog()) {
             this.terminate();
             return;
         }
     }
-
-    this.setState(0);
 };
 
 DrawBasedOnRectangle.prototype.finishEvent = function() {
@@ -78,17 +79,34 @@ DrawBasedOnRectangle.prototype.finishEvent = function() {
     EAction.prototype.finishEvent.call(this);
 };
 
+DrawBasedOnRectangle.prototype.setState = function(state) {
+    EAction.prototype.setState.call(this, state);
+
+    this.setCrosshairCursor();
+    this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
+
+    var appWin = RMainWindowQt.getMainWindow();
+    var trPosition = qsTr("Position");
+    this.setCommandPrompt(trPosition);
+    this.setLeftMouseTip(trPosition);
+    this.setRightMouseTip(EAction.trCancel);
+    EAction.showSnapTools();
+};
+
 /**
  * Show dialog to enter some of the options.
  * This might move to EAction at one point.
  */
 DrawBasedOnRectangle.prototype.showDialog = function() {
+    var i;
+    var children;
+
     if (isNull(this.dialog)) {
         // collect widgets which are tagged to be moved to the dialog:
-        var i, c;
+        var c;
         var widgets = [];
         var optionsToolBar = EAction.getOptionsToolBar();
-        var children = optionsToolBar.children();
+        children = optionsToolBar.children();
         for (i = 0; i < children.length; ++i) {
             c = children[i];
             if (c["MoveToDialog"]===true) {
@@ -102,27 +120,37 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
         }
 
         // show dialog and move tool bar widgets to its layout:
-        this.dialog = WidgetFactory.createDialog(DrawBasedOnRectangle.includeBasePath, "DrawBasedOnRectangleDialog.ui");
-        this.dialog.windowTitle = this.getToolTitle();
-        this.dialog.windowIcon = new QIcon();
+        var formLayout = undefined;
+        if (isNull(this.dialogUiFile)) {
+            // auto create dialog:
+            this.dialog = WidgetFactory.createDialog(DrawBasedOnRectangle.includeBasePath, "DrawBasedOnRectangleDialog.ui");
+            this.dialog.windowTitle = this.getToolTitle();
+            this.dialog.windowIcon = new QIcon();
+            formLayout = this.dialog.findChild("FormLayout");
+        }
+        else {
+            this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile);
+            WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
+        }
 
-        // make sure options are stored in the same place as for dialog less tool:
-        //this.dialog.objectName = optionsToolBar.objectName;
-
-        var formLayout = this.dialog.findChild("FormLayout");
         for (i = 0; i < widgets.length; i++) {
-            if (isOfType(widgets[i], QCheckBox)) {
-                formLayout.addRow(new QWidget(formLayout), widgets[i]);
-                this.moveWidget(widgets[i], this.dialog);
-                continue;
-            }
+            if (isNull(this.dialogUiFile) && !isNull(formLayout)) {
+                if (isOfType(widgets[i], QCheckBox)) {
+                    formLayout.addRow(new QWidget(formLayout), widgets[i]);
+                    this.moveWidget(widgets[i], this.dialog);
+                    continue;
+                }
 
-            // other widgets are moved to the dialog:
-            if (i<widgets.length-1) {
-                formLayout.addRow(widgets[i], widgets[i+1]);
-                this.moveWidget(widgets[i], this.dialog);
-                this.moveWidget(widgets[i+1], this.dialog);
-                i++;
+                // other widgets are moved to the dialog:
+                if (i<widgets.length-1) {
+                    formLayout.addRow(widgets[i], widgets[i+1]);
+                    this.moveWidget(widgets[i], this.dialog);
+                    this.moveWidget(widgets[i+1], this.dialog);
+                    i++;
+                }
+            }
+            else {
+                widgets[i].destroy();
             }
         }
 
@@ -149,10 +177,54 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
         }
     }
 
+    // give focus to control with custom property 'DefaultFocus':
+    children = this.dialog.children();
+    for (i=0; i<children.length; i++) {
+        if (children[i].property("DefaultFocus")===true) {
+            children[i].setFocus();
+            if (isFunction(children[i].selectAll)) {
+                // select all text in line edits:
+                children[i].selectAll();
+            }
+            break;
+        }
+    }
+
     var ret = this.dialog.exec();
+
     WidgetFactory.saveState(this.dialog, "Shape");
     WidgetFactory.saveState(this.dialog, this.settingsGroup);
+
+    //var appWin = EAction.getMainWindow();
+    //appWin.setFocus();
+    var view = EAction.getGraphicsView();
+    if (!isNull(view)) {
+        view.setFocus();
+    }
+
+    //this.updatePreview();
+    //this.simulateMouseMoveEvent();
+
     return ret;
+};
+
+DrawBasedOnRectangle.prototype.validateNumber = function(n) {
+    this.enableOk(!isNaN(n));
+};
+
+DrawBasedOnRectangle.prototype.validatePositiveNumber = function(n) {
+    this.enableOk(!isNaN(n) && n>=0);
+};
+
+DrawBasedOnRectangle.prototype.validateNumberGreaterZero = function(n) {
+    this.enableOk(!isNaN(n) && n>0);
+};
+
+DrawBasedOnRectangle.prototype.enableOk = function(onOff) {
+    if (!isNull(this.dialog)) {
+        var buttonBox = this.dialog.findChild("ButtonBox");
+        buttonBox.button(QDialogButtonBox.Ok).enabled = onOff;
+    }
 };
 
 DrawBasedOnRectangle.prototype.moveWidget = function(widget, dialog) {
@@ -206,20 +278,6 @@ DrawBasedOnRectangle.prototype.initUiOptions = function(resume, restoreFromSetti
     refPointCombo.currentIndex = this.referencePointIndex;
 };
 
-DrawBasedOnRectangle.prototype.setState = function(state) {
-    EAction.prototype.setState.call(this, state);
-
-    this.setCrosshairCursor();
-    this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-
-    var appWin = RMainWindowQt.getMainWindow();
-    var trPosition = qsTr("Position");
-    this.setCommandPrompt(trPosition);
-    this.setLeftMouseTip(trPosition);
-    this.setRightMouseTip(EAction.trCancel);
-    EAction.showSnapTools();
-};
-
 DrawBasedOnRectangle.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
     this.pos = event.getModelPosition();
@@ -247,6 +305,12 @@ DrawBasedOnRectangle.prototype.keyPressEvent = function(event) {
 
     EAction.prototype.keyPressEvent(event);
 };
+
+//DrawBasedOnRectangle.prototype.keyReleaseEvent = function(event) {
+//    EAction.prototype.keyReleaseEvent(event);
+//    // update preview:
+//    this.simulateMouseMoveEvent();
+//};
 
 DrawBasedOnRectangle.prototype.getOperation = function(preview) {
     var i;
@@ -310,16 +374,19 @@ DrawBasedOnRectangle.prototype.getShapes = function(corners) {
 
 DrawBasedOnRectangle.prototype.slotWidthChanged = function(value) {
     this.width = value;
+    this.validateNumberGreaterZero(this.width);
     this.updatePreview(true);
 };
 
 DrawBasedOnRectangle.prototype.slotHeightChanged = function(value) {
     this.height = value;
+    this.validateNumberGreaterZero(this.height);
     this.updatePreview(true);
 };
 
 DrawBasedOnRectangle.prototype.slotAngleChanged = function(value) {
     this.angle = value;
+    this.validateNumber(this.angle);
     this.updatePreview(true);
 };
 

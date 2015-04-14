@@ -29,8 +29,8 @@ function ShapeRectangleSize(guiAction) {
     DrawBasedOnRectangle.call(this, guiAction);
 
     this.createPolyline = false;
-    //this.includeBasePath = ShapeRectangleSize.includeBasePath;
-    //this.dialogUiFile = "ShapeRectangleSizeDialog.ui";
+    this.includeBasePath = ShapeRectangleSize.includeBasePath;
+    this.dialogUiFile = "ShapeRectangleSizeDialog.ui";
 
     this.setUiOptions(["../Shape.ui", "ShapeRectangleSize.ui"]);
 }

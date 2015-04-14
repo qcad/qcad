@@ -929,6 +929,62 @@
                 
     } else 
 
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RLayer */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RLayer*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLayer*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type RLayer*.",
+                               context);                    
+                    }
+                    RLayer& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RLayer
+                    * cppResult =
+                    new
+                    RLayer
+                    (
+                    a0
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
     {
        return REcmaHelper::throwError(
        QString::fromLatin1("RLayer(): no matching constructor found."),

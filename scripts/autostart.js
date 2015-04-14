@@ -612,8 +612,6 @@ function main() {
         include(files[i]);
     }
 
-    //RMainWindow* appWin = RMainWindow::getMainWindow();
-
     RPluginLoader.postInitPlugins(RPluginInterface.AddOnsInitialized);
 
     addActionsToWidgets();
@@ -700,6 +698,8 @@ function main() {
     //action.setChecked(statusBar.visible);
 
     RPluginLoader.postInitPlugins(RPluginInterface.AllDone);
+
+    appWin.setFocus();
 
     if (!RSettings.hasQuitFlag()) {
         // start and enter the main application loop:

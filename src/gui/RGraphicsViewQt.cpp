@@ -392,3 +392,15 @@ void RGraphicsViewQt::emitUpdateTextLabel(const RTextLabel& textLabel) {
         gbPainter.end();
     }
 }
+
+void RGraphicsViewQt::simulateMouseMoveEvent() {
+    if (!lastKnownScreenPosition.isValid() && isVisible()) {
+        QPoint p = mapFromGlobal(QCursor::pos());
+        if (p.x()>width() || p.x()<0 || p.y()<0 || p.y()>height()) {
+            p = QPoint(width()/2, height()/2);
+        }
+        lastKnownScreenPosition = RVector(p.x(), p.y());
+        lastKnownModelPosition = mapFromView(lastKnownScreenPosition);
+    }
+    RGraphicsView::simulateMouseMoveEvent();
+}

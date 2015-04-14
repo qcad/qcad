@@ -28,6 +28,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="RLineweight :: Weight000"
         isConst="false" />
       </variant>
+      <variant>
+        <arg type="RLayer &amp;" typeName="RLayer" name="other"
+        isConst="true" />
+      </variant>
     </constructor>
     <method name="init" cppName="init" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

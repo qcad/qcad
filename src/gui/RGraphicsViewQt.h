@@ -86,6 +86,8 @@ public:
     virtual void emitUpdateSnapInfo(RSnap* snap, RSnapRestriction* restriction);
     virtual void emitUpdateTextLabel(const RTextLabel& textLabel);
 
+    virtual void simulateMouseMoveEvent();
+
 signals:
     void drop(QDropEvent* event);
     void dragEnter(QDragEnterEvent* event);
