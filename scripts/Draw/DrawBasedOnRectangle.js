@@ -124,13 +124,19 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
         if (isNull(this.dialogUiFile)) {
             // auto create dialog:
             this.dialog = WidgetFactory.createDialog(DrawBasedOnRectangle.includeBasePath, "DrawBasedOnRectangleDialog.ui");
-            this.dialog.windowTitle = this.getToolTitle();
-            this.dialog.windowIcon = new QIcon();
             formLayout = this.dialog.findChild("FormLayout");
         }
         else {
             this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile);
             WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
+        }
+        this.dialog.windowTitle = this.getToolTitle();
+        var guiAction = this.getGuiAction();
+        if (!isNull(guiAction)) {
+            this.dialog.windowIcon = guiAction.icon;
+        }
+        else {
+            this.dialog.windowIcon = new QIcon();
         }
 
         for (i = 0; i < widgets.length; i++) {
