@@ -18,6 +18,7 @@
  */
 
 include("../Save/Save.js");
+include("scripts/File/NewFile/NewFile.js");
 
 /**
  * This action handles all user interaction to save drawings under a new name.
@@ -49,16 +50,15 @@ SaveAs.initPreferences = function(pageWidget, calledByPrefDialog, document) {
 
 SaveAs.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
+    var appWin = EAction.getMainWindow();
 
     var nameFilters = RFileExporterRegistry.getFilterStrings();
     if (nameFilters.length===0) {
-        var appWin = EAction.getMainWindow();
         EAction.handleUserWarning(qsTr("No export filters have been found. Aborting..."));
         this.terminate();
         return;
     }
 
-    var appWin = EAction.getMainWindow();
     var lastSaveAsFileDir = RSettings.getStringValue("SaveAs/Path", QDir.homePath());
     var defaultNameFilter = RSettings.getStringValue("SaveAs/Filter", "");
     var fileDialog = new QFileDialog(appWin);
@@ -129,6 +129,7 @@ SaveAs.prototype.beginEvent = function() {
     var mdiArea = EAction.getMdiArea();
     if (!isNull(mdiArea)) {
         mdiArea.updateTabBar();
+        NewFile.updateTitle();
     }
 
     this.terminate();
