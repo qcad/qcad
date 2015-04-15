@@ -355,11 +355,17 @@ RS::Ending RLine::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
 
 void RLine::trimStartPoint(const RVector& p) {
     RVector tp = getClosestPointOnShape(p, false);
+    if (!tp.isValid()) {
+        return;
+    }
     setStartPoint(tp);
 }
 
 void RLine::trimEndPoint(const RVector& p) {
     RVector tp = getClosestPointOnShape(p, false);
+    if (!tp.isValid()) {
+        return;
+    }
     setEndPoint(tp);
 }
 
