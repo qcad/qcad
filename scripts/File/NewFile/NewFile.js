@@ -254,6 +254,14 @@ NewFile.updateTitle = function(mdiChild) {
     var appWin = EAction.getMainWindow();
     var tabBar = appWin.getTabBar();
 
+    if (isNull(mdiChild)) {
+        mdiChild = appWin.getMdiChild();
+    }
+
+    if (isNull(mdiChild)) {
+        return;
+    }
+
     var document = mdiChild.getDocument();
     var fileName = document.getFileName();
     var title = undefined;
