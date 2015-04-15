@@ -29,6 +29,7 @@ function InsertBlock(guiAction) {
     BlockInsert.call(this, guiAction);
     this.setUiOptions("InsertBlock.ui");
 
+    //this.dialog = undefined;
     this.blockReferenceData = new RBlockReferenceData();
     this.blockReferenceData.setPosition(new RVector(0.0,0.0));
     this.blockReferenceData.setScaleFactors(new RVector(1.0,1.0));
@@ -86,6 +87,14 @@ InsertBlock.prototype.beginEvent = function() {
     this.setState(InsertBlock.State.SettingPosition);
 };
 
+InsertBlock.prototype.finishEvent = function() {
+//    if (!isNull(this.dialog)) {
+//        this.dialog.destroy();
+//    }
+    EAction.prototype.finishEvent.call(this);
+};
+
+
 InsertBlock.prototype.initUiOptions = function(resume, optionsToolBar) {
     BlockInsert.prototype.initUiOptions.call(this, resume, optionsToolBar);
     //var optionsToolBar = EAction.getOptionsToolBar();
@@ -137,19 +146,43 @@ InsertBlock.prototype.getOperation = function(preview) {
         return undefined;
     }
 
+    var blockId = this.blockReferenceData.getReferencedBlockId();
+    var ids = doc.queryBlockEntities(blockId);
+
+    var bd = this.blockReferenceData;
+
+    if (preview) {
+        bd = bd.copy();
+
+        // reduce columns / rows for preview:
+        if (bd.getColumnCount()>1 || bd.getRowCount()>1) {
+            // max insertions:
+            var max = RSettings.getPreviewEntities() / ids.length;
+            // reduce rows:
+            if (max<2) {
+                bd.setColumnCount(1);
+                bd.setRowCount(1);
+            }
+            else if (max<bd.getColumnCount()) {
+                bd.setColumnCount(max);
+                bd.setRowCount(1);
+            }
+            else {
+                bd.setRowCount(max/bd.getColumnCount());
+            }
+        }
+    }
+
     var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
-
     var blockRef = new RBlockReferenceEntity(
         doc,
-        this.blockReferenceData
+        bd
     );
     op.addObject(blockRef);
 
     // create attribute for each attribute definition in block:
     var blockRefId = doc.getStorage().getMaxObjectId();
-    var blockId = this.blockReferenceData.getReferencedBlockId();
-    var ids = doc.queryBlockEntities(blockId);
     for (var i=0; i<ids.length; i++) {
         var id = ids[i];
         var e = doc.queryEntity(id);
@@ -242,6 +275,44 @@ InsertBlock.prototype.slotFlipHorizontal = function() {
 InsertBlock.prototype.slotFlipVertical = function() {
     this.blockReferenceData.flipVertical();
     this.updateOptionsToolBar();
+};
+
+InsertBlock.prototype.slotSingle = function() {
+    this.blockReferenceData.setColumnCount(1);
+    this.blockReferenceData.setRowCount(1);
+    this.blockReferenceData.setColumnSpacing(0);
+    this.blockReferenceData.setRowSpacing(0);
+    this.updatePreview();
+};
+
+InsertBlock.prototype.slotArray = function() {
+    // show array options in dialog:
+    var dialog = WidgetFactory.createDialog(InsertBlock.includeBasePath, "InsertBlockDialog.ui");
+    WidgetFactory.restoreState(dialog, this.settingsGroup, this);
+
+    dialog.exec();
+    WidgetFactory.saveState(dialog, this.settingsGroup);
+    dialog.destroy();
+};
+
+InsertBlock.prototype.slotColumnCountChanged = function(value) {
+    this.blockReferenceData.setColumnCount(parseInt(value));
+    this.updatePreview(true);
+};
+
+InsertBlock.prototype.slotRowCountChanged = function(value) {
+    this.blockReferenceData.setRowCount(parseInt(value));
+    this.updatePreview(true);
+};
+
+InsertBlock.prototype.slotColumnSpacingChanged = function(value) {
+    this.blockReferenceData.setColumnSpacing(value);
+    this.updatePreview(true);
+};
+
+InsertBlock.prototype.slotRowSpacingChanged = function(value) {
+    this.blockReferenceData.setRowSpacing(value);
+    this.updatePreview(true);
 };
 
 InsertBlock.prototype.updateOptionsToolBar = function() {

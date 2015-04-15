@@ -32,8 +32,9 @@ include("Draw.js");
 function DrawBasedOnRectangle(guiAction) {
     EAction.call(this, guiAction);
 
+    this.dialogUiFile = undefined;
     this.useDialog = RSettings.getBoolValue("DrawBasedOnRectangle/UseDialog", false);
-    //this.dialogUiFile = "";
+    this.dialog = undefined;
     this.pos = undefined;
     this.width = 1;
     this.height = 1;

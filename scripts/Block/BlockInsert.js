@@ -45,6 +45,7 @@ BlockInsert.prototype.showAttributeControls = function(show) {
     var optionsToolBar = EAction.getOptionsToolBar();
     optionsToolBar.findChild("AttributeLabelAction").visible = show;
     optionsToolBar.findChild("AttributeTagAction").visible = show;
+    optionsToolBar.findChild("AttributeEqualLabelAction").visible = show;
     optionsToolBar.findChild("AttributeValueAction").visible = show;
     optionsToolBar.findChild("AttributeSeparatorAction").visible = show;
 };
