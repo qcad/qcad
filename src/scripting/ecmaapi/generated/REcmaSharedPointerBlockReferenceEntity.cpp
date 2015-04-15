@@ -100,6 +100,22 @@
             
             REcmaHelper::registerFunction(&engine, proto, setRotation, "setRotation");
             
+            REcmaHelper::registerFunction(&engine, proto, getColumnCount, "getColumnCount");
+            
+            REcmaHelper::registerFunction(&engine, proto, setColumnCount, "setColumnCount");
+            
+            REcmaHelper::registerFunction(&engine, proto, getRowCount, "getRowCount");
+            
+            REcmaHelper::registerFunction(&engine, proto, setRowCount, "setRowCount");
+            
+            REcmaHelper::registerFunction(&engine, proto, getColumnSpacing, "getColumnSpacing");
+            
+            REcmaHelper::registerFunction(&engine, proto, setColumnSpacing, "setColumnSpacing");
+            
+            REcmaHelper::registerFunction(&engine, proto, getRowSpacing, "getRowSpacing");
+            
+            REcmaHelper::registerFunction(&engine, proto, setRowSpacing, "setRowSpacing");
+            
             REcmaHelper::registerFunction(&engine, proto, setReferencedBlockId, "setReferencedBlockId");
             
             REcmaHelper::registerFunction(&engine, proto, getReferencedBlockId, "getReferencedBlockId");
@@ -200,6 +216,22 @@
             
             ctor.setProperty("PropertyRotation",
                 qScriptValueFromValue(&engine, RBlockReferenceEntity::PropertyRotation),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyColumnCount",
+                qScriptValueFromValue(&engine, RBlockReferenceEntity::PropertyColumnCount),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyRowCount",
+                qScriptValueFromValue(&engine, RBlockReferenceEntity::PropertyRowCount),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyColumnSpacing",
+                qScriptValueFromValue(&engine, RBlockReferenceEntity::PropertyColumnSpacing),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyRowSpacing",
+                qScriptValueFromValue(&engine, RBlockReferenceEntity::PropertyRowSpacing),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -1722,6 +1754,422 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setRotation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlockReferenceEntity::getColumnCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getColumnCount", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getColumnCount";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("getColumnCount", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getColumnCount();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getColumnCount().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getColumnCount", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlockReferenceEntity::setColumnCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setColumnCount", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::setColumnCount";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("setColumnCount", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setColumnCount(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setColumnCount().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setColumnCount", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlockReferenceEntity::getRowCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getRowCount", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getRowCount";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("getRowCount", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getRowCount();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getRowCount().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getRowCount", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlockReferenceEntity::setRowCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setRowCount", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::setRowCount";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("setRowCount", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setRowCount(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setRowCount().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setRowCount", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlockReferenceEntity::getColumnSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getColumnSpacing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getColumnSpacing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("getColumnSpacing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getColumnSpacing();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getColumnSpacing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getColumnSpacing", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlockReferenceEntity::setColumnSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setColumnSpacing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::setColumnSpacing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("setColumnSpacing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setColumnSpacing(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setColumnSpacing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setColumnSpacing", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlockReferenceEntity::getRowSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getRowSpacing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getRowSpacing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("getRowSpacing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getRowSpacing();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getRowSpacing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getRowSpacing", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlockReferenceEntity::setRowSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setRowSpacing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::setRowSpacing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceEntity* self = 
+                        getSelf("setRowSpacing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setRowSpacing(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setRowSpacing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setRowSpacing", context, engine);
             return result;
         }
          QScriptValue

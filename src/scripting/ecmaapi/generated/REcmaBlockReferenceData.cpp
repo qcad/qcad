@@ -70,6 +70,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getBoundingBoxes, "getBoundingBoxes");
+            
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
             REcmaHelper::registerFunction(&engine, proto, getInternalReferencePoints, "getInternalReferencePoints");
@@ -114,11 +116,31 @@
             
             REcmaHelper::registerFunction(&engine, proto, setRotation, "setRotation");
             
+            REcmaHelper::registerFunction(&engine, proto, getColumnCount, "getColumnCount");
+            
+            REcmaHelper::registerFunction(&engine, proto, setColumnCount, "setColumnCount");
+            
+            REcmaHelper::registerFunction(&engine, proto, getRowCount, "getRowCount");
+            
+            REcmaHelper::registerFunction(&engine, proto, setRowCount, "setRowCount");
+            
+            REcmaHelper::registerFunction(&engine, proto, getColumnSpacing, "getColumnSpacing");
+            
+            REcmaHelper::registerFunction(&engine, proto, setColumnSpacing, "setColumnSpacing");
+            
+            REcmaHelper::registerFunction(&engine, proto, getRowSpacing, "getRowSpacing");
+            
+            REcmaHelper::registerFunction(&engine, proto, setRowSpacing, "setRowSpacing");
+            
             REcmaHelper::registerFunction(&engine, proto, update, "update");
             
             REcmaHelper::registerFunction(&engine, proto, queryEntity, "queryEntity");
             
             REcmaHelper::registerFunction(&engine, proto, applyTransformationTo, "applyTransformationTo");
+            
+            REcmaHelper::registerFunction(&engine, proto, getColumnRowOffset, "getColumnRowOffset");
+            
+            REcmaHelper::registerFunction(&engine, proto, applyColumnRowOffsetTo, "applyColumnRowOffsetTo");
             
             REcmaHelper::registerFunction(&engine, proto, mapToBlock, "mapToBlock");
             
@@ -313,6 +335,680 @@
         
     } else 
 
+    if( context->argumentCount() ==
+        5
+                && (
+                
+                        context->argument(
+                        0
+                        ).isNumber()
+                ) /* type: RBlock::Id */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        2
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        3
+                        ).isNumber()
+                ) /* type: double */
+            
+                && (
+                
+                        context->argument(
+                        4
+                        ).isNumber()
+                ) /* type: int */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RBlock::Id
+                    a0 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if (ap2 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 2 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a2 = 
+                    *ap2;
+                
+                    // argument isStandardType
+                    double
+                    a3 =
+                    (double)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a4 =
+                    (int)
+                    
+                    context->argument( 4 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // copyable class:
+            RBlockReferenceData
+                    cppResult(
+                    a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+                    );
+                
+            result = engine->newVariant(
+            context->thisObject(), qVariantFromValue(cppResult));
+        
+    } else 
+
+    if( context->argumentCount() ==
+        6
+                && (
+                
+                        context->argument(
+                        0
+                        ).isNumber()
+                ) /* type: RBlock::Id */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        2
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        3
+                        ).isNumber()
+                ) /* type: double */
+            
+                && (
+                
+                        context->argument(
+                        4
+                        ).isNumber()
+                ) /* type: int */
+            
+                && (
+                
+                        context->argument(
+                        5
+                        ).isNumber()
+                ) /* type: int */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RBlock::Id
+                    a0 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if (ap2 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 2 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a2 = 
+                    *ap2;
+                
+                    // argument isStandardType
+                    double
+                    a3 =
+                    (double)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a4 =
+                    (int)
+                    
+                    context->argument( 4 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a5 =
+                    (int)
+                    
+                    context->argument( 5 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // copyable class:
+            RBlockReferenceData
+                    cppResult(
+                    a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5
+                    );
+                
+            result = engine->newVariant(
+            context->thisObject(), qVariantFromValue(cppResult));
+        
+    } else 
+
+    if( context->argumentCount() ==
+        7
+                && (
+                
+                        context->argument(
+                        0
+                        ).isNumber()
+                ) /* type: RBlock::Id */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        2
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        3
+                        ).isNumber()
+                ) /* type: double */
+            
+                && (
+                
+                        context->argument(
+                        4
+                        ).isNumber()
+                ) /* type: int */
+            
+                && (
+                
+                        context->argument(
+                        5
+                        ).isNumber()
+                ) /* type: int */
+            
+                && (
+                
+                        context->argument(
+                        6
+                        ).isNumber()
+                ) /* type: double */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RBlock::Id
+                    a0 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if (ap2 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 2 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a2 = 
+                    *ap2;
+                
+                    // argument isStandardType
+                    double
+                    a3 =
+                    (double)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a4 =
+                    (int)
+                    
+                    context->argument( 4 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a5 =
+                    (int)
+                    
+                    context->argument( 5 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a6 =
+                    (double)
+                    
+                    context->argument( 6 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // copyable class:
+            RBlockReferenceData
+                    cppResult(
+                    a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5
+        ,
+    a6
+                    );
+                
+            result = engine->newVariant(
+            context->thisObject(), qVariantFromValue(cppResult));
+        
+    } else 
+
+    if( context->argumentCount() ==
+        8
+                && (
+                
+                        context->argument(
+                        0
+                        ).isNumber()
+                ) /* type: RBlock::Id */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        2
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        3
+                        ).isNumber()
+                ) /* type: double */
+            
+                && (
+                
+                        context->argument(
+                        4
+                        ).isNumber()
+                ) /* type: int */
+            
+                && (
+                
+                        context->argument(
+                        5
+                        ).isNumber()
+                ) /* type: int */
+            
+                && (
+                
+                        context->argument(
+                        6
+                        ).isNumber()
+                ) /* type: double */
+            
+                && (
+                
+                        context->argument(
+                        7
+                        ).isNumber()
+                ) /* type: double */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RBlock::Id
+                    a0 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if (ap2 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 2 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a2 = 
+                    *ap2;
+                
+                    // argument isStandardType
+                    double
+                    a3 =
+                    (double)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a4 =
+                    (int)
+                    
+                    context->argument( 4 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a5 =
+                    (int)
+                    
+                    context->argument( 5 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a6 =
+                    (double)
+                    
+                    context->argument( 6 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a7 =
+                    (double)
+                    
+                    context->argument( 7 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // copyable class:
+            RBlockReferenceData
+                    cppResult(
+                    a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5
+        ,
+    a6
+        ,
+    a7
+                    );
+                
+            result = engine->newVariant(
+            context->thisObject(), qVariantFromValue(cppResult));
+        
+    } else 
+
     {
        return REcmaHelper::throwError(
        QString::fromLatin1("RBlockReferenceData(): no matching constructor found."),
@@ -361,6 +1057,87 @@
 
     // public methods:
      QScriptValue
+        REcmaBlockReferenceData::getBoundingBoxes
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::getBoundingBoxes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::getBoundingBoxes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("getBoundingBoxes", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RBox >'
+    QList < RBox > cppResult =
+        
+               self->getBoundingBoxes();
+        // return type: QList < RBox >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RBox >'
+    QList < RBox > cppResult =
+        
+               self->getBoundingBoxes(a0);
+        // return type: QList < RBox >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.getBoundingBoxes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::getBoundingBoxes", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaBlockReferenceData::getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2418,6 +3195,422 @@
             return result;
         }
          QScriptValue
+        REcmaBlockReferenceData::getColumnCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::getColumnCount", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::getColumnCount";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("getColumnCount", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getColumnCount();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.getColumnCount().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::getColumnCount", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::setColumnCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::setColumnCount", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::setColumnCount";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("setColumnCount", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setColumnCount(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.setColumnCount().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::setColumnCount", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::getRowCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::getRowCount", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::getRowCount";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("getRowCount", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getRowCount();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.getRowCount().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::getRowCount", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::setRowCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::setRowCount", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::setRowCount";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("setRowCount", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setRowCount(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.setRowCount().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::setRowCount", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::getColumnSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::getColumnSpacing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::getColumnSpacing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("getColumnSpacing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getColumnSpacing();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.getColumnSpacing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::getColumnSpacing", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::setColumnSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::setColumnSpacing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::setColumnSpacing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("setColumnSpacing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setColumnSpacing(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.setColumnSpacing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::setColumnSpacing", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::getRowSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::getRowSpacing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::getRowSpacing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("getRowSpacing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getRowSpacing();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.getRowSpacing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::getRowSpacing", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::setRowSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::setRowSpacing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::setRowSpacing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("setRowSpacing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setRowSpacing(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.setRowSpacing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::setRowSpacing", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaBlockReferenceData::update
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2616,6 +3809,170 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlockReferenceData::applyTransformationTo", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::getColumnRowOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::getColumnRowOffset", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::getColumnRowOffset";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("getColumnRowOffset", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getColumnRowOffset(a0
+        ,
+    a1);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.getColumnRowOffset().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::getColumnRowOffset", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::applyColumnRowOffsetTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::applyColumnRowOffsetTo", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::applyColumnRowOffsetTo";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("applyColumnRowOffsetTo", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntity */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 0 is not of type REntity*.",
+                               context);                    
+                    }
+                    REntity& a0 = *ap0;
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a2 =
+                    (int)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->applyColumnRowOffsetTo(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.applyColumnRowOffsetTo().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::applyColumnRowOffsetTo", context, engine);
             return result;
         }
          QScriptValue

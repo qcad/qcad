@@ -97,6 +97,9 @@
         growToInclude
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        growToIncludeBoxes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         growToIncludeBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

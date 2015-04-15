@@ -129,6 +129,12 @@
         
     
     
+      void simulateMouseMoveEvent(
+                
+            );
+        
+    
+    
       QSize sizeHint(
                 
             );
@@ -387,11 +393,6 @@
     
       void setPrintPointSize(
                 const RVector & s
-            );
-        
-    
-      void simulateMouseMoveEvent(
-                
             );
         
     

@@ -141,9 +141,6 @@
         setPrintPointSize
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        simulateMouseMoveEvent
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         setTextHeightThresholdOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -283,6 +280,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         emitUpdateTextLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        simulateMouseMoveEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

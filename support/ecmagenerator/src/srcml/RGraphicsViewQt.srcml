@@ -293,6 +293,13 @@ dir="./gui" filename="RGraphicsViewQt.h">
       <name>textLabel</name>
     </decl>
   </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
+    <name>void</name>
+  </type>
+  <name>simulateMouseMoveEvent</name>
+  <parameter_list>()</parameter_list>;</function_decl>
   <label>
   <name>signals</name>:</label>
   <function_decl>

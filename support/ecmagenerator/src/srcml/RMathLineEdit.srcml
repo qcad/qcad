@@ -384,6 +384,13 @@ dir="./gui" filename="RMathLineEdit.h">
     </type>
     <name>noEmit</name>
   </decl>;</decl_stmt>
+  <decl_stmt>
+  <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>noResultInToolTip</name>
+  </decl>;</decl_stmt>
   <comment type="line">//double defaultValue;</comment>
   <comment type="line">// QLabel*
   resultTip;</comment></private>}</block>;</class>

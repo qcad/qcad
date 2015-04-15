@@ -48,6 +48,9 @@
 
     // public methods:
     static  QScriptValue
+        getBoundingBoxes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -114,6 +117,30 @@
         setRotation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getColumnCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setColumnCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getRowCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setRowCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColumnSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setColumnSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getRowSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setRowSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         update
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -121,6 +148,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         applyTransformationTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColumnRowOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        applyColumnRowOffsetTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         mapToBlock

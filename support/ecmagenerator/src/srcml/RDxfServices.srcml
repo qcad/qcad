@@ -139,7 +139,8 @@ dir="./core" filename="RDxfServices.h">
       <name>QString</name>&amp;</type>
       <name>lTol</name>
     </decl>
-  </param>)</parameter_list>;</function_decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
     <name>void</name>

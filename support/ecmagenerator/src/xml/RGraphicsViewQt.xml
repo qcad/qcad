@@ -106,6 +106,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="textLabel" isConst="true" />
       </variant>
     </method>
+    <method name="simulateMouseMoveEvent"
+    cppName="simulateMouseMoveEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="sizeHint" cppName="sizeHint"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

@@ -148,8 +148,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, setPrintPointSize, "setPrintPointSize");
             
-            REcmaHelper::registerFunction(&engine, proto, simulateMouseMoveEvent, "simulateMouseMoveEvent");
-            
             REcmaHelper::registerFunction(&engine, proto, setTextHeightThresholdOverride, "setTextHeightThresholdOverride");
             
             REcmaHelper::registerFunction(&engine, proto, getTextHeightThresholdOverride, "getTextHeightThresholdOverride");
@@ -245,6 +243,8 @@
             REcmaHelper::registerFunction(&engine, proto, emitUpdateSnapInfo, "emitUpdateSnapInfo");
             
             REcmaHelper::registerFunction(&engine, proto, emitUpdateTextLabel, "emitUpdateTextLabel");
+            
+            REcmaHelper::registerFunction(&engine, proto, simulateMouseMoveEvent, "simulateMouseMoveEvent");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RGraphicsViewQt*>(), *proto);
@@ -2427,50 +2427,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewQt::setPrintPointSize", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsViewQt::simulateMouseMoveEvent
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsViewQt::simulateMouseMoveEvent", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::simulateMouseMoveEvent";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsViewQt* self = 
-                        getSelf("simulateMouseMoveEvent", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->simulateMouseMoveEvent();
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.simulateMouseMoveEvent().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::simulateMouseMoveEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -5186,6 +5142,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewQt::emitUpdateTextLabel", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::simulateMouseMoveEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::simulateMouseMoveEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::simulateMouseMoveEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("simulateMouseMoveEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->simulateMouseMoveEvent();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.simulateMouseMoveEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::simulateMouseMoveEvent", context, engine);
             return result;
         }
          QScriptValue REcmaGraphicsViewQt::toString

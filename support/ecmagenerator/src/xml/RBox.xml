@@ -127,6 +127,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="growToIncludeBoxes" cppName="growToIncludeBoxes"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; RBox &gt; &amp;"
+        typeName="QList &lt; RBox &gt;" name="others"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="growToIncludeBox" cppName="growToIncludeBox"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
