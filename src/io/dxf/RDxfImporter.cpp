@@ -641,7 +641,9 @@ void RDxfImporter::addInsert(const DL_InsertData& data) {
                             blockId,
                             insertionPoint,
                             scale,
-                            RMath::deg2rad(data.angle)
+                            RMath::deg2rad(data.angle),
+                            data.cols, data.rows,
+                            data.colSp, data.rowSp
                     )
             )
     );

@@ -47,8 +47,12 @@ protected:
 public:
     RBlockReferenceData();
     RBlockReferenceData(RBlock::Id referencedBlockId,
-            const RVector& position, const RVector& scaleFactors, double angle);
+            const RVector& position, const RVector& scaleFactors,
+            double angle,
+            int columnCount=1, int rowCount=1,
+            double columnSpacing=0, double rowSpacing=0);
 
+    virtual QList<RBox> getBoundingBoxes(bool ignoreEmpty=false) const;
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual QList<RVector> getInternalReferencePoints(
@@ -100,19 +104,54 @@ public:
     }
     void setRotation(double r);
 
+    int getColumnCount() const {
+        return columnCount;
+    }
+    void setColumnCount(int c) {
+        columnCount = c;
+    }
+
+    int getRowCount() const {
+        return rowCount;
+    }
+    void setRowCount(int c) {
+        rowCount = c;
+    }
+
+    double getColumnSpacing() const {
+        return columnSpacing;
+    }
+    void setColumnSpacing(double s) {
+        columnSpacing = s;
+    }
+
+    double getRowSpacing() const {
+        return rowSpacing;
+    }
+    void setRowSpacing(double s) {
+        rowSpacing = s;
+    }
+
     virtual void update() const;
     virtual void update(RObject::Id entityId) const;
 
     QSharedPointer<REntity> queryEntity(REntity::Id entityId) const;
     bool applyTransformationTo(REntity& entity) const;
+    RVector getColumnRowOffset(int col, int row) const;
+    void applyColumnRowOffsetTo(REntity& entity, int col, int row) const;
     RVector mapToBlock(const RVector& v) const;
+
 
 private:
     mutable RBlock::Id referencedBlockId;
     RVector position;
     RVector scaleFactors;
     double rotation;
-    mutable RBox boundingBox;
+    int columnCount;
+    int rowCount;
+    double columnSpacing;
+    double rowSpacing;
+    mutable QList<RBox> boundingBoxes;
     mutable QMap<REntity::Id, QSharedPointer<REntity> > cache;
 };
 

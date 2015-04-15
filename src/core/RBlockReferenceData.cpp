@@ -21,7 +21,12 @@
 #include "RDocument.h"
 
 RBlockReferenceData::RBlockReferenceData() :
-    referencedBlockId(RBlock::INVALID_ID), rotation(0) {
+    referencedBlockId(RBlock::INVALID_ID),
+    rotation(0),
+    columnCount(1),
+    rowCount(1),
+    columnSpacing(0),
+    rowSpacing(0) {
 }
 
 RBlockReferenceData::RBlockReferenceData(RDocument* document,
@@ -32,9 +37,17 @@ RBlockReferenceData::RBlockReferenceData(RDocument* document,
 
 RBlockReferenceData::RBlockReferenceData(
         RBlock::Id referencedBlockId, const RVector& position,
-        const RVector& scaleFactors, double rotation) :
+        const RVector& scaleFactors, double rotation,
+        int columnCount, int rowCount,
+        double columnSpacing, double rowSpacing) :
         referencedBlockId(referencedBlockId),
-        position(position), scaleFactors(scaleFactors), rotation(rotation) {
+        position(position),
+        scaleFactors(scaleFactors),
+        rotation(rotation),
+        columnCount(columnCount),
+        rowCount(rowCount),
+        columnSpacing(columnSpacing),
+        rowSpacing(rowSpacing) {
 }
 
 void RBlockReferenceData::setReferencedBlockName(const QString& blockName) {
@@ -73,21 +86,31 @@ RVector RBlockReferenceData::getVectorTo(
         return RVector::invalid;
     }
 
-    QSet<REntity::Id> ids =
-        document->queryBlockEntities(referencedBlockId);
+    QSet<REntity::Id> ids = document->queryBlockEntities(referencedBlockId);
     QSet<REntity::Id>::iterator it;
     double minDist = RMAXDOUBLE;
     RVector res(RVector::invalid);
-    for (it = ids.begin(); it != ids.end(); it++) {
-        QSharedPointer<REntity> entity = queryEntity(*it);
-        if (entity.isNull()) {
-            continue;
-        }
-        RVector v = entity->getVectorTo(point, limited);
-        double dist = v.getMagnitude();
-        if (dist < minDist) {
-            minDist = dist;
-            res = v;
+
+    // TODO: narrow down col / row using bounding boxes
+
+    for (int col=0; col<columnCount; col++) {
+        for (int row=0; row<rowCount; row++) {
+            for (it = ids.begin(); it != ids.end(); it++) {
+                QSharedPointer<REntity> entity = queryEntity(*it);
+                if (entity.isNull()) {
+                    continue;
+                }
+                if (col!=0 || row!=0) {
+                    entity = QSharedPointer<REntity>(entity->clone());
+                    applyColumnRowOffsetTo(*entity, col, row);
+                }
+                RVector v = entity->getVectorTo(point, limited);
+                double dist = v.getMagnitude();
+                if (dist < minDist) {
+                    minDist = dist;
+                    res = v;
+                }
+            }
         }
     }
 
@@ -117,14 +140,22 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
         document->queryBlockEntities(referencedBlockId);
     QSet<REntity::Id>::iterator it;
     double minDist = RMAXDOUBLE;
-    for (it = ids.begin(); it != ids.end(); it++) {
-        QSharedPointer<REntity> entity = queryEntity(*it);
-        if (entity.isNull()) {
-            continue;
-        }
-        double dist = entity->getDistanceTo(point, limited, range, draft, strictRange);
-        if (RMath::isNormal(dist) && dist < minDist) {
-            minDist = dist;
+    for (int col=0; col<columnCount; col++) {
+        for (int row=0; row<rowCount; row++) {
+            for (it = ids.begin(); it != ids.end(); it++) {
+                QSharedPointer<REntity> entity = queryEntity(*it);
+                if (entity.isNull()) {
+                    continue;
+                }
+                if (col!=0 || row!=0) {
+                    entity = QSharedPointer<REntity>(entity->clone());
+                    applyColumnRowOffsetTo(*entity, col, row);
+                }
+                double dist = entity->getDistanceTo(point, limited, range, draft, strictRange);
+                if (RMath::isNormal(dist) && dist < minDist) {
+                    minDist = dist;
+                }
+            }
         }
     }
 
@@ -133,28 +164,28 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
     return minDist;
 }
 
-RBox RBlockReferenceData::getBoundingBox(bool ignoreEmpty) const {
-    if (boundingBox.isValid()) {
-        return boundingBox;
+QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
+    if (!boundingBoxes.isEmpty()) {
+        return boundingBoxes;
     }
 
     if (document == NULL) {
         qWarning() << "RBlockReferenceData::getBoundingBox: document is NULL";
-        return RBox();
+        return QList<RBox>();
     }
 
     static int recursionDepth=0;
     if (recursionDepth++>16) {
         recursionDepth--;
-        qWarning() << "RBlockReferenceData::getBoundingBox: "
+        qWarning() << "RBlockReferenceData::getBoundingBoxes: "
             << "maximum recursion depth reached: block: " << getBlockName();
         groundReferencedBlockId();
-        return RBox();
+        return QList<RBox>();
     }
 
-    QSet<REntity::Id> ids =
-        document->queryBlockEntities(referencedBlockId);
+    QSet<REntity::Id> ids = document->queryBlockEntities(referencedBlockId);
 
+    RBox baseBBox;
     QSet<REntity::Id>::iterator it;
     for (it = ids.begin(); it != ids.end(); it++) {
         QSharedPointer<REntity> entity = queryEntity(*it);
@@ -163,12 +194,34 @@ RBox RBlockReferenceData::getBoundingBox(bool ignoreEmpty) const {
         }
 
         RBox b = entity->getBoundingBox(ignoreEmpty);
-        boundingBox.growToInclude(b);
+        baseBBox.growToInclude(b);
+    }
+
+    if (columnCount==1 && rowCount==1) {
+        boundingBoxes.append(baseBBox);
+    }
+    else {
+        // add bounding boxes for rows and columns:
+        for (int col=0; col<columnCount; col++) {
+            for (int row=0; row<rowCount; row++) {
+                RVector offset = getColumnRowOffset(col, row);
+                RBox b = baseBBox;
+                b.c1 += offset;
+                b.c2 += offset;
+                boundingBoxes.append(b);
+            }
+        }
     }
 
     recursionDepth--;
 
-    return boundingBox;
+    return boundingBoxes;
+}
+
+RBox RBlockReferenceData::getBoundingBox(bool ignoreEmpty) const {
+    RBox ret;
+    ret.growToIncludeBoxes(getBoundingBoxes(ignoreEmpty));
+    return ret;
 }
 
 /**
@@ -187,6 +240,7 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId) c
 
         // always update selection status:
         e->setSelected(isSelected());
+
         return e;
     }
 
@@ -214,6 +268,23 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId) c
     cache.insert(entityId, entity);
 
     return entity;
+}
+
+RVector RBlockReferenceData::getColumnRowOffset(int col, int row) const {
+    if (col==0 && row==0) {
+        return RVector(0,0);
+    }
+
+    RVector offset(col*columnSpacing, row*rowSpacing);
+    offset.rotate(rotation);
+    return offset;
+}
+
+void RBlockReferenceData::applyColumnRowOffsetTo(REntity& entity, int col, int row) const {
+    if (col==0 && row==0) {
+        return;
+    }
+    entity.move(getColumnRowOffset(col, row));
 }
 
 bool RBlockReferenceData::applyTransformationTo(REntity& entity) const {
@@ -443,11 +514,11 @@ void RBlockReferenceData::setRotation(double r) {
 }
 
 void RBlockReferenceData::update() const {
-    boundingBox = RBox();
+    boundingBoxes.clear();
     cache.clear();
 }
 
 void RBlockReferenceData::update(REntity::Id entityId) const {
-    boundingBox = RBox();
+    boundingBoxes.clear();
     cache.remove(entityId);
 }

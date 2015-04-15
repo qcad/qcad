@@ -40,6 +40,10 @@ RPropertyTypeId RBlockReferenceEntity::PropertyScaleX;
 RPropertyTypeId RBlockReferenceEntity::PropertyScaleY;
 RPropertyTypeId RBlockReferenceEntity::PropertyScaleZ;
 RPropertyTypeId RBlockReferenceEntity::PropertyRotation;
+RPropertyTypeId RBlockReferenceEntity::PropertyColumnCount;
+RPropertyTypeId RBlockReferenceEntity::PropertyRowCount;
+RPropertyTypeId RBlockReferenceEntity::PropertyColumnSpacing;
+RPropertyTypeId RBlockReferenceEntity::PropertyRowSpacing;
 
 
 RBlockReferenceEntity::RBlockReferenceEntity(RDocument* document,
@@ -82,6 +86,10 @@ void RBlockReferenceEntity::init() {
     RBlockReferenceEntity::PropertyScaleY.generateId(typeid(RBlockReferenceEntity), QT_TRANSLATE_NOOP("REntity", "Scale"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RBlockReferenceEntity::PropertyScaleZ.generateId(typeid(RBlockReferenceEntity), QT_TRANSLATE_NOOP("REntity", "Scale"), QT_TRANSLATE_NOOP("REntity", "Z"));
     RBlockReferenceEntity::PropertyRotation.generateId(typeid(RBlockReferenceEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
+    RBlockReferenceEntity::PropertyColumnCount.generateId(typeid(RBlockReferenceEntity), "", QT_TRANSLATE_NOOP("REntity", "Columns"));
+    RBlockReferenceEntity::PropertyRowCount.generateId(typeid(RBlockReferenceEntity), "", QT_TRANSLATE_NOOP("REntity", "Rows"));
+    RBlockReferenceEntity::PropertyColumnSpacing.generateId(typeid(RBlockReferenceEntity), "", QT_TRANSLATE_NOOP("REntity", "Column Spacing"));
+    RBlockReferenceEntity::PropertyRowSpacing.generateId(typeid(RBlockReferenceEntity), "", QT_TRANSLATE_NOOP("REntity", "Row Spacing"));
 }
 
 QSet<RPropertyTypeId> RBlockReferenceEntity::getPropertyTypeIds() const {
@@ -164,6 +172,12 @@ bool RBlockReferenceEntity::setProperty(RPropertyTypeId propertyTypeId,
 
     ret = ret || RObject::setMember(data.rotation, value, PropertyRotation == propertyTypeId);
 
+    ret = ret || RObject::setMember(data.columnCount, value, PropertyColumnCount == propertyTypeId);
+    ret = ret || RObject::setMember(data.rowCount, value, PropertyRowCount == propertyTypeId);
+
+    ret = ret || RObject::setMember(data.columnSpacing, value, PropertyColumnSpacing == propertyTypeId);
+    ret = ret || RObject::setMember(data.rowSpacing, value, PropertyRowSpacing == propertyTypeId);
+
     if (propertyTypeId == PropertyReferencedBlock) {
         if (value.type() == QVariant::Int ||
             value.type() == QVariant::LongLong) {
@@ -236,8 +250,15 @@ QPair<QVariant, RPropertyAttributes> RBlockReferenceEntity::getProperty(
     } else if (propertyTypeId == PropertyScaleZ) {
         return qMakePair(QVariant(data.scaleFactors.z), RPropertyAttributes());
     } else if (propertyTypeId == PropertyRotation) {
-        return qMakePair(QVariant(data.rotation), 
-            RPropertyAttributes(RPropertyAttributes::Angle));
+        return qMakePair(QVariant(data.rotation),  RPropertyAttributes(RPropertyAttributes::Angle));
+    } else if (propertyTypeId == PropertyColumnCount) {
+        return qMakePair(QVariant(data.columnCount), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyRowCount) {
+        return qMakePair(QVariant(data.rowCount), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyColumnSpacing) {
+        return qMakePair(QVariant(data.columnSpacing), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyRowSpacing) {
+        return qMakePair(QVariant(data.rowSpacing), RPropertyAttributes());
     } else if (propertyTypeId == PropertyReferencedBlock) {
         if (humanReadable) {
             RDocument* document = getData().getDocument();
@@ -342,23 +363,38 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
     data.update();
 
     QSet<REntity::Id> ids = document->queryBlockEntities(data.referencedBlockId);
-//    QSet<REntity::Id> ids = document->queryBlockReferenceEntities(getId());
-    //QSet<REntity::Id> idsAttr = document->queryAttributes(objectId);
-    //ids.unite(idsAttr);
 
     QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
     int i;
     QList<REntity::Id>::iterator it;
-    for (it = list.begin(), i = 0; it != list.end(); it++, i++) {
-        if (preview && i>RSettings::getPreviewEntities()) {
-            break;
-        }
 
-        QSharedPointer<REntity> entity = data.queryEntity(*it);
-        if (entity.isNull()) {
-            continue;
+    for (int col=0; col<data.columnCount; col++) {
+        for (int row=0; row<data.rowCount; row++) {
+            for (it = list.begin(), i = 0; it != list.end(); it++, i++) {
+                if (preview && i>RSettings::getPreviewEntities()) {
+                    break;
+                }
+
+                QSharedPointer<REntity> entityBase = data.queryEntity(*it);
+                if (entityBase.isNull()) {
+                    continue;
+                }
+
+                QSharedPointer<REntity> entity;
+                if (col!=0 || row!=0) {
+                    entity = QSharedPointer<REntity>(entityBase->clone());
+                    data.applyColumnRowOffsetTo(*entity, col, row);
+//                    RVector offset(col*data.columnSpacing, row*data.rowSpacing);
+//                    offset.rotate(data.rotation);
+//                    entity->move(offset);
+                }
+                else {
+                    entity = entityBase;
+                }
+
+                e.exportEntity(*entity, preview, true, isSelected() || forceSelected);
+            }
         }
-        e.exportEntity(*entity, preview, true, isSelected() || forceSelected);
     }
 
     // too slow:

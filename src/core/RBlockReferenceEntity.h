@@ -57,6 +57,10 @@ public:
     static RPropertyTypeId PropertyScaleY;
     static RPropertyTypeId PropertyScaleZ;
     static RPropertyTypeId PropertyRotation;
+    static RPropertyTypeId PropertyColumnCount;
+    static RPropertyTypeId PropertyRowCount;
+    static RPropertyTypeId PropertyColumnSpacing;
+    static RPropertyTypeId PropertyRowSpacing;
 
 public:
     RBlockReferenceEntity(RDocument* document, const RBlockReferenceData& data,
@@ -119,6 +123,34 @@ public:
 
     void setRotation(double r) {
         data.setRotation(r);
+    }
+
+    int getColumnCount() const {
+        return data.getColumnCount();
+    }
+    void setColumnCount(int c) {
+        data.setColumnCount(c);
+    }
+
+    int getRowCount() const {
+        return data.getRowCount();
+    }
+    void setRowCount(int c) {
+        data.setRowCount(c);
+    }
+
+    double getColumnSpacing() const {
+        return data.getColumnSpacing();
+    }
+    void setColumnSpacing(double s) {
+        data.setColumnSpacing(s);
+    }
+
+    double getRowSpacing() const {
+        return data.getRowSpacing();
+    }
+    void setRowSpacing(double s) {
+        data.setRowSpacing(s);
     }
 
     void setReferencedBlockId(RBlock::Id blockId) {

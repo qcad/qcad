@@ -47,7 +47,7 @@ public:
     QString fixFontName(const QString& fontName) const;
 
     void fixQCad2String(QString& str) const;
-    void fixDimensionLabel(QString& text, QString& uTol, QString& lTol);
+    void fixDimensionLabel(QString& text, QString& uTol, QString& lTol) const;
     void detectQCad2Format(const QString& fileName);
 
     bool hasDIMZIN() const {

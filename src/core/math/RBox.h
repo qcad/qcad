@@ -73,6 +73,7 @@ public:
     bool intersectsWith(const RShape& shape, bool limited = true) const;
 
     void growToInclude(const RBox& other);
+    void growToIncludeBoxes(const QList<RBox>& others);
     void growToIncludeBox(const RBox& other) {
         growToInclude(other);
     }

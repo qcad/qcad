@@ -232,6 +232,12 @@ bool RBox::intersectsWith(const RShape& shape, bool limited) const {
     return false;
 }
 
+void RBox::growToIncludeBoxes(const QList<RBox>& others) {
+    for (int i=0; i<others.length(); i++) {
+        growToInclude(others[i]);
+    }
+}
+
 /**
  * Grows this box to include the given box or sets this box to the
  * given box if this box is invalid.

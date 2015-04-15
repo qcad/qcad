@@ -47,7 +47,7 @@ void RDxfServices::fixQCad2String(QString& str) const {
     str.replace(rx, "\\S\\1^\\2;");
 }
 
-void RDxfServices::fixDimensionLabel(QString& text, QString& uTol, QString& lTol) {
+void RDxfServices::fixDimensionLabel(QString& text, QString& uTol, QString& lTol) const {
     // strip away initial vertical alignment, e.g. '\A1;'
     QRegExp rxAlignment("^\\\\A(\\d+);");
     text.replace(rxAlignment, "");

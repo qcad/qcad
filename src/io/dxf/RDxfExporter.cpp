@@ -1595,17 +1595,20 @@ void RDxfExporter::writeBlockReference(const RBlockReferenceEntity& br) {
 
     dxf.writeInsert(
         *dw,
-        DL_InsertData((const char*)RDxfExporter::escapeUnicode(blockName),
-                      br.getPosition().x,
-                      br.getPosition().y,
-                      0.0,
-                      br.getScaleFactors().x,
-                      br.getScaleFactors().y,
-                      0.0,
-                      RMath::rad2deg(br.getRotation()),
-                      1, 1,         // array col, row
-                      0.0, 0.0),    // col, row spacing
-        attributes);
+        DL_InsertData(
+            (const char*)RDxfExporter::escapeUnicode(blockName),
+            br.getPosition().x,
+            br.getPosition().y,
+            0.0,
+            br.getScaleFactors().x,
+            br.getScaleFactors().y,
+            0.0,
+            RMath::rad2deg(br.getRotation()),
+            br.getColumnCount(), br.getRowCount(),
+            br.getColumnSpacing(), br.getRowSpacing()
+        ),
+        attributes
+    );
 }
 
 //void RDxfExporter::writeExplodedEntities(const REntity& entity) {
