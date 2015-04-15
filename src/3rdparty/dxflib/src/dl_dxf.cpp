@@ -2726,7 +2726,12 @@ void DL_Dxf::writeInsert(DL_WriterA& dw,
     dw.entity("INSERT");
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
-        dw.dxfString(100, "AcDbBlockReference");
+        if (data.cols!=1 || data.rows!=1) {
+            dw.dxfString(100, "AcDbMInsertBlock");
+        }
+        else {
+            dw.dxfString(100, "AcDbBlockReference");
+        }
     }
     dw.entityAttributes(attrib);
     dw.dxfString(2, data.name);
@@ -2749,7 +2754,6 @@ void DL_Dxf::writeInsert(DL_WriterA& dw,
         dw.dxfReal(44, data.colSp);
         dw.dxfReal(45, data.rowSp);
     }
-
 }
 
 
