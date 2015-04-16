@@ -782,6 +782,29 @@ dir="./core" filename="RSettings.h">
   <function_decl>
   <type>
     <name>static</name>
+    <name>RColor</name>
+  </type>
+  <name>getColorValue</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QString</name>&amp;</type>
+      <name>key</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RColor</name>&amp;</type>
+      <name>defaultValue</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
     <name>bool</name>
   </type>
   <name>getBoolValue</name>

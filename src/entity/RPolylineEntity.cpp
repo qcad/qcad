@@ -49,7 +49,6 @@ RPolylineEntity::RPolylineEntity(RDocument* document, const RPolylineData& data,
 
 RPolylineEntity::RPolylineEntity(const RPolylineEntity& other) : REntity(other) {
     RDebug::incCounter("RPolylineEntity");
-    REntity::operator=(other);
     data = other.data;
 }
 

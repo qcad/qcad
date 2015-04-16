@@ -202,6 +202,13 @@ void RDocument::init() {
         setVariable("MultiPageSettings/GlueMarginsBottom", RSettings::getDoubleValue("MultiPageSettings/GlueMarginsBottom", 0));
         setVariable("MultiPageSettings/PrintCropMarks", RSettings::getBoolValue("MultiPageSettings/PrintCropMarks", false));
 
+        // color printing settings:
+        setVariable("ColorSettings/ColorMode", RSettings::getStringValue("ColorSettings/ColorMode", "FullColor"));
+        RColor col = RSettings::getColorValue("ColorSettings/BackgroundColor", RColor(QString("white")));
+        QVariant v;
+        v.setValue<RColor>(col);
+        setVariable("ColorSettings/BackgroundColor", v);
+
         // printer page settings:
         QString vs;
         double vd;

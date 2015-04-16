@@ -78,6 +78,7 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
 }
 
 RDocumentInterface::~RDocumentInterface() {
+    qDebug() << "deleting: " << QString("0x%1").arg((long int)this, 0, 16);
     RDebug::decCounter("RDocumentInterface");
     deleting = true;
 
@@ -226,6 +227,9 @@ void RDocumentInterface::clear() {
     for (it=scenes.begin(); it!=scenes.end(); it++) {
         (*it)->clear();
     }
+
+    //qDebug() << "RDocumentInterface::clear: modified: " << document.isModified();
+    document.setModified(false);
 }
 
 /**

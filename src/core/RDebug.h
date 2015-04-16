@@ -100,6 +100,7 @@ public:
     static void incCounter(const QString& id = 0);
     static void decCounter(const QString& id = 0);
     static void printCounter(const QString& id = 0);
+    static void printCounters();
 
 private:
 #if defined(Q_OS_MAC) && !defined(Q_OS_IOS)

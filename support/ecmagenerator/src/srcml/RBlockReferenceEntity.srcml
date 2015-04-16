@@ -257,6 +257,17 @@ dir="./core" filename="RBlockReferenceEntity.h">
       </expr>
     </init></decl>
   </param>)</parameter_list>;</constructor_decl>
+  <constructor_decl>
+  <name>RBlockReferenceEntity</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RBlockReferenceEntity</name>&amp;</type>
+      <name>other</name>
+    </decl>
+  </param>)</parameter_list>;</constructor_decl>
   <destructor_decl>
   <specifier>virtual</specifier>
   <name>~RBlockReferenceEntity</name>

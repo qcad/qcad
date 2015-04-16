@@ -55,6 +55,7 @@ Explode.prototype.beginEvent = function() {
         if (isPointEntity(entity) ||
             isLineEntity(entity) ||
             isArcEntity(entity)) {
+            entity.destroy();
             continue;
         }
 

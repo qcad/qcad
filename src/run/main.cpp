@@ -276,24 +276,10 @@ int main(int argc, char *argv[]) {
     RPatternListImperial::uninit();
     RSingleton::cleanUp();
     RMath::uninit();
+
     RDocumentInterface::deleteClipboard();
 
-    RDebug::printCounter("RAction");
-    RDebug::printCounter("RDocument");
-    RDebug::printCounter("RDocumentInterface");
-    RDebug::printCounter("RGraphicsView");
-    RDebug::printCounter("RAddObjectsOperation");
-    RDebug::printCounter("ROperation");
-
-    RDebug::printCounter("RLayer");
-
-    RDebug::printCounter("RPointEntity");
-    RDebug::printCounter("RLineEntity");
-    RDebug::printCounter("RPolylineEntity");
-    RDebug::printCounter("RArcEntity");
-    RDebug::printCounter("RCircleEntity");
-    RDebug::printCounter("RLeaderEntity");
-    RDebug::printCounter("RSplineEntity");
+    RDebug::printCounters();
 
     return ret;
 }

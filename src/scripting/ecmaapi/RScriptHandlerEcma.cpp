@@ -1048,6 +1048,8 @@ void RScriptHandlerEcma::createActionDocumentLevel(const QString& scriptFile,
         return;
     }
 
+    engine->collectGarbage();
+
     doScript(scriptFile);
 
     QString className = QFileInfo(scriptFile).completeBaseName();

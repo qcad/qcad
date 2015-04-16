@@ -69,5 +69,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="0" isConst="true" />
       </variant>
     </method>
+    <method name="printCounters" cppName="printCounters"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
   </class>
 </unit>

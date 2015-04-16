@@ -165,6 +165,8 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
             isArcShape(shape) ||
             isCircleShape(shape)) {
 
+            //qDebug("entity1:", entity);
+            //qDebug("entity1:", entity.getId());
             this.entity1 = entity;
             this.shape1 = shape;
             this.pos1 = pos;

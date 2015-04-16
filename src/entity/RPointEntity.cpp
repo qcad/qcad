@@ -45,7 +45,6 @@ RPointEntity::RPointEntity(RDocument* document, const RPointData& data,
 
 RPointEntity::RPointEntity(const RPointEntity& other) : REntity(other) {
     RDebug::incCounter("RPointEntity");
-    REntity::operator=(other);
     data = other.data;
 }
 

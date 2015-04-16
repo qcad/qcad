@@ -199,6 +199,7 @@ Divide.prototype.getOperation = function(preview) {
 
     var cutPositions = Divide.divide(op, this.pos, this.pos2, this.entity);
     if (cutPositions.length===0) {
+        op.destroy();
         return undefined;
     }
     this.cutPos = cutPositions[0];

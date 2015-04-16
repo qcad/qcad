@@ -268,6 +268,9 @@
         getValue
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getColorValue
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBoolValue
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

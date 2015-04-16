@@ -427,6 +427,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="RDEFAULT_QVARIANT" isConst="true" />
       </variant>
     </method>
+    <method name="getColorValue" cppName="getColorValue"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+        <arg type="RColor &amp;" typeName="RColor"
+        name="defaultValue" isConst="true" />
+      </variant>
+    </method>
     <method name="getBoolValue" cppName="getBoolValue"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

@@ -65,6 +65,7 @@ public:
 public:
     RBlockReferenceEntity(RDocument* document, const RBlockReferenceData& data,
             RObject::Id objectId = RObject::INVALID_ID);
+    RBlockReferenceEntity(const RBlockReferenceEntity& other);
     virtual ~RBlockReferenceEntity();
 
     static void init();

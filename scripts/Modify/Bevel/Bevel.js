@@ -45,8 +45,8 @@ Bevel.prototype.getOperation = function(preview) {
 
     var success = Bevel.bevel(
             op,
-            this.entity1.clone(), this.pos1,
-            this.entity2.clone(), this.pos2,
+            this.entity1, this.pos1,
+            this.entity2, this.pos2,
             this.trim,
             this.distance1, this.distance2,
             preview);
@@ -299,7 +299,7 @@ Bevel.bevel = function(op, entity1, pos1, entity2, pos2, trim, distance1, distan
         // add new trimmed entities:
         else {
             if (isFunction(entity1.setShape)) {
-                modifyEntity(op, entity1, trimmed1);
+                modifyEntity(op, entity1.clone(), trimmed1);
             }
             else {
                 if (!preview) {
@@ -308,7 +308,7 @@ Bevel.bevel = function(op, entity1, pos1, entity2, pos2, trim, distance1, distan
             }
 
             if (isFunction(entity2.setShape)) {
-                modifyEntity(op, entity2, trimmed2);
+                modifyEntity(op, entity2.clone(), trimmed2);
             }
             else {
                 if (!preview) {

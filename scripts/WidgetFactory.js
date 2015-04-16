@@ -713,7 +713,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
 
                 // color object given:
                 else {
-                    c.setColor(value);
+                    if (isOfType(value, RColor)) {
+                        c.setColor(value);
+                    }
+                    else {
+                        qWarning("value is not of type RColor:", value);
+                    }
                 }
             }
             continue;

@@ -50,8 +50,7 @@ Modify.prototype.beginEvent = function() {
     }
 };
 
-Modify.prototype.deleteSelectedEntities = function(msgEntitiesDeleted,
-        msgNothingDeleted) {
+Modify.prototype.deleteSelectedEntities = function(msgEntitiesDeleted, msgNothingDeleted) {
     var di = EAction.getDocumentInterface();
     var doc = di.getDocument();
     var ids = doc.querySelectedEntities();

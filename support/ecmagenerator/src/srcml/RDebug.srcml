@@ -313,7 +313,14 @@ dir="./core" filename="RDebug.h">
     <init>
       <expr>0</expr>
     </init></decl>
-  </param>)</parameter_list>;</function_decl></public>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>void</name>
+  </type>
+  <name>printCounters</name>
+  <parameter_list>()</parameter_list>;</function_decl></public>
   <private>private: 
   <cpp:if>#
   <cpp:directive>if</cpp:directive>

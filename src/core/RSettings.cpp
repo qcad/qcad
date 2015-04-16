@@ -776,6 +776,16 @@ bool RSettings::getBoolValue(const QString& key, bool defaultValue) {
     return ret.toBool();
 }
 
+RColor RSettings::getColorValue(const QString& key, const RColor& defaultValue) {
+    QVariant ret = getValue(key, defaultValue);
+    if (ret.canConvert<RColor>()) {
+        return ret.value<RColor>();
+    }
+    else {
+        return defaultValue;
+    }
+}
+
 double RSettings::getDoubleValue(const QString& key, double defaultValue) {
     QVariant ret = getValue(key, defaultValue);
 

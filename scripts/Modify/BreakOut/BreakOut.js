@@ -222,7 +222,8 @@ BreakOut.prototype.getOperation = function(preview) {
                 op.deleteObject(this.entity);
             }
             else {
-                modifyEntity(op, this.entity.data(), newSegments[2]);
+                //modifyEntity(op, this.entity.data(), newSegments[2]);
+                modifyEntity(op, this.entity.clone(), newSegments[2]);
             }
         }
     }

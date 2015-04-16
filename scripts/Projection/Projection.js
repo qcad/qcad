@@ -101,7 +101,7 @@ Projection.init = function() {
 Projection.prototype.beginEvent = function() {
     Transform.prototype.beginEvent.call(this);
 
-    // open menu:
+    // show projection tools panel:
     if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ProjectionToolsPanelAction") {
         EAction.showCadToolBarPanel("ProjectionToolsPanel");
         this.terminate();
@@ -110,6 +110,7 @@ Projection.prototype.beginEvent = function() {
 
     // start tool:
     if (!this.verifySelection()) {
+        this.terminate();
         return;
     }
 
@@ -150,7 +151,6 @@ Projection.prototype.escapeEvent = function() {
         break;
 
     case Projection.State.SettingTargetPoint:
-        //this.setState(Projection.State.SettingReferencePoint);
         this.setState(Projection.State.SettingReferencePoint);
         break;
     }
@@ -441,12 +441,13 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
         var segmentation = this.segmentation;
         this.segmentation = false;
         var segments = preview ? 4 : -1;
-        var shapes = shape.getExploded(segments);
-        var pls = new RPolyline();
-        for (i=0; i<shapes.length; i++) {
-            s = shapes[i].data();
-            pls.appendShape(s);
-        }
+        var pls = shape.toPolyline(segments);
+//        var shapes = shape.getExploded(segments);
+//        var pls = new RPolyline();
+//        for (i=0; i<shapes.length; i++) {
+//            s = shapes[i].data();
+//            pls.appendShape(s);
+//        }
         ret = this.projectShape(pls, preview, trim);
         this.segmentation = segmentation;
         return ret;

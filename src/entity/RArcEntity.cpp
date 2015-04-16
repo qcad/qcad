@@ -173,7 +173,7 @@ void RArcEntity::print(QDebug dbg) const {
     REntity::print(dbg);
     dbg.nospace() << ", center: " << getCenter();
     dbg.nospace() << ", radius: " << getRadius();
-    dbg.nospace() << ", startAngle: " << getStartAngle();
-    dbg.nospace() << ", endAngle: " << getEndAngle();
+    dbg.nospace() << ", startAngle: " << RMath::rad2deg(getStartAngle());
+    dbg.nospace() << ", endAngle: " << RMath::rad2deg(getEndAngle());
     dbg.nospace() << ", reversed: " << isReversed() << ")";
 }

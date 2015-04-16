@@ -125,9 +125,12 @@ function isOfType(obj, type) {
  * This method also supports shared pointers, i.e. obj.isNull()==true.
  */
 function isNull(obj) {
-    if (isDeleted(obj)) {
-        return true;
-    }
+//    if (obj!=null && obj.constructor===RLineEntity) {
+//        bt();
+//    }
+//    if (isDeleted(obj)) {
+//        return true;
+//    }
 
     return (obj==null ||
             (typeof(obj.isNull)==="function" && obj.isNull()===true));
@@ -852,18 +855,10 @@ function isComboBox(obj) {
  * \param widget the widget [optional, used for the recursive call], obsolete
  * \return Object or undefined
  */
-function objectFromPath(path /*, widget*/) {
-    //if (widget != undefined) {
-    //    return widget;
-    //}
+function objectFromPath(path) {
     var child = getMainWindow();
     var children = path.split("::");
-    for (i = 1; i < children.length; ++i) {
-//      var ch = child.findChild(children[i]);
-//      if (ch.toString() == "QDialog" && ch.visible == false) {
-//          qDebug("library.js:", "objectFromPath(): ch:", ch);
-//          continue;
-//      }
+    for (var i = 1; i < children.length; ++i) {
         if (typeof(child)==="undefined") {
             return undefined;
         }
@@ -1748,6 +1743,7 @@ function modifyEntity(op, entity, shape) {
     }
 
     entity.setShape(shape);
+
     op.addObject(entity, false);
 };
 

@@ -1420,6 +1420,10 @@ EAction.prototype.updatePreview = function(clear) {
     }
 
     var di = this.getDocumentInterface();
+    if (isNull(di)) {
+        return;
+    }
+
     if (clear === true) {
         di.clearPreview();
     }

@@ -41,6 +41,8 @@ RPropertyTypeId REntity::PropertyMaxY;
 
 
 REntity::~REntity() {
+    //qDebug() << "deleting entity: " << QString("0x%1").arg((long int)this, 0, 16);
+    //qDebug() << "deleting entity: " << getId();
 }
 
 bool REntity::isComplex(const RS::EntityType type) {

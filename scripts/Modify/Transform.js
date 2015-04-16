@@ -35,6 +35,7 @@ Transform.includeBasePath = includeBasePath;
 
 Transform.prototype.finishEvent = function() {
     this.clearCache();
+    Modify.prototype.finishEvent.call(this);
 };
 
 Transform.prototype.verifySelection = function() {
@@ -71,24 +72,34 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
     var doc = this.getDocument();
 
     if (cache) {
+        // return cached document as paste operation:
         if (!isNull(this.diTrans) && preview) {
+            RDebug.startTimer(10);
             op = new RPasteOperation(this.diTrans.getDocument());
-            op.setOffset(this.targetPoint)
+            op.setOffset(this.targetPoint);
+            RDebug.stopTimer(10, "return cached doc");
             return op;
         }
 
+        RDebug.startTimer(10);
         this.clearCache();
+        RDebug.stopTimer(10, "clear cache");
 
+        RDebug.startTimer(10);
         var docTrans = new RDocument(new RMemoryStorage(), new RSpatialIndexNavel());
         docTrans.copyVariablesFrom(doc);
         this.diTrans = new RDocumentInterface(docTrans);
         this.diTrans.setNotifyListeners(false);
+        RDebug.stopTimer(10, "create cache doc");
 
+        // copy seletion to cache document:
+        RDebug.startTimer(10);
         var copyOp = new RCopyOperation(new RVector(0,0), doc);
         copyOp.setClear(false);
         this.diTrans.applyOperation(copyOp);
         di = this.diTrans;
         ids = this.diTrans.getDocument().queryAllEntities();
+        RDebug.stopTimer(10, "copy sel to cache");
     }
     else {
         di = this.getDocumentInterface();
@@ -96,7 +107,6 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
     }
 
     var document = di.getDocument();
-    var storage = document.getStorage();
     var i, k, id, entity, entityP;
     var num = this.copies;
     if (num===0) {
@@ -105,6 +115,7 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
 
     op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
+    RDebug.startTimer(10);
     for (k=1; k<=num; k++) {
         for (i=0; i<ids.length; i++) {
             if (!cache && preview && op.getPreviewCounter()>RSettings.getPreviewEntities()) {
@@ -118,7 +129,8 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
             }
 
             // entity is valid as long as entityP is valid:
-            entity = entityP.data();
+            //entity = entityP.data();
+            entity = entityP.clone();
 
             // copy: assign new IDs
             if (this.copies>0) {
@@ -137,7 +149,9 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
         }
         op.endCycle();
     }
+    RDebug.stopTimer(10, "for loop");
 
+    RDebug.startTimer(10);
     if (cache) {
         di.applyOperation(op);
     }
@@ -151,6 +165,7 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
         op = new RPasteOperation(this.diTrans.getDocument());
         op.setOffset(this.targetPoint);
     }
+    RDebug.stopTimer(10, "last");
 
     return op;
 };

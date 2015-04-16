@@ -44,7 +44,6 @@ RLeaderEntity::RLeaderEntity(RDocument* document, const RLeaderData& data, RObje
 
 RLeaderEntity::RLeaderEntity(const RLeaderEntity& other) : REntity(other) {
     RDebug::incCounter("RLeaderEntity");
-    REntity::operator=(other);
     data = other.data;
 }
 
