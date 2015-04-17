@@ -33,7 +33,7 @@
  */
 class QCADGUI_EXPORT RCloseCurrentEvent : public QEvent {
 public:
-    RCloseCurrentEvent() : QEvent(QEvent::User) {}
+    RCloseCurrentEvent() : QEvent((QEvent::Type)(QEvent::User+400)) {}
     virtual ~RCloseCurrentEvent() {}
 };
 
