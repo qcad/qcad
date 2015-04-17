@@ -68,6 +68,8 @@
 
 RDxfImporter::RDxfImporter(RDocument& document, RMessageHandler* messageHandler, RProgressHandler* progressHandler)
     : RFileImporter(document, messageHandler, progressHandler),
+      polylinePlineGen(false),
+      leaderArrowHead(false),
       inDict(false) {
 }
 
@@ -1115,12 +1117,13 @@ void RDxfImporter::addDimOrdinate(const DL_DimensionData& data,
 
 void RDxfImporter::addLeader(const DL_LeaderData& data) {
     leader = RLeaderData();
-    leader.setArrowHead(data.arrowHeadFlag==1);
+    leaderArrowHead = data.arrowHeadFlag==1;
 }
 
 void RDxfImporter::addLeaderVertex(const DL_LeaderVertexData& data) {
     RVector v(data.x, data.y);
     leader.appendVertex(v);
+    leader.setArrowHead(leaderArrowHead);
 }
 
 void RDxfImporter::addHatch(const DL_HatchData& data) {

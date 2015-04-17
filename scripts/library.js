@@ -1875,6 +1875,10 @@ function getInBlockTextEdit(entity) {
 }
 
 function setOverrideCursor(cursor) {
+    if (!RSettings.isGuiEnabled()) {
+        return;
+    }
+
     if (RSettings.isQt(5)) {
         QGuiApplication.setOverrideCursor(cursor);
     }

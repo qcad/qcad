@@ -155,6 +155,7 @@ private:
     bool polylinePlineGen;
     RSpline spline;
     RLeaderData leader;
+    bool leaderArrowHead;
     RHatchData hatch;
     QByteArray mtext;
     QMap<QString, RDxfTextStyle> textStyles;

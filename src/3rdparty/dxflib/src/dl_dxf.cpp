@@ -2890,7 +2890,7 @@ void DL_Dxf::writeDimStyleOverrides(DL_WriterA& dw,
         dw.dxfString(1000, "DSTYLE");
         dw.dxfString(1002, "{");
         dw.dxfInt(1070, 144);
-        dw.dxfInt(1040, data.linearFactor);
+        dw.dxfReal(1040, data.linearFactor);
         dw.dxfString(1002, "}");
     }
 }

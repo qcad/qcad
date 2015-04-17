@@ -78,7 +78,6 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
 }
 
 RDocumentInterface::~RDocumentInterface() {
-    qDebug() << "deleting: " << QString("0x%1").arg((long int)this, 0, 16);
     RDebug::decCounter("RDocumentInterface");
     deleting = true;
 
