@@ -33,7 +33,7 @@
  */
 class QCADCORE_EXPORT RTerminateEvent : public QEvent {
 public:
-    RTerminateEvent() : QEvent(QEvent::User) {}
+    RTerminateEvent() : QEvent((QEvent::Type)(QEvent::User+200)) {}
     virtual ~RTerminateEvent() {}
 };
 

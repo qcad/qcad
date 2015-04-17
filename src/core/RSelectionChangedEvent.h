@@ -32,7 +32,7 @@
  */
 class QCADCORE_EXPORT RSelectionChangedEvent : public QEvent {
 public:
-    RSelectionChangedEvent() : QEvent(QEvent::User) {}
+    RSelectionChangedEvent() : QEvent((QEvent::Type)(QEvent::User+100)) {}
     virtual ~RSelectionChangedEvent() {}
 };
 
