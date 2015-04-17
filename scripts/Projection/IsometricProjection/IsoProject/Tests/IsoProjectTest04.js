@@ -41,13 +41,15 @@ IsoProjectTest04.prototype.test00 = function() {
     var p = new RVector(15.079008, 11.991533);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    this.triggerCommand('pj');
+    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ProjectionToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ProjectionToolsPanel::IsoProjectButton');
     this.setZoom(6.914994309623345, new RVector(1.69613, 14.7619, 0) );
     var p = new RVector(9.728316, 19.80065);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('IsoProject/ProjectionType', 'Top');
     this.setToolOption('IsoProject/SegmentLength',  [ 1, 0 ] );
+    this.setToolOption('IsoProject/TrueScale', 'false');
     this.updateToolOptions();
     this.setZoom(6.914994309623345, new RVector(1.69613, 14.7619, 0) );
     var p = new RVector(57.161472, 28.477447);
@@ -55,6 +57,7 @@ IsoProjectTest04.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('IsoProject/ProjectionType', 'Right');
     this.setToolOption('IsoProject/SegmentLength',  [ 1, 0 ] );
+    this.setToolOption('IsoProject/TrueScale', 'false');
     this.updateToolOptions();
     this.setZoom(6.914994309623345, new RVector(1.69613, 14.7619, 0) );
     var p = new RVector(57.306085, 20.089877);
@@ -62,9 +65,10 @@ IsoProjectTest04.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('IsoProject/ProjectionType', 'Left');
     this.setToolOption('IsoProject/SegmentLength',  [ 1, 0 ] );
+    this.setToolOption('IsoProject/TrueScale', 'false');
     this.updateToolOptions();
     this.setZoom(6.914994309623345, new RVector(1.69613, 14.7619, 0) );
-    var p = new RVector(42.700144, 19.945264);
+    var p = new RVector(41.8, 19.6);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     var p = new RVector(30.118789, 17.486838);

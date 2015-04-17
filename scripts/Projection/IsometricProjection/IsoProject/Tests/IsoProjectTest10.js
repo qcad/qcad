@@ -63,6 +63,10 @@ IsoProjectTest10.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setZoom(10, new RVector(5, 5, 0, true));
+    this.setToolOption('IsoProject/ProjectionType', 'Top');
+    this.setToolOption('IsoProject/SegmentLength',  [ 1, 0 ] );
+    this.setToolOption('IsoProject/TrueScale', 'false');
+    this.updateToolOptions();
     var p = new RVector(30, 20.2);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
