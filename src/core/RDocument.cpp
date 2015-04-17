@@ -1688,14 +1688,20 @@ void RDocument::setModified(bool m) {
 }
 
 void RDocument::copyVariablesFrom(const RDocument& other) {
-    RTransaction transaction(storage, "Copy variables from other document", false);
+    RTransaction* transaction = new RTransaction(storage, "Copy variables from other document", false);
+
+    bool useLocalTransaction;
+    QSharedPointer<RDocumentVariables> docVars = storage.startDocumentVariablesTransaction(transaction, useLocalTransaction);
 
     for (RS::KnownVariable kv=RS::ANGBASE; kv<=RS::MaxKnownVariable; kv=(RS::KnownVariable)(kv+1)) {
         QVariant otherKV = other.getKnownVariable(kv);
         if (otherKV.isValid()) {
-            setKnownVariable(kv, otherKV, &transaction);
+            docVars->setKnownVariable(kv, otherKV);
+            //setKnownVariable(kv, otherKV, &transaction);
         }
     }
+
+    storage.endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 
     QStringList keys = other.getVariables();
     for (int i=0; i<keys.length(); i++) {
@@ -1706,9 +1712,10 @@ void RDocument::copyVariablesFrom(const RDocument& other) {
         }
     }
 
-    setDimensionFont(other.getDimensionFont(), &transaction);
+    setDimensionFont(other.getDimensionFont(), transaction);
 
-    transaction.end();
+    transaction->end();
+    delete transaction;
 }
 
 RDocument& RDocument::getClipboard() {
