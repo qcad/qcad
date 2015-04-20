@@ -35,6 +35,7 @@ ShapePolygonPPTest00.prototype.test00 = function() {
     this.clickOnWidget('MainWindow::MainToolsPanel::ShapeToolsPanelButton');
     this.clickOnWidget('MainWindow::ShapeToolsPanel::ShapePolygonPPButton');
     this.setToolOption('ShapePolygonPP/Corners', '3');
+    this.setToolOption('Shape/CreatePolyline', 'true');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(9.9, -0.1);
@@ -47,6 +48,7 @@ ShapePolygonPPTest00.prototype.test00 = function() {
     var p = new RVector(30, -0.1);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('ShapePolygonPP/Corners', '4');
+    this.setToolOption('Shape/CreatePolyline', 'true');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(9.9, -0.1);
@@ -59,6 +61,7 @@ ShapePolygonPPTest00.prototype.test00 = function() {
     var p = new RVector(29.9, -0.2);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('ShapePolygonPP/Corners', '5');
+    this.setToolOption('Shape/CreatePolyline', 'true');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(10, 0);
@@ -71,6 +74,7 @@ ShapePolygonPPTest00.prototype.test00 = function() {
     var p = new RVector(29.8, 0.2);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('ShapePolygonPP/Corners', '6');
+    this.setToolOption('Shape/CreatePolyline', 'true');
     this.updateToolOptions();
     this.setZoom(8.333333333333334, new RVector(9.88, 8.1, 0) );
     var p = new RVector(9.92, -0.06);
@@ -83,6 +87,7 @@ ShapePolygonPPTest00.prototype.test00 = function() {
     var p = new RVector(29.96, -0.06);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('ShapePolygonPP/Corners', '7');
+    this.setToolOption('Shape/CreatePolyline', 'true');
     this.updateToolOptions();
     this.setZoom(6.9444444444444455, new RVector(14.344, 11.652, 0) );
     var p = new RVector(9.992, -0.132);
@@ -95,6 +100,7 @@ ShapePolygonPPTest00.prototype.test00 = function() {
     var p = new RVector(29.864, -0.132);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('ShapePolygonPP/Corners', '8');
+    this.setToolOption('Shape/CreatePolyline', 'true');
     this.updateToolOptions();
     this.setZoom(5.787037037037038, new RVector(20.7088, 17.4408, 0) );
     var p = new RVector(9.8768, -0.1608);
