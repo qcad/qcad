@@ -653,6 +653,19 @@ void RMemoryStorage::selectAllEntites(QSet<REntity::Id>* affectedEntities) {
     }
 }
 
+int RMemoryStorage::countSelectedEntities() const {
+    RBlock::Id currentBlock = getCurrentBlockId();
+    QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
+    int result = 0;
+    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+        QSharedPointer<REntity> e = *it;
+        if (!e.isNull() && !e->isUndone() && e->isSelected() && e->getBlockId() == currentBlock) {
+            result++;
+        }
+    }
+    return result;
+}
+
 void RMemoryStorage::clearEntitySelection(QSet<REntity::Id>* affectedEntities) {
     QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
     for (it = entityMap.begin(); it != entityMap.end(); ++it) {

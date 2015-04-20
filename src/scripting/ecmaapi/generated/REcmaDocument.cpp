@@ -153,6 +153,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryLinetype, "queryLinetype");
             
+            REcmaHelper::registerFunction(&engine, proto, countSelectedEntities, "countSelectedEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, clearSelection, "clearSelection");
             
             REcmaHelper::registerFunction(&engine, proto, selectAllEntites, "selectAllEntites");
@@ -4298,6 +4300,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::queryLinetype", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::countSelectedEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::countSelectedEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::countSelectedEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("countSelectedEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->countSelectedEntities();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.countSelectedEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::countSelectedEntities", context, engine);
             return result;
         }
          QScriptValue

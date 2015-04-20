@@ -287,6 +287,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="linetypeName" isConst="true" />
       </variant>
     </method>
+    <method name="countSelectedEntities"
+    cppName="countSelectedEntities" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
     <method name="clearEntitySelection"
     cppName="clearEntitySelection" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

@@ -132,6 +132,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryLinetype, "queryLinetype");
             
+            REcmaHelper::registerFunction(&engine, proto, countSelectedEntities, "countSelectedEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, clearEntitySelection, "clearEntitySelection");
             
             REcmaHelper::registerFunction(&engine, proto, selectAllEntites, "selectAllEntites");
@@ -2574,6 +2576,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::queryLinetype", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::countSelectedEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::countSelectedEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::countSelectedEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("countSelectedEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->countSelectedEntities();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.countSelectedEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::countSelectedEntities", context, engine);
             return result;
         }
          QScriptValue

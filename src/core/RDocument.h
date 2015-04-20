@@ -153,6 +153,8 @@ public:
     QSharedPointer<RLinetype> queryLinetype(RLinetype::Id linetypeId) const;
     QSharedPointer<RLinetype> queryLinetype(const QString& linetypeName) const;
 
+    int countSelectedEntities() const;
+
     void clearSelection(
         QSet<REntity::Id>* affectedEntities=NULL
     );

@@ -245,6 +245,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getKnownVariable, "getKnownVariable");
             
+            REcmaHelper::registerFunction(&engine, proto, countSelectedEntities, "countSelectedEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, clearEntitySelection, "clearEntitySelection");
             
             REcmaHelper::registerFunction(&engine, proto, selectAllEntites, "selectAllEntites");
@@ -6393,6 +6395,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::getKnownVariable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::countSelectedEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::countSelectedEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::countSelectedEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("countSelectedEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->countSelectedEntities();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.countSelectedEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::countSelectedEntities", context, engine);
             return result;
         }
          QScriptValue

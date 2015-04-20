@@ -1422,6 +1422,10 @@ bool RDocument::isEntityLayerFrozen(REntity::Id entityId) const {
     return storage.isLayerFrozen(entity->getLayerId());
 }
 
+int RDocument::countSelectedEntities() const {
+    return storage.countSelectedEntities();
+}
+
 /**
  * \todo refactoring to operation
  *

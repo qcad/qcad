@@ -795,6 +795,14 @@ dir="./core" filename="RMemoryStorage.h">
   <function_decl>
   <type>
     <name>virtual</name>
+    <name>int</name>
+  </type>
+  <name>countSelectedEntities</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>virtual</name>
     <name>void</name>
   </type>
   <name>clearEntitySelection</name>

@@ -89,11 +89,13 @@ dir="./core" filename="RTransactionEvent.h">
       <name>QEvent</name>
       <argument_list>(
       <argument>
-        <expr>
-          <name>
-          <name>QEvent</name>::
-          <name>User</name></name>
-        </expr>
+        <expr>(
+        <name>
+        <name>QEvent</name>::
+        <name>Type</name></name>)(
+        <name>
+        <name>QEvent</name>::
+        <name>User</name></name>+300)</expr>
       </argument>)</argument_list>
     </call>, 
     <call>

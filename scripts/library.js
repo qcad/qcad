@@ -1874,6 +1874,13 @@ function getInBlockTextEdit(entity) {
     return entity.getCustomProperty("QCAD", "InBlockTextEdit", "0")==="1";
 }
 
+function setOverrideWaitCursor() {
+    if (!RSettings.isGuiEnabled()) {
+        return;
+    }
+    setOverrideCursor(new QCursor(Qt.WaitCursor));
+}
+
 function setOverrideCursor(cursor) {
     if (!RSettings.isGuiEnabled()) {
         return;
@@ -1888,6 +1895,10 @@ function setOverrideCursor(cursor) {
 }
 
 function restoreOverrideCursor() {
+    if (!RSettings.isGuiEnabled()) {
+        return;
+    }
+
     if (RSettings.isQt(5)) {
         QGuiApplication.restoreOverrideCursor();
     }

@@ -2244,6 +2244,27 @@ dir="./core" filename="RStorage.h">
   </param>)</parameter_list>
   <specifier>const</specifier>
   <specifier>= 0</specifier>;</function_decl>
+  <comment type="block">/** * \return Number of selected entities.
+  */</comment>
+  <function>
+    <type>
+      <name>virtual</name>
+      <name>int</name>
+    </type>
+    <name>countSelectedEntities</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <return>return 
+    <expr>
+    <call>
+      <name>querySelectedEntities</name>
+      <argument_list>()</argument_list>
+    </call>.
+    <call>
+      <name>size</name>
+      <argument_list>()</argument_list>
+    </call></expr>;</return>}</block>
+  </function>
   <comment type="block">/** * Clears the selection status of all
   entities. */</comment>
   <function_decl>

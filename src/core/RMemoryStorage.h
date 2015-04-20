@@ -85,6 +85,7 @@ public:
     virtual QSharedPointer<RLinetype> queryLinetype(RLinetype::Id linetypeId) const;
     virtual QSharedPointer<RLinetype> queryLinetype(const QString& linetypeName) const;
 
+    virtual int countSelectedEntities() const;
     virtual void clearEntitySelection(QSet<REntity::Id>* affectedEntities = NULL);
     virtual void selectAllEntites(QSet<REntity::Id>* affectedEntities = NULL);
     virtual void selectEntity(REntity::Id entityId, bool add = false,

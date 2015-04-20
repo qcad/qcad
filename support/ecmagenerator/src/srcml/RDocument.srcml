@@ -1180,6 +1180,13 @@ dir="./core" filename="RDocument.h">
   <specifier>const</specifier>;</function_decl>
   <function_decl>
   <type>
+    <name>int</name>
+  </type>
+  <name>countSelectedEntities</name>
+  <parameter_list>()</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
     <name>void</name>
   </type>
   <name>clearSelection</name>

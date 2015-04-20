@@ -315,6 +315,9 @@
         getKnownVariable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        countSelectedEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clearEntitySelection
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

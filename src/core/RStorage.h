@@ -363,6 +363,13 @@ public:
     virtual QVariant getKnownVariable(RS::KnownVariable key) const = 0;
 
     /**
+     * \return Number of selected entities.
+     */
+    virtual int countSelectedEntities() {
+        return querySelectedEntities().size();
+    }
+
+    /**
      * Clears the selection status of all entities.
      */
     virtual void clearEntitySelection(
