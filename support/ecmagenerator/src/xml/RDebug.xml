@@ -50,7 +50,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="id"
-        hasDefault="true" default="0" isConst="true" />
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
       </variant>
     </method>
     <method name="decCounter" cppName="decCounter"
@@ -58,7 +59,17 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="id"
-        hasDefault="true" default="0" isConst="true" />
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getCounter" cppName="getCounter"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="id"
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
       </variant>
     </method>
     <method name="printCounter" cppName="printCounter"
@@ -66,7 +77,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="id"
-        hasDefault="true" default="0" isConst="true" />
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
       </variant>
     </method>
     <method name="printCounters" cppName="printCounters"

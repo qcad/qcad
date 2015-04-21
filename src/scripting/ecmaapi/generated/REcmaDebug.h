@@ -67,6 +67,9 @@
         decCounter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCounter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         printCounter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

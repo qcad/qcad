@@ -55,6 +55,7 @@ public:
 public:
     RMixedOperation(bool undoable = true);
     virtual ~RMixedOperation() {
+        RDebug::decCounter("RMixedOperation");
     }
 
     QSharedPointer<RObject> addObject(const QSharedPointer<RObject>& obj,

@@ -196,7 +196,7 @@ Trim.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    var op = new RMixedOperation();
+    var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
 
     qDebug(this.limitingEntity, this.limitingShape, this.limitingPos, this.trimEntity, this.trimPos, this.trimBoth);

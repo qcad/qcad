@@ -113,6 +113,13 @@ void RDebug::decCounter(const QString& id) {
     counter[id]--;
 }
 
+int RDebug::getCounter(const QString& id) {
+    if (!counter.contains(id)) {
+        return 0;
+    }
+    return counter[id];
+}
+
 void RDebug::printCounter(const QString& id) {
     if (!counter.contains(id)) {
         return;

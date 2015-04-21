@@ -277,7 +277,9 @@ dir="./core" filename="RDebug.h">
     <name>QString</name>&amp;</type>
     <name>id</name>=
     <init>
-      <expr>0</expr>
+      <expr>
+        <name>RDEFAULT_QSTRING</name>
+      </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
@@ -294,7 +296,28 @@ dir="./core" filename="RDebug.h">
     <name>QString</name>&amp;</type>
     <name>id</name>=
     <init>
-      <expr>0</expr>
+      <expr>
+        <name>RDEFAULT_QSTRING</name>
+      </expr>
+    </init></decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>int</name>
+  </type>
+  <name>getCounter</name>
+  <parameter_list>(
+  <param>
+    <decl>
+    <type>
+    <name>const</name>
+    <name>QString</name>&amp;</type>
+    <name>id</name>=
+    <init>
+      <expr>
+        <name>RDEFAULT_QSTRING</name>
+      </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
@@ -311,7 +334,9 @@ dir="./core" filename="RDebug.h">
     <name>QString</name>&amp;</type>
     <name>id</name>=
     <init>
-      <expr>0</expr>
+      <expr>
+        <name>RDEFAULT_QSTRING</name>
+      </expr>
     </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>

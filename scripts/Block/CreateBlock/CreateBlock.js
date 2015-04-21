@@ -75,7 +75,7 @@ CreateBlock.prototype.coordinateEvent = function(event) {
     var storage = document.getStorage();
     var ids = document.querySelectedEntities();
 
-    var op = new RMixedOperation();
+    var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
     op.addObject(block);
     var blockId = storage.getMaxObjectId();

@@ -52,7 +52,6 @@ public:
         allowInvisible(false),
         entityTypeFilter(entityTypeFilter),
         transactionGroup(-1) {
-
         RDebug::incCounter("ROperation");
     }
 

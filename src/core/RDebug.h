@@ -97,9 +97,10 @@ public:
 
     static void hexDump(const QString& str);
 
-    static void incCounter(const QString& id = 0);
-    static void decCounter(const QString& id = 0);
-    static void printCounter(const QString& id = 0);
+    static void incCounter(const QString& id = RDEFAULT_QSTRING);
+    static void decCounter(const QString& id = RDEFAULT_QSTRING);
+    static int getCounter(const QString& id = RDEFAULT_QSTRING);
+    static void printCounter(const QString& id = RDEFAULT_QSTRING);
     static void printCounters();
 
 private:

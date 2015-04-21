@@ -41,7 +41,7 @@ Explode.prototype.beginEvent = function() {
     var i, k, e, n;
     var polyline, shapes, shape;
 
-    var op = new RMixedOperation();
+    var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
 
     for (i=0; i<ids.length; i++) {

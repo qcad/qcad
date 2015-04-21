@@ -71,6 +71,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, decCounter, "decCounter");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getCounter, "getCounter");
+            
             REcmaHelper::registerFunction(&engine, &ctor, printCounter, "printCounter");
             
             REcmaHelper::registerFunction(&engine, &ctor, printCounters, "printCounters");
@@ -581,6 +583,77 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDebug::decCounter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDebug::getCounter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDebug::getCounter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDebug::getCounter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RDebug::
+       getCounter();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RDebug::
+       getCounter(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.getCounter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDebug::getCounter", context, engine);
             return result;
         }
          QScriptValue

@@ -21,6 +21,8 @@
 
 RMixedOperation::RMixedOperation(bool undoable) :
     ROperation(undoable), list() {
+
+    RDebug::incCounter("RMixedOperation");
 }
 
 void RMixedOperation::setMode(Modes& modes, RMixedOperation::Mode mode, bool on) {

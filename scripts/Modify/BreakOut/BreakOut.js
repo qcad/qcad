@@ -189,7 +189,7 @@ BreakOut.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    var op = new RMixedOperation();
+    var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
     var e;
 
