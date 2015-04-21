@@ -932,7 +932,7 @@ LibraryBrowser.directoryChanged = function(selected, deselected) {
 //    }
 
     //qDebug("LibraryBrowser.directoryChanged: dirPath: ", dirPath);
-    setOverrideCursor(new QCursor(Qt.WaitCursor));
+    setOverrideWaitCursor();
     LibraryBrowser.updateFsView(dirPath, model);
     restoreOverrideCursor();
 };

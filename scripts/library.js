@@ -125,12 +125,9 @@ function isOfType(obj, type) {
  * This method also supports shared pointers, i.e. obj.isNull()==true.
  */
 function isNull(obj) {
-//    if (obj!=null && obj.constructor===RLineEntity) {
-//        bt();
-//    }
-//    if (isDeleted(obj)) {
-//        return true;
-//    }
+    if (isDeleted(obj)) {
+        return true;
+    }
 
     return (obj==null ||
             (typeof(obj.isNull)==="function" && obj.isNull()===true));
