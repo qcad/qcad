@@ -82,24 +82,24 @@ CreateBlock.prototype.coordinateEvent = function(event) {
 
     for (var i=0; i<ids.length; i++) {
         var id = ids[i];
+
+        // deselect original entity:
+        di.deselectEntity(id);
+
         var entity = document.queryEntity(id);
         if (isNull(entity)) {
             debugger;
         }
 
-        //var e = entity.clone();
-        //storage.setObjectId(e, RObject.INVALID_ID);
-        //e.setBlockId(blockId);
-
         // move entity to new block:
+        // note that the original entity is moved to the new block (same id)
         entity.setBlockId(blockId);
-        di.deselectEntity(id);
+
+        // deselect entity which is part of the new block (avoid selected entities inside blocks):
         //entity.setSelected(false);
         entity.move(pos.getNegated());
 
         op.addObject(entity, false);
-        //op.addObject(e);
-        //op.deleteObject(entity);
     }
 
     var blockReference = new RBlockReferenceEntity(document, new RBlockReferenceData(blockId, pos, new RVector(1,1,1), 0.0));

@@ -20,7 +20,7 @@
 include("../BlockInsert.js");
  
 /**
- * \class DeselectBlockReferences
+ * \class InsertBlock
  * \ingroup ecma_block
  * \brief This action handles the user interaction to insert a block
  * from the block list into the drawing.
@@ -29,7 +29,6 @@ function InsertBlock(guiAction) {
     BlockInsert.call(this, guiAction);
     this.setUiOptions("InsertBlock.ui");
 
-    //this.dialog = undefined;
     this.blockReferenceData = new RBlockReferenceData();
     this.blockReferenceData.setPosition(new RVector(0.0,0.0));
     this.blockReferenceData.setScaleFactors(new RVector(1.0,1.0));
@@ -86,14 +85,6 @@ InsertBlock.prototype.beginEvent = function() {
 
     this.setState(InsertBlock.State.SettingPosition);
 };
-
-InsertBlock.prototype.finishEvent = function() {
-//    if (!isNull(this.dialog)) {
-//        this.dialog.destroy();
-//    }
-    EAction.prototype.finishEvent.call(this);
-};
-
 
 InsertBlock.prototype.initUiOptions = function(resume, optionsToolBar) {
     BlockInsert.prototype.initUiOptions.call(this, resume, optionsToolBar);

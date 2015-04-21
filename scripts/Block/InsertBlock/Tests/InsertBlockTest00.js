@@ -16,6 +16,9 @@ InsertBlockTest00.prototype.test00 = function() {
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ShapeToolsPanel::ShapePolygonPPButton');
+    this.setToolOption('ShapePolygonPP/Corners', '3');
+    this.setToolOption('Shape/CreatePolyline', 'true');
+    this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(9.7, 9.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -49,6 +52,8 @@ InsertBlockTest00.prototype.test00 = function() {
     var w = objectFromPath('MainWindow::BlockListDock::BlockListWidget::BlockList::qt_scrollarea_viewport');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(72, 26), Qt.LeftButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::BlockListDock::BlockListWidget::InsertBlock');
+    this.setToolOption('InsertBlock/Rotation', '0');
+    this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(39.7, 9.6);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

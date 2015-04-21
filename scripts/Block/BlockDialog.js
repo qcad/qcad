@@ -65,6 +65,7 @@ BlockDialog.prototype.show = function() {
         while (!this.validate()) {
             ++c;
             blockName.text = "block " + c;
+            qDebug("trying block name: ", blockName.text);
         }
     }
 
