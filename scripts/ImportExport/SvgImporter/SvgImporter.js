@@ -308,21 +308,24 @@ SvgImporter.prototype.setTransform = function(t) {
 };
 
 SvgImporter.prototype.importFile = function(fileName) {
-    qDebug("SvgImporter.prototype.importFile");
-
     if (isNull(this.getDocument())) {
         this.setDocument(EAction.getDocument());
     }
 
+    var handler = new SvgHandler(this);
+    parseXml(fileName, handler);
+
+    /*
     var fi = new QFileInfo(fileName);
 
     var file = new QFile(fi.absoluteFilePath());
     var xmlReader = new QXmlSimpleReader();
     var source = new QXmlInputSource(file);
-    var handler = new SvgHandler(this);
-    xmlReader.setContentHandler(handler);
+    //var handler = new SvgHandler(this);
+    //xmlReader.setContentHandler(handler);
     var ok = xmlReader.parse(source, false);
     file.close();
+    */
     
     this.endImport();
 

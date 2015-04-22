@@ -126,6 +126,7 @@
 #endif
 #include <QWheelEvent>
 #include <QWidget>
+#include <QXmlContentHandler>
 #include <QXmlResultItems>
 #include <QXmlStreamWriter>
 #include <QXmlQuery>
@@ -282,6 +283,7 @@ Q_DECLARE_METATYPE(QWidget*)
 Q_DECLARE_METATYPE(QXmlQuery)
 Q_DECLARE_METATYPE(QXmlQuery*)
 Q_DECLARE_METATYPE(QXmlStreamWriter*)
+Q_DECLARE_METATYPE(QXmlContentHandler*)
 Q_DECLARE_METATYPE(QXmlResultItems*)
 
 Q_DECLARE_METATYPE(QFlags<Qt::MouseButton>)

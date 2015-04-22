@@ -224,6 +224,13 @@ CadToolBar.init = function() {
     if (isNull(toolBar)) {
         return;
     }
+
+    toolBar.styleSheet = "QToolButton {"
+        + "  border: 1px solid #969696;"
+        //+ "  border-radius: 6px; "
+        + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f8f8f8, stop: 0.2 #e3e3e3, stop: 1 #f9f9f9);"
+        + "}";
+
     if (RSettings.getStringValue("CadToolBar/Location", "left")==="top") {
         appWin.addToolBarBreak();
         appWin.addToolBar(Qt.TopToolBarArea, toolBar);

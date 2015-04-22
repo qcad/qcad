@@ -30,6 +30,7 @@
 #include <QNetworkReply>
 #include <QXmlResultItems>
 #include <QXmlStreamWriter>
+#include <QXmlContentHandler>
 
 #include <QtScriptTools>
 
@@ -406,19 +407,16 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     globalObject.setProperty("download", engine->newFunction(ecmaDownload));
     globalObject.setProperty("downloadToFile", engine->newFunction(ecmaDownloadToFile));
     globalObject.setProperty("mSleep", engine->newFunction(ecmaMSleep));
+    globalObject.setProperty("parseXml", engine->newFunction(ecmaParseXml));
     globalObject.setProperty("qApp", engine->newQObject(dynamic_cast<RSingleApplication*>(qApp)));
     //globalObject.setProperty("getShapeIntersections", engine->newFunction(ecmaGetShapeIntersections));
 
     // fix Qt wrapper APIs
     QScriptValue classQObject = globalObject.property("QObject");
-    classQObject.property("prototype").setProperty("findChild",
-            engine->newFunction(ecmaQObjectFindChild));
-    classQObject.property("prototype").setProperty("getChildren",
-            engine->newFunction(ecmaQObjectGetChildren));
-    classQObject.property("prototype").setProperty("getObjectId",
-            engine->newFunction(ecmaGetObjectId));
-    classQObject.property("prototype").setProperty("destroy",
-            engine->newFunction(ecmaDestroy));
+    classQObject.property("prototype").setProperty("findChild", engine->newFunction(ecmaQObjectFindChild));
+    classQObject.property("prototype").setProperty("getChildren", engine->newFunction(ecmaQObjectGetChildren));
+    classQObject.property("prototype").setProperty("getObjectId", engine->newFunction(ecmaGetObjectId));
+    classQObject.property("prototype").setProperty("destroy", engine->newFunction(ecmaDestroy));
 
     QScriptValue classQSortFilterProxyModel = globalObject.property("QSortFilterProxyModel");
     classQSortFilterProxyModel.property("prototype").setProperty("castToQAbstractItemModel",
@@ -1737,6 +1735,26 @@ QScriptValue RScriptHandlerEcma::ecmaMSleep(QScriptContext* context,
         return throwError(
                 "Wrong number/types of arguments for msleep().",
                 context);
+    }
+    return engine->undefinedValue();
+}
+
+QScriptValue RScriptHandlerEcma::ecmaParseXml(QScriptContext* context, QScriptEngine* engine) {
+
+    if (context->argumentCount() == 2 && context->argument(0).isString()) {
+        QString fileName = context->argument(0).toString();
+        QXmlContentHandler* handler = qscriptvalue_cast<QXmlContentHandler*>(context->argument(1));
+
+        QFileInfo fi(fileName);
+        QFile file(fi.absoluteFilePath());
+        QXmlSimpleReader xmlReader;
+        QXmlInputSource source(&file);
+        xmlReader.setContentHandler(handler);
+        bool ret = xmlReader.parse(&source, false);
+        file.close();
+        return qScriptValueFromValue(engine, ret);
+    } else {
+        return throwError("Wrong number/types of arguments for parseXml().", context);
     }
     return engine->undefinedValue();
 }

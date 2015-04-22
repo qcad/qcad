@@ -23,6 +23,7 @@ include("FileIconProvider.js");
 include("Rdf.js");
 include("scripts/Block/InsertScriptItem/InsertScriptItem.js");
 include("scripts/Block/InsertBlockItem/InsertBlockItem.js");
+include("scripts/AddOn.js");
 
 include("db/ItemPeer.js");
 include("db/ItemTagPeer.js");
@@ -157,21 +158,42 @@ LibraryBrowser.getSourceList = function() {
         sourceList = [];
     }
 
-    // no configuration: add libraries vailable in libraries subdir:
+    var i;
+    var filters = new QDir.Filters(QDir.AllDirs, QDir.NoDotAndDotDot, QDir.Readable);
+    var sortFlags = new QDir.SortFlags(QDir.Name, QDir.IgnoreCase);
+    var librariesDir;
+    var libs;
+
+    // no configuration: add all libraries available in libraries subdir:
     if (sourceList.length === 0) {
-        var librariesDir = new QDir("libraries");
-        var filters = new QDir.Filters(QDir.AllDirs, QDir.NoDotAndDotDot, QDir.Readable);
-        var sortFlags = new QDir.SortFlags(QDir.Name, QDir.IgnoreCase);
-        var libs = librariesDir.entryList([], filters, sortFlags);
-        for (var i=0; i<libs.length; i++) {
+        librariesDir = new QDir("libraries");
+        libs = librariesDir.entryList([], filters, sortFlags);
+        for (i=0; i<libs.length; i++) {
             sourceList.push(new QDir("libraries/%1".arg(libs[i])).absolutePath());
         }
-        //RSettings.setValue("LibraryBrowser/SourceList", sourceList);
     }
-    //LibraryBrowser.sources = [];
-    //for (var i = 0; i < sourceList.length; ++i) {
-        //LibraryBrowser.sources.push(new Directory(sourceList[i]));
-    //}
+
+    // always add default library:
+
+    // always add libraries of installed add-ons:
+    var localAddOns = AddOn.getLocalAddOns();
+    for (var k=0; k<localAddOns.length; k++) {
+        var localAddOnDir = RSettings.getDataLocation() + "/" + localAddOns[k];
+        var fi = new QFileInfo(localAddOnDir);
+        if (fi.exists()) {
+            //sourceList.push(new QDir(fi.absoluteFilePath() + "/libraries/%1".arg(libs[i])).absolutePath());
+            librariesDir = new QDir(fi.absoluteFilePath() + "/libraries");
+            libs = librariesDir.entryList([], filters, sortFlags);
+            for (i=0; i<libs.length; i++) {
+                var path = new QDir(fi.absoluteFilePath() + "/libraries/%1".arg(libs[i])).absolutePath();
+                qDebug("adding libraries dir of add-on: ", path);
+                sourceList.push(path);
+            }
+        }
+    }
+
+    qDebug("sourceList: ", sourceList);
+
     return sourceList;
 };
 

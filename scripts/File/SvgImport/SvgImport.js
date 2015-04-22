@@ -54,9 +54,7 @@ SvgImport.prototype.beginEvent = function() {
     }
     
     if (isNull(fileName)) {
-        var lastDir = RSettings.getStringValue(
-                "SvgImport/Path",
-                RSettings.getDocumentsLocation());
+        var lastDir = RSettings.getStringValue( "SvgImport/Path", RSettings.getDocumentsLocation());
         fileName = QFileDialog.getOpenFileName(
             this, qsTr("Import SVG"), lastDir,
             qsTr("SVG Files") + " (*.svg);;" + qsTr("All Files") + " (*)");

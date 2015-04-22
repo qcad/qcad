@@ -89,15 +89,16 @@ ExXmlImport.prototype.beginEvent = function() {
 
     var fileName = files[0];
 
-    var file = new QFile(fileName);
+    //var file = new QFile(fileName);
 
     EAction.handleUserMessage("importing: " + fileName);
 
-    var xmlReader = new QXmlSimpleReader();
-    var source = new QXmlInputSource(file);
+    //var xmlReader = new QXmlSimpleReader();
+    //var source = new QXmlInputSource(file);
     var handler = new MyXmlHandler();
-    xmlReader.setContentHandler(handler);
-    var ok = xmlReader.parse(source, false);
+    //xmlReader.setContentHandler(handler);
+    //var ok = xmlReader.parse(source, false);
+    var ok = parseXml(fileName, handler);
 
     if (ok) {
         EAction.handleUserMessage("import successful");
@@ -106,7 +107,7 @@ ExXmlImport.prototype.beginEvent = function() {
         EAction.handleUserMessage("import failed");
     }
 
-    file.close();
+    //file.close();
 
     this.terminate();
 };
