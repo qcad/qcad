@@ -63,7 +63,9 @@ DrawBasedOnRectangle.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
     this.setState(0);
-    this.simulateMouseMoveEvent();
+
+    // commented out to disable preview initially
+    //this.simulateMouseMoveEvent();
 
     if (this.useDialog) {
         if (!this.showDialog()) {
@@ -132,13 +134,13 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
             WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
         }
         this.dialog.windowTitle = this.getToolTitle();
-        var guiAction = this.getGuiAction();
-        if (!isNull(guiAction)) {
-            this.dialog.windowIcon = guiAction.icon;
-        }
-        else {
+//        var guiAction = this.getGuiAction();
+//        if (!isNull(guiAction)) {
+//            this.dialog.windowIcon = guiAction.icon;
+//        }
+//        else {
             this.dialog.windowIcon = new QIcon();
-        }
+//        }
 
         for (i = 0; i < widgets.length; i++) {
             if (isNull(this.dialogUiFile) && !isNull(formLayout)) {
