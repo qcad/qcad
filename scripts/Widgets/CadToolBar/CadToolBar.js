@@ -219,11 +219,6 @@ CadToolBar.prototype.updateIconSize = function() {
 
 CadToolBar.init = function() {
     var appWin = EAction.getMainWindow();
-//    var toolBar = new QToolBar(qsTr("CAD Tools"), appWin);
-//    toolBar.objectName = "CadQToolBar";
-//    cadToolBar = new CadToolBar(toolBar);
-//    toolBar.addWidget(cadToolBar);
-//    cadToolBar.updateIconSize();
 
     var toolBar = appWin.findChild("CadQToolBar");
     if (isNull(toolBar)) {
@@ -236,14 +231,6 @@ CadToolBar.init = function() {
     else {
         appWin.addToolBar(Qt.LeftToolBarArea, toolBar);
     }
-
-//    toolBar.topLevelChanged.connect(function(onOff) {
-////        RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
-//    });
-//    toolBar.orientationChanged.connect(function(orientation) {
-////        RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
-//        var chs = toolBar.getChildren();
-//    });
 };
 
 CadToolBar.postInit = function() {
