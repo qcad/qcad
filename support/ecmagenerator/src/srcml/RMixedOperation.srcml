@@ -102,7 +102,19 @@ dir="./operations" filename="RMixedOperation.h">
     <specifier>virtual</specifier>
     <name>~RMixedOperation</name>
     <parameter_list>()</parameter_list>
-    <block>{ }</block>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+      <call>
+        <name>
+        <name>RDebug</name>::
+        <name>decCounter</name></name>
+        <argument_list>(
+        <argument>
+          <expr>"RMixedOperation"</expr>
+        </argument>)</argument_list>
+      </call>
+    </expr>;</expr_stmt>}</block>
   </destructor>
   <function_decl>
   <type>

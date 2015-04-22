@@ -208,6 +208,14 @@ public:
         return data.getEndPoint();
     }
 
+    void setStartPoint(const RVector& sp) {
+        return data.setStartPoint(sp);
+    }
+
+    void setEndPoint(const RVector& ep) {
+        return data.setEndPoint(ep);
+    }
+
     bool reverse() {
         return data.reverse();
     }

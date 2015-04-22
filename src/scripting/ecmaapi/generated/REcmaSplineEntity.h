@@ -152,6 +152,12 @@
         getEndPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setStartPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setEndPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

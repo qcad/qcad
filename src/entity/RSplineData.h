@@ -91,6 +91,14 @@ public:
         return RSpline::getEndPoint();
     }
 
+    void setStartPoint(const RVector& sp) {
+        RSpline::setStartPoint(sp);
+    }
+
+    void setEndPoint(const RVector& ep) {
+        RSpline::setEndPoint(ep);
+    }
+
     bool reverse() {
         return RSpline::reverse();
     }
