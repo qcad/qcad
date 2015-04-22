@@ -68,8 +68,6 @@ CreateBlock.prototype.coordinateEvent = function(event) {
         return;
     }
 
-    //block.setOrigin(pos);
-
     var di = this.getDocumentInterface();
     var document = this.getDocument();
     var storage = document.getStorage();
@@ -96,7 +94,6 @@ CreateBlock.prototype.coordinateEvent = function(event) {
         entity.setBlockId(blockId);
 
         // deselect entity which is part of the new block (avoid selected entities inside blocks):
-        //entity.setSelected(false);
         entity.move(pos.getNegated());
 
         op.addObject(entity, false);
