@@ -56,6 +56,8 @@ static const char * const qtscript_QUrl_function_names[] = {
     , "swap"
     , "toLocalFile"
     , "toString"
+    , "path"
+    , "fragment"
 };
 
 static const char * const qtscript_QUrl_function_signatures[] = {
@@ -99,7 +101,9 @@ static const char * const qtscript_QUrl_function_signatures[] = {
     , "String userName, ParsingMode mode"
     , "QUrl other"
     , ""
-""
+    , ""
+    , ""
+    , ""
 };
 
 static const int qtscript_QUrl_function_lengths[] = {
@@ -142,6 +146,8 @@ static const int qtscript_QUrl_function_lengths[] = {
     , 2
     , 2
     , 1
+    , 0
+    , 0
     , 0
     , 0
 };
@@ -258,7 +264,7 @@ static QScriptValue qtscript_QUrl_prototype_call(QScriptContext *context, QScrip
     if (context->callee().isFunction())
         _id = context->callee().data().toUInt32();
     else
-        _id = 0xBABE0000 + 27;
+        _id = 0xBABE0000 + 29;
 #endif
     Q_ASSERT((_id & 0xFFFF0000) == 0xBABE0000);
     _id &= 0x0000FFFF;
@@ -534,12 +540,26 @@ static QScriptValue qtscript_QUrl_prototype_call(QScriptContext *context, QScrip
     }
     break;
 
-    case 27: {
-    QString result;
-    QDebug d(&result);
-    d << *_q_self;
-    return QScriptValue(context->engine(), result);
+    case 27:
+    if (context->argumentCount() == 0) {
+        QString _q_result = _q_self->toString();
+        return QScriptValue(context->engine(), _q_result);
     }
+    break;
+
+    case 28:
+    if (context->argumentCount() == 0) {
+        QString _q_result = _q_self->path();
+        return QScriptValue(context->engine(), _q_result);
+    }
+    break;
+
+    case 29:
+    if (context->argumentCount() == 0) {
+        QString _q_result = _q_self->fragment();
+        return QScriptValue(context->engine(), _q_result);
+    }
+    break;
 
     default:
     Q_ASSERT(false);
@@ -703,7 +723,7 @@ QScriptValue qtscript_create_QUrl_class(QScriptEngine *engine)
 {
     engine->setDefaultPrototype(qMetaTypeId<QUrl*>(), QScriptValue());
     QScriptValue proto = engine->newVariant(qVariantFromValue((QUrl*)0));
-    for (int i = 0; i < 28; ++i) {
+    for (int i = 0; i < 30; ++i) {
         QScriptValue fun = engine->newFunction(qtscript_QUrl_prototype_call, qtscript_QUrl_function_lengths[i+11]);
         fun.setData(QScriptValue(engine, uint(0xBABE0000 + i)));
         proto.setProperty(QString::fromLatin1(qtscript_QUrl_function_names[i+11]),
