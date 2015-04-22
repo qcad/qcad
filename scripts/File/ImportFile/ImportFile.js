@@ -54,6 +54,7 @@ ImportFile.prototype.beginEvent = function() {
 
 ImportFile.prototype.finishEvent = function() {
     this.sourceDi.destroy();
+    Paste.prototype.finishEvent.call(this);
 };
 
 
