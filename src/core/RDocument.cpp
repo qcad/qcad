@@ -269,7 +269,6 @@ void RDocument::init() {
             setVariable(s, RSettings::getStringValue(s, "auto"));
         }
 
-        //setVariable("DimensionSettings/DimensionFont", "Standard");
         docVars->setDimensionFont(RSettings::getStringValue("DimensionSettings/DimensionFont", "Standard"));
 
         // notify new document listeners
@@ -281,7 +280,7 @@ void RDocument::init() {
     transaction.addObject(docVars);
 
     transaction.end();
-    resetTransactionStack();
+    //resetTransactionStack();
     storage.setModified(false);
 }
 
