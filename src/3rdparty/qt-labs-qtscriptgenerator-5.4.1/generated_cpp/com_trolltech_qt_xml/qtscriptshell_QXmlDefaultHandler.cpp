@@ -1,6 +1,7 @@
 #include "qtscriptshell_QXmlDefaultHandler.h"
 
 #include <QtScript/QScriptEngine>
+#include <QDebug>
 #include <QVariant>
 #include <qxml.h>
 

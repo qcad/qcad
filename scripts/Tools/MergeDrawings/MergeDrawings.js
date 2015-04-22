@@ -100,15 +100,16 @@ function main() {
     }
 
     // parse XML into array:
-    var file = new QFile(xmlFile);
+    //var file = new QFile(xmlFile);
 
-    var xmlReader = new QXmlSimpleReader();
-    var source = new QXmlInputSource(file);
+    //var xmlReader = new QXmlSimpleReader();
+    //var source = new QXmlInputSource(file);
     var handler = new XmlHandler();
-    xmlReader.setContentHandler(handler);
-    var ok = xmlReader.parse(source, false);
+    //xmlReader.setContentHandler(handler);
+    //var ok = xmlReader.parse(source, false);
+    parseXml(xmlFile, handler);
 
-    file.close();
+    //file.close();
 
     // target document:
     var docDest = new RDocument(new RMemoryStorage(), new RSpatialIndexNavel());
