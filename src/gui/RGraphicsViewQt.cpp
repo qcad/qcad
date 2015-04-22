@@ -167,6 +167,8 @@ void RGraphicsViewQt::mouseMoveEvent(QMouseEvent* event) {
         return;
     }
 
+    qDebug() << "mouseMoveEvent";
+
     RMouseEvent e(*event, *scene, *this);
     RGraphicsView::handleMouseMoveEvent(e);
 
@@ -317,6 +319,7 @@ QSize RGraphicsViewQt::sizeHint() const {
  * that events go to this view.
  */
 void RGraphicsViewQt::focusInEvent(QFocusEvent* event) {
+    qDebug() << "RGraphicsViewQt::focusInEvent";
     if (getDocumentInterface()!=NULL) {
         RGraphicsViewQt* other =
                 dynamic_cast<RGraphicsViewQt*>(
@@ -355,6 +358,7 @@ void RGraphicsViewQt::focusInEvent(QFocusEvent* event) {
  * Called when this view lost the focus. Resets the focus highlighting.
  */
 void RGraphicsViewQt::focusOutEvent(QFocusEvent* event) {
+    qDebug() << "RGraphicsViewQt::focusOutEvent";
     QWidget::focusOutEvent(event);
 }
 

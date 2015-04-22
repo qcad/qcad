@@ -63,6 +63,7 @@ public:
 public:
     RImageEntity(RDocument* document, const RImageData& data,
         RObject::Id objectId = RObject::INVALID_ID);
+    RImageEntity(const RImageEntity& other);
     virtual ~RImageEntity();
 
     static void init();

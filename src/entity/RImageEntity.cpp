@@ -50,9 +50,17 @@ RPropertyTypeId RImageEntity::PropertyAngle;
 RImageEntity::RImageEntity(RDocument* document, const RImageData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
+
+    RDebug::incCounter("RImageEntity");
+}
+
+RImageEntity::RImageEntity(const RImageEntity& other) : REntity(other) {
+    RDebug::incCounter("RImageEntity");
+    data = other.data;
 }
 
 RImageEntity::~RImageEntity() {
+    RDebug::decCounter("RImageEntity");
 }
 
 RImageEntity* RImageEntity::clone() const {

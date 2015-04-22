@@ -85,6 +85,13 @@ Image.prototype.beginEvent = function() {
     this.setState(Image.State.SettingPosition);
 };
 
+Image.prototype.finishEvent = function() {
+    Draw.prototype.finishEvent.call(this);
+    if (!isNull(this.image)) {
+        this.image.destroy();
+    }
+};
+
 Image.prototype.getFileName = function() {
     var lastOpenFileDir = RSettings.getStringValue(
             "Image/Path",
@@ -197,7 +204,7 @@ Image.prototype.pickCoordinate = function(event, preview) {
     this.image.setHeight(this.height);
     this.image.setAngle(this.angle);
 
-    var op = new RAddObjectOperation(this.image, this.getToolTitle());
+    var op = new RAddObjectOperation(this.image.clone(), this.getToolTitle());
     if (preview) {
         this.getDocumentInterface().previewOperation(op);
     }
