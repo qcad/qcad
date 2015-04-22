@@ -280,7 +280,6 @@ void RDocument::init() {
     transaction.addObject(docVars);
 
     transaction.end();
-    //resetTransactionStack();
     storage.setModified(false);
 }
 
