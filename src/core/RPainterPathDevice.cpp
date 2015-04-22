@@ -56,8 +56,12 @@ int RPainterPathDevice::metric(PaintDeviceMetric metric) const {
         return 72;
     case QPaintDevice::PdmPhysicalDpiY:
         return 72;
+#if QT_VERSION >= 0x050000
+    case QPaintDevice::PdmDevicePixelRatio:
+        return 1;
+#endif
     default:
-        qWarning("QSvgGenerator::metric(), unhandled metric %d\n", metric);
+        qWarning("RPainterPathDevice::metric(), unhandled metric %d\n", metric);
         break;
     }
     return 0;
