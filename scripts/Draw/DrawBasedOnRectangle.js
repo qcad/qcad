@@ -202,26 +202,16 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
     WidgetFactory.saveState(this.dialog, "Shape");
     WidgetFactory.saveState(this.dialog, this.settingsGroup);
 
-    //this.dialog.destroy();
-    //this.dialog = undefined;
+//    var view = EAction.getGraphicsView();
 
-    //var appWin = EAction.getMainWindow();
-    //appWin.setFocus();
-    var view = EAction.getGraphicsView();
-//    if (!isNull(view)) {
-//        view.setFocus();
-//    }
+//    qDebug("view.hasFocus: ", view.hasFocus());
+//    qDebug("view.mouseTracking: ", view.mouseTracking);
+//    qDebug("focus widget: ", QApplication.focusWidget());
+//    qDebug("focus widget name: ", QApplication.focusWidget().objectName);
 
-    //this.updatePreview();
-    //this.simulateMouseMoveEvent();
-    qDebug("view.hasFocus: ", view.hasFocus());
-    qDebug("view.mouseTracking: ", view.mouseTracking);
-    qDebug("focus widget: ", QApplication.focusWidget());
-    qDebug("focus widget name: ", QApplication.focusWidget().objectName);
-
-    var appWin = RMainWindowQt.getMainWindow();
-    var event = new QFocusEvent(QEvent.FocusIn);
-    QCoreApplication.sendEvent(appWin, event);
+//    var appWin = RMainWindowQt.getMainWindow();
+//    var event = new QFocusEvent(QEvent.FocusIn);
+//    QCoreApplication.sendEvent(appWin, event);
 
     return ret;
 };
