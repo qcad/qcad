@@ -405,6 +405,10 @@ double REllipse::getLength() const {
         a2 = t;
     }
 
+    if (RMath::fuzzyCompare(a2, 0.0)) {
+        a2 = 2*M_PI;
+    }
+
     if (fabs(a1-a2)<RS::AngleTolerance) {
         return 0.0;
     }
