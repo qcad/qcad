@@ -1964,6 +1964,14 @@ function addActionsToWidgets() {
 
                 if (visibility) {
                     RGuiAction.addToWidget(a, w);
+
+                    if (isFunction(w.widgetForAction)) {
+                        // if action was added to tool bar: set object name of tool button:
+                        var tb = w.widgetForAction(a);
+                        if (!isNull(tb)) {
+                            tb.objectName = "ToolButton" + a.objectName.replace(/Action$/, "");
+                        }
+                    }
                 }
                 else {
                     // action not visible in this widget:
