@@ -204,7 +204,11 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
     WidgetFactory.saveState(this.dialog, "Shape");
     WidgetFactory.saveState(this.dialog, this.settingsGroup);
 
-//    var view = EAction.getGraphicsView();
+    var view = EAction.getGraphicsView();
+    if (!isNull(view)) {
+        // view loses focus because of dialog:
+        view.giveFocus();
+    }
 
 //    qDebug("view.hasFocus: ", view.hasFocus());
 //    qDebug("view.mouseTracking: ", view.mouseTracking);
