@@ -394,7 +394,6 @@ ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePositi
         }
 
         for (n=1; n<=number; ++n) {
-            qDebug("n:", n);
             var spl;
             if (RSpline.hasProxy()) {
                 spl = new RSpline();
@@ -403,9 +402,6 @@ ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePositi
                 spl = new RPolyline();
             }
 
-            qDebug("spl:", spl);
-            qDebug("start:", shape.getStartParam());
-            qDebug("end:", shape.getEndParam());
             var endParam = shape.getEndParam();
             if (RMath.fuzzyCompare(endParam, 0.0)) {
                 endParam = 2*Math.PI;
@@ -414,7 +410,6 @@ ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePositi
             var k = d*n;
             var root, v;
             for (t=shape.getStartParam(); t<endParam+0.1; t+=0.1) {
-                qDebug("t:", t);
                 if (t>endParam) {
                     t = endParam;
                 }
@@ -426,14 +421,12 @@ ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePositi
                 v.rotate(shape.getAngle());
                 v.move(center);
                 if (isSplineShape(spl)) {
-                    qDebug("fit point: ", v);
                     spl.appendFitPoint(v);
                 }
                 else {
                     spl.appendVertex(v);
                 }
             }
-            qDebug("spline: ", spl);
             ret.push(spl);
         }
     }
