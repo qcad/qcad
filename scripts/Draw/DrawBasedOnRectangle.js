@@ -76,9 +76,9 @@ DrawBasedOnRectangle.prototype.beginEvent = function() {
 };
 
 DrawBasedOnRectangle.prototype.finishEvent = function() {
-    if (!isNull(this.dialog)) {
-        this.dialog.destroy();
-    }
+    //if (!isNull(this.dialog)) {
+    //    this.dialog.destroy();
+    //}
     EAction.prototype.finishEvent.call(this);
 };
 
@@ -104,85 +104,82 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
     var i;
     var children;
 
-    if (isNull(this.dialog)) {
-        // collect widgets which are tagged to be moved to the dialog:
-        var c;
-        var widgets = [];
-        var optionsToolBar = EAction.getOptionsToolBar();
-        children = optionsToolBar.children();
-        for (i = 0; i < children.length; ++i) {
-            c = children[i];
-            if (c["MoveToDialog"]===true) {
-                widgets.push(c);
+    // collect widgets which are tagged to be 'moved' to the dialog:
+    var c;
+    var widgets = [];
+    var optionsToolBar = EAction.getOptionsToolBar();
+    children = optionsToolBar.children();
+    for (i = 0; i < children.length; ++i) {
+        c = children[i];
+        if (c["MoveToDialog"]===true) {
+            widgets.push(c);
+        }
+    }
+
+    if (widgets.length===0) {
+        // no widgets to show in dialog, return to normal operation without dialog:
+        return true;
+    }
+
+    // show dialog and move tool bar widgets to its layout:
+    var formLayout = undefined;
+    if (isNull(this.dialogUiFile)) {
+        // auto create dialog (disabled for now: keeping the dialog alive does not work under win 7):
+        //dialog = WidgetFactory.createDialog(DrawBasedOnRectangle.includeBasePath, "DrawBasedOnRectangleDialog.ui");
+        //formLayout = dialog.findChild("FormLayout");
+    }
+    else {
+        this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile);
+        WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
+    }
+    this.dialog.windowTitle = this.getToolTitle();
+    this.dialog.windowIcon = new QIcon();
+
+    for (i = 0; i < widgets.length; i++) {
+        /*
+        if (isNull(this.dialogUiFile) && !isNull(formLayout)) {
+            if (isOfType(widgets[i], QCheckBox)) {
+                formLayout.addRow(new QWidget(formLayout), widgets[i]);
+                this.moveWidget(widgets[i], dialog);
+                continue;
             }
-        }
 
-        if (widgets.length===0) {
-            // no widgets to show in dialog, return to normal operation without dialog:
-            return true;
-        }
-
-        // show dialog and move tool bar widgets to its layout:
-        var formLayout = undefined;
-        if (isNull(this.dialogUiFile)) {
-            // auto create dialog:
-            this.dialog = WidgetFactory.createDialog(DrawBasedOnRectangle.includeBasePath, "DrawBasedOnRectangleDialog.ui");
-            formLayout = this.dialog.findChild("FormLayout");
+            // other widgets are moved to the dialog:
+            if (i<widgets.length-1) {
+                formLayout.addRow(widgets[i], widgets[i+1]);
+                this.moveWidget(widgets[i], dialog);
+                this.moveWidget(widgets[i+1], dialog);
+                i++;
+            }
         }
         else {
-            this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile);
-            WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
+        */
+            var a = optionsToolBar.findChild(widgets[i].objectName + "Action");
+            if (!isNull(a)) {
+                a.visible = false;
+            }
+        //}
+    }
+
+    // remove double separators:
+    children = optionsToolBar.children();
+    var previousWidgetWasSeparator = false;
+    for (i = 0; i < children.length; ++i) {
+        c = children[i];
+        if (isFunction(c.isSeparator) && c.isSeparator()===true) {
+            if (previousWidgetWasSeparator) {
+                var idx = this.optionWidgetActions.indexOf(c);
+                if (idx!==-1) {
+                    // make sure the action is also removed from the list of added actions:
+                    this.optionWidgetActions.splice(idx, 1);
+                }
+                c.destroy();
+            }
+
+            previousWidgetWasSeparator = true;
         }
-        this.dialog.windowTitle = this.getToolTitle();
-//        var guiAction = this.getGuiAction();
-//        if (!isNull(guiAction)) {
-//            this.dialog.windowIcon = guiAction.icon;
-//        }
-//        else {
-            this.dialog.windowIcon = new QIcon();
-//        }
-
-        for (i = 0; i < widgets.length; i++) {
-            if (isNull(this.dialogUiFile) && !isNull(formLayout)) {
-                if (isOfType(widgets[i], QCheckBox)) {
-                    formLayout.addRow(new QWidget(formLayout), widgets[i]);
-                    this.moveWidget(widgets[i], this.dialog);
-                    continue;
-                }
-
-                // other widgets are moved to the dialog:
-                if (i<widgets.length-1) {
-                    formLayout.addRow(widgets[i], widgets[i+1]);
-                    this.moveWidget(widgets[i], this.dialog);
-                    this.moveWidget(widgets[i+1], this.dialog);
-                    i++;
-                }
-            }
-            else {
-                widgets[i].destroy();
-            }
-        }
-
-        // remove double separators:
-        children = optionsToolBar.children();
-        var previousWidgetWasSeparator = false;
-        for (i = 0; i < children.length; ++i) {
-            c = children[i];
-            if (isFunction(c.isSeparator) && c.isSeparator()===true) {
-                if (previousWidgetWasSeparator) {
-                    var idx = this.optionWidgetActions.indexOf(c);
-                    if (idx!==-1) {
-                        // make sure the action is also removed from the list of added actions:
-                        this.optionWidgetActions.splice(idx, 1);
-                    }
-                    c.destroy();
-                }
-
-                previousWidgetWasSeparator = true;
-            }
-            else if (isQWidget(c) && c.objectName.length!==0) {
-                previousWidgetWasSeparator = false;
-            }
+        else if (isQWidget(c) && c.objectName.length!==0 && c.visible) {
+            previousWidgetWasSeparator = false;
         }
     }
 
@@ -204,20 +201,14 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
     WidgetFactory.saveState(this.dialog, "Shape");
     WidgetFactory.saveState(this.dialog, this.settingsGroup);
 
+    this.dialog.destroy();
+    this.dialog = undefined;
+
     var view = EAction.getGraphicsView();
     if (!isNull(view)) {
         // view loses focus because of dialog:
         view.giveFocus();
     }
-
-//    qDebug("view.hasFocus: ", view.hasFocus());
-//    qDebug("view.mouseTracking: ", view.mouseTracking);
-//    qDebug("focus widget: ", QApplication.focusWidget());
-//    qDebug("focus widget name: ", QApplication.focusWidget().objectName);
-
-//    var appWin = RMainWindowQt.getMainWindow();
-//    var event = new QFocusEvent(QEvent.FocusIn);
-//    QCoreApplication.sendEvent(appWin, event);
 
     return ret;
 };
@@ -241,6 +232,7 @@ DrawBasedOnRectangle.prototype.enableOk = function(onOff) {
     }
 };
 
+/*
 DrawBasedOnRectangle.prototype.moveWidget = function(widget, dialog) {
     widget.setParent(dialog);
     //widget.sizePolicy = new QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed);
@@ -250,6 +242,7 @@ DrawBasedOnRectangle.prototype.moveWidget = function(widget, dialog) {
     widget.maximumWidth = 32000;
     widget.visible = true;
 };
+*/
 
 DrawBasedOnRectangle.prototype.initUiOptions = function(resume, restoreFromSettings) {
     EAction.prototype.initUiOptions.call(this, resume, restoreFromSettings);
