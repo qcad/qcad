@@ -18,7 +18,7 @@
  */
 
 include("../Ellipse.js");
-include("../../DrawBasedOnRectangle.js");
+include("../../DrawBasedOnRectangleSize.js");
 include("scripts/ShapeAlgorithms.js");
 
 /**
@@ -27,12 +27,12 @@ include("scripts/ShapeAlgorithms.js");
  * \ingroup ecma_draw_ellipse
  */
 function EllipseRR(guiAction) {
-    DrawBasedOnRectangle.call(this, guiAction);
+    DrawBasedOnRectangleSize.call(this, guiAction);
 
     this.setUiOptions("EllipseRR.ui");
 }
 
-EllipseRR.prototype = new DrawBasedOnRectangle();
+EllipseRR.prototype = new DrawBasedOnRectangleSize();
 
 EllipseRR.prototype.getShapes = function(corners) {
     var lines = [];

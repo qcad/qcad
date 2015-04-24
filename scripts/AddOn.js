@@ -444,7 +444,7 @@ AddOn.getParentAddOn = function(addOns, addOn) {
 AddOn.getAddOns = function(dir) {
     var topCall = isNull(dir);
     if (topCall && !isNull(AddOn.addOns)) {
-        // return cached list (TODO: breaks app preferences on second call):
+        // return cached list:
         return AddOn.addOns;
     }
 

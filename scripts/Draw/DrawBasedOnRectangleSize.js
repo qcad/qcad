@@ -20,7 +20,7 @@
 include("Draw.js");
 
 /**
- * \class DrawBasedOnRectangle
+ * \class DrawBasedOnRectangleSize
  * 
  * \brief Base class for drawing tools that draw something based on 
  * a rectangular shape with given width, height and angle. The tool
@@ -29,11 +29,11 @@ include("Draw.js");
  * 
  * \ingroup ecma_draw
  */
-function DrawBasedOnRectangle(guiAction) {
+function DrawBasedOnRectangleSize(guiAction) {
     EAction.call(this, guiAction);
 
     this.dialogUiFile = undefined;
-    this.useDialog = RSettings.getBoolValue("DrawBasedOnRectangle/UseDialog", false);
+    this.useDialog = RSettings.getBoolValue("DrawBasedOnRectangleSize/UseDialog", false);
     this.dialog = undefined;
     this.pos = undefined;
     this.width = 1;
@@ -56,10 +56,10 @@ function DrawBasedOnRectangle(guiAction) {
     this.referencePointIndex = undefined;
 }
 
-DrawBasedOnRectangle.prototype = new EAction();
-DrawBasedOnRectangle.includeBasePath = includeBasePath;
+DrawBasedOnRectangleSize.prototype = new EAction();
+DrawBasedOnRectangleSize.includeBasePath = includeBasePath;
 
-DrawBasedOnRectangle.prototype.beginEvent = function() {
+DrawBasedOnRectangleSize.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
     this.setState(0);
@@ -75,14 +75,14 @@ DrawBasedOnRectangle.prototype.beginEvent = function() {
     }
 };
 
-DrawBasedOnRectangle.prototype.finishEvent = function() {
+DrawBasedOnRectangleSize.prototype.finishEvent = function() {
     //if (!isNull(this.dialog)) {
     //    this.dialog.destroy();
     //}
     EAction.prototype.finishEvent.call(this);
 };
 
-DrawBasedOnRectangle.prototype.setState = function(state) {
+DrawBasedOnRectangleSize.prototype.setState = function(state) {
     EAction.prototype.setState.call(this, state);
 
     this.setCrosshairCursor();
@@ -100,7 +100,7 @@ DrawBasedOnRectangle.prototype.setState = function(state) {
  * Show dialog to enter some of the options.
  * This might move to EAction at one point.
  */
-DrawBasedOnRectangle.prototype.showDialog = function() {
+DrawBasedOnRectangleSize.prototype.showDialog = function() {
     var i;
     var children;
 
@@ -125,7 +125,7 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
     var formLayout = undefined;
     if (isNull(this.dialogUiFile)) {
         // auto create dialog (disabled for now: keeping the dialog alive does not work under win 7):
-        //dialog = WidgetFactory.createDialog(DrawBasedOnRectangle.includeBasePath, "DrawBasedOnRectangleDialog.ui");
+        //dialog = WidgetFactory.createDialog(DrawBasedOnRectangleSize.includeBasePath, "DrawBasedOnRectangleSizeDialog.ui");
         //formLayout = dialog.findChild("FormLayout");
     }
     else {
@@ -213,19 +213,19 @@ DrawBasedOnRectangle.prototype.showDialog = function() {
     return ret;
 };
 
-DrawBasedOnRectangle.prototype.validateNumber = function(n) {
+DrawBasedOnRectangleSize.prototype.validateNumber = function(n) {
     this.enableOk(!isNaN(n));
 };
 
-DrawBasedOnRectangle.prototype.validatePositiveNumber = function(n) {
+DrawBasedOnRectangleSize.prototype.validatePositiveNumber = function(n) {
     this.enableOk(!isNaN(n) && n>=0);
 };
 
-DrawBasedOnRectangle.prototype.validateNumberGreaterZero = function(n) {
+DrawBasedOnRectangleSize.prototype.validateNumberGreaterZero = function(n) {
     this.enableOk(!isNaN(n) && n>0);
 };
 
-DrawBasedOnRectangle.prototype.enableOk = function(onOff) {
+DrawBasedOnRectangleSize.prototype.enableOk = function(onOff) {
     if (!isNull(this.dialog)) {
         var buttonBox = this.dialog.findChild("ButtonBox");
         buttonBox.button(QDialogButtonBox.Ok).enabled = onOff;
@@ -233,7 +233,7 @@ DrawBasedOnRectangle.prototype.enableOk = function(onOff) {
 };
 
 /*
-DrawBasedOnRectangle.prototype.moveWidget = function(widget, dialog) {
+DrawBasedOnRectangleSize.prototype.moveWidget = function(widget, dialog) {
     widget.setParent(dialog);
     //widget.sizePolicy = new QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed);
     widget.sizePolicy = new QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed);
@@ -244,7 +244,7 @@ DrawBasedOnRectangle.prototype.moveWidget = function(widget, dialog) {
 };
 */
 
-DrawBasedOnRectangle.prototype.initUiOptions = function(resume, restoreFromSettings) {
+DrawBasedOnRectangleSize.prototype.initUiOptions = function(resume, restoreFromSettings) {
     EAction.prototype.initUiOptions.call(this, resume, restoreFromSettings);
 
     this.referencePointIndex = RSettings.getIntValue(this.settingsGroup + "/ReferencePoint", 4);
@@ -285,7 +285,7 @@ DrawBasedOnRectangle.prototype.initUiOptions = function(resume, restoreFromSetti
     refPointCombo.currentIndex = this.referencePointIndex;
 };
 
-DrawBasedOnRectangle.prototype.pickCoordinate = function(event, preview) {
+DrawBasedOnRectangleSize.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
     this.pos = event.getModelPosition();
 
@@ -301,7 +301,7 @@ DrawBasedOnRectangle.prototype.pickCoordinate = function(event, preview) {
     }
 };
 
-DrawBasedOnRectangle.prototype.keyPressEvent = function(event) {
+DrawBasedOnRectangleSize.prototype.keyPressEvent = function(event) {
     if (this.useDialog) {
         // enter pressed:
         if (event.key() === Qt.Key_Enter.valueOf() || event.key() === Qt.Key_Return.valueOf()) {
@@ -313,13 +313,13 @@ DrawBasedOnRectangle.prototype.keyPressEvent = function(event) {
     EAction.prototype.keyPressEvent(event);
 };
 
-//DrawBasedOnRectangle.prototype.keyReleaseEvent = function(event) {
+//DrawBasedOnRectangleSize.prototype.keyReleaseEvent = function(event) {
 //    EAction.prototype.keyReleaseEvent(event);
 //    // update preview:
 //    this.simulateMouseMoveEvent();
 //};
 
-DrawBasedOnRectangle.prototype.getOperation = function(preview) {
+DrawBasedOnRectangleSize.prototype.getOperation = function(preview) {
     var i;
     
     if (isNull(this.pos) || isNull(this.width) || isNull(this.height) || isNull(this.angle)) {
@@ -375,29 +375,29 @@ DrawBasedOnRectangle.prototype.getOperation = function(preview) {
     return op;
 };
 
-DrawBasedOnRectangle.prototype.getShapes = function(corners) {
+DrawBasedOnRectangleSize.prototype.getShapes = function(corners) {
     return [];
 };
 
-DrawBasedOnRectangle.prototype.slotWidthChanged = function(value) {
+DrawBasedOnRectangleSize.prototype.slotWidthChanged = function(value) {
     this.width = value;
     this.validateNumberGreaterZero(this.width);
     this.updatePreview(true);
 };
 
-DrawBasedOnRectangle.prototype.slotHeightChanged = function(value) {
+DrawBasedOnRectangleSize.prototype.slotHeightChanged = function(value) {
     this.height = value;
     this.validateNumberGreaterZero(this.height);
     this.updatePreview(true);
 };
 
-DrawBasedOnRectangle.prototype.slotAngleChanged = function(value) {
+DrawBasedOnRectangleSize.prototype.slotAngleChanged = function(value) {
     this.angle = value;
     this.validateNumber(this.angle);
     this.updatePreview(true);
 };
 
-DrawBasedOnRectangle.prototype.slotReferencePointChanged = function(value) {
+DrawBasedOnRectangleSize.prototype.slotReferencePointChanged = function(value) {
     var optionsToolBar = EAction.getOptionsToolBar();
     var refPointCombo = optionsToolBar.findChild("ReferencePoint");
 
@@ -406,7 +406,7 @@ DrawBasedOnRectangle.prototype.slotReferencePointChanged = function(value) {
     this.updatePreview(true);
 };
 
-DrawBasedOnRectangle.prototype.slotReset = function() {
+DrawBasedOnRectangleSize.prototype.slotReset = function() {
     var optionsToolBar = EAction.getOptionsToolBar();
 
     if (isNull(optionsToolBar)) {

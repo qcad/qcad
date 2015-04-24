@@ -18,7 +18,7 @@
  */
 
 include("../Circle.js");
-include("../../DrawBasedOnRectangle.js");
+include("../../DrawBasedOnRectangleSize.js");
 
 /**
  * \class CircleCD
@@ -26,12 +26,12 @@ include("../../DrawBasedOnRectangle.js");
  * \ingroup ecma_draw_circle
  */
 function CircleCD(guiAction) {
-    DrawBasedOnRectangle.call(this, guiAction);
+    DrawBasedOnRectangleSize.call(this, guiAction);
 
     this.setUiOptions("CircleCD.ui");
 }
 
-CircleCD.prototype = new DrawBasedOnRectangle();
+CircleCD.prototype = new DrawBasedOnRectangleSize();
 
 CircleCD.prototype.getShapes = function(corners) {
     var circle = new RCircle(RVector.getAverage(corners[0], corners[2]), corners[0].getDistanceTo(corners[1])/2);
