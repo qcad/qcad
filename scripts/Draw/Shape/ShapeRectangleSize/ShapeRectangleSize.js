@@ -18,7 +18,7 @@
  */
 
 include("../Shape.js");
-include("../../DrawBasedOnRectangle.js");
+include("../../DrawBasedOnRectangleSize.js");
 
 /**
  * \class ShapeRectangleSize
@@ -26,7 +26,7 @@ include("../../DrawBasedOnRectangle.js");
  * \ingroup ecma_draw_shape
  */
 function ShapeRectangleSize(guiAction) {
-    DrawBasedOnRectangle.call(this, guiAction);
+    DrawBasedOnRectangleSize.call(this, guiAction);
 
     this.createPolyline = false;
     this.includeBasePath = ShapeRectangleSize.includeBasePath;
@@ -35,7 +35,7 @@ function ShapeRectangleSize(guiAction) {
     this.setUiOptions(["../Shape.ui", "ShapeRectangleSize.ui"]);
 }
 
-ShapeRectangleSize.prototype = new DrawBasedOnRectangle();
+ShapeRectangleSize.prototype = new DrawBasedOnRectangleSize();
 ShapeRectangleSize.includeBasePath = includeBasePath;
 
 ShapeRectangleSize.prototype.getShapes = function(corners) {
