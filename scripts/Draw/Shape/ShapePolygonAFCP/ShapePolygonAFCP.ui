@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>265</width>
+    <width>152</width>
     <height>50</height>
    </rect>
   </property>
@@ -14,7 +14,7 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>No. of Sides:</string>
+      <string>Corners:</string>
      </property>
     </widget>
    </item>
@@ -22,20 +22,6 @@
     <widget class="QSpinBox" name="Corners">
      <property name="minimum">
       <number>3</number>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="Line" name="line">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QCheckBox" name="Inside">
-     <property name="text">
-      <string>Corners</string>
      </property>
     </widget>
    </item>

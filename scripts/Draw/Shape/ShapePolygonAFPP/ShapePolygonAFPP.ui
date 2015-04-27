@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>265</width>
+    <width>296</width>
     <height>50</height>
    </rect>
   </property>
@@ -14,7 +14,7 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>No. of Sides:</string>
+      <string>Corners:</string>
      </property>
     </widget>
    </item>
@@ -33,9 +33,9 @@
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="Inside">
+    <widget class="QCheckBox" name="CornerToCorner">
      <property name="text">
-      <string>Corners</string>
+      <string>Corner to Corner</string>
      </property>
     </widget>
    </item>

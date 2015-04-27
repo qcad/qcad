@@ -29,7 +29,7 @@ function ShapePolygonAFPP(guiAction) {
     Shape.call(this, guiAction);
     this.corner1 = undefined;
     this.corner2 = undefined;
-    this.inside = false;
+    this.cornerToCorner = false;
 
     this.setUiOptions(["../Shape.ui", "ShapePolygonAFPP.ui"]);
 }
@@ -57,7 +57,7 @@ ShapePolygonAFPP.prototype.setState = function(state) {
     switch (this.state) {
     case ShapePolygonAFPP.State.SettingCorner1:
         var trCorner1 = qsTr("First side");
-        if (this.inside) {
+        if (this.cornerToCorner) {
             trCorner1 = qsTr("First Corner");
         }
         this.setCommandPrompt(trCorner1);
@@ -67,7 +67,7 @@ ShapePolygonAFPP.prototype.setState = function(state) {
 
     case ShapePolygonAFPP.State.SettingCorner2:
         var trCorner2 = qsTr("Second side");
-        if (this.inside) {
+        if (this.cornerToCorner) {
             trCorner2 = qsTr("Second Corner");
         }
         this.setCommandPrompt(trCorner2);
@@ -134,7 +134,7 @@ ShapePolygonAFPP.prototype.getOperation = function(preview) {
     var hyp = Math.sqrt((dist * dist) + (opp * opp));
     var cen = RVector.createPolar(dist, this.corner1.getAngleTo(this.corner2));
     var center = this.corner1.operator_add(cen);
-    if (this.inside) {
+    if (this.cornerToCorner) {
         var corner = this.corner2;
     } else {
         var v = RVector.createPolar(hyp, center.getAngleTo(this.corner1) + angle);
@@ -149,7 +149,7 @@ ShapePolygonAFPP.prototype.getOperation = function(preview) {
         var newhyp = Math.sqrt((newdist * newdist) + (newopp * newopp));
         var newcen = RVector.createPolar(newdist, this.corner1.getAngleTo(this.corner2));
         var newcenter = this.corner1.operator_add(newcen);
-        if (this.inside) {
+        if (this.cornerToCorner) {
             newcenter = this.corner2.operator_subtract(newcen);
             v = RVector.createPolar(newhyp, newcenter.getAngleTo(this.corner1));
             corner = newcenter.operator_add(v);
@@ -187,8 +187,8 @@ ShapePolygonAFPP.prototype.slotCornersChanged = function(value) {
     this.updatePreview(true);
 };
 
-ShapePolygonAFPP.prototype.slotInsideChanged = function(checked) {
-    this.inside = checked;
+ShapePolygonAFPP.prototype.slotCornerToCornerChanged = function(checked) {
+    this.cornerToCorner = checked;
     //Change prompt
     if (this.state >= 0) {
         this.setState(this.state);
