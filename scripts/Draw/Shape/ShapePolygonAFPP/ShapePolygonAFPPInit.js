@@ -3,7 +3,7 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ShapePolygonAFPP.js");
     action.setIcon(basePath + "/ShapePolygonAFPP.svg");
-    action.setStatusTip(qsTranslate("ShapePolygonAFPP", "Draw regular polygon from center point of two sides"));
+    action.setStatusTip(qsTranslate("ShapePolygonAFPP", "Draw regular polygon from middle points of two sides"));
     action.setDefaultShortcuts([new QKeySequence("p,g,4")]);
     action.setDefaultCommands(["polygonss", "pg4"]);
     action.setGroupSortOrder(11530);

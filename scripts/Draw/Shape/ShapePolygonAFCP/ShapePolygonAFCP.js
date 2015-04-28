@@ -29,8 +29,7 @@ function ShapePolygonAFCP(guiAction) {
     Shape.call(this, guiAction);
 
     this.center = undefined;
-    this.corner = undefined;
-    this.inside = false;
+    this.middleOfSide = undefined;
 
     this.setUiOptions(["../Shape.ui", "ShapePolygonAFCP.ui"]);
 }
@@ -58,7 +57,7 @@ ShapePolygonAFCP.prototype.setState = function(state) {
     switch (this.state) {
     case ShapePolygonAFCP.State.SettingCenter:
         this.center = undefined;
-        this.corner = undefined;
+        this.middleOfSide = undefined;
         var trCenter = qsTr("Center");
         this.setCommandPrompt(trCenter);
         this.setLeftMouseTip(trCenter);
@@ -66,13 +65,10 @@ ShapePolygonAFCP.prototype.setState = function(state) {
         break;
 
     case ShapePolygonAFCP.State.SettingCorner:
-        this.corner = undefined;
-        var trCornerPoint = qsTr("Side");
-        if (this.inside) {
-            trCornerPoint = qsTr("Corner");
-        }
-        this.setCommandPrompt(trCornerPoint);
-        this.setLeftMouseTip(trCornerPoint);
+        this.middleOfSide = undefined;
+        var trMiddlePoint = qsTr("Middle of Side");
+        this.setCommandPrompt(trMiddlePoint);
+        this.setLeftMouseTip(trMiddlePoint);
         this.setRightMouseTip(qsTr("Done"));
         break;
     }
@@ -106,7 +102,7 @@ ShapePolygonAFCP.prototype.pickCoordinate = function(event, preview) {
         break;
 
     case ShapePolygonAFCP.State.SettingCorner:
-        this.corner = event.getModelPosition();
+        this.middleOfSide = event.getModelPosition();
         if (preview) {
             this.updatePreview();
         }
@@ -114,7 +110,7 @@ ShapePolygonAFCP.prototype.pickCoordinate = function(event, preview) {
             var op = this.getOperation(false);
             if (!isNull(op)) {
                 di.applyOperation(op);
-                di.setRelativeZero(this.corner);
+                di.setRelativeZero(this.middleOfSide);
                 this.setState(ShapePolygonAFCP.State.SettingCenter);
             }
         }
@@ -123,36 +119,18 @@ ShapePolygonAFCP.prototype.pickCoordinate = function(event, preview) {
 };
 
 ShapePolygonAFCP.prototype.getOperation = function(preview) {
-    if (isNull(this.center) || isNull(this.corner)) {
+    if (isNull(this.center) || isNull(this.middleOfSide)) {
         return undefined;
     }
 
     var corners = [];
 
     var angle = Math.PI/this.numberOfCorners;
-    var dist = this.center.getDistanceTo(this.corner);
+    var dist = this.center.getDistanceTo(this.middleOfSide);
     var opp = Math.tan(angle)*dist;
     var hyp = Math.sqrt((dist * dist) + (opp * opp));
-    if (this.inside) {
-        var corner = this.corner;
-    } else {
-        var v = RVector.createPolar(hyp, this.center.getAngleTo(this.corner) + angle);
-        corner = this.center.operator_add(v);
-    }
-
-//    if ((this.numberOfCorners % 2) == 1) {
-//        // odd no. of corners
-//        var newdist = (dist / (dist + hyp)) * (dist * 2);
-//        var newopp = Math.tan(angle) * newdist;
-//        var newhyp = Math.sqrt((newdist * newdist) + (newopp * newopp));
-//        if (this.inside) {
-//            v = RVector.createPolar(newhyp, this.center.getAngleTo(this.corner));
-//            corner = this.center.operator_add(v);
-//        } else {
-//            v = RVector.createPolar(newhyp, this.center.getAngleTo(this.corner) + angle);
-//            corner = this.center.operator_add(v);
-//        }
-//    }
+    var v = RVector.createPolar(hyp, this.center.getAngleTo(this.middleOfSide) + angle);
+    var corner = this.center.operator_add(v);
 
     for (var n=1; n<=this.numberOfCorners; ++n) {
         var c = corner.copy();
@@ -175,16 +153,15 @@ ShapePolygonAFCP.prototype.getOperation = function(preview) {
     return op;
 };
 
-ShapePolygonAFCP.prototype.slotCornersChanged = function(value) {
-    this.numberOfCorners = value;
-    this.updatePreview(true);
+ShapePolygonAFCP.prototype.getAuxPreview = function() {
+    if (isNull(this.center) || isNull(this.middleOfSide)) {
+        return undefined;
+    }
+
+    return [ new RCircle(this.center, this.center.getDistanceTo(this.middleOfSide)) ];
 };
 
-ShapePolygonAFCP.prototype.slotInsideChanged = function(checked) {
-    this.inside = checked;
-    //Change prompt
-    if (this.state >= 0) {
-        this.setState(this.state);
-    }
+ShapePolygonAFCP.prototype.slotCornersChanged = function(value) {
+    this.numberOfCorners = value;
     this.updatePreview(true);
 };
