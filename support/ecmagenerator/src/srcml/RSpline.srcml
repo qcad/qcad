@@ -1032,6 +1032,29 @@ dir="./core/math" filename="RSpline.h">
       </argument>&gt;</argument_list></name>
     </argument>&gt;</argument_list></name>
   </type>
+  <name>getExplodedBezier</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+        <name>int</name>
+      </type>
+      <name>segments</name>
+    </decl>
+  </param>)</parameter_list>
+  <specifier>const</specifier>;</function_decl>
+  <function_decl>
+  <type>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>QSharedPointer
+      <argument_list>&lt;
+      <argument>
+        <name>RShape</name>
+      </argument>&gt;</argument_list></name>
+    </argument>&gt;</argument_list></name>
+  </type>
   <name>getExplodedWithSegmentLength</name>
   <parameter_list>(
   <param>
@@ -1219,6 +1242,9 @@ dir="./core/math" filename="RSpline.h">
     </decl>
   </param>)</parameter_list>
   <specifier>const</specifier>;</function_decl>
+  <comment type="line">//void
+  appendToExploded(QList&lt;QSharedPointer&lt;RShape&gt; &gt;&amp;
+  list) const;</comment>
   <function_decl>
   <type>
     <name>void</name>

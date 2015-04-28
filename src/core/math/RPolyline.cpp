@@ -21,6 +21,7 @@
 #include "RArc.h"
 #include "RBox.h"
 #include "RCircle.h"
+#include "RDirected.h"
 #include "RLine.h"
 #include "RPainterPath.h"
 #include "RPolyline.h"
@@ -101,40 +102,130 @@ void RPolyline::normalize() {
     bulges = newBulges;
 }
 
-void RPolyline::appendShape(const RShape& shape) {
-    const RDirected* directed = dynamic_cast<const RDirected*>(&shape);
-    if (directed==NULL) {
-        qWarning("RPolyline::appendShape: shape is not a line, arc or polyline");
-        return;
-    }
+void RPolyline::prependShape(const RShape& shape) {
+    appendShape(shape, true);
+//    const RDirected* directed = dynamic_cast<const RDirected*>(&shape);
+//    if (directed==NULL) {
+//        qWarning() << "RPolyline::prependShape: shape is not a line, arc or polyline: " << shape;
+//        return;
+//    }
+
+//    const RPolyline* pl = dynamic_cast<const RPolyline*>(&shape);
+//    if (pl!=NULL) {
+//        for (int i=pl->countSegments()-1; i>=0; --i) {
+//            QSharedPointer<RShape> s = pl->getSegmentAt(i);
+//            if (s.isNull()) {
+//                continue;
+//            }
+//            prependShape(*s.data());
+//        }
+//    }
+
+//    double bulge = 0.0;
+//    const RArc* arc = dynamic_cast<const RArc*>(&shape);
+//    if (arc!=NULL) {
+//        bulge = arc->getBulge();
+//    }
+
+//    const RLine* line = dynamic_cast<const RLine*>(&shape);
+//    if (line!=NULL) {
+//        directed = line;
+//    }
+
+//    if (vertices.size()==0) {
+//        prependVertex(directed->getEndPoint());
+//    }
+
+//    if (!vertices.last().equalsFuzzy(directed->getEndPoint())) {
+//        qWarning("RPolyline::prependShape: arc not connected to polyline");
+//    }
+
+//    prependVertex(directed->getStartPoint());
+//    setBulgeAt(0, bulge);
+}
+
+void RPolyline::appendShape(const RShape& shape, bool prepend) {
+//    const RDirected* directed = dynamic_cast<const RDirected*>(&shape);
+//    if (directed==NULL) {
+//        qWarning() << "RPolyline::appendShape: shape is not a line, arc or polyline: " << shape;
+//        return;
+//    }
 
     const RPolyline* pl = dynamic_cast<const RPolyline*>(&shape);
     if (pl!=NULL) {
-        for (int i=0; i<pl->countSegments(); ++i) {
-            QSharedPointer<RShape> s = pl->getSegmentAt(i);
-            if (s.isNull()) {
-                continue;
+        if (prepend) {
+            for (int i=pl->countSegments()-1; i>=0; --i) {
+                QSharedPointer<RShape> s = pl->getSegmentAt(i);
+                if (s.isNull()) {
+                    continue;
+                }
+                prependShape(*s);
             }
-            appendShape(*s.data());
+        }
+        else {
+            for (int i=0; i<pl->countSegments(); ++i) {
+                QSharedPointer<RShape> s = pl->getSegmentAt(i);
+                if (s.isNull()) {
+                    continue;
+                }
+                appendShape(*s);
+            }
+        }
+        return;
+    }
+
+    const RDirected* directed = NULL;
+    double bulge = 0.0;
+
+    const RLine* line = dynamic_cast<const RLine*>(&shape);
+    if (line!=NULL) {
+        directed = line;
+    }
+    else {
+        const RArc* arc = dynamic_cast<const RArc*>(&shape);
+        if (arc!=NULL) {
+            bulge = arc->getBulge();
+            directed = arc;
         }
     }
 
-    double bulge = 0.0;
-    const RArc* arc = dynamic_cast<const RArc*>(&shape);
-    if (arc!=NULL) {
-        bulge = arc->getBulge();
+    if (directed==NULL) {
+        qWarning() << "RPolyline::appendShape: shape is not a line, arc or polyline: " << shape;
+        return;
     }
 
-    if (vertices.size()==0) {
-        appendVertex(directed->getStartPoint());
+    RVector connectionPoint;
+    RVector nextPoint;
+    double gap;
+    if (prepend) {
+        connectionPoint = directed->getEndPoint();
+        nextPoint = directed->getStartPoint();
+        if (vertices.size()==0) {
+            appendVertex(connectionPoint);
+        }
+        gap = vertices.first().getDistanceTo(connectionPoint);
+    }
+    else {
+        connectionPoint = directed->getStartPoint();
+        nextPoint = directed->getEndPoint();
+        if (vertices.size()==0) {
+            appendVertex(connectionPoint);
+        }
+        gap = vertices.last().getDistanceTo(connectionPoint);
     }
 
-    if (!vertices.last().equalsFuzzy(directed->getStartPoint())) {
-        qWarning("RPolyline::appendShape: arc not connected to polyline");
+    if (!RMath::fuzzyCompare(gap, 0.0, 1.0e-4)) {
+        qWarning() << "RPolyline::appendShape: arc or line not connected to polyline, gap: " << gap;
     }
 
-    appendVertex(directed->getEndPoint());
-    setBulgeAt(bulges.size()-2, bulge);
+    if (prepend) {
+        prependVertex(nextPoint);
+        setBulgeAt(0, bulge);
+    }
+    else {
+        appendVertex(nextPoint);
+        setBulgeAt(bulges.size()-2, bulge);
+    }
 }
 
 void RPolyline::appendVertex(const RVector& vertex, double bulge) {
@@ -866,6 +957,7 @@ void RPolyline::print(QDebug dbg) const {
     RShape::print(dbg);
     dbg.nospace() << ", ";
     dbg.nospace() << "vertices: " << countVertices() << ", ";
+    dbg.nospace() << "bulges: " << bulges.length() << ", ";
     dbg.nospace() << "closed: " << closed << ", ";
     QList<QSharedPointer<RShape> > sub = getExploded();
     QList<QSharedPointer<RShape> >::iterator it;

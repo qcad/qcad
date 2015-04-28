@@ -40,12 +40,22 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="prependShape" cppName="prependShape"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="shape"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="appendShape" cppName="appendShape"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RShape &amp;" typeName="RShape" name="shape"
         isConst="true" />
+        <arg type="bool" typeName="bool" name="prepend"
+        hasDefault="true" default=" false" isConst="false" />
       </variant>
     </method>
     <method name="appendVertex" cppName="appendVertex"

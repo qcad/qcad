@@ -77,6 +77,9 @@
         normalize
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        prependShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         appendShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -278,6 +278,9 @@
         getExploded
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getExplodedBezier
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getExplodedWithSegmentLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

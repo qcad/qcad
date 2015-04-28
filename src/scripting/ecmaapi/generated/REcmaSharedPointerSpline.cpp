@@ -264,6 +264,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
+            REcmaHelper::registerFunction(&engine, proto, getExplodedBezier, "getExplodedBezier");
+            
             REcmaHelper::registerFunction(&engine, proto, getExplodedWithSegmentLength, "getExplodedWithSegmentLength");
             
             REcmaHelper::registerFunction(&engine, proto, getBezierSegments, "getBezierSegments");
@@ -4818,6 +4820,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSpline::getExploded", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSpline::getExplodedBezier
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSpline::getExplodedBezier", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::getExplodedBezier";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getExplodedBezier", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->getExplodedBezier(a0);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getExplodedBezier().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::getExplodedBezier", context, engine);
             return result;
         }
          QScriptValue

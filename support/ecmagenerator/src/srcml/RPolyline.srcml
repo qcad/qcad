@@ -161,6 +161,20 @@ dir="./core/math" filename="RPolyline.h">
   <type>
     <name>void</name>
   </type>
+  <name>prependShape</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RShape</name>&amp;</type>
+      <name>shape</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <function_decl>
+  <type>
+    <name>void</name>
+  </type>
   <name>appendShape</name>
   <parameter_list>(
   <param>
@@ -170,6 +184,18 @@ dir="./core/math" filename="RPolyline.h">
       <name>RShape</name>&amp;</type>
       <name>shape</name>
     </decl>
+  </param>, 
+  <param>
+    <decl>
+    <type>
+      <name>bool</name>
+    </type>
+    <name>prepend</name>=
+    <init>
+      <expr>
+        <name>false</name>
+      </expr>
+    </init></decl>
   </param>)</parameter_list>;</function_decl>
   <function_decl>
   <type>

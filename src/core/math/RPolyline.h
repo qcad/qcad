@@ -62,7 +62,8 @@ public:
     void clear();
     void normalize();
 
-    void appendShape(const RShape& shape);
+    void prependShape(const RShape& shape);
+    void appendShape(const RShape& shape, bool prepend = false);
 
     void appendVertex(const RVector& vertex, double bulge = 0.0);
     void prependVertex(const RVector& vertex, double bulge = 0.0);

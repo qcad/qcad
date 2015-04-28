@@ -106,6 +106,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, normalize, "normalize");
             
+            REcmaHelper::registerFunction(&engine, proto, prependShape, "prependShape");
+            
             REcmaHelper::registerFunction(&engine, proto, appendShape, "appendShape");
             
             REcmaHelper::registerFunction(&engine, proto, appendVertex, "appendVertex");
@@ -692,6 +694,71 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerPolyline::prependShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::prependShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::prependShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("prependShape", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->prependShape(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.prependShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::prependShape", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerPolyline::appendShape
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -745,6 +812,56 @@
     // return type 'void'
     
                self->appendShape(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->appendShape(a0
+        ,
+    a1);
     } else
 
 

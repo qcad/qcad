@@ -1687,6 +1687,10 @@ EAction.warnNotLineArc = function() {
     EAction.handleUserWarning(qsTr("Entity is not a line or arc."))
 };
 
+EAction.warnNotLineArcPolyline = function() {
+    EAction.handleUserWarning(qsTr("Entity is not a line, arc or polyline."))
+};
+
 EAction.warnNotLine = function() {
     EAction.handleUserWarning(qsTr("Entity is not a line."));
 };
