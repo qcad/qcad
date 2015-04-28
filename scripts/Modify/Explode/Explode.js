@@ -86,15 +86,9 @@ Explode.prototype.beginEvent = function() {
         else if (isSplineEntity(entity)) {
             var spline = entity.getData().castToShape();
             var seg = RSettings.getIntValue("Explode/SplineSegments", 64);
-            newShapes.push(spline.toPolyline(seg));
-//            if (lineSegments.length>0) {
-//                polyline = new RPolyline();
-//                polyline.appendVertex(lineSegments[0].getStartPoint());
-//                for (k=0; k<lineSegments.length; k++) {
-//                    polyline.appendVertex(lineSegments[k].getEndPoint());
-//                }
-//                newShapes.push(polyline);
-//            }
+            var pl = spline.toPolyline(seg);
+            pl.simplify();
+            newShapes.push(pl);
         }
 
         // explode hatch into lines / solid fill into boundary:

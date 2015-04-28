@@ -622,7 +622,7 @@ void RSpline::updateTangentsPeriodic() {
 RPolyline RSpline::toPolyline(int segments) const {
     RPolyline ret;
 
-    QList<QSharedPointer<RShape> > lineSegments = getExploded(segments);
+    QList<QSharedPointer<RShape> > lineSegments = getExplodedBezier(segments);
     for (int k=0; k<lineSegments.size(); k++) {
         QSharedPointer<RDirected> dir = lineSegments[k].dynamicCast<RDirected>();
         if (dir.isNull()) {
@@ -704,6 +704,19 @@ QList<QSharedPointer<RShape> > RSpline::getExploded(int segments) const {
     }
 
     return exploded;
+}
+
+/**
+ * \return exploded spline, treated as one spline segment, typically only
+ * used for bezier spline segments (degree+1 control points).
+ */
+QList<QSharedPointer<RShape> > RSpline::getExplodedBezier(int segments) const {
+    QList<QSharedPointer<RShape> > ret;
+    QList<RSpline> bezierSegments = getBezierSegments();
+    for (int i=0; i<bezierSegments.length(); i++) {
+        ret.append(bezierSegments[i].getExploded(segments));
+    }
+    return ret;
 }
 
 void RSpline::appendToExploded(const RLine& line) const {
