@@ -241,13 +241,9 @@ bool RObject::setMemberZ(QList<RVector>& variable, const QVariant& value,
  * \param value A QList of QPairs of int and double where the int is the index and
  *      the double the value.
  */
-bool RObject::setMemberVector(QList<RVector>& variable, const QVariant& value,
-                         RObject::XYZ xyz) {
-
+bool RObject::setMemberVector(QList<RVector>& variable, const QVariant& value, RObject::XYZ xyz) {
     if (!value.canConvert<QList<QPair<int, double> > >()) {
-        qWarning() <<
-                      QString("RObject::setMemberVector: '%1' is not a QList<QPair<int, double> >").arg(
-                          value.toString());
+        qWarning() << QString("RObject::setMemberVector: '%1' is not a QList<QPair<int, double> >").arg(value.toString());
         return false;
     }
 
@@ -305,9 +301,7 @@ bool RObject::setMemberVector(QList<RVector>& variable, const QVariant& value,
 /**
  * \param value A list for int / double pairs: QList<QPair<int, double> >
  */
-bool RObject::setMember(QList<double>& variable, const QVariant& value,
-                         bool condition) {
-
+bool RObject::setMember(QList<double>& variable, const QVariant& value, bool condition) {
     if (!condition) {
         return false;
     }
@@ -320,13 +314,16 @@ bool RObject::setMember(QList<double>& variable, const QVariant& value,
 
     QList<QPair<int, double> > pairList = value.value<QList<QPair<int, double> > >();
     QList<QPair<int, double> >::iterator it;
+
+    int offset = 0;
     for (it=pairList.begin(); it!=pairList.end(); ++it) {
         int i = (*it).first;
         double v = (*it).second;
 
         // entry was removed:
-        if (RMath::isNaN(v) && i<variable.size()) {
+        if (RMath::isNaN(v) && i-offset<variable.size()) {
             variable.removeLast();
+            offset++;
         }
 
         // entry was added:
