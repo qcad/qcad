@@ -35,8 +35,7 @@ class RExporter;
  */
 class QCADCORE_EXPORT RPropertyChange {
 public:
-    RPropertyChange(RPropertyTypeId propertyTypeId, QVariant oldValue,
-            QVariant newValue);
+    RPropertyChange(RPropertyTypeId propertyTypeId, QVariant oldValue, QVariant newValue);
     RPropertyTypeId propertyTypeId;
     QVariant oldValue;
     QVariant newValue;

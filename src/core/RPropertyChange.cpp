@@ -19,8 +19,7 @@
 #include "RPropertyChange.h"
 #include "RMetaTypes.h"
 
-RPropertyChange::RPropertyChange(RPropertyTypeId propertyTypeId, QVariant oldValue,
-        QVariant newValue) :
+RPropertyChange::RPropertyChange(RPropertyTypeId propertyTypeId, QVariant oldValue, QVariant newValue) :
     propertyTypeId(propertyTypeId) {
 
     if (oldValue.type()==QVariant::UserType &&
