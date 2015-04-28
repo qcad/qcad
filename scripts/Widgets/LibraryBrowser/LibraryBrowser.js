@@ -165,15 +165,14 @@ LibraryBrowser.getSourceList = function() {
     var libs;
 
     // no configuration: add all libraries available in libraries subdir:
-    if (sourceList.length === 0) {
-        librariesDir = new QDir("libraries");
-        libs = librariesDir.entryList([], filters, sortFlags);
-        for (i=0; i<libs.length; i++) {
+    librariesDir = new QDir("libraries");
+    libs = librariesDir.entryList([], filters, sortFlags);
+    for (i=0; i<libs.length; i++) {
+        // always add default library if available:
+        if (libs[i]==="default" || sourceList.length === 0) {
             sourceList.push(new QDir("libraries/%1".arg(libs[i])).absolutePath());
         }
     }
-
-    // always add default library:
 
     // always add libraries of installed add-ons:
     var localAddOns = AddOn.getLocalAddOns();
@@ -192,6 +191,7 @@ LibraryBrowser.getSourceList = function() {
         }
     }
 
+    sourceList = sourceList.unique();
     qDebug("sourceList: ", sourceList);
 
     return sourceList;
@@ -1280,21 +1280,12 @@ LibraryBrowser.syncAll = function(progressDialog, startUp) {
         var sourceDb = sourceListDb[i].name;
         if (!sourceList.contains(sourceDb)) {
             // source deleted: drop entire DB:
-            //var con = new DbConnection(Table.connectionName);
-            //con.db.close();
-            //if (con.db.isOpen()) {
-            //    qWarning("DB still open");
-            //}
-            //QSqlDatabase.removeDatabase(Table.connectionName);
-            //if (!QFile.remove(LibraryBrowser.getDbFileName())) {
-            //    debugger;
-            //    qWarning("Cannot delete DB");
-            //}
+            EAction.handleUserWarning(qsTr("Source removed from part library: %1").arg(sourceListDb[i].name));
+            EAction.handleUserWarning(qsTr("Force database update."));
             LibraryBrowser.initDb(true);
             force = true;
             qDebug("Rebuilding DB...");
             break;
-            //ItemPeer.doDeleteById(sourceListDb[i].id, progressDialog);
         }
     }
 
