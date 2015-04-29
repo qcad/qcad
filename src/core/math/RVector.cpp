@@ -990,7 +990,7 @@ bool RVector::RVectorDistanceSort::lessThan(const RVector& v1, const RVector& v2
 }
 
 bool RVector::RVectorLeftRightTopBottomSort::lessThan(const RVector& v1, const RVector& v2) {
-    return v1.x < v2.x || (v1.x==v2.x && v1.y > v2.y);
+    return v1.y > v2.y || (v1.y==v2.y && v1.x < v2.x);
 }
 
 bool RVector::RVectorAngleSort::lessThan(const RVector& v1, const RVector& v2) {
