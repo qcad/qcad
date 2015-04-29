@@ -288,6 +288,9 @@
         getSortedByDistance
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSortedLeftRightTopBottom
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getSortedByAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

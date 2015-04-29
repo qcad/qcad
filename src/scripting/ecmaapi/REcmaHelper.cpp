@@ -503,6 +503,13 @@ void REcmaHelper::fromScriptValue(QScriptEngine* engine, QScriptValue scriptValu
     }
 }
 
+void REcmaHelper::fromScriptValue(QScriptEngine* engine, QScriptValue scriptValue, QList<RS::EntityType>& cppValue) {
+    QVariantList vl = engine->fromScriptValue<QVariantList>(scriptValue);
+    for (int i = 0; i < vl.size(); ++i) {
+        cppValue.append((RS::EntityType)vl.at(i).toInt());
+    }
+}
+
 QScriptValue REcmaHelper::listToScriptValue(QScriptEngine* engine, const QList<QSharedPointer<RShape> >& cppValue) {
     QVariantList vl;
     for (int i = 0; i < cppValue.size(); ++i) {

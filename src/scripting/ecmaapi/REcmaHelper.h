@@ -249,6 +249,7 @@ static QScriptValue tryCast(QScriptEngine* engine, RSnapRestriction* cppValue) {
 }
 
 static void fromScriptValue(QScriptEngine* engine, QScriptValue scriptValue, QList<QSharedPointer<RShape> >& cppValue);
+static void fromScriptValue(QScriptEngine* engine, QScriptValue scriptValue, QList<RS::EntityType>& cppValue);
 static QVariant toVariant(const QSharedPointer<RShape>& cppValue);
 
 template<class T>

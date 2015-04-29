@@ -1846,6 +1846,57 @@ dir="./core/math" filename="RVector.h">
       <name>RVector</name>
     </argument>&gt;</argument_list></name>
   </type>
+  <name>getSortedLeftRightTopBottom</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>QList
+      <argument_list>&lt;
+      <argument>
+        <name>RVector</name>
+      </argument>&gt;</argument_list></name>&amp;</type>
+      <name>list</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl>
+  <class>class 
+  <name>RVectorLeftRightTopBottomSort</name>
+  <block>{
+  <private type="default"></private>
+  <public>public: 
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>bool</name>
+  </type>
+  <name>lessThan</name>
+  <parameter_list>(
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>v1</name>
+    </decl>
+  </param>, 
+  <param>
+    <decl>
+      <type>
+      <name>const</name>
+      <name>RVector</name>&amp;</type>
+      <name>v2</name>
+    </decl>
+  </param>)</parameter_list>;</function_decl></public>}</block>;</class>
+  <function_decl>
+  <type>
+    <name>static</name>
+    <name>QList
+    <argument_list>&lt;
+    <argument>
+      <name>RVector</name>
+    </argument>&gt;</argument_list></name>
+  </type>
   <name>getSortedByAngle</name>
   <parameter_list>(
   <param>

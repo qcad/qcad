@@ -34,6 +34,7 @@ function DrawBasedOnRectanglePP(guiAction) {
 
     this.corner1 = undefined;
     this.corner2 = undefined;
+    this.previewRectangle = false;
 }
 
 DrawBasedOnRectanglePP.prototype = new EAction();
@@ -115,4 +116,30 @@ DrawBasedOnRectanglePP.prototype.pickCoordinate = function(event, preview) {
         }
         break;
     }
+};
+
+DrawBasedOnRectanglePP.prototype.getCorners = function() {
+    if (isNull(this.corner1) || isNull(this.corner2)) {
+        return [];
+    }
+
+    return [
+        new RVector(this.corner1.x, this.corner1.y),
+        new RVector(this.corner2.x, this.corner1.y),
+        new RVector(this.corner2.x, this.corner2.y),
+        new RVector(this.corner1.x, this.corner2.y)
+    ];
+};
+
+DrawBasedOnRectanglePP.prototype.getAuxPreview = function() {
+    if (this.previewRectangle!==true) {
+        return undefined;
+    }
+
+    var shapes = [];
+    var corners = this.getCorners();
+    for (var i=0; i<corners.length; ++i) {
+        shapes.push(new RLine(corners[i], corners[(i+1)%corners.length]));
+    }
+    return shapes;
 };

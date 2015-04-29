@@ -39,12 +39,7 @@ ShapeRectanglePP.prototype.beginEvent = function() {
 };
 
 ShapeRectanglePP.prototype.getOperation = function(preview) {
-    var corners = [
-        new RVector(this.corner1.x, this.corner1.y),
-        new RVector(this.corner2.x, this.corner1.y),
-        new RVector(this.corner2.x, this.corner2.y),
-        new RVector(this.corner1.x, this.corner2.y)
-    ];
+    var corners = this.getCorners();
 
     var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());

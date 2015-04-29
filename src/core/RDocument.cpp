@@ -1079,7 +1079,6 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
     // filter out entities that don't intersect with the given box
     // or are not on the current block or are on a frozen layer:
     QMap<REntity::Id, QSet<int> > res;
-    //QSet<REntity::Id> outsiders;
     QMap<REntity::Id, QSet<int> >::iterator it;
     for (it=candidates.begin(); it!=candidates.end(); ++it) {
         if (RMouseEvent::hasMouseMoved()) {
@@ -1087,25 +1086,21 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         }
         QSharedPointer<REntity> entity = queryEntityDirect(it.key());
         if (entity.isNull()) {
-            //outsiders.insert(*it);
             continue;
         }
 
         // undone:
         if (entity->isUndone()) {
-            //outsiders.insert(*it);
             continue;
         }
 
         // not on current or given block:
         if (entity->getBlockId() != blockId) {
-            //outsiders.insert(*it);
             continue;
         }
 
         // layer is off:
         if (isLayerFrozen(entity->getLayerId())) {
-            //outsiders.insert(*it);
             continue;
         }
 
@@ -1116,7 +1111,6 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
             if (blockId!=RBlock::INVALID_ID) {
                 QSharedPointer<RBlock> block = queryBlockDirect(blockId);
                 if (!block.isNull() && block->isFrozen()) {
-                    //outsiders.insert(*it);
                     continue;
                 }
             }
@@ -1125,14 +1119,12 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         // layer is locked:
         if (!includeLockedLayers) {
             if (isLayerLocked(entity->getLayerId())) {
-                //outsiders.insert(*it);
                 continue;
             }
         }
 
         // apply filter:
         if (filter.contains(entity->getType())) {
-            //outsiders.insert(*it);
             continue;
         }
 
@@ -1143,7 +1135,6 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
 
         if (!checkBoundingBoxOnly &&
             !entity->intersectsWith(pl)) {
-            //outsiders.insert(*it);
             continue;
         }
 
@@ -1151,7 +1142,6 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
     }
 
     return res;
-    //return candidates - outsiders;
 }
 
 

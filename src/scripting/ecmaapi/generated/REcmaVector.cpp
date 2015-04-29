@@ -258,6 +258,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getSortedByDistance, "getSortedByDistance");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getSortedLeftRightTopBottom, "getSortedLeftRightTopBottom");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getSortedByAngle, "getSortedByAngle");
             
 
@@ -6267,6 +6269,57 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::getSortedByDistance", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::getSortedLeftRightTopBottom
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::getSortedLeftRightTopBottom", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getSortedLeftRightTopBottom";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        RVector::
+       getSortedLeftRightTopBottom(a0);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getSortedLeftRightTopBottom().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::getSortedLeftRightTopBottom", context, engine);
             return result;
         }
          QScriptValue

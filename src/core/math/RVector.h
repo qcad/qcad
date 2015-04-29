@@ -235,6 +235,12 @@ public:
         static RVector v;
     };
 
+    static QList<RVector> getSortedLeftRightTopBottom(const QList<RVector>& list);
+    class RVectorLeftRightTopBottomSort {
+    public:
+        static bool lessThan(const RVector& v1, const RVector& v2);
+    };
+
     static QList<RVector> getSortedByAngle(const QList<RVector>& list, const RVector& center, double angle);
     class RVectorAngleSort {
     public:

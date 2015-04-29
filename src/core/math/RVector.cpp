@@ -922,6 +922,15 @@ QList<RVector> RVector::getSortedByDistance(const QList<RVector>& list, const RV
 }
 
 /**
+ * \return List of same vectors as given, ordered from left to right, top to bottom.
+ */
+QList<RVector> RVector::getSortedLeftRightTopBottom(const QList<RVector>& list) {
+    QList<RVector> ret = list;
+    qSort(ret.begin(), ret.end(), RVector::RVectorLeftRightTopBottomSort::lessThan);
+    return ret;
+}
+
+/**
  * \return List of same vectors as given, ordered by shortes angle difference to given reference angle.
  */
 QList<RVector> RVector::getSortedByAngle(const QList<RVector>& list, const RVector& center, double angle) {
@@ -978,6 +987,10 @@ QDataStream& operator>>(QDataStream& stream, RVector& vector) {
 
 bool RVector::RVectorDistanceSort::lessThan(const RVector& v1, const RVector& v2) {
     return v.getDistanceTo(v1) < v.getDistanceTo(v2);
+}
+
+bool RVector::RVectorLeftRightTopBottomSort::lessThan(const RVector& v1, const RVector& v2) {
+    return v1.x < v2.x || (v1.x==v2.x && v1.y > v2.y);
 }
 
 bool RVector::RVectorAngleSort::lessThan(const RVector& v1, const RVector& v2) {
