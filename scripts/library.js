@@ -1105,11 +1105,18 @@ function deepCopy(obj) {
 /**
  * \return A new array which contains every unique item of this array only once.
  */
-Array.prototype.unique = function() {
+Array.prototype.unique = function(method) {
     var a = [], i, l = this.length;
     for (i = 0; i < l; i++) {
-        if (a.indexOf(this[i], 0) < 0) {
-            a.push(this[i]);
+        if (isNull(method)) {
+            if (a.indexOf(this[i], 0) < 0) {
+                a.push(this[i]);
+            }
+        }
+        else {
+            if (!a.contains(this[i], method)) {
+                a.push(this[i]);
+            }
         }
     }
     return a;
