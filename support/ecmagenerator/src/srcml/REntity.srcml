@@ -3008,13 +3008,7 @@ dir="./core" filename="REntity.h">
     <block>{ 
     <return>return 
     <expr>1</expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>dump</name>
-  <parameter_list>()</parameter_list>;</function_decl></public>
+  </function></public>
   <protected>protected: 
   <function_decl>
   <type>

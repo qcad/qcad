@@ -259,9 +259,6 @@
         ;static  QScriptValue
         getComplexity
         (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        dump
-        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

@@ -37,7 +37,7 @@ dir="./core" filename="RPropertyChange.h">
   <class_decl>class 
   <name>RExporter</name>;</class_decl>
   <comment type="block">/** * Stores the change that was made to a
-  property of an object. */</comment>
+  property of an object. * * \scriptable * \copyable */</comment>
   <class>class 
   <macro>
     <name>QCADCORE_EXPORT</name>
@@ -46,6 +46,11 @@ dir="./core" filename="RPropertyChange.h">
   <block>{
   <private type="default"></private>
   <public>public: 
+  <constructor>
+    <name>RPropertyChange</name>
+    <parameter_list>()</parameter_list>
+    <block>{}</block>
+  </constructor>
   <constructor_decl>
   <name>RPropertyChange</name>
   <parameter_list>(
@@ -73,6 +78,106 @@ dir="./core" filename="RPropertyChange.h">
       <name>newValue</name>
     </decl>
   </param>)</parameter_list>;</constructor_decl>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setOldValue</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QVariant</name>&amp;</type>
+        <name>v</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>oldValue</name>= 
+    <name>v</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>QVariant</name>
+    </type>
+    <name>getOldValue</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>oldValue</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setNewValue</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>QVariant</name>&amp;</type>
+        <name>v</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>newValue</name>= 
+    <name>v</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>QVariant</name>
+    </type>
+    <name>getNewValue</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>newValue</name>
+    </expr>;</return>}</block>
+  </function>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>setPropertyTypeId</name>
+    <parameter_list>(
+    <param>
+      <decl>
+        <type>
+        <name>const</name>
+        <name>RPropertyTypeId</name>&amp;</type>
+        <name>id</name>
+      </decl>
+    </param>)</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <name>propertyTypeId</name>= 
+    <name>id</name></expr>;</expr_stmt>}</block>
+  </function>
+  <function>
+    <type>
+      <name>RPropertyTypeId</name>
+    </type>
+    <name>getPropertyTypeId</name>
+    <parameter_list>()</parameter_list>
+    <specifier>const</specifier>
+    <block>{ 
+    <return>return 
+    <expr>
+      <name>propertyTypeId</name>
+    </expr>;</return>}</block>
+  </function></public>
+  <public>public: 
   <decl_stmt>
   <decl>
     <type>
@@ -147,6 +252,11 @@ dir="./core" filename="RPropertyChange.h">
     <name>Q_DECLARE_METATYPE</name>
     <argument_list>(
     <argument>RPropertyChange*</argument>)</argument_list>
+  </macro>
+  <macro>
+    <name>Q_DECLARE_METATYPE</name>
+    <argument_list>(
+    <argument>RPropertyChange</argument>)</argument_list>
   </macro>
   <cpp:endif>#
   <cpp:directive>endif</cpp:directive></cpp:endif>

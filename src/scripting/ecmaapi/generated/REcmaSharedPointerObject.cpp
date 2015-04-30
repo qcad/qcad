@@ -99,6 +99,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getComplexity, "getComplexity");
             
+            REcmaHelper::registerFunction(&engine, proto, dump, "dump");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RObjectPointer>(), *proto);
       
@@ -1832,6 +1834,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerObject::getComplexity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerObject::dump
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerObject::dump", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::dump";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("dump", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->dump();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.dump().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerObject::dump", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerObject::toString

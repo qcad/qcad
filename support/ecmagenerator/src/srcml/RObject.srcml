@@ -741,43 +741,21 @@ dir="./core" filename="RObject.h">
     <return>return 
     <expr>0</expr>;</return>}</block>
   </function>
-  <comment type="block">/** * \return The ID of the given property.
-  */</comment>
-  <comment type="line">// RPropertyTypeId getPropertyId(const
-  QString&amp; propertyGroupTitle, const QString&amp;
-  propertyTitle) {</comment>
-  <comment type="line">// if
-  (propertyTypeIdMap.count(propertyGroupTitle)==0 ||</comment>
-  <comment type="line">//
-  propertyTypeIdMap[propertyGroupTitle].count(propertyTitle)==0)
-  {</comment>
-  <comment type="line">//</comment>
-  <comment type="line">// return -1;</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// else {</comment>
-  <comment type="line">// return
-  propertyTypeIdMap[propertyGroupTitle][propertyTitle];</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// }</comment>
-  <comment type="block">/** * \return Property ID of the first
-  registered property with * the given group title and property
-  title or -1. */</comment>
-  <comment type="line">// static RPropertyTypeId
-  getPropertyTypeId(const QString&amp; propertyGroupTitle, const
-  QString&amp; propertyTitle) {</comment>
-  <comment type="line">// if
-  (propertyTypeIdMap.count(propertyGroupTitle)==0) {</comment>
-  <comment type="line">// return -1;</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// if
-  (propertyTypeIdMap[propertyGroupTitle].count(propertyTitle)==0)
-  {</comment>
-  <comment type="line">// return -1;</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">//</comment>
-  <comment type="line">// return
-  propertyTypeIdMap[propertyGroupTitle][propertyTitle];</comment>
-  <comment type="line">// }</comment>
+  <function>
+    <type>
+      <name>void</name>
+    </type>
+    <name>dump</name>
+    <parameter_list>()</parameter_list>
+    <block>{ 
+    <expr_stmt>
+    <expr>
+    <call>
+      <name>qDebug</name>
+      <argument_list>()</argument_list>
+    </call>&lt;&lt; *
+    <name>this</name></expr>;</expr_stmt>}</block>
+  </function>
   <comment type="block">/** * \nonscriptable */</comment>
   <function>
     <type>

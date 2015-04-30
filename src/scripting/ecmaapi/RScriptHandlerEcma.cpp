@@ -199,6 +199,7 @@
 #include "REcmaPolylineData.h"
 #include "REcmaPolylineEntity.h"
 #include "REcmaPropertyAttributes.h"
+#include "REcmaPropertyChange.h"
 #include "REcmaPropertyEditor.h"
 #include "REcmaPropertyEvent.h"
 #include "REcmaPropertyListener.h"
@@ -853,6 +854,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaPropertyEvent::initEcma(*engine);
 
+    REcmaPropertyChange::initEcma(*engine);
     REcmaPropertyAttributes::initEcma(*engine);
 
     REcmaFileSystemModel::initEcma(*engine);

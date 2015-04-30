@@ -4,8 +4,59 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RStorage" />
   <class_decl name="RExporter" />
   <class name="RPropertyChange"
-  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
-  hasStreamOperator="true" isAbstract="false"
-  isScriptable="false" />
+  hasStreamOperator="true" isAbstract="false" isScriptable="true">
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="QVariant" typeName="QVariant" name="oldValue"
+        isConst="false" />
+        <arg type="QVariant" typeName="QVariant" name="newValue"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="setOldValue" cppName="setOldValue"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QVariant &amp;" typeName="QVariant" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getOldValue" cppName="getOldValue"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="false" />
+    </method>
+    <method name="setNewValue" cppName="setNewValue"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QVariant &amp;" typeName="QVariant" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getNewValue" cppName="getNewValue"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="false" />
+    </method>
+    <method name="setPropertyTypeId" cppName="setPropertyTypeId"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPropertyTypeId &amp;"
+        typeName="RPropertyTypeId" name="id" isConst="true" />
+      </variant>
+    </method>
+    <method name="getPropertyTypeId" cppName="getPropertyTypeId"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RPropertyTypeId"
+      isPureVirtual="false" />
+    </method>
+  </class>
 </unit>

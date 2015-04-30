@@ -246,6 +246,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QMap &lt; RObject::Id , QList &lt; RPropertyChange &gt; &gt;"
       isPureVirtual="false" />
+      <variant returnType="QList &lt; RPropertyChange &gt;"
+      isPureVirtual="false">
+        <arg type="RObject::Id" typeName="RObject::Id" name="id"
+        isConst="false" />
+      </variant>
     </method>
     <method name="hasOnlyChanges" cppName="hasOnlyChanges"
     specifier="public" isStatic="false" isVirtual="false"

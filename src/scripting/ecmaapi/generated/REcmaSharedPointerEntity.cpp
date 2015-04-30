@@ -207,8 +207,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getComplexity, "getComplexity");
             
-            REcmaHelper::registerFunction(&engine, proto, dump, "dump");
-            
         engine.setDefaultPrototype(
             qMetaTypeId<REntityPointer>(), *proto);
       
@@ -7291,50 +7289,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEntity::getComplexity", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSharedPointerEntity::dump
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerEntity::dump", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEntity::dump";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    REntity* self = 
-                        getSelf("dump", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->dump();
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.dump().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerEntity::dump", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerEntity::toString
