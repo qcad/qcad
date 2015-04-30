@@ -387,7 +387,3 @@ void REntity::print(QDebug dbg) const {
         << ", boundingBoxes: " << getBoundingBoxes()
         << ")";
 }
-
-void REntity::dump() {
-    qDebug() << *this;
-}

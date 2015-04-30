@@ -1006,6 +1006,18 @@ bool RTransaction::isPreview() const {
     return (ls!=NULL);
 }
 
+
+/**
+ * \return List of property changes by this transaction for the given object.
+ */
+QList<RPropertyChange> RTransaction::getPropertyChanges(RObject::Id id) const {
+    if (!propertyChanges.contains(id)) {
+        qDebug() << "no property changes for object: " << id;
+        return QList<RPropertyChange>();
+    }
+    return propertyChanges[id];
+}
+
 /**
  * Stream operator for QDebug
  */

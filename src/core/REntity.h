@@ -583,8 +583,6 @@ public:
         return 1;
     }
 
-    void dump();
-
 protected:
     virtual void print(QDebug dbg) const;
 };

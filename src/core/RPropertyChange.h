@@ -32,10 +32,37 @@ class RExporter;
 
 /**
  * Stores the change that was made to a property of an object.
+ *
+ * \scriptable
+ * \copyable
  */
 class QCADCORE_EXPORT RPropertyChange {
 public:
+    RPropertyChange() {}
     RPropertyChange(RPropertyTypeId propertyTypeId, QVariant oldValue, QVariant newValue);
+
+    void setOldValue(const QVariant& v) {
+        oldValue = v;
+    }
+    QVariant getOldValue() const {
+        return oldValue;
+    }
+
+    void setNewValue(const QVariant& v) {
+        newValue = v;
+    }
+    QVariant getNewValue() const {
+        return newValue;
+    }
+
+    void setPropertyTypeId(const RPropertyTypeId& id) {
+        propertyTypeId = id;
+    }
+    RPropertyTypeId getPropertyTypeId() const {
+        return propertyTypeId;
+    }
+
+public:
     RPropertyTypeId propertyTypeId;
     QVariant oldValue;
     QVariant newValue;
@@ -47,5 +74,6 @@ typedef QMap<int, QList<RPropertyChange> > _RMapIntPropertyChange;
 Q_DECLARE_METATYPE(_RMapIntPropertyChange*)
 Q_DECLARE_METATYPE(_RMapIntPropertyChange)
 Q_DECLARE_METATYPE(RPropertyChange*)
+Q_DECLARE_METATYPE(RPropertyChange)
 
 #endif

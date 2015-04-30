@@ -236,6 +236,8 @@ public:
         return propertyChanges;
     }
 
+    QList<RPropertyChange> getPropertyChanges(RObject::Id id) const;
+
     bool hasOnlyChanges() const {
         return onlyChanges;
     }
