@@ -7049,9 +7049,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'bool'
+    bool cppResult =
+        
                self->deselectEntities(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
     } else
 
 
@@ -7093,11 +7098,16 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'bool'
+    bool cppResult =
+        
                self->deselectEntities(a0
         ,
     a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
     } else
 
 

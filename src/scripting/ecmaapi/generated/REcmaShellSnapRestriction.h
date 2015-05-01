@@ -33,7 +33,7 @@
     
       REcmaShellSnapRestriction(
                 RDocumentInterface * documentInterface
-        =  NULL
+        = NULL
             );
         
     

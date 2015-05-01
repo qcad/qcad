@@ -40,7 +40,7 @@
     
       REcmaShellRestrictAngleLength(
                 RDocumentInterface * documentInterface
-        =  NULL
+        = NULL
             );
         
       REcmaShellRestrictAngleLength(

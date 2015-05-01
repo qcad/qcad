@@ -34,7 +34,7 @@
     
       REcmaShellActionAdapter(
                 RGuiAction * guiAction
-        =  NULL
+        = NULL
             );
         
     

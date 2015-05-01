@@ -38,8 +38,8 @@
         
       REcmaShellFileExporterAdapter(
                 RDocument & document, RMessageHandler * messageHandler
-        =  NULL, RProgressHandler * progressHandler
-        =  NULL
+        = NULL, RProgressHandler * progressHandler
+        = NULL
             );
         
     
@@ -52,7 +52,7 @@
     
       bool exportFile(
                 const QString & fileName, const QString & nameFilter, bool setFileName
-        =  true
+        = true
             );
         
     
@@ -65,7 +65,7 @@
     
       void exportArcSegment(
                 const RArc & arg1, bool arg2
-        =  false
+        = false
             );
         
     
@@ -154,7 +154,7 @@
     
       void setEntityAttributes(
                 bool forceSelected
-        =  false
+        = false
             );
         
     
@@ -297,8 +297,8 @@
     
       void exportEntities(
                 bool allBlocks
-        =  true, bool undone
-        =  false
+        = true, bool undone
+        = false
             );
         
       void exportEntities(
@@ -307,21 +307,21 @@
         
       void exportEntities(
                 QSet < REntity::Id > & entityIds, bool allBlocks
-        =  true
+        = true
             );
         
     
       void exportEntity(
                 REntity & e, bool preview
-        =  false, bool allBlocks
-        =  true, bool forceSelected
-        =  false
+        = false, bool allBlocks
+        = true, bool forceSelected
+        = false
             );
         
       void exportEntity(
                 REntity::Id entityId, bool allBlocks
-        =  true, bool forceSelected
-        =  false
+        = true, bool forceSelected
+        = false
             );
         
     
@@ -337,8 +337,8 @@
     
       void exportCurrentEntity(
                 bool preview
-        =  false, bool forceSelected
-        =  false
+        = false, bool forceSelected
+        = false
             );
         
     
@@ -392,7 +392,7 @@
     
       void exportPolyline(
                 const RPolyline & polyline, bool polylineGen
-        =  true, double offset
+        = true, double offset
         = RNANDOUBLE
             );
         

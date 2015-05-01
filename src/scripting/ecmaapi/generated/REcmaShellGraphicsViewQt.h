@@ -35,8 +35,8 @@
     
       REcmaShellGraphicsViewQt(
                 QWidget * parent
-        =  NULL, bool showFocus
-        =  true
+        = NULL, bool showFocus
+        = true
             );
         
     
@@ -262,7 +262,7 @@
       void autoZoom(
                 int margin
         = RDEFAULT_MIN1, bool ignoreEmpty
-        =  false
+        = false
             );
         
     
@@ -299,25 +299,25 @@
     
       double getFactor(
                 bool includeStepFactor
-        =  true
+        = true
             );
         
     
       void setFactor(
                 double f, bool regen
-        =  true
+        = true
             );
         
     
       RVector getOffset(
                 bool includeStepOffset
-        =  true
+        = true
             );
         
     
       void setOffset(
                 const RVector & offset, bool regen
-        =  true
+        = true
             );
         
     
@@ -418,7 +418,7 @@
     
       void setScene(
                 RGraphicsSceneQt * scene, bool regen
-        =  true
+        = true
             );
         
     
@@ -429,7 +429,7 @@
     
       void regenerate(
                 bool force
-        =  false
+        = false
             );
         
     
@@ -671,7 +671,7 @@
     
       void pan(
                 const RVector & delta, bool regen
-        =  true
+        = true
             );
         
     
@@ -691,7 +691,7 @@
     
       REntity::Id getClosestEntity(
                 const RVector & screenPosition, int range, int strictRange, bool includeLockedLayers
-        =  true
+        = true
             );
         
     

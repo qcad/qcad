@@ -220,6 +220,9 @@
         flushTransactions
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        flushRedo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setSnap
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

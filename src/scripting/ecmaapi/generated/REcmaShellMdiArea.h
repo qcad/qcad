@@ -47,7 +47,7 @@
     
       void updateTabBar(
                 RMdiChildQt * child
-        =  NULL
+        = NULL
             );
         
     
