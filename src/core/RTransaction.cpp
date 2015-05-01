@@ -701,6 +701,13 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             QPair<QVariant, RPropertyAttributes> oldProperty =
                 oldObject->getProperty(pid);
 
+//            RPropertyChange pc(*it, oldProperty.first, newProperty.first);
+//            if (pid==RObject::PropertyProtected) {
+//                qDebug() << "pid: " << pid;
+//                qDebug() << "old property: " << oldProperty.first;
+//                qDebug() << "new property: " << newProperty.first;
+//            }
+
             // don't record changes in redundant properties (e.g. angle for lines):
             if (newProperty.second.isRedundant()) {
                 continue;
