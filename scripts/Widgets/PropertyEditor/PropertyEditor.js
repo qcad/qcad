@@ -344,7 +344,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
     var protectedCombo = this.widget.findChild("Protected");
     this.makeReadOnly(protectedCombo);
 
-    // enable to to inspect protected property:
+    // comment out to to inspect protected property (debugging):
     protectedLabel.visible = false;
     protectedCombo.visible = false;
 

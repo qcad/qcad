@@ -637,10 +637,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         // as part of this transaction:
         oldObject = storage->queryObjectDirect(object->getId());
         if (oldObject.isNull()) {
-            RDebug::printBacktrace();
-            qDebug() << "obj:" << *object;
-            qWarning("RTransaction::addObject: "
-                "original object not found in storage");
+            qWarning() << "RTransaction::addObject: original object not found in storage for " << *object;
             fail();
             return false;
         }
