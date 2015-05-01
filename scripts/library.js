@@ -36,11 +36,11 @@ if (typeof(global)==="undefined") {
  * \return Absolute path of given file.
  */
 function getAbsolutePathForArg(file) {
-    // detect URL:
-    var url = new QUrl(file);
-    if (url.isValid() && url.scheme().length!==0 && !url.isLocalFile()) {
-        return file;
-    }
+    // detect URL (TODO: breaks under win):
+//    var url = new QUrl(file);
+//    if (url.isValid() && url.scheme().length!==0 && !url.isLocalFile()) {
+//        return file;
+//    }
 
     // detect absolute path:
     var fi = new QFileInfo(file);

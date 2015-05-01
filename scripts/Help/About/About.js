@@ -126,6 +126,9 @@ About.prototype.initAboutPlugins = function(webView) {
         html += "No plugins found.";
     }
     else {
+        var namePostfixesSlash = [];
+        var namePostfixesSpace = [];
+        var nameOverrides = [];
         for (var i=0; i<numPlugins; i++) {
             html += "<table border='0' width='100%'>";
             html += "<col width='25%'/>";
@@ -137,15 +140,22 @@ About.prototype.initAboutPlugins = function(webView) {
 
             // plugin about info:
             text = pluginInfo.get("Name", qsTr("No information available"));
-            if (text==="Pro Tools") {
-                if (isNull(pluginInfo.get("TrialExpired"))) {
-                    this.applicationName = qApp.applicationName + " Professional";
+            html += this.getTableRow(qsTr("Plugin:"), "<b>" + Qt.escape(text) + "</b>", false);
+
+            text = pluginInfo.get("NamePostfix");
+            if (!isNull(text)) {
+                if (text.startsWith("/")) {
+                    namePostfixesSlash.push(text);
                 }
                 else {
-                    this.applicationName = qApp.applicationName + " Professional Trial";
+                    namePostfixesSpace.push(text);
                 }
             }
-            html += this.getTableRow(qsTr("Plugin:"), "<b>" + Qt.escape(text) + "</b>", false);
+
+            text = pluginInfo.get("NameOverride");
+            if (!isNull(text)) {
+                nameOverrides.push(text);
+            }
 
             // ID:
             text = pluginInfo.get("ID");
@@ -229,6 +239,21 @@ About.prototype.initAboutPlugins = function(webView) {
             }
             html += "</table>";
             html += "<hr/>";
+        }
+
+        // name override:
+        if (nameOverrides.length!==0) {
+            var a = nameOverrides.sort( function (a, b) { return b.length - a.length; });
+            this.applicationName = a[0];
+        }
+        else {
+            // add name postfixes:
+
+            // e.g. "/XYZ" for "MyApp/XYZ":
+            namePostfixesSlash.sort();
+            // e.g. "Incredible Edition" for "MyApp Incredible Edition":
+            namePostfixesSpace.sort();
+            this.applicationName = qApp.applicationName + namePostfixesSlash.join("") + namePostfixesSpace.join("");
         }
     }
 
