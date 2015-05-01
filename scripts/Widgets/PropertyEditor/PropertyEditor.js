@@ -197,6 +197,7 @@ function PropertyEditorImpl(basePath) {
     this.widget.findChild("LabelLinetypeScale").text = RSettings.translate("REntity", "Linetype Scale") + this.colon;
     this.widget.findChild("LabelDrawOrder").text = RSettings.translate("REntity", "Draw Order") + this.colon;
     this.widget.findChild("LabelHandle").text = RSettings.translate("REntity", "Handle") + this.colon;
+    this.widget.findChild("LabelProtected").text = RSettings.translate("REntity", "Protected") + this.colon;
 
     var selectionCombo = this.widget.findChild("Selection");
     selectionCombo["activated(int)"].connect(this, "filterChanged");
@@ -339,6 +340,13 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
     var drawOrderEdit = this.widget.findChild("DrawOrder");
     var handleEdit = this.widget.findChild("Handle");
     this.makeReadOnly(handleEdit);
+    var protectedLabel = this.widget.findChild("LabelProtected");
+    var protectedCombo = this.widget.findChild("Protected");
+    this.makeReadOnly(protectedCombo);
+
+    // enable to to inspect protected property:
+    protectedLabel.visible = false;
+    protectedCombo.visible = false;
 
     var scrollArea = this.widget.findChild("ScrollArea");
     var layout = scrollArea.layout();
@@ -359,6 +367,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
         linetypeScaleEdit.text = "";
         drawOrderEdit.text = "";
         handleEdit.text = "";
+        protectedCombo.clear();
         generalGroup.enabled = false;
         this.widget.updatesEnabled = true;
         return;
@@ -508,6 +517,11 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
             // handle:
             else if (propertyTypeId.getId()===RObject.PropertyHandle.getId()) {
                 this.initControls(propertyTypeId, onlyChanges, handleEdit);
+            }
+
+            // protected:
+            else if (propertyTypeId.getId()===RObject.PropertyProtected.getId()) {
+                this.initControls(propertyTypeId, onlyChanges, protectedCombo);
             }
 
             // other properties:
@@ -954,12 +968,15 @@ PropertyEditorImpl.prototype.initBooleanControls = function(objectName, property
     if (isNull(control)) {
         control = new QComboBox(this.geometryGroup);
         control.objectName = objectName;
-        control.addItem(qsTr("Yes"), true);
-        control.addItem(qsTr("No"), false);
         control.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
         control.focusPolicy = Qt.ClickFocus;
         control.minimumWidth = 50;
         control.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred);
+    }
+
+    if (control.count<2) {
+        control.addItem(qsTr("Yes"), true);
+        control.addItem(qsTr("No"), false);
     }
 
     if (attributes.isMixed()) {
