@@ -15,7 +15,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument &amp;" typeName="RDocument"
         name="document" isConst="false" />
         <arg type="bool" typeName="bool" name="preview"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="preview" cppName="preview" specifier="public"

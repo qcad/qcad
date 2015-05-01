@@ -23,7 +23,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="endAngle"
         isConst="false" />
         <arg type="bool" typeName="bool" name="reversed"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant>
         <arg type="RVector &amp;" typeName="RVector" name="center"
@@ -35,7 +35,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="endAngle"
         isConst="false" />
         <arg type="bool" typeName="bool" name="reversed"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </constructor>
     <method name="clone" cppName="clone" specifier="public"
@@ -135,7 +135,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="strictRange"
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
       </variant>
@@ -206,7 +206,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="allowForZeroLength"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="isAngleWithinArc" cppName="isAngleWithinArc"

@@ -1,2316 +1,343 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./spatialindex" filename="RSpatialIndexNavel.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RSPATIALINDEXNAVEL_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RSPATIALINDEXNAVEL_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"spatialindex_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RSpatialIndex.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>
-  "spatialindexnavel/include/spatialindex/SpatialIndex.h"</cpp:file></cpp:include>
-  <class>class 
-  <name>RSiDataStream</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>
-  <name>SpatialIndex</name>::
-  <name>IDataStream</name></name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor>
-    <name>RSiDataStream</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QList
-        <argument_list>&lt;
-        <argument>
-          <name>int</name>
-        </argument>&gt;</argument_list></name>&amp;</type>
-        <name>ids</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QList
-        <argument_list>&lt;
-        <argument>
-          <name>QList
-          <argument_list>&lt;
-          <argument>
-            <name>RBox</name>
-          </argument>&gt;</argument_list></name>
-        </argument>&gt;</argument_list></name>&amp;</type>
-        <name>bbs</name>
-      </decl>
-    </param>)</parameter_list>
-    <member_list>: 
-    <call>
-      <name>ids</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>ids</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>bbs</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>bbs</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>index</name>
-      <argument_list>(
-      <argument>
-        <expr>0</expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>pos</name>
-      <argument_list>(
-      <argument>
-        <expr>0</expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{ }</block>
-  </constructor>
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RSiDataStream</name>
-    <parameter_list>()</parameter_list>
-    <block>{ }</block>
-  </destructor>
-  <function>
-    <type>
-    <name>virtual</name>
-    <name>
-    <name>SpatialIndex</name>::
-    <name>IData</name></name>*</type>
-    <name>getNext</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>
-    <name>index</name>&gt;=
-    <name>ids</name>.
-    <call>
-      <name>length</name>
-      <argument_list>()</argument_list>
-    </call>|| 
-    <name>index</name>&gt;=
-    <name>bbs</name>.
-    <call>
-      <name>length</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <name>NULL</name>
-      </expr>;</return>}</block>
-    </then></if>
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>RBox</name>
-    </type>
-    <name>bb</name>=
-    <init>
-      <expr>
-        <name>
-          <name>bbs</name>
-          <index>[
-          <expr>
-            <name>index</name>
-          </expr>]</index>
-          <index>[
-          <expr>
-            <name>pos</name>
-          </expr>]</index>
-        </name>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>
-      <name>p1</name>
-      <index>[]</index>
-    </name>=
-    <init>
-      <expr>
-        <block>{ 
-        <expr>
-        <name>bb</name>.
-        <call>
-          <name>getMinimum</name>
-          <argument_list>()</argument_list>
-        </call>.
-        <name>x</name></expr>, 
-        <expr>
-        <name>bb</name>.
-        <call>
-          <name>getMinimum</name>
-          <argument_list>()</argument_list>
-        </call>.
-        <name>y</name></expr>, 
-        <expr>
-        <name>bb</name>.
-        <call>
-          <name>getMinimum</name>
-          <argument_list>()</argument_list>
-        </call>.
-        <name>z</name></expr>}</block>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>
-      <name>p2</name>
-      <index>[]</index>
-    </name>=
-    <init>
-      <expr>
-        <block>{ 
-        <expr>
-        <name>bb</name>.
-        <call>
-          <name>getMaximum</name>
-          <argument_list>()</argument_list>
-        </call>.
-        <name>x</name></expr>, 
-        <expr>
-        <name>bb</name>.
-        <call>
-          <name>getMaximum</name>
-          <argument_list>()</argument_list>
-        </call>.
-        <name>y</name></expr>, 
-        <expr>
-        <name>bb</name>.
-        <call>
-          <name>getMaximum</name>
-          <argument_list>()</argument_list>
-        </call>.
-        <name>z</name></expr>}</block>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <decl_stmt>
-    <decl>
-      <type>
-        <name>
-        <name>SpatialIndex</name>::
-        <name>Region</name></name>
-      </type>
-      <name>r</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>p1</name>
-        </expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <name>p2</name>
-        </expr>
-      </argument>, 
-      <argument>
-        <expr>3</expr>
-      </argument>)</argument_list>
-    </decl>;</decl_stmt>
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>qint64</name>
-    </type>
-    <name>id</name>=
-    <init>
-      <expr>
-        <call>
-          <name>
-          <name>RSpatialIndex</name>::
-          <name>getSIId</name></name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>
-                <name>ids</name>
-                <index>[
-                <expr>
-                  <name>index</name>
-                </expr>]</index>
-              </name>
-            </expr>
-          </argument>, 
-          <argument>
-            <expr>
-              <name>pos</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>pos</name>&lt;
-    <name>
-      <name>bbs</name>
-      <index>[
-      <expr>
-        <name>index</name>
-      </expr>]</index>
-    </name>.
-    <call>
-      <name>length</name>
-      <argument_list>()</argument_list>
-    </call>-1</expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-      <name>pos</name>++</expr>;</expr_stmt>}</block>
-    </then>
-    <else>else 
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>index</name>++</expr>;</expr_stmt>
-    <expr_stmt>
-    <expr>
-    <name>pos</name>= 0</expr>;</expr_stmt>}</block></else></if>
-    <return>return 
-    <expr>new 
-    <call>
-      <name>
-      <name>SpatialIndex</name>::
-      <name>RTree</name>::
-      <name>Data</name></name>
-      <argument_list>(
-      <argument>
-        <expr>0</expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <name>NULL</name>
-        </expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <name>r</name>
-        </expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <name>id</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>hasNext</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>index</name>&lt;
-    <name>ids</name>.
-    <call>
-      <name>length</name>
-      <argument_list>()</argument_list>
-    </call>&amp;&amp; 
-    <name>index</name>&lt;
-    <name>bbs</name>.
-    <call>
-      <name>length</name>
-      <argument_list>()</argument_list>
-    </call>&amp;&amp; 
-    <name>pos</name>&lt;
-    <name>
-      <name>bbs</name>
-      <index>[
-      <expr>
-        <name>index</name>
-      </expr>]</index>
-    </name>.
-    <call>
-      <name>length</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>uint32_t</name>
-    </type>
-    <name>size</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <throw>throw 
-    <expr>
-      <call>
-        <name>
-        <name>Tools</name>::
-        <name>NotSupportedException</name></name>
-        <argument_list>(
-        <argument>
-          <expr>"Operation not supported."</expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</throw>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>rewind</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>index</name>= 0</expr>;</expr_stmt>
-    <expr_stmt>
-    <expr>
-    <name>pos</name>= 0</expr>;</expr_stmt>}</block>
-  </function></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>const</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>&gt;</argument_list></name>&amp;</type>
-    <name>ids</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>const</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RBox</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>&amp;</type>
-    <name>bbs</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>index</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>pos</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <comment type="block">/** * \ingroup spatialindex */</comment>
-  <class>class 
-  <name>RSiGetRegionVisitor</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RSpatialIndexVisitor</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor>
-    <name>RSiGetRegionVisitor</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>id</name>
-      </decl>
-    </param>)</parameter_list>
-    <member_list>: 
-    <call>
-      <name>id</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>id</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>found</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>false</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{ }</block>
-  </constructor>
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RSiGetRegionVisitor</name>
-    <parameter_list>()</parameter_list>
-    <block>{ }</block>
-  </destructor>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>visitData</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>id</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>pos</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>x1</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>y1</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>z1</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>x2</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>y2</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>z2</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>Q_UNUSED</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>pos</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>this</name>-&gt;
-    <name>id</name>== 
-    <name>id</name></expr>)</condition>
-    <then>
-      <block>{ 
-      <decl_stmt>
-      <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>
-        <name>p1</name>
-        <index>[]</index>
-      </name>=
-      <init>
-        <expr>
-          <block>{ 
-          <expr>
-            <name>x1</name>
-          </expr>, 
-          <expr>
-            <name>y1</name>
-          </expr>, 
-          <expr>
-            <name>z1</name>
-          </expr>}</block>
-        </expr>
-      </init></decl>;</decl_stmt>
-      <decl_stmt>
-      <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>
-        <name>p2</name>
-        <index>[]</index>
-      </name>=
-      <init>
-        <expr>
-          <block>{ 
-          <expr>
-            <name>x2</name>
-          </expr>, 
-          <expr>
-            <name>y2</name>
-          </expr>, 
-          <expr>
-            <name>z2</name>
-          </expr>}</block>
-        </expr>
-      </init></decl>;</decl_stmt>
-      <expr_stmt>
-      <expr>
-      <name>region</name>= 
-      <call>
-        <name>
-        <name>SpatialIndex</name>::
-        <name>Region</name></name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <name>p1</name>
-          </expr>
-        </argument>, 
-        <argument>
-          <expr>
-            <name>p2</name>
-          </expr>
-        </argument>, 
-        <argument>
-          <expr>3</expr>
-        </argument>)</argument_list>
-      </call></expr>;</expr_stmt>
-      <expr_stmt>
-      <expr>
-      <name>found</name>= 
-      <name>true</name></expr>;</expr_stmt>}</block>
-    </then></if>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>visitNode</name>
-    <parameter_list>( 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-      </decl>
-    </param>
-    <comment type="block">/*x1*/</comment>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-      </decl>
-    </param>
-    <comment type="block">/*y1*/</comment>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-      </decl>
-    </param>
-    <comment type="block">/*z1*/</comment>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-      </decl>
-    </param>
-    <comment type="block">/*x2*/</comment>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-      </decl>
-    </param>
-    <comment type="block">/*y2*/</comment>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-      </decl>
-    </param>
-    <comment type="block">/*z2*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function></public>
-  <public>public: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>id</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>SpatialIndex</name>::
-      <name>Region</name></name>
-    </type>
-    <name>region</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>found</name>
-  </decl>;</decl_stmt></public>}</block>;</class>
-  <comment type="block">/** * \brief Spatial index class. * Each
-  instance of this class offers a spatial index. * This class wraps
-  the API of the "spatial index" library. * * \ingroup spatialindex
-  * \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADSPATIALINDEX_EXPORT</name>
-  </macro>
-  <name>RSpatialIndexNavel</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RSpatialIndex</name></super>
-  <block>{
-  <private type="default"></private>
-  <protected>protected: 
-  <comment type="block">/** * Internal representation of a
-  rectangular region. * Depends on the external spatial index
-  library. * * \ingroup spatialindex */</comment>
-  <class>class 
-  <name>RSiRegion</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>
-  <name>SpatialIndex</name>::
-  <name>Region</name></name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RSiRegion</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z2</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl></public>}</block>;</class>
-  <comment type="block">/** * Internal representation of a point. *
-  Depends on the external spatial index library. * * \ingroup
-  spatialindex */</comment>
-  <class>class 
-  <name>RSiPoint</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>
-  <name>SpatialIndex</name>::
-  <name>Point</name></name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RSiPoint</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl></public>}</block>;</class>
-  <comment type="block">/** * \brief Internal node and data
-  visitor. * Depends on the external spatial index library. * \see
-  RSpatialIndexVisitor * * \ingroup spatialindex */</comment>
-  <class>class 
-  <name>Visitor</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>
-  <name>SpatialIndex</name>::
-  <name>IVisitor</name></name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor>
-    <name>Visitor</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QMap
-        <argument_list>&lt;
-        <argument>
-          <name>int</name>
-        </argument>, 
-        <argument>
-          <name>QSet
-          <argument_list>&lt;
-          <argument>
-            <name>int</name>
-          </argument>&gt;</argument_list></name>
-        </argument>&gt;</argument_list></name>&amp;</type>
-        <name>ids</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-      <name>RSpatialIndexVisitor</name>*</type>
-      <name>dataVisitor</name>=
-      <init>
-        <expr>
-          <name>NULL</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <member_list>: 
-    <call>
-      <name>ids</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>ids</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>dataVisitor</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>dataVisitor</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{ }</block>
-  </constructor>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>visitNode</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>
-        <name>SpatialIndex</name>::
-        <name>INode</name></name>&amp;</type>
-        <name>n</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <comment type="line">//printf("Visitor::visitNode: %Ld\n",
-    n.getIdentifier());</comment>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>dataVisitor</name>!= 
-    <name>NULL</name></expr>)</condition>
-    <then>
-      <block>{ 
-      <decl_stmt>
-      <decl>
-        <type>
-        <name>
-        <name>SpatialIndex</name>::
-        <name>IShape</name></name>*</type>
-        <name>shape</name>
-      </decl>;</decl_stmt>
-      <expr_stmt>
-      <expr>
-      <name>n</name>.
-      <call>
-        <name>getShape</name>
-        <argument_list>(
-        <argument>
-          <expr>&amp;
-          <name>shape</name></expr>
-        </argument>)</argument_list>
-      </call></expr>;</expr_stmt>
-      <if>if 
-      <condition>(
-      <expr>
-      <name>shape</name>== 
-      <name>NULL</name></expr>)</condition>
-      <then>
-        <block>{ 
-        <expr_stmt>
-        <expr>
-          <call>
-            <name>fprintf</name>
-            <argument_list>(
-            <argument>
-              <expr>
-                <name>stderr</name>
-              </expr>
-            </argument>, 
-            <argument>
-              <expr>"error: node has no shape\n"</expr>
-            </argument>)</argument_list>
-          </call>
-        </expr>;</expr_stmt>
-        <return>return;</return>}</block>
-      </then></if>
-      <decl_stmt>
-      <decl>
-      <type>
-      <name>
-      <name>SpatialIndex</name>::
-      <name>Region</name></name>*</type>
-      <name>region</name>=
-      <init>
-        <expr>
-          <call>
-            <name>dynamic_cast
-            <argument_list>&lt;
-            <argument>
-            <name>
-            <name>SpatialIndex</name>::
-            <name>
-            Region</name></name>*</argument>&gt;</argument_list></name>
-            <argument_list>(
-            <argument>
-              <expr>
-                <name>shape</name>
-              </expr>
-            </argument>)</argument_list>
-          </call>
-        </expr>
-      </init></decl>;</decl_stmt>
-      <if>if 
-      <condition>(
-      <expr>
-      <name>region</name>== 
-      <name>NULL</name></expr>)</condition>
-      <then>
-        <block>{ 
-        <expr_stmt>
-        <expr>
-          <call>
-            <name>fprintf</name>
-            <argument_list>(
-            <argument>
-              <expr>
-                <name>stderr</name>
-              </expr>
-            </argument>, 
-            <argument>
-              <expr>"error: node shape in spacial index is not a
-              SpatialIndex::Region\n"</expr>
-            </argument>)</argument_list>
-          </call>
-        </expr>;</expr_stmt>
-        <return>return;</return>}</block>
-      </then></if>
-      <expr_stmt>
-      <expr>
-      <name>dataVisitor</name>-&gt;
-      <call>
-        <name>visitNode</name>
-        <argument_list>(
-        <argument>
-          <expr>
-          <name>region</name>-&gt;
-          <name>
-            <name>m_pLow</name>
-            <index>[
-            <expr>0</expr>]</index>
-          </name></expr>
-        </argument>, 
-        <argument>
-          <expr>
-          <name>region</name>-&gt;
-          <name>
-            <name>m_pLow</name>
-            <index>[
-            <expr>1</expr>]</index>
-          </name></expr>
-        </argument>, 
-        <argument>
-          <expr>
-          <name>region</name>-&gt;
-          <name>
-            <name>m_pLow</name>
-            <index>[
-            <expr>2</expr>]</index>
-          </name></expr>
-        </argument>, 
-        <argument>
-          <expr>
-          <name>region</name>-&gt;
-          <name>
-            <name>m_pHigh</name>
-            <index>[
-            <expr>0</expr>]</index>
-          </name></expr>
-        </argument>, 
-        <argument>
-          <expr>
-          <name>region</name>-&gt;
-          <name>
-            <name>m_pHigh</name>
-            <index>[
-            <expr>1</expr>]</index>
-          </name></expr>
-        </argument>, 
-        <argument>
-          <expr>
-          <name>region</name>-&gt;
-          <name>
-            <name>m_pHigh</name>
-            <index>[
-            <expr>2</expr>]</index>
-          </name></expr>
-        </argument>)</argument_list>
-      </call></expr>;</expr_stmt>}</block>
-    </then></if>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>visitData</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>
-        <name>SpatialIndex</name>::
-        <name>IData</name></name>&amp;</type>
-        <name>d</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>qint64</name>
-    </type>
-    <name>siid</name>=
-    <init>
-      <expr>
-      <name>d</name>.
-      <call>
-        <name>getIdentifier</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </init></decl>;</decl_stmt>
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>id</name>=
-    <init>
-      <expr>
-        <call>
-          <name>
-          <name>RSpatialIndex</name>::
-          <name>getId</name></name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>siid</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>pos</name>=
-    <init>
-      <expr>
-        <call>
-          <name>
-          <name>RSpatialIndex</name>::
-          <name>getPos</name></name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>siid</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <comment type="line">//if (ids.contains(id)) {</comment>
-    <expr_stmt>
-    <expr>
-    <name>
-      <name>ids</name>
-      <index>[
-      <expr>
-        <name>id</name>
-      </expr>]</index>
-    </name>.
-    <call>
-      <name>insert</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>pos</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>
-    <comment type="block">/* qFatal("Visitor.visitData: double
-    entry found in spatial index, identifier: %d",
-    (int)d.getIdentifier()); Q_ASSERT(false); */</comment>
-    <comment type="line">// }</comment>
-    <comment type="line">// else {</comment>
-    <comment type="line">// ids.insert(id, QSet&lt;int&gt;()
-    &lt;&lt; pos);</comment>
-    <comment type="line">// }</comment>
-    <comment type="line">//ids.insert(d.getIdentifier());</comment>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>dataVisitor</name>!= 
-    <name>NULL</name></expr>)</condition>
-    <then>
-      <block>{ 
-      <decl_stmt>
-      <decl>
-        <type>
-        <name>
-        <name>SpatialIndex</name>::
-        <name>IShape</name></name>*</type>
-        <name>shape</name>
-      </decl>;</decl_stmt>
-      <expr_stmt>
-      <expr>
-      <name>d</name>.
-      <call>
-        <name>getShape</name>
-        <argument_list>(
-        <argument>
-          <expr>&amp;
-          <name>shape</name></expr>
-        </argument>)</argument_list>
-      </call></expr>;</expr_stmt>
-      <if>if 
-      <condition>(
-      <expr>
-      <name>shape</name>== 
-      <name>NULL</name></expr>)</condition>
-      <then>
-        <block>{ 
-        <expr_stmt>
-        <expr>
-          <call>
-            <name>fprintf</name>
-            <argument_list>(
-            <argument>
-              <expr>
-                <name>stderr</name>
-              </expr>
-            </argument>, 
-            <argument>
-              <expr>"error: data node has no shape\n"</expr>
-            </argument>)</argument_list>
-          </call>
-        </expr>;</expr_stmt>
-        <return>return;</return>}</block>
-      </then></if>
-      <decl_stmt>
-      <decl>
-      <type>
-      <name>
-      <name>SpatialIndex</name>::
-      <name>Region</name></name>*</type>
-      <name>region</name>=
-      <init>
-        <expr>
-          <call>
-            <name>dynamic_cast
-            <argument_list>&lt;
-            <argument>
-            <name>
-            <name>SpatialIndex</name>::
-            <name>
-            Region</name></name>*</argument>&gt;</argument_list></name>
-            <argument_list>(
-            <argument>
-              <expr>
-                <name>shape</name>
-              </expr>
-            </argument>)</argument_list>
-          </call>
-        </expr>
-      </init></decl>;</decl_stmt>
-      <if>if 
-      <condition>(
-      <expr>
-      <name>region</name>== 
-      <name>NULL</name></expr>)</condition>
-      <then>
-        <block>{ 
-        <expr_stmt>
-        <expr>
-          <call>
-            <name>fprintf</name>
-            <argument_list>(
-            <argument>
-              <expr>
-                <name>stderr</name>
-              </expr>
-            </argument>, 
-            <argument>
-              <expr>"error: shape in spacial index is not a
-              SpatialIndex::Region\n"</expr>
-            </argument>)</argument_list>
-          </call>
-        </expr>;</expr_stmt>
-        <return>return;</return>}</block>
-      </then></if>
-      <comment type="line">//size_t len;</comment>
-      <comment type="line">//uint8_t* data;</comment>
-      <comment type="line">//d.getData(len, &amp;data);</comment>
-      <expr_stmt>
-      <expr>
-      <name>dataVisitor</name>-&gt;
-      <call>
-        <name>visitData</name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <name>id</name>
-          </expr>
-        </argument>, 
-        <argument>
-          <expr>
-            <name>pos</name>
-          </expr>
-        </argument>, 
-        <argument>
-          <expr>
-          <name>region</name>-&gt;
-          <name>
-            <name>m_pLow</name>
-            <index>[
-            <expr>0</expr>]</index>
-          </name></expr>
-        </argument>, 
-        <argument>
-          <expr>
-          <name>region</name>-&gt;
-          <name>
-            <name>m_pLow</name>
-            <index>[
-            <expr>1</expr>]</index>
-          </name></expr>
-        </argument>, 
-        <argument>
-          <expr>
-          <name>region</name>-&gt;
-          <name>
-            <name>m_pLow</name>
-            <index>[
-            <expr>2</expr>]</index>
-          </name></expr>
-        </argument>, 
-        <argument>
-          <expr>
-          <name>region</name>-&gt;
-          <name>
-            <name>m_pHigh</name>
-            <index>[
-            <expr>0</expr>]</index>
-          </name></expr>
-        </argument>, 
-        <argument>
-          <expr>
-          <name>region</name>-&gt;
-          <name>
-            <name>m_pHigh</name>
-            <index>[
-            <expr>1</expr>]</index>
-          </name></expr>
-        </argument>, 
-        <argument>
-          <expr>
-          <name>region</name>-&gt;
-          <name>
-            <name>m_pHigh</name>
-            <index>[
-            <expr>2</expr>]</index>
-          </name></expr>
-        </argument>)</argument_list>
-      </call></expr>;</expr_stmt>
-      <comment type="line">//region-&gt;getX1(),
-      region-&gt;getY1(), region-&gt;getZ1(),</comment>
-      <comment type="line">//region-&gt;getX2(),
-      region-&gt;getY2(), region-&gt;getZ2(),</comment>
-      <comment type="line">//len, data);</comment>
-      <comment type="line">//delete data;</comment>
-      <comment type="line">//delete region;</comment>
-      <expr_stmt>
-      <expr>delete 
-      <name>shape</name></expr>;</expr_stmt>}</block>
-    </then></if>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>visitData</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>
-        <name>std</name>::
-        <name>vector
-        <argument_list>&lt;
-        <argument>
-        <name>const</name>
-        <name>
-        <name>SpatialIndex</name>::
-        <name>
-        IData</name></name>*</argument>&gt;</argument_list></name></name>&amp;</type>
-        <name>v</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <decl_stmt>
-    <decl>
-      <type>
-        <name>
-        <name>std</name>::
-        <name>vector
-        <argument_list>&lt;
-        <argument>
-        <name>const</name>
-        <name>
-        <name>SpatialIndex</name>::
-        <name>
-        IData</name></name>*</argument>&gt;</argument_list></name>::
-        <name>iterator</name></name>
-      </type>
-      <name>it</name>
-    </decl>;</decl_stmt>
-    <for>for (
-    <init>
-    <expr>
-    <name>it</name>= 
-    <name>v</name>.
-    <call>
-      <name>begin</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</init>
-    <condition>
-    <expr>
-    <name>it</name>!= 
-    <name>v</name>.
-    <call>
-      <name>end</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</condition>
-    <incr>
-      <expr>
-      <name>it</name>++</expr>
-    </incr>) 
-    <block>{ 
-    <expr_stmt>
-    <expr>
-      <call>
-        <name>printf</name>
-        <argument_list>(
-        <argument>
-          <expr>"Visitor::visitData[]: %Ld\n"</expr>
-        </argument>, 
-        <argument>
-          <expr>(*
-          <name>it</name>)-&gt;
-          <call>
-            <name>getIdentifier</name>
-            <argument_list>()</argument_list>
-          </call></expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</expr_stmt>}</block></for>}</block>
-  </function></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>, 
-    <argument>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>int</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>&amp;</type>
-    <name>ids</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RSpatialIndexVisitor</name>*</type>
-    <name>dataVisitor</name>
-  </decl>;</decl_stmt></private>}</block>;</class></protected>
-  <public>public: 
-  <constructor_decl>
-  <name>RSpatialIndexNavel</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <name>~RSpatialIndexNavel</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <comment type="line">//static int dataToInt(const uint8_t*
-  data);</comment>
-  <comment type="line">//static void intToData(int i, uint8_t*
-  data);</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>clear</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>bulkLoad</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>int</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>ids</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QList
-        <argument_list>&lt;
-        <argument>
-          <name>RBox</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>bbs</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>addToIndex</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>id</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>pos</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>addToIndex</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>id</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>pos</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RBox</name>&amp;</type>
-      <name>bb</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">//void removeFromIndex(int id);</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>removeFromIndex</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>id</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RBox</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>bb</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>removeFromIndex</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>id</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>pos</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RBox</name>&amp;</type>
-      <name>bb</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>removeFromIndex</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>id</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>pos</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>, 
-    <argument>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>int</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryIntersected</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RSpatialIndexVisitor</name>*</type>
-    <name>dataVisitor</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>int</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>queryIntersectedSimple</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RBox</name>&amp;</type>
-        <name>b</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>
-      <name>RSpatialIndex</name>::
-      <name>queryIntersected</name></name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>b</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>.
-    <call>
-      <name>keys</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>, 
-    <argument>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>int</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryContained</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RSpatialIndexVisitor</name>*</type>
-    <name>dataVisitor</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>, 
-    <argument>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>int</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryNearestNeighbor</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>unsigned</name>
-        <name>int</name>
-      </type>
-      <name>k</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RSpatialIndexVisitor</name>*</type>
-    <name>dataVisitor</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QPair
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>, 
-    <argument>
-      <name>int</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryNearestNeighbor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <protected>protected: 
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addToIndex</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>id</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>pos</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RSiRegion</name>&amp;</type>
-      <name>region</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>size_t</name>
-    </type>
-    <name>dataLength</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>uint8_t</name>*</type>
-    <name>data</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>, 
-    <argument>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>int</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryIntersected</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RSiRegion</name>&amp;</type>
-      <name>region</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RSpatialIndexVisitor</name>*</type>
-    <name>dataVisitor</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>, 
-    <argument>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>int</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryContained</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RSiRegion</name>&amp;</type>
-      <name>region</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RSpatialIndexVisitor</name>*</type>
-    <name>dataVisitor</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>, 
-    <argument>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>int</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryNearestNeighbor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>unsigned</name>
-        <name>int</name>
-      </type>
-      <name>k</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RSiPoint</name>&amp;</type>
-      <name>point</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RSpatialIndexVisitor</name>*</type>
-    <name>dataVisitor</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">// QSet&lt;int&gt; sidsToIds(const
-  QSet&lt;int&gt; sids);</comment>
-  <comment type="line">// QSet&lt;int&gt; idToSids(int
-  id);</comment></protected>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>init</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>uninit</name>
-  <parameter_list>()</parameter_list>;</function_decl></protected>
-  <protected>protected: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>
-    <name>SpatialIndex</name>::
-    <name>ISpatialIndex</name></name>*</type>
-    <name>tree</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>
-    <name>SpatialIndex</name>::
-    <name>IStorageManager</name></name>*</type>
-    <name>buff</name>
-  </decl>;</decl_stmt>
-  <comment type="line">// QMap&lt;int, int&gt; sidToId;</comment>
-  <comment type="line">// QMap&lt;int, QList&lt;int&gt; &gt;
-  idToSid;</comment>
-  <comment type="line">// int
-  sidCounter;</comment></protected>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RSpatialIndexNavel*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./spatialindex" filename="RSpatialIndexNavel.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSPATIALINDEXNAVEL_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RSPATIALINDEXNAVEL_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"spatialindex_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSpatialIndex.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"spatialindexnavel/include/spatialindex/SpatialIndex.h"</cpp:file></cpp:include>
+
+<class>class <name>RSiDataStream</name> <super>: <specifier>public</specifier> <name><name>SpatialIndex</name>::<name>IDataStream</name></name></super>
+<block>{<private type="default">
+</private><public>public:
+    <constructor><name>RSiDataStream</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name>&amp;</type> <name>ids</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>bbs</name></decl></param>)</parameter_list> <member_list>: <call><name>ids</name><argument_list>(<argument><expr><name>ids</name></expr></argument>)</argument_list></call>, <call><name>bbs</name><argument_list>(<argument><expr><name>bbs</name></expr></argument>)</argument_list></call>, <call><name>index</name><argument_list>(<argument><expr>0</expr></argument>)</argument_list></call>, <call><name>pos</name><argument_list>(<argument><expr>0</expr></argument>)</argument_list></call> </member_list><block>{
+    }</block></constructor>
+
+    <destructor><specifier>virtual</specifier> <name>~RSiDataStream</name><parameter_list>()</parameter_list> <block>{ }</block></destructor>
+
+    <function><type><name>virtual</name> <name><name>SpatialIndex</name>::<name>IData</name></name>*</type> <name>getNext</name><parameter_list>()</parameter_list> <block>{
+        <if>if <condition>(<expr><name>index</name>&gt;=<name>ids</name>.<call><name>length</name><argument_list>()</argument_list></call> || <name>index</name>&gt;=<name>bbs</name>.<call><name>length</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>NULL</name></expr>;</return>
+        }</block></then></if>
+
+        <decl_stmt><decl><type><name>RBox</name></type> <name>bb</name> =<init> <expr><name><name>bbs</name><index>[<expr><name>index</name></expr>]</index><index>[<expr><name>pos</name></expr>]</index></name></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>double</name></type> <name><name>p1</name><index>[]</index></name> =<init> <expr><block>{
+            <expr><name>bb</name>.<call><name>getMinimum</name><argument_list>()</argument_list></call>.<name>x</name></expr>, <expr><name>bb</name>.<call><name>getMinimum</name><argument_list>()</argument_list></call>.<name>y</name></expr>, <expr><name>bb</name>.<call><name>getMinimum</name><argument_list>()</argument_list></call>.<name>z</name></expr>
+        }</block></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>double</name></type> <name><name>p2</name><index>[]</index></name> =<init> <expr><block>{
+            <expr><name>bb</name>.<call><name>getMaximum</name><argument_list>()</argument_list></call>.<name>x</name></expr>, <expr><name>bb</name>.<call><name>getMaximum</name><argument_list>()</argument_list></call>.<name>y</name></expr>, <expr><name>bb</name>.<call><name>getMaximum</name><argument_list>()</argument_list></call>.<name>z</name></expr>
+        }</block></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name><name>SpatialIndex</name>::<name>Region</name></name></type> <name>r</name><argument_list>(<argument><expr><name>p1</name></expr></argument>, <argument><expr><name>p2</name></expr></argument>, <argument><expr>3</expr></argument>)</argument_list></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>qint64</name></type> <name>id</name> =<init> <expr><call><name><name>RSpatialIndex</name>::<name>getSIId</name></name><argument_list>(<argument><expr><name><name>ids</name><index>[<expr><name>index</name></expr>]</index></name></expr></argument>, <argument><expr><name>pos</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+        <if>if <condition>(<expr><name>pos</name>&lt;<name><name>bbs</name><index>[<expr><name>index</name></expr>]</index></name>.<call><name>length</name><argument_list>()</argument_list></call>-1</expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>pos</name>++</expr>;</expr_stmt>
+        }</block></then>
+        <else>else <block>{
+            <expr_stmt><expr><name>index</name>++</expr>;</expr_stmt>
+            <expr_stmt><expr><name>pos</name> = 0</expr>;</expr_stmt>
+        }</block></else></if>
+
+        <return>return <expr>new <call><name><name>SpatialIndex</name>::<name>RTree</name>::<name>Data</name></name><argument_list>(<argument><expr>0</expr></argument>, <argument><expr><name>NULL</name></expr></argument>, <argument><expr><name>r</name></expr></argument>, <argument><expr><name>id</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>hasNext</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>index</name>&lt;<name>ids</name>.<call><name>length</name><argument_list>()</argument_list></call> &amp;&amp; <name>index</name>&lt;<name>bbs</name>.<call><name>length</name><argument_list>()</argument_list></call> &amp;&amp; <name>pos</name>&lt;<name><name>bbs</name><index>[<expr><name>index</name></expr>]</index></name>.<call><name>length</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>uint32_t</name></type> <name>size</name><parameter_list>()</parameter_list> <block>{
+        <throw>throw <expr><call><name><name>Tools</name>::<name>NotSupportedException</name></name><argument_list>(<argument><expr>"Operation not supported."</expr></argument>)</argument_list></call></expr>;</throw>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>rewind</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>index</name> = 0</expr>;</expr_stmt>
+        <expr_stmt><expr><name>pos</name> = 0</expr>;</expr_stmt>
+    }</block></function>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name>&amp;</type> <name>ids</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>bbs</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>index</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>pos</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+
+<comment type="block">/**
+ * \ingroup spatialindex
+ */</comment>
+<class>class <name>RSiGetRegionVisitor</name><super>: <specifier>public</specifier> <name>RSpatialIndexVisitor</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RSiGetRegionVisitor</name><parameter_list>(<param><decl><type><name>int</name></type> <name>id</name></decl></param>)</parameter_list> <member_list>:
+        <call><name>id</name><argument_list>(<argument><expr><name>id</name></expr></argument>)</argument_list></call>, <call><name>found</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call> </member_list><block>{
+    }</block></constructor>
+    <destructor><specifier>virtual</specifier> <name>~RSiGetRegionVisitor</name><parameter_list>()</parameter_list> <block>{
+    }</block></destructor>
+    <function><type><name>virtual</name> <name>void</name></type> <name>visitData</name><parameter_list>(<param><decl><type><name>int</name></type> <name>id</name></decl></param>, <param><decl><type><name>int</name></type> <name>pos</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>, 
+        <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>, <param><decl><type><name>double</name></type> <name>z2</name></decl></param>)</parameter_list> <block>{
+
+        <constructor_decl><name>Q_UNUSED</name><parameter_list>(<param><decl><type><name>pos</name></type></decl></param>)</parameter_list>;</constructor_decl>
+
+        <if>if <condition>(<expr><name>this</name>-&gt;<name>id</name> == <name>id</name></expr>)</condition><then> <block>{
+            <decl_stmt><decl><type><name>double</name></type> <name><name>p1</name><index>[]</index></name> =<init> <expr><block>{ <expr><name>x1</name></expr>, <expr><name>y1</name></expr>, <expr><name>z1</name></expr> }</block></expr></init></decl>;</decl_stmt>
+            <decl_stmt><decl><type><name>double</name></type> <name><name>p2</name><index>[]</index></name> =<init> <expr><block>{ <expr><name>x2</name></expr>, <expr><name>y2</name></expr>, <expr><name>z2</name></expr> }</block></expr></init></decl>;</decl_stmt>
+
+            <expr_stmt><expr><name>region</name> = <call><name><name>SpatialIndex</name>::<name>Region</name></name><argument_list>(<argument><expr><name>p1</name></expr></argument>, <argument><expr><name>p2</name></expr></argument>, <argument><expr>3</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+            <expr_stmt><expr><name>found</name> = <name>true</name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>visitNode</name><parameter_list>(
+        <param><decl><type><name>double</name></type></decl></param> <comment type="block">/*x1*/</comment>, <param><decl><type><name>double</name></type></decl></param> <comment type="block">/*y1*/</comment>, <param><decl><type><name>double</name></type></decl></param> <comment type="block">/*z1*/</comment>,
+        <param><decl><type><name>double</name></type></decl></param> <comment type="block">/*x2*/</comment>, <param><decl><type><name>double</name></type></decl></param> <comment type="block">/*y2*/</comment>, <param><decl><type><name>double</name></type></decl></param> <comment type="block">/*z2*/</comment>)</parameter_list> <block>{}</block></function>
+
+</public><public>public:
+    <decl_stmt><decl><type><name>int</name></type> <name>id</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>SpatialIndex</name>::<name>Region</name></name></type> <name>region</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>found</name></decl>;</decl_stmt>
+</public>}</block>;</class>
+
+
+
+<comment type="block">/**
+ * \brief Spatial index class. 
+ * Each instance of this class offers a spatial index.
+ * This class wraps the API of the "spatial index" library.
+ *
+ * \ingroup spatialindex
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADSPATIALINDEX_EXPORT</name></macro> <name>RSpatialIndexNavel</name><super>: <specifier>public</specifier> <name>RSpatialIndex</name></super> <block>{<private type="default">
+</private><protected>protected:
+    <comment type="block">/**
+     * Internal representation of a rectangular region.
+     * Depends on the external spatial index library.
+     *
+     * \ingroup spatialindex
+     */</comment>
+    <class>class <name>RSiRegion</name><super>: <specifier>public</specifier> <name><name>SpatialIndex</name>::<name>Region</name></name></super> <block>{<private type="default">
+    </private><public>public:
+        <constructor_decl><name>RSiRegion</name><parameter_list>(<param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>, <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>,
+                <param><decl><type><name>double</name></type> <name>z2</name></decl></param>)</parameter_list>;</constructor_decl>
+    </public>}</block>;</class>
+
+    <comment type="block">/**
+     * Internal representation of a point.
+     * Depends on the external spatial index library.
+     *
+     * \ingroup spatialindex
+     */</comment>
+    <class>class <name>RSiPoint</name><super>: <specifier>public</specifier> <name><name>SpatialIndex</name>::<name>Point</name></name></super> <block>{<private type="default">
+    </private><public>public:
+        <constructor_decl><name>RSiPoint</name><parameter_list>(<param><decl><type><name>double</name></type> <name>x</name></decl></param>, <param><decl><type><name>double</name></type> <name>y</name></decl></param>, <param><decl><type><name>double</name></type> <name>z</name></decl></param>)</parameter_list>;</constructor_decl>
+    </public>}</block>;</class>
+
+    <comment type="block">/**
+     * \brief Internal node and data visitor.
+     * Depends on the external spatial index library.
+     * \see RSpatialIndexVisitor
+     *
+     * \ingroup spatialindex
+     */</comment>
+    <class>class <name>Visitor</name><super>: <specifier>public</specifier> <name><name>SpatialIndex</name>::<name>IVisitor</name></name></super> <block>{<private type="default">
+    </private><public>public:
+        <constructor><name>Visitor</name><parameter_list>(<param><decl><type><name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>ids</name></decl></param>, <param><decl><type><name>RSpatialIndexVisitor</name>*</type> <name>dataVisitor</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <member_list>:
+            <call><name>ids</name><argument_list>(<argument><expr><name>ids</name></expr></argument>)</argument_list></call>, <call><name>dataVisitor</name><argument_list>(<argument><expr><name>dataVisitor</name></expr></argument>)</argument_list></call> </member_list><block>{
+        }</block></constructor>
+
+        <function><type><name>void</name></type> <name>visitNode</name><parameter_list>(<param><decl><type><name>const</name> <name><name>SpatialIndex</name>::<name>INode</name></name>&amp;</type> <name>n</name></decl></param>)</parameter_list> <block>{
+            <comment type="line">//printf("Visitor::visitNode: %Ld\n", n.getIdentifier());</comment>
+            <if>if <condition>(<expr><name>dataVisitor</name> != <name>NULL</name></expr>)</condition><then> <block>{
+                <decl_stmt><decl><type><name><name>SpatialIndex</name>::<name>IShape</name></name>*</type> <name>shape</name></decl>;</decl_stmt>
+                <expr_stmt><expr><name>n</name>.<call><name>getShape</name><argument_list>(<argument><expr>&amp;<name>shape</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+                <if>if <condition>(<expr><name>shape</name> == <name>NULL</name></expr>)</condition><then> <block>{
+                    <expr_stmt><expr><call><name>fprintf</name><argument_list>(<argument><expr><name>stderr</name></expr></argument>, <argument><expr>"error: node has no shape\n"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+                    <return>return;</return>
+                }</block></then></if>
+                <decl_stmt><decl><type><name><name>SpatialIndex</name>::<name>Region</name></name>*</type> <name>region</name> =<init>
+                        <expr><call><name>dynamic_cast<argument_list>&lt;<argument><name><name>SpatialIndex</name>::<name>Region</name></name>*</argument>&gt;</argument_list></name> <argument_list>(<argument><expr><name>shape</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+                <if>if <condition>(<expr><name>region</name> == <name>NULL</name></expr>)</condition><then> <block>{
+                    <expr_stmt><expr><call><name>fprintf</name><argument_list>(<argument><expr><name>stderr</name></expr></argument>,
+                            <argument><expr>"error: node shape in spacial index is not a SpatialIndex::Region\n"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+                    <return>return;</return>
+                }</block></then></if>
+                <expr_stmt><expr><name>dataVisitor</name>-&gt;<call><name>visitNode</name><argument_list>(<argument><expr><name>region</name>-&gt;<name><name>m_pLow</name><index>[<expr>0</expr>]</index></name></expr></argument>,
+                        <argument><expr><name>region</name>-&gt;<name><name>m_pLow</name><index>[<expr>1</expr>]</index></name></expr></argument>, <argument><expr><name>region</name>-&gt;<name><name>m_pLow</name><index>[<expr>2</expr>]</index></name></expr></argument>,
+                        <argument><expr><name>region</name>-&gt;<name><name>m_pHigh</name><index>[<expr>0</expr>]</index></name></expr></argument>, <argument><expr><name>region</name>-&gt;<name><name>m_pHigh</name><index>[<expr>1</expr>]</index></name></expr></argument>,
+                        <argument><expr><name>region</name>-&gt;<name><name>m_pHigh</name><index>[<expr>2</expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            }</block></then></if>
+        }</block></function>
+
+        <function><type><name>void</name></type> <name>visitData</name><parameter_list>(<param><decl><type><name>const</name> <name><name>SpatialIndex</name>::<name>IData</name></name>&amp;</type> <name>d</name></decl></param>)</parameter_list> <block>{
+            <decl_stmt><decl><type><name>qint64</name></type> <name>siid</name> =<init> <expr><name>d</name>.<call><name>getIdentifier</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+            <decl_stmt><decl><type><name>int</name></type> <name>id</name> =<init> <expr><call><name><name>RSpatialIndex</name>::<name>getId</name></name><argument_list>(<argument><expr><name>siid</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+            <decl_stmt><decl><type><name>int</name></type> <name>pos</name> =<init> <expr><call><name><name>RSpatialIndex</name>::<name>getPos</name></name><argument_list>(<argument><expr><name>siid</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+            <comment type="line">//if (ids.contains(id)) {</comment>
+                <expr_stmt><expr><name><name>ids</name><index>[<expr><name>id</name></expr>]</index></name>.<call><name>insert</name><argument_list>(<argument><expr><name>pos</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+                <comment type="block">/*
+                qFatal("Visitor.visitData: double entry found in spatial index, identifier: %d", 
+                    (int)d.getIdentifier());
+                Q_ASSERT(false);
+                */</comment>
+<comment type="line">//            }</comment>
+<comment type="line">//            else {</comment>
+<comment type="line">//                ids.insert(id, QSet&lt;int&gt;() &lt;&lt; pos);</comment>
+<comment type="line">//            }</comment>
+
+            <comment type="line">//ids.insert(d.getIdentifier());</comment>
+
+            <if>if <condition>(<expr><name>dataVisitor</name> != <name>NULL</name></expr>)</condition><then> <block>{
+                <decl_stmt><decl><type><name><name>SpatialIndex</name>::<name>IShape</name></name>*</type> <name>shape</name></decl>;</decl_stmt>
+                <expr_stmt><expr><name>d</name>.<call><name>getShape</name><argument_list>(<argument><expr>&amp;<name>shape</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+                <if>if <condition>(<expr><name>shape</name> == <name>NULL</name></expr>)</condition><then> <block>{
+                    <expr_stmt><expr><call><name>fprintf</name><argument_list>(<argument><expr><name>stderr</name></expr></argument>, <argument><expr>"error: data node has no shape\n"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+                    <return>return;</return>
+                }</block></then></if>
+                <decl_stmt><decl><type><name><name>SpatialIndex</name>::<name>Region</name></name>*</type> <name>region</name> =<init>
+                        <expr><call><name>dynamic_cast<argument_list>&lt;<argument><name><name>SpatialIndex</name>::<name>Region</name></name>*</argument>&gt;</argument_list></name> <argument_list>(<argument><expr><name>shape</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+                <if>if <condition>(<expr><name>region</name> == <name>NULL</name></expr>)</condition><then> <block>{
+                    <expr_stmt><expr><call><name>fprintf</name><argument_list>(<argument><expr><name>stderr</name></expr></argument>,
+                            <argument><expr>"error: shape in spacial index is not a SpatialIndex::Region\n"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+                    <return>return;</return>
+                }</block></then></if>
+
+                <comment type="line">//size_t len;</comment>
+                <comment type="line">//uint8_t* data;</comment>
+                <comment type="line">//d.getData(len, &amp;data);</comment>
+                <expr_stmt><expr><name>dataVisitor</name>-&gt;<call><name>visitData</name><argument_list>(<argument><expr><name>id</name></expr></argument>, <argument><expr><name>pos</name></expr></argument>, <argument><expr><name>region</name>-&gt;<name><name>m_pLow</name><index>[<expr>0</expr>]</index></name></expr></argument>,
+                        <argument><expr><name>region</name>-&gt;<name><name>m_pLow</name><index>[<expr>1</expr>]</index></name></expr></argument>, <argument><expr><name>region</name>-&gt;<name><name>m_pLow</name><index>[<expr>2</expr>]</index></name></expr></argument>,
+                        <argument><expr><name>region</name>-&gt;<name><name>m_pHigh</name><index>[<expr>0</expr>]</index></name></expr></argument>, <argument><expr><name>region</name>-&gt;<name><name>m_pHigh</name><index>[<expr>1</expr>]</index></name></expr></argument>,
+                        <argument><expr><name>region</name>-&gt;<name><name>m_pHigh</name><index>[<expr>2</expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+                        <comment type="line">//region-&gt;getX1(), region-&gt;getY1(), region-&gt;getZ1(),</comment>
+                        <comment type="line">//region-&gt;getX2(), region-&gt;getY2(), region-&gt;getZ2(),</comment>
+                        <comment type="line">//len, data);</comment>
+                <comment type="line">//delete data;</comment>
+                <comment type="line">//delete region;</comment>
+                <expr_stmt><expr>delete <name>shape</name></expr>;</expr_stmt>
+            }</block></then></if>
+        }</block></function>
+
+        <function><type><name>void</name></type> <name>visitData</name><parameter_list>(<param><decl><type><name><name>std</name>::<name>vector<argument_list>&lt;<argument><name>const</name> <name><name>SpatialIndex</name>::<name>IData</name></name>*</argument>&gt;</argument_list></name></name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+            <decl_stmt><decl><type><name><name>std</name>::<name>vector<argument_list>&lt;<argument><name>const</name> <name><name>SpatialIndex</name>::<name>IData</name></name>*</argument>&gt;</argument_list></name>::<name>iterator</name></name></type> <name>it</name></decl>;</decl_stmt>
+            <for>for (<init><expr><name>it</name> = <name>v</name>.<call><name>begin</name><argument_list>()</argument_list></call></expr>;</init> <condition><expr><name>it</name> != <name>v</name>.<call><name>end</name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>it</name>++</expr></incr>) <block>{
+                <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr>"Visitor::visitData[]: %Ld\n"</expr></argument>, <argument><expr>(*<name>it</name>)-&gt;<call><name>getIdentifier</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            }</block></for>
+        }</block></function>
+
+    </public><private>private:
+        <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>ids</name></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>RSpatialIndexVisitor</name>*</type> <name>dataVisitor</name></decl>;</decl_stmt>
+    </private>}</block>;</class>
+
+</protected><public>public:
+    <constructor_decl><name>RSpatialIndexNavel</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <destructor_decl><name>~RSpatialIndexNavel</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <comment type="line">//static int dataToInt(const uint8_t* data);</comment>
+    <comment type="line">//static void intToData(int i, uint8_t* data);</comment>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>clear</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>bulkLoad</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name>&amp;</type> <name>ids</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>bbs</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>addToIndex</name><parameter_list>(<param><decl><type><name>int</name></type> <name>id</name></decl></param>, <param><decl><type><name>int</name></type> <name>pos</name></decl></param>,
+                    <param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>,
+                    <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>, <param><decl><type><name>double</name></type> <name>z2</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>addToIndex</name><parameter_list>(<param><decl><type><name>int</name></type> <name>id</name></decl></param>, <param><decl><type><name>int</name></type> <name>pos</name></decl></param>,
+        <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>bb</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="line">//void removeFromIndex(int id);</comment>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>removeFromIndex</name><parameter_list>(<param><decl><type><name>int</name></type> <name>id</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name>&amp;</type> <name>bb</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>removeFromIndex</name><parameter_list>(<param><decl><type><name>int</name></type> <name>id</name></decl></param>, <param><decl><type><name>int</name></type> <name>pos</name></decl></param>, <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>bb</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>removeFromIndex</name><parameter_list>(
+            <param><decl><type><name>int</name></type> <name>id</name></decl></param>,
+            <param><decl><type><name>int</name></type> <name>pos</name></decl></param>,
+            <param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>,
+            <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>, <param><decl><type><name>double</name></type> <name>z2</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryIntersected</name><parameter_list>(
+            <param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>,
+            <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>, <param><decl><type><name>double</name></type> <name>z2</name></decl></param>,
+            <param><decl><type><name>RSpatialIndexVisitor</name>*</type> <name>dataVisitor</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function><type><name>QList<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></type> <name>queryIntersectedSimple</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>b</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name><name>RSpatialIndex</name>::<name>queryIntersected</name></name><argument_list>(<argument><expr><name>b</name></expr></argument>)</argument_list></call>.<call><name>keys</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+    <function_decl><type><name>virtual</name> <name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryContained</name><parameter_list>(
+            <param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>,
+            <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>, <param><decl><type><name>double</name></type> <name>z2</name></decl></param>,
+            <param><decl><type><name>RSpatialIndexVisitor</name>*</type> <name>dataVisitor</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryNearestNeighbor</name><parameter_list>(
+            <param><decl><type><name>unsigned</name> <name>int</name></type> <name>k</name></decl></param>,
+            <param><decl><type><name>double</name></type> <name>x</name></decl></param>, <param><decl><type><name>double</name></type> <name>y</name></decl></param>, <param><decl><type><name>double</name></type> <name>z</name></decl></param>,
+            <param><decl><type><name>RSpatialIndexVisitor</name>*</type> <name>dataVisitor</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QPair<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>int</name></argument>&gt;</argument_list></name></type> <name>queryNearestNeighbor</name><parameter_list>(<param><decl><type><name>double</name></type> <name>x</name></decl></param>, <param><decl><type><name>double</name></type> <name>y</name></decl></param>, <param><decl><type><name>double</name></type> <name>z</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><protected>protected:
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>void</name></type> <name>addToIndex</name><parameter_list>(<param><decl><type><name>int</name></type> <name>id</name></decl></param>, <param><decl><type><name>int</name></type> <name>pos</name></decl></param>, <param><decl><type><name>const</name> <name>RSiRegion</name>&amp;</type> <name>region</name></decl></param>, <param><decl><type><name>size_t</name></type> <name>dataLength</name> =<init> <expr>0</expr></init></decl></param>,
+            <param><decl><type><name>const</name> <name>uint8_t</name>*</type> <name>data</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryIntersected</name><parameter_list>(<param><decl><type><name>const</name> <name>RSiRegion</name>&amp;</type> <name>region</name></decl></param>,
+            <param><decl><type><name>RSpatialIndexVisitor</name>*</type> <name>dataVisitor</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryContained</name><parameter_list>(<param><decl><type><name>const</name> <name>RSiRegion</name>&amp;</type> <name>region</name></decl></param>,
+            <param><decl><type><name>RSpatialIndexVisitor</name>*</type> <name>dataVisitor</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryNearestNeighbor</name><parameter_list>(<param><decl><type><name>unsigned</name> <name>int</name></type> <name>k</name></decl></param>, <param><decl><type><name>const</name> <name>RSiPoint</name>&amp;</type> <name>point</name></decl></param>,
+            <param><decl><type><name>RSpatialIndexVisitor</name>*</type> <name>dataVisitor</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+<comment type="line">//    QSet&lt;int&gt; sidsToIds(const QSet&lt;int&gt; sids);</comment>
+<comment type="line">//    QSet&lt;int&gt; idToSids(int id);</comment>
+
+</protected><protected>protected:
+    <function_decl><type><name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>uninit</name><parameter_list>()</parameter_list>;</function_decl>
+
+</protected><protected>protected:
+    <decl_stmt><decl><type><name><name>SpatialIndex</name>::<name>ISpatialIndex</name></name>*</type> <name>tree</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>SpatialIndex</name>::<name>IStorageManager</name></name>*</type> <name>buff</name></decl>;</decl_stmt>
+
+<comment type="line">//    QMap&lt;int, int&gt; sidToId;</comment>
+<comment type="line">//    QMap&lt;int, QList&lt;int&gt; &gt; idToSid;</comment>
+<comment type="line">//    int sidCounter;</comment>
+</protected>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSpatialIndexNavel*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

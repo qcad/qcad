@@ -20,7 +20,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RBox &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="ignoreEmpty"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getReferencePoints" cppName="getReferencePoints"
@@ -207,7 +207,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
         <arg type="bool" typeName="bool" name="ignoreComplex"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPoints"
@@ -218,13 +218,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="REntityData &amp;" typeName="REntityData"
         name="other" isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="same"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
         <arg type="bool" typeName="bool" name="ignoreComplex"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="setPolylineGen" cppName="setPolylineGen"

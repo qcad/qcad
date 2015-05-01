@@ -1,1551 +1,265 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RTextBasedEntity.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RTEXTBASEDENTITY_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RTEXTBASEDENTITY_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"REntity.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RTextBasedData.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RDocument</name>;</class_decl>
-  <class_decl>class 
-  <name>RExporter</name>;</class_decl>
-  <comment type="block">/** * Text entity. * * \scriptable *
-  \sharedPointerSupport * \ingroup entity */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RTextBasedEntity</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>REntity</name></super>
-  <block>{
-  <private type="default">
-    <macro>
-      <name>Q_DECLARE_TR_FUNCTIONS</name>
-      <argument_list>(
-      <argument>RTextBasedEntity</argument>)</argument_list>
-    </macro>
-  </private>
-  <public>public: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyCustom</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyHandle</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyType</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyBlock</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyLayer</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyLinetype</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyLinetypeScale</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyLineweight</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyColor</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyDrawOrder</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertySimple</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyPositionX</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyPositionY</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyPositionZ</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyText</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyPlainText</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyFontName</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyHeight</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyAngle</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyXScale</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyBold</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyItalic</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyLineSpacingFactor</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyHAlign</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyVAlign</name>
-  </decl>;</decl_stmt></public>
-  <public>public: 
-  <constructor_decl>
-  <name>RTextBasedEntity</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>*</type>
-      <name>document</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RObject</name>::
-      <name>Id</name></name>
-    </type>
-    <name>objectId</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RObject</name>::
-        <name>INVALID_ID</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RTextBasedEntity</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>init</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>static</name>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>RPropertyTypeId</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getStaticPropertyTypeIds</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RPropertyTypeId</name>::
-        <name>getPropertyTypeIds</name></name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <call>
-              <name>typeid</name>
-              <argument_list>(
-              <argument>
-                <expr>
-                  <name>RTextBasedEntity</name>
-                </expr>
-              </argument>)</argument_list>
-            </call>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>
-      <name>RS</name>::
-      <name>EntityType</name></name>
-    </type>
-    <name>getType</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>
-      <name>RS</name>::
-      <name>EntityTextBased</name></name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-  <name>virtual</name>
-  <name>RTextBasedData</name>&amp;</type>
-  <name>getData</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-  <name>virtual</name>
-  <name>const</name>
-  <name>RTextBasedData</name>&amp;</type>
-  <name>getData</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>setProperty</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>RPropertyTypeId</name>
-      </type>
-      <name>propertyTypeId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RTransaction</name>*</type>
-    <name>transaction</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QPair
-    <argument_list>&lt;
-    <argument>
-      <name>QVariant</name>
-    </argument>, 
-    <argument>
-      <name>RPropertyAttributes</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getProperty</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>RPropertyTypeId</name>&amp;</type>
-      <name>propertyTypeId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>humanReadable</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>noAttributes</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>exportEntity</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RExporter</name>&amp;</type>
-      <name>e</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>preview</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>forceSelected</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RPainterPath</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getPainterPaths</name>
-    <parameter_list>(
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>draft</name>=
-      <init>
-        <expr>
-          <name>false</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getPainterPaths</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>draft</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RShape</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getShapes</name>
-    <parameter_list>(
-    <param>
-      <decl>
-      <type>
-      <name>const</name>
-      <name>RBox</name>&amp;</type>
-      <name>queryBox</name>=
-      <init>
-        <expr>
-          <name>RDEFAULT_RBOX</name>
-        </expr>
-      </init></decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>ignoreComplex</name>=
-      <init>
-        <expr>
-          <name>false</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getShapes</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>queryBox</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RShape</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getExploded</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getExploded</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-    <name>virtual</name>
-    <name>RTextBasedData</name>&amp;</type>
-    <name>getTextData</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>getData</name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isBold</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>isBold</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setBold</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setBold</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>on</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isItalic</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>isItalic</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setItalic</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setItalic</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>on</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>getPosition</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getPosition</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setPosition</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>position</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setPosition</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>position</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>getAlignmentPoint</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getAlignmentPoint</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setAlignmentPoint</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>alignmentPoint</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setAlignmentPoint</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>alignmentPoint</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getTextHeight</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getTextHeight</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setTextHeight</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>h</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setTextHeight</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>h</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getTextWidth</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getTextWidth</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getWidth</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getWidth</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getHeight</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getHeight</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>VAlign</name></name>
-    </type>
-    <name>getVAlign</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getVAlign</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setVAlign</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RS</name>::
-          <name>VAlign</name></name>
-        </type>
-        <name>va</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setVAlign</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>va</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>HAlign</name></name>
-    </type>
-    <name>getHAlign</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getHAlign</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setHAlign</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RS</name>::
-          <name>HAlign</name></name>
-        </type>
-        <name>ha</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setHAlign</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>ha</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getFontName</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getFontName</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setFontName</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>fontName</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setFontName</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>fontName</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setDrawingDirection</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RS</name>::
-          <name>TextDrawingDirection</name></name>
-        </type>
-        <name>drawingDirection</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setDrawingDirection</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>drawingDirection</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>TextDrawingDirection</name></name>
-    </type>
-    <name>getDrawingDirection</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getDrawingDirection</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setLineSpacingStyle</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RS</name>::
-          <name>TextLineSpacingStyle</name></name>
-        </type>
-        <name>lineSpacingStyle</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setLineSpacingStyle</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>lineSpacingStyle</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>TextLineSpacingStyle</name></name>
-    </type>
-    <name>getLineSpacingStyle</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getLineSpacingStyle</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setLineSpacingFactor</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>lineSpacingFactor</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setLineSpacingFactor</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>lineSpacingFactor</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getLineSpacingFactor</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getLineSpacingFactor</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setAngle</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>angle</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setAngle</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>angle</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getAngle</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getAngle</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setXScale</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>xScale</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setXScale</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>xScale</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getXScale</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getXScale</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setSimple</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setSimple</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>on</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isSimple</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>isSimple</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getEscapedText</name>
-    <parameter_list>(
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>escapeUnicode</name>=
-      <init>
-        <expr>
-          <name>false</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getEscapedText</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>escapeUnicode</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <comment type="line">//QString getHtmlText() const {</comment>
-  <comment type="line">// return getData().getHtmlText();</comment>
-  <comment type="line">//}</comment>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getPlainText</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>getPlainText</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setText</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>text</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setText</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>text</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>sync</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RTextBasedEntity</name>&amp;</type>
-        <name>other</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <call>
-      <name>getData</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>sync</name>
-      <argument_list>(
-      <argument>
-        <expr>
-        <name>other</name>.
-        <call>
-          <name>getData</name>
-          <argument_list>()</argument_list>
-        </call></expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>print</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QDebug</name>
-      </type>
-      <name>dbg</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>
-  const</specifier>;</function_decl></protected>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RTextBasedEntity*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;RTextBasedEntity&gt;</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;RTextBasedEntity&gt;*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RTextBasedEntity.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RTEXTBASEDENTITY_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RTEXTBASEDENTITY_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextBasedData.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RExporter</name>;</class_decl>
+
+<comment type="block">/**
+ * Text entity.
+ *
+ * \scriptable
+ * \sharedPointerSupport
+ * \ingroup entity
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RTextBasedEntity</name><super>: <specifier>public</specifier> <name>REntity</name></super> <block>{<private type="default">
+
+    <macro><name>Q_DECLARE_TR_FUNCTIONS</name><argument_list>(<argument>RTextBasedEntity</argument>)</argument_list></macro>
+
+</private><public>public:
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyCustom</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyHandle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyType</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyBlock</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLayer</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLinetype</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLinetypeScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLineweight</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyColor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDrawOrder</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertySimple</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPositionX</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPositionY</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPositionZ</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyText</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlainText</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyFontName</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyHeight</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyAngle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyXScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyBold</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyItalic</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLineSpacingFactor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyHAlign</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyVAlign</name></decl>;</decl_stmt>
+
+</public><public>public:
+    <constructor_decl><name>RTextBasedEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name> =<init> <expr><name><name>RObject</name>::<name>INVALID_ID</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RTextBasedEntity</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function><type><name>static</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getStaticPropertyTypeIds</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name><name>RPropertyTypeId</name>::<name>getPropertyTypeIds</name></name><argument_list>(<argument><expr><call><name>typeid</name><argument_list>(<argument><expr><name>RTextBasedEntity</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityTextBased</name></name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>RTextBasedData</name>&amp;</type> <name>getData</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>const</name> <name>RTextBasedData</name>&amp;</type> <name>getData</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>bool</name></type> <name>setProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>,
+        <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></type> <name>getProperty</name><parameter_list>(
+            <param><decl><type><name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>,
+            <param><decl><type><name>bool</name></type> <name>humanReadable</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>noAttributes</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEntity</name><parameter_list>(<param><decl><type><name>RExporter</name>&amp;</type> <name>e</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name>=<init><expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPaths</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getPainterPaths</name><argument_list>(<argument><expr><name>draft</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getShapes</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name> =<init> <expr><name>RDEFAULT_RBOX</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreComplex</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getShapes</name><argument_list>(<argument><expr><name>queryBox</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getExploded</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getExploded</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>RTextBasedData</name>&amp;</type> <name>getTextData</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isBold</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>isBold</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setBold</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setBold</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isItalic</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>isItalic</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setItalic</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setItalic</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getPosition</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getPosition</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPosition</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setPosition</name><argument_list>(<argument><expr><name>position</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getAlignmentPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getAlignmentPoint</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setAlignmentPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>alignmentPoint</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setAlignmentPoint</name><argument_list>(<argument><expr><name>alignmentPoint</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getTextHeight</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getTextHeight</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setTextHeight</name><parameter_list>(<param><decl><type><name>double</name></type> <name>h</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setTextHeight</name><argument_list>(<argument><expr><name>h</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getTextWidth</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getTextWidth</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getWidth</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getWidth</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>double</name></type> <name>getHeight</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getHeight</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name><name>RS</name>::<name>VAlign</name></name></type> <name>getVAlign</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getVAlign</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setVAlign</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>VAlign</name></name></type> <name>va</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setVAlign</name><argument_list>(<argument><expr><name>va</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name><name>RS</name>::<name>HAlign</name></name></type> <name>getHAlign</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getHAlign</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setHAlign</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>HAlign</name></name></type> <name>ha</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setHAlign</name><argument_list>(<argument><expr><name>ha</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>QString</name></type> <name>getFontName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getFontName</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setFontName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontName</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setFontName</name><argument_list>(<argument><expr><name>fontName</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setDrawingDirection</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>TextDrawingDirection</name></name></type> <name>drawingDirection</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setDrawingDirection</name><argument_list>(<argument><expr><name>drawingDirection</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name><name>RS</name>::<name>TextDrawingDirection</name></name></type> <name>getDrawingDirection</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getDrawingDirection</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setLineSpacingStyle</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>TextLineSpacingStyle</name></name></type> <name>lineSpacingStyle</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setLineSpacingStyle</name><argument_list>(<argument><expr><name>lineSpacingStyle</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name><name>RS</name>::<name>TextLineSpacingStyle</name></name></type> <name>getLineSpacingStyle</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getLineSpacingStyle</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setLineSpacingFactor</name><parameter_list>(<param><decl><type><name>double</name></type> <name>lineSpacingFactor</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setLineSpacingFactor</name><argument_list>(<argument><expr><name>lineSpacingFactor</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getLineSpacingFactor</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getLineSpacingFactor</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setAngle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angle</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setAngle</name><argument_list>(<argument><expr><name>angle</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getAngle</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getAngle</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setXScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>xScale</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setXScale</name><argument_list>(<argument><expr><name>xScale</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getXScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getXScale</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setSimple</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setSimple</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isSimple</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>isSimple</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QString</name></type> <name>getEscapedText</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>escapeUnicode</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getEscapedText</name><argument_list>(<argument><expr><name>escapeUnicode</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="line">//QString getHtmlText() const {</comment>
+    <comment type="line">//    return getData().getHtmlText();</comment>
+    <comment type="line">//}</comment>
+
+    <function><type><name>QString</name></type> <name>getPlainText</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getPlainText</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setText</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setText</name><argument_list>(<argument><expr><name>text</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>sync</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedEntity</name>&amp;</type> <name>other</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>sync</name><argument_list>(<argument><expr><name>other</name>.<call><name>getData</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+</public><protected>protected:
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+</protected>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextBasedEntity*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RTextBasedEntity&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RTextBasedEntity&gt;*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

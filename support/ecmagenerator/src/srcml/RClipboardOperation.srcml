@@ -1,648 +1,128 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./operations" filename="RClipboardOperation.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RCLIPBOARDOPERATION_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RCLIPBOARDOPERATION_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"operations_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"REntity.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RExporter.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"ROperation.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RVector.h"</cpp:file></cpp:include>
-  <typedef>typedef 
-  <type>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>QString</name>
-    </argument>, 
-    <argument>
-      <name>QString</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>RQMapQStringQString</name>;</typedef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RDEFAULT_QMAP_QSTRING_QSTRING</name>
-  <name>RQMapQStringQString</name>()</cpp:define>
-  <comment type="block">/** * Base class for clipboard related
-  operations (copy, cut, paste). * * \ingroup operations *
-  \scriptable * \abstract */</comment>
-  <class>class 
-  <macro>
-    <name>QCADOPERATIONS_EXPORT</name>
-  </macro>
-  <name>RClipboardOperation</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>ROperation</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RClipboardOperation</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RClipboardOperation</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </destructor></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>copy</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>src</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>dest</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>offset</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>scale</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>rotation</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>flipHorizontal</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>flipVertical</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>toCurrentLayer</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>toCurrentBlock</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>overwriteLayers</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>overwriteBlocks</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>blockName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>layerName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RTransaction</name>&amp;</type>
-      <name>transaction</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>selectionOnly</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>clear</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>toModelSpaceBlock</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>preview</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RQMapQStringQString</name>&amp;</type>
-    <name>attributes</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_QMAP_QSTRING_QSTRING</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>copyEntity</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>REntity</name>&amp;</type>
-      <name>entity</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>src</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>dest</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>offset</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>scale</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>unitScale</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>rotation</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>flipHorizontal</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>flipVertical</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>toCurrentLayer</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>toCurrentBlock</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>overwriteLayers</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>overwriteBlocks</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>blockName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RTransaction</name>&amp;</type>
-      <name>transaction</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>toModelSpaceBlock</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RLayer</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>copyEntityLayer</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>REntity</name>&amp;</type>
-      <name>entity</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>src</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>dest</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>overwriteLayers</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RTransaction</name>&amp;</type>
-      <name>transaction</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RLayer</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>copyLayer</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLayer</name>::
-        <name>Id</name></name>
-      </type>
-      <name>layerId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>src</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>dest</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>overwriteLayers</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RTransaction</name>&amp;</type>
-      <name>transaction</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RLinetype</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>copyEntityLinetype</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>REntity</name>&amp;</type>
-      <name>entity</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>src</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>dest</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>overwriteLinetypes</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RTransaction</name>&amp;</type>
-      <name>transaction</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RLinetype</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>copyLinetype</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLinetype</name>::
-        <name>Id</name></name>
-      </type>
-      <name>linetypeId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>src</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>dest</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>overwriteLinetypes</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RTransaction</name>&amp;</type>
-      <name>transaction</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl></protected>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RLayer</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>copiedLayers</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RLinetype</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>copiedLinetypes</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RBlock</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>copiedBlocks</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RBlock</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>copiedBlockContents</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RClipboardOperation*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./operations" filename="RClipboardOperation.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ *
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RCLIPBOARDOPERATION_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RCLIPBOARDOPERATION_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"operations_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExporter.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"ROperation.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<typedef>typedef <type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>RQMapQStringQString</name>;</typedef>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QMAP_QSTRING_QSTRING</name> <name>RQMapQStringQString</name>()</cpp:define>
+
+<comment type="block">/**
+ * Base class for clipboard related operations (copy, cut, paste).
+ * 
+ * \ingroup operations
+ * \scriptable
+ * \abstract
+ */</comment>
+<class>class <macro><name>QCADOPERATIONS_EXPORT</name></macro> <name>RClipboardOperation</name> <super>: <specifier>public</specifier> <name>ROperation</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor_decl><name>RClipboardOperation</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <destructor><specifier>virtual</specifier> <name>~RClipboardOperation</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+    
+</public><protected>protected:
+    <function_decl><type><name>void</name></type> <name>copy</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>src</name></decl></param>, <param><decl><type><name>RDocument</name>&amp;</type> <name>dest</name></decl></param>,
+        <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>scale</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>rotation</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>flipHorizontal</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>flipVertical</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>toCurrentLayer</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>toCurrentBlock</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>overwriteLayers</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>overwriteBlocks</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>,
+        <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>selectionOnly</name></decl></param>, <param><decl><type><name>bool</name></type> <name>clear</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>toModelSpaceBlock</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>preview</name></decl></param>,
+        <param><decl><type><name>const</name> <name>RQMapQStringQString</name>&amp;</type> <name>attributes</name> =<init> <expr><name>RDEFAULT_QMAP_QSTRING_QSTRING</name></expr></init></decl></param>
+    )</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>copyEntity</name><parameter_list>(
+        <param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>,
+        <param><decl><type><name>RDocument</name>&amp;</type> <name>src</name></decl></param>, <param><decl><type><name>RDocument</name>&amp;</type> <name>dest</name></decl></param>,
+        <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>scale</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>unitScale</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>rotation</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>flipHorizontal</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>flipVertical</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>toCurrentLayer</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>toCurrentBlock</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>overwriteLayers</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>overwriteBlocks</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>,
+        <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>toModelSpaceBlock</name></decl></param>
+    )</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>copyEntityLayer</name><parameter_list>(
+        <param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>,
+        <param><decl><type><name>RDocument</name>&amp;</type> <name>src</name></decl></param>,
+        <param><decl><type><name>RDocument</name>&amp;</type> <name>dest</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>overwriteLayers</name></decl></param>,
+        <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>
+    )</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>copyLayer</name><parameter_list>(
+        <param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>,
+        <param><decl><type><name>RDocument</name>&amp;</type> <name>src</name></decl></param>, <param><decl><type><name>RDocument</name>&amp;</type> <name>dest</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>overwriteLayers</name></decl></param>,
+        <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>
+    )</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></type> <name>copyEntityLinetype</name><parameter_list>(
+            <param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>,
+            <param><decl><type><name>RDocument</name>&amp;</type> <name>src</name></decl></param>,
+            <param><decl><type><name>RDocument</name>&amp;</type> <name>dest</name></decl></param>,
+            <param><decl><type><name>bool</name></type> <name>overwriteLinetypes</name></decl></param>,
+            <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>
+            )</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></type> <name>copyLinetype</name><parameter_list>(
+            <param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>,
+            <param><decl><type><name>RDocument</name>&amp;</type> <name>src</name></decl></param>, <param><decl><type><name>RDocument</name>&amp;</type> <name>dest</name></decl></param>,
+            <param><decl><type><name>bool</name></type> <name>overwriteLinetypes</name></decl></param>,
+            <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>
+            )</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>mutable</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedLayers</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedLinetypes</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedBlocks</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>QSet<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>copiedBlockContents</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RClipboardOperation*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

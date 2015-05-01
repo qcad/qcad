@@ -26,7 +26,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -72,7 +72,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="strictRange"
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
         <arg type="bool" typeName="bool" name="includeLockedLayers"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
       <variant returnType="REntity::Id" isPureVirtual="false">
         <arg type="QSet &lt; REntity::Id &gt; &amp;"
@@ -100,9 +100,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; REntity::Id &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="undone"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="allBlocks"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="RS::EntityType" typeName="RS::EntityType"
         name="type" hasDefault="true" default="RS :: EntityAll"
         isConst="false" />
@@ -146,7 +146,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
         <arg type="bool" typeName="bool" name="allBlocks"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="queryBlockEntities" cppName="queryBlockEntities"
@@ -217,9 +217,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="bool" typeName="bool"
         name="checkBoundingBoxOnly" hasDefault="true"
-        default=" false" isConst="false" />
+        default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="includeLockedLayers"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
         hasDefault="true" default="RBlock :: INVALID_ID"
         isConst="false" />
@@ -238,9 +238,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="bool" typeName="bool"
         name="checkBoundingBoxOnly" hasDefault="true"
-        default=" false" isConst="false" />
+        default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="includeLockedLayers"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
         hasDefault="true" default="RBlock :: INVALID_ID"
         isConst="false" />
@@ -419,7 +419,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QSet &lt; REntity::Id &gt; *"
         typeName="QSet &lt; REntity::Id &gt; *"
-        name="affectedEntities" hasDefault="true" default=" NULL"
+        name="affectedEntities" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -429,7 +429,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QSet &lt; REntity::Id &gt; *"
         typeName="QSet &lt; REntity::Id &gt; *"
-        name="affectedEntities" hasDefault="true" default=" NULL"
+        name="affectedEntities" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -440,10 +440,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
         <arg type="bool" typeName="bool" name="add"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="QSet &lt; REntity::Id &gt; *"
         typeName="QSet &lt; REntity::Id &gt; *"
-        name="affectedEntities" hasDefault="true" default=" NULL"
+        name="affectedEntities" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -455,7 +455,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
         <arg type="QSet &lt; REntity::Id &gt; *"
         typeName="QSet &lt; REntity::Id &gt; *"
-        name="affectedEntities" hasDefault="true" default=" NULL"
+        name="affectedEntities" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -467,23 +467,23 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="QSet &lt; REntity::Id &gt;" name="entityId"
         isConst="true" />
         <arg type="bool" typeName="bool" name="add"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="QSet &lt; REntity::Id &gt; *"
         typeName="QSet &lt; REntity::Id &gt; *"
-        name="affectedEntities" hasDefault="true" default=" NULL"
+        name="affectedEntities" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
     <method name="deselectEntities" cppName="deselectEntities"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
+      <variant returnType="bool" isPureVirtual="false">
         <arg type="QSet &lt; REntity::Id &gt; &amp;"
         typeName="QSet &lt; REntity::Id &gt;" name="entityId"
         isConst="true" />
         <arg type="QSet &lt; REntity::Id &gt; *"
         typeName="QSet &lt; REntity::Id &gt; *"
-        name="affectedEntities" hasDefault="true" default=" NULL"
+        name="affectedEntities" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -545,9 +545,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RBox" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="ignoreHiddenLayers"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="ignoreEmpty"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getSelectionBox" cppName="getSelectionBox"
@@ -685,14 +685,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="layerName" isConst="true" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -983,7 +983,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
         <arg type="bool" typeName="bool" name="overwrite"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getVariable" cppName="getVariable"
@@ -996,7 +996,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="defaultValue" hasDefault="true"
         default="RDEFAULT_QVARIANT" isConst="true" />
         <arg type="bool" typeName="bool" name="useSettings"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="hasVariable" cppName="hasVariable"
@@ -1016,7 +1016,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
@@ -1025,7 +1025,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="value"
         isConst="true" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -1046,7 +1046,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RS::Unit" typeName="RS::Unit" name="unit"
         isConst="false" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -1065,7 +1065,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString" name="f"
         isConst="true" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -1081,7 +1081,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="v"
         isConst="false" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>

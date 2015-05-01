@@ -1,83 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./operations" filename="RTranslation.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RTRANSLATION_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RTRANSLATION_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"operations_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RTransformation.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RVector.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Helper class for
-  RModifyObjectsOperation::transformSelection * * \ingroup
-  operations * \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADOPERATIONS_EXPORT</name>
-  </macro>
-  <name>RTranslation</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RTransformation</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor>
-    <name>RTranslation</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>offset</name>
-      </decl>
-    </param>)</parameter_list>
-    <member_list>: 
-    <call>
-      <name>offset</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>offset</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{}</block>
-  </constructor>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>offset</name>
-  </decl>;</decl_stmt></public>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RTranslation*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./operations" filename="RTranslation.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RTRANSLATION_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RTRANSLATION_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"operations_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransformation.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * Helper class for RModifyObjectsOperation::transformSelection
+ * 
+ * \ingroup operations
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADOPERATIONS_EXPORT</name></macro> <name>RTranslation</name> <super>: <specifier>public</specifier> <name>RTransformation</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RTranslation</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list> <member_list>: <call><name>offset</name><argument_list>(<argument><expr><name>offset</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+
+    <decl_stmt><decl><type><name>RVector</name></type> <name>offset</name></decl>;</decl_stmt>
+</public>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTranslation*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

@@ -10,7 +10,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant>
         <arg type="bool" typeName="bool" name="undoable"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
       <variant>
         <arg type="QList &lt; QSharedPointer &lt; RObject &gt; &gt; &amp;"
@@ -18,9 +18,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="list" isConst="false" />
         <arg type="bool" typeName="bool"
         name="useCurrentAttributes" hasDefault="true"
-        default=" true" isConst="false" />
+        default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="undoable"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </constructor>
     <method name="replaceObject" cppName="replaceObject"
@@ -32,7 +32,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="bool" typeName="bool"
         name="useCurrentAttributes" hasDefault="true"
-        default=" true" isConst="false" />
+        default="true" isConst="false" />
       </variant>
     </method>
     <method name="getObject" cppName="getObject" specifier="public"
@@ -55,9 +55,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="bool" typeName="bool"
         name="useCurrentAttributes" hasDefault="true"
-        default=" true" isConst="false" />
+        default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="forceNew"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="deleteObject" cppName="deleteObject"
@@ -75,7 +75,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument &amp;" typeName="RDocument"
         name="document" isConst="false" />
         <arg type="bool" typeName="bool" name="preview"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getPreviewCounter" cppName="getPreviewCounter"

@@ -6,9 +6,6 @@ fi
 
 echo "Generating script bindings for the QCAD Application Framework..."
 
-rm src/srcml/RVector.srcml
-rm src/xml/RVector.xml
-
 sh ./cpp2srcml.sh $scope
 if [ $? -ne 0 ]; then exit $?; fi
 sh ./srcml2xml.sh $scope

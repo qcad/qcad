@@ -147,7 +147,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="RSpatialIndexVisitor *"
         typeName="RSpatialIndexVisitor *" name="dataVisitor"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
       <variant returnType="QMap &lt; int , QSet &lt; int &gt; &gt;"
       isPureVirtual="false">
@@ -155,7 +155,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="RSpatialIndexVisitor *"
         typeName="RSpatialIndexVisitor *" name="dataVisitor"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </method>
     <method name="queryContained" cppName="queryContained"
@@ -177,7 +177,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="RSpatialIndexVisitor *"
         typeName="RSpatialIndexVisitor *" name="dataVisitor"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
       <variant returnType="QMap &lt; int , QSet &lt; int &gt; &gt;"
       isPureVirtual="false">
@@ -185,7 +185,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="RSpatialIndexVisitor *"
         typeName="RSpatialIndexVisitor *" name="dataVisitor"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </method>
     <method name="queryNearestNeighbor"
@@ -202,7 +202,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="RSpatialIndexVisitor *"
         typeName="RSpatialIndexVisitor *" name="dataVisitor"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
       <variant returnType="QPair &lt; int , int &gt;"
       isPureVirtual="false">

@@ -1,484 +1,93 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RSpatialIndexSimple.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RSPATIALINDEXSIMPLE_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RSPATIALINDEXSIMPLE_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RSpatialIndex.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDebug.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RMath.h"</cpp:file></cpp:include>
-  <comment type="block">/** * \brief Simple spatial index
-  implementation. * * \ingroup core * \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RSpatialIndexSimple</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RSpatialIndex</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RSpatialIndexSimple</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RSpatialIndexSimple</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>clear</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>addToIndex</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>id</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>pos</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">//virtual void removeFromIndex(int
-  id);</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>removeFromIndex</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>id</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>pos</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>removeFromIndex</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>id</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RBox</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>bb</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>, 
-    <argument>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>int</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryIntersected</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RSpatialIndexVisitor</name>*</type>
-    <name>dataVisitor</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>, 
-    <argument>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>int</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryContained</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RSpatialIndexVisitor</name>*</type>
-    <name>dataVisitor</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>, 
-    <argument>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>int</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryNearestNeighbor</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>uint</name>
-      </type>
-      <name>k</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RSpatialIndexVisitor</name>*</type>
-    <name>dataVisitor</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <protected>protected: 
-  <comment type="line">//QMultiHash&lt;RBox, int&gt; si;</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>int</name>
-      </argument>, 
-      <argument>
-        <name>QList
-        <argument_list>&lt;
-        <argument>
-          <name>RBox</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>si</name>
-  </decl>;</decl_stmt></protected>}</block>;</class>
-  <comment type="line">//QDebug operator&lt;&lt;(QDebug dbg,
-  RSpatialIndexSimple&amp; si);</comment>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RSpatialIndexSimple*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RSpatialIndexSimple.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSPATIALINDEXSIMPLE_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RSPATIALINDEXSIMPLE_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSpatialIndex.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDebug.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
+
+
+
+<comment type="block">/**
+ * \brief Simple spatial index implementation.
+ *
+ * \ingroup core
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RSpatialIndexSimple</name><super>: <specifier>public</specifier> <name>RSpatialIndex</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor_decl><name>RSpatialIndexSimple</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RSpatialIndexSimple</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>clear</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>addToIndex</name><parameter_list>(
+        <param><decl><type><name>int</name></type> <name>id</name></decl></param>, <param><decl><type><name>int</name></type> <name>pos</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>, <param><decl><type><name>double</name></type> <name>z2</name></decl></param>
+    )</parameter_list>;</function_decl>
+
+    <comment type="line">//virtual void removeFromIndex(int id);</comment>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>removeFromIndex</name><parameter_list>(
+            <param><decl><type><name>int</name></type> <name>id</name></decl></param>, <param><decl><type><name>int</name></type> <name>pos</name></decl></param>,
+            <param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>,
+            <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>, <param><decl><type><name>double</name></type> <name>z2</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>removeFromIndex</name><parameter_list>(<param><decl><type><name>int</name></type> <name>id</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name>&amp;</type> <name>bb</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryIntersected</name><parameter_list>(
+        <param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>, <param><decl><type><name>double</name></type> <name>z2</name></decl></param>,
+        <param><decl><type><name>RSpatialIndexVisitor</name>*</type> <name>dataVisitor</name>=<init><expr><name>NULL</name></expr></init></decl></param>
+    )</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryContained</name><parameter_list>(
+        <param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>, <param><decl><type><name>double</name></type> <name>z2</name></decl></param>,
+        <param><decl><type><name>RSpatialIndexVisitor</name>*</type> <name>dataVisitor</name>=<init><expr><name>NULL</name></expr></init></decl></param>
+    )</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryNearestNeighbor</name><parameter_list>(
+        <param><decl><type><name>uint</name></type> <name>k</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>x</name></decl></param>, <param><decl><type><name>double</name></type> <name>y</name></decl></param>, <param><decl><type><name>double</name></type> <name>z</name></decl></param>,
+        <param><decl><type><name>RSpatialIndexVisitor</name>*</type> <name>dataVisitor</name>=<init><expr><name>NULL</name></expr></init></decl></param>
+    )</parameter_list>;</function_decl>
+
+</public><protected>protected:
+    <comment type="line">//QMultiHash&lt;RBox, int&gt; si;</comment>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>si</name></decl>;</decl_stmt>
+</protected>}</block>;</class>
+
+<comment type="line">//QDebug operator&lt;&lt;(QDebug dbg, RSpatialIndexSimple&amp; si);</comment>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSpatialIndexSimple*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

@@ -1,269 +1,86 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./entity" filename="RAttributeDefinitionData.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RATTRIBUTEDEFINITIONDATA_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RATTRIBUTEDEFINITIONDATA_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QTextLayout&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RTextData.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Stores and manages all data that
-  defines the geometry and * appearance of a block attribute
-  definition entity. * * \scriptable * \sharedPointerSupport *
-  \copyable * \ingroup entity */</comment>
-  <class>class 
-  <macro>
-    <name>QCADENTITY_EXPORT</name>
-  </macro>
-  <name>RAttributeDefinitionData</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RTextBasedData</name></super>
-  <block>{
-  <private type="default">
-    <decl_stmt>
-    <decl>
-      <type>
-      <name>friend</name>class</type>
-      <name>RAttributeDefinitionEntity</name>
-    </decl>;</decl_stmt>
-  </private>
-  <protected>protected: 
-  <constructor_decl>
-  <name>RAttributeDefinitionData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>*</type>
-      <name>document</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RAttributeDefinitionData</name>&amp;</type>
-      <name>data</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl></protected>
-  <public>public: 
-  <constructor>
-    <name>RAttributeDefinitionData</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </constructor>
-  <constructor_decl>
-  <name>RAttributeDefinitionData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RTextBasedData</name>&amp;</type>
-      <name>textData</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>tag</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>prompt</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RAttributeDefinitionData</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </destructor>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getTag</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>tag</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setTag</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>t</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>tag</name>= 
-    <name>t</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getPrompt</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>prompt</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setPrompt</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>p</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>prompt</name>= 
-    <name>p</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QString</name>
-  </type>
-  <name>getRenderedText</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>escUnicode</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>friend</name>
-    <name>QDebug</name>
-  </type>
-  <name>operator&lt;&lt;</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QDebug</name>
-      </type>
-      <name>dbg</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RAttributeDefinitionData</name>&amp;</type>
-      <name>t</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>tag</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>prompt</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RAttributeDefinitionData</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RAttributeDefinitionData*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>const
-    RAttributeDefinitionData*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;RAttributeDefinitionData&gt;</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;RAttributeDefinitionData&gt;*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./entity" filename="RAttributeDefinitionData.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RATTRIBUTEDEFINITIONDATA_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RATTRIBUTEDEFINITIONDATA_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextLayout&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextData.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * Stores and manages all data that defines the geometry and
+ * appearance of a block attribute definition entity.
+ *
+ * \scriptable
+ * \sharedPointerSupport
+ * \copyable
+ * \ingroup entity
+ */</comment>
+<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RAttributeDefinitionData</name><super>: <specifier>public</specifier> <name>RTextBasedData</name></super> <block>{<private type="default">
+    <decl_stmt><decl><type><name>friend</name> class</type> <name>RAttributeDefinitionEntity</name></decl>;</decl_stmt>
+
+</private><protected>protected:
+    <constructor_decl><name>RAttributeDefinitionData</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RAttributeDefinitionData</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</constructor_decl>
+
+</protected><public>public:
+    <constructor><name>RAttributeDefinitionData</name><parameter_list>()</parameter_list> <block>{}</block></constructor>
+    <constructor_decl><name>RAttributeDefinitionData</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>textData</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>tag</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>prompt</name></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor><specifier>virtual</specifier> <name>~RAttributeDefinitionData</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+
+    <function><type><name>QString</name></type> <name>getTag</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>tag</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setTag</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>t</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>tag</name> = <name>t</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>QString</name></type> <name>getPrompt</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>prompt</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPrompt</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>prompt</name> = <name>p</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getRenderedText</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>escUnicode</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>friend</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RAttributeDefinitionData</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>QString</name></type> <name>tag</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>prompt</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RAttributeDefinitionData</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RAttributeDefinitionData*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const RAttributeDefinitionData*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RAttributeDefinitionData&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RAttributeDefinitionData&gt;*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

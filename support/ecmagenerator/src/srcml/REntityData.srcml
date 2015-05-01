@@ -1,1805 +1,342 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="REntityData.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RENTITYDATA_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RENTITYDATA_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QStack&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RBlock.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RBox.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RColor.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RLayer.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RLine.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RMatrix.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RObject.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RSettings.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RView.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RBlockReferenceEntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RDocument</name>;</class_decl>
-  <class_decl>class 
-  <name>REntity</name>;</class_decl>
-  <class_decl>class 
-  <name>RExporter</name>;</class_decl>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RDEFAULT_QSET_INT</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RDEFAULT_QSET_INT</name>
-  <name>QSet</name>&lt;int&gt;()</cpp:define>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RDEFAULT_TOLERANCE_1E_MIN4</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RDEFAULT_TOLERANCE_1E_MIN4</name>1.0e-4</cpp:define>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
-  <comment type="block">/** * Base class for all entity data
-  classes. Such classes are * used to separate functionality from
-  data. Data objects may * for example be used to perform certain
-  calculations. A * custom entity might use the same data class as
-  a standard * entity to provide similar behavior (e.g. a wall
-  might * behave similar like a line entity). * * \scriptable *
-  \sharedPointerSupport * \ingroup core */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>REntityData</name>
-  <block>{
-  <private type="default">
-    <decl_stmt>
-    <decl>
-      <type>
-      <name>friend</name>class</type>
-      <name>REntity</name>
-    </decl>;</decl_stmt>
-  </private>
-  <public>public: 
-  <constructor_decl>
-  <name>REntityData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>RDocument</name>*</type>
-    <name>document</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~REntityData</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </destructor>
-  <function>
-    <type>
-    <name>RDocument</name>*</type>
-    <name>getDocument</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>document</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-    <name>const</name>
-    <name>RDocument</name>*</type>
-    <name>getDocument</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>document</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setDocument</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RDocument</name>*</type>
-        <name>document</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>document</name>= 
-    <name>document</name></expr>;</expr_stmt>}</block>
-  </function>
-  <comment type="block">/** * \return Shapes that represent the
-  geometry of this entity. */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RShape</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getShapes</name>
-    <parameter_list>(
-    <param>
-      <decl>
-      <type>
-      <name>const</name>
-      <name>RBox</name>&amp;</type>
-      <name>queryBox</name>=
-      <init>
-        <expr>
-          <name>RDEFAULT_RBOX</name>
-        </expr>
-      </init></decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>ignoreComplex</name>=
-      <init>
-        <expr>
-          <name>false</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>queryBox</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>ignoreComplex</argument>)</argument_list>
-    </macro>
-    <return>return 
-    <expr>
-      <call>
-        <name>QList
-        <argument_list>&lt;
-        <argument>
-          <name>QSharedPointer
-          <argument_list>&lt;
-          <argument>
-            <name>RShape</name>
-          </argument>&gt;</argument_list></name>
-        </argument>&gt;</argument_list></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return The one shape that is part of
-  this entity which is the * closest to the given position.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RShape</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getClosestShape</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>pos</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>range</name>=
-    <init>
-      <expr>
-        <name>RNANDOUBLE</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>ignoreComplex</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-    <name>virtual</name>
-    <name>RShape</name>*</type>
-    <name>castToShape</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>NULL</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function>
-    <type>
-    <name>virtual</name>
-    <name>const</name>
-    <name>RShape</name>*</type>
-    <name>castToConstShape</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>const_cast
-      <argument_list>&lt;
-      <argument>
-      <name>
-      REntityData</name>*</argument>&gt;</argument_list></name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>this</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>-&gt;
-    <call>
-      <name>castToShape</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RBox</name>
-  </type>
-  <name>getBoundingBox</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>ignoreEmpty</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * \return List of bounding boxes that
-  contain this entity. * This is used for complex entities such as
-  block references * to further optimize algorithms that depend on
-  bounding boxes * (e.g. spatial index algorithms). The default
-  implementation * returns the bounding box that contains the whole
-  entity. */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RBox</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getBoundingBoxes</name>
-    <parameter_list>(
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>ignoreEmpty</name>=
-      <init>
-        <expr>
-          <name>false</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RBox</name>
-      </argument>&gt;</argument_list></name>
-      <argument_list>()</argument_list>
-    </call>&lt;&lt; 
-    <call>
-      <name>getBoundingBox</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>ignoreEmpty</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RPolyline</name>
-  </type>
-  <name>getHull</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>offset</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * \return True if the entity is
-  currently selected. This can for example * influence the color in
-  which the entity is exported. */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>isSelected</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>selectionStatus</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * Selects or deselects this entity.
-  */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>setSelected</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>selectionStatus</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <comment type="block">/** * \return The draw order of this
-  entity. Entities are usually drawn in * ascending order of this
-  number. */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>int</name>
-    </type>
-    <name>getDrawOrder</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>drawOrder</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * Sets the draw order of this entity.
-  */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>setDrawOrder</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>drawOrder</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>drawOrder</name>= 
-    <name>drawOrder</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>setLayerId</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RLayer</name>::
-          <name>Id</name></name>
-        </type>
-        <name>layerId</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>layerId</name>= 
-    <name>layerId</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>
-      <name>RLayer</name>::
-      <name>Id</name></name>
-    </type>
-    <name>getLayerId</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>layerId</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>getLayerName</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>setBlockId</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RBlock</name>::
-          <name>Id</name></name>
-        </type>
-        <name>blockId</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>blockId</name>= 
-    <name>blockId</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>
-      <name>RBlock</name>::
-      <name>Id</name></name>
-    </type>
-    <name>getBlockId</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>blockId</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>setParentId</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RObject</name>::
-          <name>Id</name></name>
-        </type>
-        <name>parentId</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>parentId</name>= 
-    <name>parentId</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>
-      <name>RObject</name>::
-      <name>Id</name></name>
-    </type>
-    <name>getParentId</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>parentId</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>getBlockName</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>setLinetypeId</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RLinetype</name>::
-          <name>Id</name></name>
-        </type>
-        <name>linetypeId</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>linetypeId</name>= 
-    <name>linetypeId</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>
-      <name>RLinetype</name>::
-      <name>Id</name></name>
-    </type>
-    <name>getLinetypeId</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>linetypeId</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setLinetypePattern</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLinetypePattern</name>&amp;</type>
-      <name>p</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RLinetypePattern</name>
-  </type>
-  <name>getLinetypePattern</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RLinetype</name>::
-    <name>Id</name></name>
-  </type>
-  <name>getLinetypeId</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>resolve</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QStack
-      <argument_list>&lt;
-      <argument>
-      <name>
-      REntity</name>*</argument>&gt;</argument_list></name>&amp;</type>
-      <name>blockRefStack</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>setLinetypeScale</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>linetypeScale</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>linetypeScale</name>= 
-    <name>linetypeScale</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>double</name>
-    </type>
-    <name>getLinetypeScale</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>linetypeScale</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>
-      <name>RLineweight</name>::
-      <name>Lineweight</name></name>
-    </type>
-    <name>getLineweight</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>lineweight</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RLineweight</name>::
-    <name>Lineweight</name></name>
-  </type>
-  <name>getLineweight</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>resolve</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QStack
-      <argument_list>&lt;
-      <argument>
-      <name>
-      REntity</name>*</argument>&gt;</argument_list></name>&amp;</type>
-      <name>blockRefStack</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getLineweightInUnits</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QStack
-      <argument_list>&lt;
-      <argument>
-      <name>
-      REntity</name>*</argument>&gt;</argument_list></name>&amp;</type>
-      <name>blockRefStack</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setLineweight</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RLineweight</name>::
-          <name>Lineweight</name></name>
-        </type>
-        <name>lineweight</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>lineweight</name>= 
-    <name>lineweight</name></expr>;</expr_stmt>
-    <comment type="line">// if
-    (RSettings::getAutoScaleLinetypePattern()) {</comment>
-    <comment type="line">// this-&gt;linetypeScale =
-    lineweight;</comment>
-    <comment type="line">// }</comment>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setColor</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RColor</name>&amp;</type>
-        <name>color</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>color</name>= 
-    <name>color</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>RColor</name>
-    </type>
-    <name>getColor</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>color</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RColor</name>
-  </type>
-  <name>getColor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>resolve</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QStack
-      <argument_list>&lt;
-      <argument>
-      <name>
-      REntity</name>*</argument>&gt;</argument_list></name>&amp;</type>
-      <name>blockRefStack</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * Can be overwritten to return
-  internal, resolved reference points. * This is used for example
-  for block references in combination with * snap to reference
-  points. * Default implementation returns same as
-  getReferencePoints(). */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getInternalReferencePoints</name>
-    <parameter_list>( 
-    <param>
-      <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>ProjectionRenderingHint</name></name>
-      </type>
-      <name>hint</name>=
-      <init>
-        <expr>
-          <name>
-          <name>RS</name>::
-          <name>RenderTop</name></name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>hint</argument>)</argument_list>
-    </macro>
-    <return>return 
-    <expr>
-      <call>
-        <name>getReferencePoints</name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return Vector of reference points of
-  this entity. Reference points * can usually be moved around by
-  the user to change the geometry * of the entity. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getReferencePoints</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>ProjectionRenderingHint</name></name>
-    </type>
-    <name>hint</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>RenderTop</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RVector</name>
-  </type>
-  <name>getPointOnEntity</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getEndPoints</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RBox</name>&amp;</type>
-    <name>queryBox</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RBOX</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getMiddlePoints</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RBox</name>&amp;</type>
-    <name>queryBox</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RBOX</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getCenterPoints</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RBox</name>&amp;</type>
-    <name>queryBox</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RBOX</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getPointsWithDistanceToEnd</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>distance</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>From</name></name>
-    </type>
-    <name>from</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>FromAny</name></name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RBox</name>&amp;</type>
-    <name>queryBox</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RBOX</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RVector</name>
-  </type>
-  <name>getClosestPointOnEntity</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>point</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>range</name>=
-    <init>
-      <expr>
-        <name>RNANDOUBLE</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>limited</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="line">// /**</comment>
-  <comment type="line">// * Override to disable intersection
-  point</comment>
-  <comment type="line">// */</comment>
-  <comment type="line">// virtual bool intersectionsEnabled()
-  {</comment>
-  <comment type="line">// return true;</comment>
-  <comment type="line">// }</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getIntersectionPoints</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>REntityData</name>&amp;</type>
-      <name>other</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>limited</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>same</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RBox</name>&amp;</type>
-    <name>queryBox</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RBOX</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>ignoreComplex</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getIntersectionPoints</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RShape</name>&amp;</type>
-      <name>shape</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>limited</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RBox</name>&amp;</type>
-    <name>queryBox</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RBOX</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>ignoreComplex</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RVector</name>
-  </type>
-  <name>getVectorTo</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>point</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>limited</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>strictRange</name>=
-    <init>
-      <expr>
-        <name>RMAXDOUBLE</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>double</name>
-  </type>
-  <name>getDistanceTo</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>point</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>limited</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>range</name>=
-    <init>
-      <expr>0.0</expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>draft</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>strictRange</name>=
-    <init>
-      <expr>
-        <name>RMAXDOUBLE</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * \return True if this entity is
-  completely inside the given box, * false otherwise. Only geometry
-  is accounted for, not the line width. */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>isInside</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RBox</name>&amp;</type>
-        <name>box</name>
-      </decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>box</name>.
-    <call>
-      <name>contains</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <call>
-            <name>getBoundingBox</name>
-            <argument_list>()</argument_list>
-          </call>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>isOnEntity</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>point</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>limited</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>tolerance</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_TOLERANCE_1E_MIN4</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>intersectsWith</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RShape</name>&amp;</type>
-      <name>shape</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * Moves the given reference point to
-  the given target point or does nothing * if this entity has no
-  reference point as the given location. * * \return True if a
-  reference point has been moved successfully, * false otherwise.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>moveReferencePoint</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>referencePoint</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>targetPoint</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>move</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>offset</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>rotate</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>rotation</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RVector</name>&amp;</type>
-    <name>center</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RVECTOR</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>scale</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>scaleFactors</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RVector</name>&amp;</type>
-    <name>center</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RVECTOR</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>scale</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>scaleFactor</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RVector</name>&amp;</type>
-    <name>center</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RVECTOR</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>mirror</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLine</name>&amp;</type>
-      <name>axis</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>mirror</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>axis1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>axis2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>flipHorizontal</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>flipVertical</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>stretch</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RPolyline</name>&amp;</type>
-      <name>area</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>offset</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * Entities can reimplement this
-  function to invalidate any internal cache * (mark the entity as
-  dirty). */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>update</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{}</block>
-  </function></public>
-  <protected>protected: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RDocument</name>*</type>
-    <name>document</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>selectionStatus</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>drawOrder</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RLayer</name>::
-      <name>Id</name></name>
-    </type>
-    <name>layerId</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RBlock</name>::
-      <name>Id</name></name>
-    </type>
-    <name>blockId</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RObject</name>::
-      <name>Id</name></name>
-    </type>
-    <name>parentId</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RLinetype</name>::
-      <name>Id</name></name>
-    </type>
-    <name>linetypeId</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>linetypeScale</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RLineweight</name>::
-      <name>Lineweight</name></name>
-    </type>
-    <name>lineweight</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RColor</name>
-    </type>
-    <name>color</name>
-  </decl>;</decl_stmt></protected>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>REntityData*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>const REntityData*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;REntityData&gt;</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;REntityData&gt;*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="REntityData.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RENTITYDATA_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RENTITYDATA_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStack&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBlock.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBox.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RColor.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLayer.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLine.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMatrix.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSettings.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RView.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RBlockReferenceEntity</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>REntity</name>;</class_decl>
+<class_decl>class <name>RExporter</name>;</class_decl>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QSET_INT</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QSET_INT</name> <name>QSet</name>&lt;int&gt;()</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_TOLERANCE_1E_MIN4</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_TOLERANCE_1E_MIN4</name> 1.0e-4</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+<comment type="block">/**
+ * Base class for all entity data classes. Such classes are
+ * used to separate functionality from data. Data objects may
+ * for example be used to perform certain calculations. A
+ * custom entity might use the same data class as a standard
+ * entity to provide similar behavior (e.g. a wall might
+ * behave similar like a line entity).
+ *
+ * \scriptable
+ * \sharedPointerSupport
+ * \ingroup core
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>REntityData</name> <block>{<private type="default">
+
+    <decl_stmt><decl><type><name>friend</name> class</type> <name>REntity</name></decl>;</decl_stmt>
+
+</private><public>public:
+    <constructor_decl><name>REntityData</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+
+    <destructor><specifier>virtual</specifier> <name>~REntityData</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+
+    <function><type><name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>document</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>const</name> <name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>document</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setDocument</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>document</name> = <name>document</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return Shapes that represent the geometry of this entity.
+     */</comment>
+    <function><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getShapes</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name> =<init> <expr><name>RDEFAULT_RBOX</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreComplex</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>queryBox</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>ignoreComplex</argument>)</argument_list></macro>
+
+        <return>return <expr><call><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return The one shape that is part of this entity which is the
+     *      closest to the given position.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>getClosestShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>, <param><decl><type><name>double</name></type> <name>range</name> =<init> <expr><name>RNANDOUBLE</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreComplex</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>RShape</name>*</type> <name>castToShape</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>NULL</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>virtual</name> <name>const</name> <name>RShape</name>*</type> <name>castToConstShape</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>const_cast<argument_list>&lt;<argument><name>REntityData</name>*</argument>&gt;</argument_list></name><argument_list>(<argument><expr><name>this</name></expr></argument>)</argument_list></call>-&gt;<call><name>castToShape</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>RBox</name></type> <name>getBoundingBox</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return List of bounding boxes that contain this entity.
+     * This is used for complex entities such as block references
+     * to further optimize algorithms that depend on bounding boxes
+     * (e.g. spatial index algorithms). The default implementation
+     * returns the bounding box that contains the whole entity.
+     */</comment>
+    <function><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></type> <name>getBoundingBoxes</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name><argument_list>()</argument_list></call> &lt;&lt; <call><name>getBoundingBox</name><argument_list>(<argument><expr><name>ignoreEmpty</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>RPolyline</name></type> <name>getHull</name><parameter_list>(<param><decl><type><name>double</name></type> <name>offset</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return True if the entity is currently selected. This can for example
+     *      influence the color in which the entity is exported.
+     */</comment>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isSelected</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>selectionStatus</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * Selects or deselects this entity.
+     */</comment>
+    <function><type><name>virtual</name> <name>void</name></type> <name>setSelected</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>selectionStatus</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return The draw order of this entity. Entities are usually drawn in
+     * ascending order of this number.
+     */</comment>
+    <function><type><name>virtual</name> <name>int</name></type> <name>getDrawOrder</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>drawOrder</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * Sets the draw order of this entity.
+     */</comment>
+    <function><type><name>virtual</name> <name>void</name></type> <name>setDrawOrder</name><parameter_list>(<param><decl><type><name>int</name></type> <name>drawOrder</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>drawOrder</name> = <name>drawOrder</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setLayerId</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>layerId</name> = <name>layerId</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>getLayerId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>layerId</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>QString</name></type> <name>getLayerName</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setBlockId</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>blockId</name> = <name>blockId</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>getBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>blockId</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setParentId</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>parentId</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>parentId</name> = <name>parentId</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getParentId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>parentId</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>QString</name></type> <name>getBlockName</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setLinetypeId</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>linetypeId</name> = <name>linetypeId</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>linetypeId</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setLinetypePattern</name><parameter_list>(<param><decl><type><name>const</name> <name>RLinetypePattern</name>&amp;</type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RLinetypePattern</name></type> <name>getLinetypePattern</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>REntity</name>*</argument>&gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setLinetypeScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>linetypeScale</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>linetypeScale</name> = <name>linetypeScale</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>double</name></type> <name>getLinetypeScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>linetypeScale</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>getLineweight</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>lineweight</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>getLineweight</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>REntity</name>*</argument>&gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>double</name></type> <name>getLineweightInUnits</name><parameter_list>(<param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>REntity</name>*</argument>&gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>void</name></type> <name>setLineweight</name><parameter_list>(<param><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>lineweight</name> = <name>lineweight</name></expr>;</expr_stmt>
+<comment type="line">//        if (RSettings::getAutoScaleLinetypePattern()) {</comment>
+<comment type="line">//            this-&gt;linetypeScale = lineweight;</comment>
+<comment type="line">//        }</comment>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setColor</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>color</name> = <name>color</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>RColor</name></type> <name>getColor</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>color</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>RColor</name></type> <name>getColor</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>, <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>REntity</name> *</argument>&gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Can be overwritten to return internal, resolved reference points.
+     * This is used for example for block references in combination with
+     * snap to reference points.
+     * Default implementation returns same as getReferencePoints().
+     */</comment>
+    <function><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getInternalReferencePoints</name><parameter_list>(
+        <param><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>hint</name>=<init><expr><name><name>RS</name>::<name>RenderTop</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>hint</argument>)</argument_list></macro>
+
+        <return>return <expr><call><name>getReferencePoints</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return Vector of reference points of this entity. Reference points
+     *      can usually be moved around by the user to change the geometry
+     *      of the entity.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getReferencePoints</name><parameter_list>(
+        <param><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>hint</name>=<init><expr><name><name>RS</name>::<name>RenderTop</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getPointOnEntity</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getEndPoints</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name> =<init> <expr><name>RDEFAULT_RBOX</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getMiddlePoints</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name> =<init> <expr><name>RDEFAULT_RBOX</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getCenterPoints</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name> =<init> <expr><name>RDEFAULT_RBOX</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getPointsWithDistanceToEnd</name><parameter_list>(
+        <param><decl><type><name>double</name></type> <name>distance</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>From</name></name></type> <name>from</name> =<init> <expr><name><name>RS</name>::<name>FromAny</name></name></expr></init></decl></param>, <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name> =<init> <expr><name>RDEFAULT_RBOX</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getClosestPointOnEntity</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>range</name>=<init><expr><name>RNANDOUBLE</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>limited</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+<comment type="line">//    /**</comment>
+<comment type="line">//     * Override to disable intersection point</comment>
+<comment type="line">//     */</comment>
+<comment type="line">//    virtual bool intersectionsEnabled() {</comment>
+<comment type="line">//        return true;</comment>
+<comment type="line">//    }</comment>
+
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getIntersectionPoints</name><parameter_list>(
+            <param><decl><type><name>const</name> <name>REntityData</name>&amp;</type> <name>other</name></decl></param>, <param><decl><type><name>bool</name></type> <name>limited</name> =<init> <expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>same</name> =<init> <expr><name>false</name></expr></init></decl></param>,
+            <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name> =<init> <expr><name>RDEFAULT_RBOX</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreComplex</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getIntersectionPoints</name><parameter_list>(
+            <param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>shape</name></decl></param>, <param><decl><type><name>bool</name></type> <name>limited</name> =<init> <expr><name>true</name></expr></init></decl></param>,
+            <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name> =<init> <expr><name>RDEFAULT_RBOX</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreComplex</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getVectorTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>, <param><decl><type><name>bool</name></type> <name>limited</name>=<init><expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>strictRange</name> =<init> <expr><name>RMAXDOUBLE</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>double</name></type> <name>getDistanceTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>, <param><decl><type><name>bool</name></type> <name>limited</name> =<init> <expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>range</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>strictRange</name> =<init> <expr><name>RMAXDOUBLE</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return True if this entity is completely inside the given box,
+     *     false otherwise. Only geometry is accounted for, not the line width.
+     */</comment>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isInside</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>box</name>.<call><name>contains</name><argument_list>(<argument><expr><call><name>getBoundingBox</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isOnEntity</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>, <param><decl><type><name>bool</name></type> <name>limited</name> =<init> <expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>tolerance</name> =<init> <expr><name>RDEFAULT_TOLERANCE_1E_MIN4</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>intersectsWith</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>shape</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Moves the given reference point to the given target point or does nothing
+     * if this entity has no reference point as the given location.
+     *
+     * \return True if a reference point has been moved successfully,
+     *        false otherwise.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>moveReferencePoint</name><parameter_list>(
+        <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>referencePoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>targetPoint</name></decl></param>
+    )</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>move</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>rotate</name><parameter_list>(<param><decl><type><name>double</name></type> <name>rotation</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name> =<init> <expr><name>RDEFAULT_RVECTOR</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>scale</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>scaleFactors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name> =<init> <expr><name>RDEFAULT_RVECTOR</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>scale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>scaleFactor</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name> =<init> <expr><name>RDEFAULT_RVECTOR</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>mirror</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>axis</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>mirror</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>axis1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>axis2</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>flipHorizontal</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>flipVertical</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>stretch</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>area</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Entities can reimplement this function to invalidate any internal cache
+     * (mark the entity as dirty).
+     */</comment>
+    <function><type><name>virtual</name> <name>void</name></type> <name>update</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{}</block></function>
+
+</public><protected>protected:
+    <decl_stmt><decl><type><name>RDocument</name>*</type> <name>document</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>selectionStatus</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>drawOrder</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>parentId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>linetypeScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RColor</name></type> <name>color</name></decl>;</decl_stmt>
+</protected>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>REntityData*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const REntityData*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;REntityData&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;REntityData&gt;*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

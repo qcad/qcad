@@ -1,553 +1,124 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./entity" filename="RLeaderData.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RLEADERDATA_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RLEADERDATA_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDimLinearData.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RVector.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Leader entity data class. * *
-  \scriptable * \copyable * \ingroup entity */</comment>
-  <class>class 
-  <macro>
-    <name>QCADENTITY_EXPORT</name>
-  </macro>
-  <name>RLeaderData</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>REntityData</name>, 
-  <specifier>protected</specifier>
-  <name>RPolyline</name></super>
-  <block>{
-  <private type="default">
-    <decl_stmt>
-    <decl>
-      <type>
-      <name>friend</name>class</type>
-      <name>RLeaderEntity</name>
-    </decl>;</decl_stmt>
-  </private>
-  <protected>protected: 
-  <constructor_decl>
-  <name>RLeaderData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>*</type>
-      <name>document</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLeaderData</name>&amp;</type>
-      <name>data</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl></protected>
-  <public>public: 
-  <constructor_decl>
-  <name>RLeaderData</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RLeaderData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RPolyline</name>&amp;</type>
-      <name>polyline</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>arrowHead</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <function>
-    <type>
-    <name>virtual</name>
-    <name>RShape</name>*</type>
-    <name>castToShape</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>this</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getDimasz</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getDimscale</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setArrowHead</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>on</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>hasArrowHead</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>arrowHead</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>canHaveArrowHead</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>updateArrowHead</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="line">// void setPolyline(const RPolyline&amp;
-  polyline) {</comment>
-  <comment type="line">// *((RPolyline*)this) = polyline;</comment>
-  <comment type="line">// }</comment>
-  <function>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>getEndPoint</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RPolyline</name>::
-        <name>getEndPoint</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>getStartPoint</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RPolyline</name>::
-        <name>getStartPoint</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>int</name>
-    </type>
-    <name>countVertices</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RPolyline</name>::
-        <name>countVertices</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>int</name>
-    </type>
-    <name>countSegments</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RPolyline</name>::
-        <name>countSegments</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>appendVertex</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>vertex</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RPolyline::appendVertex</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>vertex</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getReferencePoints</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>ProjectionRenderingHint</name></name>
-    </type>
-    <name>hint</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>RenderTop</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>moveReferencePoint</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>referencePoint</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>targetPoint</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>scale</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>scaleFactors</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>center</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>stretch</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RPolyline</name>&amp;</type>
-      <name>area</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>offset</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RShape</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getExploded</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RPolyline</name>::
-        <name>getExploded</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RShape</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getShapes</name>
-    <parameter_list>(
-    <param>
-      <decl>
-      <type>
-      <name>const</name>
-      <name>RBox</name>&amp;</type>
-      <name>queryBox</name>=
-      <init>
-        <expr>
-          <name>RDEFAULT_RBOX</name>
-        </expr>
-      </init></decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>ignoreComplex</name>=
-      <init>
-        <expr>
-          <name>false</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>queryBox</argument>)</argument_list>
-    </macro>
-    <decl_stmt>
-    <decl>
-      <type>
-        <name>QList
-        <argument_list>&lt;
-        <argument>
-          <name>QSharedPointer
-          <argument_list>&lt;
-          <argument>
-            <name>RShape</name>
-          </argument>&gt;</argument_list></name>
-        </argument>&gt;</argument_list></name>
-      </type>
-      <name>ret</name>
-    </decl>;</decl_stmt>
-    <expr_stmt>
-    <expr>
-    <name>ret</name>&lt;&lt; 
-    <call>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RShape</name>
-      </argument>&gt;</argument_list></name>
-      <argument_list>(
-      <argument>
-        <expr>new 
-        <call>
-          <name>RPolyline</name>
-          <argument_list>(
-          <argument>
-            <expr>*
-            <name>this</name></expr>
-          </argument>)</argument_list>
-        </call></expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>
-    <if>if 
-    <condition>(
-    <expr>
-      <name>arrowHead</name>
-    </expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-      <name>ret</name>&lt;&lt; 
-      <call>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RShape</name>
-        </argument>&gt;</argument_list></name>
-        <argument_list>(
-        <argument>
-          <expr>new 
-          <call>
-            <name>RTriangle</name>
-            <argument_list>(
-            <argument>
-              <expr>
-                <call>
-                  <name>getArrowShape</name>
-                  <argument_list>()</argument_list>
-                </call>
-              </expr>
-            </argument>)</argument_list>
-          </call></expr>
-        </argument>)</argument_list>
-      </call></expr>;</expr_stmt>}</block>
-    </then></if>
-    <return>return 
-    <expr>
-      <name>ret</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>RTriangle</name>
-  </type>
-  <name>getArrowShape</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
-  <private>private: 
-  <comment type="block">/** Arrow head on / off */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>arrowHead</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RLeaderData</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RLeaderData*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>const RLeaderData*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;RLeaderData&gt;</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./entity" filename="RLeaderData.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RLEADERDATA_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RLEADERDATA_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDimLinearData.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * Leader entity data class.
+ *
+ * \scriptable
+ * \copyable
+ * \ingroup entity
+ */</comment>
+<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RLeaderData</name><super>: <specifier>public</specifier> <name>REntityData</name>, <specifier>protected</specifier> <name>RPolyline</name></super> <block>{<private type="default">
+    <decl_stmt><decl><type><name>friend</name> class</type> <name>RLeaderEntity</name></decl>;</decl_stmt>
+
+</private><protected>protected:
+    <constructor_decl><name>RLeaderData</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RLeaderData</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</constructor_decl>
+
+</protected><public>public:
+    <constructor_decl><name>RLeaderData</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RLeaderData</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>polyline</name></decl></param>, <param><decl><type><name>bool</name></type> <name>arrowHead</name></decl></param>)</parameter_list>;</constructor_decl>
+
+    <function><type><name>virtual</name> <name>RShape</name>*</type> <name>castToShape</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>this</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>double</name></type> <name>getDimasz</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getDimscale</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setArrowHead</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    <function><type><name>bool</name></type> <name>hasArrowHead</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>arrowHead</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>bool</name></type> <name>canHaveArrowHead</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>updateArrowHead</name><parameter_list>()</parameter_list>;</function_decl>
+
+<comment type="line">//    void setPolyline(const RPolyline&amp; polyline) {</comment>
+<comment type="line">//        *((RPolyline*)this) = polyline;</comment>
+<comment type="line">//    }</comment>
+
+    <function><type><name>RVector</name></type> <name>getEndPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RPolyline</name>::<name>getEndPoint</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getStartPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RPolyline</name>::<name>getStartPoint</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>int</name></type> <name>countVertices</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RPolyline</name>::<name>countVertices</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>int</name></type> <name>countSegments</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RPolyline</name>::<name>countSegments</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>appendVertex</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>vertex</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RPolyline::appendVertex</name><parameter_list>(<param><decl><type><name>vertex</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getReferencePoints</name><parameter_list>(
+        <param><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>hint</name> =<init> <expr><name><name>RS</name>::<name>RenderTop</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>moveReferencePoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>referencePoint</name></decl></param>, 
+        <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>targetPoint</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>scale</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>scaleFactors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>stretch</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>area</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getExploded</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RPolyline</name>::<name>getExploded</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getShapes</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name> =<init> <expr><name>RDEFAULT_RBOX</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreComplex</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>queryBox</argument>)</argument_list></macro>
+
+        <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>ret</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>ret</name> &lt;&lt; <call><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr>new <call><name>RPolyline</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <if>if <condition>(<expr><name>arrowHead</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>ret</name> &lt;&lt; <call><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr>new <call><name>RTriangle</name><argument_list>(<argument><expr><call><name>getArrowShape</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+        <return>return <expr><name>ret</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>RTriangle</name></type> <name>getArrowShape</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</public><private>private:
+    <comment type="block">/** Arrow head on / off */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>arrowHead</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLeaderData</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLeaderData*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const RLeaderData*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RLeaderData&gt;</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

@@ -31,7 +31,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QWidget *" typeName="QWidget *" name="parent"
         hasDefault="true" default="0" isConst="false" />
         <arg type="bool" typeName="bool" name="hasMdiArea"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </constructor>
     <method name="getMainWindow" cppName="getMainWindow"
@@ -108,7 +108,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString" name="message"
         isConst="true" />
         <arg type="bool" typeName="bool" name="messageBox"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="handleUserCommand" cppName="handleUserCommand"
@@ -131,7 +131,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RTransaction &amp;" typeName="RTransaction"
         name="t" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyChanges"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="RS::EntityType" typeName="RS::EntityType"
         name="entityTypeFilter" hasDefault="true"
         default="RS :: EntityAll" isConst="false" />
@@ -293,7 +293,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QMdiSubWindow *" typeName="QMdiSubWindow *"
-        name="mdiChild" hasDefault="true" default=" NULL"
+        name="mdiChild" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>

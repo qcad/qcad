@@ -246,7 +246,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="REntity *" typeName="REntity *" name="entity"
         isConst="false" />
         <arg type="bool" typeName="bool" name="copyBlockId"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getBoundingBox" cppName="getBoundingBox"
@@ -254,7 +254,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RBox" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="ignoreEmpty"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getBoundingBoxes" cppName="getBoundingBoxes"
@@ -263,7 +263,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RBox &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="ignoreEmpty"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getHull" cppName="getHull" specifier="public"
@@ -280,7 +280,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
         <arg type="bool" typeName="bool" name="ignoreComplex"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getClosestShape" cppName="getClosestShape"
@@ -293,7 +293,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="range"
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
         <arg type="bool" typeName="bool" name="ignoreComplex"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getClosestSimpleShape"
@@ -321,7 +321,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="tolerance"
         hasDefault="true" default="RDEFAULT_TOLERANCE_1E_MIN4"
         isConst="false" />
@@ -342,11 +342,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="range"
         hasDefault="true" default="0.0" isConst="false" />
         <arg type="bool" typeName="bool" name="draft"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="double" typeName="double" name="strictRange"
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
       </variant>
@@ -358,7 +358,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="strictRange"
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
       </variant>
@@ -426,7 +426,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="range"
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getPointsWithDistanceToEnd"
@@ -451,22 +451,22 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="REntity &amp;" typeName="REntity" name="other"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
         <arg type="bool" typeName="bool" name="ignoreComplex"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false">
         <arg type="RShape &amp;" typeName="RShape" name="shape"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
         <arg type="bool" typeName="bool" name="ignoreComplex"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsWithShape"
@@ -477,7 +477,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RShape &amp;" typeName="RShape" name="shape"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
       </variant>
@@ -574,9 +574,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RExporter &amp;" typeName="RExporter" name="e"
         isConst="false" />
         <arg type="bool" typeName="bool" name="preview"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="forceSelected"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="isSelectedForPropertyEditing"
@@ -593,9 +593,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RPropertyTypeId" name="propertyTypeId"
         isConst="false" />
         <arg type="bool" typeName="bool" name="humanReadable"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="noAttributes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="setProperty" cppName="setProperty"
@@ -607,7 +607,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -620,7 +620,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="allowInvisible"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getComplexity" cppName="getComplexity"

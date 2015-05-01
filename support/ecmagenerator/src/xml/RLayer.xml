@@ -15,9 +15,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString" name="name"
         isConst="true" />
         <arg type="bool" typeName="bool" name="frozen"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="locked"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="RColor &amp;" typeName="RColor" name="color"
         hasDefault="true" default="Qt :: black" isConst="true" />
         <arg type="RLinetype::Id" typeName="RLinetype::Id"
@@ -122,9 +122,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RPropertyTypeId" name="propertyTypeId"
         isConst="false" />
         <arg type="bool" typeName="bool" name="humanReadable"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="noAttributes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="setProperty" cppName="setProperty"
@@ -136,7 +136,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>

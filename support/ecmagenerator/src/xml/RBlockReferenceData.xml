@@ -34,7 +34,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RBox &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="ignoreEmpty"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getBoundingBox" cppName="getBoundingBox"
@@ -42,7 +42,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RBox" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="ignoreEmpty"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getInternalReferencePoints"
@@ -74,7 +74,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="strictRange"
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
       </variant>
@@ -86,11 +86,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="range"
         hasDefault="true" default="0.0" isConst="false" />
         <arg type="bool" typeName="bool" name="draft"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="double" typeName="double" name="strictRange"
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
       </variant>
@@ -102,7 +102,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
         <arg type="bool" typeName="bool" name="ignoreComplex"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="moveReferencePoint" cppName="moveReferencePoint"

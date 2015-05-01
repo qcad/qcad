@@ -33,7 +33,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString" name="text"
         isConst="true" />
         <arg type="bool" typeName="bool" name="undoable"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </constructor>
     <method name="setRecordAffectedObjects"
@@ -185,9 +185,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="bool" typeName="bool"
         name="useCurrentAttributes" hasDefault="true"
-        default=" true" isConst="false" />
+        default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="forceNew"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="QSet &lt; RPropertyTypeId &gt; &amp;"
         typeName="QSet &lt; RPropertyTypeId &gt;"
         name="modifiedPropertyTypeIds" hasDefault="true"

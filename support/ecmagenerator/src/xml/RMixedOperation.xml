@@ -17,7 +17,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant>
         <arg type="bool" typeName="bool" name="undoable"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </constructor>
     <method name="addObject" cppName="addObject" specifier="public"
@@ -29,9 +29,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="bool" typeName="bool"
         name="useCurrentAttributes" hasDefault="true"
-        default=" true" isConst="false" />
+        default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="forceNew"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="deleteObject" cppName="deleteObject"
@@ -53,7 +53,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument &amp;" typeName="RDocument"
         name="document" isConst="false" />
         <arg type="bool" typeName="bool" name="preview"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="setMode" cppName="setMode" specifier="protected"
@@ -66,7 +66,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RMixedOperation::Mode" name="mode"
         isConst="false" />
         <arg type="bool" typeName="bool" name="on"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getMode" cppName="getMode" specifier="protected"

@@ -47,7 +47,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="RDEFAULT_MIN1"
         isConst="false" />
         <arg type="bool" typeName="bool" name="ignoreEmpty"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="zoomTo" cppName="zoomTo" specifier="public"
@@ -99,7 +99,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="includeStepFactor"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="setFactor" cppName="setFactor" specifier="public"
@@ -108,14 +108,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="f"
         isConst="false" />
         <arg type="bool" typeName="bool" name="regen"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getOffset" cppName="getOffset" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="includeStepOffset"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="setOffset" cppName="setOffset" specifier="public"
@@ -124,7 +124,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="offset"
         isConst="true" />
         <arg type="bool" typeName="bool" name="regen"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getBackgroundColor" cppName="getBackgroundColor"
@@ -260,7 +260,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RGraphicsSceneQt *" name="scene"
         isConst="false" />
         <arg type="bool" typeName="bool" name="regen"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="setBackgroundColor" cppName="setBackgroundColor"
@@ -276,7 +276,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="force"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="repaintView" cppName="repaintView"
@@ -625,7 +625,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="force"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="updateGraphicsBuffer"

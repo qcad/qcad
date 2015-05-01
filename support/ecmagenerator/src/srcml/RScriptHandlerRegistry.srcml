@@ -1,174 +1,65 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RScriptHandlerRegistry.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RSCRIPTHANDLERREGISTRY_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RSCRIPTHANDLERREGISTRY_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RNonCopyable.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RAction.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RGuiAction.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RScriptAction.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RMainWindow.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RSingleton.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Script Handler Registry for global
-  Script Handlers. * * \ingroup core */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RScriptHandlerRegistry</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RSingleton</name></super>
-  <block>{
-  <private type="default">
-    <decl_stmt>
-    <decl>
-      <type>
-      <name>friend</name>class</type>
-      <name>RSingleton</name>
-    </decl>;</decl_stmt>
-  </private>
-  <public>public: 
-  <typedef>typedef 
-  <function_decl>
-  <type>
-  <name>RScriptHandler</name>*</type>(*
-  <name>FactoryFunction</name>)
-  <parameter_list>()</parameter_list>;</function_decl></typedef>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RScriptHandlerRegistry</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>registerScriptHandler</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>FactoryFunction</name>
-      </type>
-      <name>factoryFunction</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>fileExtensions</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>static</name>
-  <name>RScriptHandler</name>*</type>
-  <name>createScriptHandler</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>extension</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>static</name>
-  <name>RScriptHandler</name>*</type>
-  <name>getGlobalScriptHandler</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>extension</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <protected>protected: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-      <name>
-      RScriptHandler</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>globalScriptHandlers</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-        <name>FactoryFunction</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>factoryFunctions</name>
-  </decl>;</decl_stmt></protected>}</block>;</class>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RScriptHandlerRegistry.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSCRIPTHANDLERREGISTRY_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RSCRIPTHANDLERREGISTRY_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RNonCopyable.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RAction.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGuiAction.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RScriptAction.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMainWindow.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSingleton.h"</cpp:file></cpp:include>
+
+
+<comment type="block">/**
+ * Script Handler Registry for global Script Handlers.
+ *
+ * \ingroup core
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RScriptHandlerRegistry</name><super>: <specifier>public</specifier> <name>RSingleton</name></super> <block>{<private type="default">
+
+    <decl_stmt><decl><type><name>friend</name> class</type> <name>RSingleton</name></decl>;</decl_stmt>
+
+</private><public>public:
+    <typedef>typedef <function_decl><type><name>RScriptHandler</name>*</type> (*<name>FactoryFunction</name>)<parameter_list>()</parameter_list>;</function_decl></typedef>
+
+    <destructor_decl><specifier>virtual</specifier> <name>~RScriptHandlerRegistry</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>registerScriptHandler</name><parameter_list>(<param><decl><type><name>FactoryFunction</name></type> <name>factoryFunction</name></decl></param>,
+            <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name>&amp;</type> <name>fileExtensions</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>RScriptHandler</name>*</type> <name>createScriptHandler</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>extension</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RScriptHandler</name>*</type> <name>getGlobalScriptHandler</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>extension</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><protected>protected:
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>RScriptHandler</name>*</argument>&gt;</argument_list></name></type> <name>globalScriptHandlers</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>FactoryFunction</name></argument>&gt;</argument_list></name></type> <name>factoryFunctions</name></decl>;</decl_stmt>
+</protected>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

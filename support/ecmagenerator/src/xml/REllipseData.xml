@@ -25,7 +25,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="endParam"
         isConst="false" />
         <arg type="bool" typeName="bool" name="reversed"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </constructor>
     <method name="getEllipse" cppName="getEllipse"
@@ -149,7 +149,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
         <arg type="bool" typeName="bool" name="ignoreComplex"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
   </class>

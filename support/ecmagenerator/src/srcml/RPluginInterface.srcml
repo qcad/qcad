@@ -1,232 +1,106 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RPluginInterface.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RPLUGININTERFACE_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RPLUGININTERFACE_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QtPlugin&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPluginInfo.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>QString</name>;</class_decl>
-  <class_decl>class 
-  <name>QScriptEngine</name>;</class_decl>
-  <comment type="block">/** * Interface for all C++ QCAD plugins. *
-  * \ingroup core * \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RPluginInterface</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <enum>enum 
-  <name>InitStatus</name>
-  <block>{ 
-  <expr>
-    <name>GotSplashWindow</name>
-  </expr>, 
-  <comment type="block">/**&lt; Splashscreen showing. */</comment>
-  <expr>
-    <name>AddOnsInitialized</name>
-  </expr>, 
-  <comment type="block">/**&lt; Add ons are initialized, actions
-  created but not added to widgets. */</comment>
-  <expr>
-    <name>ActionsAdded</name>
-  </expr>, 
-  <comment type="block">/**&lt; Actions have been added to widgets.
-  */</comment>
-  <expr>
-    <name>GotMainWindowBeforeShow</name>
-  </expr>, 
-  <comment type="block">/**&lt; Main window created but not shown
-  yet. */</comment>
-  <expr>
-    <name>GotMainWindow</name>
-  </expr>, 
-  <comment type="block">/**&lt; Main window with all tools and
-  menus has been created. */</comment>
-  <expr>
-    <name>LoadedFiles</name>
-  </expr>, 
-  <comment type="block">/**&lt; Loaded files given on command line.
-  */</comment>
-  <expr>
-    <name>ScriptsExecuted</name>
-  </expr>, 
-  <comment type="block">/**&lt; Executed scripts given on command
-  line. */</comment>
-  <expr>
-    <name>AllDone</name>
-  </expr>
-  <comment type="block">/**&lt; Application is ready and idle.
-  */</comment>}</block>;</enum></public>
-  <public>public: 
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RPluginInterface</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </destructor>
-  <comment type="block">/** * Called immediately after the plugin
-  has been loaded, directly * after starting the application.
-  Implementations typically perform * plugin initialization,
-  registration of file importers, exporter, etc. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>init</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called before a plugin is removed /
-  unloaded. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>uninit</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>remove</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called after the application has been
-  fully loaded, directly before * entering the main event loop.
-  Implementations typically perform * initialization that depends
-  on the application being up and running. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>postInit</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RPluginInterface</name>::
-        <name>InitStatus</name></name>
-      </type>
-      <name>status</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called whenever a new script engine
-  is instantiated. * Implementations may register their own script
-  extensions by making * C / C++ code scriptable. * *
-  \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>initScriptExtensions</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>&amp;</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return An RPluginInfo object with at
-  least the following keys: * - 'Version' - Version string * -
-  'Name' - Plugin name * - 'Description' - Longer description of
-  the plugin * - 'License' - Licensing information (e.g. 'GPLv3',
-  'proprietary', ...) * - 'URL' - URL where more information about
-  the plugin can be found * * This is typically used by an about
-  dialog or debugging / developer tools. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RPluginInfo</name>
-  </type>
-  <name>getPluginInfo</name>
-  <parameter_list>()</parameter_list>
-  <specifier>=
-  0</specifier>;</function_decl></public>}</block>;</class>
-  <decl_stmt>
-    <decl>
-      <type>
-        <name>QT_BEGIN_NAMESPACE</name>
-      </type>
-      <name>Q_DECLARE_INTERFACE</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>RPluginInterface</name>
-        </expr>
-      </argument>, 
-      <argument>
-        <expr>"org.qcad.QCAD.RPluginInterface/1.0"</expr>
-      </argument>)</argument_list>
-      <name>QT_END_NAMESPACE</name>
-      <name>Q_DECLARE_METATYPE</name>
-      <argument_list>(
-      <argument>
-        <expr>
-        <name>RPluginInterface</name>*</expr>
-      </argument>)</argument_list>
-      <name>Q_DECLARE_METATYPE</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>
-          <name>RPluginInterface</name>::
-          <name>InitStatus</name></name>
-        </expr>
-      </argument>)</argument_list>
-      <name>Q_DECLARE_METATYPE</name>
-      <argument_list>(
-      <argument>
-        <expr>
-        <name>
-        <name>RPluginInterface</name>::
-        <name>InitStatus</name></name>*</expr>
-      </argument>)</argument_list>
-      <cpp:endif>#
-      <cpp:directive>endif</cpp:directive></cpp:endif>
-    </decl>
-  </decl_stmt>
-</unit>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RPluginInterface.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RPLUGININTERFACE_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RPLUGININTERFACE_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QtPlugin&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPluginInfo.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>QString</name>;</class_decl>
+<class_decl>class <name>QScriptEngine</name>;</class_decl>
+
+<comment type="block">/**
+ * Interface for all C++ QCAD plugins.
+ * 
+ * \ingroup core
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPluginInterface</name> <block>{<private type="default">
+</private><public>public:
+    <enum>enum <name>InitStatus</name> <block>{
+        <expr><name>GotSplashWindow</name></expr>,    <comment type="block">/**&lt; Splashscreen showing. */</comment>
+        <expr><name>AddOnsInitialized</name></expr>,  <comment type="block">/**&lt; Add ons are initialized, actions created but not added to widgets. */</comment>
+        <expr><name>ActionsAdded</name></expr>,       <comment type="block">/**&lt; Actions have been added to widgets. */</comment>
+        <expr><name>GotMainWindowBeforeShow</name></expr>,      <comment type="block">/**&lt; Main window created but not shown yet. */</comment>
+        <expr><name>GotMainWindow</name></expr>,      <comment type="block">/**&lt; Main window with all tools and menus has been created. */</comment>
+        <expr><name>LoadedFiles</name></expr>,        <comment type="block">/**&lt; Loaded files given on command line. */</comment>
+        <expr><name>ScriptsExecuted</name></expr>,    <comment type="block">/**&lt; Executed scripts given on command line. */</comment>
+        <expr><name>AllDone</name></expr>             <comment type="block">/**&lt; Application is ready and idle. */</comment>
+    }</block>;</enum>
+
+</public><public>public:
+    <destructor><specifier>virtual</specifier> <name>~RPluginInterface</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+
+    <comment type="block">/**
+     * Called immediately after the plugin has been loaded, directly
+     * after starting the application. Implementations typically perform
+     * plugin initialization, registration of file importers, exporter, etc.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>init</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called before a plugin is removed / unloaded.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>uninit</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>remove</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called after the application has been fully loaded, directly before
+     * entering the main event loop. Implementations typically perform
+     * initialization that depends on the application being up and running.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>postInit</name><parameter_list>(<param><decl><type><name><name>RPluginInterface</name>::<name>InitStatus</name></name></type> <name>status</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called whenever a new script engine is instantiated.
+     * Implementations may register their own script extensions by making
+     * C / C++ code scriptable.
+     *
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>initScriptExtensions</name><parameter_list>(<param><decl><type><name>QScriptEngine</name>&amp;</type> <name>engine</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return An RPluginInfo object with at least the following keys:
+     * - 'Version' - Version string
+     * - 'Name' - Plugin name
+     * - 'Description' - Longer description of the plugin
+     * - 'License' - Licensing information (e.g. 'GPLv3', 'proprietary', ...)
+     * - 'URL' - URL where more information about the plugin can be found
+     *
+     * This is typically used by an about dialog or debugging / developer tools.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>RPluginInfo</name></type> <name>getPluginInfo</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+</public>}</block>;</class>
+
+<decl_stmt><decl><type><name>QT_BEGIN_NAMESPACE</name></type>
+<name>Q_DECLARE_INTERFACE</name><argument_list>(<argument><expr><name>RPluginInterface</name></expr></argument>, <argument><expr>"org.qcad.QCAD.RPluginInterface/1.0"</expr></argument>)</argument_list>
+<name>QT_END_NAMESPACE</name>
+
+<name>Q_DECLARE_METATYPE</name><argument_list>(<argument><expr><name>RPluginInterface</name>*</expr></argument>)</argument_list>
+<name>Q_DECLARE_METATYPE</name><argument_list>(<argument><expr><name><name>RPluginInterface</name>::<name>InitStatus</name></name></expr></argument>)</argument_list>
+<name>Q_DECLARE_METATYPE</name><argument_list>(<argument><expr><name><name>RPluginInterface</name>::<name>InitStatus</name></name>*</expr></argument>)</argument_list>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</decl></decl_stmt></unit>

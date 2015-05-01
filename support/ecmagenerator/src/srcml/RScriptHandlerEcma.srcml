@@ -1,1525 +1,175 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./scripting/ecmaapi" filename="RScriptHandlerEcma.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RSCRIPTHANDLERECMA_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RSCRIPTHANDLERECMA_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"ecmaapi_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QtScript&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMainWindow&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RScriptHandler.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RGuiAction.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"REcmaFocusListenerAdapter.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>QScriptEngineDebugger</name>;</class_decl>
-  <comment type="block">/** * Script handler implementation for
-  ECMA scripts, based on Qt Script. * * \ingroup ecma */</comment>
-  <class>class 
-  <macro>
-    <name>QCADECMAAPI_EXPORT</name>
-  </macro>
-  <name>RScriptHandlerEcma</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QObject</name>, 
-  <specifier>public</specifier>
-  <name>RScriptHandler</name></super>
-  <block>{
-  <private type="default">
-    <macro>
-      <name>Q_OBJECT</name>
-    </macro>
-  </private>
-  <public>public: 
-  <constructor_decl>
-  <name>RScriptHandlerEcma</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RScriptHandlerEcma</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-  <name>static</name>
-  <name>RScriptHandler</name>*</type>
-  <name>factory</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>QString</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getSupportedFileExtensionsStatic</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>QString</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getSupportedFileExtensions</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>doScript</name>
-    <argument_list>(
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QString</name>&amp; 
-      <name>scriptFile</name></expr>
-    </argument>,
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QStringList</name>&amp; 
-      <name>arguments</name>= 
-      <call>
-        <name>QStringList</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>virtual</name>
-      <name>QVariant</name>
-    </type>
-    <name>eval</name>
-    <argument_list>(
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QString</name>&amp; 
-      <name>script</name></expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QString</name>&amp; 
-      <name>fileName</name>= 
-      <call>
-        <name>QString</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>virtual</name>
-      <name>QVariant</name>
-    </type>
-    <name>evalGlobal</name>
-    <argument_list>(
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QString</name>&amp; 
-      <name>script</name></expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QString</name>&amp; 
-      <name>fileName</name>= 
-      <call>
-        <name>QString</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
-  <function_decl>
-  <type>
-  <name>virtual</name>
-  <name>RFileImporterAdapter</name>*</type>
-  <name>createFileImporter</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>className</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>document</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>isRunning</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>abort</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>hasUncaughtExceptions</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>createActionDocumentLevel</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>scriptFile</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RGuiAction</name>*</type>
-      <name>guiAction</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocumentInterface</name>*</type>
-      <name>documentInterface</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>createActionApplicationLevel</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>scriptFile</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RGuiAction</name>*</type>
-      <name>guiAction</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>initGlobalVariables</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>scriptFile</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-    <name>QScriptEngine</name>&amp;</type>
-    <name>getScriptEngine</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>*
-    <name>engine</name></expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>isIncluded</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>className</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>markIncluded</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>className</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaInclude</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QScriptValue</name>
-    </type>
-    <name>doInclude</name>
-    <argument_list>(
-    <argument>
-      <expr>
-      <name>QScriptEngine</name>* 
-      <name>engine</name></expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QString</name>&amp; 
-      <name>fileName</name></expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>QString</name>
-      <name>trContext</name>= 
-      <call>
-        <name>QString</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>bool</name>
-      <name>force</name>=
-      <name>false</name></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaExit</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaPrint</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaDebug</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaWarning</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaCritical</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaMessageHandler</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>MessageType</name></name>
-      </type>
-      <name>type</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaGray</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaQtEscape</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaDestroy</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaQObjectFindChild</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaQObjectGetChildren</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaQDomNodeAppendChild</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaQDomNodeRemoveChild</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaBacktrace</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaAttachDebugger</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaDetachDebugger</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaCollectGarbage</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaQLayoutGetWidth</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaQByteArrayToString</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaQUrlQueryItems</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaQLocaleScript</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaQLocaleScriptToString</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaQLineEditValidator</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">//static QScriptValue
-  ecmaQWebPageSetLinkDelegationPolicy(QScriptContext* context,
-  QScriptEngine* engine);</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaMSleep</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaParseXml</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaArguments</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaGetObjectId</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaImportExtension</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaIsDeleted</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaSerialize</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">//static QScriptValue
-  ecmaBlockEvents(QScriptContext* context, QScriptEngine*
-  engine);</comment>
-  <comment type="line">//static QScriptValue
-  ecmaUnblockEvents(QScriptContext* context, QScriptEngine*
-  engine);</comment>
-  <comment type="line">//static QScriptValue
-  ecmaGetOpt(QScriptContext* context, QScriptEngine*
-  engine);</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaAddApplicationFont</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaDownload</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaDownloadToFile</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaQSortFilterProxyModelCastToQAbstractItemModel</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">// static QScriptValue
-  ecmaQFontDatabaseFamilies(QScriptContext* context, QScriptEngine*
-  engine);</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaQEventCast</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>ecmaQFileClose</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>*</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">//static QScriptValue
-  ecmaGetShapeIntersections(QScriptContext* context, QScriptEngine*
-  engine);</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>eventFilter</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>void</name>*</type>
-      <name>message</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QScriptValue</name>
-  </type>
-  <name>throwError</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptContext</name>*</type>
-      <name>context</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <template>template
-  <parameter_list>&lt;
-  <param>
-    <type>class</type>
-    <name>T</name>
-  </param>&gt;</parameter_list>
-  <function>
-    <type>
-      <name>static</name>
-      <name>QScriptValue</name>
-    </type>
-    <name>ecmaObjectDestroy</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QScriptContext</name>*</type>
-        <name>context</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>QScriptEngine</name>*</type>
-        <name>engine</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <decl_stmt>
-    <decl>
-    <type>
-    <name>T</name>*</type>
-    <name>self</name>=
-    <init>
-      <expr>
-        <call>
-          <name>qscriptvalue_cast
-          <argument_list>&lt;
-          <argument>
-          <name>T</name>*</argument>&gt;</argument_list></name>
-          <argument_list>(
-          <argument>
-            <expr>
-            <name>context</name>-&gt;
-            <call>
-              <name>thisObject</name>
-              <argument_list>()</argument_list>
-            </call></expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>self</name>== 
-    <name>NULL</name></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <call>
-          <name>throwError</name>
-          <argument_list>(
-          <argument>
-            <expr>"destroy(): Object is NULL"</expr>
-          </argument>, 
-          <argument>
-            <expr>
-              <name>context</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>;</return>}</block>
-    </then></if>
-    <expr_stmt>
-    <expr>delete 
-    <name>self</name></expr>;</expr_stmt>
-    <expr_stmt>
-    <expr>
-    <name>self</name>= 
-    <name>NULL</name></expr>;</expr_stmt>
-    <expr_stmt>
-    <expr>
-    <name>context</name>-&gt;
-    <call>
-      <name>thisObject</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setData</name>
-      <argument_list>(
-      <argument>
-        <expr>
-        <name>engine</name>-&gt;
-        <call>
-          <name>nullValue</name>
-          <argument_list>()</argument_list>
-        </call></expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>
-    <expr_stmt>
-    <expr>
-    <name>context</name>-&gt;
-    <call>
-      <name>thisObject</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>prototype</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setData</name>
-      <argument_list>(
-      <argument>
-        <expr>
-        <name>engine</name>-&gt;
-        <call>
-          <name>nullValue</name>
-          <argument_list>()</argument_list>
-        </call></expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>
-    <expr_stmt>
-    <expr>
-    <name>context</name>-&gt;
-    <call>
-      <name>thisObject</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setPrototype</name>
-      <argument_list>(
-      <argument>
-        <expr>
-        <name>engine</name>-&gt;
-        <call>
-          <name>nullValue</name>
-          <argument_list>()</argument_list>
-        </call></expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>
-    <expr_stmt>
-    <expr>
-    <name>context</name>-&gt;
-    <call>
-      <name>thisObject</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>setScriptClass</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>NULL</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>
-    <return>return 
-    <expr>
-    <name>engine</name>-&gt;
-    <call>
-      <name>undefinedValue</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function></template></public>
-  <public>public slots: 
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>triggerActionApplicationLevel</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>scriptFile</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RScriptHandler::triggerActionApplicationLevel</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>scriptFile</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>installTranslatorFunctions</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>
-    <name>engine</name>== 
-    <name>NULL</name></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-        <call>
-          <name>qWarning</name>
-          <argument_list>(
-          <argument>
-            <expr>"REcmaHandler::installTranslationFunctions: "
-            "engine is NULL"</expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>;</expr_stmt>
-      <return>return;</return>}</block>
-    </then></if>
-    <expr_stmt>
-    <expr>
-    <name>engine</name>-&gt;
-    <call>
-      <name>installTranslatorFunctions</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>exceptionHandler</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QScriptValue</name>&amp;</type>
-      <name>exception</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>readScript</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>fileName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>forceReload</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl></protected>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>QScriptEngine</name>*</type>
-    <name>engine</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>QScriptEngineDebugger</name>*</type>
-    <name>debugger</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>bool</name>
-    </type>
-    <name>translatorInstalled</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>bool</name>
-    </type>
-    <name>alwaysLoadScripts</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//static
-  QAbstractEventDispatcher::EventFilter
-  defaultEventFilter;</comment></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RScriptHandlerEcma*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
-  <comment type="line">// RECMASCRIPTHANDLER_H</comment>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./scripting/ecmaapi" filename="RScriptHandlerEcma.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSCRIPTHANDLERECMA_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RSCRIPTHANDLERECMA_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"ecmaapi_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QtScript&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMainWindow&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RScriptHandler.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGuiAction.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REcmaFocusListenerAdapter.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>QScriptEngineDebugger</name>;</class_decl>
+
+
+<comment type="block">/**
+ * Script handler implementation for ECMA scripts, based on Qt Script.
+ *
+ * \ingroup ecma
+ */</comment>
+<class>class <macro><name>QCADECMAAPI_EXPORT</name></macro> <name>RScriptHandlerEcma</name><super>: <specifier>public</specifier> <name>QObject</name>, <specifier>public</specifier> <name>RScriptHandler</name></super> <block>{<private type="default">
+<macro><name>Q_OBJECT</name></macro>
+
+</private><public>public:
+    <constructor_decl><name>RScriptHandlerEcma</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RScriptHandlerEcma</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>static</name> <name>RScriptHandler</name>*</type> <name>factory</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getSupportedFileExtensionsStatic</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getSupportedFileExtensions</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>doScript</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>scriptFile</name></expr></argument>,<argument><expr><name>const</name> <name>QStringList</name>&amp; <name>arguments</name> = <call><name>QStringList</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>virtual</name> <name>QVariant</name></type> <name>eval</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>script</name></expr></argument>, <argument><expr><name>const</name> <name>QString</name>&amp; <name>fileName</name> = <call><name>QString</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>virtual</name> <name>QVariant</name></type> <name>evalGlobal</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>script</name></expr></argument>, <argument><expr><name>const</name> <name>QString</name>&amp; <name>fileName</name> = <call><name>QString</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <function_decl><type><name>virtual</name> <name>RFileImporterAdapter</name>*</type> <name>createFileImporter</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>className</name></decl></param>, <param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isRunning</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>abort</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasUncaughtExceptions</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>createActionDocumentLevel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>,
+            <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl></param>, <param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>createActionApplicationLevel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>,
+            <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>initGlobalVariables</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>QScriptEngine</name>&amp;</type> <name>getScriptEngine</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr>*<name>engine</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>isIncluded</name><parameter_list>(<param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>className</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>markIncluded</name><parameter_list>(<param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>className</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaInclude</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <decl_stmt><decl><type><name>static</name> <name>QScriptValue</name></type> <name>doInclude</name><argument_list>(<argument><expr><name>QScriptEngine</name>* <name>engine</name></expr></argument>, <argument><expr><name>const</name> <name>QString</name>&amp; <name>fileName</name></expr></argument>, <argument><expr><name>QString</name> <name>trContext</name> = <call><name>QString</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name>bool</name> <name>force</name>=<name>false</name></expr></argument>)</argument_list></decl>;</decl_stmt>
+
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaExit</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaPrint</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaDebug</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaWarning</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaCritical</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaMessageHandler</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>MessageType</name></name></type> <name>type</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaGray</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQtEscape</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaDestroy</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQObjectFindChild</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQObjectGetChildren</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQDomNodeAppendChild</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQDomNodeRemoveChild</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaBacktrace</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaAttachDebugger</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaDetachDebugger</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaCollectGarbage</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQLayoutGetWidth</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQByteArrayToString</name><parameter_list>(<param><decl><type><name>QScriptContext</name> *</type><name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name> *</type><name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQUrlQueryItems</name><parameter_list>(<param><decl><type><name>QScriptContext</name> *</type><name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name> *</type><name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQLocaleScript</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQLocaleScriptToString</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQLineEditValidator</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="line">//static QScriptValue ecmaQWebPageSetLinkDelegationPolicy(QScriptContext* context, QScriptEngine* engine);</comment>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaMSleep</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaParseXml</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaArguments</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaGetObjectId</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaImportExtension</name><parameter_list>(<param><decl><type><name>QScriptContext</name> *</type><name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name> *</type><name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaIsDeleted</name><parameter_list>(<param><decl><type><name>QScriptContext</name> *</type><name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name> *</type><name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaSerialize</name><parameter_list>(<param><decl><type><name>QScriptContext</name> *</type><name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name> *</type><name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="line">//static QScriptValue ecmaBlockEvents(QScriptContext* context, QScriptEngine* engine);</comment>
+    <comment type="line">//static QScriptValue ecmaUnblockEvents(QScriptContext* context, QScriptEngine* engine);</comment>
+    <comment type="line">//static QScriptValue ecmaGetOpt(QScriptContext* context, QScriptEngine* engine);</comment>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaAddApplicationFont</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaDownload</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaDownloadToFile</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQSortFilterProxyModelCastToQAbstractItemModel</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+<comment type="line">//    static QScriptValue ecmaQFontDatabaseFamilies(QScriptContext* context, QScriptEngine* engine);</comment>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQEventCast</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQFileClose</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="line">//static QScriptValue ecmaGetShapeIntersections(QScriptContext* context, QScriptEngine* engine);</comment>
+
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>eventFilter</name><parameter_list>(<param><decl><type><name>void</name> *</type><name>message</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>throwError</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>)</parameter_list>;</function_decl>
+
+    <template>template<parameter_list>&lt;<param><type>class</type> <name>T</name></param>&gt;</parameter_list>
+    <function><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaObjectDestroy</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list> <block>{
+        <decl_stmt><decl><type><name>T</name>*</type> <name>self</name> =<init> <expr><call><name>qscriptvalue_cast<argument_list>&lt;<argument><name>T</name>*</argument>&gt;</argument_list></name> <argument_list>(<argument><expr><name>context</name>-&gt;<call><name>thisObject</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+        <if>if <condition>(<expr><name>self</name> == <name>NULL</name></expr>)</condition><then> <block>{
+            <return>return <expr><call><name>throwError</name><argument_list>(<argument><expr>"destroy(): Object is NULL"</expr></argument>, <argument><expr><name>context</name></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <expr_stmt><expr>delete <name>self</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>self</name> = <name>NULL</name></expr>;</expr_stmt>
+
+        <expr_stmt><expr><name>context</name>-&gt;<call><name>thisObject</name><argument_list>()</argument_list></call>.<call><name>setData</name><argument_list>(<argument><expr><name>engine</name>-&gt;<call><name>nullValue</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>context</name>-&gt;<call><name>thisObject</name><argument_list>()</argument_list></call>.<call><name>prototype</name><argument_list>()</argument_list></call>.<call><name>setData</name><argument_list>(<argument><expr><name>engine</name>-&gt;<call><name>nullValue</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>context</name>-&gt;<call><name>thisObject</name><argument_list>()</argument_list></call>.<call><name>setPrototype</name><argument_list>(<argument><expr><name>engine</name>-&gt;<call><name>nullValue</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>context</name>-&gt;<call><name>thisObject</name><argument_list>()</argument_list></call>.<call><name>setScriptClass</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <return>return <expr><name>engine</name>-&gt;<call><name>undefinedValue</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function></template>
+
+</public><public>public slots:
+    <function><type><name>void</name></type> <name>triggerActionApplicationLevel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RScriptHandler::triggerActionApplicationLevel</name><parameter_list>(<param><decl><type><name>scriptFile</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+    <function><type><name>void</name></type> <name>installTranslatorFunctions</name><parameter_list>()</parameter_list> <block>{
+        <if>if <condition>(<expr><name>engine</name> == <name>NULL</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><call><name>qWarning</name><argument_list>(<argument><expr>"REcmaHandler::installTranslationFunctions: "
+                "engine is NULL"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <return>return;</return>
+        }</block></then></if>
+        <expr_stmt><expr><name>engine</name>-&gt;<call><name>installTranslatorFunctions</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+    <function_decl><type><name>void</name></type> <name>exceptionHandler</name><parameter_list>(<param><decl><type><name>const</name> <name>QScriptValue</name>&amp;</type> <name>exception</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><protected>protected:
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>readScript</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceReload</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QScriptEngineDebugger</name>*</type> <name>debugger</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>translatorInstalled</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>alwaysLoadScripts</name></decl>;</decl_stmt>
+    <comment type="line">//static QAbstractEventDispatcher::EventFilter defaultEventFilter;</comment>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RScriptHandlerEcma*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif> <comment type="line">// RECMASCRIPTHANDLER_H</comment>
 </unit>

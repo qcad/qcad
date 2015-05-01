@@ -1,986 +1,180 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./entity" filename="RHatchData.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RHATCHDATA_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RHATCHDATA_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RBox.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"REntity.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RLine.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPainterPathSource.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPoint.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RVector.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Stores and manages all data that
-  defines the geometry and * appearance of a hatch or solid fill
-  entity. * * \scriptable * \copyable * \ingroup entity
-  */</comment>
-  <class>class 
-  <macro>
-    <name>QCADENTITY_EXPORT</name>
-  </macro>
-  <name>RHatchData</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>REntityData</name>, 
-  <specifier>public</specifier>
-  <name>RPainterPathSource</name></super>
-  <block>{
-  <private type="default">
-    <decl_stmt>
-    <decl>
-      <type>
-      <name>friend</name>class</type>
-      <name>RHatchEntity</name>
-    </decl>;</decl_stmt>
-  </private>
-  <protected>protected: 
-  <constructor_decl>
-  <name>RHatchData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>*</type>
-      <name>document</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RHatchData</name>&amp;</type>
-      <name>data</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl></protected>
-  <public>public: 
-  <constructor_decl>
-  <name>RHatchData</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RHatchData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RHatchData</name>&amp;</type>
-      <name>other</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RHatchData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>solid</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>scaleFactor</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>angle</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>patternName</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <function_decl>
-  <type>
-  <name>RHatchData</name>&amp;</type>
-  <name>operator=</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RHatchData</name>&amp;</type>
-      <name>other</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RBox</name>
-  </type>
-  <name>getBoundingBox</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>ignoreEmpty</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RVector</name>
-  </type>
-  <name>getPointOnEntity</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>double</name>
-  </type>
-  <name>getDistanceTo</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>point</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>limited</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>range</name>=
-    <init>
-      <expr>0.0</expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>draft</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>strictRange</name>=
-    <init>
-      <expr>
-        <name>RMAXDOUBLE</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>intersectsWith</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RShape</name>&amp;</type>
-      <name>shape</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getReferencePoints</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>ProjectionRenderingHint</name></name>
-    </type>
-    <name>hint</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>RenderTop</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>moveReferencePoint</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>referencePoint</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>targetPoint</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>move</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>offset</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>rotate</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>rotation</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RVector</name>&amp;</type>
-    <name>center</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RVECTOR</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>scale</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>scaleFactors</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RVector</name>&amp;</type>
-    <name>center</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RVECTOR</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>mirror</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLine</name>&amp;</type>
-      <name>axis</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>stretch</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RPolyline</name>&amp;</type>
-      <name>area</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>offset</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-    <name>virtual</name>
-    <name>RShape</name>*</type>
-    <name>castToShape</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>NULL</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RShape</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getShapes</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RBox</name>&amp;</type>
-    <name>queryBox</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RBOX</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>ignoreComplex</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RShape</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getExploded</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isSolid</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>solid</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setSolid</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>solid</name>= 
-    <name>on</name></expr>;</expr_stmt>
-    <constructor_decl>
-    <name>update</name>
-    <parameter_list>
-    ()</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getScale</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>scaleFactor</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setScale</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>s</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>scaleFactor</name>= 
-    <name>s</name></expr>;</expr_stmt>
-    <constructor_decl>
-    <name>update</name>
-    <parameter_list>
-    ()</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getAngle</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>angle</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setAngle</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>a</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>angle</name>= 
-    <name>a</name></expr>;</expr_stmt>
-    <constructor_decl>
-    <name>update</name>
-    <parameter_list>
-    ()</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>getOriginPoint</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>originPoint</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setOriginPoint</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>op</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>originPoint</name>= 
-    <name>op</name></expr>;</expr_stmt>
-    <constructor_decl>
-    <name>update</name>
-    <parameter_list>
-    ()</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getPatternName</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>patternName</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setPatternName</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>n</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>patternName</name>= 
-    <name>n</name></expr>;</expr_stmt>
-    <constructor_decl>
-    <name>update</name>
-    <parameter_list>
-    ()</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>newLoop</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addBoundary</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RShape</name>
-        </argument>&gt;</argument_list></name>
-      </type>
-      <name>shape</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RPainterPath</name>
-  </type>
-  <name>getBoundaryPath</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RPainterPath</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getPainterPaths</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>draft</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QList
-        <argument_list>&lt;
-        <argument>
-          <name>QSharedPointer
-          <argument_list>&lt;
-          <argument>
-            <name>RShape</name>
-          </argument>&gt;</argument_list></name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getBoundary</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>boundary</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>QPair
-    <argument_list>&lt;
-    <argument>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RShape</name>
-      </argument>&gt;</argument_list></name>
-    </argument>, 
-    <argument>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RShape</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getBoundaryElementsAt</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>index</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>int</name>&amp;</type>
-      <name>internalIndex</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>update</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>order</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>int</name>
-    </type>
-    <name>getLoopCount</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>boundary</name>.
-    <call>
-      <name>count</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RShape</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getLoopBoundary</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>index</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>int</name>
-  </type>
-  <name>getComplexity</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RLine</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getSegments</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLine</name>&amp;</type>
-      <name>line</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl></protected>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>solid</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>scaleFactor</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>angle</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>patternName</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>originPoint</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * Hatch boundary, ordered by loops, in
-  strictly defined order. */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QList
-        <argument_list>&lt;
-        <argument>
-          <name>QSharedPointer
-          <argument_list>&lt;
-          <argument>
-            <name>RShape</name>
-          </argument>&gt;</argument_list></name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>boundary</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
-      <name>RPainterPath</name>
-    </type>
-    <name>boundaryPath</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RPainterPath</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>painterPaths</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
-      <name>bool</name>
-    </type>
-    <name>dirty</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
-      <name>bool</name>
-    </type>
-    <name>gotDraft</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RHatchData</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RHatchData*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>const RHatchData*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;RHatchData&gt;</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./entity" filename="RHatchData.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RHATCHDATA_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RHATCHDATA_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBox.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLine.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPathSource.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPoint.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * Stores and manages all data that defines the geometry and
+ * appearance of a hatch or solid fill entity.
+ *
+ * \scriptable
+ * \copyable
+ * \ingroup entity
+ */</comment>
+<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RHatchData</name><super>: <specifier>public</specifier> <name>REntityData</name>, <specifier>public</specifier> <name>RPainterPathSource</name></super> <block>{<private type="default">
+
+    <decl_stmt><decl><type><name>friend</name> class</type> <name>RHatchEntity</name></decl>;</decl_stmt>
+
+</private><protected>protected:
+    <constructor_decl><name>RHatchData</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RHatchData</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</constructor_decl>
+
+</protected><public>public:
+    <constructor_decl><name>RHatchData</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RHatchData</name><parameter_list>(<param><decl><type><name>const</name> <name>RHatchData</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RHatchData</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>solid</name></decl></param>, <param><decl><type><name>double</name></type> <name>scaleFactor</name></decl></param>, <param><decl><type><name>double</name></type> <name>angle</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>patternName</name></decl></param>)</parameter_list>;</constructor_decl>
+
+    <function_decl><type><name>RHatchData</name>&amp;</type> <name>operator=</name><parameter_list>(<param><decl><type><name>const</name> <name>RHatchData</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>RBox</name></type> <name>getBoundingBox</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getPointOnEntity</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>double</name></type> <name>getDistanceTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>, <param><decl><type><name>bool</name></type> <name>limited</name> =<init> <expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>range</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>strictRange</name> =<init> <expr><name>RMAXDOUBLE</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>intersectsWith</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>shape</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getReferencePoints</name><parameter_list>(
+        <param><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>hint</name> =<init> <expr><name><name>RS</name>::<name>RenderTop</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>moveReferencePoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>referencePoint</name></decl></param>, 
+        <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>targetPoint</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>move</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>rotate</name><parameter_list>(<param><decl><type><name>double</name></type> <name>rotation</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name> =<init> <expr><name>RDEFAULT_RVECTOR</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>scale</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>scaleFactors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name> =<init> <expr><name>RDEFAULT_RVECTOR</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>mirror</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>axis</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>stretch</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>area</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>virtual</name> <name>RShape</name>*</type> <name>castToShape</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>NULL</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getShapes</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name> =<init> <expr><name>RDEFAULT_RBOX</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreComplex</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getExploded</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>bool</name></type> <name>isSolid</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>solid</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setSolid</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>solid</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>scaleFactor</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>scaleFactor</name> = <name>s</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getAngle</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>angle</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setAngle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>angle</name> = <name>a</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getOriginPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>originPoint</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setOriginPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>op</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>originPoint</name> = <name>op</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>QString</name></type> <name>getPatternName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>patternName</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPatternName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>n</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>patternName</name> = <name>n</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function_decl><type><name>void</name></type> <name>newLoop</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>addBoundary</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>shape</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RPainterPath</name></type> <name>getBoundaryPath</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPaths</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+
+    <function><type><name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getBoundary</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>boundary</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>QPair<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getBoundaryElementsAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>, <param><decl><type><name>int</name>&amp;</type> <name>internalIndex</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>update</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>order</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function><type><name>int</name></type> <name>getLoopCount</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>boundary</name>.<call><name>count</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getLoopBoundary</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>int</name></type> <name>getComplexity</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</public><protected>protected:
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RLine</name></argument>&gt;</argument_list></name></type> <name>getSegments</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>line</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>bool</name></type> <name>solid</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>scaleFactor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>angle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>patternName</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>originPoint</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Hatch boundary, ordered by loops, in strictly defined order.
+     */</comment>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>boundary</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>mutable</name> <name>RPainterPath</name></type> <name>boundaryPath</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>painterPaths</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>dirty</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>gotDraft</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RHatchData</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RHatchData*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const RHatchData*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RHatchData&gt;</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

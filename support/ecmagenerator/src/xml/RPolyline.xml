@@ -55,7 +55,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RShape &amp;" typeName="RShape" name="shape"
         isConst="true" />
         <arg type="bool" typeName="bool" name="prepend"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="appendVertex" cppName="appendVertex"
@@ -219,7 +219,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
         <arg type="bool" typeName="bool" name="borderIsInside"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="double" typeName="double" name="tolerance"
         hasDefault="true" default="RS :: PointTolerance"
         isConst="false" />
@@ -302,7 +302,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="strictRange"
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
       </variant>

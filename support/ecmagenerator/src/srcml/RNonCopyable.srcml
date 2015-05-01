@@ -1,77 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RNonCopyable.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RNONCOPYABLE_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RNONCOPYABLE_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Instances of classes derived from
-  this base class cannot be copied. * * \ingroup core */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RNonCopyable</name>
-  <block>{
-  <private type="default"></private>
-  <protected>protected: 
-  <constructor>
-    <name>RNonCopyable</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </constructor>
-  <destructor>
-    <name>~RNonCopyable</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </destructor></protected>
-  <private>private: 
-  <constructor_decl>
-  <name>RNonCopyable</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RNonCopyable</name>&amp;</type>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <function_decl>
-  <type>
-  <name>const</name>
-  <name>RNonCopyable</name>&amp;</type>
-  <name>operator=</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RNonCopyable</name>&amp;</type>
-    </decl>
-  </param>)</parameter_list>;</function_decl></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RNonCopyable*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RNonCopyable.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RNONCOPYABLE_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RNONCOPYABLE_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+
+
+<comment type="block">/**
+ * Instances of classes derived from this base class cannot be copied.
+ *
+ * \ingroup core
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RNonCopyable</name> <block>{<private type="default">
+</private><protected>protected:
+    <constructor><name>RNonCopyable</name><parameter_list>()</parameter_list> <block>{}</block></constructor>
+    <destructor><name>~RNonCopyable</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+
+</protected><private>private:
+    <constructor_decl><name>RNonCopyable</name><parameter_list>(<param><decl><type><name>const</name> <name>RNonCopyable</name>&amp;</type></decl></param>)</parameter_list>;</constructor_decl>
+    <function_decl><type><name>const</name> <name>RNonCopyable</name>&amp;</type> <name>operator=</name><parameter_list>(<param><decl><type><name>const</name> <name>RNonCopyable</name>&amp;</type></decl></param>)</parameter_list>;</function_decl>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RNonCopyable*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

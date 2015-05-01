@@ -326,7 +326,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="undone"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="QSet &lt; REntity::Id &gt; &amp;"
@@ -364,7 +364,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="force"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="repaintViews" cppName="repaintViews"
@@ -394,7 +394,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QCursor &amp;" typeName="QCursor" name="cursor"
         isConst="true" />
         <arg type="bool" typeName="bool" name="global"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="importUrl" cppName="importUrl" specifier="public"
@@ -407,7 +407,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="nameFilter" hasDefault="true" default="&quot;&quot;"
         isConst="true" />
         <arg type="bool" typeName="bool" name="notify"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="importFile" cppName="importFile"
@@ -421,7 +421,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="nameFilter" hasDefault="true" default="&quot;&quot;"
         isConst="true" />
         <arg type="bool" typeName="bool" name="notify"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getCorrectedFileName"
@@ -444,7 +444,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="fileVersion" hasDefault="true" default="&quot;&quot;"
         isConst="true" />
         <arg type="bool" typeName="bool" name="resetModified"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="undo" cppName="undo" specifier="public"
@@ -458,6 +458,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="flushTransactions" cppName="flushTransactions"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="flushRedo" cppName="flushRedo" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="setSnap" cppName="setSnap" specifier="public"
@@ -508,7 +512,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="strictRange"
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
         <arg type="bool" typeName="bool" name="includeLockedLayers"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="highlightEntity" cppName="highlightEntity"
@@ -535,7 +539,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="QSet &lt; REntity::Id &gt;" name="entityIds"
         isConst="true" />
         <arg type="bool" typeName="bool" name="add"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="selectEntity" cppName="selectEntity"
@@ -545,13 +549,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
         <arg type="bool" typeName="bool" name="add"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="deselectEntities" cppName="deselectEntities"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
+      <variant returnType="bool" isPureVirtual="false">
         <arg type="QSet &lt; REntity::Id &gt; &amp;"
         typeName="QSet &lt; REntity::Id &gt;" name="entityIds"
         isConst="true" />
@@ -572,7 +576,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RBox &amp;" typeName="RBox" name="box"
         isConst="true" />
         <arg type="bool" typeName="bool" name="add"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="selectAll" cppName="selectAll" specifier="public"

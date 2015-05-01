@@ -1,392 +1,84 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./scripting/ecmaapi/adapters"
-filename="RFileExporterAdapter.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RFILEEXPORTERADAPTER_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RFILEEXPORTERADAPTER_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RFileExporter.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RArc</name>;</class_decl>
-  <class_decl>class 
-  <name>RCircle</name>;</class_decl>
-  <class_decl>class 
-  <name>RDocument</name>;</class_decl>
-  <class_decl>class 
-  <name>REllipse</name>;</class_decl>
-  <class_decl>class 
-  <name>RImageData</name>;</class_decl>
-  <class_decl>class 
-  <name>RLine</name>;</class_decl>
-  <class_decl>class 
-  <name>RLinetype</name>;</class_decl>
-  <class_decl>class 
-  <name>RLinetypePattern</name>;</class_decl>
-  <class_decl>class 
-  <name>RMessageHandler</name>;</class_decl>
-  <class_decl>class 
-  <name>RPoint</name>;</class_decl>
-  <class_decl>class 
-  <name>RPolyline</name>;</class_decl>
-  <class_decl>class 
-  <name>RProgressHandler</name>;</class_decl>
-  <class_decl>class 
-  <name>RSpline</name>;</class_decl>
-  <class_decl>class 
-  <name>RTriangle</name>;</class_decl>
-  <class_decl>class 
-  <name>RVector</name>;</class_decl>
-  <class_decl>class 
-  <name>RXLine</name>;</class_decl>
-  <comment type="block">/** * \brief Base class for file exporters,
-  including script file exporters. * * File exporters export \ref
-  RDocument objects into files of a specific format. * * \ingroup
-  ecma * \scriptable * \generateScriptShell */</comment>
-  <class>class 
-  <name>RFileExporterAdapter</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RFileExporter</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor>
-    <name>RFileExporterAdapter</name>
-    <parameter_list>()</parameter_list>
-    <member_list>: 
-    <call>
-      <name>RFileExporter</name>
-      <argument_list>()</argument_list>
-    </call></member_list>
-    <block>{}</block>
-  </constructor>
-  <constructor>
-    <name>RFileExporterAdapter</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RDocument</name>&amp;</type>
-        <name>document</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-      <name>RMessageHandler</name>*</type>
-      <name>messageHandler</name>=
-      <init>
-        <expr>
-          <name>NULL</name>
-        </expr>
-      </init></decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-      <name>RProgressHandler</name>*</type>
-      <name>progressHandler</name>=
-      <init>
-        <expr>
-          <name>NULL</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <member_list>: 
-    <call>
-      <name>RFileExporter</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>document</name>
-        </expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <name>messageHandler</name>
-        </expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <name>progressHandler</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{}</block>
-  </constructor>
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RFileExporterAdapter</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </destructor>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QString</name>
-    </type>
-    <name>getCorrectedFileName</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>fileName</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>nameFilter</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>Q_UNUSED</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>nameFilter</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <return>return 
-    <expr>
-      <name>fileName</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>exportFile</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>fileName</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>nameFilter</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>setFileName</name>=
-      <init>
-        <expr>
-          <name>true</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>Q_UNUSED</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>fileName</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <constructor_decl>
-    <name>Q_UNUSED</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>nameFilter</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <constructor_decl>
-    <name>Q_UNUSED</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>setFileName</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <return>return 
-    <expr>
-      <name>false</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>exportPoint</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RPoint</name>&amp;</type>
-      </decl>
-    </param>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>exportArcSegment</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RArc</name>&amp;</type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>=
-      <init>
-        <expr>
-          <name>false</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>exportLineSegment</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RLine</name>&amp;</type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>double</name>
-      </type>=
-      <init>
-        <expr>
-          <name>RNANDOUBLE</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>exportTriangle</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RTriangle</name>&amp;</type>
-      </decl>
-    </param>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>exportXLine</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RXLine</name>&amp;</type>
-      </decl>
-    </param>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>double</name>
-    </type>
-    <name>getLineTypePatternScale</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RLinetypePattern</name>&amp;</type>
-        <name>p</name>
-      </decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RFileExporter</name>::
-        <name>getLineTypePatternScale</name></name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <name>p</name>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function></public>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RFileExporterAdapter*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./scripting/ecmaapi/adapters" filename="RFileExporterAdapter.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RFILEEXPORTERADAPTER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RFILEEXPORTERADAPTER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RFileExporter.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RArc</name>;</class_decl>
+<class_decl>class <name>RCircle</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>REllipse</name>;</class_decl>
+<class_decl>class <name>RImageData</name>;</class_decl>
+<class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RLinetype</name>;</class_decl>
+<class_decl>class <name>RLinetypePattern</name>;</class_decl>
+<class_decl>class <name>RMessageHandler</name>;</class_decl>
+<class_decl>class <name>RPoint</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
+<class_decl>class <name>RProgressHandler</name>;</class_decl>
+<class_decl>class <name>RSpline</name>;</class_decl>
+<class_decl>class <name>RTriangle</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
+<class_decl>class <name>RXLine</name>;</class_decl>
+
+<comment type="block">/**
+ * \brief Base class for file exporters, including script file exporters. 
+ *
+ * File exporters export \ref RDocument objects into files of a specific format.
+ *
+ * \ingroup ecma
+ * \scriptable
+ * \generateScriptShell
+ */</comment>
+<class>class <name>RFileExporterAdapter</name> <super>: <specifier>public</specifier> <name>RFileExporter</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RFileExporterAdapter</name><parameter_list>()</parameter_list> <member_list>: <call><name>RFileExporter</name><argument_list>()</argument_list></call> </member_list><block>{}</block></constructor>
+    <constructor><name>RFileExporterAdapter</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>,
+        <param><decl><type><name>RMessageHandler</name>*</type> <name>messageHandler</name> =<init> <expr><name>NULL</name></expr></init></decl></param>, <param><decl><type><name>RProgressHandler</name>*</type> <name>progressHandler</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>
+        <member_list>: <call><name>RFileExporter</name><argument_list>(<argument><expr><name>document</name></expr></argument>, <argument><expr><name>messageHandler</name></expr></argument>, <argument><expr><name>progressHandler</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+    <destructor><specifier>virtual</specifier> <name>~RFileExporterAdapter</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+
+    <function><type><name>virtual</name> <name>QString</name></type> <name>getCorrectedFileName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>Q_UNUSED</name><parameter_list>(<param><decl><type><name>nameFilter</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <return>return <expr><name>fileName</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>exportFile</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name></decl></param>, <param><decl><type><name>bool</name></type> <name>setFileName</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>Q_UNUSED</name><parameter_list>(<param><decl><type><name>fileName</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <constructor_decl><name>Q_UNUSED</name><parameter_list>(<param><decl><type><name>nameFilter</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <constructor_decl><name>Q_UNUSED</name><parameter_list>(<param><decl><type><name>setFileName</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <return>return <expr><name>false</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>exportPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RPoint</name>&amp;</type></decl></param>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>exportArcSegment</name><parameter_list>(<param><decl><type><name>const</name> <name>RArc</name>&amp;</type></decl></param>, <param><decl><type><name>bool</name></type>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>exportLineSegment</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type></decl></param>, <param><decl><type><name>double</name></type>=<init><expr><name>RNANDOUBLE</name></expr></init></decl></param>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>exportTriangle</name><parameter_list>(<param><decl><type><name>const</name> <name>RTriangle</name>&amp;</type></decl></param>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>exportXLine</name><parameter_list>(<param><decl><type><name>const</name> <name>RXLine</name>&amp;</type></decl></param>)</parameter_list> <block>{}</block></function>
+
+    <function><type><name>virtual</name> <name>double</name></type> <name>getLineTypePatternScale</name><parameter_list>(<param><decl><type><name>const</name> <name>RLinetypePattern</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{ <return>return <expr><call><name><name>RFileExporter</name>::<name>getLineTypePatternScale</name></name><argument_list>(<argument><expr><name>p</name></expr></argument>)</argument_list></call></expr>;</return> }</block></function>
+</public>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RFileExporterAdapter*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

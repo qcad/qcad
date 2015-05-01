@@ -1,731 +1,158 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./operations" filename="RPasteOperation.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RPASTEOPERATION_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RPASTEOPERATION_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"operations_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"REntity.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RExporter.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RClipboardOperation.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RVector.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Implementation of an operation that
-  pastes the clipboard * at a given reference point. * * \ingroup
-  operations * \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADOPERATIONS_EXPORT</name>
-  </macro>
-  <name>RPasteOperation</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RClipboardOperation</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RPasteOperation</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>sourceDocument</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RPasteOperation</name>
-    <parameter_list>()</parameter_list>
-    <block>{ }</block>
-  </destructor>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setOffsets</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QList
-        <argument_list>&lt;
-        <argument>
-          <name>RVector</name>
-        </argument>&gt;</argument_list></name>&amp;</type>
-        <name>offsets</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>offsets</name>= 
-    <name>offsets</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setRotations</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QList
-        <argument_list>&lt;
-        <argument>
-          <name>double</name>
-        </argument>&gt;</argument_list></name>&amp;</type>
-        <name>rotations</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>rotations</name>= 
-    <name>rotations</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setOffset</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>offset</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>
-    <name>this</name>-&gt;
-    <name>offsets</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-      <name>this</name>-&gt;
-      <name>offsets</name>&lt;&lt; 
-      <name>offset</name></expr>;</expr_stmt>}</block>
-    </then>
-    <else>else 
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>
-      <name>offsets</name>
-      <index>[
-      <expr>0</expr>]</index>
-    </name>= 
-    <name>
-    offset</name></expr>;</expr_stmt>}</block></else></if>}</block>
-  </function>
-  <function>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>getOffset</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>
-    <name>this</name>-&gt;
-    <name>offsets</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <name>
-        <name>RVector</name>::
-        <name>invalid</name></name>
-      </expr>;</return>}</block>
-    </then>
-    <else>else 
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>this</name>-&gt;
-    <name>
-      <name>offsets</name>
-      <index>[
-      <expr>0</expr>]</index>
-    </name></expr>;</return>}</block></else></if>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setScale</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>scale</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>scale</name>= 
-    <name>scale</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getScale</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>this</name>-&gt;
-    <name>scale</name></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setRotation</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>rotation</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>
-    <name>this</name>-&gt;
-    <name>rotations</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-      <name>this</name>-&gt;
-      <name>rotations</name>&lt;&lt; 
-      <name>rotation</name></expr>;</expr_stmt>}</block>
-    </then>
-    <else>else 
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>
-      <name>rotations</name>
-      <index>[
-      <expr>0</expr>]</index>
-    </name>= 
-    <name>
-    rotation</name></expr>;</expr_stmt>}</block></else></if>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getRotation</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>
-    <name>this</name>-&gt;
-    <name>rotations</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>0.0</expr>;</return>}</block>
-    </then>
-    <else>else 
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>this</name>-&gt;
-    <name>
-      <name>rotations</name>
-      <index>[
-      <expr>0</expr>]</index>
-    </name></expr>;</return>}</block></else></if>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setFlipHorizontal</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>flipHorizontal</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>flipHorizontal</name>= 
-    <name>flipHorizontal</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getFlipHorizontal</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>this</name>-&gt;
-    <name>flipHorizontal</name></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setFlipVertical</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>flipVertical</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>flipVertical</name>= 
-    <name>flipVertical</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getFlipVertical</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>this</name>-&gt;
-    <name>flipVertical</name></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setToCurrentLayer</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>toCurrentLayer</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>toCurrentLayer</name>= 
-    <name>toCurrentLayer</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getToCurrentLayer</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>this</name>-&gt;
-    <name>toCurrentLayer</name></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setOverwriteLayers</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>overwriteLayers</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>overwriteLayers</name>= 
-    <name>overwriteLayers</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getOverwriteLayers</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>this</name>-&gt;
-    <name>overwriteLayers</name></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setOverwriteBlocks</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>overwriteBlocks</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>overwriteBlocks</name>= 
-    <name>overwriteBlocks</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getOverwriteBlocks</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>this</name>-&gt;
-    <name>overwriteBlocks</name></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setBlockName</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>blockName</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>blockName</name>= 
-    <name>blockName</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getBlockName</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>this</name>-&gt;
-    <name>blockName</name></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setLayerName</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>layerName</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>layerName</name>= 
-    <name>layerName</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getLayerName</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>this</name>-&gt;
-    <name>layerName</name></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setAttribute</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>tag</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>value</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>attributes</name>.
-    <call>
-      <name>insert</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>tag</name>
-        </expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <name>value</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RTransaction</name>
-  </type>
-  <name>apply</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>document</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>preview</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RPolyline</name>
-  </type>
-  <name>getBoundary</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>unitFactor</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RDocument</name>&amp;</type>
-    <name>sourceDocument</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>offsets</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>scale</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>double</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>rotations</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>flipHorizontal</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>flipVertical</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>toCurrentLayer</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>overwriteLayers</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>overwriteBlocks</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>blockName</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>layerName</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-        <name>QString</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>attributes</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RPasteOperation*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./operations" filename="RPasteOperation.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RPASTEOPERATION_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RPASTEOPERATION_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"operations_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExporter.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RClipboardOperation.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * Implementation of an operation that pastes the clipboard
+ * at a given reference point.
+ * 
+ * \ingroup operations
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADOPERATIONS_EXPORT</name></macro> <name>RPasteOperation</name><super>: <specifier>public</specifier> <name>RClipboardOperation</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor_decl><name>RPasteOperation</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>sourceDocument</name></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor><specifier>virtual</specifier> <name>~RPasteOperation</name><parameter_list>()</parameter_list> <block>{
+    }</block></destructor>
+
+    <function><type><name>void</name></type> <name>setOffsets</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>offsets</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>offsets</name> = <name>offsets</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setRotations</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name>&amp;</type> <name>rotations</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>rotations</name> = <name>rotations</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setOffset</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>this</name>-&gt;<name>offsets</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>this</name>-&gt;<name>offsets</name> &lt;&lt; <name>offset</name></expr>;</expr_stmt>
+        }</block></then>
+        <else>else <block>{
+            <expr_stmt><expr><name>this</name>-&gt;<name><name>offsets</name><index>[<expr>0</expr>]</index></name> = <name>offset</name></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block></function>
+    <function><type><name>RVector</name></type> <name>getOffset</name><parameter_list>()</parameter_list> <block>{
+        <if>if <condition>(<expr><name>this</name>-&gt;<name>offsets</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name><name>RVector</name>::<name>invalid</name></name></expr>;</return>
+        }</block></then>
+        <else>else <block>{
+            <return>return <expr><name>this</name>-&gt;<name><name>offsets</name><index>[<expr>0</expr>]</index></name></expr>;</return>
+        }</block></else></if>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>scale</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>scale</name> = <name>scale</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>double</name></type> <name>getScale</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>this</name>-&gt;<name>scale</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setRotation</name><parameter_list>(<param><decl><type><name>double</name></type> <name>rotation</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>this</name>-&gt;<name>rotations</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>this</name>-&gt;<name>rotations</name> &lt;&lt; <name>rotation</name></expr>;</expr_stmt>
+        }</block></then>
+        <else>else <block>{
+            <expr_stmt><expr><name>this</name>-&gt;<name><name>rotations</name><index>[<expr>0</expr>]</index></name> = <name>rotation</name></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block></function>
+    <function><type><name>double</name></type> <name>getRotation</name><parameter_list>()</parameter_list> <block>{
+        <if>if <condition>(<expr><name>this</name>-&gt;<name>rotations</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr>0.0</expr>;</return>
+        }</block></then>
+        <else>else <block>{
+            <return>return <expr><name>this</name>-&gt;<name><name>rotations</name><index>[<expr>0</expr>]</index></name></expr>;</return>
+        }</block></else></if>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setFlipHorizontal</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>flipHorizontal</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>flipHorizontal</name> = <name>flipHorizontal</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getFlipHorizontal</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>this</name>-&gt;<name>flipHorizontal</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setFlipVertical</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>flipVertical</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>flipVertical</name> = <name>flipVertical</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getFlipVertical</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>this</name>-&gt;<name>flipVertical</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setToCurrentLayer</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>toCurrentLayer</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>toCurrentLayer</name> = <name>toCurrentLayer</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getToCurrentLayer</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>this</name>-&gt;<name>toCurrentLayer</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setOverwriteLayers</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>overwriteLayers</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>overwriteLayers</name> = <name>overwriteLayers</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getOverwriteLayers</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>this</name>-&gt;<name>overwriteLayers</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setOverwriteBlocks</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>overwriteBlocks</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>overwriteBlocks</name> = <name>overwriteBlocks</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getOverwriteBlocks</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>this</name>-&gt;<name>overwriteBlocks</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setBlockName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>blockName</name> = <name>blockName</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>QString</name></type> <name>getBlockName</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>this</name>-&gt;<name>blockName</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setLayerName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>layerName</name> = <name>layerName</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>QString</name></type> <name>getLayerName</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>this</name>-&gt;<name>layerName</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setAttribute</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>tag</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>value</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>attributes</name>.<call><name>insert</name><argument_list>(<argument><expr><name>tag</name></expr></argument>, <argument><expr><name>value</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>RTransaction</name></type> <name>apply</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>RPolyline</name></type> <name>getBoundary</name><parameter_list>(<param><decl><type><name>double</name></type> <name>unitFactor</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>RDocument</name>&amp;</type> <name>sourceDocument</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>offsets</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>scale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>rotations</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>flipHorizontal</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>flipVertical</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>toCurrentLayer</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>overwriteLayers</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>overwriteBlocks</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>blockName</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>layerName</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>attributes</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPasteOperation*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

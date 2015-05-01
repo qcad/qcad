@@ -58,7 +58,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="RSpatialIndexVisitor *"
         typeName="RSpatialIndexVisitor *" name="dataVisitor"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </method>
     <method name="queryContained" cppName="queryContained"
@@ -80,7 +80,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="RSpatialIndexVisitor *"
         typeName="RSpatialIndexVisitor *" name="dataVisitor"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </method>
     <method name="queryNearestNeighbor"
@@ -98,7 +98,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="RSpatialIndexVisitor *"
         typeName="RSpatialIndexVisitor *" name="dataVisitor"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </method>
   </class>

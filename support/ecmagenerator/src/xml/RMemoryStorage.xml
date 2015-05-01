@@ -48,9 +48,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; REntity::Id &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="undone"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="allBlocks"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="RS::EntityType" typeName="RS::EntityType"
         name="type" hasDefault="true" default="RS :: EntityAll"
         isConst="false" />
@@ -68,7 +68,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; RLayer::Id &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="undone"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="queryAllBlocks" cppName="queryAllBlocks"
@@ -77,7 +77,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; RBlock::Id &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="undone"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="queryAllViews" cppName="queryAllViews"
@@ -86,7 +86,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; RView::Id &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="undone"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="queryAllLinetypes" cppName="queryAllLinetypes"
@@ -115,7 +115,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
         <arg type="bool" typeName="bool" name="allBlocks"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="queryBlockEntities" cppName="queryBlockEntities"
@@ -298,7 +298,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QSet &lt; REntity::Id &gt; *"
         typeName="QSet &lt; REntity::Id &gt; *"
-        name="affectedEntities" hasDefault="true" default=" NULL"
+        name="affectedEntities" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -308,7 +308,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QSet &lt; REntity::Id &gt; *"
         typeName="QSet &lt; REntity::Id &gt; *"
-        name="affectedEntities" hasDefault="true" default=" NULL"
+        name="affectedEntities" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -319,10 +319,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
         <arg type="bool" typeName="bool" name="add"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="QSet &lt; REntity::Id &gt; *"
         typeName="QSet &lt; REntity::Id &gt; *"
-        name="affectedEntities" hasDefault="true" default=" NULL"
+        name="affectedEntities" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -334,7 +334,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
         <arg type="QSet &lt; REntity::Id &gt; *"
         typeName="QSet &lt; REntity::Id &gt; *"
-        name="affectedEntities" hasDefault="true" default=" NULL"
+        name="affectedEntities" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -346,23 +346,23 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="QSet &lt; REntity::Id &gt;" name="entityIds"
         isConst="true" />
         <arg type="bool" typeName="bool" name="add"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="QSet &lt; REntity::Id &gt; *"
         typeName="QSet &lt; REntity::Id &gt; *"
-        name="affectedEntities" hasDefault="true" default=" NULL"
+        name="affectedEntities" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
     <method name="deselectEntities" cppName="deselectEntities"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
+      <variant returnType="bool" isPureVirtual="false">
         <arg type="QSet &lt; REntity::Id &gt; &amp;"
         typeName="QSet &lt; REntity::Id &gt;" name="entityIds"
         isConst="true" />
         <arg type="QSet &lt; REntity::Id &gt; *"
         typeName="QSet &lt; REntity::Id &gt; *"
-        name="affectedEntities" hasDefault="true" default=" NULL"
+        name="affectedEntities" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -377,10 +377,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="QSet &lt; REntity::Id &gt; *"
         typeName="QSet &lt; REntity::Id &gt; *"
-        name="affectedEntities" hasDefault="true" default=" NULL"
+        name="affectedEntities" hasDefault="true" default="NULL"
         isConst="false" />
         <arg type="bool" typeName="bool" name="onlyDescend"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="isSelected" cppName="isSelected"
@@ -401,9 +401,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RBox" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="ignoreHiddenLayers"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="ignoreEmpty"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getSelectionBox" cppName="getSelectionBox"
@@ -428,9 +428,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="QSharedPointer &lt; RObject &gt;" name="object"
         isConst="false" />
         <arg type="bool" typeName="bool" name="checkBlockRecursion"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="keepHandles"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="checkRecursion" cppName="checkRecursion"
@@ -522,7 +522,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
         <arg type="bool" typeName="bool" name="overwrite"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getVariable" cppName="getVariable"
@@ -542,7 +542,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>

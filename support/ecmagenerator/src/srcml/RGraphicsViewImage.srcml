@@ -1,2161 +1,343 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./gui" filename="RGraphicsViewImage.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RGRAPHICSVIEWIMAGE_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RGRAPHICSVIEWIMAGE_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QtCore&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QPinchGesture&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RGraphicsView.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RAction</name>;</class_decl>
-  <class_decl>class 
-  <name>RDocument</name>;</class_decl>
-  <class_decl>class 
-  <name>RDocumentInterface</name>;</class_decl>
-  <class_decl>class 
-  <name>RGraphicsSceneQt</name>;</class_decl>
-  <class_decl>class 
-  <name>RLine</name>;</class_decl>
-  <class_decl>class 
-  <name>RSnap</name>;</class_decl>
-  <class_decl>class 
-  <name>RSnapRestriction</name>;</class_decl>
-  <comment type="block">/** * \brief QImage based 2d graphics view.
-  * * This graphics view displays a rectangular area of a *
-  RGraphicsSceneQt. * * \ingroup gui * \scriptable *
-  \generateScriptShell */</comment>
-  <class>class 
-  <macro>
-    <name>QCADGUI_EXPORT</name>
-  </macro>
-  <name>RGraphicsViewImage</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RGraphicsView</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RGraphicsViewImage</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RGraphicsViewImage</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <comment type="line">// TODO: these methods are not found in
-  RGraphicsViewQt, due to the</comment>
-  <comment type="line">// multiple inheritance of RGraphicsViewQt
-  (QWidget and RGraphicsViewImage)</comment>
-  <comment type="line">// unless they are re-declared here
-  again:</comment>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setViewportNumber</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>n</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::setViewportNumber</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>n</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>int</name>
-    </type>
-    <name>getViewportNumber</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>getViewportNumber</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setNavigationAction</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RAction</name>*</type>
-        <name>action</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::setNavigationAction</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>action</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>RBox</name>
-    </type>
-    <name>getBox</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>getBox</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>autoZoom</name>
-    <parameter_list>(
-    <param>
-      <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>margin</name>=
-      <init>
-        <expr>
-          <name>RDEFAULT_MIN1</name>
-        </expr>
-      </init></decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>ignoreEmpty</name>=
-      <init>
-        <expr>
-          <name>false</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::autoZoom</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>margin</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>ignoreEmpty</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>zoomTo</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RBox</name>&amp;</type>
-        <name>window</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>margin</name>=
-      <init>
-        <expr>0</expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::zoomTo</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>window</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>margin</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>zoom</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>center</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>factor</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::zoom</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>center</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>factor</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>centerToBox</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RBox</name>&amp;</type>
-        <name>box</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::centerToBox</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>box</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>centerToPoint</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>point</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::centerToPoint</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>point</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setGrid</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RGrid</name>*</type>
-        <name>grid</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::setGrid</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>grid</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-    <name>RGrid</name>*</type>
-    <name>getGrid</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>getGrid</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getFactor</name>
-    <parameter_list>(
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>includeStepFactor</name>=
-      <init>
-        <expr>
-          <name>true</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>getFactor</name></name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <name>includeStepFactor</name>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setFactor</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>f</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>regen</name>=
-      <init>
-        <expr>
-          <name>true</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::setFactor</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>f</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>regen</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>getOffset</name>
-    <parameter_list>(
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>includeStepOffset</name>=
-      <init>
-        <expr>
-          <name>true</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>getOffset</name></name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <name>includeStepOffset</name>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setOffset</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>offset</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>regen</name>=
-      <init>
-        <expr>
-          <name>true</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::setOffset</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>offset</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>regen</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QColor</name>
-    </type>
-    <name>getBackgroundColor</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>getBackgroundColor</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setMargin</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>m</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::setMargin</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>m</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setColorMode</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RGraphicsView</name>::
-          <name>ColorMode</name></name>
-        </type>
-        <name>cm</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::setColorMode</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>cm</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setHairlineMode</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::setHairlineMode</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>on</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getHairlineMode</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>getHairlineMode</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setAntialiasing</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::setAntialiasing</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>on</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getAntialiasing</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>getAntialiasing</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-    <name>RGraphicsScene</name>*</type>
-    <name>getScene</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>getScene</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-    <name>RDocument</name>*</type>
-    <name>getDocument</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>getDocument</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-    <name>RDocumentInterface</name>*</type>
-    <name>getDocumentInterface</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>getDocumentInterface</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setPrinting</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::setPrinting</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>on</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isPrinting</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>isPrinting</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setPrintPreview</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::setPrintPreview</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>on</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isPrintPreview</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>isPrintPreview</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setPrintPointSize</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>s</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::setPrintPointSize</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>s</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>simulateMouseMoveEvent</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::simulateMouseMoveEvent</name>
-    <parameter_list>
-    ()</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setTextHeightThresholdOverride</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>v</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::setTextHeightThresholdOverride</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>v</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>int</name>
-    </type>
-    <name>getTextHeightThresholdOverride</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>getTextHeightThresholdOverride</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isGridVisible</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RGraphicsView</name>::
-        <name>isGridVisible</name></name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setGridVisible</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>RGraphicsView::setGridVisible</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>on</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setScene</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RGraphicsSceneQt</name>*</type>
-      <name>scene</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>regen</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setBackgroundColor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QColor</name>&amp;</type>
-      <name>col</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>regenerate</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>force</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>repaintView</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>updateImage</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>giveFocus</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>hasFocus</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>true</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>removeFocus</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>saveViewport</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>restoreViewport</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RVector</name>
-  </type>
-  <name>mapFromView</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>z</name>=
-    <init>
-      <expr>0.0</expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RVector</name>
-  </type>
-  <name>mapToView</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>double</name>
-  </type>
-  <name>mapDistanceFromView</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>d</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>double</name>
-  </type>
-  <name>mapDistanceToView</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>d</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>int</name>
-  </type>
-  <name>getWidth</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>int</name>
-  </type>
-  <name>getHeight</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>resizeImage</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>w</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>h</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintGridPoint</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>ucsPosition</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintGridLine</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLine</name>&amp;</type>
-      <name>ucsPosition</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">//virtual void paintCursorLine(const
-  RLine&amp; ucsPosition);</comment>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setPaintOrigin</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>val</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setPanOptimization</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>on</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>getPanOptimization</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintEntities</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPainter</name>*</type>
-      <name>painter</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RBox</name>&amp;</type>
-      <name>queryBox</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintEntity</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPainter</name>*</type>
-      <name>painter</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </type>
-      <name>id</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QImage</name>
-  </type>
-  <name>getBuffer</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QTransform</name>
-  </type>
-  <name>getTransform</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>emitUpdateSnapInfo</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RSnap</name>*</type>
-        <name>snap</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>RSnapRestriction</name>*</type>
-        <name>restriction</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>snap</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>restriction</argument>)</argument_list>
-    </macro>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>emitUpdateTextLabel</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RTextLabel</name>&amp;</type>
-        <name>textLabel</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>textLabel</argument>)</argument_list>
-    </macro>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>emitDecorateBackground</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QPainter</name>*</type>
-        <name>painter</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>painter</argument>)</argument_list>
-    </macro>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>emitDecorateForeground</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QPainter</name>*</type>
-        <name>painter</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>painter</argument>)</argument_list>
-    </macro>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>clearBackground</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addToBackground</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RPainterPath</name>&amp;</type>
-      <name>path</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setBackgroundTransform</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>bgFactor</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>bgOffset</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setColorCorrectionOverride</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>colorCorrectionOverride</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getColorCorrectionOverride</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>colorCorrectionOverride</name>
-    </expr>;</return>}</block>
-  </function></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getPointSize</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>pSize</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>drawDot</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPainter</name>*</type>
-      <name>painter</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>QPointF</name>
-      </type>
-      <name>pt</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>drawPlus</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPainter</name>*</type>
-      <name>painter</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>QPointF</name>
-      </type>
-      <name>pt</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>pSize</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>drawEx</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPainter</name>*</type>
-      <name>painter</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>QPointF</name>
-      </type>
-      <name>pt</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>pSize</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>drawVBar</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPainter</name>*</type>
-      <name>painter</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>QPointF</name>
-      </type>
-      <name>pt</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>pSize</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>drawCircle</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPainter</name>*</type>
-      <name>painter</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>QPointF</name>
-      </type>
-      <name>pt</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>pSize</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>drawSquare</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPainter</name>*</type>
-      <name>painter</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>QPointF</name>
-      </type>
-      <name>pt</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>pSize</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintImage</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPainter</name>*</type>
-      <name>painter</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RImageData</name>&amp;</type>
-      <name>image</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintOrigin</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPaintDevice</name>&amp;</type>
-      <name>device</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintReferencePoint</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPainter</name>&amp;</type>
-      <name>painter</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>pos</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>highlight</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>paintErase</name>
-    <argument_list>(
-    <argument>
-      <expr>
-      <name>QPaintDevice</name>&amp; 
-      <name>device</name></expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QRect</name>&amp; 
-      <name>rect</name>= 
-      <call>
-        <name>QRect</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>paintGrid</name>
-    <argument_list>(
-    <argument>
-      <expr>
-      <name>QPaintDevice</name>&amp; 
-      <name>device</name></expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QRect</name>&amp; 
-      <name>rect</name>= 
-      <call>
-        <name>QRect</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>paintMetaGrid</name>
-    <argument_list>(
-    <argument>
-      <expr>
-      <name>QPaintDevice</name>&amp; 
-      <name>device</name></expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QRect</name>&amp; 
-      <name>rect</name>= 
-      <call>
-        <name>QRect</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintCursor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPaintDevice</name>&amp;</type>
-      <name>device</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintRelativeZero</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPaintDevice</name>&amp;</type>
-      <name>device</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>paintDocument</name>
-    <argument_list>(
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QRect</name>&amp; 
-      <name>rect</name>= 
-      <call>
-        <name>QRect</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>paintBackground</name>
-    <argument_list>(
-    <argument>
-      <expr>
-      <name>QPainter</name>* 
-      <name>painter</name></expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QRect</name>&amp; 
-      <name>rect</name>= 
-      <call>
-        <name>QRect</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>QPainter</name>*</type>
-    <name>initPainter</name>
-    <argument_list>(
-    <argument>
-      <expr>
-      <name>QPaintDevice</name>&amp; 
-      <name>device</name></expr>
-    </argument>, 
-    <argument>
-      <expr>
-        <name>bool</name>
-        <name>erase</name>
-      </expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>bool</name>
-      <name>screen</name>= 
-      <name>false</name></expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QRect</name>&amp; 
-      <name>rect</name>= 
-      <call>
-        <name>QRect</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>invalidate</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>force</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>updateGraphicsBuffer</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>updateTransformation</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl></protected>
-  <protected>protected: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QImage</name>
-    </type>
-    <name>graphicsBuffer</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QImage</name>
-    </type>
-    <name>graphicsBufferWithPreview</name>
-  </decl>;</decl_stmt></protected>
-  <protected>protected: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>panOptimization</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMutex</name>
-    </type>
-    <name>mutexSi</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RGraphicsSceneQt</name>*</type>
-    <name>sceneQt</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>currentScale</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QSize</name>
-    </type>
-    <name>lastSize</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>lastOffset</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>lastFactor</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>graphicsBufferNeedsUpdate</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
-      <name>QTransform</name>
-    </type>
-    <name>transform</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QTransform</name>
-    </type>
-    <name>previousView</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>QPainter</name>*</type>
-    <name>gridPainter</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>doPaintOrigin</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isSelected</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>selectedIds</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>bgColorLightness</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>colorCorrectionOverride</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>colorCorrection</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>colorThreshold</name>
-  </decl>;</decl_stmt>
-  <comment type="line">// int
-  textHeightThresholdOverride;</comment>
-  <comment type="line">// int textHeightThreshold;</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>drawingScale</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RPainterPath</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>backgroundDecoration</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//QTransform backgroundTransform;</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>backgroundFactor</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>backgroundOffset</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RBox</name>
-    </type>
-    <name>clipBox</name>
-  </decl>;</decl_stmt></protected>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RGraphicsViewImage*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./gui" filename="RGraphicsViewImage.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RGRAPHICSVIEWIMAGE_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RGRAPHICSVIEWIMAGE_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QtCore&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPinchGesture&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGraphicsView.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RAction</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
+<class_decl>class <name>RGraphicsSceneQt</name>;</class_decl>
+<class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RSnap</name>;</class_decl>
+<class_decl>class <name>RSnapRestriction</name>;</class_decl>
+
+
+
+<comment type="block">/**
+ * \brief QImage based 2d graphics view.
+ *
+ * This graphics view displays a rectangular area of a
+ * RGraphicsSceneQt.
+ *
+ * \ingroup gui
+ * \scriptable
+ * \generateScriptShell
+ */</comment>
+<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RGraphicsViewImage</name> <super>: <specifier>public</specifier> <name>RGraphicsView</name></super> <block>{<private type="default">
+
+</private><public>public:
+    <constructor_decl><name>RGraphicsViewImage</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RGraphicsViewImage</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <comment type="line">// TODO: these methods are not found in RGraphicsViewQt, due to the</comment>
+    <comment type="line">// multiple inheritance of RGraphicsViewQt (QWidget and RGraphicsViewImage)</comment>
+    <comment type="line">// unless they are re-declared here again:</comment>
+    <function><type><name>void</name></type> <name>setViewportNumber</name><parameter_list>(<param><decl><type><name>int</name></type> <name>n</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setViewportNumber</name><parameter_list>(<param><decl><type><name>n</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>int</name></type> <name>getViewportNumber</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getViewportNumber</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setNavigationAction</name><parameter_list>(<param><decl><type><name>RAction</name>*</type> <name>action</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setNavigationAction</name><parameter_list>(<param><decl><type><name>action</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>RBox</name></type> <name>getBox</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getBox</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>autoZoom</name><parameter_list>(<param><decl><type><name>int</name></type> <name>margin</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::autoZoom</name><parameter_list>(<param><decl><type><name>margin</name></type></decl></param>, <param><decl><type><name>ignoreEmpty</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>zoomTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name> &amp;</type><name>window</name></decl></param>, <param><decl><type><name>int</name></type> <name>margin</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::zoomTo</name><parameter_list>(<param><decl><type><name>window</name></type></decl></param>, <param><decl><type><name>margin</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>zoom</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>, <param><decl><type><name>double</name></type> <name>factor</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::zoom</name><parameter_list>(<param><decl><type><name>center</name></type></decl></param>, <param><decl><type><name>factor</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>centerToBox</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::centerToBox</name><parameter_list>(<param><decl><type><name>box</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>centerToPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::centerToPoint</name><parameter_list>(<param><decl><type><name>point</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setGrid</name><parameter_list>(<param><decl><type><name>RGrid</name>*</type> <name>grid</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setGrid</name><parameter_list>(<param><decl><type><name>grid</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>RGrid</name>*</type> <name>getGrid</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getGrid</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getFactor</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>includeStepFactor</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getFactor</name></name><argument_list>(<argument><expr><name>includeStepFactor</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setFactor</name><parameter_list>(<param><decl><type><name>double</name></type> <name>f</name></decl></param>, <param><decl><type><name>bool</name></type> <name>regen</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setFactor</name><parameter_list>(<param><decl><type><name>f</name></type></decl></param>, <param><decl><type><name>regen</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getOffset</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>includeStepOffset</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getOffset</name></name><argument_list>(<argument><expr><name>includeStepOffset</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setOffset</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>, <param><decl><type><name>bool</name></type> <name>regen</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setOffset</name><parameter_list>(<param><decl><type><name>offset</name></type></decl></param>, <param><decl><type><name>regen</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>QColor</name></type> <name>getBackgroundColor</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getBackgroundColor</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setMargin</name><parameter_list>(<param><decl><type><name>int</name></type> <name>m</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setMargin</name><parameter_list>(<param><decl><type><name>m</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setColorMode</name><parameter_list>(<param><decl><type><name><name>RGraphicsView</name>::<name>ColorMode</name></name></type> <name>cm</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setColorMode</name><parameter_list>(<param><decl><type><name>cm</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setHairlineMode</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setHairlineMode</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getHairlineMode</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getHairlineMode</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setAntialiasing</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setAntialiasing</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getAntialiasing</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getAntialiasing</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RGraphicsScene</name>*</type> <name>getScene</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getScene</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getDocument</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RDocumentInterface</name>*</type> <name>getDocumentInterface</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getDocumentInterface</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPrinting</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setPrinting</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isPrinting</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>isPrinting</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPrintPreview</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setPrintPreview</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isPrintPreview</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>isPrintPreview</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPrintPointSize</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>s</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setPrintPointSize</name><parameter_list>(<param><decl><type><name>s</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>simulateMouseMoveEvent</name><parameter_list>()</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::simulateMouseMoveEvent</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setTextHeightThresholdOverride</name><parameter_list>(<param><decl><type><name>int</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setTextHeightThresholdOverride</name><parameter_list>(<param><decl><type><name>v</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>int</name></type> <name>getTextHeightThresholdOverride</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getTextHeightThresholdOverride</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isGridVisible</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>isGridVisible</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setGridVisible</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setGridVisible</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+    
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setScene</name><parameter_list>(<param><decl><type><name>RGraphicsSceneQt</name>*</type> <name>scene</name></decl></param>, <param><decl><type><name>bool</name></type> <name>regen</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setBackgroundColor</name><parameter_list>(<param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>col</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>regenerate</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>force</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>repaintView</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateImage</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>giveFocus</name><parameter_list>()</parameter_list> <block>{
+        <return>return;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>hasFocus</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>true</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>removeFocus</name><parameter_list>()</parameter_list> <block>{
+        <return>return;</return>
+    }</block></function>
+
+    <function_decl><type><name>void</name></type> <name>saveViewport</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>restoreViewport</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>mapFromView</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>, <param><decl><type><name>double</name></type> <name>z</name>=<init><expr>0.0</expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>mapToView</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>double</name></type> <name>mapDistanceFromView</name><parameter_list>(<param><decl><type><name>double</name></type> <name>d</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>double</name></type> <name>mapDistanceToView</name><parameter_list>(<param><decl><type><name>double</name></type> <name>d</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    
+    <function_decl><type><name>virtual</name> <name>int</name></type> <name>getWidth</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>int</name></type> <name>getHeight</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>resizeImage</name><parameter_list>(<param><decl><type><name>int</name></type> <name>w</name></decl></param>, <param><decl><type><name>int</name></type> <name>h</name></decl></param>)</parameter_list>;</function_decl>
+    
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintGridPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>ucsPosition</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintGridLine</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>ucsPosition</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="line">//virtual void paintCursorLine(const RLine&amp; ucsPosition);</comment>
+
+    <function_decl><type><name>void</name></type> <name>setPaintOrigin</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>val</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setPanOptimization</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>getPanOptimization</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintEntities</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>, <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintEntity</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>, <param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>QImage</name></type> <name>getBuffer</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QTransform</name></type> <name>getTransform</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>emitUpdateSnapInfo</name><parameter_list>(<param><decl><type><name>RSnap</name>*</type> <name>snap</name></decl></param>, <param><decl><type><name>RSnapRestriction</name>*</type> <name>restriction</name></decl></param>)</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>snap</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>restriction</argument>)</argument_list></macro>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>emitUpdateTextLabel</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextLabel</name>&amp;</type> <name>textLabel</name></decl></param>)</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>textLabel</argument>)</argument_list></macro>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>emitDecorateBackground</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>)</parameter_list> <block>{ <macro><name>Q_UNUSED</name><argument_list>(<argument>painter</argument>)</argument_list></macro> }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>emitDecorateForeground</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>)</parameter_list> <block>{ <macro><name>Q_UNUSED</name><argument_list>(<argument>painter</argument>)</argument_list></macro> }</block></function>
+
+    <function_decl><type><name>void</name></type> <name>clearBackground</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>addToBackground</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setBackgroundTransform</name><parameter_list>(<param><decl><type><name>double</name></type> <name>bgFactor</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>bgOffset</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>void</name></type> <name>setColorCorrectionOverride</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>colorCorrectionOverride</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getColorCorrectionOverride</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>colorCorrectionOverride</name></expr>;</return>
+    }</block></function>
+
+
+</public><protected>protected:
+    <function_decl><type><name>double</name></type> <name>getPointSize</name><parameter_list>(<param><decl><type><name>double</name></type> <name>pSize</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawDot</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>, <param><decl><type><name>QPointF</name></type> <name>pt</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawPlus</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>, <param><decl><type><name>QPointF</name></type> <name>pt</name></decl></param>, <param><decl><type><name>double</name></type> <name>pSize</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawEx</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>, <param><decl><type><name>QPointF</name></type> <name>pt</name></decl></param>, <param><decl><type><name>double</name></type> <name>pSize</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawVBar</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>, <param><decl><type><name>QPointF</name></type> <name>pt</name></decl></param>, <param><decl><type><name>double</name></type> <name>pSize</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawCircle</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>, <param><decl><type><name>QPointF</name></type> <name>pt</name></decl></param>, <param><decl><type><name>double</name></type> <name>pSize</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawSquare</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>, <param><decl><type><name>QPointF</name></type> <name>pt</name></decl></param>, <param><decl><type><name>double</name></type> <name>pSize</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintImage</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>, <param><decl><type><name>RImageData</name>&amp;</type> <name>image</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintOrigin</name><parameter_list>(<param><decl><type><name>QPaintDevice</name>&amp;</type> <name>device</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintReferencePoint</name><parameter_list>(<param><decl><type><name>QPainter</name>&amp;</type> <name>painter</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>, <param><decl><type><name>bool</name></type> <name>highlight</name></decl></param>)</parameter_list>;</function_decl>
+    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>paintErase</name><argument_list>(<argument><expr><name>QPaintDevice</name>&amp; <name>device</name></expr></argument>, <argument><expr><name>const</name> <name>QRect</name>&amp; <name>rect</name> = <call><name>QRect</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>paintGrid</name><argument_list>(<argument><expr><name>QPaintDevice</name>&amp; <name>device</name></expr></argument>, <argument><expr><name>const</name> <name>QRect</name>&amp; <name>rect</name> = <call><name>QRect</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>paintMetaGrid</name><argument_list>(<argument><expr><name>QPaintDevice</name>&amp; <name>device</name></expr></argument>, <argument><expr><name>const</name> <name>QRect</name>&amp; <name>rect</name> = <call><name>QRect</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintCursor</name><parameter_list>(<param><decl><type><name>QPaintDevice</name>&amp;</type> <name>device</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintRelativeZero</name><parameter_list>(<param><decl><type><name>QPaintDevice</name>&amp;</type> <name>device</name></decl></param>)</parameter_list>;</function_decl>
+    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>paintDocument</name><argument_list>(<argument><expr><name>const</name> <name>QRect</name>&amp; <name>rect</name> = <call><name>QRect</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>paintBackground</name><argument_list>(<argument><expr><name>QPainter</name>* <name>painter</name></expr></argument>, <argument><expr><name>const</name> <name>QRect</name>&amp; <name>rect</name> = <call><name>QRect</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <decl_stmt><decl><type><name>QPainter</name>*</type> <name>initPainter</name><argument_list>(<argument><expr><name>QPaintDevice</name>&amp; <name>device</name></expr></argument>, <argument><expr><name>bool</name> <name>erase</name></expr></argument>, <argument><expr><name>bool</name> <name>screen</name> = <name>false</name></expr></argument>, <argument><expr><name>const</name> <name>QRect</name>&amp; <name>rect</name> = <call><name>QRect</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+
+    <function_decl><type><name>void</name></type> <name>invalidate</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>force</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>updateGraphicsBuffer</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>updateTransformation</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</protected><protected>protected:
+    <decl_stmt><decl><type><name>QImage</name></type> <name>graphicsBuffer</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QImage</name></type> <name>graphicsBufferWithPreview</name></decl>;</decl_stmt>
+
+</protected><protected>protected:
+    <decl_stmt><decl><type><name>bool</name></type> <name>panOptimization</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMutex</name></type> <name>mutexSi</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>RGraphicsSceneQt</name>*</type> <name>sceneQt</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>currentScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QSize</name></type> <name>lastSize</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>lastOffset</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>lastFactor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>graphicsBufferNeedsUpdate</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>QTransform</name></type> <name>transform</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QTransform</name></type> <name>previousView</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>QPainter</name>*</type> <name>gridPainter</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>doPaintOrigin</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>bool</name></type> <name>isSelected</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>selectedIds</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>bgColorLightness</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>bool</name></type> <name>colorCorrectionOverride</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>colorCorrection</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>colorThreshold</name></decl>;</decl_stmt>
+
+<comment type="line">//    int textHeightThresholdOverride;</comment>
+<comment type="line">//    int textHeightThreshold;</comment>
+
+    <decl_stmt><decl><type><name>double</name></type> <name>drawingScale</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>backgroundDecoration</name></decl>;</decl_stmt>
+    <comment type="line">//QTransform backgroundTransform;</comment>
+    <decl_stmt><decl><type><name>double</name></type> <name>backgroundFactor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>backgroundOffset</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RBox</name></type> <name>clipBox</name></decl>;</decl_stmt>
+</protected>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsViewImage*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

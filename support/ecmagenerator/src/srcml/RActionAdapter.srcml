@@ -1,496 +1,95 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RActionAdapter.h">
-  <comment type="block">/** * Copyright (c) 2011-2013 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RACTIONADAPTER_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RACTIONADAPTER_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RAction.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RVector.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDebug.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"REntity.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RPropertyEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>RGraphicsScene</name>;</class_decl>
-  <class_decl>class 
-  <name>RDocumentInterface</name>;</class_decl>
-  <class_decl>class 
-  <name>RCommandEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>RCoordinateEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>RDocument</name>;</class_decl>
-  <class_decl>class 
-  <name>REntityPickEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>RMouseEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>RWheelEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>RGuiAction</name>;</class_decl>
-  <class_decl>class 
-  <name>RStorage</name>;</class_decl>
-  <class_decl>class 
-  <name>RTabletEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>ROperation</name>;</class_decl>
-  <comment type="block">/** * \brief Abstract base class for all
-  action classes. * * Action classes handle user interaction with a
-  document. A menu, * toolbar button or command usually triggers an
-  action. * * \ingroup core * \scriptable * \generateScriptShell
-  */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RActionAdapter</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RAction</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor>
-    <name>RActionAdapter</name>
-    <parameter_list>(
-    <param>
-      <decl>
-      <type>
-      <name>RGuiAction</name>*</type>
-      <name>guiAction</name>=
-      <init>
-        <expr>
-          <name>NULL</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <member_list>: 
-    <call>
-      <name>RAction</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>guiAction</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{ 
-    <comment type="line">// qDebug() &lt;&lt; "RActionAdapter "
-    &lt;&lt; QString("0x%1").arg((int)this, 0,
-    16);</comment>}</block>
-  </constructor>
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RActionAdapter</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <comment type="line">// qDebug() &lt;&lt; "~RActionAdapter "
-    &lt;&lt; QString("0x%1").arg((int)this, 0,
-    16);</comment>}</block>
-  </destructor>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>beginEvent</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>setGraphicsView</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RGraphicsView</name>*</type>
-      </decl>
-    </param>
-    <comment type="block">/*view*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>finishEvent</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>suspendEvent</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>resumeEvent</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>escapeEvent</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>keyPressEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QKeyEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>keyReleaseEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QKeyEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>mousePressEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RMouseEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>mouseMoveEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RMouseEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>mouseReleaseEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RMouseEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>mouseDoubleClickEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RMouseEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>wheelEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RWheelEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>tabletEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RTabletEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>swipeGestureEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QSwipeGesture</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*gesture*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>panGestureEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QPanGesture</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*gesture*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>pinchGestureEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QPinchGesture</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*gesture*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>commandEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RCommandEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>commandEventPreview</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RCommandEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>coordinateEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RCoordinateEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>coordinateEventPreview</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RCoordinateEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>entityPickEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>REntityPickEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>entityPickEventPreview</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>REntityPickEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event)*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>propertyChangeEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RPropertyEvent</name>&amp;</type>
-      </decl>
-    </param>
-    <comment type="block">/*event*/</comment>)</parameter_list>
-    <block>{}</block>
-  </function>
-  <comment type="line">//virtual void setMultiSnapPoints(const
-  QList&lt;RVector&gt;&amp; /*points*/) {}</comment>
-  <comment type="line">//virtual void setMultiSnapAngles(const
-  QList&lt;double&gt;&amp; /*angles*/) {}</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>updatePreview</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>applyOperation</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </function></public>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RActionAdapter*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RActionAdapter.h"><comment type="block">/**
+ * Copyright (c) 2011-2013 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RACTIONADAPTER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RACTIONADAPTER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RAction.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDebug.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RPropertyEvent</name>;</class_decl>
+<class_decl>class <name>RGraphicsScene</name>;</class_decl>
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
+<class_decl>class <name>RCommandEvent</name>;</class_decl>
+<class_decl>class <name>RCoordinateEvent</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>REntityPickEvent</name>;</class_decl>
+<class_decl>class <name>RMouseEvent</name>;</class_decl>
+<class_decl>class <name>RWheelEvent</name>;</class_decl>
+<class_decl>class <name>RGuiAction</name>;</class_decl>
+<class_decl>class <name>RStorage</name>;</class_decl>
+<class_decl>class <name>RTabletEvent</name>;</class_decl>
+<class_decl>class <name>ROperation</name>;</class_decl>
+
+<comment type="block">/**
+ * \brief Abstract base class for all action classes.
+ *
+ * Action classes handle user interaction with a document. A menu,
+ * toolbar button or command usually triggers an action.
+ *
+ * \ingroup core
+ * \scriptable
+ * \generateScriptShell
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RActionAdapter</name> <super>: <specifier>public</specifier> <name>RAction</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RActionAdapter</name><parameter_list>(<param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <member_list>: <call><name>RAction</name><argument_list>(<argument><expr><name>guiAction</name></expr></argument>)</argument_list></call> </member_list><block>{
+<comment type="line">//        qDebug() &lt;&lt; "RActionAdapter " &lt;&lt; QString("0x%1").arg((int)this, 0, 16);</comment>
+    }</block></constructor>
+    <destructor><specifier>virtual</specifier> <name>~RActionAdapter</name><parameter_list>()</parameter_list> <block>{
+<comment type="line">//        qDebug() &lt;&lt; "~RActionAdapter " &lt;&lt; QString("0x%1").arg((int)this, 0, 16);</comment>
+    }</block></destructor>
+    <function><type><name>virtual</name> <name>void</name></type> <name>beginEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>setGraphicsView</name><parameter_list>(<param><decl><type><name>RGraphicsView</name>*</type></decl></param> <comment type="block">/*view*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>finishEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>suspendEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>resumeEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>escapeEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>keyPressEvent</name><parameter_list>(<param><decl><type><name>QKeyEvent</name>&amp;</type></decl></param> <comment type="block">/*event*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>keyReleaseEvent</name><parameter_list>(<param><decl><type><name>QKeyEvent</name>&amp;</type></decl></param> <comment type="block">/*event*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>mousePressEvent</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type></decl></param> <comment type="block">/*event*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>mouseMoveEvent</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type></decl></param> <comment type="block">/*event*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>mouseReleaseEvent</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type></decl></param> <comment type="block">/*event*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>mouseDoubleClickEvent</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type></decl></param> <comment type="block">/*event*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>wheelEvent</name><parameter_list>(<param><decl><type><name>RWheelEvent</name>&amp;</type></decl></param> <comment type="block">/*event*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>tabletEvent</name><parameter_list>(<param><decl><type><name>RTabletEvent</name>&amp;</type></decl></param> <comment type="block">/*event*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>swipeGestureEvent</name><parameter_list>(<param><decl><type><name>QSwipeGesture</name>&amp;</type></decl></param> <comment type="block">/*gesture*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>panGestureEvent</name><parameter_list>(<param><decl><type><name>QPanGesture</name>&amp;</type></decl></param> <comment type="block">/*gesture*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>pinchGestureEvent</name><parameter_list>(<param><decl><type><name>QPinchGesture</name>&amp;</type></decl></param> <comment type="block">/*gesture*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>commandEvent</name><parameter_list>(<param><decl><type><name>RCommandEvent</name>&amp;</type></decl></param> <comment type="block">/*event*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>commandEventPreview</name><parameter_list>(<param><decl><type><name>RCommandEvent</name>&amp;</type></decl></param> <comment type="block">/*event*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>coordinateEvent</name><parameter_list>(<param><decl><type><name>RCoordinateEvent</name>&amp;</type></decl></param> <comment type="block">/*event*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>coordinateEventPreview</name><parameter_list>(<param><decl><type><name>RCoordinateEvent</name>&amp;</type></decl></param> <comment type="block">/*event*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>entityPickEvent</name><parameter_list>(<param><decl><type><name>REntityPickEvent</name>&amp;</type></decl></param> <comment type="block">/*event*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>entityPickEventPreview</name><parameter_list>(<param><decl><type><name>REntityPickEvent</name>&amp;</type></decl></param> <comment type="block">/*event)*/</comment>)</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>propertyChangeEvent</name><parameter_list>(<param><decl><type><name>RPropertyEvent</name>&amp;</type></decl></param> <comment type="block">/*event*/</comment>)</parameter_list> <block>{}</block></function>
+    <comment type="line">//virtual void setMultiSnapPoints(const QList&lt;RVector&gt;&amp; /*points*/) {}</comment>
+    <comment type="line">//virtual void setMultiSnapAngles(const QList&lt;double&gt;&amp; /*angles*/) {}</comment>
+    <function><type><name>virtual</name> <name>void</name></type> <name>updatePreview</name><parameter_list>()</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>applyOperation</name><parameter_list>()</parameter_list> <block>{}</block></function>
+</public>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RActionAdapter*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

@@ -1,254 +1,80 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./gui" filename="RRulerQt.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RRULERQT_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RRULERQT_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QFrame&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RCoordinateListener.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RRuler.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RVector.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RGraphicsView</name>;</class_decl>
-  <class_decl>class 
-  <name>RDocumentInterface</name>;</class_decl>
-  <comment type="block">/** * Widget that displays the current
-  mouse position. * Usually shown in the status bar of an
-  application. * * \ingroup gui * \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADGUI_EXPORT</name>
-  </macro>
-  <name>RRulerQt</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QFrame</name>, 
-  <specifier>public</specifier>
-  <name>RRuler</name>, 
-  <specifier>public</specifier>
-  <name>RCoordinateListener</name></super>
-  <block>{
-  <private type="default">
-    <function_decl>
-    <type>
-      <name>Q_OBJECT</name>
-    </type>
-    <name>Q_PROPERTY</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>Qt</name>::
-          <name>Orientation</name></name>
-          <name>orientation</name>
-          <name>READ</name>
-          <name>getOrientation</name>
-          <name>WRITE</name>
-        </type>
-        <name>setOrientation</name>
-      </decl>
-    </param>)</parameter_list>;</function_decl>
-  </private>
-  <public>public: 
-  <constructor_decl>
-  <name>RRulerQt</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>QWidget</name>*</type>
-    <name>parent</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RRulerQt</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setOrientation</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>Qt</name>::
-        <name>Orientation</name></name>
-      </type>
-      <name>orientation</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSize</name>
-  </type>
-  <name>sizeHint</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintTick</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>pos</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>major</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>label</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QFont</name>
-  </type>
-  <name>getFont</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>updateViewport</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>updateCoordinate</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocumentInterface</name>*</type>
-      <name>documentInterface</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>paintEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPaintEvent</name>*</type>
-    </decl>
-  </param>)</parameter_list>;</function_decl></protected>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>QPainter</name>*</type>
-    <name>painter</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QImage</name>
-    </type>
-    <name>buffer</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QSize</name>
-    </type>
-    <name>lastSize</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>viewportChanged</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QPainterPath</name>
-    </type>
-    <name>cursorArrow</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>cursorPosition</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
-      <name>QSize</name>
-    </type>
-    <name>hint</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RRulerQt*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./gui" filename="RRulerQt.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RRULERQT_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RRULERQT_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFrame&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCoordinateListener.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RRuler.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RGraphicsView</name>;</class_decl>
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
+
+<comment type="block">/**
+ * Widget that displays the current mouse position.
+ * Usually shown in the status bar of an application.
+ *
+ * \ingroup gui
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RRulerQt</name><super>: <specifier>public</specifier> <name>QFrame</name>, <specifier>public</specifier> <name>RRuler</name>, <specifier>public</specifier> <name>RCoordinateListener</name></super> <block>{<private type="default">
+
+<function_decl><type><name>Q_OBJECT</name></type>
+<name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name><name>Qt</name>::<name>Orientation</name></name> <name>orientation</name> <name>READ</name> <name>getOrientation</name> <name>WRITE</name></type> <name>setOrientation</name></decl></param>)</parameter_list>;</function_decl>
+
+</private><public>public:
+    <constructor_decl><name>RRulerQt</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name>=<init><expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RRulerQt</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setOrientation</name><parameter_list>(<param><decl><type><name><name>Qt</name>::<name>Orientation</name></name></type> <name>orientation</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QSize</name></type> <name>sizeHint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintTick</name><parameter_list>(<param><decl><type><name>int</name></type> <name>pos</name></decl></param>, <param><decl><type><name>bool</name></type> <name>major</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>label</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QFont</name></type> <name>getFont</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>updateViewport</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateCoordinate</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><protected>protected:
+    <function_decl><type><name>void</name></type> <name>paintEvent</name><parameter_list>(<param><decl><type><name>QPaintEvent</name> *</type></decl></param>)</parameter_list>;</function_decl>
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>QPainter</name> *</type><name>painter</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QImage</name></type> <name>buffer</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QSize</name></type> <name>lastSize</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>viewportChanged</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QPainterPath</name></type> <name>cursorArrow</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>cursorPosition</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>QSize</name></type> <name>hint</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RRulerQt*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

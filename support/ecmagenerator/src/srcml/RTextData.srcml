@@ -1,249 +1,71 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./entity" filename="RTextData.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RTEXTDATA_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RTEXTDATA_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"entity_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RTextBasedData.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RVector.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Text entity data class. * *
-  \scriptable * \sharedPointerSupport * \copyable * \ingroup entity
-  */</comment>
-  <class>class 
-  <macro>
-    <name>QCADENTITY_EXPORT</name>
-  </macro>
-  <name>RTextData</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RTextBasedData</name></super>
-  <block>{
-  <private type="default">
-    <decl_stmt>
-    <decl>
-      <type>
-      <name>friend</name>class</type>
-      <name>RTextEntity</name>
-    </decl>;</decl_stmt>
-  </private>
-  <protected>protected: 
-  <constructor_decl>
-  <name>RTextData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>*</type>
-      <name>document</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RTextData</name>&amp;</type>
-      <name>data</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl></protected>
-  <public>public: 
-  <constructor_decl>
-  <name>RTextData</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RTextData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RTextBasedData</name>&amp;</type>
-      <name>data</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RTextData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>position</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>alignmentPoint</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>textHeight</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>textWidth</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>VAlign</name></name>
-      </type>
-      <name>verticalAlignment</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>HAlign</name></name>
-      </type>
-      <name>horizontalAlignment</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>TextDrawingDirection</name></name>
-      </type>
-      <name>drawingDirection</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>TextLineSpacingStyle</name></name>
-      </type>
-      <name>lineSpacingStyle</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>lineSpacingFactor</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>text</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>fontName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>bold</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>italic</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>angle</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>simple</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl></public>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RTextData</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RTextData*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>const RTextData*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;RTextData&gt;</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;RTextData&gt;*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./entity" filename="RTextData.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RTEXTDATA_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RTEXTDATA_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextBasedData.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * Text entity data class.
+ *
+ * \scriptable
+ * \sharedPointerSupport
+ * \copyable
+ * \ingroup entity
+ */</comment>
+<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RTextData</name><super>: <specifier>public</specifier> <name>RTextBasedData</name></super> <block>{<private type="default">
+    <decl_stmt><decl><type><name>friend</name> class</type> <name>RTextEntity</name></decl>;</decl_stmt>
+
+</private><protected>protected:
+    <constructor_decl><name>RTextData</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RTextData</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</constructor_decl>
+
+</protected><public>public:
+    <constructor_decl><name>RTextData</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RTextData</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RTextData</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>,
+              <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>alignmentPoint</name></decl></param>,
+              <param><decl><type><name>double</name></type> <name>textHeight</name></decl></param>,
+              <param><decl><type><name>double</name></type> <name>textWidth</name></decl></param>,
+              <param><decl><type><name><name>RS</name>::<name>VAlign</name></name></type> <name>verticalAlignment</name></decl></param>,
+              <param><decl><type><name><name>RS</name>::<name>HAlign</name></name></type> <name>horizontalAlignment</name></decl></param>,
+              <param><decl><type><name><name>RS</name>::<name>TextDrawingDirection</name></name></type> <name>drawingDirection</name></decl></param>,
+              <param><decl><type><name><name>RS</name>::<name>TextLineSpacingStyle</name></name></type> <name>lineSpacingStyle</name></decl></param>,
+              <param><decl><type><name>double</name></type> <name>lineSpacingFactor</name></decl></param>,
+              <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name></decl></param>,
+              <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontName</name></decl></param>,
+              <param><decl><type><name>bool</name></type> <name>bold</name></decl></param>,
+              <param><decl><type><name>bool</name></type> <name>italic</name></decl></param>,
+              <param><decl><type><name>double</name></type> <name>angle</name></decl></param>,
+              <param><decl><type><name>bool</name></type> <name>simple</name></decl></param>)</parameter_list>;</constructor_decl>
+</public>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextData</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextData*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const RTextData*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RTextData&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RTextData&gt;*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

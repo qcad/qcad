@@ -82,7 +82,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; QPair &lt; QString , RColor &gt; &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="onlyFixed"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getIcon" cppName="getIcon" specifier="public"

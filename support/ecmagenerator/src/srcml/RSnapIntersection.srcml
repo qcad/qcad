@@ -1,150 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./snap" filename="RSnapIntersection.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RSNAPINTERSECTION_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RSNAPINTERSECTION_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"snap_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RSnap.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"REntity.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RGraphicsView</name>;</class_decl>
-  <class_decl>class 
-  <name>RMouseEvent</name>;</class_decl>
-  <comment type="block">/** * \brief Intersection snapper
-  implementation. * * \scriptable * * \ingroup snap */</comment>
-  <class>class 
-  <macro>
-    <name>QCADSNAP_EXPORT</name>
-  </macro>
-  <name>RSnapIntersection</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RSnap</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RSnapIntersection</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RSnapIntersection</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </destructor>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RVector</name>
-  </type>
-  <name>snap</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>position</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RGraphicsView</name>&amp;</type>
-      <name>view</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>range</name>=
-    <init>
-      <expr>
-        <name>RNANDOUBLE</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RVector</name>
-  </type>
-  <name>snap</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>position</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RGraphicsView</name>&amp;</type>
-      <name>view</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </argument>, 
-      <argument>
-        <name>QSet
-        <argument_list>&lt;
-        <argument>
-          <name>int</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>candidates</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RBox</name>&amp;</type>
-      <name>queryBox</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RSnapIntersection*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./snap" filename="RSnapIntersection.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSNAPINTERSECTION_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RSNAPINTERSECTION_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"snap_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSnap.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RGraphicsView</name>;</class_decl>
+<class_decl>class <name>RMouseEvent</name>;</class_decl>
+
+<comment type="block">/**
+ * \brief Intersection snapper implementation.
+ *
+ * \scriptable
+ *
+ * \ingroup snap
+ */</comment>
+<class>class <macro><name>QCADSNAP_EXPORT</name></macro> <name>RSnapIntersection</name> <super>: <specifier>public</specifier> <name>RSnap</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor_decl><name>RSnapIntersection</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <destructor><specifier>virtual</specifier> <name>~RSnapIntersection</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>snap</name><parameter_list>(
+        <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>,
+        <param><decl><type><name>RGraphicsView</name>&amp;</type> <name>view</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>range</name> =<init> <expr><name>RNANDOUBLE</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>snap</name><parameter_list>(
+            <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>,
+            <param><decl><type><name>RGraphicsView</name>&amp;</type> <name>view</name></decl></param>,
+            <param><decl><type><name>const</name> <name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>candidates</name></decl></param>,
+            <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name></decl></param>)</parameter_list>;</function_decl>
+</public>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSnapIntersection*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

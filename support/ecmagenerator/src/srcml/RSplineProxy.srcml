@@ -1,202 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core/math" filename="RSplineProxy.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RSPLINEPROXY_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RSPLINEPROXY_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"../core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RSpline.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Proxy for advanced spline
-  functionality. May be implemented * by a plugin. * * \ingroup
-  math */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RSplineProxy</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>init</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>uninit</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RSpline</name>
-  </type>
-  <name>updateFromFitPoints</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RSpline</name>&amp;</type>
-      <name>spline</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>useTangents</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RSpline</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>split</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RSpline</name>&amp;</type>
-      <name>spline</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>points</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>double</name>
-  </type>
-  <name>getTAtPoint</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RSpline</name>&amp;</type>
-      <name>spline</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>point</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>double</name>
-  </type>
-  <name>getTAtDistance</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RSpline</name>&amp;</type>
-      <name>spline</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>dist</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RVector</name>
-  </type>
-  <name>getClosestPointOnShape</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RSpline</name>&amp;</type>
-      <name>spline</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>point</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>limited</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="line">//virtual QList&lt;RVector&gt;
-  getIntersectionPoints(const RSpline&amp; spline, const
-  RShape&amp; other, bool limited=true, bool same=false) =
-  0;</comment></public>}</block>;</class>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core/math" filename="RSplineProxy.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSPLINEPROXY_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RSPLINEPROXY_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSpline.h"</cpp:file></cpp:include>
+
+
+<comment type="block">/**
+ * Proxy for advanced spline functionality. May be implemented
+ * by a plugin.
+ *
+ * \ingroup math
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RSplineProxy</name> <block>{<private type="default">
+</private><public>public:
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>uninit</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RSpline</name></type> <name>updateFromFitPoints</name><parameter_list>(<param><decl><type><name>const</name> <name>RSpline</name>&amp;</type> <name>spline</name></decl></param>, <param><decl><type><name>bool</name></type> <name>useTangents</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RSpline</name></argument>&gt;</argument_list></name></type> <name>split</name><parameter_list>(<param><decl><type><name>const</name> <name>RSpline</name>&amp;</type> <name>spline</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>points</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>double</name></type> <name>getTAtPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RSpline</name>&amp;</type> <name>spline</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>double</name></type> <name>getTAtDistance</name><parameter_list>(<param><decl><type><name>const</name> <name>RSpline</name>&amp;</type> <name>spline</name></decl></param>, <param><decl><type><name>double</name></type> <name>dist</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getClosestPointOnShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RSpline</name>&amp;</type> <name>spline</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>, <param><decl><type><name>bool</name></type> <name>limited</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <comment type="line">//virtual QList&lt;RVector&gt; getIntersectionPoints(const RSpline&amp; spline, const RShape&amp; other, bool limited=true, bool same=false) = 0;</comment>
+</public>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

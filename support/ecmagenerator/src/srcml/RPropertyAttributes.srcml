@@ -1,1292 +1,276 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RPropertyAttributes.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RPROPERTYATTRIBUTES_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RPROPERTYATTRIBUTES_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QPair&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDebug.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RMath.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Structure to transfer attributes
-  about property types. * For example a property 'Side' might have
-  the two choices * 'Left' and 'Right'. These choices can be stored
-  in a * \c RPropertyAttributes object. Other attributes define if
-  a property * is visible, if it is an angle (such properties
-  require * conversion between radiants and degrees), etc. * *
-  \ingroup core * \scriptable * \copyable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RPropertyAttributes</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <enum>enum 
-  <name>Option</name>
-  <block>{ 
-  <expr>
-  <name>NoOptions</name>= 0x0</expr>, 
-  <expr>
-  <name>ReadOnly</name>= 0x1</expr>, 
-  <comment type="line">//!&lt; Property is read only</comment>
-  <expr>
-  <name>Invisible</name>= 0x2</expr>, 
-  <comment type="line">//!&lt; Property is not displayed</comment>
-  <expr>
-  <name>Angle</name>= 0x4</expr>, 
-  <comment type="line">//!&lt; Property is an angle (shown in user
-  preferred angle unit)</comment>
-  <expr>
-  <name>AffectsOtherProperties</name>= 0x8</expr>, 
-  <comment type="line">//!&lt; Property affects others, needs
-  refresh on changing</comment>
-  <expr>
-  <name>IgnoreCase</name>= 0x10</expr>, 
-  <comment type="line">//!&lt; Property is not case
-  sensitive</comment>
-  <expr>
-  <name>AllowMixedValue</name>= 0x20</expr>, 
-  <comment type="line">//!&lt; Property can be mixed</comment>
-  <expr>
-  <name>List</name>= 0x40</expr>, 
-  <comment type="line">//!&lt; Property is a list (e.g. x values of
-  polyline vertices)</comment>
-  <expr>
-  <name>Mixed</name>= 0x80</expr>, 
-  <comment type="line">//!&lt; Property has mixed values</comment>
-  <expr>
-  <name>RichText</name>= 0x100</expr>, 
-  <comment type="line">//!&lt; Property is rich text and can be
-  edited as such</comment>
-  <expr>
-  <name>Style</name>= 0x200</expr>, 
-  <comment type="line">//!&lt; Property is a text style
-  (font)</comment>
-  <expr>
-  <name>DimensionLabel</name>= 0x400</expr>, 
-  <comment type="line">//!&lt; Property is a dimension label
-  (suggests context menu to insert symbols, including
-  &lt;&gt;)</comment>
-  <expr>
-  <name>Label</name>= 0x800</expr>, 
-  <comment type="line">//!&lt; Property is a label (suggests
-  context menu to insert symbols)</comment>
-  <expr>
-  <name>Pattern</name>= 0x1000</expr>, 
-  <comment type="line">//!&lt; Property is a hatch pattern
-  name</comment>
-  <expr>
-  <name>Custom</name>= 0x2000</expr>, 
-  <comment type="line">//!&lt; Property is a map of custom
-  properties</comment>
-  <expr>
-  <name>Integer</name>= 0x4000</expr>, 
-  <comment type="line">//!&lt; Property is an int (not a double
-  number)</comment>
-  <expr>
-  <name>Redundant</name>= 0x8000</expr>, 
-  <comment type="line">//!&lt; Property is redundant (e.g. angle
-  for line entities)</comment>
-  <expr>
-  <name>VisibleToParent</name>= 0x10000</expr>, 
-  <comment type="line">//!&lt; Property can be edited in the
-  context of the parent entity</comment>
-  <expr>
-  <name>KnownVariable</name>= 0x20000</expr>, 
-  <comment type="line">//!&lt; Property is a known DXF
-  variable</comment>
-  <expr>
-  <name>NumericallySorted</name>= 0x40000</expr>
-  <comment type="line">//!&lt; Sort choices for this property
-  numerically</comment>}</block>;</enum>
-  <macro>
-    <name>Q_DECLARE_FLAGS</name>
-    <argument_list>(
-    <argument>Options</argument>, 
-    <argument>Option</argument>)</argument_list>
-  </macro></public>
-  <public>public: 
-  <constructor>
-    <name>RPropertyAttributes</name>
-    <parameter_list>()</parameter_list>
-    <member_list>: 
-    <call>
-      <name>options</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>NoOptions</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{}</block>
-  </constructor>
-  <constructor>
-    <name>RPropertyAttributes</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RPropertyAttributes</name>::
-          <name>Options</name></name>
-        </type>
-        <name>options</name>
-      </decl>
-    </param>)</parameter_list>
-    <member_list>: 
-    <call>
-      <name>options</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>options</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{ }</block>
-  </constructor>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setOption</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RPropertyAttributes</name>::
-        <name>Option</name></name>
-      </type>
-      <name>option</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>on</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isReadOnly</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>ReadOnly</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setReadOnly</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>readOnly</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>setOption</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>ReadOnly</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>readOnly</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isInvisible</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>Invisible</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setInvisible</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>invisible</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>setOption</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>Invisible</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>invisible</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isList</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>List</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setList</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>setOption</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>List</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>on</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isAngleType</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>Angle</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setAngleType</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>angle</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>setOption</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>Angle</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>angle</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getIgnoreCase</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>IgnoreCase</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setIgnoreCase</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>ignoreCase</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>setOption</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>IgnoreCase</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>ignoreCase</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>affectsOtherProperties</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>AffectsOtherProperties</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setAffectsOtherProperties</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>affectsOtherProperties</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>setOption</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>AffectsOtherProperties</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>affectsOtherProperties</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setAllowMixedValue</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>allowMixedValue</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>setOption</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>AllowMixedValue</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>allowMixedValue</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getAllowMixedValue</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>AllowMixedValue</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getChoices</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>choices</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setChoices</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>QSet
-          <argument_list>&lt;
-          <argument>
-            <name>QString</name>
-          </argument>&gt;</argument_list></name>
-        </type>
-        <name>choices</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>choices</name>= 
-    <name>choices</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>hasChoices</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>!
-    <name>choices</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <comment type="line">// QList&lt;QVariant&gt; getEnumChoices()
-  const {</comment>
-  <comment type="line">// return enumChoices;</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// void setEnumChoices(QList&lt;QVariant&gt;
-  ec) {</comment>
-  <comment type="line">// enumChoices = ec;</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// bool hasEnumChoices() const {</comment>
-  <comment type="line">// return !enumChoices.isEmpty();</comment>
-  <comment type="line">// }</comment>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isRichText</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>RichText</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setRichText</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>setOption</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>RichText</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>on</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isStyle</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>Style</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setStyle</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>setOption</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>Style</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>on</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>mixWith</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RPropertyAttributes</name>&amp;</type>
-      <name>other</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isMixed</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>Mixed</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setMixed</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>mixed</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>setOption</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>Mixed</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>mixed</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isLabel</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>Label</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isDimensionLabel</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>DimensionLabel</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isInteger</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>Integer</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isRedundant</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>Redundant</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setRedundant</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>setOption</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>Redundant</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>on</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isVisibleToParent</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>VisibleToParent</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isNumericallySorted</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>options</name>.
-    <call>
-      <name>testFlag</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>NumericallySorted</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setNumericallySorted</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>setOption</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>NumericallySorted</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>on</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>getPropertyTypeId</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>propertyTypeId</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setPropertyTypeId</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>RPropertyTypeId</name>
-        </type>
-        <name>pid</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>propertyTypeId</name>= 
-    <name>pid</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>operator ==</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RPropertyAttributes</name>&amp;</type>
-        <name>other</name>
-      </decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>
-    <call>
-      <name>isInvisible</name>
-      <argument_list>()</argument_list>
-    </call>!= 
-    <name>other</name>.
-    <call>
-      <name>isInvisible</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <name>false</name>
-      </expr>;</return>}</block>
-    </then></if>
-    <if>if 
-    <condition>(
-    <expr>
-    <call>
-      <name>isAngleType</name>
-      <argument_list>()</argument_list>
-    </call>!= 
-    <name>other</name>.
-    <call>
-      <name>isAngleType</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <name>false</name>
-      </expr>;</return>}</block>
-    </then></if>
-    <if>if 
-    <condition>(
-    <expr>
-    <call>
-      <name>affectsOtherProperties</name>
-      <argument_list>()</argument_list>
-    </call>!= 
-    <name>other</name>.
-    <call>
-      <name>affectsOtherProperties</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <name>false</name>
-      </expr>;</return>}</block>
-    </then></if>
-    <if>if 
-    <condition>(
-    <expr>
-    <call>
-      <name>isList</name>
-      <argument_list>()</argument_list>
-    </call>!= 
-    <name>other</name>.
-    <call>
-      <name>isList</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <name>false</name>
-      </expr>;</return>}</block>
-    </then></if>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>choices</name>!= 
-    <name>other</name>.
-    <name>choices</name></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <name>false</name>
-      </expr>;</return>}</block>
-    </then></if>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>propertyTypeId</name>!= 
-    <name>other</name>.
-    <name>propertyTypeId</name></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <name>false</name>
-      </expr>;</return>}</block>
-    </then></if>
-    <return>return 
-    <expr>
-      <name>true</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>operator !=</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RPropertyAttributes</name>&amp;</type>
-        <name>other</name>
-      </decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>!operator ==(
-    <name>other</name>)</expr>;</return>}</block>
-  </function></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RPropertyAttributes</name>::
-      <name>Options</name></name>
-    </type>
-    <name>options</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>choices</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//QList&lt;QVariant&gt;
-  enumChoices;</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>propertyTypeId</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_OPERATORS_FOR_FLAGS</name>
-    <argument_list>(
-    <argument>
-    RPropertyAttributes::Options</argument>)</argument_list>
-  </macro>
-  <typedef>typedef 
-  <type>
-    <name>QPair
-    <argument_list>&lt;
-    <argument>
-      <name>QVariant</name>
-    </argument>, 
-    <argument>
-      <name>RPropertyAttributes</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>_RPairVariantPropertyAttributes</name>;</typedef>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RPropertyAttributes</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RPropertyAttributes*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QFlags&lt;RPropertyAttributes::Option&gt;*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    RPropertyAttributes::Option</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    RPropertyAttributes::Option*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    _RPairVariantPropertyAttributes*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    _RPairVariantPropertyAttributes</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RPropertyAttributes.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RPROPERTYATTRIBUTES_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RPROPERTYATTRIBUTES_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPair&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDebug.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * Structure to transfer attributes about property types.
+ * For example a property 'Side' might have the two choices
+ * 'Left' and 'Right'. These choices can be stored in a
+ * \c RPropertyAttributes object. Other attributes define if a property
+ * is visible, if it is an angle (such properties require
+ * conversion between radiants and degrees), etc.
+ *
+ * \ingroup core
+ * \scriptable
+ * \copyable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPropertyAttributes</name> <block>{<private type="default">
+</private><public>public:
+    <enum>enum <name>Option</name> <block>{
+        <expr><name>NoOptions</name> = 0x0</expr>,
+        <expr><name>ReadOnly</name> = 0x1</expr>,                  <comment type="line">//!&lt; Property is read only</comment>
+        <expr><name>Invisible</name> = 0x2</expr>,                 <comment type="line">//!&lt; Property is not displayed</comment>
+        <expr><name>Angle</name> = 0x4</expr>,                     <comment type="line">//!&lt; Property is an angle (shown in user preferred angle unit)</comment>
+        <expr><name>AffectsOtherProperties</name> = 0x8</expr>,    <comment type="line">//!&lt; Property affects others, needs refresh on changing</comment>
+        <expr><name>IgnoreCase</name> = 0x10</expr>,               <comment type="line">//!&lt; Property is not case sensitive</comment>
+        <expr><name>AllowMixedValue</name> = 0x20</expr>,          <comment type="line">//!&lt; Property can be mixed</comment>
+        <expr><name>List</name> = 0x40</expr>,                     <comment type="line">//!&lt; Property is a list (e.g. x values of polyline vertices)</comment>
+        <expr><name>Mixed</name> = 0x80</expr>,                    <comment type="line">//!&lt; Property has mixed values</comment>
+        <expr><name>RichText</name> = 0x100</expr>,                <comment type="line">//!&lt; Property is rich text and can be edited as such</comment>
+        <expr><name>Style</name> = 0x200</expr>,                   <comment type="line">//!&lt; Property is a text style (font)</comment>
+        <expr><name>DimensionLabel</name> = 0x400</expr>,          <comment type="line">//!&lt; Property is a dimension label (suggests context menu to insert symbols, including &lt;&gt;)</comment>
+        <expr><name>Label</name> = 0x800</expr>,                   <comment type="line">//!&lt; Property is a label (suggests context menu to insert symbols)</comment>
+        <expr><name>Pattern</name> = 0x1000</expr>,                <comment type="line">//!&lt; Property is a hatch pattern name</comment>
+        <expr><name>Custom</name> = 0x2000</expr>,                 <comment type="line">//!&lt; Property is a map of custom properties</comment>
+        <expr><name>Integer</name> = 0x4000</expr>,                <comment type="line">//!&lt; Property is an int (not a double number)</comment>
+        <expr><name>Redundant</name> = 0x8000</expr>,              <comment type="line">//!&lt; Property is redundant (e.g. angle for line entities)</comment>
+        <expr><name>VisibleToParent</name> = 0x10000</expr>,       <comment type="line">//!&lt; Property can be edited in the context of the parent entity</comment>
+        <expr><name>KnownVariable</name> = 0x20000</expr>,         <comment type="line">//!&lt; Property is a known DXF variable</comment>
+        <expr><name>NumericallySorted</name> = 0x40000</expr>      <comment type="line">//!&lt; Sort choices for this property numerically</comment>
+    }</block>;</enum>
+    <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Options</argument>, <argument>Option</argument>)</argument_list></macro>
+
+</public><public>public:
+    <constructor><name>RPropertyAttributes</name><parameter_list>()</parameter_list> <member_list>: <call><name>options</name><argument_list>(<argument><expr><name>NoOptions</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+
+    <constructor><name>RPropertyAttributes</name><parameter_list>(<param><decl><type><name><name>RPropertyAttributes</name>::<name>Options</name></name></type> <name>options</name></decl></param>)</parameter_list> <member_list>:
+        <call><name>options</name><argument_list>(<argument><expr><name>options</name></expr></argument>)</argument_list></call> </member_list><block>{
+    }</block></constructor>
+
+    <function_decl><type><name>void</name></type> <name>setOption</name><parameter_list>(<param><decl><type><name><name>RPropertyAttributes</name>::<name>Option</name></name></type> <name>option</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>bool</name></type> <name>isReadOnly</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>ReadOnly</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setReadOnly</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>readOnly</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>ReadOnly</name></type></decl></param>, <param><decl><type><name>readOnly</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isInvisible</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>Invisible</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setInvisible</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>invisible</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>Invisible</name></type></decl></param>, <param><decl><type><name>invisible</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isList</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>List</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setList</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>List</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isAngleType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>Angle</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setAngleType</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>angle</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>Angle</name></type></decl></param>, <param><decl><type><name>angle</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getIgnoreCase</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>IgnoreCase</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setIgnoreCase</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreCase</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>IgnoreCase</name></type></decl></param>, <param><decl><type><name>ignoreCase</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>affectsOtherProperties</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>AffectsOtherProperties</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setAffectsOtherProperties</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>affectsOtherProperties</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>AffectsOtherProperties</name></type></decl></param>, <param><decl><type><name>affectsOtherProperties</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setAllowMixedValue</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>allowMixedValue</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>AllowMixedValue</name></type></decl></param>, <param><decl><type><name>allowMixedValue</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getAllowMixedValue</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>AllowMixedValue</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getChoices</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>choices</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setChoices</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>choices</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>choices</name> = <name>choices</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>hasChoices</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr>!<name>choices</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+<comment type="line">//    QList&lt;QVariant&gt; getEnumChoices() const {</comment>
+<comment type="line">//        return enumChoices;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setEnumChoices(QList&lt;QVariant&gt; ec) {</comment>
+<comment type="line">//        enumChoices = ec;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    bool hasEnumChoices() const {</comment>
+<comment type="line">//        return !enumChoices.isEmpty();</comment>
+<comment type="line">//    }</comment>
+
+    <function><type><name>bool</name></type> <name>isRichText</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>RichText</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setRichText</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>RichText</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isStyle</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>Style</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setStyle</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>Style</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function_decl><type><name>void</name></type> <name>mixWith</name><parameter_list>(<param><decl><type><name>const</name> <name>RPropertyAttributes</name> &amp;</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>bool</name></type> <name>isMixed</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>Mixed</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setMixed</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>mixed</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>Mixed</name></type></decl></param>, <param><decl><type><name>mixed</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isLabel</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>Label</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isDimensionLabel</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>DimensionLabel</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isInteger</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>Integer</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isRedundant</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>Redundant</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setRedundant</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>Redundant</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isVisibleToParent</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>VisibleToParent</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isNumericallySorted</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>NumericallySorted</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setNumericallySorted</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>NumericallySorted</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>RPropertyTypeId</name></type> <name>getPropertyTypeId</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>propertyTypeId</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPropertyTypeId</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>pid</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>propertyTypeId</name> = <name>pid</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>operator ==</name> <parameter_list>(<param><decl><type><name>const</name> <name>RPropertyAttributes</name>&amp;</type> <name>other</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr><call><name>isInvisible</name><argument_list>()</argument_list></call> != <name>other</name>.<call><name>isInvisible</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>false</name></expr>;</return>
+        }</block></then></if>
+        <if>if <condition>(<expr><call><name>isAngleType</name><argument_list>()</argument_list></call> != <name>other</name>.<call><name>isAngleType</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>false</name></expr>;</return>
+        }</block></then></if>
+        <if>if <condition>(<expr><call><name>affectsOtherProperties</name><argument_list>()</argument_list></call> != <name>other</name>.<call><name>affectsOtherProperties</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>false</name></expr>;</return>
+        }</block></then></if>
+        <if>if <condition>(<expr><call><name>isList</name><argument_list>()</argument_list></call> != <name>other</name>.<call><name>isList</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>false</name></expr>;</return>
+        }</block></then></if>
+        <if>if <condition>(<expr><name>choices</name> != <name>other</name>.<name>choices</name></expr>)</condition><then> <block>{
+            <return>return <expr><name>false</name></expr>;</return>
+        }</block></then></if>
+        <if>if <condition>(<expr><name>propertyTypeId</name> != <name>other</name>.<name>propertyTypeId</name></expr>)</condition><then> <block>{
+            <return>return <expr><name>false</name></expr>;</return>
+        }</block></then></if>
+
+        <return>return <expr><name>true</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>operator !=</name><parameter_list>(<param><decl><type><name>const</name> <name>RPropertyAttributes</name>&amp;</type> <name>other</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>!operator ==(<name>other</name>)</expr>;</return>
+    }</block></function>
+
+
+</public><private>private:
+    <decl_stmt><decl><type><name><name>RPropertyAttributes</name>::<name>Options</name></name></type> <name>options</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>choices</name></decl>;</decl_stmt>
+    <comment type="line">//QList&lt;QVariant&gt; enumChoices;</comment>
+    <decl_stmt><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_OPERATORS_FOR_FLAGS</name><argument_list>(<argument>RPropertyAttributes::Options</argument>)</argument_list></macro>
+
+<typedef>typedef <type><name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></type> <name>_RPairVariantPropertyAttributes</name>;</typedef>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPropertyAttributes</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPropertyAttributes*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFlags&lt;RPropertyAttributes::Option&gt;*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPropertyAttributes::Option</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPropertyAttributes::Option*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>_RPairVariantPropertyAttributes*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>_RPairVariantPropertyAttributes</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

@@ -65,7 +65,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="withNull"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="addCoordinateListener"
@@ -132,7 +132,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RTransaction &amp;" typeName="RTransaction"
         name="t" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyChanges"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="RS::EntityType" typeName="RS::EntityType"
         name="entityTypeFilter" hasDefault="true"
         default="RS :: EntityAll" isConst="false" />
@@ -166,7 +166,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyChanges"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="RS::EntityType" typeName="RS::EntityType"
         name="entityTypeFilter" hasDefault="true"
         default="RS :: EntityAll" isConst="false" />
@@ -272,7 +272,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -301,7 +301,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -630,7 +630,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString" name="message"
         isConst="true" />
         <arg type="bool" typeName="bool" name="messageBox"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="handleUserCommand" cppName="handleUserCommand"

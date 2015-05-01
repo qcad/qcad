@@ -21,7 +21,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityTypeFilter" hasDefault="true"
         default="RS :: EntityAll" isConst="false" />
         <arg type="bool" typeName="bool" name="manual"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="updateFromObject" cppName="updateFromObject"
@@ -31,7 +31,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RObject *" typeName="RObject *" name="object"
         isConst="false" />
         <arg type="RDocument *" typeName="RDocument *"
-        name="document" hasDefault="true" default=" NULL"
+        name="document" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>

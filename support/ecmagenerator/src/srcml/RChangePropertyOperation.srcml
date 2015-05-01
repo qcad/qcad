@@ -1,208 +1,68 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./operations" filename="RChangePropertyOperation.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RCHANGEPROPERTYOPERATION_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RCHANGEPROPERTYOPERATION_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"operations_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RExporter.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"ROperation.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPropertyEvent.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RTransaction.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Implementation of an operation that
-  changes a given property to * a given value for the selection in
-  a document. * * \ingroup operations * \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADOPERATIONS_EXPORT</name>
-  </macro>
-  <name>RChangePropertyOperation</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>ROperation</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RChangePropertyOperation</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RPropertyTypeId</name>&amp;</type>
-      <name>propertyTypeId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>EntityType</name></name>
-    </type>
-    <name>entityTypeFilter</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>EntityAll</name></name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>undoable</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RChangePropertyOperation</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RPropertyEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>undoable</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RChangePropertyOperation</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </destructor>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RTransaction</name>
-  </type>
-  <name>apply</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>document</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>preview</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>preview</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>document</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RExporter</name>&amp;</type>
-      <name>exporter</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>propertyTypeId</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QVariant</name>
-    </type>
-    <name>value</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RChangePropertyOperation*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./operations" filename="RChangePropertyOperation.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RCHANGEPROPERTYOPERATION_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RCHANGEPROPERTYOPERATION_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"operations_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExporter.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"ROperation.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyEvent.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransaction.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * Implementation of an operation that changes a given property to
+ * a given value for the selection in a document.
+ * 
+ * \ingroup operations
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADOPERATIONS_EXPORT</name></macro> <name>RChangePropertyOperation</name> <super>: <specifier>public</specifier> <name>ROperation</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor_decl><name>RChangePropertyOperation</name><parameter_list>(
+        <param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>,
+        <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>undoable</name> =<init> <expr><name>true</name></expr></init></decl></param>
+    )</parameter_list>;</constructor_decl>
+
+    <constructor_decl><name>RChangePropertyOperation</name><parameter_list>(
+        <param><decl><type><name>const</name> <name>RPropertyEvent</name>&amp;</type> <name>event</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>undoable</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+
+    <destructor><specifier>virtual</specifier> <name>~RChangePropertyOperation</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+    
+    <function_decl><type><name>virtual</name> <name>RTransaction</name></type> <name>apply</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>preview</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>RExporter</name>&amp;</type> <name>exporter</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QVariant</name></type> <name>value</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RChangePropertyOperation*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

@@ -1,163 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RLocalPeer.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RLOCALPEER_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RLOCALPEER_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QLocalServer&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QLocalSocket&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QDir&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RLockedFile.h"</cpp:file></cpp:include>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RLocalPeer</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QObject</name></super>
-  <block>{
-  <private type="default">
-    <macro>
-      <name>Q_OBJECT</name>
-    </macro>
-  </private>
-  <public>public: 
-  <macro>
-    <name>RLocalPeer</name>
-    <argument_list>(
-    <argument>QObject* parent=0</argument>, 
-    <argument>const QString&amp; appId =
-    QString()</argument>)</argument_list>
-  </macro>; 
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isClient</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>sendMessage</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>timeout</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>applicationId</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>id</name>
-    </expr>;</return>}</block>
-  </function>
-  <label>
-  <name>signals</name>:</label>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>messageReceived</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <protected>protected slots: 
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>receiveConnection</name>
-  <parameter_list>()</parameter_list>;</function_decl></protected>
-  <protected>protected: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>id</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>socketName</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>QLocalServer</name>*</type>
-    <name>server</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RLockedFile</name>
-    </type>
-    <name>lockFile</name>
-  </decl>;</decl_stmt></protected>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>static</name>
-    <name>const</name>
-    <name>char</name>*</type>
-    <name>ack</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RLocalPeer.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RLOCALPEER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RLOCALPEER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QLocalServer&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QLocalSocket&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDir&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLockedFile.h"</cpp:file></cpp:include>
+
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RLocalPeer</name> <super>: <specifier>public</specifier> <name>QObject</name></super> <block>{<private type="default">
+    <macro><name>Q_OBJECT</name></macro>
+
+</private><public>public:
+    <macro><name>RLocalPeer</name><argument_list>(<argument>QObject* parent=0</argument>, <argument>const QString&amp; appId = QString()</argument>)</argument_list></macro>;
+    <function_decl><type><name>bool</name></type> <name>isClient</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>sendMessage</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name> &amp;</type><name>message</name></decl></param>, <param><decl><type><name>int</name></type> <name>timeout</name></decl></param>)</parameter_list>;</function_decl>
+    <function><type><name>QString</name></type> <name>applicationId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>id</name></expr>;</return>
+    }</block></function>
+
+<label><name>signals</name>:</label>
+    <function_decl><type><name>void</name></type> <name>messageReceived</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><protected>protected slots:
+    <function_decl><type><name>void</name></type> <name>receiveConnection</name><parameter_list>()</parameter_list>;</function_decl>
+
+</protected><protected>protected:
+    <decl_stmt><decl><type><name>QString</name></type> <name>id</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>socketName</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QLocalServer</name>*</type> <name>server</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RLockedFile</name></type> <name>lockFile</name></decl>;</decl_stmt>
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>static</name> <name>const</name> <name>char</name>*</type> <name>ack</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

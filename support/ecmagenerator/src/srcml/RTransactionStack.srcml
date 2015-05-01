@@ -1,130 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RTransactionStack.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RTRANSACTIONSTACK_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RTRANSACTIONSTACK_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RNonCopyable.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RTransaction.h"</cpp:file></cpp:include>
-  <comment type="block">/** * A transaction stack handles
-  transactions on a document. Transactions * are stored in a \ref
-  RStorage "storage" implementation. * Transactions can be undone
-  and redone. * * \ingroup core */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RTransactionStack</name>
-  <super>: 
-  <name>RNonCopyable</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RTransactionStack</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RStorage</name>&amp;</type>
-      <name>storage</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <name>~RTransactionStack</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>reset</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RTransaction</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>undo</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RTransaction</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>redo</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isUndoAvailable</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isRedoAvailable</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>getUndoableTransactionText</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>getRedoableTransactionText</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RStorage</name>&amp;</type>
-    <name>storage</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RTransactionStack*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RTransactionStack.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RTRANSACTIONSTACK_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RTRANSACTIONSTACK_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RNonCopyable.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransaction.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * A transaction stack handles transactions on a document. Transactions
+ * are stored in a \ref RStorage "storage" implementation. 
+ * Transactions can be undone and redone.
+ *
+ * \ingroup core
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RTransactionStack</name> <super>: <name>RNonCopyable</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor_decl><name>RTransactionStack</name><parameter_list>(<param><decl><type><name>RStorage</name>&amp;</type> <name>storage</name></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><name>~RTransactionStack</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>void</name></type> <name>reset</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RTransaction</name></argument>&gt;</argument_list></name></type> <name>undo</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RTransaction</name></argument>&gt;</argument_list></name></type> <name>redo</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isUndoAvailable</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isRedoAvailable</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getUndoableTransactionText</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getRedoableTransactionText</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>RStorage</name>&amp;</type> <name>storage</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransactionStack*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

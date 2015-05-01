@@ -28,11 +28,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument &amp;" typeName="RDocument"
         name="document" isConst="false" />
         <arg type="RMessageHandler *" typeName="RMessageHandler *"
-        name="messageHandler" hasDefault="true" default=" NULL"
+        name="messageHandler" hasDefault="true" default="NULL"
         isConst="false" />
         <arg type="RProgressHandler *"
         typeName="RProgressHandler *" name="progressHandler"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </constructor>
     <method name="getCorrectedFileName"
@@ -54,7 +54,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString"
         name="nameFilter" isConst="true" />
         <arg type="bool" typeName="bool" name="setFileName"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="exportPoint" cppName="exportPoint"
@@ -72,7 +72,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RArc &amp;" typeName="RArc" name=""
         isConst="true" />
         <arg type="bool" typeName="bool" name="" hasDefault="true"
-        default=" false" isConst="false" />
+        default="false" isConst="false" />
       </variant>
     </method>
     <method name="exportLineSegment" cppName="exportLineSegment"

@@ -1,655 +1,114 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RPropertyEditor.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RPROPERTYEDITOR_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RPROPERTYEDITOR_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QCoreApplication&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RObject.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPropertyListener.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Base class for property editors.
-  Provides basic functionality that * is common to any property
-  editor implementation. * * \ingroup core * \scriptable *
-  \generateScriptShell */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RPropertyEditor</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RPropertyListener</name></super>
-  <block>{
-  <private type="default">
-    <macro>
-      <name>Q_DECLARE_TR_FUNCTIONS</name>
-      <argument_list>(
-      <argument>RPropertyEditor</argument>)</argument_list>
-    </macro>
-  </private>
-  <public>public: 
-  <constructor_decl>
-  <name>RPropertyEditor</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RPropertyEditor</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <comment type="line">// from RPropertyListener
-  interface:</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>updateFromDocument</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>*</type>
-      <name>document</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>onlyChanges</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>EntityType</name></name>
-    </type>
-    <name>entityTypeFilter</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>EntityAll</name></name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>manual</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>updateFromObject</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RObject</name>*</type>
-      <name>object</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RDocument</name>*</type>
-    <name>document</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>clearEditor</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>propertyChanged</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>RPropertyTypeId</name>
-      </type>
-      <name>propertyTypeId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>QVariant</name>
-      </type>
-      <name>propertyValue</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>EntityType</name></name>
-    </type>
-    <name>entityTypeFilter</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>EntityAll</name></name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>QVariant</name>::
-      <name>Type</name></name>
-    </type>
-    <name>typeHint</name>=
-    <init>
-      <expr>
-        <name>
-        <name>QVariant</name>::
-        <name>Invalid</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>listPropertyChanged</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>RPropertyTypeId</name>
-      </type>
-      <name>propertyTypeId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>index</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>QVariant</name>
-      </type>
-      <name>propertyValue</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>EntityType</name></name>
-    </type>
-    <name>entityTypeFilter</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>EntityAll</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QStringList</name>
-  </type>
-  <name>getGroupTitles</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QStringList</name>
-  </type>
-  <name>getPropertyTitles</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>group</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QVariant</name>
-  </type>
-  <name>getPropertyValue</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RPropertyTypeId</name>&amp;</type>
-      <name>propertyTypeId</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QVariant</name>
-  </type>
-  <name>getPropertyValue</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>group</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>title</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RPropertyAttributes</name>
-  </type>
-  <name>getPropertyAttributes</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RPropertyTypeId</name>&amp;</type>
-      <name>propertyTypeId</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RPropertyAttributes</name>
-  </type>
-  <name>getPropertyAttributes</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>group</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>title</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>RS</name>::
-      <name>EntityType</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getTypes</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>int</name>
-  </type>
-  <name>getTypeCount</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>EntityType</name></name>
-      </type>
-      <name>type</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>checkType</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>EntityType</name></name>
-      </type>
-      <name>type</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>EntityType</name></name>
-      </type>
-      <name>filter</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>updateEditor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RObject</name>&amp;</type>
-      <name>object</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>doUpdateGui</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RDocument</name>*</type>
-    <name>document</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * Updates the user interface of this
-  property editor. This is the * only part of the property editor
-  that depends on the user interface * and GUI toolkit that is
-  available. */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>updateGui</name>
-    <parameter_list>( 
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>onlyChanges</name>=
-      <init>
-        <expr>
-          <name>false</name>
-        </expr>
-      </init></decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>EntityType</name></name>
-      </type>
-      <name>entityTypeFilter</name>=
-      <init>
-        <expr>
-          <name>
-          <name>RS</name>::
-          <name>EntityAll</name></name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>onlyChanges</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>entityTypeFilter</argument>)</argument_list>
-    </macro>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>updateProperty</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RPropertyTypeId</name>&amp;</type>
-      <name>propertyTypeId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RObject</name>&amp;</type>
-      <name>object</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>*</type>
-      <name>document</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>removeAllButThese</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QMultiMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-        <name>QString</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>propertyTitles</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>customOnly</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl></protected>
-  <protected>protected: 
-  <comment type="line">//! key / value / attributes</comment>
-  <typedef>typedef 
-  <type>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>QString</name>
-    </argument>, 
-    <argument>
-      <name>QPair
-      <argument_list>&lt;
-      <argument>
-        <name>QVariant</name>
-      </argument>, 
-      <argument>
-        <name>RPropertyAttributes</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>RPropertyMap</name>;</typedef>
-  <comment type="line">//! group key /
-  key,value,attributes</comment>
-  <typedef>typedef 
-  <type>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>QString</name>
-    </argument>, 
-    <argument>
-      <name>RPropertyMap</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>RPropertyGroupMap</name>;</typedef>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QStringList</name>
-    </type>
-    <name>groupOrder</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-        <name>QStringList</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>propertyOrder</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RPropertyGroupMap</name>
-    </type>
-    <name>combinedProperties</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RS</name>::
-        <name>EntityType</name></name>
-      </argument>, 
-      <argument>
-        <name>int</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>combinedTypes</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>guiUpToDate</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>updatesDisabled</name>
-  </decl>;</decl_stmt></protected>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RPropertyEditor*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RPropertyEditor.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RPROPERTYEDITOR_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RPROPERTYEDITOR_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QCoreApplication&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyListener.h"</cpp:file></cpp:include>
+
+
+<comment type="block">/**
+ * Base class for property editors. Provides basic functionality that
+ * is common to any property editor implementation.
+ *
+ * \ingroup core
+ * \scriptable
+ * \generateScriptShell
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPropertyEditor</name><super>: <specifier>public</specifier> <name>RPropertyListener</name></super> <block>{<private type="default">
+
+    <macro><name>Q_DECLARE_TR_FUNCTIONS</name><argument_list>(<argument>RPropertyEditor</argument>)</argument_list></macro>
+
+</private><public>public:
+    <constructor_decl><name>RPropertyEditor</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RPropertyEditor</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <comment type="line">// from RPropertyListener interface:</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateFromDocument</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>onlyChanges</name></decl></param>,
+            <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>manual</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateFromObject</name><parameter_list>(<param><decl><type><name>RObject</name>*</type> <name>object</name></decl></param>, <param><decl><type><name>RDocument</name>*</type> <name>document</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>clearEditor</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>propertyChanged</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>QVariant</name></type> <name>propertyValue</name></decl></param>,
+                         <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>,
+                         <param><decl><type><name><name>QVariant</name>::<name>Type</name></name></type> <name>typeHint</name> =<init> <expr><name><name>QVariant</name>::<name>Invalid</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>listPropertyChanged</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>,
+                         <param><decl><type><name>int</name></type> <name>index</name></decl></param>, <param><decl><type><name>QVariant</name></type> <name>propertyValue</name></decl></param>,
+                         <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>QStringList</name></type> <name>getGroupTitles</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>QStringList</name></type> <name>getPropertyTitles</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>group</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QVariant</name></type> <name>getPropertyValue</name><parameter_list>(<param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QVariant</name></type> <name>getPropertyValue</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>group</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RPropertyAttributes</name></type> <name>getPropertyAttributes</name><parameter_list>(<param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RPropertyAttributes</name></type> <name>getPropertyAttributes</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>group</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name><name>RS</name>::<name>EntityType</name></name></argument>&gt;</argument_list></name></type> <name>getTypes</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>getTypeCount</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>type</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>checkType</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>type</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>filter</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><protected>protected:
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateEditor</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name>bool</name></type> <name>doUpdateGui</name></decl></param>,
+            <param><decl><type><name>RDocument</name>*</type> <name>document</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Updates the user interface of this property editor. This is the
+     * only part of the property editor that depends on the user interface
+     * and GUI toolkit that is available.
+     */</comment>
+    <function><type><name>virtual</name> <name>void</name></type> <name>updateGui</name><parameter_list>(
+        <param><decl><type><name>bool</name></type> <name>onlyChanges</name> =<init> <expr><name>false</name></expr></init></decl></param>,
+        <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>)</parameter_list> <block>{
+
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>onlyChanges</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>entityTypeFilter</argument>)</argument_list></macro>
+    }</block></function>
+
+    <function_decl><type><name>void</name></type> <name>updateProperty</name><parameter_list>(<param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>,
+            <param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>removeAllButThese</name><parameter_list>(<param><decl><type><name>const</name> <name>QMultiMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name>&amp;</type> <name>propertyTitles</name></decl></param>, <param><decl><type><name>bool</name></type> <name>customOnly</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+</protected><protected>protected:
+    <comment type="line">//! key / value / attributes</comment>
+    <typedef>typedef <type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>RPropertyMap</name>;</typedef>
+    <comment type="line">//! group key / key,value,attributes</comment>
+    <typedef>typedef <type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>RPropertyMap</name></argument>&gt;</argument_list></name></type> <name>RPropertyGroupMap</name>;</typedef>
+
+    <decl_stmt><decl><type><name>QStringList</name></type> <name>groupOrder</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QStringList</name></argument>&gt;</argument_list></name></type> <name>propertyOrder</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RPropertyGroupMap</name></type> <name>combinedProperties</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>EntityType</name></name></argument>, <argument><name>int</name></argument>&gt;</argument_list></name></type> <name>combinedTypes</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>guiUpToDate</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>updatesDisabled</name></decl>;</decl_stmt>
+</protected>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPropertyEditor*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

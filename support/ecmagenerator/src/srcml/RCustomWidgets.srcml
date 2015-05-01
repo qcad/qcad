@@ -1,101 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./customwidgets" filename="RCustomWidgets.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RCUSTOMWIDGETS_H_</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RCUSTOMWIDGETS_H_</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QtDesigner/QtDesigner&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QtCore/qplugin.h&gt;</cpp:file></cpp:include>
-  <class>class 
-  <name>RCustomWidgets</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QObject</name>, 
-  <specifier>public</specifier>
-  <name>QDesignerCustomWidgetCollectionInterface</name></super>
-  <block>{
-  <private type="default">
-  <decl_stmt>
-    <decl>
-    <type>
-      <name>Q_OBJECT</name>
-    </type>
-    <name>Q_INTERFACES</name>
-    <argument_list>(
-    <argument>
-      <expr>
-        <name>QDesignerCustomWidgetCollectionInterface</name>
-      </expr>
-    </argument>)</argument_list>
-    <cpp:if>#
-    <cpp:directive>if</cpp:directive>
-    <expr>
-    <name>QT_VERSION</name>&gt;= 0x050000</expr></cpp:if>
-    <name>Q_PLUGIN_METADATA</name>
-    <argument_list>(
-    <argument>
-      <expr>
-      <name>IID</name>"org.qcad.customwidgets"</expr>
-    </argument>)</argument_list>
-    <cpp:endif>#
-    <cpp:directive>endif</cpp:directive></cpp:endif>public</decl>
-  </decl_stmt>: 
-  <constructor_decl>
-  <name>RCustomWidgets</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>QObject</name>*</type>
-    <name>parent</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-    <name>
-    QDesignerCustomWidgetInterface</name>*</argument>&gt;</argument_list></name>
-  </type>
-  <name>customWidgets</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl></private>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-      <name>
-      QDesignerCustomWidgetInterface</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>widgets</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./customwidgets" filename="RCustomWidgets.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RCUSTOMWIDGETS_H_</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RCUSTOMWIDGETS_H_</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QtDesigner/QtDesigner&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QtCore/qplugin.h&gt;</cpp:file></cpp:include>
+
+<class>class <name>RCustomWidgets</name><super>: <specifier>public</specifier> <name>QObject</name>,
+        <specifier>public</specifier> <name>QDesignerCustomWidgetCollectionInterface</name></super> <block>{<private type="default">
+
+    <decl_stmt><decl><type><name>Q_OBJECT</name></type>
+    <name>Q_INTERFACES</name><argument_list>(<argument><expr><name>QDesignerCustomWidgetCollectionInterface</name></expr></argument>)</argument_list>
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x050000</expr></cpp:if>
+    <name>Q_PLUGIN_METADATA</name><argument_list>(<argument><expr><name>IID</name> "org.qcad.customwidgets"</expr></argument>)</argument_list>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+public</decl></decl_stmt>:
+    <constructor_decl><name>RCustomWidgets</name><parameter_list>(<param><decl><type><name>QObject</name> *</type><name>parent</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
+
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QDesignerCustomWidgetInterface</name>*</argument>&gt;</argument_list></name></type> <name>customWidgets</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</private><private>private:
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QDesignerCustomWidgetInterface</name>*</argument>&gt;</argument_list></name></type> <name>widgets</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

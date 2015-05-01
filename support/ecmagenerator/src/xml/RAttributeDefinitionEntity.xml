@@ -63,7 +63,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -76,9 +76,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RPropertyTypeId" name="propertyTypeId"
         isConst="false" />
         <arg type="bool" typeName="bool" name="humanReadable"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="noAttributes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getTag" cppName="getTag" specifier="public"

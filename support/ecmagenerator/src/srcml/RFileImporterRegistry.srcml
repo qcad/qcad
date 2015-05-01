@@ -1,207 +1,80 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RFileImporterRegistry.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RFILEIMPORTERREGISTRY_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RFILEIMPORTERREGISTRY_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RDocument</name>;</class_decl>
-  <class_decl>class 
-  <name>RFileImporter</name>;</class_decl>
-  <class_decl>class 
-  <name>RFileImporterFactory</name>;</class_decl>
-  <class_decl>class 
-  <name>RMessageHandler</name>;</class_decl>
-  <class_decl>class 
-  <name>RProgressHandler</name>;</class_decl>
-  <comment type="block">/** * \brief Registry of all available file
-  importers (\ref RFileImporter). * * File importers must register
-  themselves in this registry to become * available to the user of
-  the application. * * \ingroup core * \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RFileImporterRegistry</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>registerFileImporter</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RFileImporterFactory</name>*</type>
-      <name>factory</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>unregisterFileImporter</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RFileImporterFactory</name>*</type>
-      <name>factory</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>static</name>
-  <name>RFileImporter</name>*</type>
-  <name>getFileImporter</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>fileName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>nameFilter</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>document</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RMessageHandler</name>*</type>
-    <name>messageHandler</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RProgressHandler</name>*</type>
-    <name>progressHandler</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QStringList</name>
-  </type>
-  <name>getFilterStrings</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>hasFileImporter</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>fileName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>nameFilter</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \return List of all importable file
-  extensions (e.g. 'dxf', 'dwg', ...). */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QStringList</name>
-  </type>
-  <name>getFilterExtensions</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="block">/** * \return List of all importable file
-  extension patterns (e.g. '*.dxf', '*.dwg', ...). */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QStringList</name>
-  </type>
-  <name>getFilterExtensionPatterns</name>
-  <parameter_list>()</parameter_list>;</function_decl></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-      <name>
-      RFileImporterFactory</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>factories</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RFileImporterRegistry*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RFileImporterRegistry.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RFILEIMPORTERREGISTRY_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RFILEIMPORTERREGISTRY_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RFileImporter</name>;</class_decl>
+<class_decl>class <name>RFileImporterFactory</name>;</class_decl>
+<class_decl>class <name>RMessageHandler</name>;</class_decl>
+<class_decl>class <name>RProgressHandler</name>;</class_decl>
+
+<comment type="block">/**
+ * \brief Registry of all available file importers (\ref RFileImporter). 
+ *
+ * File importers must register themselves in this registry to become 
+ * available to the user of the application.
+ *
+ * \ingroup core
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RFileImporterRegistry</name> <block>{<private type="default">
+</private><public>public:
+    <function_decl><type><name>static</name> <name>void</name></type> <name>registerFileImporter</name><parameter_list>(<param><decl><type><name>RFileImporterFactory</name>*</type> <name>factory</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>unregisterFileImporter</name><parameter_list>(<param><decl><type><name>RFileImporterFactory</name>*</type> <name>factory</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>RFileImporter</name>*</type> <name>getFileImporter</name><parameter_list>(
+        <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name></decl></param>,
+        <param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>,
+        <param><decl><type><name>RMessageHandler</name>*</type> <name>messageHandler</name> =<init> <expr><name>NULL</name></expr></init></decl></param>,
+        <param><decl><type><name>RProgressHandler</name>*</type> <name>progressHandler</name> =<init> <expr><name>NULL</name></expr></init></decl></param>
+    )</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getFilterStrings</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>hasFileImporter</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \return List of all importable file extensions (e.g. 'dxf', 'dwg', ...).
+     */</comment>
+    <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getFilterExtensions</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \return List of all importable file extension patterns (e.g. '*.dxf', '*.dwg', ...).
+     */</comment>
+    <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getFilterExtensionPatterns</name><parameter_list>()</parameter_list>;</function_decl>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>RFileImporterFactory</name>*</argument>&gt;</argument_list></name></type> <name>factories</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RFileImporterRegistry*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

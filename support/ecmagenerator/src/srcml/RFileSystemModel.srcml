@@ -1,564 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./gui" filename="RFileSystemModel.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RFILESYSTEMMODEL_H_</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RFILESYSTEMMODEL_H_</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QFileSystemModel&gt;</cpp:file></cpp:include>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RDEFAULT_QMODELINDEX</name>
-  <name>QModelIndex</name>()</cpp:define>
-  <comment type="block">/** * \scriptable * \ingroup gui
-  */</comment>
-  <class>class 
-  <macro>
-    <name>QCADGUI_EXPORT</name>
-  </macro>
-  <name>RFileSystemModel</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QFileSystemModel</name></super>
-  <block>{
-  <private type="default">
-    <macro>
-      <name>Q_OBJECT</name>
-    </macro>
-  </private>
-  <public>public: 
-  <constructor_decl>
-  <name>RFileSystemModel</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>QObject</name>*</type>
-    <name>parent</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <function_decl>
-  <type>
-    <name>QModelIndex</name>
-  </type>
-  <name>setRootPath</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>newPath</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>rootPath</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QModelIndex</name>
-  </type>
-  <name>index</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>path</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>column</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QModelIndex</name>
-  </type>
-  <name>index</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>row</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>column</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QModelIndex</name>&amp;</type>
-    <name>parent</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_QMODELINDEX</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>filePath</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QModelIndex</name>&amp;</type>
-      <name>index</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setFilter</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>QDir</name>::
-        <name>Filters</name></name>
-      </type>
-      <name>filters</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isDir</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QModelIndex</name>&amp;</type>
-      <name>index</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>setHeaderData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>section</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>Qt</name>::
-        <name>Orientation</name></name>
-      </type>
-      <name>orientation</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>role</name>=
-    <init>
-      <expr>
-        <name>
-        <name>Qt</name>::
-        <name>EditRole</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>setHeaderData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>section</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>Qt</name>::
-        <name>Orientation</name></name>
-      </type>
-      <name>orientation</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>role</name>=
-    <init>
-      <expr>
-        <name>
-        <name>Qt</name>::
-        <name>EditRole</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>int</name>
-  </type>
-  <name>rowCount</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QModelIndex</name>&amp;</type>
-    <name>parent</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_QMODELINDEX</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setIconProvider</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QFileIconProvider</name>*</type>
-      <name>provider</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setNameFilter</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>filter</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setNameFilters</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QStringList</name>&amp;</type>
-      <name>filters</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setNameFilterDisables</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>enable</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>setItemData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QModelIndex</name>&amp;</type>
-      <name>index</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>int</name>
-      </argument>, 
-      <argument>
-        <name>QVariant</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>roles</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>setItemData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QModelIndex</name>&amp;</type>
-      <name>index</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>Qt</name>::
-        <name>ItemDataRole</name></name>
-      </type>
-      <name>role</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>setItemData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QModelIndex</name>&amp;</type>
-      <name>index</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>Qt</name>::
-        <name>ItemDataRole</name></name>
-      </type>
-      <name>role</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QColor</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>, 
-    <argument>
-      <name>QVariant</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>itemData</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QModelIndex</name>&amp;</type>
-      <name>index</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>canFetchMore</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QModelIndex</name>&amp;</type>
-      <name>parent</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>fetchMore</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QModelIndex</name>&amp;</type>
-      <name>parent</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QVariant</name>
-  </type>
-  <name>data</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QModelIndex</name>&amp;</type>
-      <name>index</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>role</name>=
-    <init>
-      <expr>
-        <name>
-        <name>Qt</name>::
-        <name>DisplayRole</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>removeRow</name>
-    <argument_list>(
-    <argument>
-      <expr>
-        <name>int</name>
-        <name>row</name>
-      </expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QModelIndex</name>&amp; 
-      <name>parent</name>= 
-      <call>
-        <name>QModelIndex</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
-  <comment type="line">//virtual Qt::ItemFlags flags(const
-  QModelIndex &amp; index)
-  const;</comment></public>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RFileSystemModel*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
-  <comment type="block">/* RFILESYSTEMMODEL_H_ */</comment>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./gui" filename="RFileSystemModel.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RFILESYSTEMMODEL_H_</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RFILESYSTEMMODEL_H_</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFileSystemModel&gt;</cpp:file></cpp:include>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QMODELINDEX</name> <name>QModelIndex</name>()</cpp:define>
+
+<comment type="block">/**
+ * \scriptable
+ * \ingroup gui
+ */</comment>
+<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RFileSystemModel</name><super>: <specifier>public</specifier> <name>QFileSystemModel</name></super> <block>{<private type="default">
+
+<macro><name>Q_OBJECT</name></macro>
+
+</private><public>public:
+    <constructor_decl><name>RFileSystemModel</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>parent</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
+
+    <function_decl><type><name>QModelIndex</name></type> <name>setRootPath</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>newPath</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>rootPath</name> <parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QModelIndex</name></type> <name>index</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>path</name></decl></param>, <param><decl><type><name>int</name></type> <name>column</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QModelIndex</name></type> <name>index</name><parameter_list>(<param><decl><type><name>int</name></type> <name>row</name></decl></param>, <param><decl><type><name>int</name></type> <name>column</name></decl></param>, <param><decl><type><name>const</name> <name>QModelIndex</name> &amp;</type> <name>parent</name> =<init>
+            <expr><name>RDEFAULT_QMODELINDEX</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>filePath</name><parameter_list>(<param><decl><type><name>const</name> <name>QModelIndex</name>&amp;</type> <name>index</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setFilter</name><parameter_list>(<param><decl><type><name><name>QDir</name>::<name>Filters</name></name></type> <name>filters</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isDir</name><parameter_list>(<param><decl><type><name>const</name> <name>QModelIndex</name>&amp;</type> <name>index</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>setHeaderData</name><parameter_list>(<param><decl><type><name>int</name></type> <name>section</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>Orientation</name></name></type> <name>orientation</name></decl></param>,
+            <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>int</name></type> <name>role</name> =<init> <expr><name><name>Qt</name>::<name>EditRole</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>setHeaderData</name><parameter_list>(<param><decl><type><name>int</name></type> <name>section</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>Orientation</name></name></type> <name>orientation</name></decl></param>,
+            <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>int</name></type> <name>role</name> =<init> <expr><name><name>Qt</name>::<name>EditRole</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>rowCount</name><parameter_list>(<param><decl><type><name>const</name> <name>QModelIndex</name> &amp;</type> <name>parent</name> =<init> <expr><name>RDEFAULT_QMODELINDEX</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setIconProvider</name><parameter_list>(<param><decl><type><name>QFileIconProvider</name>*</type> <name>provider</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setNameFilter</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>filter</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setNameFilters</name><parameter_list>(<param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>filters</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setNameFilterDisables</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>enable</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>setItemData</name><parameter_list>(<param><decl><type><name>const</name> <name>QModelIndex</name>&amp;</type> <name>index</name></decl></param>,
+            <param><decl><type><name>const</name> <name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QVariant</name></argument>&gt;</argument_list></name>&amp;</type> <name>roles</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>setItemData</name><parameter_list>(<param><decl><type><name>const</name> <name>QModelIndex</name>&amp;</type> <name>index</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>ItemDataRole</name></name></type> <name>role</name></decl></param>,
+            <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>value</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>setItemData</name><parameter_list>(<param><decl><type><name>const</name> <name>QModelIndex</name>&amp;</type> <name>index</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>ItemDataRole</name></name></type> <name>role</name></decl></param>,
+            <param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>value</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QVariant</name></argument>&gt;</argument_list></name></type> <name>itemData</name><parameter_list>(<param><decl><type><name>const</name> <name>QModelIndex</name> &amp;</type> <name>index</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>canFetchMore</name><parameter_list>(<param><decl><type><name>const</name> <name>QModelIndex</name> &amp;</type> <name>parent</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>fetchMore</name><parameter_list>(<param><decl><type><name>const</name> <name>QModelIndex</name> &amp;</type> <name>parent</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QVariant</name></type> <name>data</name><parameter_list>(<param><decl><type><name>const</name> <name>QModelIndex</name> &amp;</type> <name>index</name></decl></param>, <param><decl><type><name>int</name></type> <name>role</name> =<init> <expr><name><name>Qt</name>::<name>DisplayRole</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <decl_stmt><decl><type><name>bool</name></type> <name>removeRow</name><argument_list>(<argument><expr><name>int</name> <name>row</name></expr></argument>, <argument><expr><name>const</name> <name>QModelIndex</name> &amp; <name>parent</name> = <call><name>QModelIndex</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <comment type="line">//virtual Qt::ItemFlags flags(const QModelIndex &amp; index) const;</comment>
+</public>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RFileSystemModel*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif> <comment type="block">/* RFILESYSTEMMODEL_H_ */</comment>
 </unit>

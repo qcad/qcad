@@ -1,665 +1,121 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core/math" filename="RCircle.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RCIRCLE_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RCIRCLE_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"../core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RShape.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RVector.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RBox</name>;</class_decl>
-  <comment type="block">/** * Low-level mathematical representation
-  of a circle. * * \ingroup math * \scriptable *
-  \sharedPointerSupport * \copyable * \hasStreamOperator
-  */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RCircle</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RShape</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RCircle</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RCircle</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>cx</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>cy</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>const</name>
-        <name>double</name>
-      </type>
-      <name>radius</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RCircle</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>center</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>const</name>
-        <name>double</name>
-      </type>
-      <name>radius</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RCircle</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function>
-    <type>
-    <name>virtual</name>
-    <name>RCircle</name>*</type>
-    <name>clone</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>new 
-    <call>
-      <name>RCircle</name>
-      <argument_list>(
-      <argument>
-        <expr>*
-        <name>this</name></expr>
-      </argument>)</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RCircle</name>
-  </type>
-  <name>createFrom2Points</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>p1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>p2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RCircle</name>
-  </type>
-  <name>createFrom3Points</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>p1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>p2</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>p3</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isValid</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>center</name>.
-    <call>
-      <name>isValid</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>to2D</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RBox</name>
-  </type>
-  <name>getBoundingBox</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>double</name>
-  </type>
-  <name>getLength</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getEndPoints</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getMiddlePoints</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getCenterPoints</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getPointsWithDistanceToEnd</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>distance</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>From</name></name>
-    </type>
-    <name>from</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>FromAny</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>double</name>
-  </type>
-  <name>getAngleAt</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>distance</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>From</name></name>
-    </type>
-    <name>from</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>FromStart</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RVector</name>
-  </type>
-  <name>getVectorTo</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>point</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>limited</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>strictRange</name>=
-    <init>
-      <expr>
-        <name>RMAXDOUBLE</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getCenter</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCenter</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>vector</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getRadius</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setRadius</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>radius</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getDiameter</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setDiameter</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>d</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getCircumference</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCircumference</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>c</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getArea</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setArea</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>contains</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>p</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="line">//bool touchesCircleInternally(const
-  RCircle&amp; other) const;</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>move</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>offset</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>rotate</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>rotation</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RVector</name>&amp;</type>
-    <name>center</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RVECTOR</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>scale</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>scaleFactors</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RVector</name>&amp;</type>
-    <name>center</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_RVECTOR</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>mirror</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLine</name>&amp;</type>
-      <name>axis</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>flipHorizontal</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>flipVertical</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RShape</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getTransformed</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QTransform</name>&amp;</type>
-      <name>transform</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>print</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QDebug</name>
-      </type>
-      <name>dbg</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl></protected>
-  <public>public: 
-  <comment type="block">/** * \getter{getCenter} *
-  \setter{setCenter} */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>center</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * \getter{getRadius} *
-  \setter{setRadius} */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>radius</name>
-  </decl>;</decl_stmt></public>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>const RCircle*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RCircle*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RCircle</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;RCircle&gt;</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;RCircle&gt;*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core/math" filename="RCircle.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RCIRCLE_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RCIRCLE_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RShape.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RBox</name>;</class_decl>
+
+<comment type="block">/**
+ * Low-level mathematical representation of a circle.
+ *
+ * \ingroup math
+ * \scriptable
+ * \sharedPointerSupport
+ * \copyable
+ * \hasStreamOperator
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RCircle</name><super>: <specifier>public</specifier> <name>RShape</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor_decl><name>RCircle</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RCircle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>cx</name></decl></param>, <param><decl><type><name>double</name></type> <name>cy</name></decl></param>, <param><decl><type><name>const</name> <name>double</name></type> <name>radius</name></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RCircle</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>, <param><decl><type><name>const</name> <name>double</name></type> <name>radius</name></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RCircle</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function><type><name>virtual</name> <name>RCircle</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>new <call><name>RCircle</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>static</name> <name>RCircle</name></type> <name>createFrom2Points</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p2</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RCircle</name></type> <name>createFrom3Points</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p2</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p3</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>center</name>.<call><name>isValid</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>to2D</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>RBox</name></type> <name>getBoundingBox</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>double</name></type> <name>getLength</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getEndPoints</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getMiddlePoints</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getCenterPoints</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getPointsWithDistanceToEnd</name><parameter_list>(
+        <param><decl><type><name>double</name></type> <name>distance</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>From</name></name></type> <name>from</name> =<init> <expr><name><name>RS</name>::<name>FromAny</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>double</name></type> <name>getAngleAt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>distance</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>From</name></name></type> <name>from</name> =<init> <expr><name><name>RS</name>::<name>FromStart</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getVectorTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>,
+            <param><decl><type><name>bool</name></type> <name>limited</name> =<init> <expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>strictRange</name> =<init> <expr><name>RMAXDOUBLE</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>getCenter</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCenter</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>vector</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getRadius</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setRadius</name><parameter_list>(<param><decl><type><name>double</name></type> <name>radius</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>double</name></type> <name>getDiameter</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDiameter</name><parameter_list>(<param><decl><type><name>double</name></type> <name>d</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getCircumference</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCircumference</name><parameter_list>(<param><decl><type><name>double</name></type> <name>c</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getArea</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setArea</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>bool</name></type> <name>contains</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <comment type="line">//bool touchesCircleInternally(const RCircle&amp; other) const;</comment>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>move</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>rotate</name><parameter_list>(<param><decl><type><name>double</name></type> <name>rotation</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name> =<init> <expr><name>RDEFAULT_RVECTOR</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>scale</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>scaleFactors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name> =<init> <expr><name>RDEFAULT_RVECTOR</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>mirror</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>axis</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>flipHorizontal</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>flipVertical</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>getTransformed</name><parameter_list>(<param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>transform</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</public><protected>protected:
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</protected><public>public:
+    <comment type="block">/**
+     * \getter{getCenter}
+     * \setter{setCenter}
+     */</comment>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>center</name></decl>;</decl_stmt>
+    <comment type="block">/**
+     * \getter{getRadius}
+     * \setter{setRadius}
+     */</comment>
+    <decl_stmt><decl><type><name>double</name></type> <name>radius</name></decl>;</decl_stmt>
+</public>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const RCircle*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RCircle*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RCircle</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RCircle&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RCircle&gt;*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

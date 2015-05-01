@@ -1,332 +1,96 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RResourceList.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RRESOURCELIST_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RRESOURCELIST_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QFileInfo&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RS.h"</cpp:file></cpp:include>
-  <comment type="block">/** * A global list of loadable resources
-  (fonts, hatch patterns, line types, ..). * * \ingroup core
-  */</comment>
-  <template>template 
-  <parameter_list>&lt;
-  <param>
-    <type>class</type>
-    <name>T</name>
-  </param>&gt;</parameter_list>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RResourceList</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <comment type="line">// void init() {</comment>
-  <comment type="line">// }</comment>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>uninit</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <function_decl>
-    <type>
-      <name>QMapIterator
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-      <name>T</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>it</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>resMap</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</function_decl>
-    <while>while 
-    <condition>(
-    <expr>
-    <name>it</name>.
-    <call>
-      <name>hasNext</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>it</name>.
-    <call>
-      <name>next</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</expr_stmt>
-    <expr_stmt>
-    <expr>delete 
-    <name>it</name>.
-    <call>
-      <name>value</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</expr_stmt>}</block></while>
-    <expr_stmt>
-    <expr>
-    <name>resMap</name>.
-    <call>
-      <name>clear</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <comment type="block">/** * \return List of all available
-  resource names. */</comment>
-  <function>
-    <type>
-      <name>QStringList</name>
-    </type>
-    <name>getNames</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>resMap</name>.
-    <call>
-      <name>keys</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return Resource with the given name
-  or an invalid resource. * The returned resource is loaded first
-  if it isn't already. */</comment>
-  <function>
-    <type>
-    <name>T</name>*</type>
-    <name>get</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>resName</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <call>
-      <name>
-      <name>RS</name>::
-      <name>mapContainsCaseInsensitive</name></name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>resMap</name>
-        </expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <name>resName</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <if>if 
-      <condition>(
-      <expr>
-        <call>
-          <name>
-          <name>RS</name>::
-          <name>mapContainsCaseInsensitive</name></name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>resSubstitutionMap</name>
-            </expr>
-          </argument>, 
-          <argument>
-            <expr>
-              <name>resName</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>)</condition>
-      <then>
-        <block>{ 
-        <return>return 
-        <expr>
-          <call>
-            <name>get</name>
-            <argument_list>(
-            <argument>
-              <expr>
-              <name>resSubstitutionMap</name>.
-              <call>
-                <name>value</name>
-                <argument_list>(
-                <argument>
-                  <expr>
-                    <name>resName</name>
-                  </expr>
-                </argument>)</argument_list>
-              </call></expr>
-            </argument>)</argument_list>
-          </call>
-        </expr>;</return>}</block>
-      </then></if>
-      <return>return 
-      <expr>
-        <name>NULL</name>
-      </expr>;</return>}</block>
-    </then></if>
-    <decl_stmt>
-    <decl>
-    <type>
-    <name>T</name>*</type>
-    <name>res</name>=
-    <init>
-      <expr>
-        <call>
-          <name>
-          <name>RS</name>::
-          <name>mapValueCaseInsensitive</name></name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>resMap</name>
-            </expr>
-          </argument>, 
-          <argument>
-            <expr>
-              <name>resName</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>res</name>==
-    <name>NULL</name></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-        <call>
-          <name>qWarning</name>
-          <argument_list>(
-          <argument>
-            <expr>"RResourceList::get: list contains NULL
-            resource."</expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>;</expr_stmt>
-      <constructor_decl>
-      <name>Q_ASSERT</name>
-      <parameter_list>(
-      <param>
-        <decl>
-          <type>
-            <name>false</name>
-          </type>
-        </decl>
-      </param>)</parameter_list>;</constructor_decl>
-      <return>return 
-      <expr>
-        <name>NULL</name>
-      </expr>;</return>}</block>
-    </then></if>
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>res</name>-&gt;
-    <call>
-      <name>isLoaded</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-      <name>res</name>-&gt;
-      <call>
-        <name>load</name>
-        <argument_list>()</argument_list>
-      </call></expr>;</expr_stmt>}</block>
-    </then></if>
-    <return>return 
-    <expr>
-      <name>res</name>
-    </expr>;</return>}</block>
-  </function></public>
-  <public>public: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-      <name>T</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>resMap</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-        <name>QString</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>resSubstitutionMap</name>
-  </decl>;</decl_stmt></public>}</block>;</class></template>
-  <comment type="line">//template &lt;class T&gt; QMap&lt;QString,
-  T*&gt; RResourceList&lt;T&gt;::resMap;</comment>
-  <comment type="line">//template &lt;class T&gt; QMap&lt;QString,
-  QString&gt; RResourceList&lt;T&gt;::resSubstitutionMap;</comment>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RResourceList.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RRESOURCELIST_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RRESOURCELIST_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFileInfo&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * A global list of loadable resources (fonts, hatch patterns, line types, ..).
+ *
+ * \ingroup core
+ */</comment>
+<template>template <parameter_list>&lt;<param><type>class</type> <name>T</name></param>&gt;</parameter_list>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RResourceList</name> <block>{<private type="default">
+</private><public>public:
+<comment type="line">//    void init() {</comment>
+<comment type="line">//    }</comment>
+
+    <function><type><name>void</name></type> <name>uninit</name><parameter_list>()</parameter_list> <block>{
+        <function_decl><type><name>QMapIterator<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>T</name>*</argument>&gt;</argument_list></name></type> <name>it</name><parameter_list>(<param><decl><type><name>resMap</name></type></decl></param>)</parameter_list>;</function_decl>
+
+        <while>while <condition>(<expr><name>it</name>.<call><name>hasNext</name><argument_list>()</argument_list></call></expr>)</condition> <block>{
+            <expr_stmt><expr><name>it</name>.<call><name>next</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+            <expr_stmt><expr>delete <name>it</name>.<call><name>value</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        }</block></while>
+
+        <expr_stmt><expr><name>resMap</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return List of all available resource names.
+     */</comment>
+    <function><type><name>QStringList</name></type> <name>getNames</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>resMap</name>.<call><name>keys</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return Resource with the given name or an invalid resource.
+     * The returned resource is loaded first if it isn't already.
+     */</comment>
+    <function><type><name>T</name>*</type> <name>get</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>resName</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr>!<call><name><name>RS</name>::<name>mapContainsCaseInsensitive</name></name><argument_list>(<argument><expr><name>resMap</name></expr></argument>, <argument><expr><name>resName</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+            <if>if <condition>(<expr><call><name><name>RS</name>::<name>mapContainsCaseInsensitive</name></name><argument_list>(<argument><expr><name>resSubstitutionMap</name></expr></argument>, <argument><expr><name>resName</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+                <return>return <expr><call><name>get</name><argument_list>(<argument><expr><name>resSubstitutionMap</name>.<call><name>value</name><argument_list>(<argument><expr><name>resName</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+            }</block></then></if>
+            <return>return <expr><name>NULL</name></expr>;</return>
+        }</block></then></if>
+
+        <decl_stmt><decl><type><name>T</name>*</type> <name>res</name> =<init> <expr><call><name><name>RS</name>::<name>mapValueCaseInsensitive</name></name><argument_list>(<argument><expr><name>resMap</name></expr></argument>, <argument><expr><name>resName</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <if>if <condition>(<expr><name>res</name>==<name>NULL</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><call><name>qWarning</name><argument_list>(<argument><expr>"RResourceList::get: list contains NULL resource."</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <constructor_decl><name>Q_ASSERT</name><parameter_list>(<param><decl><type><name>false</name></type></decl></param>)</parameter_list>;</constructor_decl>
+            <return>return <expr><name>NULL</name></expr>;</return>
+        }</block></then></if>
+
+        <if>if <condition>(<expr>!<name>res</name>-&gt;<call><name>isLoaded</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>res</name>-&gt;<call><name>load</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+
+        <return>return <expr><name>res</name></expr>;</return>
+    }</block></function>
+
+</public><public>public:
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>T</name>*</argument>&gt;</argument_list></name></type> <name>resMap</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>resSubstitutionMap</name></decl>;</decl_stmt>
+</public>}</block>;</class></template>
+
+<comment type="line">//template &lt;class T&gt; QMap&lt;QString, T*&gt; RResourceList&lt;T&gt;::resMap;</comment>
+<comment type="line">//template &lt;class T&gt; QMap&lt;QString, QString&gt; RResourceList&lt;T&gt;::resSubstitutionMap;</comment>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

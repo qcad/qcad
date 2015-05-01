@@ -1,884 +1,173 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./gui" filename="RMainWindowQt.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RMAINWINDOWQT_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RMAINWINDOWQT_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMainWindow&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QKeyEvent&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RCloseCurrentEvent.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RMainWindow.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>QMdiArea</name>;</class_decl>
-  <class_decl>class 
-  <name>QMdiSubWindow</name>;</class_decl>
-  <class_decl>class 
-  <name>RBlockListener</name>;</class_decl>
-  <class_decl>class 
-  <name>RCoordinateListener</name>;</class_decl>
-  <class_decl>class 
-  <name>RDocument</name>;</class_decl>
-  <class_decl>class 
-  <name>RDocumentInterface</name>;</class_decl>
-  <class_decl>class 
-  <name>RFocusListener</name>;</class_decl>
-  <class_decl>class 
-  <name>RGraphicsView</name>;</class_decl>
-  <class_decl>class 
-  <name>RLayerListener</name>;</class_decl>
-  <class_decl>class 
-  <name>RMdiArea</name>;</class_decl>
-  <class_decl>class 
-  <name>RMdiChildQt</name>;</class_decl>
-  <class_decl>class 
-  <name>RNewDocumentListener</name>;</class_decl>
-  <class_decl>class 
-  <name>RPenListener</name>;</class_decl>
-  <class_decl>class 
-  <name>RPropertyListener</name>;</class_decl>
-  <class_decl>class 
-  <name>RSelectionListener</name>;</class_decl>
-  <class_decl>class 
-  <name>RSnapListener</name>;</class_decl>
-  <class_decl>class 
-  <name>RUcsListener</name>;</class_decl>
-  <class_decl>class 
-  <name>RViewFocusListener</name>;</class_decl>
-  <class_decl>class 
-  <name>RViewListener</name>;</class_decl>
-  <comment type="block">/** * \brief Base class for a Qt based MDI
-  main application window. * * \ingroup gui * * \scriptable
-  */</comment>
-  <class>class 
-  <macro>
-    <name>QCADGUI_EXPORT</name>
-  </macro>
-  <name>RMainWindowQt</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QMainWindow</name>, 
-  <specifier>public</specifier>
-  <name>RMainWindow</name></super>
-  <block>{
-  <private type="default">
-    <macro>
-      <name>Q_OBJECT</name>
-    </macro>
-  </private>
-  <public>public: 
-  <constructor_decl>
-  <name>RMainWindowQt</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>QWidget</name>*</type>
-    <name>parent</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>hasMdiArea</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RMainWindowQt</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-  <name>static</name>
-  <name>RMainWindowQt</name>*</type>
-  <name>getMainWindow</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>int</name>
-  </type>
-  <name>getWidth</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>int</name>
-  </type>
-  <name>getHeight</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>int</name>
-  </type>
-  <name>getPositionX</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>int</name>
-  </type>
-  <name>getPositionY</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>resize</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>width</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>height</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>move</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>x</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>y</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>virtual</name>
-  <name>RDocument</name>*</type>
-  <name>getDocument</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>virtual</name>
-  <name>RDocumentInterface</name>*</type>
-  <name>getDocumentInterface</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>handleUserMessage</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>handleUserInfo</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>handleUserWarning</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>messageBox</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>handleUserCommand</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>postSelectionChangedEvent</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>postTransactionEvent</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>RTransaction</name>&amp;</type>
-      <name>t</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>onlyChanges</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>EntityType</name></name>
-    </type>
-    <name>entityTypeFilter</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>EntityAll</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>postCloseEvent</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RMdiChildQt</name>*</type>
-  <name>getMdiChild</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>QTabBar</name>*</type>
-  <name>getTabBar</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RMdiArea</name>*</type>
-  <name>getMdiArea</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>cancelProgress</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setProgress</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>value</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setProgressEnd</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setProgressText</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QString</name>&amp;</type>
-    <name>text</name>=
-    <init>
-      <expr>""</expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setCommandPrompt</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QString</name>&amp;</type>
-    <name>text</name>=
-    <init>
-      <expr>""</expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setLeftMouseTip</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QString</name>&amp;</type>
-    <name>text</name>=
-    <init>
-      <expr>""</expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setRightMouseTip</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QString</name>&amp;</type>
-    <name>text</name>=
-    <init>
-      <expr>""</expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>escapeEvent</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setGraphicsViewCursor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QCursor</name>&amp;</type>
-      <name>cursor</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>readSettings</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>writeSettings</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>virtual</name>
-  <name>QWidget</name>*</type>
-  <name>getChildWidget</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>name</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <public>public slots: 
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>quit</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>currentTabChanged</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>index</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>subWindowActivated</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QMdiSubWindow</name>*</type>
-      <name>sw</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">//void objectDestroyed(QObject
-  *obj);</comment>
-  <label>
-  <name>signals</name>:</label>
-  <comment type="block">/** * Emmitted when the command prompt is
-  requested to change. */</comment>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>commandPrompt</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>text</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * Emmitted when the left mouse button
-  tip is requested to change. */</comment>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>leftMouseTip</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * Emmitted when the right mouse button
-  tip is requested to change. */</comment>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>rightMouseTip</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>progress</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>value</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>progressEnd</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>progressText</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>label</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>progressCanceled</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>userMessage</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>userInfo</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>userWarning</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>messageBox</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>userCommand</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>escape</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>drop</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QDropEvent</name>*</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>dragEnter</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QDragEnterEvent</name>*</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>resumedTab</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RMdiChildQt</name>*</type>
-      <name>mdiChild</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>closeRequested</name>
-  <parameter_list>()</parameter_list>;</function_decl></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>closeEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QCloseEvent</name>*</type>
-      <name>e</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>dropEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QDropEvent</name>*</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>dragEnterEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QDragEnterEvent</name>*</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>event</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QEvent</name>*</type>
-      <name>e</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></protected>
-  <protected>protected slots: 
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>updateGuiActions</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>QMdiSubWindow</name>*</type>
-    <name>mdiChild</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>initGuiActions</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>updateScenes</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QMdiSubWindow</name>*</type>
-      <name>mdiChild</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>notifyListenersSlot</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QMdiSubWindow</name>*</type>
-      <name>mdiChild</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>suspendAndResume</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QMdiSubWindow</name>*</type>
-      <name>mdiChild</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></protected>
-  <protected>protected: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RMdiArea</name>*</type>
-    <name>mdiArea</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//private:</comment>
-  <comment type="line">// bool
-  objectWasDestroyed;</comment></protected>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RMainWindowQt*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./gui" filename="RMainWindowQt.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RMAINWINDOWQT_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RMAINWINDOWQT_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMainWindow&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QKeyEvent&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCloseCurrentEvent.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMainWindow.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>QMdiArea</name>;</class_decl>
+<class_decl>class <name>QMdiSubWindow</name>;</class_decl>
+
+<class_decl>class <name>RBlockListener</name>;</class_decl>
+<class_decl>class <name>RCoordinateListener</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
+<class_decl>class <name>RFocusListener</name>;</class_decl>
+<class_decl>class <name>RGraphicsView</name>;</class_decl>
+<class_decl>class <name>RLayerListener</name>;</class_decl>
+<class_decl>class <name>RMdiArea</name>;</class_decl>
+<class_decl>class <name>RMdiChildQt</name>;</class_decl>
+<class_decl>class <name>RNewDocumentListener</name>;</class_decl>
+<class_decl>class <name>RPenListener</name>;</class_decl>
+<class_decl>class <name>RPropertyListener</name>;</class_decl>
+<class_decl>class <name>RSelectionListener</name>;</class_decl>
+<class_decl>class <name>RSnapListener</name>;</class_decl>
+<class_decl>class <name>RUcsListener</name>;</class_decl>
+<class_decl>class <name>RViewFocusListener</name>;</class_decl>
+<class_decl>class <name>RViewListener</name>;</class_decl>
+
+<comment type="block">/**
+ * \brief Base class for a Qt based MDI main application window.
+ *
+ * \ingroup gui
+ *
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RMainWindowQt</name><super>: <specifier>public</specifier> <name>QMainWindow</name>, <specifier>public</specifier> <name>RMainWindow</name></super> <block>{<private type="default">
+<macro><name>Q_OBJECT</name></macro>
+
+</private><public>public:
+    <constructor_decl><name>RMainWindowQt</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name> =<init> <expr>0</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>hasMdiArea</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RMainWindowQt</name><parameter_list>()</parameter_list>;</destructor_decl>
+    <function_decl><type><name>static</name> <name>RMainWindowQt</name>*</type> <name>getMainWindow</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>int</name></type> <name>getWidth</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>int</name></type> <name>getHeight</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>int</name></type> <name>getPositionX</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>int</name></type> <name>getPositionY</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>resize</name><parameter_list>(<param><decl><type><name>int</name></type> <name>width</name></decl></param>, <param><decl><type><name>int</name></type> <name>height</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>move</name><parameter_list>(<param><decl><type><name>int</name></type> <name>x</name></decl></param>, <param><decl><type><name>int</name></type> <name>y</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RDocumentInterface</name>*</type> <name>getDocumentInterface</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserMessage</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserInfo</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserWarning</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>messageBox</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserCommand</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>postSelectionChangedEvent</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>postTransactionEvent</name><parameter_list>(
+        <param><decl><type><name>RTransaction</name>&amp;</type> <name>t</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>onlyChanges</name>=<init><expr><name>false</name></expr></init></decl></param>,
+        <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>
+    )</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>postCloseEvent</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>RMdiChildQt</name>*</type> <name>getMdiChild</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>QTabBar</name>*</type> <name>getTabBar</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RMdiArea</name>*</type> <name>getMdiArea</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>cancelProgress</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setProgress</name><parameter_list>(<param><decl><type><name>int</name></type> <name>value</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setProgressEnd</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setProgressText</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name> =<init> <expr>""</expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setCommandPrompt</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name> =<init> <expr>""</expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setLeftMouseTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name> =<init> <expr>""</expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setRightMouseTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name> =<init> <expr>""</expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>escapeEvent</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setGraphicsViewCursor</name><parameter_list>(<param><decl><type><name>const</name> <name>QCursor</name>&amp;</type> <name>cursor</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>readSettings</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>writeSettings</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QWidget</name>*</type> <name>getChildWidget</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><public>public slots:
+    <function_decl><type><name>void</name></type> <name>quit</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>currentTabChanged</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>subWindowActivated</name><parameter_list>(<param><decl><type><name>QMdiSubWindow</name>*</type> <name>sw</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="line">//void objectDestroyed(QObject *obj);</comment>
+
+<label><name>signals</name>:</label>
+    <comment type="block">/**
+     * Emmitted when the command prompt is requested to change.
+     */</comment>
+    <function_decl><type><name>void</name></type> <name>commandPrompt</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Emmitted when the left mouse button tip is requested to change.
+     */</comment>
+    <function_decl><type><name>void</name></type> <name>leftMouseTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Emmitted when the right mouse button tip is requested to change.
+     */</comment>
+    <function_decl><type><name>void</name></type> <name>rightMouseTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>progress</name><parameter_list>(<param><decl><type><name>int</name></type> <name>value</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>progressEnd</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>progressText</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>label</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>progressCanceled</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>userMessage</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>userInfo</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>userWarning</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>messageBox</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>userCommand</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>escape</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>drop</name><parameter_list>(<param><decl><type><name>QDropEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>dragEnter</name><parameter_list>(<param><decl><type><name>QDragEnterEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>resumedTab</name><parameter_list>(<param><decl><type><name>RMdiChildQt</name>*</type> <name>mdiChild</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>closeRequested</name><parameter_list>()</parameter_list>;</function_decl>
+
+</public><protected>protected:
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>closeEvent</name><parameter_list>(<param><decl><type><name>QCloseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>dropEvent</name><parameter_list>(<param><decl><type><name>QDropEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>dragEnterEvent</name><parameter_list>(<param><decl><type><name>QDragEnterEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>event</name><parameter_list>(<param><decl><type><name>QEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+
+</protected><protected>protected slots:
+    <function_decl><type><name>void</name></type> <name>updateGuiActions</name><parameter_list>(<param><decl><type><name>QMdiSubWindow</name>*</type> <name>mdiChild</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>initGuiActions</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>updateScenes</name><parameter_list>(<param><decl><type><name>QMdiSubWindow</name>*</type> <name>mdiChild</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>notifyListenersSlot</name><parameter_list>(<param><decl><type><name>QMdiSubWindow</name>*</type> <name>mdiChild</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>suspendAndResume</name><parameter_list>(<param><decl><type><name>QMdiSubWindow</name>*</type> <name>mdiChild</name></decl></param>)</parameter_list>;</function_decl>
+
+</protected><protected>protected:
+    <decl_stmt><decl><type><name>RMdiArea</name>*</type> <name>mdiArea</name></decl>;</decl_stmt>
+
+<comment type="line">//private:</comment>
+<comment type="line">//    bool objectWasDestroyed;</comment>
+</protected>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RMainWindowQt*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

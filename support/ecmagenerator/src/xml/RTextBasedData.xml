@@ -11,7 +11,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant>
         <arg type="RDocument *" typeName="RDocument *"
-        name="document" hasDefault="true" default=" NULL"
+        name="document" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
       <variant>
@@ -58,7 +58,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RBox" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="ignoreEmpty"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getWidth" cppName="getWidth" specifier="public"
@@ -129,11 +129,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="range"
         hasDefault="true" default="0.0" isConst="false" />
         <arg type="bool" typeName="bool" name="draft"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="double" typeName="double" name="strictRange"
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
       </variant>
@@ -410,7 +410,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="escapeUnicode"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getPlainText" cppName="getPlainText"
@@ -423,7 +423,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="escapeUnicode"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="escapeUnicode" cppName="escapeUnicode"
@@ -453,7 +453,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RPainterPath &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="draft"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getShapes" cppName="getShapes" specifier="public"
@@ -463,7 +463,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
         <arg type="bool" typeName="bool" name="ignoreComplex"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getExploded" cppName="getExploded"
@@ -482,7 +482,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="range"
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
         <arg type="bool" typeName="bool" name="ignoreComplex"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getClosestPointOnEntity"

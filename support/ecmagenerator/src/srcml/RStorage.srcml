@@ -1,3569 +1,660 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RStorage.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RSTORAGE_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RSTORAGE_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RBlock.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RBlockReferenceEntity.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RBox.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocumentVariables.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"REntity.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RLayer.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RLinetype.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RLinetypePattern.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RModifiedListener.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RNonCopyable.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RRequireHeap.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RTransaction.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RUcs.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RView.h"</cpp:file></cpp:include>
-  <comment type="block">/** * This is the abstract base class for
-  all storage implementations. * A storage is used to store
-  documents (entities, layers, blocks, * transactions) in memory or
-  on disk. Every \ref RDocument "document" * is backed by a storage
-  object. * * A storage implementation is available in the \ref
-  qcaddbstorage. * * \ingroup core * \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RStorage</name>
-  <super>: 
-  <name>RNonCopyable</name>, 
-  <specifier>public</specifier>
-  <name>RRequireHeap</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RStorage</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RStorage</name>
-    <parameter_list>()</parameter_list>
-    <block>{ }</block>
-  </destructor>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setDocument</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RDocument</name>*</type>
-        <name>doc</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>document</name>= 
-    <name>doc</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-    <name>RDocument</name>*</type>
-    <name>getDocument</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>document</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * Resets this storage to its initial,
-  empty state. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>clear</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="block">/** * Starts a new transaction. * This
-  function is called before something is stored in the * storage.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>beginTransaction</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Commits the current transaction. *
-  This function is called after something has been stored in the *
-  storage. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>commitTransaction</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Rolls the current transaction back in
-  order to cancel it. * This function should never be called under
-  normal circumstances. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>rollbackTransaction</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return Ordered list of given IDs for
-  display purposes. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>orderBackToFront</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>entityIds</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * \return A set of all object IDs of
-  the document. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>RObject</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryAllObjects</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A set of all entity IDs of
-  the document. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryAllEntities</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>undone</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>allBlocks</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>EntityType</name></name>
-    </type>
-    <name>type</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>EntityAll</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A set of all UCS IDs of the
-  document. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>RUcs</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryAllUcs</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A set of all layer IDs of the
-  document. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>RLayer</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryAllLayers</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>undone</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A set of all block IDs of the
-  document. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>RBlock</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryAllBlocks</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>undone</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A set of all view IDs of the
-  document. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>RView</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryAllViews</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>undone</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A set of all linetype IDs of
-  the document. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>RLinetype</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryAllLinetypes</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A set of all entity IDs on
-  the given layer. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryLayerEntities</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLayer</name>::
-        <name>Id</name></name>
-      </type>
-      <name>layerId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>allBlocks</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A set of all entity IDs that
-  are part of the given block. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryBlockEntities</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RBlock</name>::
-        <name>Id</name></name>
-      </type>
-      <name>blockId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A set of all block attributes
-  which are not stored in the * block definition but as separate
-  entities on the same level as * the block reference. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryChildEntities</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </type>
-      <name>parentId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>EntityType</name></name>
-    </type>
-    <name>type</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>EntityAll</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>hasChildEntities</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </type>
-      <name>parentId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A set of all block reference
-  entity IDs that reference * the given block. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryBlockReferences</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RBlock</name>::
-        <name>Id</name></name>
-      </type>
-      <name>blockId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A set of all block reference
-  entity IDs. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryAllBlockReferences</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A set of entity IDs of all
-  selected entities. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>querySelectedEntities</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A set of entity IDs of all
-  infinite entities (xlines). */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryInfiniteEntities</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RDocumentVariables</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryDocumentVariables</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RDocumentVariables</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryDocumentVariablesDirect</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A shared pointer to the
-  object with the given \c objectId * or null pointer if the object
-  is no available in this storage. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RObject</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryObject</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </type>
-      <name>objectId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RObject</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>queryObjectDirect</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RObject</name>::
-          <name>Id</name></name>
-        </type>
-        <name>objectId</name>
-      </decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>queryObject</name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <name>objectId</name>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RObject</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryObjectByHandle</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RObject</name>::
-        <name>Handle</name></name>
-      </type>
-      <name>objectHandle</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A pointer to the enitity with
-  the given \c entityId * or NULL if no such entity exists.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>REntity</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryEntity</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </type>
-      <name>entityId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>REntity</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>queryEntityDirect</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>REntity</name>::
-          <name>Id</name></name>
-        </type>
-        <name>entityId</name>
-      </decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>queryEntity</name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <name>entityId</name>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return A pointer to the UCS with the
-  given \c ucsId * or NULL if no such UCS exists. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RUcs</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryUcs</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RUcs</name>::
-        <name>Id</name></name>
-      </type>
-      <name>ucsId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RUcs</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>queryUcsDirect</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RUcs</name>::
-          <name>Id</name></name>
-        </type>
-        <name>ucsId</name>
-      </decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>queryUcs</name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <name>ucsId</name>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return A pointer to the UCS with the
-  given \c ucsName * or NULL if no such UCS exists. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RUcs</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryUcs</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>ucsName</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return A pointer to the layer with
-  the given \c layerId * or NULL if no such layer exists.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RLayer</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryLayer</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLayer</name>::
-        <name>Id</name></name>
-      </type>
-      <name>layerId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RLayer</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>queryLayerDirect</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RLayer</name>::
-          <name>Id</name></name>
-        </type>
-        <name>layerId</name>
-      </decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>queryLayer</name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <name>layerId</name>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return A pointer to the layer with
-  the given \c layerName * or NULL if no such layer exists.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RLayer</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryLayer</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>layerName</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RLayer</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>queryCurrentLayer</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>queryLayer</name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <call>
-              <name>getCurrentLayerId</name>
-              <argument_list>()</argument_list>
-            </call>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RView</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>queryCurrentView</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>queryView</name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <call>
-              <name>getCurrentViewId</name>
-              <argument_list>()</argument_list>
-            </call>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RLinetype</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryLinetypeDirect</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLinetype</name>::
-        <name>Id</name></name>
-      </type>
-      <name>linetypeId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RLinetype</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryLinetype</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLinetype</name>::
-        <name>Id</name></name>
-      </type>
-      <name>linetypeId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RLinetype</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryLinetype</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>linetypeName</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RBlock</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryBlockDirect</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RBlock</name>::
-        <name>Id</name></name>
-      </type>
-      <name>blockId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RBlock</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryBlock</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RBlock</name>::
-        <name>Id</name></name>
-      </type>
-      <name>blockId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RBlock</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryBlock</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>blockName</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RView</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryView</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RView</name>::
-        <name>Id</name></name>
-      </type>
-      <name>viewId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RView</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>queryView</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>viewName</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="line">//RTransaction setCurrentLayer(RLayer::Id
-  layerId);</comment>
-  <comment type="line">//RTransaction setCurrentLayer(const
-  QString&amp; layerName);</comment>
-  <comment type="line">//void setCurrentLayer(RTransaction&amp;
-  transaction, RLayer::Id layerId);</comment>
-  <comment type="line">//void setCurrentLayer(RTransaction&amp;
-  transaction, const QString&amp; layerName);</comment>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentLayer</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLayer</name>::
-        <name>Id</name></name>
-      </type>
-      <name>layerId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RTransaction</name>*</type>
-    <name>transaction</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentLayer</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>layerName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RTransaction</name>*</type>
-    <name>transaction</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RLayer</name>::
-    <name>Id</name></name>
-  </type>
-  <name>getCurrentLayerId</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>
-      <name>RView</name>::
-      <name>Id</name></name>
-    </type>
-    <name>getCurrentViewId</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <comment type="line">//return (RView::Id)
-    getVariable("CurrentView").toInt();</comment>
-    <return>return 
-    <expr>
-      <name>currentViewId</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setCurrentColor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RColor</name>
-  </type>
-  <name>getCurrentColor</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentLineweight</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLineweight</name>::
-        <name>Lineweight</name></name>
-      </type>
-      <name>lw</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RLineweight</name>::
-    <name>Lineweight</name></name>
-  </type>
-  <name>getCurrentLineweight</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentLinetype</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLinetype</name>::
-        <name>Id</name></name>
-      </type>
-      <name>ltId</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentLinetype</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>name</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentLinetypePattern</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLinetypePattern</name>&amp;</type>
-      <name>p</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RLinetype</name>::
-    <name>Id</name></name>
-  </type>
-  <name>getCurrentLinetypeId</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RLinetypePattern</name>
-  </type>
-  <name>getCurrentLinetypePattern</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RLinetype</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>queryCurrentLinetype</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>queryLinetype</name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <call>
-              <name>getCurrentLinetypeId</name>
-              <argument_list>()</argument_list>
-            </call>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RBlock</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>queryCurrentBlock</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>queryBlock</name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <call>
-              <name>getCurrentBlockId</name>
-              <argument_list>()</argument_list>
-            </call>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>setCurrentBlock</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RBlock</name>::
-          <name>Id</name></name>
-        </type>
-        <name>blockId</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <comment type="line">//setVariable("CurrentBlock",
-    blockId);</comment>
-    <expr_stmt>
-    <expr>
-    <name>currentBlockId</name>= 
-    <name>blockId</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setCurrentBlock</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>blockName</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>
-      <name>RBlock</name>::
-      <name>Id</name></name>
-    </type>
-    <name>id</name>=
-    <init>
-      <expr>
-        <call>
-          <name>getBlockId</name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>blockName</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>id</name>== 
-    <name>
-    <name>RBlock</name>::
-    <name>INVALID_ID</name></name></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return;</return>}</block>
-    </then></if>
-    <constructor_decl>
-    <name>setCurrentBlock</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>id</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>
-      <name>RBlock</name>::
-      <name>Id</name></name>
-    </type>
-    <name>getCurrentBlockId</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <comment type="line">//return (RBlock::Id)
-    getVariable("CurrentBlock").toInt();</comment>
-    <return>return 
-    <expr>
-      <name>currentBlockId</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setCurrentView</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RView</name>::
-          <name>Id</name></name>
-        </type>
-        <name>viewId</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <comment type="line">//setVariable("CurrentView",
-    viewId);</comment>
-    <expr_stmt>
-    <expr>
-    <name>currentViewId</name>= 
-    <name>viewId</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setCurrentView</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>viewName</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>
-      <name>RView</name>::
-      <name>Id</name></name>
-    </type>
-    <name>id</name>=
-    <init>
-      <expr>
-        <call>
-          <name>getViewId</name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>viewName</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <comment type="line">// unlike blocks and layers, the current
-    view can be invalid:</comment>
-    <constructor_decl>
-    <name>setCurrentView</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>id</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>QSharedPointer
-    <argument_list>&lt;
-    <argument>
-      <name>RDocumentVariables</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>startDocumentVariablesTransaction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RTransaction</name>*&amp;</type>
-      <name>transaction</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>bool</name>&amp;</type>
-      <name>useLocalTransaction</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>endDocumentVariablesTransaction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RTransaction</name>*</type>
-      <name>transaction</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>useLocalTransaction</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RDocumentVariables</name>
-        </argument>&gt;</argument_list></name>
-      </type>
-      <name>docVars</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setUnit</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>unit</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RTransaction</name>*</type>
-    <name>transaction</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">//void setUnit(RTransaction&amp;
-  transaction, RS::Unit unit);</comment>
-  <function_decl>
-  <type>
-    <name>
-    <name>RS</name>::
-    <name>Unit</name></name>
-  </type>
-  <name>getUnit</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setDimensionFont</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>f</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RTransaction</name>*</type>
-    <name>transaction</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QString</name>
-  </type>
-  <name>getDimensionFont</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setLinetypeScale</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>v</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RTransaction</name>*</type>
-    <name>transaction</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>double</name>
-  </type>
-  <name>getLinetypeScale</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QString</name>
-  </type>
-  <name>getBlockName</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RBlock</name>::
-        <name>Id</name></name>
-      </type>
-      <name>blockId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>QString</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getBlockNames</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RBlock</name>::
-    <name>Id</name></name>
-  </type>
-  <name>getBlockId</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>blockName</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>hasBlock</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>blockName</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QString</name>
-  </type>
-  <name>getViewName</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RView</name>::
-        <name>Id</name></name>
-      </type>
-      <name>viewId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>QString</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getViewNames</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RView</name>::
-    <name>Id</name></name>
-  </type>
-  <name>getViewId</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>viewName</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>hasView</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>viewName</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QString</name>
-  </type>
-  <name>getLayerName</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLayer</name>::
-        <name>Id</name></name>
-      </type>
-      <name>layerId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>QString</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getLayerNames</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RLayer</name>::
-    <name>Id</name></name>
-  </type>
-  <name>getLayerId</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>layerName</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>hasLayer</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>layerName</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QString</name>
-  </type>
-  <name>getLinetypeName</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLinetype</name>::
-        <name>Id</name></name>
-      </type>
-      <name>linetypeId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QString</name>
-  </type>
-  <name>getLinetypeDescription</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLinetype</name>::
-        <name>Id</name></name>
-      </type>
-      <name>linetypeId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QString</name>
-  </type>
-  <name>getLinetypeLabel</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLinetype</name>::
-        <name>Id</name></name>
-      </type>
-      <name>linetypeId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>QString</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getLinetypeNames</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RLinetypePattern</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getLinetypePatterns</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RLinetype</name>::
-    <name>Id</name></name>
-  </type>
-  <name>getLinetypeId</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>linetypeName</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>hasLinetype</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>linetypeName</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QStringList</name>
-  </type>
-  <name>getVariables</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setVariable</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>key</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>overwrite</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return The value of the given
-  variable or an invalid variant if the * variable does not exist.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QVariant</name>
-  </type>
-  <name>getVariable</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>key</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return True if the given variable
-  exists in this storage. */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>hasVariable</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>key</name>
-      </decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>QVariant</name>
-    </type>
-    <name>value</name>=
-    <init>
-      <expr>
-        <call>
-          <name>getVariable</name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>key</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <return>return 
-    <expr>
-    <name>value</name>.
-    <call>
-      <name>isValid</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setKnownVariable</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>KnownVariable</name></name>
-      </type>
-      <name>key</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RTransaction</name>*</type>
-    <name>transaction</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QVariant</name>
-  </type>
-  <name>getKnownVariable</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>KnownVariable</name></name>
-      </type>
-      <name>key</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return Number of selected entities.
-  */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>int</name>
-    </type>
-    <name>countSelectedEntities</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>querySelectedEntities</name>
-      <argument_list>()</argument_list>
-    </call>.
-    <call>
-      <name>size</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * Clears the selection status of all
-  entities. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>clearEntitySelection</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-    <type>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>*</type>
-    <name>affectedEntities</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Sets the selection status of all
-  entities. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>selectAllEntites</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>*</type>
-    <name>affectedEntities</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Selects the entity with the given ID.
-  * * \param add True to add the entity to the current selection. *
-  False to replace the current selection with the given entity. *
-  \param affected Optional pointer to an empty set of entity IDs. *
-  After the call, this set will contain all entity IDs of *
-  entities that were affected by the call. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>selectEntity</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </type>
-      <name>entityId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>add</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>*</type>
-    <name>affectedEntities</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Selects all entities with the given
-  IDs. * * \param add True to add the entities to the current
-  selection. * False to replace the current selection with the new
-  entities. * \param affected Optional pointer to an empty set of
-  entity IDs. * After the call, this set will contain all entity
-  IDs of * entities that were affected by the call. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>selectEntities</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>entityIds</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>add</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>*</type>
-    <name>affectedEntities</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Deselects the entity with the given
-  ID. * * \param affected Optional pointer to an empty set of
-  entity IDs. * After the call, this set will contain all entity
-  IDs of * entities that were affected by the call. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>deselectEntity</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </type>
-      <name>entityId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>*</type>
-    <name>affectedEntities</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Deselects all entities with the given
-  IDs. * * \param affected Optional pointer to an empty set of
-  entity IDs. * After the call, this set will contain all entity
-  IDs of * entities that were affected by the call. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>deselectEntities</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>entityIds</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>
-      <name>REntity</name>::
-      <name>Id</name></name>
-    </argument>&gt;</argument_list></name>*</type>
-    <name>affectedEntities</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>isSelected</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>REntity</name>::
-          <name>Id</name></name>
-        </type>
-        <name>entityId</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>REntity</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>e</name>=
-    <init>
-      <expr>
-        <call>
-          <name>queryEntityDirect</name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>entityId</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <return>return 
-    <expr>(!
-    <name>e</name>.
-    <call>
-      <name>isNull</name>
-      <argument_list>()</argument_list>
-    </call>&amp;&amp; 
-    <name>e</name>-&gt;
-    <call>
-      <name>isSelected</name>
-      <argument_list>()</argument_list>
-    </call>)</expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>isEntity</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RObject</name>::
-          <name>Id</name></name>
-        </type>
-        <name>objectId</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>REntity</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>e</name>=
-    <init>
-      <expr>
-        <call>
-          <name>queryEntityDirect</name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>objectId</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <return>return 
-    <expr>!
-    <name>e</name>.
-    <call>
-      <name>isNull</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>isLayerLocked</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RLayer</name>::
-          <name>Id</name></name>
-        </type>
-        <name>layerId</name>
-      </decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RLayer</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>l</name>=
-    <init>
-      <expr>
-        <call>
-          <name>queryLayerDirect</name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>layerId</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>l</name>.
-    <call>
-      <name>isNull</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <name>false</name>
-      </expr>;</return>}</block>
-    </then></if>
-    <return>return 
-    <expr>
-    <name>l</name>-&gt;
-    <call>
-      <name>isLocked</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>isLayerFrozen</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RLayer</name>::
-          <name>Id</name></name>
-        </type>
-        <name>layerId</name>
-      </decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RLayer</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>l</name>=
-    <init>
-      <expr>
-        <call>
-          <name>queryLayerDirect</name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>layerId</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>l</name>.
-    <call>
-      <name>isNull</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <name>false</name>
-      </expr>;</return>}</block>
-    </then></if>
-    <return>return 
-    <expr>
-    <name>l</name>-&gt;
-    <call>
-      <name>isFrozen</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>isBlockFrozen</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RBlock</name>::
-          <name>Id</name></name>
-        </type>
-        <name>blockId</name>
-      </decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <decl_stmt>
-    <decl>
-    <type>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RBlock</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>b</name>=
-    <init>
-      <expr>
-        <call>
-          <name>queryBlockDirect</name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>blockId</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>b</name>.
-    <call>
-      <name>isNull</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <name>false</name>
-      </expr>;</return>}</block>
-    </then></if>
-    <return>return 
-    <expr>
-    <name>b</name>-&gt;
-    <call>
-      <name>isFrozen</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setObjectId</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RObject</name>&amp;</type>
-      <name>object</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </type>
-      <name>objectId</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setObjectHandle</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RObject</name>&amp;</type>
-      <name>object</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RObject</name>::
-        <name>Handle</name></name>
-      </type>
-      <name>objectHandle</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \return True if at least one entity
-  is selected in this storage. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>hasSelection</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return The bounding box around all
-  visible entities. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RBox</name>
-  </type>
-  <name>getBoundingBox</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>ignoreHiddenLayers</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>ignoreEmpty</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RBox</name>
-  </type>
-  <name>getSelectionBox</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>removeObject</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RObject</name>
-        </argument>&gt;</argument_list></name>
-      </type>
-      <name>object</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Saves the given object to the
-  storage. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>saveObject</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RObject</name>
-        </argument>&gt;</argument_list></name>
-      </type>
-      <name>object</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>checkBlockRecursion</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>keepHandles</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Deletes the object with the given ID.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>deleteObject</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </type>
-      <name>objectId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return The ID of the last completed
-  transaction. * The default implementation reads variable
-  "LastTransaction". */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>int</name>
-    </type>
-    <name>getLastTransactionId</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>lastTransactionId</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * Sets the ID of the last created
-  transaction. This is called * when a transaction is undone or
-  redone (the last transaction * id indicates where we are in the
-  transaction stack). * The default implementation sets the
-  variable "LastTransaction". */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>setLastTransactionId</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>transactionId</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>lastTransactionId</name>= 
-    <name>transactionId</name></expr>;</expr_stmt>
-    <constructor_decl>
-    <name>setModified</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>true</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>startTransactionGroup</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>
-    lastTransactionGroup</name>++</expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>int</name>
-    </type>
-    <name>getTransactionGroup</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>lastTransactionGroup</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return The ID of the last used
-  transaction group. */</comment>
-  <comment type="line">// virtual int getLastTransactionGroup()
-  {</comment>
-  <comment type="line">// return lastTransactionGroup;</comment>
-  <comment type="line">// }</comment>
-  <comment type="block">/** * Sets the ID of the last created
-  transaction. This is called * when a transaction is undone or
-  redone (the last transaction * id indicates where we are in the
-  transaction stack). * The default implementation sets the
-  variable "LastTransaction". */</comment>
-  <comment type="line">// virtual void setLastTransactionGroup(int
-  transactionGroup) {</comment>
-  <comment type="line">// lastTransactionGroup =
-  transactionGroup;</comment>
-  <comment type="line">// setModified(true);</comment>
-  <comment type="line">// }</comment>
-  <comment type="block">/** * Saves the given transaction.
-  Transactions need to be stored * for undo / redo functionality.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>saveTransaction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RTransaction</name>&amp;</type>
-      <name>transaction</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Deletes all transactions with IDs
-  from transactionId (inclusive) * to the maximum transaction ID.
-  This is called if some transactions * have been undone and then a
-  redo is triggerd. All undone * transactions have to be deleted at
-  this point. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>deleteTransactionsFrom</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>transactionId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>resetTransactionStack</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return Transaction with the given
-  id. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>RTransaction</name>
-  </type>
-  <name>getTransaction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>transactionId</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Toggles the current undo status of
-  all given objects. * The undo status can for example be a boolean
-  value that is true * if the object is undone or false otherwise.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>toggleUndoStatus</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>objects</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Toggles the current undo status of
-  the given object. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>toggleUndoStatus</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </type>
-      <name>object</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>setUndoStatus</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </type>
-      <name>object</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>status</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="line">//virtual bool getUndoStatus(RObject::Id
-  object) const = 0;</comment>
-  <comment type="block">/** * \return The highest transaction ID
-  that is in use. This should be * used by \ref
-  deleteTransactionsFrom internally. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>int</name>
-  </type>
-  <name>getMaxTransactionId</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RLineweight</name>::
-    <name>Lineweight</name></name>
-  </type>
-  <name>getMaxLineweight</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RObject</name>::
-    <name>Id</name></name>
-  </type>
-  <name>getNewObjectId</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RObject</name>::
-    <name>Id</name></name>
-  </type>
-  <name>getMaxObjectId</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RObject</name>::
-    <name>Handle</name></name>
-  </type>
-  <name>getNewObjectHandle</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>RObject</name>::
-    <name>Handle</name></name>
-  </type>
-  <name>getMaxObjectHandle</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>setMaxDrawOrder</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>m</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>maxDrawOrder</name>= 
-    <name>m</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>int</name>
-    </type>
-    <name>getMaxDrawOrder</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>maxDrawOrder</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>int</name>
-  </type>
-  <name>getMinDrawOrder</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="block">/** * Linked storages should return true if
-  the given object is stored * in the storage the linked storage
-  links to. */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>isInBackStorage</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RObject</name>::
-          <name>Id</name></name>
-        </type>
-      </decl>
-    </param>
-    <comment type="block">/*object*/</comment>)</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>false</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>getKnownVariableName</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>KnownVariable</name></name>
-      </type>
-      <name>n</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>friend</name>
-    <name>QDebug</name>
-  </type>
-  <name>operator&lt;&lt;</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QDebug</name>
-      </type>
-      <name>dbg</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RStorage</name>&amp;</type>
-      <name>s</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setModified</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>m</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isModified</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>modified</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addModifiedListener</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RModifiedListener</name>*</type>
-      <name>l</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * Clear caches: */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>update</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </function></public>
-  <protected>protected: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>modified</name>
-  </decl>;</decl_stmt></protected>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RDocument</name>*</type>
-    <name>document</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>maxDrawOrder</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RObject</name>::
-      <name>Id</name></name>
-    </type>
-    <name>idCounter</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RObject</name>::
-      <name>Handle</name></name>
-    </type>
-    <name>handleCounter</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RColor</name>
-    </type>
-    <name>currentColor</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RLineweight</name>::
-      <name>Lineweight</name></name>
-    </type>
-    <name>currentLineweight</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RLinetype</name>::
-      <name>Id</name></name>
-    </type>
-    <name>currentLinetypeId</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//RLayer::Id currentLayerId;</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RView</name>::
-      <name>Id</name></name>
-    </type>
-    <name>currentViewId</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RBlock</name>::
-      <name>Id</name></name>
-    </type>
-    <name>currentBlockId</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>lastTransactionId</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>lastTransactionGroup</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-      <name>
-      RModifiedListener</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>modifiedListeners</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RStorage*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>const RStorage*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RStorage.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSTORAGE_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RSTORAGE_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBlock.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBlockReferenceEntity.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBox.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocumentVariables.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLayer.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLinetype.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLinetypePattern.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RModifiedListener.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RNonCopyable.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RRequireHeap.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransaction.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RUcs.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RView.h"</cpp:file></cpp:include>
+
+
+<comment type="block">/**
+ * This is the abstract base class for all storage implementations.
+ * A storage is used to store documents (entities, layers, blocks,
+ * transactions) in memory or on disk. Every \ref RDocument "document"
+ * is backed by a storage object.
+ *
+ * A storage implementation is available in the \ref qcaddbstorage.
+ *
+ * \ingroup core
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RStorage</name> <super>: <name>RNonCopyable</name>, <specifier>public</specifier> <name>RRequireHeap</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor_decl><name>RStorage</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <destructor><specifier>virtual</specifier> <name>~RStorage</name><parameter_list>()</parameter_list> <block>{ }</block></destructor>
+
+    <function><type><name>void</name></type> <name>setDocument</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>doc</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>document</name> = <name>doc</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>document</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * Resets this storage to its initial, empty state.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>clear</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Starts a new transaction.
+     * This function is called before something is stored in the
+     * storage.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>beginTransaction</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Commits the current transaction.
+     * This function is called after something has been stored in the
+     * storage.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>commitTransaction</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Rolls the current transaction back in order to cancel it.
+     * This function should never be called under normal circumstances.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>rollbackTransaction</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return Ordered list of given IDs for display purposes.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>orderBackToFront</name><parameter_list>(<param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of all object IDs of the document.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllObjects</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of all entity IDs of the document.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllEntities</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>,
+            <param><decl><type><name>bool</name></type> <name>allBlocks</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>type</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of all UCS IDs of the document.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>RUcs</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllUcs</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of all layer IDs of the document.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>RLayer</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllLayers</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of all block IDs of the document.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllBlocks</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of all view IDs of the document.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>RView</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllViews</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of all linetype IDs of the document.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>RLinetype</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllLinetypes</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of all entity IDs on the given layer.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryLayerEntities</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>allBlocks</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of all entity IDs that are part of the given block.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryBlockEntities</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of all block attributes which are not stored in the
+     * block definition but as separate entities on the same level as
+     * the block reference.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryChildEntities</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>parentId</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>type</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasChildEntities</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>parentId</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of all block reference entity IDs that reference
+     * the given block.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryBlockReferences</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of all block reference entity IDs.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllBlockReferences</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of entity IDs of all selected entities.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>querySelectedEntities</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of entity IDs of all infinite entities (xlines).
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryInfiniteEntities</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RDocumentVariables</name></argument>&gt;</argument_list></name></type> <name>queryDocumentVariables</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RDocumentVariables</name></argument>&gt;</argument_list></name></type> <name>queryDocumentVariablesDirect</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A shared pointer to the object with the given \c objectId
+     *      or null pointer if the object is no available in this storage.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>queryObject</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>queryObjectDirect</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>queryObject</name><argument_list>(<argument><expr><name>objectId</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>queryObjectByHandle</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Handle</name></name></type> <name>objectHandle</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A pointer to the enitity with the given \c entityId
+     *      or NULL if no such entity exists.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></type> <name>queryEntity</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></type> <name>queryEntityDirect</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>queryEntity</name><argument_list>(<argument><expr><name>entityId</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return A pointer to the UCS with the given \c ucsId
+     *      or NULL if no such UCS exists.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RUcs</name></argument>&gt;</argument_list></name></type> <name>queryUcs</name><parameter_list>(<param><decl><type><name><name>RUcs</name>::<name>Id</name></name></type> <name>ucsId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RUcs</name></argument>&gt;</argument_list></name></type> <name>queryUcsDirect</name><parameter_list>(<param><decl><type><name><name>RUcs</name>::<name>Id</name></name></type> <name>ucsId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>queryUcs</name><argument_list>(<argument><expr><name>ucsId</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return A pointer to the UCS with the given \c ucsName
+     *      or NULL if no such UCS exists.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RUcs</name></argument>&gt;</argument_list></name></type> <name>queryUcs</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>ucsName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A pointer to the layer with the given \c layerId
+     *      or NULL if no such layer exists.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>queryLayer</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>queryLayerDirect</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>queryLayer</name><argument_list>(<argument><expr><name>layerId</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return A pointer to the layer with the given \c layerName
+     *      or NULL if no such layer exists.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>queryLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>queryCurrentLayer</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>queryLayer</name><argument_list>(<argument><expr><call><name>getCurrentLayerId</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RView</name></argument>&gt;</argument_list></name></type> <name>queryCurrentView</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>queryView</name><argument_list>(<argument><expr><call><name>getCurrentViewId</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></type> <name>queryLinetypeDirect</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></type> <name>queryLinetype</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></type> <name>queryLinetype</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>linetypeName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></type> <name>queryBlockDirect</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></type> <name>queryBlock</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></type> <name>queryBlock</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RView</name></argument>&gt;</argument_list></name></type> <name>queryView</name><parameter_list>(<param><decl><type><name><name>RView</name>::<name>Id</name></name></type> <name>viewId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RView</name></argument>&gt;</argument_list></name></type> <name>queryView</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>viewName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="line">//RTransaction setCurrentLayer(RLayer::Id layerId);</comment>
+    <comment type="line">//RTransaction setCurrentLayer(const QString&amp; layerName);</comment>
+    <comment type="line">//void setCurrentLayer(RTransaction&amp; transaction, RLayer::Id layerId);</comment>
+    <comment type="line">//void setCurrentLayer(RTransaction&amp; transaction, const QString&amp; layerName);</comment>
+    <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name><name>RLayer</name>::<name>Id</name></name></type> <name>getCurrentLayerId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function><type><name>virtual</name> <name><name>RView</name>::<name>Id</name></name></type> <name>getCurrentViewId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <comment type="line">//return (RView::Id) getVariable("CurrentView").toInt();</comment>
+        <return>return <expr><name>currentViewId</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setCurrentColor</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RColor</name></type> <name>getCurrentColor</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setCurrentLineweight</name><parameter_list>(<param><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lw</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>getCurrentLineweight</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setCurrentLinetype</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>ltId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCurrentLinetype</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCurrentLinetypePattern</name><parameter_list>(<param><decl><type><name>const</name> <name>RLinetypePattern</name>&amp;</type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name><name>RLinetype</name>::<name>Id</name></name></type> <name>getCurrentLinetypeId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RLinetypePattern</name></type> <name>getCurrentLinetypePattern</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></type> <name>queryCurrentLinetype</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>queryLinetype</name><argument_list>(<argument><expr><call><name>getCurrentLinetypeId</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></type> <name>queryCurrentBlock</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>queryBlock</name><argument_list>(<argument><expr><call><name>getCurrentBlockId</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setCurrentBlock</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <block>{
+        <comment type="line">//setVariable("CurrentBlock", blockId);</comment>
+        <expr_stmt><expr><name>currentBlockId</name> = <name>blockId</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setCurrentBlock</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list> <block>{
+        <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>id</name> =<init> <expr><call><name>getBlockId</name><argument_list>(<argument><expr><name>blockName</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <if>if <condition>(<expr><name>id</name> == <name><name>RBlock</name>::<name>INVALID_ID</name></name></expr>)</condition><then> <block>{
+            <return>return;</return>
+        }</block></then></if>
+        <constructor_decl><name>setCurrentBlock</name><parameter_list>(<param><decl><type><name>id</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name><name>RBlock</name>::<name>Id</name></name></type> <name>getCurrentBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <comment type="line">//return (RBlock::Id) getVariable("CurrentBlock").toInt();</comment>
+        <return>return <expr><name>currentBlockId</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setCurrentView</name><parameter_list>(<param><decl><type><name><name>RView</name>::<name>Id</name></name></type> <name>viewId</name></decl></param>)</parameter_list> <block>{
+        <comment type="line">//setVariable("CurrentView", viewId);</comment>
+        <expr_stmt><expr><name>currentViewId</name> = <name>viewId</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setCurrentView</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>viewName</name></decl></param>)</parameter_list> <block>{
+        <decl_stmt><decl><type><name><name>RView</name>::<name>Id</name></name></type> <name>id</name> =<init> <expr><call><name>getViewId</name><argument_list>(<argument><expr><name>viewName</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <comment type="line">// unlike blocks and layers, the current view can be invalid:</comment>
+        <constructor_decl><name>setCurrentView</name><parameter_list>(<param><decl><type><name>id</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RDocumentVariables</name></argument>&gt;</argument_list></name></type> <name>startDocumentVariablesTransaction</name><parameter_list>(<param><decl><type><name>RTransaction</name>*&amp;</type> <name>transaction</name></decl></param>, <param><decl><type><name>bool</name>&amp;</type> <name>useLocalTransaction</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>endDocumentVariablesTransaction</name><parameter_list>(<param><decl><type><name>RTransaction</name>*</type> <name>transaction</name></decl></param>, <param><decl><type><name>bool</name></type> <name>useLocalTransaction</name></decl></param>, <param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RDocumentVariables</name></argument>&gt;</argument_list></name></type> <name>docVars</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setUnit</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="line">//void setUnit(RTransaction&amp; transaction, RS::Unit unit);</comment>
+    <function_decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>getUnit</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setDimensionFont</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>f</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getDimensionFont</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setLinetypeScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>double</name></type> <name>getLinetypeScale</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getBlockName</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getBlockNames</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name><name>RBlock</name>::<name>Id</name></name></type> <name>getBlockId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasBlock</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getViewName</name><parameter_list>(<param><decl><type><name><name>RView</name>::<name>Id</name></name></type> <name>viewId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getViewNames</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name><name>RView</name>::<name>Id</name></name></type> <name>getViewId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>viewName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasView</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>viewName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getLayerName</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getLayerNames</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name><name>RLayer</name>::<name>Id</name></name></type> <name>getLayerId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getLinetypeName</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getLinetypeDescription</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getLinetypeLabel</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getLinetypeNames</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RLinetypePattern</name></argument>&gt;</argument_list></name></type> <name>getLinetypePatterns</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>linetypeName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasLinetype</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>linetypeName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QStringList</name></type> <name>getVariables</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setVariable</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>bool</name></type> <name>overwrite</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/**
+     * \return The value of the given variable or an invalid variant if the
+     *      variable does not exist.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QVariant</name></type> <name>getVariable</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return True if the given variable exists in this storage.
+     */</comment>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>hasVariable</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <decl_stmt><decl><type><name>QVariant</name></type> <name>value</name> =<init> <expr><call><name>getVariable</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <return>return <expr><name>value</name>.<call><name>isValid</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setKnownVariable</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QVariant</name></type> <name>getKnownVariable</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return Number of selected entities.
+     */</comment>
+    <function><type><name>virtual</name> <name>int</name></type> <name>countSelectedEntities</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>querySelectedEntities</name><argument_list>()</argument_list></call>.<call><name>size</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * Clears the selection status of all entities.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>clearEntitySelection</name><parameter_list>(
+        <param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>*</type> <name>affectedEntities</name>=<init><expr><name>NULL</name></expr></init></decl></param>
+    )</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Sets the selection status of all entities.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>selectAllEntites</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>*</type> <name>affectedEntities</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Selects the entity with the given ID.
+     *
+     * \param add True to add the entity to the current selection.
+     *      False to replace the current selection with the given entity.
+     * \param affected Optional pointer to an empty set of entity IDs.
+     *      After the call, this set will contain all entity IDs of
+     *      entities that were affected by the call.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>selectEntity</name><parameter_list>(
+        <param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>add</name>=<init><expr><name>false</name></expr></init></decl></param>,
+        <param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>*</type> <name>affectedEntities</name>=<init><expr><name>NULL</name></expr></init></decl></param>
+    )</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Selects all entities with the given IDs.
+     *
+     * \param add True to add the entities to the current selection.
+     *      False to replace the current selection with the new entities.
+     * \param affected Optional pointer to an empty set of entity IDs.
+     *      After the call, this set will contain all entity IDs of
+     *      entities that were affected by the call.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>selectEntities</name><parameter_list>(
+        <param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>add</name>=<init><expr><name>false</name></expr></init></decl></param>,
+        <param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>*</type> <name>affectedEntities</name>=<init><expr><name>NULL</name></expr></init></decl></param>
+    )</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Deselects the entity with the given ID.
+     *
+     * \param affected Optional pointer to an empty set of entity IDs.
+     *      After the call, this set will contain all entity IDs of
+     *      entities that were affected by the call.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>deselectEntity</name><parameter_list>(
+        <param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>,
+        <param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>*</type> <name>affectedEntities</name>=<init><expr><name>NULL</name></expr></init></decl></param>
+    )</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Deselects all entities with the given IDs.
+     *
+     * \param affected Optional pointer to an empty set of entity IDs.
+     *      After the call, this set will contain all entity IDs of
+     *      entities that were affected by the call.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>deselectEntities</name><parameter_list>(
+        <param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>,
+        <param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>*</type> <name>affectedEntities</name>=<init><expr><name>NULL</name></expr></init></decl></param>
+    )</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isSelected</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list> <block>{
+        <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></type> <name>e</name> =<init> <expr><call><name>queryEntityDirect</name><argument_list>(<argument><expr><name>entityId</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <return>return <expr>(!<name>e</name>.<call><name>isNull</name><argument_list>()</argument_list></call> &amp;&amp; <name>e</name>-&gt;<call><name>isSelected</name><argument_list>()</argument_list></call>)</expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isEntity</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>)</parameter_list> <block>{
+        <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></type> <name>e</name> =<init> <expr><call><name>queryEntityDirect</name><argument_list>(<argument><expr><name>objectId</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <return>return <expr>!<name>e</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isLayerLocked</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>l</name> =<init> <expr><call><name>queryLayerDirect</name><argument_list>(<argument><expr><name>layerId</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <if>if <condition>(<expr><name>l</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>false</name></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><name>l</name>-&gt;<call><name>isLocked</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isLayerFrozen</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>l</name> =<init> <expr><call><name>queryLayerDirect</name><argument_list>(<argument><expr><name>layerId</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <if>if <condition>(<expr><name>l</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>false</name></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><name>l</name>-&gt;<call><name>isFrozen</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isBlockFrozen</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></type> <name>b</name> =<init> <expr><call><name>queryBlockDirect</name><argument_list>(<argument><expr><name>blockId</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <if>if <condition>(<expr><name>b</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>false</name></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><name>b</name>-&gt;<call><name>isFrozen</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>void</name></type> <name>setObjectId</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setObjectHandle</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Handle</name></name></type> <name>objectHandle</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \return True if at least one entity is selected in this storage.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasSelection</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return The bounding box around all visible entities.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>RBox</name></type> <name>getBoundingBox</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreHiddenLayers</name> =<init> <expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreEmpty</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>RBox</name></type> <name>getSelectionBox</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>removeObject</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>object</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Saves the given object to the storage.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>saveObject</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>object</name></decl></param>, <param><decl><type><name>bool</name></type> <name>checkBlockRecursion</name> =<init> <expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>keepHandles</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Deletes the object with the given ID.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>deleteObject</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return The ID of the last completed transaction.
+     * The default implementation reads variable "LastTransaction".
+     */</comment>
+    <function><type><name>virtual</name> <name>int</name></type> <name>getLastTransactionId</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>lastTransactionId</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * Sets the ID of the last created transaction. This is called
+     * when a transaction is undone or redone (the last transaction
+     * id indicates where we are in the transaction stack).
+     * The default implementation sets the variable "LastTransaction".
+     */</comment>
+    <function><type><name>virtual</name> <name>void</name></type> <name>setLastTransactionId</name><parameter_list>(<param><decl><type><name>int</name></type> <name>transactionId</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>lastTransactionId</name> = <name>transactionId</name></expr>;</expr_stmt>
+
+        <constructor_decl><name>setModified</name><parameter_list>(<param><decl><type><name>true</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>startTransactionGroup</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>lastTransactionGroup</name>++</expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>int</name></type> <name>getTransactionGroup</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>lastTransactionGroup</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return The ID of the last used transaction group.
+     */</comment>
+<comment type="line">//    virtual int getLastTransactionGroup() {</comment>
+<comment type="line">//        return lastTransactionGroup;</comment>
+<comment type="line">//    }</comment>
+
+    <comment type="block">/**
+     * Sets the ID of the last created transaction. This is called
+     * when a transaction is undone or redone (the last transaction
+     * id indicates where we are in the transaction stack).
+     * The default implementation sets the variable "LastTransaction".
+     */</comment>
+<comment type="line">//    virtual void setLastTransactionGroup(int transactionGroup) {</comment>
+<comment type="line">//        lastTransactionGroup = transactionGroup;</comment>
+
+<comment type="line">//        setModified(true);</comment>
+<comment type="line">//    }</comment>
+
+    <comment type="block">/**
+     * Saves the given transaction. Transactions need to be stored
+     * for undo / redo functionality.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>saveTransaction</name><parameter_list>(<param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Deletes all transactions with IDs from transactionId (inclusive)
+     * to the maximum transaction ID. This is called if some transactions
+     * have been undone and then a redo is triggerd. All undone
+     * transactions have to be deleted at this point.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>deleteTransactionsFrom</name><parameter_list>(<param><decl><type><name>int</name></type> <name>transactionId</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>resetTransactionStack</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return Transaction with the given id.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>RTransaction</name></type> <name>getTransaction</name><parameter_list>(<param><decl><type><name>int</name></type> <name>transactionId</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Toggles the current undo status of all given objects.
+     * The undo status can for example be a boolean value that is true
+     * if the object is undone or false otherwise.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>toggleUndoStatus</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>objects</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Toggles the current undo status of the given object.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>toggleUndoStatus</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>object</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>setUndoStatus</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>object</name></decl></param>, <param><decl><type><name>bool</name></type> <name>status</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="line">//virtual bool getUndoStatus(RObject::Id object) const = 0;</comment>
+
+    <comment type="block">/**
+     * \return The highest transaction ID that is in use. This should be
+     * used by \ref deleteTransactionsFrom internally.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>int</name></type> <name>getMaxTransactionId</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>getMaxLineweight</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name><name>RObject</name>::<name>Id</name></name></type> <name>getNewObjectId</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name><name>RObject</name>::<name>Id</name></name></type> <name>getMaxObjectId</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name><name>RObject</name>::<name>Handle</name></name></type> <name>getNewObjectHandle</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name><name>RObject</name>::<name>Handle</name></name></type> <name>getMaxObjectHandle</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setMaxDrawOrder</name><parameter_list>(<param><decl><type><name>int</name></type> <name>m</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>maxDrawOrder</name> = <name>m</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>int</name></type> <name>getMaxDrawOrder</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>maxDrawOrder</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>int</name></type> <name>getMinDrawOrder</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Linked storages should return true if the given object is stored
+     * in the storage the linked storage links to.
+     */</comment>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isInBackStorage</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type></decl></param> <comment type="block">/*object*/</comment>)</parameter_list> <block>{
+        <return>return <expr><name>false</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>getKnownVariableName</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>n</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>friend</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>RStorage</name>&amp;</type> <name>s</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setModified</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>m</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>bool</name></type> <name>isModified</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>modified</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>void</name></type> <name>addModifiedListener</name><parameter_list>(<param><decl><type><name>RModifiedListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Clear caches:
+     */</comment>
+    <function><type><name>virtual</name> <name>void</name></type> <name>update</name><parameter_list>()</parameter_list> <block>{}</block></function>
+
+</public><protected>protected:
+    <decl_stmt><decl><type><name>bool</name></type> <name>modified</name></decl>;</decl_stmt>
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>RDocument</name>*</type> <name>document</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>maxDrawOrder</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>idCounter</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RObject</name>::<name>Handle</name></name></type> <name>handleCounter</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RColor</name></type> <name>currentColor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>currentLineweight</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>currentLinetypeId</name></decl>;</decl_stmt>
+    <comment type="line">//RLayer::Id currentLayerId;</comment>
+    <decl_stmt><decl><type><name><name>RView</name>::<name>Id</name></name></type> <name>currentViewId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>currentBlockId</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>lastTransactionId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>lastTransactionGroup</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RModifiedListener</name>*</argument>&gt;</argument_list></name></type> <name>modifiedListeners</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RStorage*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const RStorage*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

@@ -14,7 +14,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>

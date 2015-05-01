@@ -19,7 +19,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="vz"
         hasDefault="true" default="0.0" isConst="false" />
         <arg type="bool" typeName="bool" name="valid_in"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </constructor>
     <method name="set" cppName="set" specifier="public"

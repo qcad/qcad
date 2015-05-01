@@ -28,9 +28,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; REntity::Id &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="undone"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="allBlocks"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="RS::EntityType" typeName="RS::EntityType"
         name="type" hasDefault="true" default="RS :: EntityAll"
         isConst="false" />
@@ -48,7 +48,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; RLayer::Id &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="undone"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="queryAllBlocks" cppName="queryAllBlocks"
@@ -57,7 +57,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; RBlock::Id &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="undone"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="queryAllViews" cppName="queryAllViews"
@@ -66,7 +66,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; RView::Id &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="undone"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="queryAllLinetypes" cppName="queryAllLinetypes"
@@ -95,7 +95,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
         <arg type="bool" typeName="bool" name="allBlocks"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="queryBlockEntities" cppName="queryBlockEntities"

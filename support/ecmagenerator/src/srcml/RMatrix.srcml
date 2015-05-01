@@ -1,991 +1,147 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core/math" filename="RMatrix.h">
-  <comment type="block">/** * Copyright (c) 2011-2015 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RMATRIX_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RMATRIX_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"../core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RMath.h"</cpp:file></cpp:include>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RMATRIX_TOLERANCE</name>1.0e-8</cpp:define>
-  <comment type="block">/** * Simple matrix class. * * \ingroup
-  math * \scriptable * \copyable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RMatrix</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RMatrix</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RMatrix</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>r</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>c</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RMatrix</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RMatrix</name>&amp;</type>
-      <name>other</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <name>~RMatrix</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isValid</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RMatrix</name>
-  </type>
-  <name>createIdentity2x2</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RMatrix</name>
-  </type>
-  <name>createIdentity3x3</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RMatrix</name>
-  </type>
-  <name>createIdentity</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>size</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RMatrix</name>
-  </type>
-  <name>createRotation</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>angle</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RMatrix</name>
-  </type>
-  <name>create2x2</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a11</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a12</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a21</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a22</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RMatrix</name>
-  </type>
-  <name>create3x3</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a11</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a12</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a13</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a21</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a22</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a23</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a31</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a32</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a33</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RMatrix</name>
-  </type>
-  <name>create3x1</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a11</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a21</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a31</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RMatrix</name>
-  </type>
-  <name>create2x3</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a11</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a12</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a13</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a21</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a22</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a23</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-  <name>RMatrix</name>&amp;</type>
-  <name>operator =</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RMatrix</name>&amp;</type>
-      <name>other</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>operator ==</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RMatrix</name>&amp;</type>
-      <name>other</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RMatrix</name>
-  </type>
-  <name>operator *</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>s</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>RMatrix</name>
-  </type>
-  <name>operator *=</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>f</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>RMatrix</name>
-  </type>
-  <name>operator *</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RMatrix</name>&amp;</type>
-      <name>other</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RMatrix</name>
-  </type>
-  <name>multiplyWith</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RMatrix</name>&amp;</type>
-      <name>w</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RMatrix</name>
-  </type>
-  <name>multiplyWith</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>w</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>multiplyWith</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>w</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-  <name>double</name>*</type>
-  <name>operator []</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>i</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>init</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>r</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>c</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>reset</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>clear</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>set3x3</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a11</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a12</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a13</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a21</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a22</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a23</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a31</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a32</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a33</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>set3x1</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a11</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a21</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a31</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>set2x3</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a11</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a12</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a13</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a21</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a22</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a23</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>set</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>r</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>c</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>get</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>r</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>c</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * \return Number of rows of this
-  matrix. */</comment>
-  <function>
-    <type>
-      <name>int</name>
-    </type>
-    <name>getRows</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>rows</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return Number of columns of this
-  matrix. */</comment>
-  <function>
-    <type>
-      <name>int</name>
-    </type>
-    <name>getCols</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>cols</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>rref</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RMatrix</name>
-  </type>
-  <name>getInverse</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RMatrix</name>
-  </type>
-  <name>getTransposed</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RMatrix</name>
-  </type>
-  <name>getAppended</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RMatrix</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isRotationAndUniformScale</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getUniformScaleFactor</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getRotationAngle</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>ref</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>startRow</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>multiplyRow</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>r</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>factor</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addRow</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>r</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>factor</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>r2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>swapRows</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>r1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>r2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>int</name>
-  </type>
-  <name>getPivotRow</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>startRow</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>int</name>
-  </type>
-  <name>getPivotCol</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>r</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></protected>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>double</name>**</type>
-    <name>m</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-  <type>
-    <name>int</name>
-  </type>
-  <name>rows</name>, 
-  <name>cols</name></decl>;</decl_stmt></private>}</block>;</class>
-  <function_decl>
-  <type>
-    <name>RMatrix</name>
-  </type>
-  <name>operator *</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>factor</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RMatrix</name>&amp;</type>
-      <name>matrix</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QCADCORE_EXPORT</name>
-    <name>QDebug</name>
-  </type>
-  <name>operator&lt;&lt;</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QDebug</name>
-      </type>
-      <name>dbg</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RMatrix</name>&amp;</type>
-      <name>m</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RMatrix</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RMatrix*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core/math" filename="RMatrix.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RMATRIX_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RMATRIX_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RMATRIX_TOLERANCE</name> 1.0e-8</cpp:define>
+
+<comment type="block">/**
+ * Simple matrix class.
+ *
+ * \ingroup math
+ * \scriptable
+ * \copyable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RMatrix</name> <block>{<private type="default">
+</private><public>public:
+    <constructor_decl><name>RMatrix</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RMatrix</name><parameter_list>(<param><decl><type><name>int</name></type> <name>r</name></decl></param>, <param><decl><type><name>int</name></type> <name>c</name></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RMatrix</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><name>~RMatrix</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>RMatrix</name></type> <name>createIdentity2x2</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RMatrix</name></type> <name>createIdentity3x3</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RMatrix</name></type> <name>createIdentity</name><parameter_list>(<param><decl><type><name>int</name></type> <name>size</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RMatrix</name></type> <name>createRotation</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angle</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RMatrix</name></type> <name>create2x2</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a11</name></decl></param>, <param><decl><type><name>double</name></type> <name>a12</name></decl></param>,
+                             <param><decl><type><name>double</name></type> <name>a21</name></decl></param>, <param><decl><type><name>double</name></type> <name>a22</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RMatrix</name></type> <name>create3x3</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a11</name></decl></param>, <param><decl><type><name>double</name></type> <name>a12</name></decl></param>, <param><decl><type><name>double</name></type> <name>a13</name></decl></param>,
+                             <param><decl><type><name>double</name></type> <name>a21</name></decl></param>, <param><decl><type><name>double</name></type> <name>a22</name></decl></param>, <param><decl><type><name>double</name></type> <name>a23</name></decl></param>,
+                             <param><decl><type><name>double</name></type> <name>a31</name></decl></param>, <param><decl><type><name>double</name></type> <name>a32</name></decl></param>, <param><decl><type><name>double</name></type> <name>a33</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RMatrix</name></type> <name>create3x1</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a11</name></decl></param>, <param><decl><type><name>double</name></type> <name>a21</name></decl></param>, <param><decl><type><name>double</name></type> <name>a31</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RMatrix</name></type> <name>create2x3</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a11</name></decl></param>, <param><decl><type><name>double</name></type> <name>a12</name></decl></param>, <param><decl><type><name>double</name></type> <name>a13</name></decl></param>,
+                             <param><decl><type><name>double</name></type> <name>a21</name></decl></param>, <param><decl><type><name>double</name></type> <name>a22</name></decl></param>, <param><decl><type><name>double</name></type> <name>a23</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>RMatrix</name>&amp;</type> <name>operator =</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>bool</name></type> <name>operator ==</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>other</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>RMatrix</name></type> <name>operator *</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>RMatrix</name></type> <name>operator *=</name><parameter_list>(<param><decl><type><name>double</name></type> <name>f</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>RMatrix</name></type> <name>operator *</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>other</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>RMatrix</name></type> <name>multiplyWith</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>w</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RMatrix</name></type> <name>multiplyWith</name><parameter_list>(<param><decl><type><name>double</name></type> <name>w</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>multiplyWith</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>w</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>double</name>*</type> <name>operator []</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>init</name><parameter_list>(<param><decl><type><name>int</name></type> <name>r</name></decl></param>, <param><decl><type><name>int</name></type> <name>c</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>reset</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>clear</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>set3x3</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a11</name></decl></param>, <param><decl><type><name>double</name></type> <name>a12</name></decl></param>, <param><decl><type><name>double</name></type> <name>a13</name></decl></param>,
+                <param><decl><type><name>double</name></type> <name>a21</name></decl></param>, <param><decl><type><name>double</name></type> <name>a22</name></decl></param>, <param><decl><type><name>double</name></type> <name>a23</name></decl></param>,
+                <param><decl><type><name>double</name></type> <name>a31</name></decl></param>, <param><decl><type><name>double</name></type> <name>a32</name></decl></param>, <param><decl><type><name>double</name></type> <name>a33</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>set3x1</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a11</name></decl></param>, <param><decl><type><name>double</name></type> <name>a21</name></decl></param>, <param><decl><type><name>double</name></type> <name>a31</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>set2x3</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a11</name></decl></param>, <param><decl><type><name>double</name></type> <name>a12</name></decl></param>,
+                <param><decl><type><name>double</name></type> <name>a13</name></decl></param>, <param><decl><type><name>double</name></type> <name>a21</name></decl></param>,
+                <param><decl><type><name>double</name></type> <name>a22</name></decl></param>, <param><decl><type><name>double</name></type> <name>a23</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>set</name><parameter_list>(<param><decl><type><name>int</name></type> <name>r</name></decl></param>, <param><decl><type><name>int</name></type> <name>c</name></decl></param>, <param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>get</name><parameter_list>(<param><decl><type><name>int</name></type> <name>r</name></decl></param>, <param><decl><type><name>int</name></type> <name>c</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return Number of rows of this matrix.
+     */</comment>
+    <function><type><name>int</name></type> <name>getRows</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>rows</name></expr>;</return>
+    }</block></function>
+    <comment type="block">/**
+     * \return Number of columns of this matrix.
+     */</comment>
+    <function><type><name>int</name></type> <name>getCols</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>cols</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>bool</name></type> <name>rref</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>RMatrix</name></type> <name>getInverse</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RMatrix</name></type> <name>getTransposed</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RMatrix</name></type> <name>getAppended</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>bool</name></type> <name>isRotationAndUniformScale</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getUniformScaleFactor</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getRotationAngle</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</public><protected>protected:
+    <function_decl><type><name>bool</name></type> <name>ref</name><parameter_list>(<param><decl><type><name>int</name></type> <name>startRow</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>multiplyRow</name><parameter_list>(<param><decl><type><name>int</name></type> <name>r</name></decl></param>, <param><decl><type><name>double</name></type> <name>factor</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>addRow</name><parameter_list>(<param><decl><type><name>int</name></type> <name>r</name></decl></param>, <param><decl><type><name>double</name></type> <name>factor</name></decl></param>, <param><decl><type><name>int</name></type> <name>r2</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>swapRows</name><parameter_list>(<param><decl><type><name>int</name></type> <name>r1</name></decl></param>, <param><decl><type><name>int</name></type> <name>r2</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>getPivotRow</name><parameter_list>(<param><decl><type><name>int</name></type> <name>startRow</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>getPivotCol</name><parameter_list>(<param><decl><type><name>int</name></type> <name>r</name></decl></param>)</parameter_list>;</function_decl>
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>double</name>**</type> <name>m</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>rows</name>, <name>cols</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<function_decl><type><name>RMatrix</name></type> <name>operator *</name><parameter_list>(<param><decl><type><name>double</name></type> <name>factor</name></decl></param>, <param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>matrix</name></decl></param>)</parameter_list>;</function_decl>
+
+<function_decl><type><name>QCADCORE_EXPORT</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>m</name></decl></param>)</parameter_list>;</function_decl>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RMatrix</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RMatrix*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>
