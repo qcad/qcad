@@ -63,13 +63,15 @@ void RShapesExporter::exportLineSegment(const RLine& line, double angle) {
 }
 
 void RShapesExporter::exportPainterPaths(const QList<RPainterPath>& paths, double angle, const RVector& pos) {
+    Q_UNUSED(angle)
+
     RVector p = getPointAt(pos.x);
     double a = getAngleAt(pos.x);
     RExporter::exportPainterPaths(paths, a, p);
 }
 
 RVector RShapesExporter::getPointAt(double d, int* index) {
-    int i = getShapeAt(d);
+    unsigned long i = getShapeAt(d);
     if (i<0 || i>=lengthAt.size() || i>=shapes.length()) {
         return RVector::invalid;
     }

@@ -164,7 +164,7 @@ public:
     /**
      * \return A set of entity IDs of all selected entities.
      */
-    virtual QSet<REntity::Id> querySelectedEntities() = 0;
+    virtual QSet<REntity::Id> querySelectedEntities() const = 0;
 
     /**
      * \return A set of entity IDs of all infinite entities (xlines).
@@ -365,7 +365,7 @@ public:
     /**
      * \return Number of selected entities.
      */
-    virtual int countSelectedEntities() {
+    virtual int countSelectedEntities() const {
         return querySelectedEntities().size();
     }
 
@@ -430,7 +430,7 @@ public:
      *      After the call, this set will contain all entity IDs of
      *      entities that were affected by the call.
      */
-    virtual void deselectEntities(
+    virtual bool deselectEntities(
         const QSet<REntity::Id>& entityIds,
         QSet<REntity::Id>* affectedEntities=NULL
     ) = 0;

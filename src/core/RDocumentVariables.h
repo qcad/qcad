@@ -37,6 +37,7 @@ class QCADCORE_EXPORT RDocumentVariables : public RObject {
 public:
     static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyHandle;
+    static RPropertyTypeId PropertyProtected;
     static RPropertyTypeId PropertyCurrentLayerId;
     static RPropertyTypeId PropertyUnit;
     static RPropertyTypeId PropertyLinetypeScale;

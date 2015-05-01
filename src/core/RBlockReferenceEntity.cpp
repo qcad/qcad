@@ -23,6 +23,7 @@
 
 RPropertyTypeId RBlockReferenceEntity::PropertyCustom;
 RPropertyTypeId RBlockReferenceEntity::PropertyHandle;
+RPropertyTypeId RBlockReferenceEntity::PropertyProtected;
 RPropertyTypeId RBlockReferenceEntity::PropertyType;
 RPropertyTypeId RBlockReferenceEntity::PropertyBlock;
 RPropertyTypeId RBlockReferenceEntity::PropertyLayer;
@@ -76,6 +77,7 @@ RBlockReferenceEntity::~RBlockReferenceEntity() {
 void RBlockReferenceEntity::init() {
     RBlockReferenceEntity::PropertyCustom.generateId(typeid(RBlockReferenceEntity), RObject::PropertyCustom);
     RBlockReferenceEntity::PropertyHandle.generateId(typeid(RBlockReferenceEntity), RObject::PropertyHandle);
+    RBlockReferenceEntity::PropertyProtected.generateId(typeid(RBlockReferenceEntity), RObject::PropertyProtected);
     RBlockReferenceEntity::PropertyType.generateId(typeid(RBlockReferenceEntity), REntity::PropertyType);
     RBlockReferenceEntity::PropertyBlock.generateId(typeid(RBlockReferenceEntity), REntity::PropertyBlock);
     RBlockReferenceEntity::PropertyLayer.generateId(typeid(RBlockReferenceEntity), REntity::PropertyLayer);

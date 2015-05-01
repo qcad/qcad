@@ -206,6 +206,7 @@ public:
     void undo();
     void redo();
     void flushTransactions();
+    void flushRedo();
 
     void setSnap(RSnap* snap);
     RSnap* getSnap();
@@ -223,7 +224,7 @@ public:
     void highlightReferencePoint(const RVector& position);
     void selectEntities(const QSet<REntity::Id>& entityIds, bool add = false);
     void selectEntity(REntity::Id entityId, bool add = false);
-    void deselectEntities(const QSet<REntity::Id>& entityIds);
+    bool deselectEntities(const QSet<REntity::Id>& entityIds);
     void deselectEntity(REntity::Id entityId);
     void selectBoxXY(const RBox& box, bool add = false);
     void selectAll();

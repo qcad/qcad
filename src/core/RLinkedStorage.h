@@ -51,7 +51,7 @@ public:
     virtual QSet<RView::Id> queryAllViews(bool undone = false);
     virtual QSet<RLinetype::Id> queryAllLinetypes();
     virtual QSet<REntity::Id> queryInfiniteEntities();
-    virtual QSet<REntity::Id> querySelectedEntities();
+    virtual QSet<REntity::Id> querySelectedEntities() const;
 
     virtual QSet<REntity::Id> queryLayerEntities(RLayer::Id layerId, bool allBlocks = false);
     virtual QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId);
@@ -113,10 +113,10 @@ public:
     virtual RObject::Id getNewObjectId();
     virtual RObject::Handle getNewObjectHandle();
 
-    virtual RLayer::Id getCurrentLayerId();
+    virtual RLayer::Id getCurrentLayerId() const;
     virtual RBlock::Id getCurrentBlockId() const;
-    virtual RView::Id getCurrentViewId();
-    virtual RColor getCurrentColor();
+    virtual RView::Id getCurrentViewId() const;
+    virtual RColor getCurrentColor() const;
     virtual RLineweight::Lineweight getCurrentLineweight() const;
     virtual RLinetype::Id getCurrentLinetypeId() const;
 

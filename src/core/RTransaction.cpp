@@ -637,6 +637,8 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         // as part of this transaction:
         oldObject = storage->queryObjectDirect(object->getId());
         if (oldObject.isNull()) {
+            RDebug::printBacktrace();
+            qDebug() << "obj:" << *object;
             qWarning("RTransaction::addObject: "
                 "original object not found in storage");
             fail();
@@ -1012,7 +1014,6 @@ bool RTransaction::isPreview() const {
  */
 QList<RPropertyChange> RTransaction::getPropertyChanges(RObject::Id id) const {
     if (!propertyChanges.contains(id)) {
-        qDebug() << "no property changes for object: " << id;
         return QList<RPropertyChange>();
     }
     return propertyChanges[id];

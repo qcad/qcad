@@ -74,7 +74,8 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
         return qMakePair(QVariant(handle), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
     if (propertyTypeId == PropertyProtected) {
-        return qMakePair(QVariant(protect), RPropertyAttributes(RPropertyAttributes::Invisible));
+        //return qMakePair(QVariant(protect), RPropertyAttributes(RPropertyAttributes::Invisible));
+        return qMakePair(QVariant(protect), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
     if (propertyTypeId.isCustom()) {
         QString appId = propertyTypeId.getCustomPropertyTitle();
@@ -99,6 +100,8 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
 
 bool RObject::setProperty(RPropertyTypeId propertyTypeId,
     const QVariant& value, RTransaction* transaction) {
+
+    Q_UNUSED(transaction)
 
     bool ret = false;
 

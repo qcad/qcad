@@ -25,6 +25,7 @@
 
 RPropertyTypeId REntity::PropertyCustom;
 RPropertyTypeId REntity::PropertyHandle;
+RPropertyTypeId REntity::PropertyProtected;
 RPropertyTypeId REntity::PropertyType;
 RPropertyTypeId REntity::PropertyBlock;
 RPropertyTypeId REntity::PropertyLayer;
@@ -68,6 +69,7 @@ bool REntity::isDimension(const RS::EntityType type) {
 void REntity::init() {
     REntity::PropertyCustom.generateId(typeid(REntity), RObject::PropertyCustom);
     REntity::PropertyHandle.generateId(typeid(REntity), RObject::PropertyHandle);
+    REntity::PropertyProtected.generateId(typeid(REntity), RObject::PropertyProtected);
     REntity::PropertyType.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Type"));
     REntity::PropertyBlock.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Block ID"));
     REntity::PropertyLayer.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Layer"));

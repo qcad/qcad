@@ -232,6 +232,8 @@ double RLinetypePattern::getPatternOffset(double length) {
  * the given dash (index) is in the middle of the entity.
  */
 double RLinetypePattern::getPatternOffsetAt(double length, double symmetryPos, double* gap, bool end) {
+    Q_UNUSED(end)
+
     double patternLength = getPatternLength();
     if (patternLength<RS::PointTolerance) {
         return 0.0;

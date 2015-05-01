@@ -57,7 +57,7 @@ public:
     virtual QSet<RView::Id> queryAllViews(bool undone = false);
     virtual QSet<RLinetype::Id> queryAllLinetypes();
     virtual QSet<REntity::Id> queryInfiniteEntities();
-    virtual QSet<REntity::Id> querySelectedEntities();
+    virtual QSet<REntity::Id> querySelectedEntities() const;
 
     virtual QSet<REntity::Id> queryLayerEntities(RLayer::Id layerId, bool allBlocks = false);
     virtual QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId);
@@ -95,7 +95,7 @@ public:
     virtual void selectEntities(const QSet<REntity::Id>& entityIds,
             bool add = false,
             QSet<REntity::Id>* affectedEntities = NULL);
-    virtual void deselectEntities(const QSet<REntity::Id>& entityIds,
+    virtual bool deselectEntities(const QSet<REntity::Id>& entityIds,
             QSet<REntity::Id>* affectedEntities = NULL);
     void setEntitySelected(QSharedPointer<REntity> entity, bool on,
         QSet<REntity::Id>* affectedEntities = NULL, bool onlyDescend = false);

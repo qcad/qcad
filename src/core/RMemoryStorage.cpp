@@ -248,11 +248,11 @@ QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() {
     return result;
 }
 
-QSet<REntity::Id> RMemoryStorage::querySelectedEntities() {
+QSet<REntity::Id> RMemoryStorage::querySelectedEntities() const {
     RBlock::Id currentBlock = getCurrentBlockId();
     QSet<REntity::Id> result;
-    QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
-    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
+    for (it = entityMap.constBegin(); it != entityMap.constEnd(); ++it) {
         QSharedPointer<REntity> e = *it;
         if (!e.isNull() && !e->isUndone() && e->isSelected() &&
             e->getBlockId() == currentBlock) {
@@ -774,16 +774,17 @@ void RMemoryStorage::setEntitySelected(QSharedPointer<REntity> entity, bool on,
     }
 }
 
-void RMemoryStorage::deselectEntities(const QSet<REntity::Id>& entityIds,
-        QSet<REntity::Id>* affectedEntities) {
-
+bool RMemoryStorage::deselectEntities(const QSet<REntity::Id>& entityIds, QSet<REntity::Id>* affectedEntities) {
+    bool ret = false;
     QSet<REntity::Id>::const_iterator it;
     for (it = entityIds.constBegin(); it != entityIds.constEnd(); ++it) {
         QSharedPointer<REntity> e = queryEntityDirect(*it);
         if (!e.isNull() && e->isSelected()) {
             setEntitySelected(e, false, affectedEntities);
+            ret = true;
         }
     }
+    return ret;
 }
 
 bool RMemoryStorage::hasSelection() const {
@@ -1111,7 +1112,7 @@ void RMemoryStorage::deleteTransactionsFrom(int transactionId) {
                     }
                 }
 
-                // delete transaction:
+                // mark transaction for removal:
                 keysToRemove.insert(it.key());
             }
         }
@@ -1122,6 +1123,10 @@ void RMemoryStorage::deleteTransactionsFrom(int transactionId) {
         for (it=keysToRemove.begin(); it!=keysToRemove.end(); ++it) {
             transactionMap.remove(*it);
         }
+    }
+
+    if (!transactionMap.contains(getLastTransactionId())) {
+        setLastTransactionId(getMaxTransactionId());
     }
 }
 

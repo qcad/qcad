@@ -199,7 +199,8 @@ bool RStorage::hasBlock(const QString& blockName) const {
 }
 
 bool RStorage::hasLinetype(const QString& linetypeName) const {
-    return getLinetypeNames().contains(linetypeName);
+    QStringList sl = getLinetypeNames().toList();
+    return sl.contains(linetypeName, Qt::CaseInsensitive);
 }
 
 QList<REntity::Id> RStorage::orderBackToFront(const QSet<REntity::Id>& entityIds) const {

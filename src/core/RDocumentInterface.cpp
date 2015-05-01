@@ -1130,6 +1130,19 @@ void RDocumentInterface::flushTransactions() {
 }
 
 /**
+ * Flush redoable transactions.
+ */
+void RDocumentInterface::flushRedo() {
+    int tid = document.getStorage().getLastTransactionId();
+    document.getStorage().deleteTransactionsFrom(tid);
+
+    if (RMainWindow::hasMainWindow()) {
+        //RMainWindow::getMainWindow()->postTransactionEvent();
+        RMainWindow::getMainWindow()->notifyTransactionListeners(&document, NULL);
+    }
+}
+
+/**
  * Sets the current snap object.
  * The document interface takes ownership of the object.
  */
@@ -1289,14 +1302,15 @@ void RDocumentInterface::selectEntities(const QSet<REntity::Id>& entityIds, bool
 /**
  * Deselects the given entities and updates the scenes accordingly.
  */
-void RDocumentInterface::deselectEntities(const QSet<REntity::Id>& entityIds) {
+bool RDocumentInterface::deselectEntities(const QSet<REntity::Id>& entityIds) {
     QSet<RObject::Id> objectIds;
-    document.deselectEntities(entityIds, &objectIds);
+    bool ret = document.deselectEntities(entityIds, &objectIds);
     updateSelectionStatus(objectIds, true);
 
-    if (RMainWindow::hasMainWindow()) {
+    if (ret && RMainWindow::hasMainWindow()) {
         RMainWindow::getMainWindow()->postSelectionChangedEvent();
     }
+    return ret;
 }
 
 /**

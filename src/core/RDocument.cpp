@@ -1475,11 +1475,11 @@ void RDocument::selectEntities(
  * \copydoc RStorage::deselectEntities
  *
  */
-void RDocument::deselectEntities(
+bool RDocument::deselectEntities(
     const QSet<REntity::Id>& entityIds,
     QSet<REntity::Id>* affectedEntities) {
 
-    storage.deselectEntities(entityIds, affectedEntities);
+    return storage.deselectEntities(entityIds, affectedEntities);
 }
 
 bool RDocument::hasSelection() const {

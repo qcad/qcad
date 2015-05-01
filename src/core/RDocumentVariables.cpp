@@ -21,6 +21,7 @@
 
 RPropertyTypeId RDocumentVariables::PropertyCustom;
 RPropertyTypeId RDocumentVariables::PropertyHandle;
+RPropertyTypeId RDocumentVariables::PropertyProtected;
 RPropertyTypeId RDocumentVariables::PropertyCurrentLayerId;
 RPropertyTypeId RDocumentVariables::PropertyUnit;
 RPropertyTypeId RDocumentVariables::PropertyLinetypeScale;
@@ -39,6 +40,7 @@ RDocumentVariables::~RDocumentVariables() {
 void RDocumentVariables::init() {
     RDocumentVariables::PropertyCustom.generateId(typeid(RDocumentVariables), RObject::PropertyCustom);
     RDocumentVariables::PropertyHandle.generateId(typeid(RDocumentVariables), RObject::PropertyHandle);
+    RDocumentVariables::PropertyProtected.generateId(typeid(RDocumentVariables), RObject::PropertyProtected);
     RDocumentVariables::PropertyCurrentLayerId.generateId(typeid(RDocumentVariables), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Current Layer ID"));
     RDocumentVariables::PropertyUnit.generateId(typeid(RDocumentVariables), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Drawing Unit"));
     RDocumentVariables::PropertyLinetypeScale.generateId(typeid(RDocumentVariables), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Linetype Scale"));

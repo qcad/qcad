@@ -175,7 +175,7 @@ public:
         bool add=false,
         QSet<REntity::Id>* affectedEntities=NULL
     );
-    void deselectEntities(
+    bool deselectEntities(
         const QSet<REntity::Id>& entityId,
         QSet<REntity::Id>* affectedEntities=NULL
     );
