@@ -21,6 +21,7 @@
 
 RPropertyTypeId RDimRotatedEntity::PropertyCustom;
 RPropertyTypeId RDimRotatedEntity::PropertyHandle;
+RPropertyTypeId RDimRotatedEntity::PropertyProtected;
 RPropertyTypeId RDimRotatedEntity::PropertyType;
 RPropertyTypeId RDimRotatedEntity::PropertyBlock;
 RPropertyTypeId RDimRotatedEntity::PropertyLayer;
@@ -67,6 +68,7 @@ RDimRotatedEntity::~RDimRotatedEntity() {
 void RDimRotatedEntity::init() {
     RDimRotatedEntity::PropertyCustom.generateId(typeid(RDimRotatedEntity), RObject::PropertyCustom);
     RDimRotatedEntity::PropertyHandle.generateId(typeid(RDimRotatedEntity), RObject::PropertyHandle);
+    RDimRotatedEntity::PropertyProtected.generateId(typeid(RDimRotatedEntity), RObject::PropertyProtected);
     RDimRotatedEntity::PropertyType.generateId(typeid(RDimRotatedEntity), REntity::PropertyType);
     RDimRotatedEntity::PropertyBlock.generateId(typeid(RDimRotatedEntity), REntity::PropertyBlock);
     RDimRotatedEntity::PropertyLayer.generateId(typeid(RDimRotatedEntity), REntity::PropertyLayer);

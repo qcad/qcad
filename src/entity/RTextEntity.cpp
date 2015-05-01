@@ -21,6 +21,7 @@
 
 RPropertyTypeId RTextEntity::PropertyCustom;
 RPropertyTypeId RTextEntity::PropertyHandle;
+RPropertyTypeId RTextEntity::PropertyProtected;
 RPropertyTypeId RTextEntity::PropertyType;
 RPropertyTypeId RTextEntity::PropertyBlock;
 RPropertyTypeId RTextEntity::PropertyLayer;
@@ -57,6 +58,7 @@ RTextEntity::~RTextEntity() {
 void RTextEntity::init() {
     RTextEntity::PropertyCustom.generateId(typeid(RTextEntity), RObject::PropertyCustom);
     RTextEntity::PropertyHandle.generateId(typeid(RTextEntity), RObject::PropertyHandle);
+    RTextEntity::PropertyProtected.generateId(typeid(RTextEntity), RObject::PropertyProtected);
     RTextEntity::PropertyType.generateId(typeid(RTextEntity), REntity::PropertyType);
     RTextEntity::PropertyBlock.generateId(typeid(RTextEntity), REntity::PropertyBlock);
     RTextEntity::PropertyLayer.generateId(typeid(RTextEntity), REntity::PropertyLayer);

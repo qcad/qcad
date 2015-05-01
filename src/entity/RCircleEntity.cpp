@@ -22,6 +22,7 @@
 
 RPropertyTypeId RCircleEntity::PropertyCustom;
 RPropertyTypeId RCircleEntity::PropertyHandle;
+RPropertyTypeId RCircleEntity::PropertyProtected;
 RPropertyTypeId RCircleEntity::PropertyType;
 RPropertyTypeId RCircleEntity::PropertyBlock;
 RPropertyTypeId RCircleEntity::PropertyLayer;
@@ -61,6 +62,7 @@ RCircleEntity::~RCircleEntity() {
 void RCircleEntity::init() {
     RCircleEntity::PropertyCustom.generateId(typeid(RCircleEntity), RObject::PropertyCustom);
     RCircleEntity::PropertyHandle.generateId(typeid(RCircleEntity), RObject::PropertyHandle);
+    RCircleEntity::PropertyProtected.generateId(typeid(RCircleEntity), RObject::PropertyProtected);
     RCircleEntity::PropertyType.generateId(typeid(RCircleEntity), REntity::PropertyType);
     RCircleEntity::PropertyBlock.generateId(typeid(RCircleEntity), REntity::PropertyBlock);
     RCircleEntity::PropertyLayer.generateId(typeid(RCircleEntity), REntity::PropertyLayer);

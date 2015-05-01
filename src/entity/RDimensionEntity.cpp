@@ -22,6 +22,7 @@
 
 RPropertyTypeId RDimensionEntity::PropertyCustom;
 RPropertyTypeId RDimensionEntity::PropertyHandle;
+RPropertyTypeId RDimensionEntity::PropertyProtected;
 RPropertyTypeId RDimensionEntity::PropertyType;
 RPropertyTypeId RDimensionEntity::PropertyBlock;
 RPropertyTypeId RDimensionEntity::PropertyLayer;
@@ -63,6 +64,7 @@ RDimensionEntity::~RDimensionEntity() {
 void RDimensionEntity::init() {
     RDimensionEntity::PropertyCustom.generateId(typeid(RDimensionEntity), RObject::PropertyCustom);
     RDimensionEntity::PropertyHandle.generateId(typeid(RDimensionEntity), RObject::PropertyHandle);
+    RDimensionEntity::PropertyProtected.generateId(typeid(RDimensionEntity), RObject::PropertyProtected);
     RDimensionEntity::PropertyType.generateId(typeid(RDimensionEntity), REntity::PropertyType);
     RDimensionEntity::PropertyBlock.generateId(typeid(RDimensionEntity), REntity::PropertyBlock);
     RDimensionEntity::PropertyLayer.generateId(typeid(RDimensionEntity), REntity::PropertyLayer);

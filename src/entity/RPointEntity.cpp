@@ -22,6 +22,7 @@
 
 RPropertyTypeId RPointEntity::PropertyCustom;
 RPropertyTypeId RPointEntity::PropertyHandle;
+RPropertyTypeId RPointEntity::PropertyProtected;
 RPropertyTypeId RPointEntity::PropertyType;
 RPropertyTypeId RPointEntity::PropertyBlock;
 RPropertyTypeId RPointEntity::PropertyLayer;
@@ -55,6 +56,7 @@ RPointEntity::~RPointEntity() {
 void RPointEntity::init() {
     RPointEntity::PropertyCustom.generateId(typeid(RPointEntity), RObject::PropertyCustom);
     RPointEntity::PropertyHandle.generateId(typeid(RPointEntity), RObject::PropertyHandle);
+    RPointEntity::PropertyProtected.generateId(typeid(RPointEntity), RObject::PropertyProtected);
     RPointEntity::PropertyType.generateId(typeid(RPointEntity), REntity::PropertyType);
     RPointEntity::PropertyBlock.generateId(typeid(RPointEntity), REntity::PropertyBlock);
     RPointEntity::PropertyLayer.generateId(typeid(RPointEntity), REntity::PropertyLayer);

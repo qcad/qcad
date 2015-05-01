@@ -21,6 +21,7 @@
 
 RPropertyTypeId RAttributeEntity::PropertyCustom;
 RPropertyTypeId RAttributeEntity::PropertyHandle;
+RPropertyTypeId RAttributeEntity::PropertyProtected;
 RPropertyTypeId RAttributeEntity::PropertyType;
 RPropertyTypeId RAttributeEntity::PropertyBlock;
 RPropertyTypeId RAttributeEntity::PropertyLayer;
@@ -58,6 +59,7 @@ RAttributeEntity::~RAttributeEntity() {
 void RAttributeEntity::init() {
     RAttributeEntity::PropertyCustom.generateId(typeid(RAttributeEntity), RObject::PropertyCustom);
     RAttributeEntity::PropertyHandle.generateId(typeid(RAttributeEntity), RObject::PropertyHandle);
+    RAttributeEntity::PropertyProtected.generateId(typeid(RAttributeEntity), RObject::PropertyProtected);
     RAttributeEntity::PropertyType.generateId(typeid(RAttributeEntity), REntity::PropertyType);
     RAttributeEntity::PropertyBlock.generateId(typeid(RAttributeEntity), REntity::PropertyBlock);
     RAttributeEntity::PropertyLayer.generateId(typeid(RAttributeEntity), REntity::PropertyLayer);

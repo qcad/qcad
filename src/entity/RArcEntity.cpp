@@ -22,6 +22,7 @@
 
 RPropertyTypeId RArcEntity::PropertyCustom;
 RPropertyTypeId RArcEntity::PropertyHandle;
+RPropertyTypeId RArcEntity::PropertyProtected;
 RPropertyTypeId RArcEntity::PropertyType;
 RPropertyTypeId RArcEntity::PropertyBlock;
 RPropertyTypeId RArcEntity::PropertyLayer;
@@ -71,6 +72,7 @@ void RArcEntity::setShape(const RArc& a) {
 void RArcEntity::init() {
     RArcEntity::PropertyCustom.generateId(typeid(RArcEntity), RObject::PropertyCustom);
     RArcEntity::PropertyHandle.generateId(typeid(RArcEntity), RObject::PropertyHandle);
+    RArcEntity::PropertyProtected.generateId(typeid(RArcEntity), RObject::PropertyProtected);
     RArcEntity::PropertyType.generateId(typeid(RArcEntity), REntity::PropertyType);
     RArcEntity::PropertyBlock.generateId(typeid(RArcEntity), REntity::PropertyBlock);
     RArcEntity::PropertyLayer.generateId(typeid(RArcEntity), REntity::PropertyLayer);

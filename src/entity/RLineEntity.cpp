@@ -22,6 +22,7 @@
 
 RPropertyTypeId RLineEntity::PropertyCustom;
 RPropertyTypeId RLineEntity::PropertyHandle;
+RPropertyTypeId RLineEntity::PropertyProtected;
 RPropertyTypeId RLineEntity::PropertyType;
 RPropertyTypeId RLineEntity::PropertyBlock;
 RPropertyTypeId RLineEntity::PropertyLayer;
@@ -66,6 +67,7 @@ void RLineEntity::setShape(const RLine& l) {
 void RLineEntity::init() {
     RLineEntity::PropertyCustom.generateId(typeid(RLineEntity), RObject::PropertyCustom);
     RLineEntity::PropertyHandle.generateId(typeid(RLineEntity), RObject::PropertyHandle);
+    RLineEntity::PropertyProtected.generateId(typeid(RLineEntity), RObject::PropertyProtected);
     RLineEntity::PropertyType.generateId(typeid(RLineEntity), REntity::PropertyType);
     RLineEntity::PropertyBlock.generateId(typeid(RLineEntity), REntity::PropertyBlock);
     RLineEntity::PropertyLayer.generateId(typeid(RLineEntity), REntity::PropertyLayer);
