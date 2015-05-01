@@ -88,6 +88,8 @@ void RLayer::setName(const QString& n) {
 bool RLayer::setProperty(RPropertyTypeId propertyTypeId,
     const QVariant& value, RTransaction* transaction) {
 
+    Q_UNUSED(transaction)
+
     bool ret = false;
 
     if (PropertyName == propertyTypeId && name == "0") {
