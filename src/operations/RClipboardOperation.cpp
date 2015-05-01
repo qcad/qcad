@@ -121,7 +121,6 @@ void RClipboardOperation::copy(
         refp->rotate(rotation);
         refp->move(offset);
 
-
         // create attribute for each attribute definition in block with
         // invalid parent ID (fixed later, when block reference ID is known):
         QSet<REntity::Id> ids = src.queryAllEntities();
@@ -553,7 +552,7 @@ QSharedPointer<RLinetype> RClipboardOperation::copyLinetype(
                  "linetype is NULL.");
         return QSharedPointer<RLinetype>();
     }
-    QString srcLinetypeName = srcLinetype->getName();
+    QString srcLinetypeName = srcLinetype->getName().toLower();
     QSharedPointer<RLinetype> destLinetype;
     if (copiedLinetypes.contains(srcLinetypeName)) {
         destLinetype = copiedLinetypes.value(srcLinetypeName);
