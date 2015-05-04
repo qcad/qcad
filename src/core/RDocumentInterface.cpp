@@ -1860,8 +1860,8 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
             }
 
             // deselect block reference entities of hidden block:
-            QSet<RObject::Id> ids = document.queryBlockReferences(*it);
             if (block->isFrozen()) {
+                QSet<RObject::Id> ids = document.queryBlockReferences(*it);
                 deselectEntities(ids);
             }
             continue;
