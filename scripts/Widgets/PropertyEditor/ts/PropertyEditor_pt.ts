@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -50,13 +50,13 @@ Documento carregado: %1</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+172"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Não seleção</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+19"/>
         <source>Geometry</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -80,7 +80,7 @@ Não entidades de dimensão com posições etiqueta personalizada selecionada.</
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Index</source>
         <translatorcomment>--google--
 Indentar nó
@@ -103,7 +103,7 @@ Fecha todas as janelas</translatorcomment>
         <translation>Todos</translation>
     </message>
     <message>
-        <location line="+620"/>
+        <location line="+623"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -113,7 +113,7 @@ Fecha todas as janelas</translatorcomment>
         <translation type="obsolete">Adicionar propriedade personalizada</translation>
     </message>
     <message>
-        <location line="-599"/>
+        <location line="-602"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicionar uma propriedade personalizada para os objetos selecionados</translation>
     </message>
@@ -212,7 +212,7 @@ Salta automaticamente</translatorcomment>
         <translation>Use medição automática</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+39"/>
         <source>Yes</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -237,7 +237,7 @@ Por favor verifique as permissões.</translatorcomment>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+305"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -264,18 +264,23 @@ Preferências Gerais do Aplicativo
         <translation>Geral</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+106"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Move a seleção para uma nova camada</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+62"/>
         <source>Linetype Scale:</source>
         <translation>Escala de tipo de linha:</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="+49"/>
+        <source>Protected:</source>
+        <translation>Protegida:</translation>
+    </message>
+    <message>
+        <location line="-182"/>
         <source>Handle:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--</translatorcomment>

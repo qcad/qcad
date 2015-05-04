@@ -34,7 +34,7 @@
         <translation>Siirrä kohde haluttuun paikkaan</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+313"/>
         <source>Move Reference Point</source>
         <translation>Siirrä viite</translation>
     </message>
@@ -62,7 +62,7 @@
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktiivinen työkalu:</translation>
@@ -73,7 +73,7 @@
         <translation>Ei mitään</translation>
     </message>
     <message>
-        <location line="+426"/>
+        <location line="+425"/>
         <source>Options</source>
         <translation>Asetukset</translation>
     </message>
@@ -93,7 +93,7 @@
         <translation>CAD työkalut</translation>
     </message>
     <message>
-        <location line="+643"/>
+        <location line="+640"/>
         <source>Entity is on a locked layer.</source>
         <translation>Kohde on lukitussa tasossa.</translation>
     </message>
@@ -106,6 +106,11 @@
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
         <translation>Kohde ei ole viiva tai kaari.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc or polyline.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -166,7 +171,7 @@
         <translation>Säde on pudonnut alle 0.0 arvon %1 samankeskisen kaaren (kaarien) jälkeen.</translation>
     </message>
     <message>
-        <location line="+555"/>
+        <location line="+560"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vähintään kaksi pistettä ovat samat.</translation>
@@ -195,7 +200,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+957"/>
+        <location filename="../WidgetFactory.js" line="+962"/>
         <source>Restore defaults</source>
         <translation>Palauta oletusarvot</translation>
     </message>
@@ -342,7 +347,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+688"/>
+        <location filename="../library.js" line="+704"/>
         <source>Entity</source>
         <translation>Kohde</translation>
     </message>

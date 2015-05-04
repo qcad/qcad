@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AboutDialog</class>
- <widget class="QDialog" name="AboutDialog">
+ <class>BrowseAddOnDialog</class>
+ <widget class="QDialog" name="BrowseAddOnDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -22,8 +22,8 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QWebView" name="Browser" native="true">
-     <property name="url" stdset="0">
+    <widget class="QWebView" name="Browser">
+     <property name="url">
       <url>
        <string>about:blank</string>
       </url>
@@ -46,7 +46,7 @@
   <customwidget>
    <class>QWebView</class>
    <extends>QWidget</extends>
-   <header>QtWebKit/QWebView</header>
+   <header>QtWebKitWidgets/QWebView</header>
   </customwidget>
  </customwidgets>
  <resources/>
@@ -54,7 +54,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>clicked(QAbstractButton*)</signal>
-   <receiver>AboutDialog</receiver>
+   <receiver>BrowseAddOnDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">

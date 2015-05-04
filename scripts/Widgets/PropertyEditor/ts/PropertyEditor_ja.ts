@@ -32,12 +32,12 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+172"/>
         <source>No Selection</source>
         <translation>選択なし</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+19"/>
         <source>Geometry</source>
         <translation>ジオメトリ</translation>
     </message>
@@ -52,7 +52,7 @@
         <translation>カスタム</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Index</source>
         <translation>目次</translation>
     </message>
@@ -67,7 +67,7 @@
         <translation>全て</translation>
     </message>
     <message>
-        <location line="+620"/>
+        <location line="+623"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -76,7 +76,7 @@
         <translation type="obsolete">カスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="-599"/>
+        <location line="-602"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
@@ -91,7 +91,7 @@
         <translation>自動計測を使用</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+39"/>
         <source>Yes</source>
         <translation>はい</translation>
     </message>
@@ -101,7 +101,7 @@
         <translation>いいえ</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+305"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -118,17 +118,22 @@
         <translation>全般</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+106"/>
         <source>Move Selection to a New Layer</source>
         <translation>選択内容を新規画層に移動</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+62"/>
         <source>Linetype Scale:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="+49"/>
+        <source>Protected:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-182"/>
         <source>Handle:</source>
         <translation>扱い:</translation>
     </message>

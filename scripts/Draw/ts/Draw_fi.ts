@@ -12,54 +12,110 @@
 <context>
     <name>DrawBasedOnRectangle</name>
     <message>
-        <location filename="../DrawBasedOnRectangle.js" line="+43"/>
         <source>Top Left</source>
-        <translation>Ylävasemmalla</translation>
+        <translation type="vanished">Ylävasemmalla</translation>
+    </message>
+    <message>
+        <source>Top</source>
+        <translation type="vanished">Ylhäällä</translation>
+    </message>
+    <message>
+        <source>Top Right</source>
+        <translation type="vanished">Yläoikealla</translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation type="vanished">Vasemmalla</translation>
+    </message>
+    <message>
+        <source>Middle</source>
+        <translation type="vanished">Keskellä</translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation type="vanished">Oikealla</translation>
+    </message>
+    <message>
+        <source>Bottom Left</source>
+        <translation type="vanished">Alavasen</translation>
+    </message>
+    <message>
+        <source>Bottom</source>
+        <translation type="vanished">Alhaalla</translation>
+    </message>
+    <message>
+        <source>Bottom Right</source>
+        <translation type="vanished">Alaoikealle</translation>
+    </message>
+    <message>
+        <source>Position</source>
+        <translation type="vanished">Sijainti</translation>
+    </message>
+</context>
+<context>
+    <name>DrawBasedOnRectanglePP</name>
+    <message>
+        <location filename="../DrawBasedOnRectanglePP.js" line="+63"/>
+        <source>First corner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Second corner</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DrawBasedOnRectangleSize</name>
+    <message>
+        <location filename="../DrawBasedOnRectangleSize.js" line="+46"/>
+        <source>Top Left</source>
+        <translation type="unfinished">Ylävasemmalla</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation>Ylhäällä</translation>
+        <translation type="unfinished">Ylhäällä</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top Right</source>
-        <translation>Yläoikealla</translation>
+        <translation type="unfinished">Yläoikealla</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Left</source>
-        <translation>Vasemmalla</translation>
+        <translation type="unfinished">Vasemmalla</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Keskellä</translation>
+        <translation type="unfinished">Keskellä</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation>Oikealla</translation>
+        <translation type="unfinished">Oikealla</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Left</source>
-        <translation>Alavasen</translation>
+        <translation type="unfinished">Alavasen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation>Alhaalla</translation>
+        <translation type="unfinished">Alhaalla</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Right</source>
-        <translation>Alaoikealle</translation>
+        <translation type="unfinished">Alaoikealle</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+38"/>
         <source>Position</source>
-        <translation>Sijainti</translation>
+        <translation type="unfinished">Sijainti</translation>
     </message>
 </context>
 <context>

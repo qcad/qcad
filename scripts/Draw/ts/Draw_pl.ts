@@ -14,9 +14,22 @@
     </message>
 </context>
 <context>
-    <name>DrawBasedOnRectangle</name>
+    <name>DrawBasedOnRectanglePP</name>
     <message>
-        <location filename="../DrawBasedOnRectangle.js" line="+43"/>
+        <location filename="../DrawBasedOnRectanglePP.js" line="+63"/>
+        <source>First corner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Second corner</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DrawBasedOnRectangleSize</name>
+    <message>
+        <location filename="../DrawBasedOnRectangleSize.js" line="+46"/>
         <source>Top Left</source>
         <translation type="unfinished"></translation>
     </message>
@@ -61,7 +74,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+38"/>
         <source>Position</source>
         <translation type="unfinished"></translation>
     </message>

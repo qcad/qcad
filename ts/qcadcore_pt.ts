@@ -341,7 +341,7 @@ Cinza Claro</translatorcomment>
 <context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+44"/>
         <source>Current Layer ID</source>
         <translation>ID da camada atual</translation>
     </message>
@@ -369,7 +369,7 @@ Cinza Claro</translatorcomment>
         <translation type="obsolete">Bloco referenciado</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+78"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+91"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
@@ -440,7 +440,27 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Ângulo</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+69"/>
+        <location line="+1"/>
+        <source>Columns</source>
+        <translation>Colunas</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rows</source>
+        <translation>Linhas</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Column Spacing</source>
+        <translation>Espaçamento de coluna</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Row Spacing</source>
+        <translation>Espaçamento de linha</translation>
+    </message>
+    <message>
+        <location filename="../src/core/REntity.cpp" line="+73"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -449,7 +469,7 @@ Tipo Ordinal</translatorcomment>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-11"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_pt.ts--
@@ -633,7 +653,7 @@ Abre diálogo de cores</translatorcomment>
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+52"/>
+        <location filename="../src/core/RLayer.cpp" line="+69"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
@@ -845,7 +865,7 @@ Borda (grande)</translatorcomment>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+816"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+818"/>
         <source>By Layer</source>
         <translation>Pela Camada</translation>
     </message>

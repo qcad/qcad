@@ -4,7 +4,7 @@
 <context>
     <name>Image</name>
     <message>
-        <location filename="../Image.js" line="+125"/>
+        <location filename="../Image.js" line="+132"/>
         <source>Files</source>
         <translatorcomment>--google--
 Todos os Arquivos de Imagem (%1)

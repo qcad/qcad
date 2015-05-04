@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>Draw</name>
     <message>
@@ -12,7 +12,63 @@
 <context>
     <name>DrawBasedOnRectangle</name>
     <message>
-        <location filename="../DrawBasedOnRectangle.js" line="+43"/>
+        <source>Top Left</source>
+        <translation>In Alto a Sinistra</translation>
+    </message>
+    <message>
+        <source>Top</source>
+        <translation>Sopra</translation>
+    </message>
+    <message>
+        <source>Top Right</source>
+        <translation>In Alto a Destra</translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation>Sinistra</translation>
+    </message>
+    <message>
+        <source>Middle</source>
+        <translation>Medio</translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation>Destra</translation>
+    </message>
+    <message>
+        <source>Bottom Left</source>
+        <translation>In Basso a Sinistra</translation>
+    </message>
+    <message>
+        <source>Bottom</source>
+        <translation>Sotto</translation>
+    </message>
+    <message>
+        <source>Bottom Right</source>
+        <translation>In Basso a Destra</translation>
+    </message>
+    <message>
+        <source>Position</source>
+        <translation>Posizione</translation>
+    </message>
+</context>
+<context>
+    <name>DrawBasedOnRectanglePP</name>
+    <message>
+        <location filename="../DrawBasedOnRectanglePP.js" line="+63"/>
+        <source>First corner</source>
+        <translation>Primo punto dell&apos;angolo</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Second corner</source>
+        <translation>Secondo punto dell&apos;angolo</translation>
+    </message>
+</context>
+<context>
+    <name>DrawBasedOnRectangleSize</name>
+    <message>
+        <location filename="../DrawBasedOnRectangleSize.js" line="+46"/>
         <source>Top Left</source>
         <translation>In Alto a Sinistra</translation>
     </message>
@@ -57,7 +113,7 @@
         <translation>In Basso a Destra</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+38"/>
         <source>Position</source>
         <translation>Posizione</translation>
     </message>

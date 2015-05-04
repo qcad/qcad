@@ -19,9 +19,9 @@
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="Radius">
-     <property name="text">
-      <string>1</string>
+    <widget class="RMathLineEdit" name="Radius" native="true">
+     <property name="text" stdset="0">
+      <string notr="true">1</string>
      </property>
      <property name="angle" stdset="0">
       <bool>false</bool>
@@ -36,8 +36,8 @@
  <customwidgets>
   <customwidget>
    <class>RMathLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>RMathLineEdit.h</header>
+   <extends>QWidget</extends>
+   <header>rmathlineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

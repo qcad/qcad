@@ -24,8 +24,8 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="RMathLineEdit" name="Angle">
-       <property name="text">
+      <widget class="RMathLineEdit" name="Angle" native="true">
+       <property name="text" stdset="0">
         <string notr="true">0</string>
        </property>
        <property name="angle" stdset="0">
@@ -54,8 +54,8 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="RMathLineEdit" name="Width">
-       <property name="text">
+      <widget class="RMathLineEdit" name="Width" native="true">
+       <property name="text" stdset="0">
         <string notr="true">100</string>
        </property>
        <property name="DefaultFocus" stdset="0">
@@ -64,8 +64,8 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="RMathLineEdit" name="Height">
-       <property name="text">
+      <widget class="RMathLineEdit" name="Height" native="true">
+       <property name="text" stdset="0">
         <string notr="true">50</string>
        </property>
       </widget>
@@ -73,7 +73,7 @@
      <item row="0" column="2">
       <widget class="QLabel" name="WidthEqual">
        <property name="text">
-        <string>=</string>
+        <string notr="true">=</string>
        </property>
       </widget>
      </item>
@@ -86,14 +86,14 @@
         </sizepolicy>
        </property>
        <property name="text">
-        <string>0</string>
+        <string notr="true">0</string>
        </property>
       </widget>
      </item>
      <item row="1" column="2">
       <widget class="QLabel" name="HeightEqual">
        <property name="text">
-        <string>=</string>
+        <string notr="true">=</string>
        </property>
       </widget>
      </item>
@@ -106,14 +106,14 @@
         </sizepolicy>
        </property>
        <property name="text">
-        <string>0</string>
+        <string notr="true">0</string>
        </property>
       </widget>
      </item>
      <item row="2" column="2">
       <widget class="QLabel" name="AngleEqual">
        <property name="text">
-        <string>=</string>
+        <string notr="true">=</string>
        </property>
       </widget>
      </item>
@@ -126,7 +126,7 @@
         </sizepolicy>
        </property>
        <property name="text">
-        <string>0</string>
+        <string notr="true">0</string>
        </property>
       </widget>
      </item>
@@ -158,8 +158,8 @@
  <customwidgets>
   <customwidget>
    <class>RMathLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>RMathLineEdit.h</header>
+   <extends>QWidget</extends>
+   <header>rmathlineedit.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

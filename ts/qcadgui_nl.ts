@@ -9,4 +9,12 @@
         <translation>Aangepast</translation>
     </message>
 </context>
+<context>
+    <name>RMathLineEdit</name>
+    <message>
+        <location filename="../src/gui/RMathLineEdit.cpp" line="+156"/>
+        <source>Invalid</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 </TS>

@@ -1,43 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>ArcTPR</name>
     <message>
-        <location filename="../ArcTPR.js" line="+76"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation>Izberi črto, lok, krog ali elipso</translation>
+        <translation type="vanished">Izberi črto, lok, krog ali elipso</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>Point on arc</source>
-        <translation>Točka na loku</translation>
+        <translation type="vanished">Točka na loku</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Choose solution</source>
-        <translation>Izberite rešitev</translation>
+        <translation type="vanished">Izberite rešitev</translation>
     </message>
     <message>
-        <location line="+119"/>
-        <location line="+60"/>
         <source>No solution</source>
-        <translation>Ni rešitve</translation>
+        <translation type="vanished">Ni rešitve</translation>
     </message>
     <message>
-        <location filename="../ArcTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Polmer:</translation>
+        <translation type="vanished">Polmer:</translation>
     </message>
     <message>
-        <location filename="../ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>&amp;Tangenta, Točka, Polmer</translation>
+        <translation type="vanished">&amp;Tangenta, Točka, Polmer</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation>Nariši lok tangencialno na entiteto, skozi točko s polmerom</translation>
+        <translation type="vanished">Nariši lok tangencialno na entiteto, skozi točko s polmerom</translation>
     </message>
 </context>
 <context>
@@ -69,6 +61,24 @@
     <message>
         <source>Draw circle tangential to two entities, through point</source>
         <translation type="obsolete">Nariši krog tangencialno na dve entiteti, skozi točko</translation>
+    </message>
+</context>
+<context>
+    <name>CircleTPR</name>
+    <message>
+        <location filename="../CircleTPR.js" line="+38"/>
+        <source>Point on circle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../CircleTPRInit.js" line="+2"/>
+        <source>&amp;Tangent, Point, Radius</source>
+        <translation type="unfinished">&amp;Tangenta, Točka, Polmer</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw circle tangential to entity, through point with radius</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -50,14 +50,12 @@ Indique o segundo vértice</translatorcomment>
 <context>
     <name>ShapeRectanglePP</name>
     <message>
-        <location filename="../ShapeRectanglePP.js" line="+58"/>
         <source>First corner</source>
-        <translation>Primeira ponto de canto</translation>
+        <translation type="vanished">Primeira ponto de canto</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Second corner</source>
-        <translation>Segundo ponto de canto</translation>
+        <translation type="vanished">Segundo ponto de canto</translation>
     </message>
     <message>
         <location filename="../ShapeRectanglePPInit.js" line="+2"/>

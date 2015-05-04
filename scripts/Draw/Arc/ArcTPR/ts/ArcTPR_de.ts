@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>ArcTPR</name>
     <message>
@@ -8,7 +8,7 @@
         <translation type="obsolete">Linie, Bogen, Kreis oder Ellipse</translation>
     </message>
     <message>
-        <location filename="../ArcTPR.js" line="+76"/>
+        <location filename="../ArcTPR.js" line="+79"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Linie, Bogen, Kreis oder Ellipse wählen</translation>
     </message>
@@ -23,8 +23,8 @@
         <translation>Lösung wählen</translation>
     </message>
     <message>
-        <location line="+119"/>
-        <location line="+60"/>
+        <location line="+120"/>
+        <location line="+65"/>
         <source>No solution</source>
         <translation>Keine Lösung</translation>
     </message>

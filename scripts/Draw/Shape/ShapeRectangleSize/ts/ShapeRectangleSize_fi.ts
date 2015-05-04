@@ -70,23 +70,45 @@
     </message>
     <message>
         <location filename="../ShapeRectangleSize.ui" line="+17"/>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="+19"/>
         <source>&amp;Width:</source>
         <translation>&amp;Leveys:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+23"/>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>&amp;Height:</source>
         <translation>&amp;Korkeus:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+30"/>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
         <translation>Kulma:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+36"/>
         <source>Reference Point:</source>
         <translation>Viitepiste:</translation>
+    </message>
+    <message>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="+37"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <source>=</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-27"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <source>0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Create Polyline</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

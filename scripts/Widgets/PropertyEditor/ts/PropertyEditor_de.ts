@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -36,12 +36,12 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+172"/>
         <source>No Selection</source>
         <translation>Keine Selektion</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+19"/>
         <source>Geometry</source>
         <translation>Geometrie</translation>
     </message>
@@ -51,7 +51,7 @@
         <translation>Abhängige Objekte</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+175"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -66,7 +66,7 @@
         <translation>Alle</translation>
     </message>
     <message>
-        <location line="+620"/>
+        <location line="+623"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -103,7 +103,7 @@
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-599"/>
+        <location line="-602"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -126,7 +126,7 @@
         <translation>Automatisch</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+39"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -140,7 +140,7 @@
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+305"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -157,14 +157,19 @@
         <translation>Allgemein</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+35"/>
         <source>Handle:</source>
         <translation>Handle:</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+133"/>
         <source>Linetype Scale:</source>
         <translation>Linientypskalierung:</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Protected:</source>
+        <translation>Geschützt:</translation>
     </message>
     <message>
         <source>Layer:</source>
@@ -187,12 +192,12 @@
         <translation type="obsolete">Reihenfolge:</translation>
     </message>
     <message>
-        <location line="-97"/>
+        <location line="-111"/>
         <source>Move Selection to a New Layer</source>
         <translation>Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-909"/>
+        <location filename="../PropertyEditor.js" line="-917"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

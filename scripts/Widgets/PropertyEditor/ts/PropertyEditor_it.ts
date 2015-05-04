@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -27,12 +27,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+373"/>
+        <location filename="../PropertyEditor.js" line="+382"/>
         <source>Geometry</source>
         <translation>Geometria</translation>
     </message>
     <message>
-        <location line="+295"/>
+        <location line="+300"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
@@ -61,7 +61,7 @@
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-481"/>
+        <location line="-495"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -76,7 +76,7 @@ Versione:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+172"/>
         <source>No Selection</source>
         <translatorcomment>--ignored case--
 --file: photivo_it.ts--
@@ -84,7 +84,7 @@ Nessuna selezione</translatorcomment>
         <translation>Nessuna selezione</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+33"/>
         <source>Dependent Entities</source>
         <translation>Entità dipendenti</translation>
     </message>
@@ -94,7 +94,7 @@ Nessuna selezione</translatorcomment>
         <translation>Personalizzato</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Index</source>
         <translation>Indice</translation>
     </message>
@@ -109,7 +109,7 @@ Nessuna selezione</translatorcomment>
         <translation>Tutto</translation>
     </message>
     <message>
-        <location line="+620"/>
+        <location line="+623"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -139,7 +139,7 @@ Specifica la base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-463"/>
+        <location line="-466"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -150,7 +150,7 @@ Specifica la base</translatorcomment>
         <translation>Utilizzare la misurazione automatica</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+39"/>
         <source>Yes</source>
         <translation>Si</translation>
     </message>
@@ -160,7 +160,7 @@ Specifica la base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+305"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -179,18 +179,23 @@ Specifica la base</translatorcomment>
         <translation>Generale</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+106"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Sposta la selezione ad un nuovo layer</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+62"/>
         <source>Linetype Scale:</source>
         <translation>Scala del tipo di linea:</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="+49"/>
+        <source>Protected:</source>
+        <translation>Protetta:</translation>
+    </message>
+    <message>
+        <location line="-182"/>
         <source>Handle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Maniglia:</translation>

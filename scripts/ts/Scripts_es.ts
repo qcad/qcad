@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -39,7 +39,7 @@
         <translation>Mover entidad</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+313"/>
         <source>Move Reference Point</source>
         <translation>Mover punto de referencia</translation>
     </message>
@@ -67,7 +67,7 @@
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Herramienta activa:</translation>
@@ -83,7 +83,7 @@
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location line="+426"/>
+        <location line="+425"/>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>
@@ -105,7 +105,7 @@
         <translation>Herramientas CAD</translation>
     </message>
     <message>
-        <location line="+643"/>
+        <location line="+640"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad está en una capa bloqueada.</translation>
@@ -121,6 +121,11 @@
         <source>Entity is not a line or arc.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una línea o un arco.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc or polyline.</source>
+        <translation>Entidad no es una línea, arco o polilínea.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -188,7 +193,7 @@
         <translation>Radio caído por debajo de 0,0 después %1 de arcos concéntricos.</translation>
     </message>
     <message>
-        <location line="+555"/>
+        <location line="+560"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -221,7 +226,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+957"/>
+        <location filename="../WidgetFactory.js" line="+962"/>
         <source>Restore defaults</source>
         <translation>Restaurar los valores predeterminados</translation>
     </message>
@@ -409,7 +414,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+688"/>
+        <location filename="../library.js" line="+704"/>
         <source>Entity</source>
         <translation>Entidad</translation>
     </message>

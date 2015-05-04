@@ -14,12 +14,12 @@
         <translation>Piirroksen asetukset</translation>
     </message>
     <message>
-        <location line="+247"/>
+        <location line="+248"/>
         <source>Restart required</source>
         <translation>Uudelleenkäynnistys tarvitaan</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translation>Käynnistä uudelleen QCAD, jotta

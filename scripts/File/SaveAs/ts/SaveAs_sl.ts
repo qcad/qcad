@@ -14,7 +14,7 @@
         <translation>Prikaži opozorilo, ob shranjevanju v datotečni format, ki ne podpira 24bitne barve</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="+32"/>
+        <location filename="../SaveAs.js" line="+33"/>
         <source>Load/Save</source>
         <translation>Naloži/Shrani</translation>
     </message>
@@ -24,17 +24,16 @@
         <translation>Shrani kot</translation>
     </message>
     <message>
-        <location line="+24"/>
         <source>No export filters</source>
-        <translation>Ni filtrov za izvoz</translation>
+        <translation type="vanished">Ni filtrov za izvoz</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+24"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Ni bil najden noben filter. Prekinjam...</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+53"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>

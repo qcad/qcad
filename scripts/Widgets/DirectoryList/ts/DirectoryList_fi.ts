@@ -13,7 +13,7 @@ is already in the list.</source>
 on jo luettelossa.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Folder not added</source>
         <translation>Hakemistoa ei lisätty</translation>
     </message>

@@ -4,44 +4,34 @@
 <context>
     <name>ShapePolygonAFCP</name>
     <message>
-        <location filename="../ShapePolygonAFCP.js" line="60"/>
+        <location filename="../ShapePolygonAFCP.js" line="+61"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonAFCP.js" line="67"/>
-        <source>Side</source>
-        <translation type="unfinished"></translation>
+        <location line="+8"/>
+        <source>Middle of Side</source>
+        <translation>Metà del lato</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonAFCP.js" line="69"/>
-        <source>Corner</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ShapePolygonAFCP.js" line="73"/>
+        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Fatto</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonAFCP.ui" line="17"/>
-        <source>No. of Sides:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ShapePolygonAFCP.ui" line="38"/>
-        <source>Corners</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ShapePolygonAFCPInit.js" line="2"/>
+        <location filename="../ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pol&amp;igono (centro, lato)</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonAFCPInit.js" line="6"/>
-        <source>Draw regular polygon from center and side</source>
-        <translation type="unfinished"></translation>
+        <location line="+4"/>
+        <source>Draw regular polygon from center and middle point of side</source>
+        <translation>Disegna poligono regolare dal centro e punto di mezzo di lato</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonAFCP.ui" line="+17"/>
+        <source>Corners:</source>
+        <translation>Punti dell&apos;angolo:</translation>
     </message>
 </context>
 </TS>

@@ -32,7 +32,12 @@
         <translation>Dvoklik na blokovno referenco odpre blok</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
+        <source>Right double-click to reset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Right-Click</source>
         <translation>Desni klik</translation>
     </message>

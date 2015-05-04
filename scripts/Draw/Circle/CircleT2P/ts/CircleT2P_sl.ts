@@ -30,9 +30,13 @@
         <translation>Ni rešitve</translation>
     </message>
     <message>
-        <location filename="../CircleT2PInit.js" line="+2"/>
         <source>2 Poin&amp;ts and Tangent</source>
-        <translation>2 &amp;točki in tangenta</translation>
+        <translation type="vanished">2 &amp;točki in tangenta</translation>
+    </message>
+    <message>
+        <location filename="../CircleT2PInit.js" line="+2"/>
+        <source>&amp;Tangent and 2 Points</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>

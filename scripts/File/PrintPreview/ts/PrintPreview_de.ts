@@ -19,7 +19,7 @@
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+153"/>
+        <location filename="../PrintPreview.js" line="+162"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -44,7 +44,7 @@
         <translation>Querformat</translation>
     </message>
     <message>
-        <location filename="../PrintPreview.js" line="+374"/>
+        <location filename="../PrintPreview.js" line="+383"/>
         <source>Export to PDF</source>
         <translation>PDF exportieren</translation>
     </message>
@@ -54,12 +54,12 @@
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../PrintPreview.js" line="-375"/>
+        <location filename="../PrintPreview.js" line="-384"/>
         <source>Drag to move paper</source>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
     <message>
-        <location line="+384"/>
+        <location line="+393"/>
         <source>Exporting to %1...</source>
         <translation>Exportiere nach %1...</translation>
     </message>

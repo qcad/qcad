@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -39,7 +39,7 @@
         <translation>Mover entidade</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+313"/>
         <source>Move Reference Point</source>
         <translation>Mover ponto de referência</translation>
     </message>
@@ -75,7 +75,7 @@ Cancelar
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Ferramenta de ativos:</translation>
@@ -96,7 +96,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+426"/>
+        <location line="+425"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -125,7 +125,7 @@ Ferramentas CAD</translatorcomment>
         <translation>Ferramentas CAD</translation>
     </message>
     <message>
-        <location line="+643"/>
+        <location line="+640"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidade está em uma camada bloqueada.</translation>
@@ -141,6 +141,11 @@ Ferramentas CAD</translatorcomment>
         <source>Entity is not a line or arc.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidade não é uma linha ou arco.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc or polyline.</source>
+        <translation>Entidade não é uma linha, arco ou polilinha.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -208,7 +213,7 @@ Ferramentas CAD</translatorcomment>
         <translation>Raio caiu abaixo de 0,0, após %1 arcos concêntricos.</translation>
     </message>
     <message>
-        <location line="+555"/>
+        <location line="+560"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -241,7 +246,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+957"/>
+        <location filename="../WidgetFactory.js" line="+962"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--
@@ -469,7 +474,7 @@ Carregando plugins...</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+688"/>
+        <location filename="../library.js" line="+704"/>
         <source>Entity</source>
         <translation>Entidade</translation>
     </message>

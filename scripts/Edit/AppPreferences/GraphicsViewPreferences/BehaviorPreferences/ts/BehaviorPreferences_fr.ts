@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>BehaviorPreferences</name>
     <message>
@@ -32,7 +32,12 @@
         <translation>Double-cliquez sur une référence de bloc pour ouvrir le bloc</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
+        <source>Right double-click to reset</source>
+        <translation>Droit double-cliquez sur pour réinitialiser</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Right-Click</source>
         <translation>Clic-droit</translation>
     </message>

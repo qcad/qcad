@@ -129,7 +129,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="+7"/>
+        <source>Timeout for hatch rendering:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-349"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
@@ -161,7 +166,7 @@
         <translation type="obsolete">テキスト高さの表示閾値:</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+265"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>

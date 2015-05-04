@@ -50,14 +50,12 @@ Wskaż drugi wierzchołek</translatorcomment>
 <context>
     <name>ShapeRectanglePP</name>
     <message>
-        <location filename="../ShapeRectanglePP.js" line="+58"/>
         <source>First corner</source>
-        <translation type="unfinished">Pierwszy zakręt</translation>
+        <translation type="obsolete">Pierwszy zakręt</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Second corner</source>
-        <translation type="unfinished">Drugi narożnik</translation>
+        <translation type="obsolete">Drugi narożnik</translation>
     </message>
     <message>
         <location filename="../ShapeRectanglePPInit.js" line="+2"/>

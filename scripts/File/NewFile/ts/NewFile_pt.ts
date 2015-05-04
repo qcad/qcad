@@ -65,7 +65,7 @@ Sem Título</translatorcomment>
         <translation>O arquivo está vazio.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Drawing loaded successfully:</source>
         <translation>Desenho carregado com sucesso:</translation>
     </message>
@@ -79,7 +79,7 @@ Sem Título</translatorcomment>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+112"/>
         <source>Untitled %1</source>
         <translation>Sem título %1</translation>
     </message>

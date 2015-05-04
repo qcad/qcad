@@ -30,7 +30,7 @@
      <item row="0" column="1">
       <widget class="QLineEdit" name="ColumnCount">
        <property name="text">
-        <string>1</string>
+        <string notr="true">1</string>
        </property>
       </widget>
      </item>
@@ -44,7 +44,7 @@
      <item row="1" column="1">
       <widget class="QLineEdit" name="RowCount">
        <property name="text">
-        <string>1</string>
+        <string notr="true">1</string>
        </property>
       </widget>
      </item>
@@ -56,8 +56,8 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="RMathLineEdit" name="ColumnSpacing">
-       <property name="text">
+      <widget class="RMathLineEdit" name="ColumnSpacing" native="true">
+       <property name="text" stdset="0">
         <string notr="true">1</string>
        </property>
        <property name="angle" stdset="0">
@@ -73,8 +73,8 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="RMathLineEdit" name="RowSpacing">
-       <property name="text">
+      <widget class="RMathLineEdit" name="RowSpacing" native="true">
+       <property name="text" stdset="0">
         <string notr="true">1</string>
        </property>
        <property name="angle" stdset="0">
@@ -99,8 +99,8 @@
  <customwidgets>
   <customwidget>
    <class>RMathLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>RMathLineEdit.h</header>
+   <extends>QWidget</extends>
+   <header>rmathlineedit.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

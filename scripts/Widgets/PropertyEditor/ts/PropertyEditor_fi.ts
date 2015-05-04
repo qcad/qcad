@@ -37,12 +37,12 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+172"/>
         <source>No Selection</source>
         <translation>Ei valintaa</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+19"/>
         <source>Geometry</source>
         <translation>Geometria</translation>
     </message>
@@ -57,7 +57,7 @@
         <translation>Muokattu</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Index</source>
         <translation>Hakemisto</translation>
     </message>
@@ -87,7 +87,7 @@
         <translation>Käytä automaattisia mittauksia</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+39"/>
         <source>Yes</source>
         <translation>Kyllä</translation>
     </message>
@@ -97,7 +97,7 @@
         <translation>Ei</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+305"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
@@ -119,17 +119,22 @@
         <translation>Yleistä</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+106"/>
         <source>Move Selection to a New Layer</source>
         <translation>Siirrä valinta uuteen tasoon</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+62"/>
         <source>Linetype Scale:</source>
         <translation>Viivatyypin mittakaava:</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="+49"/>
+        <source>Protected:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-182"/>
         <source>Handle:</source>
         <translation>Käsittele:</translation>
     </message>

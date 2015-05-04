@@ -32,7 +32,7 @@ Fecha todas as janelas</translatorcomment>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+152"/>
+        <location filename="../PrintPreview.js" line="+161"/>
         <source>Drag to move paper</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Arraste para mover o papel</translation>
@@ -48,7 +48,7 @@ lugares:\</translatorcomment>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location line="+374"/>
+        <location line="+383"/>
         <source>Export to PDF</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Exportação para PDF</translation>

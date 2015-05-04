@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>About</name>
     <message>
@@ -14,17 +14,17 @@
         <translation>Vtičniki</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>No information available</source>
         <translation>Informacije niso navoljo</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+1"/>
         <source>Plugin:</source>
         <translation>Vtičnik:</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+20"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -87,7 +87,7 @@
         <translation>Napaka:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+32"/>
         <source>Script Add-Ons</source>
         <translation>Dodatki skript</translation>
     </message>

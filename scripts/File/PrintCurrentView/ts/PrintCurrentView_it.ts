@@ -17,12 +17,12 @@
     <message>
         <location filename="../PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation type="unfinished"></translation>
+        <translation>Stampa &amp;visualizza corrente</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Print current view</source>
-        <translation type="unfinished"></translation>
+        <translation>Stampa visualizza corrente</translation>
     </message>
 </context>
 </TS>

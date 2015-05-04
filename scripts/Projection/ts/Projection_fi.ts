@@ -19,7 +19,7 @@
         <translation>&amp;Projektio</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+41"/>
         <source>Reference point</source>
         <translation>Viitepiste</translation>
     </message>

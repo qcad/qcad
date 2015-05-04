@@ -14,7 +14,7 @@
         <translation>Die zwei Objekte können nicht gerundet werden.</translation>
     </message>
     <message>
-        <location line="+220"/>
+        <location line="+216"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Erstes Objekt kann nicht getrimmt werden.</translation>
     </message>

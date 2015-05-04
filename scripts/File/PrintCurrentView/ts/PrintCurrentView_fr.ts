@@ -17,12 +17,12 @@
     <message>
         <location filename="../PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation type="unfinished"></translation>
+        <translation>Imprimer &amp;affichage courant</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Print current view</source>
-        <translation type="unfinished"></translation>
+        <translation>Imprimer affichage courant</translation>
     </message>
 </context>
 </TS>

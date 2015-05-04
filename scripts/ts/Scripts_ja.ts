@@ -34,7 +34,7 @@
         <translation>希望の位置にエンティティを移動</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+313"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -62,7 +62,7 @@
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>アクティブツール:</translation>
@@ -73,7 +73,7 @@
         <translation>なし</translation>
     </message>
     <message>
-        <location line="+426"/>
+        <location line="+425"/>
         <source>Options</source>
         <translation>オプション</translation>
     </message>
@@ -93,7 +93,7 @@
         <translation>CADツール</translation>
     </message>
     <message>
-        <location line="+643"/>
+        <location line="+640"/>
         <source>Entity is on a locked layer.</source>
         <translation>エンティティはロックされた画層にあります。</translation>
     </message>
@@ -106,6 +106,11 @@
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
         <translation>エンティティは線分または弧ではありません。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc or polyline.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -166,7 +171,7 @@
         <translation>%1同心弧の半径が0.0を下回りました。</translation>
     </message>
     <message>
-        <location line="+555"/>
+        <location line="+560"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>少なくとも2点が同一です。</translation>
@@ -195,7 +200,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+957"/>
+        <location filename="../WidgetFactory.js" line="+962"/>
         <source>Restore defaults</source>
         <translation>デフォルトを置き換え</translation>
     </message>
@@ -342,7 +347,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+688"/>
+        <location filename="../library.js" line="+704"/>
         <source>Entity</source>
         <translation>エンティティ</translation>
     </message>

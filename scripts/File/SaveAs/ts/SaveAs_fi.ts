@@ -14,7 +14,7 @@
         <translation>Näytä varoitus, kun tallennetaan tiedostomuotoon, joka ei tue 24bittisiä värejä</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="+32"/>
+        <location filename="../SaveAs.js" line="+33"/>
         <source>Load/Save</source>
         <translation>Lataa/tallenna</translation>
     </message>
@@ -24,17 +24,16 @@
         <translation>Tallenna nimellä</translation>
     </message>
     <message>
-        <location line="+24"/>
         <source>No export filters</source>
-        <translation>Ei vientisuodattimia</translation>
+        <translation type="vanished">Ei vientisuodattimia</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+24"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Vientisuodattimia ei löydetty. Keskeytetään...</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+53"/>
         <source>Format:</source>
         <translation>Muoto:</translation>
     </message>

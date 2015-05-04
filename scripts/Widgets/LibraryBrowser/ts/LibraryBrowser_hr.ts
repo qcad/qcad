@@ -4,7 +4,7 @@
 <context>
     <name>LibraryBrowser</name>
     <message>
-        <location filename="../LibraryBrowser.js" line="+70"/>
+        <location filename="../LibraryBrowser.js" line="+71"/>
         <source>audience</source>
         <translation type="unfinished"></translation>
     </message>
@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1108"/>
+        <location line="+1129"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-1100"/>
+        <location line="-1121"/>
         <source>Icon</source>
         <translation type="unfinished"></translation>
     </message>
@@ -81,7 +81,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+654"/>
+        <location line="+675"/>
         <source>Page %1 of %2</source>
         <translation type="unfinished"></translation>
     </message>
@@ -141,7 +141,17 @@ Library browser will not be available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+43"/>
+        <source>Source removed from part library: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Force database update.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+393"/>
         <source>&amp;Insert</source>
         <translation type="unfinished"></translation>
     </message>
@@ -265,12 +275,12 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+60"/>
         <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Look for:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -300,7 +310,12 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+36"/>
+        <source>Insert selected item into drawing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Update DB from file system</source>
         <translation type="unfinished"></translation>
     </message>

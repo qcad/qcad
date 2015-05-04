@@ -1,110 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>LineRectangleSize</name>
     <message>
         <source>Top Left</source>
-        <translation type="vanished">Oben links</translation>
+        <translation>Oben links</translation>
     </message>
     <message>
         <source>Top</source>
-        <translation type="vanished">Oben</translation>
+        <translation>Oben</translation>
     </message>
     <message>
         <source>Top Right</source>
-        <translation type="vanished">Oben rechts</translation>
+        <translation>Oben rechts</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="vanished">Links</translation>
+        <translation>Links</translation>
     </message>
     <message>
         <source>Middle</source>
-        <translation type="vanished">Mitte</translation>
+        <translation>Mitte</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="vanished">Rechts</translation>
+        <translation>Rechts</translation>
     </message>
     <message>
         <source>Bottom Left</source>
-        <translation type="vanished">Unten links</translation>
+        <translation>Unten links</translation>
     </message>
     <message>
         <source>Bottom</source>
-        <translation type="vanished">Unten</translation>
+        <translation>Unten</translation>
     </message>
     <message>
         <source>Bottom Right</source>
-        <translation type="vanished">Unten rechts</translation>
+        <translation>Unten rechts</translation>
     </message>
     <message>
         <source>Position</source>
-        <translation type="vanished">Position</translation>
+        <translation>Position</translation>
     </message>
     <message>
         <source>Rectangle with &amp;Size</source>
-        <translation type="vanished">Rechteck mit &amp;Grösse</translation>
+        <translation>Rechteck mit &amp;Grösse</translation>
     </message>
     <message>
         <source>Draw rectangle with position and size</source>
-        <translation type="vanished">Rechteck von Position und Grösse</translation>
+        <translation>Rechteck von Position und Grösse</translation>
     </message>
     <message>
         <source>&amp;Width:</source>
-        <translation type="vanished">&amp;Breite:</translation>
+        <translation>&amp;Breite:</translation>
     </message>
     <message>
         <source>&amp;Height:</source>
-        <translation type="vanished">&amp;Höhe:</translation>
+        <translation>&amp;Höhe:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation type="vanished">Referenzpunkt:</translation>
+        <translation>Referenzpunkt:</translation>
     </message>
 </context>
 <context>
     <name>ShapeRectangleSize</name>
     <message>
         <source>Top Left</source>
-        <translation type="vanished">Oben links</translation>
+        <translation>Oben links</translation>
     </message>
     <message>
         <source>Top</source>
-        <translation type="vanished">Oben</translation>
+        <translation>Oben</translation>
     </message>
     <message>
         <source>Top Right</source>
-        <translation type="vanished">Oben rechts</translation>
+        <translation>Oben rechts</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="vanished">Links</translation>
+        <translation>Links</translation>
     </message>
     <message>
         <source>Middle</source>
-        <translation type="vanished">Mitte</translation>
+        <translation>Mitte</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="vanished">Rechts</translation>
+        <translation>Rechts</translation>
     </message>
     <message>
         <source>Bottom Left</source>
-        <translation type="vanished">Unten links</translation>
+        <translation>Unten links</translation>
     </message>
     <message>
         <source>Bottom</source>
-        <translation type="vanished">Unten</translation>
+        <translation>Unten</translation>
     </message>
     <message>
         <source>Bottom Right</source>
-        <translation type="vanished">Unten rechts</translation>
+        <translation>Unten rechts</translation>
     </message>
     <message>
         <source>Position</source>
-        <translation type="vanished">Position</translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location filename="../ShapeRectangleSizeInit.js" line="+2"/>
@@ -118,23 +118,45 @@
     </message>
     <message>
         <location filename="../ShapeRectangleSize.ui" line="+17"/>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="+19"/>
         <source>&amp;Width:</source>
         <translation>&amp;Breite:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+23"/>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>&amp;Height:</source>
         <translation>&amp;Höhe:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+30"/>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+36"/>
         <source>Reference Point:</source>
         <translation>Referenzpunkt:</translation>
+    </message>
+    <message>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="+37"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <source>=</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-27"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <source>0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Create Polyline</source>
+        <translation>Polylinien konstruieren</translation>
     </message>
 </context>
 </TS>

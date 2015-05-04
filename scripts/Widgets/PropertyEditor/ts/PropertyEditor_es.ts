@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -34,12 +34,12 @@ Tipo de línea:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+373"/>
+        <location filename="../PropertyEditor.js" line="+382"/>
         <source>Geometry</source>
         <translation>Geometría</translation>
     </message>
     <message>
-        <location line="+295"/>
+        <location line="+300"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -68,7 +68,7 @@ Tipo de línea:</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-481"/>
+        <location line="-495"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -83,7 +83,7 @@ Versión:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+172"/>
         <source>No Selection</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--
@@ -92,7 +92,7 @@ Seleccin nula</translatorcomment>
         <translation>Seleccin nula</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+33"/>
         <source>Dependent Entities</source>
         <translation>Entidades dependientes</translation>
     </message>
@@ -102,7 +102,7 @@ Seleccin nula</translatorcomment>
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: qgis_es.ts--
@@ -127,7 +127,7 @@ Mosaico horizontal
         <translation>Todo</translation>
     </message>
     <message>
-        <location line="+620"/>
+        <location line="+623"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -157,7 +157,7 @@ Seleccione entidad base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-463"/>
+        <location line="-466"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -168,7 +168,7 @@ Seleccione entidad base</translatorcomment>
         <translation>Utilizar la medición automática</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+39"/>
         <source>Yes</source>
         <translation>Sí</translation>
     </message>
@@ -178,7 +178,7 @@ Seleccione entidad base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+305"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -197,18 +197,23 @@ Seleccione entidad base</translatorcomment>
         <translation>General</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+106"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Mueve la selección a una nueva capa</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+62"/>
         <source>Linetype Scale:</source>
         <translation>Escala de tipo de línea:</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="+49"/>
+        <source>Protected:</source>
+        <translation>Protegida:</translation>
+    </message>
+    <message>
+        <location line="-182"/>
         <source>Handle:</source>
         <translatorcomment>--ignored colon--
 --file: es.po--</translatorcomment>

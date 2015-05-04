@@ -50,7 +50,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Drawing loaded successfully:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -60,7 +60,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+112"/>
         <source>Untitled %1</source>
         <translation type="unfinished"></translation>
     </message>

@@ -30,12 +30,16 @@
         <translation>Ei ratkaisua</translation>
     </message>
     <message>
-        <location filename="../Circle2TPInit.js" line="+2"/>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation>Piste, 2 Tangenttia</translation>
+        <translation type="vanished">Piste, 2 Tangenttia</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../Circle2TPInit.js" line="+2"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Piirrä ympyrä tangentiaalisesti kahteen kohteeseen, pisteen kautta</translation>
     </message>

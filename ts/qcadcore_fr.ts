@@ -331,7 +331,7 @@ Autres...</translatorcomment>
 <context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+44"/>
         <source>Current Layer ID</source>
         <translation>ID de la couche actuelle</translation>
     </message>
@@ -354,7 +354,7 @@ Autres...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+77"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+90"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_fr.ts--
@@ -445,7 +445,27 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Angle</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+69"/>
+        <location line="+1"/>
+        <source>Columns</source>
+        <translation>Colonnes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rows</source>
+        <translation>Lignes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Column Spacing</source>
+        <translation>Espacement des colonnes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Row Spacing</source>
+        <translation>Espacement des lignes</translation>
+    </message>
+    <message>
+        <location filename="../src/core/REntity.cpp" line="+73"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -632,7 +652,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+52"/>
+        <location filename="../src/core/RLayer.cpp" line="+69"/>
         <source>Name</source>
         <translation>Nom</translation>
     </message>
@@ -846,7 +866,7 @@ Bordure (grande)</translatorcomment>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+816"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+818"/>
         <source>By Layer</source>
         <translation>Par calque</translation>
     </message>

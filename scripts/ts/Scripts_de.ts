@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -34,7 +34,7 @@
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+313"/>
         <source>Move Reference Point</source>
         <translation>Referenzpunkt verschieben</translation>
     </message>
@@ -62,7 +62,7 @@
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -77,7 +77,7 @@
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+426"/>
+        <location line="+425"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -97,7 +97,7 @@
         <translation>CAD Werkzeuge</translation>
     </message>
     <message>
-        <location line="+643"/>
+        <location line="+640"/>
         <source>Entity is on a locked layer.</source>
         <translation>Element ist auf gesperrtem Layer.</translation>
     </message>
@@ -110,6 +110,11 @@
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
         <translation>Element ist keine Linie und kein Bogen.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc or polyline.</source>
+        <translation>Element ist keine Linie, kein Bogen und keine Polylinie.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -170,7 +175,7 @@
         <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location line="+562"/>
+        <location line="+567"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>
@@ -203,7 +208,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+957"/>
+        <location filename="../WidgetFactory.js" line="+962"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>
@@ -398,7 +403,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+688"/>
+        <location filename="../library.js" line="+704"/>
         <source>Entity</source>
         <translation>Objekt</translation>
     </message>

@@ -14,12 +14,12 @@
         <translation>Nastavitve risbe</translation>
     </message>
     <message>
-        <location line="+247"/>
+        <location line="+248"/>
         <source>Restart required</source>
         <translation>Potreben je ponovni zagon</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translation>QCAD je potrebno ponovno zagnat,

@@ -30,12 +30,16 @@
         <translation>Ni rešitve</translation>
     </message>
     <message>
-        <location filename="../Circle2TPInit.js" line="+2"/>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation>Točka, 2 Tan&amp;genti</translation>
+        <translation type="vanished">Točka, 2 Tan&amp;genti</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../Circle2TPInit.js" line="+2"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Nariši krog tangencialno na dve entiteti, skozi točko</translation>
     </message>

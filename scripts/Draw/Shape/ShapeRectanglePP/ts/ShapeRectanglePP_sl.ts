@@ -42,14 +42,12 @@
 <context>
     <name>ShapeRectanglePP</name>
     <message>
-        <location filename="../ShapeRectanglePP.js" line="+58"/>
         <source>First corner</source>
-        <translation>Prvi vogal</translation>
+        <translation type="vanished">Prvi vogal</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Second corner</source>
-        <translation>Drugi vogal</translation>
+        <translation type="vanished">Drugi vogal</translation>
     </message>
     <message>
         <location filename="../ShapeRectanglePPInit.js" line="+2"/>

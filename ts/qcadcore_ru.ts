@@ -215,7 +215,7 @@
 <context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+44"/>
         <source>Current Layer ID</source>
         <translation type="unfinished"></translation>
     </message>
@@ -238,7 +238,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+77"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+90"/>
         <source>Block</source>
         <translation type="unfinished"></translation>
     </message>
@@ -290,7 +290,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+69"/>
+        <location line="+1"/>
+        <source>Columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Column Spacing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Row Spacing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/REntity.cpp" line="+73"/>
         <source>Type</source>
         <translation type="unfinished"></translation>
     </message>
@@ -457,7 +477,7 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+52"/>
+        <location filename="../src/core/RLayer.cpp" line="+69"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -513,7 +533,7 @@
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+816"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+818"/>
         <source>By Layer</source>
         <translation type="unfinished"></translation>
     </message>

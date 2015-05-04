@@ -4,17 +4,16 @@
 <context>
     <name>OpenFile</name>
     <message>
-        <location filename="../OpenFile.js" line="+43"/>
         <source>No import filters</source>
-        <translation>Ei tuontisuodattimia</translation>
+        <translation type="vanished">Ei tuontisuodattimia</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../OpenFile.js" line="+42"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Tuontisuodattimia ei ole löydetty. Keskeytetään...</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+16"/>
         <source>Open Drawing</source>
         <translation>Avaa piirros</translation>
     </message>

@@ -4,14 +4,12 @@
 <context>
     <name>ShapeRectanglePP</name>
     <message>
-        <location filename="../ShapeRectanglePP.js" line="+58"/>
         <source>First corner</source>
-        <translation>Ensimmäinen kulma</translation>
+        <translation type="vanished">Ensimmäinen kulma</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Second corner</source>
-        <translation>Toinen kulma</translation>
+        <translation type="vanished">Toinen kulma</translation>
     </message>
     <message>
         <location filename="../ShapeRectanglePPInit.js" line="+2"/>

@@ -14,12 +14,12 @@
         <translation>Zeichnungseinstellungen</translation>
     </message>
     <message>
-        <location line="+247"/>
+        <location line="+248"/>
         <source>Restart required</source>
         <translation>Neustart</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translation>Bitte starten Sie QCAD neu

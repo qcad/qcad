@@ -14,12 +14,12 @@
         <translation>図面設定</translation>
     </message>
     <message>
-        <location line="+247"/>
+        <location line="+248"/>
         <source>Restart required</source>
         <translation>再起動が必要</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translation>設定の変更を反映するには

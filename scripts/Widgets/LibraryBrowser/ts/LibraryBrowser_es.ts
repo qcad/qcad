@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>Favorites</name>
     <message>
@@ -11,7 +11,7 @@
 <context>
     <name>LibraryBrowser</name>
     <message>
-        <location filename="../LibraryBrowser.js" line="+70"/>
+        <location filename="../LibraryBrowser.js" line="+71"/>
         <source>audience</source>
         <translation>Público objetivo</translation>
     </message>
@@ -67,13 +67,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1108"/>
+        <location line="+1129"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Navegador de la biblioteca</translation>
     </message>
     <message>
-        <location line="-1100"/>
+        <location line="-1121"/>
         <source>Icon</source>
         <translation>Icono</translation>
     </message>
@@ -88,7 +88,7 @@
         <translation>Elija la carpeta de origen</translation>
     </message>
     <message>
-        <location line="+654"/>
+        <location line="+675"/>
         <source>Page %1 of %2</source>
         <translation>Página %1 de %2</translation>
     </message>
@@ -160,7 +160,17 @@ Database file: %3
 Library browser will not be available.</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+43"/>
+        <source>Source removed from part library: %1</source>
+        <translation>Fuente retirado de biblioteca: %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Force database update.</source>
+        <translation>Forzada de actualización de base de datos.</translation>
+    </message>
+    <message>
+        <location line="+393"/>
         <source>&amp;Insert</source>
         <translation>&amp;Insertar</translation>
     </message>
@@ -293,17 +303,17 @@ en los resultados de búsqueda:</translation>
         <translation>Sistema de archivos</translation>
     </message>
     <message>
-        <location line="+252"/>
+        <location line="+270"/>
         <source>Favorites</source>
         <translation>Favoritos</translation>
     </message>
     <message>
-        <location line="-201"/>
+        <location line="-210"/>
         <source>Tags</source>
         <translation>Tags</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Look for:</source>
         <translation>Buscar:</translation>
     </message>
@@ -328,7 +338,12 @@ en los resultados de búsqueda:</translation>
         <translation>about:blank</translation>
     </message>
     <message>
-        <location line="+157"/>
+        <location line="+142"/>
+        <source>Insert selected item into drawing</source>
+        <translation>Insertar elemento seleccionado en el dibujo</translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Update DB from file system</source>
         <translation>Actualizar</translation>
     </message>

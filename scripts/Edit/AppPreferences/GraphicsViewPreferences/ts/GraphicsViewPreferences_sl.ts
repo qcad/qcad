@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -109,7 +109,12 @@
         <translation>Glajenje krivulj privzeto vklopljeno</translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="+7"/>
+        <source>Timeout for hatch rendering:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-349"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Samodejno uporabi zaslonske črte v prikazu modela</translation>
     </message>
@@ -119,7 +124,7 @@
     </message>
     <message>
         <source>Performance</source>
-        <translation>Optimizacija</translation>
+        <translation type="vanished">Optimizacija</translation>
     </message>
     <message>
         <location line="+78"/>
@@ -141,7 +146,7 @@
         <translation type="obsolete">Prag prikaza višine besedila:</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+265"/>
         <source>Selection</source>
         <translation>Izbor</translation>
     </message>

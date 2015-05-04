@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -34,7 +34,7 @@
         <translation>Premakni entiteto na željeno lokacijo</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+313"/>
         <source>Move Reference Point</source>
         <translation>Premakni referenčno točko</translation>
     </message>
@@ -62,7 +62,7 @@
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
@@ -73,7 +73,7 @@
         <translation>Brez</translation>
     </message>
     <message>
-        <location line="+426"/>
+        <location line="+425"/>
         <source>Options</source>
         <translation>Nastavitve</translation>
     </message>
@@ -93,7 +93,7 @@
         <translation>CAD orodja</translation>
     </message>
     <message>
-        <location line="+643"/>
+        <location line="+640"/>
         <source>Entity is on a locked layer.</source>
         <translation>Entiteta je na zaklenjeni plasti.</translation>
     </message>
@@ -106,6 +106,11 @@
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
         <translation>Entiteta ni črta ali lok.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc or polyline.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -166,7 +171,7 @@
         <translation>Radius je padel pod 0.0 po %1 kocentričnih lokih.</translation>
     </message>
     <message>
-        <location line="+555"/>
+        <location line="+560"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vsaj dve točki sta identični.</translation>
@@ -195,7 +200,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+957"/>
+        <location filename="../WidgetFactory.js" line="+962"/>
         <source>Restore defaults</source>
         <translation>Obnovi privzeto</translation>
     </message>
@@ -342,7 +347,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+688"/>
+        <location filename="../library.js" line="+704"/>
         <source>Entity</source>
         <translation>Entiteta</translation>
     </message>

@@ -9,7 +9,7 @@
         <translation>Izbrani eniteti ni mogoče zaokrožit.</translation>
     </message>
     <message>
-        <location line="+220"/>
+        <location line="+216"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Prve entietete ni mogoče skrajšat.</translation>
     </message>

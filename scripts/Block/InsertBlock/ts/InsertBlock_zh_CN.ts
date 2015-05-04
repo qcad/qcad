@@ -58,5 +58,30 @@
         <source>&amp;Insert Block</source>
         <translation>插入块(&amp;I)</translation>
     </message>
+    <message>
+        <location filename="../InsertBlockDialog.ui" line="+14"/>
+        <source>Move / Copy Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Columns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Rows:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Column Spacing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Row Spacing:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

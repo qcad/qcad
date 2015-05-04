@@ -24,13 +24,13 @@ Preferências do Desenho Atual...</translatorcomment>
         <translation>Preferências de desenho</translation>
     </message>
     <message>
-        <location line="+247"/>
+        <location line="+248"/>
         <source>Restart required</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>É necessário reiniciar</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translatorcomment>--google--</translatorcomment>

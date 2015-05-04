@@ -50,7 +50,7 @@
         <translation>Tiedosto on tyhjä.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Drawing loaded successfully:</source>
         <translation>Piirros ladattu onnistuneesti:</translation>
     </message>
@@ -60,7 +60,7 @@
         <translation>Muoto:</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+112"/>
         <source>Untitled %1</source>
         <translation>Nimetön %1</translation>
     </message>

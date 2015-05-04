@@ -30,9 +30,13 @@
         <translation>无解决方案</translation>
     </message>
     <message>
-        <location filename="../CircleT2PInit.js" line="+2"/>
         <source>2 Poin&amp;ts and Tangent</source>
-        <translation>两点与切线(&amp;t)</translation>
+        <translation type="vanished">两点与切线(&amp;t)</translation>
+    </message>
+    <message>
+        <location filename="../CircleT2PInit.js" line="+2"/>
+        <source>&amp;Tangent and 2 Points</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>

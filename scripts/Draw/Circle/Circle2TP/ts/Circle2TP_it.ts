@@ -30,12 +30,16 @@
         <translation>Nessuna soluzione</translation>
     </message>
     <message>
-        <location filename="../Circle2TPInit.js" line="+2"/>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation>Punto, 2 tan&amp;genti</translation>
+        <translation type="vanished">Punto, 2 tan&amp;genti</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../Circle2TPInit.js" line="+2"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation>2 tan&amp;genti e punto</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Disegnare un cerchio tangente a due entità e attraverso un punto</translation>
     </message>

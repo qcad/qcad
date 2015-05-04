@@ -4,49 +4,49 @@
 <context>
     <name>ShapePolygonAFPP</name>
     <message>
-        <location filename="../ShapePolygonAFPP.js" line="59"/>
+        <location filename="../ShapePolygonAFPP.js" line="+59"/>
         <source>First side</source>
-        <translation type="unfinished"></translation>
+        <translation>Primo lato</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonAFPP.js" line="61"/>
+        <location line="+2"/>
         <source>First Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Primo punto dell&apos;angolo</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonAFPP.js" line="69"/>
+        <location line="+8"/>
         <source>Second side</source>
-        <translation type="unfinished"></translation>
+        <translation>Seconda lato</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonAFPP.js" line="71"/>
+        <location line="+2"/>
         <source>Second Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Secondo punto dell&apos;angolo</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonAFPP.js" line="75"/>
+        <location line="+4"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Fatto</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonAFPP.ui" line="17"/>
-        <source>No. of Sides:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ShapePolygonAFPP.ui" line="38"/>
-        <source>Corners</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ShapePolygonAFPPInit.js" line="2"/>
+        <location filename="../ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation type="unfinished"></translation>
+        <translation>Poligo&amp;no (lato, lato)</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonAFPPInit.js" line="6"/>
-        <source>Draw regular polygon from center point of two sides</source>
-        <translation type="unfinished"></translation>
+        <location line="+4"/>
+        <source>Draw regular polygon from middle points of two sides</source>
+        <translation>Disegna poligono regolare dai punti centrali di due lati</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonAFPP.ui" line="+17"/>
+        <source>Corners:</source>
+        <translation>Punti dell&apos;angolo:</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Corner to Corner</source>
+        <translation>Punto dell&apos;angolo</translation>
     </message>
 </context>
 </TS>

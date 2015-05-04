@@ -18,17 +18,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>No information available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+1"/>
         <source>Plugin:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+20"/>
         <source>ID:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -91,7 +91,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+32"/>
         <source>Script Add-Ons</source>
         <translation type="unfinished"></translation>
     </message>

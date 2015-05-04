@@ -215,7 +215,7 @@
 <context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+44"/>
         <source>Current Layer ID</source>
         <translation>Aktywna warstwa</translation>
     </message>
@@ -242,7 +242,7 @@
         <translation type="obsolete">Blok</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+78"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+91"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
@@ -289,12 +289,32 @@
         <translation>Kąt</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+69"/>
+        <location line="+1"/>
+        <source>Columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Column Spacing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Row Spacing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/REntity.cpp" line="+73"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-11"/>
         <source>Block</source>
         <translation>Blok</translation>
     </message>
@@ -463,7 +483,7 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+52"/>
+        <location filename="../src/core/RLayer.cpp" line="+69"/>
         <source>Name</source>
         <translation>Nazwa</translation>
     </message>
@@ -603,7 +623,7 @@
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+816"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+818"/>
         <source>By Layer</source>
         <translation>Według warstwy</translation>
     </message>

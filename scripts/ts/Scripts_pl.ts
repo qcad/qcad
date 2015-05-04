@@ -39,7 +39,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+313"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -75,7 +75,7 @@ Anuluj
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -91,7 +91,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+426"/>
+        <location line="+425"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -120,7 +120,7 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Narzędzia CAD</translation>
     </message>
     <message>
-        <location line="+643"/>
+        <location line="+640"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka jest na zablokowanej warstwie.</translation>
@@ -136,6 +136,11 @@ Narzędzia CAD</translatorcomment>
         <source>Entity is not a line or arc.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie linii lub łuku.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc or polyline.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -204,7 +209,7 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Promień spadła poniżej 0,0 po koncentrycznym łuk (s).</translation>
     </message>
     <message>
-        <location line="+555"/>
+        <location line="+560"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -238,7 +243,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+957"/>
+        <location filename="../WidgetFactory.js" line="+962"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
@@ -436,7 +441,7 @@ Dzielenie (÷)</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+688"/>
+        <location filename="../library.js" line="+704"/>
         <source>Entity</source>
         <translation type="unfinished"></translation>
     </message>

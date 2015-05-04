@@ -54,7 +54,7 @@
         <translation>ファイルは空です。</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Drawing loaded successfully:</source>
         <translation>ロード済み:</translation>
     </message>
@@ -68,7 +68,7 @@
         <translation>フォーマット:</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+112"/>
         <source>Untitled %1</source>
         <translation>無題%1</translation>
     </message>

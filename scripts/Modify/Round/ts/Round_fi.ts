@@ -9,7 +9,7 @@
         <translation>Näitä kahta kohdetta ei voida kiertää.</translation>
     </message>
     <message>
-        <location line="+220"/>
+        <location line="+216"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Enismmäistä kohdetta ei voida hienosäätää.</translation>
     </message>

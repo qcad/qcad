@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -129,15 +129,20 @@
         <translation>Antialiasing activé par défaut</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Timeout for hatch rendering:</source>
+        <translation>Délai d&apos;attente pour hachure rendu :</translation>
+    </message>
+    <message>
         <source>Antialiasing on by default</source>
-        <translation type="vanished">Antialiasing activé par défaut</translation>
+        <translation>Antialiasing activé par défaut</translation>
     </message>
     <message>
         <source>Display entities with N dashes as continuous:</source>
         <translation type="obsolete">Afficher les entités avec N tirets que continu:</translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="-349"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Utiliser automatiquement les types de lignes sur écran en vue du modèle</translation>
     </message>
@@ -147,7 +152,7 @@
     </message>
     <message>
         <source>Performance</source>
-        <translation type="vanished">Performance</translation>
+        <translation>Performance</translation>
     </message>
     <message>
         <location line="+78"/>
@@ -169,7 +174,7 @@
         <translation type="obsolete">Afficher limite pour le texte:</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+265"/>
         <source>Selection</source>
         <translation>Sélection</translation>
     </message>

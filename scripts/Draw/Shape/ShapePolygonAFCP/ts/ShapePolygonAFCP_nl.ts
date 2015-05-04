@@ -1,46 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="nl_NL">
+<TS version="2.1" language="nl_NL">
 <context>
     <name>ShapePolygonAFCP</name>
     <message>
-        <location filename="../ShapePolygonAFCP.js" line="60"/>
+        <location filename="../ShapePolygonAFCP.js" line="+61"/>
         <source>Center</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ShapePolygonAFCP.js" line="67"/>
-        <source>Side</source>
+        <location line="+8"/>
+        <source>Middle of Side</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ShapePolygonAFCP.js" line="69"/>
-        <source>Corner</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ShapePolygonAFCP.js" line="73"/>
+        <location line="+3"/>
         <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ShapePolygonAFCP.ui" line="17"/>
-        <source>No. of Sides:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ShapePolygonAFCP.ui" line="38"/>
-        <source>Corners</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ShapePolygonAFCPInit.js" line="2"/>
+        <location filename="../ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ShapePolygonAFCPInit.js" line="6"/>
-        <source>Draw regular polygon from center and side</source>
+        <location line="+4"/>
+        <source>Draw regular polygon from center and middle point of side</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonAFCP.ui" line="+17"/>
+        <source>Corners:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -12,7 +12,7 @@ is already in the list.</source>
         <translation type="unfinished">&apos;&amp;#39; Folder jest już na liście.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Folder not added</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Folder nie dodał</translation>

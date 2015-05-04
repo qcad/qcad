@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="+32"/>
+        <location filename="../SaveAs.js" line="+33"/>
         <source>Load/Save</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25,16 +25,11 @@
     </message>
     <message>
         <location line="+24"/>
-        <source>No export filters</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
         <source>No export filters have been found. Aborting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+53"/>
         <source>Format:</source>
         <translation type="unfinished"></translation>
     </message>

@@ -70,6 +70,10 @@
         <translation>Rifletti blocco&lt;br&gt;verticalmente</translation>
     </message>
     <message>
+        <source>...</source>
+        <translation type="obsolete">...</translation>
+    </message>
+    <message>
         <source>Attribute 1:</source>
         <translation type="obsolete">Attribute 1:</translation>
     </message>
@@ -80,6 +84,31 @@
     <message>
         <source>Attribute 3:</source>
         <translation type="obsolete">Attribute 3:</translation>
+    </message>
+    <message>
+        <location filename="../InsertBlockDialog.ui" line="+14"/>
+        <source>Move / Copy Options</source>
+        <translation>Opzioni Spostamento</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Columns:</source>
+        <translation>Colonne:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Rows:</source>
+        <translation>Righe:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Column Spacing:</source>
+        <translation>Interasse colonne:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Row Spacing:</source>
+        <translation>Interasse Righe:</translation>
     </message>
 </context>
 <context>

@@ -42,14 +42,12 @@
 <context>
     <name>ShapeRectanglePP</name>
     <message>
-        <location filename="../ShapeRectanglePP.js" line="+58"/>
         <source>First corner</source>
-        <translation>Premier point d&apos;angle</translation>
+        <translation type="vanished">Premier point d&apos;angle</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Second corner</source>
-        <translation>Deuxième point d&apos;angle</translation>
+        <translation type="vanished">Deuxième point d&apos;angle</translation>
     </message>
     <message>
         <location filename="../ShapeRectanglePPInit.js" line="+2"/>

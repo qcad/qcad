@@ -31,11 +31,11 @@
     </message>
     <message>
         <location filename="../Circle2TPInit.js" line="+2"/>
-        <source>Point, 2 Tan&amp;gents</source>
+        <source>2 Tan&amp;gents and Point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation type="unfinished"></translation>
     </message>

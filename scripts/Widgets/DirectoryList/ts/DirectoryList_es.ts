@@ -14,7 +14,7 @@ is already in the list.</source>
 ya está en la lista.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Folder not added</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Carpeta no se añade</translation>

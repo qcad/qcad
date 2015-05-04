@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -129,15 +129,20 @@
         <translation>Kantenglättung standardmässig an</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Timeout for hatch rendering:</source>
+        <translation>Timeout für Schraffurwiedergabe:</translation>
+    </message>
+    <message>
         <source>Antialiasing on by default</source>
-        <translation type="vanished">Kantenglättung standardmässig an</translation>
+        <translation>Kantenglättung standardmässig an</translation>
     </message>
     <message>
         <source>Display entities with N dashes as continuous:</source>
         <translation type="obsolete">Gestrichelte Objekte mit mehr als N Strichen ausgezogen darstellen:</translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="-349"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
     </message>
@@ -147,7 +152,7 @@
     </message>
     <message>
         <source>Performance</source>
-        <translation type="vanished">Leistung</translation>
+        <translation>Leistung</translation>
     </message>
     <message>
         <location line="+78"/>
@@ -169,7 +174,7 @@
         <translation type="obsolete">Anzeigegrenzwert für Texte:</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+265"/>
         <source>Selection</source>
         <translation>Selektion</translation>
     </message>

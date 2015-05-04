@@ -50,13 +50,13 @@ Wersja: </translatorcomment>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+172"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">No Selection</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+19"/>
         <source>Geometry</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -80,7 +80,7 @@ Własne filtry</translatorcomment>
         <translation type="unfinished">Niestandardowy</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -105,7 +105,7 @@ Czy chcesz zamknąć plik
         <translation type="unfinished">Wszystkie</translation>
     </message>
     <message>
-        <location line="+620"/>
+        <location line="+623"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -115,7 +115,7 @@ Czy chcesz zamknąć plik
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="-599"/>
+        <location line="-602"/>
         <source>Add custom property to selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -209,7 +209,7 @@ Przyciąganie automatyczne</translatorcomment>
         <translation type="unfinished">Użyj automatycznego pomiaru</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+39"/>
         <source>Yes</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -228,7 +228,7 @@ Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
         <translation type="unfinished">Nie</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+305"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -255,18 +255,23 @@ General Punctuation</translatorcomment>
         <translation type="unfinished">Ogólny</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+106"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przenieś zaznaczenie do nowej warstwy</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+62"/>
         <source>Linetype Scale:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="+49"/>
+        <source>Protected:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-182"/>
         <source>Handle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Uchwyt:</translation>

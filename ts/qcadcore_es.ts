@@ -336,7 +336,7 @@ Otros...</translatorcomment>
 <context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+44"/>
         <source>Current Layer ID</source>
         <translation>ID de la capa actual</translation>
     </message>
@@ -359,7 +359,7 @@ Otros...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+77"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+90"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_es.ts--
@@ -450,7 +450,27 @@ Introduzca ángulo en línea de cota:</translatorcomment>
         <translation>Ángulo</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+69"/>
+        <location line="+1"/>
+        <source>Columns</source>
+        <translation>Columnas</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rows</source>
+        <translation>Filas</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Column Spacing</source>
+        <translation>Espacio entre columnas</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Row Spacing</source>
+        <translation>Espacio entre filas</translation>
+    </message>
+    <message>
+        <location filename="../src/core/REntity.cpp" line="+73"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -638,7 +658,7 @@ Colores
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+52"/>
+        <location filename="../src/core/RLayer.cpp" line="+69"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
@@ -851,7 +871,7 @@ Borde
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+816"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+818"/>
         <source>By Layer</source>
         <translation>Por Capa</translation>
     </message>

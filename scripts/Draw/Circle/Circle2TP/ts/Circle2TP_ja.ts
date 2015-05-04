@@ -30,12 +30,16 @@
         <translation>解決法がありません</translation>
     </message>
     <message>
-        <location filename="../Circle2TPInit.js" line="+2"/>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation>&amp;g 1点と2接線</translation>
+        <translation type="vanished">&amp;g 1点と2接線</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../Circle2TPInit.js" line="+2"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>２つのエンティティに接し１点を通る円を描画</translation>
     </message>

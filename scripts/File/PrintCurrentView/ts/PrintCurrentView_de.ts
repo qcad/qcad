@@ -17,7 +17,7 @@
     <message>
         <location filename="../PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation>Druckt die aktuelle Ansicht der Zeichnung</translation>
+        <translation>&amp;Aktuelle Ansicht drucken</translation>
     </message>
     <message>
         <location line="+6"/>

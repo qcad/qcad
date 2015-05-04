@@ -129,7 +129,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+89"/>
+        <source>Timeout for hatch rendering:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+65"/>
         <source>Selection</source>
         <translation type="unfinished"></translation>
     </message>

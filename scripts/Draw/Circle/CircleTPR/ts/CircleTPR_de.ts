@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>ArcTPR</name>
     <message>
@@ -8,40 +8,32 @@
         <translation type="obsolete">Linie, Bogen, Kreis oder Ellipse</translation>
     </message>
     <message>
-        <location filename="../ArcTPR.js" line="+76"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation>Linie, Bogen, Kreis oder Ellipse wählen</translation>
+        <translation type="vanished">Linie, Bogen, Kreis oder Ellipse wählen</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>Point on arc</source>
-        <translation>Punkt auf Bogen</translation>
+        <translation type="vanished">Punkt auf Bogen</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Choose solution</source>
-        <translation>Lösung wählen</translation>
+        <translation type="vanished">Lösung wählen</translation>
     </message>
     <message>
-        <location line="+119"/>
-        <location line="+60"/>
         <source>No solution</source>
-        <translation>Keine Lösung</translation>
+        <translation type="vanished">Keine Lösung</translation>
     </message>
     <message>
-        <location filename="../ArcTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Radius:</translation>
+        <translation type="vanished">Radius:</translation>
     </message>
     <message>
-        <location filename="../ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>&amp;Tangente, Punkt, Radius</translation>
+        <translation type="vanished">&amp;Tangente, Punkt, Radius</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation>Zeichnet einen Bogen tangential zu Objekt, durch Punkt mit Radius</translation>
+        <translation type="vanished">Zeichnet einen Bogen tangential zu Objekt, durch Punkt mit Radius</translation>
     </message>
 </context>
 <context>
@@ -73,6 +65,24 @@
     <message>
         <source>Draw circle tangential to two entities, through point</source>
         <translation type="obsolete">Kreis, tangential zu zwei Objekten, durch Punkt</translation>
+    </message>
+</context>
+<context>
+    <name>CircleTPR</name>
+    <message>
+        <location filename="../CircleTPR.js" line="+38"/>
+        <source>Point on circle</source>
+        <translation>Punkt auf Kreis</translation>
+    </message>
+    <message>
+        <location filename="../CircleTPRInit.js" line="+2"/>
+        <source>&amp;Tangent, Point, Radius</source>
+        <translation>&amp;Tangente, Punkt, Radius</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw circle tangential to entity, through point with radius</source>
+        <translation>Zeichnet einen Kreis tangential zu Objekt, durch Punkt mit Radius</translation>
     </message>
 </context>
 </TS>

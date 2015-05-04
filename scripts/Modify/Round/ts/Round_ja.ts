@@ -9,7 +9,7 @@
         <translation>２つのエンティティは丸め丸められません。</translation>
     </message>
     <message>
-        <location line="+220"/>
+        <location line="+216"/>
         <source>First entity cannot be trimmed.</source>
         <translation>１つ目のエンティティはトリムできません。</translation>
     </message>

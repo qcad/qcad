@@ -22,12 +22,12 @@
     <message>
         <location filename="../PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation type="unfinished"></translation>
+        <translation>Imprimir &amp;exiba atual</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Print current view</source>
-        <translation type="unfinished"></translation>
+        <translation>Imprimir exiba atual</translation>
     </message>
 </context>
 </TS>

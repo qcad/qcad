@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -129,11 +129,16 @@
         <translation>Antialiasing ativada por padrão</translation>
     </message>
     <message>
-        <source>Antialiasing on by default</source>
-        <translation type="vanished">Antialiasing ativada por padrão</translation>
+        <location line="+7"/>
+        <source>Timeout for hatch rendering:</source>
+        <translation>Tempo de espera para renderização hachura:</translation>
     </message>
     <message>
-        <location line="-342"/>
+        <source>Antialiasing on by default</source>
+        <translation>Antialiasing ativada por padrão</translation>
+    </message>
+    <message>
+        <location line="-349"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Usar automaticamente tipos de linha baseado em tela, tendo em vista modelo</translation>
     </message>
@@ -143,7 +148,7 @@
     </message>
     <message>
         <source>Performance</source>
-        <translation type="vanished">Desempenho</translation>
+        <translation>Desempenho</translation>
     </message>
     <message>
         <location line="+78"/>
@@ -165,7 +170,7 @@
         <translation type="obsolete">Mostrar limite para o texto:</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+265"/>
         <source>Selection</source>
         <translation>Selecção</translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>Draw</name>
     <message>
@@ -12,7 +12,63 @@
 <context>
     <name>DrawBasedOnRectangle</name>
     <message>
-        <location filename="../DrawBasedOnRectangle.js" line="+43"/>
+        <source>Top Left</source>
+        <translation>Oben links</translation>
+    </message>
+    <message>
+        <source>Top</source>
+        <translation>Oben</translation>
+    </message>
+    <message>
+        <source>Top Right</source>
+        <translation>Oben rechts</translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation>Links</translation>
+    </message>
+    <message>
+        <source>Middle</source>
+        <translation>Mitte</translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation>Rechts</translation>
+    </message>
+    <message>
+        <source>Bottom Left</source>
+        <translation>Unten links</translation>
+    </message>
+    <message>
+        <source>Bottom</source>
+        <translation>Unten</translation>
+    </message>
+    <message>
+        <source>Bottom Right</source>
+        <translation>Unten rechts</translation>
+    </message>
+    <message>
+        <source>Position</source>
+        <translation>Position</translation>
+    </message>
+</context>
+<context>
+    <name>DrawBasedOnRectanglePP</name>
+    <message>
+        <location filename="../DrawBasedOnRectanglePP.js" line="+63"/>
+        <source>First corner</source>
+        <translation>Erster Eckpunkt</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Second corner</source>
+        <translation>Zweiter Eckpunkt</translation>
+    </message>
+</context>
+<context>
+    <name>DrawBasedOnRectangleSize</name>
+    <message>
+        <location filename="../DrawBasedOnRectangleSize.js" line="+46"/>
         <source>Top Left</source>
         <translation>Oben links</translation>
     </message>
@@ -57,7 +113,7 @@
         <translation>Unten rechts</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+38"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>

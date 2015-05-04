@@ -32,12 +32,12 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+172"/>
         <source>No Selection</source>
         <translation>Ni izbrano</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+19"/>
         <source>Geometry</source>
         <translation>Geometrija</translation>
     </message>
@@ -52,7 +52,7 @@
         <translation>Dodatno</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+158"/>
         <source>Index</source>
         <translation>Indeks</translation>
     </message>
@@ -72,7 +72,7 @@
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
     </message>
     <message>
-        <location line="+599"/>
+        <location line="+602"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -113,7 +113,7 @@
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-463"/>
+        <location line="-466"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -123,7 +123,7 @@
         <translation>Uporabi samodejne meritve</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+39"/>
         <source>Yes</source>
         <translation>Da</translation>
     </message>
@@ -133,7 +133,7 @@
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+305"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -150,17 +150,22 @@
         <translation>Splošno</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+106"/>
         <source>Move Selection to a New Layer</source>
         <translation>Premakni izbrano na drugo plast</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+62"/>
         <source>Linetype Scale:</source>
         <translation>Faktor tipa črte:</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="+49"/>
+        <source>Protected:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-182"/>
         <source>Handle:</source>
         <translation>Identifikator:</translation>
     </message>

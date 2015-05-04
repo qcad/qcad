@@ -4,17 +4,16 @@
 <context>
     <name>OpenFile</name>
     <message>
-        <location filename="../OpenFile.js" line="+43"/>
         <source>No import filters</source>
-        <translation>インポートフィルタがありません</translation>
+        <translation type="vanished">インポートフィルタがありません</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../OpenFile.js" line="+42"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>インポートフィルタがみつかりません。中断します...</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+16"/>
         <source>Open Drawing</source>
         <translation>図面を開く</translation>
     </message>

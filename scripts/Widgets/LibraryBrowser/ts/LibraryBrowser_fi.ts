@@ -4,7 +4,7 @@
 <context>
     <name>LibraryBrowser</name>
     <message>
-        <location filename="../LibraryBrowser.js" line="+70"/>
+        <location filename="../LibraryBrowser.js" line="+71"/>
         <source>audience</source>
         <translation>yleisö</translation>
     </message>
@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1108"/>
+        <location line="+1129"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Historiaselain</translation>
     </message>
     <message>
-        <location line="-1100"/>
+        <location line="-1121"/>
         <source>Icon</source>
         <translation>Kuvake</translation>
     </message>
@@ -81,7 +81,7 @@
         <translation>Valitse lähdekansio</translation>
     </message>
     <message>
-        <location line="+654"/>
+        <location line="+675"/>
         <source>Page %1 of %2</source>
         <translation>Sivu %1 / %2</translation>
     </message>
@@ -145,7 +145,17 @@ Tietokanta tiedosto: %3
 Kirjastoselain ei ole käytettävissä.</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+43"/>
+        <source>Source removed from part library: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Force database update.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+393"/>
         <source>&amp;Insert</source>
         <translation>&amp;Lisää</translation>
     </message>
@@ -270,12 +280,12 @@ näkyy etsintätuloksissa:</translation>
         <translation>Tiedostojärjestelmä</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+60"/>
         <source>Tags</source>
         <translation>Tunnisteet/tagit</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Look for:</source>
         <translation>Etsi:</translation>
     </message>
@@ -305,7 +315,12 @@ näkyy etsintätuloksissa:</translation>
         <translation>Suosikit</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+36"/>
+        <source>Insert selected item into drawing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Update DB from file system</source>
         <translation>Päivitä DB/tietokanta tiedosto järjestelmästä</translation>
     </message>

@@ -58,6 +58,31 @@
         <source>Flip block&lt;br&gt;vertically</source>
         <translation>ブロック反転&lt;br&gt;垂直</translation>
     </message>
+    <message>
+        <location filename="../InsertBlockDialog.ui" line="+14"/>
+        <source>Move / Copy Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Columns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Rows:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Column Spacing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Row Spacing:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Paste</name>
