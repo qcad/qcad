@@ -182,9 +182,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="isLogicallyClosed" cppName="isLogicallyClosed"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
+    <method name="isGeometricallyClosed"
+    cppName="isGeometricallyClosed" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="getExploded" cppName="getExploded"

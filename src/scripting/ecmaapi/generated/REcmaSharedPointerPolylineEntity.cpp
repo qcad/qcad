@@ -134,7 +134,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, isClosed, "isClosed");
             
-            REcmaHelper::registerFunction(&engine, proto, isLogicallyClosed, "isLogicallyClosed");
+            REcmaHelper::registerFunction(&engine, proto, isGeometricallyClosed, "isGeometricallyClosed");
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
@@ -168,6 +168,10 @@
             
             ctor.setProperty("PropertyHandle",
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyHandle),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyProtected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyType",
@@ -2739,19 +2743,19 @@
             return result;
         }
          QScriptValue
-        REcmaSharedPointerPolylineEntity::isLogicallyClosed
+        REcmaSharedPointerPolylineEntity::isGeometricallyClosed
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerPolylineEntity::isLogicallyClosed", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolylineEntity::isLogicallyClosed";
+            //REcmaHelper::functionStart("REcmaSharedPointerPolylineEntity::isGeometricallyClosed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolylineEntity::isGeometricallyClosed";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RPolylineEntity* self = 
-                        getSelf("isLogicallyClosed", context);
+                        getSelf("isGeometricallyClosed", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2771,7 +2775,7 @@
     // return type 'bool'
     bool cppResult =
         
-               self->isLogicallyClosed();
+               self->isGeometricallyClosed();
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2781,10 +2785,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.isLogicallyClosed().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.isGeometricallyClosed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerPolylineEntity::isLogicallyClosed", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolylineEntity::isGeometricallyClosed", context, engine);
             return result;
         }
          QScriptValue

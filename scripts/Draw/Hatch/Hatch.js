@@ -156,7 +156,7 @@ Hatch.prototype.verifyBoundaryEntity = function(entity) {
 };
 
 Hatch.prototype.isClosedPolyline = function(entity) {
-    return isPolylineEntity(entity) && entity.isLogicallyClosed();
+    return isPolylineEntity(entity) && entity.isGeometricallyClosed();
 };
 
 Hatch.prototype.isClosedCurve = function(entity) {

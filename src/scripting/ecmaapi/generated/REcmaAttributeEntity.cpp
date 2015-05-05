@@ -118,6 +118,10 @@
                 qScriptValueFromValue(&engine, RAttributeEntity::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RAttributeEntity::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RAttributeEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

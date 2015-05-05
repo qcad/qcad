@@ -170,7 +170,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="querySelectedEntities" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QSet &lt; REntity::Id &gt;"
-      isPureVirtual="true" />
+      isPureVirtual="false" />
     </method>
     <method name="queryInfiniteEntities"
     cppName="queryInfiniteEntities" specifier="public"

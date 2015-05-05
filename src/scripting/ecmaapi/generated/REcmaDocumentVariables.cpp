@@ -124,6 +124,10 @@
                 qScriptValueFromValue(&engine, RDocumentVariables::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RDocumentVariables::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyCurrentLayerId",
                 qScriptValueFromValue(&engine, RDocumentVariables::PropertyCurrentLayerId),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

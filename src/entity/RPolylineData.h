@@ -143,8 +143,8 @@ public:
         return RPolyline::isClosed();
     }
 
-    bool isLogicallyClosed() const {
-        return RPolyline::isLogicallyClosed();
+    bool isGeometricallyClosed() const {
+        return RPolyline::isGeometricallyClosed();
     }
 
     QList<QSharedPointer<RShape> > getExploded() const {

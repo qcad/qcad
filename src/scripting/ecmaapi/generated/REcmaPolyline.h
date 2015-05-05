@@ -140,7 +140,7 @@
         isClosed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        isLogicallyClosed
+        isGeometricallyClosed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getOrientation

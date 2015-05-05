@@ -355,12 +355,12 @@ bool RPolyline::isClosed() const {
     return closed;
 }
 
-bool RPolyline::isLogicallyClosed(double tolerance) const {
+bool RPolyline::isGeometricallyClosed(double tolerance) const {
     return isClosed() || getStartPoint().getDistanceTo(getEndPoint()) < tolerance;
 }
 
 RS::Orientation RPolyline::getOrientation() const {
-    if (!isLogicallyClosed()) {
+    if (!isGeometricallyClosed()) {
         return RS::Any;
     }
 
@@ -579,7 +579,7 @@ QSharedPointer<RShape> RPolyline::getSegmentAt(int i) const {
  * polyline is not closed (\see setClosed), false is returned.
  */
 bool RPolyline::contains(const RVector& point, bool borderIsInside, double tolerance) const {
-    if (!isLogicallyClosed(tolerance)) {
+    if (!isGeometricallyClosed(tolerance)) {
         return false;
     }
 

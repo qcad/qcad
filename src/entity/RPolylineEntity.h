@@ -183,8 +183,8 @@ public:
         return data.isClosed();
     }
 
-    bool isLogicallyClosed() const {
-        return data.isLogicallyClosed();
+    bool isGeometricallyClosed() const {
+        return data.isGeometricallyClosed();
     }
 
     QList<QSharedPointer<RShape> > getExploded() const {

@@ -146,7 +146,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, isClosed, "isClosed");
             
-            REcmaHelper::registerFunction(&engine, proto, isLogicallyClosed, "isLogicallyClosed");
+            REcmaHelper::registerFunction(&engine, proto, isGeometricallyClosed, "isGeometricallyClosed");
             
             REcmaHelper::registerFunction(&engine, proto, getOrientation, "getOrientation");
             
@@ -2152,19 +2152,19 @@
             return result;
         }
          QScriptValue
-        REcmaPolyline::isLogicallyClosed
+        REcmaPolyline::isGeometricallyClosed
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPolyline::isLogicallyClosed", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::isLogicallyClosed";
+            //REcmaHelper::functionStart("REcmaPolyline::isGeometricallyClosed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::isGeometricallyClosed";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RPolyline* self = 
-                        getSelf("isLogicallyClosed", context);
+                        getSelf("isGeometricallyClosed", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2184,7 +2184,7 @@
     // return type 'bool'
     bool cppResult =
         
-               self->isLogicallyClosed();
+               self->isGeometricallyClosed();
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2216,7 +2216,7 @@
     // return type 'bool'
     bool cppResult =
         
-               self->isLogicallyClosed(a0);
+               self->isGeometricallyClosed(a0);
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2226,10 +2226,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.isLogicallyClosed().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.isGeometricallyClosed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPolyline::isLogicallyClosed", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolyline::isGeometricallyClosed", context, engine);
             return result;
         }
          QScriptValue

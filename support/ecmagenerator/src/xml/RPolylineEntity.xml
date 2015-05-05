@@ -229,9 +229,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="isLogicallyClosed" cppName="isLogicallyClosed"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
+    <method name="isGeometricallyClosed"
+    cppName="isGeometricallyClosed" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="getExploded" cppName="getExploded"
@@ -275,6 +275,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyCustom" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyHandle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyProtected" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyType" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

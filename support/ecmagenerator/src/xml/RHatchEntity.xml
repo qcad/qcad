@@ -234,6 +234,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyHandle" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyProtected" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyType" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyBlock" type="RPropertyTypeId"

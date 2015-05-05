@@ -121,7 +121,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, isClosed, "isClosed");
             
-            REcmaHelper::registerFunction(&engine, proto, isLogicallyClosed, "isLogicallyClosed");
+            REcmaHelper::registerFunction(&engine, proto, isGeometricallyClosed, "isGeometricallyClosed");
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
@@ -1860,19 +1860,19 @@
             return result;
         }
          QScriptValue
-        REcmaPolylineData::isLogicallyClosed
+        REcmaPolylineData::isGeometricallyClosed
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPolylineData::isLogicallyClosed", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::isLogicallyClosed";
+            //REcmaHelper::functionStart("REcmaPolylineData::isGeometricallyClosed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::isGeometricallyClosed";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RPolylineData* self = 
-                        getSelf("isLogicallyClosed", context);
+                        getSelf("isGeometricallyClosed", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1892,7 +1892,7 @@
     // return type 'bool'
     bool cppResult =
         
-               self->isLogicallyClosed();
+               self->isGeometricallyClosed();
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1902,10 +1902,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.isLogicallyClosed().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.isGeometricallyClosed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPolylineData::isLogicallyClosed", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineData::isGeometricallyClosed", context, engine);
             return result;
         }
          QScriptValue
