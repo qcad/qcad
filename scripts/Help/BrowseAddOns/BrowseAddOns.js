@@ -29,7 +29,10 @@ BrowseAddOns.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
 
     // old version:
-    //Help.openUrl("http://www.qcad.org/add-ons");
+    Help.openUrl("http://www.qcad.org/add-ons");
+
+    // disabled for now:
+    return;
 
     var formWidget = this.createWidget("BrowseAddOnsDialog.ui");
     this.webView = formWidget.findChild("Browser");

@@ -45,4 +45,3 @@ ShapeRectangleSize.prototype.getShapes = function(corners) {
 ShapeRectangleSize.prototype.slotCreatePolylineChanged = function(checked) {
     this.createPolyline = checked;
 };
-
