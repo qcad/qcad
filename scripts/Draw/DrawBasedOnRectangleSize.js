@@ -104,6 +104,12 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
     var i;
     var children;
 
+    var di = this.getDocumentInterface();
+    if (!isNull(di)) {
+        di.clearPreview();
+        di.repaintViews();
+    }
+
     // collect widgets which are tagged to be 'moved' to the dialog:
     var c;
     var widgets = [];
@@ -131,10 +137,6 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
     else {
         this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile);
         //WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
-        var di = this.getDocumentInterface();
-        if (!isNull(di)) {
-            di.clearPreview();
-        }
         WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
     }
     this.dialog.windowTitle = this.getToolTitle();
@@ -206,8 +208,6 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
     WidgetFactory.saveState(this.dialog, "Shape");
     WidgetFactory.saveState(this.dialog, this.settingsGroup);
 
-    //this.updateFromDialog(this.dialog);
-
     this.dialog.destroy();
     this.dialog = undefined;
 
@@ -221,25 +221,6 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
 
     return ret;
 };
-
-//DrawBasedOnRectangleSize.prototype.updateFromDialog = function(dialog) {
-//    var w = dialog.findChild("Angle");
-//    if (!isNull(w)) {
-//        this.angle = w.getValue();
-//    }
-//    w = dialog.findChild("Height");
-//    if (!isNull(w)) {
-//        this.height = w.getValue();
-//    }
-//    w = dialog.findChild("Width");
-//    if (!isNull(w)) {
-//        this.width = w.getValue();
-//    }
-//    w = dialog.findChild("CreatePolyline");
-//    if (!isNull(w)) {
-//        this.width = w.getValue();
-//    }
-//};
 
 DrawBasedOnRectangleSize.prototype.validateNumber = function(n) {
     this.enableOk(!isNaN(n));
