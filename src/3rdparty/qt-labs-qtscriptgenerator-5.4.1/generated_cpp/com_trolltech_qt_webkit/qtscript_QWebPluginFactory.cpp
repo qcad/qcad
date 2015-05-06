@@ -86,18 +86,18 @@ static QScriptValue qtscript_create_enum_class_helper(
 // QWebPluginFactory::Extension
 //
 
-static const QWebPluginFactory::Extension qtscript_QWebPluginFactory_Extension_values[] = {
-};
+//static const QWebPluginFactory::Extension qtscript_QWebPluginFactory_Extension_values[] = {
+//};
 
-static const char * const qtscript_QWebPluginFactory_Extension_keys[] = {
-};
+//static const char * const qtscript_QWebPluginFactory_Extension_keys[] = {
+//};
 
 static QString qtscript_QWebPluginFactory_Extension_toStringHelper(QWebPluginFactory::Extension value)
 {
-    for (int i = 0; i < 0; ++i) {
-        if (qtscript_QWebPluginFactory_Extension_values[i] == value)
-            return QString::fromLatin1(qtscript_QWebPluginFactory_Extension_keys[i]);
-    }
+    //for (int i = 0; i < 0; ++i) {
+    //    if (qtscript_QWebPluginFactory_Extension_values[i] == value)
+    //        return QString::fromLatin1(qtscript_QWebPluginFactory_Extension_keys[i]);
+    //}
     return QString();
 }
 
@@ -115,10 +115,10 @@ static void qtscript_QWebPluginFactory_Extension_fromScriptValue(const QScriptVa
 static QScriptValue qtscript_construct_QWebPluginFactory_Extension(QScriptContext *context, QScriptEngine *engine)
 {
     int arg = context->argument(0).toInt32();
-    for (int i = 0; i < 0; ++i) {
-        if (qtscript_QWebPluginFactory_Extension_values[i] == arg)
-            return qScriptValueFromValue(engine,  static_cast<QWebPluginFactory::Extension>(arg));
-    }
+    //for (int i = 0; i < 0; ++i) {
+    //    if (qtscript_QWebPluginFactory_Extension_values[i] == arg)
+    //        return qScriptValueFromValue(engine,  static_cast<QWebPluginFactory::Extension>(arg));
+    //}
     return context->throwError(QString::fromLatin1("Extension(): invalid enum value (%0)").arg(arg));
 }
 
@@ -141,11 +141,11 @@ static QScriptValue qtscript_create_QWebPluginFactory_Extension_class(QScriptEng
         qtscript_QWebPluginFactory_Extension_valueOf, qtscript_QWebPluginFactory_Extension_toString);
     qScriptRegisterMetaType<QWebPluginFactory::Extension>(engine, qtscript_QWebPluginFactory_Extension_toScriptValue,
         qtscript_QWebPluginFactory_Extension_fromScriptValue, ctor.property(QString::fromLatin1("prototype")));
-    for (int i = 0; i < 0; ++i) {
-        clazz.setProperty(QString::fromLatin1(qtscript_QWebPluginFactory_Extension_keys[i]),
-            engine->newVariant(qVariantFromValue(qtscript_QWebPluginFactory_Extension_values[i])),
-            QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    }
+    //for (int i = 0; i < 0; ++i) {
+    //    clazz.setProperty(QString::fromLatin1(qtscript_QWebPluginFactory_Extension_keys[i]),
+    //        engine->newVariant(qVariantFromValue(qtscript_QWebPluginFactory_Extension_values[i])),
+    //        QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    //}
     return ctor;
 }
 
