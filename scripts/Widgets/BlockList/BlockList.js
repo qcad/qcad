@@ -258,6 +258,9 @@ BlockList.getPreferencesCategory = function() {
 BlockList.applyPreferences = function(doc, mdiChild) {
     var appWin = RMainWindowQt.getMainWindow();
     appWin.notifyBlockListeners(EAction.getDocumentInterface());
+
+    var blockList = appWin.findChild("BlockList");
+    WidgetFactory.initList(blockList, "BlockList");
 };
 
 
@@ -303,6 +306,9 @@ BlockList.init = function(basePath) {
     var blockList = new RBlockListQt(layout);
     blockList.objectName = "BlockList";
     layout.addWidget(blockList, 1, 0);
+
+    RSettings.setValue("BlockList/AlternatingRowColor", new RColor(230, 235, 250), false);
+    WidgetFactory.initList(blockList, "BlockList");
 
     var button;
     button = formWidget.findChild("ShowAllBlocks");
