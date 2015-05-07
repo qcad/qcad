@@ -328,11 +328,11 @@ DrawBasedOnRectangleSize.prototype.keyPressEvent = function(event) {
 //    this.simulateMouseMoveEvent();
 //};
 
-DrawBasedOnRectangleSize.prototype.updatePreview = function() {
+DrawBasedOnRectangleSize.prototype.updatePreview = function(clear) {
     if (!isNull(this.dialog)) {
         return;
     }
-    EAction.prototype.updatePreview.call(this);
+    EAction.prototype.updatePreview.call(this, clear);
 };
 
 DrawBasedOnRectangleSize.prototype.getOperation = function(preview) {
