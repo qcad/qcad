@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.0" language="ja_JP">
 <context>
     <name>LayerList</name>
     <message>
@@ -12,6 +12,11 @@
         <location line="+52"/>
         <source>Layer List</source>
         <translation>画層リスト</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use alternating row colors</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

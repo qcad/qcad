@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LayerList</class>
+ <widget class="QWidget" name="LayerList">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>492</width>
+    <height>389</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QCheckBox" name="EnableAlternatingRowColor">
+       <property name="text">
+        <string>Enable alternating row colors</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="RColorCombo" name="AlternatingRowColor">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="onlyFixed" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="color" stdset="0">
+        <color>
+         <red>230</red>
+         <green>235</green>
+         <blue>250</blue>
+        </color>
+       </property>
+       <property name="blackWhite" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="showAlphaChannel" stdset="0">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RColorCombo</class>
+   <extends>QComboBox</extends>
+   <header>RColorCombo.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>EnableAlternatingRowColor</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>AlternatingRowColor</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>188</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>248</x>
+     <y>25</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

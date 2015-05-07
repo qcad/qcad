@@ -181,6 +181,21 @@ function LayerList(guiAction) {
 
 LayerList.prototype = new Widgets();
 
+LayerList.getPreferencesCategory = function() {
+    return [ qsTr("Widgets"), qsTr("Layer List") ];
+};
+
+LayerList.applyPreferences = function(doc, mdiChild) {
+    var appWin = RMainWindowQt.getMainWindow();
+    appWin.notifyLayerListeners(EAction.getDocumentInterface());
+
+    //if (RSettings.getBoolValue("LayerList/AlternatingRowColors", false)===true) {
+        var layerList = appWin.findChild("LayerList");
+        WidgetFactory.initList(layerList, "LayerList");
+    //}
+};
+
+
 /**
  * Shows / hides the layer list.
  */
@@ -214,6 +229,7 @@ LayerList.uninit = function() {
     if (!isNull(basicDock)) {
         basicDock.destroy();
     }
+    LayerList.getPreferencesCategory = undefined;
 };
 
 LayerList.init = function(basePath) {
@@ -234,6 +250,9 @@ LayerList.init = function(basePath) {
     var layerList = new RLayerListQt(layout);
     layerList.objectName = "LayerList";
     layout.addWidget(layerList, 1, 0);
+
+    RSettings.setValue("LayerList/AlternatingRowColor", new RColor(230, 235, 250), false);
+    WidgetFactory.initList(layerList, "LayerList");
 
     layerList.itemSelectionChanged.connect(function() {
         var action = RGuiAction.getByScriptFile("scripts/Layer/RemoveLayer/RemoveLayer.js");
