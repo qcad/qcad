@@ -44,31 +44,31 @@
     <name>Circle2TP</name>
     <message>
         <source>First line, arc or circle</source>
-        <translation type="obsolete">Első vonal, ív vagy kör</translation>
+        <translation type="vanished">Első vonal, ív vagy kör</translation>
     </message>
     <message>
         <source>Second line, arc or circle</source>
-        <translation type="obsolete">Második vonal, ív vagy kör</translation>
+        <translation type="vanished">Második vonal, ív vagy kör</translation>
     </message>
     <message>
         <source>Point on circle line</source>
-        <translation type="obsolete">Körvonal pontja</translation>
+        <translation type="vanished">Körvonal pontja</translation>
     </message>
     <message>
         <source>Choose solution</source>
-        <translation type="obsolete">Válasszon megoldást</translation>
+        <translation type="vanished">Válasszon megoldást</translation>
     </message>
     <message>
         <source>No solution</source>
-        <translation type="obsolete">Nincs megoldás</translation>
+        <translation type="vanished">Nincs megoldás</translation>
     </message>
     <message>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation type="obsolete">Pont, 2 érintő</translation>
+        <translation type="vanished">Pont, 2 érintő</translation>
     </message>
     <message>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation type="obsolete">Két elemet érintő ponton átmenő kör szerkesztése</translation>
+        <translation type="vanished">Két elemet érintő ponton átmenő kör szerkesztése</translation>
     </message>
 </context>
 </TS>

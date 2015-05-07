@@ -140,23 +140,9 @@
         <translation>Referenzpunkt:</translation>
     </message>
     <message>
-        <location filename="../ShapeRectangleSizeDialog.ui" line="+37"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <source>=</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-27"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <source>0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation>Polylinien konstruieren</translation>
+        <translation>Polylinie konstruieren</translation>
     </message>
 </context>
 </TS>

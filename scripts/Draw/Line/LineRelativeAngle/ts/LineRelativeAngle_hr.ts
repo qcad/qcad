@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hr_HR">
+<TS version="2.1" language="hr">
 <context>
     <name>LineRelativeAngle</name>
     <message>
         <location filename="../LineRelativeAngle.js" line="+70"/>
         <source>Choose base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Izaberite bazni entitet</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Set position</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavi položaj</translation>
     </message>
     <message>
         <location filename="../LineRelativeAngle.ui" line="+17"/>
         <source>Relative Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Relativni kut:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Duljina:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Referentna točka:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Početak</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Sredina</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Kraj</translation>
     </message>
     <message>
         <location filename="../LineRelativeAngleInit.js" line="+2"/>

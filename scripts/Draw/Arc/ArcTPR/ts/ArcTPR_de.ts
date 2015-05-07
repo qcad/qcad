@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>ArcTPR</name>
-    <message>
-        <source>Line, arc, circle or ellipse</source>
-        <translation type="obsolete">Linie, Bogen, Kreis oder Ellipse</translation>
-    </message>
     <message>
         <location filename="../ArcTPR.js" line="+79"/>
         <source>Choose line, arc, circle or ellipse</source>
@@ -48,31 +44,31 @@
     <name>Circle2TP</name>
     <message>
         <source>First line, arc or circle</source>
-        <translation type="obsolete">Erste Linie, erster Bogen oder Kreis</translation>
+        <translation>Erste Linie, erster Bogen oder Kreis</translation>
     </message>
     <message>
         <source>Second line, arc or circle</source>
-        <translation type="obsolete">Zweite Linie, zweiter Bogen oder Kreis</translation>
+        <translation>Zweite Linie, zweiter Bogen oder Kreis</translation>
     </message>
     <message>
         <source>Point on circle line</source>
-        <translation type="obsolete">Punkt auf Kreislinie</translation>
+        <translation>Punkt auf Kreislinie</translation>
     </message>
     <message>
         <source>Choose solution</source>
-        <translation type="obsolete">Lösung wählen</translation>
+        <translation>Lösung wählen</translation>
     </message>
     <message>
         <source>No solution</source>
-        <translation type="obsolete">Keine Lösung</translation>
+        <translation>Keine Lösung</translation>
     </message>
     <message>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation type="obsolete">Punkt, 2 Tan&amp;genten</translation>
+        <translation>Punkt, 2 Tan&amp;genten</translation>
     </message>
     <message>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation type="obsolete">Kreis, tangential zu zwei Objekten, durch Punkt</translation>
+        <translation>Kreis, tangential zu zwei Objekten, durch Punkt</translation>
     </message>
 </context>
 </TS>

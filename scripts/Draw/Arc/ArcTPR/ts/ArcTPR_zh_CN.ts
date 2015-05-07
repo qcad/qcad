@@ -44,31 +44,31 @@
     <name>Circle2TP</name>
     <message>
         <source>First line, arc or circle</source>
-        <translation type="obsolete">第一条线、弧线或圆</translation>
+        <translation type="vanished">第一条线、弧线或圆</translation>
     </message>
     <message>
         <source>Second line, arc or circle</source>
-        <translation type="obsolete">第二条线、弧线或圆</translation>
+        <translation type="vanished">第二条线、弧线或圆</translation>
     </message>
     <message>
         <source>Point on circle line</source>
-        <translation type="obsolete">圆弧线上的点</translation>
+        <translation type="vanished">圆弧线上的点</translation>
     </message>
     <message>
         <source>Choose solution</source>
-        <translation type="obsolete">选择解决方案</translation>
+        <translation type="vanished">选择解决方案</translation>
     </message>
     <message>
         <source>No solution</source>
-        <translation type="obsolete">没有解决方案</translation>
+        <translation type="vanished">没有解决方案</translation>
     </message>
     <message>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation type="obsolete">点、两个切线(&amp;g)</translation>
+        <translation type="vanished">点、两个切线(&amp;g)</translation>
     </message>
     <message>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation type="obsolete">按点向2个实体画圆弧切线</translation>
+        <translation type="vanished">按点向2个实体画圆弧切线</translation>
     </message>
 </context>
 </TS>

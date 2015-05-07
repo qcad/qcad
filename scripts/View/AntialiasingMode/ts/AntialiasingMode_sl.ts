@@ -6,7 +6,7 @@
     <message>
         <location filename="../AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
-        <translation>&amp;Glajenje krivulj</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>Hatch</name>
     <message>
         <location filename="../Hatch.js" line="+55"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen begrenzing geselecteerd</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Loop niet gesloten op punt %1/%2.</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="unfinished"></translation>
+        <translation>Elk rand objekt moet een lijn, boog, cirkel, ellips boog, ellips, polylijn of spline zijn. Gevonden:</translation>
     </message>
     <message>
         <location filename="../HatchInit.js" line="+2"/>

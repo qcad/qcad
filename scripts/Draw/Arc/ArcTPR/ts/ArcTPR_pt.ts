@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>ArcTPR</name>
     <message>
@@ -44,31 +44,31 @@
     <name>Circle2TP</name>
     <message>
         <source>First line, arc or circle</source>
-        <translation type="obsolete">Primeira linha, arco, circulo</translation>
+        <translation>Primeira linha, arco, circulo</translation>
     </message>
     <message>
         <source>Second line, arc or circle</source>
-        <translation type="obsolete">Segunda linha, arco, circulo</translation>
+        <translation>Segunda linha, arco, circulo</translation>
     </message>
     <message>
         <source>Point on circle line</source>
-        <translation type="obsolete">Ponto</translation>
+        <translation>Ponto</translation>
     </message>
     <message>
         <source>Choose solution</source>
-        <translation type="obsolete">Escolher solução</translation>
+        <translation>Escolher solução</translation>
     </message>
     <message>
         <source>No solution</source>
-        <translation type="obsolete">Nenhuma solução</translation>
+        <translation>Nenhuma solução</translation>
     </message>
     <message>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation type="obsolete">Ponto, 2 tan&amp;gentes</translation>
+        <translation>Ponto, 2 tan&amp;gentes</translation>
     </message>
     <message>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation type="obsolete">Desenhe um círculo tangente a duas entidades e através de um ponto</translation>
+        <translation>Desenhe um círculo tangente a duas entidades e através de um ponto</translation>
     </message>
 </context>
 </TS>

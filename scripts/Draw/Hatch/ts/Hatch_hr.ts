@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hr_HR">
+<TS version="2.1" language="hr">
 <context>
     <name>Hatch</name>
     <message>
         <location filename="../Hatch.js" line="+55"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nije odabrana granica.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Petlja nije zatvorena u točki %1/%2.</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -64,12 +64,12 @@
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kut:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mjerilo:</translation>
     </message>
 </context>
 </TS>

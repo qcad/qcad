@@ -26,7 +26,7 @@
     <message>
         <location line="+20"/>
         <source>ID:</source>
-        <translation>ID:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>

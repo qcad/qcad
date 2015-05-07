@@ -6,7 +6,7 @@
     <message>
         <location filename="../DevDebug.js" line="+45"/>
         <source>&amp;Debug Mode</source>
-        <translation>&amp;Razhroščevalni način</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

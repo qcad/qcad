@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hr_HR">
+<TS version="2.1" language="hr">
 <context>
     <name>LineOrthogonalTangent</name>
     <message>
         <location filename="../LineOrthogonalTangent.js" line="+70"/>
         <source>Choose line</source>
-        <translation type="unfinished"></translation>
+        <translation>Izaberi liniju</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Izaberi kružnicu, luk ili elipsu</translation>
     </message>
     <message>
         <location line="+139"/>
         <source>No tangent possible</source>
-        <translation type="unfinished"></translation>
+        <translation>Tangenta nije moguća</translation>
     </message>
     <message>
         <location filename="../LineOrthogonalTangentInit.js" line="+2"/>

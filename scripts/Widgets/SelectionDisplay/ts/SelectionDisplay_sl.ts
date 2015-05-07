@@ -10,7 +10,7 @@
     <message>
         <location filename="../SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation>Ni izbranih entitet.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -57,7 +57,7 @@
     <message>
         <location filename="../SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation>Obrazec</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

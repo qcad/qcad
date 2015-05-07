@@ -140,7 +140,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation>Entiteta ni črta, lok, krog, elipsa ali lomljenka.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>

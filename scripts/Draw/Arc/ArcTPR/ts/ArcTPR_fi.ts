@@ -44,31 +44,31 @@
     <name>Circle2TP</name>
     <message>
         <source>First line, arc or circle</source>
-        <translation type="obsolete">Ensimmäinen viiva, kaari tai ympyrä</translation>
+        <translation type="vanished">Ensimmäinen viiva, kaari tai ympyrä</translation>
     </message>
     <message>
         <source>Second line, arc or circle</source>
-        <translation type="obsolete">Toinen viiva, kaari tai ympyrä</translation>
+        <translation type="vanished">Toinen viiva, kaari tai ympyrä</translation>
     </message>
     <message>
         <source>Point on circle line</source>
-        <translation type="obsolete">Piste ympyrän viivalla</translation>
+        <translation type="vanished">Piste ympyrän viivalla</translation>
     </message>
     <message>
         <source>Choose solution</source>
-        <translation type="obsolete">Valitse ratkaisu</translation>
+        <translation type="vanished">Valitse ratkaisu</translation>
     </message>
     <message>
         <source>No solution</source>
-        <translation type="obsolete">Ei ratkaisua</translation>
+        <translation type="vanished">Ei ratkaisua</translation>
     </message>
     <message>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation type="obsolete">Piste, 2 Tangenttia</translation>
+        <translation type="vanished">Piste, 2 Tangenttia</translation>
     </message>
     <message>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation type="obsolete">Piirrä ympyrä tangentiaalisesti kahteen kohteeseen, pisteen kautta</translation>
+        <translation type="vanished">Piirrä ympyrä tangentiaalisesti kahteen kohteeseen, pisteen kautta</translation>
     </message>
 </context>
 </TS>

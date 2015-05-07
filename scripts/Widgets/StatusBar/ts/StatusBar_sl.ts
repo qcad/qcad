@@ -31,7 +31,7 @@
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation>Prikaz napredka</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../StatusBar.js" line="+32"/>
@@ -46,7 +46,7 @@
     <message>
         <location line="+6"/>
         <source>&amp;Status Bar</source>
-        <translation>&amp;Statusna vrstica</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

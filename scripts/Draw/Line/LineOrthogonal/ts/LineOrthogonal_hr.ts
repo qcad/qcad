@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hr_HR">
+<TS version="2.1" language="hr">
 <context>
     <name>LineOrthogonal</name>
     <message>
@@ -11,32 +11,32 @@
     <message>
         <location line="+20"/>
         <source>&amp;Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Referentna Točka:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Početak</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Sredina</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Kraj</translation>
     </message>
     <message>
         <location filename="../LineOrthogonalInit.js" line="+2"/>
         <source>&amp;Orthogonal</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ortogonalno</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Nacrtajj liniju okomitu na bazni entitet</translation>
     </message>
 </context>
 </TS>

@@ -44,31 +44,31 @@
     <name>Circle2TP</name>
     <message>
         <source>First line, arc or circle</source>
-        <translation type="obsolete">Eerste lijn, boog of cirkel</translation>
+        <translation type="vanished">Eerste lijn, boog of cirkel</translation>
     </message>
     <message>
         <source>Second line, arc or circle</source>
-        <translation type="obsolete">Tweede lijn, boog of cirkel</translation>
+        <translation type="vanished">Tweede lijn, boog of cirkel</translation>
     </message>
     <message>
         <source>Point on circle line</source>
-        <translation type="obsolete">Punt op cirkel</translation>
+        <translation type="vanished">Punt op cirkel</translation>
     </message>
     <message>
         <source>Choose solution</source>
-        <translation type="obsolete">Kies oplossing</translation>
+        <translation type="vanished">Kies oplossing</translation>
     </message>
     <message>
         <source>No solution</source>
-        <translation type="obsolete">Geen oplossing</translation>
+        <translation type="vanished">Geen oplossing</translation>
     </message>
     <message>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation type="obsolete">Punt, 2 tan&amp;genten</translation>
+        <translation type="vanished">Punt, 2 tan&amp;genten</translation>
     </message>
     <message>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation type="obsolete">Cirkel tangentieel aan twee objecten, door punt</translation>
+        <translation type="vanished">Cirkel tangentieel aan twee objecten, door punt</translation>
     </message>
 </context>
 </TS>

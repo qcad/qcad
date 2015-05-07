@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>Insert</name>
     <message>
@@ -68,10 +68,6 @@
         <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
         <translation>Voltear bloque&lt;br&gt;verticalmente</translation>
-    </message>
-    <message>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <source>Attribute 1:</source>

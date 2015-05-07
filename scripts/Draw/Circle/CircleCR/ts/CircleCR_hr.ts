@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hr_HR">
+<TS version="2.1" language="hr">
 <context>
     <name>CircleCR</name>
     <message>
         <location filename="../CircleCR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Polumjer:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kut:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Referentna Točka:</translation>
     </message>
     <message>
         <location filename="../CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Centar, &amp;Polumjer</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Nacrtaj kružnicu preko centra i polumjera</translation>
     </message>
 </context>
 </TS>

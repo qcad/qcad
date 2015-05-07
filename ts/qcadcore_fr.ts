@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.0" language="fr_FR">
 <context>
     <name>QObject</name>
     <message>
@@ -689,21 +689,21 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Par calque</translatorcomment>
-        <translation type="vanished">Par calque</translation>
+        <translation>Par calque</translation>
     </message>
     <message>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Par bloc</translatorcomment>
-        <translation type="vanished">Par bloc</translation>
+        <translation>Par bloc</translation>
     </message>
     <message>
         <source>Continuous</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Continu</translatorcomment>
-        <translation type="vanished">Continu</translation>
+        <translation>Continu</translation>
     </message>
     <message>
         <source>Dot</source>
@@ -712,7 +712,7 @@ Continu</translatorcomment>
 Points de la g&amp;rille :
 Points de la g&amp;rille
 Points de la grille :</translatorcomment>
-        <translation type="vanished">Point</translation>
+        <translation>Point</translation>
     </message>
     <message>
         <source>Dot (small)</source>
@@ -720,7 +720,7 @@ Points de la grille :</translatorcomment>
 --file: qcadguiqt_fr.ts--
 Point (petit)
 Tiret-point (petit)</translatorcomment>
-        <translation type="vanished">Point (petit)</translation>
+        <translation>Point (petit)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
@@ -728,7 +728,7 @@ Tiret-point (petit)</translatorcomment>
 --file: qcadguiqt_fr.ts--
 Point (grand)
 Tiret-point (grand)</translatorcomment>
-        <translation type="vanished">Point (grand)</translation>
+        <translation>Point (grand)</translation>
     </message>
     <message>
         <source>Dash</source>
@@ -736,21 +736,21 @@ Tiret-point (grand)</translatorcomment>
 --file: qcadguiqt_fr.ts--
 Tiret
 Tiret (petit)</translatorcomment>
-        <translation type="vanished">Tiret</translation>
+        <translation>Tiret</translation>
     </message>
     <message>
         <source>Dash (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Tiret (petit)</translatorcomment>
-        <translation type="vanished">Tiret (petit)</translation>
+        <translation>Tiret (petit)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Tiret (grand)</translatorcomment>
-        <translation type="vanished">Tiret (grand)</translation>
+        <translation>Tiret (grand)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
@@ -758,21 +758,21 @@ Tiret (grand)</translatorcomment>
 --file: qcadguiqt_fr.ts--
 Tiret-point
 Tiret-point (petit)</translatorcomment>
-        <translation type="vanished">Tiret-point</translation>
+        <translation>Tiret-point</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Tiret-point (petit)</translatorcomment>
-        <translation type="vanished">Tiret-point (petit)</translation>
+        <translation>Tiret-point (petit)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Tiret-point (grand)</translatorcomment>
-        <translation type="vanished">Tiret-point (grand)</translation>
+        <translation>Tiret-point (grand)</translation>
     </message>
     <message>
         <source>Divide</source>
@@ -781,21 +781,21 @@ Tiret-point (grand)</translatorcomment>
 &amp;Division
 Division
 Divise les entités</translatorcomment>
-        <translation type="vanished">Division</translation>
+        <translation>Division</translation>
     </message>
     <message>
         <source>Divide (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Division (petite)</translatorcomment>
-        <translation type="vanished">Division (petite)</translation>
+        <translation>Division (petite)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Division (grande)</translatorcomment>
-        <translation type="vanished">Division (grande)</translation>
+        <translation>Division (grande)</translation>
     </message>
     <message>
         <source>Center</source>
@@ -804,21 +804,21 @@ Division (grande)</translatorcomment>
 &amp;Centre, point, angles
 Centre, point, angles
 Indiquer le centre</translatorcomment>
-        <translation type="vanished">Centré</translation>
+        <translation>Centré</translation>
     </message>
     <message>
         <source>Center (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Centre (petit)</translatorcomment>
-        <translation type="vanished">Centre (petit)</translation>
+        <translation>Centre (petit)</translation>
     </message>
     <message>
         <source>Center (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Centre (grand)</translatorcomment>
-        <translation type="vanished">Centre (grand)</translation>
+        <translation>Centre (grand)</translation>
     </message>
     <message>
         <source>Border</source>
@@ -826,21 +826,21 @@ Centre (grand)</translatorcomment>
 --file: qcadguiqt_fr.ts--
 Bordure
 Bordure (petite)</translatorcomment>
-        <translation type="vanished">Bordure</translation>
+        <translation>Bordure</translation>
     </message>
     <message>
         <source>Border (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Bordure (petite)</translatorcomment>
-        <translation type="vanished">Bordure (petite)</translation>
+        <translation>Bordure (petite)</translation>
     </message>
     <message>
         <source>Border (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Bordure (grande)</translatorcomment>
-        <translation type="vanished">Bordure (grande)</translation>
+        <translation>Bordure (grande)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -884,7 +884,7 @@ Bordure (grande)</translatorcomment>
     </message>
     <message>
         <source>Border (2x)</source>
-        <translation type="vanished">Bordure (2x)</translation>
+        <translation>Bordure (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -895,7 +895,7 @@ Bordure (grande)</translatorcomment>
     </message>
     <message>
         <source>Center (2x)</source>
-        <translation type="vanished">Centre (2x)</translation>
+        <translation>Centre (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1061,7 +1061,7 @@ Bordure (grande)</translatorcomment>
     </message>
     <message>
         <source>Drainage Reverse</source>
-        <translation type="vanished">Drainage inverse</translation>
+        <translation>Drainage inverse</translation>
     </message>
 </context>
 <context>

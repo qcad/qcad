@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hr_HR">
+<TS version="2.1" language="hr">
 <context>
     <name>Line2P</name>
     <message>
@@ -31,37 +31,37 @@
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Poništi prethodni segment</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation type="unfinished"></translation>
+        <translation>,, U</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponovi segment</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation type="unfinished"></translation>
+        <translation>,, R</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Ograniči duljinu ili kut</translation>
     </message>
     <message>
         <location filename="../Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Linija preko &amp;2 točke</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Nacrtaj jednu liniju ili niz linija</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>QObject</name>
     <message>
@@ -705,14 +705,14 @@ Colore G&amp;riglia:</translatorcomment>
 --file: qcadguiqt_it.ts--
 Da Layer
 Scegli layer nella cartella</translatorcomment>
-        <translation type="vanished">Da Layer</translation>
+        <translation>Da Layer</translation>
     </message>
     <message>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Da Blocco</translatorcomment>
-        <translation type="vanished">Da Blocco</translation>
+        <translation>Da Blocco</translation>
     </message>
     <message>
         <source>Continuous</source>
@@ -720,7 +720,7 @@ Da Blocco</translatorcomment>
 --file: qcadguiqt_it.ts--
 Continua
 Colore continuo</translatorcomment>
-        <translation type="vanished">Continua</translation>
+        <translation>Continua</translation>
     </message>
     <message>
         <source>Dot</source>
@@ -729,7 +729,7 @@ Colore continuo</translatorcomment>
 Punti G&amp;riglia:
 Punti G&amp;riglia
 Punti Griglia:</translatorcomment>
-        <translation type="vanished">Puntinata</translation>
+        <translation>Puntinata</translation>
     </message>
     <message>
         <source>Dot (small)</source>
@@ -737,7 +737,7 @@ Punti Griglia:</translatorcomment>
 --file: qcadguiqt_it.ts--
 Puntinata (Ridotta)
 Trattopunto (Ridotta)</translatorcomment>
-        <translation type="vanished">Puntinata (Ridotta)</translation>
+        <translation>Puntinata (Ridotta)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
@@ -745,7 +745,7 @@ Trattopunto (Ridotta)</translatorcomment>
 --file: qcadguiqt_it.ts--
 Puntinata (Ingrandita)
 Trattopunto (Ingrandita)</translatorcomment>
-        <translation type="vanished">Puntinata (Ingrandita)</translation>
+        <translation>Puntinata (Ingrandita)</translation>
     </message>
     <message>
         <source>Dash</source>
@@ -754,21 +754,21 @@ Trattopunto (Ingrandita)</translatorcomment>
 Trattino
 tratteggiato
 Tratteggiata (Ridotta)</translatorcomment>
-        <translation type="vanished">Tratteggiata</translation>
+        <translation>Tratteggiata</translation>
     </message>
     <message>
         <source>Dash (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Tratteggiata (Ridotta)</translatorcomment>
-        <translation type="vanished">Tratteggiata (Ridotta)</translation>
+        <translation>Tratteggiata (Ridotta)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Tratteggiata (Ingrandita)</translatorcomment>
-        <translation type="vanished">Tratteggiata (Ingrandita)</translation>
+        <translation>Tratteggiata (Ingrandita)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
@@ -776,42 +776,42 @@ Tratteggiata (Ingrandita)</translatorcomment>
 --file: qcadguiqt_it.ts--
 Trattopunto
 Trattopunto (Ridotta)</translatorcomment>
-        <translation type="vanished">Trattopunto</translation>
+        <translation>Trattopunto</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Trattopunto (Ridotta)</translatorcomment>
-        <translation type="vanished">Trattopunto (Ridotta)</translation>
+        <translation>Trattopunto (Ridotta)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Trattopunto (Ingrandita)</translatorcomment>
-        <translation type="vanished">Trattopunto (Ingrandita)</translation>
+        <translation>Trattopunto (Ingrandita)</translation>
     </message>
     <message>
         <source>Divide</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--
 Dividi</translatorcomment>
-        <translation type="vanished">Dividi</translation>
+        <translation>Dividi</translation>
     </message>
     <message>
         <source>Divide (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Dividi (Ridotta)</translatorcomment>
-        <translation type="vanished">Dividi (Ridotta)</translation>
+        <translation>Dividi (Ridotta)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Dividi (Ingrandita)</translatorcomment>
-        <translation type="vanished">Dividi (Ingrandita)</translation>
+        <translation>Dividi (Ingrandita)</translation>
     </message>
     <message>
         <source>Center</source>
@@ -820,21 +820,21 @@ Dividi (Ingrandita)</translatorcomment>
 Centro
 Arco: Centro, Punto, Angoli
 </translatorcomment>
-        <translation type="vanished">Centro</translation>
+        <translation>Centro</translation>
     </message>
     <message>
         <source>Center (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Centro (Ridotta)</translatorcomment>
-        <translation type="vanished">Centro (Ridotta)</translation>
+        <translation>Centro (Ridotta)</translation>
     </message>
     <message>
         <source>Center (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Centro (Ingrandita)</translatorcomment>
-        <translation type="vanished">Centro (Ingrandita)</translation>
+        <translation>Centro (Ingrandita)</translation>
     </message>
     <message>
         <source>Border</source>
@@ -842,21 +842,21 @@ Centro (Ingrandita)</translatorcomment>
 --file: qgis_it.ts--
 Bordo
 Margine (Ridotta)</translatorcomment>
-        <translation type="vanished">Margine</translation>
+        <translation>Margine</translation>
     </message>
     <message>
         <source>Border (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Margine (Ridotta)</translatorcomment>
-        <translation type="vanished">Margine (Ridotta)</translation>
+        <translation>Margine (Ridotta)</translation>
     </message>
     <message>
         <source>Border (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Margine (Ingrandita)</translatorcomment>
-        <translation type="vanished">Margine (Ingrandita)</translation>
+        <translation>Margine (Ingrandita)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -900,7 +900,7 @@ Margine (Ingrandita)</translatorcomment>
     </message>
     <message>
         <source>Border (2x)</source>
-        <translation type="vanished">Margine (2x)</translation>
+        <translation>Margine (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -911,7 +911,7 @@ Margine (Ingrandita)</translatorcomment>
     </message>
     <message>
         <source>Center (2x)</source>
-        <translation type="vanished">Centro (2x)</translation>
+        <translation>Centro (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1077,7 +1077,7 @@ Margine (Ingrandita)</translatorcomment>
     </message>
     <message>
         <source>Drainage Reverse</source>
-        <translation type="vanished">Drenaggio inverti</translation>
+        <translation>Drenaggio inverti</translation>
     </message>
 </context>
 <context>

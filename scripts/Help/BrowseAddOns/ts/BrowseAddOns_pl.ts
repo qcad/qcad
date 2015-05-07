@@ -2,7 +2,7 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="pl_PL">
 <context>
-    <name>AboutDialog</name>
+    <name>BrowseAddOnDialog</name>
     <message>
         <location filename="../BrowseAddOnsDialog.ui" line="+28"/>
         <source>about:blank</source>
@@ -18,7 +18,7 @@
         <translation type="unfinished">Znajdź dodatków</translation>
     </message>
     <message>
-        <location filename="../BrowseAddOns.js" line="+71"/>
+        <location filename="../BrowseAddOns.js" line="+74"/>
         <source>Unknown</source>
         <translation type="unfinished"></translation>
     </message>
