@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>565</width>
-    <height>968</height>
+    <height>728</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,9 +20,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
-     <width>563</width>
-     <height>966</height>
+     <y>-185</y>
+     <width>548</width>
+     <height>911</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -773,12 +773,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>297</x>
-     <y>436</y>
+     <x>359</x>
+     <y>192</y>
     </hint>
     <hint type="destinationlabel">
-     <x>296</x>
-     <y>459</y>
+     <x>350</x>
+     <y>218</y>
     </hint>
    </hints>
   </connection>
@@ -789,12 +789,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>342</x>
-     <y>438</y>
+     <x>359</x>
+     <y>192</y>
     </hint>
     <hint type="destinationlabel">
-     <x>394</x>
-     <y>459</y>
+     <x>459</x>
+     <y>222</y>
     </hint>
    </hints>
   </connection>

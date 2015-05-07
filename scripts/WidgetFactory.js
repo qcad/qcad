@@ -1088,6 +1088,23 @@ WidgetFactory.initBlockCombo = function(comboBox, doc, showSpaces) {
     }
 };
 
+WidgetFactory.initList = function(list, groupName) {
+    if (isNull(list)) {
+        return;
+    }
+
+    if (RSettings.getBoolValue(groupName + "/EnableAlternatingRowColor", false)===true) {
+        list.alternatingRowColors = true;
+        var p = list.palette;
+        var col = RSettings.getColorValue(groupName + "/AlternatingRowColor", new RColor(230, 235, 250));
+        p.setColor(QPalette.AlternateBase, new QColor(col.red(), col.green(), col.blue(), col.alpha()));
+        list.palette = p;
+    }
+    else {
+        list.alternatingRowColors = false;
+    }
+};
+
 WidgetFactory.initHAlignCombo = function(comboBox) {
     comboBox.clear();
     comboBox.addItem(qsTr("Left"), RS.HAlignLeft);
