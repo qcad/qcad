@@ -3,10 +3,10 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ShapePolygonAFPP.js");
     action.setIcon(basePath + "/ShapePolygonAFPP.svg");
-    action.setStatusTip(qsTranslate("ShapePolygonAFPP", "Draw regular polygon from middle points of two sides"));
+    action.setStatusTip(qsTranslate("ShapePolygonAFPP", "Draw regular polygon from middle points of two opposite sides or two opposite corners"));
     action.setDefaultShortcuts([new QKeySequence("p,g,4")]);
     action.setDefaultCommands(["polygonss", "pg4"]);
-    action.setGroupSortOrder(11530);
-    action.setSortOrder(200);
+    action.setGroupSortOrder(11520);
+    action.setSortOrder(400);
     action.setWidgetNames(["DrawShapeMenu", "ShapeToolBar", "ShapeToolsPanel"]);
 }

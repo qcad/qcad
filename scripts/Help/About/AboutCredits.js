@@ -17,6 +17,8 @@ var credits =
                               "Edit > Drawing Preferences > General > Point Display<br>" +
                               "Modify > Break out Manual<br>" +
                               "View > Display Distance/Angle<br>" +
+                              "Draw > Shape > Polygon (Center, Side)<br>" +
+                              "Draw > Shape > Polygon (Side, Side)<br>" +
                               "<i>Significant contributions to:</i><br>" +
                               "Draw > Line > Line from 2 Points<br>" +
                               "Draw > Polyline > Draw Polyline<br>" +
