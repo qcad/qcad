@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt_PT">
+<TS version="2.1" language="pt_PT">
 <context>
     <name>LineRectangleSize</name>
     <message>
@@ -10,7 +10,7 @@
 Esquerda Acima
 Em cima à esquerda
 Cada objecto seleccionado tem um marca de diamante no canto esquerdo superio</translatorcomment>
-        <translation>Esquerda acima</translation>
+        <translation type="vanished">Esquerda acima</translation>
     </message>
     <message>
         <source>Top</source>
@@ -18,7 +18,7 @@ Cada objecto seleccionado tem um marca de diamante no canto esquerdo superio</tr
 --file: pt_PT.po--
 Deposita ao fim da garimpagem
 Centro Acima</translatorcomment>
-        <translation>Topo</translation>
+        <translation type="vanished">Topo</translation>
     </message>
     <message>
         <source>Top Right</source>
@@ -26,7 +26,7 @@ Centro Acima</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Direita Acima
 Em cima à direita</translatorcomment>
-        <translation>Direita acima</translation>
+        <translation type="vanished">Direita acima</translation>
     </message>
     <message>
         <source>Left</source>
@@ -35,7 +35,7 @@ Em cima à direita</translatorcomment>
 Esquerda Acima
 Em cima à esquerda
 Esquerda ao Meio</translatorcomment>
-        <translation>Esquerda</translation>
+        <translation type="vanished">Esquerda</translation>
     </message>
     <message>
         <source>Middle</source>
@@ -44,7 +44,7 @@ Esquerda ao Meio</translatorcomment>
 &amp;Meio
 Meio
 Salta aos pontos de meio</translatorcomment>
-        <translation>Meio</translation>
+        <translation type="vanished">Meio</translation>
     </message>
     <message>
         <source>Right</source>
@@ -53,7 +53,7 @@ Salta aos pontos de meio</translatorcomment>
 Direita ao Meio
 Direita Abaixo
 Em baixo à direita</translatorcomment>
-        <translation>Direita</translation>
+        <translation type="vanished">Direita</translation>
     </message>
     <message>
         <source>Bottom Left</source>
@@ -61,7 +61,7 @@ Em baixo à direita</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Esquerda Abaixo
 Em baixo à esquerda</translatorcomment>
-        <translation>Esquerda abaixo</translation>
+        <translation type="vanished">Esquerda abaixo</translation>
     </message>
     <message>
         <source>Bottom</source>
@@ -70,7 +70,7 @@ Em baixo à esquerda</translatorcomment>
 Direita Abaixo
 Em baixo à direita
 Centro Abaixo</translatorcomment>
-        <translation>Fundo</translation>
+        <translation type="vanished">Fundo</translation>
     </message>
     <message>
         <source>Bottom Right</source>
@@ -78,7 +78,7 @@ Centro Abaixo</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Direita Abaixo
 Em baixo à direita</translatorcomment>
-        <translation>Direita abaixo</translation>
+        <translation type="vanished">Direita abaixo</translation>
     </message>
     <message>
         <source>Position</source>
@@ -87,72 +87,72 @@ Em baixo à direita</translatorcomment>
 Indique a dimensão da linha de posicionamento ou insira o ângulo:
 Indique a dimensão da linha de posicionamento ou insira o ângulo
 Indique a posição [ângulo/comprimento]</translatorcomment>
-        <translation>Posição</translation>
+        <translation type="vanished">Posição</translation>
     </message>
     <message>
         <source>Rectangle with &amp;Size</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Retângulo com &amp;tamanho</translation>
+        <translation type="vanished">Retângulo com &amp;tamanho</translation>
     </message>
     <message>
         <source>Draw rectangle with position and size</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar retângulo com a posição e tamanho</translation>
+        <translation type="vanished">Desenhar retângulo com a posição e tamanho</translation>
     </message>
     <message>
         <source>&amp;Width:</source>
-        <translation>&amp;Largura:</translation>
+        <translation type="vanished">&amp;Largura:</translation>
     </message>
     <message>
         <source>&amp;Height:</source>
-        <translation>&amp;Altura:</translation>
+        <translation type="vanished">&amp;Altura:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation>Ponto de referência:</translation>
+        <translation type="vanished">Ponto de referência:</translation>
     </message>
 </context>
 <context>
     <name>ShapeRectangleSize</name>
     <message>
         <source>Top Left</source>
-        <translation>Esquerda acima</translation>
+        <translation type="vanished">Esquerda acima</translation>
     </message>
     <message>
         <source>Top</source>
-        <translation>Topo</translation>
+        <translation type="vanished">Topo</translation>
     </message>
     <message>
         <source>Top Right</source>
-        <translation>Direita acima</translation>
+        <translation type="vanished">Direita acima</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation>Esquerda</translation>
+        <translation type="vanished">Esquerda</translation>
     </message>
     <message>
         <source>Middle</source>
-        <translation>Meio</translation>
+        <translation type="vanished">Meio</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation>Direita</translation>
+        <translation type="vanished">Direita</translation>
     </message>
     <message>
         <source>Bottom Left</source>
-        <translation>Esquerda abaixo</translation>
+        <translation type="vanished">Esquerda abaixo</translation>
     </message>
     <message>
         <source>Bottom</source>
-        <translation>Fundo</translation>
+        <translation type="vanished">Fundo</translation>
     </message>
     <message>
         <source>Bottom Right</source>
-        <translation>Direita abaixo</translation>
+        <translation type="vanished">Direita abaixo</translation>
     </message>
     <message>
         <source>Position</source>
-        <translation>Posição</translation>
+        <translation type="vanished">Posição</translation>
     </message>
     <message>
         <location filename="../ShapeRectangleSizeInit.js" line="+2"/>

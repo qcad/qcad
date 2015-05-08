@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -135,7 +135,7 @@
     </message>
     <message>
         <source>Antialiasing on by default</source>
-        <translation>Antialiasing activado por defecto</translation>
+        <translation type="vanished">Antialiasing activado por defecto</translation>
     </message>
     <message>
         <source>Display entities with N dashes as continuous:</source>
@@ -152,7 +152,7 @@
     </message>
     <message>
         <source>Performance</source>
-        <translation>Rendimiento</translation>
+        <translation type="vanished">Rendimiento</translation>
     </message>
     <message>
         <location line="+78"/>

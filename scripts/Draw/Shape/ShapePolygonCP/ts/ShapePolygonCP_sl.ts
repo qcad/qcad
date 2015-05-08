@@ -51,9 +51,13 @@
         <translation>Vogali:</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation>Pol&amp;igon (središče, točka)</translation>
+        <translation type="vanished">Pol&amp;igon (središče, točka)</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonCPInit.js" line="+2"/>
+        <source>Pol&amp;ygon (Center, Corner)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>

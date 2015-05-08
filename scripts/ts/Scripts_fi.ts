@@ -270,7 +270,7 @@
         <translation>Mitattu arvo</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+110"/>
         <source>Left</source>
         <translation>Vasen</translation>
     </message>

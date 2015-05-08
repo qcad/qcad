@@ -24,14 +24,22 @@
         <translation>Kulmat:</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation>Monikulmio (kaksi kulmaa)</translation>
+        <translation type="vanished">Monikulmio (kaksi kulmaa)</translation>
+    </message>
+    <message>
+        <source>Draw regular polygon from two corner points</source>
+        <translation type="vanished">Piirrä säännöllinen monikulmio kahdella kulmapisteellä</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonPPInit.js" line="+2"/>
+        <source>Polygo&amp;n (2 Points of Side)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw regular polygon from two corner points</source>
-        <translation>Piirrä säännöllinen monikulmio kahdella kulmapisteellä</translation>
+        <source>Draw regular polygon from end points of one side</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

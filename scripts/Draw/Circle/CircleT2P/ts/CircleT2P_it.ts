@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it_IT">
+<TS version="2.1" language="it_IT">
 <context>
     <name>CircleT2P</name>
     <message>
@@ -31,7 +31,7 @@
     </message>
     <message>
         <source>2 Poin&amp;ts and Tangent</source>
-        <translation>&amp;2 punti e tangente</translation>
+        <translation type="vanished">&amp;2 punti e tangente</translation>
     </message>
     <message>
         <location filename="../CircleT2PInit.js" line="+2"/>

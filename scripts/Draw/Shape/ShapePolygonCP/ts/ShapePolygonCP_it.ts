@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.0" language="it_IT">
 <context>
     <name>LinePolygonCP</name>
     <message>
         <source>Center</source>
-        <translation type="vanished">Centro</translation>
+        <translation>Centro</translation>
     </message>
     <message>
         <source>Corner point</source>
-        <translation type="vanished">Punto dell&apos;angolo</translation>
+        <translation>Punto dell&apos;angolo</translation>
     </message>
     <message>
         <source>Done</source>
-        <translation type="vanished">Fatto</translation>
+        <translation>Fatto</translation>
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation type="vanished">Pol&amp;igono (centro, punto)</translation>
+        <translation>Pol&amp;igono (centro, punto)</translation>
     </message>
     <message>
         <source>Draw regular polygon from center and corner point</source>
-        <translation type="vanished">Disegnare un poligono regolare dal punto centrale e un punto dell&apos;angolo</translation>
+        <translation>Disegnare un poligono regolare dal punto centrale e un punto dell&apos;angolo</translation>
     </message>
     <message>
         <source>Corners:</source>
-        <translation type="vanished">Punti dell&apos;angolo:</translation>
+        <translation>Punti dell&apos;angolo:</translation>
     </message>
 </context>
 <context>
@@ -51,8 +51,12 @@
         <translation>Punti dell&apos;angolo:</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Point)</source>
+        <translation>Pol&amp;igono (centro, punto)</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonCPInit.js" line="+2"/>
+        <source>Pol&amp;ygon (Center, Corner)</source>
         <translation>Pol&amp;igono (centro, punto)</translation>
     </message>
     <message>

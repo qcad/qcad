@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it_IT">
+<TS version="2.1" language="it_IT">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -294,7 +294,7 @@
         <translation>Valore misurato</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+110"/>
         <source>Left</source>
         <translation>Sinistra</translation>
     </message>

@@ -64,9 +64,13 @@ Zrobione
         <translation type="unfinished">Rogi:</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation type="unfinished">Polygon (Center Point)</translation>
+        <translation type="obsolete">Polygon (Center Point)</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonCPInit.js" line="+2"/>
+        <source>Pol&amp;ygon (Center, Corner)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>

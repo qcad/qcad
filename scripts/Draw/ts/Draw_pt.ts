@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt_PT">
+<TS version="2.1" language="pt_PT">
 <context>
     <name>Draw</name>
     <message>
@@ -17,43 +17,43 @@
     <name>DrawBasedOnRectangle</name>
     <message>
         <source>Top Left</source>
-        <translation>Esquerda acima</translation>
+        <translation type="vanished">Esquerda acima</translation>
     </message>
     <message>
         <source>Top</source>
-        <translation>Topo</translation>
+        <translation type="vanished">Topo</translation>
     </message>
     <message>
         <source>Top Right</source>
-        <translation>Direita acima</translation>
+        <translation type="vanished">Direita acima</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation>Esquerda</translation>
+        <translation type="vanished">Esquerda</translation>
     </message>
     <message>
         <source>Middle</source>
-        <translation>Meio</translation>
+        <translation type="vanished">Meio</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation>Direita</translation>
+        <translation type="vanished">Direita</translation>
     </message>
     <message>
         <source>Bottom Left</source>
-        <translation>Esquerda abaixo</translation>
+        <translation type="vanished">Esquerda abaixo</translation>
     </message>
     <message>
         <source>Bottom</source>
-        <translation>Fundo</translation>
+        <translation type="vanished">Fundo</translation>
     </message>
     <message>
         <source>Bottom Right</source>
-        <translation>Direita abaixo</translation>
+        <translation type="vanished">Direita abaixo</translation>
     </message>
     <message>
         <source>Position</source>
-        <translation>Posição</translation>
+        <translation type="vanished">Posição</translation>
     </message>
 </context>
 <context>

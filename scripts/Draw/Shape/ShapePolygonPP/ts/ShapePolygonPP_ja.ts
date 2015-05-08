@@ -54,14 +54,22 @@
         <translation>頂点の数:</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation>&amp;n 多角形（２頂点）</translation>
+        <translation type="vanished">&amp;n 多角形（２頂点）</translation>
+    </message>
+    <message>
+        <source>Draw regular polygon from two corner points</source>
+        <translation type="vanished">２頂点から正多角形を描画</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonPPInit.js" line="+2"/>
+        <source>Polygo&amp;n (2 Points of Side)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw regular polygon from two corner points</source>
-        <translation>２頂点から正多角形を描画</translation>
+        <source>Draw regular polygon from end points of one side</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

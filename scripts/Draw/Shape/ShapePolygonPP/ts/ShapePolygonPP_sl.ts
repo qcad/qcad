@@ -54,14 +54,22 @@
         <translation>Vogal:</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation>Poligo&amp;n (dva vogala)</translation>
+        <translation type="vanished">Poligo&amp;n (dva vogala)</translation>
+    </message>
+    <message>
+        <source>Draw regular polygon from two corner points</source>
+        <translation type="vanished">Nariši navadni poligon iz dveh vogalnih točk</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonPPInit.js" line="+2"/>
+        <source>Polygo&amp;n (2 Points of Side)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw regular polygon from two corner points</source>
-        <translation>Nariši navadni poligon iz dveh vogalnih točk</translation>
+        <source>Draw regular polygon from end points of one side</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

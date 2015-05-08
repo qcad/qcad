@@ -24,9 +24,13 @@
         <translation>Kulmat:</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation>Monikulmio (keskus, piste)</translation>
+        <translation type="vanished">Monikulmio (keskus, piste)</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonCPInit.js" line="+2"/>
+        <source>Pol&amp;ygon (Center, Corner)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>

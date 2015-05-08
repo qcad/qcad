@@ -270,7 +270,7 @@
         <translation>測定値</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+110"/>
         <source>Left</source>
         <translation>左</translation>
     </message>

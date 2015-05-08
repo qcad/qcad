@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>LinePolygonCP</name>
     <message>
         <source>Corners:</source>
-        <translation type="vanished">Puntos de esquina:</translation>
+        <translation>Puntos de esquina:</translation>
     </message>
 </context>
 <context>
     <name>LinePolygonPP</name>
     <message>
         <source>First corner</source>
-        <translation type="vanished">Primer punto de esquina</translation>
+        <translation>Primer punto de esquina</translation>
     </message>
     <message>
         <source>Corner point</source>
-        <translation type="vanished">Esquina</translation>
+        <translation>Esquina</translation>
     </message>
     <message>
         <source>Done</source>
-        <translation type="vanished">Terminar</translation>
+        <translation>Terminar</translation>
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation type="vanished">Polígo&amp;no (dos esquinas)</translation>
+        <translation>Polígo&amp;no (dos esquinas)</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
-        <translation type="vanished">Dibuja un polígono regular a partir de dos esquinas</translation>
+        <translation>Dibuja un polígono regular a partir de dos esquinas</translation>
     </message>
 </context>
 <context>
@@ -54,13 +54,21 @@
         <translation>Puntos de esquina:</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Two Corners)</source>
         <translation>Polígo&amp;no (dos esquinas)</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Draw regular polygon from two corner points</source>
+        <translation>Dibuja un polígono regular a partir de dos esquinas</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonPPInit.js" line="+2"/>
+        <source>Polygo&amp;n (2 Points of Side)</source>
+        <translation>Polígo&amp;no (dos esquinas)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw regular polygon from end points of one side</source>
         <translation>Dibuja un polígono regular a partir de dos esquinas</translation>
     </message>
 </context>

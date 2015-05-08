@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it_IT">
+<TS version="2.1" language="it_IT">
 <context>
     <name>Draw</name>
     <message>
@@ -13,43 +13,43 @@
     <name>DrawBasedOnRectangle</name>
     <message>
         <source>Top Left</source>
-        <translation>In Alto a Sinistra</translation>
+        <translation type="vanished">In Alto a Sinistra</translation>
     </message>
     <message>
         <source>Top</source>
-        <translation>Sopra</translation>
+        <translation type="vanished">Sopra</translation>
     </message>
     <message>
         <source>Top Right</source>
-        <translation>In Alto a Destra</translation>
+        <translation type="vanished">In Alto a Destra</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation>Sinistra</translation>
+        <translation type="vanished">Sinistra</translation>
     </message>
     <message>
         <source>Middle</source>
-        <translation>Medio</translation>
+        <translation type="vanished">Medio</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation>Destra</translation>
+        <translation type="vanished">Destra</translation>
     </message>
     <message>
         <source>Bottom Left</source>
-        <translation>In Basso a Sinistra</translation>
+        <translation type="vanished">In Basso a Sinistra</translation>
     </message>
     <message>
         <source>Bottom</source>
-        <translation>Sotto</translation>
+        <translation type="vanished">Sotto</translation>
     </message>
     <message>
         <source>Bottom Right</source>
-        <translation>In Basso a Destra</translation>
+        <translation type="vanished">In Basso a Destra</translation>
     </message>
     <message>
         <source>Position</source>
-        <translation>Posizione</translation>
+        <translation type="vanished">Posizione</translation>
     </message>
 </context>
 <context>

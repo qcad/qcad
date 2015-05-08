@@ -45,7 +45,7 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw regular polygon from middle points of two sides</source>
+        <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

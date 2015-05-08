@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.0" language="es_ES">
 <context>
     <name>ShapePolygonAFPP</name>
     <message>
@@ -35,6 +35,10 @@
     </message>
     <message>
         <location line="+4"/>
+        <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
+        <translation>Dibuja polígono regular de puntos medios de dos lados</translation>
+    </message>
+    <message>
         <source>Draw regular polygon from middle points of two sides</source>
         <translation>Dibuja polígono regular de puntos medios de dos lados</translation>
     </message>
