@@ -235,6 +235,7 @@ Circle2TP.prototype.pickCoordinate = function(event, preview) {
                 }
                 // multiple solutions:
                 else {
+                    op.destroy();
                     this.setState(Circle2TP.State.ChoosingSolution);
                 }
             }
