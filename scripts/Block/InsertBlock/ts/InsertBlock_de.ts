@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>Insert</name>
     <message>
@@ -70,6 +70,17 @@
         <translation>Block vertikal&lt;br&gt;spiegeln</translation>
     </message>
     <message>
+        <location line="+18"/>
+        <source>Single Block</source>
+        <translation>Einzelner Block</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location filename="../InsertBlockDialog.ui" line="+14"/>
+        <source>Array of Blocks</source>
+        <translation>Anordnung von Blöcken</translation>
+    </message>
+    <message>
         <source>Attribute 1:</source>
         <translation type="obsolete">Attribute 1:</translation>
     </message>
@@ -82,12 +93,11 @@
         <translation type="obsolete">Attribute 3:</translation>
     </message>
     <message>
-        <location filename="../InsertBlockDialog.ui" line="+14"/>
         <source>Move / Copy Options</source>
-        <translation>Verschieben / Kopieren Optionen</translation>
+        <translation type="obsolete">Verschieben / Kopieren Optionen</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location filename="../InsertBlockDialog.ui" line="+12"/>
         <source>Columns:</source>
         <translation>Spalten:</translation>
     </message>

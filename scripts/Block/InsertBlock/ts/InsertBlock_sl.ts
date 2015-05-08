@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>InsertBlock</name>
     <message>
@@ -54,17 +54,23 @@
         <translation>Zrcali blok&lt;br&gt;po navpični osi</translation>
     </message>
     <message>
+        <location line="+18"/>
+        <source>Single Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location filename="../InsertBlockDialog.ui" line="+14"/>
+        <source>Array of Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
         <translation>&amp;Vstavi blok</translation>
     </message>
     <message>
-        <location filename="../InsertBlockDialog.ui" line="+14"/>
-        <source>Move / Copy Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+12"/>
+        <location filename="../InsertBlockDialog.ui" line="+12"/>
         <source>Columns:</source>
         <translation type="unfinished"></translation>
     </message>

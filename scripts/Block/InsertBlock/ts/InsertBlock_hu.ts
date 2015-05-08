@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu">
+<TS version="2.0" language="hu">
 <context>
     <name>InsertBlock</name>
     <message>
@@ -54,17 +54,23 @@
         <translation>Blokk tükrözése&lt;br&gt;függőlegesen</translation>
     </message>
     <message>
+        <location line="+18"/>
+        <source>Single Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location filename="../InsertBlockDialog.ui" line="+14"/>
+        <source>Array of Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
         <translation>Blokk beillesztése</translation>
     </message>
     <message>
-        <location filename="../InsertBlockDialog.ui" line="+14"/>
-        <source>Move / Copy Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+12"/>
+        <location filename="../InsertBlockDialog.ui" line="+12"/>
         <source>Columns:</source>
         <translation type="unfinished"></translation>
     </message>

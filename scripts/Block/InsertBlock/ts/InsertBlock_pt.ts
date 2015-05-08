@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.0" language="pt_PT">
 <context>
     <name>Insert</name>
     <message>
@@ -78,6 +78,17 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation>Inverter bloco&lt;br&gt;verticalmente</translation>
     </message>
     <message>
+        <location line="+18"/>
+        <source>Single Block</source>
+        <translation>Único bloco</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location filename="../InsertBlockDialog.ui" line="+14"/>
+        <source>Array of Blocks</source>
+        <translation>Matriz de blocos</translation>
+    </message>
+    <message>
         <source>Attribute 1:</source>
         <translation type="obsolete">Attribute 1:</translation>
     </message>
@@ -90,12 +101,11 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation type="obsolete">Attribute 3:</translation>
     </message>
     <message>
-        <location filename="../InsertBlockDialog.ui" line="+14"/>
         <source>Move / Copy Options</source>
-        <translation>Opções mova / copie</translation>
+        <translation type="obsolete">Opções mova / copie</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location filename="../InsertBlockDialog.ui" line="+12"/>
         <source>Columns:</source>
         <translation>Colunas:</translation>
     </message>

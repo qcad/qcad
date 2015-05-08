@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.0" language="pl_PL">
 <context>
     <name>InsertBlock</name>
     <message>
@@ -66,12 +66,18 @@ Wskaż pozycje</translatorcomment>
         <translation type="unfinished">Odwróć blok &lt;br&gt; pionowo</translation>
     </message>
     <message>
-        <location filename="../InsertBlockDialog.ui" line="+14"/>
-        <source>Move / Copy Options</source>
+        <location line="+18"/>
+        <source>Single Block</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+17"/>
+        <location filename="../InsertBlockDialog.ui" line="+14"/>
+        <source>Array of Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../InsertBlockDialog.ui" line="+12"/>
         <source>Columns:</source>
         <translation type="unfinished"></translation>
     </message>

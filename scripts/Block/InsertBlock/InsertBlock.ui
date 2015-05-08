@@ -356,6 +356,9 @@
    </item>
    <item>
     <widget class="QToolButton" name="Single">
+     <property name="toolTip">
+      <string>Single Block</string>
+     </property>
      <property name="icon">
       <iconset>
        <normaloff>SingleBlock.svg</normaloff>SingleBlock.svg</iconset>
@@ -370,6 +373,9 @@
    </item>
    <item>
     <widget class="QToolButton" name="Array">
+     <property name="toolTip">
+      <string>Array of Blocks</string>
+     </property>
      <property name="icon">
       <iconset>
        <normaloff>ArrayOfBlocks.svg</normaloff>ArrayOfBlocks.svg</iconset>
