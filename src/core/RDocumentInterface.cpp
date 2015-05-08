@@ -417,7 +417,7 @@ void RDocumentInterface::deleteTerminatedActions() {
 
     // if one or more actions (with state) have been terminated, resume previous action
     // or default action:
-    if (removed && !removedHadNoState) {
+    if (removed /*&& !removedHadNoState // TODO: breaks snap to coordinate options */) {
         if (currentActions.size()>0) {
             currentActions.top()->resumeEvent();
         }
