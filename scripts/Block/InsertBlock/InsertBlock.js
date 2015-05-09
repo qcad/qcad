@@ -159,7 +159,7 @@ InsertBlock.prototype.getOperation = function(preview) {
                 bd.setRowCount(1);
             }
             else {
-                bd.setRowCount(max/bd.getColumnCount());
+                bd.setRowCount(Math.min(bd.getRowCount(), max/bd.getColumnCount()));
             }
         }
     }
