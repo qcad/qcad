@@ -65,15 +65,19 @@ InsertBlockItem.prototype.beginEvent = function() {
     // TODO refactor
     BlockInsert.prototype.beginEvent.call(this);
 
-    var url = this.guiAction.data();
-    this.diItem.importUrl(url, "", false);
+    var url = this.guiAction.data().toString();
 
-    if (RSettings.isQt(5)) {
-        this.blockName = new QFileInfo(url.toLocalFile()).completeBaseName();
+    if (url.indexOf("file:///")===0) {
+        url = url.substring(8);
     }
-    else {
-        this.blockName = new QFileInfo(url.path()).completeBaseName();
+    else if (url.indexOf("file://")===0) {
+        url = url.substring(5);
     }
+    qDebug("path: ", url);
+    this.diItem.importFile(url, "", false);
+    //this.diItem.importUrl(url, "", false);
+
+    this.blockName = new QFileInfo(url).completeBaseName();
 
     // fix block name if necessary:
     this.blockName = fixSymbolTableName(this.blockName);

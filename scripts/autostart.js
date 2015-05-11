@@ -253,7 +253,6 @@ function loadStyleSheets(args) {
  */
 function setUpDragAndDrop(appWin) {
     appWin.dragEnter.connect(function(event) {
-        qDebug("event.mimeData(): ", event.mimeData());
         if (event.mimeData().hasUrls()) {
             event.acceptProposedAction();
         }
@@ -271,6 +270,8 @@ function setUpDragAndDrop(appWin) {
             }
             files.push(file);
         }
+
+        qDebug("files:", files);
 
         openFiles(files, false);
     });
