@@ -23,6 +23,31 @@
 function OptionsToolBar() {
 }
 
+OptionsToolBar.normalizeSeparators = function(action) {
+    // remove double separators:
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var children = optionsToolBar.children();
+    var previousWidgetWasSeparator = false;
+    for (var i = 0; i < children.length; ++i) {
+        var c = children[i];
+        if (isFunction(c.isSeparator) && c.isSeparator()===true) {
+            if (previousWidgetWasSeparator) {
+                var idx = action.optionWidgetActions.indexOf(c);
+                if (idx!==-1) {
+                    // make sure the action is also removed from the list of added actions:
+                    action.optionWidgetActions.splice(idx, 1);
+                }
+                c.destroy();
+            }
+
+            previousWidgetWasSeparator = true;
+        }
+        else if (isQWidget(c) && c.objectName.length!==0 && c.visible) {
+            previousWidgetWasSeparator = false;
+        }
+    }
+};
+
 OptionsToolBar.init = function(basePath) {
     // make sure that the options tool bar is initialized before 
     // positions are restored from the config file:

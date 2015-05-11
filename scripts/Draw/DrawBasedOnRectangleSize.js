@@ -18,6 +18,7 @@
  */
 
 include("Draw.js");
+include("scripts/Widgets/OptionsToolBar/OptionsToolBar.js");
 
 /**
  * \class DrawBasedOnRectangleSize
@@ -76,9 +77,6 @@ DrawBasedOnRectangleSize.prototype.beginEvent = function() {
 };
 
 DrawBasedOnRectangleSize.prototype.finishEvent = function() {
-    //if (!isNull(this.dialog)) {
-    //    this.dialog.destroy();
-    //}
     EAction.prototype.finishEvent.call(this);
 };
 
@@ -110,7 +108,7 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
         di.repaintViews();
     }
 
-    // collect widgets which are tagged to be 'moved' to the dialog:
+    // collect widgets which are tagged to be shown in the dialog:
     var c;
     var widgets = [];
     var optionsToolBar = EAction.getOptionsToolBar();
@@ -130,65 +128,25 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
     // show dialog and move tool bar widgets to its layout:
     var formLayout = undefined;
     if (isNull(this.dialogUiFile)) {
-        // auto create dialog (disabled for now: keeping the dialog alive does not work under win 7):
-        //dialog = WidgetFactory.createDialog(DrawBasedOnRectangleSize.includeBasePath, "DrawBasedOnRectangleSizeDialog.ui");
-        //formLayout = dialog.findChild("FormLayout");
+        return;
     }
-    else {
-        this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile);
-        //WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
-        WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
-    }
+
+    this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile);
+    qDebug("restore");
+    WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
+    qDebug("restore: OK");
     this.dialog.windowTitle = this.getToolTitle();
     this.dialog.windowIcon = new QIcon();
 
     for (i = 0; i < widgets.length; i++) {
-        /*
-        if (isNull(this.dialogUiFile) && !isNull(formLayout)) {
-            if (isOfType(widgets[i], QCheckBox)) {
-                formLayout.addRow(new QWidget(formLayout), widgets[i]);
-                this.moveWidget(widgets[i], dialog);
-                continue;
-            }
-
-            // other widgets are moved to the dialog:
-            if (i<widgets.length-1) {
-                formLayout.addRow(widgets[i], widgets[i+1]);
-                this.moveWidget(widgets[i], dialog);
-                this.moveWidget(widgets[i+1], dialog);
-                i++;
-            }
+        var a = optionsToolBar.findChild(widgets[i].objectName + "Action");
+        if (!isNull(a)) {
+            a.visible = false;
         }
-        else {
-        */
-            var a = optionsToolBar.findChild(widgets[i].objectName + "Action");
-            if (!isNull(a)) {
-                a.visible = false;
-            }
-        //}
     }
 
     // remove double separators:
-    children = optionsToolBar.children();
-    var previousWidgetWasSeparator = false;
-    for (i = 0; i < children.length; ++i) {
-        c = children[i];
-        if (isFunction(c.isSeparator) && c.isSeparator()===true) {
-            if (previousWidgetWasSeparator) {
-                var idx = this.optionWidgetActions.indexOf(c);
-                if (idx!==-1) {
-                    // make sure the action is also removed from the list of added actions:
-                    this.optionWidgetActions.splice(idx, 1);
-                }
-                c.destroy();
-            }
-
-            previousWidgetWasSeparator = true;
-        }
-        else if (isQWidget(c) && c.objectName.length!==0 && c.visible) {
-            previousWidgetWasSeparator = false;
-        }
-    }
+    OptionsToolBar.normalizeSeparators(this);
 
     // give focus to control with custom property 'DefaultFocus':
     children = this.dialog.children();
@@ -208,6 +166,9 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
     WidgetFactory.saveState(this.dialog, "Shape");
     WidgetFactory.saveState(this.dialog, this.settingsGroup);
 
+    // sync options tool bar with dialog:
+    WidgetFactory.restoreState(optionsToolBar, this.settingsGroup, this);
+
     this.dialog.destroy();
     this.dialog = undefined;
 
@@ -221,37 +182,6 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
 
     return ret;
 };
-
-DrawBasedOnRectangleSize.prototype.validateNumber = function(n) {
-    this.enableOk(!isNaN(n));
-};
-
-DrawBasedOnRectangleSize.prototype.validatePositiveNumber = function(n) {
-    this.enableOk(!isNaN(n) && n>=0);
-};
-
-DrawBasedOnRectangleSize.prototype.validateNumberGreaterZero = function(n) {
-    this.enableOk(!isNaN(n) && n>0);
-};
-
-DrawBasedOnRectangleSize.prototype.enableOk = function(onOff) {
-    if (!isNull(this.dialog)) {
-        var buttonBox = this.dialog.findChild("ButtonBox");
-        buttonBox.button(QDialogButtonBox.Ok).enabled = onOff;
-    }
-};
-
-/*
-DrawBasedOnRectangleSize.prototype.moveWidget = function(widget, dialog) {
-    widget.setParent(dialog);
-    //widget.sizePolicy = new QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed);
-    widget.sizePolicy = new QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed);
-    widget.minimumWidth = 50;
-    //widget.minimumHeight = 10;
-    widget.maximumWidth = 32000;
-    widget.visible = true;
-};
-*/
 
 DrawBasedOnRectangleSize.prototype.initUiOptions = function(resume, restoreFromSettings) {
     EAction.prototype.initUiOptions.call(this, resume, restoreFromSettings);
@@ -322,12 +252,6 @@ DrawBasedOnRectangleSize.prototype.keyPressEvent = function(event) {
     EAction.prototype.keyPressEvent.call(this, event);
 };
 
-//DrawBasedOnRectangleSize.prototype.keyReleaseEvent = function(event) {
-//    EAction.prototype.keyReleaseEvent(event);
-//    // update preview:
-//    this.simulateMouseMoveEvent();
-//};
-
 DrawBasedOnRectangleSize.prototype.updatePreview = function(clear) {
     if (!isNull(this.dialog)) {
         return;
@@ -397,21 +321,22 @@ DrawBasedOnRectangleSize.prototype.getShapes = function(corners) {
 
 DrawBasedOnRectangleSize.prototype.slotWidthChanged = function(value) {
     this.width = value;
-    this.validateNumberGreaterZero(this.width);
+    this.updateOkButton();
     this.updatePreview(true);
 };
 
 DrawBasedOnRectangleSize.prototype.slotHeightChanged = function(value) {
     this.height = value;
-    this.validateNumberGreaterZero(this.height);
+    this.updateOkButton();
     this.updatePreview(true);
 };
 
 DrawBasedOnRectangleSize.prototype.slotAngleChanged = function(value) {
     this.angle = value;
-    this.validateNumber(this.angle);
+    this.updateOkButton();
     this.updatePreview(true);
 };
+
 
 DrawBasedOnRectangleSize.prototype.slotReferencePointChanged = function(value) {
     var optionsToolBar = EAction.getOptionsToolBar();
@@ -437,6 +362,23 @@ DrawBasedOnRectangleSize.prototype.slotReset = function() {
         angleEdit.setValue(0.0);
     }
     this.updatePreview(true);
+};
+
+DrawBasedOnRectangleSize.prototype.validate = function() {
+    return isNumberGreaterZero(this.width) && isNumberGreaterZero(this.height) && isNumber(this.angle);
+};
+
+DrawBasedOnRectangleSize.prototype.updateOkButton = function() {
+    if (isNull(this.dialog)) {
+        return;
+    }
+
+    var buttonBox = this.dialog.findChild("ButtonBox");
+    if (isNull(buttonBox)) {
+        return;
+    }
+
+    buttonBox.button(QDialogButtonBox.Ok).enabled = this.validate();
 };
 
 

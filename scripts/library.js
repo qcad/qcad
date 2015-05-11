@@ -143,6 +143,14 @@ function isNumber(obj) {
     return (typeof(obj)==="number" && !isNaN(obj) && isFinite(obj));
 }
 
+function isNumberGreaterEqualZero(n) {
+    return !isNaN(n) && n>=0;
+};
+
+function isNumberGreaterZero(n) {
+    return !isNaN(n) && n>0;
+};
+
 /**
  * Checks if the given object is a string.
  *

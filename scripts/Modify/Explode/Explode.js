@@ -164,22 +164,27 @@ Explode.prototype.beginEvent = function() {
         else if (isBlockReferenceEntity(entity)) {
             var data = entity.getData();
             var subIds = document.queryBlockEntities(data.getReferencedBlockId());
-            for (k=0; k<subIds.length; k++) {
-                var subEntity = data.queryEntity(subIds[k]);
-                if (isNull(subEntity)) {
-                    continue;
-                }
+            for (var col=0; col<data.getColumnCount(); col++) {
+                for (var row=0; row<data.getRowCount(); row++) {
+                    for (k=0; k<subIds.length; k++) {
+                        var subEntity = data.queryEntity(subIds[k]);
+                        if (isNull(subEntity)) {
+                            continue;
+                        }
 
-                // ignore attribute definitions:
-                if (isAttributeDefinitionEntity(subEntity)) {
-                    continue;
-                }
+                        // ignore attribute definitions:
+                        if (isAttributeDefinitionEntity(subEntity)) {
+                            continue;
+                        }
 
-                var e = subEntity.clone();
-                storage.setObjectId(e, RObject.INVALID_ID);
-                e.setBlockId(document.getCurrentBlockId());
-                e.setSelected(true);
-                newEntities.push(e);
+                        e = subEntity.clone();
+                        data.applyColumnRowOffsetTo(e, col, row);
+                        storage.setObjectId(e, RObject.INVALID_ID);
+                        e.setBlockId(document.getCurrentBlockId());
+                        e.setSelected(true);
+                        newEntities.push(e);
+                    }
+                }
             }
         }
 

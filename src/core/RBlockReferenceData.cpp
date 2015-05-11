@@ -390,9 +390,12 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
         return ret;
     }
 
+    bool isArray = (columnCount!=1 || rowCount!=1);
+
     // query entities in query box that are part of the block definition:
+    // ignore query box for block arrays:
     QSet<REntity::Id> ids;
-    if (queryBox.isValid()) {
+    if (queryBox.isValid() && !isArray) {
         QList<RVector> corners = queryBox.getCorners2d();
         RVector::moveList(corners, -position);
         RVector::rotateList(corners, -rotation);
@@ -408,14 +411,14 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
 
     QSet<REntity::Id>::iterator it;
 
-//    TODO:
-//    for (int col=0; col<columnCount; col++) {
-//        for (int row=0; row<rowCount; row++) {
+    for (int col=0; col<columnCount; col++) {
+        for (int row=0; row<rowCount; row++) {
             for (it = ids.begin(); it != ids.end(); it++) {
                 QSharedPointer<REntity> entity = queryEntity(*it);
                 if (entity.isNull()) {
                     continue;
                 }
+
 
                 RS::EntityType t = entity->getType();
 
@@ -427,17 +430,25 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
                 if (t==RS::EntityAttribute) {
                     continue;
                 }
-                if (ignoreComplex) {
-                    if (REntity::isComplex(t)) {
-                        continue;
-                    }
+                if (ignoreComplex && REntity::isComplex(t)) {
+                    continue;
                 }
 
-//                applyColumnRowOffsetTo(*entity, col, row);
+                if (isArray && col>0 || row>0) {
+                    entity = QSharedPointer<REntity>(entity->clone());
+                    applyColumnRowOffsetTo(*entity, col, row);
+
+                    // bounding box check for arrays:
+                    if (queryBox.isValid()) {
+                        if (!queryBox.intersects(entity->getBoundingBox())) {
+                            continue;
+                        }
+                    }
+                }
                 ret.append(entity->getShapes(queryBox));
             }
-//        }
-//    }
+        }
+    }
 
     recursionDepth--;
     return ret;
