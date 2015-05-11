@@ -157,6 +157,7 @@ LibraryBrowser.getSourceList = function() {
     if (isNull(sourceList)) {
         sourceList = [];
     }
+    var noSourcesConfigured = sourceList.length===0;
 
     var i;
     var filters = new QDir.Filters(QDir.AllDirs, QDir.NoDotAndDotDot, QDir.Readable);
@@ -169,7 +170,7 @@ LibraryBrowser.getSourceList = function() {
     libs = librariesDir.entryList([], filters, sortFlags);
     for (i=0; i<libs.length; i++) {
         // always add default library if available:
-        if (libs[i]==="default" || sourceList.length === 0) {
+        if (libs[i]==="default" || noSourcesConfigured) {
             sourceList.push(new QDir("libraries/%1".arg(libs[i])).absolutePath());
         }
     }

@@ -407,30 +407,37 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
     }
 
     QSet<REntity::Id>::iterator it;
-    for (it = ids.begin(); it != ids.end(); it++) {
-        QSharedPointer<REntity> entity = queryEntity(*it);
-        if (entity.isNull()) {
-            continue;
-        }
 
-        RS::EntityType t = entity->getType();
+//    TODO:
+//    for (int col=0; col<columnCount; col++) {
+//        for (int row=0; row<rowCount; row++) {
+            for (it = ids.begin(); it != ids.end(); it++) {
+                QSharedPointer<REntity> entity = queryEntity(*it);
+                if (entity.isNull()) {
+                    continue;
+                }
 
-        // ignore attribute definitions since they are not rendered in the
-        // context of a block reference:
-        if (t==RS::EntityAttributeDefinition) {
-            continue;
-        }
-        if (t==RS::EntityAttribute) {
-            continue;
-        }
-        if (ignoreComplex) {
-            if (REntity::isComplex(t)) {
-                continue;
+                RS::EntityType t = entity->getType();
+
+                // ignore attribute definitions since they are not rendered in the
+                // context of a block reference:
+                if (t==RS::EntityAttributeDefinition) {
+                    continue;
+                }
+                if (t==RS::EntityAttribute) {
+                    continue;
+                }
+                if (ignoreComplex) {
+                    if (REntity::isComplex(t)) {
+                        continue;
+                    }
+                }
+
+//                applyColumnRowOffsetTo(*entity, col, row);
+                ret.append(entity->getShapes(queryBox));
             }
-        }
-
-        ret.append(entity->getShapes(queryBox));
-    }
+//        }
+//    }
 
     recursionDepth--;
     return ret;
