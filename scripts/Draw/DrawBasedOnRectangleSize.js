@@ -111,12 +111,18 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
     // collect widgets which are tagged to be shown in the dialog:
     var c;
     var widgets = [];
+    var noSyncWidgets = [];
     var optionsToolBar = EAction.getOptionsToolBar();
     children = optionsToolBar.children();
     for (i = 0; i < children.length; ++i) {
         c = children[i];
         if (c["MoveToDialog"]===true) {
             widgets.push(c);
+        }
+        else {
+            if (isQWidget(c)) {
+                noSyncWidgets.push(c);
+            }
         }
     }
 
@@ -166,8 +172,14 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
     WidgetFactory.saveState(this.dialog, "Shape");
     WidgetFactory.saveState(this.dialog, this.settingsGroup);
 
-    // sync options tool bar with dialog:
+    // sync invisible part of options tool bar with dialog:
+    for (i=0; i<noSyncWidgets.length; i++) {
+        noSyncWidgets[i].setProperty("Loaded", true);
+    }
     WidgetFactory.restoreState(optionsToolBar, this.settingsGroup, this);
+    for (i=0; i<noSyncWidgets.length; i++) {
+        noSyncWidgets[i].setProperty("Loaded", false);
+    }
 
     this.dialog.destroy();
     this.dialog = undefined;
