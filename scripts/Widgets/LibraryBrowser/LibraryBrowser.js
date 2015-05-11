@@ -152,14 +152,21 @@ LibraryBrowser.getDbFileName = function() {
  * \return Source paths (root paths for library items).
  */
 LibraryBrowser.getSourceList = function() {
+    var i;
+
     // get list of sources (root paths) from ini file:
     var sourceList = RSettings.getValue("LibraryBrowser/SourceList");
     if (isNull(sourceList)) {
         sourceList = [];
     }
+    else {
+        for (i=0; i<sourceList.length; i++) {
+            sourceList[i] = QDir.fromNativeSeparators(sourceList[i]);
+        }
+    }
+
     var noSourcesConfigured = sourceList.length===0;
 
-    var i;
     var filters = new QDir.Filters(QDir.AllDirs, QDir.NoDotAndDotDot, QDir.Readable);
     var sortFlags = new QDir.SortFlags(QDir.Name, QDir.IgnoreCase);
     var librariesDir;
@@ -171,7 +178,7 @@ LibraryBrowser.getSourceList = function() {
     for (i=0; i<libs.length; i++) {
         // always add default library if available:
         if (libs[i]==="default" || noSourcesConfigured) {
-            sourceList.push(new QDir("libraries/%1".arg(libs[i])).absolutePath());
+            sourceList.push(QDir.fromNativeSeparators(new QDir("libraries/%1".arg(libs[i])).absolutePath()));
         }
     }
 
@@ -186,6 +193,7 @@ LibraryBrowser.getSourceList = function() {
             libs = librariesDir.entryList([], filters, sortFlags);
             for (i=0; i<libs.length; i++) {
                 var path = new QDir(fi.absoluteFilePath() + "/libraries/%1".arg(libs[i])).absolutePath();
+                path = QDir.fromNativeSeparators(path);
                 qDebug("adding libraries dir of add-on: ", path);
                 sourceList.push(path);
             }
@@ -1278,7 +1286,7 @@ LibraryBrowser.syncAll = function(progressDialog, startUp) {
     var sourceListDb = ItemPeer.getSourceItems(["id", "name"]);
     var sourceList = LibraryBrowser.getSourceList();
     for (i=0; i<sourceListDb.length; i++) {
-        var sourceDb = sourceListDb[i].name;
+        var sourceDb = QDir.fromNativeSeparators(sourceListDb[i].name);
         if (!sourceList.contains(sourceDb)) {
             // source deleted: drop entire DB:
             EAction.handleUserWarning(qsTr("Source removed from part library: %1").arg(sourceListDb[i].name));
