@@ -283,6 +283,15 @@ function setUpDragAndDrop(appWin) {
     });
 
     appWin.drop.connect(function(evt) {
+        var appWin = RMainWindowQt.getMainWindow();
+        if (!isNull(appWin)) {
+            qDebug("raise");
+            appWin.activateWindow();
+            appWin.raise();
+            qDebug("focus");
+            appWin.setFocus(Qt.OtherFocusReason);
+        }
+
         var urls = getUrlsFromMimeData(evt.mimeData());
         var urlStrings = [];
         for (var i = 0; i < urls.length; ++i) {
@@ -290,6 +299,7 @@ function setUpDragAndDrop(appWin) {
         }
 
         openFiles(urlStrings, false);
+
     });
 }
 
