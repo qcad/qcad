@@ -165,7 +165,8 @@ bool RColor::isFixed() const {
 }
 
 /**
- * \return Name of the color if known, otherwise "#RRGGBB".
+ * \return Localized name of the color if known, otherwise "#RRGGBB".
+ * For a localization neutral name use name() instead.
  */
 QString RColor::getName() const {
     init();

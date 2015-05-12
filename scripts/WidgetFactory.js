@@ -219,17 +219,17 @@ WidgetFactory.saveState = function(widget, group, document, map) {
         if (isOfType(c, QLineEdit)) {
             value = c.text;
         }
-        if (isOfType(c, QPlainTextEdit)) {
+        else if (isOfType(c, QPlainTextEdit)) {
             value = c.toPlainText();
         }
-        if (isOfType(c, RMathLineEdit)) {
+        else if (isOfType(c, RMathLineEdit)) {
             //value = [c.text, c.getDefaultUnit()];
             value = c.text;
         }
-        if (isOfType(c, QCheckBox)) {
+        else if (isOfType(c, QCheckBox)) {
             value = c.checked;
         }
-        if (isOfType(c, QRadioButton) ||
+        else if (isOfType(c, QRadioButton) ||
             isOfType(c, QToolButton) ||
             isOfType(c, QPushButton)) {
 
@@ -246,12 +246,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
                 }
             }
         }
-        /*
-        if (c.toString() == "QButtonGroup") {
-            value = c.checkedButton().objectName;
-        }
-        */
-        if (isOfType(c, QComboBox) || isOfType(c, QFontComboBox)) {
+        else if (isOfType(c, QComboBox) || isOfType(c, QFontComboBox)) {
             var forceSaveText = false;
             var forceSaveIndex = false;
             if (typeof(c["ForceSaveText"]) != "undefined"
@@ -271,19 +266,19 @@ WidgetFactory.saveState = function(widget, group, document, map) {
                 value = c.itemData(c.currentIndex);
             }
         }
-        if (isOfType(c, RColorCombo)) {
+        else if (isOfType(c, RColorCombo)) {
             value = c.getColor();
         }
-        if (isOfType(c, RLineweightCombo)) {
+        else if (isOfType(c, RLineweightCombo)) {
             value = c.getLineweight();
         }
-        if (isOfType(c, RLinetypeCombo)) {
+        else if (isOfType(c, RLinetypeCombo)) {
             value = c.getLinetypePattern();
         }
-        if (isOfType(c, QSpinBox) || isOfType(c, QDoubleSpinBox)) {
+        else if (isOfType(c, QSpinBox) || isOfType(c, QDoubleSpinBox)) {
             value = c.value;
         }
-        if (isOfType(c, QListWidget)) {
+        else if (isOfType(c, QListWidget)) {
             var items = [];
             if (c.count != 0) {
                 for ( var j = 0; j < c.count; ++j) {
@@ -306,7 +301,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
                 }
             }
         }
-        if (c.toString().startsWith("RFontChooserWidget")) {
+        else if (c.toString().startsWith("RFontChooserWidget")) {
             value = c.getFont();
         }
 

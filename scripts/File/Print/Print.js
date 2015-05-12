@@ -1319,29 +1319,18 @@ Print.getBackgroundColor = function(document) {
         return color;
     }
     else if (isString(color)) {
-        return new RColor(color);
+        var ret = new RColor(color);
+        if (ret.isValid()) {
+            return ret;
+        }
+        // invalid color name: default to white:
+        return new RColor("white");
     }
     else {
         debugger;
         return new RColor("white");
     }
-
-//    var colorString = Print.getBackgroundColorString(document);
-//    return new QColor(colorString);
 };
-
-//Print.getBackgroundColorString = function(document) {
-//    return EAction.getValue("ColorSettings/BackgroundColor", "white", document);
-//}
-
-//Print.setBackgroundColor = function(document, color) {
-//    document.setVariable("ColorSettings/BackgroundColor", color);
-//    Print.setBackgroundColorString(document, color.getName());
-//}
-
-//Print.setBackgroundColorString = function(document, colorString) {
-//    document.setVariable("ColorSettings/BackgroundColor", colorString);
-//}
 
 Print.getEnablePageTags = function(document) {
     return EAction.getBoolValue("PageTagSettings/EnablePageTags", false, document);
