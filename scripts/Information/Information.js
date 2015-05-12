@@ -65,9 +65,7 @@ Information.prototype.formatAngularResult = function(angle) {
         return "";
     }
 
-    return RUnit.formatAngle(angle,
-                              document.getAngleFormat(), document.getAnglePrecision(),
-                              document.showLeadingZeroesAngle(), document.showTrailingZeroesAngle());
+    return document.formatAngle(angle);
 };
 
 /**

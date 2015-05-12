@@ -41,5 +41,5 @@ InfoPositionPolRel.prototype.getDisplayedLabel = function(p, prec) {
         relZero = new RVector(0,0);
     }
     p = p.operator_subtract(relZero);
-    return coordinateToString(p, prec, true, true);
+    return coordinateToString(p, prec, true, true, this.getDocument());
 };

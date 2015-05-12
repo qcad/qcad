@@ -305,6 +305,9 @@ public:
     void setLinetypeScale(double v, RTransaction* transaction = NULL);
     double getLinetypeScale() const;
 
+    QString formatLinear(double value);
+    QString formatAngle(double value);
+
     RS::LinearFormat getLinearFormat();
     int getLinearPrecision();
     bool showLeadingZeroes();

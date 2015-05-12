@@ -406,6 +406,29 @@ double RDocument::getLinetypeScale() const {
     return storage.getLinetypeScale();
 }
 
+QString RDocument::formatLinear(double value) {
+    return RUnit::formatLinear(
+        value,
+        getUnit(),
+        getLinearFormat(),
+        getLinearPrecision(),
+        false,
+        showLeadingZeroes(),
+        showTrailingZeroes(),
+        false
+    );
+}
+
+QString RDocument::formatAngle(double value) {
+    return RUnit::formatAngle(
+        value,
+        getAngleFormat(),
+        getAnglePrecision(),
+        showLeadingZeroesAngle(),
+        showTrailingZeroesAngle()
+    );
+}
+
 /**
  * \return The linear format type for this document.
  * This is determined by the variable "$DIMLUNIT".

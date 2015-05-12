@@ -1090,6 +1090,22 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
+    <method name="formatLinear" cppName="formatLinear"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="value"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="formatAngle" cppName="formatAngle"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="value"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getLinearFormat" cppName="getLinearFormat"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

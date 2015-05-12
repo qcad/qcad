@@ -75,13 +75,14 @@ CoordinateDisplay.postInit = function(basePath) {
         singleShot = new QTimer();
         singleShot.singleShot = true;
         singleShot.timeout.connect(function() {
+            var doc = EAction.getDocument();
             StatusBar.clearMessage();
             var absPos = documentInterface.getCursorPosition();
             var relPos = absPos.operator_subtract(documentInterface.getRelativeZero());
 
             if (absPos.isValid()) {
-                lAbs.setText(coordinateToString(absPos, 4, false, false));
-                lAbsPol.setText(coordinateToString(absPos, 4, false, true));
+                lAbs.setText(coordinateToString(absPos, 4, false, false, doc));
+                lAbsPol.setText(coordinateToString(absPos, 4, false, true, doc));
             }
             else {
                 lAbs.setText("-");
@@ -89,8 +90,8 @@ CoordinateDisplay.postInit = function(basePath) {
             }
 
             if (relPos.isValid()) {
-                lRel.setText(coordinateToString(relPos, 4, true, false));
-                lRelPol.setText(coordinateToString(relPos, 4, true, true));
+                lRel.setText(coordinateToString(relPos, 4, true, false, doc));
+                lRelPol.setText(coordinateToString(relPos, 4, true, true, doc));
             }
             else {
                 lRel.setText("-");

@@ -435,6 +435,12 @@
         getLinetypeScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        formatLinear
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        formatAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLinearFormat
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

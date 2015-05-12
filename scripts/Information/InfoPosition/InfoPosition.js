@@ -75,7 +75,7 @@ InfoPosition.prototype.getDisplayedLabel = function(p, prec) {
         prec = 4;
     }
 
-    return coordinateToString(p, prec, false, false);
+    return coordinateToString(p, prec, false, false, this.getDocument());
 };
 
 InfoPosition.prototype.pickCoordinate = function(event, preview) {

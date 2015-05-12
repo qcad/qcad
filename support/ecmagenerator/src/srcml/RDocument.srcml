@@ -306,6 +306,9 @@
     <function_decl><type><name>void</name></type> <name>setLinetypeScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getLinetypeScale</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>QString</name></type> <name>formatLinear</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>formatAngle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name><name>RS</name>::<name>LinearFormat</name></name></type> <name>getLinearFormat</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>int</name></type> <name>getLinearPrecision</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>showLeadingZeroes</name><parameter_list>()</parameter_list>;</function_decl>

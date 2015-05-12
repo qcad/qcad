@@ -36,5 +36,5 @@ InfoPositionPol.prototype.getDisplayedLabel = function(p, prec) {
     }
 
     var di = this.getDocumentInterface();
-    return coordinateToString(p, prec, false, true);
+    return coordinateToString(p, prec, false, true, this.getDocument());
 };

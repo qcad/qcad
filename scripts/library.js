@@ -1504,22 +1504,44 @@ function numberToString(num, decimals) {
     return ret;
 }
 
+function angleToString(num, decimals) {
+    var formatString = "%." + decimals + "f";
+    var ret = sprintf(formatString, num);
+    var decimalPoint = RSettings.getStringValue("Input/DecimalPoint", ".");
+    if (decimalPoint!==".") {
+        ret = ret.replace(".", decimalPoint);
+    }
+    return ret;
+}
+
 /**
  * Formats the given coordinate (RVector) into a locale aware string.
  */
-function coordinateToString(coordinate, decimals, relative, polar) {
+function coordinateToString(coordinate, decimals, relative, polar, doc) {
     var first;
     var second;
     var sep;
     if (polar) {
         sep = RSettings.getStringValue("Input/PolarCoordinateSeparator", "<");
-        first = coordinate.getMagnitude();
-        second = coordinate.getAngle() / (2 * Math.PI) * 360;
+        if (!isNull(doc)) {
+            first = doc.formatLinear(coordinate.getMagnitude());
+            second = doc.formatAngle(coordinate.getAngle());
+        }
+        else {
+            first = numberToString(coordinate.getMagnitude(), decimals);
+            second = angleToString(coordinate.getAngle() / (2 * Math.PI) * 360);
+        }
     }
     else {
         sep = RSettings.getStringValue("Input/CartesianCoordinateSeparator", ",");
-        first = coordinate.x;
-        second = coordinate.y;
+        if (!isNull(doc)) {
+            first = doc.formatLinear(coordinate.x);
+            second = doc.formatLinear(coordinate.y);
+        }
+        else {
+            first = numberToString(coordinate.x, decimals);
+            second = numberToString(coordinate.y, decimals);
+        }
     }
 
     var prefix;
@@ -1533,10 +1555,7 @@ function coordinateToString(coordinate, decimals, relative, polar) {
         prefix = "";
     }
 
-    return prefix +
-            numberToString(first, decimals) +
-            sep +
-            numberToString(second, decimals);
+    return prefix + first + sep + second;
 }
 
 /**

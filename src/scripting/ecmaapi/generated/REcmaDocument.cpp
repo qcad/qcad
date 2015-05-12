@@ -329,6 +329,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypeScale, "getLinetypeScale");
             
+            REcmaHelper::registerFunction(&engine, proto, formatLinear, "formatLinear");
+            
+            REcmaHelper::registerFunction(&engine, proto, formatAngle, "formatAngle");
+            
             REcmaHelper::registerFunction(&engine, proto, getLinearFormat, "getLinearFormat");
             
             REcmaHelper::registerFunction(&engine, proto, getLinearPrecision, "getLinearPrecision");
@@ -10365,6 +10369,126 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getLinetypeScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::formatLinear
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::formatLinear", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::formatLinear";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("formatLinear", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->formatLinear(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.formatLinear().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::formatLinear", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::formatAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::formatAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::formatAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("formatAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->formatAngle(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.formatAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::formatAngle", context, engine);
             return result;
         }
          QScriptValue

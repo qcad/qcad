@@ -649,10 +649,6 @@ QString RUnit::formatFractional(double length, RS::Unit /*unit*/,
     return ret;
 }
 
-
-
-
-
 /**
  * Formats the given angle with the given format.
  *
