@@ -65,16 +65,10 @@ InsertBlockItem.prototype.beginEvent = function() {
     // TODO refactor
     BlockInsert.prototype.beginEvent.call(this);
 
-    var url = this.guiAction.data().toString();
+    var url = this.guiAction.data();
+    var path = url.toLocalFile();
 
-    if (url.indexOf("file:///")===0) {
-        url = url.substring(8);
-    }
-    else if (url.indexOf("file://")===0) {
-        url = url.substring(5);
-    }
-    qDebug("path: ", url);
-    this.diItem.importFile(url, "", false);
+    this.diItem.importFile(path, "", false);
     //this.diItem.importUrl(url, "", false);
 
     this.blockName = new QFileInfo(url).completeBaseName();

@@ -51,7 +51,8 @@ InsertScriptItem.prototype.beginEvent = function() {
     
     Block.prototype.beginEvent.call(this);
 
-    this.file = new QUrl(this.guiAction.data()).toLocalFile();
+    var url = this.guiAction.data();
+    this.file = url.toLocalFile();
     include(this.file);
     
     InsertScriptItem.evalInit(this.file);
