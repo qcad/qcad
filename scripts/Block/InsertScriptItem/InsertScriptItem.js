@@ -52,6 +52,11 @@ InsertScriptItem.prototype.beginEvent = function() {
     Block.prototype.beginEvent.call(this);
 
     var url = this.guiAction.data();
+    if (isNull(url) || !url.isLocalFile()) {
+        this.terminate();
+        return;
+    }
+
     this.file = url.toLocalFile();
     include(this.file);
     

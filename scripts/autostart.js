@@ -120,6 +120,9 @@ function openFiles(args, createNew) {
             continue;
         }
 
+        if (isNull(args[i])) {
+            continue;
+        }
 
         // all arguments after -exec are script files or script arguments:
         if (args[i] === "-exec") {
@@ -134,39 +137,62 @@ function openFiles(args, createNew) {
             continue;
         }
 
+
         // skip other arguments without parameter:
         if (args[i][0] === "-") {
             continue;
         }
 
         foundFile = true;
-
-        // if the file is already open, activate that appropriate sub window instead
-        // of opening the file again:
-        var document = undefined;
-        var fileName = undefined;
-        var fileInfo = undefined;
-        var argFileInfo = undefined;
         var foundExisting = false;
-        for (var k=0; k<mdiChildren.length; k++) {
-            document = mdiChildren[k].getDocument();
-            fileName = document.getFileName();
-            fileInfo = new QFileInfo(fileName);
-            argFileInfo = new QFileInfo(getAbsolutePathForArg(args[i]));
 
-            if (fileInfo.equals(argFileInfo)) {
-                mdiArea.setActiveSubWindow(mdiChildren[k]);
-                foundExisting = true;
-                break;
+        var arg = args[i];
+        var isLocalFile = true;
+
+        if (isUrl(arg)) {
+            var url = new QUrl(arg);
+            if (url.isLocalFile()) {
+                // arg is now a path:
+                arg = url.toLocalFile();
+            }
+            else {
+                isLocalFile = false;
+            }
+        }
+
+        if (isLocalFile) {
+            // if the file is already open, activate that appropriate sub window instead
+            // of opening the file again:
+            var document = undefined;
+            var fileName = undefined;
+            var fileInfo = undefined;
+            var argFileInfo = undefined;
+            for (var k=0; k<mdiChildren.length; k++) {
+                document = mdiChildren[k].getDocument();
+                fileName = document.getFileName();
+                fileInfo = new QFileInfo(fileName);
+                argFileInfo = new QFileInfo(getAbsolutePathForArg(arg));
+
+                if (fileInfo.equals(argFileInfo)) {
+                    mdiArea.setActiveSubWindow(mdiChildren[k]);
+                    foundExisting = true;
+                    break;
+                }
             }
         }
 
         // open the file if it is not already open:
         if (!foundExisting) {
-            NewFile.createMdiChild(getAbsolutePathForArg(args[i]), filter);
+            if (isLocalFile) {
+                NewFile.createMdiChild(getAbsolutePathForArg(arg), filter);
+            }
+            else {
+                NewFile.createMdiChild(arg, filter);
+            }
         }
     }
 
+    // create new document if no files were loaded:
     if (!foundFile && createNew===true) {
         var fileNewAction = RGuiAction.getByScriptFile("scripts/File/NewFile/NewFile.js");
         if (!isNull(fileNewAction)) {
@@ -253,27 +279,17 @@ function loadStyleSheets(args) {
  */
 function setUpDragAndDrop(appWin) {
     appWin.dragEnter.connect(function(event) {
-        if (event.mimeData().hasUrls()) {
-            event.acceptProposedAction();
-        }
+        event.acceptProposedAction();
     });
 
     appWin.drop.connect(function(evt) {
-        var urls = evt.mimeData().urls();
-        var files = [];
+        var urls = getUrlsFromMimeData(evt.mimeData());
+        var urlStrings = [];
         for (var i = 0; i < urls.length; ++i) {
-            var file = new QUrl(urls[i]).toLocalFile();
-            include("scripts/Block/InsertScriptItem/InsertScriptItem.js");
-            if (InsertScriptItem.isScriptFile(file)) {
-                qWarning("autostart.js:", "main(): cannot open script file:", file);
-                return;
-            }
-            files.push(file);
+            urlStrings.push(urls[i].toString());
         }
 
-        qDebug("files:", files);
-
-        openFiles(files, false);
+        openFiles(urlStrings, false);
     });
 }
 

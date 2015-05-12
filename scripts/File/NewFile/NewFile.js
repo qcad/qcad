@@ -98,7 +98,7 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
         nameFilter = "";
     }
 
-    if (isOpen) {
+    if (isOpen && !isUrl(fileName)) {
         if (!isNull(AutoSave) && !new QFileInfo(fileName).baseName().startsWith("~")) {
             if (!AutoSave.recover(fileName)) {
                 // canceled file recovering:
@@ -110,7 +110,7 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
     var appWin = EAction.getMainWindow();
     var mdiArea = appWin.centralWidget();
 
-    if (!isNull(fileName)) {
+    if (isOpen) {
         appWin.handleUserMessage(qsTr("Opening drawing:") + " " + fileName + "...");
     }
 
@@ -122,12 +122,22 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
 
     if (isOpen) {
         //appWin.setProgressText(qsTr("Loading..."));
-        var errorCode = documentInterface.importFile(fileName, nameFilter);
+        var errorCode;
+        if (isUrl(fileName)) {
+            errorCode = documentInterface.importUrl(new QUrl(fileName), nameFilter);
+            document.setFileName("");
+            document.setModified(true);
+        }
+        else {
+            errorCode = documentInterface.importFile(fileName, nameFilter);
+        }
         if (errorCode !== RDocumentInterface.IoErrorNoError) {
-            var dlg = new QMessageBox(QMessageBox.Warning,
-                                      qsTr("Import Error"),
-                                      "",
-                                      QMessageBox.OK);
+            var dlg = new QMessageBox(
+                QMessageBox.Warning,
+                qsTr("Import Error"),
+                "",
+                QMessageBox.OK
+            );
             var path = fileName.elidedText(dlg.font, 500);
             var text = qsTr("Cannot open file") + "\n\n'%1'.\n\n".arg(path) + " ";
             switch (errorCode) {

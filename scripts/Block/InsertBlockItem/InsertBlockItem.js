@@ -66,10 +66,16 @@ InsertBlockItem.prototype.beginEvent = function() {
     BlockInsert.prototype.beginEvent.call(this);
 
     var url = this.guiAction.data();
-    var path = url.toLocalFile();
 
-    this.diItem.importFile(path, "", false);
-    //this.diItem.importUrl(url, "", false);
+    var path;
+    if (url.isLocalFile()) {
+        path = url.toLocalFile();
+        this.diItem.importFile(path, "", false);
+    }
+    else {
+        path = QUrl.fromPercentEncoding(url.encodedPath());
+        this.diItem.importUrl(url, "", false);
+    }
 
     this.blockName = new QFileInfo(path).completeBaseName();
 

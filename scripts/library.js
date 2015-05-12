@@ -2000,6 +2000,41 @@ function addActionsToWidgets() {
     }
 }
 
+/**
+ * \return Array of QUrl objects with all URLs extracted from
+ * the mime data (usually from drag and drop).
+ */
+function getUrlsFromMimeData(mimeData) {
+    var urls = [];
+
+    if (mimeData.hasFormat("text/uri-list")) {
+        urls = mimeData.urls();
+    }
+
+    else if (mimeData.hasFormat("text/plain")) {
+        var text = mimeData.text();
+        var url = new QUrl(text);
+        if (!url.isValid()) {
+            return [];
+        }
+        if (!isUrl(url)) {
+            return [];
+        }
+        urls = [url];
+    }
+
+    return urls;
+}
+
+/**
+ * \return True if the urlString is a URL that can be loaded.
+ */
+function isUrl(urlString) {
+    var url = new QUrl(urlString);
+    var scheme = url.scheme();
+    return scheme==="file" || scheme==="http" || scheme==="ftp";
+}
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {

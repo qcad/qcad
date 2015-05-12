@@ -229,9 +229,7 @@ function EventHandler(viewport, documentInterface) {
 }
 
 EventHandler.prototype.dragEnter = function(event) {
-    if (event.mimeData().hasUrls()) {
-        event.acceptProposedAction();
-    }
+    event.acceptProposedAction();
 };
 
 /**
@@ -240,34 +238,46 @@ EventHandler.prototype.dragEnter = function(event) {
  */
 EventHandler.prototype.drop = function(event) {
     var mimeData = event.mimeData();
-    if (mimeData.hasText()) {
-        qDebug(mimeData.text());
+    var urls = getUrlsFromMimeData(mimeData);
+
+    if (urls.length===0) {
+        EAction.handleUserMessage(qsTr("Cannot import URL(s): ") + text);
+        event.acceptProposedAction();
+        return;
     }
-    if (mimeData.hasFormat("text/uri-list")) {
-        var a = mimeData.data("text/uri-list");
-        var url = new QUrl(mimeData.urls()[0]);
-        var file = url.toLocalFile();
+
+    var appWin = RMainWindowQt.getMainWindow();
+    if (!isNull(appWin)) {
+        appWin.raise();
+        appWin.setFocus(Qt.OtherFocusReason);
+    }
+
+    var action;
+    if (urls[0].isLocalFile()) {
+        var file = urls[0].toLocalFile();
+        EAction.handleUserMessage(qsTr("Importing file: ") + file);
         if (new QFileInfo(file).isFile()) {
-            var appWin = RMainWindowQt.getMainWindow();
-            if (!isNull(appWin)) {
-                appWin.raise();
-                appWin.setFocus(Qt.OtherFocusReason);
-            }
             include("scripts/Block/InsertScriptItem/InsertScriptItem.js");
-            var action;
             if (InsertScriptItem.isScriptFile(file)) {
                 action = RGuiAction.getByScriptFile("scripts/Block/InsertScriptItem/InsertScriptItem.js");
             } else {
                 action = RGuiAction.getByScriptFile("scripts/Block/InsertBlockItem/InsertBlockItem.js");
             }
-            action.setData(url);
-            action.slotTrigger();
-            event.accept();
         }
+    }
+    else {
+        EAction.handleUserMessage(qsTr("Importing URL: ") + urls[0].toString());
+        action = RGuiAction.getByScriptFile("scripts/Block/InsertBlockItem/InsertBlockItem.js");
+    }
+
+    if (isNull(action)) {
+        event.acceptProposedAction();
         return;
     }
 
-    event.acceptProposedAction();
+    action.setData(urls[0]);
+    action.slotTrigger();
+    event.accept();
 };
 
 EventHandler.prototype.updateTextLabel = function(painter, textLabel) {
