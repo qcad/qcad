@@ -68,13 +68,19 @@ InsertBlockItem.prototype.beginEvent = function() {
     var url = this.guiAction.data();
 
     var path;
+    var err;
     if (url.isLocalFile()) {
         path = url.toLocalFile();
-        this.diItem.importFile(path, "", false);
+        err = this.diItem.importFile(path, "", false);
     }
     else {
         path = QUrl.fromPercentEncoding(url.encodedPath());
-        this.diItem.importUrl(url, "", false);
+        err = this.diItem.importUrl(url, "", false);
+    }
+
+    if (err!==RDocumentInterface.IoErrorNoError) {
+        EAction.handleUserWarning(qsTr("Cannot import file from URL: ") + url.toString());
+        this.terminate();
     }
 
     this.blockName = new QFileInfo(path).completeBaseName();

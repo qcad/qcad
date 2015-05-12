@@ -139,7 +139,7 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
                 QMessageBox.OK
             );
             var path = fileName.elidedText(dlg.font, 500);
-            var text = qsTr("Cannot open file") + "\n\n'%1'.\n\n".arg(path) + " ";
+            var text = qsTr("Cannot open file") + "\n\n'%1'.\n\n".arg(path);
             switch (errorCode) {
             case RDocumentInterface.IoErrorNoImporterFound:
                 text += qsTr("No suitable Importer found. "

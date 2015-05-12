@@ -241,7 +241,7 @@ EventHandler.prototype.drop = function(event) {
     var urls = getUrlsFromMimeData(mimeData);
 
     if (urls.length===0) {
-        EAction.handleUserMessage(qsTr("Cannot import URL(s): ") + text);
+        EAction.handleUserWarning(qsTr("Dropped data not supported"));
         event.acceptProposedAction();
         return;
     }
