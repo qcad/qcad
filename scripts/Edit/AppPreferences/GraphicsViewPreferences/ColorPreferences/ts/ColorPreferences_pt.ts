@@ -80,7 +80,7 @@ Pano de Fundo do Desenho:</translatorcomment>
         <translation>Grade</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>Meta grid:</source>
         <translation>Grade meta:</translation>
     </message>
@@ -174,7 +174,7 @@ Pano de Fundo do Desenho:</translatorcomment>
         <translation type="obsolete">Mira inativos:</translation>
     </message>
     <message>
-        <location line="-538"/>
+        <location line="-535"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: qgis_pt.ts--

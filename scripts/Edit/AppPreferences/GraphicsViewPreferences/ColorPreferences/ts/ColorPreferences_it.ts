@@ -72,7 +72,7 @@ Visualizzazione grafica</translatorcomment>
         <translation>Griglia</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>Meta grid:</source>
         <translation>Meta griglia:</translation>
     </message>
@@ -162,7 +162,7 @@ Visualizzazione grafica</translatorcomment>
         <translation type="obsolete">Reticolo inattivo:</translation>
     </message>
     <message>
-        <location line="-538"/>
+        <location line="-535"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--

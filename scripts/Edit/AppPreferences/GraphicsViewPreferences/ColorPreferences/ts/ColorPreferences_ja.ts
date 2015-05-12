@@ -57,7 +57,7 @@
         <translation>グリッド</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>Meta grid:</source>
         <translation>メタグリッド:</translation>
     </message>
@@ -146,7 +146,7 @@
         <translation type="obsolete">非アクティブな十字線:</translation>
     </message>
     <message>
-        <location line="-538"/>
+        <location line="-535"/>
         <source>Origin:</source>
         <translation>原点:</translation>
     </message>

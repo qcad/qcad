@@ -57,7 +57,7 @@
         <translation>Mreža</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>Meta grid:</source>
         <translation>Tabelarična mreža:</translation>
     </message>
@@ -146,7 +146,7 @@
         <translation type="obsolete">Neaktivni kazalni križec:</translation>
     </message>
     <message>
-        <location line="-538"/>
+        <location line="-535"/>
         <source>Origin:</source>
         <translation>Izhodišče:</translation>
     </message>

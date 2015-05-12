@@ -67,7 +67,7 @@
         <translation>Raster</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>Meta grid:</source>
         <translation>Meta Raster:</translation>
     </message>
@@ -172,7 +172,7 @@
         <translation type="obsolete">Inaktives Fadenkreuz:</translation>
     </message>
     <message>
-        <location line="-619"/>
+        <location line="-616"/>
         <source>Crosshairs:</source>
         <translation>Fadenkreuz:</translation>
     </message>

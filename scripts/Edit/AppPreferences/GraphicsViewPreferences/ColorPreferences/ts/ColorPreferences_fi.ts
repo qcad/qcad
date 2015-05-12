@@ -57,7 +57,7 @@
         <translation>Ristikko</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>Meta grid:</source>
         <translation>Meta/kuvaus ristikko:</translation>
     </message>
@@ -142,7 +142,7 @@
         <translation>Suurenna/säädä laatikon reuna:</translation>
     </message>
     <message>
-        <location line="-538"/>
+        <location line="-535"/>
         <source>Origin:</source>
         <translation>Nollakohta:</translation>
     </message>

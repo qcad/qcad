@@ -73,7 +73,7 @@ Ver gráficos</translatorcomment>
         <translation>Rejilla</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>Meta grid:</source>
         <translation>Meta rejilla:</translation>
     </message>
@@ -167,7 +167,7 @@ Ver gráficos</translatorcomment>
         <translation type="obsolete">Retículo inactivo:</translation>
     </message>
     <message>
-        <location line="-538"/>
+        <location line="-535"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--

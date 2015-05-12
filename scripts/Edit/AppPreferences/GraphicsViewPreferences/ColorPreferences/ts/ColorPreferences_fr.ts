@@ -67,7 +67,7 @@ Arrière-plan du dessin :</translatorcomment>
         <translation>Grille</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>Meta grid:</source>
         <translation>Métagrille :</translation>
     </message>
@@ -166,7 +166,7 @@ Arrière-plan du dessin :</translatorcomment>
         <translation type="obsolete">Réticule inactif :</translation>
     </message>
     <message>
-        <location line="-619"/>
+        <location line="-616"/>
         <source>Crosshairs:</source>
         <translation>Réticule :</translation>
     </message>

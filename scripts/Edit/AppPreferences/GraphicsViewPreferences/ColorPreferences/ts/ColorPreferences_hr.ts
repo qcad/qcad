@@ -67,7 +67,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+36"/>
         <source>Meta grid:</source>
         <translation type="unfinished"></translation>
     </message>
