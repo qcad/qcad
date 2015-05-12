@@ -4,7 +4,7 @@
 <context>
     <name>InsertScriptItem</name>
     <message>
-        <location filename="../InsertScriptItem.js" line="+65"/>
+        <location filename="../InsertScriptItem.js" line="+71"/>
         <source>Position</source>
         <translation>Pozicija</translation>
     </message>

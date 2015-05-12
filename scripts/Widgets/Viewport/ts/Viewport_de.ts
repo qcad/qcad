@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>Form</name>
     <message>
@@ -138,7 +138,22 @@
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+324"/>
+        <location filename="../Viewport.js" line="+244"/>
+        <source>Dropped data not supported</source>
+        <translation>Eingefügte Daten nicht unterstützt</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Importing file: </source>
+        <translation>Importiere Datei: </translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Importing URL: </source>
+        <translation>Importiere URL: </translation>
+    </message>
+    <message>
+        <location line="+65"/>
         <source>Grid</source>
         <translation>Raster</translation>
     </message>

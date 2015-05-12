@@ -8,7 +8,7 @@
         <translation type="obsolete">Insérer un script</translation>
     </message>
     <message>
-        <location filename="../InsertScriptItem.js" line="+65"/>
+        <location filename="../InsertScriptItem.js" line="+71"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>

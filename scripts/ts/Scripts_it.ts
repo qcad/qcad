@@ -222,7 +222,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+962"/>
+        <location filename="../WidgetFactory.js" line="+957"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>
@@ -366,7 +366,7 @@
         <translation type="obsolete">Post-inizializzazione...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+304"/>
+        <location filename="../autostart.js" line="+321"/>
         <source>Loading add-on translations...</source>
         <translation>Caricamento aggiuntivo traduzioni...</translation>
     </message>
@@ -410,7 +410,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+704"/>
+        <location filename="../library.js" line="+712"/>
         <source>Entity</source>
         <translation>Entità</translation>
     </message>

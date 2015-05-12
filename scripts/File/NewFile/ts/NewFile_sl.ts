@@ -29,12 +29,12 @@
         <translation type="vanished">Odpiram...</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Import Error</source>
         <translation>Napaka pri uvozu</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Cannot open file</source>
         <translation>Ne morem odpret datoteke</translation>
     </message>

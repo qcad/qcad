@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>LinePolygonCP</name>
     <message>
         <source>Corners:</source>
-        <translation>Ecken:</translation>
+        <translation type="vanished">Ecken:</translation>
     </message>
 </context>
 <context>
     <name>LinePolygonPP</name>
     <message>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
         <source>First corner</source>
-        <translation>Erster Eckpunkt</translation>
+        <translation type="vanished">Erster Eckpunkt</translation>
     </message>
     <message>
         <source>Corner point</source>
-        <translation>Eckpunkt</translation>
+        <translation type="vanished">Eckpunkt</translation>
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation>Polygo&amp;n (zwei Eckpunkte)</translation>
+        <translation type="vanished">Polygo&amp;n (zwei Eckpunkte)</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
-        <translation>Reguläres Polygon von zwei Eckpunkten</translation>
+        <translation type="vanished">Reguläres Polygon von zwei Eckpunkten</translation>
     </message>
 </context>
 <context>
@@ -55,11 +55,11 @@
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation>Polygo&amp;n (zwei Eckpunkte)</translation>
+        <translation type="vanished">Polygo&amp;n (zwei Eckpunkte)</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
-        <translation>Reguläres Polygon von zwei Eckpunkten</translation>
+        <translation type="vanished">Reguläres Polygon von zwei Eckpunkten</translation>
     </message>
     <message>
         <location filename="../ShapePolygonPPInit.js" line="+2"/>

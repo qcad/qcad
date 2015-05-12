@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>LinePolygonCP</name>
     <message>
         <source>Center</source>
-        <translation>Mittelpunkt</translation>
+        <translation type="vanished">Mittelpunkt</translation>
     </message>
     <message>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation>Pol&amp;ygon (Zentrum, Punkt)</translation>
+        <translation type="vanished">Pol&amp;ygon (Zentrum, Punkt)</translation>
     </message>
     <message>
         <source>Draw regular polygon from center and corner point</source>
-        <translation>Reguläres Polygon von Zentrum und Eckpunkt</translation>
+        <translation type="vanished">Reguläres Polygon von Zentrum und Eckpunkt</translation>
     </message>
     <message>
         <source>Corners:</source>
-        <translation>Ecken:</translation>
+        <translation type="vanished">Ecken:</translation>
     </message>
     <message>
         <source>Corner point</source>
-        <translation>Eckpunkt</translation>
+        <translation type="vanished">Eckpunkt</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation>Pol&amp;ygon (Zentrum, Punkt)</translation>
+        <translation type="vanished">Pol&amp;ygon (Zentrum, Punkt)</translation>
     </message>
     <message>
         <location filename="../ShapePolygonCPInit.js" line="+2"/>

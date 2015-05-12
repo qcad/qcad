@@ -37,7 +37,7 @@
         <translation type="vanished">Lade...</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="+128"/>
+        <location filename="../NewFile.js" line="+137"/>
         <source>Import Error</source>
         <translation>Import Fehler</translation>
     </message>
@@ -54,12 +54,12 @@
 </translation>
     </message>
     <message>
-        <location line="-14"/>
+        <location line="-23"/>
         <source>Opening drawing:</source>
         <translation>Zeichnung öffnen:</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+28"/>
         <source>Cannot open file</source>
         <translation>Kann Datei nicht öffnen</translation>
     </message>

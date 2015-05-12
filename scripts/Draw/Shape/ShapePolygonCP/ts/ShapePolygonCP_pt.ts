@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt_PT">
+<TS version="2.1" language="pt_PT">
 <context>
     <name>LinePolygonCP</name>
     <message>
@@ -10,12 +10,12 @@
 &amp;Centro, ponto, ângulos
 Centro, ponto, ângulos
 Arco com Centro, Ponto, Ângulos</translatorcomment>
-        <translation>Centro</translation>
+        <translation type="vanished">Centro</translation>
     </message>
     <message>
         <source>Corner point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ponto de canto</translation>
+        <translation type="vanished">Ponto de canto</translation>
     </message>
     <message>
         <source>Done</source>
@@ -24,24 +24,24 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
 Concluído
 Cópias de segurança de desenhos não salvos foram feitas para os seguintes
 lugares:\</translatorcomment>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Poly&amp;gon (centro, ponto)</translation>
+        <translation type="vanished">Poly&amp;gon (centro, ponto)</translation>
     </message>
     <message>
         <source>Draw regular polygon from center and corner point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar polígono regular do ponto de centro e de canto</translation>
+        <translation type="vanished">Desenhar polígono regular do ponto de centro e de canto</translation>
     </message>
     <message>
         <source>Corners:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 Cantos:</translatorcomment>
-        <translation>Pontos de canto:</translation>
+        <translation type="vanished">Pontos de canto:</translation>
     </message>
 </context>
 <context>
@@ -68,7 +68,7 @@ Cantos:</translatorcomment>
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation>Poly&amp;gon (centro, ponto)</translation>
+        <translation type="vanished">Poly&amp;gon (centro, ponto)</translation>
     </message>
     <message>
         <location filename="../ShapePolygonCPInit.js" line="+2"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it_IT">
+<TS version="2.1" language="it_IT">
 <context>
     <name>ShapePolygonAFPP</name>
     <message>
@@ -40,7 +40,7 @@
     </message>
     <message>
         <source>Draw regular polygon from middle points of two sides</source>
-        <translation>Disegna poligono regolare dai punti centrali di due lati</translation>
+        <translation type="vanished">Disegna poligono regolare dai punti centrali di due lati</translation>
     </message>
     <message>
         <location filename="../ShapePolygonAFPP.ui" line="+17"/>
