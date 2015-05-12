@@ -71,7 +71,7 @@ InsertBlockItem.prototype.beginEvent = function() {
     this.diItem.importFile(path, "", false);
     //this.diItem.importUrl(url, "", false);
 
-    this.blockName = new QFileInfo(url).completeBaseName();
+    this.blockName = new QFileInfo(path).completeBaseName();
 
     // fix block name if necessary:
     this.blockName = fixSymbolTableName(this.blockName);
