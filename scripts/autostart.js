@@ -285,10 +285,8 @@ function setUpDragAndDrop(appWin) {
     appWin.drop.connect(function(evt) {
         var appWin = RMainWindowQt.getMainWindow();
         if (!isNull(appWin)) {
-            qDebug("raise");
             appWin.activateWindow();
             appWin.raise();
-            qDebug("focus");
             appWin.setFocus(Qt.OtherFocusReason);
         }
 
@@ -299,7 +297,6 @@ function setUpDragAndDrop(appWin) {
         }
 
         openFiles(urlStrings, false);
-
     });
 }
 
