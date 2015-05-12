@@ -43,9 +43,7 @@ EditFromReferenceTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::SelectToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SelectToolsPanel::SelectAllButton');
-    var p = new RVector(8.9, 30.7);
-    this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
-    this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
+    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SelectToolsPanel::BackButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::CreateBlockButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(9.7, 10.2);
@@ -59,10 +57,6 @@ EditFromReferenceTest00.prototype.test00 = function() {
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::SelectToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SelectToolsPanel::DeselectAllButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SelectToolsPanel::BackButton');
-    // key: 'B'
-    this.pressAndReleaseKeyOnGv(0x42, 0);
-    // key: 'D'
-    this.pressAndReleaseKeyOnGv(0x44, 0);
     this.triggerCommand('bd');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(20.1, 15.9);

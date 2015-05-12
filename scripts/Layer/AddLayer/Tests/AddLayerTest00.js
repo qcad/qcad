@@ -17,7 +17,7 @@ AddLayerTest00.prototype.test00 = function() {
     this.dlgStart();
     this.dlgAppendCode('var map = new Map()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/LayerName', 'layer 1')");
-    this.dlgAppendCode("map.put('DialogOpenedByTdb/Color', new RColor(0,0,0,255,true))");
+    this.dlgAppendCode("map.put('DialogOpenedByTdb/Color', new RColor(0,0,0,255,RColor.Fixed))");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Lineweight', 25)");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Linetype', new RLinetypePattern(true,'Continuous','Solid line',[]))");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Parent', '')");
