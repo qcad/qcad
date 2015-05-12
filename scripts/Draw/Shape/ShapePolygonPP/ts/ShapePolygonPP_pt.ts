@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt_PT">
+<TS version="2.1" language="pt_PT">
 <context>
     <name>LinePolygonCP</name>
     <message>
@@ -8,7 +8,7 @@
         <translatorcomment>--exact match--
 --file: pt.po--
 Cantos:</translatorcomment>
-        <translation>Pontos de canto:</translation>
+        <translation type="vanished">Pontos de canto:</translation>
     </message>
 </context>
 <context>
@@ -17,12 +17,12 @@ Cantos:</translatorcomment>
         <source>First corner</source>
         <translatorcomment>--google--
 Indique o primeiro vértice</translatorcomment>
-        <translation>Primeira ponto de canto:</translation>
+        <translation type="vanished">Primeira ponto de canto:</translation>
     </message>
     <message>
         <source>Corner point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ponto de canto</translation>
+        <translation type="vanished">Ponto de canto</translation>
     </message>
     <message>
         <source>Done</source>
@@ -31,17 +31,17 @@ Indique o primeiro vértice</translatorcomment>
 Concluído
 Cópias de segurança de desenhos não salvos foram feitas para os seguintes
 lugares:\</translatorcomment>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Polygo&amp;n (dois cantos)</translation>
+        <translation type="vanished">Polygo&amp;n (dois cantos)</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar polígono regular a partir de dois pontos de canto</translation>
+        <translation type="vanished">Desenhar polígono regular a partir de dois pontos de canto</translation>
     </message>
 </context>
 <context>
@@ -68,11 +68,11 @@ lugares:\</translatorcomment>
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation>Polygo&amp;n (dois cantos)</translation>
+        <translation type="vanished">Polygo&amp;n (dois cantos)</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
-        <translation>Desenhar polígono regular a partir de dois pontos de canto</translation>
+        <translation type="vanished">Desenhar polígono regular a partir de dois pontos de canto</translation>
     </message>
     <message>
         <location filename="../ShapePolygonPPInit.js" line="+2"/>

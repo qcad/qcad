@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>LinePolygonCP</name>
     <message>
         <source>Center</source>
-        <translation>Centro</translation>
+        <translation type="vanished">Centro</translation>
     </message>
     <message>
         <source>Corner point</source>
-        <translation>Punto de esquina</translation>
+        <translation type="vanished">Punto de esquina</translation>
     </message>
     <message>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation>Polí&amp;gono (centro, punto)</translation>
+        <translation type="vanished">Polí&amp;gono (centro, punto)</translation>
     </message>
     <message>
         <source>Draw regular polygon from center and corner point</source>
-        <translation>Dibuja un polígono regular desde el punto central y un punto de esquina</translation>
+        <translation type="vanished">Dibuja un polígono regular desde el punto central y un punto de esquina</translation>
     </message>
     <message>
         <source>Corners:</source>
-        <translation>Puntos de esquina:</translation>
+        <translation type="vanished">Puntos de esquina:</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation>Polí&amp;gono (centro, punto)</translation>
+        <translation type="vanished">Polí&amp;gono (centro, punto)</translation>
     </message>
     <message>
         <location filename="../ShapePolygonCPInit.js" line="+2"/>

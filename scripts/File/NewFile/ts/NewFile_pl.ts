@@ -38,13 +38,13 @@ Nienazwany
         <translation type="obsolete">Ładowanie...</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Import Error</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Błąd importu</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Cannot open file</source>
         <translatorcomment>--google--
 Nie można otworzyć pliku &apos;%1&apos;

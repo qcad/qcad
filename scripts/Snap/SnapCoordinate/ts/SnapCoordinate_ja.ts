@@ -4,7 +4,7 @@
 <context>
     <name>SnapCoordinate</name>
     <message>
-        <location filename="../SnapCoordinate.js" line="+82"/>
+        <location filename="../SnapCoordinate.js" line="+87"/>
         <source>Set coordinate</source>
         <translation>座標セット</translation>
     </message>

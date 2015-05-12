@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it_IT">
+<TS version="2.1" language="it_IT">
 <context>
     <name>LinePolygonCP</name>
     <message>
         <source>Corners:</source>
-        <translation>Punti dell&apos;angolo:</translation>
+        <translation type="vanished">Punti dell&apos;angolo:</translation>
     </message>
 </context>
 <context>
     <name>LinePolygonPP</name>
     <message>
         <source>First corner</source>
-        <translation>Primo punto dell&apos;angolo</translation>
+        <translation type="vanished">Primo punto dell&apos;angolo</translation>
     </message>
     <message>
         <source>Corner point</source>
-        <translation>Punto dell&apos;angolo</translation>
+        <translation type="vanished">Punto dell&apos;angolo</translation>
     </message>
     <message>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation>Poligo&amp;no (due punti d&apos;angolo)</translation>
+        <translation type="vanished">Poligo&amp;no (due punti d&apos;angolo)</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
-        <translation>Disegnare un poligono regolare da due punti dell&apos;angolo</translation>
+        <translation type="vanished">Disegnare un poligono regolare da due punti dell&apos;angolo</translation>
     </message>
 </context>
 <context>
@@ -55,11 +55,11 @@
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation>Poligo&amp;no (due punti d&apos;angolo)</translation>
+        <translation type="vanished">Poligo&amp;no (due punti d&apos;angolo)</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
-        <translation>Disegnare un poligono regolare da due punti dell&apos;angolo</translation>
+        <translation type="vanished">Disegnare un poligono regolare da due punti dell&apos;angolo</translation>
     </message>
     <message>
         <location filename="../ShapePolygonPPInit.js" line="+2"/>

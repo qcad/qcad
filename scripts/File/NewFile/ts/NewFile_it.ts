@@ -33,12 +33,12 @@
         <translation type="vanished">Caricamento…</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Import Error</source>
         <translation>Errore di importazione</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Cannot open file</source>
         <translation>Impossibile aprire il file</translation>
     </message>

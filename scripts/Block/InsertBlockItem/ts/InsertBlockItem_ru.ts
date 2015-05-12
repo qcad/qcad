@@ -4,7 +4,12 @@
 <context>
     <name>InsertBlockItem</name>
     <message>
-        <location filename="../InsertBlockItem.js" line="+88"/>
+        <location filename="../InsertBlockItem.js" line="+82"/>
+        <source>Cannot import file from URL: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>

@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1129"/>
+        <location line="+1138"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-1121"/>
+        <location line="-1130"/>
         <source>Icon</source>
         <translation type="unfinished"></translation>
     </message>
@@ -81,7 +81,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+675"/>
+        <location line="+684"/>
         <source>Page %1 of %2</source>
         <translation type="unfinished"></translation>
     </message>

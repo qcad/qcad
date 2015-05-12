@@ -29,12 +29,12 @@
         <translation type="vanished">読込中...</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Import Error</source>
         <translation>インポートエラー</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Cannot open file</source>
         <translation>ファイルを開けません</translation>
     </message>
