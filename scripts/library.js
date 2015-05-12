@@ -2041,3 +2041,10 @@ if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
         return this.plainText;
     }
 }
+
+// add isLocalFile to API for Qt 4.7:
+if (!isFunction(QUrl.prototype.isLocalFile)) {
+    QUrl.prototype.isLocalFile = function() {
+        return this.scheme().toLowerCase()==="file";
+    }
+}
