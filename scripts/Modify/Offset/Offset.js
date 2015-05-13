@@ -175,7 +175,6 @@ Offset.prototype.getOperation = function(preview) {
 
         if (!isNull(e)) {
             this.addObjectToOperation(op, e);
-//            op.addObject(e);
         }
     }
     return op;
