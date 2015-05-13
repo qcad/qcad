@@ -5,7 +5,6 @@ function init(basePath) {
     action.setScriptFile(basePath + "/Duplicate.js");
     action.setIcon(basePath + "/Duplicate.svg");
     action.setDefaultShortcuts([
-        new QKeySequence("Ctrl+D"),
         new QKeySequence("d,p")
     ]);
     action.setDefaultCommands(["duplicate", "dp"]);
