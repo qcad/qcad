@@ -149,6 +149,10 @@ public:
         return data.isClosed();
     }
 
+    bool isGeometricallyClosed() const {
+        return data.isGeometricallyClosed();
+    }
+
     bool isPeriodic() const {
         return data.isPeriodic();
     }

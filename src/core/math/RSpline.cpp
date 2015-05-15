@@ -428,6 +428,10 @@ bool RSpline::isClosed() const {
     */
 }
 
+bool RSpline::isGeometricallyClosed(double tolerance) const {
+    return isClosed() || getStartPoint().getDistanceTo(getEndPoint()) < tolerance;
+}
+
 /**
  * \return True if this spline is periodic, i.e. closed and 'smooth'
  *      where start and end connect. The tangents at the start point and

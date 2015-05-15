@@ -108,6 +108,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isClosed, "isClosed");
             
+            REcmaHelper::registerFunction(&engine, proto, isGeometricallyClosed, "isGeometricallyClosed");
+            
             REcmaHelper::registerFunction(&engine, proto, isPeriodic, "isPeriodic");
             
             REcmaHelper::registerFunction(&engine, proto, appendControlPoint, "appendControlPoint");
@@ -2133,6 +2135,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSplineEntity::isClosed", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSplineEntity::isGeometricallyClosed
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSplineEntity::isGeometricallyClosed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSplineEntity::isGeometricallyClosed";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSplineEntity* self = 
+                        getSelf("isGeometricallyClosed", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isGeometricallyClosed();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineEntity.isGeometricallyClosed().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSplineEntity::isGeometricallyClosed", context, engine);
             return result;
         }
          QScriptValue

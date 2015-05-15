@@ -187,6 +187,10 @@ public:
         return data.isGeometricallyClosed();
     }
 
+    double getLength() const {
+        return data.getLength();
+    }
+
     QList<QSharedPointer<RShape> > getExploded() const {
         return data.getExploded();
     }

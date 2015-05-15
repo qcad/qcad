@@ -104,6 +104,7 @@
     <comment type="line">//bool isClosedPeriodic() const;</comment>
 
     <function_decl><type><name>bool</name></type> <name>isClosed</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isGeometricallyClosed</name><parameter_list>(<param><decl><type><name>double</name></type> <name>tolerance</name>=<init><expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isPeriodic</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>double</name></type> <name>getDirection1</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>

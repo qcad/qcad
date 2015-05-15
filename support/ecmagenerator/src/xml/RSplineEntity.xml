@@ -160,6 +160,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="isGeometricallyClosed"
+    cppName="isGeometricallyClosed" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="isPeriodic" cppName="isPeriodic"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -143,6 +143,9 @@
         isGeometricallyClosed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getExploded
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -136,6 +136,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isGeometricallyClosed, "isGeometricallyClosed");
             
+            REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
+            
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
             REcmaHelper::registerFunction(&engine, proto, getComplexity, "getComplexity");
@@ -2789,6 +2791,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolylineEntity::isGeometricallyClosed", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolylineEntity::getLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolylineEntity::getLength", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolylineEntity::getLength";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("getLength", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getLength();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getLength().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolylineEntity::getLength", context, engine);
             return result;
         }
          QScriptValue

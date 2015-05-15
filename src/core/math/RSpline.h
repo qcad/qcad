@@ -103,6 +103,7 @@ public:
     //bool isClosedPeriodic() const;
 
     bool isClosed() const;
+    bool isGeometricallyClosed(double tolerance=RS::PointTolerance) const;
     bool isPeriodic() const;
 
     virtual double getDirection1() const;

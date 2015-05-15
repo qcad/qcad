@@ -110,6 +110,9 @@
         isClosed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isGeometricallyClosed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isPeriodic
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
