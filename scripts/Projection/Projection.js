@@ -473,7 +473,7 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
                 var gotGap = pl.countVertices()>0 &&
                     !pl.getEndPoint().equalsFuzzy(seg.getStartPoint());
 
-                // s is a line or polyline that connets to the poyline we have:
+                // s is a line or polyline that connets to the polyline we have:
                 if (!gotGap && (isLineShape(seg) || isPolylineShape(seg))) {
                     if (seg.getLength()>RS.PointTolerance) {
                         pl.appendShape(seg);
