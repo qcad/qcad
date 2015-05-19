@@ -5,8 +5,6 @@ contains(QT_VERSION, ^5\\..*\\..*) {
     macx {
         QT += macextras
     }
-    #INCLUDEPATH += ~/local/qt/include/QtWebKitWidgets
-    #QMAKE_CXXFLAGS += -I/Users/andrew/local/qt/include/QtWebKitWidgets
 }
 else {
     QT += webkit
