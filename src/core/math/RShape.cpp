@@ -592,12 +592,9 @@ QList<RVector> RShape::getIntersectionPointsLC(const RLine& line1,
 
     RVector vLineCenter = line1.getVectorTo(circle2.getCenter(), false);
     double dist = vLineCenter.getMagnitude();
-    qDebug() << "dist: " << dist;
-    qDebug() << "r: " << circle2.getRadius();
 
     // special case: arc almost touches line (tangent with tiny gap):
     if (dist >= circle2.getRadius() && dist < circle2.getRadius()+1.0e-4) {
-        qDebug() << "tan";
         res.append(circle2.getCenter() - vLineCenter);
         // ret.setTangent(true);
         return res;
