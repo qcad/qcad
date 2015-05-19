@@ -40,6 +40,7 @@ ImportFile.prototype.beginEvent = function() {
     var fileDialogInfo = this.getFileName();
     if (isNull(fileDialogInfo)) {
         this.sourceDi.destroy();
+        this.sourceDi = undefined;
         this.terminate();
         return;
     }
@@ -53,7 +54,9 @@ ImportFile.prototype.beginEvent = function() {
 };
 
 ImportFile.prototype.finishEvent = function() {
-    this.sourceDi.destroy();
+    if (!isNull(this.sourceDi)) {
+        this.sourceDi.destroy();
+    }
     Paste.prototype.finishEvent.call(this);
 };
 
