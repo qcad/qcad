@@ -20,6 +20,8 @@
 #include <QFileInfo>
 #include <QList>
 #include <QMenu>
+#include <QPainter>
+#include <QSvgRenderer>
 #include <QToolBar>
 #include <QVectorIterator>
 
@@ -197,11 +199,31 @@ void RGuiAction::setIcon(const QString& iconFile) {
         QAction::setIcon(QIcon());
     }
     else {
-        QAction::setIcon(QIcon(iconFile));
+        if (qApp->devicePixelRatio()!=1 && QFileInfo(iconFile).suffix().toLower()=="svg") {
+            // TODO, retina icons:
+//            qDebug() << "device pixel ratio: " << qApp->devicePixelRatio();
+//            QPixmap pm(64, 64);
+//            pm.setDevicePixelRatio(qApp->devicePixelRatio());
+//            pm.fill(Qt::transparent);
+//            QPainter p;
+//            p.begin(&pm);
+//            QSvgRenderer renderer(iconFile);
+//            renderer.render(&p);
+//            //render.render(&p, QRectF(0, 0, 256, 256));
+//            p.end();
+//            qDebug() << "dpr: " << pm.devicePixelRatio();
+
+//            //QIcon icon(iconFile);
+//            //icon.addPixmap(pm);
+//            QIcon icon(pm);
+//            QAction::setIcon(icon);
+            QAction::setIcon(QIcon(iconFile));
+        }
+        else {
+            QAction::setIcon(QIcon(iconFile));
+        }
     }
 }
-
-
 
 void RGuiAction::disableIcon() {
     iconDisabled = true;

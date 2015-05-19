@@ -1117,3 +1117,28 @@ WidgetFactory.initVAlignCombo = function(comboBox) {
     comboBox.addItem(qsTr("Base"), RS.VAlignBase);
     comboBox.addItem(qsTr("Bottom"), RS.VAlignBottom);
 };
+
+WidgetFactory.installComboBoxEventFilter = function(widget) {
+    var children = widget.children();
+    for ( var i = 0; i < children.length; ++i) {
+        var c = children[i];
+
+        if (!c || isDeleted(c)) {
+            break;
+        }
+
+        if (isOfType(c, QSpinBox) ||
+            isOfType(c, QComboBox) ||
+            isOfType(c, QFontComboBox) ||
+            isOfType(c, RColorCombo) ||
+            isOfType(c, RLineweightCombo) ||
+            isOfType(c, RLinetypeCombo)) {
+
+            c.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
+            c.focusPolicy = Qt.ClickFocus;
+            continue;
+        }
+
+        WidgetFactory.installComboBoxEventFilter(c);
+    }
+};
