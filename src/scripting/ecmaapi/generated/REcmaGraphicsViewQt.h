@@ -264,6 +264,9 @@
         getHeight
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getRect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getCursor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

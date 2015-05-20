@@ -193,6 +193,9 @@
         equals
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        operator_less
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isLoaded
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

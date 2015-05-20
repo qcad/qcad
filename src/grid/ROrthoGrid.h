@@ -54,7 +54,7 @@ public:
 
     virtual void paintCursor(const RVector& pos);
 
-    virtual void paintRuler(RRuler& ruler);
+    virtual void paintRuler(RRuler& ruler, qreal devicePixelRatio = 1.0);
 
     virtual QString getInfoText();
 

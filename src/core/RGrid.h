@@ -69,7 +69,7 @@ public:
 
     virtual void paintCursor(const RVector& pos) = 0;
 
-    virtual void paintRuler(RRuler& ruler) = 0;
+    virtual void paintRuler(RRuler& ruler, qreal devicePixelRatio = 1.0) = 0;
 
     virtual QString getInfoText() = 0;
 

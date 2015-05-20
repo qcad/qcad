@@ -74,6 +74,7 @@ public:
 
     virtual int getWidth() const;
     virtual int getHeight() const;
+    virtual QRect getRect() const;
     
     virtual QCursor getCursor();
     virtual void setCursor(Qt::CursorShape cursorShape);
@@ -88,7 +89,7 @@ public:
 
     virtual void simulateMouseMoveEvent();
 
-    double getDevicePixelRatio() const;
+    virtual double getDevicePixelRatio() const;
 
 signals:
     void drop(QDropEvent* event);

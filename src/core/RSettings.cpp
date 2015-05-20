@@ -49,6 +49,7 @@ int RSettings::showCrosshair = -1;
 int RSettings::showLargeCrosshair = -1;
 int RSettings::showLargeOriginAxis = -1;
 int RSettings::concurrentDrawing = -1;
+int RSettings::highResolutionGraphicsView = -1;
 int RSettings::previewEntities = -1;
 int RSettings::limitZoomAndScroll = -1;
 int RSettings::autoScaleLinetypePattern = -1;
@@ -78,6 +79,13 @@ QString RSettings::getAppId() {
     return ret;
 }
 
+double RSettings::getDevicePixelRatio() {
+#if QT_VERSION >= 0x050000
+    return qApp->devicePixelRatio();
+#else
+    return 1.0;
+#endif
+}
 
 QStringList RSettings::getOriginalArguments() {
     return originalArguments;
@@ -398,7 +406,7 @@ QFont RSettings::getRulerFont() {
     if (rulerFont==NULL) {
         // get application's default font (pixel size is -1, point size e.g. 10pt):
         QFont font;
-        font.setPointSize(9);
+        font.setPointSize(9*getDevicePixelRatio());
         rulerFont = new QFont(getValue("GraphicsViewFonts/Ruler", font).value<QFont>());
     }
     return *rulerFont;
@@ -643,8 +651,7 @@ bool RSettings::getLimitZoomAndScroll() {
 
 bool RSettings::getShowCrosshair() {
     if (showCrosshair==-1) {
-        showCrosshair = getValue("GraphicsView/ShowCrosshair", 
-            QVariant(true)).toBool();
+        showCrosshair = getValue("GraphicsView/ShowCrosshair",  QVariant(true)).toBool();
     }
     return (bool)showCrosshair;
 }
@@ -656,8 +663,7 @@ void RSettings::setShowCrosshair(bool on) {
 
 bool RSettings::getShowLargeCrosshair() {
     if (showLargeCrosshair==-1) {
-        showLargeCrosshair = getValue("GraphicsView/ShowLargeCrosshair",
-                                 QVariant(true)).toBool();
+        showLargeCrosshair = getValue("GraphicsView/ShowLargeCrosshair",  QVariant(true)).toBool();
     }
     return (bool)showLargeCrosshair;
 }
@@ -669,8 +675,7 @@ void RSettings::setShowLargeCrosshair(bool on) {
 
 bool RSettings::getShowLargeOriginAxis() {
     if (showLargeOriginAxis==-1) {
-        showLargeOriginAxis = getValue("GraphicsView/ShowLargeOriginAxis",
-                                 QVariant(false)).toBool();
+        showLargeOriginAxis = getValue("GraphicsView/ShowLargeOriginAxis", QVariant(false)).toBool();
     }
     return (bool)showLargeOriginAxis;
 }
@@ -682,8 +687,7 @@ void RSettings::setShowLargeOriginAxis(bool on) {
 
 bool RSettings::getConcurrentDrawing() {
     if (concurrentDrawing==-1) {
-        concurrentDrawing = getValue("GraphicsView/ConcurrentDrawing", 
-            QVariant(false)).toBool();
+        concurrentDrawing = getValue("GraphicsView/ConcurrentDrawing",  QVariant(false)).toBool();
     }
     return (bool)concurrentDrawing;
 }
@@ -691,6 +695,13 @@ bool RSettings::getConcurrentDrawing() {
 void RSettings::setConcurrentDrawing(bool on) {
     setValue("GraphicsView/ConcurrentDrawing", on);
     concurrentDrawing = on;
+}
+
+bool RSettings::getHighResolutionGraphicsView() {
+    if (highResolutionGraphicsView==-1) {
+        highResolutionGraphicsView = getValue("GraphicsView/HighResolutionGraphicsView", QVariant(false)).toBool();
+    }
+    return (bool)highResolutionGraphicsView;
 }
 
 QLocale RSettings::getNumberLocale() {
@@ -917,6 +928,7 @@ void RSettings::resetCache() {
     showLargeCrosshair = -1;
     showLargeOriginAxis = -1;
     concurrentDrawing = -1;
+    highResolutionGraphicsView = -1;
     previewEntities = -1;
     limitZoomAndScroll = -1;
     autoScaleLinetypePattern = -1;

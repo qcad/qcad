@@ -59,8 +59,6 @@ RGraphicsViewImage::RGraphicsViewImage()
     graphicsBufferNeedsUpdate = true;
 }
 
-
-
 RGraphicsViewImage::~RGraphicsViewImage() {
 }
 
@@ -524,7 +522,8 @@ void RGraphicsViewImage::updateTransformation() const {
  * port changes or document changes.
  */
 void RGraphicsViewImage::updateGraphicsBuffer() {
-    QSize newSize(getWidth(), getHeight());
+    double dpr = getDevicePixelRatio();
+    QSize newSize(getWidth()*dpr, getHeight()*dpr);
 
     if (lastSize!=newSize && graphicsBuffer.size()!=newSize) {
         graphicsBuffer = QImage(newSize, QImage::Format_RGB32);

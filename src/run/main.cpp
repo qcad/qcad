@@ -104,6 +104,9 @@ int main(int argc, char *argv[]) {
     qApp->setApplicationVersion(RSettings::getVersionString());
 
     RMainWindow::installMessageHandler();
+
+    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+
 #ifdef Q_OS_MAC
     // TODO: make available as script function:
     QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus);

@@ -369,6 +369,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RLinetypePattern" name="other" isConst="true" />
       </variant>
     </method>
+    <method name="operator&lt;" cppName="operator&lt;"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLinetypePattern &amp;"
+        typeName="RLinetypePattern" name="other" isConst="true" />
+      </variant>
+    </method>
     <method name="isLoaded" cppName="isLoaded" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />

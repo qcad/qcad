@@ -56,6 +56,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="true">
         <arg type="RRuler &amp;" typeName="RRuler" name="ruler"
         isConst="false" />
+        <arg type="qreal" typeName="qreal" name="devicePixelRatio"
+        hasDefault="true" default="1.0" isConst="false" />
       </variant>
     </method>
     <method name="getInfoText" cppName="getInfoText"

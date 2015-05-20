@@ -665,7 +665,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="getDevicePixelRatio"
     cppName="getDevicePixelRatio" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
   </class>

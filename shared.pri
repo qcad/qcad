@@ -162,4 +162,3 @@ INCLUDEPATH += \
     $$PWD/src/spatialindex \
     $$PWD/src/3rdparty \
     $$PWD/src/zip
-

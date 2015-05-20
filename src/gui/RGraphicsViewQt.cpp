@@ -93,7 +93,8 @@ void RGraphicsViewQt::paintEvent(QPaintEvent* e) {
     RDocumentInterface* di = getDocumentInterface();
     if (di!=NULL && di->isSuspended()) {
         QPainter wPainter(this);
-        wPainter.drawImage(0, 0, graphicsBuffer);
+        //wPainter.drawImage(0, 0, graphicsBuffer);
+        wPainter.drawImage(getRect(), graphicsBuffer);
         //QPixmap pm;
         //pm.convertFromImage(graphicsBuffer);
         //wPainter.drawPixmap(this->rect(), pm);
@@ -106,7 +107,8 @@ void RGraphicsViewQt::paintEvent(QPaintEvent* e) {
     // event is NULL for fake paint events (testing):
     if (e!=NULL) {
         QPainter wPainter(this);
-        wPainter.drawImage(0, 0, graphicsBufferWithPreview);
+        //wPainter.drawImage(0, 0, graphicsBufferWithPreview);
+        wPainter.drawImage(getRect(), graphicsBufferWithPreview);
         //QPixmap pm;
         //pm.convertFromImage(graphicsBufferWithPreview);
         //wPainter.drawPixmap(this->rect(), pm);
@@ -302,6 +304,10 @@ int RGraphicsViewQt::getHeight() const {
     return height() * getDevicePixelRatio();
 }
 
+QRect RGraphicsViewQt::getRect() const {
+    return QRect(0,0,getWidth(),getHeight());
+}
+
 QCursor RGraphicsViewQt::getCursor() {
     return QWidget::cursor();
 }
@@ -412,6 +418,10 @@ void RGraphicsViewQt::simulateMouseMoveEvent() {
 }
 
 double RGraphicsViewQt::getDevicePixelRatio() const {
-    return 1;
-    //return devicePixelRatio();
+    if (RSettings::getHighResolutionGraphicsView()) {
+        return devicePixelRatio();
+    }
+    else {
+        return 1;
+    }
 }

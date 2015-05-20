@@ -287,6 +287,14 @@
                 qScriptValueFromValue(&engine, REntity::PropertyMaxY),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertySizeX",
+                qScriptValueFromValue(&engine, REntity::PropertySizeX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertySizeY",
+                qScriptValueFromValue(&engine, REntity::PropertySizeY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     

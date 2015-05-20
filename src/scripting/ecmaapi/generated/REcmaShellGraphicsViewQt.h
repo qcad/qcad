@@ -89,6 +89,12 @@
         
     
     
+      QRect getRect(
+                
+            );
+        
+    
+    
       QCursor getCursor(
                 
             );

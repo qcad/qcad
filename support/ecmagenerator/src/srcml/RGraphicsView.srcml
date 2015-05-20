@@ -283,7 +283,7 @@
     <function_decl><type><name>void</name></type> <name>setAntialiasing</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>val</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>getAntialiasing</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function><type><name>double</name></type> <name>getDevicePixelRatio</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>virtual</name> <name>double</name></type> <name>getDevicePixelRatio</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr>1.0</expr>;</return>
     }</block></function>
 

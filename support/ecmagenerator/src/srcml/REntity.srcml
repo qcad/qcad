@@ -83,6 +83,8 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyMinY</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyMaxX</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyMaxY</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertySizeX</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertySizeY</name></decl>;</decl_stmt>
 
 </public><public>public:
     <macro><name>REntity</name><argument_list>(<argument>RDocument* document</argument>, <argument>Id objectId=-1</argument>)</argument_list></macro> : <constructor><name>RObject</name><parameter_list>(<param><decl><type><name>document</name></type></decl></param>, <param><decl><type><name>objectId</name></type></decl></param>)</parameter_list> <block>{}</block></constructor>

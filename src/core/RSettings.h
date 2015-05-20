@@ -52,6 +52,8 @@ public:
 
     static QString getAppId();
 
+    static double getDevicePixelRatio();
+
     static QString getLocale();
     static void loadTranslations(const QString& module, const QStringList& dirs = RDEFAULT_QSTRINGLIST);
     static QString translate(const QString& context, const QString& str);
@@ -93,6 +95,7 @@ public:
     static QFont getInfoLabelFont();
     static QFont getStatusBarFont();
 
+    static bool getHighResolutionGraphicsView();
     static bool getAutoScaleGrid();
     static bool getAutoScaleMetaGrid();
     static bool getAutoScalePatterns();
@@ -185,6 +188,7 @@ private:
     static int showLargeCrosshair;
     static int showLargeOriginAxis;
     static int concurrentDrawing;
+    static int highResolutionGraphicsView;
     static int previewEntities;
     static int limitZoomAndScroll;
     static int autoScaleLinetypePattern;

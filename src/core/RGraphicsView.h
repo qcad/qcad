@@ -282,7 +282,7 @@ public:
     void setAntialiasing(bool val);
     bool getAntialiasing() const;
 
-    double getDevicePixelRatio() const {
+    virtual double getDevicePixelRatio() const {
         return 1.0;
     }
 

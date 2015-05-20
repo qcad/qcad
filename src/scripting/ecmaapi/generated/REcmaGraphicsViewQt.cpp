@@ -232,6 +232,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getHeight, "getHeight");
             
+            REcmaHelper::registerFunction(&engine, proto, getRect, "getRect");
+            
             REcmaHelper::registerFunction(&engine, proto, getCursor, "getCursor");
             
             REcmaHelper::registerFunction(&engine, proto, setCursor, "setCursor");
@@ -4748,6 +4750,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewQt::getHeight", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::getRect
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::getRect", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::getRect";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("getRect", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QRect'
+    QRect cppResult =
+        
+               self->getRect();
+        // return type: QRect
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.getRect().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::getRect", context, engine);
             return result;
         }
          QScriptValue

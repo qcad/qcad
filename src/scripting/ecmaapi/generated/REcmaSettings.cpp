@@ -61,6 +61,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getAppId, "getAppId");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getDevicePixelRatio, "getDevicePixelRatio");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getLocale, "getLocale");
             
             REcmaHelper::registerFunction(&engine, &ctor, loadTranslations, "loadTranslations");
@@ -120,6 +122,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, getInfoLabelFont, "getInfoLabelFont");
             
             REcmaHelper::registerFunction(&engine, &ctor, getStatusBarFont, "getStatusBarFont");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getHighResolutionGraphicsView, "getHighResolutionGraphicsView");
             
             REcmaHelper::registerFunction(&engine, &ctor, getAutoScaleGrid, "getAutoScaleGrid");
             
@@ -402,6 +406,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getAppId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getDevicePixelRatio
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getDevicePixelRatio", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getDevicePixelRatio";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        RSettings::
+       getDevicePixelRatio();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getDevicePixelRatio().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getDevicePixelRatio", context, engine);
             return result;
         }
          QScriptValue
@@ -1694,6 +1737,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getStatusBarFont", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getHighResolutionGraphicsView
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getHighResolutionGraphicsView", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getHighResolutionGraphicsView";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getHighResolutionGraphicsView();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getHighResolutionGraphicsView().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getHighResolutionGraphicsView", context, engine);
             return result;
         }
          QScriptValue

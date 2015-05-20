@@ -52,6 +52,9 @@
         getAppId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDevicePixelRatio
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLocale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -140,6 +143,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getStatusBarFont
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getHighResolutionGraphicsView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getAutoScaleGrid

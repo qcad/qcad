@@ -25,7 +25,7 @@
 RInputEvent::RInputEvent(const RVector& position, RGraphicsScene& s, RGraphicsView& v, qreal devicePixelRatio)
     : screenPosition(position*devicePixelRatio), scene(s), view(v) {
 
-    modelPosition = view.mapFromView(position);
+    modelPosition = view.mapFromView(screenPosition);
 
 //  RDocumentInterface& documentInterface = scene.getDocumentInterface();
 //  RUcs ucs = documentInterface.getCurrentUcs();

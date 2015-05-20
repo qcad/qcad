@@ -70,7 +70,7 @@
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintCursor</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintRuler</name><parameter_list>(<param><decl><type><name>RRuler</name>&amp;</type> <name>ruler</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintRuler</name><parameter_list>(<param><decl><type><name>RRuler</name>&amp;</type> <name>ruler</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>devicePixelRatio</name> =<init> <expr>1.0</expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getInfoText</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
 

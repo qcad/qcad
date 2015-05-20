@@ -13,6 +13,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="getDevicePixelRatio"
+    cppName="getDevicePixelRatio" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
     <method name="getLocale" cppName="getLocale" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
@@ -184,6 +189,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QFont" isPureVirtual="false" />
+    </method>
+    <method name="getHighResolutionGraphicsView"
+    cppName="getHighResolutionGraphicsView" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="getAutoScaleGrid" cppName="getAutoScaleGrid"
     specifier="public" isStatic="true" isVirtual="false"
