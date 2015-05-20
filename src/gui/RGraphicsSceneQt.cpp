@@ -287,8 +287,8 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength
     // arc threshold is configurable (FS#1012):
     if (arc.getAngleLength(allowForZeroLength)<=RSettings::getArcAngleLengthThreshold()) {
         // Qt won't export a zero length line as point:
-        RVector startPoint = arc.getStartPoint() - RVector::createPolar(0.01, arc.getStartAngle());
-        RVector endPoint = arc.getEndPoint() + RVector::createPolar(0.01, arc.getStartAngle());
+        RVector startPoint = arc.getStartPoint() - RVector::createPolar(0.01, arc.getStartAngle()+M_PI_2);
+        RVector endPoint = arc.getEndPoint() + RVector::createPolar(0.01, arc.getStartAngle()+M_PI_2);
         currentPainterPath.moveTo(startPoint);
         currentPainterPath.lineTo(endPoint);
         return;
