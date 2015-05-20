@@ -82,6 +82,8 @@ public:
     static RPropertyTypeId PropertyMinY;
     static RPropertyTypeId PropertyMaxX;
     static RPropertyTypeId PropertyMaxY;
+    static RPropertyTypeId PropertySizeX;
+    static RPropertyTypeId PropertySizeY;
 
 public:
     REntity(RDocument* document, Id objectId=-1) : RObject(document, objectId) {}

@@ -39,6 +39,8 @@ RPropertyTypeId REntity::PropertyMinX;
 RPropertyTypeId REntity::PropertyMaxX;
 RPropertyTypeId REntity::PropertyMinY;
 RPropertyTypeId REntity::PropertyMaxY;
+RPropertyTypeId REntity::PropertySizeX;
+RPropertyTypeId REntity::PropertySizeY;
 
 
 REntity::~REntity() {
@@ -83,6 +85,9 @@ void REntity::init() {
     REntity::PropertyMinY.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Bottom"));
     REntity::PropertyMaxX.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Right"));
     REntity::PropertyMaxY.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Top"));
+
+    REntity::PropertySizeX.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Width"));
+    REntity::PropertySizeY.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Height"));
 }
 
 /**
@@ -258,6 +263,12 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
     }
     else if (propertyTypeId == PropertyMaxY) {
         return qMakePair(QVariant(getBoundingBox().getMaximum().y), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    }
+    else if (propertyTypeId == PropertySizeX) {
+        return qMakePair(QVariant(getBoundingBox().getWidth()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    }
+    else if (propertyTypeId == PropertySizeY) {
+        return qMakePair(QVariant(getBoundingBox().getHeight()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
 
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);
