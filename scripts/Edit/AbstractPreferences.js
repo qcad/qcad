@@ -250,7 +250,6 @@ AbstractPreferences.prototype.load = function(addOn) {
     }
 
     WidgetFactory.restoreState(widget, undefined, undefined, false, document);
-    WidgetFactory.installComboBoxEventFilter(widget);
 
     if (!isNull(global[className]) && isFunction(global[className].postInitPreferences)) {
         global[className].postInitPreferences(widget, true, document, this);

@@ -282,6 +282,10 @@ public:
     void setAntialiasing(bool val);
     bool getAntialiasing() const;
 
+    double getDevicePixelRatio() const {
+        return 1.0;
+    }
+
 protected:
     bool printing;
     bool printPreview;

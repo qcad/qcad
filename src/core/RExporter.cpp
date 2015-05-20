@@ -1104,14 +1104,11 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
         if (draftMode) {
             minAStep *= 4;
         }
-        //qDebug() << "minAStep:" << minAStep;
 
         if (aStep<minAStep) {
             aStep = minAStep;
         }
     }
-    //qDebug() << "aStep:" << aStep;
-    //aStep = 0.0001;
     RVector prev = arc.getStartPoint();
     RVector ci;
     double a;
@@ -1124,8 +1121,7 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
         for (a=a1+aStep; a<=a2; a+=aStep) {
             ci.x = center.x + cos(a) * radius;
             ci.y = center.y + sin(a) * radius;
-            //path.lineTo(RVector(ci.x, ci.y));
-            this->exportLineSegment(RLine(prev, ci), a+M_PI_2);
+            exportLineSegment(RLine(prev, ci), a+M_PI_2);
             prev = ci;
         }
     } else {
@@ -1136,13 +1132,11 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
         for (a=a1-aStep; a>=a2; a-=aStep) {
             ci.x = center.x + cos(a) * radius;
             ci.y = center.y + sin(a) * radius;
-            this->exportLineSegment(RLine(prev, ci), a+M_PI_2);
-            //path.lineTo(RVector(cix, ciy));
+            exportLineSegment(RLine(prev, ci), a+M_PI_2);
             prev = ci;
         }
     }
     this->exportLineSegment(RLine(prev, arc.getEndPoint()), arc.getEndAngle()+M_PI_2);
-    //path.lineTo(arc.getEndPoint());
 }
 
 /**

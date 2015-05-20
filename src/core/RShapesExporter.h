@@ -22,6 +22,9 @@
 #include "RShape.h"
 #include "RExporter.h"
 
+/**
+ * Exports entities into a list of shapes.
+ */
 class RShapesExporter : public RExporter {
 public:
     RShapesExporter(RExporter& exporter, const QList<QSharedPointer<RShape> >& shapes, double offset);

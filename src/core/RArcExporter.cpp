@@ -33,7 +33,13 @@ void RArcExporter::exportLineSegment(const RLine& line, double angle) {
     double ang2 = line.getEndPoint().x / arc.getRadius();
     a.setStartAngle(arc.getStartAngle() + ang1);
     a.setEndAngle(arc.getStartAngle() + ang2);
-    exporter.exportArcSegment(a, true);
+    bool allowZeroLen = true;
+
+    // arc segment is full circle:
+    if (ang2>ang1+M_PI*2-1.0e-6) {
+        allowZeroLen = false;
+    }
+    exporter.exportArcSegment(a, allowZeroLen);
 }
 
 void RArcExporter::exportPainterPaths(const QList<RPainterPath>& paths, double angle, const RVector& pos) {

@@ -34,9 +34,9 @@ RMouseEvent::RMouseEvent(Type type, const RVector& position,
 }
 
 RMouseEvent::RMouseEvent(const QMouseEvent& mouseEvent, RGraphicsScene& s,
-        RGraphicsView& v) :
+        RGraphicsView& v, qreal devicePixelRatio) :
     QMouseEvent(mouseEvent),
-    RInputEvent(RVector(mouseEvent.posF().x(), mouseEvent.posF().y()), s, v) {
+    RInputEvent(RVector(mouseEvent.posF().x(), mouseEvent.posF().y()), s, v, devicePixelRatio) {
 }
 
 RMouseEvent::~RMouseEvent() {

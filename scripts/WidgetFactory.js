@@ -95,6 +95,15 @@ WidgetFactory.createWidget = function(basePath, uiFile, parent) {
     var formWidget = loader.load(buf, parent);
     buf.close();
     loader.destroy();
+
+    if (isNull(formWidget)) {
+        qDebug("WidgetFactory.createWidget: widget is NULL");
+    }
+
+    if (RS.getSystemId()==="osx") {
+        WidgetFactory.installComboBoxEventFilter(formWidget);
+    }
+
     return formWidget;
 };
 
@@ -1119,6 +1128,13 @@ WidgetFactory.initVAlignCombo = function(comboBox) {
 };
 
 WidgetFactory.installComboBoxEventFilter = function(widget) {
+    if (isNull(widget)) {
+        return;
+    }
+    if (!isQWidget(widget) || !isFunction(widget.children)) {
+        return;
+    }
+
     var children = widget.children();
     for ( var i = 0; i < children.length; ++i) {
         var c = children[i];

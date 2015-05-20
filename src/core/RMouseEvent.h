@@ -47,7 +47,7 @@ public:
             RGraphicsView& v);
 
     RMouseEvent(const QMouseEvent& mouseEvent, RGraphicsScene& s,
-            RGraphicsView& v);
+            RGraphicsView& v, qreal devicePixelRatio = 1.0);
 
     virtual ~RMouseEvent();
 

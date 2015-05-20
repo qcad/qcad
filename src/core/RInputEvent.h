@@ -40,7 +40,7 @@ class RGraphicsView;
  */
 class QCADCORE_EXPORT RInputEvent {
 public:
-    RInputEvent(const RVector& position, RGraphicsScene& s, RGraphicsView& v);
+    RInputEvent(const RVector& position, RGraphicsScene& s, RGraphicsView& v, qreal devicePixelRatio=1.0);
     virtual ~RInputEvent();
 
     RVector getModelPosition() const;
