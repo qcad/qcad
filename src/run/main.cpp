@@ -105,7 +105,9 @@ int main(int argc, char *argv[]) {
 
     RMainWindow::installMessageHandler();
 
+#if QT_VERSION >= 0x050000
     QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+#endif
 
 #ifdef Q_OS_MAC
     // TODO: make available as script function:
