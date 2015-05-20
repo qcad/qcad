@@ -419,7 +419,11 @@ void RGraphicsViewQt::simulateMouseMoveEvent() {
 
 double RGraphicsViewQt::getDevicePixelRatio() const {
     if (RSettings::getHighResolutionGraphicsView()) {
+#if QT_VERSION >= 0x050000
         return devicePixelRatio();
+#else
+        return 1;
+#endif
     }
     else {
         return 1;
