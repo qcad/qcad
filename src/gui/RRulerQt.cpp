@@ -203,7 +203,7 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
             return;
         }
 
-        grid->paintRuler(*this, devicePixelRatio());
+        grid->paintRuler(*this, dpr);
 
         delete painter;
         painter = NULL;
