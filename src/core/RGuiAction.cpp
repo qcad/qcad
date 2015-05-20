@@ -199,6 +199,7 @@ void RGuiAction::setIcon(const QString& iconFile) {
         QAction::setIcon(QIcon());
     }
     else {
+#if QT_VERSION >= 0x050000
         if (qApp->devicePixelRatio()!=1 && QFileInfo(iconFile).suffix().toLower()=="svg") {
             // TODO, retina icons:
 //            qDebug() << "device pixel ratio: " << qApp->devicePixelRatio();
@@ -222,6 +223,9 @@ void RGuiAction::setIcon(const QString& iconFile) {
         else {
             QAction::setIcon(QIcon(iconFile));
         }
+#else
+        QAction::setIcon(QIcon(iconFile));
+#endif
     }
 }
 
