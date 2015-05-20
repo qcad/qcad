@@ -135,6 +135,12 @@
         
     
     
+      double getDevicePixelRatio(
+                
+            );
+        
+    
+    
       QSize sizeHint(
                 
             );

@@ -260,6 +260,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAntialiasing, "getAntialiasing");
             
+            REcmaHelper::registerFunction(&engine, proto, getDevicePixelRatio, "getDevicePixelRatio");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RGraphicsView*>(), *proto);
 
@@ -6236,6 +6238,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsView::getAntialiasing", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::getDevicePixelRatio
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::getDevicePixelRatio", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::getDevicePixelRatio";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("getDevicePixelRatio", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDevicePixelRatio();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.getDevicePixelRatio().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::getDevicePixelRatio", context, engine);
             return result;
         }
          QScriptValue REcmaGraphicsView::toString

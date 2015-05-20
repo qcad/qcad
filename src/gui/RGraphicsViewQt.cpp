@@ -94,6 +94,9 @@ void RGraphicsViewQt::paintEvent(QPaintEvent* e) {
     if (di!=NULL && di->isSuspended()) {
         QPainter wPainter(this);
         wPainter.drawImage(0, 0, graphicsBuffer);
+        //QPixmap pm;
+        //pm.convertFromImage(graphicsBuffer);
+        //wPainter.drawPixmap(this->rect(), pm);
         wPainter.end();
         return;
     }
@@ -104,6 +107,9 @@ void RGraphicsViewQt::paintEvent(QPaintEvent* e) {
     if (e!=NULL) {
         QPainter wPainter(this);
         wPainter.drawImage(0, 0, graphicsBufferWithPreview);
+        //QPixmap pm;
+        //pm.convertFromImage(graphicsBufferWithPreview);
+        //wPainter.drawPixmap(this->rect(), pm);
         wPainter.end();
     }
 
@@ -167,7 +173,7 @@ void RGraphicsViewQt::mouseMoveEvent(QMouseEvent* event) {
         return;
     }
 
-    RMouseEvent e(*event, *scene, *this);
+    RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
     RGraphicsView::handleMouseMoveEvent(e);
 
  #if (QT_VERSION < QT_VERSION_CHECK(4, 8, 0))
@@ -223,7 +229,7 @@ void RGraphicsViewQt::mousePressEvent(QMouseEvent* event) {
     if (event==NULL || scene==NULL) {
         return;
     }
-    RMouseEvent e(*event, *scene, *this);
+    RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
     RGraphicsView::handleMousePressEvent(e);
     lastButtonState = event->buttons();
     event->accept();
@@ -233,7 +239,7 @@ void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
     if (event==NULL || scene==NULL) {
         return;
     }
-    RMouseEvent e(*event, *scene, *this);
+    RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
     RGraphicsView::handleMouseReleaseEvent(e);
     lastButtonState = event->buttons();
     event->accept();
@@ -243,7 +249,7 @@ void RGraphicsViewQt::mouseDoubleClickEvent(QMouseEvent* event) {
     if (event==NULL || scene==NULL) {
         return;
     }
-    RMouseEvent e(*event, *scene, *this);
+    RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
     RGraphicsView::handleMouseDoubleClickEvent(e);
     lastButtonState = event->buttons();
     event->accept();
@@ -289,11 +295,11 @@ void RGraphicsViewQt::resizeEvent(QResizeEvent* ) {
 }
 
 int RGraphicsViewQt::getWidth() const {
-    return width();
+    return width() * getDevicePixelRatio();
 }
 
 int RGraphicsViewQt::getHeight() const {
-    return height();
+    return height() * getDevicePixelRatio();
 }
 
 QCursor RGraphicsViewQt::getCursor() {
@@ -403,4 +409,9 @@ void RGraphicsViewQt::simulateMouseMoveEvent() {
         lastKnownModelPosition = mapFromView(lastKnownScreenPosition);
     }
     RGraphicsView::simulateMouseMoveEvent();
+}
+
+double RGraphicsViewQt::getDevicePixelRatio() const {
+    return 1;
+    //return devicePixelRatio();
 }

@@ -88,6 +88,8 @@ public:
 
     virtual void simulateMouseMoveEvent();
 
+    double getDevicePixelRatio() const;
+
 signals:
     void drop(QDropEvent* event);
     void dragEnter(QDragEnterEvent* event);
@@ -96,6 +98,7 @@ signals:
 
     void updateSnapInfo(QPainter* painter, RSnap* snap, RSnapRestriction* restriction);
     void updateTextLabel(QPainter* painter, const RTextLabel& textLabel);
+
 
 protected:
     virtual QSize sizeHint() const;

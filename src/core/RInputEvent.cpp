@@ -22,8 +22,8 @@
 #include "RGraphicsView.h"
 #include "RUcs.h"
 
-RInputEvent::RInputEvent(const RVector& position, RGraphicsScene& s, RGraphicsView& v)
-    : screenPosition(position), scene(s), view(v) {
+RInputEvent::RInputEvent(const RVector& position, RGraphicsScene& s, RGraphicsView& v, qreal devicePixelRatio)
+    : screenPosition(position*devicePixelRatio), scene(s), view(v) {
 
     modelPosition = view.mapFromView(position);
 
