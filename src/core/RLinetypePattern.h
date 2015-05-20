@@ -133,6 +133,7 @@ public:
 
     RLinetypePattern& operator=(const RLinetypePattern& other);
     bool operator==(const RLinetypePattern& other) const;
+    bool operator<(const RLinetypePattern& other) const;
 
     bool isLoaded() { return true; }
     void load() {}

@@ -17,15 +17,14 @@
  * along with QCAD.
  */
 
-include("../../WidgetFactory.js");
+include("scripts/WidgetFactory.js");
 
 function PenToolBar() {
 }
 
 PenToolBar.init = function(basePath) {
     var penToolBar = EAction.getToolBar(qsTr("Pen"), "Pen");
-    var w = WidgetFactory.createWidget(
-        includeBasePath, "PenToolBar.ui", RMainWindowQt.getMainWindow());
+    var w = WidgetFactory.createWidget(includeBasePath, "PenToolBar.ui", RMainWindowQt.getMainWindow());
     WidgetFactory.moveChildren(w, penToolBar, w.objectName);
     w.destroy();
     //penToolBar.addWidget(w);

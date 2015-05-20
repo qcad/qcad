@@ -51,6 +51,7 @@ void RLinetypeCombo::init(RDocument* doc) {
 
     if (doc!=NULL) {
         patterns = doc->getLinetypePatterns();
+        qSort(patterns.begin(), patterns.end());
     }
 
     // change delegate if document changes to clear preview cache:

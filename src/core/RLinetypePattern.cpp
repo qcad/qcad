@@ -165,6 +165,33 @@ bool RLinetypePattern::operator==(const RLinetypePattern& other) const {
     return true;
 }
 
+bool RLinetypePattern::operator<(const RLinetypePattern& other) const {
+    QString n1 = name.toLower();
+    QString n2 = other.name.toLower();
+    if (n1=="bylayer") {
+        return true;
+    }
+    if (n2=="bylayer") {
+        return false;
+    }
+
+    if (n1=="byblock") {
+        return true;
+    }
+    if (n2=="byblock") {
+        return false;
+    }
+
+    if (n1=="continuous") {
+        return true;
+    }
+    if (n2=="continuous") {
+        return false;
+    }
+
+    return n1<n2;
+}
+
 void RLinetypePattern::scale(double factor) {
     for (int i = 0; i < pattern.length(); ++i) {
         pattern[i] *= factor;
