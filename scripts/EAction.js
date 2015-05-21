@@ -670,6 +670,12 @@ EAction.activateMainWindow = function() {
         return;
     }
     appWin.activateWindow();
+
+    var view = EAction.getGraphicsView();
+    if (!isNull(view)) {
+        // view loses focus because of dialogs:
+        view.giveFocus();
+    }
 };
 
 /**

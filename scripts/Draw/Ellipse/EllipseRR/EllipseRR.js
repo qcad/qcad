@@ -60,10 +60,12 @@ EllipseRR.prototype.getAuxPreview = function() {
 
 EllipseRR.prototype.slotXRadiusChanged = function(value) {
     this.width = value * 2;
+    this.updateOkButton();
     this.updatePreview(true);
 };
 
 EllipseRR.prototype.slotYRadiusChanged = function(value) {
     this.height = value * 2;
+    this.updateOkButton();
     this.updatePreview(true);
 };

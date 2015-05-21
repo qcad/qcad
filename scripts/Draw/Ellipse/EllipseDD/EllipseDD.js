@@ -60,10 +60,12 @@ EllipseDD.prototype.getAuxPreview = function() {
 
 EllipseDD.prototype.slotXDiameterChanged = function(value) {
     this.width = value;
+    this.updateOkButton();
     this.updatePreview(true);
 };
 
 EllipseDD.prototype.slotYDiameterChanged = function(value) {
     this.height = value;
+    this.updateOkButton();
     this.updatePreview(true);
 };

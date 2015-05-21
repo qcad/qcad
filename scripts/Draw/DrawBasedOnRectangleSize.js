@@ -155,7 +155,7 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
         return;
     }
 
-    this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile);
+    this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile, EAction.getMainWindow());
     WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
     this.dialog.windowTitle = this.getToolTitle();
     this.dialog.windowIcon = new QIcon();
@@ -208,7 +208,8 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
 
     EAction.activateMainWindow();
 
-    this.updatePreview();
+    this.simulateMouseMoveEvent();
+    //this.updatePreview(true);
 
     return ret;
 };
@@ -243,6 +244,14 @@ DrawBasedOnRectangleSize.prototype.initUiOptions = function(resume, restoreFromS
         }
     }
 
+    if (this.useDialog) {
+        var appWin = EAction.getMainWindow();
+        this.shortcutReturn = new QShortcut(new QKeySequence(Qt.Key_Return.valueOf()), refPointCombo, 0, 0, Qt.WindowShortcut);
+        this.shortcutReturn.activated.connect(this, "showDialog");
+        this.shortcutEnter = new QShortcut(new QKeySequence(Qt.Key_Enter.valueOf()), refPointCombo, 0, 0, Qt.WindowShortcut);
+        this.shortcutEnter.activated.connect(this, "showDialog");
+    }
+
     if (isNull(this.referencePointIndex) ||
         this.referencePointIndex<0 ||
         this.referencePointIndex>this.referencePoints.length-1) {
@@ -270,17 +279,18 @@ DrawBasedOnRectangleSize.prototype.pickCoordinate = function(event, preview) {
     }
 };
 
-DrawBasedOnRectangleSize.prototype.keyPressEvent = function(event) {
-    if (this.useDialog) {
-        // enter pressed:
-        if (event.key() === Qt.Key_Enter.valueOf() || event.key() === Qt.Key_Return.valueOf()) {
-            // show dialog to change size and angle:
-            this.showDialog();
-        }
-    }
+//DrawBasedOnRectangleSize.prototype.keyPressEvent = function(event) {
+//    qDebug("DrawBasedOnRectangleSize.prototype.keyPressEvent: ", event.key());
+//    if (this.useDialog) {
+//        // enter pressed:
+//        if (event.key() === Qt.Key_Enter.valueOf() || event.key() === Qt.Key_Return.valueOf()) {
+//            // show dialog to change size and angle:
+//            this.showDialog();
+//        }
+//    }
 
-    EAction.prototype.keyPressEvent.call(this, event);
-};
+//    EAction.prototype.keyPressEvent.call(this, event);
+//};
 
 DrawBasedOnRectangleSize.prototype.updatePreview = function(clear) {
     if (!isNull(this.dialog)) {

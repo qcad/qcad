@@ -56,5 +56,6 @@ CircleCR.prototype.getAuxPreview = function() {
 CircleCR.prototype.slotRadiusChanged = function(value) {
     this.width = value * 2;
     this.height = value * 2;
+    this.updateOkButton();
     this.updatePreview(true);
 };

@@ -56,5 +56,6 @@ CircleCD.prototype.getAuxPreview = function() {
 CircleCD.prototype.slotDiameterChanged = function(value) {
     this.width = value;
     this.height = value;
+    this.updateOkButton();
     this.updatePreview(true);
 };

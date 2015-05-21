@@ -39,7 +39,7 @@ BlockDialog.includeBasePath = includeBasePath;
 BlockDialog.prototype.show = function() {
     var lt;
     
-    this.dialog = WidgetFactory.createDialog(BlockDialog.includeBasePath, "BlockDialog.ui");
+    this.dialog = WidgetFactory.createDialog(BlockDialog.includeBasePath, "BlockDialog.ui", EAction.getMainWindow());
     //this.dialog.windowIcon = new QIcon(BlockDialog.includeBasePath + "/EditBlock/EditBlock.svg");
 
     var widgets = getWidgets(this.dialog);
