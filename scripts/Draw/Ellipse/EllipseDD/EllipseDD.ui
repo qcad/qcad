@@ -19,12 +19,18 @@
      <property name="buddy">
       <cstring>XDiameter</cstring>
      </property>
+     <property name="MoveToDialog" stdset="0">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="XDiameter">
-     <property name="text">
+    <widget class="RMathLineEdit" name="XDiameter" native="true">
+     <property name="text" stdset="0">
       <string notr="true">100</string>
+     </property>
+     <property name="MoveToDialog" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -36,12 +42,18 @@
      <property name="buddy">
       <cstring>YDiameter</cstring>
      </property>
+     <property name="MoveToDialog" stdset="0">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="YDiameter">
-     <property name="text">
+    <widget class="RMathLineEdit" name="YDiameter" native="true">
+     <property name="text" stdset="0">
       <string notr="true">50</string>
+     </property>
+     <property name="MoveToDialog" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -57,20 +69,26 @@
      <property name="text">
       <string>Angle:</string>
      </property>
+     <property name="MoveToDialog" stdset="0">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="Angle">
+    <widget class="RMathLineEdit" name="Angle" native="true">
      <property name="maximumSize">
       <size>
        <width>100</width>
        <height>16777215</height>
       </size>
      </property>
-     <property name="text">
+     <property name="text" stdset="0">
       <string notr="true">0</string>
      </property>
      <property name="angle" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
      </property>
     </widget>
@@ -110,15 +128,19 @@
     </widget>
    </item>
    <item>
-    <widget class="QToolButton" name="Reset"/>
+    <widget class="QToolButton" name="Reset">
+     <property name="HideInDialogMode" stdset="0">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
  <customwidgets>
   <customwidget>
    <class>RMathLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>RMathLineEdit.h</header>
+   <extends>QWidget</extends>
+   <header>rmathlineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

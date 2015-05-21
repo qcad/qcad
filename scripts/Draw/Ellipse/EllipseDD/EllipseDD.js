@@ -29,6 +29,7 @@ include("scripts/ShapeAlgorithms.js");
 function EllipseDD(guiAction) {
     DrawBasedOnRectangleSize.call(this, guiAction);
 
+    this.dialogUiFile = "EllipseDDDialog.ui";
     this.setUiOptions("EllipseDD.ui");
 }
 
