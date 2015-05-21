@@ -199,7 +199,21 @@ void RGuiAction::setIcon(const QString& iconFile) {
         QAction::setIcon(QIcon());
     }
     else {
-        QAction::setIcon(QIcon(iconFile));
+        int is = 128;
+        if (RSettings::getDevicePixelRatio()>1) {
+            is = 256;
+        }
+
+        QPixmap pm(is,is);
+        pm.fill(Qt::transparent);
+        QPainter p;
+        p.begin(&pm);
+        QSvgRenderer renderer(iconFile);
+        renderer.render(&p, QRectF(0, 0, is, is));
+        p.end();
+        
+        QIcon icon(pm);
+        QAction::setIcon(icon);
     }
 }
 
