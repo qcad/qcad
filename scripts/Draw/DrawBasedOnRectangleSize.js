@@ -41,19 +41,34 @@ function DrawBasedOnRectangleSize(guiAction) {
     this.height = 1;
     this.angle = 0;
     this.corners = [];
-    
+
     // [ObjectName], [Shown Text], offset vector
-    this.referencePoints = [
-        [ "TopLeft",     qsTr("Top Left"),     new RVector(-1,  1) ],
-        [ "Top",         qsTr("Top"),          new RVector( 0,  1) ],
-        [ "TopRight",    qsTr("Top Right"),    new RVector( 1,  1) ],
-        [ "Left",        qsTr("Left"),         new RVector(-1,  0) ],
-        [ "Middle",      qsTr("Middle"),       new RVector( 0,  0) ],
-        [ "Right",       qsTr("Right"),        new RVector( 1,  0) ],
-        [ "BottomLeft",  qsTr("Bottom Left"),  new RVector(-1, -1) ],
-        [ "Bottom",      qsTr("Bottom"),       new RVector( 0, -1) ],
-        [ "BottomRight", qsTr("Bottom Right"), new RVector( 1, -1) ]
-    ];
+    var tl = [ "TopLeft",     qsTr("Top Left"),     new RVector(-1,  1) ];
+    var t =  [ "Top",         qsTr("Top"),          new RVector( 0,  1) ];
+    var tr = [ "TopRight",    qsTr("Top Right"),    new RVector( 1,  1) ];
+    var l =  [ "Left",        qsTr("Left"),         new RVector(-1,  0) ];
+    var m =  [ "Middle",      qsTr("Middle"),       new RVector( 0,  0) ];
+    var r =  [ "Right",       qsTr("Right"),        new RVector( 1,  0) ];
+    var bl = [ "BottomLeft",  qsTr("Bottom Left"),  new RVector(-1, -1) ];
+    var b =  [ "Bottom",      qsTr("Bottom"),       new RVector( 0, -1) ];
+    var br = [ "BottomRight", qsTr("Bottom Right"), new RVector( 1, -1) ];
+    
+    if (RSettings.getBoolValue("DrawBasedOnRectangleSize/ReversedShortcuts", false)) {
+        this.referencePoints = [
+            tl, t, tr,
+            l, m, r,
+            bl, b, br,
+        ];
+    }
+    else {
+        // fits with number pad:
+        this.referencePoints = [
+            bl, b, br,
+            l, m, r,
+            tl, t, tr,
+        ];
+    }
+
     this.referencePointIndex = undefined;
 }
 
@@ -116,7 +131,10 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
     children = optionsToolBar.children();
     for (i = 0; i < children.length; ++i) {
         c = children[i];
-        if (c["MoveToDialog"]===true) {
+        if (c["HideInDialogMode"]===true) {
+            c.destroy();
+        }
+        else if (c["MoveToDialog"]===true) {
             widgets.push(c);
         }
         else {
@@ -137,10 +155,8 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
         return;
     }
 
-    this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile);
-    qDebug("restore");
+    this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile, EAction.getMainWindow());
     WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
-    qDebug("restore: OK");
     this.dialog.windowTitle = this.getToolTitle();
     this.dialog.windowIcon = new QIcon();
 
@@ -184,13 +200,16 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
     this.dialog.destroy();
     this.dialog = undefined;
 
-    var view = EAction.getGraphicsView();
-    if (!isNull(view)) {
-        // view loses focus because of dialog:
-        view.giveFocus();
-    }
+//    var view = EAction.getGraphicsView();
+//    if (!isNull(view)) {
+//        // view loses focus because of dialog:
+//        view.giveFocus();
+//    }
 
-    this.updatePreview();
+    EAction.activateMainWindow();
+
+    this.simulateMouseMoveEvent();
+    //this.updatePreview(true);
 
     return ret;
 };
@@ -225,6 +244,14 @@ DrawBasedOnRectangleSize.prototype.initUiOptions = function(resume, restoreFromS
         }
     }
 
+    if (this.useDialog) {
+        var appWin = EAction.getMainWindow();
+        this.shortcutReturn = new QShortcut(new QKeySequence(Qt.Key_Return.valueOf()), refPointCombo, 0, 0, Qt.WindowShortcut);
+        this.shortcutReturn.activated.connect(this, "showDialog");
+        this.shortcutEnter = new QShortcut(new QKeySequence(Qt.Key_Enter.valueOf()), refPointCombo, 0, 0, Qt.WindowShortcut);
+        this.shortcutEnter.activated.connect(this, "showDialog");
+    }
+
     if (isNull(this.referencePointIndex) ||
         this.referencePointIndex<0 ||
         this.referencePointIndex>this.referencePoints.length-1) {
@@ -252,17 +279,18 @@ DrawBasedOnRectangleSize.prototype.pickCoordinate = function(event, preview) {
     }
 };
 
-DrawBasedOnRectangleSize.prototype.keyPressEvent = function(event) {
-    if (this.useDialog) {
-        // enter pressed:
-        if (event.key() === Qt.Key_Enter.valueOf() || event.key() === Qt.Key_Return.valueOf()) {
-            // show dialog to change size and angle:
-            this.showDialog();
-        }
-    }
+//DrawBasedOnRectangleSize.prototype.keyPressEvent = function(event) {
+//    qDebug("DrawBasedOnRectangleSize.prototype.keyPressEvent: ", event.key());
+//    if (this.useDialog) {
+//        // enter pressed:
+//        if (event.key() === Qt.Key_Enter.valueOf() || event.key() === Qt.Key_Return.valueOf()) {
+//            // show dialog to change size and angle:
+//            this.showDialog();
+//        }
+//    }
 
-    EAction.prototype.keyPressEvent.call(this, event);
-};
+//    EAction.prototype.keyPressEvent.call(this, event);
+//};
 
 DrawBasedOnRectangleSize.prototype.updatePreview = function(clear) {
     if (!isNull(this.dialog)) {

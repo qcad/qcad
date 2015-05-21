@@ -34,24 +34,24 @@ AbstractPreferences.prototype = new Edit();
 AbstractPreferences.prototype.beginEvent = function() {
     Edit.prototype.beginEvent.call(this);
     
-    this.formWidget = this.createWidget("scripts/Edit/AbstractPreferences.ui");
+    this.dialog = this.createWidget("scripts/Edit/AbstractPreferences.ui");
     // TODO: Qt 5: add this flag (?)
     //var flags = new Qt.WindowFlags(Qt.WindowTitleHint);
-    //this.formWidget.setWindowFlags(flags);
-    this.treeWidget = this.formWidget.findChild("twCategory");
+    //this.dialog.setWindowFlags(flags);
+    this.treeWidget = this.dialog.findChild("twCategory");
     var title;
     if (this.appPreferences) {
         title = qsTr("Application Preferences");
     } else {
         title = qsTr("Drawing Preferences");
     }
-    this.formWidget.setWindowTitle(title);
+    this.dialog.setWindowTitle(title);
     this.treeWidget.setHeaderLabel(title);
-    this.pageWidget = this.formWidget.findChild("stwPage");
-    this.filterWidget = this.formWidget.findChild("leFilter");
-    this.titleWidget = this.formWidget.findChild("lbTitle");
+    this.pageWidget = this.dialog.findChild("stwPage");
+    this.filterWidget = this.dialog.findChild("leFilter");
+    this.titleWidget = this.dialog.findChild("lbTitle");
     
-    var splitter = this.formWidget.findChild("splitter");
+    var splitter = this.dialog.findChild("splitter");
     splitter.setStretchFactor(0, 1);
     splitter.setStretchFactor(1, 4);
     
@@ -59,7 +59,7 @@ AbstractPreferences.prototype.beginEvent = function() {
     this.treeWidget.itemSelectionChanged.connect(this, "showPage");
     this.filterWidget.textChanged.connect(this, "filterTree");    
 
-    var btApply = this.formWidget.findChild("buttonBox").button(QDialogButtonBox.Apply);
+    var btApply = this.dialog.findChild("buttonBox").button(QDialogButtonBox.Apply);
     btApply.clicked.connect(this, "apply");
 
     this.addOns = AddOn.getAddOns();
@@ -67,11 +67,12 @@ AbstractPreferences.prototype.beginEvent = function() {
     AbstractPreferences.fillTreeWidget(this.addOns, this.treeWidget, this.appPreferences);
     this.treeWidget.expandAll();
 
-    if (this.formWidget.exec() === QDialog.Accepted.valueOf()) {
+    if (this.dialog.exec() === QDialog.Accepted.valueOf()) {
         // apply calls save and apply:
         this.apply();
     }
-    this.formWidget.destroy();
+    this.dialog.destroy();
+    EAction.activateMainWindow();
     this.terminate();
 };
 
@@ -400,7 +401,7 @@ AbstractPreferences.prototype.showPage = function() {
                 font.setBold(true);
                 treeWidget.currentItem().setFont(0, font);
             };
-            var btReset = this.formWidget.findChild("ResetToDefaults");
+            var btReset = this.dialog.findChild("ResetToDefaults");
             try {
                 btReset.clicked.disconnect(this, "reset");
             } catch (e) {

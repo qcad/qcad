@@ -39,7 +39,7 @@ BlockDialog.includeBasePath = includeBasePath;
 BlockDialog.prototype.show = function() {
     var lt;
     
-    this.dialog = WidgetFactory.createDialog(BlockDialog.includeBasePath, "BlockDialog.ui");
+    this.dialog = WidgetFactory.createDialog(BlockDialog.includeBasePath, "BlockDialog.ui", EAction.getMainWindow());
     //this.dialog.windowIcon = new QIcon(BlockDialog.includeBasePath + "/EditBlock/EditBlock.svg");
 
     var widgets = getWidgets(this.dialog);
@@ -71,6 +71,7 @@ BlockDialog.prototype.show = function() {
 
     if (!this.dialog.exec()) {
         this.dialog.destroy();
+        EAction.activateMainWindow();
         return undefined;
     }
 
@@ -79,10 +80,11 @@ BlockDialog.prototype.show = function() {
         this.block.setName(text);
         return this.block;
     }
-    this.dialog.setAttribute(Qt.WA_DeleteOnClose);
-    this.dialog.close();
+    //this.dialog.setAttribute(Qt.WA_DeleteOnClose);
+    //this.dialog.close();
     var block = new RBlock(this.document, text, new RVector(0,0));
     this.dialog.destroy();
+    EAction.activateMainWindow();
     return block;
 };
 

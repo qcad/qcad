@@ -147,12 +147,14 @@ ColumnLayout.prototype.setGeometry = function(rect) {
 
     var verticalWhenFloating = RSettings.getBoolValue("CadToolBar/VerticalWhenFloating", false);
     var horizontal = (this.toolBar.orientation===Qt.Horizontal && verticalWhenFloating!==true);
+    var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
 
     if (this.property("sHintColumns")===columns &&
         this.property("sHintWidth")===width &&
         this.property("sHintHeight")===height &&
         this.property("sHintVerticalWhenFloating")===verticalWhenFloating &&
-        this.property("sHintHorizontal")===horizontal) {
+        this.property("sHintHorizontal")===horizontal &&
+        this.property("sHintIconSize")===iconSize) {
 
         return this.sHint;
     }
@@ -160,7 +162,6 @@ ColumnLayout.prototype.setGeometry = function(rect) {
     var w = (horizontal && this.toolBar.movable) ? 2 : 0;
     var h = (!horizontal && this.toolBar.movable) ? 2 : 0;
 
-    var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
     var buttonSize = iconSize * 1.25;
     var c=0;
     var groupOrder=-1;
@@ -265,6 +266,7 @@ ColumnLayout.prototype.setGeometry = function(rect) {
     this.setProperty("sHintHeight", height);
     this.setProperty("sHintVerticalWhenFloating", verticalWhenFloating);
     this.setProperty("sHintHorizontal", horizontal);
+    this.setProperty("sHintIconSize", iconSize);
 };
 
 ColumnLayout.prototype.itemAt = function(index) {

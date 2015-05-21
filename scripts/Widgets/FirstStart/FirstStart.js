@@ -29,13 +29,13 @@ FirstStart.prototype.showDialog = function() {
     var code;
     
     this.path = "scripts/Widgets/FirstStart";
-    var formWidget = WidgetFactory.createWidget(this.path, "FirstStartDialog.ui", null);
+    var dialog = WidgetFactory.createWidget(this.path, "FirstStartDialog.ui", null);
 
     var pathFi = new QFileInfo(this.path);
-    formWidget.windowTitle = qsTr("%1 First Start").arg(qApp.applicationName);
-    formWidget.styleSheet = 
+    dialog.windowTitle = qsTr("%1 First Start").arg(qApp.applicationName);
+    dialog.styleSheet =
         "QDialog{ background-image: url(" + pathFi.absoluteFilePath() + "/firststart.png) }";
-    this.widgets = getWidgets(formWidget);
+    this.widgets = getWidgets(dialog);
 
     // language combo
     var langCombo = this.widgets["Language"];
@@ -75,7 +75,7 @@ FirstStart.prototype.showDialog = function() {
     this.translators = [];
     this.changeLanguage(code);
 
-    if (formWidget.exec()) {
+    if (dialog.exec()) {
         // save settings
 
         // language:
@@ -150,7 +150,7 @@ FirstStart.prototype.showDialog = function() {
         settings.sync();
     }
 
-    formWidget.destroy();
+    dialog.destroy();
 };
 
 FirstStart.prototype.changeLanguage = function(code) {

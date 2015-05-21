@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Bevel", "&Chamfer / Bevel"), 
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("Bevel", "&Chamfer / Bevel"),  RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/Bevel.js");
     action.setIcon(basePath + "/Bevel.svg");

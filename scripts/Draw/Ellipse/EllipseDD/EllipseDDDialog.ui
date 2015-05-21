@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EllipseDD</class>
+ <widget class="QDialog" name="EllipseDD">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>315</width>
+    <height>136</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout" columnstretch="0,2,0,0">
+     <item row="0" column="0">
+      <widget class="QLabel" name="XDiameterLabel">
+       <property name="text">
+        <string>X Diameter:</string>
+       </property>
+       <property name="buddy">
+        <cstring>XDiameter</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="RMathLineEdit" name="Angle" native="true">
+       <property name="text" stdset="0">
+        <string notr="true">0</string>
+       </property>
+       <property name="angle" stdset="0">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="AngleEqual">
+       <property name="text">
+        <string notr="true">=</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLabel" name="AngleResult">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string notr="true">0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="XDiameterEqual">
+       <property name="text">
+        <string notr="true">=</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="RMathLineEdit" name="XDiameter" native="true">
+       <property name="text" stdset="0">
+        <string notr="true">0</string>
+       </property>
+       <property name="DefaultFocus" stdset="0">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="AngleLabel">
+       <property name="text">
+        <string>Angle:</string>
+       </property>
+       <property name="buddy">
+        <cstring>Angle</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="XDiameterResult">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string notr="true">0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="YDiameterLabel">
+       <property name="text">
+        <string>Y Diameter:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="YDiameterEqual">
+       <property name="text">
+        <string notr="true">=</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="RMathLineEdit" name="YDiameter" native="true">
+       <property name="text" stdset="0">
+        <string notr="true">0</string>
+       </property>
+       <property name="DefaultFocus" stdset="0">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLabel" name="YDiameterResult">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string notr="true">0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QDialogButtonBox" name="ButtonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QWidget</extends>
+   <header>rmathlineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>XDiameter</tabstop>
+  <tabstop>YDiameter</tabstop>
+  <tabstop>Angle</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ButtonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>EllipseDD</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>186</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ButtonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>EllipseDD</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>264</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>278</x>
+     <y>130</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

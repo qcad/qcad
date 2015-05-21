@@ -1259,6 +1259,7 @@ PropertyEditorImpl.prototype.addCustomProperty = function() {
 
     if (!dialog.exec()) {
         dialog.destroy();
+        EAction.activateMainWindow();
         return;
     }
 
@@ -1270,6 +1271,7 @@ PropertyEditorImpl.prototype.addCustomProperty = function() {
     this.onlyChangesOverride = false;
 
     dialog.destroy();
+    EAction.activateMainWindow();
 };
 
 

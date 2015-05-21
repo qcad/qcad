@@ -44,6 +44,7 @@ ExXmlExport.prototype.beginEvent = function() {
     fileDialog.acceptMode = QFileDialog.AcceptSave;
     if (!fileDialog.exec()) {
         fileDialog.destroy();
+        EAction.activateMainWindow();
         this.terminate();
         return;
     }
@@ -51,6 +52,7 @@ ExXmlExport.prototype.beginEvent = function() {
     var files = fileDialog.selectedFiles();
     if (files.length===0) {
         fileDialog.destroy();
+        EAction.activateMainWindow();
         this.terminate();
         return;
     }

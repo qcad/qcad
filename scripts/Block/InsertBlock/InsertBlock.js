@@ -284,6 +284,7 @@ InsertBlock.prototype.slotArray = function() {
     dialog.exec();
     WidgetFactory.saveState(dialog, this.settingsGroup);
     dialog.destroy();
+    EAction.activateMainWindow();
 };
 
 InsertBlock.prototype.slotColumnCountChanged = function(value) {

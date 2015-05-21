@@ -30,7 +30,7 @@ About.prototype = new Help();
 About.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
 
-    var formWidget = this.createWidget("AboutDialog.ui");
+    var dialog = this.createWidget("AboutDialog.ui");
 
     this.head = "<head>\n"
          + "<style type='text/css'>\n"
@@ -44,33 +44,35 @@ About.prototype.beginEvent = function() {
     this.applicationName = qApp.applicationName;
 
     // init plugin view:
-    var webView = formWidget.findChild("PluginsText");
+    var webView = dialog.findChild("PluginsText");
     WidgetFactory.initWebView(webView, this, "openUrl");
     var webPage = webView.page();
     webPage.linkDelegationPolicy = QWebPage.DelegateAllLinks;
     this.initAboutPlugins(webView);
 
-    formWidget.windowTitle = qsTr("About %1").arg(this.applicationName);
+    dialog.windowTitle = qsTr("About %1").arg(this.applicationName);
 
     // init about view:
-    webView = formWidget.findChild("AppText");
+    webView = dialog.findChild("AppText");
     WidgetFactory.initWebView(webView, this, "openUrl");
     this.initAboutApp(webView);
 
     // init scripts view:
-    webView = formWidget.findChild("ScriptsText");
+    webView = dialog.findChild("ScriptsText");
     WidgetFactory.initWebView(webView, this, "openUrl");
     this.initAboutScripts(webView);
 
-    webView = formWidget.findChild("CreditsText");
+    webView = dialog.findChild("CreditsText");
     WidgetFactory.initWebView(webView, this, "openUrl");
     this.initCredits(webView);
 
     // init system view:
-    var textEdit = formWidget.findChild("SystemText");
+    var textEdit = dialog.findChild("SystemText");
     this.initAboutSystem(textEdit);
 
-    formWidget.exec();
+    dialog.exec();
+    dialog.destroy();
+    EAction.activateMainWindow();
 };
 
 About.prototype.initAboutApp = function(webView) {

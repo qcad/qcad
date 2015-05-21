@@ -39,6 +39,7 @@ SelectByHandle.prototype.beginEvent = function() {
 
     if (!dialog.exec()) {
         dialog.destroy();
+        EAction.activateMainWindow();
         this.terminate();
         return;
     }
@@ -61,5 +62,6 @@ SelectByHandle.prototype.beginEvent = function() {
     }
 
     dialog.destroy();
+    EAction.activateMainWindow();
     this.terminate();
 };

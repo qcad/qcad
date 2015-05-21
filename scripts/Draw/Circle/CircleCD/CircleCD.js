@@ -28,6 +28,7 @@ include("../../DrawBasedOnRectangleSize.js");
 function CircleCD(guiAction) {
     DrawBasedOnRectangleSize.call(this, guiAction);
 
+    this.dialogUiFile = "CircleCDDialog.ui";
     this.setUiOptions("CircleCD.ui");
 }
 
@@ -55,5 +56,6 @@ CircleCD.prototype.getAuxPreview = function() {
 CircleCD.prototype.slotDiameterChanged = function(value) {
     this.width = value;
     this.height = value;
+    this.updateOkButton();
     this.updatePreview(true);
 };

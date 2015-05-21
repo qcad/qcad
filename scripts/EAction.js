@@ -661,6 +661,24 @@ EAction.getMainWindow = function() {
 };
 
 /**
+ * Reactivates the main window after showing a dialog.
+ * This is necessary with Qt>=5.
+ */
+EAction.activateMainWindow = function() {
+    var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return;
+    }
+    appWin.activateWindow();
+
+    var view = EAction.getGraphicsView();
+    if (!isNull(view)) {
+        // view loses focus because of dialogs:
+        view.giveFocus();
+    }
+};
+
+/**
  * \return The current MDI child or null.
  */
 EAction.getMdiChild = function() {

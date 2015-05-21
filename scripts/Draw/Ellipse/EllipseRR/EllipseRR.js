@@ -29,6 +29,7 @@ include("scripts/ShapeAlgorithms.js");
 function EllipseRR(guiAction) {
     DrawBasedOnRectangleSize.call(this, guiAction);
 
+    this.dialogUiFile = "EllipseRRDialog.ui";
     this.setUiOptions("EllipseRR.ui");
 }
 
@@ -59,10 +60,12 @@ EllipseRR.prototype.getAuxPreview = function() {
 
 EllipseRR.prototype.slotXRadiusChanged = function(value) {
     this.width = value * 2;
+    this.updateOkButton();
     this.updatePreview(true);
 };
 
 EllipseRR.prototype.slotYRadiusChanged = function(value) {
     this.height = value * 2;
+    this.updateOkButton();
     this.updatePreview(true);
 };
