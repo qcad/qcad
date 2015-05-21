@@ -28,6 +28,7 @@ include("../../DrawBasedOnRectangleSize.js");
 function CircleCD(guiAction) {
     DrawBasedOnRectangleSize.call(this, guiAction);
 
+    this.dialogUiFile = "CircleCDDialog.ui";
     this.setUiOptions("CircleCD.ui");
 }
 

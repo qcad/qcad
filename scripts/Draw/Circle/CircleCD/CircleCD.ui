@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>649</width>
-    <height>46</height>
+    <height>50</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
@@ -16,11 +16,14 @@
      <property name="text">
       <string>Diameter:</string>
      </property>
+     <property name="MoveToDialog" stdset="0">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="Diameter">
-     <property name="text">
+    <widget class="RMathLineEdit" name="Diameter" native="true">
+     <property name="text" stdset="0">
       <string notr="true">1</string>
      </property>
      <property name="angle" stdset="0">
@@ -28,6 +31,9 @@
      </property>
      <property name="defaultUnit" stdset="0">
       <number>0</number>
+     </property>
+     <property name="MoveToDialog" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -43,20 +49,26 @@
      <property name="text">
       <string>Angle:</string>
      </property>
+     <property name="MoveToDialog" stdset="0">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="Angle">
+    <widget class="RMathLineEdit" name="Angle" native="true">
      <property name="maximumSize">
       <size>
        <width>100</width>
        <height>16777215</height>
       </size>
      </property>
-     <property name="text">
+     <property name="text" stdset="0">
       <string notr="true">0</string>
      </property>
      <property name="angle" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
      </property>
     </widget>
@@ -103,8 +115,8 @@
  <customwidgets>
   <customwidget>
    <class>RMathLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>RMathLineEdit.h</header>
+   <extends>QWidget</extends>
+   <header>rmathlineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
