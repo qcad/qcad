@@ -14,7 +14,12 @@ CONFIG += warn_off
 # Handles dllimport/dllexport directives:
 DEFINES += QUAZIP_BUILD
 
-INCLUDEPATH += $$[QT_INSTALL_HEADERS]/../src/3rdparty/zlib
+contains(QT_VERSION, ^5\\..*\\..*) {
+    INCLUDEPATH += $$[QT_INSTALL_HEADERS]/QtZlib
+}
+else {
+    INCLUDEPATH += $$[QT_INSTALL_HEADERS]/../src/3rdparty/zlib
+}
 
 include(src/quazip.pri)
 #include($$[QT_INSTALL_HEADERS]/../src/3rdparty/zlib.pri)
