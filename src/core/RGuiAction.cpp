@@ -199,21 +199,23 @@ void RGuiAction::setIcon(const QString& iconFile) {
         QAction::setIcon(QIcon());
     }
     else {
-        int is = 128;
+        int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
         if (RSettings::getDevicePixelRatio()>1) {
-            is = 256;
+            //is = 256;
+            iconSize*=RSettings::getDevicePixelRatio();
         }
 
-        QPixmap pm(is,is);
+        QPixmap pm(iconSize,iconSize);
         pm.fill(Qt::transparent);
         QPainter p;
         p.begin(&pm);
         QSvgRenderer renderer(iconFile);
-        renderer.render(&p, QRectF(0, 0, is, is));
+        renderer.render(&p, QRectF(0, 0, iconSize, iconSize));
         p.end();
         
         QIcon icon(pm);
         QAction::setIcon(icon);
+//        QAction::setIcon(QIcon(iconFile));
     }
 }
 
