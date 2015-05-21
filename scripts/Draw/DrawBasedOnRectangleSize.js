@@ -41,19 +41,34 @@ function DrawBasedOnRectangleSize(guiAction) {
     this.height = 1;
     this.angle = 0;
     this.corners = [];
-    
+
     // [ObjectName], [Shown Text], offset vector
-    this.referencePoints = [
-        [ "TopLeft",     qsTr("Top Left"),     new RVector(-1,  1) ],
-        [ "Top",         qsTr("Top"),          new RVector( 0,  1) ],
-        [ "TopRight",    qsTr("Top Right"),    new RVector( 1,  1) ],
-        [ "Left",        qsTr("Left"),         new RVector(-1,  0) ],
-        [ "Middle",      qsTr("Middle"),       new RVector( 0,  0) ],
-        [ "Right",       qsTr("Right"),        new RVector( 1,  0) ],
-        [ "BottomLeft",  qsTr("Bottom Left"),  new RVector(-1, -1) ],
-        [ "Bottom",      qsTr("Bottom"),       new RVector( 0, -1) ],
-        [ "BottomRight", qsTr("Bottom Right"), new RVector( 1, -1) ]
-    ];
+    var tl = [ "TopLeft",     qsTr("Top Left"),     new RVector(-1,  1) ];
+    var t =  [ "Top",         qsTr("Top"),          new RVector( 0,  1) ];
+    var tr = [ "TopRight",    qsTr("Top Right"),    new RVector( 1,  1) ];
+    var l =  [ "Left",        qsTr("Left"),         new RVector(-1,  0) ];
+    var m =  [ "Middle",      qsTr("Middle"),       new RVector( 0,  0) ];
+    var r =  [ "Right",       qsTr("Right"),        new RVector( 1,  0) ];
+    var bl = [ "BottomLeft",  qsTr("Bottom Left"),  new RVector(-1, -1) ];
+    var b =  [ "Bottom",      qsTr("Bottom"),       new RVector( 0, -1) ];
+    var br = [ "BottomRight", qsTr("Bottom Right"), new RVector( 1, -1) ];
+    
+    if (RSettings.getBoolValue("DrawBasedOnRectangleSize/ReversedShortcuts", false)) {
+        this.referencePoints = [
+            tl, t, tr,
+            l, m, r,
+            bl, b, br,
+        ];
+    }
+    else {
+        // fits with number pad:
+        this.referencePoints = [
+            bl, b, br,
+            l, m, r,
+            tl, t, tr,
+        ];
+    }
+
     this.referencePointIndex = undefined;
 }
 
@@ -116,7 +131,10 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
     children = optionsToolBar.children();
     for (i = 0; i < children.length; ++i) {
         c = children[i];
-        if (c["MoveToDialog"]===true) {
+        if (c["HideInDialogMode"]===true) {
+            c.destroy();
+        }
+        else if (c["MoveToDialog"]===true) {
             widgets.push(c);
         }
         else {
