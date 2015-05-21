@@ -115,11 +115,7 @@ else {
                 imageformats\\qmng.dll \
                 imageformats\\qsvg.dll \
                 imageformats\\qtiff.dll \
-                sqldrivers\\qsqlite.dll \
-                codecs\\qcncodecs.dll \
-                codecs\\qjpcodecs.dll \
-                codecs\\qkrcodecs.dll \
-                codecs\\qtwcodecs.dll
+                sqldrivers\\qsqlite.dll
         }
 
         contains(QT_VERSION, ^4\\..*\\..*) {
@@ -151,12 +147,17 @@ else {
             }
             !exists("$${DESTDIR_WIN}\\..\\plugins\\$${FILE}") {
                 message(Copying $${FILE})
-                system(copy "$$[QT_INSTALL_PLUGINS]\\$${FILE}" "$${DESTDIR_WIN}\\..\\plugins\\$${FILE}")
+                system(cp "$$[QT_INSTALL_PLUGINS]\\$${FILE}" "$${DESTDIR_WIN}\\..\\plugins\\$${FILE}")
             }
         }
 
         # copy Qt libraries into same dir as exe to avoid Qt version mixup:
-        system(copy "$$[QT_INSTALL_LIBS]\\*.dll" "$${DESTDIR_WIN}")
+        contains(QT_VERSION, ^5\\..*\\..*) {
+            system(cp "$$[QT_INSTALL_BINS]/*.dll" "$${DESTDIR_WIN}")
+        }
+        else {
+            system(cp "$$[QT_INSTALL_LIBS]/*.dll" "$${DESTDIR_WIN}")
+        }
     }
 }
 

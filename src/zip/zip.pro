@@ -1,7 +1,13 @@
 include( ../../shared.pri )
 
 INCLUDEPATH+=../3rdparty/quazip/src
-INCLUDEPATH += $$[QT_INSTALL_HEADERS]/../src/3rdparty/zlib
+
+contains(QT_VERSION, ^5\\..*\\..*) {
+    INCLUDEPATH += $$[QT_INSTALL_HEADERS]/QtZlib
+}
+else {
+    INCLUDEPATH += $$[QT_INSTALL_HEADERS]/../src/3rdparty/zlib
+}
 
 HEADERS = \
     RZip.h

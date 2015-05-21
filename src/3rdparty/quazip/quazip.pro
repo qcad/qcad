@@ -22,7 +22,6 @@ else {
 }
 
 include(src/quazip.pri)
-#include($$[QT_INSTALL_HEADERS]/../src/3rdparty/zlib.pri)
 
 !win32-msvc* {
     LIBS += -lz
