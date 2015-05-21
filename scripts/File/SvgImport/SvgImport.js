@@ -71,6 +71,7 @@ SvgImport.prototype.beginEvent = function() {
 
     if (!dialog.exec()) {
         dialog.destroy();
+        EAction.activateMainWindow();
         this.terminate();
         return;
     }
@@ -94,5 +95,6 @@ SvgImport.prototype.beginEvent = function() {
     }
     
     dialog.destroy();
+    EAction.activateMainWindow();
     this.terminate();
 };

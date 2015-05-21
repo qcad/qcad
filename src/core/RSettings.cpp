@@ -539,15 +539,14 @@ QString RSettings::getOSVersion() {
         return "Windows Vista, Windows Server 2008 (operating system version 6.0)";
     case QSysInfo::WV_WINDOWS7:
         return "Windows 7, Windows Server 2008 R2 (operating system version 6.1)";
-#if QT_VERSION >= 0x040800
-    case QSysInfo::WV_WINDOWS8:
+    // QSysInfo::WV_WINDOWS8:
+    case 0x00a0:
         return "Windows 8";
-    default:
-        return "Unknown / Unsupported";
-#else
+    // QSysInfo::WV_WINDOWS8_1:
+    case 0x00b0:
+        return "Windows 8.1";
     default:
         return "Windows >= 8";
-#endif
     }
 #elif defined (Q_OS_MAC)
     switch (QSysInfo::MacintoshVersion) {
@@ -571,11 +570,15 @@ QString RSettings::getOSVersion() {
         return "Mac OS X 10.7";
     case QSysInfo::MV_10_8:
         return "Mac OS X 10.8";
+    // QSysInfo::MV_10_9:
     case 0x000B:
         return "Mac OS X 10.9";
+    // QSysInfo::MV_10_10:
+    case 0x000C:
+        return "Mac OS X 10.10";
     default:
     case QSysInfo::MV_Unknown:
-        return "Mac OS X > 10.9";
+        return "Mac OS X > 10.10";
     }
 #else
     return "Unknown";

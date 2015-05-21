@@ -28,6 +28,8 @@
 #include <QFontDatabase>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
+#include <QPrinter>
+#include <QPrintDialog>
 #include <QXmlResultItems>
 #include <QXmlStreamWriter>
 #include <QXmlContentHandler>
@@ -443,6 +445,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     QScriptValue classQPrinter = globalObject.property("QPrinter");
     classQPrinter.property("prototype").setProperty("destroy",
             engine->newFunction(ecmaObjectDestroy<QPrinter>));
+
+    QScriptValue classQPrintDialog = globalObject.property("QPrintDialog");
+    classQPrintDialog.property("prototype").setProperty("destroy",
+            engine->newFunction(ecmaObjectDestroy<QPrintDialog>));
 
     QScriptValue classQTimer = globalObject.property("QTimer");
     classQTimer.property("prototype").setProperty("destroy",

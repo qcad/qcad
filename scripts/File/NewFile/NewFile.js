@@ -132,13 +132,13 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
             errorCode = documentInterface.importFile(fileName, nameFilter);
         }
         if (errorCode !== RDocumentInterface.IoErrorNoError) {
-            var dlg = new QMessageBox(
+            var dialog = new QMessageBox(
                 QMessageBox.Warning,
                 qsTr("Import Error"),
                 "",
                 QMessageBox.OK
             );
-            var path = fileName.elidedText(dlg.font, 500);
+            var path = fileName.elidedText(dialog.font, 500);
             var text = qsTr("Cannot open file") + "\n\n'%1'.\n\n".arg(path);
             switch (errorCode) {
             case RDocumentInterface.IoErrorNoImporterFound:
@@ -155,10 +155,11 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
                 text += qsTr("File is empty.");
                 break;
             }
-            dlg.text = text;
+            dialog.text = text;
             appWin.handleUserWarning(text);
-            dlg.exec();
-            dlg.destroy();
+            dialog.exec();
+            dialog.destroy();
+            EAction.activateMainWindow();
             RSettings.removeRecentFile(fileName);
             return undefined;
         }
@@ -398,5 +399,6 @@ NewFile.closeRequested = function(mdiChild) {
         mdiChild.setCloseEventRejected();
     }
     dialog.destroy();
+    EAction.activateMainWindow();
 };
 

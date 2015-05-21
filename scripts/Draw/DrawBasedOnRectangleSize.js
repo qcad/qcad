@@ -138,9 +138,7 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
     }
 
     this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile);
-    qDebug("restore");
     WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
-    qDebug("restore: OK");
     this.dialog.windowTitle = this.getToolTitle();
     this.dialog.windowIcon = new QIcon();
 
@@ -184,11 +182,13 @@ DrawBasedOnRectangleSize.prototype.showDialog = function() {
     this.dialog.destroy();
     this.dialog = undefined;
 
-    var view = EAction.getGraphicsView();
-    if (!isNull(view)) {
-        // view loses focus because of dialog:
-        view.giveFocus();
-    }
+//    var view = EAction.getGraphicsView();
+//    if (!isNull(view)) {
+//        // view loses focus because of dialog:
+//        view.giveFocus();
+//    }
+
+    EAction.activateMainWindow();
 
     this.updatePreview();
 

@@ -404,6 +404,7 @@ TextDialog.prototype.show =  function(textDataIn) {
     if (!this.dialog.exec()) {
         // dialog canceled:
         this.dialog.destroy();
+        EAction.activateMainWindow();
         return undefined;
     }
 
@@ -486,6 +487,8 @@ TextDialog.prototype.show =  function(textDataIn) {
     RSettings.setValue("TextDialog/MainFont", textDataOut.getFontName());
 
     this.dialog.destroy();
+    EAction.activateMainWindow();
+
     return textDataOut;
 };
 

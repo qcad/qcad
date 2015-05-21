@@ -153,6 +153,7 @@ Translate.prototype.showDialog = function() {
     WidgetFactory.restoreState(dialog);
     if (!dialog.exec()) {
         dialog.destroy();
+        EAction.activateMainWindow();
         return false;
     }
 
@@ -172,6 +173,7 @@ Translate.prototype.showDialog = function() {
     WidgetFactory.saveState(dialog);
 
     dialog.destroy();
+    EAction.activateMainWindow();
     return true;
 };
 

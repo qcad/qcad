@@ -47,6 +47,7 @@ ExResizeWindow.prototype.beginEvent = function() {
     }
 
     dialog.destroy();
+    EAction.activateMainWindow();
     this.terminate();
 };
 

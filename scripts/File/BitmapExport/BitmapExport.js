@@ -168,6 +168,7 @@ BitmapExport.prototype.getProperties = function() {
 
     if (!dialog.exec()) {
         dialog.destroy();
+        EAction.activateMainWindow();
         return undefined;
     }
 
@@ -184,6 +185,7 @@ BitmapExport.prototype.getProperties = function() {
     ret["margin"] = RMath.eval(marginCombo.currentText);
 
     dialog.destroy();
+    EAction.activateMainWindow();
     return ret;
 };
 

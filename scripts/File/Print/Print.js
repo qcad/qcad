@@ -103,35 +103,42 @@ Print.prototype.print = function(pdfFile) {
         Print.cancel = false;
         Print.printDialog = new QPrintDialog(printer, EAction.getMainWindow());
 
-        // Mac, Win: exec() never returns without destroying the dialog through these signals:
-        // Linux: make sure that cancel is caught correctly:
-        Print.printDialog["accepted(QPrinter*)"].connect(
-                    function() {
-                        Print.cancel = false;
-                        Print.printDialog.close();
-                        if (RS.getSystemId()==="osx" && !RSettings.isQt(5)) {
-                            Print.printDialog.destroy();
-                        }
-                    });
-
-        Print.printDialog.rejected.connect(
-                    function() {
-                        Print.cancel = true;
-                        Print.printDialog.close();
-                        if (RS.getSystemId()==="osx" && !RSettings.isQt(5)) {
-                            Print.printDialog.destroy();
-                        }
-                    });
-
-        // Windows:
-        if (RS.getSystemId()==="win") {
-            // slot 'dummy' is never called:
-            Print.printDialog.open(this, "dummy");
-        }
-
-        // Mac OS X, Linux, various other unices:
-        else {
+        if (RSettings.isQt(5)) {
+            Print.printDialog.rejected.connect(function() { Print.cancel = true; });
             Print.printDialog.exec();
+            Print.printDialog.destroy();
+        }
+        else {
+            // Mac, Win: exec() never returns without destroying the dialog through these signals:
+            // Linux: make sure that cancel is caught correctly:
+            Print.printDialog["accepted(QPrinter*)"].connect(
+                        function() {
+                            Print.cancel = false;
+                            Print.printDialog.close();
+                            if (RS.getSystemId()==="osx") {
+                                Print.printDialog.destroy();
+                            }
+                        });
+
+            Print.printDialog.rejected.connect(
+                        function() {
+                            Print.cancel = true;
+                            Print.printDialog.close();
+                            if (RS.getSystemId()==="osx") {
+                                Print.printDialog.destroy();
+                            }
+                        });
+
+            // Windows:
+            if (RS.getSystemId()==="win") {
+                // slot 'dummy' is never called:
+                Print.printDialog.open(this, "dummy");
+            }
+
+            // Mac OS X, Linux, various other unices:
+            else {
+                Print.printDialog.exec();
+            }
         }
 
         if (Print.cancel===true) {

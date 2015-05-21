@@ -51,6 +51,7 @@ else {
 
         contains(QT_VERSION, ^5\\..*\\..*) {
             FILES += imageformats/libqtga.dylib
+            FILES += printsupport/libcocoaprintersupport.dylib
         }
         else {
             FILES += \
