@@ -84,7 +84,7 @@
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QLabel" name="WidthLabel">
+      <widget class="QLabel" name="DiameterLabel">
        <property name="text">
         <string>Diameter:</string>
        </property>
