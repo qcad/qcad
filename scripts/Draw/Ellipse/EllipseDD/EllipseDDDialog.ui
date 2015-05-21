@@ -157,6 +157,7 @@
  </customwidgets>
  <tabstops>
   <tabstop>XDiameter</tabstop>
+  <tabstop>YDiameter</tabstop>
   <tabstop>Angle</tabstop>
  </tabstops>
  <resources/>
