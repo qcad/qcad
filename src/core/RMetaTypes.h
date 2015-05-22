@@ -92,6 +92,7 @@
 #include <QPoint>
 #include <QPointF>
 #include <QPrinter>
+#include <QPrintDialog>
 #include <QProcess>
 #include <QProgressBar>
 #include <QQuaternion>
@@ -235,6 +236,7 @@ Q_DECLARE_METATYPE(QPoint*)
 Q_DECLARE_METATYPE(QPointF*)
 #if !defined(Q_OS_IOS)
 Q_DECLARE_METATYPE(QPrinter*)
+Q_DECLARE_METATYPE(QPrintDialog*)
 #endif
 Q_DECLARE_METATYPE(QProgressBar*)
 Q_DECLARE_METATYPE(QProcess::ProcessError*)
