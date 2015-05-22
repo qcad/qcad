@@ -200,8 +200,9 @@ void RGuiAction::setIcon(const QString& iconFile) {
     }
     else {
         int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
+
+        // retina icons:
         if (RSettings::getDevicePixelRatio()>1) {
-            //is = 256;
             iconSize*=RSettings::getDevicePixelRatio();
         }
 
