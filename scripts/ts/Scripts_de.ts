@@ -77,7 +77,7 @@
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+425"/>
+        <location line="+443"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -208,7 +208,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+957"/>
+        <location filename="../WidgetFactory.js" line="+966"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>

@@ -52,7 +52,7 @@
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+602"/>
+        <location line="+604"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -81,7 +81,7 @@
         <translation type="obsolete">Milieu</translation>
     </message>
     <message>
-        <location line="-1097"/>
+        <location line="-1099"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIABLE*</translation>
@@ -170,7 +170,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+307"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>

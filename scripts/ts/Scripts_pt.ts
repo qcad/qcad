@@ -96,7 +96,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+425"/>
+        <location line="+443"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -246,7 +246,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+957"/>
+        <location filename="../WidgetFactory.js" line="+966"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--

@@ -92,7 +92,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+307"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>

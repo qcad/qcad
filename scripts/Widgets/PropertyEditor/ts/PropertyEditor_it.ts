@@ -109,7 +109,7 @@ Nessuna selezione</translatorcomment>
         <translation>Tutto</translation>
     </message>
     <message>
-        <location line="+623"/>
+        <location line="+625"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -139,7 +139,7 @@ Specifica la base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-466"/>
+        <location line="-468"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -160,7 +160,7 @@ Specifica la base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+307"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>

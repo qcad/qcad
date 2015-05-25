@@ -470,7 +470,7 @@ Introduzca ángulo en línea de cota:</translatorcomment>
         <translation>Espacio entre filas</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+73"/>
+        <location filename="../src/core/REntity.cpp" line="+75"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -563,12 +563,20 @@ Colores
         <translation>Personalizado</translation>
     </message>
     <message>
+        <location filename="../src/core/REntity.cpp" line="+2"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
         <translation>Ancho</translation>
     </message>
     <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <source>Size</source>
+        <translation>Tamaño</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Altura</translation>
     </message>
@@ -649,7 +657,7 @@ Colores
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+179"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+181"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Requiere una selección</translation>
@@ -871,7 +879,7 @@ Borde
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+818"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+845"/>
         <source>By Layer</source>
         <translation>Por Capa</translation>
     </message>

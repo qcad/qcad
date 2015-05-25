@@ -37,7 +37,7 @@
         <translation>block 1</translation>
     </message>
     <message>
-        <location filename="../BlockDialog.js" line="+102"/>
+        <location filename="../BlockDialog.js" line="+104"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaces avant ou après.</translation>
     </message>

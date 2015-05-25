@@ -5,21 +5,24 @@
     <name>EllipseRR</name>
     <message>
         <location filename="../EllipseRR.ui" line="+17"/>
+        <location filename="../EllipseRRDialog.ui" line="+129"/>
         <source>X Radius:</source>
         <translation>X Radius:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+23"/>
+        <location filename="../EllipseRRDialog.ui" line="-10"/>
         <source>Y Radius:</source>
         <translation>Y Radius:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+30"/>
+        <location filename="../EllipseRRDialog.ui" line="-90"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+36"/>
         <source>Reference Point:</source>
         <translation>Referenzpunkt:</translation>
     </message>

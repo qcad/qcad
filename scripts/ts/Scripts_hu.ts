@@ -73,7 +73,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+425"/>
+        <location line="+443"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
@@ -200,7 +200,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+957"/>
+        <location filename="../WidgetFactory.js" line="+966"/>
         <source>Restore defaults</source>
         <translation type="unfinished"></translation>
     </message>

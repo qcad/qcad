@@ -4,7 +4,7 @@
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../ImportFile.js" line="+48"/>
+        <location filename="../ImportFile.js" line="+49"/>
         <source>Error while importing file %1</source>
         <translation>Error al importar archivo %1</translation>
     </message>
@@ -13,7 +13,7 @@
         <translation type="vanished">No hay filtros de importación</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+20"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>No se han encontrado filtros de importación. Anulando...</translation>
     </message>

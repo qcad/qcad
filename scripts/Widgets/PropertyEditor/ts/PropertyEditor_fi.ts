@@ -97,7 +97,7 @@
         <translation>Ei</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+307"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>

@@ -58,7 +58,7 @@
         <translation>El archivo está vacío.</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Drawing loaded successfully:</source>
         <translation>Dibujo cargó correctamente:</translation>
     </message>

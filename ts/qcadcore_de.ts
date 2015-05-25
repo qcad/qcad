@@ -318,7 +318,7 @@
         <translation>Reihenabstand</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+73"/>
+        <location filename="../src/core/REntity.cpp" line="+75"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
@@ -391,12 +391,20 @@
         <translation>Benutzerdefiniert</translation>
     </message>
     <message>
+        <location filename="../src/core/REntity.cpp" line="+2"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
         <translation>Breite</translation>
     </message>
     <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <source>Size</source>
+        <translation>Grösse</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Höhe</translation>
     </message>
@@ -477,7 +485,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+179"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+181"/>
         <source>Requires selection</source>
         <translation>Benötigt Selektion</translation>
     </message>
@@ -625,7 +633,7 @@
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+818"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+845"/>
         <source>By Layer</source>
         <translation>Von Layer</translation>
     </message>

@@ -79,7 +79,7 @@
         <translation>Datei ist leer.</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Drawing loaded successfully:</source>
         <translation>Zeichnung erfolgreich geladen:</translation>
     </message>

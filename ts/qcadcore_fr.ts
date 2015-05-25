@@ -465,7 +465,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Espacement des lignes</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+73"/>
+        <location filename="../src/core/REntity.cpp" line="+75"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -557,12 +557,20 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <translation>Personnalisé</translation>
     </message>
     <message>
+        <location filename="../src/core/REntity.cpp" line="+2"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
         <translation>Largeur</translation>
     </message>
     <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <source>Size</source>
+        <translation>Taille</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Hauteur</translation>
     </message>
@@ -643,7 +651,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+179"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+181"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nécessite une sélection</translation>
@@ -866,7 +874,7 @@ Bordure (grande)</translatorcomment>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+818"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+845"/>
         <source>By Layer</source>
         <translation>Par calque</translation>
     </message>

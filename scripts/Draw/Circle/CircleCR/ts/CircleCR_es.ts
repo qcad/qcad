@@ -27,16 +27,18 @@
     </message>
     <message>
         <location filename="../CircleCR.ui" line="+17"/>
+        <location filename="../CircleCRDialog.ui" line="+89"/>
         <source>Radius:</source>
         <translation>Radio:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <location filename="../CircleCRDialog.ui" line="-60"/>
         <source>Angle:</source>
         <translation>Ángulo:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+36"/>
         <source>Reference Point:</source>
         <translation>Punto de referencia:</translation>
     </message>

@@ -103,7 +103,7 @@ Fecha todas as janelas</translatorcomment>
         <translation>Todos</translation>
     </message>
     <message>
-        <location line="+623"/>
+        <location line="+625"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -113,7 +113,7 @@ Fecha todas as janelas</translatorcomment>
         <translation type="obsolete">Adicionar propriedade personalizada</translation>
     </message>
     <message>
-        <location line="-602"/>
+        <location line="-604"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicionar uma propriedade personalizada para os objetos selecionados</translation>
     </message>
@@ -237,7 +237,7 @@ Por favor verifique as permissões.</translatorcomment>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+307"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>

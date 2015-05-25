@@ -460,7 +460,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Espaçamento de linha</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+73"/>
+        <location filename="../src/core/REntity.cpp" line="+75"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -558,12 +558,20 @@ Abre diálogo de cores</translatorcomment>
         <translation>Personalizado</translation>
     </message>
     <message>
+        <location filename="../src/core/REntity.cpp" line="+2"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
         <translation>Largura</translation>
     </message>
     <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <source>Size</source>
+        <translation>Tamanho</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Altura</translation>
     </message>
@@ -644,7 +652,7 @@ Abre diálogo de cores</translatorcomment>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+179"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+181"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Requer a seleção</translation>
@@ -865,7 +873,7 @@ Borda (grande)</translatorcomment>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+818"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+845"/>
         <source>By Layer</source>
         <translation>Pela Camada</translation>
     </message>

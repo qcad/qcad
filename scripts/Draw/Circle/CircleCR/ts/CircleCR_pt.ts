@@ -35,6 +35,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
     </message>
     <message>
         <location filename="../CircleCR.ui" line="+17"/>
+        <location filename="../CircleCRDialog.ui" line="+89"/>
         <source>Radius:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -43,12 +44,13 @@ Raio</translatorcomment>
         <translation>Raio:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <location filename="../CircleCRDialog.ui" line="-60"/>
         <source>Angle:</source>
         <translation>Ângulo:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+36"/>
         <source>Reference Point:</source>
         <translation>Ponto de referência:</translation>
     </message>

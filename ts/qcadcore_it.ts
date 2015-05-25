@@ -479,7 +479,7 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
         <translation>Interasse righe</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+73"/>
+        <location filename="../src/core/REntity.cpp" line="+75"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: liferea-1.8-rc1.it.po--
@@ -572,12 +572,20 @@ Colore G&amp;riglia:</translatorcomment>
         <translation>Personalizzato</translation>
     </message>
     <message>
+        <location filename="../src/core/REntity.cpp" line="+2"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
         <translation>Larghezza</translation>
     </message>
     <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <source>Size</source>
+        <translation>Dimensioni</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Altezza</translation>
     </message>
@@ -658,7 +666,7 @@ Colore G&amp;riglia:</translatorcomment>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+179"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+181"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Richiede selezione</translation>
@@ -882,7 +890,7 @@ Margine (Ingrandita)</translatorcomment>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+818"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+845"/>
         <source>By Layer</source>
         <translation>Da Layer</translation>
     </message>

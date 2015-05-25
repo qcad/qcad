@@ -9,7 +9,7 @@
         <translation>Kynä</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+64"/>
         <source>Reset to Defaults</source>
         <translation>Palauta oletusasetukset</translation>
     </message>

@@ -56,7 +56,7 @@
         <translation>Tipo di linea:</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+142"/>
+        <location filename="../LayerDialog.js" line="+144"/>
         <source>Leading or trailing spaces.</source>
         <translation>Spazi iniziali o finali.</translation>
     </message>

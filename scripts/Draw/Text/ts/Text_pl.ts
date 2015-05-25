@@ -74,7 +74,7 @@ Rysuj obiekty tekstowe</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+255"/>
+        <location line="+258"/>
         <source>&amp;Undo</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

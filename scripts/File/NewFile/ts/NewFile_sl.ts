@@ -54,7 +54,7 @@
         <translation>Datoteka je prazna.</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Drawing loaded successfully:</source>
         <translation>Risba naložena uspešno:</translation>
     </message>

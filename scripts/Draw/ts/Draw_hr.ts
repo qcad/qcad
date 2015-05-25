@@ -25,7 +25,7 @@
 <context>
     <name>DrawBasedOnRectangleSize</name>
     <message>
-        <location filename="../DrawBasedOnRectangleSize.js" line="+47"/>
+        <location filename="../DrawBasedOnRectangleSize.js" line="+46"/>
         <source>Top Left</source>
         <translation type="unfinished"></translation>
     </message>
@@ -70,7 +70,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+51"/>
         <source>Position</source>
         <translation type="unfinished"></translation>
     </message>

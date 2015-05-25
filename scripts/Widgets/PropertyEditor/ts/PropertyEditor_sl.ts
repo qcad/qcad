@@ -72,7 +72,7 @@
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
     </message>
     <message>
-        <location line="+602"/>
+        <location line="+604"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -113,7 +113,7 @@
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-466"/>
+        <location line="-468"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -133,7 +133,7 @@
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+307"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>

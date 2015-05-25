@@ -24,7 +24,7 @@ Preferências do Desenho Atual...</translatorcomment>
         <translation>Preferências de desenho</translation>
     </message>
     <message>
-        <location line="+248"/>
+        <location line="+249"/>
         <source>Restart required</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>É necessário reiniciar</translation>

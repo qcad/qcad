@@ -29,16 +29,18 @@
     </message>
     <message>
         <location filename="../CircleCD.ui" line="+17"/>
+        <location filename="../CircleCDDialog.ui" line="+89"/>
         <source>Diameter:</source>
         <translation>Diametro:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
+        <location filename="../CircleCDDialog.ui" line="-60"/>
         <source>Angle:</source>
         <translation>Angolo:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+36"/>
         <source>Reference Point:</source>
         <translation>Punto di riferimento:</translation>
     </message>
