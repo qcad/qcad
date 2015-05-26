@@ -199,24 +199,28 @@ void RGuiAction::setIcon(const QString& iconFile) {
         QAction::setIcon(QIcon());
     }
     else {
-        int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
+        if (QFileInfo(iconFile).suffix().toLower()=="svg") {
+            int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
 
-        // retina icons:
-        if (RSettings::getDevicePixelRatio()>1) {
-            iconSize*=RSettings::getDevicePixelRatio();
+            // retina icons:
+            if (RSettings::getDevicePixelRatio()>1) {
+                iconSize*=RSettings::getDevicePixelRatio();
+            }
+
+            QPixmap pm(iconSize,iconSize);
+            pm.fill(Qt::transparent);
+            QPainter p;
+            p.begin(&pm);
+            QSvgRenderer renderer(iconFile);
+            renderer.render(&p, QRectF(0, 0, iconSize, iconSize));
+            p.end();
+
+            QIcon icon(pm);
+            QAction::setIcon(icon);
         }
-
-        QPixmap pm(iconSize,iconSize);
-        pm.fill(Qt::transparent);
-        QPainter p;
-        p.begin(&pm);
-        QSvgRenderer renderer(iconFile);
-        renderer.render(&p, QRectF(0, 0, iconSize, iconSize));
-        p.end();
-        
-        QIcon icon(pm);
-        QAction::setIcon(icon);
-//        QAction::setIcon(QIcon(iconFile));
+        else {
+            QAction::setIcon(QIcon(iconFile));
+        }
     }
 }
 
