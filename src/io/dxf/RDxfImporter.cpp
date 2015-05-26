@@ -1272,8 +1272,12 @@ void RDxfImporter::addHatchEdge(const DL_HatchEdgeData& data) {
         }
         else {
             s->setControlPoints(controlPoints);
-            knots.removeFirst();
-            knots.removeLast();
+            if (!knots.isEmpty()) {
+                knots.removeFirst();
+            }
+            if (!knots.isEmpty()) {
+                knots.removeLast();
+            }
             s->setKnotVector(knots);
         }
 
