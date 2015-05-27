@@ -63,7 +63,7 @@ void RDebug::startTimer(int id) {
 }
 
 
-int RDebug::stopTimer(int id, const QString& msg) {
+int RDebug::stopTimer(int id, const QString& msg, int msThreshold) {
 #if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
     Nanoseconds elapsedNano;
     uint64_t end = mach_absolute_time();
@@ -75,14 +75,10 @@ int RDebug::stopTimer(int id, const QString& msg) {
     int t = timer[id].elapsed() * 1000000;
     timer.remove(id);
 #endif
-    /*
-    va_list varg;
-    va_start(varg, format);
-    fprintf(stream, "TIMER: %d ms ", t);
-    printV(format, varg);
-    va_end(varg);
-    */
-    qDebug() << "TIMER: " << t << "ns (" << t/1000000 << "ms)" << " - " << msg;
+
+    if (t/1000000>=msThreshold) {
+        qDebug() << "TIMER: " << t << "ns (" << t/1000000 << "ms )" << " - " << msg;
+    }
     return t;
 }
 
