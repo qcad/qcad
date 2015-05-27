@@ -65,6 +65,8 @@ void RImporter::importObjectP(QSharedPointer<RObject> object) {
     //qDebug() << "importObjectP: " << *object;
     //RDebug::startTimer();
     transaction.addObject(object, false);
+    //document->getStorage().saveObject(object, false, true);
+    //storage->saveObject(object, !blockRecursionDetectionDisabled, keepHandles);
 //    if (RDebug::stopTimer("importObjectP")>10) {
 //        qDebug() << "importObjectP (slow): " << *object;
 //    }

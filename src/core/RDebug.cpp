@@ -69,10 +69,10 @@ int RDebug::stopTimer(int id, const QString& msg) {
     uint64_t end = mach_absolute_time();
     uint64_t elapsed = end - timerMac[id];
     elapsedNano = AbsoluteToNanoseconds( *(AbsoluteTime *) &elapsed );
-    int t = (unsigned int)((* (uint64_t *) &elapsedNano) / 1000000);
+    uint64_t t = (* (uint64_t *) &elapsedNano);
     timerMac.remove(id);
 #else
-    int t = timer[id].elapsed();
+    int t = timer[id].elapsed() * 1000000;
     timer.remove(id);
 #endif
     /*
@@ -82,7 +82,7 @@ int RDebug::stopTimer(int id, const QString& msg) {
     printV(format, varg);
     va_end(varg);
     */
-    qDebug() << "TIMER: " << t << "ms - " << msg;
+    qDebug() << "TIMER: " << t << "ns (" << t/1000000 << "ms)" << " - " << msg;
     return t;
 }
 
