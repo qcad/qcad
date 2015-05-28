@@ -222,7 +222,7 @@ double RDimensionData::getDimScale() const {
     double ret = dimScale;
 
     if (document!=NULL && RMath::fuzzyCompare(ret, 1.0)) {
-        ret = document->getKnownVariable(RS::DIMSCALE, ret).toDouble();
+        ret = document->getKnownVariable(RS::DIMSCALE, 1.0).toDouble();
     }
 
     return ret;
