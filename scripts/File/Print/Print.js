@@ -1303,6 +1303,11 @@ Print.setScaleString = function(document, scaleString) {
 };
 
 Print.getColumns = function(document) {
+    var appWin = RMainWindowQt.getMainWindow();
+    if (appWin.property("PrintPreview/InitialZoom")==="View") {
+        return 1;
+    }
+
     return EAction.getIntValue("MultiPageSettings/Columns", 1, document);
 };
 
@@ -1311,6 +1316,11 @@ Print.setColumns = function(document, columns) {
 };
 
 Print.getRows = function(document) {
+    var appWin = RMainWindowQt.getMainWindow();
+    if (appWin.property("PrintPreview/InitialZoom")==="View") {
+        return 1;
+    }
+
     return EAction.getIntValue("MultiPageSettings/Rows", 1, document);
 };
 
