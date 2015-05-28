@@ -32,6 +32,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="id" isConst="false" />
         <arg type="QString &amp;" typeName="QString" name="msg"
         isConst="true" />
+        <arg type="int" typeName="int" name="msThreshold"
+        hasDefault="true" default="0" isConst="false" />
       </variant>
     </method>
     <method name="timeStamp" cppName="timeStamp" specifier="public"

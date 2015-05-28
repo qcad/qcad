@@ -2891,6 +2891,8 @@ void DL_Dxf::writeDimStyleOverrides(DL_WriterA& dw,
         dw.dxfString(1002, "{");
         dw.dxfInt(1070, 144);
         dw.dxfReal(1040, data.linearFactor);
+        dw.dxfInt(1070,40);
+        dw.dxfReal(1040, data.dimScale);
         dw.dxfString(1002, "}");
     }
 }

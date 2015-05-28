@@ -1170,7 +1170,8 @@ void RDxfExporter::writeDimension(const RDimensionEntity& d) {
                              // TODO: dim style:
                              (const char*)RDxfExporter::escapeUnicode(d.getFontName()),
                              d.getTextAngle(),
-                             d.getLinearFactor());
+                             d.getLinearFactor(),
+                             d.getDimScale());
 
     switch (d.getType()) {
     case RS::EntityDimAligned: {

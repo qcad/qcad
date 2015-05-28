@@ -93,6 +93,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setLinearFactor, "setLinearFactor");
             
+            REcmaHelper::registerFunction(&engine, proto, getDimScale, "getDimScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimScale, "setDimScale");
+            
             REcmaHelper::registerFunction(&engine, proto, getDistanceTo, "getDistanceTo");
             
             REcmaHelper::registerFunction(&engine, proto, intersectsWith, "intersectsWith");
@@ -108,8 +112,6 @@
             REcmaHelper::registerFunction(&engine, proto, scale, "scale");
             
             REcmaHelper::registerFunction(&engine, proto, mirror, "mirror");
-            
-            REcmaHelper::registerFunction(&engine, proto, getDimscale, "getDimscale");
             
             REcmaHelper::registerFunction(&engine, proto, getDimexo, "getDimexo");
             
@@ -1318,6 +1320,110 @@
             return result;
         }
          QScriptValue
+        REcmaDimensionData::getDimScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDimScale();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimScale", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimensionData::getDistanceTo
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2267,55 +2373,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::mirror", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimensionData::getDimscale
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimensionData::getDimscale", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimscale";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimensionData* self = 
-                        getSelf("getDimscale", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->getDimscale();
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimscale().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimensionData::getDimscale", context, engine);
             return result;
         }
          QScriptValue

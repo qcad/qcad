@@ -145,6 +145,9 @@
         getStatusBarFont
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSelectionColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getHighResolutionGraphicsView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -123,6 +123,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getStatusBarFont, "getStatusBarFont");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getSelectionColor, "getSelectionColor");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getHighResolutionGraphicsView, "getHighResolutionGraphicsView");
             
             REcmaHelper::registerFunction(&engine, &ctor, getAutoScaleGrid, "getAutoScaleGrid");
@@ -1737,6 +1739,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getStatusBarFont", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getSelectionColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getSelectionColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getSelectionColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RSettings::
+       getSelectionColor();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getSelectionColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getSelectionColor", context, engine);
             return result;
         }
          QScriptValue

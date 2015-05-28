@@ -196,6 +196,7 @@
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getPoints</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>transform</name><parameter_list>(<param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>move</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>rotate</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angle</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>scale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>fx</name></decl></param>, <param><decl><type><name>double</name></type> <name>fy</name></decl></param>)</parameter_list>;</function_decl>
 

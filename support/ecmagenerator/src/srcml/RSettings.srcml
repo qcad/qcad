@@ -23,7 +23,6 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QColor&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDir&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSettings&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFont&gt;</cpp:file></cpp:include>
@@ -95,6 +94,8 @@
     <function_decl><type><name>static</name> <name>QFont</name></type> <name>getSnapLabelFont</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QFont</name></type> <name>getInfoLabelFont</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QFont</name></type> <name>getStatusBarFont</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>getSelectionColor</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getHighResolutionGraphicsView</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getAutoScaleGrid</name><parameter_list>()</parameter_list>;</function_decl>
@@ -182,6 +183,7 @@
     <decl_stmt><decl><type><name>static</name> <name>QFont</name>*</type> <name>snapLabelFont</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QFont</name>*</type> <name>infoLabelFont</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QFont</name>*</type> <name>statusBarFont</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>selectionColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>snapRange</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>pickRange</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>zeroWeightWeight</name></decl>;</decl_stmt>

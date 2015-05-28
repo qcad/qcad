@@ -187,6 +187,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getDimScale" cppName="getDimScale"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setDimScale" cppName="setDimScale"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="f"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -235,6 +248,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyLowerTolerance" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyLinearFactor" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimScale" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyAutoTextPos" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

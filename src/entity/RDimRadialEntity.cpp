@@ -40,6 +40,7 @@ RPropertyTypeId RDimRadialEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimRadialEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimRadialEntity::PropertyLinearFactor;
+RPropertyTypeId RDimRadialEntity::PropertyDimScale;
 RPropertyTypeId RDimRadialEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimRadialEntity::PropertyFontName;
 
@@ -81,6 +82,7 @@ void RDimRadialEntity::init() {
     RDimRadialEntity::PropertyMeasuredValue.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyMeasuredValue);
 
     RDimRadialEntity::PropertyLinearFactor.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyLinearFactor);
+    RDimRadialEntity::PropertyDimScale.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimScale);
     RDimRadialEntity::PropertyAutoTextPos.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimRadialEntity::PropertyFontName.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyFontName);
 

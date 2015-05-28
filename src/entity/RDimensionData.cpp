@@ -32,6 +32,7 @@ RDimensionData::RDimensionData(RDocument* document) :
     defaultAngle(RNANDOUBLE),
     textAngle(0.0),
     linearFactor(1.0),
+    dimScale(1.0),
     dirty(true),
     dimLineLength(0.0),
     autoTextPos(true) {
@@ -82,6 +83,7 @@ RDimensionData::RDimensionData(const RVector& definitionPoint,
       defaultAngle(RNANDOUBLE),
       textAngle(angle),
       linearFactor(1.0),
+      dimScale(1.0),
       dirty(true),
       dimLineLength(0.0),
       autoTextPos(true) {
@@ -216,14 +218,14 @@ bool RDimensionData::mirror(const RLine& axis) {
     return true;
 }
 
-double RDimensionData::getDimscale() const {
-    double dimscale = 1.0;
+double RDimensionData::getDimScale() const {
+    double ret = dimScale;
 
-    if (document!=NULL) {
-        dimscale = document->getKnownVariable(RS::DIMSCALE, dimscale).toDouble();
+    if (document!=NULL && RMath::fuzzyCompare(ret, 1.0)) {
+        ret = document->getKnownVariable(RS::DIMSCALE, ret).toDouble();
     }
 
-    return dimscale;
+    return ret;
 }
 
 double RDimensionData::getDimexo() const {
@@ -236,7 +238,7 @@ double RDimensionData::getDimexo() const {
         qWarning() << "RDimensionData::getDimexo: no document";
     }
 
-    return dimexo * getDimscale();
+    return dimexo * getDimScale();
 }
 
 double RDimensionData::getDimexe() const {
@@ -249,7 +251,7 @@ double RDimensionData::getDimexe() const {
         qWarning() << "RDimensionData::getDimexe: no document";
     }
 
-    return dimexe * getDimscale();
+    return dimexe * getDimScale();
 }
 
 double RDimensionData::getDimasz() const {
@@ -262,7 +264,7 @@ double RDimensionData::getDimasz() const {
         qWarning() << "RDimensionData::getDimasz: no document";
     }
 
-    return dimasz * getDimscale();
+    return dimasz * getDimScale();
 }
 
 double RDimensionData::getDimgap() const {
@@ -275,7 +277,7 @@ double RDimensionData::getDimgap() const {
         qWarning() << "RDimensionData::getDimgap: no document";
     }
 
-    return dimgap * getDimscale();
+    return dimgap * getDimScale();
 }
 
 double RDimensionData::getDimtxt() const {
@@ -288,7 +290,7 @@ double RDimensionData::getDimtxt() const {
         qWarning() << "RDimensionData::getDimtxt: no document";
     }
 
-    return dimtxt * getDimscale();
+    return dimtxt * getDimScale();
 }
 
 bool RDimensionData::useArchTick() const {

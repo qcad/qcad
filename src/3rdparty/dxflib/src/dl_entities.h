@@ -917,7 +917,8 @@ struct DXFLIB_EXPORT DL_DimensionData {
                      const std::string& text,
                      const std::string& style,
                      double angle,
-                     double linearFactor = 1.0) :
+                     double linearFactor = 1.0,
+                     double dimScale = 1.0) :
         dpx(dpx), dpy(dpy), dpz(dpz),
         mpx(mpx), mpy(mpy), mpz(mpz),
         type(type),
@@ -927,7 +928,8 @@ struct DXFLIB_EXPORT DL_DimensionData {
         text(text),
         style(style),
         angle(angle),
-        linearFactor(linearFactor) {
+        linearFactor(linearFactor),
+        dimScale(dimScale) {
 
     }
 
@@ -1000,6 +1002,10 @@ struct DXFLIB_EXPORT DL_DimensionData {
      * Linear factor style override.
      */
     double linearFactor;
+    /**
+     * Dimension scale (dimscale) style override.
+     */
+    double dimScale;
 };
 
 
