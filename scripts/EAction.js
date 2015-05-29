@@ -1418,6 +1418,13 @@ EAction.prototype.getHighlightedEntities = function() {
 };
 
 /**
+ * Called by updatePreview. Implementations must handle errors during preview.
+ */
+EAction.prototype.handlePreviewError = function() {
+    return;
+};
+
+/**
  * Updates the preview based on the operation returned by getOperation and the
  * auxiliary construction returned be getAuxPreview.
  * 
@@ -1441,6 +1448,9 @@ EAction.prototype.updatePreview = function(clear) {
     var op = this.getOperation(true);
     if (!isNull(op)) {
         di.previewOperation(op);
+    }
+    else {
+        this.handlePreviewError();
     }
 
     var i;
@@ -1559,6 +1569,9 @@ EAction.prototype.simulateMouseMoveEvent = function() {
 };
 
 EAction.handleUserWarning = function(message) {
+    if (isNull(message)) {
+        return;
+    }
     var appWin = EAction.getMainWindow();
     if (isNull(appWin)) {
         return;
@@ -1567,6 +1580,9 @@ EAction.handleUserWarning = function(message) {
 };
 
 EAction.handleUserMessage = function(message) {
+    if (isNull(message)) {
+        return;
+    }
     var appWin = EAction.getMainWindow();
     if (isNull(appWin)) {
         return;
@@ -1575,6 +1591,9 @@ EAction.handleUserMessage = function(message) {
 };
 
 EAction.handleUserCommand = function(message) {
+    if (isNull(message)) {
+        return;
+    }
     var appWin = EAction.getMainWindow();
     if (isNull(appWin)) {
         return;
