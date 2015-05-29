@@ -78,7 +78,7 @@ CadToolBar.prototype.contextMenuEvent = function(event) {
     else {
         var tb = appWin.findChild("CadQToolBar");
 
-        if (tb.floating) {
+        if (tb.floating && !RSettings.isQt(5)) {
             var menu = new QMenu(this);
             menu.objectName = "ContextMenu";
             // force tool bar to be vertical:
