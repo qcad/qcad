@@ -956,7 +956,7 @@ void RScriptHandlerEcma::doScript(const QString& scriptFile,const QStringList& a
 
     QScriptValue globalObject = engine->globalObject();
 
-    if (isIncluded(engine, fi.completeBaseName())) {
+    if (!alwaysLoadScripts && isIncluded(engine, fi.completeBaseName())) {
         return;
     }
 
