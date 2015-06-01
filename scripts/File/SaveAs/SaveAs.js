@@ -19,12 +19,15 @@
 
 include("../Save/Save.js");
 include("scripts/File/NewFile/NewFile.js");
+include("scripts/Tools/arguments.js");
 
 /**
  * This action handles all user interaction to save drawings under a new name.
  */
 function SaveAs(guiAction) {
     Save.call(this, guiAction);
+
+    this.args = guiAction.getArguments();
 }
 
 SaveAs.prototype = new Save();
@@ -59,72 +62,88 @@ SaveAs.prototype.beginEvent = function() {
         return;
     }
 
-    var lastSaveAsFileDir = RSettings.getStringValue("SaveAs/Path", QDir.homePath());
-    var defaultNameFilter = RSettings.getStringValue("SaveAs/Filter", "");
-    var fileDialog = new QFileDialog(appWin);
+    var nameFilter;
+    var file;
+    var forceOverwrite = false;
 
-    // don't use KDE file dialog (workaround for file type filter bug):
-    fileDialog.setOption(
-        QFileDialog.DontUseNativeDialog,
-        RS.getWindowManagerId()==="kde"
-    );
+    if (this.args.length>=1) {
+        forceOverwrite = testArgument(this.args, "-f", "-force");
+        file = this.args[this.args.length-1];
+        if (!new QFileInfo(file).isAbsolute()) {
+            file = RSettings.getLaunchPath() + QDir.separator + file;
+        }
+        nameFilter = getArgument(this.args, "-t", "-filter");
+    }
+    else {
+        var lastSaveAsFileDir = RSettings.getStringValue("SaveAs/Path", QDir.homePath());
+        var defaultNameFilter = RSettings.getStringValue("SaveAs/Filter", "");
+        var fileDialog = new QFileDialog(appWin);
 
-    // overwrite is handled after extension has been added:
-    fileDialog.setOption(QFileDialog.DontConfirmOverwrite, true);
-    fileDialog.fileMode = QFileDialog.AnyFile;
-    fileDialog.acceptMode = QFileDialog.AcceptSave;
-    fileDialog.setNameFilters(nameFilters);
+        // don't use KDE file dialog (workaround for file type filter bug):
+        fileDialog.setOption(
+            QFileDialog.DontUseNativeDialog,
+            RS.getWindowManagerId()==="kde"
+        );
 
-    var fileName = this.getDocument().getFileName();
-    var fileInfo = new QFileInfo(fileName);
+        // overwrite is handled after extension has been added:
+        fileDialog.setOption(QFileDialog.DontConfirmOverwrite, true);
+        fileDialog.fileMode = QFileDialog.AnyFile;
+        fileDialog.acceptMode = QFileDialog.AcceptSave;
+        fileDialog.setNameFilters(nameFilters);
 
-    var suffix = fileInfo.suffix().toLowerCase();
+        var fileName = this.getDocument().getFileName();
+        var fileInfo = new QFileInfo(fileName);
 
-    if (suffix.length!==0 && !defaultNameFilter.containsIgnoreCase(suffix)) {
-        // preselect first name filter that matches current extension:
-        for (var i=0; i<nameFilters.length; ++i) {
-            if (nameFilters[i].contains("*." + suffix)) {
-                fileDialog.selectNameFilter(nameFilters[i]);
-                break;
+        var suffix = fileInfo.suffix().toLowerCase();
+
+        if (suffix.length!==0 && !defaultNameFilter.containsIgnoreCase(suffix)) {
+            // preselect first name filter that matches current extension:
+            for (var i=0; i<nameFilters.length; ++i) {
+                if (nameFilters[i].contains("*." + suffix)) {
+                    fileDialog.selectNameFilter(nameFilters[i]);
+                    break;
+                }
             }
         }
-    }
-    else {
-        // preselect configured name filter:
-        if (defaultNameFilter.length===0) {
-            fileDialog.selectNameFilter(nameFilters[0]);
+        else {
+            // preselect configured name filter:
+            if (defaultNameFilter.length===0) {
+                fileDialog.selectNameFilter(nameFilters[0]);
+            }
+            else {
+                fileDialog.selectNameFilter(defaultNameFilter);
+            }
+        }
+
+        if (fileName.length!==0) {
+            fileDialog.selectFile(fileInfo.absoluteFilePath());
         }
         else {
-            fileDialog.selectNameFilter(defaultNameFilter);
+            fileDialog.setDirectory(lastSaveAsFileDir);
         }
-    }
-
-    if (fileName.length!==0) {
-        fileDialog.selectFile(fileInfo.absoluteFilePath());
-    }
-    else {
-        fileDialog.setDirectory(lastSaveAsFileDir);
-    }
 
 
-    fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
+        fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
 
-    // global function qcadInitFileDialog may be registered to perform
-    // additional initialization
-    if (typeof qcadInitFileDialog!="undefined" && isFunction(qcadInitFileDialog)) {
-        qcadInitFileDialog(fileDialog);
-    }
+        // global function qcadInitFileDialog may be registered to perform
+        // additional initialization
+        if (typeof qcadInitFileDialog!="undefined" && isFunction(qcadInitFileDialog)) {
+            qcadInitFileDialog(fileDialog);
+        }
 
-    if (!fileDialog.exec()) {
+        if (!fileDialog.exec()) {
+            fileDialog.destroy();
+            this.terminate();
+            return;
+        }
+
+        RSettings.setValue("SaveAs/Path", fileDialog.directory().absolutePath());
+        file = fileDialog.selectedFiles()[0];
+        nameFilter = fileDialog.selectedNameFilter();
         fileDialog.destroy();
-        this.terminate();
-        return;
     }
 
-    RSettings.setValue("SaveAs/Path", fileDialog.directory().absolutePath());
-    var file = fileDialog.selectedFiles()[0];
-
-    this.save(fileDialog.selectedFiles()[0], fileDialog.selectedNameFilter(), true);
+    this.save(file, nameFilter, !forceOverwrite);
 
     var mdiArea = EAction.getMdiArea();
     if (!isNull(mdiArea)) {
@@ -133,6 +152,5 @@ SaveAs.prototype.beginEvent = function() {
     }
 
     this.terminate();
-    fileDialog.destroy();
 };
 

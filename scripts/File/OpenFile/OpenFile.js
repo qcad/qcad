@@ -30,6 +30,8 @@ if (new QFileInfo("scripts/File/AutoSave/AutoSave.js")) {
  */
 function OpenFile(guiAction) {
     NewFile.call(this, guiAction);
+
+    this.args = guiAction.getArguments();
 }
 
 OpenFile.prototype = new NewFile();
@@ -43,8 +45,20 @@ OpenFile.prototype.beginEvent = function() {
         return;
     }
 
+    var fileName;
+    if (this.args.length>=1) {
+        fileName = this.args[this.args.length-1];
+        if (!new QFileInfo(fileName).isAbsolute()) {
+            fileName = RSettings.getLaunchPath() + QDir.separator + fileName;
+        }
+        if (!isNull(fileName)) {
+            NewFile.createMdiChild(fileName);
+            return;
+        }
+    }
+
     if (!isNull(this.guiAction)) {
-        var fileName = this.guiAction.data();
+        fileName = this.guiAction.data();
         if (!isNull(fileName)) {
             NewFile.createMdiChild(fileName);
             return;
