@@ -27,7 +27,9 @@ include("scripts/Tools/arguments.js");
 function SaveAs(guiAction) {
     Save.call(this, guiAction);
 
-    this.args = guiAction.getArguments();
+    if (!isNull(guiAction)) {
+        this.args = guiAction.getArguments();
+    }
 }
 
 SaveAs.prototype = new Save();
@@ -66,7 +68,7 @@ SaveAs.prototype.beginEvent = function() {
     var file;
     var forceOverwrite = false;
 
-    if (this.args.length>=1) {
+    if (!isNull(this.args) && this.args.length>=1) {
         forceOverwrite = testArgument(this.args, "-f", "-force");
         file = this.args[this.args.length-1];
         if (!new QFileInfo(file).isAbsolute()) {

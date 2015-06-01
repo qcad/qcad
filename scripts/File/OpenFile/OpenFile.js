@@ -31,7 +31,9 @@ if (new QFileInfo("scripts/File/AutoSave/AutoSave.js")) {
 function OpenFile(guiAction) {
     NewFile.call(this, guiAction);
 
-    this.args = guiAction.getArguments();
+    if (!isNull(guiAction)) {
+        this.args = guiAction.getArguments();
+    }
 }
 
 OpenFile.prototype = new NewFile();
@@ -46,7 +48,7 @@ OpenFile.prototype.beginEvent = function() {
     }
 
     var fileName;
-    if (this.args.length>=1) {
+    if (!isNull(this.args) && this.args.length>=1) {
         fileName = this.args[this.args.length-1];
         if (!new QFileInfo(fileName).isAbsolute()) {
             fileName = RSettings.getLaunchPath() + QDir.separator + fileName;
