@@ -49,7 +49,7 @@ else {
             sqldrivers/libqsqlite.dylib \
             sqldrivers/libqsqlodbc.dylib
 
-        contains(QT_VERSION, ^5\\..*\\..*) {
+        greaterThan(QT_MAJOR_VERSION, 4) {
             FILES += imageformats/libqtga.dylib
             FILES += printsupport/libcocoaprintersupport.dylib
         }
@@ -83,7 +83,7 @@ else {
             imageformats/libqtiff.so \
             sqldrivers/libqsqlite.so
 
-        contains(QT_VERSION, ^5\\..*\\..*) {
+        greaterThan(QT_MAJOR_VERSION, 4) {
             FILES += imageformats/libqtga.so
         }
         else {
@@ -106,7 +106,7 @@ else {
     }
 
     else:win32 {
-        contains(QT_VERSION, ^5\\..*\\..*) {
+        greaterThan(QT_MAJOR_VERSION, 4) {
             FILES += \
                 designer\\qwebview.dll \
                 imageformats\\qgif.dll \
@@ -152,7 +152,7 @@ else {
         }
 
         # copy Qt libraries into same dir as exe to avoid Qt version mixup:
-        contains(QT_VERSION, ^5\\..*\\..*) {
+        greaterThan(QT_MAJOR_VERSION, 4) {
             system(cp "$$[QT_INSTALL_BINS]/*.dll" "$${DESTDIR_WIN}")
         }
         else {

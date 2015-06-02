@@ -14,7 +14,7 @@ CONFIG += warn_off
 # Handles dllimport/dllexport directives:
 DEFINES += QUAZIP_BUILD
 
-contains(QT_VERSION, ^5\\..*\\..*) {
+greaterThan(QT_MAJOR_VERSION, 4) {
     INCLUDEPATH += $$[QT_INSTALL_HEADERS]/QtZlib
 }
 else {

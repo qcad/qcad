@@ -1,4 +1,4 @@
-contains(QT_VERSION, ^5\\..*\\..*) {
+greaterThan(QT_MAJOR_VERSION, 4) {
     cache()
     DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x000000
     QT += printsupport
@@ -45,7 +45,7 @@ macx-ios-* {
 }
 
 !r_mobile {
-    contains(QT_VERSION, ^5\\..*\\..*) {
+    greaterThan(QT_MAJOR_VERSION, 4) {
         QT += webkitwidgets
     }
 }
@@ -76,7 +76,7 @@ macx {
         }
     }
 
-    contains(QT_VERSION, ^5\\..*\\..*) {
+    greaterThan(QT_MAJOR_VERSION, 4) {
         QMAKE_LFLAGS += -F/System/Library/Frameworks
     }
 }
@@ -108,7 +108,7 @@ QT += core \
     xmlpatterns
 
 # make sure that the QtHelp framework is included in the app bundle under Mac OS X:
-contains(QT_VERSION, ^5\\..*\\..*) {
+greaterThan(QT_MAJOR_VERSION, 4) {
     QT += help \
         uitools
     !r_mobile {

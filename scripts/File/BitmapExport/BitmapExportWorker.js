@@ -1,3 +1,20 @@
+/**
+ * Exports the given RDocument (doc) to a bitmap (BMP, PNG, JPEG, TIFF, ...).
+ * \param doc RDocument document
+ * \param scene Graphics scene to export (e.g. RGraphicsSceneQt)
+ * \param fileName File name for exported bitmap. Extension determines format.
+ * \param properties Various properties:
+ *  properties["width"]: width of bitmap in pixels (ignored if resolution is present)
+ *  properties["height"]: height of bitmap in pixels (ignored if resolution is present)
+ *  properties["resolution"]: resolution in pixels / drawing unit
+ *  properties["margin"]: margin at borders in pixels
+ *  properties["backgroundColor"]: background color (RColor)
+ *  properties["origin"]: true: export origin point as red cross
+ *  properties["antialiasing"]: true: use antialiasing
+ *  properties["quality"]: Export quality (0..100), JPEG only
+ *  properties["monochrome"]: true: Export as black / white
+ *  properties["grayscale"]: true: Export as grayscale
+ */
 function exportBitmap(doc, scene, fileName, properties) {
     var view = new RGraphicsViewImage();
     view.setScene(scene, false);

@@ -2,7 +2,7 @@ include( ../../shared.pri )
 
 INCLUDEPATH+=../3rdparty/quazip/src
 
-contains(QT_VERSION, ^5\\..*\\..*) {
+greaterThan(QT_MAJOR_VERSION, 4) {
     INCLUDEPATH += $$[QT_INSTALL_HEADERS]/QtZlib
 }
 else {

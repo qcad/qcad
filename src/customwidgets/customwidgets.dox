@@ -19,7 +19,7 @@ It might be necessary to include the base class of your class as well, in this e
 
 \include RListViewPlugin.cpp
 
-\section new_class Adding the new Plugin Class to the custom Widgets
+\section add_class Adding the new Plugin Class to the custom Widgets
 
 Every plugin must be initialized in \c RCustomWidgets:
 
