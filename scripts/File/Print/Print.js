@@ -1304,7 +1304,7 @@ Print.setScaleString = function(document, scaleString) {
 
 Print.getColumns = function(document) {
     var appWin = RMainWindowQt.getMainWindow();
-    if (appWin.property("PrintPreview/InitialZoom")==="View") {
+    if (isNull(appWin) || appWin.property("PrintPreview/InitialZoom")==="View") {
         return 1;
     }
 
@@ -1317,7 +1317,7 @@ Print.setColumns = function(document, columns) {
 
 Print.getRows = function(document) {
     var appWin = RMainWindowQt.getMainWindow();
-    if (appWin.property("PrintPreview/InitialZoom")==="View") {
+    if (isNull(appWin) || appWin.property("PrintPreview/InitialZoom")==="View") {
         return 1;
     }
 
