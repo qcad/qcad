@@ -306,6 +306,13 @@ REntity* RExporter::getEntity() {
     return NULL;
 }
 
+REntity* RExporter::getCurrentBlockRef() {
+    if (!blockRefStack.isEmpty()) {
+        return blockRefStack.top();
+    }
+    return NULL;
+}
+
 /**
  * Sets the current export color in RGB and Alpha.
  * All components are in the range of 0.0 <= component <= 1.0.

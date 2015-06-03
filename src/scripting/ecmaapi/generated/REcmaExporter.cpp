@@ -123,6 +123,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getEntity, "getEntity");
             
+            REcmaHelper::registerFunction(&engine, proto, getCurrentBlockRef, "getCurrentBlockRef");
+            
             REcmaHelper::registerFunction(&engine, proto, isEntitySelected, "isEntitySelected");
             
             REcmaHelper::registerFunction(&engine, proto, startExport, "startExport");
@@ -1697,6 +1699,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::getEntity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::getCurrentBlockRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::getCurrentBlockRef", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getCurrentBlockRef";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("getCurrentBlockRef", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'REntity *'
+    REntity * cppResult =
+        
+               self->getCurrentBlockRef();
+        // return type: REntity *
+                // REntity:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getCurrentBlockRef().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::getCurrentBlockRef", context, engine);
             return result;
         }
          QScriptValue

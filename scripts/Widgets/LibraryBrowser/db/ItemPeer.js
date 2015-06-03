@@ -325,6 +325,8 @@ ItemPeer.getIdsByTagIdsAndText = function(tagIds, text) {
             matchingItemIds = itemIds;
         }
         else {
+            matchingItemIds.sort();
+            itemIds.sort();
             matchingItemIds = Array.intersect(matchingItemIds, itemIds);
         }
     }

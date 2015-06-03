@@ -103,6 +103,7 @@ public:
 
     virtual REntity* getBlockRefOrEntity();
     virtual REntity* getEntity();
+    virtual REntity* getCurrentBlockRef();
 
     /**
      * \nonscriptable

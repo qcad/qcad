@@ -109,6 +109,9 @@
         getEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCurrentBlockRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isEntitySelected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

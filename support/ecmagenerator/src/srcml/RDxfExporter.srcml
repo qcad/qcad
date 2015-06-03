@@ -144,9 +144,9 @@
     <decl_stmt><decl><type><name>DL_Attributes</name></type> <name>attributes</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>textStyleCounter</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>textStyles</name></decl>;</decl_stmt>
-    <comment type="line">//QList&lt;DL_StyleData&gt; textStyles;</comment>
     <comment type="line">// maps image entity IDs to handles:</comment>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>int</name></argument>&gt;</argument_list></name></type> <name>imageHandles</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>minimalistic</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDxfExporter*</argument>)</argument_list></macro>

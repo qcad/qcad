@@ -213,6 +213,11 @@
             );
         
     
+      REntity * getCurrentBlockRef(
+                
+            );
+        
+    
       bool isEntitySelected(
                 
             );

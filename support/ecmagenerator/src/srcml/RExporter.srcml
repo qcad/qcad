@@ -104,6 +104,7 @@
 
     <function_decl><type><name>virtual</name> <name>REntity</name>*</type> <name>getBlockRefOrEntity</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>REntity</name>*</type> <name>getEntity</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>REntity</name>*</type> <name>getCurrentBlockRef</name><parameter_list>()</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * \nonscriptable
