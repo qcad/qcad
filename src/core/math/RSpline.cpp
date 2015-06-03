@@ -1059,14 +1059,14 @@ bool RSpline::isValid() const {
     }
     if (hasFitPoints()) {
         if (fitPoints.count() < 3) {
-            qDebug() << "RSpline::isValid: spline not valid: less than 3 fit points";
+            //qDebug() << "RSpline::isValid: spline not valid: less than 3 fit points";
             return false;
         }
         return true;
     }
     else {
         if (controlPoints.count() < degree+1) {
-            qDebug() << "RSpline::isValid: spline not valid: less than " << degree+1 << " control points";
+            //qDebug() << "RSpline::isValid: spline not valid: less than " << degree+1 << " control points";
             return false;
         }
         return true;

@@ -1371,9 +1371,7 @@ static QScriptValue qtscript_QPrinter_prototype_call(QScriptContext *context, QS
     case 46:
     if (context->argumentCount() == 1) {
         QPrinter::OutputFormat _q_arg0 = qscriptvalue_cast<QPrinter::OutputFormat>(context->argument(0));
-        qDebug() << "output format: " << _q_arg0;
         _q_self->setOutputFormat(_q_arg0);
-        qDebug() << "output format set to: " << _q_self->outputFormat();
         return context->engine()->undefinedValue();
     }
     break;
