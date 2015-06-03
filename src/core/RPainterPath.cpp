@@ -408,6 +408,10 @@ void RPainterPath::transform(const QTransform& t) {
     }
 }
 
+void RPainterPath::move(const RVector& offset) {
+    translate(offset.x, offset.y);
+}
+
 void RPainterPath::rotate(double angle) {
     QTransform t;
     t.rotate(RMath::rad2deg(angle));

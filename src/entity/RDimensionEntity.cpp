@@ -42,6 +42,7 @@ RPropertyTypeId RDimensionEntity::PropertyText;
 RPropertyTypeId RDimensionEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimensionEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimensionEntity::PropertyLinearFactor;
+RPropertyTypeId RDimensionEntity::PropertyDimScale;
 RPropertyTypeId RDimensionEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimensionEntity::PropertyFontName;
 //RPropertyTypeId RDimensionEntity::PropertyHeight;
@@ -93,6 +94,7 @@ void RDimensionEntity::init() {
     RDimensionEntity::PropertyAutoLabel.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Auto Label"));
     RDimensionEntity::PropertyMeasuredValue.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Measured Value"));
     RDimensionEntity::PropertyLinearFactor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Linear Factor"));
+    RDimensionEntity::PropertyDimScale.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
     RDimensionEntity::PropertyAutoTextPos.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Auto Label Position"));
 }
 
@@ -125,6 +127,7 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().upperTolerance, value, PropertyUpperTolerance == propertyTypeId);
     ret = ret || RObject::setMember(getData().lowerTolerance, value, PropertyLowerTolerance == propertyTypeId);
     ret = ret || RObject::setMember(getData().linearFactor, value, PropertyLinearFactor == propertyTypeId);
+    ret = ret || RObject::setMember(getData().dimScale, value, PropertyDimScale == propertyTypeId);
     ret = ret || RObject::setMember(getData().autoTextPos, value, PropertyAutoTextPos == propertyTypeId);
 //    if (RPluginLoader::hasPlugin("DWG")) {
 //        ret = ret || RObject::setMember(getData().fontName, value, PropertyFontName == propertyTypeId);
@@ -200,6 +203,8 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
         }
     } else if (propertyTypeId == PropertyLinearFactor) {
         return qMakePair(QVariant(getData().linearFactor), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyDimScale) {
+        return qMakePair(QVariant(getData().dimScale), RPropertyAttributes());
     } else if (propertyTypeId == PropertyAutoTextPos) {
         return qMakePair(QVariant(getData().autoTextPos), RPropertyAttributes(RPropertyAttributes::Invisible));
     }
@@ -278,5 +283,6 @@ void RDimensionEntity::print(QDebug dbg) const {
                   << ", lower tolerance: " << getData().lowerTolerance
                   << ", measurement (label): " << getData().getMeasurement(true)
                   << ", measurement (stored): " << getData().getMeasurement(false)
+                  << ", dimscale: " << getData().getDimScale()
                   << ")";
 }

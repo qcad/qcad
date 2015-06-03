@@ -195,6 +195,7 @@ public:
     QList<RVector> getPoints() const;
 
     void transform(const QTransform& t);
+    void move(const RVector& offset);
     void rotate(double angle);
     void scale(double fx, double fy);
 

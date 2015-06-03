@@ -90,6 +90,12 @@
         setLinearFactor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDimScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDistanceTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -112,9 +118,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         mirror
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDimexo

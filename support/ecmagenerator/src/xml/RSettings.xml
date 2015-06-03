@@ -190,6 +190,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QFont" isPureVirtual="false" />
     </method>
+    <method name="getSelectionColor" cppName="getSelectionColor"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
     <method name="getHighResolutionGraphicsView"
     cppName="getHighResolutionGraphicsView" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

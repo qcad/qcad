@@ -46,6 +46,8 @@ public:
                     const RVector& extensionPoint2,
                     double rotation);
 
+    virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
+
     virtual bool isValid() const;
 
     void setRotation(double r) {

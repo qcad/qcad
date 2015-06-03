@@ -41,6 +41,7 @@ RPropertyTypeId RDimDiametricEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimDiametricEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimDiametricEntity::PropertyLinearFactor;
+RPropertyTypeId RDimDiametricEntity::PropertyDimScale;
 RPropertyTypeId RDimDiametricEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimDiametricEntity::PropertyFontName;
 
@@ -83,6 +84,7 @@ void RDimDiametricEntity::init() {
     RDimDiametricEntity::PropertyMeasuredValue.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyMeasuredValue);
 
     RDimDiametricEntity::PropertyLinearFactor.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyLinearFactor);
+    RDimDiametricEntity::PropertyDimScale.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimScale);
     RDimDiametricEntity::PropertyAutoTextPos.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimDiametricEntity::PropertyFontName.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyFontName);
 

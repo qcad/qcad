@@ -46,6 +46,13 @@ RDimRotatedData::RDimRotatedData(const RDimensionData& dimData,
 
 }
 
+RBox RDimRotatedData::getBoundingBox(bool ignoreEmpty) const {
+    boundingBox = RDimensionData::getBoundingBox(ignoreEmpty);
+    boundingBox.growToInclude(extensionPoint1);
+    boundingBox.growToInclude(extensionPoint2);
+    return boundingBox;
+}
+
 bool RDimRotatedData::isValid() const {
     return RDimLinearData::isValid() && RMath::isNormal(rotation);
 }

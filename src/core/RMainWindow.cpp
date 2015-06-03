@@ -81,7 +81,7 @@ void RMainWindow::messageHandler(QtMsgType type, const QMessageLogContext& conte
 
     switch (type) {
     case QtDebugMsg:
-        fprintf(stderr, "\033[36m%s:%u, %s:\033[0m\nDebug:    %s\n", context.file, context.line, context.function, localMsg.constData());
+        fprintf(stderr, "\033[36m%s:%u, %s:\033[0m\n%s: Debug:    %s\n", context.file, context.line, context.function, (const char*)QTime::currentTime().toString().toLocal8Bit(), localMsg.constData());
         fflush(stderr);
         break;
     case QtWarningMsg:

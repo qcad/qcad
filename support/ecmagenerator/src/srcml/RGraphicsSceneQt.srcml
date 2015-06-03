@@ -109,7 +109,6 @@
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>startEntity</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>topLevelEntity</name></decl></param>)</parameter_list>;</function_decl>
 
-
     <function><type><name>virtual</name> <name>void</name></type> <name>dump</name><parameter_list>()</parameter_list> <block>{
         <expr_stmt><expr><call><name>qDebug</name><argument_list>()</argument_list></call> &lt;&lt; *<name>this</name></expr>;</expr_stmt>
     }</block></function>

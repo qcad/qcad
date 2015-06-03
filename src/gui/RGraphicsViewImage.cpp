@@ -728,6 +728,27 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         // get painter paths of the given entity:
         painterPaths = sceneQt->getPainterPaths(id);
 
+        // entity is a block ref: add painter paths for block entities, transformed to block ref location:
+//        QSharedPointer<REntity> e = getDocument()->queryEntityDirect(id);
+//        QSharedPointer<RBlockReferenceEntity> blockRef = e.dynamicCast<RBlockReferenceEntity>();
+//        if (!blockRef.isNull()) {
+//            QSharedPointer<RBlock> block = getDocument()->queryBlockDirect(blockRef->getReferencedBlockId());
+//            if (!block.isNull()) {
+//                QSet<REntity::Id> ids = getDocument()->queryBlockEntities(blockRef->getReferencedBlockId());
+//                QSet<REntity::Id>::iterator it;
+//                for (it=ids.begin(); it!=ids.end(); it++) {
+//                    QList<RPainterPath> pps = sceneQt->getPainterPaths(*it);
+//                    for (int i=0; i<pps.length(); i++) {
+////                        pps[i].move(-block->getOrigin());
+////                        pps[i].scale(blockRef->getScaleFactors().x, blockRef->getScaleFactors().y);
+////                        pps[i].rotate(blockRef->getRotation());
+////                        pps[i].move(blockRef->getPosition());
+//                        painterPaths.append(pps[i]);
+//                    }
+//                }
+//            }
+//        }
+
         // if at least one arc path is too detailed or not detailed enough,
         // or the path is an XLine or Ray, regen:
 
@@ -1159,8 +1180,7 @@ void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image) {
     // draw image in draft mode / selected mode (border in black or white):
     if (scene->getDraftMode() || image.isSelected()) {
         if (image.isSelected()) {
-            RColor selectionColor = RSettings::getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128));
-            painter->setPen(QPen(QBrush(selectionColor), 0));
+            painter->setPen(QPen(QBrush(RSettings::getSelectionColor()), 0));
         }
         else {
             if (backgroundColor.value()<128) {

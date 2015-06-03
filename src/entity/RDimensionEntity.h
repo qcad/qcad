@@ -63,6 +63,7 @@ public:
     static RPropertyTypeId PropertyLowerTolerance;
 
     static RPropertyTypeId PropertyLinearFactor;
+    static RPropertyTypeId PropertyDimScale;
     static RPropertyTypeId PropertyAutoTextPos;
     static RPropertyTypeId PropertyFontName;
     //static RPropertyTypeId PropertyHeight;
@@ -170,6 +171,14 @@ public:
 
     void setLinearFactor(double f) {
         getData().setLinearFactor(f);
+    }
+
+    double getDimScale() const {
+        return getData().getDimScale();
+    }
+
+    void setDimScale(double f) {
+        getData().setDimScale(f);
     }
 
 protected:

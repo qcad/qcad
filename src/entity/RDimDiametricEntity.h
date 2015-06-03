@@ -62,6 +62,7 @@ public:
     static RPropertyTypeId PropertyMeasuredValue;
 
     static RPropertyTypeId PropertyLinearFactor;
+    static RPropertyTypeId PropertyDimScale;
     static RPropertyTypeId PropertyAutoTextPos;
     static RPropertyTypeId PropertyFontName;
 

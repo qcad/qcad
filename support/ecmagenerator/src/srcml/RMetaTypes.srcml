@@ -93,6 +93,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPoint&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPointF&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPrinter&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPrintDialog&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QProcess&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QProgressBar&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QQuaternion&gt;</cpp:file></cpp:include>
@@ -236,6 +237,7 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QPointF*</argument>)</argument_list></macro>
 <cpp:if>#<cpp:directive>if</cpp:directive> <expr>!<call><name>defined</name><argument_list>(<argument><expr><name>Q_OS_IOS</name></expr></argument>)</argument_list></call></expr></cpp:if>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QPrinter*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QPrintDialog*</argument>)</argument_list></macro>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QProgressBar*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QProcess::ProcessError*</argument>)</argument_list></macro>

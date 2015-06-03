@@ -62,12 +62,7 @@ void RImporter::startImport() {
  * Imports an entity into the document.
  */
 void RImporter::importObjectP(QSharedPointer<RObject> object) {
-    //qDebug() << "importObjectP: " << *object;
-    //RDebug::startTimer();
     transaction.addObject(object, false);
-//    if (RDebug::stopTimer("importObjectP")>10) {
-//        qDebug() << "importObjectP (slow): " << *object;
-//    }
 }
 
 /**

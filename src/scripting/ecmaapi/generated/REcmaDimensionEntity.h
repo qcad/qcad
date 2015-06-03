@@ -124,6 +124,12 @@
         ;static  QScriptValue
         setLinearFactor
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimScale
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

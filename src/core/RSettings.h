@@ -22,7 +22,6 @@
 
 #include "core_global.h"
 
-#include <QColor>
 #include <QDir>
 #include <QSettings>
 #include <QFont>
@@ -94,6 +93,8 @@ public:
     static QFont getSnapLabelFont();
     static QFont getInfoLabelFont();
     static QFont getStatusBarFont();
+
+    static RColor getSelectionColor();
 
     static bool getHighResolutionGraphicsView();
     static bool getAutoScaleGrid();
@@ -181,6 +182,7 @@ private:
     static QFont* snapLabelFont;
     static QFont* infoLabelFont;
     static QFont* statusBarFont;
+    static RColor* selectionColor;
     static int snapRange;
     static int pickRange;
     static int zeroWeightWeight;

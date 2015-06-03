@@ -42,6 +42,7 @@ QFont* RSettings::rulerFont = NULL;
 QFont* RSettings::snapLabelFont = NULL;
 QFont* RSettings::infoLabelFont = NULL;
 QFont* RSettings::statusBarFont = NULL;
+RColor* RSettings::selectionColor = NULL;
 int RSettings::snapRange = -1;
 int RSettings::pickRange = -1;
 int RSettings::zeroWeightWeight = -1;
@@ -448,6 +449,14 @@ QFont RSettings::getStatusBarFont() {
         statusBarFont = new QFont(getValue("StatusBar/Font", font).value<QFont>());
     }
     return *statusBarFont;
+}
+
+RColor RSettings::getSelectionColor() {
+    if (selectionColor==NULL) {
+        // get application's default font (pixel size is -1, point size e.g. 10pt):
+        selectionColor = new RColor(getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128)));
+    }
+    return *selectionColor;
 }
 
 bool RSettings::getAutoScaleGrid() {

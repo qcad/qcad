@@ -185,6 +185,10 @@
                 qScriptValueFromValue(&engine, RDimRadialEntity::PropertyLinearFactor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyDimScale",
+                qScriptValueFromValue(&engine, RDimRadialEntity::PropertyDimScale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyAutoTextPos",
                 qScriptValueFromValue(&engine, RDimRadialEntity::PropertyAutoTextPos),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

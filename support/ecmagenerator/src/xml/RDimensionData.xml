@@ -125,6 +125,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getDimScale" cppName="getDimScale"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setDimScale" cppName="setDimScale"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="f"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getDistanceTo" cppName="getDistanceTo"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -201,11 +214,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RLine &amp;" typeName="RLine" name="axis"
         isConst="true" />
       </variant>
-    </method>
-    <method name="getDimscale" cppName="getDimscale"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
     </method>
     <method name="getDimexo" cppName="getDimexo" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

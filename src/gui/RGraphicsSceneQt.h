@@ -108,7 +108,6 @@ public:
 
     virtual void startEntity(bool topLevelEntity);
 
-
     virtual void dump() {
         qDebug() << *this;
     }

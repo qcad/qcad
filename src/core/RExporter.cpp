@@ -242,8 +242,7 @@ QBrush RExporter::getBrush(const RPainterPath& path) {
         }
         REntity* e=getEntity();
         if (e!=NULL && e->isSelected()) {
-            RColor selectionColor = RSettings::getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128));
-            brush.setColor(selectionColor);
+            brush.setColor(RSettings::getSelectionColor());
         }
         else {
             brush.setColor(color);
@@ -273,8 +272,7 @@ void RExporter::setEntityAttributes(bool forceSelected) {
     }
 
     if (forceSelected || currentEntity->isSelected()) {
-        RColor selectionColor = RSettings::getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128));
-        setColor(selectionColor);
+        setColor(RSettings::getSelectionColor());
     }
     else {
         setColor(currentEntity->getColor(true, blockRefStack));
@@ -421,7 +419,11 @@ void RExporter::exportEntities(bool allBlocks, bool undone) {
     for (it=list.begin(); it!=list.end(); it++) {
         QSharedPointer<REntity> e = document->queryEntityDirect(*it);
         if (!e.isNull()) {
+            //RDebug::startTimer(500);
             exportEntity(*e, false);
+//            if (RDebug::stopTimer(500, "export entity", 100)>100000000) {
+//                qDebug() << *e;
+//            }
         }
     }
 }
@@ -507,6 +509,14 @@ void RExporter::exportView(RView::Id viewId) {
 }
 
 /**
+ * Exports the given entity as part of a block definition to be reused by block references.
+ * This is called for entities which have no attributes ByBlock.
+ */
+//void RExporter::exportBlockEntity(REntity& entity, bool preview, bool allBlocks, bool forceSelected) {
+//    RExporter::exportEntity(entity, preview, allBlocks, forceSelected);
+//}
+
+/**
  * Sets the current entity to the given entity and calls \ref exportEntity().
  * Note that entity is a temporary clone.
  */
@@ -528,11 +538,11 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
     QSharedPointer<RLayer> layer;
     if (layerSource!=NULL) {
         RLayer::Id layerId = entity.getLayerId();
-        layer = layerSource->queryLayer(layerId);
+        layer = layerSource->queryLayerDirect(layerId);
         Q_ASSERT(!layer.isNull());
     }
     else {
-        layer = doc->queryLayer(entity.getLayerId());
+        layer = doc->queryLayerDirect(entity.getLayerId());
         if (layer.isNull()) {
             qDebug() << "Document: " << *doc;
             qDebug() << "Layer ID: " << entity.getLayerId();

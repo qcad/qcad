@@ -83,7 +83,7 @@ public:
      * Stops the timer with the given ID and prints the given message together 
      * with the time that has elapsed.
      */
-    static int stopTimer(int id, const QString& msg);
+    static int stopTimer(int id, const QString& msg, int msThreshold = 0);
 
     /**
      * Stops the timer with ID 0 and prints the given message together 

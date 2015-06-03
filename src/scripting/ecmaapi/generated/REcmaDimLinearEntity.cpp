@@ -180,6 +180,10 @@
                 qScriptValueFromValue(&engine, RDimLinearEntity::PropertyLinearFactor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyDimScale",
+                qScriptValueFromValue(&engine, RDimLinearEntity::PropertyDimScale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyAutoTextPos",
                 qScriptValueFromValue(&engine, RDimLinearEntity::PropertyAutoTextPos),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

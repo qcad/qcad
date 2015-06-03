@@ -143,9 +143,9 @@ private:
     DL_Attributes attributes;
     int textStyleCounter;
     QMap<int, QString> textStyles;
-    //QList<DL_StyleData> textStyles;
     // maps image entity IDs to handles:
     QMap<int, int> imageHandles;
+    bool minimalistic;
 };
 
 Q_DECLARE_METATYPE(RDxfExporter*)

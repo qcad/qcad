@@ -174,7 +174,20 @@ bool RGraphicsSceneQt::beginPath() {
 void RGraphicsSceneQt::endPath() {
     if (!exportToPreview) {
         if (!currentPainterPath.isEmpty()) {
-            addPath(getBlockRefOrEntity()->getId(), currentPainterPath, false);
+//            REntity* entity = getEntity();
+//            if (entity->getColor().isByBlock() ||
+//                entity->getLinetypeId()==document->getLinetypeByBlockId() ||
+//                entity->getLineweight()==RLineweight::WeightByBlock) {
+
+                // entities which are part of a block and have attributes ByBlock are exported to block ref ID:
+                addPath(getBlockRefOrEntity()->getId(), currentPainterPath, false);
+//            }
+//            else {
+//                // entities which are part of a block and have NO attributes ByBlock are exported to entity ID:
+//                if (!painterPaths.contains(getEntity()->getId())) {
+//                    addPath(getEntity()->getId(), currentPainterPath, false);
+//                }
+//            }
         }
     } else {
         addToPreview(currentPainterPath);
