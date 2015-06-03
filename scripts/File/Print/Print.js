@@ -19,7 +19,7 @@
 
 include("../File.js");
 include("sprintf.js");
-if (typeof(PrintPreview)=="undefined") {
+if (RSettings.isGuiEnabled() && typeof(PrintPreview)=="undefined") {
     include("../PrintPreview/PrintPreview.js");
 }
 if (typeof(PageSettings)=="undefined") {
