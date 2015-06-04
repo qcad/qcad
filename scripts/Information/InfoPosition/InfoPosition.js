@@ -93,8 +93,13 @@ InfoPosition.prototype.pickCoordinate = function(event, preview) {
 
         if (!preview) {
             appWin.handleUserInfo(this.getDisplayedLabel(this.pos, 8));
-            if (!isNull(op) && this.addToDrawing) {
-                di.applyOperation(op);
+            if (!isNull(op)) {
+                if (this.addToDrawing) {
+                    di.applyOperation(op);
+                }
+                else {
+                    op.destroy();
+                }
             }
         }
         else {

@@ -93,8 +93,13 @@ InfoAngle.prototype.pickEntity = function(event, preview) {
     // keep showing preview after 2nd entity has been set:
     if (!this.addToDrawing) {
         op = this.getOperation(preview);
-        if (!isNull(op) && preview) {
-            di.previewOperation(op);
+        if (!isNull(op)) {
+            if (preview) {
+                di.previewOperation(op);
+            }
+            else {
+                op.destroy();
+            }
         }
     }
 
@@ -150,6 +155,9 @@ InfoAngle.prototype.pickEntity = function(event, preview) {
             if (this.addToDrawing) {
                 di.applyOperation(op);
                 di.setRelativeZero(this.point2);
+            }
+            else {
+                op.destroy();
             }
 
             this.setState(InfoAngle.State.SettingFirstShape);

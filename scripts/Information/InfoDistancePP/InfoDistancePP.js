@@ -136,6 +136,9 @@ InfoDistancePP.prototype.pickCoordinate = function(event, preview) {
             if (preview) {
                 di.previewOperation(op);
             }
+            else {
+                op.destroy();
+            }
         }
     }
 };

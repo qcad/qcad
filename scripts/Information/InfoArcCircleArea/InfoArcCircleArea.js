@@ -128,8 +128,7 @@ InfoArcCircleArea.prototype.getOperation = function(preview) {
             if (this.addChord) {
                 var p1 = this.shape.getStartPoint();
                 var p2 = this.shape.getEndPoint();
-                var chord = new RLineEntity(this.getDocument(), new RLineData(p1, p2));
-                chord = chord.castToShape();
+                var chord = new RLine(p1, p2);
                 this.addShape(op, chord, preview);
             }
         } else {
@@ -137,10 +136,8 @@ InfoArcCircleArea.prototype.getOperation = function(preview) {
                 p1 = this.shape.getStartPoint();
                 p2 = this.shape.getEndPoint();
                 var cen = this.shape.getCenter();
-                var lin1 = new RLineEntity(this.getDocument(), new RLineData(p1, cen));
-                var lin2 = new RLineEntity(this.getDocument(), new RLineData(p2, cen));
-                lin1 = lin1.castToShape();
-                lin2 = lin2.castToShape();
+                var lin1 = new RLine(p1, cen);
+                var lin2 = new RLine(p2, cen);
                 this.addShape(op, lin1, preview);
                 this.addShape(op, lin2, preview);
             }
