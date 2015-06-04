@@ -851,6 +851,10 @@ QString RUnit::doubleToString(double value, int prec,
         }
     }
 
+    if (ret=="-0") {
+        ret = "0";
+    }
+
     return ret;
 
     /*

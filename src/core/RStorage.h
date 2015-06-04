@@ -141,6 +141,8 @@ public:
      */
     virtual QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId) = 0;
 
+    virtual QSet<REntity::Id> queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId) = 0;
+
     /**
      * \return A set of all block attributes which are not stored in the
      * block definition but as separate entities on the same level as

@@ -325,8 +325,8 @@ ItemPeer.getIdsByTagIdsAndText = function(tagIds, text) {
             matchingItemIds = itemIds;
         }
         else {
-            matchingItemIds.sort();
-            itemIds.sort();
+            matchingItemIds.sortNumerical();
+            itemIds.sortNumerical();
             matchingItemIds = Array.intersect(matchingItemIds, itemIds);
         }
     }
@@ -366,6 +366,8 @@ ItemPeer.getIdsByTagIdsAndText = function(tagIds, text) {
         matchingItemIds = itemIds;
     }
     else {
+        matchingItemIds.sortNumerical();
+        itemIds.sortNumerical();
         matchingItemIds = Array.intersect(matchingItemIds, itemIds);
     }
 

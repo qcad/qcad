@@ -122,6 +122,10 @@ function testArgument(args, shortFlag, longFlag) {
 }
 
 function printArgument(name, prop) {
-    var spc = new Array(20 - name.length).join(" ");
+    var spc = "";
+    if (name.length<32) {
+        spc = new Array(32 - name.length).join(" ");
+    }
+
     print(" ", name, spc, ":", prop);
 }

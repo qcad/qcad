@@ -920,6 +920,10 @@ QSet<REntity::Id> RDocument::queryBlockEntities(RBlock::Id blockId) const {
     return storage.queryBlockEntities(blockId);
 }
 
+QSet<REntity::Id> RDocument::queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId) const {
+    return storage.queryLayerBlockEntities(layerId, blockId);
+}
+
 bool RDocument::hasChildEntities(REntity::Id parentId) const {
     return storage.hasChildEntities(parentId);
 }

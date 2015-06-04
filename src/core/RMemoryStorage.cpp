@@ -293,6 +293,18 @@ QSet<REntity::Id> RMemoryStorage::queryBlockEntities(RBlock::Id blockId) {
     return result;
 }
 
+QSet<REntity::Id> RMemoryStorage::queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId) {
+    QSet<REntity::Id> result;
+    QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
+    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+        QSharedPointer<REntity> e = *it;
+        if (!e.isNull() && e->getLayerId() == layerId && !e->isUndone() && e->getBlockId() == blockId) {
+            result.insert(e->getId());
+        }
+    }
+    return result;
+}
+
 QSet<REntity::Id> RMemoryStorage::queryChildEntities(REntity::Id parentId, RS::EntityType type) {
     QSet<REntity::Id> result; // = queryBlockEntities(blockRef->getReferencedBlockId());
     if (parentId==REntity::INVALID_ID) {

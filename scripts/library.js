@@ -1256,6 +1256,9 @@ Array.prototype.sortNumerical = function() {
  * \param a first array, must already be sorted
  * \param b second array, must already be sorted
  *
+ * Items must be sorted NUMERICALLY (sortNumerical) if arrays contain numbers or
+ * ALPHABETICALLY (sort) if arrays contain strings.
+ *
  * State of input arrays is undefined when
  * the function returns.
  */

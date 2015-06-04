@@ -131,6 +131,17 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="queryLayerBlockEntities"
+    cppName="queryLayerBlockEntities" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; REntity::Id &gt;"
+      isPureVirtual="true">
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        isConst="false" />
+        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="queryChildEntities" cppName="queryChildEntities"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

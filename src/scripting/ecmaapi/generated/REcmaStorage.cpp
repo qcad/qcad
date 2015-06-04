@@ -99,6 +99,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryBlockEntities, "queryBlockEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, queryLayerBlockEntities, "queryLayerBlockEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, queryChildEntities, "queryChildEntities");
             
             REcmaHelper::registerFunction(&engine, proto, hasChildEntities, "hasChildEntities");
@@ -1510,6 +1512,80 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::queryBlockEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::queryLayerBlockEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::queryLayerBlockEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::queryLayerBlockEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("queryLayerBlockEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayer::Id */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RBlock::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayer::Id
+                    a0 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RBlock::Id
+                    a1 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->queryLayerBlockEntities(a0
+        ,
+    a1);
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.queryLayerBlockEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::queryLayerBlockEntities", context, engine);
             return result;
         }
          QScriptValue

@@ -92,6 +92,11 @@ QSet<REntity::Id> RLinkedStorage::queryBlockEntities(RBlock::Id blockId) {
     }
 }
 
+QSet<REntity::Id> RLinkedStorage::queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId) {
+    // TODO: implement
+    return RMemoryStorage::queryLayerBlockEntities(layerId, blockId);
+}
+
 QSet<REntity::Id> RLinkedStorage::queryChildEntities(REntity::Id parentId, RS::EntityType type) {
     if (entityMap.contains(parentId)) {
         // got parent, return only child entities from this parent:
