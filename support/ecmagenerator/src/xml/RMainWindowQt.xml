@@ -206,6 +206,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="&quot;&quot;" isConst="true" />
       </variant>
     </method>
+    <method name="showContextMenu" cppName="showContextMenu"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="entityId" isConst="false" />
+      </variant>
+    </method>
     <method name="escapeEvent" cppName="escapeEvent"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

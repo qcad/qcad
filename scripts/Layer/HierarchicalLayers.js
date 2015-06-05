@@ -58,6 +58,10 @@ HierarchicalLayers.getParentLayerName = function(layerName) {
 };
 
 HierarchicalLayers.getShortLayerName = function(layerName) {
-    var a = layerName.split(HierarchicalLayers.separator);
+    var a = HierarchicalLayers.getLayerNameHierarchy(layerName);
     return a[a.length-1];
+};
+
+HierarchicalLayers.getLayerNameHierarchy = function(layerName) {
+    return layerName.split(HierarchicalLayers.separator);
 };

@@ -276,6 +276,7 @@
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QVariantMap</name></argument>&gt;</argument_list></name></type> <name>customProperties</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RObject::Id</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RObject::XYZ</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RObject::XYZ*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;QSharedPointer&lt;RObject&gt; &gt;</argument>)</argument_list></macro>

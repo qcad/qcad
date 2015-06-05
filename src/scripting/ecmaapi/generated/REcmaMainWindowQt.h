@@ -308,6 +308,9 @@
         setRightMouseTip
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        showContextMenu
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         escapeEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

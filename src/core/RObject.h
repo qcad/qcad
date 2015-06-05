@@ -275,6 +275,7 @@ private:
     QMap<QString, QVariantMap> customProperties;
 };
 
+Q_DECLARE_METATYPE(RObject::Id)
 Q_DECLARE_METATYPE(RObject::XYZ)
 Q_DECLARE_METATYPE(RObject::XYZ*)
 Q_DECLARE_METATYPE(QList<QSharedPointer<RObject> >)

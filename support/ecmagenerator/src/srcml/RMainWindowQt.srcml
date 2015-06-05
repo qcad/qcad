@@ -28,6 +28,7 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCloseCurrentEvent.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMainWindow.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>QMdiArea</name>;</class_decl>
 <class_decl>class <name>QMdiSubWindow</name>;</class_decl>
@@ -99,6 +100,7 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setLeftMouseTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name> =<init> <expr>""</expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setRightMouseTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name> =<init> <expr>""</expr></init></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>showContextMenu</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>escapeEvent</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setGraphicsViewCursor</name><parameter_list>(<param><decl><type><name>const</name> <name>QCursor</name>&amp;</type> <name>cursor</name></decl></param>)</parameter_list>;</function_decl>
@@ -134,10 +136,16 @@
     <function_decl><type><name>void</name></type> <name>progressEnd</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>progressText</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>label</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>progressCanceled</name><parameter_list>()</parameter_list>;</function_decl>
+
     <function_decl><type><name>void</name></type> <name>userMessage</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>userInfo</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>userWarning</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>messageBox</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>userCommand</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Emitted when a context menu is requested on top of the given entity.
+     */</comment>
+    <function_decl><type><name>void</name></type> <name>contextMenu</name><parameter_list>(<param><decl><type><name>int</name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>escape</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>drop</name><parameter_list>(<param><decl><type><name>QDropEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>dragEnter</name><parameter_list>(<param><decl><type><name>QDragEnterEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>

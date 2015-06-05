@@ -433,6 +433,11 @@ void RMainWindowQt::escapeEvent() {
     emit escape();
 }
 
+void RMainWindowQt::showContextMenu(RObject::Id entityId) {
+    qDebug() << "entityId: " << entityId;
+    emit contextMenu((int)entityId);
+}
+
 void RMainWindowQt::setGraphicsViewCursor(const QCursor& cursor) {
     if (mdiArea==NULL) {
         return;
