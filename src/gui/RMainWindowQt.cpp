@@ -434,7 +434,6 @@ void RMainWindowQt::escapeEvent() {
 }
 
 void RMainWindowQt::showContextMenu(RObject::Id entityId) {
-    qDebug() << "entityId: " << entityId;
     emit contextMenu((int)entityId);
 }
 
