@@ -375,7 +375,6 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
                 if (rightClickToDeselect) {
                     this.selectEntity(entityId, add);
                     handled = true;
-                    //CadToolBar.back();
                 }
             }
             else {
