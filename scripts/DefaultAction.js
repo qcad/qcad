@@ -276,8 +276,10 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
 DefaultAction.prototype.getEntityIdUnderCursor = function(event, range) {
     var view = event.getGraphicsView();
     if (isNull(range)) {
-        range = view.mapDistanceFromView(this.pickRangePixels);
+        range = this.pickRangePixels;
     }
+
+    range = view.mapDistanceFromView(range);
 
     var strictRange = view.mapDistanceFromView(10);
     return this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
