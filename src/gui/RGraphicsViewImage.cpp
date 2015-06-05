@@ -1153,6 +1153,10 @@ void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image) {
     }
 
     if (!scene->getDraftMode()) {
+        if (image.getFade()==100) {
+            // 100% transparent:
+            return;
+        }
         QImage qImage = image.getImage();
         if (qImage.isNull()) {
             return;
@@ -1173,7 +1177,11 @@ void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image) {
         wm.rotate(RMath::rad2deg(angle));
         wm.scale(scale.x, -scale.y);
         painter->setMatrix(wm);
+        if (image.getFade()>0 && image.getFade()<100) {
+            painter->setOpacity(1.0 - ((double)image.getFade()/100));
+        }
         painter->drawImage(0,-qImage.height(), qImage);
+        painter->setOpacity(1.0);
         painter->restore();
     }
 

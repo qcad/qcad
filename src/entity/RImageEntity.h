@@ -61,6 +61,8 @@ public:
     static RPropertyTypeId PropertyWidth;
     static RPropertyTypeId PropertyHeight;
 
+    static RPropertyTypeId PropertyFade;
+
 public:
     RImageEntity(RDocument* document, const RImageData& data,
         RObject::Id objectId = RObject::INVALID_ID);

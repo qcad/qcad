@@ -66,7 +66,8 @@ public:
         Redundant = 0x8000,              //!< Property is redundant (e.g. angle for line entities)
         VisibleToParent = 0x10000,       //!< Property can be edited in the context of the parent entity
         KnownVariable = 0x20000,         //!< Property is a known DXF variable
-        NumericallySorted = 0x40000      //!< Sort choices for this property numerically
+        NumericallySorted = 0x40000,     //!< Sort choices for this property numerically
+        Percentage = 0x80000 | Integer   //!< Property is a percentage (0...100)
     };
     Q_DECLARE_FLAGS(Options, Option)
 

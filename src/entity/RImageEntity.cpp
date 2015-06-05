@@ -47,6 +47,7 @@ RPropertyTypeId RImageEntity::PropertyScaleFactorY;
 RPropertyTypeId RImageEntity::PropertyWidth;
 RPropertyTypeId RImageEntity::PropertyHeight;
 RPropertyTypeId RImageEntity::PropertyAngle;
+RPropertyTypeId RImageEntity::PropertyFade;
 
 RImageEntity::RImageEntity(RDocument* document, const RImageData& data,
         RObject::Id objectId) :
@@ -94,6 +95,8 @@ void RImageEntity::init() {
     RImageEntity::PropertyHeight.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
 
     RImageEntity::PropertyAngle.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
+
+    RImageEntity::PropertyFade.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Fade"));
 }
 
 bool RImageEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -142,6 +145,7 @@ bool RImageEntity::setProperty(RPropertyTypeId propertyTypeId,
         data.vVector.setAngle(value.toDouble() + M_PI/2);
         return true;
     }
+    ret = ret || RObject::setMember(data.fade, value, PropertyFade == propertyTypeId);
 
     return ret;
 }
@@ -167,6 +171,8 @@ QPair<QVariant, RPropertyAttributes> RImageEntity::getProperty(
         return qMakePair(QVariant(data.vVector.getMagnitude() * data.getImage().height()), RPropertyAttributes());
     } else if (propertyTypeId == PropertyAngle) {
         return qMakePair(QVariant(data.uVector.getAngle()), RPropertyAttributes(RPropertyAttributes::Angle));
+    } else if (propertyTypeId == PropertyFade) {
+        return qMakePair(QVariant(data.fade), RPropertyAttributes(RPropertyAttributes::Percentage));
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
