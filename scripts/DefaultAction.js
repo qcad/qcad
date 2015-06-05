@@ -364,10 +364,11 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
 
             // right-click on entity can be used to show context menu:
             if (entityId!==-1) {
-                // show entity context menu?
+                // show entity context menu:
                 if (rightClickEntityContextMenu) {
                     var appWin = EAction.getMainWindow();
                     appWin.showContextMenu(entityId);
+                    handled = true;
                 }
 
                 // use right-click on entity to select entity:
