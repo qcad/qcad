@@ -57,6 +57,7 @@ RGraphicsViewQt::RGraphicsViewQt(QWidget* parent, bool showFocus)
 
     grabGesture(Qt::PanGesture);
     grabGesture(Qt::PinchGesture);
+    setContextMenuPolicy(Qt::PreventContextMenu);
 }
 
 
