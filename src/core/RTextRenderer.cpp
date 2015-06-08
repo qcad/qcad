@@ -128,6 +128,10 @@ void RTextRenderer::renderSimple() {
     painterPaths.clear();
     richText = "";
 
+    if (textData.getText().isEmpty()) {
+        //return;
+    }
+
     RVector pos = textData.getAlignmentPoint();
     if (textData.getHAlign()==RS::HAlignFit) {
         pos = textData.getPosition();
