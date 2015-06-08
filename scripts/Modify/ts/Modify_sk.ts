@@ -1,22 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>Modify</name>
     <message>
         <location filename="../Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Nástroje úpravy</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show modification tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobraziť nástroje úpravy</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Úpravy</translation>
     </message>
 </context>
 <context>
@@ -24,22 +23,22 @@
     <message>
         <location filename="../ModifyCorner.js" line="+78"/>
         <source>Choose first entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte prvý prvok</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte druhý prvok</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastaviť bod</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte možnosť</translation>
     </message>
 </context>
 <context>
@@ -47,7 +46,7 @@
     <message>
         <location filename="../Transform.js" line="+44"/>
         <source>This tool requires a selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Tento nástroj vyžaduje výber</translation>
     </message>
 </context>
 </TS>

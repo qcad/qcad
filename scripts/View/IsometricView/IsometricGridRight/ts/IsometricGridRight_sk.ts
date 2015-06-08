@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>IsometricGridRight</name>
     <message>
         <location filename="../IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation type="unfinished"></translation>
+        <translation>P&amp;ravý pohľad</translation>
     </message>
 </context>
 </TS>

@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>Startup</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobraziť úvodný obrázok</translation>
     </message>
 </context>
 <context>
@@ -14,7 +13,7 @@
     <message>
         <location filename="../StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Pri spustení</translation>
     </message>
 </context>
 </TS>

@@ -1,63 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>ArcCPA</name>
     <message>
         <location filename="../ArcCPA.js" line="+66"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Stredový bod</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Point on arc or radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Bod na oblúku alebo polomer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point on arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Bod na oblúku</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Start angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Začiatočný uhol</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Koncový uhol</translation>
     </message>
     <message>
         <location filename="../ArcCPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Smer:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Proti smeru hodinových ručičiek (plusový)</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+17"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Smer</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>V smere hodinových ručičiek (mínusový)</translation>
     </message>
     <message>
         <location filename="../ArcCPAInit.js" line="+2"/>
         <source>&amp;Center, Point, Angles</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Stred, Bod, 2 uholy</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
-        <translation type="unfinished"></translation>
+        <translation>Nakreslite oblúk zo stredového bodu, bodu na oblúku a 2 uhlov</translation>
     </message>
 </context>
 </TS>

@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>IsometricGridOff</name>
     <message>
         <location filename="../IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnúť Izometrický p&amp;ohľad</translation>
     </message>
 </context>
 </TS>

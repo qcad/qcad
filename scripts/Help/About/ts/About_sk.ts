@@ -1,105 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>About</name>
     <message>
         <location filename="../About.js" line="+53"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>O %1</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Zásuvné moduly</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>No information available</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiadne dostupné informácie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plugin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zásuvný modul:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>ID:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Description:</source>
-        <translation type="unfinished"></translation>
+        <translation>Popis:</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Neznáme</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzia:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Qt Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt Verzia:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>License:</source>
-        <translation type="unfinished"></translation>
+        <translation>Licencia:</translation>
     </message>
     <message>
         <location line="+9"/>
         <location line="+12"/>
         <source>Internet:</source>
-        <translation type="unfinished"></translation>
+        <translation>Internet:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktívne</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inactive (restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>Neaktívny (reštart)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Trial Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Skúšobná verzia:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>File:</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbor:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Error:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba:</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Script Add-Ons</source>
-        <translation type="unfinished"></translation>
+        <translation>Skripty Doplnkov</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Prispievatelia</translation>
     </message>
     <message>
         <location filename="../AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
-        <translation type="unfinished"></translation>
+        <translation>O progr&amp;ame...</translation>
     </message>
 </context>
 <context>
@@ -107,7 +106,7 @@
     <message>
         <location filename="../AboutDialog.ui" line="+81"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>O programe</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -115,27 +114,27 @@
         <location line="+25"/>
         <location line="+25"/>
         <source>about:blank</source>
-        <translation type="unfinished"></translation>
+        <translation>about:blank</translation>
     </message>
     <message>
         <location line="-66"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Tvorcovia</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Zásuvné moduly</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Scripts</source>
-        <translation type="unfinished"></translation>
+        <translation>Skripty</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>Systém</translation>
     </message>
 </context>
 </TS>

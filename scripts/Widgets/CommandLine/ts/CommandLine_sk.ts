@@ -1,99 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>CommandLine</name>
     <message>
         <location filename="../CommandLine.js" line="+30"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomôcky</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+45"/>
         <location filename="../CommandLine.ui" line="+14"/>
         <source>Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Príkazový riadok</translation>
     </message>
     <message>
         <location line="-16"/>
         <source>&amp;Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Príkazový riadok</translation>
     </message>
     <message>
         <location line="+144"/>
-        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
-        <translation type="unfinished"></translation>
+        <source>Invalid coordinate or distance '%1'.</source>
+        <translation>Neplatné súradnice alebo vzdialenosť '%1'.</translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <source>Unknown command or invalid coordinate or value: '%1'</source>
+        <translation>Neznámy príkaz alebo neplatné súradnice alebo hodnota: '%1'</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Numbers may be entered as: &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <source>Numbers may be entered as: '%1'</source>
+        <translation>Čísla môžu byť zapísané ako: '%1'</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
-        <translation type="unfinished"></translation>
+        <source>Coordinates may be entered as: '%1' (absolute) or '%2' (relative) or '%3' (polar) or '%4' (relative polar)</source>
+        <translation>Súradnice môžu byť zadaná ako: '%1' (absolútne) alebo '%2' (relatívne) alebo '%3' (polárne), alebo '%4' (relatívne polárne)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>You may change the number / coordinate format in the application preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Formát čísiel / súradníc môžete zmeniť v nastaveniach programu.</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation type="unfinished"></translation>
+        <translation>Úkon zlyhal. Prosím, skontrolujte blokové rekurzie a zamknuté alebo neviditeľné vrstvy alebo bloky.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Varovanie</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Info</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Súradnice</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Command</source>
-        <translation type="unfinished"></translation>
+        <translation>Príkaz</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Command:</source>
-        <translation type="unfinished"></translation>
+        <translation>Príkaz:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>: </source>
-        <translation type="unfinished"></translation>
+        <translation>:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>History Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Veľkosť histórie:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Show warnings as dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobraziť varovanie v samostatnom okienku</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Show information as dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobraziť informácie v samostatnom okienku</translation>
     </message>
 </context>
 </TS>

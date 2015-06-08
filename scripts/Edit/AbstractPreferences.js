@@ -71,6 +71,7 @@ AbstractPreferences.prototype.beginEvent = function() {
         // apply calls save and apply:
         this.apply();
     }
+    this.uninit();
     this.dialog.destroy();
     EAction.activateMainWindow();
     this.terminate();
@@ -227,6 +228,56 @@ AbstractPreferences.prototype.apply = function() {
     var di = EAction.getDocumentInterface();
     if (!isNull(di)) {
         di.regenerateScenes();
+    }
+};
+
+/**
+ * Cleans up settings of all preference pages by calling
+ * 'uninitPreferences' for every add-on class.
+ */
+AbstractPreferences.prototype.uninit = function() {
+    var mdiChild, document;
+
+    for (var i = 0; i < this.addOns.length; ++i) {
+        var addOn = this.addOns[i];
+        var className = addOn.getClassName();
+
+        var widget = addOn.getPreferenceWidget();
+        if (isNull(widget) || widget.hasChanged !== true) {
+            continue;
+        }
+
+        try {
+            // include normally not needed
+            var doInclude = false;
+            if (isNull(global[className])) {
+                doInclude = true;
+            }
+            if (doInclude) {
+                include(addOn.getFilePath());
+            }
+
+            // uninit application settings globally:
+            if (this.appPreferences) {
+                if (!isNull(global[className]) && isFunction(global[className].uninitPreferences)) {
+                    global[className].uninitPreferences(undefined, undefined, widget);
+                }
+            }
+
+            // uninit document specific settings to current document:
+            else {
+                mdiChild = EAction.getMdiChild();
+                document = EAction.getDocument();
+                if (!isNull(global[className]) && isFunction(global[className].uninitPreferences)) {
+                    global[className].uninitPreferences(document, mdiChild, widget);
+                }
+            }
+        } catch (e) {
+            qWarning("AbstractPreferences.js:",
+                     "uninit(): Exception: %1; %2; %3"
+                     .arg(e.message).arg(e.fileName).arg(e.lineNumber));
+            continue;
+        }
     }
 };
 

@@ -1,82 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>BitmapExport</name>
     <message>
         <location filename="../BitmapExport.js" line="+54"/>
-        <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
-        <translation type="unfinished"></translation>
+        <source>Error while generating Bitmap file '%1': %2</source>
+        <translation>Chyba pri generovaní obrázkového súboru '%1': %2</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Bitmap file has been exported to &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <source>Bitmap file has been exported to '%1'</source>
+        <translation>Obrázkový súbor bol exportovaný do '%1'</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbory</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportovať ako obrázok (BMP, JPG,...)</translation>
     </message>
     <message>
         <location filename="../BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportovať ako obrázok</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozmer</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Width:</source>
-        <translation type="unfinished"></translation>
+        <translation>Šírka:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Výška:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Pixels per drawing unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pixely na výkresovú jednotku:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Margin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Okraj:</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozadie</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>Biele</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>Čierne</translation>
     </message>
     <message>
         <location filename="../BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ex&amp;portovať ako obrázok...</translation>
     </message>
 </context>
 </TS>

@@ -1,57 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>FirstStart</name>
     <message>
         <location filename="../FirstStart.js" line="+35"/>
         <source>%1 First Start</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - Prvé spustenie</translation>
     </message>
     <message>
         <location line="+189"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>Čierne</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>Biele</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jazyk:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Welcome to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Vitajte v %1-e</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prosím, vyberte nastavenie používané pre nové výkresy. Všetky tieto nastavenia možno neskôr zmeniť v dialógovom okne "Nastavenia".</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jednotka:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default Paper Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Predvolená veľkosť papiera:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Desatinná čiarka:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Background Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Farba pozadia:</translation>
     </message>
 </context>
 </TS>

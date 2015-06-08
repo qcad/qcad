@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>BehaviorPreferences</name>
     <message>
         <location filename="../BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Plocha Grafiky </translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Funkcie</translation>
     </message>
 </context>
 <context>
@@ -19,47 +18,47 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Double-Click</source>
-        <translation type="unfinished"></translation>
+        <translation>Dvojklik</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Double-click to edit text</source>
-        <translation type="unfinished"></translation>
+        <translation>Dvojklikom otvoriť úpravu textu</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation type="unfinished"></translation>
+        <translation>Dvojklikom na blok otvoriť úpravu bloku</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Right double-click to reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Dvojklik pravým tlačítkom reset</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Right-Click</source>
-        <translation type="unfinished"></translation>
+        <translation>Kliknutie pravým tlačidlom myši</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Pravé tlačidlo myši zruší výber prvkov (vhodné použiť s viacnásobným výberom prvkov)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cursor Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozsah kurzoru</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Cursor range for snap:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozsah pre prichytávanie:</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Cursor range for picking entities:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozsah pre vyberanie prvkov:</translation>
     </message>
 </context>
 </TS>

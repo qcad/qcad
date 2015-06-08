@@ -1,105 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.1" language="ru">
 <context>
     <name>About</name>
     <message>
         <location filename="../About.js" line="+53"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+69"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Надстройки</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>No information available</source>
-        <translation type="unfinished"></translation>
+        <translation>Сведения недоступны</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plugin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Надстройка:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>Идентификатор:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Description:</source>
-        <translation type="unfinished"></translation>
+        <translation>Описание:</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Неизвестно</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Qt Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия Qt:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>License:</source>
-        <translation type="unfinished"></translation>
+        <translation>Лицензия:</translation>
     </message>
     <message>
         <location line="+9"/>
         <location line="+12"/>
         <source>Internet:</source>
-        <translation type="unfinished"></translation>
+        <translation>Интернет:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Inactive (restart)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Trial Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Пробная версия:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>File:</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Error:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка:</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Script Add-Ons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+51"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
-        <translation type="unfinished"></translation>
+        <translation>О программе...</translation>
     </message>
 </context>
 <context>
@@ -107,7 +106,7 @@
     <message>
         <location filename="../AboutDialog.ui" line="+81"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>О программе</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -115,27 +114,27 @@
         <location line="+25"/>
         <location line="+25"/>
         <source>about:blank</source>
-        <translation type="unfinished"></translation>
+        <translation>about:blank</translation>
     </message>
     <message>
         <location line="-66"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Надстройки</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Scripts</source>
-        <translation type="unfinished"></translation>
+        <translation>Скрипты</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>Система</translation>
     </message>
 </context>
 </TS>

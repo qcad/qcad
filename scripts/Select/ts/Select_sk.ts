@@ -1,27 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>Select</name>
     <message>
         <location filename="../Select.js" line="+216"/>
         <source>Selection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Nástroje výberu</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show selection tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobraziť nástroje výberu</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Selection Tools Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Panel Nástrojov výberu</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>&amp;Select</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Výber</translation>
     </message>
 </context>
 </TS>

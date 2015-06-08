@@ -1,22 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
         <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridať vlastnú vlastnosť</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Názov:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hodnota:</translation>
     </message>
 </context>
 <context>
@@ -24,119 +23,119 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobraziť Z súradnice</translation>
     </message>
     <message>
         <location filename="../PropertyEditor.js" line="+187"/>
         <source>*VARIES*</source>
-        <translation type="unfinished"></translation>
+        <translation>*Rôzne*</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>:</source>
-        <translation type="unfinished"></translation>
+        <translation>:</translation>
     </message>
     <message>
         <location line="+172"/>
         <source>No Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Nič nie je vybraté</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Geometry</source>
-        <translation type="unfinished"></translation>
+        <translation>Geometria</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Dependent Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Závislé prvky</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Vlastné</translation>
     </message>
     <message>
         <location line="+158"/>
         <source>Index</source>
-        <translation type="unfinished"></translation>
+        <translation>Index</translation>
     </message>
     <message>
         <location line="+59"/>
         <source>Remove this property from selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstrániť vlastnosť z vybraných prvkov</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>Všetko</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Add custom property to selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridať vlastné vlastnosti k vybraným prvkom</translation>
     </message>
     <message>
         <location line="+136"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>automatický</translation>
     </message>
     <message>
         <location line="+121"/>
         <source>Use auto measurement</source>
-        <translation type="unfinished"></translation>
+        <translation>Použiť automatické meranie</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Áno</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie</translation>
     </message>
     <message>
         <location line="+307"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomôcky</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Vlastnosti</translation>
     </message>
     <message>
         <location filename="../PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Výber:</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Všeobecné</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Handle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Identifikátor:</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Move Selection to a New Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Presunúť výber do Novej vrstvy</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Linetype Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mierka typu čiary:</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Protected:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chránené:</translation>
     </message>
 </context>
 </TS>

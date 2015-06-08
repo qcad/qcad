@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>DraftMode</name>
     <message>
         <location filename="../DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Režim Náčrt</translation>
     </message>
 </context>
 </TS>
