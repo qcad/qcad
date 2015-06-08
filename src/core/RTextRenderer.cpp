@@ -129,7 +129,7 @@ void RTextRenderer::renderSimple() {
     richText = "";
 
     if (textData.getText().isEmpty()) {
-        //return;
+        return;
     }
 
     RVector pos = textData.getAlignmentPoint();
