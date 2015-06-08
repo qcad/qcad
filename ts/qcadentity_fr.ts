@@ -63,7 +63,7 @@ Hauteur
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation>Fondu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+84"/>

@@ -707,7 +707,7 @@ Altura:
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation>Esmaecimento</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-3"/>

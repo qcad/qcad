@@ -56,7 +56,7 @@
     <message>
         <location line="+18"/>
         <source>Single Block</source>
-        <translation type="unfinished">Jeden blok</translation>
+        <translation>Jeden blok</translation>
     </message>
     <message>
         <location line="+17"/>

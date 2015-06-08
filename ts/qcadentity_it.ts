@@ -63,7 +63,7 @@ Altezza Testo:</translatorcomment>
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation>Dissolvenza</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+84"/>
