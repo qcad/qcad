@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -30,7 +31,7 @@
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation>Prosím, vyberte nastavenie používané pre nové výkresy. Všetky tieto nastavenia možno neskôr zmeniť v dialógovom okne "Nastavenia".</translation>
+        <translation>Prosím, vyberte nastavenie používané pre nové výkresy. Všetky tieto nastavenia možno neskôr zmeniť v dialógovom okne &quot;Nastavenia&quot;.</translation>
     </message>
     <message>
         <location line="+14"/>

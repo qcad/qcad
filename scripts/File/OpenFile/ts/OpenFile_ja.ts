@@ -8,12 +8,12 @@
         <translation type="vanished">インポートフィルタがありません</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="+42"/>
+        <location filename="../OpenFile.js" line="+46"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>インポートフィルタがみつかりません。中断します...</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Open Drawing</source>
         <translation>図面を開く</translation>
     </message>

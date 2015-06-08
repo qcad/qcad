@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -18,7 +19,7 @@
         <translation>Hotovo</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+79"/>
         <source>Distance:</source>
         <translation>Vzdialenosť:</translation>
     </message>

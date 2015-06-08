@@ -39,7 +39,7 @@
         <translation>Déplacer entité</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+332"/>
         <source>Move Reference Point</source>
         <translation>Déplacer référence</translation>
     </message>
@@ -105,7 +105,7 @@
         <translation>Outils de CAO</translation>
     </message>
     <message>
-        <location line="+640"/>
+        <location line="+659"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entité est sur un calque verrouillé.</translation>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -14,7 +15,7 @@
     </message>
     <message>
         <location line="+77"/>
-        <source>Lines don't intersect.</source>
+        <source>Lines don&apos;t intersect.</source>
         <translation>Čiary sa nikdy nepretnú, sú rovnobežné.</translation>
     </message>
     <message>

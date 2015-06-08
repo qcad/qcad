@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -9,8 +10,8 @@
     </message>
     <message>
         <location line="+23"/>
-        <source>%1 %2 on Layer '%3'</source>
-        <translation>%1 %2 na Vrstve '%3'</translation>
+        <source>%1 %2 on Layer &apos;%3&apos;</source>
+        <translation>%1 %2 na Vrstve &apos;%3&apos;</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -19,8 +20,8 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>%1 Entities on Layer '%2'</source>
-        <translation>%1 Prvkov(-y) na Vrstve '%2'</translation>
+        <source>%1 Entities on Layer &apos;%2&apos;</source>
+        <translation>%1 Prvkov(-y) na Vrstve &apos;%2&apos;</translation>
     </message>
     <message>
         <location line="+3"/>

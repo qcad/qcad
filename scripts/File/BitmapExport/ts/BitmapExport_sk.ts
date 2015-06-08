@@ -1,16 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
     <name>BitmapExport</name>
     <message>
         <location filename="../BitmapExport.js" line="+54"/>
-        <source>Error while generating Bitmap file '%1': %2</source>
-        <translation>Chyba pri generovaní obrázkového súboru '%1': %2</translation>
+        <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
+        <translation>Chyba pri generovaní obrázkového súboru &apos;%1&apos;: %2</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Bitmap file has been exported to '%1'</source>
-        <translation>Obrázkový súbor bol exportovaný do '%1'</translation>
+        <source>Bitmap file has been exported to &apos;%1&apos;</source>
+        <translation>Obrázkový súbor bol exportovaný do &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+44"/>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -13,7 +14,7 @@
         <translation>Zobraziť varovanie pri ukladaní súboru do formátu, ktorý nepodporuje 24 bitové farby</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="+33"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
         <translation>Načítať/Uložiť</translation>
     </message>
@@ -28,7 +29,7 @@
         <translation>Žiadne exportné filtre sa nenašli. Ukončujem...</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+66"/>
         <source>Format:</source>
         <translation>Formát:</translation>
     </message>

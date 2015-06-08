@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -20,7 +21,7 @@
     <message>
         <location line="+4"/>
         <source>Draw freehand line</source>
-        <translation>Nakreslite ľubovolnú čiaru ("voľne rukou")</translation>
+        <translation>Nakreslite ľubovolnú čiaru (&quot;voľne rukou&quot;)</translation>
     </message>
 </context>
 </TS>

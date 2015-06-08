@@ -34,7 +34,7 @@
         <translation>Premakni entiteto na željeno lokacijo</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+332"/>
         <source>Move Reference Point</source>
         <translation>Premakni referenčno točko</translation>
     </message>
@@ -93,7 +93,7 @@
         <translation>CAD orodja</translation>
     </message>
     <message>
-        <location line="+640"/>
+        <location line="+659"/>
         <source>Entity is on a locked layer.</source>
         <translation>Entiteta je na zaklenjeni plasti.</translation>
     </message>

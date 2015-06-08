@@ -14,7 +14,7 @@
         <translation>Näytä varoitus, kun tallennetaan tiedostomuotoon, joka ei tue 24bittisiä värejä</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="+33"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
         <translation>Lataa/tallenna</translation>
     </message>
@@ -33,7 +33,7 @@
         <translation>Vientisuodattimia ei löydetty. Keskeytetään...</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+66"/>
         <source>Format:</source>
         <translation>Muoto:</translation>
     </message>

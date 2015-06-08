@@ -14,7 +14,7 @@
         <translation>２４ビットカラーをサポートしない形式の時警告を出す</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="+33"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
         <translation>ロード/セーブ</translation>
     </message>
@@ -33,7 +33,7 @@
         <translation>エクスポートフィルタがみつかりません。中断します...</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+66"/>
         <source>Format:</source>
         <translation>フォーマット:</translation>
     </message>

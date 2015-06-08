@@ -4,7 +4,7 @@
 <context>
     <name>SaveAs</name>
     <message>
-        <location filename="../SaveAs.js" line="+33"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
         <translation>Carico/Salvare</translation>
     </message>
@@ -23,7 +23,7 @@
         <translation>Non sono stati trovati filtri di exportazione. Interruzione...</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+66"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>

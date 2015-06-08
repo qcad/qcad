@@ -13,7 +13,7 @@
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="+236"/>
+        <location line="+233"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -82,12 +82,12 @@
         <translation>Kreisfläche:</translation>
     </message>
     <message>
-        <location line="-248"/>
+        <location line="-245"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
         <translation>Kreis, Kreisbogen, Ellipse oder Ellipsenbogen wählen</translation>
     </message>
     <message>
-        <location line="+249"/>
+        <location line="+246"/>
         <location line="+67"/>
         <source>circumference:</source>
         <translation>Umfang:</translation>

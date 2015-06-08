@@ -4,7 +4,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/entity/RImageEntity.cpp" line="+84"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="+85"/>
         <source>File</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -61,9 +61,14 @@ Altezza Testo:</translatorcomment>
         <translation>Altezza</translation>
     </message>
     <message>
+        <location line="+4"/>
+        <source>Fade</source>
+        <translation>Dissolvenza</translation>
+    </message>
+    <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+84"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+74"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+91"/>
         <location line="+4"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+95"/>
@@ -71,20 +76,20 @@ Altezza Testo:</translatorcomment>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+91"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+88"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+90"/>
         <location line="+4"/>
         <location line="+3"/>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+87"/>
         <location line="+5"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+87"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+89"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+93"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+95"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+80"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+81"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+78"/>
         <location line="+3"/>
@@ -92,7 +97,7 @@ Altezza Testo:</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="+86"/>
         <location line="+3"/>
-        <location filename="../src/entity/RImageEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="-12"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+69"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+80"/>
         <location line="+3"/>
@@ -379,7 +384,8 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
         <translation>Angolo</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+11"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -808,7 +814,7 @@ Valore dell&apos;ordinata</translatorcomment>
         <translation>Angolo di quota</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-19"/>
         <source>Label</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--
@@ -876,7 +882,7 @@ Limite inferiore</translatorcomment>
         <translation>Fattore</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Auto Label Position</source>
         <translation>Auto Label Position</translation>
     </message>

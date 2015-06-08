@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ru">
 <context>
@@ -5,7 +6,7 @@
     <message>
         <location filename="../Point1P.js" line="+51"/>
         <source>Position</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Point1PInit.js" line="+2"/>

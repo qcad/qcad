@@ -8,12 +8,12 @@
         <translation type="vanished">Pas de filtres d&apos;importation</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="+42"/>
+        <location filename="../OpenFile.js" line="+46"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Pas de filtres d&apos;importation ont été trouvés. Abandon...</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Open Drawing</source>
         <translation>Ouvrir le dessin</translation>
     </message>

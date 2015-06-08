@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -5,10 +6,10 @@
     <message>
         <location filename="../DirectoryList.js" line="+57"/>
         <source>The folder
-'%1'
+&apos;%1&apos;
 is already in the list.</source>
         <translation>Priečinok
-'%1'
+&apos;%1&apos;
 už existuje v zozname.</translation>
     </message>
     <message>

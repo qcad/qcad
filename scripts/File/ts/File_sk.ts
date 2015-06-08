@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -29,8 +30,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>The file '%1' already exists. Do you wish to overwrite it?</source>
-        <translation>Súbor '%1' už existuje. Chcete ho prepísať?</translation>
+        <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
+        <translation>Súbor &apos;%1&apos; už existuje. Chcete ho prepísať?</translation>
     </message>
 </context>
 </TS>

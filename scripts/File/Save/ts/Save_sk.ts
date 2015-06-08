@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -9,8 +10,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>The file '%1' already exists. Do you wish to overwrite it?</source>
-        <translation>Súbor '%1' už existuje. Chcete ho prepísať?</translation>
+        <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
+        <translation>Súbor &apos;%1&apos; už existuje. Chcete ho prepísať?</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -19,8 +20,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>The file format version you are using is not recommended: '%1'.</source>
-        <translation>Použitá verzia súboru sa neodporúča: '%1'.</translation>
+        <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
+        <translation>Použitá verzia súboru sa neodporúča: &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -29,7 +30,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>All custom colors will be 'rounded' to the nearest fixed color.</source>
+        <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
         <translation>Všetky vlastné farby budú nahradené najbližšími dostupnými farbami.</translation>
     </message>
     <message>
@@ -44,8 +45,8 @@
     </message>
     <message>
         <location line="+3"/>
-        <source>Saving to file format version '%1'.</source>
-        <translation>Uloženie do verzie súboru '%1'.</translation>
+        <source>Saving to file format version &apos;%1&apos;.</source>
+        <translation>Uloženie do verzie súboru &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -54,7 +55,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Custom colors are 'rounded' to the nearest fixed color.</source>
+        <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
         <translation>Vlastné farby sú nahradené najbližšími dostupnými farbami.</translation>
     </message>
     <message>

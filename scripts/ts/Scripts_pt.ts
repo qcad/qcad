@@ -39,7 +39,7 @@
         <translation>Mover entidade</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+332"/>
         <source>Move Reference Point</source>
         <translation>Mover ponto de referência</translation>
     </message>
@@ -125,7 +125,7 @@ Ferramentas CAD</translatorcomment>
         <translation>Ferramentas CAD</translation>
     </message>
     <message>
-        <location line="+640"/>
+        <location line="+659"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidade está em uma camada bloqueada.</translation>

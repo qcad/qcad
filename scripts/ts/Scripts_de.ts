@@ -34,7 +34,7 @@
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+332"/>
         <source>Move Reference Point</source>
         <translation>Referenzpunkt verschieben</translation>
     </message>
@@ -97,7 +97,7 @@
         <translation>CAD Werkzeuge</translation>
     </message>
     <message>
-        <location line="+640"/>
+        <location line="+659"/>
         <source>Entity is on a locked layer.</source>
         <translation>Element ist auf gesperrtem Layer.</translation>
     </message>

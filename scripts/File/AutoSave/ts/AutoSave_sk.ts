@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -29,16 +30,16 @@
     </message>
     <message>
         <location line="+21"/>
-        <source>An 'autosave' backup file for an untitled drawing was found.
+        <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation>Bol nájdený súbor 'bez názvu' automatickým uložením.
+        <translation>Bol nájdený súbor &apos;bez názvu&apos; automatickým uložením.
 Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>%1 'autosave' backup files for untitled drawings were found.
+        <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation>Boli nájdené %1 súbory(ov) 'bez názvu' auto. uložením.Prajete si ich obnoviť?</translation>
+        <translation>Boli nájdené %1 súbory(ov) &apos;bez názvu&apos; auto. uložením.Prajete si ich obnoviť?</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -57,9 +58,9 @@ Do you wish to recover them?</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>An 'autosave' backup file for '%1' exists.
+        <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation>Auto. uložením súbor '%1' existuje.
+        <translation>Auto. uložením súbor &apos;%1&apos; existuje.
 Prajete si ho obnoviť?</translation>
     </message>
     <message>

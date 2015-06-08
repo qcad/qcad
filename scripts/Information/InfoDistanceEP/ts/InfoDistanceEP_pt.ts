@@ -31,7 +31,7 @@ lugares:\</translatorcomment>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+79"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: PolylineEquidistant_pt.ts--

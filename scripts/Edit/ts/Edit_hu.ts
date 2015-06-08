@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+249"/>
+        <location line="+300"/>
         <source>Restart required</source>
         <translation type="unfinished"></translation>
     </message>

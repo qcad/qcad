@@ -19,7 +19,7 @@
         <translation>Končano</translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="+88"/>
         <source>Angle:</source>
         <translation>Kot:</translation>
     </message>

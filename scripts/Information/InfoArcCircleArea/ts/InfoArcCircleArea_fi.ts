@@ -9,7 +9,7 @@
         <translation>Valmis</translation>
     </message>
     <message>
-        <location line="+236"/>
+        <location line="+233"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -70,12 +70,12 @@
         <translation>Ympyrän ala:</translation>
     </message>
     <message>
-        <location line="-248"/>
+        <location line="-245"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
         <translation>Valitse kaari, ympyrä, ellipsi tai ellipsin kaari</translation>
     </message>
     <message>
-        <location line="+249"/>
+        <location line="+246"/>
         <location line="+67"/>
         <source>circumference:</source>
         <translation>ympärysmitta:</translation>

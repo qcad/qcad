@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -65,7 +66,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Surveyor's units</source>
+        <source>Surveyor&apos;s units</source>
         <translation>Prehľad</translation>
     </message>
     <message>
@@ -75,8 +76,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>The drawing unit must be 'Inch' or 'Foot' to display dimension labels in formats 'Architectural' or 'Engineering'. Format changed to 'Decimal'.</source>
-        <translation>Pre zobrazenie kót vo formátoch 'Architektonický' alebo 'Strojársky' musia byť nastavené jednotky v 'Palcoch' alebo 'Stopách'. Formát zmenený na 'Desatinný'.</translation>
+        <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
+        <translation>Pre zobrazenie kót vo formátoch &apos;Architektonický&apos; alebo &apos;Strojársky&apos; musia byť nastavené jednotky v &apos;Palcoch&apos; alebo &apos;Stopách&apos;. Formát zmenený na &apos;Desatinný&apos;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

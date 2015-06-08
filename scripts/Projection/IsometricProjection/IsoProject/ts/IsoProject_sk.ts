@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -44,8 +45,8 @@
     </message>
     <message>
         <location line="+18"/>
-        <source>Scale projection to original size ('isometric drawing')</source>
-        <translation>Mierka premietania v pôvodnej veľkosti ('izometrický výkres')</translation>
+        <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
+        <translation>Mierka premietania v pôvodnej veľkosti (&apos;izometrický výkres&apos;)</translation>
     </message>
     <message>
         <location line="+3"/>

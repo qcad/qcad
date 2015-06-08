@@ -16,7 +16,7 @@
         <translation type="unfinished">Pokaż ostrzeżenie podczas zapisywania w formacie pliku, który nie obsługuje 24bit kolory</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="+33"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Load / Save</translation>
@@ -38,7 +38,7 @@ Zachowaj jako &amp;szablon...</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+66"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

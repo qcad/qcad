@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -9,8 +10,8 @@
     </message>
     <message>
         <location line="+16"/>
-        <source>Adjusted invalid block name to '%1'</source>
-        <translation>Neplatný názov bloku upravený na '%1'</translation>
+        <source>Adjusted invalid block name to &apos;%1&apos;</source>
+        <translation>Neplatný názov bloku upravený na &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+55"/>

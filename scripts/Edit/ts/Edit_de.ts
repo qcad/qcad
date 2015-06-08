@@ -14,7 +14,7 @@
         <translation>Zeichnungseinstellungen</translation>
     </message>
     <message>
-        <location line="+249"/>
+        <location line="+300"/>
         <source>Restart required</source>
         <translation>Neustart</translation>
     </message>

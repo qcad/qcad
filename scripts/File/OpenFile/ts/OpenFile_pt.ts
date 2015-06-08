@@ -8,12 +8,12 @@
         <translation type="vanished">Não há filtros de importação</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="+42"/>
+        <location filename="../OpenFile.js" line="+46"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Sem filtros de importação foram encontrados. Abortar...</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+28"/>
         <source>Open Drawing</source>
         <translatorcomment>--exact match--
 --file: Compare_pt.ts--

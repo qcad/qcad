@@ -19,7 +19,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="+88"/>
         <source>Angle:</source>
         <translation type="unfinished"></translation>
     </message>

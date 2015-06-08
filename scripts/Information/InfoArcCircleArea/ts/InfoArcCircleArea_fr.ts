@@ -13,7 +13,7 @@
         <translation>Terminer</translation>
     </message>
     <message>
-        <location line="+236"/>
+        <location line="+233"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -74,12 +74,12 @@
         <translation>Aire du cercle :</translation>
     </message>
     <message>
-        <location line="-248"/>
+        <location line="-245"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
         <translation>Choisissez cercle, arc, ellipse ou ellipse arc</translation>
     </message>
     <message>
-        <location line="+249"/>
+        <location line="+246"/>
         <location line="+67"/>
         <source>circumference:</source>
         <translation>Circonférence :</translation>

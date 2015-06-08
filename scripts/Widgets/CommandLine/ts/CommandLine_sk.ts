@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -21,23 +22,23 @@
     </message>
     <message>
         <location line="+144"/>
-        <source>Invalid coordinate or distance '%1'.</source>
-        <translation>Neplatné súradnice alebo vzdialenosť '%1'.</translation>
+        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
+        <translation>Neplatné súradnice alebo vzdialenosť &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Unknown command or invalid coordinate or value: '%1'</source>
-        <translation>Neznámy príkaz alebo neplatné súradnice alebo hodnota: '%1'</translation>
+        <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
+        <translation>Neznámy príkaz alebo neplatné súradnice alebo hodnota: &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Numbers may be entered as: '%1'</source>
-        <translation>Čísla môžu byť zapísané ako: '%1'</translation>
+        <source>Numbers may be entered as: &apos;%1&apos;</source>
+        <translation>Čísla môžu byť zapísané ako: &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Coordinates may be entered as: '%1' (absolute) or '%2' (relative) or '%3' (polar) or '%4' (relative polar)</source>
-        <translation>Súradnice môžu byť zadaná ako: '%1' (absolútne) alebo '%2' (relatívne) alebo '%3' (polárne), alebo '%4' (relatívne polárne)</translation>
+        <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
+        <translation>Súradnice môžu byť zadaná ako: &apos;%1&apos; (absolútne) alebo &apos;%2&apos; (relatívne) alebo &apos;%3&apos; (polárne), alebo &apos;%4&apos; (relatívne polárne)</translation>
     </message>
     <message>
         <location line="+8"/>

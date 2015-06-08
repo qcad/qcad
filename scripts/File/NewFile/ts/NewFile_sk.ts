@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -70,12 +71,12 @@
     </message>
     <message>
         <location line="+54"/>
-        <source>Do you want to save the changes you made in&lt;br&gt;the document '%1'?</source>
-        <translation>Uložiť vykonané zmeny v dokumente&lt;br&gt;'%1' ?</translation>
+        <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
+        <translation>Uložiť vykonané zmeny v dokumente&lt;br&gt;&apos;%1&apos; ?</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Your changes will be lost if you don't save them.</source>
+        <source>Your changes will be lost if you don&apos;t save them.</source>
         <translation>Vaše zmeny sa stratia, ak ich neuložíte.</translation>
     </message>
     <message>

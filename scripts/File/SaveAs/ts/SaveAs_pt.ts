@@ -4,7 +4,7 @@
 <context>
     <name>SaveAs</name>
     <message>
-        <location filename="../SaveAs.js" line="+33"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
         <translation>Carregar/Guardar</translation>
     </message>
@@ -23,7 +23,7 @@
         <translation>Sem filtros de exportação foram encontrados. Abortar...</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+66"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: pt.po--

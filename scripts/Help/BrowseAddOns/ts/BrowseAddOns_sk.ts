@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -23,8 +24,8 @@
     </message>
     <message>
         <location line="-73"/>
-        <source>Add-on '%1' will be uninstalled when %2 is started the next time.</source>
-        <translation>Doplnok "%1" bude odinštalovaný pri ďalšom spustení %2 .</translation>
+        <source>Add-on &apos;%1&apos; will be uninstalled when %2 is started the next time.</source>
+        <translation>Doplnok &quot;%1&quot; bude odinštalovaný pri ďalšom spustení %2 .</translation>
     </message>
     <message>
         <location line="+74"/>

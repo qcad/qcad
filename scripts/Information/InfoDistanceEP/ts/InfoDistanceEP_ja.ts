@@ -19,7 +19,7 @@
         <translation>完了</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+79"/>
         <source>Distance:</source>
         <translation>距離:</translation>
     </message>
