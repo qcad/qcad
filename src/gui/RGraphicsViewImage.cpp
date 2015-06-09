@@ -413,11 +413,13 @@ void RGraphicsViewImage::paintOrigin(QPaintDevice& device) {
         RBox b = getBox();
         //pen.setStyle(Qt::DashDotDotLine);
         pen.setDashPattern(QVector<qreal>() << 9 << 3 << 3 << 3 << 3 << 3);
+        RVector z = mapToView(RVector(0,0));
+        pen.setDashOffset(-z.x);
         gridPainter->setPen(pen);
-        gridPainter->drawLine(QPointF(0.0, 0.0), QPointF(b.c1.x, 0));
-        gridPainter->drawLine(QPointF(0.0, 0.0), QPointF(b.c2.x, 0));
-        gridPainter->drawLine(QPointF(0.0, 0.0), QPointF(0.0, b.c1.y));
-        gridPainter->drawLine(QPointF(0.0, 0.0), QPointF(0.0, b.c2.y));
+        gridPainter->drawLine(QPointF(b.c1.x, 0.0), QPointF(b.c2.x, 0));
+        pen.setDashOffset(z.y);
+        gridPainter->setPen(pen);
+        gridPainter->drawLine(QPointF(0.0, b.c1.y), QPointF(0.0, b.c2.y));
     }
     else {
         gridPainter->setPen(pen);
