@@ -29,6 +29,7 @@ RPropertyTypeId RDimRadialEntity::PropertyLinetype;
 RPropertyTypeId RDimRadialEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimRadialEntity::PropertyLineweight;
 RPropertyTypeId RDimRadialEntity::PropertyColor;
+RPropertyTypeId RDimRadialEntity::PropertyDisplayedColor;
 RPropertyTypeId RDimRadialEntity::PropertyDrawOrder;
 
 RPropertyTypeId RDimRadialEntity::PropertyMiddleOfTextX;
@@ -70,6 +71,7 @@ void RDimRadialEntity::init() {
     RDimRadialEntity::PropertyLinetypeScale.generateId(typeid(RDimRadialEntity), REntity::PropertyLinetypeScale);
     RDimRadialEntity::PropertyLineweight.generateId(typeid(RDimRadialEntity), REntity::PropertyLineweight);
     RDimRadialEntity::PropertyColor.generateId(typeid(RDimRadialEntity), REntity::PropertyColor);
+    RDimRadialEntity::PropertyDisplayedColor.generateId(typeid(RDimRadialEntity), REntity::PropertyDisplayedColor);
     RDimRadialEntity::PropertyDrawOrder.generateId(typeid(RDimRadialEntity), REntity::PropertyDrawOrder);
 
     RDimRadialEntity::PropertyMiddleOfTextX.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyMiddleOfTextX);

@@ -177,6 +177,10 @@
                 qScriptValueFromValue(&engine, RXLineEntity::PropertyColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RXLineEntity::PropertyDisplayedColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyDrawOrder",
                 qScriptValueFromValue(&engine, RXLineEntity::PropertyDrawOrder),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

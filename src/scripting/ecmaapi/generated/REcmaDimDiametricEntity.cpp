@@ -152,6 +152,10 @@
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyDisplayedColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyDrawOrder",
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyDrawOrder),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

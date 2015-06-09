@@ -30,6 +30,7 @@ RPropertyTypeId RRayEntity::PropertyLinetype;
 RPropertyTypeId RRayEntity::PropertyLinetypeScale;
 RPropertyTypeId RRayEntity::PropertyLineweight;
 RPropertyTypeId RRayEntity::PropertyColor;
+RPropertyTypeId RRayEntity::PropertyDisplayedColor;
 RPropertyTypeId RRayEntity::PropertyDrawOrder;
 
 RPropertyTypeId RRayEntity::PropertyBasePointX;
@@ -71,6 +72,7 @@ void RRayEntity::init() {
     RRayEntity::PropertyLinetypeScale.generateId(typeid(RRayEntity), REntity::PropertyLinetypeScale);
     RRayEntity::PropertyLineweight.generateId(typeid(RRayEntity), REntity::PropertyLineweight);
     RRayEntity::PropertyColor.generateId(typeid(RRayEntity), REntity::PropertyColor);
+    RRayEntity::PropertyDisplayedColor.generateId(typeid(RRayEntity), REntity::PropertyDisplayedColor);
     RRayEntity::PropertyDrawOrder.generateId(typeid(RRayEntity), REntity::PropertyDrawOrder);
 
     RRayEntity::PropertyBasePointX.generateId(typeid(RRayEntity), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "X"));

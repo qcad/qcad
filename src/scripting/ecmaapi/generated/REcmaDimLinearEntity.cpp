@@ -144,6 +144,10 @@
                 qScriptValueFromValue(&engine, RDimLinearEntity::PropertyColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RDimLinearEntity::PropertyDisplayedColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyDrawOrder",
                 qScriptValueFromValue(&engine, RDimLinearEntity::PropertyDrawOrder),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

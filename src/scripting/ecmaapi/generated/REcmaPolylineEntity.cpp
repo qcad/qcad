@@ -203,6 +203,10 @@
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyDisplayedColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyDrawOrder",
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyDrawOrder),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

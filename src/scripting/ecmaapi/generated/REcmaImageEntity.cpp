@@ -173,6 +173,10 @@
                 qScriptValueFromValue(&engine, RImageEntity::PropertyColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RImageEntity::PropertyDisplayedColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyDrawOrder",
                 qScriptValueFromValue(&engine, RImageEntity::PropertyDrawOrder),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -211,6 +215,10 @@
             
             ctor.setProperty("PropertyHeight",
                 qScriptValueFromValue(&engine, RImageEntity::PropertyHeight),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyFade",
+                qScriptValueFromValue(&engine, RImageEntity::PropertyFade),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 

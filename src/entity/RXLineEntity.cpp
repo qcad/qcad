@@ -30,6 +30,7 @@ RPropertyTypeId RXLineEntity::PropertyLinetype;
 RPropertyTypeId RXLineEntity::PropertyLinetypeScale;
 RPropertyTypeId RXLineEntity::PropertyLineweight;
 RPropertyTypeId RXLineEntity::PropertyColor;
+RPropertyTypeId RXLineEntity::PropertyDisplayedColor;
 RPropertyTypeId RXLineEntity::PropertyDrawOrder;
 
 RPropertyTypeId RXLineEntity::PropertyBasePointX;
@@ -71,6 +72,7 @@ void RXLineEntity::init() {
     RXLineEntity::PropertyLinetypeScale.generateId(typeid(RXLineEntity), REntity::PropertyLinetypeScale);
     RXLineEntity::PropertyLineweight.generateId(typeid(RXLineEntity), REntity::PropertyLineweight);
     RXLineEntity::PropertyColor.generateId(typeid(RXLineEntity), REntity::PropertyColor);
+    RXLineEntity::PropertyDisplayedColor.generateId(typeid(RXLineEntity), REntity::PropertyDisplayedColor);
     RXLineEntity::PropertyDrawOrder.generateId(typeid(RXLineEntity), REntity::PropertyDrawOrder);
 
     RXLineEntity::PropertyBasePointX.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "X"));

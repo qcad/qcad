@@ -30,6 +30,7 @@ RPropertyTypeId RPointEntity::PropertyLinetype;
 RPropertyTypeId RPointEntity::PropertyLinetypeScale;
 RPropertyTypeId RPointEntity::PropertyLineweight;
 RPropertyTypeId RPointEntity::PropertyColor;
+RPropertyTypeId RPointEntity::PropertyDisplayedColor;
 RPropertyTypeId RPointEntity::PropertyDrawOrder;
 
 RPropertyTypeId RPointEntity::PropertyPositionX;
@@ -64,6 +65,7 @@ void RPointEntity::init() {
     RPointEntity::PropertyLinetypeScale.generateId(typeid(RPointEntity), REntity::PropertyLinetypeScale);
     RPointEntity::PropertyLineweight.generateId(typeid(RPointEntity), REntity::PropertyLineweight);
     RPointEntity::PropertyColor.generateId(typeid(RPointEntity), REntity::PropertyColor);
+    RPointEntity::PropertyDisplayedColor.generateId(typeid(RPointEntity), REntity::PropertyDisplayedColor);
     RPointEntity::PropertyDrawOrder.generateId(typeid(RPointEntity), REntity::PropertyDrawOrder);
     RPointEntity::PropertyPositionX.generateId(typeid(RPointEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "X"));
     RPointEntity::PropertyPositionY.generateId(typeid(RPointEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Y"));

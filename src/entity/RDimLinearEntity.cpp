@@ -29,6 +29,7 @@ RPropertyTypeId RDimLinearEntity::PropertyLinetype;
 RPropertyTypeId RDimLinearEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimLinearEntity::PropertyLineweight;
 RPropertyTypeId RDimLinearEntity::PropertyColor;
+RPropertyTypeId RDimLinearEntity::PropertyDisplayedColor;
 RPropertyTypeId RDimLinearEntity::PropertyDrawOrder;
 
 RPropertyTypeId RDimLinearEntity::PropertyMiddleOfTextX;
@@ -73,6 +74,7 @@ void RDimLinearEntity::init() {
     RDimLinearEntity::PropertyLinetypeScale.generateId(typeid(RDimLinearEntity), REntity::PropertyLinetypeScale);
     RDimLinearEntity::PropertyLineweight.generateId(typeid(RDimLinearEntity), REntity::PropertyLineweight);
     RDimLinearEntity::PropertyColor.generateId(typeid(RDimLinearEntity), REntity::PropertyColor);
+    RDimLinearEntity::PropertyDisplayedColor.generateId(typeid(RDimLinearEntity), REntity::PropertyDisplayedColor);
     RDimLinearEntity::PropertyDrawOrder.generateId(typeid(RDimLinearEntity), REntity::PropertyDrawOrder);
 
     RDimLinearEntity::PropertyMiddleOfTextX.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyMiddleOfTextX);

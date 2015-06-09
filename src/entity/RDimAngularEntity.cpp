@@ -29,6 +29,7 @@ RPropertyTypeId RDimAngularEntity::PropertyLinetype;
 RPropertyTypeId RDimAngularEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimAngularEntity::PropertyLineweight;
 RPropertyTypeId RDimAngularEntity::PropertyColor;
+RPropertyTypeId RDimAngularEntity::PropertyDisplayedColor;
 RPropertyTypeId RDimAngularEntity::PropertyDrawOrder;
 
 RPropertyTypeId RDimAngularEntity::PropertyMiddleOfTextX;
@@ -80,6 +81,7 @@ void RDimAngularEntity::init() {
     RDimAngularEntity::PropertyLinetypeScale.generateId(typeid(RDimAngularEntity), REntity::PropertyLinetypeScale);
     RDimAngularEntity::PropertyLineweight.generateId(typeid(RDimAngularEntity), REntity::PropertyLineweight);
     RDimAngularEntity::PropertyColor.generateId(typeid(RDimAngularEntity), REntity::PropertyColor);
+    RDimAngularEntity::PropertyDisplayedColor.generateId(typeid(RDimAngularEntity), REntity::PropertyDisplayedColor);
     RDimAngularEntity::PropertyDrawOrder.generateId(typeid(RDimAngularEntity), REntity::PropertyDrawOrder);
 
     RDimAngularEntity::PropertyMiddleOfTextX.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyMiddleOfTextX);

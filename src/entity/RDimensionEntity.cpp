@@ -30,6 +30,7 @@ RPropertyTypeId RDimensionEntity::PropertyLinetype;
 RPropertyTypeId RDimensionEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimensionEntity::PropertyLineweight;
 RPropertyTypeId RDimensionEntity::PropertyColor;
+RPropertyTypeId RDimensionEntity::PropertyDisplayedColor;
 RPropertyTypeId RDimensionEntity::PropertyDrawOrder;
 
 RPropertyTypeId RDimensionEntity::PropertyDefinitionPointX;
@@ -73,6 +74,7 @@ void RDimensionEntity::init() {
     RDimensionEntity::PropertyLinetypeScale.generateId(typeid(RDimensionEntity), REntity::PropertyLinetypeScale);
     RDimensionEntity::PropertyLineweight.generateId(typeid(RDimensionEntity), REntity::PropertyLineweight);
     RDimensionEntity::PropertyColor.generateId(typeid(RDimensionEntity), REntity::PropertyColor);
+    RDimensionEntity::PropertyDisplayedColor.generateId(typeid(RDimensionEntity), REntity::PropertyDisplayedColor);
     RDimensionEntity::PropertyDrawOrder.generateId(typeid(RDimensionEntity), REntity::PropertyDrawOrder);
 
     RDimensionEntity::PropertyText.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Label"));

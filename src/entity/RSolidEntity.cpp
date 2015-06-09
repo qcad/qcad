@@ -30,6 +30,7 @@ RPropertyTypeId RSolidEntity::PropertyLinetype;
 RPropertyTypeId RSolidEntity::PropertyLinetypeScale;
 RPropertyTypeId RSolidEntity::PropertyLineweight;
 RPropertyTypeId RSolidEntity::PropertyColor;
+RPropertyTypeId RSolidEntity::PropertyDisplayedColor;
 RPropertyTypeId RSolidEntity::PropertyDrawOrder;
 
 RPropertyTypeId RSolidEntity::PropertyPoint1X;
@@ -67,6 +68,7 @@ void RSolidEntity::init() {
     RSolidEntity::PropertyLinetypeScale.generateId(typeid(RSolidEntity), REntity::PropertyLinetypeScale);
     RSolidEntity::PropertyLineweight.generateId(typeid(RSolidEntity), REntity::PropertyLineweight);
     RSolidEntity::PropertyColor.generateId(typeid(RSolidEntity), REntity::PropertyColor);
+    RSolidEntity::PropertyDisplayedColor.generateId(typeid(RSolidEntity), REntity::PropertyDisplayedColor);
     RSolidEntity::PropertyDrawOrder.generateId(typeid(RSolidEntity), REntity::PropertyDrawOrder);
 
     RSolidEntity::PropertyPoint1X.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "X"));

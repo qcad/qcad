@@ -36,6 +36,7 @@ RPropertyTypeId RImageEntity::PropertyLinetype;
 RPropertyTypeId RImageEntity::PropertyLinetypeScale;
 RPropertyTypeId RImageEntity::PropertyLineweight;
 RPropertyTypeId RImageEntity::PropertyColor;
+RPropertyTypeId RImageEntity::PropertyDisplayedColor;
 RPropertyTypeId RImageEntity::PropertyDrawOrder;
 
 RPropertyTypeId RImageEntity::PropertyFileName;
@@ -80,6 +81,7 @@ void RImageEntity::init() {
     RImageEntity::PropertyLinetypeScale.generateId(typeid(RImageEntity), REntity::PropertyLinetypeScale);
     RImageEntity::PropertyLineweight.generateId(typeid(RImageEntity), REntity::PropertyLineweight);
     RImageEntity::PropertyColor.generateId(typeid(RImageEntity), REntity::PropertyColor);
+    RImageEntity::PropertyDisplayedColor.generateId(typeid(RImageEntity), REntity::PropertyDisplayedColor);
     RImageEntity::PropertyDrawOrder.generateId(typeid(RImageEntity), REntity::PropertyDrawOrder);
 
     RImageEntity::PropertyFileName.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "File"));

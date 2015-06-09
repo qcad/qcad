@@ -30,6 +30,7 @@ RPropertyTypeId RArcEntity::PropertyLinetype;
 RPropertyTypeId RArcEntity::PropertyLinetypeScale;
 RPropertyTypeId RArcEntity::PropertyLineweight;
 RPropertyTypeId RArcEntity::PropertyColor;
+RPropertyTypeId RArcEntity::PropertyDisplayedColor;
 RPropertyTypeId RArcEntity::PropertyDrawOrder;
 
 RPropertyTypeId RArcEntity::PropertyCenterX;
@@ -80,6 +81,7 @@ void RArcEntity::init() {
     RArcEntity::PropertyLinetypeScale.generateId(typeid(RArcEntity), REntity::PropertyLinetypeScale);
     RArcEntity::PropertyLineweight.generateId(typeid(RArcEntity), REntity::PropertyLineweight);
     RArcEntity::PropertyColor.generateId(typeid(RArcEntity), REntity::PropertyColor);
+    RArcEntity::PropertyDisplayedColor.generateId(typeid(RArcEntity), REntity::PropertyDisplayedColor);
     RArcEntity::PropertyDrawOrder.generateId(typeid(RArcEntity), REntity::PropertyDrawOrder);
     RArcEntity::PropertyCenterX.generateId(typeid(RArcEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"));
     RArcEntity::PropertyCenterY.generateId(typeid(RArcEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"));

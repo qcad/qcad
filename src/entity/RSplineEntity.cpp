@@ -31,6 +31,7 @@ RPropertyTypeId RSplineEntity::PropertyLinetype;
 RPropertyTypeId RSplineEntity::PropertyLinetypeScale;
 RPropertyTypeId RSplineEntity::PropertyLineweight;
 RPropertyTypeId RSplineEntity::PropertyColor;
+RPropertyTypeId RSplineEntity::PropertyDisplayedColor;
 RPropertyTypeId RSplineEntity::PropertyDrawOrder;
 RPropertyTypeId RSplineEntity::PropertyControlPointNX;
 RPropertyTypeId RSplineEntity::PropertyControlPointNY;
@@ -69,6 +70,7 @@ void RSplineEntity::init() {
     RSplineEntity::PropertyLinetypeScale.generateId(typeid(RSplineEntity), REntity::PropertyLinetypeScale);
     RSplineEntity::PropertyLineweight.generateId(typeid(RSplineEntity), REntity::PropertyLineweight);
     RSplineEntity::PropertyColor.generateId(typeid(RSplineEntity), REntity::PropertyColor);
+    RSplineEntity::PropertyDisplayedColor.generateId(typeid(RSplineEntity), REntity::PropertyDisplayedColor);
     RSplineEntity::PropertyDrawOrder.generateId(typeid(RSplineEntity), REntity::PropertyDrawOrder);
     RSplineEntity::PropertyPeriodic.generateId(typeid(RSplineEntity), "", QT_TRANSLATE_NOOP("REntity", "Closed Periodic"));
     RSplineEntity::PropertyDegree.generateId(typeid(RSplineEntity), "", QT_TRANSLATE_NOOP("REntity", "Degree"));

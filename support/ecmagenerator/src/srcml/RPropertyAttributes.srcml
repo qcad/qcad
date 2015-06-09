@@ -67,7 +67,8 @@
         <expr><name>Redundant</name> = 0x8000</expr>,              <comment type="line">//!&lt; Property is redundant (e.g. angle for line entities)</comment>
         <expr><name>VisibleToParent</name> = 0x10000</expr>,       <comment type="line">//!&lt; Property can be edited in the context of the parent entity</comment>
         <expr><name>KnownVariable</name> = 0x20000</expr>,         <comment type="line">//!&lt; Property is a known DXF variable</comment>
-        <expr><name>NumericallySorted</name> = 0x40000</expr>      <comment type="line">//!&lt; Sort choices for this property numerically</comment>
+        <expr><name>NumericallySorted</name> = 0x40000</expr>,     <comment type="line">//!&lt; Sort choices for this property numerically</comment>
+        <expr><name>Percentage</name> = 0x80000 | <name>Integer</name></expr>   <comment type="line">//!&lt; Property is a percentage (0...100)</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Options</argument>, <argument>Option</argument>)</argument_list></macro>
 

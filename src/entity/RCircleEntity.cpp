@@ -30,6 +30,7 @@ RPropertyTypeId RCircleEntity::PropertyLinetype;
 RPropertyTypeId RCircleEntity::PropertyLinetypeScale;
 RPropertyTypeId RCircleEntity::PropertyLineweight;
 RPropertyTypeId RCircleEntity::PropertyColor;
+RPropertyTypeId RCircleEntity::PropertyDisplayedColor;
 RPropertyTypeId RCircleEntity::PropertyDrawOrder;
 
 RPropertyTypeId RCircleEntity::PropertyCenterX;
@@ -70,6 +71,7 @@ void RCircleEntity::init() {
     RCircleEntity::PropertyLinetypeScale.generateId(typeid(RCircleEntity), REntity::PropertyLinetypeScale);
     RCircleEntity::PropertyLineweight.generateId(typeid(RCircleEntity), REntity::PropertyLineweight);
     RCircleEntity::PropertyColor.generateId(typeid(RCircleEntity), REntity::PropertyColor);
+    RCircleEntity::PropertyDisplayedColor.generateId(typeid(RCircleEntity), REntity::PropertyDisplayedColor);
     RCircleEntity::PropertyDrawOrder.generateId(typeid(RCircleEntity), REntity::PropertyDrawOrder);
     RCircleEntity::PropertyCenterX.generateId(typeid(RCircleEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"));
     RCircleEntity::PropertyCenterY.generateId(typeid(RCircleEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"));

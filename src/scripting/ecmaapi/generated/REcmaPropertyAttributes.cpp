@@ -245,6 +245,16 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("Percentage",
+    QScriptValue(RPropertyAttributes::Percentage),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Integer",
+    QScriptValue(RPropertyAttributes::Integer),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RPropertyAttributes::Option>(

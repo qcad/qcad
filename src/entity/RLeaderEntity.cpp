@@ -30,6 +30,7 @@ RPropertyTypeId RLeaderEntity::PropertyLinetype;
 RPropertyTypeId RLeaderEntity::PropertyLinetypeScale;
 RPropertyTypeId RLeaderEntity::PropertyLineweight;
 RPropertyTypeId RLeaderEntity::PropertyColor;
+RPropertyTypeId RLeaderEntity::PropertyDisplayedColor;
 RPropertyTypeId RLeaderEntity::PropertyDrawOrder;
 
 RPropertyTypeId RLeaderEntity::PropertyArrowHead;
@@ -63,6 +64,7 @@ void RLeaderEntity::init() {
     RLeaderEntity::PropertyLinetypeScale.generateId(typeid(RLeaderEntity), REntity::PropertyLinetypeScale);
     RLeaderEntity::PropertyLineweight.generateId(typeid(RLeaderEntity), REntity::PropertyLineweight);
     RLeaderEntity::PropertyColor.generateId(typeid(RLeaderEntity), REntity::PropertyColor);
+    RLeaderEntity::PropertyDisplayedColor.generateId(typeid(RLeaderEntity), REntity::PropertyDisplayedColor);
     RLeaderEntity::PropertyDrawOrder.generateId(typeid(RLeaderEntity), REntity::PropertyDrawOrder);
 
     RLeaderEntity::PropertyArrowHead.generateId(typeid(RLeaderEntity), "", QT_TRANSLATE_NOOP("REntity", "Arrow"));

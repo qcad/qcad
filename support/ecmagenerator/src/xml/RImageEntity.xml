@@ -207,6 +207,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyColor" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyDisplayedColor" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyDrawOrder" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyFileName" type="RPropertyTypeId"
@@ -226,6 +228,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyWidth" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyHeight" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyFade" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

@@ -33,6 +33,7 @@ RPropertyTypeId REntity::PropertyLinetype;
 RPropertyTypeId REntity::PropertyLinetypeScale;
 RPropertyTypeId REntity::PropertyLineweight;
 RPropertyTypeId REntity::PropertyColor;
+RPropertyTypeId REntity::PropertyDisplayedColor;
 RPropertyTypeId REntity::PropertyDrawOrder;
 
 RPropertyTypeId REntity::PropertyMinX;
@@ -79,6 +80,7 @@ void REntity::init() {
     REntity::PropertyLinetypeScale.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Linetype Scale"));
     REntity::PropertyLineweight.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Lineweight"));
     REntity::PropertyColor.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Color"));
+    REntity::PropertyDisplayedColor.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Displayed Color"));
     REntity::PropertyDrawOrder.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Draw Order"));
 
     REntity::PropertyMinX.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Left"));
@@ -248,6 +250,12 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
         QVariant var;
         var.setValue<RColor> (getData().getColor());
         return qMakePair(var, RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyDisplayedColor) {
+        QVariant var;
+        QStack<REntity*> stack;
+        var.setValue<RColor> (getData().getColor(true, stack));
+        return qMakePair(var, RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
     else if (propertyTypeId == PropertyDrawOrder) {
         return qMakePair(QVariant(getData().getDrawOrder()), RPropertyAttributes());

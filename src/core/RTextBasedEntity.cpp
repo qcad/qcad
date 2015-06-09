@@ -28,6 +28,7 @@ RPropertyTypeId RTextBasedEntity::PropertyLinetype;
 RPropertyTypeId RTextBasedEntity::PropertyLinetypeScale;
 RPropertyTypeId RTextBasedEntity::PropertyLineweight;
 RPropertyTypeId RTextBasedEntity::PropertyColor;
+RPropertyTypeId RTextBasedEntity::PropertyDisplayedColor;
 RPropertyTypeId RTextBasedEntity::PropertyDrawOrder;
 
 RPropertyTypeId RTextBasedEntity::PropertySimple;
@@ -64,6 +65,7 @@ void RTextBasedEntity::init() {
     RTextBasedEntity::PropertyLinetypeScale.generateId(typeid(RTextBasedEntity), REntity::PropertyLinetypeScale);
     RTextBasedEntity::PropertyLineweight.generateId(typeid(RTextBasedEntity), REntity::PropertyLineweight);
     RTextBasedEntity::PropertyColor.generateId(typeid(RTextBasedEntity), REntity::PropertyColor);
+    RTextBasedEntity::PropertyDisplayedColor.generateId(typeid(RTextBasedEntity), REntity::PropertyDisplayedColor);
     RTextBasedEntity::PropertyDrawOrder.generateId(typeid(RTextBasedEntity), REntity::PropertyDrawOrder);
 
     RTextBasedEntity::PropertySimple.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Simple"));

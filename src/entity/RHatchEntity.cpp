@@ -36,6 +36,7 @@ RPropertyTypeId RHatchEntity::PropertyLinetype;
 RPropertyTypeId RHatchEntity::PropertyLinetypeScale;
 RPropertyTypeId RHatchEntity::PropertyLineweight;
 RPropertyTypeId RHatchEntity::PropertyColor;
+RPropertyTypeId RHatchEntity::PropertyDisplayedColor;
 RPropertyTypeId RHatchEntity::PropertyDrawOrder;
 
 RPropertyTypeId RHatchEntity::PropertySolid;
@@ -75,6 +76,7 @@ void RHatchEntity::init() {
     RHatchEntity::PropertyLinetypeScale.generateId(typeid(RHatchEntity), REntity::PropertyLinetypeScale);
     RHatchEntity::PropertyLineweight.generateId(typeid(RHatchEntity), REntity::PropertyLineweight);
     RHatchEntity::PropertyColor.generateId(typeid(RHatchEntity), REntity::PropertyColor);
+    RHatchEntity::PropertyDisplayedColor.generateId(typeid(RHatchEntity), REntity::PropertyDisplayedColor);
     RHatchEntity::PropertyDrawOrder.generateId(typeid(RHatchEntity), REntity::PropertyDrawOrder);
 
     RHatchEntity::PropertySolid.generateId(typeid(RHatchEntity), "", QT_TRANSLATE_NOOP("REntity", "Solid"));

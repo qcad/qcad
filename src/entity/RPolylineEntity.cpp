@@ -31,6 +31,7 @@ RPropertyTypeId RPolylineEntity::PropertyLinetype;
 RPropertyTypeId RPolylineEntity::PropertyLinetypeScale;
 RPropertyTypeId RPolylineEntity::PropertyLineweight;
 RPropertyTypeId RPolylineEntity::PropertyColor;
+RPropertyTypeId RPolylineEntity::PropertyDisplayedColor;
 RPropertyTypeId RPolylineEntity::PropertyDrawOrder;
 
 RPropertyTypeId RPolylineEntity::PropertyPolylineGen;
@@ -74,6 +75,7 @@ void RPolylineEntity::init() {
     RPolylineEntity::PropertyLinetypeScale.generateId(typeid(RPolylineEntity), REntity::PropertyLinetypeScale);
     RPolylineEntity::PropertyLineweight.generateId(typeid(RPolylineEntity), REntity::PropertyLineweight);
     RPolylineEntity::PropertyColor.generateId(typeid(RPolylineEntity), REntity::PropertyColor);
+    RPolylineEntity::PropertyDisplayedColor.generateId(typeid(RPolylineEntity), REntity::PropertyDisplayedColor);
     RPolylineEntity::PropertyDrawOrder.generateId(typeid(RPolylineEntity), REntity::PropertyDrawOrder);
 
     RPolylineEntity::PropertyPolylineGen.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Polyline Pattern"));

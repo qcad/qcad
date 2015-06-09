@@ -26,6 +26,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="VisibleToParent" />
       <value name="KnownVariable" />
       <value name="NumericallySorted" />
+      <value name="Percentage" />
+      <value name="Integer" />
     </enum>
     <constructor>
       <variant />

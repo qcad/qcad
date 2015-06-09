@@ -31,6 +31,7 @@ RPropertyTypeId RBlockReferenceEntity::PropertyLinetype;
 RPropertyTypeId RBlockReferenceEntity::PropertyLinetypeScale;
 RPropertyTypeId RBlockReferenceEntity::PropertyLineweight;
 RPropertyTypeId RBlockReferenceEntity::PropertyColor;
+RPropertyTypeId RBlockReferenceEntity::PropertyDisplayedColor;
 RPropertyTypeId RBlockReferenceEntity::PropertyDrawOrder;
 
 RPropertyTypeId RBlockReferenceEntity::PropertyReferencedBlock;
@@ -85,6 +86,7 @@ void RBlockReferenceEntity::init() {
     RBlockReferenceEntity::PropertyLinetypeScale.generateId(typeid(RBlockReferenceEntity), REntity::PropertyLinetypeScale);
     RBlockReferenceEntity::PropertyLineweight.generateId(typeid(RBlockReferenceEntity), REntity::PropertyLineweight);
     RBlockReferenceEntity::PropertyColor.generateId(typeid(RBlockReferenceEntity), REntity::PropertyColor);
+    RBlockReferenceEntity::PropertyDisplayedColor.generateId(typeid(RBlockReferenceEntity), REntity::PropertyDisplayedColor);
     RBlockReferenceEntity::PropertyDrawOrder.generateId(typeid(RBlockReferenceEntity), REntity::PropertyDrawOrder);
 
     RBlockReferenceEntity::PropertyReferencedBlock.generateId(typeid(RBlockReferenceEntity), "", QT_TRANSLATE_NOOP("REntity", "Block"));

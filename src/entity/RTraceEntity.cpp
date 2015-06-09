@@ -30,6 +30,7 @@ RPropertyTypeId RTraceEntity::PropertyLinetype;
 RPropertyTypeId RTraceEntity::PropertyLinetypeScale;
 RPropertyTypeId RTraceEntity::PropertyLineweight;
 RPropertyTypeId RTraceEntity::PropertyColor;
+RPropertyTypeId RTraceEntity::PropertyDisplayedColor;
 RPropertyTypeId RTraceEntity::PropertyDrawOrder;
 
 RPropertyTypeId RTraceEntity::PropertyPoint1X;
@@ -67,6 +68,7 @@ void RTraceEntity::init() {
     RTraceEntity::PropertyLinetypeScale.generateId(typeid(RTraceEntity), REntity::PropertyLinetypeScale);
     RTraceEntity::PropertyLineweight.generateId(typeid(RTraceEntity), REntity::PropertyLineweight);
     RTraceEntity::PropertyColor.generateId(typeid(RTraceEntity), REntity::PropertyColor);
+    RTraceEntity::PropertyDisplayedColor.generateId(typeid(RTraceEntity), REntity::PropertyDisplayedColor);
     RTraceEntity::PropertyDrawOrder.generateId(typeid(RTraceEntity), REntity::PropertyDrawOrder);
 
     RTraceEntity::PropertyPoint1X.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "X"));

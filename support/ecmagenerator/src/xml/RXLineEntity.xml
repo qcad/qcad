@@ -225,6 +225,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyColor" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyDisplayedColor" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyDrawOrder" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyBasePointX" type="RPropertyTypeId"

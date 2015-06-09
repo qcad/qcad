@@ -51,6 +51,7 @@ public:
     static RPropertyTypeId PropertyLinetypeScale;
     static RPropertyTypeId PropertyLineweight;
     static RPropertyTypeId PropertyColor;
+    static RPropertyTypeId PropertyDisplayedColor;
     static RPropertyTypeId PropertyDrawOrder;
 
     static RPropertyTypeId PropertyAngle;
