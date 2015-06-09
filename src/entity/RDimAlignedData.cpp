@@ -44,6 +44,13 @@ RDimAlignedData::RDimAlignedData(const RDimensionData& dimData,
 
 }
 
+RBox RDimAlignedData::getBoundingBox(bool ignoreEmpty) const {
+    boundingBox = RDimensionData::getBoundingBox(ignoreEmpty);
+    boundingBox.growToInclude(extensionPoint1);
+    boundingBox.growToInclude(extensionPoint2);
+    return boundingBox;
+}
+
 QList<RVector> RDimAlignedData::getReferencePoints(
     RS::ProjectionRenderingHint hint) const {
 

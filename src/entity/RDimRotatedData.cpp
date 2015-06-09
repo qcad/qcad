@@ -118,26 +118,12 @@ QList<QSharedPointer<RShape> > RDimRotatedData::getShapes(const RBox& queryBox, 
 
     QList<QSharedPointer<RShape> > ret;
 
-//    if (ignoreComplex) {
-//        return ret;
-//    }
-
     double dimexo = getDimexo();
     double dimexe = getDimexe();
-    //double dimasz = getDimasz();
-    //double dimgap = getDimgap();
-    //double dimtxt = getDimtxt();
 
-    double extAngle = rotation + (M_PI/2.0);
+    double extAngle = rotation - (M_PI/2.0);
 
-    RLine extensionLine(extensionPoint1, extensionPoint2);
-
-    // angle from extension endpoints towards dimension line
-    //double extAngle = extensionPoint1.getAngleTo(extensionPoint2);
-    // direction of dimension line
     RVector dirDim = RVector::createPolar(1.0, rotation);
-    // direction of extension lines
-    //RVector dirExt = RVector::createPolar(1.0, extAngle);
 
     // construction line for dimension line
     RLine dimLine(definitionPoint, definitionPoint + dirDim);
@@ -147,42 +133,25 @@ QList<QSharedPointer<RShape> > RDimRotatedData::getShapes(const RBox& queryBox, 
     // definitive dimension line:
     ret += getDimensionLineShapes(dimP1, dimP2, true, true);
 
-    RVector vDimexo1, vDimexe1, vDimexo2, vDimexe2;
-    vDimexe1.setPolar(dimexe, extensionPoint1.getAngleTo(dimP1));
-    vDimexo1.setPolar(dimexo, extensionPoint1.getAngleTo(dimP1));
-
-    vDimexe2.setPolar(dimexe, extensionPoint2.getAngleTo(dimP2));
-    vDimexo2.setPolar(dimexo, extensionPoint2.getAngleTo(dimP2));
-
-    if ((extensionPoint1-dimP1).getMagnitude()<RS::PointTolerance) {
-        vDimexe1.setPolar(dimexe,
-                          definitionPoint.getAngleTo(dimP1)-M_PI/2.0);
-        vDimexo1.setPolar(dimexo,
-                          definitionPoint.getAngleTo(dimP1)-M_PI/2.0);
-    }
-    if ((extensionPoint2-dimP2).getMagnitude()<RS::PointTolerance) {
-        vDimexe2.setPolar(dimexe,
-                          definitionPoint.getAngleTo(dimP2)-M_PI/2.0);
-        vDimexo2.setPolar(dimexo,
-                          definitionPoint.getAngleTo(dimP2)-M_PI/2.0);
-    }
-
-
-
-    RS::Side side = extensionLine.getSideOfPoint(definitionPoint);
-    if (side==RS::RightHand) {
-        extAngle -= M_PI/2.0;
-    }
-    else {
-        extAngle += M_PI/2.0;
-    }
-
     // extension lines:
-    RLine line;
-    line = RLine(extensionPoint1+vDimexo1, dimP1+vDimexe1);
-    ret.append(QSharedPointer<RLine>(new RLine(line)));
-    line = RLine(extensionPoint2+vDimexo2, dimP2+vDimexe2);
-    ret.append(QSharedPointer<RLine>(new RLine(line)));
+    RVector vDimexo1, vDimexe1, vDimexo2, vDimexe2;
+    if (!extensionPoint1.equalsFuzzy(dimP1)) {
+        double a1 = extensionPoint1.getAngleTo(dimP1);
+        vDimexe1.setPolar(dimexe, a1);
+        vDimexo1.setPolar(dimexo, a1);
+
+        RLine line(extensionPoint1+vDimexo1, dimP1+vDimexe1);
+        ret.append(QSharedPointer<RLine>(new RLine(line)));
+    }
+
+    if (!extensionPoint2.equalsFuzzy(dimP2)) {
+        double a2 = extensionPoint2.getAngleTo(dimP2);
+        vDimexe2.setPolar(dimexe, a2);
+        vDimexo2.setPolar(dimexo, a2);
+
+        RLine line(extensionPoint2+vDimexo2, dimP2+vDimexe2);
+        ret.append(QSharedPointer<RLine>(new RLine(line)));
+    }
 
     return ret;
 }
