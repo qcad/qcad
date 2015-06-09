@@ -33,10 +33,10 @@ var credits =
     ],
     [
         "Translations",
-        [ "Wang Zhen Zhe",     "Chinese (zh_CN) translation." ],
+        //[ "Wang Zhen Zhe",     "Chinese (zh_CN) translation." ],
         [ "Timo Seppola",      "Finnish (fi) translation." ],
         [ "Tanaka Hidemune",   "Japanese (ja) translation and user reference manual." ],
-        [ "J&amp;J",  "Slovak (sk) translation." ],
+        [ "Ján Jamriška",      "Slovak (sk) translation." ],
         [ "Miha ('miharix')",  "Slovenian (sl) translation." ],
     ],
     [
