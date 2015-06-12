@@ -22,6 +22,8 @@ pow = Math.pow;
 sqrt = Math.sqrt;
 random = Math.random;
 round = Math.round;
+simpleUseOp = false;
+simpleOp = undefined;
 
 function rad2deg(a) { 
     return a / (2.0 * Math.PI) * 360.0; 
@@ -66,6 +68,9 @@ function getDocumentInterface() {
 
 function getDocument() {
     var di = getDocumentInterface();
+    if (isNull(di)) {
+        return undefined;
+    }
     return di.getDocument();
 }
 
@@ -162,7 +167,30 @@ function addShape(shape) {
 }
 
 function addEntity(entity) {
-    var di = getDocumentInterface();
-    var op = new RAddObjectOperation(entity);
-    di.applyOperation(op);
+    if (simpleUseOp===true) {
+        if (isNull(simpleOp)) {
+            simpleOp = new RAddObjectsOperation();
+        }
+        simpleOp.addObject(entity, false);
+    }
+    else {
+        var di = getDocumentInterface();
+        di.applyOperation(new RAddObjectOperation(entity, false));
+    }
+}
+
+function startTransaction() {
+    simpleUseOp = true;
+    if (!isNull(simpleOp)) {
+        simpleOp.destroy();
+        simpleOp = undefined;
+    }
+}
+
+function endTransaction() {
+    if (!isNull(simpleOp)) {
+        var di = getDocumentInterface();
+        di.applyOperation(simpleOp);
+        simpleOp = undefined;
+    }
 }

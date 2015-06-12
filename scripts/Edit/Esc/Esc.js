@@ -53,6 +53,21 @@ Esc.prototype.beginEvent = function() {
         }
     }
 
+    // special case: erase script shell text:
+    var ecmaScriptShellEdit = objectFromPath("MainWindow::EcmaScriptShell::CommandEdit");
+    if (!isNull(ecmaScriptShellEdit)) {
+        if (ecmaScriptShellEdit.focus) {
+            if (ecmaScriptShellEdit.text!=="") {
+                ecmaScriptShellEdit.text = "";
+                this.terminate();
+                return;
+            }
+            else {
+                returnFocus = true;
+            }
+        }
+    }
+
     // return focus to graphics view or application window:
     if (returnFocus) {
         var view = this.getGraphicsViews();

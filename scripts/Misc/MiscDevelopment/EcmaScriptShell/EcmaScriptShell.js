@@ -136,7 +136,9 @@ EcmaScriptShell.init = function(basePath) {
 
         var res;
         try {
+            startTransaction();
             res = RMainWindow.getMainWindow().eval("js", command);
+            endTransaction();
             appendAndScroll("<span style='color:#000000;'>" + Qt.escape(res) + "</span>");
         }
         catch(e) {

@@ -328,10 +328,9 @@ CommandLine.init = function(basePath) {
             return;
         }
 
-        var cartCoordSep =
-            RSettings.getStringValue("Input/CartesianCoordinateSeparator", ',');
-        var polCoordSep =
-            RSettings.getStringValue("Input/PolarCoordinateSeparator", '<');
+        var cartCoordSep = RSettings.getStringValue("Input/CartesianCoordinateSeparator", ',');
+        var polCoordSep = RSettings.getStringValue("Input/PolarCoordinateSeparator", '<');
+        var what;
         if (message.contains(cartCoordSep) || message.contains(polCoordSep)) {
             what = qsTr("Coordinate");
         }
