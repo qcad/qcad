@@ -2,4 +2,4 @@ NAME = $${TARGET}
 TSDIR = ts
 include(../../translations.pri)
 SOURCES = $${TARGET}.js $${TARGET}Init.js
-FORMS = TranslateDialog.ui
+FORMS = $${TARGET}.ui $${TARGET}Dialog.ui PreferencesPage.ui

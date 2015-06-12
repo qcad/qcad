@@ -29,11 +29,20 @@ function Translate(guiAction) {
 
     this.referencePoint = undefined;
     this.targetPoint = undefined;
+
+    this.useDialog = RSettings.getBoolValue("Translate/UseDialog", true);
+
+    if (!this.useDialog) {
+        this.setUiOptions("Translate.ui");
+    }
 }
 
 Translate.prototype = new Transform();
-
 Translate.includeBasePath = includeBasePath;
+
+Translate.getPreferencesCategory = function() {
+    return [qsTr("Modify"), qsTr("Move/Copy")];
+};
 
 Translate.State = {
     SettingReferencePoint : 0,
@@ -108,13 +117,14 @@ Translate.prototype.pickCoordinate = function(event, preview) {
             di.previewOperation(this.getOperation(true));
         }
         else {
-            this.setState(-1);
-            if (!this.showDialog()) {
-                // dialog canceled:
-                this.terminate();
-                return;
+            if (this.useDialog) {
+                this.setState(-1);
+                if (!this.showDialog()) {
+                    // dialog canceled:
+                    this.terminate();
+                    return;
+                }
             }
-
 
             di.applyOperation(this.getOperation(false));
             di.setRelativeZero(this.targetPoint);
@@ -138,7 +148,7 @@ Translate.prototype.getOperation = function(preview, selectResult) {
     var op = new RModifyObjectsOperation();
     var offset = this.targetPoint.operator_subtract(this.referencePoint)
     var transformation = new RTranslation(offset);
-    op.transformSelection(transformation, di, this.copies, preview, selectResult, this.useCurrentAttributes);
+    op.transformSelection(transformation, di, this.getCopies(), preview, selectResult, this.useCurrentAttributes);
 
     return op;
 };
@@ -176,13 +186,4 @@ Translate.prototype.showDialog = function() {
     EAction.activateMainWindow();
     return true;
 };
-
-/**
- * Callback function for Transform.getOperation.
- */
-//Translate.prototype.transform = function(entity, k, op, preview, forceNew) {
-//    var delta = this.targetPoint.operator_subtract(this.referencePoint);
-//    entity.move(delta.operator_multiply(k));
-//    op.addObject(entity, this.useCurrentAttributes, forceNew);
-//};
 

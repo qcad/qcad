@@ -28,6 +28,9 @@ function Transform(guiAction) {
     
     this.useCurrentAttributes = false;
     this.copies = 0;
+    this.copy = undefined;
+
+    this.useDialog = true;
 }
 
 Transform.prototype = new Modify();
@@ -100,7 +103,8 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
 
     var document = di.getDocument();
     var i, k, id, entity, entityP;
-    var num = this.copies;
+    var copies = this.getCopies();
+    var num = copies;
     if (num===0) {
         num=1;
     }
@@ -124,7 +128,7 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
             entity = entityP.clone();
 
             // copy: assign new IDs
-            if (this.copies>0) {
+            if (copies>0) {
                 if (!preview && !selectResult) {
                     entity.setSelected(false);
                 }
@@ -135,7 +139,7 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
                 this.transform(entity, k, op, preview, true);
             }
             else {
-                this.transform(entity, k, op, preview, this.copies>0);
+                this.transform(entity, k, op, preview, copies>0);
             }
         }
         op.endCycle();
@@ -166,4 +170,27 @@ Transform.prototype.clearCache = function() {
 
     this.diTrans = undefined;
     //Modify.prototype.updatePreview.call(this);
+};
+
+Transform.prototype.slotCopyChanged = function(checked) {
+    this.copy = checked;
+
+    var optionsToolBar = EAction.getOptionsToolBar();
+    optionsToolBar.findChild("LabelNumberOfCopies").enabled = checked;
+    optionsToolBar.findChild("NumberOfCopies").enabled = checked;
+};
+
+Transform.prototype.slotNumberOfCopiesChanged = function(v) {
+    this.copies = v;
+};
+
+Transform.prototype.slotUseCurrentAttributesChanged = function(checked) {
+    this.useCurrentAttributes = checked;
+};
+
+Transform.prototype.getCopies = function() {
+    if (this.copy===false) {
+        return 0;
+    }
+    return this.copies;
 };
