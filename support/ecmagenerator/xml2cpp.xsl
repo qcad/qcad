@@ -21,6 +21,7 @@
 <xsl:output method="text" />
 <xsl:param name="scope"/>
 <xsl:param name="mode"/>
+<xsl:param name="cwd"/>
 <xsl:param name="sharedPointerSupport" select="false()"/>
 <xsl:param name="spsSuffix">
     <xsl:choose>
@@ -2180,8 +2181,14 @@
         <xsl:when test="rs:isSimpleRType($type) and document(concat('src/xml/',$type,'.xml'))">
             <func:result select="concat('src/xml/',$type,'.xml')"/>
         </xsl:when>
-        <xsl:when test="rs:isSimpleRType($type) and document(concat('testing/xml/',$type,'.xml'))">
-            <func:result select="concat('testing/xml/',$type,'.xml')"/>
+        <xsl:when test="rs:isSimpleRType($type) and document(concat('tmp/xml/',$type,'.xml'))">
+            <func:result select="concat('tmp/xml/',$type,'.xml')"/>
+        </xsl:when>
+        <xsl:when test="rs:isSimpleRType($type) and document(concat($cwd, '/src/xml/',$type,'.xml'))">
+            <func:result select="concat($cwd, '/src/xml/',$type,'.xml')"/>
+        </xsl:when>
+        <xsl:when test="rs:isSimpleRType($type) and document(concat($cwd, '/testing/xml/',$type,'.xml'))">
+            <func:result select="concat($cwd, '/testing/xml/',$type,'.xml')"/>
         </xsl:when>        
         <xsl:otherwise>
            <func:result select="''"/>

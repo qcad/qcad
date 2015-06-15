@@ -62,7 +62,7 @@ do
 
         echo "processing $file ($mode)"
         (
-            xsltproc --stringparam scope $scope --stringparam mode $mode xml2cpp.xsl "$f" >"${ecmapath}_tmp"
+            xsltproc --stringparam scope $scope --stringparam mode $mode --stringparam cwd `pwd` xml2cpp.xsl "$f" >"${ecmapath}_tmp"
             if [ -f $ecmapath ]; then
                 diff $ecmapath ${ecmapath}_tmp
                 if [ $? -eq 0 ]; then
