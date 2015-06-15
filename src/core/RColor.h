@@ -71,6 +71,7 @@ public:
     int getCustomColorCode() const;
     int getColorIndex() const;
 
+    static void removeColor(const QString& cn);
     static RColor createFromCadIndex(const QString& code) {
         return createFromCadIndex(code.toInt());
     }

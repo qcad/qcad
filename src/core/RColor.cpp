@@ -320,7 +320,16 @@ void RColor::init() {
 
 void RColor::init(const QString& cn, const RColor& c) {
     list.append(QPair<QString, RColor> (cn, c));
-    //iconMap.insert(c, getIcon(c));
+}
+
+void RColor::removeColor(const QString& cn) {
+    init();
+    for (int i=0; i<list.length(); i++) {
+        if (list.at(i).first==cn) {
+            list.removeAt(i);
+            break;
+        }
+    }
 }
 
 QIcon RColor::getIcon(const RColor& color, const QSize& size) {
