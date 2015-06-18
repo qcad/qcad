@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Circle2P</name>
     <message>
@@ -42,7 +42,7 @@ Os dois pontos são idênticos</translatorcomment>
         <location line="+5"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar círculo de 2 pontos opostos diametralmente</translation>
+        <translation>Desenhe um círculo a partir de 2 pontos diametralmente opostos</translation>
     </message>
 </context>
 </TS>

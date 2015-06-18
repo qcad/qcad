@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>ImportFile</name>
     <message>
         <location filename="../ImportFile.js" line="+49"/>
         <source>Error while importing file %1</source>
-        <translation>Erro ao importar arquivo %1</translation>
+        <translation>Erro ao importar o arquivo %1</translation>
     </message>
     <message>
         <source>No import filters</source>
@@ -15,7 +15,7 @@
     <message>
         <location line="+20"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation>Sem filtros de importação foram encontrados. Abortar...</translation>
+        <translation>Nenhum filtro de importação foi encontrados. Abortando...</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -25,7 +25,7 @@
     <message>
         <location line="+3"/>
         <source>Import Drawing</source>
-        <translation>Importar desenho</translation>
+        <translation>Importe um Desenho</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -35,7 +35,7 @@
     <message>
         <location filename="../ImportFileInit.js" line="+2"/>
         <source>&amp;Import</source>
-        <translation>&amp;Importar</translation>
+        <translation>&amp;Importe</translation>
     </message>
 </context>
 </TS>

@@ -369,7 +369,7 @@ Altri...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+90"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+92"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: photivo_it.ts--
@@ -386,8 +386,8 @@ Lista Blocchi</translatorcomment>
     <message>
         <location line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+70"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+65"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: default.po--
@@ -479,7 +479,7 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
         <translation>Interasse righe</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+75"/>
+        <location filename="../src/core/REntity.cpp" line="+76"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: liferea-1.8-rc1.it.po--
@@ -531,6 +531,11 @@ Tipo di linea</translatorcomment>
 Colori
 Colore G&amp;riglia:</translatorcomment>
         <translation>Colore</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Displayed Color</source>
+        <translation>Colore visualizzato</translation>
     </message>
     <message>
         <location line="+1"/>

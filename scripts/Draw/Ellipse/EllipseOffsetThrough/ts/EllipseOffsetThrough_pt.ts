@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>CircleConcentricThrough</name>
     <message>
@@ -49,12 +49,12 @@ Número:</translatorcomment>
     <message>
         <location filename="../EllipseOffsetThroughInit.js" line="+2"/>
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation>Curva paralela (&amp;através ponto)</translation>
+        <translation>Curva Paralela (&amp;através de Ponto)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse through point</source>
-        <translation>Desenhar curva paralelo através ponto</translation>
+        <translation>Desenhe uma curva paralela passando por um ponto</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>DimAngular</name>
     <message>
@@ -22,7 +22,7 @@ Especifique a segunda linha</translatorcomment>
         <location line="+8"/>
         <source>Dimension arc location</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Localização arco cota</translation>
+        <translation>Localização do arco de dimensão</translation>
     </message>
     <message>
         <location filename="../DimAngularInit.js" line="+2"/>
@@ -36,7 +36,7 @@ A&amp;ngular</translatorcomment>
         <location line="+5"/>
         <source>Draw angular dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhe cota angular</translation>
+        <translation>Desenhe uma dimensão angular</translation>
     </message>
 </context>
 </TS>

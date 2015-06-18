@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>LineRectangleSize</name>
     <message>
@@ -10,7 +10,7 @@
 Esquerda Acima
 Em cima à esquerda
 Cada objecto seleccionado tem um marca de diamante no canto esquerdo superio</translatorcomment>
-        <translation type="vanished">Esquerda acima</translation>
+        <translation type="vanished">Esquerda Superior</translation>
     </message>
     <message>
         <source>Top</source>
@@ -18,7 +18,7 @@ Cada objecto seleccionado tem um marca de diamante no canto esquerdo superio</tr
 --file: pt_PT.po--
 Deposita ao fim da garimpagem
 Centro Acima</translatorcomment>
-        <translation type="vanished">Topo</translation>
+        <translation type="vanished">Superior</translation>
     </message>
     <message>
         <source>Top Right</source>
@@ -26,7 +26,7 @@ Centro Acima</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Direita Acima
 Em cima à direita</translatorcomment>
-        <translation type="vanished">Direita acima</translation>
+        <translation type="vanished">Direita Superior</translation>
     </message>
     <message>
         <source>Left</source>
@@ -61,7 +61,7 @@ Em baixo à direita</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Esquerda Abaixo
 Em baixo à esquerda</translatorcomment>
-        <translation type="vanished">Esquerda abaixo</translation>
+        <translation type="vanished">Esquerda Inferior</translation>
     </message>
     <message>
         <source>Bottom</source>
@@ -70,7 +70,7 @@ Em baixo à esquerda</translatorcomment>
 Direita Abaixo
 Em baixo à direita
 Centro Abaixo</translatorcomment>
-        <translation type="vanished">Fundo</translation>
+        <translation type="vanished">Inferior</translation>
     </message>
     <message>
         <source>Bottom Right</source>
@@ -78,7 +78,7 @@ Centro Abaixo</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Direita Abaixo
 Em baixo à direita</translatorcomment>
-        <translation type="vanished">Direita abaixo</translation>
+        <translation type="vanished">Direita Inferior</translation>
     </message>
     <message>
         <source>Position</source>
@@ -97,7 +97,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     <message>
         <source>Draw rectangle with position and size</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Desenhar retângulo com a posição e tamanho</translation>
+        <translation type="vanished">Desenhe um retângulo com posição e tamanho</translation>
     </message>
     <message>
         <source>&amp;Width:</source>
@@ -109,22 +109,22 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation type="vanished">Ponto de referência:</translation>
+        <translation type="vanished">Ponto de Referência:</translation>
     </message>
 </context>
 <context>
     <name>ShapeRectangleSize</name>
     <message>
         <source>Top Left</source>
-        <translation type="vanished">Esquerda acima</translation>
+        <translation type="vanished">Esquerda Superior</translation>
     </message>
     <message>
         <source>Top</source>
-        <translation type="vanished">Topo</translation>
+        <translation type="vanished">Superior</translation>
     </message>
     <message>
         <source>Top Right</source>
-        <translation type="vanished">Direita acima</translation>
+        <translation type="vanished">Direita Superior</translation>
     </message>
     <message>
         <source>Left</source>
@@ -140,15 +140,15 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     </message>
     <message>
         <source>Bottom Left</source>
-        <translation type="vanished">Esquerda abaixo</translation>
+        <translation type="vanished">Esquerda Inferior</translation>
     </message>
     <message>
         <source>Bottom</source>
-        <translation type="vanished">Fundo</translation>
+        <translation type="vanished">Inferior</translation>
     </message>
     <message>
         <source>Bottom Right</source>
-        <translation type="vanished">Direita abaixo</translation>
+        <translation type="vanished">Direita Inferior</translation>
     </message>
     <message>
         <source>Position</source>
@@ -162,7 +162,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     <message>
         <location line="+5"/>
         <source>Draw rectangle with position and size</source>
-        <translation>Desenhar retângulo com a posição e tamanho</translation>
+        <translation>Desenhe um retângulo com posição e tamanho</translation>
     </message>
     <message>
         <location filename="../ShapeRectangleSize.ui" line="+17"/>
@@ -185,12 +185,12 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation>Ponto de referência:</translation>
+        <translation>Ponto de Referência:</translation>
     </message>
     <message>
         <location filename="../ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation>Criar polilinha</translation>
+        <translation>Crie uma Polilinha</translation>
     </message>
 </context>
 </TS>

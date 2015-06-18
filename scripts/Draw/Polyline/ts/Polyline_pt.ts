@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Polyline</name>
     <message>
@@ -8,7 +8,7 @@
         <source>Polyline Tools</source>
         <translatorcomment>--google--
 Exibe o menu &quot;Multilinha&quot;</translatorcomment>
-        <translation>Ferramentas polilinha</translation>
+        <translation>Ferramentas de Polilinha</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -16,7 +16,7 @@ Exibe o menu &quot;Multilinha&quot;</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Exibe o menu &quot;Multilinha&quot;</translatorcomment>
-        <translation>Exibe o menu &quot;Polilinha&quot;</translation>
+        <translation>Mostre as ferramentas de polilinha</translation>
     </message>
     <message>
         <location line="+18"/>

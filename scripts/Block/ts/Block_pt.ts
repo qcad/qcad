@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Block</name>
     <message>
@@ -58,7 +58,7 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Nome do Bloco:</translatorcomment>
-        <translation>Nome do bloco:</translation>
+        <translation>Nome do Bloco:</translation>
     </message>
     <message>
         <location line="+7"/>

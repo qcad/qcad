@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>ArcConcentric</name>
     <message>
@@ -17,7 +17,7 @@
         <location line="+5"/>
         <source>Draw concentric arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar arco concêntricos</translation>
+        <translation>Desenhe um arco concêntrico</translation>
     </message>
     <message>
         <location filename="../ArcConcentric.ui" line="+17"/>

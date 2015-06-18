@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>FontPreferences</name>
     <message>
@@ -39,19 +39,19 @@ Fontes
         <location filename="../PreferencesPage.ui" line="+41"/>
         <source>Ruler Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Fonte réguas:</translation>
+        <translation>Fonte da Régua:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Snap Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Fonte do rótulo rápida:</translation>
+        <translation>Fonte do Rótulo de Salto:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Fonte do rótulo info:</translation>
+        <translation>Fonte do Rótulo de Informação:</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>PageSettings</name>
     <message>
@@ -21,7 +21,7 @@ Impressão completa</translatorcomment>
     <message>
         <location line="-2"/>
         <source>Defaults for New Drawings</source>
-        <translation>Padrões para novos desenhos</translation>
+        <translation>Padrões para Novos Desenhos</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -52,7 +52,7 @@ Não entidades de dimensão com posições etiqueta personalizada selecionada.</
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Page Orientation</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Orientação da página</translation>
+        <translation>Orientação da Página</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -94,7 +94,7 @@ Formato do Papel</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Largura do Papel:</translatorcomment>
-        <translation>Largura do Papel:</translation>
+        <translation>Largura do papel:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -102,13 +102,13 @@ Largura do Papel:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Altura do Papel:</translatorcomment>
-        <translation>Altura do Papel:</translation>
+        <translation>Altura do papel:</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>Viewport</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Viewport</translation>
+        <translation>Âncora de Vista</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -142,12 +142,12 @@ Altura do Papel:</translatorcomment>
 --file: pt.po--
 [2300-23FF] Miscelânea Técnica
 [2600-26FF] Miscelânea de Símbolos</translatorcomment>
-        <translation>Miscelânio</translation>
+        <translation>Miscelânea</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show paper borders</source>
-        <translation>Mostrar bordas da página</translation>
+        <translation>Exiba bordas do papel</translation>
     </message>
     <message>
         <source>Show page borders</source>

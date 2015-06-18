@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>ColorPreferences</name>
     <message>
         <location filename="../ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Ver gráficos</translation>
+        <translation>Ver Gráficos</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -46,7 +46,7 @@ Cores &amp;básicas</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Pano de Fundo:
 Pano de Fundo do Desenho:</translatorcomment>
-        <translation>Pano de fundo:</translation>
+        <translation>Pano de Fundo:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -57,12 +57,12 @@ Pano de Fundo do Desenho:</translatorcomment>
         <location line="+18"/>
         <source>Crosshairs:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mira:</translation>
+        <translation>Miras:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation>Mira inativos:</translation>
+        <translation>Miras inativas:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -82,12 +82,12 @@ Pano de Fundo do Desenho:</translatorcomment>
     <message>
         <location line="+48"/>
         <source>Meta grid:</source>
-        <translation>Grade meta:</translation>
+        <translation>Metagrade:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection</source>
-        <translation>Selecção</translation>
+        <translation>Seleção</translation>
     </message>
     <message>
         <source>First selection color:</source>
@@ -96,22 +96,22 @@ Pano de Fundo do Desenho:</translatorcomment>
     <message>
         <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation>Cor principal para a seleção:</translation>
+        <translation>Cor principal para seleção:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation>Use cor secundário de seleção</translation>
+        <translation>Use cor secundária para seleção</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation>Cor secundário de seleção:</translation>
+        <translation>Cor secundária para seleção:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation>Pontos de referência:</translation>
+        <translation>Pontos de referência arrastáveis:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -121,52 +121,52 @@ Pano de Fundo do Desenho:</translatorcomment>
     <message>
         <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation>Caixa de seleção:</translation>
+        <translation>Preenchimento da caixa de seleção:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation>Caixa de seleção de captura:</translation>
+        <translation>Preenchimento da caixa de seleção cruzada:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Snap Tools</source>
-        <translation>Ferramentas salto</translation>
+        <translation>Ferramentas de Salto</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Snap label:</source>
-        <translation>Etiqueta rótulo:</translation>
+        <translation>Rótulo do salto:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Info Tools</source>
-        <translation>Ferramentas de informação</translation>
+        <translation>Ferramentas de Informação</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation>Medições e rótulos:</translation>
+        <translation>Dimensões e rótulos:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation>Ferramentas de desenho</translation>
+        <translation>Ferramentas de Desenho</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation>Formas auxiliares:</translation>
+        <translation>Formas Auxiliares:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Zoom Tools</source>
-        <translation>Ferramentas de zoom</translation>
+        <translation>Ferramentas de Zoom</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation>Borda da caixa de seleção:</translation>
+        <translation>Borda da caixa de zoom:</translation>
     </message>
     <message>
         <source>Inactive Crosshairs:</source>
@@ -201,7 +201,7 @@ Ponto de referência:</translatorcomment>
 --file: pt.po--
 &amp;Meta-grade:
 Meta-grade:</translatorcomment>
-        <translation>Grelha:</translation>
+        <translation>Grade:</translation>
     </message>
     <message>
         <source>Meta Grid:</source>

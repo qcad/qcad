@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>InfoDistanceEP</name>
     <message>
@@ -43,7 +43,7 @@ Selecione a entidade a ser aparada ou entre a distância:</translatorcomment>
         <location filename="../InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Distância &amp;entidade de ponto</translation>
+        <translation>Distância de &amp;entidade a ponto</translation>
     </message>
 </context>
 </TS>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Dialog</name>
     <message>
         <location filename="../TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mapa de caracteres</translation>
+        <translation>Mapa de Caracteres</translation>
     </message>
 </context>
 <context>
@@ -35,7 +35,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <source>Draw text</source>
         <translatorcomment>--google--
 Desenhe entidades de texto</translatorcomment>
-        <translation>Desenhar texto</translation>
+        <translation>Desenhe texto</translation>
     </message>
     <message>
         <location filename="../Text.ui" line="+17"/>
@@ -67,7 +67,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
     <message>
         <location filename="../TextDialog/TextDialog.js" line="+242"/>
         <source>Default value:</source>
-        <translation>Padrão:</translation>
+        <translation>Valor padrão:</translation>
     </message>
     <message>
         <location line="+258"/>
@@ -75,7 +75,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 &amp;Desfazer</translatorcomment>
-        <translation>&amp;Desfazer</translation>
+        <translation>&amp;Desfaça</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -83,7 +83,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 &amp;Refazer</translatorcomment>
-        <translation>&amp;Refazer</translation>
+        <translation>&amp;Refaça</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -92,7 +92,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 --file: qt_pt.ts--
 Cor&amp;tar
 Cor&amp;te com referência </translatorcomment>
-        <translation>Cor&amp;tar</translation>
+        <translation>Cor&amp;te</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -101,7 +101,7 @@ Cor&amp;te com referência </translatorcomment>
 --file: qt_pt.ts--
 &amp;Copiar
 &amp;Copie com referência</translatorcomment>
-        <translation>&amp;Copiar</translation>
+        <translation>&amp;Copie</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -109,7 +109,7 @@ Cor&amp;te com referência </translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 Co&amp;lar</translatorcomment>
-        <translation>Co&amp;lar</translation>
+        <translation>Co&amp;le</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -145,14 +145,14 @@ Co&amp;lar</translatorcomment>
         <location line="+6"/>
         <source>&amp;Special Characters...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Caracteres especiais...</translation>
+        <translation>&amp;Caracteres Especiais...</translation>
     </message>
     <message>
         <location line="+312"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>
-        <translation>Outras...</translation>
+        <translation>Outros...</translation>
     </message>
     <message>
         <location line="+130"/>
@@ -167,7 +167,7 @@ Grau:</translatorcomment>
         <location line="+1"/>
         <source>Plus-Minus</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Plus-minus</translation>
+        <translation>Mais-Menos</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -230,7 +230,7 @@ identidade</translatorcomment>
         <location line="+1"/>
         <source>Not equal</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Não igual</translation>
+        <translation>Diferente de</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -242,7 +242,7 @@ identidade</translatorcomment>
         <location line="+1"/>
         <source>Omega</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ómega</translation>
+        <translation>Ômega</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -254,12 +254,12 @@ identidade</translatorcomment>
         <location line="+1"/>
         <source>Cubed</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cubado</translation>
+        <translation>Cubo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation>Espaço rígido</translation>
+        <translation>Espaço fixo</translation>
     </message>
     <message>
         <location filename="../TextDialog/TextDialog.ui" line="+14"/>
@@ -275,7 +275,7 @@ Insira o texto de dimensão
         <location line="+14"/>
         <source>Main Font</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Fonte principal</translation>
+        <translation>Fonte Principal</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -290,7 +290,7 @@ Altura:
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Altura texto em unidades de desenho</translation>
+        <translation>Altura do Texto em Unidades de Desenho</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -316,20 +316,21 @@ Itálico</translatorcomment>
         <location line="-202"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation>Texto simples</translation>
+        <translation>Texto simples
+ (uma linha, sem formatação)</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Rich Text</source>
         <translatorcomment>--google--
 Área de texto rico</translatorcomment>
-        <translation>Texto rico</translation>
+        <translation>Texto com Formatação</translation>
     </message>
     <message>
         <location line="-24"/>
         <source>Text fits on one line and has no formatting</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Texto se encaixa em uma linha e não tem nenhuma formatação</translation>
+        <translation>O texto se encaixa em uma linha e não possui nenhuma formatação</translation>
     </message>
     <message>
         <source>Simple Text</source>
@@ -344,7 +345,7 @@ Itálico</translatorcomment>
 Cortar
 Corte entidades para a área de transferência
 Corte com referência </translatorcomment>
-        <translation>Cortar</translation>
+        <translation>Corte</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -354,7 +355,7 @@ Corte com referência </translatorcomment>
 &amp;Copiar
 Copiar
 &amp;Copie com referência</translatorcomment>
-        <translation>Copiar</translation>
+        <translation>Copie</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -364,7 +365,7 @@ Copiar
 Co&amp;lar
 Colar
 Cole o conteúdo da área de transferência</translatorcomment>
-        <translation>Colar</translation>
+        <translation>Cole</translation>
     </message>
     <message>
         <location line="+115"/>
@@ -383,7 +384,7 @@ Cole o conteúdo da área de transferência</translatorcomment>
         <source>Insert Symbol...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>
-        <translation>Insere símbolo...</translation>
+        <translation>Insira um Símbolo...</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -397,17 +398,17 @@ Fonte papel:</translatorcomment>
     <message>
         <location line="+23"/>
         <source>Attribute Details</source>
-        <translation>Detalhes atributo</translation>
+        <translation>Detalhes do Atributo</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Tag:</source>
-        <translation>Etiqueta:</translation>
+        <translation>Rótulo:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation>Prompt:</translation>
+        <translation>Mensagem:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -418,7 +419,7 @@ Fonte papel:</translatorcomment>
         <location line="+42"/>
         <source>Text Geometry</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Geometria texto</translation>
+        <translation>Geometria do Texto</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -432,7 +433,7 @@ Fonte papel:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Fator de Espaçamento de Linhas</translatorcomment>
-        <translation>Fator de espaçamento de linhas</translation>
+        <translation>Fator de Espaçamento das Linhas</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -451,7 +452,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 Entre o ângulo de rotação:
 Entre o ângulo de rotação
 Ângulo de rotação</translatorcomment>
-        <translation>Ângulo de rotação</translation>
+        <translation>Ângulo de Rotação</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -468,12 +469,12 @@ Alinhamento|Vertical</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Centro Acima</translatorcomment>
-        <translation>Centro acima</translation>
+        <translation>Centro Superior</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Base Left</source>
-        <translation>Esquerda base</translation>
+        <translation>Esquerda de Base</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -483,17 +484,17 @@ Centro Acima</translatorcomment>
 Esquerda acima
 Em cima à esquerda
 Cada objecto seleccionado tem um marca de diamante no canto esquerdo superio</translatorcomment>
-        <translation>Esquerda acima</translation>
+        <translation>Esquerda Superior</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Base Center</source>
-        <translation>Centro base</translation>
+        <translation>Centro de Base</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Base Right</source>
-        <translation>Direita base</translation>
+        <translation>Direita de Base</translation>
     </message>
     <message>
         <location line="+128"/>
@@ -502,7 +503,7 @@ Cada objecto seleccionado tem um marca de diamante no canto esquerdo superio</tr
 --file: LineRectangleSize_pt.ts--
 Direita acima
 Em cima à direita</translatorcomment>
-        <translation>Direita acima</translation>
+        <translation>Direita Superior</translation>
     </message>
     <message>
         <location line="-323"/>
@@ -510,7 +511,7 @@ Em cima à direita</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Centro Abaixo</translatorcomment>
-        <translation>Centro abaixo</translation>
+        <translation>Centro Inferior</translation>
     </message>
     <message>
         <location line="+291"/>
@@ -518,7 +519,7 @@ Centro Abaixo</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Esquerda ao Meio</translatorcomment>
-        <translation>Esquerda ao meio</translation>
+        <translation>Esquerda ao Meio</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -526,7 +527,7 @@ Esquerda ao Meio</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Centro ao Meio</translatorcomment>
-        <translation>Centro ao meio</translation>
+        <translation>Centro ao Meio</translation>
     </message>
     <message>
         <location line="-163"/>
@@ -534,7 +535,7 @@ Centro ao Meio</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Direita ao Meio</translatorcomment>
-        <translation>Direita ao meio</translation>
+        <translation>Direita ao Meio</translation>
     </message>
     <message>
         <location line="-96"/>
@@ -543,7 +544,7 @@ Direita ao Meio</translatorcomment>
 --file: LineRectangleSize_pt.ts--
 Esquerda abaixo
 Em baixo à esquerda</translatorcomment>
-        <translation>Esquerda abaixo</translation>
+        <translation>Esquerda Inferior</translation>
     </message>
     <message>
         <location line="+291"/>
@@ -552,7 +553,7 @@ Em baixo à esquerda</translatorcomment>
 --file: LineRectangleSize_pt.ts--
 Direita abaixo
 Em baixo à direita</translatorcomment>
-        <translation>Direita abaixo</translation>
+        <translation>Direita Inferior</translation>
     </message>
     <message>
         <location line="+152"/>
@@ -561,7 +562,7 @@ Em baixo à direita</translatorcomment>
 --file: pt_PT.po--
 Cancelar
 &amp;Cancelar</translatorcomment>
-        <translation>Cancelar</translation>
+        <translation>Cancele</translation>
     </message>
     <message>
         <location line="+13"/>

@@ -4,7 +4,17 @@
 <context>
     <name>Translate</name>
     <message>
-        <location filename="../Translate.js" line="+62"/>
+        <location filename="../Translate.js" line="+44"/>
+        <source>Modify</source>
+        <translation>Modifizieren</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Move/Copy</source>
+        <translation>Verschieben / Kopieren</translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Reference point</source>
         <translation>Referenzpunkt</translation>
     </message>
@@ -22,6 +32,26 @@
         <location filename="../TranslateInit.js" line="+10"/>
         <source>Move or copy entities once or multiple times</source>
         <translation>Objekte verschieben oder kopieren</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Dialog anzeigen für Werkzeugoptionen</translation>
+    </message>
+    <message>
+        <location filename="../Translate.ui" line="+17"/>
+        <source>Copy</source>
+        <translation>Kopieren</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number of Copies:</source>
+        <translation>Anzahl Kopien:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Use current layer and &amp;attributes</source>
+        <translation>Aktueller Layer / &amp;Attribute</translation>
     </message>
 </context>
 <context>

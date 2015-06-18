@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Dimension</name>
     <message>
@@ -21,7 +21,7 @@
     <message>
         <location line="+1"/>
         <source>Metric screw</source>
-        <translation>Métrica</translation>
+        <translation>Parafuso métrico</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -36,17 +36,17 @@ Diâmetro (ø)</translatorcomment>
         <location line="+1"/>
         <source>Plus/Minus</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Plus / Minus</translation>
+        <translation>Mais/Menos</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation>Quase igual</translation>
+        <translation>Quase igual a</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation>Assintoticamente igual</translation>
+        <translation>Assintoticamente igual a</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -68,13 +68,13 @@ Delta Y</translatorcomment>
         <location line="+58"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ferramentas cotas</translation>
+        <translation>Ferramentas de Dimensão</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show dimension tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mostrar as ferramentas cotas</translation>
+        <translation>Mostre as ferramentas de dimensões</translation>
     </message>
     <message>
         <location line="+18"/>

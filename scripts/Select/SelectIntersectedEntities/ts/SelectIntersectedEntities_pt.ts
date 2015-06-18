@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>SelectIntersectedEntities</name>
     <message>
@@ -25,13 +25,13 @@ Especifique o segundo ponto de distância</translatorcomment>
         <location filename="../SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>(De-)selecionar entidades in&amp;tersectada</translation>
+        <translation>(De-)Selecione Entidades In&amp;tersectadas</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>(De-)selecione todas as entidades cortadas por uma linha</translation>
+        <translation>(De-)Selecione todas as entidades cortadas por uma linha</translation>
     </message>
     <message>
         <location filename="../SelectIntersectedEntities.ui" line="+17"/>
@@ -48,7 +48,7 @@ Modo:</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
 Substituir a seleção atual</translatorcomment>
-        <translation>Substituir a seleção atual</translation>
+        <translation>Substitua a seleção atual</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -59,7 +59,7 @@ Substituir a seleção atual</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
 SelectionMode</translatorcomment>
-        <translation>SelectionMode</translation>
+        <translation>ModoSeleção</translation>
     </message>
     <message>
         <location line="-53"/>
@@ -67,7 +67,7 @@ SelectionMode</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
 Adicionar à seleção atual</translatorcomment>
-        <translation>Adicionar à seleção atual</translation>
+        <translation>Adicione à seleção atual</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -75,7 +75,7 @@ Adicionar à seleção atual</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
 Subtrair da seleção atual</translatorcomment>
-        <translation>Subtrair da seleção atual</translation>
+        <translation>Subtraia da seleção atual</translation>
     </message>
     <message>
         <location line="+20"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>CircleT2P</name>
     <message>
@@ -21,7 +21,7 @@
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation>Escolher solução</translation>
+        <translation>Escolha uma solução</translation>
     </message>
     <message>
         <location line="+134"/>
@@ -41,7 +41,7 @@
     <message>
         <location line="+4"/>
         <source>Draw circle through two points and tangential to one entity</source>
-        <translation>Desenhe um círculo através de dois pontos e tangente à uma entidade</translation>
+        <translation>Desenhe um círculo passando por dois pontos e tangente a uma entidade</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Insert</name>
     <message>
@@ -65,7 +65,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     <message>
         <location line="+65"/>
         <source>Keep Proportions</source>
-        <translation>Mantenha proporções</translation>
+        <translation>Mantenha as Proporções</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -117,7 +117,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     <message>
         <location line="+14"/>
         <source>Column Spacing:</source>
-        <translation>Espaçamento de coluna:</translation>
+        <translation>Espaçamento de Coluna:</translation>
     </message>
     <message>
         <location line="+17"/>

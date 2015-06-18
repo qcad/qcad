@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>TranslateRotate</name>
     <message>
@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 M&amp;ova e Rotacione</translatorcomment>
-        <translation>M&amp;ova e rotacione</translation>
+        <translation>M&amp;ova e Rotacione</translation>
     </message>
     <message>
         <location filename="../TranslateRotate.ui" line="+17"/>
@@ -81,17 +81,17 @@ Use camada e &amp;atributos atual</translatorcomment>
     <message>
         <location filename="../TranslateRotateDialog.ui" line="+14"/>
         <source>Move and Rotate Options</source>
-        <translation>Opções mova e rotacione</translation>
+        <translation>Opções de Mova e Rotacione</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies</source>
-        <translation>Número de cópias</translation>
+        <translation>Número de Cópias</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Apague o original</translation>
+        <translation>&amp;Elimine o original</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -111,7 +111,7 @@ Use camada e &amp;atributos atual</translatorcomment>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Use camada e &amp;atributos atual</translation>
+        <translation>Use a camada e os &amp;atributos atuais</translation>
     </message>
 </context>
 </TS>

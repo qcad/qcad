@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Copy</name>
     <message>
@@ -10,7 +10,7 @@
 --file: qt_pt.ts--
 &amp;Copiar
 &amp;Copie com referência</translatorcomment>
-        <translation>&amp;Copiar</translation>
+        <translation>&amp;Copie</translation>
     </message>
 </context>
 </TS>

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>LineParallel</name>
     <message>
         <source>Choose line, arc or circle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Escolha linha, arco ou círculo</translation>
+        <translation type="vanished">Escolha uma linha, arco ou círculo</translation>
     </message>
     <message>
         <location filename="../LineParallelInit.js" line="+2"/>
         <source>Para&amp;llel (with Distance)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Para&amp;lelas (com a distância)</translation>
+        <translation>Para&amp;lelas (com a Distância)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhe paralela à linha existente, ou arco ou círculo concêntrico</translation>
+        <translation>Desenhe uma paralela à linha existente, ou arco ou círculo concêntrico</translation>
     </message>
     <message>
         <source>Distance:</source>

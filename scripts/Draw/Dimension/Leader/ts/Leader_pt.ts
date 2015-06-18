@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Leader</name>
     <message>
@@ -37,17 +37,17 @@ Traçado: Terminado. %ld nós criados</translatorcomment>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar conduza (seqüência de linha com a seta)</translation>
+        <translation>Desenhe conduzindo (seqüência de linhas com seta)</translation>
     </message>
     <message>
         <location filename="../Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
-        <translation>Desfazer</translation>
+        <translation>Desfaça a Última Condução</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Arrow head</source>
-        <translation>Seta</translation>
+        <translation>Cabeça da seta</translation>
     </message>
 </context>
 </TS>

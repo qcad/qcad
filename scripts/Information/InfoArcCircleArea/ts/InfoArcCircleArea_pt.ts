@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>InfoArcCircleArea</name>
     <message>
         <source>Select Arc, Circle, Ellipse or Elliptical Arc</source>
-        <translation type="vanished">Selecione arc, círculo, elipse ou elíptico arc</translation>
+        <translation type="vanished">Selecione Arco, Círculo, Elipse ou Arco Elíptico</translation>
     </message>
     <message>
         <location filename="../InfoArcCircleArea.js" line="+70"/>
@@ -20,7 +20,7 @@
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation>São desligados</translation>
+        <translation>Área</translation>
     </message>
     <message>
         <location line="-108"/>
@@ -32,7 +32,7 @@
         <location line="-37"/>
         <location line="+24"/>
         <source>Ellipse arc area:</source>
-        <translation>Área arco elíptico</translation>
+        <translation>Área de arco elíptico:</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -40,7 +40,7 @@
         <location line="+43"/>
         <location line="+22"/>
         <source>arc length:</source>
-        <translation>comprimento arco:</translation>
+        <translation>comprimento de arco:</translation>
     </message>
     <message>
         <location line="-88"/>
@@ -76,7 +76,7 @@
     <message>
         <location line="-245"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
-        <translation>Selecione arc, círculo, elipse ou elíptico arc</translation>
+        <translation>Selecione um arco, círculo, elipse ou arco elíptico</translation>
     </message>
     <message>
         <location line="+246"/>
@@ -87,13 +87,13 @@
     <message>
         <location line="-1"/>
         <source>Ellipse area:</source>
-        <translation>Área elipse:</translation>
+        <translation>Área da elipse:</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation>Área arco:</translation>
+        <translation>Área do arco:</translation>
     </message>
     <message>
         <location filename="../InfoArcCircleArea.ui" line="+17"/>
@@ -103,22 +103,22 @@
     <message>
         <location line="+7"/>
         <source>Calculate Area of Sector</source>
-        <translation>Calcular a área do setor</translation>
+        <translation>Calcule a Área do Setor</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Calculate Area of Segment</source>
-        <translation>Calcular área do segmento</translation>
+        <translation>Calcule a Área do Segmento</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Add:</source>
-        <translation>Adicionar:</translation>
+        <translation>Adicione:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add entities to drawing</source>
-        <translation>Adicionar entidades ao desenho</translation>
+        <translation>Adicione entidades ao desenho</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../InfoArcCircleArea.ui" line="+13"/>
         <source>Add lengths/circumference to drawing</source>
-        <translation>Adicionar comprimentos / circunferência para desenho</translation>
+        <translation>Adicione comprimentos / circunferência para o desenho</translation>
     </message>
     <message>
         <location filename="../InfoArcCircleArea.js" line="-68"/>
@@ -149,7 +149,7 @@
     <message>
         <location filename="../InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation>Área arc/círculo/elipse</translation>
+        <translation>Área do Arco/Círculo/Elipse</translation>
     </message>
 </context>
 </TS>

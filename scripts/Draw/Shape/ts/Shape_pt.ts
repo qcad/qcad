@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Line</name>
     <message>
@@ -8,14 +8,14 @@
         <translatorcomment>--google--
 Exibe o menu &quot;Multilinha&quot;
 Exibe o menu &quot;Linha&quot;</translatorcomment>
-        <translation type="vanished">Ferramentas de linha</translation>
+        <translation type="vanished">Ferramentas de Linha</translation>
     </message>
     <message>
         <source>Show line tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Exibe o menu &quot;Linha&quot;</translatorcomment>
-        <translation type="vanished">Exibe o menu &quot;Linha&quot;</translation>
+        <translation type="vanished">Exiba as ferramentas de linha</translation>
     </message>
     <message>
         <source>&amp;Line</source>
@@ -27,11 +27,11 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
     </message>
     <message>
         <source>Line Segment</source>
-        <translation type="vanished">Segmento de linha</translation>
+        <translation type="vanished">Segmento de Linha</translation>
     </message>
     <message>
         <source>Infinite Line</source>
-        <translation type="vanished">Linha infinita</translation>
+        <translation type="vanished">Linha Infinita</translation>
     </message>
     <message>
         <source>Ray</source>
@@ -43,16 +43,16 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
     <message>
         <location filename="../Shape.js" line="+74"/>
         <source>Shape Tools</source>
-        <translation>Ferramentas de forma</translation>
+        <translation>Ferramentas de Forma</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show shape tools</source>
-        <translation>Mostrar ferramentas de forma</translation>
+        <translation>Mostre as ferramentas de forma</translation>
     </message>
     <message>
         <source>Show line tools</source>
-        <translation type="vanished">Mostrar ferramentas de forma</translation>
+        <translation type="vanished">Mostre as ferramentas de linha</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -62,7 +62,7 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
     <message>
         <location filename="../Shape.ui" line="+17"/>
         <source>Create polyline</source>
-        <translation>Criar polilinha</translation>
+        <translation>Crie uma polilinha</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>RestrictHorizontal</name>
     <message>
@@ -12,7 +12,7 @@ Restrinja &amp;Horizontal</translatorcomment>
     <message>
         <location filename="../RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
-        <translation>Restringir &amp;horizontalmente</translation>
+        <translation>Restrinja &amp;horizontalmente</translation>
     </message>
 </context>
 </TS>

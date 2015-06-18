@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>DimVertical</name>
     <message>
@@ -17,7 +17,7 @@
         <location line="+5"/>
         <source>Draw vertical dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhe cota vertical</translation>
+        <translation>Desenhe uma dimensão vertical</translation>
     </message>
 </context>
 </TS>

@@ -94,7 +94,7 @@ Aviso:</translatorcomment>
         <translation>Informação</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+15"/>
         <source>Coordinate</source>
         <translatorcomment>--exact match--
 --file: SnapCoordinate_pt.ts--

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Frame</name>
     <message>
@@ -51,7 +51,7 @@ lugares:\</translatorcomment>
         <location line="+383"/>
         <source>Export to PDF</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Exportação para PDF</translation>
+        <translation>Exporte para PDF</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -68,7 +68,7 @@ lugares:\</translatorcomment>
     <message>
         <location line="+3"/>
         <source>Export failed (cannot open file for writing): %1</source>
-        <translation>Exportação falhou (Não é possível abrir arquivo): %1</translation>
+        <translation>A exportação falhou (Não é possível abrir arquivo): %1</translation>
     </message>
     <message>
         <location filename="../PrintPreviewInit.js" line="+2"/>
@@ -82,13 +82,13 @@ lugares:\</translatorcomment>
         <location line="+6"/>
         <source>Preview how current drawing would be printed</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Visualizar como desenho atual seria impresso</translation>
+        <translation>Visualize como o desenho atual seria impresso</translation>
     </message>
     <message>
         <location filename="../PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Fechar visualização de impressão</translation>
+        <translation>Encerre a Prévia de Impressão</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -103,7 +103,7 @@ Im_primir...</translatorcomment>
     <message>
         <location line="+17"/>
         <source>Export as PDF...</source>
-        <translation>Exportação para PDF...</translation>
+        <translation>Exporte para PDF...</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -124,18 +124,18 @@ Escala de tipo de linha global:</translatorcomment>
         <location line="+18"/>
         <source>Move Paper Position</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mover a posição do papel</translation>
+        <translation>Mova a Posição do Papel</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ajuste automático de desenho para a página(s)</translation>
+        <translation>Ajuste automaticamente o desenho para página(s)</translation>
     </message>
     <message>
         <location line="+76"/>
         <source>Auto zoom to page</source>
-        <translation>Zoom automático para a página</translation>
+        <translation>Zoom automático para página</translation>
     </message>
     <message>
         <source>Auto fit pages to drawing</source>
@@ -146,7 +146,7 @@ Escala de tipo de linha global:</translatorcomment>
         <location line="-65"/>
         <source>Auto Center</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Centro</translation>
+        <translation>Centralização Automática</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -190,7 +190,7 @@ Paisagem</translatorcomment>
         <location line="+45"/>
         <source>Full Color Mode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cor</translation>
+        <translation>Modo de Cores Plenas</translation>
     </message>
     <message>
         <source>ColorMode</source>
@@ -201,20 +201,20 @@ Paisagem</translatorcomment>
         <location line="+23"/>
         <source>Grayscale Mode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escala de cinzas</translation>
+        <translation>Modo de Escala de Cinzas</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Black / White Mode</source>
         <translatorcomment>--google--
 Comute modos Branco / Preto</translatorcomment>
-        <translation>Branco / preto</translation>
+        <translation>Modo Branco / Preto</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Show Paper Borders</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mostrar fronteiras papel</translation>
+        <translation>Exiba as Bordas do Papel</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -222,13 +222,13 @@ Comute modos Branco / Preto</translatorcomment>
         <translatorcomment>--ignored case--
 --file: MultiPageSettings_pt.ts--
 Cultura marcas de impressão</translatorcomment>
-        <translation>Imprimir as marcas de corte</translation>
+        <translation>Imprima as Marcas de Corte</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Show More Options</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mostrar mais opções</translation>
+        <translation>Exiba Mais Opções</translation>
     </message>
 </context>
 </TS>

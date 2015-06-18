@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>LineParallelThrough</name>
     <message>
         <source>Choose line, arc or circle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Escolha linha, arco ou círculo</translation>
+        <translation type="vanished">Escolha uma linha, arco ou círculo</translation>
     </message>
     <message>
         <source>Specify point</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Especifique o ponto</translatorcomment>
-        <translation type="vanished">Especifique o ponto</translation>
+        <translation type="vanished">Indique o ponto</translation>
     </message>
     <message>
         <source>Par&amp;allel (through Point)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Par&amp;alela (através de ponto)</translation>
+        <translation type="vanished">Par&amp;alela (através de Ponto)</translation>
     </message>
     <message>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Desenhar linha paralela ou arco ou círculo concêntrico através de um ponto</translation>
+        <translation type="vanished">Desenhe linha paralela ou arco ou círculo concêntrico passando por um ponto</translation>
     </message>
     <message>
         <source>Number:</source>
@@ -39,7 +39,7 @@ Número:</translatorcomment>
     <message>
         <location filename="../OffsetThrough.js" line="+67"/>
         <source>Specify point</source>
-        <translation>Especifique o ponto</translation>
+        <translation>Indique o ponto</translation>
     </message>
     <message>
         <location filename="../OffsetThrough.ui" line="+17"/>
@@ -49,12 +49,12 @@ Número:</translatorcomment>
     <message>
         <location filename="../OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation>Deslocamentos (através de ponto)</translation>
+        <translation>Deslocamento (através de Ponto)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation>Deslocamentos linha, arco, círculo ou elipse através de ponto</translation>
+        <translation>Deslocamento de linha, arco, círculo ou elipse passando por um ponto</translation>
     </message>
 </context>
 </TS>

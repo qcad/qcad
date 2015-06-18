@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>CircleConcentric</name>
     <message>
@@ -70,12 +70,12 @@ Número:</translatorcomment>
     <message>
         <location filename="../EllipseOffsetInit.js" line="+2"/>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation>&amp;Curva paralela (distância)</translation>
+        <translation>&amp;Curva Paralela (com Distância)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse</source>
-        <translation>Desenhar curva paralelo a uma elipse</translation>
+        <translation>Desenhe uma curva paralela a uma elipse</translation>
     </message>
 </context>
 </TS>

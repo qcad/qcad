@@ -369,10 +369,10 @@ Cinza Claro</translatorcomment>
         <translation type="obsolete">Bloco referenciado</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+91"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+93"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+65"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -385,7 +385,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     <message>
         <location line="-2"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+70"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>X</source>
         <translatorcomment>--exact match--
@@ -460,7 +460,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Espaçamento de linha</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+75"/>
+        <location filename="../src/core/REntity.cpp" line="+76"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -517,6 +517,11 @@ Lista de Camadas</translatorcomment>
 Cores
 Abre diálogo de cores</translatorcomment>
         <translation>Cor</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Displayed Color</source>
+        <translation>Cor exibida</translation>
     </message>
     <message>
         <location line="+1"/>

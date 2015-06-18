@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>ColorSettings</name>
     <message>
         <location filename="../ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation>Padrões para novos desenhos</translation>
+        <translation>Padrões para Novos Desenhos</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -43,20 +43,20 @@ Cores &amp;básicas</translatorcomment>
         <translatorcomment>--exact match--
 --file: pt.po--
 Cor de plano de fundo</translatorcomment>
-        <translation>Cor de plano de fundo:</translation>
+        <translation>Cor do Plano de Fundo:</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Color Mode</source>
         <translatorcomment>--google--
 Em modo de cor, agir na matiz do objecto</translatorcomment>
-        <translation>Modo de cor</translation>
+        <translation>Modo de Cor</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Full color</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cores</translation>
+        <translation>Cor Plena</translation>
     </message>
     <message>
         <location line="+20"/>

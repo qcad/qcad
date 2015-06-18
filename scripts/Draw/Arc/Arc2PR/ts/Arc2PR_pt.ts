@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Arc2PR</name>
     <message>
@@ -43,7 +43,7 @@ Ponto final (x):</translatorcomment>
         <location line="+4"/>
         <source>Draw arc from 2 points and radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar arco de 2 pontos e raio</translation>
+        <translation>Desenhe um arco a partir de 2 pontos e raio</translation>
     </message>
     <message>
         <location filename="../Arc2PR.ui" line="+17"/>

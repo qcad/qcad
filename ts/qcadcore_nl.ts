@@ -238,7 +238,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+90"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+92"/>
         <source>Block</source>
         <translation>Blok</translation>
     </message>
@@ -246,7 +246,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+65"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -255,7 +255,7 @@
     <message>
         <location line="-2"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+70"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>X</source>
         <translation>X</translation>
@@ -310,7 +310,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+75"/>
+        <location filename="../src/core/REntity.cpp" line="+76"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
@@ -343,6 +343,11 @@
         <location line="+1"/>
         <source>Color</source>
         <translation>Kleur</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Displayed Color</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>

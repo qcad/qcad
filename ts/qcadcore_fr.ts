@@ -354,7 +354,7 @@ Autres...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+90"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+92"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_fr.ts--
@@ -371,8 +371,8 @@ Liste des blocs</translatorcomment>
     <message>
         <location line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+70"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+65"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -465,7 +465,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Espacement des lignes</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+75"/>
+        <location filename="../src/core/REntity.cpp" line="+76"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -516,6 +516,11 @@ Type de ligne</translatorcomment>
 Couleurs
 Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <translation>Couleur</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Displayed Color</source>
+        <translation>Couleur affichée</translation>
     </message>
     <message>
         <location line="+1"/>

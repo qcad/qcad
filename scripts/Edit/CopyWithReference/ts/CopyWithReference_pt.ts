@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>CopyWithReference</name>
     <message>
@@ -9,7 +9,7 @@
         <translatorcomment>--ignored case--
 --file: qcadactions_pt.ts--
 &amp;Copie com referência</translatorcomment>
-        <translation>&amp;Copie com referência</translation>
+        <translation>&amp;Copie com Referência</translation>
     </message>
 </context>
 </TS>

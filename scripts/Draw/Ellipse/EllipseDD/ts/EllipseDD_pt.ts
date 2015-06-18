@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_BR">
+<TS version="2.1" language="pt">
 <context>
     <name>EllipseDD</name>
     <message>
         <location filename="../EllipseDD.ui" line="+17"/>
         <location filename="../EllipseDDDialog.ui" line="+19"/>
         <source>X Diameter:</source>
-        <translation>X diâmetro:</translation>
+        <translation>Diâmetro X:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../EllipseDDDialog.ui" line="+80"/>
         <source>Y Diameter:</source>
-        <translation>Y diâmetro:</translation>
+        <translation>Diâmetro Y:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -24,17 +24,17 @@
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation>Ponto de referência:</translation>
+        <translation>Ponto de Referência:</translation>
     </message>
     <message>
         <location filename="../EllipseDDInit.js" line="+2"/>
         <source>Ellipse with &amp;Diameters</source>
-        <translation>Ellipse com &amp;diâmetros</translation>
+        <translation>Elipse com &amp;diâmetros</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse with position and diameters</source>
-        <translation>Ellipse com posição e diâmetros</translation>
+        <translation>Desenhe uma elipse com posição e diâmetros</translation>
     </message>
 </context>
 </TS>

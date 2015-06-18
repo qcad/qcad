@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Translate</name>
     <message>
-        <location filename="../Translate.js" line="+62"/>
+        <location filename="../Translate.js" line="+44"/>
+        <source>Modify</source>
+        <translation>Modifica</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Move/Copy</source>
+        <translation>Mova / Copie</translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Reference point</source>
         <translatorcomment>--exact match--
 --file: IsoProject_pt.ts--
@@ -27,13 +37,33 @@ Ponto de destino</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Mova / Copie</translatorcomment>
-        <translation>&amp;Mova / copie</translation>
+        <translation>&amp;Mova / Copie</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Move or copy entities once or multiple times</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mover ou copiar entidades uma vez ou múltiplas vezes</translation>
+        <translation>Mova ou copie entidades uma, ou múltiplas vezes</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Use diálogo para exibir as opções da ferramenta</translation>
+    </message>
+    <message>
+        <location filename="../Translate.ui" line="+17"/>
+        <source>Copy</source>
+        <translation>Copiar</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number of Copies:</source>
+        <translation>Número de cópias:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Use current layer and &amp;attributes</source>
+        <translation>Use camada e &amp;atributos atual</translation>
     </message>
 </context>
 <context>
@@ -89,17 +119,17 @@ Use camada e &amp;atributos atual</translatorcomment>
     <message>
         <location filename="../TranslateDialog.ui" line="+14"/>
         <source>Move / Copy Options</source>
-        <translation>Opções mova / copie</translation>
+        <translation>Opções Mova / Copie</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies</source>
-        <translation>Número de cópias</translation>
+        <translation>Número de Cópias</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Apague o original</translation>
+        <translation>&amp;Elimine o original</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -114,7 +144,7 @@ Use camada e &amp;atributos atual</translatorcomment>
     <message>
         <location line="+108"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Use camada e &amp;atributos atual</translation>
+        <translation>Use a camada e os &amp;atributos atuais</translation>
     </message>
 </context>
 </TS>

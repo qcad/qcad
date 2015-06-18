@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Stretch</name>
     <message>
@@ -10,7 +10,7 @@
 --file: LineRectangle_pt.ts--
 Indique o primeiro vértice
 Primeira ponto de canto</translatorcomment>
-        <translation>Primeira ponto de canto</translation>
+        <translation>Primeiro vértice</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -19,7 +19,7 @@ Primeira ponto de canto</translatorcomment>
 --file: LineRectangle_pt.ts--
 Indique o segundo vértice
 Segundo ponto de canto</translatorcomment>
-        <translation>Segundo ponto de canto</translation>
+        <translation>Segundo vértice</translation>
     </message>
     <message>
         <location line="+9"/>

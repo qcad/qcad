@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Save</name>
     <message>
         <location filename="../Save.js" line="+77"/>
         <source>Overwrite File?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Substituir arquivo?</translation>
+        <translation>Substitua o Arquivo?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -18,22 +18,22 @@
     <message>
         <location line="+20"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation>Todas as cores personalizadas serão &apos;arredondado&apos; para a cor mais próxima fixo.</translation>
+        <translation>Todas as cores personalizadas serão aproximadas para a cor fixa mais próxima.</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>File Format Version Not Recommended</source>
-        <translation>Version file formato não recomendado</translation>
+        <translation>Versão de Formato de Arquivo Não Recomendada</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
-        <translation>A versão de formato de arquivo que você está usando não é recomendado: &apos;%1&apos;.</translation>
+        <translation>A versão de formato de arquivo que você está usando não é recomendada: &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All black entities and layers will be saved as white.</source>
-        <translation>Todas as entidades e camadas negras serão salvas como branco.</translation>
+        <translation>Todas as entidades e camadas negras serão salvas como brancas.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -43,7 +43,7 @@
     <message>
         <location line="+43"/>
         <source>Saved drawing:</source>
-        <translation>Desenho guardado:</translation>
+        <translation>Desenho gravado:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -60,28 +60,28 @@
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 A guardar...</translatorcomment>
-        <translation>A guardar...</translation>
+        <translation>Gravando...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Saving to file format version &apos;%1&apos;.</source>
-        <translation>Salvando em arquivo formato versão &apos;%1&apos;.</translation>
+        <translation>Gravando em arquivo formato versão &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Black entities and layers are saved as white.</source>
-        <translation>Entidades e camadas negras são salvos como branco.</translation>
+        <translation>Entidades e camadas negras são salvas como brancas.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation>As cores personalizadas são &apos;arredondado&apos; para a cor mais próxima fixo.</translation>
+        <translation>As cores personalizadas são aproximadas para a cor fixa mais próxima.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>File %1 has not been saved.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Arquivo &apos;%1&apos; não foi guardado.</translation>
+        <translation>O arquivo &apos;%1&apos; não foi gravado.</translation>
     </message>
     <message>
         <source>Saved drawing: %1</source>
@@ -96,7 +96,7 @@ Desenho salvo: %1</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 &amp;Gravar</translatorcomment>
-        <translation>&amp;Guardar</translation>
+        <translation>&amp;Gravar</translation>
     </message>
 </context>
 </TS>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>EditText</name>
     <message>
         <location filename="../EditText.js" line="+61"/>
         <source>Choose text</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha texto</translation>
+        <translation>Escolha o texto</translation>
     </message>
     <message>
         <location filename="../EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Editar te&amp;xto</translation>
+        <translation>Edite Te&amp;xto</translation>
     </message>
     <message>
         <location line="+5"/>

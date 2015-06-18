@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Divide</name>
     <message>
@@ -13,12 +13,12 @@ Escolha linha, arco ou círculo</translatorcomment>
     <message>
         <location filename="../Divide.js" line="+66"/>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation>Escolha linha, arco, círculo, elipse ou chaveta</translation>
+        <translation>Escolha uma linha, arco, círculo, elipse ou spline</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation>Escolha linha, arco, círculo ou elipse</translation>
+        <translation>Escolha uma linha, arco, círculo ou elipse</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -26,7 +26,7 @@ Escolha linha, arco ou círculo</translatorcomment>
         <translatorcomment>--exact match--
 --file: InfoDistanceEP_pt.ts--
 Especifique o ponto</translatorcomment>
-        <translation>Especifique o ponto</translation>
+        <translation>Indique o ponto</translation>
     </message>
     <message>
         <location line="+8"/>

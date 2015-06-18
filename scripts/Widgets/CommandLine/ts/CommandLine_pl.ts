@@ -90,7 +90,7 @@ Wypisuje informację debugowania obiektów</translatorcomment>
         <translation type="unfinished">Informacja</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+15"/>
         <source>Coordinate</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

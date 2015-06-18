@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>AddBlock</name>
     <message>
@@ -19,7 +19,7 @@
         <location line="+6"/>
         <source>Add new empty block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Adicionar novo bloco vazio</translation>
+        <translation>Adicione um novo bloco vazio</translation>
     </message>
 </context>
 </TS>

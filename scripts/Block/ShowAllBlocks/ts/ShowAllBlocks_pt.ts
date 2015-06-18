@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>ShowAllBlocks</name>
     <message>
@@ -9,7 +9,7 @@
 --file: qcadactions_pt.ts--
 &amp;Mostre Todas
 &amp;Mostre todos</translatorcomment>
-        <translation type="vanished">&amp;Mostre todas</translation>
+        <translation type="vanished">&amp;Mostre todos</translation>
     </message>
     <message>
         <location filename="../ShowAllBlocksInit.js" line="+2"/>

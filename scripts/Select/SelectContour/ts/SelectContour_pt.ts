@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>SelectContour</name>
     <message>
         <location filename="../SelectContour.js" line="+133"/>
         <source>Choose entity of contour</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha entidade de contorno</translation>
+        <translation>Escolha as entidade de contorno</translation>
     </message>
     <message>
         <location filename="../SelectContourInit.js" line="+2"/>
@@ -36,7 +36,7 @@ Modo:</translatorcomment>
         <location line="+7"/>
         <source>Replace the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Substituir a seleção atual</translation>
+        <translation>Substitua a seleção atual</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -45,19 +45,19 @@ Modo:</translatorcomment>
         <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>SelectionMode</translation>
+        <translation>ModoSeleção</translation>
     </message>
     <message>
         <location line="-53"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Adicionar à seleção atual</translation>
+        <translation>Adicione à seleção atual</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Subtrair da seleção atual</translation>
+        <translation>Subtraia da seleção atual</translation>
     </message>
     <message>
         <location line="+20"/>

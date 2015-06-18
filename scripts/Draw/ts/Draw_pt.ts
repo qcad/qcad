@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Draw</name>
     <message>
@@ -10,22 +10,22 @@
 --file: qcadactions_pt.ts--
 &amp;Desenho
 &amp;Preferências do Desenho Atual...</translatorcomment>
-        <translation>&amp;Desenho</translation>
+        <translation>&amp;Desenhe</translation>
     </message>
 </context>
 <context>
     <name>DrawBasedOnRectangle</name>
     <message>
         <source>Top Left</source>
-        <translation type="vanished">Esquerda acima</translation>
+        <translation type="vanished">Esquerda Superior</translation>
     </message>
     <message>
         <source>Top</source>
-        <translation type="vanished">Topo</translation>
+        <translation type="vanished">Superior</translation>
     </message>
     <message>
         <source>Top Right</source>
-        <translation type="vanished">Direita acima</translation>
+        <translation type="vanished">Direita Superior</translation>
     </message>
     <message>
         <source>Left</source>
@@ -41,15 +41,15 @@
     </message>
     <message>
         <source>Bottom Left</source>
-        <translation type="vanished">Esquerda abaixo</translation>
+        <translation type="vanished">Esquerda Inferior</translation>
     </message>
     <message>
         <source>Bottom</source>
-        <translation type="vanished">Fundo</translation>
+        <translation type="vanished">Inferior</translation>
     </message>
     <message>
         <source>Bottom Right</source>
-        <translation type="vanished">Direita abaixo</translation>
+        <translation type="vanished">Direita Inferior</translation>
     </message>
     <message>
         <source>Position</source>
@@ -61,12 +61,12 @@
     <message>
         <location filename="../DrawBasedOnRectanglePP.js" line="+63"/>
         <source>First corner</source>
-        <translation>Primeira ponto de canto</translation>
+        <translation>Primeiro vértice</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation>Segundo ponto de canto</translation>
+        <translation>Segundo vértice</translation>
     </message>
 </context>
 <context>
@@ -74,17 +74,17 @@
     <message>
         <location filename="../DrawBasedOnRectangleSize.js" line="+46"/>
         <source>Top Left</source>
-        <translation>Esquerda acima</translation>
+        <translation>Esquerda Superior</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation>Topo</translation>
+        <translation>Superior</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top Right</source>
-        <translation>Direita acima</translation>
+        <translation>Direita Superior</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -104,17 +104,17 @@
     <message>
         <location line="+1"/>
         <source>Bottom Left</source>
-        <translation>Esquerda abaixo</translation>
+        <translation>Esquerda Inferior</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation>Fundo</translation>
+        <translation>Inferior</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Right</source>
-        <translation>Direita abaixo</translation>
+        <translation>Direita Inferior</translation>
     </message>
     <message>
         <location line="+51"/>

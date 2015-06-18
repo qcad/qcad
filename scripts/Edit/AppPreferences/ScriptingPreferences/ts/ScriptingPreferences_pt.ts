@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Scripting</name>
     <message>
@@ -19,7 +19,7 @@ Script</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
-        <translation>Reanalisar pasta de scripts na inicialização</translation>
+        <translation>Repassar a pasta de scripts na inicialização</translation>
     </message>
 </context>
 <context>
@@ -27,7 +27,7 @@ Script</translatorcomment>
     <message>
         <location filename="../ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
-        <translation>Script</translation>
+        <translation>Scripts</translation>
     </message>
 </context>
 </TS>

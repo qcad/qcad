@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Circle2TR</name>
     <message>
@@ -37,7 +37,7 @@
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to two entities with given radius</source>
-        <translation>Desenhe um círculo tangente a duas entidades com um raio</translation>
+        <translation>Desenhe um círculo tangente a duas entidades, com um raio dado</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>CircleCR</name>
     <message>
@@ -31,7 +31,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+4"/>
         <source>Draw circle from center and radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar círculo de centro e raio</translation>
+        <translation>Desenhe um círculo a partir do centro e raio</translation>
     </message>
     <message>
         <location filename="../CircleCR.ui" line="+17"/>
@@ -52,7 +52,7 @@ Raio</translatorcomment>
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation>Ponto de referência:</translation>
+        <translation>Ponto de Referência:</translation>
     </message>
 </context>
 </TS>

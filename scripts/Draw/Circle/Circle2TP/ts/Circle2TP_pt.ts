@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Circle2TP</name>
     <message>
@@ -41,7 +41,7 @@
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation>Desenhe um círculo tangente a duas entidades e através de um ponto</translation>
+        <translation>Desenhe um círculo tangente a duas entidades, passando por um ponto</translation>
     </message>
 </context>
 </TS>

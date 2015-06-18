@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>ArcTPR</name>
     <message>
@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation type="vanished">Desenhar um arco tangente a uma entidade, através de um ponto com raio</translation>
+        <translation type="vanished">Desenhe um arco tangente a uma entidade, passando por um ponto, com raio</translation>
     </message>
 </context>
 <context>
@@ -78,7 +78,7 @@
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to entity, through point with radius</source>
-        <translation>Desenhar um círculo tangente a uma entidade, através de um ponto com raio</translation>
+        <translation>Desenhe um círculo tangente a uma entidade, passando por um ponto, com raio</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>ArcCPA</name>
     <message>
@@ -41,7 +41,7 @@ Indique o ângulo de início</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Indique o ângulo de fim ou [Ângulo/Comprimento da corda]
 Indique o ângulo de término</translatorcomment>
-        <translation>Ângulo de término</translation>
+        <translation>Ângulo final</translation>
     </message>
     <message>
         <location filename="../ArcCPAInit.js" line="+2"/>
@@ -55,7 +55,7 @@ Indique o ângulo de término</translatorcomment>
         <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar arco de centro, ponto no arco e ângulos</translation>
+        <translation>Desenhe um arco do centro, ponto no arco e ângulos</translation>
     </message>
     <message>
         <location filename="../ArcCPA.ui" line="+17"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Grid</name>
     <message>
@@ -90,7 +90,7 @@ Posicionamento na grade</translatorcomment>
     <message>
         <location line="-2"/>
         <source>Defaults for New Drawings</source>
-        <translation>Padrões para novos desenhos</translation>
+        <translation>Padrões para Novos Desenhos</translation>
     </message>
     <message>
         <location line="+83"/>
@@ -104,19 +104,19 @@ Posicionamento na grade</translatorcomment>
 &amp;Automático
 Automático
 Salta automaticamente</translatorcomment>
-        <translation>auto</translation>
+        <translation>automático</translation>
     </message>
 </context>
 <context>
     <name>scrollArea</name>
     <message>
         <source>View 1</source>
-        <translation type="vanished">Exiba 1</translation>
+        <translation type="vanished">Vista 1</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation>Exiba 1</translation>
+        <translation>Âncora de Vista 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -124,7 +124,7 @@ Salta automaticamente</translatorcomment>
         <location line="+152"/>
         <location line="+152"/>
         <source>Display Grid</source>
-        <translation>Exibição de grade</translation>
+        <translation>Grade de Visualização</translation>
     </message>
     <message>
         <location line="-446"/>
@@ -132,7 +132,7 @@ Salta automaticamente</translatorcomment>
         <location line="+152"/>
         <location line="+152"/>
         <source>Isometric Grid</source>
-        <translation>Grade isométrica</translation>
+        <translation>Grade Isométrica</translation>
     </message>
     <message>
         <location line="-449"/>
@@ -140,7 +140,7 @@ Salta automaticamente</translatorcomment>
         <location line="+152"/>
         <location line="+152"/>
         <source>Grid Spacing</source>
-        <translation>Espaçamento da grade</translation>
+        <translation>Espaçamento da Grade</translation>
     </message>
     <message>
         <location line="-450"/>
@@ -172,34 +172,34 @@ Salta automaticamente</translatorcomment>
         <location line="+152"/>
         <location line="+152"/>
         <source>Meta Grid Spacing</source>
-        <translation>Espaçamento da meta grade</translation>
+        <translation>Espaçamento da Metagrade</translation>
     </message>
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation>Exiba 2</translation>
+        <translation>Âncora de Vista 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation>Exiba 3</translation>
+        <translation>Âncora de Vista 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation>Exiba 4</translation>
+        <translation>Âncora de Vista 4</translation>
     </message>
     <message>
         <source>View 2</source>
-        <translation type="vanished">Exiba 2</translation>
+        <translation type="vanished">Vista 2</translation>
     </message>
     <message>
         <source>View 3</source>
-        <translation type="vanished">Exiba 3</translation>
+        <translation type="vanished">Vista 3</translation>
     </message>
     <message>
         <source>View 4</source>
-        <translation type="vanished">Exiba 4</translation>
+        <translation type="vanished">Vista 4</translation>
     </message>
 </context>
 </TS>

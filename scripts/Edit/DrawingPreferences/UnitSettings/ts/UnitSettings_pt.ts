@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>UnitSettings</name>
     <message>
@@ -9,13 +9,13 @@
         <translatorcomment>--google--
 &amp;Principal unidade do desenho:
 Principal unidade do desenho:</translatorcomment>
-        <translation>Unidade de desenho:</translation>
+        <translation>Unidade de Desenho:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paper Unit:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Unidade de papel:</translation>
+        <translation>Unidade de Papel:</translation>
     </message>
     <message>
         <location filename="../UnitSettings.js" line="+27"/>
@@ -40,12 +40,12 @@ Preferências Gerais do Aplicativo
 &amp;Principal unidade do desenho
 Principal unidade do desenho:
 Altura texto em unidades de desenho</translatorcomment>
-        <translation>Unidade de desenho</translation>
+        <translation>Unidade de Desenho</translation>
     </message>
     <message>
         <location line="-2"/>
         <source>Defaults for New Drawings</source>
-        <translation>Padrões para novos desenhos</translation>
+        <translation>Padrões para Novos Desenhos</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -74,7 +74,7 @@ Polegada</translatorcomment>
 --file: pt.po--
 Fonte
 Rodapé</translatorcomment>
-        <translation>Fonte</translation>
+        <translation>Pé</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -125,7 +125,7 @@ Quilômetro</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Polegada Milimétrica</translatorcomment>
-        <translation>Micro polegada</translation>
+        <translation>Polegada Milimesimal</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -214,7 +214,7 @@ Astro</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Anos-Luz</translatorcomment>
-        <translation>Anos-Luz</translation>
+        <translation>Ano-Luz</translation>
     </message>
     <message>
         <location line="+1"/>

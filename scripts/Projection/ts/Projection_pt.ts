@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Projection</name>
     <message>
         <location filename="../Projection.js" line="+70"/>
         <source>Projection Tools</source>
-        <translation>Ferramentas de projeção</translation>
+        <translation>Ferramentas de Projeção</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show projection tools</source>
-        <translation>Ferramentas de projeção</translation>
+        <translation>Exiba as ferramentas de projeção</translation>
     </message>
     <message>
         <location line="+14"/>

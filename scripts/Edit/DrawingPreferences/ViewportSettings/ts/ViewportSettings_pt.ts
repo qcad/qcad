@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Viewport</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Viewports</translation>
+        <translation>Âncoras de Vista</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -17,7 +17,7 @@
 Prévia de impressão para %1
 Prévia de Impressão
 Exibe uma prévia da impressão</translatorcomment>
-        <translation>Pré-visualizar</translation>
+        <translation>Pré-visualização</translation>
     </message>
 </context>
 <context>
@@ -25,12 +25,12 @@ Exibe uma prévia da impressão</translatorcomment>
     <message>
         <location filename="../ViewportSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation>Padrões para novos desenhos</translation>
+        <translation>Padrões para Novos Desenhos</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout - Viewports</source>
-        <translation>Arranjo - Viewports</translation>
+        <translation>Disposição - Âncoras de Vista</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -39,7 +39,7 @@ Exibe uma prévia da impressão</translatorcomment>
 --file: pt.po--
 LTR
 Arranjo</translatorcomment>
-        <translation>Arranjo</translation>
+        <translation>Disposição</translation>
     </message>
     <message>
         <source>Default Viewport Settings</source>
@@ -50,7 +50,7 @@ Arranjo</translatorcomment>
         <location line="+0"/>
         <source>Viewports</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Viewports</translation>
+        <translation>Âncoras de Vista</translation>
     </message>
 </context>
 </TS>

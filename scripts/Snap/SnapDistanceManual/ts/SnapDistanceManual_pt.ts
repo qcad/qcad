@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>SnapDistance</name>
     <message>
@@ -25,7 +25,7 @@
     <message>
         <location filename="../SnapDistanceManual.js" line="+36"/>
         <source>Specify first point to measure distance from</source>
-        <translation>Especifique o ponto inicial</translation>
+        <translation>Especifique o primeiro ponto para medir a distância a partir dele</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -35,17 +35,17 @@
     <message>
         <location filename="../SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation>&amp;Distância manualmente</translation>
+        <translation>&amp;Distância Manualmente</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Snap distance between 2 points</source>
-        <translation>Salto distância entre dois pontos</translation>
+        <translation>Distância do salto entre 2 pontos</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManual.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation>Distância ao ponto de término:</translation>
+        <translation>Distância do salto:</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -55,7 +55,7 @@
     <message>
         <location line="+5"/>
         <source>Percentage</source>
-        <translation>Percentagem</translation>
+        <translation>Porcentagem</translation>
     </message>
     <message>
         <location line="+5"/>

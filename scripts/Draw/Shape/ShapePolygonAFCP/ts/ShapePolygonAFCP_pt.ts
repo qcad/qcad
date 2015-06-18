@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>ShapePolygonAFCP</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location line="+8"/>
         <source>Middle of Side</source>
-        <translation>Meio de lateral</translation>
+        <translation>Meio da Aresta</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -21,17 +21,17 @@
     <message>
         <location filename="../ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation>Polí&amp;gono (centro, lateral)</translation>
+        <translation>Polí&amp;gono (Centro, Aresta)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and middle point of side</source>
-        <translation>Desenhar polígono regular do centro e ponto médio do lado</translation>
+        <translation>Desenhe polígono regular a partir do centro e de ponto do meio de aresta</translation>
     </message>
     <message>
         <location filename="../ShapePolygonAFCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Pontos de canto:</translation>
+        <translation>Vértices:</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>AppPreferences</name>
     <message>
@@ -14,7 +14,7 @@
         <location filename="../AppPreferences.js" line="+64"/>
         <source>Application &amp;Preferences</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Preferências do aplicativo</translation>
+        <translation>&amp;Preferências do Aplicativo</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_BR">
+<TS version="2.1" language="pt">
 <context>
     <name>RestrictAngleLength</name>
     <message>
@@ -22,7 +22,7 @@
     <message>
         <location filename="../RestrictAngleLengthInit.js" line="+2"/>
         <source>Restrict &amp;Angle or Length</source>
-        <translation>Restringir comprimento ou &amp;ângulo</translation>
+        <translation>Restrinja o &amp;ângulo ou o Comprimento</translation>
     </message>
 </context>
 </TS>

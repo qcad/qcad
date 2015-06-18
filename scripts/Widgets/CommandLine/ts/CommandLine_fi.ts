@@ -61,7 +61,7 @@
         <translation>Tiedot</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+15"/>
         <source>Coordinate</source>
         <translation>Koordinaatti</translation>
     </message>

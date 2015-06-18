@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>SvgImport</name>
     <message>
         <location filename="../SvgImport.js" line="+59"/>
         <source>Import SVG</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Importar SVG</translation>
+        <translation>Importe um SVG</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -25,18 +25,18 @@ Arquivos SVG</translatorcomment>
 --file: pt.po--
 Todos os Ficheiros (*.*)
 Todos os tipos</translatorcomment>
-        <translation>Todos os tipos</translation>
+        <translation>Todos os Arquivos</translation>
     </message>
     <message>
         <location filename="../SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Importar SVG ...</translation>
+        <translation>&amp;Importe um SVG ...</translation>
     </message>
     <message>
         <location filename="../SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
-        <translation>Importar SVG</translation>
+        <translation>Importe um SVG</translation>
     </message>
     <message>
         <location line="+8"/>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Ellipse</name>
     <message>
         <location filename="../Ellipse.js" line="+71"/>
         <source>Ellipse Tools</source>
-        <translation>Ferramentas elipse</translation>
+        <translation>Ferramentas de Elipse</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show ellipse tools</source>
-        <translation>Exibe o menu &quot;Elipse&quot;</translation>
+        <translation>Mostre as ferramentas de elipse</translation>
     </message>
     <message>
         <location line="+14"/>

@@ -69,7 +69,7 @@
         <translation>情報</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+15"/>
         <source>Coordinate</source>
         <translation>座標</translation>
     </message>

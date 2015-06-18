@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>CircleCD</name>
     <message>
@@ -29,7 +29,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
     <message>
         <source>Draw circle from center and radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Desenhar círculo de centro e raio</translation>
+        <translation type="vanished">Desenhe um círculo a partir do centro e raio</translation>
     </message>
     <message>
         <source>Radius:</source>
@@ -54,7 +54,7 @@ Raio</translatorcomment>
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation>Ponto de referência:</translation>
+        <translation>Ponto de Referência:</translation>
     </message>
     <message>
         <location filename="../CircleCDInit.js" line="+2"/>
@@ -64,7 +64,7 @@ Raio</translatorcomment>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and diameter</source>
-        <translation>Desenhar círculo de centro e diâmetro</translation>
+        <translation>Desenhe um círculo a partir do centro e do diâmetro</translation>
     </message>
 </context>
 </TS>

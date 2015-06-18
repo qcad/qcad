@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>OpenFile</name>
     <message>
@@ -10,7 +10,7 @@
     <message>
         <location filename="../OpenFile.js" line="+46"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation>Sem filtros de importação foram encontrados. Abortar...</translation>
+        <translation>Nenhum filtro de importação foi encontrado. Abortando...</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -18,7 +18,7 @@
         <translatorcomment>--exact match--
 --file: Compare_pt.ts--
 Abra desenho</translatorcomment>
-        <translation>Abra desenho</translation>
+        <translation>Abra o Desenho</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -27,7 +27,7 @@ Abra desenho</translatorcomment>
 --file: pt.po--
 Todos os Ficheiros (*.*)
 Todos os tipos</translatorcomment>
-        <translation>Todos os ficheiros</translation>
+        <translation>Todos os Arquivos</translation>
     </message>
     <message>
         <source>Format:</source>
@@ -86,13 +86,13 @@ Apenas Leitura</translatorcomment>
 --file: qt_pt.ts--
 &amp;Abra IDE
 &amp;Abra...</translatorcomment>
-        <translation>&amp;Abrir</translation>
+        <translation>&amp;Abra</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Open an existing drawing</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Abrir um desenho existente</translation>
+        <translation>Abra um desenho existente</translation>
     </message>
 </context>
 </TS>

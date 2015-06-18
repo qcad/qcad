@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>DeselectAll</name>
     <message>
@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 De&amp;sseleciona Tudo</translatorcomment>
-        <translation>De&amp;sseleciona tudo</translation>
+        <translation>De&amp;sselecione Tudo</translation>
     </message>
     <message>
         <location line="+4"/>

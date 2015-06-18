@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>LineFreehand</name>
     <message>
@@ -21,14 +21,14 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 À &amp;Mão Livre</translatorcomment>
-        <translation>&amp;Linha à mão livre</translation>
+        <translation>&amp;Linha à Mão Livre</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw freehand line</source>
         <translatorcomment>--google--
 Desenhar linhas a mão-livre</translatorcomment>
-        <translation>Desenhar linha à mão livre</translation>
+        <translation>Desenhe linha à mão livre</translation>
     </message>
 </context>
 </TS>

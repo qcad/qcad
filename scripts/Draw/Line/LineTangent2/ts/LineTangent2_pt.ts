@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>LineTangent2</name>
     <message>
         <location filename="../LineTangent2.js" line="+70"/>
         <source>Choose first circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha primeiro círculo ou arco</translation>
+        <translation>Escolha o primeiro círculo ou arco</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha segundo círculo ou arco</translation>
+        <translation>Escolha o segundo círculo ou arco</translation>
     </message>
     <message>
         <location line="+140"/>
         <source>No tangent possible</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Tangent não é possível</translation>
+        <translation>Nenhuma tangente é possível</translation>
     </message>
     <message>
         <source>Tan&amp;gent (C,C)</source>
@@ -31,7 +31,7 @@ Tan&amp;gente (C,C)</translatorcomment>
     <message>
         <location filename="../LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation>Tan&amp;gente (C,C)</translation>
+        <translation>Tan&amp;gente (Dois Círculos)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -39,7 +39,7 @@ Tan&amp;gente (C,C)</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Desenhe tangente (círculo,círculo)</translatorcomment>
-        <translation>Desenhe tangente (círculo, círculo)</translation>
+        <translation>Desenhe uma tangente (círculo, círculo)</translation>
     </message>
 </context>
 </TS>

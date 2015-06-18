@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>CreateBlock</name>
     <message>
@@ -10,7 +10,7 @@
 Indique o ponto de referência
 Copie entidade com ponto de referência  para o clipboard
 Corte entidades com ponto de referência ao clipboard</translatorcomment>
-        <translation>Ponto de referência</translation>
+        <translation>Ponto de Referência</translation>
     </message>
     <message>
         <source>&amp;Create Block</source>

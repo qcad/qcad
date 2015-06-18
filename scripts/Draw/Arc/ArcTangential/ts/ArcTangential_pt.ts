@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>ArcCRA</name>
     <message>
@@ -18,7 +18,7 @@ Raio</translatorcomment>
         <location filename="../ArcTangential.js" line="+63"/>
         <source>Choose base line or base arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha linha de base ou arco de base</translation>
+        <translation>Escolha uma linha de base ou um arco de base</translation>
     </message>
     <message>
         <location line="+5"/>

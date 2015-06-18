@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Image</name>
     <message>
@@ -18,7 +18,7 @@ Todos os Ficheiros (*)</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Todos os Arquivos de Imagem (%1)</translatorcomment>
-        <translation>Todos os Arquivos de imagem (%1)</translation>
+        <translation>Todos os Arquivos de Imagem (%1)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -27,13 +27,13 @@ Todos os Arquivos de Imagem (%1)</translatorcomment>
 --file: pt.po--
 Todos os Ficheiros (*.*)
 Todos os Ficheiros (*)</translatorcomment>
-        <translation>Todos os arquivos</translation>
+        <translation>Todos os Arquivos</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Import Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Importar bitmap</translation>
+        <translation>Importar Bitmap</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -54,7 +54,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Inserir bitmap</translation>
+        <translation>Insira Bitmap</translation>
     </message>
     <message>
         <location filename="../Image.ui" line="+17"/>

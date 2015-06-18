@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>SaveAs</name>
     <message>
         <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
-        <translation>Carregar/Guardar</translation>
+        <translation>Carregar/Gravar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Save as</source>
-        <translation>Guardar como</translation>
+        <translation>Gravar como</translation>
     </message>
     <message>
         <source>No export filters</source>
@@ -20,7 +20,7 @@
     <message>
         <location line="+24"/>
         <source>No export filters have been found. Aborting...</source>
-        <translation>Sem filtros de exportação foram encontrados. Abortar...</translation>
+        <translation>Nenhum filtro de exportação foi encontrado. Abortando...</translation>
     </message>
     <message>
         <location line="+66"/>
@@ -37,7 +37,7 @@ Formato:</translatorcomment>
         <translatorcomment>--ignored case--
 --file: qcadactions_pt.ts--
 Salve &amp;Como...</translatorcomment>
-        <translation>Guardar &amp;como...</translation>
+        <translation>Gravar &amp;Como...</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
@@ -47,7 +47,7 @@ Salve &amp;Como...</translatorcomment>
     <message>
         <location line="+50"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
-        <translation>Mostrar aviso ao salvar em um formato de arquivo que não suporta cores 24bit</translation>
+        <translation>Mostrar aviso ao salvar em um formato de arquivo que não suporta cores de 24bits</translation>
     </message>
 </context>
 </TS>

@@ -242,7 +242,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+90"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+92"/>
         <source>Block</source>
         <translation>Block</translation>
     </message>
@@ -253,8 +253,8 @@
     <message>
         <location line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+70"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+65"/>
         <source>X</source>
         <translation>X</translation>
     </message>
@@ -318,7 +318,7 @@
         <translation>Reihenabstand</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+75"/>
+        <location filename="../src/core/REntity.cpp" line="+76"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
@@ -351,6 +351,11 @@
         <location line="+1"/>
         <source>Color</source>
         <translation>Farbe</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Displayed Color</source>
+        <translation>Angezeigte Farbe</translation>
     </message>
     <message>
         <location line="+1"/>

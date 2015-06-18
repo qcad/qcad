@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Style</name>
     <message>
@@ -18,7 +18,7 @@ E_stilo: </translatorcomment>
     <message>
         <location filename="../StylePreferences.js" line="+26"/>
         <source>Layout</source>
-        <translation>Arranjo</translation>
+        <translation>Disposição</translation>
     </message>
     <message>
         <location line="+0"/>

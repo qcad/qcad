@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>LinePolygonCP</name>
     <message>
@@ -15,7 +15,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
     <message>
         <source>Corner point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Ponto de canto</translation>
+        <translation type="vanished">Ponto de vértice</translation>
     </message>
     <message>
         <source>Done</source>
@@ -29,19 +29,19 @@ lugares:\</translatorcomment>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Poly&amp;gon (centro, ponto)</translation>
+        <translation type="vanished">Polí&amp;gono (Centro, Ponto)</translation>
     </message>
     <message>
         <source>Draw regular polygon from center and corner point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Desenhar polígono regular do ponto de centro e de canto</translation>
+        <translation type="vanished">Desenhe um polígono regular a partir do ponto de centro e de vértice</translation>
     </message>
     <message>
         <source>Corners:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 Cantos:</translatorcomment>
-        <translation type="vanished">Pontos de canto:</translation>
+        <translation type="vanished">Vértices:</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@ Cantos:</translatorcomment>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation>Ponto de canto</translation>
+        <translation>Ponto de vértice</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -64,21 +64,21 @@ Cantos:</translatorcomment>
     <message>
         <location filename="../ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Pontos de canto:</translation>
+        <translation>Vértices:</translation>
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation type="vanished">Poly&amp;gon (centro, ponto)</translation>
+        <translation type="vanished">Polí&amp;gono (Centro, Ponto)</translation>
     </message>
     <message>
         <location filename="../ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation>Poly&amp;gon (centro, ponto)</translation>
+        <translation>Polí&amp;gono (Centro, Vértice)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and corner point</source>
-        <translation>Desenhar polígono regular do ponto de centro e de canto</translation>
+        <translation>Desenhe polígono regular a partir do centro e de vértice</translation>
     </message>
 </context>
 </TS>

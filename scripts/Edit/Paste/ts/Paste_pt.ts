@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Paste</name>
     <message>
@@ -19,7 +19,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 Co&amp;lar</translatorcomment>
-        <translation>Co&amp;lar</translation>
+        <translation>Co&amp;le</translation>
     </message>
     <message>
         <location filename="../Paste.ui" line="+17"/>
@@ -35,7 +35,7 @@ _Rotação</translatorcomment>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Girar entidades colado&lt;br&gt;por este ângulo</translatorcomment>
-        <translation>Girar entidades colado&lt;br&gt;por este ângulo</translation>
+        <translation>Rotacione as entidades coladas&lt;br&gt;por este ângulo</translation>
     </message>
     <message>
         <location line="+97"/>
@@ -52,7 +52,7 @@ Escala de tipo de linha global:</translatorcomment>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Escala entidades colado&lt;br&gt;por este factor</translatorcomment>
-        <translation>Escala entidades colado&lt;br&gt;por este factor</translation>
+        <translation>Escalone as entidades coladas&lt;br&gt;por este fator</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -60,7 +60,7 @@ Escala entidades colado&lt;br&gt;por este factor</translatorcomment>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Inverter entidades colada&lt;br&gt;horizontalmente</translatorcomment>
-        <translation>Inverter entidades colada&lt;br&gt;horizontalmente</translation>
+        <translation>Inverta as entidades coladas&lt;br&gt;horizontalmente</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -68,7 +68,7 @@ Inverter entidades colada&lt;br&gt;horizontalmente</translatorcomment>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Inverter entidades colada&lt;br&gt;verticalmente</translatorcomment>
-        <translation>Inverter entidades colada&lt;br&gt;verticalmente</translation>
+        <translation>Inverta as entidades coladas&lt;br&gt;verticalmente</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -76,7 +76,7 @@ Inverter entidades colada&lt;br&gt;verticalmente</translatorcomment>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Colar todas as entidades&lt;br&gt;para a camada atual,&lt;br&gt;em vez da camada original</translatorcomment>
-        <translation>Colar todas as entidades&lt;br&gt;para a camada atual,&lt;br&gt;em vez da camada original</translation>
+        <translation>Cole todas as entidades&lt;br&gt;na camada atual,&lt;br&gt;ao invés da camada original</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -87,7 +87,7 @@ Para Camada Atual
 Para camada atual
 Utilize a camada atual
 Colar todas as entidades&lt;br&gt;para a camada atual,&lt;br&gt;em vez da camada original</translatorcomment>
-        <translation>Para camada atual</translation>
+        <translation>Para a camada atual</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -95,7 +95,7 @@ Colar todas as entidades&lt;br&gt;para a camada atual,&lt;br&gt;em vez da camada
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Substituir camadas&lt;br&gt;existentes no desenho com&lt;br&gt;camadas da área de transferência</translatorcomment>
-        <translation>Substituir camadas&lt;br&gt;existentes no desenho com&lt;br&gt;camadas da área de transferência</translation>
+        <translation>Substitua as camadas&lt;br&gt;existentes no desenho pelas&lt;br&gt;camadas da área de transferência</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -103,7 +103,7 @@ Substituir camadas&lt;br&gt;existentes no desenho com&lt;br&gt;camadas da área 
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Substituir camadas</translatorcomment>
-        <translation>Substituir camadas</translation>
+        <translation>Substitua as camadas</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -111,7 +111,7 @@ Substituir camadas</translatorcomment>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Sobrescrever blocos existentes&lt;br&gt;no desenho com blocos&lt;br&gt;da área de transferência</translatorcomment>
-        <translation>Sobrescrever blocos existentes&lt;br&gt;no desenho com blocos&lt;br&gt;da área de transferência</translation>
+        <translation>Substitua os blocos existentes&lt;br&gt;no desenho pelos blocos&lt;br&gt;da área de transferência</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -119,7 +119,7 @@ Sobrescrever blocos existentes&lt;br&gt;no desenho com blocos&lt;br&gt;da área 
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Sobrescrever blocos</translatorcomment>
-        <translation>Sobrescrever blocos</translation>
+        <translation>Substitua os blocos</translation>
     </message>
 </context>
 </TS>

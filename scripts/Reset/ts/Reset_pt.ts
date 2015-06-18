@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Reset</name>
     <message>
@@ -10,12 +10,12 @@
 --file: pt_PT.po--
 Repor
 Redefinir posição do rótulo de %1 dimensão(s).</translatorcomment>
-        <translation>Repor</translation>
+        <translation>Resete</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Reset / Idle</source>
-        <translation>&amp;Redefinir</translation>
+        <translation>&amp;Redefina / Inativo</translation>
     </message>
     <message>
         <source>&amp;Reset</source>

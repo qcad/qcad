@@ -359,7 +359,7 @@ Otros...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+90"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+92"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_es.ts--
@@ -376,8 +376,8 @@ Lista de bloques</translatorcomment>
     <message>
         <location line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+70"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+65"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -470,7 +470,7 @@ Introduzca ángulo en línea de cota:</translatorcomment>
         <translation>Espacio entre filas</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+75"/>
+        <location filename="../src/core/REntity.cpp" line="+76"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -522,6 +522,11 @@ Tipo de línea</translatorcomment>
 Colores
 &amp;Color puntos rejilla:</translatorcomment>
         <translation>Color</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Displayed Color</source>
+        <translation>Color muestra</translation>
     </message>
     <message>
         <location line="+1"/>

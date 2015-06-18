@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Language</name>
     <message>
@@ -22,7 +22,7 @@ Idioma GUI:</translatorcomment>
         <location filename="../PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Língua de interface do usuário:</translation>
+        <translation>Idioma da Interface do Usuário:</translation>
     </message>
 </context>
 <context>
@@ -30,7 +30,7 @@ Idioma GUI:</translatorcomment>
     <message>
         <location filename="../LanguagePreferences.js" line="+44"/>
         <source>Language Settings</source>
-        <translation>Configurações de linguagem</translation>
+        <translation>Configurações de Linguagem</translation>
     </message>
     <message>
         <location line="+0"/>

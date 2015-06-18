@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>LineAngle</name>
     <message>
@@ -19,19 +19,19 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translatorcomment>--google--
 Indique a posição [ângulo/comprimento]
 Indique a posição [%1]</translatorcomment>
-        <translation>Especificar a posição</translation>
+        <translation>Especifique a posição</translation>
     </message>
     <message>
         <location filename="../LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Linha de â&amp;ngulo</translation>
+        <translation>Linha a partir do Â&amp;ngulo</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line at a given absolute angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhe uma linha em um ângulo absoluto</translation>
+        <translation>Desenhe uma linha a partir de um dado ângulo absoluto</translation>
     </message>
     <message>
         <location filename="../LineAngle.ui" line="+17"/>
@@ -79,7 +79,7 @@ Salta aos pontos de meio</translatorcomment>
 --file: pt.po--
 Indique o ponto de término do guia
 Indique o ângulo de fim ou [Ângulo/Comprimento da corda]</translatorcomment>
-        <translation>Fim</translation>
+        <translation>Final</translation>
     </message>
 </context>
 </TS>

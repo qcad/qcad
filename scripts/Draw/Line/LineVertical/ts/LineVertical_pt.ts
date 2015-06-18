@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>LineVertical</name>
     <message>
@@ -14,7 +14,7 @@
         <source>Draw vertical line</source>
         <translatorcomment>--google--
 Desenhe linhas verticais</translatorcomment>
-        <translation>Desenhar linha vertical</translation>
+        <translation>Desenhe uma linha vertical</translation>
     </message>
 </context>
 </TS>

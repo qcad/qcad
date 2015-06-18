@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>CircleConcentricThrough</name>
     <message>
@@ -15,7 +15,7 @@ Concêntricos (&amp;através ponto)</translatorcomment>
         <location line="+4"/>
         <source>Draw concentric circle through point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar círculo concêntrico através do ponto</translation>
+        <translation>Desenhe um círculo concêntrico passando por um ponto</translation>
     </message>
     <message>
         <location filename="../CircleConcentricThrough.ui" line="+17"/>

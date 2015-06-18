@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Dialog</name>
     <message>
@@ -16,7 +16,7 @@ Abre diálogo de cores</translatorcomment>
         <location line="+8"/>
         <source>Arcs and Circles</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Arcos e círculos</translation>
+        <translation>Arcos e Círculos</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -59,7 +59,7 @@ Exibe o menu &quot;Elipse&quot;</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Desenhe chavetas (NURBS)
 Desenha chavetas</translatorcomment>
-        <translation>Chaveta</translation>
+        <translation>Splines</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -68,7 +68,7 @@ Desenha chavetas</translatorcomment>
 --file: pt_PT.po--
 Exibe o menu &quot;Dimensão&quot;
 &amp;Dimensões</translatorcomment>
-        <translation>Cotas</translation>
+        <translation>Dimensões</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -83,7 +83,7 @@ Exibe o menu &quot;Dimensão&quot;
 Desenhe hachurados e preenchimentos sólidos
 Hachuras / preenchimentos sólidos
 &amp;Combine Hachuras</translatorcomment>
-        <translation>Escotilhas</translation>
+        <translation>Hachuras</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -116,7 +116,7 @@ Oculte (congele) todos os carimbos</translatorcomment>
 --file: qcadactions_pt.ts--
 &amp;Fragmente
 &amp;Fragmente Texto em Letras</translatorcomment>
-        <translation>&amp;Explodir</translation>
+        <translation>&amp;Fragmente</translation>
     </message>
     <message>
         <location filename="../Explode.js" line="+31"/>
@@ -136,7 +136,7 @@ Oculte (congele) todos os carimbos</translatorcomment>
     <message>
         <location line="+64"/>
         <source>Ellipse segments (per full ellipse):</source>
-        <translation>Segmentos de elipse:</translation>
+        <translation>Segmentos de elipse (por elipse inteira):</translation>
     </message>
 </context>
 </TS>

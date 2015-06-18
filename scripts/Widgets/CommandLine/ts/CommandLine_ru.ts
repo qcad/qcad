@@ -61,7 +61,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+15"/>
         <source>Coordinate</source>
         <translation type="unfinished"></translation>
     </message>

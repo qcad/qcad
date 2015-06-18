@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>InsertBlockItem</name>
     <message>
@@ -88,17 +88,17 @@ Utilize a camada atual</translatorcomment>
         <location line="+3"/>
         <source>Overwrite blocks</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Sobrescrever blocos</translation>
+        <translation>Substitua Blocos</translation>
     </message>
     <message>
         <location filename="../InsertBlockItem.js" line="+82"/>
         <source>Cannot import file from URL: </source>
-        <translation>Não consigo importar arquivo do URL: </translation>
+        <translation>Não é possível importar arquivo da URL: </translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation>Ajustado nome do bloco inválido &apos;%1&apos;</translation>
+        <translation>Ajustado o nome do Bloco inválido para &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+55"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>DimHorizontal</name>
     <message>
@@ -17,7 +17,7 @@
         <location line="+5"/>
         <source>Draw horizontal dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhe cota horizontal</translation>
+        <translation>Desenhe uma dimensão horizontal</translation>
     </message>
 </context>
 </TS>

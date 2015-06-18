@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Line</name>
     <message>
@@ -9,7 +9,7 @@
         <translatorcomment>--google--
 Exibe o menu &quot;Multilinha&quot;
 Exibe o menu &quot;Linha&quot;</translatorcomment>
-        <translation>Ferramentas de linha</translation>
+        <translation>Ferramentas de Linha</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -17,7 +17,7 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Exibe o menu &quot;Linha&quot;</translatorcomment>
-        <translation>Exibe o menu &quot;Linha&quot;</translation>
+        <translation>Exibe as ferramentas de linha</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -31,17 +31,17 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
     <message>
         <location filename="../Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation>Entidade mesmo tipo para original</translation>
+        <translation>Mesmo Tipo de Entidade do Original</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Line Segment</source>
-        <translation>Segmento de linha</translation>
+        <translation>Segmento de Linha</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Infinite Line</source>
-        <translation>Linha infinita</translation>
+        <translation>Linha Infinita</translation>
     </message>
     <message>
         <location line="+17"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>RestrictOff</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location filename="../RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
-        <translation>Restrições &amp;desativado</translation>
+        <translation>Restrições &amp;desativadas</translation>
     </message>
 </context>
 </TS>

@@ -61,7 +61,7 @@
         <translation>Info</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+15"/>
         <source>Coordinate</source>
         <translation>Súradnice</translation>
     </message>

@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>AutoSave</name>
     <message>
         <location filename="../AutoSave.js" line="+34"/>
         <source>Load/Save</source>
-        <translation>Carregar/Guardar</translation>
+        <translation>Carregue/Grave</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Autosave</source>
-        <translation>Gravação automática</translation>
+        <translation>Grave Automaticamente</translation>
     </message>
     <message>
         <location line="+115"/>
         <source>Autosave failed:</source>
-        <translation>Gravação automática falhou:</translation>
+        <translation>Gravar automaticamente falhou:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
-        <translation>Gravação automática foi concluída.</translation>
+        <translation>Gravar automaticamente concluído.</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation>Um arquivo de backup &apos;autosave&apos; para um desenho sem título foi encontrado.
+        <translation>Um arquivo de backup de gravação automática para um desenho sem título foi encontrado.
 Você deseja recuperá-lo?</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation>%1 arquivos de backup &apos;autosave&apos; para um desenhos sem título foram encontrados.
+        <translation>%1 arquivos de backup de gravação automática, para desenhos sem título foram encontrados.
 Você deseja recuperá-los?</translation>
     </message>
     <message>
@@ -51,7 +51,7 @@ Você deseja recuperá-los?</translation>
         <location line="+1"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation>Um arquivo de backup &apos;autosave&apos; para &apos;%1&apos; foi encontrado.
+        <translation>Um arquivo de backup de gravação automática para &apos;%1&apos; foi encontrado.
 Você deseja recuperá-lo?</translation>
     </message>
     <message>
@@ -64,7 +64,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="-13"/>
         <source>Moved autosave backup file to:</source>
-        <translation>Renomeado arquivo gravação automática:</translation>
+        <translation>Movido o arquivo de gravação automática para:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -91,7 +91,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="-124"/>
         <source>Recover Files?</source>
-        <translation>Recuperar arquivos?</translation>
+        <translation>Recuperar Arquivos?</translation>
     </message>
     <message>
         <source>Choose Autosave Directory</source>
@@ -115,7 +115,7 @@ Caixa de diálogo de comportamento (requer reinício):</translatorcomment>
         <location line="+12"/>
         <source>Autosave Interval:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Intervalo gravação automática:</translation>
+        <translation>Intervalo para gravação automática:</translation>
     </message>
     <message>
         <location line="+54"/>

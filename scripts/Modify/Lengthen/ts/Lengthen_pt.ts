@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Lengthen</name>
     <message>
         <location filename="../Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha linha ou arco</translation>
+        <translation>Escolha uma linha ou arco</translation>
     </message>
     <message>
         <source>&amp;Lengthen</source>
@@ -33,7 +33,7 @@ Quantidade</translatorcomment>
     <message>
         <location filename="../LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
-        <translation>A&amp;longar / encurtar</translation>
+        <translation>A&amp;longue / Encurte</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Offset</name>
     <message>
@@ -16,12 +16,12 @@
     <message>
         <location filename="../OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation>Deslocamento (com distância)</translation>
+        <translation>Deslocamento (com Distância)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation>Deslocamentos linha, arco, círculo ou elipse</translation>
+        <translation>Deslocamentos de linha, arco, círculo ou elipse</translation>
     </message>
     <message>
         <source>Draw parallel to existing line or concentric arc, circle</source>
@@ -56,12 +56,12 @@ Número:</translatorcomment>
     </message>
     <message>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation type="vanished">Escolha linha, arco, círculo ou elipse</translation>
+        <translation type="vanished">Escolha uma linha, arco, círculo ou elipse</translation>
     </message>
     <message>
         <location filename="../Offset.js" line="+74"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation>Escolha linha, arco, círculo ou elipse</translation>
+        <translation>Escolha uma linha, arco, círculo ou elipse</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>LineBisector</name>
     <message>
@@ -25,7 +25,7 @@ Selecione a segunda linha [comprimento/número]</translatorcomment>
         <location line="+77"/>
         <source>Lines don&apos;t intersect.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Linhas não se cruzam.</translation>
+        <translation>As linhas não se cruzam</translation>
     </message>
     <message>
         <location filename="../LineBisectorInit.js" line="+2"/>
@@ -37,7 +37,7 @@ Selecione a segunda linha [comprimento/número]</translatorcomment>
         <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhe ângulo bissetriz</translation>
+        <translation>Desenhe ângulo de mediatriz, trissecção, ...</translation>
     </message>
     <message>
         <location filename="../LineBisector.ui" line="+17"/>

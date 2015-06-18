@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -11,7 +11,7 @@
 &amp;Dimensão
 Dimensão
 Dimensão Alinhada</translatorcomment>
-        <translation>Cota</translation>
+        <translation>Dimensão</translation>
     </message>
     <message>
         <source>Default Dimension Settings</source>
@@ -23,12 +23,12 @@ Dimensão Alinhada</translatorcomment>
         <location line="+2"/>
         <source>Dimension Settings</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Configurações cotas</translation>
+        <translation>Configurações de Dimensões</translation>
     </message>
     <message>
         <location line="-2"/>
         <source>Defaults for New Drawings</source>
-        <translation>Padrões para novos desenhos</translation>
+        <translation>Padrões para Novos Desenhos</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -79,7 +79,7 @@ Fracionais</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Graus Decimais</translatorcomment>
-        <translation>Graus decimais</translation>
+        <translation>Graus Decimais</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -112,23 +112,23 @@ Radianos</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Unidades de topógrafo</translatorcomment>
-        <translation>Unidades de topógrafo</translation>
+        <translation>Unidades de topografia</translation>
     </message>
     <message>
         <location line="+193"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Unidade / format</translation>
+        <translation>Unidade / Formato</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>A unidade de desenho deve ser &apos;Inch&apos; ou &apos;Foot&apos; para exibir cotas em formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;decimal&apos;.</translation>
+        <translation>A unidade de desenho deve ser &apos;Polegada&apos; ou &apos;Pé&apos; para exibir rótulos de dimensões nos formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;Decimal&apos;.</translation>
     </message>
     <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">A unidade de desenho deve ser &apos;Inch&apos; para exibir cotas em formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;decimal&apos;.</translation>
+        <translation type="vanished">A unidade de desenho deve ser &apos;Polegada&apos; para exibir rótulos de dimensões em formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;Decimal&apos;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
@@ -169,7 +169,7 @@ Extensão da linha de deslocamento:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Extensão da linha de extensionamento:</translatorcomment>
-        <translation>Extensão da linha de extensionamento:</translation>
+        <translation>Extensão da linha estendida:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -177,7 +177,7 @@ Extensão da linha de extensionamento:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Dimensione a linha de brecha:</translatorcomment>
-        <translation>Linha de cota brecha:</translation>
+        <translation>Lacuna da linha de dimensão:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -198,7 +198,7 @@ Tamanho da seta:</translatorcomment>
         <translatorcomment>--google--
 Estilo da Seta:
 Estilo da Seta</translatorcomment>
-        <translation>Estilo da seta</translation>
+        <translation>Estilo da Seta</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -215,7 +215,7 @@ Tamanho da seta:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Espessura Arquitetônica</translatorcomment>
-        <translation>Espessura arquitetônica</translation>
+        <translation>Ponto Arquitetônico</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -225,19 +225,19 @@ Espessura Arquitetônica</translatorcomment>
     <message>
         <location line="+6"/>
         <source>Dimension label font:</source>
-        <translation>Fonte:</translation>
+        <translation>Fonte do rótulo de dimensões:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Label Format</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Formato etiqueta</translation>
+        <translation>Formato do rótulo</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cotas lineares</translation>
+        <translation>Dimensões Lineares</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -268,7 +268,7 @@ Exibe zeros à esquerda</translatorcomment>
         <location line="-50"/>
         <source>Angular Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cotas angulares</translation>
+        <translation>Dimensões Angulares</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -295,7 +295,7 @@ Pre&amp;cisão:</translatorcomment>
 Prévia de impressão para %1
 Prévia de Impressão
 Exibe uma prévia da impressão</translatorcomment>
-        <translation>Pré-visualizar</translation>
+        <translation>Pré-visualização</translation>
     </message>
 </context>
 </TS>
