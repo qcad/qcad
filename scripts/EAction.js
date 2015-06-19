@@ -1648,6 +1648,7 @@ EAction.assertEditable = function(entity, quiet) {
  * drawing lines).
  */
 EAction.prototype.propertyChangeEvent = function(event) {
+    qDebug("EAction.prototype.propertyChangeEvent");
     var di = this.getDocumentInterface();
     if (isNull(di)) {
         return;

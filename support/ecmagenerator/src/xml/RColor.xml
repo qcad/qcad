@@ -45,6 +45,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
     </method>
+    <method name="removeColor" cppName="removeColor"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="cn"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="createFromCadIndex" cppName="createFromCadIndex"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

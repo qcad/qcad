@@ -37,6 +37,7 @@
 
 <function_decl><type><name>Q_OBJECT</name></type>
 <name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name>bool</name> <name>angle</name> <name>READ</name> <name>isAngle</name> <name>WRITE</name></type> <name>setAngle</name></decl></param>)</parameter_list>;</function_decl>
+<constructor_decl><name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name>bool</name> <name>integer</name> <name>READ</name> <name>isInteger</name> <name>WRITE</name></type> <name>setInteger</name></decl></param>)</parameter_list>;</constructor_decl>
 <comment type="line">//Q_PROPERTY(double defaultValue READ getDefaultValue WRITE setDefaultValue);</comment>
 <comment type="line">//Q_PROPERTY(int defaultUnit READ getDefaultUnit WRITE setDefaultUnit);</comment>
 <comment type="line">//Q_PROPERTY(RS::Unit defaultUnit READ getDefaultUnit WRITE setDefaultUnit);</comment>

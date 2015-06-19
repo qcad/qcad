@@ -120,6 +120,10 @@
         <return>return <expr><name>handle</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>ObjectUnknown</name></name></expr>;</return>
+    }</block></function>
+
     <function><type><name>bool</name></type> <name>isProtected</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>protect</name></expr>;</return>
     }</block></function>

@@ -119,6 +119,7 @@
 <comment type="line">//    static QScriptValue ecmaQFontDatabaseFamilies(QScriptContext* context, QScriptEngine* engine);</comment>
     <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQEventCast</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQFileClose</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QScriptValue</name></type> <name>ecmaQFileReadAll</name><parameter_list>(<param><decl><type><name>QScriptContext</name>*</type> <name>context</name></decl></param>, <param><decl><type><name>QScriptEngine</name>*</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="line">//static QScriptValue ecmaGetShapeIntersections(QScriptContext* context, QScriptEngine* engine);</comment>
 

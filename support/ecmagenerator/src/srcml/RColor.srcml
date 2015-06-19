@@ -72,6 +72,7 @@
     <function_decl><type><name>int</name></type> <name>getCustomColorCode</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>int</name></type> <name>getColorIndex</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>void</name></type> <name>removeColor</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>cn</name></decl></param>)</parameter_list>;</function_decl>
     <function><type><name>static</name> <name>RColor</name></type> <name>createFromCadIndex</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>code</name></decl></param>)</parameter_list> <block>{
         <return>return <expr><call><name>createFromCadIndex</name><argument_list>(<argument><expr><name>code</name>.<call><name>toInt</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>

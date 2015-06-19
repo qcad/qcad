@@ -43,7 +43,7 @@ Ponto de destino</translatorcomment>
         <location line="+10"/>
         <source>Move or copy entities once or multiple times</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mova ou copie entidades uma ou múltiplas vezes</translation>
+        <translation>Mova ou copie entidades uma, ou múltiplas vezes</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
@@ -53,7 +53,7 @@ Ponto de destino</translatorcomment>
     <message>
         <location filename="../Translate.ui" line="+17"/>
         <source>Copy</source>
-        <translation>Copiar</translation>
+        <translation>Copie</translation>
     </message>
     <message>
         <location line="+14"/>

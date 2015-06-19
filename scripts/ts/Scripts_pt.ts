@@ -131,7 +131,7 @@ Ferramentas CAD</translatorcomment>
         <translation>A entidade está em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+86"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>A entidade não é uma referência de Bloco.</translation>
@@ -475,6 +475,56 @@ Carregando plugins...</translatorcomment>
     <name>library</name>
     <message>
         <location filename="../library.js" line="+712"/>
+        <source>Objects</source>
+        <translation>Objectos</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Object</source>
+        <translation>Objecto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unknown Objects</source>
+        <translation>Objectos Desconhecidas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Unknown Object</source>
+        <translation>Objecto Desconhecida</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Layers</source>
+        <translation>Camadas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layer</source>
+        <translation>Camada</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Linetypes</source>
+        <translation>Tipos de Linha</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Linetype</source>
+        <translation>Tipo de Linha</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Views</source>
+        <translation>Vistas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>View</source>
+        <translation>Ver</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity</source>
         <translation>Entidade</translation>
     </message>

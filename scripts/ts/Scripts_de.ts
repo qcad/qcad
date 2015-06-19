@@ -102,7 +102,7 @@
         <translation>Element ist auf gesperrtem Layer.</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+86"/>
         <source>Entity is not a block reference.</source>
         <translation>Element ist keine Block Referenz.</translation>
     </message>
@@ -404,6 +404,56 @@
     <name>library</name>
     <message>
         <location filename="../library.js" line="+712"/>
+        <source>Objects</source>
+        <translation>Objekte</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Object</source>
+        <translation>Objekt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unknown Objects</source>
+        <translation>Unbekannte Objekte</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Unknown Object</source>
+        <translation>Unbekanntes Objekt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Layers</source>
+        <translation>Layer</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layer</source>
+        <translation>Layer</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Linetypes</source>
+        <translation>Linientypen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Linetype</source>
+        <translation>Linientyp</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Views</source>
+        <translation>Ansichten</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>View</source>
+        <translation>Ansicht</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity</source>
         <translation>Objekt</translation>
     </message>

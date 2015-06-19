@@ -21,7 +21,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RColor &amp;" typeName="RColor" name="color"
         hasDefault="true" default="Qt :: black" isConst="true" />
         <arg type="RLinetype::Id" typeName="RLinetype::Id"
-        name="linetype" hasDefault="true"
+        name="linetypeId" hasDefault="true"
         default="RLinetype :: INVALID_ID" isConst="false" />
         <arg type="RLineweight::Lineweight"
         typeName="RLineweight::Lineweight" name="lineweight"

@@ -107,7 +107,7 @@
         <translation>Entità è su un layer bloccato.</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+86"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entità non è un riferimento di blocco.</translation>
@@ -411,6 +411,56 @@
     <name>library</name>
     <message>
         <location filename="../library.js" line="+712"/>
+        <source>Objects</source>
+        <translation>Oggetti</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Object</source>
+        <translation>Oggetto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unknown Objects</source>
+        <translation>Oggetti sconosciuta</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Unknown Object</source>
+        <translation>Oggetto sconosciuta</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Layers</source>
+        <translation>Layer</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layer</source>
+        <translation>Layer</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Linetypes</source>
+        <translation>Tipi di linea</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Linetype</source>
+        <translation>Tipo di linea</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Views</source>
+        <translation>Viste</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>View</source>
+        <translation>Visualizza</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity</source>
         <translation>Entità</translation>
     </message>

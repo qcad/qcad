@@ -708,8 +708,19 @@ function entityTypeToString(type, plural) {
     }
 
     switch (type) {
+    case RS.ObjectAll:
+        return plural ? qsTr("Objects") : qsTr("Object");
+    case RS.ObjectUnknown:
+        return plural ? qsTr("Unknown Objects") : qsTr("Unknown Object");
+    case RS.ObjectLayer:
+        return plural ? qsTr("Layers") : qsTr("Layer");
+    case RS.ObjectLinetype:
+        return plural ? qsTr("Linetypes") : qsTr("Linetype");
+    case RS.ObjectView:
+        return plural ? qsTr("Views") : qsTr("View");
+
     case RS.EntityAll:
-        return plural ? qsTr("Entity") : qsTr("Entities");
+        return plural ? qsTr("Entities") : qsTr("Entity");
     case RS.Entity3dFace:
         return plural ? qsTr("3dFaces") : qsTr("3dFace");
     case RS.EntityBlockRef:
@@ -774,69 +785,69 @@ function entityTypeToString(type, plural) {
     }
 }
 
-function getEntityTypeProperties(type) {
-    switch (type) {
-    case RS.EntityAll:
-        return REntity.getStaticPropertyTypeIds();
-    case RS.EntityBlockReferenceEntity:
-        return RBlockReferenceEntity.getStaticPropertyTypeIds();
-    case RS.EntityArc:
-        return RArcEntity.getStaticPropertyTypeIds();
-    case RS.EntityAttribute:
-        return RAttributeEntity.getStaticPropertyTypeIds();
-    case RS.EntityAttributeDefinition:
-        return RAttributeDefinitionEntity.getStaticPropertyTypeIds();
-    case RS.EntityCircle:
-        return RCircleEntity.getStaticPropertyTypeIds();
-    case RS.EntityDimension:
-        return RDimensionEntity.getStaticPropertyTypeIds();
-    case RS.EntityDimAligned:
-        return RDimAlignedEntity.getStaticPropertyTypeIds();
-    case RS.EntityDimAngular:
-        return RDimAngularEntity.getStaticPropertyTypeIds();
-    case RS.EntityDimDiametric:
-        return RDimDiametricEntity.getStaticPropertyTypeIds();
-    case RS.EntityDimOrdinate:
-        return RDimOrdinateEntity.getStaticPropertyTypeIds();
-    case RS.EntityDimRotated:
-        return RDimRotatedEntity.getStaticPropertyTypeIds();
-    case RS.EntityDimRadial:
-        return RDimRadialEntity.getStaticPropertyTypeIds();
-    case RS.EntityEllipse:
-        return REllipseEntity.getStaticPropertyTypeIds();
-    case RS.EntityHatch:
-        return RHatchEntity.getStaticPropertyTypeIds();
-    case RS.EntityImage:
-        return RImageEntity.getStaticPropertyTypeIds();
-    case RS.EntityLeader:
-        return RLeaderEntity.getStaticPropertyTypeIds();
-    case RS.EntityLine:
-        return RLineEntity.getStaticPropertyTypeIds();
-    case RS.EntityPoint:
-        return RPointEntity.getStaticPropertyTypeIds();
-    case RS.EntityPolyline:
-        return RPolylineEntity.getStaticPropertyTypeIds();
-    case RS.EntitySolid:
-        return RSolidEntity.getStaticPropertyTypeIds();
-    case RS.EntityTrace:
-        return RTraceEntity.getStaticPropertyTypeIds();
-    case RS.EntityViewport:
-        return RViewportEntity.getStaticPropertyTypeIds();
-    case RS.EntityRay:
-        return RRayEntity.getStaticPropertyTypeIds();
-    case RS.EntityXLine:
-        return RXLineEntity.getStaticPropertyTypeIds();
-    case RS.EntitySpline:
-        return RSplineEntity.getStaticPropertyTypeIds();
-    case RS.EntityTextBased:
-        return RTextBasedEntity.getStaticPropertyTypeIds();
-    case RS.EntityText:
-        return RTextEntity.getStaticPropertyTypeIds();
-    case RS.EntityUnknown:
-    default:
-        return [];
-    }
-}
+//function getEntityTypeProperties(type) {
+//    switch (type) {
+//    case RS.EntityAll:
+//        return REntity.getStaticPropertyTypeIds();
+//    case RS.EntityBlockReferenceEntity:
+//        return RBlockReferenceEntity.getStaticPropertyTypeIds();
+//    case RS.EntityArc:
+//        return RArcEntity.getStaticPropertyTypeIds();
+//    case RS.EntityAttribute:
+//        return RAttributeEntity.getStaticPropertyTypeIds();
+//    case RS.EntityAttributeDefinition:
+//        return RAttributeDefinitionEntity.getStaticPropertyTypeIds();
+//    case RS.EntityCircle:
+//        return RCircleEntity.getStaticPropertyTypeIds();
+//    case RS.EntityDimension:
+//        return RDimensionEntity.getStaticPropertyTypeIds();
+//    case RS.EntityDimAligned:
+//        return RDimAlignedEntity.getStaticPropertyTypeIds();
+//    case RS.EntityDimAngular:
+//        return RDimAngularEntity.getStaticPropertyTypeIds();
+//    case RS.EntityDimDiametric:
+//        return RDimDiametricEntity.getStaticPropertyTypeIds();
+//    case RS.EntityDimOrdinate:
+//        return RDimOrdinateEntity.getStaticPropertyTypeIds();
+//    case RS.EntityDimRotated:
+//        return RDimRotatedEntity.getStaticPropertyTypeIds();
+//    case RS.EntityDimRadial:
+//        return RDimRadialEntity.getStaticPropertyTypeIds();
+//    case RS.EntityEllipse:
+//        return REllipseEntity.getStaticPropertyTypeIds();
+//    case RS.EntityHatch:
+//        return RHatchEntity.getStaticPropertyTypeIds();
+//    case RS.EntityImage:
+//        return RImageEntity.getStaticPropertyTypeIds();
+//    case RS.EntityLeader:
+//        return RLeaderEntity.getStaticPropertyTypeIds();
+//    case RS.EntityLine:
+//        return RLineEntity.getStaticPropertyTypeIds();
+//    case RS.EntityPoint:
+//        return RPointEntity.getStaticPropertyTypeIds();
+//    case RS.EntityPolyline:
+//        return RPolylineEntity.getStaticPropertyTypeIds();
+//    case RS.EntitySolid:
+//        return RSolidEntity.getStaticPropertyTypeIds();
+//    case RS.EntityTrace:
+//        return RTraceEntity.getStaticPropertyTypeIds();
+//    case RS.EntityViewport:
+//        return RViewportEntity.getStaticPropertyTypeIds();
+//    case RS.EntityRay:
+//        return RRayEntity.getStaticPropertyTypeIds();
+//    case RS.EntityXLine:
+//        return RXLineEntity.getStaticPropertyTypeIds();
+//    case RS.EntitySpline:
+//        return RSplineEntity.getStaticPropertyTypeIds();
+//    case RS.EntityTextBased:
+//        return RTextBasedEntity.getStaticPropertyTypeIds();
+//    case RS.EntityText:
+//        return RTextEntity.getStaticPropertyTypeIds();
+//    case RS.EntityUnknown:
+//    default:
+//        return [];
+//    }
+//}
 
 /**
  * Checks the type of the given object.

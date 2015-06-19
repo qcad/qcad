@@ -276,6 +276,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; REntity::Id &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="queryPropertyEditorObjects"
+    cppName="queryPropertyEditorObjects" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; RObject::Id &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="queryDocumentVariables"
     cppName="queryDocumentVariables" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

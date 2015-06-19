@@ -111,7 +111,7 @@
         <translation>Entidad está en una capa bloqueada.</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+86"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una referencia a bloque.</translation>
@@ -415,6 +415,56 @@
     <name>library</name>
     <message>
         <location filename="../library.js" line="+712"/>
+        <source>Objects</source>
+        <translation>Objetos</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Object</source>
+        <translation>Objeto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unknown Objects</source>
+        <translation>Objetos desconocido</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Unknown Object</source>
+        <translation>Objeto desconocida</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Layers</source>
+        <translation>Capas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layer</source>
+        <translation>Capa</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Linetypes</source>
+        <translation>Tipos de línea</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Linetype</source>
+        <translation>Tipo de línea</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Views</source>
+        <translation>Vistas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>View</source>
+        <translation>Vista</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity</source>
         <translation>Entidad</translation>
     </message>

@@ -69,7 +69,7 @@
     <message>
         <location line="+7"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Schaal:</translation>
     </message>
 </context>
 </TS>

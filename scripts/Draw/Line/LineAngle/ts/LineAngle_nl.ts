@@ -6,7 +6,7 @@
     <message>
         <location filename="../LineAngle.js" line="+65"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Positie</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -61,7 +61,7 @@
 
     <constructor_decl><name>RLayer</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>, <param><decl><type><name>bool</name></type> <name>frozen</name> =<init> <expr><name>false</name></expr></init></decl></param>,
         <param><decl><type><name>bool</name></type> <name>locked</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name> =<init> <expr><name><name>Qt</name>::<name>black</name></name></expr></init></decl></param>,
-        <param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetype</name> =<init> <expr><name><name>RLinetype</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
+        <param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name> =<init> <expr><name><name>RLinetype</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
         <param><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name> =<init> <expr><name><name>RLineweight</name>::<name>Weight000</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
     <constructor_decl><name>RLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>RLayer</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
@@ -102,11 +102,11 @@
     }</block></function>
 
     <function><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>linetype</name></expr>;</return>
+        <return>return <expr><name>linetypeId</name></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setLinetypeId</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>lt</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>linetype</name> = <name>lt</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>linetypeId</name> = <name>lt</name></expr>;</expr_stmt>
     }</block></function>
 
     <function><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>getLineweight</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -130,7 +130,7 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>frozen</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>locked</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RColor</name></type> <name>color</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetype</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
