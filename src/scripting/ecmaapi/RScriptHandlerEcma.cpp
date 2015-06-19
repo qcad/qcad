@@ -497,11 +497,13 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 //    classQWebPage.property("prototype").setProperty("setLinkDelegationPolicy",
 //            engine->newFunction(ecmaQWebPageSetLinkDelegationPolicy));
 
-# if QT_VERSION < 0x050301
     QScriptValue classQFile = globalObject.property("QFile");
+# if QT_VERSION < 0x050301
     classQFile.property("prototype").setProperty("close",
             engine->newFunction(ecmaQFileClose));
 # endif
+    classQFile.property("prototype").setProperty("readAll",
+            engine->newFunction(ecmaQFileReadAll));
 #endif
 
     QScriptValue classQt = globalObject.property("Qt");
@@ -1976,6 +1978,21 @@ QScriptValue RScriptHandlerEcma::ecmaQFileClose(QScriptContext* context, QScript
     self->close();
 
     return engine->undefinedValue();
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQFileReadAll(QScriptContext* context, QScriptEngine* engine) {
+    QFile* self = qscriptvalue_cast<QFile*>(context->thisObject());
+    if (self == NULL) {
+        return throwError("QFile.readAll: Object is NULL", context);
+    }
+
+    if (context->argumentCount() != 0) {
+        return throwError("Wrong number/types of arguments for QFile.readAll.", context);
+    }
+
+    QByteArray ret = self->readAll();
+
+    return qScriptValueFromValue(engine, ret);
 }
 
 /*

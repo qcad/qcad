@@ -128,27 +128,10 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
     if (transformAttr!=="") {
         // got transform attribute: update transform stack:
         var transform = this.getTransform(transformAttr);
-//        var combinedTransform = new QTransform();
-//        if (this.transformStack.length!==0) {
-//            combinedTransform = this.transformStack[this.transformStack.length-1];
-//        }
         transform.operator_multiply_assign(newTransform);
         newTransform = transform;
 
-//        for (var i=0; i<this.transformStack.length; i++) {
-//            qDebug("[" + i + "]: ", this.transformStack[i]);
-//        }
     }
-//    else {
-//        // no transform attribute given: keep same transform:
-//        if (this.transformStack.length!==0) {
-//            newTransform = this.transformStack[this.transformStack.length-1];
-//        }
-//        // add identity transform to transform stack:
-//        else {
-//            newTransform = new QTransform();
-//        }
-//    }
     this.transformStack.push(newTransform);
     this.svgImporter.setTransform(newTransform);
 
@@ -574,7 +557,12 @@ SvgImporter.prototype.importPath = function(dData) {
             break;
 
         case 'c':
+            qDebug(coords.join(" | "));
             for (k=0; k<coords.length; k+=6) {
+                qDebug([ox, oy,
+                       coords[k+0] + x, coords[k+1] + y,
+                       coords[k+2] + x, coords[k+3] + y,
+                       coords[k+4] + x, coords[k+5] + y].join(" | "));
                 this.importBezier(ox, oy,
                                   coords[k+0] + x, coords[k+1] + y,
                                   coords[k+2] + x, coords[k+3] + y,

@@ -38,6 +38,7 @@ var credits =
         [ "Tanaka Hidemune",   "Japanese (ja) translation and user reference manual." ],
         [ "Ján Jamriška",      "Slovak (sk) translation." ],
         [ "Miha ('miharix')",  "Slovenian (sl) translation." ],
+        [ "Eduardo Passeto",   "Portuguese (pt) translation." ],
     ],
     [
         "Icons",
