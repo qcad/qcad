@@ -1460,13 +1460,22 @@ ShapeAlgorithms.createEllipseInscribedFromLines = function(line1, line2, line3, 
  */
 ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
     var scale = undefined;
+    var offset = new RVector(0,0);
 
     var i;
     var quad = [v1, v2, v3, v4];
 
+    var extr = new RBox(RVector.getMinimum(quad), RVector.getMaximum(quad));
+
+    // offset to reduce magnitudes:
+    offset = extr.getCenter().getNegated();
+    v1.move(offset);
+    v2.move(offset);
+    v3.move(offset);
+    v4.move(offset);
+
     // numbers in this algorithm can get extremely large, so we scale down here
     // a bit if appropriate:
-    var extr = new RBox(RVector.getMinimum(quad), RVector.getMaximum(quad));
     if (extr.getWidth()>100.0 || extr.getHeight()>100.0) {
         scale = 100.0/Math.max(extr.getWidth(), extr.getHeight());
         v1.scale(scale);
@@ -1585,6 +1594,7 @@ ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
     if (!isNull(scale)) {
         ellipse.scale(new RVector(1.0/scale,1.0/scale));
     }
+    ellipse.move(offset.getNegated());
 
     return ellipse;
 };
@@ -1940,10 +1950,22 @@ ShapeAlgorithms.transformArc = function(arc, fun) {
     var v3 = arc.getCenter().operator_subtract(r1).operator_subtract(r2);
     var v4 = arc.getCenter().operator_subtract(r1).operator_add(r2);
 
+    qDebug("---");
+    qDebug(v1);
+    qDebug(v2);
+    qDebug(v3);
+    qDebug(v4);
+
     fun(v1);
     fun(v2);
     fun(v3);
     fun(v4);
+
+    qDebug("---");
+    qDebug(v1);
+    qDebug(v2);
+    qDebug(v3);
+    qDebug(v4);
 
     //var ret = [];
     var ellipse = ShapeAlgorithms.createEllipseInscribedFromVertices(v1, v2, v3, v4);
@@ -1973,6 +1995,7 @@ ShapeAlgorithms.transformArc = function(arc, fun) {
     //ret.push(ShapeAlgorithms.ellipseToArcCircleEllipse(ellipse));
     //ret = ret.concat([new RLine(v1, v2), new RLine(v2, v3), new RLine(v3, v4), new RLine(v4, v1)]);
 
+    qDebug("ellipse: ", ellipse);
     return ShapeAlgorithms.ellipseToArcCircleEllipse(ellipse);
 };
 
