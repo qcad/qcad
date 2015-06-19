@@ -133,6 +133,7 @@ public:
     );
 
     QSet<REntity::Id> querySelectedEntities();
+    QSet<RObject::Id> queryPropertyEditorObjects();
 
     QSharedPointer<RDocumentVariables> queryDocumentVariables() const;
     QSharedPointer<RDocumentVariables> queryDocumentVariablesDirect() const;

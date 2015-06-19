@@ -121,6 +121,31 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("ObjectAll",
+    QScriptValue(RS::ObjectAll),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ObjectUnknown",
+    QScriptValue(RS::ObjectUnknown),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ObjectLayer",
+    QScriptValue(RS::ObjectLayer),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ObjectLinetype",
+    QScriptValue(RS::ObjectLinetype),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ObjectView",
+    QScriptValue(RS::ObjectView),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityAll",
     QScriptValue(RS::EntityAll),
     QScriptValue::ReadOnly);

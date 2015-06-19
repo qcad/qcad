@@ -1266,6 +1266,17 @@ QSet<REntity::Id> RDocument::querySelectedEntities() {
     return storage.querySelectedEntities();
 }
 
+QSet<RObject::Id> RDocument::queryPropertyEditorObjects() {
+    QSet<RObject::Id> objectIds = querySelectedEntities();
+
+    // no entities selected: use layer properties:
+//    if (objectIds.isEmpty()) {
+//        objectIds.insert(getCurrentLayerId());
+//    }
+
+    return objectIds;
+}
+
 QSharedPointer<RDocumentVariables> RDocument::queryDocumentVariables() const {
     return storage.queryDocumentVariables();
 }

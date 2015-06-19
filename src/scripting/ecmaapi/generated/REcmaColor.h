@@ -54,6 +54,9 @@
         getColorIndex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         createFromCadIndex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

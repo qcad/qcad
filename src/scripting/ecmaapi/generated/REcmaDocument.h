@@ -132,6 +132,9 @@
         querySelectedEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryPropertyEditorObjects
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryDocumentVariables
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

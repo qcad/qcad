@@ -119,6 +119,10 @@ public:
         return handle;
     }
 
+    virtual RS::EntityType getType() const {
+        return RS::ObjectUnknown;
+    }
+
     bool isProtected() const {
         return protect;
     }

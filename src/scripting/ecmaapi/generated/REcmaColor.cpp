@@ -104,6 +104,8 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, removeColor, "removeColor");
+            
             REcmaHelper::registerFunction(&engine, &ctor, createFromCadIndex, "createFromCadIndex");
             
             REcmaHelper::registerFunction(&engine, &ctor, createFromCadCustom, "createFromCadCustom");
@@ -720,6 +722,51 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaColor::getColorIndex", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaColor::removeColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaColor::removeColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaColor::removeColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RColor::
+       removeColor(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RColor.removeColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaColor::removeColor", context, engine);
             return result;
         }
          QScriptValue

@@ -127,6 +127,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, querySelectedEntities, "querySelectedEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, queryPropertyEditorObjects, "queryPropertyEditorObjects");
+            
             REcmaHelper::registerFunction(&engine, proto, queryDocumentVariables, "queryDocumentVariables");
             
             REcmaHelper::registerFunction(&engine, proto, queryDocumentVariablesDirect, "queryDocumentVariablesDirect");
@@ -3402,6 +3404,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::querySelectedEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::queryPropertyEditorObjects
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::queryPropertyEditorObjects", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::queryPropertyEditorObjects";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("queryPropertyEditorObjects", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
+        
+               self->queryPropertyEditorObjects();
+        // return type: QSet < RObject::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.queryPropertyEditorObjects().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::queryPropertyEditorObjects", context, engine);
             return result;
         }
          QScriptValue

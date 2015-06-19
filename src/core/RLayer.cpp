@@ -32,7 +32,7 @@ RLayer::RLayer() :
         RObject(),
         frozen(false),
         locked(false),
-        linetype(RLinetype::INVALID_ID),
+        linetypeId(RLinetype::INVALID_ID),
         lineweight(RLineweight::WeightInvalid) {
 
     RDebug::incCounter("RLayer");
@@ -42,7 +42,7 @@ RLayer::RLayer(RDocument* document, const QString& name,
     bool frozen, bool locked, const RColor& color,
     RLinetype::Id linetype, RLineweight::Lineweight lineweight) :
     RObject(document), name(name.trimmed()), frozen(frozen), locked(locked),
-    color(color), linetype(linetype), lineweight(lineweight) {
+    color(color), linetypeId(linetype), lineweight(lineweight) {
 
     RDebug::incCounter("RLayer");
 }
@@ -52,7 +52,7 @@ RLayer::RLayer(const RLayer& other) :
     frozen(other.frozen),
     locked(other.locked),
     color(other.color),
-    linetype(other.linetype),
+    linetypeId(other.linetypeId),
     lineweight(other.lineweight) {
 
     RObject::operator=(other);
@@ -92,8 +92,15 @@ bool RLayer::setProperty(RPropertyTypeId propertyTypeId,
 
     bool ret = false;
 
-    if (PropertyName == propertyTypeId && name == "0") {
-        return false;
+    if (PropertyName == propertyTypeId) {
+        // never change name of layer 0:
+        if (name == "0") {
+            return false;
+        }
+        // never change layer name to empty string:
+        if (value.toString().isEmpty()) {
+            return false;
+        }
     }
 
     ret = RObject::setMember(name, value.toString().trimmed(), PropertyName == propertyTypeId);
@@ -103,10 +110,10 @@ bool RLayer::setProperty(RPropertyTypeId propertyTypeId,
 
     if (propertyTypeId == PropertyLinetype) {
         if (value.type() == QVariant::Int || value.type() == QVariant::LongLong) {
-            ret = ret || RObject::setMember(linetype, value.toInt(), true);
+            ret = ret || RObject::setMember(linetypeId, value.toInt(), true);
         } else if (value.type() == QVariant::String) {
             if (getDocument() != NULL) {
-                ret = ret || RObject::setMember(linetype,
+                ret = ret || RObject::setMember(linetypeId,
                         getDocument()->getLinetypeId(value.toString()), true);
             }
         }
@@ -141,21 +148,23 @@ QPair<QVariant, RPropertyAttributes> RLayer::getProperty(
 
     if (propertyTypeId == PropertyLinetype) {
         if (humanReadable) {
-            if (getDocument() != NULL) {
+            RDocument* document = getDocument();
+            if (document != NULL) {
                 RPropertyAttributes attr;
-                if (!noAttributes) {
-                    attr.setChoices(getDocument()->getLinetypeNames());
-                }
-                QVariant v;
-                QSharedPointer<RLinetype> lt = getDocument()->queryLinetype(
-                        linetype);
-                v.setValue<RLinetype> (*lt.data());
-                return qMakePair(v, attr);
+                //if (!noAttributes) {
+                //    attr.setChoices(getDocument()->getLinetypeNames());
+                //}
+                //QVariant v;
+                //QSharedPointer<RLinetype> lt = getDocument()->queryLinetype(linetype);
+                //v.setValue<RLinetype> (*lt.data());
+                //return qMakePair(v, attr);
 //                return qMakePair(QVariant(getDocument()->getLinetypeName(
 //                        linetype)), attr);
+                QString desc = document->getLinetypeLabel(linetypeId);
+                return qMakePair(QVariant(desc), attr);
             }
         } else {
-            return qMakePair(QVariant(linetype), RPropertyAttributes());
+            return qMakePair(QVariant(linetypeId), RPropertyAttributes());
         }
     }
 

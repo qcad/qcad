@@ -66,6 +66,9 @@
         getHandle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isProtected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

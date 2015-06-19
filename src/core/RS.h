@@ -71,10 +71,17 @@ public:
 
     /**
      * Entity types used for property handling / filtering.
+     * \todo QCAD 4: rename to objectType
      */
     enum EntityType {
+        ObjectAll,
+        ObjectUnknown,      /**< Unknown object */
+        ObjectLayer,
+        ObjectLinetype,
+        ObjectView,
+
         EntityAll,          /**< All entities (for filters) */
-        EntityUnknown,      /**< Unknown */
+        EntityUnknown,      /**< Unknown entity */
         EntityAttribute,    /**< Block attribute */
         EntityAttributeDefinition,     /**< Block attribute definition */
         EntityBlockRef,     /**< Block reference */

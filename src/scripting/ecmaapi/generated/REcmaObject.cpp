@@ -61,6 +61,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getHandle, "getHandle");
             
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, isProtected, "isProtected");
             
             REcmaHelper::registerFunction(&engine, proto, setProtected, "setProtected");
@@ -513,6 +515,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaObject::getHandle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaObject::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaObject::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaObject::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        
+               self->getType();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaObject::getType", context, engine);
             return result;
         }
          QScriptValue

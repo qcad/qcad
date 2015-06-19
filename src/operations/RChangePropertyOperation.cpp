@@ -56,34 +56,36 @@ RTransaction RChangePropertyOperation::apply(RDocument& document, bool preview) 
 
     //RDebug::startTimer();
 
-    QSet<REntity::Id> selectedEntities = document.querySelectedEntities();
-    QSet<REntity::Id>::iterator it;
-    for (it = selectedEntities.begin(); it != selectedEntities.end(); it++) {
+    //qDebug() << "filter: " << entityTypeFilter;
 
-        QSharedPointer<REntity> entity = document.queryEntity(*it);
-        if (entity.isNull()) {
+    QSet<RObject::Id> selectedObjects = document.queryPropertyEditorObjects();
+    QSet<RObject::Id>::iterator it;
+    for (it = selectedObjects.begin(); it != selectedObjects.end(); it++) {
+
+        QSharedPointer<RObject> obj = document.queryObject(*it);
+        if (obj.isNull()) {
             continue;
         }
         if (entityTypeFilter!=RS::EntityAll) {
             // special filter for block references and attributes:
             if (entityTypeFilter==RS::EntityBlockRefAttr) {
-                if (entity->getType()!=RS::EntityBlockRef &&
-                    entity->getType()!=RS::EntityAttribute) {
+                if (obj->getType()!=RS::EntityBlockRef &&
+                    obj->getType()!=RS::EntityAttribute) {
                     continue;
                 }
             }
             else {
-                if (entityTypeFilter!=entity->getType()) {
+                if (entityTypeFilter!=obj->getType()) {
                     continue;
                 }
             }
         }
 
-        // apply operation to entity:
-        bool modified = entity->setProperty(propertyTypeId, val, &transaction);
+        // apply operation to object:
+        bool modified = obj->setProperty(propertyTypeId, val, &transaction);
 
         if (modified) {
-            transaction.addObject(entity, false, false,
+            transaction.addObject(obj, false, false,
                 QSet<RPropertyTypeId>() << propertyTypeId);
         }
     }
