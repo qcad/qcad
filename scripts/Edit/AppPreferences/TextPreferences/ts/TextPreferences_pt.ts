@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Show font preview in font controls</source>
-        <translation>Mostrar previsão da fonte em controles de fonte</translation>
+        <translation>Exiba a previsão da fonte nos controles de fonte</translation>
     </message>
     <message>
         <location line="+10"/>

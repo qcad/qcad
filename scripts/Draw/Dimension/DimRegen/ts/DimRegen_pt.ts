@@ -19,7 +19,7 @@
         <location filename="../DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Redefina a Posição do Rótulo</translation>
+        <translation>&amp;Resete a Posição do Rótulo</translation>
     </message>
 </context>
 </TS>

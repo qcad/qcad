@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>LineBisector</name>
     <message>
         <location filename="../LineBisector.js" line="+66"/>
         <source>First line</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste lijn</translation>
     </message>
     <message>
         <location line="+4"/>

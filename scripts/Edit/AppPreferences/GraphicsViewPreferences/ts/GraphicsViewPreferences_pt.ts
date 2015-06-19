@@ -86,7 +86,7 @@
     <message>
         <location line="+26"/>
         <source>Color lightness threshold:</source>
-        <translation>Limite para a luminosidade da cor:</translation>
+        <translation>Limites para a luminosidade da cor:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -126,7 +126,7 @@
     <message>
         <location line="+82"/>
         <source>Anti-aliasing on by default</source>
-        <translation>Antialiasing ativada como padrão</translation>
+        <translation>Suavização ativada como padrão</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -135,7 +135,7 @@
     </message>
     <message>
         <source>Antialiasing on by default</source>
-        <translation type="vanished">Antialiasing ativada como padrão</translation>
+        <translation type="vanished">Suavização ativada como padrão</translation>
     </message>
     <message>
         <location line="-349"/>

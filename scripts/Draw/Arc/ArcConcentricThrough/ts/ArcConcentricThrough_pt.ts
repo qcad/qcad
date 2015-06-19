@@ -7,7 +7,7 @@
         <location filename="../ArcConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Concêntrico (&amp;através de Ponto)</translation>
+        <translation>Concêntrico (&amp;passando por Ponto)</translation>
     </message>
     <message>
         <location line="+5"/>

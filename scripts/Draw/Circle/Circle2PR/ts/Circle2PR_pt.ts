@@ -27,7 +27,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
 Inválido raio</translatorcomment>
-        <translation>Inválido raio</translation>
+        <translation>Raio inválido</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -43,7 +43,7 @@ Os dois pontos são idênticos</translatorcomment>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
 &amp;2 Pontos e raio</translatorcomment>
-        <translation>&amp;2 pontos e raio</translation>
+        <translation>&amp;2 Pontos e Raio</translation>
     </message>
     <message>
         <location line="+5"/>

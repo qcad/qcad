@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>LayerList</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location line="+53"/>
         <source>&amp;Layer List</source>
-        <translation>&amp;Lista de camadas</translation>
+        <translation>&amp;Lista de Camadas</translation>
     </message>
     <message>
         <location line="-53"/>
@@ -20,12 +20,12 @@
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 Lista de Camadas</translatorcomment>
-        <translation>Lista de camadas</translation>
+        <translation>Lista de Camadas</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Enable alternating row colors</source>
-        <translation>Ativar alternando cores entre as linhas</translation>
+        <translation>Ative cores alternadas para linhas</translation>
     </message>
 </context>
 </TS>

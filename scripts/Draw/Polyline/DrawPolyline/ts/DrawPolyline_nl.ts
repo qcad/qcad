@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>DrawPolyline</name>
     <message>
         <location filename="../DrawPolyline.js" line="+69"/>
         <source>First vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste hoekpunt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>Volgende hoekpunt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaar</translation>
     </message>
     <message>
         <location line="+415"/>
         <source>close</source>
-        <translation type="unfinished"></translation>
+        <translation>close</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation type="unfinished"></translation>
+        <translation>undo</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -76,27 +76,27 @@
     <message>
         <location line="+3"/>
         <source>,, A</source>
-        <translation type="unfinished"></translation>
+        <translation>,, A</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation type="unfinished"></translation>
+        <translation>Sweep</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoek of lengte beperken</translation>
     </message>
     <message>
         <location filename="../DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Polylijn &amp;tekenen</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw polyline with line and arc segments</source>
-        <translation type="unfinished"></translation>
+        <translation>Polylijn met lijn en boog segmenten tekenen</translation>
     </message>
 </context>
 </TS>

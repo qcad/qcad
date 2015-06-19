@@ -18,12 +18,12 @@ Especifique o ponto</translatorcomment>
     <message>
         <source>Par&amp;allel (through Point)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Par&amp;alela (através de Ponto)</translation>
+        <translation type="vanished">Par&amp;alela (passando por Ponto)</translation>
     </message>
     <message>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Desenhe linha paralela ou arco ou círculo concêntrico passando por um ponto</translation>
+        <translation type="vanished">Desenhe uma linha paralela ou arco ou círculo concêntrico passando por um ponto</translation>
     </message>
     <message>
         <source>Number:</source>
@@ -49,12 +49,12 @@ Número:</translatorcomment>
     <message>
         <location filename="../OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation>Deslocamento (através de Ponto)</translation>
+        <translation>Offset (passando por Ponto)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation>Deslocamento de linha, arco, círculo ou elipse passando por um ponto</translation>
+        <translation>Offset de linha, arco, círculo ou elipse passando por um ponto</translation>
     </message>
 </context>
 </TS>

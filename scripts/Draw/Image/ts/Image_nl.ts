@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>Image</name>
     <message>
@@ -41,22 +41,22 @@
     <message>
         <location line="+20"/>
         <source>Keep proportions</source>
-        <translation type="unfinished"></translation>
+        <translation>Proportioneel</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoogte:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoek:</translation>
     </message>
     <message>
         <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitmap invoegen</translation>
     </message>
 </context>
 </TS>

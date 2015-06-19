@@ -17,7 +17,7 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Exibe o menu &quot;Linha&quot;</translatorcomment>
-        <translation>Exibe as ferramentas de linha</translation>
+        <translation>Exiba as ferramentas de linha</translation>
     </message>
     <message>
         <location line="+14"/>

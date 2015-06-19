@@ -16,17 +16,17 @@
     <message>
         <location filename="../OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation>Deslocamento (com Distância)</translation>
+        <translation>Offset (com Distância)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation>Deslocamentos de linha, arco, círculo ou elipse</translation>
+        <translation>Offset de linha, arco, círculo ou elipse</translation>
     </message>
     <message>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Desenhe paralela à linha existente, ou arco ou círculo concêntrico</translation>
+        <translation type="vanished">Desenhe uma paralela à linha existente, ou arco ou círculo concêntrico</translation>
     </message>
     <message>
         <source>Distance:</source>

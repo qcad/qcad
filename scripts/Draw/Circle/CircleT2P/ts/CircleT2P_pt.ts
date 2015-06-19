@@ -11,12 +11,12 @@
     <message>
         <location line="+12"/>
         <source>First point on circle line</source>
-        <translation>Primeiro ponto em círculo</translation>
+        <translation>Primeiro ponto na cincunferência</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second point on circle line</source>
-        <translation>Segundo ponto em círculo</translation>
+        <translation>Segundo ponto na circunferência</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -31,12 +31,12 @@
     </message>
     <message>
         <source>2 Poin&amp;ts and Tangent</source>
-        <translation type="vanished">&amp;2 pontos y tangente</translation>
+        <translation type="vanished">&amp;2 Pontos e Tangente</translation>
     </message>
     <message>
         <location filename="../CircleT2PInit.js" line="+2"/>
         <source>&amp;Tangent and 2 Points</source>
-        <translation>Tangente y &amp;2 pontos</translation>
+        <translation>Tangente e &amp;2 Pontos</translation>
     </message>
     <message>
         <location line="+4"/>

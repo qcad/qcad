@@ -96,7 +96,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+443"/>
+        <location line="+445"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -134,7 +134,7 @@ Ferramentas CAD</translatorcomment>
         <location line="+85"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>A entidade não é uma referência de bloco.</translation>
+        <translation>A entidade não é uma referência de Bloco.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -262,7 +262,7 @@ Restaurar Predefinições</translatorcomment>
 Insira um símbolo no rótulo
 Insere símbolo
 Insere Símbolo</translatorcomment>
-        <translation>Insira Símbolo</translation>
+        <translation>Insira um Símbolo</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -384,7 +384,7 @@ Delta X</translatorcomment>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation>Ajustado a</translation>
+        <translation>Ajustado para</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -432,22 +432,22 @@ Carregando plugins...</translatorcomment>
     <message>
         <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
-        <translation>Carregando extensão de traduções...</translation>
+        <translation>Carregando traduções da add-on...</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation>Carregando extensões...</translation>
+        <translation>Carregando add-ons...</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation>Iniciando extensões...</translation>
+        <translation>Iniciando add-on...</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Post-initializing add-ons...</source>
-        <translation>Pós-inicialização de extensões...</translation>
+        <translation>Pós-inicialização de add-ons...</translation>
     </message>
     <message>
         <source>Loading add-on translations ...</source>
@@ -464,7 +464,7 @@ Carregando plugins...</translatorcomment>
     <message>
         <location line="-13"/>
         <source>Initializing add-ons:</source>
-        <translation>Iniciando extensões:</translation>
+        <translation>Iniciando add-ons:</translation>
     </message>
     <message>
         <source>Post-initializing add-ons ...</source>

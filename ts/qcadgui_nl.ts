@@ -14,7 +14,7 @@
     <message>
         <location filename="../src/gui/RMathLineEdit.cpp" line="+156"/>
         <source>Invalid</source>
-        <translation>Ongeldig</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

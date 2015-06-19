@@ -5,7 +5,7 @@
     <name>InfoArcCircleArea</name>
     <message>
         <source>Select Arc, Circle, Ellipse or Elliptical Arc</source>
-        <translation type="vanished">Selecione Arco, Círculo, Elipse ou Arco Elíptico</translation>
+        <translation type="vanished">Selecione um Arco, Círculo, Elipse ou Arco Elíptico</translation>
     </message>
     <message>
         <location filename="../InfoArcCircleArea.js" line="+70"/>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../InfoArcCircleArea.ui" line="+13"/>
         <source>Add lengths/circumference to drawing</source>
-        <translation>Adicione comprimentos / circunferência para o desenho</translation>
+        <translation>Adicione comprimentos/circunferência ao desenho</translation>
     </message>
     <message>
         <location filename="../InfoArcCircleArea.js" line="-68"/>

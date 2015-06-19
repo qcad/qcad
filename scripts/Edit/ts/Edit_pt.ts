@@ -55,12 +55,12 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
     <message>
         <location filename="../Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation>Ferramentas de edição</translation>
+        <translation>Ferramentas de Edição</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show edit tools</source>
-        <translation>Exiba ferramentas de edição</translation>
+        <translation>Exiba as ferramentas de edição</translation>
     </message>
     <message>
         <location line="+18"/>

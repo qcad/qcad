@@ -17,7 +17,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+7"/>
         <source>Point on arc or radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ponto no arco ou raio</translation>
+        <translation>Ponto no arco ou no raio</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -49,7 +49,7 @@ Indique o ângulo de término</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Centro, Ponto, Ângulos</translatorcomment>
-        <translation>&amp;Centro, ponto, ângulos</translation>
+        <translation>&amp;Centro, Ponto, Ângulos</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -64,7 +64,7 @@ Indique o ângulo de término</translatorcomment>
 --file: pt.po--
 Direção de Visualização:
 Descrição:</translatorcomment>
-        <translation>Descrição:</translation>
+        <translation>Direção:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -81,7 +81,7 @@ Descrição:</translatorcomment>
 Direção de Visualização:
 Direção de Visualização
 LTR</translatorcomment>
-        <translation>Descrição</translation>
+        <translation>Direção</translation>
     </message>
     <message>
         <location line="-10"/>

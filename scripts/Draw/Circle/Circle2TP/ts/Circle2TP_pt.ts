@@ -6,22 +6,22 @@
     <message>
         <location filename="../Circle2TP.js" line="+76"/>
         <source>First line, arc or circle</source>
-        <translation>Primeira linha, arco, circulo</translation>
+        <translation>Primeira linha, arco ou circulo</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second line, arc or circle</source>
-        <translation>Segunda linha, arco, circulo</translation>
+        <translation>Segunda linha, arco ou circulo</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Point on circle line</source>
-        <translation>Ponto</translation>
+        <translation>Ponto na circunferência</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation>Escolher solução</translation>
+        <translation>Escolha uma solução</translation>
     </message>
     <message>
         <location line="+136"/>
@@ -31,12 +31,12 @@
     </message>
     <message>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation type="vanished">Ponto, 2 tan&amp;gentes</translation>
+        <translation type="vanished">Ponto, 2 Tan&amp;gentes</translation>
     </message>
     <message>
         <location filename="../Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation>2 tan&amp;gentes e ponto</translation>
+        <translation>2 Tan&amp;gentes e Ponto</translation>
     </message>
     <message>
         <location line="+4"/>

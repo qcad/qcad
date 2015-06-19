@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>QObject</name>
     <message>
@@ -31,7 +31,7 @@ Polegada</translatorcomment>
 Fonte
 Pé
 Rodapé</translatorcomment>
-        <translation>Fonte</translation>
+        <translation>Pé</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -82,7 +82,7 @@ Quilômetro</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Polegada Milimétrica</translatorcomment>
-        <translation>Microinch</translation>
+        <translation>Polegada Milimesimal</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -172,7 +172,7 @@ Astro</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Anos-Luz</translatorcomment>
-        <translation>Anos-Luz</translation>
+        <translation>Ano-Luz</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -199,7 +199,7 @@ Pela Camada</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Pelo Carimbo</translatorcomment>
-        <translation>Pelo bloco</translation>
+        <translation>Pelo Bloco</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -208,7 +208,7 @@ Pelo Carimbo</translatorcomment>
 --file: pt_PT.po--
 &amp;Refazer
 Refaça a última ação</translatorcomment>
-        <translation>Encarnado</translation>
+        <translation>Vermelho</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -267,32 +267,32 @@ Canal Magenta</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Dark Red</source>
-        <translation>Vermelho escuro</translation>
+        <translation>Vermelho Escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation>Verde escuro</translation>
+        <translation>Verde Escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation>Azul escuro</translation>
+        <translation>Azul Escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation>Ciano escuro</translation>
+        <translation>Ciano Escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation>Magenta escuro</translation>
+        <translation>Magenta Escuro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation>Amarelo escuro</translation>
+        <translation>Amarelo Escuro</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -320,7 +320,7 @@ Branco</translatorcomment>
 CInzento
 Cinza
 Cinza Claro</translatorcomment>
-        <translation>CInzento</translation>
+        <translation>Cinza</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -343,22 +343,22 @@ Cinza Claro</translatorcomment>
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+44"/>
         <source>Current Layer ID</source>
-        <translation>ID da camada atual</translation>
+        <translation>ID da Camada Atual</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation>Unidade de desenho</translation>
+        <translation>Unidade de Desenho</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Escala de tipo de linha</translation>
+        <translation>Escala do Tipo de Linha</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation>Fonte para fonte</translation>
+        <translation>Fonte da Fonte</translation>
     </message>
 </context>
 <context>
@@ -452,12 +452,12 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
-        <translation>Espaçamento de coluna</translation>
+        <translation>Espaçamento de Coluna</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation>Espaçamento de linha</translation>
+        <translation>Espaçamento de Linha</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+76"/>
@@ -481,7 +481,7 @@ Lista de Blocos</translatorcomment>
     <message>
         <location filename="../src/core/REntity.cpp" line="+1"/>
         <source>Block ID</source>
-        <translation>Bloco ID</translation>
+        <translation>ID do Bloco</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -496,18 +496,18 @@ Lista de Camadas</translatorcomment>
         <location line="+1"/>
         <source>Linetype</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Tipo de linha</translation>
+        <translation>Tipo de Linha</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Escala de tipo de linha</translation>
+        <translation>Escala do tipo de linha</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lineweight</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Peso da linha</translation>
+        <translation>Largura da Linha</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -527,7 +527,7 @@ Abre diálogo de cores</translatorcomment>
         <location line="+1"/>
         <source>Draw Order</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ordem do traçado</translation>
+        <translation>Ordem do Desenho</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -535,7 +535,7 @@ Abre diálogo de cores</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Boundary</source>
-        <translation>Limite</translation>
+        <translation>Contorno</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -545,7 +545,7 @@ Abre diálogo de cores</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation>Fundo</translation>
+        <translation>Inferior</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -555,7 +555,7 @@ Abre diálogo de cores</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation>Topo</translation>
+        <translation>Superior</translation>
     </message>
     <message>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
@@ -590,7 +590,7 @@ Abre diálogo de cores</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation>Posição do texto</translation>
+        <translation>Posição do Texto</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -600,22 +600,22 @@ Abre diálogo de cores</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation>Texto simples</translation>
+        <translation>Texto Simples</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Font Name</source>
-        <translation>Nome da fonte</translation>
+        <translation>Nome da Fonte</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation>Altura do texto</translation>
+        <translation>Altura do Texto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation>Ângulo do texto</translation>
+        <translation>Ângulo do Texto</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -635,7 +635,7 @@ Abre diálogo de cores</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Line Spacing</source>
-        <translation>Espaçamento de linha</translation>
+        <translation>Espaçamento entre Linhas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -660,7 +660,7 @@ Abre diálogo de cores</translatorcomment>
         <location filename="../src/core/RGuiAction.cpp" line="+181"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Requer a seleção</translation>
+        <translation>Requer uma seleção</translation>
     </message>
 </context>
 <context>
@@ -673,12 +673,12 @@ Abre diálogo de cores</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation>Oculto</translation>
+        <translation>Congelado</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Locked</source>
-        <translation>Trancado</translation>
+        <translation>Bloqueado</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -688,12 +688,12 @@ Abre diálogo de cores</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Linetype</source>
-        <translation>Tipo de linha</translation>
+        <translation>Tipo de Linha</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lineweight</source>
-        <translation>Peso da linha</translation>
+        <translation>Espessura da Linha</translation>
     </message>
 </context>
 <context>
@@ -710,7 +710,7 @@ Pela Camada</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Pelo Carimbo</translatorcomment>
-        <translation type="vanished">Pelo bloco</translation>
+        <translation type="vanished">Pelo Bloco</translation>
     </message>
     <message>
         <source>Continuous</source>
@@ -771,21 +771,21 @@ Tracejado (grande)</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Traço Ponto
 Traço Ponto (pequeno)</translatorcomment>
-        <translation type="vanished">Traço Ponto</translation>
+        <translation type="vanished">Traço-Ponto</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Traço Ponto (pequeno)</translatorcomment>
-        <translation type="vanished">Traço Ponto (pequeno)</translation>
+        <translation type="vanished">Traço-Ponto (pequeno)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Traço Ponto (grande)</translatorcomment>
-        <translation type="vanished">Traço Ponto (grande)</translation>
+        <translation type="vanished">Traço-Ponto (grande)</translation>
     </message>
     <message>
         <source>Divide</source>
@@ -800,7 +800,7 @@ Separação</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Separação (pequeno)</translatorcomment>
-        <translation type="vanished">Separação (pequeno)</translation>
+        <translation type="vanished">Separação (pequena)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
@@ -838,21 +838,21 @@ Centro (grande)</translatorcomment>
 Limite
 Borda
 Borda (pequeno)</translatorcomment>
-        <translation type="vanished">Limite</translation>
+        <translation type="vanished">Margem</translation>
     </message>
     <message>
         <source>Border (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Borda (pequeno)</translatorcomment>
-        <translation type="vanished">Borda (pequeno)</translation>
+        <translation type="vanished">Margem (pequena)</translation>
     </message>
     <message>
         <source>Border (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Borda (grande)</translatorcomment>
-        <translation type="vanished">Borda (grande)</translation>
+        <translation type="vanished">Margem (grande)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -872,7 +872,7 @@ Borda (grande)</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation>Padrão</translation>
+        <translation>Textura</translation>
     </message>
 </context>
 <context>
@@ -885,18 +885,18 @@ Borda (grande)</translatorcomment>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation>Pelo bloco</translation>
+        <translation>Pelo Bloco</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation>Limite</translation>
+        <translation>Margem</translation>
     </message>
     <message>
         <source>Border (2x)</source>
-        <translation type="vanished">Borda (2x)</translation>
+        <translation type="vanished">Margem (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -914,7 +914,7 @@ Borda (grande)</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation>Traço Ponto</translation>
+        <translation>Traço-Ponto</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -928,7 +928,7 @@ Borda (grande)</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation>Separação</translation>
+        <translation>Divisor</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -942,39 +942,39 @@ Borda (grande)</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation>Oculta</translation>
+        <translation>Oculto</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation>Fantasma</translation>
+        <translation>Espectro</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation>ISO traço</translation>
+        <translation>traço ISO</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation>ISO tracejado, o espaço</translation>
+        <translation>ISO traço-espaço</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation>ISO longo traço, ponto</translation>
+        <translation>ISO Traço longo-ponto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation>ISO longo traço, dois pontos</translation>
+        <translation>ISO Traço longo-ponto duplo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation>ISO longo traço, ponto triplo</translation>
+        <translation>ISO Traço longo-ponto triplo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -984,57 +984,57 @@ Borda (grande)</translatorcomment>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation>ISO longo traço, curto traço</translation>
+        <translation>ISO Traço longo-traço curto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation>ISO longo traço, dois curto traços</translation>
+        <translation>ISO Traço longo-traço curto duplo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation>ISO traço, ponto</translation>
+        <translation>ISO traço-ponto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation>ISO dois traços, ponto</translation>
+        <translation>ISO traço duplo-ponto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation>ISO traço, dois pontos</translation>
+        <translation>ISO traço-duplo ponto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation>ISO dois traços, dois pontos</translation>
+        <translation>ISO traço duplo-duplo ponto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation>ISO traço, ponto triplo</translation>
+        <translation>ISO traço triplo-ponto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation>ISO dois traços, ponto triplo</translation>
+        <translation>ISO Traço duplo-ponto triplo</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hot Water Supply</source>
-        <translation>Água quente</translation>
+        <translation>Fornecimento de Água Quente</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation>Água quente</translation>
+        <translation>Água Quente</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gas Line</source>
-        <translation>Linha de gás</translation>
+        <translation>Linha de Gás</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1044,22 +1044,22 @@ Borda (grande)</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation>Zig Zag</translation>
+        <translation>Zigue Zague</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation>Vias</translation>
+        <translation>Trajetos</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation>Limite 1</translation>
+        <translation>Linha de Cerca 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation>Limite 2</translation>
+        <translation>Linha de Cerca 2</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1069,11 +1069,11 @@ Borda (grande)</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translation>Drenagem reverso</translation>
+        <translation>Drenagem Reversa</translation>
     </message>
     <message>
         <source>Drainage Reverse</source>
-        <translation type="vanished">Drenagem reverso</translation>
+        <translation type="vanished">Drenagem Reversa</translation>
     </message>
 </context>
 <context>
@@ -1101,7 +1101,7 @@ Pelo Carimbo</translatorcomment>
 --file: pt_PT.po--
 Unidade Padrão:
 &amp;Padrões</translatorcomment>
-        <translation>Predefinição</translation>
+        <translation>Padrão</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1315,12 +1315,12 @@ Configurar...</translatorcomment>
 %1 ambíguo não tratado
 Desenhar Alças
 Mover manualmente</translatorcomment>
-        <translation>Ângulo</translation>
+        <translation>Manipulador</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Protected</source>
-        <translation>Protegida</translation>
+        <translation>Protegido</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../ArcTPR.js" line="+79"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation>Escolha linha, arco, círculo ou elipse</translation>
+        <translation>Escolha uma linha, arco, círculo ou elipse</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -16,7 +16,7 @@
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation>Escolher solução</translation>
+        <translation>Escolha uma solução</translation>
     </message>
     <message>
         <location line="+120"/>
@@ -32,12 +32,12 @@
     <message>
         <location filename="../ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>&amp;Tangente, ponto, raio</translation>
+        <translation>&amp;Tangente, Ponto, Raio</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation>Desenhar um arco tangente a uma entidade, passando por um ponto, com raio</translation>
+        <translation>Desenhe um arco tangente a uma entidade, passando por um ponto, com raio</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
     </message>
     <message>
         <source>Point on circle line</source>
-        <translation type="vanished">Ponto</translation>
+        <translation type="vanished">Ponto na circunferência</translation>
     </message>
     <message>
         <source>Choose solution</source>
@@ -64,7 +64,7 @@
     </message>
     <message>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation type="vanished">Ponto, 2 tan&amp;gentes</translation>
+        <translation type="vanished">Ponto, 2 Tan&amp;gentes</translation>
     </message>
     <message>
         <source>Draw circle tangential to two entities, through point</source>

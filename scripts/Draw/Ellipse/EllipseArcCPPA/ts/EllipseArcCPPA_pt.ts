@@ -29,7 +29,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ponto menor da elipse ou raio menor</translation>
+        <translation>Ponto menor da elipse ou o raio menor</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -63,7 +63,7 @@ Entre o ângulo de rotação
         <location line="+264"/>
         <source>Invalid major radius.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Raio maior inválido</translation>
+        <translation>Raio maior inválido.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -101,7 +101,7 @@ Indique o ângulo de início:
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Ângulo de Término:</translatorcomment>
-        <translation>Ângulo de término:</translation>
+        <translation>Ângulo final:</translation>
     </message>
     <message>
         <location filename="../EllipseArcCPPAInit.js" line="+2"/>

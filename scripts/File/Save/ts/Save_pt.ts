@@ -96,7 +96,7 @@ Desenho salvo: %1</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 &amp;Gravar</translatorcomment>
-        <translation>&amp;Gravar</translation>
+        <translation>&amp;Grave</translation>
     </message>
 </context>
 </TS>

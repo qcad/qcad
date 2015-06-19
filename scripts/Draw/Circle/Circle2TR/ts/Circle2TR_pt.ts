@@ -6,12 +6,12 @@
     <message>
         <location filename="../Circle2TR.js" line="+68"/>
         <source>First line, arc or circle</source>
-        <translation>Primeira linha, arco, circulo</translation>
+        <translation>Primeira linha, arco ou circulo</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second line, arc or circle</source>
-        <translation>Segunda linha, arco, circulo</translation>
+        <translation>Segunda linha, arco ou círculo</translation>
     </message>
     <message>
         <location line="+77"/>
@@ -22,7 +22,7 @@
     <message>
         <location line="-20"/>
         <source>Invalid radius</source>
-        <translation>Inválido raio</translation>
+        <translation>Raio inválido</translation>
     </message>
     <message>
         <location filename="../Circle2TR.ui" line="+17"/>
@@ -32,7 +32,7 @@
     <message>
         <location filename="../Circle2TRInit.js" line="+2"/>
         <source>2 &amp;Tangents and Radius</source>
-        <translation>2 &amp;tangentes e raio</translation>
+        <translation>2 &amp;Tangentes e Raio</translation>
     </message>
     <message>
         <location line="+5"/>

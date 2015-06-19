@@ -86,7 +86,7 @@ Sem Título</translatorcomment>
     <message>
         <location line="+12"/>
         <source>read-only</source>
-        <translation>Apenas leitura</translation>
+        <translation>apenas leitura</translation>
     </message>
     <message>
         <location line="+54"/>

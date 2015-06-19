@@ -28,7 +28,7 @@ Texto a mostrar</translatorcomment>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Deslocamento (Trackpad, Mouse de Múltiplos Botões)</translation>
+        <translation>Rolagem (Trackpad, Mouse de Múltiplos Botões)</translation>
     </message>
 </context>
 <context>
@@ -43,7 +43,7 @@ Texto a mostrar</translatorcomment>
         <location line="+10"/>
         <source>Enable pan gesture</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Habilite o gesto de panagem</translation>
+        <translation>Habilite o gesto de deslocamento</translation>
     </message>
     <message>
         <location line="+7"/>

@@ -95,7 +95,7 @@
     <message>
         <location line="+32"/>
         <source>Script Add-Ons</source>
-        <translation>Scripts de Adicionais</translation>
+        <translation>Scripts de Add-Ons</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -131,7 +131,7 @@
     <message>
         <location line="-41"/>
         <source>Plugins</source>
-        <translation>Extensões</translation>
+        <translation>Plugins</translation>
     </message>
     <message>
         <location line="+25"/>

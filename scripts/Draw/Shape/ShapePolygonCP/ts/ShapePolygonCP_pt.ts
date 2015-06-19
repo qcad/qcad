@@ -15,7 +15,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
     <message>
         <source>Corner point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Ponto de vértice</translation>
+        <translation type="vanished">Vértice</translation>
     </message>
     <message>
         <source>Done</source>
@@ -54,7 +54,7 @@ Cantos:</translatorcomment>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation>Ponto de vértice</translation>
+        <translation>Vértice</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -78,7 +78,7 @@ Cantos:</translatorcomment>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and corner point</source>
-        <translation>Desenhe polígono regular a partir do centro e de vértice</translation>
+        <translation>Desenhe um polígono regular a partir do centro e de vértice</translation>
     </message>
 </context>
 </TS>

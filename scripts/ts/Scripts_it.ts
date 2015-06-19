@@ -79,7 +79,7 @@
         <translation>Niente</translation>
     </message>
     <message>
-        <location line="+443"/>
+        <location line="+445"/>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>

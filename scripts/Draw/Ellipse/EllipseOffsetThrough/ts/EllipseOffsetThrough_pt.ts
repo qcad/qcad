@@ -49,7 +49,7 @@ Número:</translatorcomment>
     <message>
         <location filename="../EllipseOffsetThroughInit.js" line="+2"/>
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation>Curva Paralela (&amp;através de Ponto)</translation>
+        <translation>Curva Paralela (&amp;passando por Ponto)</translation>
     </message>
     <message>
         <location line="+4"/>

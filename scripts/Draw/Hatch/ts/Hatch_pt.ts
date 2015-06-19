@@ -74,7 +74,7 @@ Hachuras / preenchimentos sólidos</translatorcomment>
         <translatorcomment>--google--
 Padrões de Hachura:
 Padrões de Hachura</translatorcomment>
-        <translation>Padrão da Hachura</translation>
+        <translation>Textura da Hachura</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -84,7 +84,7 @@ Padrões de Hachura</translatorcomment>
 Prévia de impressão para %1
 Prévia de Impressão
 Exibe uma prévia da impressão</translatorcomment>
-        <translation>Pré-visualizar</translation>
+        <translation>Pré-visualize</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -93,7 +93,7 @@ Exibe uma prévia da impressão</translatorcomment>
 --file: pt.po--
 Padrão
 Padrões de Hachura:</translatorcomment>
-        <translation>Padrão</translation>
+        <translation>Textura</translation>
     </message>
     <message>
         <location line="+14"/>

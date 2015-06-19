@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>FirstStart</name>
     <message>
@@ -39,7 +39,7 @@ Idioma GUI:</translatorcomment>
     <message>
         <location line="-194"/>
         <source>%1 First Start</source>
-        <translation>%1 primeiro iniciar</translation>
+        <translation>%1 Primeiro Início</translation>
     </message>
     <message>
         <location line="+195"/>
@@ -50,7 +50,7 @@ Idioma GUI:</translatorcomment>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Por favor, escolha as configurações usadas para novos desenhos. Todas essas configurações podem ser alteradas posteriormente no diálogo preferências.</translation>
+        <translation>Por favor, escolha as configurações usadas para novos desenhos. Todas essas configurações podem ser alteradas posteriormente no Diálogo de Preferências.</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -59,13 +59,13 @@ Idioma GUI:</translatorcomment>
 --file: pt.po--
 Unidade Padrão:
 &amp;Principal unidade do desenho:</translatorcomment>
-        <translation>Unidades:</translation>
+        <translation>Unidade:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default Paper Size:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Tamanho de papel padrão:</translation>
+        <translation>Tamanho de Papel Padrão:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -73,7 +73,7 @@ Unidade Padrão:
         <translatorcomment>--exact match--
 --file: Input_pt.ts--
 Ponto decimal:</translatorcomment>
-        <translation>Ponto decimal:</translation>
+        <translation>Ponto Decimal:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -81,7 +81,7 @@ Ponto decimal:</translatorcomment>
         <translatorcomment>--ignored case--
 --file: pt.po--
 Cor de plano de fundo</translatorcomment>
-        <translation>Cor de plano de fundo:</translation>
+        <translation>Cor do Pano de Fundo:</translation>
     </message>
     <message>
         <source>QCAD First Start</source>

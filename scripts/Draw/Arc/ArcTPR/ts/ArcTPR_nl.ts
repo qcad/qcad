@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>ArcTPR</name>
     <message>
         <location filename="../ArcTPR.js" line="+79"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies lijn, boog, cirkel of ellips</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Point on arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Punt op boog</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -27,17 +27,17 @@
     <message>
         <location filename="../ArcTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Radius:</translation>
     </message>
     <message>
         <location filename="../ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tangent, punt en radius</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken boog rakend aan object, door punt en met radius</translation>
     </message>
 </context>
 <context>

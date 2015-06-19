@@ -5,12 +5,12 @@
     <name>DisplayDistanceAngle</name>
     <message>
         <source>Display Distance/Angle</source>
-        <translation type="vanished">Exiba Distância/Ângulo</translation>
+        <translation type="vanished">Exiba a Distância/Ângulo</translation>
     </message>
     <message>
         <location filename="../DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>Exiba &amp;distância/Ângulo</translation>
+        <translation>Exiba a &amp;distância/Ângulo</translation>
     </message>
 </context>
 </TS>

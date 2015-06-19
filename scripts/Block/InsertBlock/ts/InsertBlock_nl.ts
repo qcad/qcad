@@ -56,13 +56,13 @@
     <message>
         <location line="+18"/>
         <source>Single Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Enkel blok</translation>
     </message>
     <message>
         <location line="+17"/>
         <location filename="../InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Array van blokken</translation>
     </message>
     <message>
         <location filename="../InsertBlockInit.js" line="+2"/>
@@ -72,22 +72,22 @@
     <message>
         <location filename="../InsertBlockDialog.ui" line="+12"/>
         <source>Columns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolommen:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Rows:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rijen:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Column Spacing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolom afstand:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Row Spacing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rij afstand:</translation>
     </message>
 </context>
 </TS>

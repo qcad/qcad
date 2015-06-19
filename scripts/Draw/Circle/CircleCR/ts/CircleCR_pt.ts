@@ -25,7 +25,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
     <message>
         <location filename="../CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
-        <translation>Centro, &amp;raio</translation>
+        <translation>Centro, &amp;Raio</translation>
     </message>
     <message>
         <location line="+4"/>

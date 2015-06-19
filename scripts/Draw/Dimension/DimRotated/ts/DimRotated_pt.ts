@@ -28,7 +28,7 @@ Indique a dimensão da linha de localização</translatorcomment>
         <location filename="../DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Rotacionado (linear)</translation>
+        <translation>&amp;Rotacionado (Linear)</translation>
     </message>
     <message>
         <location line="+5"/>

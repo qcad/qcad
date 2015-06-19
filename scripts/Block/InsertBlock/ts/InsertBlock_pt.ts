@@ -30,7 +30,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     <message>
         <location filename="../InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>&amp;Insira bloco</translation>
+        <translation>&amp;Insira um Bloco</translation>
     </message>
     <message>
         <location filename="../InsertBlock.ui" line="+17"/>
@@ -40,7 +40,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     <message>
         <location line="+19"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
-        <translation>Rodar bloco&lt;br&gt;por este ângulo</translation>
+        <translation>Rotacione o Bloco&lt;br&gt;por este ângulo</translation>
     </message>
     <message>
         <location line="+97"/>
@@ -50,7 +50,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     <message>
         <location line="+19"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation>Escala bloco em X&lt;br&gt;por este fator</translation>
+        <translation>Escalone o Bloco em X&lt;br&gt;por este fator</translation>
     </message>
     <message>
         <location line="+68"/>
@@ -60,7 +60,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     <message>
         <location line="+22"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation>Escala bloco em Y&lt;br&gt;por este fator</translation>
+        <translation>Escalone o Bloco em Y&lt;br&gt;por este fator</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -70,23 +70,23 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     <message>
         <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
-        <translation>Inverter bloco&lt;br&gt;horizontalmente</translation>
+        <translation>Inverta o Bloco&lt;br&gt;horizontalmente</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
-        <translation>Inverter bloco&lt;br&gt;verticalmente</translation>
+        <translation>Inverta o Bloco&lt;br&gt;verticalmente</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Single Block</source>
-        <translation>Único bloco</translation>
+        <translation>Bloco Único</translation>
     </message>
     <message>
         <location line="+17"/>
         <location filename="../InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
-        <translation>Matriz de blocos</translation>
+        <translation>Matriz de Blocos</translation>
     </message>
     <message>
         <source>Attribute 1:</source>

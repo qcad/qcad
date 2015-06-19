@@ -16,12 +16,12 @@
     <message>
         <location line="+115"/>
         <source>Autosave failed:</source>
-        <translation>Gravar automaticamente falhou:</translation>
+        <translation>Gravação automática falhou:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
-        <translation>Gravar automaticamente concluído.</translation>
+        <translation>Gravação automática concluída.</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -45,7 +45,7 @@ Você deseja recuperá-los?</translation>
     <message>
         <location line="+47"/>
         <source>Recover File?</source>
-        <translation>Recuperar arquivo?</translation>
+        <translation>Recuperar Arquivo?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -69,12 +69,12 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+16"/>
         <source>Moved original file to:</source>
-        <translation>Movido arquivo original para:</translation>
+        <translation>Movido o arquivo original para:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Cannot remove file:</source>
-        <translation>Não é possível excluir arquivo:</translation>
+        <translation>Não é possível excluir o arquivo:</translation>
     </message>
     <message>
         <source>Cannot remove file: </source>
@@ -91,7 +91,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="-124"/>
         <source>Recover Files?</source>
-        <translation>Recuperar Arquivos?</translation>
+        <translation>Recupere os Arquivos?</translation>
     </message>
     <message>
         <source>Choose Autosave Directory</source>
@@ -109,7 +109,7 @@ Você deseja recuperá-lo?</translation>
         <source>Enable Autosave</source>
         <translatorcomment>--google--
 Caixa de diálogo de comportamento (requer reinício):</translatorcomment>
-        <translation>Habilitar gravação automática</translation>
+        <translation>Habilite a gravação automática</translation>
     </message>
     <message>
         <location line="+12"/>

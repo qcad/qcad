@@ -13,7 +13,7 @@
         <location line="+5"/>
         <source>Show point tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mostre ferramentas para ponto</translation>
+        <translation>Exiba as ferramentas para ponto</translation>
     </message>
     <message>
         <location line="+18"/>

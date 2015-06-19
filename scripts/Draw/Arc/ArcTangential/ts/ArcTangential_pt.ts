@@ -24,7 +24,7 @@ Raio</translatorcomment>
         <location line="+5"/>
         <source>Choose end point of arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolham o ponto final do arco</translation>
+        <translation>Escolha o ponto final do arco</translation>
     </message>
     <message>
         <source>Co&amp;ntinue</source>
@@ -38,13 +38,13 @@ Raio</translatorcomment>
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation>&amp;Tangencialmente ligado</translation>
+        <translation>&amp;Tangencialmente Ligado</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar arco tangente à entidade de base</translation>
+        <translation>Desenhe um arco tangente à entidade de base</translation>
     </message>
     <message>
         <location filename="../ArcTangential.ui" line="+17"/>

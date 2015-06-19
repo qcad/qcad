@@ -7,7 +7,7 @@
         <location filename="../EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha a referência do bloco</translation>
+        <translation>Escolha a referência do Bloco</translation>
     </message>
     <message>
         <location filename="../EditFromReferenceInit.js" line="+2"/>
@@ -19,7 +19,7 @@
         <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Edite o bloco baseado nas referências escolhidas para o Bloco</translation>
+        <translation>Edite o Bloco baseado nas referências escolhidas para o Bloco</translation>
     </message>
 </context>
 </TS>

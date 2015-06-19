@@ -13,13 +13,13 @@
     <message>
         <location filename="../AddBlockInit.js" line="+2"/>
         <source>&amp;Add Empty Block</source>
-        <translation>&amp;Adicione Bloco</translation>
+        <translation>&amp;Adicione um Bloco Vazio</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Add new empty block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Adicione um novo bloco vazio</translation>
+        <translation>Adicione um novo Bloco vazio</translation>
     </message>
 </context>
 </TS>

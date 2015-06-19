@@ -41,7 +41,7 @@ lugares:\</translatorcomment>
         <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhe uma única linha ou seqüência de linhas</translation>
+        <translation>Desenhe uma única linha ou uma seqüência de linhas</translation>
     </message>
     <message>
         <location filename="../Line2P.ui" line="+23"/>

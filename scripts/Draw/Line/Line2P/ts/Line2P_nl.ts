@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>Line2P</name>
     <message>
         <location filename="../Line2P.js" line="+67"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste punt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next point</source>
-        <translation type="unfinished"></translation>
+        <translation>Volgende punt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaar</translation>
     </message>
     <message>
         <location filename="../Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation type="unfinished"></translation>
+        <translation>Sequence sluiten</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, C</source>
-        <translation type="unfinished"></translation>
+        <translation>,, C</translation>
     </message>
     <message>
         <location line="+20"/>

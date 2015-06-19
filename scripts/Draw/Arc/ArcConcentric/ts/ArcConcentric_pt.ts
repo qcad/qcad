@@ -11,7 +11,7 @@
     <message>
         <location filename="../ArcConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation>&amp;Concêntricos (distância)</translation>
+        <translation>&amp;Concêntricos (com distância)</translation>
     </message>
     <message>
         <location line="+5"/>

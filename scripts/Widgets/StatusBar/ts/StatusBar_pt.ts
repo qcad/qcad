@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>StatusBar</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+47"/>
         <source>Status Bar Font:</source>
-        <translation>Fonte barra de estado:</translation>
+        <translation>Fonte da Barra de Status:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Status Bar Widgets</source>
-        <translation>Widgets na barra de status</translation>
+        <translation>Widgets da Barra de Status</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation>Exibição para coordenadas</translation>
+        <translation>Exibição de coordenadas</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -41,12 +41,12 @@
     <message>
         <location line="+0"/>
         <source>Status Bar</source>
-        <translation>Barra de estado</translation>
+        <translation>Barra de Status</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Status Bar</source>
-        <translation>Barra de &amp;estado</translation>
+        <translation>Barra de &amp;status</translation>
     </message>
 </context>
 </TS>

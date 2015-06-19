@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Edite Camada</translatorcomment>
-        <translation>&amp;Edite Camada</translation>
+        <translation>&amp;Edite a Camada</translation>
     </message>
 </context>
 </TS>

@@ -73,7 +73,7 @@
         <translation>Brez</translation>
     </message>
     <message>
-        <location line="+443"/>
+        <location line="+445"/>
         <source>Options</source>
         <translation>Nastavitve</translation>
     </message>

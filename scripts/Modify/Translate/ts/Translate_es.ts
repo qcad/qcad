@@ -41,7 +41,7 @@ Punto objetivo</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation>Utilice diálogo para mostrar opciones de la herramienta</translation>
+        <translation>Utilice diálogo para opciones de la herramienta</translation>
     </message>
     <message>
         <location filename="../Translate.ui" line="+17"/>

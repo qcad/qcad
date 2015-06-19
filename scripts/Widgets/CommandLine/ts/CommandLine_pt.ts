@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>CommandLine</name>
     <message>
@@ -13,7 +13,7 @@
 Foca na &amp;Linha de Comando
 Foca na Linha de Comando
 Linha de Comando</translatorcomment>
-        <translation>Linha de comando</translation>
+        <translation>Linha de Comando</translation>
     </message>
     <message>
         <source>Invalid coordinate &apos;%1&apos;</source>
@@ -37,27 +37,27 @@ Linha de Comando</translatorcomment>
     <message>
         <location line="+163"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
-        <translation>Comando desconhecido ou coordenadas ou valor inválido: &apos;%1&apos;</translation>
+        <translation>Comando desconhecido, ou coordenadas ou valor inválido: &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Numbers may be entered as: &apos;%1&apos;</source>
-        <translation>Números podem ser inseridos como: &apos;%1&apos;</translation>
+        <translation>Números devem ser inseridos como: &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
-        <translation>Coordenadas podem ser introduzidas como: &apos;%1&apos; (absoluto) ou &apos;%2&apos; (relativa) ou &apos;%3&apos; (polar) ou &apos;%4&apos; (relativa polar)</translation>
+        <translation>Coordenadas devem ser introduzidas como: &apos;%1&apos; (absoluta) ou &apos;%2&apos; (relativa) ou &apos;%3&apos; (polar) ou &apos;%4&apos; (polar relativa)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>You may change the number / coordinate format in the application preferences.</source>
-        <translation>Você pode alterar o formato número e coordenadas nas preferências do aplicativo.</translation>
+        <translation>Você pode modificar o número/formato das coordenadas nas preferências do aplicativo.</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation>Tentando aproveitar ou modificar as entidades em uma camada bloqueada.</translation>
+        <translation>Falha na transação. Por favor verifique por autorreferências em Blocos ou camadas bloqueadas ou invisíveis nos Blocos.</translation>
     </message>
     <message>
         <source>Trying to draw on or modify entities on a locked or invisible layer.</source>
@@ -76,7 +76,7 @@ Linha de Comando</translatorcomment>
     <message>
         <location line="+173"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
-        <translation>Coordenar ou distância inválido &apos;%1&apos;.</translation>
+        <translation>Coordenada ou distância inválida &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+109"/>
@@ -101,7 +101,7 @@ Aviso:</translatorcomment>
 &amp;Coordenadas
 Coordenadas
 Salta a uma coordenada dada</translatorcomment>
-        <translation>Coordenadas</translation>
+        <translation>Coordenada</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -135,17 +135,17 @@ Documento carregado: %1</translatorcomment>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>History Size:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Tamanho história:</translation>
+        <translation>Tamanho do Histórico:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Show warnings as dialog</source>
-        <translation>Mostrar uma caixa de diálogo para advertências</translation>
+        <translation>Exiba avisos como caixas de diálogo</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Show information as dialog</source>
-        <translation>Mostrar uma caixa de diálogo para informações</translation>
+        <translation>Exiba informações como caixas de diálogo</translation>
     </message>
 </context>
 </TS>

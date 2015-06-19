@@ -71,7 +71,7 @@ Para comprimentos formatados como &apos;Engenharia&apos; ou &apos;Arquitetura&ap
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Fracionais</translatorcomment>
-        <translation>Fracionais</translation>
+        <translation>Frações</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -161,7 +161,7 @@ Altura do Texto:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Extensão da linha de deslocamento:</translatorcomment>
-        <translation>Extensão da linha de deslocamento:</translation>
+        <translation>Extensão da linha de offset:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -262,7 +262,7 @@ Espessura Arquitetônica</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Exibe zeros à esquerda</translatorcomment>
-        <translation>Exibe zeros à esquerda</translation>
+        <translation>Exiba zeros à esquerda</translation>
     </message>
     <message>
         <location line="-50"/>

@@ -48,7 +48,7 @@ Ponto de destino</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Opções Mova e Rotacione
 Opções de Rotacione</translatorcomment>
-        <translation>Opções de rotacão</translation>
+        <translation>Opções de Rotação</translation>
     </message>
     <message>
         <location line="+14"/>

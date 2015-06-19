@@ -16,7 +16,7 @@ Todos os Ficheiros (*.*)</translatorcomment>
         <location line="+10"/>
         <source>Export as Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Exporte como bitmap</translation>
+        <translation>Exporte como Bitmap</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -28,7 +28,7 @@ Todos os Ficheiros (*.*)</translatorcomment>
         <location line="+6"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Arquivo Bitmap foi exportado para &apos;%1&apos;</translation>
+        <translation>O arquivo Bitmap foi exportado para &apos;%1&apos;</translation>
     </message>
     <message>
         <location filename="../BitmapExportInit.js" line="+2"/>

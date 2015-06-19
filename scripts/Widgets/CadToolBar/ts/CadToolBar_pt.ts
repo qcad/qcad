@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>CadToolBar</name>
     <message>
@@ -15,16 +15,16 @@ O seu tema não suporta menus de navegação ou de widgets.</translatorcomment>
     <message>
         <location line="+0"/>
         <source>CAD Toolbar</source>
-        <translation>Barra de ferramentas CAD</translation>
+        <translation>Barra de Ferramentas CAD</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Vertical/Horizontal</source>
-        <translation>Vertical / Horizontal</translation>
+        <translation>Vertical/Horizontal</translation>
     </message>
     <message>
         <source>Toggle Title Bar</source>
-        <translation type="vanished">Mostrar barra de título</translation>
+        <translation type="vanished">Alterne a Barra de Título</translation>
     </message>
     <message>
         <source>CAD Tool Bar</source>
@@ -38,7 +38,7 @@ O seu tema não suporta menus de navegação ou de widgets.</translatorcomment>
 --file: LibraryBrowser_pt.ts--
 Tamanho ícone:
 Fazer ferramentas principais menores</translatorcomment>
-        <translation>Tamanho ícone:</translation>
+        <translation>Tamanho do Ícone:</translation>
     </message>
     <message>
         <location line="+71"/>

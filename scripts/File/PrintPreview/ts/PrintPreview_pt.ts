@@ -68,7 +68,7 @@ lugares:\</translatorcomment>
     <message>
         <location line="+3"/>
         <source>Export failed (cannot open file for writing): %1</source>
-        <translation>A exportação falhou (Não é possível abrir arquivo): %1</translation>
+        <translation>A exportação falhou (Não é possível gravar no arquivo): %1</translation>
     </message>
     <message>
         <location filename="../PrintPreviewInit.js" line="+2"/>
@@ -76,7 +76,7 @@ lugares:\</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Prévia de Impressão</translatorcomment>
-        <translation>&amp;Prévia de impressão</translation>
+        <translation>&amp;Prévia de Impressão</translation>
     </message>
     <message>
         <location line="+6"/>

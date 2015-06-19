@@ -111,7 +111,7 @@ Substituir camadas</translatorcomment>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Sobrescrever blocos existentes&lt;br&gt;no desenho com blocos&lt;br&gt;da área de transferência</translatorcomment>
-        <translation>Substitua os blocos existentes&lt;br&gt;no desenho pelos blocos&lt;br&gt;da área de transferência</translation>
+        <translation>Substitua os Blocos existentes&lt;br&gt;no desenho pelos Blocos&lt;br&gt;da área de transferência</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -119,7 +119,7 @@ Sobrescrever blocos existentes&lt;br&gt;no desenho com blocos&lt;br&gt;da área 
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Sobrescrever blocos</translatorcomment>
-        <translation>Substitua os blocos</translation>
+        <translation>Substitua os Blocos</translation>
     </message>
 </context>
 </TS>

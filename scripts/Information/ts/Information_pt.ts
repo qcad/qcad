@@ -13,7 +13,7 @@
         <location line="+5"/>
         <source>Show information tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Exiba ferramentas de informação</translation>
+        <translation>Exiba as ferramentas de informação</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../Information.ui" line="+17"/>
         <source>Add measurement to drawing</source>
-        <translation>Adicione medida para o desenho</translation>
+        <translation>Adicione medidas para o desenho</translation>
     </message>
     <message>
         <location line="+17"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../Translate.js" line="+44"/>
         <source>Modify</source>
-        <translation>Modifica</translation>
+        <translation>Modifique</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -43,12 +43,12 @@ Ponto de destino</translatorcomment>
         <location line="+10"/>
         <source>Move or copy entities once or multiple times</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mova ou copie entidades uma, ou múltiplas vezes</translation>
+        <translation>Mova ou copie entidades uma ou múltiplas vezes</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation>Use diálogo para exibir as opções da ferramenta</translation>
+        <translation>Usar diálogo para opções de ferramentas</translation>
     </message>
     <message>
         <location filename="../Translate.ui" line="+17"/>

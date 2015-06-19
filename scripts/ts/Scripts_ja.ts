@@ -73,7 +73,7 @@
         <translation>なし</translation>
     </message>
     <message>
-        <location line="+443"/>
+        <location line="+445"/>
         <source>Options</source>
         <translation>オプション</translation>
     </message>

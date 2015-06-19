@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Arc2PA</name>
     <message>
@@ -25,7 +25,7 @@ Ponto final (x):</translatorcomment>
         <location line="+85"/>
         <source>Invalid angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Inválido ângulo</translation>
+        <translation>Ângulo inválido</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -43,7 +43,7 @@ Ponto final (x):</translatorcomment>
         <location line="+4"/>
         <source>Draw arc from 2 points and angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar arco de 2 pontos e ângulo</translation>
+        <translation>Desenhe um arco a partir de 2 pontos e ângulo</translation>
     </message>
     <message>
         <location filename="../Arc2PA.ui" line="+17"/>
@@ -61,7 +61,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 --file: pt.po--
 Direção de Visualização:
 Descrição:</translatorcomment>
-        <translation>Descrição:</translation>
+        <translation>Direção:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -78,7 +78,7 @@ Descrição:</translatorcomment>
 Direção de Visualização:
 Direção de Visualização
 LTR</translatorcomment>
-        <translation>Descrição</translation>
+        <translation>Direção</translation>
     </message>
     <message>
         <location line="-10"/>

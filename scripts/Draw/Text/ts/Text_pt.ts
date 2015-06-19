@@ -35,7 +35,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <source>Draw text</source>
         <translatorcomment>--google--
 Desenhe entidades de texto</translatorcomment>
-        <translation>Desenhe texto</translation>
+        <translation>Desenhe um texto</translation>
     </message>
     <message>
         <location filename="../Text.ui" line="+17"/>
@@ -182,7 +182,7 @@ Diâmetro (ø)</translatorcomment>
         <location line="+1"/>
         <source>Almost equal</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Quase igual</translation>
+        <translation>Quase igual a</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -433,7 +433,7 @@ Fonte papel:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Fator de Espaçamento de Linhas</translatorcomment>
-        <translation>Fator de Espaçamento das Linhas</translation>
+        <translation>Fator de Espaçamento entre a Linhas</translation>
     </message>
     <message>
         <location line="+16"/>

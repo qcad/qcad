@@ -11,7 +11,7 @@
     <message>
         <location line="+5"/>
         <source>Show ellipse tools</source>
-        <translation>Mostre as ferramentas de elipse</translation>
+        <translation>Exiba as ferramentas de elipse</translation>
     </message>
     <message>
         <location line="+14"/>

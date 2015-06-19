@@ -156,7 +156,7 @@ Pano de Fundo do Desenho:</translatorcomment>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation>Formas Auxiliares:</translation>
+        <translation>Formas auxiliares:</translation>
     </message>
     <message>
         <location line="+33"/>

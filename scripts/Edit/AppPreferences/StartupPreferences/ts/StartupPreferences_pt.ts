@@ -23,7 +23,7 @@ Indique o ponto de início ou [Centro]</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Habilitar Tela de Início</translation>
+        <translation>Habilitar a Tela de Início</translation>
     </message>
 </context>
 <context>

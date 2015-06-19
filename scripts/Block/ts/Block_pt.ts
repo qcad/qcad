@@ -6,12 +6,12 @@
     <message>
         <location filename="../Block.js" line="+66"/>
         <source>Block Tools</source>
-        <translation>Ferramentas bloco</translation>
+        <translation>Ferramentas de Bloco</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show block tools</source>
-        <translation>Mostrar as ferramentas de bloco</translation>
+        <translation>Exiba as ferramentas para Blocos</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -27,30 +27,30 @@
     <message>
         <location filename="../BlockDialog.js" line="+104"/>
         <source>Leading or trailing spaces.</source>
-        <translation>Esquerda ou à direita espaços.</translation>
+        <translation>Espaços no início ou no fim.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Nome do bloco está vazio.</translation>
+        <translation>O nome do Bloco está vazio.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is invalid.</source>
-        <translation>Nome do bloco não é válido.</translation>
+        <translation>O nome do Bloco não é válido.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Block already exists.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Bloco já existe.</translation>
+        <translation>O Bloco já existe.</translation>
     </message>
     <message>
         <location filename="../BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dados bloco</translation>
+        <translation>Dados do Bloco</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -64,7 +64,7 @@ Nome do Bloco:</translatorcomment>
         <location line="+7"/>
         <source>block 1</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>bloco 1</translation>
+        <translation>Bloco 1</translation>
     </message>
 </context>
 </TS>

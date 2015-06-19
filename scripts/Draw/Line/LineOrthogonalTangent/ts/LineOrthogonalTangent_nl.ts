@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>LineOrthogonalTangent</name>
     <message>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../LineOrthogonalTangentInit.js" line="+2"/>
         <source>Orthogonal / Tange&amp;nt</source>
-        <translation type="unfinished"></translation>
+        <translation>Orthogonaal / tange&amp;nt</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijn loodrecht op lijn en tangent aan cirkel, boog of ellips tekenen</translation>
     </message>
 </context>
 </TS>

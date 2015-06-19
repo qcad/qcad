@@ -13,7 +13,7 @@
         <location filename="../EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Edite Te&amp;xto</translation>
+        <translation>Edite o Te&amp;xto</translation>
     </message>
     <message>
         <location line="+5"/>

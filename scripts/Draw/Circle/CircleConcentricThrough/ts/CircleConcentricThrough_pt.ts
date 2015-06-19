@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: ArcConcentricThrough_pt.ts--
 Concêntricos (&amp;através ponto)</translatorcomment>
-        <translation>Concêntricos (&amp;através ponto)</translation>
+        <translation>Concêntricos (&amp;através de Ponto)</translation>
     </message>
     <message>
         <location line="+4"/>

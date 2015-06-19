@@ -121,13 +121,13 @@ Altura do Papel:</translatorcomment>
         <location line="+17"/>
         <source>Offset X:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Deslocamento X:</translation>
+        <translation>Offset em X:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Offset Y:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Deslocamento Y:</translation>
+        <translation>Offset em Y:</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -147,7 +147,7 @@ Altura do Papel:</translatorcomment>
     <message>
         <location line="+6"/>
         <source>Show paper borders</source>
-        <translation>Exiba bordas do papel</translation>
+        <translation>Exiba as bordas do papel</translation>
     </message>
     <message>
         <source>Show page borders</source>

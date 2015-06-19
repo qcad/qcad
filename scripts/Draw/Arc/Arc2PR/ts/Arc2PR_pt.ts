@@ -25,7 +25,7 @@ Ponto final (x):</translatorcomment>
         <location line="+81"/>
         <source>Invalid radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Inválido raio</translation>
+        <translation>Raio inválido</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -37,7 +37,7 @@ Ponto final (x):</translatorcomment>
         <location filename="../Arc2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;2 Pontos e raio</translation>
+        <translation>&amp;2 Pontos e Raio</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -98,7 +98,7 @@ Resolução padrão de exportação</translatorcomment>
         <location line="+7"/>
         <source>Shorter Arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Arco curta</translation>
+        <translation>Arco mais curto</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -114,7 +114,7 @@ Resolução preferida para a figura (pontos por polegada)</translatorcomment>
         <location line="-10"/>
         <source>Longer Arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Arco longa</translation>
+        <translation>Arco mais longo</translation>
     </message>
 </context>
 </TS>

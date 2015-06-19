@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
         <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Adicionar propriedade personalizada</translation>
+        <translation>Adicione Propriedades Personalizadas</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -53,7 +53,7 @@ Documento carregado: %1</translatorcomment>
         <location line="+172"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Não seleção</translation>
+        <translation>Nenhuma Seleção</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -67,7 +67,7 @@ Geometria</translatorcomment>
     <message>
         <location line="+14"/>
         <source>Dependent Entities</source>
-        <translation>Entidades dependentes</translation>
+        <translation>Entidades Dependentes</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -90,7 +90,7 @@ Trocar para a próxima camada</translatorcomment>
     <message>
         <location line="+59"/>
         <source>Remove this property from selected objects</source>
-        <translation>Remover esta propriedade a partir de objetos selecionados</translation>
+        <translation>Remova esta propriedade dos objetos selecionados</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -115,7 +115,7 @@ Fecha todas as janelas</translatorcomment>
     <message>
         <location line="-604"/>
         <source>Add custom property to selected objects</source>
-        <translation>Adicionar uma propriedade personalizada para os objetos selecionados</translation>
+        <translation>Adicione uma propriedade personalizada aos objetos selecionados</translation>
     </message>
     <message>
         <source>Left</source>
@@ -203,7 +203,7 @@ Centro abaixo</translatorcomment>
 &amp;Auto
 Auto
 Salta automaticamente</translatorcomment>
-        <translation>Auto</translation>
+        <translation>Automático</translation>
     </message>
     <message>
         <location line="+121"/>
@@ -244,7 +244,7 @@ Por favor verifique as permissões.</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 Editor de Propriedades</translatorcomment>
-        <translation>Editor de propriedades</translation>
+        <translation>Editor de Propriedades</translation>
     </message>
     <message>
         <location filename="../PropertyEditor.ui" line="+40"/>
@@ -252,7 +252,7 @@ Editor de Propriedades</translatorcomment>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Selecção:</translatorcomment>
-        <translation>Selecção:</translation>
+        <translation>Seleção:</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -267,29 +267,29 @@ Preferências Gerais do Aplicativo
         <location line="+106"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Move a seleção para uma nova camada</translation>
+        <translation>Mova a Seleção para uma Nova Camada</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Linetype Scale:</source>
-        <translation>Escala de tipo de linha:</translation>
+        <translation>Escala do Tipo de Linha:</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Protected:</source>
-        <translation>Protegida:</translation>
+        <translation>Protegido:</translation>
     </message>
     <message>
         <location line="-182"/>
         <source>Handle:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--</translatorcomment>
-        <translation>Punho:</translation>
+        <translation>Manipulador:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation>Mostrar coordenadas z</translation>
+        <translation>Exiba coordenadas Z</translation>
     </message>
 </context>
 </TS>

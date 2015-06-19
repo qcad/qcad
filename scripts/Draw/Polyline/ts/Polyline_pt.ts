@@ -16,7 +16,7 @@ Exibe o menu &quot;Multilinha&quot;</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Exibe o menu &quot;Multilinha&quot;</translatorcomment>
-        <translation>Mostre as ferramentas de polilinha</translation>
+        <translation>Exiba as ferramentas de polilinha</translation>
     </message>
     <message>
         <location line="+18"/>

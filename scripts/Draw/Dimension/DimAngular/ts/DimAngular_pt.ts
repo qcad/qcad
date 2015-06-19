@@ -7,7 +7,7 @@
         <location filename="../DimAngular.js" line="+72"/>
         <source>Arc or first of two lines</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Arco ou primeira de duas linhas</translation>
+        <translation>Arco ou a primeira de duas linhas</translation>
     </message>
     <message>
         <location line="+12"/>

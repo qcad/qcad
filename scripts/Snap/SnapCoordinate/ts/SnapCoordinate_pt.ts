@@ -15,7 +15,7 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 &amp;Coordenadas</translatorcomment>
-        <translation>&amp;Coordenadas</translation>
+        <translation>&amp;Coordenada</translation>
     </message>
     <message>
         <location filename="../SnapCoordinate.ui" line="+17"/>

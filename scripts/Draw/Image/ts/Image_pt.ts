@@ -33,7 +33,7 @@ Todos os Ficheiros (*)</translatorcomment>
         <location line="+8"/>
         <source>Import Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Importar Bitmap</translation>
+        <translation>Importar um Bitmap</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -54,7 +54,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Insira Bitmap</translation>
+        <translation>Insira um Bitmap</translation>
     </message>
     <message>
         <location filename="../Image.ui" line="+17"/>
@@ -71,7 +71,7 @@ Largura:
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Mantenha proporções</translatorcomment>
-        <translation>Mantenha proporções</translation>
+        <translation>Mantenha as proporções</translation>
     </message>
     <message>
         <location line="+17"/>

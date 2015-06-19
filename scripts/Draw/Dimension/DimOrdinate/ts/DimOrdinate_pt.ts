@@ -27,7 +27,7 @@ Indique o ponto de término do guia</translatorcomment>
         <location line="+5"/>
         <source>Draw ordinate dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhe dimensão ordenada</translation>
+        <translation>Desenhe uma dimensão ordenada</translation>
     </message>
 </context>
 </TS>

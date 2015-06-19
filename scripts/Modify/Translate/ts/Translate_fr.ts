@@ -39,7 +39,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation>Utilisez dialogue pour afficher les options de l&apos;outil</translation>
+        <translation>Utiliser dialogue pour options de l&apos;outil</translation>
     </message>
     <message>
         <location filename="../Translate.ui" line="+17"/>
@@ -49,7 +49,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation>Nombre de copies:</translation>
+        <translation>Nombre de copies :</translation>
     </message>
     <message>
         <location line="+30"/>

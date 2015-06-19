@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>BlockList</name>
     <message>
@@ -11,7 +11,7 @@
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 Lista de Blocos</translatorcomment>
-        <translation>Lista de blocos</translation>
+        <translation>Lista de Blocos</translation>
     </message>
     <message>
         <location line="-78"/>
@@ -21,12 +21,12 @@ Lista de Blocos</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Hide internal blocks</source>
-        <translation>Esconder blocos internos</translation>
+        <translation>Oculte os Blocos internos</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Enable alternating row colors</source>
-        <translation>Ativar alternando cores entre as linhas</translation>
+        <translation>Ative alternando as cores das linhas</translation>
     </message>
 </context>
 </TS>

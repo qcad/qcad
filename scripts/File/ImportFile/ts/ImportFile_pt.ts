@@ -15,12 +15,12 @@
     <message>
         <location line="+20"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation>Nenhum filtro de importação foi encontrados. Abortando...</translation>
+        <translation>Nenhum filtro de importação foi encontrado. Abortando...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>All Files</source>
-        <translation>Todos os arquivos</translation>
+        <translation>Todos os Arquivos</translation>
     </message>
     <message>
         <location line="+3"/>

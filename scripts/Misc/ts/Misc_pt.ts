@@ -11,7 +11,7 @@
     <message>
         <location line="+5"/>
         <source>Show misc tools</source>
-        <translation>Exiba miscelânea de ferramentas</translation>
+        <translation>Exiba a miscelânea de ferramentas</translation>
     </message>
     <message>
         <location line="+17"/>

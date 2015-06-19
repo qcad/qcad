@@ -11,7 +11,7 @@
     <message>
         <location line="+5"/>
         <source>Show layer tools</source>
-        <translation>Exiba ferramentas de camada</translation>
+        <translation>Exiba as ferramentas de camada</translation>
     </message>
     <message>
         <location line="+18"/>

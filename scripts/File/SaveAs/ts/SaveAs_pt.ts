@@ -6,12 +6,12 @@
     <message>
         <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
-        <translation>Carregar/Gravar</translation>
+        <translation>Carregue/Grave</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Save as</source>
-        <translation>Gravar como</translation>
+        <translation>Grave como</translation>
     </message>
     <message>
         <source>No export filters</source>
@@ -37,7 +37,7 @@ Formato:</translatorcomment>
         <translatorcomment>--ignored case--
 --file: qcadactions_pt.ts--
 Salve &amp;Como...</translatorcomment>
-        <translation>Gravar &amp;Como...</translation>
+        <translation>Grave &amp;Como...</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
@@ -47,7 +47,7 @@ Salve &amp;Como...</translatorcomment>
     <message>
         <location line="+50"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
-        <translation>Mostrar aviso ao salvar em um formato de arquivo que não suporta cores de 24bits</translation>
+        <translation>Exiba aviso ao salvar em um formato de arquivo que não suporte cores de 24bits</translation>
     </message>
 </context>
 </TS>

@@ -34,12 +34,12 @@
     <message>
         <location filename="../ToolBarPreferences.js" line="+30"/>
         <source>Widgets</source>
-        <translation>Vinhetas</translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Toolbars</source>
-        <translation>Barras de ferramentas</translation>
+        <translation>Barras de Ferramentas</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation>&amp;Desmarque Camada</translation>
+        <translation>&amp;Desmarque a Camada</translation>
     </message>
 </context>
 </TS>

@@ -15,13 +15,13 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 (Des)Selecione &amp;Contorno</translatorcomment>
-        <translation>(Des-)selecione &amp;contorno</translation>
+        <translation>(Des-)Selecione &amp;contorno</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>(De-)selecione entidades ligadas</translation>
+        <translation>(De-)Selecione entidades ligadas</translation>
     </message>
     <message>
         <location filename="../SelectContour.ui" line="+17"/>

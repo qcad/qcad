@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Adicione Camada</translatorcomment>
-        <translation>&amp;Adicione Camada</translation>
+        <translation>&amp;Adicione uma Camada</translation>
     </message>
     <message>
         <location filename="../AddLayer.js" line="+35"/>
@@ -19,7 +19,7 @@
     <message>
         <location line="+0"/>
         <source>Add Layer</source>
-        <translation>Adicione Camada</translation>
+        <translation>Adicione uma Camada</translation>
     </message>
 </context>
 <context>

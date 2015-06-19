@@ -6,7 +6,7 @@
     <message>
         <location filename="../InsertBlockItem.js" line="+82"/>
         <source>Cannot import file from URL: </source>
-        <translation type="unfinished"></translation>
+        <translation>Kan bestand niet importeren vanuit URL: </translation>
     </message>
     <message>
         <location line="+16"/>

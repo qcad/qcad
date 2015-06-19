@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>LineFreehand</name>
     <message>
@@ -21,7 +21,7 @@
     <message>
         <location line="+4"/>
         <source>Draw freehand line</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken lijnen uit de vrije hand</translation>
     </message>
 </context>
 </TS>

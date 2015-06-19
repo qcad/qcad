@@ -39,7 +39,7 @@ Substituir arquivo?
 Arquivo existe:
 &apos;%1&apos;
 Substituir arquivo?</translatorcomment>
-        <translation>Substituir o Arquivo?</translation>
+        <translation>Substitua o Arquivo?</translation>
     </message>
     <message>
         <location line="+1"/>

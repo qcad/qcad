@@ -21,12 +21,12 @@
     <message>
         <location filename="../HatchInit.js" line="+2"/>
         <source>&amp;Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Arcering</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw hatch or solid fill</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken arceringen of inkleuringen</translation>
     </message>
 </context>
 <context>
@@ -34,37 +34,37 @@
     <message>
         <location filename="../HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Arcering</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Soort</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Solid Fill</source>
-        <translation type="unfinished"></translation>
+        <translation>Inkleuring</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Arceer patroon</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Voorbeeld</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Patroon</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoek:</translation>
     </message>
     <message>
         <location line="+7"/>

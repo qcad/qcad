@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: ToggleBlockVisibility_pt.ts--
 Comute &amp;visibilidade</translatorcomment>
-        <translation>&amp;Comute Visibilidade</translation>
+        <translation>&amp;Comute a Visibilidade</translation>
     </message>
 </context>
 </TS>

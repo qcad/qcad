@@ -21,7 +21,7 @@
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation>Pontos médios</translation>
+        <translation>Pontos de meio</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -63,7 +63,7 @@
 --file: qcadactions_pt.ts--
 &amp;Automático
 &amp;Close Automático</translatorcomment>
-        <translation>&amp;Auto</translation>
+        <translation>&amp;Automático</translation>
     </message>
     <message>
         <location filename="../SnapAuto.js" line="+34"/>

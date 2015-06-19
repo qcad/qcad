@@ -12,7 +12,7 @@
     <message>
         <location line="+5"/>
         <source>Show snap tools</source>
-        <translation>Exiba ferramentas de salto</translation>
+        <translation>Exiba as ferramentas de salto</translation>
     </message>
     <message>
         <location line="+17"/>

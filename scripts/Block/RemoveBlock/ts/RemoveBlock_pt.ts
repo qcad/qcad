@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Remova Bloco</translatorcomment>
-        <translation>&amp;Remova bloco</translation>
+        <translation>&amp;Remova um Bloco</translation>
     </message>
     <message>
         <location line="+1"/>

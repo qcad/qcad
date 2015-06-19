@@ -36,7 +36,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation>Dialog anzeigen für Werkzeugoptionen</translation>
+        <translation>Dialog verwenden für Werkzeugoptionen</translation>
     </message>
     <message>
         <location filename="../Translate.ui" line="+17"/>
@@ -51,7 +51,7 @@
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Aktueller Layer / &amp;Attribute</translation>
+        <translation>Aktuellen Layer und &amp;Attribute verwenden</translation>
     </message>
 </context>
 <context>

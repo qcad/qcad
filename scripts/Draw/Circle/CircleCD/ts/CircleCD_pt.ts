@@ -24,7 +24,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
     </message>
     <message>
         <source>Center, &amp;Radius</source>
-        <translation type="vanished">Centro, &amp;raio</translation>
+        <translation type="vanished">Centro, &amp;Raio</translation>
     </message>
     <message>
         <source>Draw circle from center and radius</source>
@@ -59,7 +59,7 @@ Raio</translatorcomment>
     <message>
         <location filename="../CircleCDInit.js" line="+2"/>
         <source>Center, &amp;Diameter</source>
-        <translation>Centro, &amp;diâmetro</translation>
+        <translation>Centro, &amp;Diâmetro</translation>
     </message>
     <message>
         <location line="+4"/>

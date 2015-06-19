@@ -8,7 +8,7 @@
         <source>First extension line origin</source>
         <translatorcomment>--google--
 Indique a primeira extensão da linha de origem</translatorcomment>
-        <translation>Origem primeira linha de extensão</translation>
+        <translation>Primeira origem da linha de extensão</translation>
     </message>
     <message>
         <location line="+9"/>

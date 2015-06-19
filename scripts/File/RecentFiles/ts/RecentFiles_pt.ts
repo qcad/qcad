@@ -25,7 +25,7 @@
         <location filename="../RecentFilesInit.js" line="+10"/>
         <source>Open &amp;Recent</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Abra um Archivo &amp;Recente</translation>
+        <translation>Abra um Arquivo &amp;Recente</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

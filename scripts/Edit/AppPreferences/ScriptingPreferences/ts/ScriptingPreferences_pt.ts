@@ -19,7 +19,7 @@ Script</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
-        <translation>Repassar a pasta de scripts na inicialização</translation>
+        <translation>Repasse a pasta de scripts na inicialização</translation>
     </message>
 </context>
 <context>

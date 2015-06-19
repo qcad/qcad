@@ -25,7 +25,7 @@ Indique a posição [%1]</translatorcomment>
         <location filename="../LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Linha a partir do Â&amp;ngulo</translation>
+        <translation>Linha a partir de Â&amp;ngulo</translation>
     </message>
     <message>
         <location line="+4"/>

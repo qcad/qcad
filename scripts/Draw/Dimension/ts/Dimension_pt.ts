@@ -74,7 +74,7 @@ Delta Y</translatorcomment>
         <location line="+5"/>
         <source>Show dimension tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mostre as ferramentas de dimensões</translation>
+        <translation>Exiba as ferramentas de dimensões</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -105,7 +105,7 @@ Prefixo de base de dados inválido</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Entre o rótulo fixo ou deixe-o vazio para rotulação automática</translatorcomment>
-        <translation>Entre o rótulo fixo ou deixe-o vazio para rotulação automática</translation>
+        <translation>Entre com o rótulo fixo ou deixe-o vazio para rotulação automática</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -131,7 +131,7 @@ Tolerância Inferior</translatorcomment>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation>Escala de desenho</translation>
+        <translation>Escala de Desenho</translation>
     </message>
 </context>
 </TS>

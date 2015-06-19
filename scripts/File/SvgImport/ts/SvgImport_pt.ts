@@ -46,7 +46,7 @@ Todos os tipos</translatorcomment>
     <message>
         <location line="+57"/>
         <source>Pixels / Inch</source>
-        <translation>Pixel / Polegada</translation>
+        <translation>Pixels / Polegada</translation>
     </message>
 </context>
 </TS>

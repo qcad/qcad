@@ -5,7 +5,7 @@
     <name>ArcTPR</name>
     <message>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="vanished">Escolha linha, arco, círculo ou elipse</translation>
+        <translation type="vanished">Escolha uma linha, arco, círculo ou elipse</translation>
     </message>
     <message>
         <source>Point on arc</source>
@@ -13,7 +13,7 @@
     </message>
     <message>
         <source>Choose solution</source>
-        <translation type="vanished">Escolher solução</translation>
+        <translation type="vanished">Escolha uma solução</translation>
     </message>
     <message>
         <source>No solution</source>
@@ -25,7 +25,7 @@
     </message>
     <message>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation type="vanished">&amp;Tangente, ponto, raio</translation>
+        <translation type="vanished">&amp;Tangente, Ponto, Raio</translation>
     </message>
     <message>
         <source>Draw arc tangential to entity, through point with radius</source>
@@ -73,7 +73,7 @@
     <message>
         <location filename="../CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>&amp;Tangente, ponto, raio</translation>
+        <translation>&amp;Tangente, Ponto, Raio</translation>
     </message>
     <message>
         <location line="+4"/>

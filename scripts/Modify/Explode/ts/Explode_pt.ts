@@ -89,7 +89,7 @@ Hachuras / preenchimentos sólidos
         <location line="+8"/>
         <source>into lines</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>em linhas</translation>
+        <translation>para linhas</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -104,7 +104,7 @@ Oculte (congele) todos os carimbos</translatorcomment>
         <location line="+8"/>
         <source>into entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>em entidades</translation>
+        <translation>para entidades</translation>
     </message>
 </context>
 <context>

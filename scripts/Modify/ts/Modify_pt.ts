@@ -13,7 +13,7 @@
         <location line="+5"/>
         <source>Show modification tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Exiba ferramentas de modificação</translation>
+        <translation>Exiba as ferramentas de modificação</translation>
     </message>
     <message>
         <location line="+18"/>

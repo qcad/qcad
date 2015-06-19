@@ -40,7 +40,7 @@
     </message>
     <message>
         <source>Draw regular polygon from middle points of two sides</source>
-        <translation type="vanished">Desenhe polígono regular a partir de pontos do meio de duas arestas</translation>
+        <translation type="vanished">Desenhe um polígono regular a partir de pontos do meio de duas arestas</translation>
     </message>
     <message>
         <location filename="../ShapePolygonAFPP.ui" line="+17"/>

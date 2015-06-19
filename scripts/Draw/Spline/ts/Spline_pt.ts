@@ -13,7 +13,7 @@
         <location line="+5"/>
         <source>Show spline tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Exiba ferramentas de spline</translation>
+        <translation>Exiba as ferramentas de spline</translation>
     </message>
     <message>
         <location line="+18"/>

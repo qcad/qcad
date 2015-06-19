@@ -33,12 +33,12 @@
     <message>
         <location filename="../BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation>Elimine Segmento</translation>
+        <translation>Elimine o Segmento</translation>
     </message>
     <message>
         <location filename="../BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation>&amp;Quebre Segmento Manualmente</translation>
+        <translation>&amp;Quebre o Segmento Manualmente</translation>
     </message>
 </context>
 </TS>
