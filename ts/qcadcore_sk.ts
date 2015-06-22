@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -347,7 +346,7 @@
     <message>
         <location line="+1"/>
         <source>Displayed Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Farba zobrazenia</translation>
     </message>
     <message>
         <location line="+1"/>

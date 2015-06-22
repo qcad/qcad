@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -562,7 +561,7 @@
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation type="unfinished"></translation>
+        <translation>Zosvetliť</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-3"/>

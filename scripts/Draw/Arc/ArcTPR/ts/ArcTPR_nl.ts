@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="nl">
 <context>
@@ -16,13 +15,13 @@
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished">Kies oplossing</translation>
+        <translation>Kies oplossing</translation>
     </message>
     <message>
         <location line="+120"/>
         <location line="+65"/>
         <source>No solution</source>
-        <translation type="unfinished">Geen oplossing</translation>
+        <translation>Geen oplossing</translation>
     </message>
     <message>
         <location filename="../ArcTPR.ui" line="+17"/>

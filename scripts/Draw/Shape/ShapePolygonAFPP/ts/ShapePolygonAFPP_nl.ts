@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="nl">
 <context>
@@ -6,22 +5,22 @@
     <message>
         <location filename="../ShapePolygonAFPP.js" line="+59"/>
         <source>First side</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste zijkant</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>First Corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>Second side</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Second Corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>

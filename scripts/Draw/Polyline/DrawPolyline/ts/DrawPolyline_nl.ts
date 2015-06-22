@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="nl">
 <context>
@@ -31,47 +30,47 @@
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Opnieuw toepassen</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>arc</source>
-        <translation type="unfinished"></translation>
+        <translation>arc</translation>
     </message>
     <message>
         <location filename="../DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Polylijn sluiten</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>,, C</source>
-        <translation type="unfinished"></translation>
+        <translation>,, C</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Segment herstellen</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation type="unfinished"></translation>
+        <translation>,, R</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Arc with radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Boog met radius:</translation>
     </message>
     <message>
         <location line="+3"/>

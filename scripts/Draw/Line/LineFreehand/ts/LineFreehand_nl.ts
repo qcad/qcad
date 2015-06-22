@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="nl">
 <context>
@@ -6,17 +5,17 @@
     <message>
         <location filename="../LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Druk op om te beginnen met tekenen</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Loslaten om te stoppen met tekenen</translation>
     </message>
     <message>
         <location filename="../LineFreehandInit.js" line="+2"/>
         <source>&amp;Freehand Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijn uit de &amp;vrije hand</translation>
     </message>
     <message>
         <location line="+4"/>

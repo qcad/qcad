@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="nl">
 <context>
@@ -6,17 +5,17 @@
     <message>
         <location filename="../LineOrthogonalTangent.js" line="+70"/>
         <source>Choose line</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies lijn</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiez cirkel, boog of ellips</translation>
     </message>
     <message>
         <location line="+139"/>
         <source>No tangent possible</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../LineOrthogonalTangentInit.js" line="+2"/>

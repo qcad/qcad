@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="nl">
 <context>
@@ -11,7 +10,7 @@
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies positie</translation>
     </message>
     <message>
         <location filename="../LineAngle.ui" line="+17"/>

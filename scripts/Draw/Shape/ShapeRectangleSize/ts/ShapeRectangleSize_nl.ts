@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="nl">
 <context>
@@ -29,17 +28,17 @@
         <location line="+30"/>
         <location filename="../ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoek:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>

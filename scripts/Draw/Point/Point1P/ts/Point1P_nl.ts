@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="nl">
 <context>
@@ -6,12 +5,12 @@
     <message>
         <location filename="../Point1P.js" line="+51"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Positie</translation>
     </message>
     <message>
         <location filename="../Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Enkel &amp;punt</translation>
     </message>
     <message>
         <location line="+4"/>

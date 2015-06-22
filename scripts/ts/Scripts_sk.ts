@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -349,52 +348,52 @@
     <message>
         <location filename="../library.js" line="+712"/>
         <source>Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Objekty</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Objekt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Neznáme objekty</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Neznámy objekt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrstvy</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrstva</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Linetypes</source>
-        <translation type="unfinished"></translation>
+        <translation>Typy čiar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>Typ čiary</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazenia</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazenie</translation>
     </message>
     <message>
         <location line="+3"/>
