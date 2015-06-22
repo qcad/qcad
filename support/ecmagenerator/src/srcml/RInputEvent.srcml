@@ -46,6 +46,7 @@
 
     <function_decl><type><name>RVector</name></type> <name>getModelPosition</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setModelPosition</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setScreenPosition</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
 <comment type="line">//  RVector getUcsPosition() const;</comment>
     <function_decl><type><name>RVector</name></type> <name>getScreenPosition</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 

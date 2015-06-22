@@ -360,6 +360,9 @@
 
     <comment type="line">// grid display flag, cached:</comment>
     <decl_stmt><decl><type><name>mutable</name> <name>int</name></type> <name>gridVisible</name></decl>;</decl_stmt>
+
+    <comment type="line">//RVector mousePressScreenPosition;</comment>
+    <comment type="line">//RVector mousePressModelPosition;</comment>
 </protected>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsView::ColorMode</argument>)</argument_list></macro>

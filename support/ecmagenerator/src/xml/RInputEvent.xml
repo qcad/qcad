@@ -32,6 +32,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="setScreenPosition" cppName="setScreenPosition"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getScreenPosition" cppName="getScreenPosition"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

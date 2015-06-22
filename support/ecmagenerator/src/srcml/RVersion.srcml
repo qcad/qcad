@@ -26,12 +26,12 @@
  * x.x.x   for releases
  * x.x.x.x for snapshots only
  */</comment>
-<cpp:define>#<cpp:directive>define</cpp:directive> <name>R_QCAD_VERSION_STRING</name> "3.9.4.7"</cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>R_QCAD_VERSION_STRING</name> "3.9.4.8"</cpp:define>
 
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>R_QCAD_VERSION_MAJOR</name>    3</cpp:define>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>R_QCAD_VERSION_MINOR</name>    9</cpp:define>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>R_QCAD_VERSION_REV</name>      4</cpp:define>
-<cpp:define>#<cpp:directive>define</cpp:directive> <name>R_QCAD_VERSION_BUILD</name>    7</cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>R_QCAD_VERSION_BUILD</name>    8</cpp:define>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>
