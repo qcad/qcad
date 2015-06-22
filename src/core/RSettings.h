@@ -168,6 +168,7 @@ public:
     static bool getUseSolidLineSelection();
 
     static int getMouseThreshold();
+    static bool getPositionByMousePress();
 
 private:
     static bool isInitialized();
@@ -197,6 +198,7 @@ private:
     static int useSolidLineSelection;
     static int useSecondarySelectionColor;
     static int mouseThreshold;
+    static int positionByMousePress;
     static double arcAngleLengthThreshold;
     static double minArcAngleStep;
     static int dashThreshold;

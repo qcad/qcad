@@ -72,7 +72,8 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
     deleting(false),
     cursorOverride(false),
     keepPreviewOnce(false),
-    mouseTrackingEnabled(true) {
+    mouseTrackingEnabled(true),
+    pressEvent(NULL) {
 
     RDebug::incCounter("RDocumentInterface");
 }
@@ -672,10 +673,22 @@ void RDocumentInterface::mouseMoveEvent(RMouseEvent& event) {
 
     if (hasCurrentAction()) {
         getCurrentAction()->mouseMoveEvent(event);
-        previewClickEvent(*getCurrentAction(), event);
+        if (pressEvent!=NULL) {
+            // use posiition of mouse press event:
+            previewClickEvent(*getCurrentAction(), *pressEvent);
+        }
+        else {
+            previewClickEvent(*getCurrentAction(), event);
+        }
     } else if (defaultAction != NULL) {
         defaultAction->mouseMoveEvent(event);
-        previewClickEvent(*defaultAction, event);
+        if (pressEvent!=NULL) {
+            // use posiition of mouse press event:
+            previewClickEvent(*defaultAction, *pressEvent);
+        }
+        else {
+            previewClickEvent(*defaultAction, event);
+        }
     } else {
         event.ignore();
     }
@@ -700,6 +713,16 @@ void RDocumentInterface::mousePressEvent(RMouseEvent& event) {
     } else {
         event.ignore();
     }
+
+    // remember mouse press event for future mouse move
+    // and mouse release events used to specify positions:
+    if (pressEvent!=NULL) {
+        delete pressEvent;
+        pressEvent = NULL;
+    }
+    if (RSettings::getPositionByMousePress()) {
+        pressEvent = new RMouseEvent(event);
+    }
 }
 
 /**
@@ -711,10 +734,26 @@ void RDocumentInterface::mouseReleaseEvent(RMouseEvent& event) {
     }
     if (hasCurrentAction()) {
         getCurrentAction()->mouseReleaseEvent(event);
-        handleClickEvent(*getCurrentAction(), event);
+        if (pressEvent!=NULL) {
+            // use posiition of mouse press event:
+            handleClickEvent(*getCurrentAction(), *pressEvent);
+            delete pressEvent;
+            pressEvent = NULL;
+        }
+        else {
+            handleClickEvent(*getCurrentAction(), event);
+        }
     } else if (defaultAction != NULL) {
         defaultAction->mouseReleaseEvent(event);
-        handleClickEvent(*defaultAction, event);
+        if (pressEvent!=NULL) {
+            // use posiition of mouse press event:
+            handleClickEvent(*defaultAction, *pressEvent);
+            delete pressEvent;
+            pressEvent = NULL;
+        }
+        else {
+            handleClickEvent(*defaultAction, event);
+        }
     } else {
         event.ignore();
     }
@@ -785,7 +824,7 @@ void RDocumentInterface::handleClickEvent(RAction& action, RMouseEvent& event) {
     if (event.button() == Qt::LeftButton && event.modifiers() == Qt::NoModifier) {
         switch (action.getClickMode()) {
         case RAction::PickCoordinate: {
-                RCoordinateEvent ce(snap(event),
+                RCoordinateEvent ce(snap(event, false),
                     event.getGraphicsScene(), event.getGraphicsView());
                 if (ce.isValid()) {
                     cursorPosition = ce.getModelPosition();
@@ -819,7 +858,7 @@ void RDocumentInterface::handleClickEvent(RAction& action, RMouseEvent& event) {
 void RDocumentInterface::previewClickEvent(RAction& action, RMouseEvent& event) {
     switch (action.getClickMode()) {
         case RAction::PickCoordinate: {
-            RCoordinateEvent ce(snap(event),
+            RCoordinateEvent ce(snap(event, true),
                 event.getGraphicsScene(), event.getGraphicsView());
             if (ce.isValid()) {
                 cursorPosition = ce.getModelPosition();
@@ -1191,9 +1230,12 @@ RSnapRestriction* RDocumentInterface::getSnapRestriction() {
  *
  * \return Coordinate to which was snapped.
  */
-RVector RDocumentInterface::snap(RMouseEvent& event) {
+RVector RDocumentInterface::snap(RMouseEvent& event, bool preview) {
     if (currentSnap!=NULL) {
-        RMouseEvent::setOriginalMousePos(event.globalPos());
+        // only allow interruption by mouse move if this is a preview and no buttons are pressed:
+        if (preview && (!RSettings::getPositionByMousePress() || event.buttons()==Qt::NoButton)) {
+            RMouseEvent::setOriginalMousePos(event.globalPos());
+        }
         RVector ret = currentSnap->snap(event);
         RMouseEvent::resetOriginalMousePos();
         if (currentSnapRestriction!=NULL) {

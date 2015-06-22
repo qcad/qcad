@@ -550,6 +550,14 @@ void RGraphicsView::simulateMouseMoveEvent() {
  * that is attached to this view.
  */
 void RGraphicsView::handleMouseMoveEvent(RMouseEvent& event) {
+    // use mouse press position for preview posisiton:
+//    if (mousePressModelPosition.isValid()) {
+//        event.setModelPosition(mousePressModelPosition);
+//    }
+//    if (mousePressScreenPosition.isValid()) {
+//        event.setScreenPosition(mousePressScreenPosition);
+//    }
+
     lastKnownModelPosition = event.getModelPosition();
     lastKnownScreenPosition = event.getScreenPosition();
     if (scene != NULL) {
@@ -577,6 +585,10 @@ void RGraphicsView::handleMousePressEvent(RMouseEvent& event) {
     if (navigationAction!=NULL) {
         navigationAction->mousePressEvent(event);
     }
+
+    // remember mouse press position to use for mouse release:
+    //mousePressScreenPosition = event.getScreenPosition();
+    //mousePressModelPosition = event.getModelPosition();
 }
 
 
@@ -587,6 +599,16 @@ void RGraphicsView::handleMousePressEvent(RMouseEvent& event) {
  * that is attached to this view.
  */
 void RGraphicsView::handleMouseReleaseEvent(RMouseEvent& event) {
+    // use mouse press position for release and final posisiton:
+//    if (mousePressModelPosition.isValid()) {
+//        event.setModelPosition(mousePressModelPosition);
+//        mousePressModelPosition = RVector::invalid;
+//    }
+//    if (mousePressScreenPosition.isValid()) {
+//        event.setScreenPosition(mousePressScreenPosition);
+//        mousePressScreenPosition = RVector::invalid;
+//    }
+
     lastKnownModelPosition = event.getModelPosition();
     lastKnownScreenPosition = event.getScreenPosition();
     if (scene == NULL) {

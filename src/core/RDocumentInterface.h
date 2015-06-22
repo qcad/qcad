@@ -214,7 +214,7 @@ public:
     void setSnapRestriction(RSnapRestriction* snapRestriction);
     RSnapRestriction* getSnapRestriction();
 
-    RVector snap(RMouseEvent& event);
+    RVector snap(RMouseEvent& event, bool preview = false);
 
     REntity::Id getClosestEntity(RMouseEvent& event);
     REntity::Id getClosestEntity(const RVector& position,
@@ -353,6 +353,8 @@ private:
 
     bool keepPreviewOnce;
     bool mouseTrackingEnabled;
+
+    RMouseEvent* pressEvent;
 };
 
 Q_DECLARE_METATYPE(RDocumentInterface::IoErrorCode)

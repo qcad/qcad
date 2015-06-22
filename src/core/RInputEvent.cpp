@@ -44,6 +44,10 @@ void RInputEvent::setModelPosition(const RVector& v) {
     modelPosition = v;
 }
 
+void RInputEvent::setScreenPosition(const RVector& v) {
+    screenPosition = v;
+}
+
 //RVector RInputEvent::getUcsPosition() const {
 //  return ucsPosition;
 //}

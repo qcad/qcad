@@ -56,6 +56,7 @@ int RSettings::limitZoomAndScroll = -1;
 int RSettings::autoScaleLinetypePattern = -1;
 int RSettings::useSecondarySelectionColor = -1;
 int RSettings::mouseThreshold = -1;
+int RSettings::positionByMousePress = -1;
 int RSettings::useSolidLineSelection = -1;
 double RSettings::arcAngleLengthThreshold = -1;
 double RSettings::minArcAngleStep = -1;
@@ -917,6 +918,13 @@ int RSettings::getMouseThreshold() {
     return mouseThreshold;
 }
 
+bool RSettings::getPositionByMousePress() {
+    if (positionByMousePress==-1) {
+        positionByMousePress = getValue("GraphicsView/PositionByMousePress", QVariant(false)).toBool();
+    }
+    return (bool)positionByMousePress;
+}
+
 void RSettings::resetCache() {
     if (rulerFont!=NULL) {
         delete rulerFont;
@@ -947,6 +955,7 @@ void RSettings::resetCache() {
     useSecondarySelectionColor = -1;
     useSolidLineSelection = -1;
     arcAngleLengthThreshold = -1;
+    positionByMousePress = -1;
     minArcAngleStep = -1;
     dashThreshold = -1;
     mouseThreshold = -1;

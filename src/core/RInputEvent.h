@@ -45,6 +45,7 @@ public:
 
     RVector getModelPosition() const;
     void setModelPosition(const RVector& v);
+    void setScreenPosition(const RVector& v);
 //  RVector getUcsPosition() const;
     RVector getScreenPosition() const;
 

@@ -25,7 +25,39 @@
      <height>613</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_3">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="title">
+       <string>Left-Click</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QCheckBox" name="PositionByMousePress">
+         <property name="text">
+          <string>Mouse press event (rather than mouse release event) determines positions</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Right-Click</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QCheckBox" name="RightClickToDeselect">
+         <property name="text">
+          <string>Right-click to deselect entities</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
     <item>
      <widget class="QGroupBox" name="DoubleClick">
       <property name="title">
@@ -56,22 +88,6 @@
         <widget class="QCheckBox" name="RightDoubleClickToReset">
          <property name="text">
           <string>Right double-click to reset</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QGroupBox" name="groupBox">
-      <property name="title">
-       <string>Right-Click</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QCheckBox" name="RightClickToDeselect">
-         <property name="text">
-          <string>Right-click to deselect entities</string>
          </property>
         </widget>
        </item>

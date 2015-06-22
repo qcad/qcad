@@ -359,6 +359,9 @@ protected:
 
     // grid display flag, cached:
     mutable int gridVisible;
+
+    //RVector mousePressScreenPosition;
+    //RVector mousePressModelPosition;
 };
 
 Q_DECLARE_METATYPE(RGraphicsView::ColorMode)
