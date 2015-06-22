@@ -137,7 +137,6 @@ DefaultAction.prototype.resumeEvent = function() {
 };
 
 DefaultAction.prototype.mouseMoveEvent = function(event) {
-    qDebug("mouse move");
     // we're in the middle of panning: don't do anything:
     if (event.buttons().valueOf() === Qt.MidButton.valueOf() ||
         (event.buttons().valueOf() === Qt.LeftButton.valueOf() &&
@@ -198,23 +197,22 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
                             var block = doc.queryBlock(blockId);
                             if (!isNull(block)) {
                                 range = view.mapDistanceFromView(this.pickRangePixels);
+                                if (Math.abs(entity.getScaleFactors().x)>0) {
+                                    range /= Math.abs(entity.getScaleFactors().x);
+                                }
                                 // cursor, mapped to block coordinates:
                                 var pBlock = entity.mapToBlock(this.d1Model);
-                                var box = new RBox(
-                                    pBlock.operator_subtract(new RVector(range,range)),
-                                    pBlock.operator_add(new RVector(range,range))
-                                );
-                                var res = doc.queryIntersectedEntitiesXY(box, true, false, blockId);
+                                var box = new RBox(pBlock, range);
+                                var candidateIds = doc.queryIntersectedEntitiesXY(box, true, false, blockId);
                                 var entityInBlockId;
-                                if (res.length===1) {
-                                    entityInBlockId = res[0];
+                                if (candidateIds.length===1) {
+                                    entityInBlockId = candidateIds[0];
                                 }
                                 else {
-                                    entityInBlockId = doc.queryClosestXY(res, pBlock, range*2, false);
+                                    entityInBlockId = doc.queryClosestXY(candidateIds, pBlock, range*2, false, range/2);
                                 }
                                 var entityInBlock = doc.queryEntityDirect(entityInBlockId);
                                 if (!isNull(entityInBlock) && getInBlockEasyDragAndDrop(entityInBlock)) {
-                                    qDebug("dragging: ", entityInBlockId);
                                     var refP = entityInBlock.getReferencePoints();
                                     if (refP.length>0) {
                                         this.d1Model = refP[0]; //entity.mapToBlock(refP[0]);
