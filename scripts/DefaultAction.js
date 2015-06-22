@@ -137,6 +137,7 @@ DefaultAction.prototype.resumeEvent = function() {
 };
 
 DefaultAction.prototype.mouseMoveEvent = function(event) {
+    qDebug("mouse move");
     // we're in the middle of panning: don't do anything:
     if (event.buttons().valueOf() === Qt.MidButton.valueOf() ||
         (event.buttons().valueOf() === Qt.LeftButton.valueOf() &&
@@ -213,6 +214,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
                                 }
                                 var entityInBlock = doc.queryEntityDirect(entityInBlockId);
                                 if (!isNull(entityInBlock) && getInBlockEasyDragAndDrop(entityInBlock)) {
+                                    qDebug("dragging: ", entityInBlockId);
                                     var refP = entityInBlock.getReferencePoints();
                                     if (refP.length>0) {
                                         this.d1Model = refP[0]; //entity.mapToBlock(refP[0]);
