@@ -468,10 +468,12 @@ QSharedPointer<RLayer> RClipboardOperation::copyEntityLayer(
         while (!l.isEmpty()) {
             QString parentLayerName = l.join(" ... ");
             QSharedPointer<RLayer> parentLayer = src.queryLayer(parentLayerName);
-            if (parentLayer.isNull()) {
-                break;
+            if (!parentLayer.isNull()) {
+                copyLayer(parentLayer->getId(), src, dest, overwriteLayers, transaction);
             }
-            copyLayer(parentLayer->getId(), src, dest, overwriteLayers, transaction);
+            else {
+                qWarning() << "parent layer of layer '" << layerName << "' not found: " << parentLayerName;
+            }
             l.removeLast();
         }
     }
