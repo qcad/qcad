@@ -77,6 +77,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, printCounters, "printCounters");
             
+            REcmaHelper::registerFunction(&engine, &ctor, setPrefix, "setPrefix");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getPrefix, "getPrefix");
+            
 
     // static properties:
     
@@ -807,6 +811,90 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDebug::printCounters", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDebug::setPrefix
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDebug::setPrefix", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDebug::setPrefix";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RDebug::
+       setPrefix(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.setPrefix().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDebug::setPrefix", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDebug::getPrefix
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDebug::getPrefix", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDebug::getPrefix";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RDebug::
+       getPrefix();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.getPrefix().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDebug::getPrefix", context, engine);
             return result;
         }
          QScriptValue REcmaDebug::toString

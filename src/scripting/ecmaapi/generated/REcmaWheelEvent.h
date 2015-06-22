@@ -55,6 +55,9 @@
         setModelPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setScreenPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getScreenPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

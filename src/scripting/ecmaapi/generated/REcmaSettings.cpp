@@ -247,6 +247,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getMouseThreshold, "getMouseThreshold");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getPositionByMousePress, "getPositionByMousePress");
+            
 
     // static properties:
     
@@ -4612,6 +4614,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getMouseThreshold", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getPositionByMousePress
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getPositionByMousePress", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getPositionByMousePress";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getPositionByMousePress();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getPositionByMousePress().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getPositionByMousePress", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

@@ -103,6 +103,13 @@ public:
     static void printCounter(const QString& id = RDEFAULT_QSTRING);
     static void printCounters();
 
+    static void setPrefix(const QString& p) {
+        prefix = p;
+    }
+    static QString getPrefix() {
+        return prefix;
+    }
+
 private:
 #if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
     static QMap<int, uint64_t> timerMac;
@@ -110,6 +117,7 @@ private:
     static QMap<int, QTime> timer;
 #endif
     static QMap<QString, int> counter;
+    static QString prefix;
 };
 
 Q_DECLARE_METATYPE(RDebug*)

@@ -78,10 +78,13 @@ void RMainWindow::installMessageHandler() {
 #if QT_VERSION >= 0x050000
 void RMainWindow::messageHandler(QtMsgType type, const QMessageLogContext& context, const QString& message) {
     QByteArray localMsg = message.toLocal8Bit();
+    QByteArray p = RDebug::getPrefix().toLocal8Bit();
 
     switch (type) {
     case QtDebugMsg:
-        fprintf(stderr, "\033[36m%s:%u, %s:\033[0m\n%s: Debug:    %s\n", context.file, context.line, context.function, (const char*)QTime::currentTime().toString().toLocal8Bit(), localMsg.constData());
+        fprintf(stderr, "\033[36m%s%s:%u, %s:\033[0m\n%s%s: Debug:    %s\n",
+                p.constData(), context.file, context.line, context.function,
+                p.constData(), (const char*)QTime::currentTime().toString().toLocal8Bit(), localMsg.constData());
         fflush(stderr);
         break;
     case QtWarningMsg:
@@ -91,15 +94,21 @@ void RMainWindow::messageHandler(QtMsgType type, const QMessageLogContext& conte
         if (localMsg.startsWith("QPainter::")) {
             break;
         }
-        fprintf(stderr, "\033[31m%s:%u, %s:\033[0m\nWarning:  %s\n", context.file, context.line, context.function, localMsg.constData());
+        fprintf(stderr, "\033[31m%s%s:%u, %s:\033[0m\n%sWarning:  %s\n",
+                p.constData(), context.file, context.line, context.function,
+                p.constData(), localMsg.constData());
         fflush(stderr);
         break;
     case QtCriticalMsg:
-        fprintf(stderr, "\033[31m%s:%u, %s\033[0m\nCritical: %s\n", context.file, context.line, context.function, localMsg.constData());
+        fprintf(stderr, "\033[31m%s%s:%u, %s\033[0m\n%sCritical: %s\n",
+                p.constData(), context.file, context.line, context.function,
+                p.constData(), localMsg.constData());
         fflush(stderr);
         break;
     case QtFatalMsg:
-        fprintf(stderr, "\033[31m%s:%u, %s\033[0m\nFatal:    %s\n", context.file, context.line, context.function, localMsg.constData());
+        fprintf(stderr, "\033[31m%s%s:%u, %s\033[0m\n%sFatal:    %s\n",
+                p.constData(), context.file, context.line, context.function,
+                p.constData(), localMsg.constData());
         fflush(stderr);
         abort();
     }

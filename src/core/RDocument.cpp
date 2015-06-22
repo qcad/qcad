@@ -1134,9 +1134,9 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         // referenced block is off:
         QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
         if (!blockRef.isNull()) {
-            RBlock::Id blockId = blockRef->getReferencedBlockId();
-            if (blockId!=RBlock::INVALID_ID) {
-                QSharedPointer<RBlock> block = queryBlockDirect(blockId);
+            RBlock::Id referencedBlockId = blockRef->getReferencedBlockId();
+            if (referencedBlockId!=RBlock::INVALID_ID) {
+                QSharedPointer<RBlock> block = queryBlockDirect(referencedBlockId);
                 if (!block.isNull() && block->isFrozen()) {
                     continue;
                 }

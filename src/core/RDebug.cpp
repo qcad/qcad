@@ -31,6 +31,7 @@ QMap<int, uint64_t> RDebug::timerMac;
 QMap<int, QTime> RDebug::timer;
 #endif
 QMap<QString, int> RDebug::counter;
+QString RDebug::prefix;
 
 void RDebug::printBacktrace(const QString& prefix) {
 #if !defined(Q_OS_WIN) && !defined(Q_OS_ANDROID)

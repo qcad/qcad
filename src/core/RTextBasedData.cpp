@@ -180,7 +180,6 @@ double RTextBasedData::getDistanceTo(const RVector& point, bool limited, double 
     Q_UNUSED(range)
     
     if (!getBoundingBox().grow(strictRange).contains(point)) {
-        //qDebug() << "RTextBasedData::getDistanceTo: bounding box not in range: " << getBoundingBox();
         return RNANDOUBLE;
     }
 
