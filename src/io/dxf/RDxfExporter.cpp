@@ -312,7 +312,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
         writeBlock(b3);
     }
 
-    if (!minimalistic) {
+    //if (!minimalistic) {
         for (int i=0; i<blockNames.size(); ++i) {
             qDebug() << "writing block: " << blockNames[i];
             if (blockNames[i].startsWith("*") && !blockNames[i].startsWith("*X")) {
@@ -324,7 +324,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
             }
             writeBlock(*block);
         }
-    }
+    //}
 
     dw->sectionEnd();
 
