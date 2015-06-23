@@ -1950,22 +1950,10 @@ ShapeAlgorithms.transformArc = function(arc, fun) {
     var v3 = arc.getCenter().operator_subtract(r1).operator_subtract(r2);
     var v4 = arc.getCenter().operator_subtract(r1).operator_add(r2);
 
-    qDebug("---");
-    qDebug(v1);
-    qDebug(v2);
-    qDebug(v3);
-    qDebug(v4);
-
     fun(v1);
     fun(v2);
     fun(v3);
     fun(v4);
-
-    qDebug("---");
-    qDebug(v1);
-    qDebug(v2);
-    qDebug(v3);
-    qDebug(v4);
 
     //var ret = [];
     var ellipse = ShapeAlgorithms.createEllipseInscribedFromVertices(v1, v2, v3, v4);
@@ -1995,7 +1983,6 @@ ShapeAlgorithms.transformArc = function(arc, fun) {
     //ret.push(ShapeAlgorithms.ellipseToArcCircleEllipse(ellipse));
     //ret = ret.concat([new RLine(v1, v2), new RLine(v2, v3), new RLine(v3, v4), new RLine(v4, v1)]);
 
-    qDebug("ellipse: ", ellipse);
     return ShapeAlgorithms.ellipseToArcCircleEllipse(ellipse);
 };
 

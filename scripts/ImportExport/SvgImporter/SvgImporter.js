@@ -258,7 +258,7 @@ SvgHandler.prototype.endElement = function(namespaceURI, localName, qName) {
 function SvgImporter(document, resolution) {
     if (isNull(resolution)) {
         // default resolution, e.g. for library items:
-        resolution = 90;
+        resolution = 72;
     }
 
     RFileImporterAdapter.call(this, document);
