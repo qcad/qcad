@@ -306,8 +306,7 @@ bool REntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
             if (document != NULL) {
                 RLinetypePattern t = value.value<RLinetypePattern> ();
                 int id = document->getLinetypeId(t.getName());
-                ret = ret || RObject::setMember(getData().linetypeId, id,
-                        true);
+                ret = ret || RObject::setMember(getData().linetypeId, id, true);
             }
         }
     } else if (propertyTypeId == PropertyLinetypeScale) {

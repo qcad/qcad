@@ -19,6 +19,8 @@
 #include "RLayer.h"
 #include "RDocument.h"
 
+RPropertyTypeId RLayer::PropertyType;
+RPropertyTypeId RLayer::PropertyHandle;
 RPropertyTypeId RLayer::PropertyProtected;
 
 RPropertyTypeId RLayer::PropertyName;
@@ -64,10 +66,12 @@ RLayer::~RLayer() {
 }
 
 void RLayer::init() {
+    RLayer::PropertyType.generateId(typeid(RLayer), RObject::PropertyType);
+    RLayer::PropertyHandle.generateId(typeid(RLayer), RObject::PropertyHandle);
     RLayer::PropertyProtected.generateId(typeid(RLayer), RObject::PropertyProtected);
 
     RLayer::PropertyName.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Name"));
-    RLayer::PropertyFrozen.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Frozen"));
+    RLayer::PropertyFrozen.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Hidden"));
     RLayer::PropertyLocked.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Locked"));
     RLayer::PropertyColor.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Color"));
     RLayer::PropertyLinetype.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Linetype"));
@@ -111,17 +115,24 @@ bool RLayer::setProperty(RPropertyTypeId propertyTypeId,
     if (propertyTypeId == PropertyLinetype) {
         if (value.type() == QVariant::Int || value.type() == QVariant::LongLong) {
             ret = ret || RObject::setMember(linetypeId, value.toInt(), true);
-        } else if (value.type() == QVariant::String) {
-            if (getDocument() != NULL) {
-                ret = ret || RObject::setMember(linetypeId,
-                        getDocument()->getLinetypeId(value.toString()), true);
+        } else {
+            RDocument* document = getDocument();
+            if (document != NULL) {
+                RLinetypePattern t = value.value<RLinetypePattern> ();
+                int id = document->getLinetypeId(t.getName());
+                ret = ret || RObject::setMember(linetypeId, id, true);
             }
         }
     }
-
-    if (PropertyLineweight == propertyTypeId) {
-        lineweight = value.value<RLineweight::Lineweight>();
-        ret = true;
+    else if (propertyTypeId == PropertyLineweight) {
+        if (value.type()==QVariant::Int || value.type()==QVariant::Double) {
+            ret = ret || RObject::setMember((int&)lineweight,
+                value.value<int>(), true);
+        }
+        else {
+            ret = ret || RObject::setMember((int&)lineweight,
+                (int)value.value<RLineweight::Lineweight>(), true);
+        }
     }
 
     return ret;

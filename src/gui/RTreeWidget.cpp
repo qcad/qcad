@@ -60,9 +60,12 @@ void RTreeWidget::mousePressEvent(QMouseEvent* e) {
 
     if (item!=NULL) {
         itemPressedData = item->data(0, Qt::UserRole);
-        if (index==0) {
-            emit itemColumnClicked(item, index);
-        }
+        qDebug() << "itemPressedData: " << itemPressedData;
+        qDebug() << "index: " << index;
+//        if (index==0) {
+//            qDebug() << "emit 1";
+//            emit itemColumnClicked(item, index);
+//        }
     }
     indexPressed = index;
 
@@ -77,6 +80,7 @@ void RTreeWidget::mouseReleaseEvent(QMouseEvent* e) {
     int index = header()->logicalIndexAt(e->pos());
 
     if (item!=NULL && item->data(0, Qt::UserRole)==itemPressedData && index==indexPressed) {
+        qDebug() << "emit 2";
         emit itemColumnClicked(item, index);
     }
 

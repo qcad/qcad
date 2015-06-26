@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include <QCoreApplication>
+#include <QDataStream>
 #include <QTime>
 
 #include "RLocalPeer.h"

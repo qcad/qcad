@@ -46,6 +46,8 @@ class RDocument;
  */
 class QCADCORE_EXPORT RLayer: public RObject {
 public:
+    static RPropertyTypeId PropertyType;
+    static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyProtected;
 
     static RPropertyTypeId PropertyName;
@@ -67,6 +69,10 @@ public:
     virtual ~RLayer();
 
     static void init();
+
+    virtual RS::EntityType getType() const {
+        return RS::ObjectLayer;
+    }
 
     virtual RLayer* clone() const;
 

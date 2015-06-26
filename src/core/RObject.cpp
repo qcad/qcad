@@ -29,11 +29,13 @@ const RObject::Id RObject::INVALID_ID = -1;
 const RObject::Handle RObject::INVALID_HANDLE = -1;
 
 RPropertyTypeId RObject::PropertyCustom;
+RPropertyTypeId RObject::PropertyType;
 RPropertyTypeId RObject::PropertyHandle;
 RPropertyTypeId RObject::PropertyProtected;
 
 void RObject::init() {
     RObject::PropertyCustom.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Custom"));
+    RObject::PropertyType.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Type"));
     RObject::PropertyHandle.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Handle"));
     RObject::PropertyProtected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Protected"));
 }
@@ -70,6 +72,9 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
     Q_UNUSED(humanReadable)
     Q_UNUSED(noAttributes)
 
+    if (propertyTypeId == PropertyType) {
+        return qMakePair(QVariant(getType()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    }
     if (propertyTypeId == PropertyHandle) {
         return qMakePair(QVariant(handle), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }

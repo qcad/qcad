@@ -56,6 +56,7 @@ public:
     const static Handle INVALID_HANDLE;
 
     static RPropertyTypeId PropertyCustom;
+    static RPropertyTypeId PropertyType;
     static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyProtected;
 

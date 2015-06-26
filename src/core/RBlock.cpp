@@ -45,7 +45,7 @@ RBlock::~RBlock() {
 
 void RBlock::init() {
     RBlock::PropertyName.generateId(typeid(RBlock), "", "Name");
-    RBlock::PropertyFrozen.generateId(typeid(RBlock), "", "Frozen");
+    RBlock::PropertyFrozen.generateId(typeid(RBlock), "", "Hidden");
 }
 
 RBlock* RBlock::clone() const {
