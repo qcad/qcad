@@ -353,14 +353,15 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
 
     if (!onlyChanges) {
         selectionCombo.clear();
+        selectionCombo.addItem(qsTr("No Selection"), -2);
     }
 
     var groups = this.getGroupTitles();
 
-    // no properties to show:
-    if (groups.length===0) {
+    // no properties to show or 'No Selection' chosen:
+    if (groups.length===0 || selectionCombo.currentIndex===0) {
+        //selectionCombo.insertItem(0, qsTr("No Selection"));
         layerCombo.clear();
-        selectionCombo.insertItem(0, qsTr("No Selection"));
         colorCombo.currentIndex = 0;
         lineweightCombo.currentIndex = 0;
         linetypeCombo.currentIndex = 0;
@@ -370,7 +371,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
         protectedCombo.clear();
         generalGroup.enabled = false;
         this.widget.updatesEnabled = true;
-        return;
+        //return;
     }
 
     var gridLayoutGeometry = undefined;
@@ -379,7 +380,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
 
     if (!onlyChanges) {
         // create geometry group box with grid layout:
-        this.geometryGroup = new QGroupBox(qsTr("Geometry"), this.widget);
+        this.geometryGroup = new QGroupBox(qsTr("Specific Properties"), this.widget);
         layout.insertWidget(2, this.geometryGroup);
 
         // grid layout with three columns and N rows for N property controls:
@@ -437,6 +438,9 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
     }
 
     var firstEntry = true;
+    var gotLayerProperty = false;
+    var gotLinetypeScaleProperty = false;
+    var gotDrawOrderProperty = false;
 
     // for all property groups:
     for (var gi=0; gi<groups.length; ++gi) {
@@ -487,6 +491,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
             // layer:
             else if (propertyTypeId.getId()===REntity.PropertyLayer.getId()) {
                 this.initControls(propertyTypeId, onlyChanges, layerCombo);
+                gotLayerProperty = true;
             }
 
             // color:
@@ -507,11 +512,13 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
             // linetype scale:
             else if (propertyTypeId.getId()===REntity.PropertyLinetypeScale.getId()) {
                 this.initControls(propertyTypeId, onlyChanges, linetypeScaleEdit);
+                gotLinetypeScaleProperty = true;
             }
 
             // draw order:
             else if (propertyTypeId.getId()===REntity.PropertyDrawOrder.getId()) {
                 this.initControls(propertyTypeId, onlyChanges, drawOrderEdit);
+                gotDrawOrderProperty = true;
             }
 
             // handle:
@@ -645,6 +652,15 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
         }
     }
 
+    // enable / disable used / unused fixed controls
+    this.widget.findChild("LabelLayer").visible = gotLayerProperty;
+    this.widget.findChild("Layer").visible = gotLayerProperty;
+    this.widget.findChild("MoveToNewLayer").visible = gotLayerProperty;
+    this.widget.findChild("LabelLinetypeScale").visible = gotLinetypeScaleProperty;
+    this.widget.findChild("LinetypeScale").visible = gotLinetypeScaleProperty;
+    this.widget.findChild("LabelDrawOrder").visible = gotDrawOrderProperty;
+    this.widget.findChild("DrawOrder").visible = gotDrawOrderProperty;
+
     // update selection combo box at the top for entity filters:
     if (!onlyChanges) {
         var types = this.getTypes();
@@ -658,12 +674,12 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
             selectionCombo.addItem(entityTypeToString(type) + " (" + typeCount + ")", type);
         }
         if (types.length!==1) {
-            selectionCombo.insertItem(0, qsTr("All") + " (" + totalCount + ")", RS.EntityAllManual);
+            selectionCombo.insertItem(1, qsTr("All") + " (" + totalCount + ")", RS.EntityAllManual);
         }
 
         var index = selectionCombo.findData(this.entityTypeFilter);
         if (index===-1) {
-            selectionCombo.currentIndex = 0;
+            selectionCombo.currentIndex = 1;
         }
         else {
             selectionCombo.currentIndex = index;

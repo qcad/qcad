@@ -68,7 +68,7 @@
     <item>
      <widget class="QGroupBox" name="General">
       <property name="title">
-       <string>General</string>
+       <string>General Properties</string>
       </property>
       <layout class="QGridLayout" name="GeneralLayout" columnstretch="0,1,0">
        <property name="topMargin">
