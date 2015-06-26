@@ -24,7 +24,8 @@
  * \brief This module contains ECMAScript implementations of
  * block related tools.
  */
-include("../EAction.js");
+include("scripts/EAction.js");
+include("scripts/Widgets/BlockList/BlockList.js");
 
 /**
  * \class Block
@@ -119,7 +120,7 @@ Block.getActiveBlockId = function() {
         return RObject.INVALID_ID;
     }
 
-    var blockId = document.getBlockId(item.text());
+    var blockId = document.getBlockId(item.text(BlockList.colName));
 
     return blockId;
 };

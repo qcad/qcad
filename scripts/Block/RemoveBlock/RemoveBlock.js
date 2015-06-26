@@ -18,7 +18,8 @@
  */
 
 include("../Block.js");
-include("../../library.js");
+include("scripts/library.js");
+include("scripts/Widgets/BlockList/BlockList.js");
 
 /**
  * \class RemoveBlock
@@ -46,7 +47,7 @@ RemoveBlock.prototype.beginEvent = function() {
         return;
     }
 
-    var block = this.getDocument().queryBlock(item.text());
+    var block = this.getDocument().queryBlock(item.text(BlockList.colName));
 
     var op = new RDeleteObjectOperation(block);
     op.setText(this.getToolTitle());

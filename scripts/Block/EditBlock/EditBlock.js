@@ -18,6 +18,7 @@
  */
 
 include("../Block.js");
+include("scripts/Widgets/BlockList/BlockList.js");
 
 
 /**
@@ -46,11 +47,10 @@ EditBlock.prototype.beginEvent = function() {
         return;
     }
 
-
     // don't display another block when activating one:
     blockList.blockSignals(true);
 
-    this.editBlock(item.text());
+    this.editBlock(item.text(BlockList.colName));
 
     blockList.blockSignals(false);
 
