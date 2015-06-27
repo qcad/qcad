@@ -124,6 +124,10 @@
                 qScriptValueFromValue(&engine, RObject::PropertyCustom),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyType",
+                qScriptValueFromValue(&engine, RObject::PropertyType),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyHandle",
                 qScriptValueFromValue(&engine, RObject::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
