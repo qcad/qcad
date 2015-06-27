@@ -161,8 +161,12 @@ public:
     RVector getMultipliedComponents(const RVector& v) const;
 
     RVector getClosest(const QList<RVector>& list) const;
+    RVector getClosest2d(const QList<RVector>& list) const;
     double getClosestDistance(const QList<RVector>& list, int counts);
-    int getClosestIndex(const QList<RVector>& list) const;
+    int getClosestIndex(const QList<RVector>& list, bool ignoreZ = false) const;
+    int getClosestIndex2d(const QList<RVector>& list) const {
+        return getClosestIndex(list, true);
+    }
 
     RVector operator +(const RVector& v) const;
     RVector operator -(const RVector& v) const;

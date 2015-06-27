@@ -876,6 +876,14 @@ RVector RVector::getClosest(const QList<RVector>& list) const {
     return list[index];
 }
 
+RVector RVector::getClosest2d(const QList<RVector>& list) const {
+    int index = getClosestIndex2d(list);
+    if (index==-1) {
+        return RVector::invalid;
+    }
+    return list[index];
+}
+
 double RVector::getClosestDistance(const QList<RVector>& list, int counts) {
     double ret=RMAXDOUBLE;
     int i=list.count();
@@ -894,13 +902,19 @@ double RVector::getClosestDistance(const QList<RVector>& list, int counts) {
     return ret;
 }
 
-int RVector::getClosestIndex(const QList<RVector>& list) const {
+int RVector::getClosestIndex(const QList<RVector>& list, bool ignoreZ) const {
     double minDist = RMAXDOUBLE;
     int index = -1;
 
     for (int i = 0; i<list.size(); ++i) {
         if (list[i].valid) {
-            double dist = getDistanceTo(list[i]);
+            double dist;
+            if (ignoreZ) {
+                dist = getDistanceTo2d(list[i]);
+            }
+            else {
+                dist = getDistanceTo(list[i]);
+            }
             if (dist < minDist) {
                 minDist = dist;
                 index = i;
