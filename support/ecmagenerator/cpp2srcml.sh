@@ -35,6 +35,10 @@ else
     cd "$scope"
 fi
 
+# find out where srcml is located:
+srcmlpath=`which srcml`
+srcmlpath=`dirname "$srcmlpath"`
+
 for f in `find . -name "R[A-Z]*.h"`
 do
     # ignore 3rd party library code:
@@ -53,7 +57,7 @@ do
 			echo "processing $cppfile ..."
 			(
 				#src2srcml "$f" $switch "$SPATH/$srcmlfile"
-				DYLD_LIBRARY_PATH=~/bin ~/bin/srcml "$f" $switch "$SPATH/$srcmlfile"
+				DYLD_LIBRARY_PATH=$srcmlpath srcml "$f" $switch "$SPATH/$srcmlfile"
 				#tidy -q -i -xml -m "$SPATH/$srcmlfile" # tidy messes up things
 			) &
 		#fi
