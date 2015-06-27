@@ -47,6 +47,8 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RLayer</name><super>: <specifier>public</specifier> <name>RObject</name></super> <block>{<private type="default">
 </private><public>public:
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyType</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyHandle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyProtected</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyName</name></decl>;</decl_stmt>
@@ -68,6 +70,10 @@
     <destructor_decl><specifier>virtual</specifier> <name>~RLayer</name><parameter_list>()</parameter_list>;</destructor_decl>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>ObjectLayer</name></name></expr>;</return>
+    }</block></function>
 
     <function_decl><type><name>virtual</name> <name>RLayer</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 

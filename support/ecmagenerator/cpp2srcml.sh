@@ -52,7 +52,8 @@ do
 		#if [ $f -nt "$SPATH/$srcmlfile" ]; then
 			echo "processing $cppfile ..."
 			(
-				src2srcml "$f" $switch "$SPATH/$srcmlfile"
+				#src2srcml "$f" $switch "$SPATH/$srcmlfile"
+				DYLD_LIBRARY_PATH=~/bin ~/bin/srcml "$f" $switch "$SPATH/$srcmlfile"
 				#tidy -q -i -xml -m "$SPATH/$srcmlfile" # tidy messes up things
 			) &
 		#fi
