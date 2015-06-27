@@ -57,7 +57,12 @@ do
 			echo "processing $cppfile ..."
 			(
 				#src2srcml "$f" $switch "$SPATH/$srcmlfile"
-				DYLD_LIBRARY_PATH=$srcmlpath srcml "$f" $switch "$SPATH/$srcmlfile"
+                if [ `uname` == "Darwin" ]
+                then
+                    DYLD_LIBRARY_PATH=$srcmlpath srcml "$f" $switch "$SPATH/$srcmlfile"
+                else
+                    LD_LIBRARY_PATH=$srcmlpath srcml "$f" $switch "$SPATH/$srcmlfile"
+                fi
 				#tidy -q -i -xml -m "$SPATH/$srcmlfile" # tidy messes up things
 			) &
 		#fi
