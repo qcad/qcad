@@ -70,6 +70,7 @@ QStringList RSettings::originalArguments;
 
 bool RSettings::quitFlag = false;
 bool RSettings::xDataEnabled = false;
+bool RSettings::nextVersionEnabled = false;
 
 QString RSettings::getAppId() {
     QString ret = qApp->applicationName();
@@ -888,6 +889,14 @@ void RSettings::setXDataEnabled(bool on) {
 
 bool RSettings::isXDataEnabled() {
     return xDataEnabled;
+}
+
+void RSettings::setNextVersionEnabled(bool on) {
+    nextVersionEnabled = on;
+}
+
+bool RSettings::isNextVersionEnabled() {
+    return nextVersionEnabled;
 }
 
 bool RSettings::getAutoScaleLinetypePatterns() {

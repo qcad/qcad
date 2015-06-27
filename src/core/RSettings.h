@@ -163,6 +163,9 @@ public:
     static void setXDataEnabled(bool on);
     static bool isXDataEnabled();
 
+    static void setNextVersionEnabled(bool on);
+    static bool isNextVersionEnabled();
+
     static bool getAutoScaleLinetypePatterns();
     static bool getUseSecondarySelectionColor();
     static bool getUseSolidLineSelection();
@@ -216,6 +219,7 @@ private:
     static bool quitFlag;
 
     static bool xDataEnabled;
+    static bool nextVersionEnabled;
 };
 
 Q_DECLARE_METATYPE(RSettings*)

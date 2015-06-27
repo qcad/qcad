@@ -353,14 +353,15 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
 
     if (!onlyChanges) {
         selectionCombo.clear();
-        selectionCombo.addItem(qsTr("No Selection"), -2);
+        // TODO: add 'no selection' item to choose current pen:
+        //selectionCombo.addItem(qsTr("No Selection"), -2);
     }
 
     var groups = this.getGroupTitles();
 
     // no properties to show or 'No Selection' chosen:
-    if (groups.length===0 || selectionCombo.currentIndex===0) {
-        //selectionCombo.insertItem(0, qsTr("No Selection"));
+    if (groups.length===0 /*|| selectionCombo.currentIndex===0*/) {
+        selectionCombo.insertItem(0, qsTr("No Selection"));
         layerCombo.clear();
         colorCombo.currentIndex = 0;
         lineweightCombo.currentIndex = 0;
@@ -371,7 +372,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
         protectedCombo.clear();
         generalGroup.enabled = false;
         this.widget.updatesEnabled = true;
-        //return;
+        return;
     }
 
     var gridLayoutGeometry = undefined;
@@ -674,12 +675,14 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
             selectionCombo.addItem(entityTypeToString(type) + " (" + typeCount + ")", type);
         }
         if (types.length!==1) {
-            selectionCombo.insertItem(1, qsTr("All") + " (" + totalCount + ")", RS.EntityAllManual);
+            // TODO: add at 0 if 'no selection' item present at 0:
+            selectionCombo.insertItem(0, qsTr("All") + " (" + totalCount + ")", RS.EntityAllManual);
         }
 
         var index = selectionCombo.findData(this.entityTypeFilter);
         if (index===-1) {
-            selectionCombo.currentIndex = 1;
+            // TODO: change to 1 if 'no selection' item present at 0:
+            selectionCombo.currentIndex = 0;
         }
         else {
             selectionCombo.currentIndex = index;

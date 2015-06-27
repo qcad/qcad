@@ -1269,9 +1269,11 @@ QSet<REntity::Id> RDocument::querySelectedEntities() {
 QSet<RObject::Id> RDocument::queryPropertyEditorObjects() {
     QSet<RObject::Id> objectIds = querySelectedEntities();
 
-    // no entities selected: use layer properties:
-    if (objectIds.isEmpty()) {
-        objectIds.insert(getCurrentLayerId());
+    if (RSettings::isNextVersionEnabled()) {
+        // no entities selected: expose layer properties:
+        if (objectIds.isEmpty()) {
+            objectIds.insert(getCurrentLayerId());
+        }
     }
 
     return objectIds;
