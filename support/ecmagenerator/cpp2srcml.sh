@@ -4,10 +4,10 @@ echo "cpp to srcml..."
 
 if command -v src2srcml &>/dev/null
 then
-	echo "src2srcml found."
+    echo "src2srcml found."
 else
-	echo "src2srcml not found. Skipping srcml generation..."
-	exit 0
+    echo "src2srcml not found. Skipping srcml generation..."
+    exit 0
 fi
 
 maxThreads=256
@@ -44,28 +44,28 @@ do
     # ignore 3rd party library code:
     if [[ $f == *3rdparty/* ]]; then continue; fi
 
-	cppfile=${f##*/}
-	if [ ${cppfile:0:5} != "REcma" ]; then
-		basename=${cppfile%%.*}
+    cppfile=${f##*/}
+    if [ ${cppfile:0:5} != "REcma" ]; then
+        basename=${cppfile%%.*}
         if [ $scope = "src" ]
         then
             srcmlfile="$scope/srcml/$basename.srcml"
         else
             srcmlfile="tmp/srcml/$basename.srcml"
         fi
-		#if [ $f -nt "$SPATH/$srcmlfile" ]; then
-			echo "processing $cppfile ..."
-			(
-				#src2srcml "$f" $switch "$SPATH/$srcmlfile"
+        #if [ $f -nt "$SPATH/$srcmlfile" ]; then
+            echo "processing $cppfile ..."
+            (
+                #src2srcml "$f" $switch "$SPATH/$srcmlfile"
                 if [ `uname` == "Darwin" ]
                 then
                     DYLD_LIBRARY_PATH=$srcmlpath srcml "$f" $switch "$SPATH/$srcmlfile"
                 else
                     LD_LIBRARY_PATH=$srcmlpath srcml "$f" $switch "$SPATH/$srcmlfile"
                 fi
-				#tidy -q -i -xml -m "$SPATH/$srcmlfile" # tidy messes up things
-			) &
-		#fi
+                #tidy -q -i -xml -m "$SPATH/$srcmlfile" # tidy messes up things
+            ) &
+        #fi
 
         let threads=threads+1
         if [ $threads -eq $maxThreads ]; then
@@ -73,7 +73,7 @@ do
             wait
             threads=0
         fi
-	fi
+    fi
 done
 
 cd $SPATH

@@ -14,7 +14,7 @@ which indent 1>/dev/null 2>&1
 hasNoIndent=$?
 
 if [ $scope == "src" ]; then
-	profile="../../src/scripting/ecmaapi/generated/generated.pri"
+    profile="../../src/scripting/ecmaapi/generated/generated.pri"
     profile_tmp="generated.pri"
 fi
 
