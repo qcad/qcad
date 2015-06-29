@@ -37,13 +37,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+172"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+19"/>
-        <source>Geometry</source>
+        <location line="+20"/>
+        <source>Specific Properties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -57,7 +57,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+158"/>
+        <location line="+164"/>
         <source>Index</source>
         <translation type="unfinished"></translation>
     </message>
@@ -67,12 +67,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>Add custom property to selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -115,7 +115,7 @@
     </message>
     <message>
         <location line="+31"/>
-        <source>General</source>
+        <source>General Properties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

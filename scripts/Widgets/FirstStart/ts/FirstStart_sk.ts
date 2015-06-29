@@ -9,7 +9,7 @@
         <translation>%1 - Prvé spustenie</translation>
     </message>
     <message>
-        <location line="+189"/>
+        <location line="+190"/>
         <source>Black</source>
         <translation>Čierne</translation>
     </message>

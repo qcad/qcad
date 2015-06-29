@@ -495,14 +495,18 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+69"/>
+        <location filename="../src/core/RLayer.cpp" line="+73"/>
         <source>Name</source>
         <translation>画層名</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Frozen</source>
-        <translation>凍結</translation>
+        <translation type="vanished">凍結</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -962,9 +966,14 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+36"/>
+        <location filename="../src/core/RObject.cpp" line="+37"/>
         <source>Custom</source>
         <translation>カスタム</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type</source>
+        <translation type="unfinished">タイプ</translation>
     </message>
     <message>
         <location line="+1"/>

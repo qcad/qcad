@@ -17,7 +17,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+48"/>
         <source>Double-Click</source>
         <translation>Dvoklik</translation>
     </message>
@@ -37,7 +37,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-42"/>
         <source>Right-Click</source>
         <translation>Desni klik</translation>
     </message>
@@ -47,7 +47,7 @@
         <translation>Desni klik za odizbor entitet</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+46"/>
         <source>Cursor Range</source>
         <translation>Območje kurzorja</translation>
     </message>

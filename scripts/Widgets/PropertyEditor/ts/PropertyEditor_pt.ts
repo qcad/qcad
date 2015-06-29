@@ -50,19 +50,23 @@ Documento carregado: %1</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+172"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nenhuma Seleção</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Geometry</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Modifique propriedades e geometria de entidade
 Geometria</translatorcomment>
-        <translation>Geometria</translation>
+        <translation type="vanished">Geometria</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -80,7 +84,7 @@ Não entidades de dimensão com posições etiqueta personalizada selecionada.</
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+158"/>
+        <location line="+164"/>
         <source>Index</source>
         <translatorcomment>--google--
 Indentar nó
@@ -93,7 +97,7 @@ Trocar para a próxima camada</translatorcomment>
         <translation>Remova esta propriedade dos objetos selecionados</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -103,7 +107,7 @@ Fecha todas as janelas</translatorcomment>
         <translation>Todos</translation>
     </message>
     <message>
-        <location line="+625"/>
+        <location line="+626"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -255,13 +259,17 @@ Selecção:</translatorcomment>
         <translation>Seleção:</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>General</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Preferências Gerais do Aplicativo
 [2000-206F] Pontuação Geral</translatorcomment>
-        <translation>Geral</translation>
+        <translation type="vanished">Geral</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>General Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+106"/>

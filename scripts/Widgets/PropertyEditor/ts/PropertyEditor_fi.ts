@@ -37,14 +37,18 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+172"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translation>Ei valintaa</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Geometry</source>
-        <translation>Geometria</translation>
+        <translation type="vanished">Geometria</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -57,7 +61,7 @@
         <translation>Muokattu</translation>
     </message>
     <message>
-        <location line="+158"/>
+        <location line="+164"/>
         <source>Index</source>
         <translation>Hakemisto</translation>
     </message>
@@ -67,12 +71,12 @@
         <translation>Poista tämä ominaisuus valituilta kohteilta</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
         <translation>Kaikki</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>Add custom property to selected objects</source>
         <translation>Lisää säädetty ominaisuus valittuihin kohteisiin</translation>
     </message>
@@ -114,9 +118,13 @@
         <translation>Valinta:</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>General</source>
-        <translation>Yleistä</translation>
+        <translation type="vanished">Yleistä</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>General Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+106"/>

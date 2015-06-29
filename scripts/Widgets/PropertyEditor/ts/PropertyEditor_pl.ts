@@ -50,19 +50,23 @@ Wersja: </translatorcomment>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+172"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">No Selection</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Geometry</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Zmodyfikuj właściwości obiektu i geometrię
 Edytuj geometrię obiektu</translatorcomment>
-        <translation type="unfinished">Geometria</translation>
+        <translation type="obsolete">Geometria</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -80,7 +84,7 @@ Własne filtry</translatorcomment>
         <translation type="unfinished">Niestandardowy</translation>
     </message>
     <message>
-        <location line="+158"/>
+        <location line="+164"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -94,7 +98,7 @@ Uaktualnianie indeksu wyszukiwawczego</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -105,7 +109,7 @@ Czy chcesz zamknąć plik
         <translation type="unfinished">Wszystkie</translation>
     </message>
     <message>
-        <location line="+625"/>
+        <location line="+626"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -246,13 +250,17 @@ Skonfiguruj edytor właściwości</translatorcomment>
         <translation type="unfinished">Wybrane strony:</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>General</source>
         <translatorcomment>--google--
 Ogólne ustawienia aplikacji
 [2000-206F] General Punctuation
 General Punctuation</translatorcomment>
-        <translation type="unfinished">Ogólny</translation>
+        <translation type="obsolete">Ogólny</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>General Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+106"/>

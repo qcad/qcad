@@ -671,14 +671,18 @@ Colores
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+69"/>
+        <location filename="../src/core/RLayer.cpp" line="+73"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Frozen</source>
-        <translation>Oculto</translation>
+        <translation type="vanished">Oculto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished">Líneas ocultas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1305,7 +1309,7 @@ Unidad por defecto:</translatorcomment>
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+36"/>
+        <location filename="../src/core/RObject.cpp" line="+37"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -1313,6 +1317,11 @@ No objetos de dimensión seleccionados con una posición de texto personalizado.
 No objetos de dimensión seleccionados con una posición de texto personalizado
 Personalizado</translatorcomment>
         <translation>Personalizado</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type</source>
+        <translation type="unfinished">Tipo</translation>
     </message>
     <message>
         <location line="+1"/>

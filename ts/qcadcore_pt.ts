@@ -666,14 +666,18 @@ Abre diálogo de cores</translatorcomment>
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+69"/>
+        <location filename="../src/core/RLayer.cpp" line="+73"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Frozen</source>
-        <translation>Congelado</translation>
+        <translation type="vanished">Congelado</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished">Oculto</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1299,13 +1303,18 @@ Unidade Padrão:
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+36"/>
+        <location filename="../src/core/RObject.cpp" line="+37"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Customize..
 Configurar...</translatorcomment>
         <translation>Personalizado</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type</source>
+        <translation type="unfinished">Tipo</translation>
     </message>
     <message>
         <location line="+1"/>

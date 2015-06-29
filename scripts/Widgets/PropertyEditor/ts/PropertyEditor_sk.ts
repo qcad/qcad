@@ -37,14 +37,18 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+172"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translation>Nič nie je vybraté</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Geometry</source>
-        <translation>Geometria</translation>
+        <translation type="vanished">Geometria</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -57,7 +61,7 @@
         <translation>Vlastné</translation>
     </message>
     <message>
-        <location line="+158"/>
+        <location line="+164"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -67,12 +71,12 @@
         <translation>Odstrániť vlastnosť z vybraných prvkov</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
         <translation>Všetko</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>Add custom property to selected objects</source>
         <translation>Pridať vlastné vlastnosti k vybraným prvkom</translation>
     </message>
@@ -114,9 +118,13 @@
         <translation>Výber:</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>General</source>
-        <translation>Všeobecné</translation>
+        <translation type="vanished">Všeobecné</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>General Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+35"/>

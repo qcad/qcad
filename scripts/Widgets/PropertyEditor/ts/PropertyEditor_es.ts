@@ -34,12 +34,11 @@ Tipo de línea:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+382"/>
         <source>Geometry</source>
-        <translation>Geometría</translation>
+        <translation type="vanished">Geometría</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location filename="../PropertyEditor.js" line="+701"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -68,7 +67,7 @@ Tipo de línea:</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-495"/>
+        <location line="-514"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -83,7 +82,7 @@ Versión:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+172"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--
@@ -92,7 +91,12 @@ Seleccin nula</translatorcomment>
         <translation>Seleccin nula</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Dependent Entities</source>
         <translation>Entidades dependientes</translation>
     </message>
@@ -102,7 +106,7 @@ Seleccin nula</translatorcomment>
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+158"/>
+        <location line="+164"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: qgis_es.ts--
@@ -116,7 +120,7 @@ Valor indexado</translatorcomment>
         <translation>Retire esta propiedad de los objetos seleccionados</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
@@ -127,7 +131,7 @@ Mosaico horizontal
         <translation>Todo</translation>
     </message>
     <message>
-        <location line="+625"/>
+        <location line="+626"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -192,9 +196,13 @@ Seleccione entidad base</translatorcomment>
         <translation>Selección:</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>General</source>
-        <translation>General</translation>
+        <translation type="vanished">General</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>General Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+106"/>

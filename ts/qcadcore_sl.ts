@@ -490,14 +490,18 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+69"/>
+        <location filename="../src/core/RLayer.cpp" line="+73"/>
         <source>Name</source>
         <translation>Ime</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Frozen</source>
-        <translation>Zamrznjeno</translation>
+        <translation type="vanished">Zamrznjeno</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished">Nevidna</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -957,9 +961,14 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+36"/>
+        <location filename="../src/core/RObject.cpp" line="+37"/>
         <source>Custom</source>
         <translation>Po meri</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type</source>
+        <translation type="unfinished">Tip</translation>
     </message>
     <message>
         <location line="+1"/>

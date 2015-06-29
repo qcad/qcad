@@ -17,7 +17,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+48"/>
         <source>Double-Click</source>
         <translation>Double-clic</translation>
     </message>
@@ -37,7 +37,7 @@
         <translation>Droit double-cliquez sur pour réinitialiser</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-42"/>
         <source>Right-Click</source>
         <translation>Clic-droit</translation>
     </message>
@@ -47,7 +47,7 @@
         <translation>Clic-droit pour désélectionner des entités</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+46"/>
         <source>Cursor Range</source>
         <translation>Gamme de curseur de souris</translation>
     </message>

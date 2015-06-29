@@ -680,14 +680,18 @@ Colore G&amp;riglia:</translatorcomment>
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+69"/>
+        <location filename="../src/core/RLayer.cpp" line="+73"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Frozen</source>
-        <translation>Nascosto</translation>
+        <translation type="vanished">Nascosto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished">Nascosta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1317,7 +1321,7 @@ Unità Predefinite:</translatorcomment>
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+36"/>
+        <location filename="../src/core/RObject.cpp" line="+37"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -1325,6 +1329,11 @@ Nessun oggetto dimensione selezionata con una posizione di testo personalizzato.
 Nessun oggetto dimensione selezionata con una posizione di testo personalizzato
 Personalizzato</translatorcomment>
         <translation>Personalizzato</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type</source>
+        <translation type="unfinished">Tipo</translation>
     </message>
     <message>
         <location line="+1"/>

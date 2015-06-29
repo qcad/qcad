@@ -17,7 +17,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+48"/>
         <source>Double-Click</source>
         <translation>Dvojklik</translation>
     </message>
@@ -37,7 +37,7 @@
         <translation>Dvojklik pravým tlačítkom reset</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-42"/>
         <source>Right-Click</source>
         <translation>Kliknutie pravým tlačidlom myši</translation>
     </message>
@@ -47,7 +47,7 @@
         <translation>Pravé tlačidlo myši zruší výber prvkov (vhodné použiť s viacnásobným výberom prvkov)</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+46"/>
         <source>Cursor Range</source>
         <translation>Rozsah kurzoru</translation>
     </message>

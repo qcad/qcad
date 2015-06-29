@@ -27,12 +27,11 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+382"/>
         <source>Geometry</source>
-        <translation>Geometria</translation>
+        <translation type="vanished">Geometria</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location filename="../PropertyEditor.js" line="+701"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
@@ -61,7 +60,7 @@
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-495"/>
+        <location line="-514"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -76,7 +75,7 @@ Versione:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+172"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translatorcomment>--ignored case--
 --file: photivo_it.ts--
@@ -84,7 +83,12 @@ Nessuna selezione</translatorcomment>
         <translation>Nessuna selezione</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Dependent Entities</source>
         <translation>Entità dipendenti</translation>
     </message>
@@ -94,7 +98,7 @@ Nessuna selezione</translatorcomment>
         <translation>Personalizzato</translation>
     </message>
     <message>
-        <location line="+158"/>
+        <location line="+164"/>
         <source>Index</source>
         <translation>Indice</translation>
     </message>
@@ -104,12 +108,12 @@ Nessuna selezione</translatorcomment>
         <translation>Rimuovere questa proprietà dagli oggetti selezionati</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
         <translation>Tutto</translation>
     </message>
     <message>
-        <location line="+625"/>
+        <location line="+626"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -174,9 +178,13 @@ Specifica la base</translatorcomment>
         <translation>Selezione:</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>General</source>
-        <translation>Generale</translation>
+        <translation type="vanished">Generale</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>General Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+106"/>

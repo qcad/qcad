@@ -17,7 +17,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+48"/>
         <source>Double-Click</source>
         <translation>Clique Duplo</translation>
     </message>
@@ -37,7 +37,7 @@
         <translation>Clique duplo de direita para resetar</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-42"/>
         <source>Right-Click</source>
         <translation>Clique do Botão Direito</translation>
     </message>
@@ -47,7 +47,7 @@
         <translation>Clique direito para desmarcar entidades </translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+46"/>
         <source>Cursor Range</source>
         <translation>Limites do Cursor</translation>
     </message>

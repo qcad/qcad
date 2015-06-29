@@ -14,5 +14,6 @@ TRANSLATIONS = \
     $$PWD/ts/$${NAME}_ru.ts \
     $$PWD/ts/$${NAME}_sk.ts \
     $$PWD/ts/$${NAME}_sl.ts \
+    $$PWD/ts/$${NAME}_sv.ts \
     $$PWD/ts/$${NAME}_zh_CN.ts
 

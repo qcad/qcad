@@ -32,14 +32,18 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+172"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translation>選択なし</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Geometry</source>
-        <translation>ジオメトリ</translation>
+        <translation type="vanished">ジオメトリ</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -52,7 +56,7 @@
         <translation>カスタム</translation>
     </message>
     <message>
-        <location line="+158"/>
+        <location line="+164"/>
         <source>Index</source>
         <translation>目次</translation>
     </message>
@@ -62,12 +66,12 @@
         <translation>選択したオブジェクトからこのプロパティを削除</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
         <translation>全て</translation>
     </message>
     <message>
-        <location line="+625"/>
+        <location line="+626"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -113,9 +117,13 @@
         <translation>選択:</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>General</source>
-        <translation>全般</translation>
+        <translation type="vanished">全般</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>General Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+106"/>

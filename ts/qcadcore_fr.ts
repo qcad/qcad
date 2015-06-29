@@ -665,14 +665,18 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+69"/>
+        <location filename="../src/core/RLayer.cpp" line="+73"/>
         <source>Name</source>
         <translation>Nom</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Frozen</source>
-        <translation>Caché</translation>
+        <translation type="vanished">Caché</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished">Caché</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1301,7 +1305,7 @@ Valeurs par &amp;défaut</translatorcomment>
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+36"/>
+        <location filename="../src/core/RObject.cpp" line="+37"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -1309,6 +1313,11 @@ Aucun objets de dimension sélectionné avec une position de texte personnalisé
 Aucun objets de dimension sélectionné avec une position de texte personnalisé
 Personnalisé</translatorcomment>
         <translation>Personnalisé</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type</source>
+        <translation type="unfinished">Type</translation>
     </message>
     <message>
         <location line="+1"/>

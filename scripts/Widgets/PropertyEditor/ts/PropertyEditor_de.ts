@@ -36,14 +36,18 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+172"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translation>Keine Selektion</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Geometry</source>
-        <translation>Geometrie</translation>
+        <translation type="vanished">Geometrie</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -51,7 +55,7 @@
         <translation>Abhängige Objekte</translation>
     </message>
     <message>
-        <location line="+175"/>
+        <location line="+181"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -61,12 +65,12 @@
         <translation>Eigenschaft von ausgewählten Objekten entfernen</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
         <translation>Alle</translation>
     </message>
     <message>
-        <location line="+625"/>
+        <location line="+626"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -152,9 +156,13 @@
         <translation>Auswahl:</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>General</source>
-        <translation>Allgemein</translation>
+        <translation type="vanished">Allgemein</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>General Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+35"/>
@@ -197,7 +205,7 @@
         <translation>Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-919"/>
+        <location filename="../PropertyEditor.js" line="-936"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

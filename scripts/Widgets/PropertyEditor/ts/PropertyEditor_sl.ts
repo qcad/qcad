@@ -32,14 +32,18 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+172"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translation>Ni izbrano</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Geometry</source>
-        <translation>Geometrija</translation>
+        <translation type="vanished">Geometrija</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -52,7 +56,7 @@
         <translation>Dodatno</translation>
     </message>
     <message>
-        <location line="+158"/>
+        <location line="+164"/>
         <source>Index</source>
         <translation>Indeks</translation>
     </message>
@@ -62,12 +66,12 @@
         <translation>Odstrani to lastnost iz izbranih objektov</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
         <translation>Vse</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>Add custom property to selected objects</source>
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
     </message>
@@ -145,9 +149,13 @@
         <translation>Izbor:</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>General</source>
-        <translation>Splošno</translation>
+        <translation type="vanished">Splošno</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>General Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+106"/>
