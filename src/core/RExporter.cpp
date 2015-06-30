@@ -641,10 +641,8 @@ void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
 
     setEntityAttributes(forceSelected);
 
-    //bool sblt = getScreenBasedLinetypes();
     if ((forceSelected || entity->isSelected()) && RSettings::getUseSecondarySelectionColor()) {
         // first part of two color selection:
-        //setScreenBasedLinetypes(true);
         twoColorSelectedMode = true;
     }
 
@@ -667,7 +665,6 @@ void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
         }
     }
     twoColorSelectedMode = false;
-    //setScreenBasedLinetypes(sblt);
 }
 
 
