@@ -1599,6 +1599,12 @@ function stringToCoordinate(relativeZero, str) {
         return undefined;
     }
 
+    str = str.trim();
+
+    if (str.length===0) {
+        return undefined;
+    }
+
     var relative = false;
     if (str[0]===relCoordPre) {
         relative = true;
