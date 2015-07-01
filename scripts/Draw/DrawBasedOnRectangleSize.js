@@ -53,7 +53,7 @@ function DrawBasedOnRectangleSize(guiAction) {
     var b =  [ "Bottom",      qsTr("Bottom"),       new RVector( 0, -1) ];
     var br = [ "BottomRight", qsTr("Bottom Right"), new RVector( 1, -1) ];
     
-    if (RSettings.getBoolValue("DrawBasedOnRectangleSize/ReversedShortcuts", false)) {
+    if (RSettings.getBoolValue("DrawBasedOnRectangleSize/ReversedShortcuts", false)===true) {
         this.referencePoints = [
             tl, t, tr,
             l, m, r,

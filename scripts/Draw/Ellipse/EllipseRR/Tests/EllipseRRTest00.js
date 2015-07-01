@@ -16,45 +16,19 @@ EllipseRRTest00.prototype.test00 = function() {
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::EllipseToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::EllipseToolsPanel::EllipseRRButton');
-    // key: '[non-alphabetic]'
-    this.pressAndReleaseKeyOnGv(0x2d, 0);
-    // key: '[non-alphabetic]'
-    this.pressAndReleaseKeyOnGv(0x2d, 0);
-    // key: '[non-alphabetic]'
-    this.pressAndReleaseKeyOnGv(0x2d, 0);
-    // key: '[non-alphabetic]'
-    this.pressAndReleaseKeyOnGv(0x2d, 0);
-    // key: '[non-alphabetic]'
-    this.pressAndReleaseKeyOnGv(0x2d, 0);
-    // key: '[non-alphabetic]'
-    this.pressAndReleaseKeyOnGv(0x2d, 0);
-    // key: '[non-alphabetic]'
-    this.pressAndReleaseKeyOnGv(0x2d, 0);
-    // key: '[non-alphabetic]'
-    this.pressAndReleaseKeyOnGv(0x2d, 0);
-    // key: '[non-alphabetic]'
-    this.pressAndReleaseKeyOnGv(0x2d, 0);
-    // key: '[non-alphabetic]'
-    this.pressAndReleaseKeyOnGv(0x2d, 0);
-    // key: '[non-alphabetic]'
-    this.pressAndReleaseKeyOnGv(0x2d, 0);
-    // key: '[non-alphabetic]'
-    this.pressAndReleaseKeyOnGv(0x2d, 0);
-    // key: '[non-alphabetic]'
-    this.pressAndReleaseKeyOnGv(0x2d, 0);
     // key: '1'
     this.pressAndReleaseKeyOnGv(0x31, 0);
     this.setToolOption('EllipseRR/XRadius', '100');
     this.setToolOption('EllipseRR/YRadius', '50');
     this.setToolOption('EllipseRR/Angle', '0');
-    this.setToolOption('EllipseRR/ReferencePoint', '0');
+    this.setToolOption('EllipseRR/ReferencePoint', '6');
     this.updateToolOptions();
     this.setZoom(0.934638789871793, new RVector(263.002, 217.415, 0, true));
     var p = new RVector(4.481087, 93.935108);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    // key: '2'
-    this.pressAndReleaseKeyOnGv(0x32, 0);
+    this.setToolOption('EllipseRR/ReferencePoint', '7');
+    this.updateToolOptions();
     var p = new RVector(141.43239, 68.256739);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.MidButton, 4, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.MidButton, 0, 0);
@@ -62,8 +36,8 @@ EllipseRRTest00.prototype.test00 = function() {
     var p = new RVector(299.782334, 98.214836);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    // key: '3'
-    this.pressAndReleaseKeyOnGv(0x33, 0);
+    this.setToolOption('EllipseRR/ReferencePoint', '8');
+    this.updateToolOptions();
     var p = new RVector(412.1252, 51.137826);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.MidButton, 4, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.MidButton, 0, 0);
@@ -74,20 +48,20 @@ EllipseRRTest00.prototype.test00 = function() {
     var p = new RVector(286.943149, -50.505719);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.MidButton, 4, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.MidButton, 0, 0);
-    // key: '4'
-    this.pressAndReleaseKeyOnGv(0x34, 0);
+    this.setToolOption('EllipseRR/ReferencePoint', '3');
+    this.updateToolOptions();
     this.setZoom(0.934638789871793, new RVector(60.7848, 299.8, 0, true));
     var p = new RVector(-0.868573, -100.792526);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    // key: '5'
-    this.pressAndReleaseKeyOnGv(0x35, 0);
+    this.setToolOption('EllipseRR/ReferencePoint', '4');
+    this.updateToolOptions();
     this.setZoom(0.934638789871793, new RVector(60.7848, 299.8, 0, true));
     var p = new RVector(304.062062, -100.792526);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    // key: '6'
-    this.pressAndReleaseKeyOnGv(0x36, 0);
+    this.setToolOption('EllipseRR/ReferencePoint', '5');
+    this.updateToolOptions();
     var p = new RVector(346.859344, -123.261099);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.MidButton, 4, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.MidButton, 0, 0);
@@ -95,8 +69,8 @@ EllipseRRTest00.prototype.test00 = function() {
     var p = new RVector(603.643037, -105.072254);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    // key: '7'
-    this.pressAndReleaseKeyOnGv(0x37, 0);
+    this.setToolOption('EllipseRR/ReferencePoint', '0');
+    this.updateToolOptions();
     var p = new RVector(428.17418, -177.827634);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.MidButton, 4, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.MidButton, 0, 0);
@@ -104,8 +78,8 @@ EllipseRRTest00.prototype.test00 = function() {
     var p = new RVector(-5.148301, -301.939752);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    // key: '8'
-    this.pressAndReleaseKeyOnGv(0x38, 0);
+    this.setToolOption('EllipseRR/ReferencePoint', '1');
+    this.updateToolOptions();
     this.setZoom(0.934638789871793, new RVector(83.2533, 385.394, 0, true));
     var p = new RVector(299.782334, -299.799888);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -113,8 +87,8 @@ EllipseRRTest00.prototype.test00 = function() {
     var p = new RVector(304.062062, -231.324236);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.MidButton, 4, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.MidButton, 0, 0);
-    // key: '9'
-    this.pressAndReleaseKeyOnGv(0x39, 0);
+    this.setToolOption('EllipseRR/ReferencePoint', '2');
+    this.updateToolOptions();
     this.setZoom(0.934638789871793, new RVector(-98.6351, 383.255, 0, true));
     var p = new RVector(605.782901, -300.86982);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

@@ -38,10 +38,8 @@ IsoProjectTest03.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     var p = new RVector(1, 19);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    // key: 'P'
-    this.pressAndReleaseKeyOnGv(0x50, 0);
-    // key: 'J'
-    this.pressAndReleaseKeyOnGv(0x4a, 0);
+    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ProjectionToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ProjectionToolsPanel::IsoProjectButton');
     this.setToolOption('IsoProject/ProjectionType', 'Top');
     this.setToolOption('IsoProject/SegmentLength',  [ 5, 0 ] );
     this.setToolOption('IsoProject/TrueScale', 'false');
