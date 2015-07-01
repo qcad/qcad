@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>GraphicsView</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Ursprung</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa stora ursprungsaxlar</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rulers and Scrollbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Linjaler och rullister</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa linjaler</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa rullningslister</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Markör</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show crosshairs</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa hårkors</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation type="unfinished"></translation>
+        <translation>visa stora hårkors</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Zooma automatiskt</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -91,27 +91,27 @@
     <message>
         <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation type="unfinished"></translation>
+        <translation>mönsterskala för linjetjocklek 0.00mm:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Display and Performance</source>
-        <translation type="unfinished"></translation>
+        <translation>Visning och Prestanda</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Number of preview entities:</source>
-        <translation type="unfinished"></translation>
+        <translation>Antal förhandsvisade objekt:</translation>
     </message>
     <message>
         <location line="+58"/>
         <source>Text height display threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Texthöjd visningströskel (px):</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa bågar som linjer under denna vinkel (grader):</translation>
     </message>
     <message>
         <location line="+69"/>

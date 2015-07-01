@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>DimAligned</name>
     <message>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../DimAlignedInit.js" line="+2"/>
         <source>&amp;Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Justerad</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw aligned dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita justerad dimension</translation>
     </message>
 </context>
 </TS>

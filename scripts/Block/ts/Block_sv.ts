@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>Block</name>
     <message>
         <location filename="../Block.js" line="+67"/>
         <source>Block Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Blockverktyg</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show block tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa blockverktyg</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Block</translation>
     </message>
 </context>
 <context>
@@ -29,32 +29,32 @@
     <message>
         <location line="+5"/>
         <source>Block name is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Blocknamn är tomt.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Blocknamnet är felaktigt.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Block already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Blocket finns redan.</translation>
     </message>
     <message>
         <location filename="../BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Blockdata</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Block name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Blocknamn:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>block 1</source>
-        <translation type="unfinished"></translation>
+        <translation>block 1</translation>
     </message>
 </context>
 </TS>

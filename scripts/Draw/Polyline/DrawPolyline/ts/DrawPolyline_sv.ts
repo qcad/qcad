@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>DrawPolyline</name>
     <message>
@@ -21,47 +21,47 @@
     <message>
         <location line="+415"/>
         <source>close</source>
-        <translation type="unfinished"></translation>
+        <translation>stäng</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation type="unfinished"></translation>
+        <translation>ångra</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation type="unfinished"></translation>
+        <translation>gör om</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>arc</source>
-        <translation type="unfinished"></translation>
+        <translation>båge</translation>
     </message>
     <message>
         <location filename="../DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">stäng polylinje</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>,, C</source>
-        <translation type="unfinished"></translation>
+        <translation>,, C</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Ångra tidigare segment</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation type="unfinished"></translation>
+        <translation>,, U</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Gör om segment</translation>
     </message>
     <message>
         <location line="+7"/>

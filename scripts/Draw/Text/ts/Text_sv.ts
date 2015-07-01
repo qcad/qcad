@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>Dialog</name>
     <message>
         <location filename="../TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Teckenkarta</translation>
     </message>
 </context>
 <context>
@@ -14,32 +14,32 @@
     <message>
         <location filename="../Text.js" line="+88"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location filename="../Text.ui" line="+17"/>
         <source>Contents:</source>
-        <translation type="unfinished"></translation>
+        <translation>Innehåll:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Höjd:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vinkel:</translation>
     </message>
     <message>
         <location filename="../TextInit.js" line="+2"/>
         <source>&amp;Text</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Text</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw text</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita text</translation>
     </message>
 </context>
 <context>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../TextDialog/TextDialog.js" line="+242"/>
         <source>Default value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Standardvärde:</translation>
     </message>
     <message>
         <location line="+258"/>
@@ -97,47 +97,47 @@
     <message>
         <location line="+18"/>
         <source>&amp;Color...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Färg...</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Special Characters...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Specialtecken...</translation>
     </message>
     <message>
         <location line="+312"/>
         <source>Others...</source>
-        <translation type="unfinished"></translation>
+        <translation>Andra...</translation>
     </message>
     <message>
         <location line="+130"/>
         <source>Degree</source>
-        <translation type="unfinished"></translation>
+        <translation>Grad</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus-Minus</source>
-        <translation type="unfinished"></translation>
+        <translation>Plus-Minus</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Diameter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal</source>
-        <translation type="unfinished"></translation>
+        <translation>nästan lika med</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
-        <translation type="unfinished"></translation>
+        <translation>Multiplikation</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation type="unfinished"></translation>
+        <translation>Division</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -187,50 +187,51 @@
     <message>
         <location filename="../TextDialog/TextDialog.ui" line="+14"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Main Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Huvudteckensnitt</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Höjd:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Texthöjd i ritningsenheter</translation>
     </message>
     <message>
         <location line="+18"/>
         <location line="+213"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Fet</translation>
     </message>
     <message>
         <location line="-206"/>
         <location line="+219"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Kursiv</translation>
     </message>
     <message>
         <location line="-205"/>
         <source>Text fits on one line and has no formatting</source>
-        <translation type="unfinished"></translation>
+        <translation>Texten får plats på en linje och har ingen formatering</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Enkel text
+(en linje, ingen formatering)</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Rich Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Formaterad text</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -280,47 +281,47 @@
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation type="unfinished"></translation>
+        <translation>Frågor:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Värde:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Text Geometry</source>
-        <translation type="unfinished"></translation>
+        <translation>Textgeometri</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Line spacing factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Linjeavståndsfaktor:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Line Spacing Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Linjeavståndsfaktor:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vinkel:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rotation Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotationsvinkel</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>Justering</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Bottom Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Längst ner till vänster</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -370,22 +371,22 @@
     <message>
         <location line="+32"/>
         <source>Middle Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Mitten vänster</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Top Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Överst till höger</translation>
     </message>
     <message>
         <location line="+88"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Avbryt</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
 </context>
 </TS>

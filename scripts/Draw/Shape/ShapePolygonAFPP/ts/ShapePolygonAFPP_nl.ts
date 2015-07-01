@@ -11,7 +11,7 @@
     <message>
         <location line="+2"/>
         <source>First Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste hoekpunt</translation>
     </message>
     <message>
         <location line="+8"/>

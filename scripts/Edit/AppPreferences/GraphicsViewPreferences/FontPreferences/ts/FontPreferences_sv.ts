@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>FontPreferences</name>
     <message>
         <location filename="../FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Grafisk vy</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Typsnitt</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+41"/>
         <source>Ruler Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Teckensnitt, linjaler:</translation>
     </message>
     <message>
         <location line="+16"/>

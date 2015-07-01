@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>LineBisector</name>
     <message>
@@ -26,17 +26,17 @@
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nummer:</translation>
     </message>
     <message>
         <location filename="../LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation type="unfinished"></translation>
+        <translation>Vinkeldelning</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita vinkeldelning, tredelning, ...</translation>
     </message>
 </context>
 </TS>

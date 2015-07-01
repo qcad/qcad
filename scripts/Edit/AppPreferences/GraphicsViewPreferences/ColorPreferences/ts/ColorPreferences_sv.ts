@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>ColorPreferences</name>
     <message>
@@ -34,47 +34,47 @@
     <message>
         <location line="+18"/>
         <source>Crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Markörer:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Inaktiva markörer:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Ursprung</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Origin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ursprung:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Relative zero:</source>
-        <translation type="unfinished"></translation>
+        <translation>Relativ nolla:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Rutnät</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rutnät:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Meta grid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Meta-rutnät:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Markering</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -124,32 +124,32 @@
     <message>
         <location line="+33"/>
         <source>Info Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Informationsverktyg</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mått och etiketter:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Ritverktyg</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation type="unfinished"></translation>
+        <translation>Övriga figurer:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Zoom Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoomverktyg</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zoom lådlinje:</translation>
     </message>
 </context>
 </TS>

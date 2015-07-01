@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>LineTangent1</name>
     <message>
         <location filename="../LineTangent1.js" line="+64"/>
         <source>Choose start point of tangent</source>
-        <translation type="unfinished"></translation>
+        <translation>Välja startpunkt av tangering</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Välj cirkel, arc eller ellips</translation>
     </message>
     <message>
         <location line="+83"/>

@@ -31,27 +31,27 @@
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Begin</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Midden</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Eind</translation>
     </message>
     <message>
         <location filename="../LineRelativeAngleInit.js" line="+2"/>
         <source>R&amp;elative Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>R&amp;elatieve hoek</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line with relative angle to base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijn met relatieve hoek naar het basis object tekenen</translation>
     </message>
 </context>
 </TS>

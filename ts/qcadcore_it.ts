@@ -691,7 +691,7 @@ Colore G&amp;riglia:</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Nascosta</translation>
+        <translation>Nascosta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1333,7 +1333,7 @@ Personalizzato</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation type="unfinished">Tipo</translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location line="+1"/>

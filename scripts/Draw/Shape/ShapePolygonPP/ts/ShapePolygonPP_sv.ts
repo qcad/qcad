@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>ShapePolygonPP</name>
     <message>
         <location filename="../ShapePolygonPP.js" line="+58"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Första hörnan</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation type="unfinished"></translation>
+        <translation>Hörnpunkt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Klar</translation>
     </message>
     <message>
         <location filename="../ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hörn:</translation>
     </message>
     <message>
         <location filename="../ShapePolygonPPInit.js" line="+2"/>

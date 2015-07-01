@@ -66,7 +66,7 @@ Geometria</translatorcomment>
     <message>
         <location line="+20"/>
         <source>Specific Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades específicas</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -269,7 +269,7 @@ Preferências Gerais do Aplicativo
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades gerais</translation>
     </message>
     <message>
         <location line="+106"/>

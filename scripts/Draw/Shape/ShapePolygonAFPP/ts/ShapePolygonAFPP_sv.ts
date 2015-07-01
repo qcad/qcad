@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>ShapePolygonAFPP</name>
     <message>
         <location filename="../ShapePolygonAFPP.js" line="+59"/>
         <source>First side</source>
-        <translation type="unfinished"></translation>
+        <translation>Första sidan</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>First Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Första hörnet</translation>
     </message>
     <message>
         <location line="+8"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>CircleCR</name>
     <message>
@@ -23,12 +23,12 @@
     <message>
         <location filename="../CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Centrum, &amp;Radie</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita cirkel från centrum och radie</translation>
     </message>
 </context>
 </TS>

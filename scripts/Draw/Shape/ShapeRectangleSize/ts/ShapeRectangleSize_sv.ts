@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>ShapeRectangleSize</name>
     <message>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Rektangel med &amp;Storlek</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw rectangle with position and size</source>
-        <translation type="unfinished"></translation>
+        <translation>RIta rektangel med position och storlek</translation>
     </message>
 </context>
 </TS>

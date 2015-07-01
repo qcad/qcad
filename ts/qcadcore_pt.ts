@@ -677,7 +677,7 @@ Abre diálogo de cores</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Oculto</translation>
+        <translation>Oculto</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1314,7 +1314,7 @@ Configurar...</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation type="unfinished">Tipo</translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location line="+1"/>

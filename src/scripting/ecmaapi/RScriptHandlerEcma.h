@@ -119,6 +119,7 @@ public:
     static QScriptValue ecmaQEventCast(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQFileClose(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQFileReadAll(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaQFileFileName(QScriptContext* context, QScriptEngine* engine);
 
     //static QScriptValue ecmaGetShapeIntersections(QScriptContext* context, QScriptEngine* engine);
 

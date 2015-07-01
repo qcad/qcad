@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>Line2P</name>
     <message>
@@ -46,22 +46,22 @@
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation type="unfinished"></translation>
+        <translation>,, R</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Begränsa längd eller vinkel</translation>
     </message>
     <message>
         <location filename="../Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Linje från &amp;2 punkter</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita enkel linje eller sekvens av linjer</translation>
     </message>
 </context>
 </TS>

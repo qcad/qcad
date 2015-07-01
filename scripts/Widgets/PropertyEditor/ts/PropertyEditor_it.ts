@@ -85,7 +85,7 @@ Nessuna selezione</translatorcomment>
     <message>
         <location line="+20"/>
         <source>Specific Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Proprietà specifiche</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -184,7 +184,7 @@ Specifica la base</translatorcomment>
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Proprietà generali</translation>
     </message>
     <message>
         <location line="+106"/>

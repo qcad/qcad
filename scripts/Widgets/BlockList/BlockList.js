@@ -213,7 +213,6 @@ RBlockListQt.prototype.getBlockItem = function(block) {
 
 RBlockListQt.prototype.updateItemIcons = function(item, block) {
     var iconName = BlockList.includeBasePath + "/Visible%1.svg".arg(Number(!block.isFrozen()));
-    qDebug("iconNAme: ", iconName);
     item.setIcon(BlockList.colVisible, new QIcon(iconName));
 
     var doc = this.di.getDocument();

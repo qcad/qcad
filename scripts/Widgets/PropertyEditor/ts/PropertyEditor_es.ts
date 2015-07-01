@@ -93,7 +93,7 @@ Seleccin nula</translatorcomment>
     <message>
         <location line="+20"/>
         <source>Specific Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propiedades específicas</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -202,7 +202,7 @@ Seleccione entidad base</translatorcomment>
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propiedades generales</translation>
     </message>
     <message>
         <location line="+106"/>

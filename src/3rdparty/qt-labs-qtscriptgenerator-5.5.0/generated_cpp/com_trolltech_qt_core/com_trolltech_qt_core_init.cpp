@@ -33,7 +33,7 @@ QScriptValue qtscript_create_QEvent_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QReadWriteLock_class(QScriptEngine *engine);
 QScriptValue qtscript_create_Global_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QTextStream_class(QScriptEngine *engine);
-//QScriptValue qtscript_create_QDirIterator_class(QScriptEngine *engine);
+QScriptValue qtscript_create_QDirIterator_class(QScriptEngine *engine);
 //QScriptValue qtscript_create_QFutureWatcher_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QDir_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QIODevice_class(QScriptEngine *engine);
@@ -134,7 +134,7 @@ static const char * const qtscript_com_trolltech_qt_core_class_names[] = {
     , "QReadWriteLock"
     , "Global"
     , "QTextStream"
-    //, "QDirIterator"
+    , "QDirIterator"
     //, "QFutureWatcher"
     , "QDir"
     , "QFile"
@@ -236,7 +236,7 @@ static const QtBindingCreator qtscript_com_trolltech_qt_core_class_functions[] =
     , qtscript_create_QReadWriteLock_class
     , qtscript_create_Global_class
     , qtscript_create_QTextStream_class
-    //, qtscript_create_QDirIterator_class
+    , qtscript_create_QDirIterator_class
     //, qtscript_create_QFutureWatcher_class
     , qtscript_create_QDir_class
     , qtscript_create_QFile_class

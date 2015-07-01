@@ -4,7 +4,7 @@
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../BlockList.js" line="+358"/>
+        <location filename="../BlockList.js" line="+357"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>

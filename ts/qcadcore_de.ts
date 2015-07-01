@@ -509,7 +509,7 @@
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Verdeckt</translation>
+        <translation>Verdeckt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -988,7 +988,7 @@
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation type="unfinished">Typ</translation>
+        <translation>Typ</translation>
     </message>
     <message>
         <location line="+1"/>

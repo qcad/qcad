@@ -48,7 +48,7 @@
     <message>
         <location line="+20"/>
         <source>Specific Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Špeciálne vlastnosti</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -124,7 +124,7 @@
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Všeobecné vlastnosti</translation>
     </message>
     <message>
         <location line="+35"/>

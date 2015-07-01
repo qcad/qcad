@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>DimRadial</name>
     <message>
@@ -11,17 +11,17 @@
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensionslinjens plats eller vinkel</translation>
     </message>
     <message>
         <location filename="../DimRadialInit.js" line="+2"/>
         <source>&amp;Radial</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Radiell</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw radial dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita radiell dimension</translation>
     </message>
 </context>
 </TS>

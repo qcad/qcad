@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>Polyline</name>
     <message>
@@ -16,7 +16,7 @@
     <message>
         <location line="+18"/>
         <source>&amp;Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Polylinje</translation>
     </message>
 </context>
 </TS>

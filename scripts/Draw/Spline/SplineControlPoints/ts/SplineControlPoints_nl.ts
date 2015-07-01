@@ -6,12 +6,12 @@
     <message>
         <location filename="../SplineControlPoints.js" line="+60"/>
         <source>First control point</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste controlepunt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Next control point</source>
-        <translation type="unfinished"></translation>
+        <translation>Volgende controlepunt</translation>
     </message>
     <message>
         <location line="+4"/>

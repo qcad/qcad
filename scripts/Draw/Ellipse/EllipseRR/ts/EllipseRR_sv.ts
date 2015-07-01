@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>EllipseRR</name>
     <message>
@@ -34,7 +34,7 @@
     <message>
         <location line="+5"/>
         <source>Draw ellipse with position and radii</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita ellips med position och radie</translation>
     </message>
 </context>
 </TS>

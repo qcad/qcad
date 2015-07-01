@@ -682,7 +682,7 @@ Colores
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Líneas ocultas</translation>
+        <translation>Líneas ocultas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1321,7 +1321,7 @@ Personalizado</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation type="unfinished">Tipo</translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location line="+1"/>

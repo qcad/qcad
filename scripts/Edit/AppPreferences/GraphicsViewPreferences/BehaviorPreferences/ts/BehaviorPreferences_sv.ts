@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>BehaviorPreferences</name>
     <message>
         <location filename="../BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Grafisk vy</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Beteende</translation>
     </message>
 </context>
 <context>
@@ -19,27 +19,27 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Right-Click</source>
-        <translation type="unfinished"></translation>
+        <translation>Högerklick</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Högercklicka för att avmarkera objekt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-Click</source>
-        <translation type="unfinished"></translation>
+        <translation>Dubbelklick</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Double-click to edit text</source>
-        <translation type="unfinished"></translation>
+        <translation>Dubbelklicka för att redigera text</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation type="unfinished"></translation>
+        <translation>Dubbelklick på blockreferens öppnar block</translation>
     </message>
     <message>
         <location line="+10"/>

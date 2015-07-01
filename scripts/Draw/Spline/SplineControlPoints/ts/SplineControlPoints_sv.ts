@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>SplineControlPoints</name>
     <message>
         <location filename="../SplineControlPoints.js" line="+60"/>
         <source>First control point</source>
-        <translation type="unfinished"></translation>
+        <translation>Första kontrollpunkt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Next control point</source>
-        <translation type="unfinished"></translation>
+        <translation>Nästa kontrollpunkt</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Klar</translation>
     </message>
     <message>
         <location filename="../SplineControlPoints.ui" line="+23"/>

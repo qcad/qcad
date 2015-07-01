@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>Spline</name>
     <message>
@@ -16,7 +16,7 @@
     <message>
         <location line="+18"/>
         <source>&amp;Spline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kurva</translation>
     </message>
 </context>
 </TS>

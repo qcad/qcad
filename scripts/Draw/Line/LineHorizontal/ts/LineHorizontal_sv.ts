@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>LineHorizontal</name>
     <message>
         <location filename="../LineHorizontal.ui" line="+17"/>
         <source>&amp;Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Längd:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Referenspunkt:</translation>
     </message>
     <message>
         <location line="+11"/>

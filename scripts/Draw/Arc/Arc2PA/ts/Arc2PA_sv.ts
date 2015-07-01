@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>Arc2PA</name>
     <message>
         <location filename="../Arc2PA.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Startpunkt</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>Slutpunkt</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Invalid angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogiltig vinkel</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>Båda punkterna är identiska</translation>
     </message>
     <message>
         <location filename="../Arc2PA.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vinkel:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Riktning:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Motsols (positiv)</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+17"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Riktning</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Medsols (negativ)</translation>
     </message>
     <message>
         <location filename="../Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;2 Punkter och vinkel</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita båge med 2 punkter och vinkel</translation>
     </message>
 </context>
 </TS>

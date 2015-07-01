@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>LineAngle</name>
     <message>
         <location filename="../LineAngle.js" line="+65"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation type="unfinished"></translation>
+        <translation>Ange position</translation>
     </message>
     <message>
         <location filename="../LineAngle.ui" line="+17"/>
         <source>&amp;Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vinkel:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Längd:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Referenspunkt:</translation>
     </message>
     <message>
         <location line="+11"/>

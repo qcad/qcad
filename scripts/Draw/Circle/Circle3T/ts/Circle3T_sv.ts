@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>Circle3T</name>
     <message>
@@ -37,7 +37,7 @@
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to three entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita cirkel tangerat mot tre objekt</translation>
     </message>
 </context>
 </TS>

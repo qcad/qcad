@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>EllipseArcCPPA</name>
     <message>
         <location filename="../EllipseArcCPPA.js" line="+74"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Mittpunkt</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -56,48 +56,48 @@
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vinkel:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Minor radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Inre radie:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Start angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Startvinkel:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Slutvinkel:</translation>
     </message>
     <message>
         <location filename="../EllipseArcCPPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Riktning:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Motsols (positiv)</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+17"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Riktning</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Medsols (negativ)</translation>
     </message>
     <message>
         <location filename="../EllipseArcCPPAInit.js" line="+2"/>
         <source>&amp;Ellipse Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ellips båge</translation>
     </message>
     <message>
         <location line="+4"/>

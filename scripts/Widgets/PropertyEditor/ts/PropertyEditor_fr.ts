@@ -103,7 +103,7 @@ Dessin enregistré : %1</translatorcomment>
     <message>
         <location line="+20"/>
         <source>Specific Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriétés spécifiques</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -194,7 +194,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriétés générales</translation>
     </message>
     <message>
         <location line="+106"/>

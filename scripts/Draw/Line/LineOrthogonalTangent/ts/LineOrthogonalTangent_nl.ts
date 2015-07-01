@@ -16,7 +16,7 @@
     <message>
         <location line="+139"/>
         <source>No tangent possible</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen tangent mogelijk</translation>
     </message>
     <message>
         <location filename="../LineOrthogonalTangentInit.js" line="+2"/>

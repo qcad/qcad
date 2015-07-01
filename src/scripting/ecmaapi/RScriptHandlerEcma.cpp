@@ -504,6 +504,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 # endif
     classQFile.property("prototype").setProperty("readAll",
             engine->newFunction(ecmaQFileReadAll));
+    classQFile.property("prototype").setProperty("fileName",
+            engine->newFunction(ecmaQFileFileName));
 #endif
 
     QScriptValue classQt = globalObject.property("Qt");
@@ -1991,6 +1993,21 @@ QScriptValue RScriptHandlerEcma::ecmaQFileReadAll(QScriptContext* context, QScri
     }
 
     QByteArray ret = self->readAll();
+
+    return qScriptValueFromValue(engine, ret);
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQFileFileName(QScriptContext* context, QScriptEngine* engine) {
+    QFile* self = qscriptvalue_cast<QFile*>(context->thisObject());
+    if (self == NULL) {
+        return throwError("QFile.fileName: Object is NULL", context);
+    }
+
+    if (context->argumentCount() != 0) {
+        return throwError("Wrong number/types of arguments for QFile.readAll.", context);
+    }
+
+    QString ret = self->fileName();
 
     return qScriptValueFromValue(engine, ret);
 }

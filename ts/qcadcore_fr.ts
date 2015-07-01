@@ -676,7 +676,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Caché</translation>
+        <translation>Caché</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1317,7 +1317,7 @@ Personnalisé</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation type="unfinished">Type</translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location line="+1"/>

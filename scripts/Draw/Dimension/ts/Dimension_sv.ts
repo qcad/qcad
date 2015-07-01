@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="sv">
 <context>
     <name>Dimension</name>
     <message>
         <location filename="../Dimension.js" line="+63"/>
         <source>No prefix</source>
-        <translation type="unfinished"></translation>
+        <translation>Inget prefix</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Radie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric screw</source>
-        <translation type="unfinished"></translation>
+        <translation>Metrisk skruv</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -61,42 +61,42 @@
     <message>
         <location line="+18"/>
         <source>D&amp;imension</source>
-        <translation type="unfinished"></translation>
+        <translation>D&amp;imension</translation>
     </message>
     <message>
         <location filename="../Dimension.ui" line="+29"/>
         <source>Label:</source>
-        <translation type="unfinished"></translation>
+        <translation>Etikett:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Prefix</source>
-        <translation type="unfinished"></translation>
+        <translation>Prefix</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation type="unfinished"></translation>
+        <translation>Skriv in fast etikett eller lämna tom för automatisk etikett</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Upper tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>Övre tolerans</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Lower tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>Undre tolerans</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Skala</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Ritningsskala</translation>
     </message>
 </context>
 </TS>
