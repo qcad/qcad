@@ -550,14 +550,6 @@ void RGraphicsView::simulateMouseMoveEvent() {
  * that is attached to this view.
  */
 void RGraphicsView::handleMouseMoveEvent(RMouseEvent& event) {
-    // use mouse press position for preview posisiton:
-//    if (mousePressModelPosition.isValid()) {
-//        event.setModelPosition(mousePressModelPosition);
-//    }
-//    if (mousePressScreenPosition.isValid()) {
-//        event.setScreenPosition(mousePressScreenPosition);
-//    }
-
     lastKnownModelPosition = event.getModelPosition();
     lastKnownScreenPosition = event.getScreenPosition();
     if (scene != NULL) {

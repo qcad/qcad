@@ -1442,7 +1442,6 @@ void RDocumentInterface::addZoomBoxToPreview(const RBox& box) {
         scene->setLineweight(RLineweight::Weight000);
         scene->setStyle(Qt::DashLine);
         scene->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
-        //scene->setScreenBasedLinetypes(true);
 
         for (int i=0; i<4; ++i) {
             scene->exportLine(RLine(boxCorners[i], boxCorners[(i+1)%4]));
