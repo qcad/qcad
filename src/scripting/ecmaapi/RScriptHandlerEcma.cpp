@@ -2004,7 +2004,7 @@ QScriptValue RScriptHandlerEcma::ecmaQFileFileName(QScriptContext* context, QScr
     }
 
     if (context->argumentCount() != 0) {
-        return throwError("Wrong number/types of arguments for QFile.readAll.", context);
+        return throwError("Wrong number/types of arguments for QFile.fileName.", context);
     }
 
     QString ret = self->fileName();
