@@ -14,15 +14,6 @@ maxThreads=256
 
 src2srcml_output=`src2srcml -h | grep \\\-\\\-output`
 
-# detect if src2srcml requires -o switch for output:
-if [ "x$src2srcml_output" = "x" ]; then
-    switch=""
-else
-    switch="-o"
-fi
-
-echo $switch
-
 SPATH=$(pwd)
 if [ -z "$1" ]
 then
@@ -56,13 +47,13 @@ do
         #if [ $f -nt "$SPATH/$srcmlfile" ]; then
             echo "processing $cppfile ..."
             (
-                #src2srcml "$f" $switch "$SPATH/$srcmlfile"
-                if [ `uname` == "Darwin" ]
-                then
-                    DYLD_LIBRARY_PATH=$srcmlpath srcml "$f" $switch "$SPATH/$srcmlfile"
-                else
-                    LD_LIBRARY_PATH=$srcmlpath srcml "$f" $switch "$SPATH/$srcmlfile"
-                fi
+                src2srcml "$f" "$SPATH/$srcmlfile"
+                #if [ `uname` == "Darwin" ]
+                #then
+                #    DYLD_LIBRARY_PATH=$srcmlpath srcml "$f" -o "$SPATH/$srcmlfile"
+                #else
+                #    LD_LIBRARY_PATH=$srcmlpath srcml "$f" -o "$SPATH/$srcmlfile"
+                #fi
                 #tidy -q -i -xml -m "$SPATH/$srcmlfile" # tidy messes up things
             ) &
         #fi

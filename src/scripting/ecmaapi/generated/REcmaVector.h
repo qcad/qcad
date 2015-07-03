@@ -183,10 +183,16 @@
         getClosest
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getClosest2d
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getClosestDistance
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getClosestIndex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getClosestIndex2d
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         operator_add

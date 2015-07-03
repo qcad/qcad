@@ -87,6 +87,9 @@
     }</block></function>
 
     <function><type><name>void</name></type> <name>setUnit</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>u</name></decl></param>)</parameter_list> <block>{
+        <decl_stmt><decl><type><name>QVariant</name></type> <name>v</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>v</name>.<call><name>setValue</name><argument_list>(<argument><expr>(<name>int</name>)<name>u</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>knownVariables</name>.<call><name>insert</name><argument_list>(<argument><expr><name><name>RS</name>::<name>INSUNITS</name></name></expr></argument>, <argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
         <expr_stmt><expr><name>unit</name> = <name>u</name></expr>;</expr_stmt>
     }</block></function>
 
@@ -95,6 +98,9 @@
     }</block></function>
 
     <function><type><name>void</name></type> <name>setLinetypeScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list> <block>{
+        <decl_stmt><decl><type><name>QVariant</name></type> <name>v</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>v</name>.<call><name>setValue</name><argument_list>(<argument><expr>(<name>double</name>)<name>s</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>knownVariables</name>.<call><name>insert</name><argument_list>(<argument><expr><name><name>RS</name>::<name>LTSCALE</name></name></expr></argument>, <argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
         <expr_stmt><expr><name>linetypeScale</name> = <name>s</name></expr>;</expr_stmt>
     }</block></function>
 

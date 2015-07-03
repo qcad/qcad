@@ -351,6 +351,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getClosest2d" cppName="getClosest2d"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="list"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getClosestDistance" cppName="getClosestDistance"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -363,6 +372,17 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="getClosestIndex" cppName="getClosestIndex"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="list"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="ignoreZ"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
+    <method name="getClosestIndex2d" cppName="getClosestIndex2d"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false">

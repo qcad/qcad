@@ -218,6 +218,7 @@
 #include "REcmaRulerQt.h"
 #include "REcmaRunner.h"
 #include "REcmaS.h"
+#include "REcmaScaleSelectionOperation.h"
 #include "REcmaScriptAction.h"
 #include "REcmaSelectionListener.h"
 #include "REcmaSelectionListenerAdapter.h"
@@ -824,6 +825,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaModifyObjectsOperation::initEcma(*engine);
     REcmaMoveReferencePointOperation::initEcma(*engine);
     REcmaMoveSelectionOperation::initEcma(*engine);
+    REcmaScaleSelectionOperation::initEcma(*engine);
     REcmaPasteOperation::initEcma(*engine);
 
     REcmaTransformation::initEcma(*engine);

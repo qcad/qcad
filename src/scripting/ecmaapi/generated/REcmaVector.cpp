@@ -174,9 +174,13 @@
             
             REcmaHelper::registerFunction(&engine, proto, getClosest, "getClosest");
             
+            REcmaHelper::registerFunction(&engine, proto, getClosest2d, "getClosest2d");
+            
             REcmaHelper::registerFunction(&engine, proto, getClosestDistance, "getClosestDistance");
             
             REcmaHelper::registerFunction(&engine, proto, getClosestIndex, "getClosestIndex");
+            
+            REcmaHelper::registerFunction(&engine, proto, getClosestIndex2d, "getClosestIndex2d");
             
             REcmaHelper::registerFunction(&engine, proto, operator_add, "operator_add");
             
@@ -3874,6 +3878,67 @@
             return result;
         }
          QScriptValue
+        REcmaVector::getClosest2d
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::getClosest2d", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getClosest2d";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("getClosest2d", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getClosest2d(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosest2d().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::getClosest2d", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaVector::getClosestDistance
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4001,11 +4066,118 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getClosestIndex(a0
+        ,
+    a1);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosestIndex().",
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::getClosestIndex", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::getClosestIndex2d
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::getClosestIndex2d", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getClosestIndex2d";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("getClosestIndex2d", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getClosestIndex2d(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosestIndex2d().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::getClosestIndex2d", context, engine);
             return result;
         }
          QScriptValue
