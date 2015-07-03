@@ -132,11 +132,12 @@ void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const RVector& 
 void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const QVariant& value) {
     if (key==RS::INSUNITS) {
         setUnit((RS::Unit)value.toInt());
+        return;
     }
-    // TODO:
-//    else if (key==RS::LTSCALE) {
-//        setLinetypeScale(value.toDouble());
-//    }
+    else if (key==RS::LTSCALE) {
+        setLinetypeScale(value.toDouble());
+        return;
+    }
 
     knownVariables.insert(key, value);
 }
@@ -146,10 +147,9 @@ QVariant RDocumentVariables::getKnownVariable(RS::KnownVariable key) const {
         return getUnit();
     }
 
-//    if (key==RS::LTSCALE) {
-//        // TODO
-//        return getLinetypeScale();
-//    }
+    if (key==RS::LTSCALE) {
+        return getLinetypeScale();
+    }
 
     // if DIMADEC is -1, DIMDEC is used:
     if (key==RS::DIMADEC &&

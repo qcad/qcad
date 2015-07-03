@@ -1422,8 +1422,9 @@ double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
 
     // document wide linetype scale:
     double docLinetypeScale = document->getKnownVariable(RS::LTSCALE).toDouble();
+
+    // LTSCALE might be zero:
     if (docLinetypeScale>1e-6) {
-        // LTSCALE might be zero:
         factor *= docLinetypeScale;
     }
 

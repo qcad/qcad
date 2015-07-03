@@ -86,6 +86,9 @@ public:
     }
 
     void setUnit(RS::Unit u) {
+        QVariant v;
+        v.setValue((int)u);
+        knownVariables.insert(RS::INSUNITS, v);
         unit = u;
     }
 
@@ -94,6 +97,9 @@ public:
     }
 
     void setLinetypeScale(double s) {
+        QVariant v;
+        v.setValue((double)s);
+        knownVariables.insert(RS::LTSCALE, v);
         linetypeScale = s;
     }
 
