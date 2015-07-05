@@ -283,12 +283,12 @@ function setUpDragAndDrop(appWin) {
     });
 
     appWin.drop.connect(function(evt) {
-//        var appWin = RMainWindowQt.getMainWindow();
-//        if (!isNull(appWin)) {
-//            appWin.activateWindow();
-//            appWin.raise();
-//            appWin.setFocus(Qt.OtherFocusReason);
-//        }
+        var appWin = RMainWindowQt.getMainWindow();
+        if (!isNull(appWin)) {
+            appWin.activateWindow();
+            appWin.raise();
+            appWin.setFocus(Qt.OtherFocusReason);
+        }
 
         var urls = getUrlsFromMimeData(evt.mimeData());
         var urlStrings = [];
