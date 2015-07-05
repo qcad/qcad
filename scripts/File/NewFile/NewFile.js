@@ -230,11 +230,14 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
     appWin.resumedTab.connect(NewFile, "updateTitle");
 
     // make sure the MDI widget is maximized before performing an auto zoom:
-    appWin.enabled = false;
-    for (var i=0; i<5; i++) {
-        QCoreApplication.processEvents();
+    // TODO: fix for Qt 5:
+    if (!RSettings.isQt(5)) {
+        appWin.enabled = false;
+        for (var i=0; i<5; i++) {
+            QCoreApplication.processEvents();
+        }
+        appWin.enabled = true;
     }
-    appWin.enabled = true;
 
     //qDebug("subWindowActivated");
     appWin.subWindowActivated(mdiChild);

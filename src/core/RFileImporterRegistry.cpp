@@ -82,8 +82,7 @@ RFileImporter* RFileImporterRegistry::getFileImporter(
         return bestMatch->instantiate(document, messageHandler, progressHandler);
     }
 
-    qWarning("RFileImporterRegistry::getFileImporter: "
-        "No suitable importer found");
+    qWarning() << "RFileImporterRegistry::getFileImporter: No suitable importer found for \n" << fileName;
 
     return NULL;
 }

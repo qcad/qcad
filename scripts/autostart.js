@@ -173,7 +173,7 @@ function openFiles(args, createNew) {
                 fileInfo = new QFileInfo(fileName);
                 argFileInfo = new QFileInfo(getAbsolutePathForArg(arg));
 
-                if (fileInfo.equals(argFileInfo)) {
+                if (fileInfo.absoluteFilePath()===argFileInfo.absoluteFilePath()) {
                     mdiArea.setActiveSubWindow(mdiChildren[k]);
                     foundExisting = true;
                     break;
@@ -283,12 +283,12 @@ function setUpDragAndDrop(appWin) {
     });
 
     appWin.drop.connect(function(evt) {
-        var appWin = RMainWindowQt.getMainWindow();
-        if (!isNull(appWin)) {
-            appWin.activateWindow();
-            appWin.raise();
-            appWin.setFocus(Qt.OtherFocusReason);
-        }
+//        var appWin = RMainWindowQt.getMainWindow();
+//        if (!isNull(appWin)) {
+//            appWin.activateWindow();
+//            appWin.raise();
+//            appWin.setFocus(Qt.OtherFocusReason);
+//        }
 
         var urls = getUrlsFromMimeData(evt.mimeData());
         var urlStrings = [];
