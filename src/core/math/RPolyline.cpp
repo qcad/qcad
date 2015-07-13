@@ -970,38 +970,34 @@ void RPolyline::print(QDebug dbg) const {
 bool RPolyline::simplify(double angleTolerance) {
     bool ret = false;
     RPolyline newPolyline;
-    //ret.appendVertex(getStartPoint());
 
     RS::EntityType type = RS::EntityUnknown;
     double angle = RMAXDOUBLE;
-    //double radius = 0;
-    //RVector center;
-    //RVector vertex;
 
     for (int i=0; i<countSegments(); i++) {
         QSharedPointer<RShape> seg = getSegmentAt(i);
 
         QSharedPointer<RLine> line = seg.dynamicCast<RLine>();
         if (!line.isNull()) {
-            double angleDiff = qAbs(RMath::getAngleDifference180(line->getAngle(), angle));
-//            qDebug() << "angle diff: " << angleDiff;
-//            qDebug() << "tol: " << angleTolerance;
-            if (type==RS::EntityLine && angleDiff<angleTolerance) {
-
-                //vertex = line->getEndPoint();
+            if (line->getLength()<RS::PointTolerance) {
                 ret = true;
             }
             else {
-                //qDebug() << "start: " << line->getStartPoint();
-                newPolyline.appendVertex(line->getStartPoint());
-                angle = line->getAngle();
-                type = RS::EntityLine;
+                double angleDiff = qAbs(RMath::getAngleDifference180(line->getAngle(), angle));
+                if (type==RS::EntityLine && angleDiff<angleTolerance) {
+                    ret = true;
+                }
+                else {
+                    newPolyline.appendVertex(line->getStartPoint());
+                    angle = line->getAngle();
+                    type = RS::EntityLine;
+                }
             }
         }
 
         QSharedPointer<RArc> arc = seg.dynamicCast<RArc>();
         if (!arc.isNull()) {
-            // TODO
+            // TODO: simplify anything if possible:
             newPolyline.appendVertex(arc->getStartPoint(), arc->getBulge());
         }
     }
@@ -1013,12 +1009,6 @@ bool RPolyline::simplify(double angleTolerance) {
         newPolyline.appendVertex(getEndPoint());
     }
 
-//    qDebug() << "old polyline: " << *this;
-//    qDebug() << "new polyline: " << newPolyline;
-
-    //*this = newPolyline;
-
-    //clear();
     vertices = newPolyline.vertices;
     bulges = newPolyline.bulges;
     closed = newPolyline.closed;
