@@ -109,7 +109,6 @@ RBlockListQt.prototype.filter = function(block) {
  * Called when blocks are addded, edited or deleted. Updates the block list.
  */
 RBlockListQt.prototype.updateBlocks = function(documentInterface) {
-    qDebug("RBlockListQt.prototype.updateBlocks");
     this.di = documentInterface;
 
     var block;
@@ -264,7 +263,6 @@ RBlockListQt.prototype.itemColumnClickedSlot = function(item, column) {
  * Called when a block name is activated (clicked, highlighted) in the block list.
  */
 RBlockListQt.prototype.blockActivated = function() {
-    qDebug("RBlockListQt.prototype.blockActivated");
     if (isNull(this.di)) {
         this.enableActions(false);
         return;
