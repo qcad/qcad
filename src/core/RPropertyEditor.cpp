@@ -253,7 +253,6 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
 
         QPair<QVariant, RPropertyAttributes> p = obj->getProperty(REntity::PropertyType);
         RS::EntityType type = (RS::EntityType)p.first.toInt();
-        qDebug() << "type: " << type;
 
         if (entityTypeFilterProp==RS::EntityAll || obj->getType()==entityTypeFilterProp) {
             bool customOnly = false;
