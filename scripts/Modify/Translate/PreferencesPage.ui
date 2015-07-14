@@ -16,6 +16,9 @@
      <property name="text">
       <string>Use dialog for tool options</string>
      </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item>
