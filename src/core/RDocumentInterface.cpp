@@ -706,6 +706,9 @@ void RDocumentInterface::mousePressEvent(RMouseEvent& event) {
         return;
     }
 
+    qDebug() << "di press at: " << event.posF();
+    qDebug() << "di press at: " << event.getModelPosition();
+
     if (hasCurrentAction()) {
         getCurrentAction()->mousePressEvent(event);
     } else if (defaultAction != NULL) {

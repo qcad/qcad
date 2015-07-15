@@ -137,6 +137,9 @@ private:
     QCursor lastCursor;
 
     bool gesturesEnabled;
+    QTime mouseClickTimer;
+    RVector mousePressScreenPosition;
+    RVector mousePressModelPosition;
 };
 
 Q_DECLARE_METATYPE(RGraphicsViewQt*)

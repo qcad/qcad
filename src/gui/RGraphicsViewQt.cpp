@@ -233,6 +233,9 @@ void RGraphicsViewQt::mousePressEvent(QMouseEvent* event) {
         return;
     }
     RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
+    mousePressScreenPosition = e.getScreenPosition();
+    mousePressModelPosition = e.getModelPosition();
+    mouseClickTimer.start();
     RGraphicsView::handleMousePressEvent(e);
     lastButtonState = event->buttons();
     event->accept();
@@ -243,6 +246,10 @@ void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
         return;
     }
     RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
+    if (mouseClickTimer.elapsed()<200) {
+        e.setScreenPosition(mousePressScreenPosition);
+        e.setModelPosition(mousePressModelPosition);
+    }
     RGraphicsView::handleMouseReleaseEvent(e);
     lastButtonState = event->buttons();
     event->accept();
