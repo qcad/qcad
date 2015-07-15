@@ -10,7 +10,7 @@ HEADERS += \
            $$PWD/qtscriptshell_QChildEvent.h \
            $$PWD/qtscriptshell_QCoreApplication.h \
            #$$PWD/qtscriptshell_QDataStream.h \
-           $$PWD/qtscriptshell_QDirIterator.h \
+           #$$PWD/qtscriptshell_QDirIterator.h \
            $$PWD/qtscriptshell_QEvent.h \
            $$PWD/qtscriptshell_QEventLoop.h \
            $$PWD/qtscriptshell_QEventTransition.h \

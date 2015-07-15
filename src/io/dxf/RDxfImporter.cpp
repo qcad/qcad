@@ -1124,6 +1124,7 @@ void RDxfImporter::addDimOrdinate(const DL_DimensionData& data,
 
 void RDxfImporter::addLeader(const DL_LeaderData& data) {
     leader = RLeaderData();
+    leader.setDocument(document);
     leaderArrowHead = data.arrowHeadFlag==1;
 }
 

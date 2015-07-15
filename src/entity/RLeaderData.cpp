@@ -43,6 +43,9 @@ double RLeaderData::getDimasz() const {
     if (document!=NULL) {
         dimasz = document->getKnownVariable(RS::DIMASZ, dimasz).toDouble();
     }
+    else {
+        qWarning() << "RLeaderData::getDimasz: no document set";
+    }
 
     return dimasz * getDimscale();
 }
@@ -52,6 +55,9 @@ double RLeaderData::getDimscale() const {
 
     if (document!=NULL) {
         dimscale = document->getKnownVariable(RS::DIMSCALE, dimscale).toDouble();
+    }
+    else {
+        qWarning() << "RLeaderData::getDimscale: no document set";
     }
 
     return dimscale;
