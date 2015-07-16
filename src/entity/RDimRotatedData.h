@@ -61,12 +61,16 @@ public:
     virtual QList<RVector> getReferencePoints(
         RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
-//    virtual bool moveReferencePoint(const RVector& referencePoint,
-//        const RVector& targetPoint);
+    virtual bool moveReferencePoint(const RVector& referencePoint,
+        const RVector& targetPoint);
+
+    virtual QList<RVector> getDimPoints() const;
 
     virtual void recomputeDefinitionPoint(
         const RVector& oldExtPoint1, const RVector& oldExtPoint2,
         const RVector& newExtPoint1, const RVector& newExtPoint2);
+
+    //virtual void recomputeDefinitionPoint(const RVector& oldDimLineGrip, const RVector& newDimLineGrip);
 
     virtual bool rotate(double rotation, const RVector& center);
     virtual bool mirror(const RLine& axis);

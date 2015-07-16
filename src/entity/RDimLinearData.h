@@ -78,6 +78,11 @@ public:
         Q_UNUSED(newExtPoint2)
     }
 
+//    virtual void recomputeDefinitionPoint(const RVector& oldDimLineGrip, const RVector& newDimLineGrip) {
+//        Q_UNUSED(oldDimLineGrip)
+//        Q_UNUSED(newDimLineGrip)
+//    }
+
     virtual bool moveReferencePoint(const RVector& referencePoint, 
         const RVector& targetPoint);
 

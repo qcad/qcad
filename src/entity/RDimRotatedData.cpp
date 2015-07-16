@@ -57,8 +57,7 @@ bool RDimRotatedData::isValid() const {
     return RDimLinearData::isValid() && RMath::isNormal(rotation);
 }
 
-QList<RVector> RDimRotatedData::getReferencePoints(
-    RS::ProjectionRenderingHint hint) const {
+QList<RVector> RDimRotatedData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
 
     QList<RVector> ret = RDimLinearData::getReferencePoints(hint);
 
@@ -68,6 +67,47 @@ QList<RVector> RDimRotatedData::getReferencePoints(
     return ret;
 }
 
+bool RDimRotatedData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint) {
+    // if definition point and extension points are on one line,
+    // move the extension points together with the definition point:
+    bool moveExtensionPoints = false;
+    if (referencePoint.equalsFuzzy(definitionPoint)) {
+        if (RLine(extensionPoint1, extensionPoint2).isOnShape(definitionPoint, false)) {
+            moveExtensionPoints = true;
+        }
+    }
+
+    bool ret = RDimLinearData::moveReferencePoint(referencePoint, targetPoint);
+
+    if (moveExtensionPoints) {
+        // move extension points with definition point:
+        RVector dir = RVector::createPolar(1.0, rotation);
+        RLine dimLine = RLine(targetPoint, targetPoint + dir);
+        extensionPoint1 = dimLine.getClosestPointOnShape(extensionPoint1, false);
+        extensionPoint2 = dimLine.getClosestPointOnShape(extensionPoint2, false);
+        definitionPoint = RVector::getAverage(extensionPoint1, extensionPoint2);
+        //recomputeDefinitionPoint(referencePoint, targetPoint);
+    }
+
+    return ret;
+}
+
+QList<RVector> RDimRotatedData::getDimPoints() const {
+    QList<RVector> ret;
+
+    RVector dirDim = RVector::createPolar(1.0, rotation);
+
+    // construction line for dimension line
+    RLine dimLine(definitionPoint, definitionPoint + dirDim);
+    ret.append(dimLine.getClosestPointOnShape(extensionPoint1, false));
+    ret.append(dimLine.getClosestPointOnShape(extensionPoint2, false));
+
+    return ret;
+}
+
+/**
+ * Recompute definition point if extension point(s) have changed.
+ */
 void RDimRotatedData::recomputeDefinitionPoint(
     const RVector& oldExtPoint1, const RVector& oldExtPoint2,
     const RVector& newExtPoint1, const RVector& newExtPoint2) {
@@ -82,12 +122,35 @@ void RDimRotatedData::recomputeDefinitionPoint(
     RLine dimLine(definitionPoint, definitionPoint + dirDim);
 
     RVector dimP1 = dimLine.getClosestPointOnShape(newExtPoint1, false);
-    //RVector dimP2 = dimLine.getClosestPointOnShape(extensionPoint2, false);
+    RVector dimP2 = dimLine.getClosestPointOnShape(newExtPoint2, false);
+
+    // make sure the dimension line is movable if dimension point == extension point
+    if (dimP1.equalsFuzzy(newExtPoint1) || dimP1.equalsFuzzy(newExtPoint2)) {
+        dimP1 = RVector::getAverage(dimP1, dimP2);
+    }
 
     if (dimP1.isValid()) {
         definitionPoint = dimP1;
     }
 }
+
+/**
+ * Recompute definition point if
+ */
+//void RDimRotatedData::recomputeDefinitionPoint(const RVector& oldDimLineGrip, const RVector& newDimLineGrip) {
+//    Q_UNUSED(oldDimLineGrip)
+
+//    RVector extDir = RVector::createPolar(1.0, rotation);
+
+//    // construction line for dimension line
+//    RLine extLine1(extensionPoint1, extensionPoint1 + extDir);
+
+//    RVector dimP1 = extLine1.getClosestPointOnShape(newDimLineGrip, false);
+
+//    if (dimP1.isValid()) {
+//        definitionPoint = dimP1;
+//    }
+//}
 
 bool RDimRotatedData::rotate(double rotation, const RVector& center) {
     RDimLinearData::rotate(rotation, center);
@@ -121,14 +184,9 @@ QList<QSharedPointer<RShape> > RDimRotatedData::getShapes(const RBox& queryBox, 
     double dimexo = getDimexo();
     double dimexe = getDimexe();
 
-    double extAngle = rotation - (M_PI/2.0);
-
-    RVector dirDim = RVector::createPolar(1.0, rotation);
-
-    // construction line for dimension line
-    RLine dimLine(definitionPoint, definitionPoint + dirDim);
-    RVector dimP1 = dimLine.getClosestPointOnShape(extensionPoint1, false);
-    RVector dimP2 = dimLine.getClosestPointOnShape(extensionPoint2, false);
+    QList<RVector> l = getDimPoints();
+    RVector dimP1 = l.at(0);
+    RVector dimP2 = l.at(1);
 
     // definitive dimension line:
     ret += getDimensionLineShapes(dimP1, dimP2, true, true);

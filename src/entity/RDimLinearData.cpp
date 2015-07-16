@@ -68,14 +68,16 @@ bool RDimLinearData::moveReferencePoint(const RVector& referencePoint,
                                  targetPoint, extensionPoint2);
         extensionPoint1 = targetPoint;
         autoTextPos = true;
-        ret = true;
+        update();
+        return true;
     }
     else if (referencePoint.equalsFuzzy(extensionPoint2)) {
         recomputeDefinitionPoint(extensionPoint1, extensionPoint2,
                                  extensionPoint1, targetPoint);
         extensionPoint2 = targetPoint;
         autoTextPos = true;
-        ret = true;
+        update();
+        return true;
     }
     else if (recomputeDefPoint) {
         recomputeDefinitionPoint(extensionPoint1, extensionPoint2,

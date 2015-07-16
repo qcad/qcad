@@ -191,6 +191,8 @@ public:
     RVector getFloor() const;
     RVector getCeil() const;
 
+    static bool containsFuzzy(const QList<RVector>& vectors, const RVector& v, double tol = RS::PointTolerance);
+
     static RVector getMinimum(const QList<RVector>& vectors);
     static RVector getMaximum(const QList<RVector>& vectors);
 
@@ -203,6 +205,7 @@ public:
     static RVector getMaximum(const RVector& v1, const RVector& v2);
 
     static RVector getAverage(const RVector& v1, const RVector& v2);
+    static RVector getAverage(const QList<RVector>& vectors);
 
     static QList<double> getXList(const QList<RVector>& vectors);
     static QList<double> getYList(const QList<RVector>& vectors);

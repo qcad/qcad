@@ -570,6 +570,16 @@ bool RVector::operator ==(const RVector& v) const {
     return false;
 }
 
+bool RVector::containsFuzzy(const QList<RVector>& vectors, const RVector& v, double tol) {
+    for (int i=0; i<vectors.length(); i++) {
+        if (v.equalsFuzzy(vectors[i], tol)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 /**
  * \return A vector with the minimum components from the given vectors.
  * These might be mixed components from all vectors.
@@ -707,6 +717,14 @@ RVector RVector::getMaximum(const RVector& v1, const RVector& v2) {
  */
 RVector RVector::getAverage(const RVector& v1, const RVector& v2) {
     return (v1+v2)/2.0;
+}
+
+RVector RVector::getAverage(const QList<RVector>& vectors) {
+    RVector sum = RVector::nullVector;
+    for (int i=0; i<vectors.length(); i++) {
+        sum+=vectors[i];
+    }
+    return sum/vectors.length();
 }
 
 /**

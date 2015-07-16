@@ -141,40 +141,29 @@ QList<RVector> RDimensionData::getReferencePoints(
 bool RDimensionData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
 
-    bool ret = false;
-
-//    qDebug() << "RDimensionData::moveReferencePoint";
-//    qDebug() << "    textPosition: " << textPositionCenter;
-//    qDebug() << "    referencePoint: " << referencePoint;
-
     if (referencePoint.equalsFuzzy(definitionPoint)) {
         definitionPoint = targetPoint;
         autoTextPos = true;
-        ret = true;
-    }
-    else {
-        if (textPositionSide.isValid()) {
-            if (referencePoint.equalsFuzzy(textPositionSide)) {
-                textPositionCenter = targetPoint;
-                textPositionSide = RVector::invalid;
-                autoTextPos = false;
-                ret = true;
-            }
-        }
-        else {
-            if (referencePoint.equalsFuzzy(textPositionCenter)) {
-                textPositionCenter = targetPoint;
-                autoTextPos = false;
-                ret = true;
-            }
-        }
-    }
-
-    if (ret) {
         update();
+        return true;
+    }
+    if (textPositionSide.isValid()) {
+        if (referencePoint.equalsFuzzy(textPositionSide)) {
+            textPositionCenter = targetPoint;
+            textPositionSide = RVector::invalid;
+            autoTextPos = false;
+            update();
+            return true;
+        }
+    }
+    if (referencePoint.equalsFuzzy(textPositionCenter)) {
+        textPositionCenter = targetPoint;
+        autoTextPos = false;
+        update();
+        return true;
     }
 
-    return ret;
+    return false;
 }
 
 bool RDimensionData::move(const RVector& offset) {
