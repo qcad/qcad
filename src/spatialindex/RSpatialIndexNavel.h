@@ -139,8 +139,7 @@ protected:
      */
     class RSiRegion: public SpatialIndex::Region {
     public:
-        RSiRegion(double x1, double y1, double z1, double x2, double y2,
-                double z2);
+        RSiRegion(double x1, double y1, double z1, double x2, double y2, double z2);
     };
 
     /**

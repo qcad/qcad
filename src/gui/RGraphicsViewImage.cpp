@@ -292,12 +292,13 @@ void RGraphicsViewImage::updateImage() {
 void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RVector& pos, bool highlight) {
     RColor color = RSettings::getColor("GraphicsViewColors/ReferencePointColor", RColor(0,0,172));
     if (highlight) {
-        color = RColor::getHighlighted(color, backgroundColor);
+        color = RColor::getHighlighted(color, backgroundColor, 100);
     }
     int size = RSettings::getIntValue("GraphicsView/ReferencePointSize", 10);
     int shape = RSettings::getIntValue("GraphicsView/ReferencePointShape", 0);
 
     if (shape==1) {
+        // cross:
         QPen p(color);
         p.setWidth(3);
         painter.setPen(p);
@@ -306,6 +307,15 @@ void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RVector& p
     }
     else {
         painter.fillRect(QRect(pos.x - size/2, pos.y - size/2, size, size), color);
+        if (highlight) {
+            if (backgroundColor.value()<128) {
+                painter.setPen(QPen(Qt::white));
+            }
+            else {
+                painter.setPen(QPen(Qt::black));
+            }
+            painter.drawRect(QRect(pos.x - size/2, pos.y - size/2, size, size));
+        }
     }
 }
 

@@ -95,7 +95,7 @@ public:
 
     QColor toCompat() const;
 
-    static RColor getHighlighted(const RColor& color, const QColor& bgColor);
+    static RColor getHighlighted(const RColor& color, const QColor& bgColor, int minDist = 75);
 
     //bool equalsCorrected(const RColor & color) const;
 

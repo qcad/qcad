@@ -1260,6 +1260,39 @@ Array.prototype.sortNumerical = function() {
     Array.prototype.sort.call(this, function(a,b) { return a - b });
 }
 
+/* Finds the intersection of two sorted arrays.
+ *
+ * \param a first array, must already be sorted
+ * \param b second array, must already be sorted
+ *
+ * Items must be sorted NUMERICALLY (sortNumerical) if arrays contain numbers or
+ * ALPHABETICALLY (sort) if arrays contain strings.
+ *
+ * Should have O(n) operations, where n is
+ * n = MIN(a.length(), b.length())
+ */
+Array.intersectSafe = function(a, b) {
+    var ai=0;
+    var bi=0;
+    var result = [];
+
+    while (ai < a.length && bi < b.length) {
+        if (a[ai] < b[bi]) {
+            ai++;
+        }
+        else if (a[ai] > b[bi]) {
+            bi++;
+        }
+        else {
+            result.push(a[ai]);
+            ai++;
+            bi++;
+        }
+    }
+
+    return result;
+};
+
 /**
  * Destructively finds the intersection of
  * two arrays.
@@ -1289,14 +1322,14 @@ Array.intersect = function(a, b) {
   }
 
   return result;
-}
+};
 
 /**
  * Escapes a string for use as literlal match in regular expression.
  */
 RegExp.escape = function(s) {
     return s.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&");
-}
+};
 
 /**
  * Checks the type of the given object.
