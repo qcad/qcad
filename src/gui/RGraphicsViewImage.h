@@ -266,6 +266,13 @@ public:
         return colorCorrectionOverride;
     }
 
+    void setPaintOffset(const RVector& offset) {
+        paintOffset = offset;
+    }
+
+    RVector getPaintOffset() const {
+        return paintOffset;
+    }
 
 protected:
     double getPointSize(double pSize);
@@ -334,6 +341,7 @@ protected:
     double backgroundFactor;
     RVector backgroundOffset;
     RBox clipBox;
+    RVector paintOffset;
 };
 
 Q_DECLARE_METATYPE(RGraphicsViewImage*)

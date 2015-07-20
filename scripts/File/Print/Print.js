@@ -249,8 +249,9 @@ Print.prototype.print = function(pdfFile) {
 
         transform.translate(-paperBorder.x(), -paperBorder.y()-paperBorder.height());
 
-        // apply user defined offset and scale:
-        transform.translate(-offset.x*scale*unitScale, -offset.y*scale*unitScale);
+        // apply user defined scale:
+        // offset is NOT applied here to avoid huge values in transformation matrix:
+        transform.translate(-1*scale*unitScale, -1*scale*unitScale);
         transform.scale(scale, scale);
 
         // scale drawing unit to mm:
@@ -258,7 +259,10 @@ Print.prototype.print = function(pdfFile) {
 
         painter.setWorldTransform(transform);
 
+        // apply offset here to avoid huge values in transformation matrix:
+        this.view.setPaintOffset(offset.getNegated());
         this.printPage(painter, paperBorderTransformed);
+        this.view.setPaintOffset(new RVector(0,0));
 
         if (Print.getPrintCropMarks(this.document)) {
             Print.drawCropMarks(

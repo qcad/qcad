@@ -799,6 +799,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
     // get image for raster image entity:
     if (sceneQt->hasImageFor(id)) {
         RImageData image = sceneQt->getImage(id);
+        image.move(paintOffset);
         paintImage(painter, image);
     }
 
@@ -806,6 +807,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
     QListIterator<RPainterPath> i(painterPaths);
     while (i.hasNext()) {
         RPainterPath path = i.next();
+        path.move(paintOffset);
         RBox pathBB = path.getBoundingBox();
 
         // additional bounding box check for painter paths that are
