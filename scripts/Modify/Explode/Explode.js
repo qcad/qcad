@@ -76,6 +76,14 @@ Explode.prototype.beginEvent = function() {
             if (polySegments.length>0) {
                 for (k=0; k<polySegments.length; k++) {
                     shape = polySegments[k].data();
+
+                    // last shape might have zero length if polyline is closed geometrically and logically:
+                    if (k===polySegments.length-1) {
+                        if (shape.getLength()<1.0e-5) {
+                            break;
+                        }
+                    }
+
                     newShapes.push(shape.clone());
                 }
             }

@@ -999,6 +999,7 @@ bool RPolyline::simplify(double angleTolerance) {
         if (!arc.isNull()) {
             // TODO: simplify anything if possible:
             newPolyline.appendVertex(arc->getStartPoint(), arc->getBulge());
+            angle = RMAXDOUBLE;
         }
     }
 
