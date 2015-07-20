@@ -79,6 +79,11 @@
         <macro><name>Q_UNUSED</name><argument_list>(<argument>newExtPoint2</argument>)</argument_list></macro>
     }</block></function>
 
+<comment type="line">//    virtual void recomputeDefinitionPoint(const RVector&amp; oldDimLineGrip, const RVector&amp; newDimLineGrip) {</comment>
+<comment type="line">//        Q_UNUSED(oldDimLineGrip)</comment>
+<comment type="line">//        Q_UNUSED(newDimLineGrip)</comment>
+<comment type="line">//    }</comment>
+
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>moveReferencePoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>referencePoint</name></decl></param>, 
         <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>targetPoint</name></decl></param>)</parameter_list>;</function_decl>
 

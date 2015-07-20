@@ -10,6 +10,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant>
         <arg type="RVector &amp;" typeName="RVector" name="offset"
         isConst="true" />
+        <arg type="double" typeName="double" name="angle"
+        hasDefault="true" default="0.0" isConst="false" />
       </variant>
     </constructor>
   </class>

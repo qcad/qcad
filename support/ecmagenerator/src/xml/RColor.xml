@@ -139,6 +139,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="QColor &amp;" typeName="QColor" name="bgColor"
         isConst="true" />
+        <arg type="int" typeName="int" name="minDist"
+        hasDefault="true" default="75" isConst="false" />
       </variant>
     </method>
     <method name="operator==" cppName="operator=="

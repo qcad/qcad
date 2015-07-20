@@ -133,6 +133,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="true" />
     </method>
+    <method name="hasCustomProperty" cppName="hasCustomProperty"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getCustomProperty" cppName="getCustomProperty"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -267,6 +267,13 @@
         <return>return <expr><name>colorCorrectionOverride</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setPaintOffset</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>paintOffset</name> = <name>offset</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getPaintOffset</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>paintOffset</name></expr>;</return>
+    }</block></function>
 
 </public><protected>protected:
     <function_decl><type><name>double</name></type> <name>getPointSize</name><parameter_list>(<param><decl><type><name>double</name></type> <name>pSize</name></decl></param>)</parameter_list>;</function_decl>
@@ -335,6 +342,7 @@
     <decl_stmt><decl><type><name>double</name></type> <name>backgroundFactor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>backgroundOffset</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RBox</name></type> <name>clipBox</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>paintOffset</name></decl>;</decl_stmt>
 </protected>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsViewImage*</argument>)</argument_list></macro>

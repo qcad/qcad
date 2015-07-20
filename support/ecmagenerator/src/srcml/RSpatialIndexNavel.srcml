@@ -140,8 +140,7 @@
      */</comment>
     <class>class <name>RSiRegion</name><super>: <specifier>public</specifier> <name><name>SpatialIndex</name>::<name>Region</name></name></super> <block>{<private type="default">
     </private><public>public:
-        <constructor_decl><name>RSiRegion</name><parameter_list>(<param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>, <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>,
-                <param><decl><type><name>double</name></type> <name>z2</name></decl></param>)</parameter_list>;</constructor_decl>
+        <constructor_decl><name>RSiRegion</name><parameter_list>(<param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>, <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>, <param><decl><type><name>double</name></type> <name>z2</name></decl></param>)</parameter_list>;</constructor_decl>
     </public>}</block>;</class>
 
     <comment type="block">/**
