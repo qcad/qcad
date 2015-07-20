@@ -33,9 +33,10 @@
  */
 class QCADOPERATIONS_EXPORT RTranslation : public RTransformation {
 public:
-    RTranslation(const RVector& offset) : offset(offset) {}
+    RTranslation(const RVector& offset, double angle = 0.0) : offset(offset), angle(angle) {}
 
     RVector offset;
+    double angle;
 };
 
 Q_DECLARE_METATYPE(RTranslation*)
