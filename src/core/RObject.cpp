@@ -385,6 +385,13 @@ QSet<RPropertyTypeId> RObject::getCustomPropertyTypeIds() const {
     return ret;
 }
 
+bool RObject::hasCustomProperty(const QString& title, const QString& key) {
+    if (!customProperties.contains(title)) {
+        return false;
+    }
+    return customProperties.value(title).contains(key);
+}
+
 /**
  * \return Value of given custom property.
  */
