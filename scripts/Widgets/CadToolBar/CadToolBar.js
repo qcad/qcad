@@ -263,10 +263,17 @@ CadToolBar.init = function() {
 
     if (RSettings.isQt(5)) {
         // tool bar buttons under Qt 5 have no border:
-        toolBar.styleSheet = "QToolButton {"
+        toolBar.styleSheet =
+              "QToolButton {"
             + "  border: 1px solid #969696;"
             //+ "  border-radius: 6px; "
             + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f8f8f8, stop: 0.2 #e3e3e3, stop: 1 #f9f9f9);"
+            + "}"
+            + "QToolButton:checked {"
+            + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #b7b7b7, stop: 0.8 #cfcfcf, stop: 1 #d1d1d1);"
+            + "}"
+            + "QToolButton:pressed {"
+            + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #a4a4a4, stop: 0.8 #b3b3b3, stop: 1 #b5b5b5);"
             + "}";
     }
 
