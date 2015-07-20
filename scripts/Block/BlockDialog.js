@@ -43,18 +43,18 @@ BlockDialog.prototype.show = function() {
     //this.dialog.windowIcon = new QIcon(BlockDialog.includeBasePath + "/EditBlock/EditBlock.svg");
 
     var widgets = getWidgets(this.dialog);
-    var blockName = widgets["BlockName"];
-    blockName.selectAll();
+    var leBlockName = widgets["BlockName"];
+    leBlockName.selectAll();
     var rx = new RegExp("[^<>/\\\\\":;\?\*|,=`]{1,255}");
-    this.validator = new QRegExpValidator(rx, blockName);
-    blockName.setValidator(this.validator);
-    blockName.textChanged.connect(this, "validate");
+    this.validator = new QRegExpValidator(rx, leBlockName);
+    leBlockName.setValidator(this.validator);
+    leBlockName.textChanged.connect(this, "validate");
 
     // init dialog to show attributes of given block:
     if (!isNull(this.block)) {
-        blockName.text = this.block.getName();
-        if (blockName.text.startsWith("*")) {
-            blockName.enabled = false;
+        leBlockName.text = this.block.getName();
+        if (leBlockName.text.startsWith("*")) {
+            leBlockName.enabled = false;
         }
     }
 
@@ -64,8 +64,7 @@ BlockDialog.prototype.show = function() {
         var c = 0;
         while (!this.validate()) {
             ++c;
-            blockName.text = "block " + c;
-            qDebug("trying block name: ", blockName.text);
+            leBlockName.text = "block " + c;
         }
     }
 
@@ -75,7 +74,7 @@ BlockDialog.prototype.show = function() {
         return undefined;
     }
 
-    var text = blockName.text.trim();
+    var text = leBlockName.text.trim();
     if (!isNull(this.block)) {
         this.block.setName(text);
         return this.block;
