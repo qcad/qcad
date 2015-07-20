@@ -68,8 +68,10 @@ void RModifyObjectsOperation::transformSelection(RTransformation* transformation
 
             if (translate) {
                 // TODO: entity->applyTransformation(transformation, k);
-                if (fabs(rotationAngle)>RS::AngleTolerance) {
+                if (!RMath::fuzzyCompare(scaleFactor, 0.0)) {
                     entity->rotate(rotationAngle, center);
+                }
+                if (!RMath::fuzzyCompare(scaleFactor, 1.0)) {
                     entity->scale(scaleFactor, center);
                 }
                 entity->move(translationOffset * k);
