@@ -33,13 +33,17 @@ void RModifyObjectsOperation::transformSelection(RTransformation* transformation
 
     bool translate = false;
     RVector translationOffset;
-    double angle = 0.0;
+    double rotationAngle = 0.0;
+    double scaleFactor = 1.0;
+    RVector center = RVector::nullVector;
 
     RTranslation* translation = dynamic_cast<RTranslation*>(transformation);
     if (translation!=NULL) {
         translate = true;
         translationOffset = translation->offset;
-        angle = translation->angle;
+        rotationAngle = translation->rotationAngle;
+        scaleFactor = translation->scaleFactor;
+        center = translation->center;
     }
 
     for (int k=1; k<=copies; k++) {
@@ -64,10 +68,11 @@ void RModifyObjectsOperation::transformSelection(RTransformation* transformation
 
             if (translate) {
                 // TODO: entity->applyTransformation(transformation, k);
-                entity->move(translationOffset * k);
-                if (fabs(angle)>RS::AngleTolerance) {
-                    entity->rotate(angle);
+                if (fabs(rotationAngle)>RS::AngleTolerance) {
+                    entity->rotate(rotationAngle, center);
+                    entity->scale(scaleFactor, center);
                 }
+                entity->move(translationOffset * k);
             }
 
             addObject(entity, useCurrentAttributes, !move);

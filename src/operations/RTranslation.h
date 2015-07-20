@@ -33,10 +33,16 @@
  */
 class QCADOPERATIONS_EXPORT RTranslation : public RTransformation {
 public:
-    RTranslation(const RVector& offset, double angle = 0.0) : offset(offset), angle(angle) {}
+    RTranslation(const RVector& offset, double rotationAngle = 0.0, double scaleFactor = 1.0, const RVector& center = RVector::nullVector)
+        : offset(offset),
+          rotationAngle(rotationAngle),
+          scaleFactor(scaleFactor),
+          center(center) {}
 
     RVector offset;
-    double angle;
+    double rotationAngle;
+    double scaleFactor;
+    RVector center;
 };
 
 Q_DECLARE_METATYPE(RTranslation*)

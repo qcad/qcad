@@ -176,8 +176,14 @@ Transform.prototype.slotCopyChanged = function(checked) {
     this.copy = checked;
 
     var optionsToolBar = EAction.getOptionsToolBar();
-    optionsToolBar.findChild("LabelNumberOfCopies").enabled = checked;
-    optionsToolBar.findChild("NumberOfCopies").enabled = checked;
+    var w = optionsToolBar.findChild("LabelNumberOfCopies");
+    if (!isNull(w)) {
+        w.enabled = checked;
+    }
+    w =  optionsToolBar.findChild("NumberOfCopies");
+    if (!isNull(w)) {
+        w.enabled = checked;
+    }
 };
 
 Transform.prototype.slotNumberOfCopiesChanged = function(v) {

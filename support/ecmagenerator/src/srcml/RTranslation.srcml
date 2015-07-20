@@ -34,10 +34,16 @@
  */</comment>
 <class>class <macro><name>QCADOPERATIONS_EXPORT</name></macro> <name>RTranslation</name> <super>: <specifier>public</specifier> <name>RTransformation</name></super> <block>{<private type="default">
 </private><public>public:
-    <constructor><name>RTranslation</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>, <param><decl><type><name>double</name></type> <name>angle</name> =<init> <expr>0.0</expr></init></decl></param>)</parameter_list> <member_list>: <call><name>offset</name><argument_list>(<argument><expr><name>offset</name></expr></argument>)</argument_list></call>, <call><name>angle</name><argument_list>(<argument><expr><name>angle</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+    <constructor><name>RTranslation</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>, <param><decl><type><name>double</name></type> <name>rotationAngle</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>scaleFactor</name> =<init> <expr>1.0</expr></init></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name> =<init> <expr><name><name>RVector</name>::<name>nullVector</name></name></expr></init></decl></param>)</parameter_list>
+        <member_list>: <call><name>offset</name><argument_list>(<argument><expr><name>offset</name></expr></argument>)</argument_list></call>,
+          <call><name>rotationAngle</name><argument_list>(<argument><expr><name>rotationAngle</name></expr></argument>)</argument_list></call>,
+          <call><name>scaleFactor</name><argument_list>(<argument><expr><name>scaleFactor</name></expr></argument>)</argument_list></call>,
+          <call><name>center</name><argument_list>(<argument><expr><name>center</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
 
     <decl_stmt><decl><type><name>RVector</name></type> <name>offset</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>double</name></type> <name>angle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>rotationAngle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>scaleFactor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>center</name></decl>;</decl_stmt>
 </public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTranslation*</argument>)</argument_list></macro>

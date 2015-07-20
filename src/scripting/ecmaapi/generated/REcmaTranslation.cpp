@@ -241,6 +241,227 @@
                 
     } else 
 
+    if( context->argumentCount() ==
+        3
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isNumber()
+                ) /* type: double */
+            
+                && (
+                
+                        context->argument(
+                        2
+                        ).isNumber()
+                ) /* type: double */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RTranslation: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RTranslation
+                    * cppResult =
+                    new
+                    RTranslation
+                    (
+                    a0
+        ,
+    a1
+        ,
+    a2
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
+    if( context->argumentCount() ==
+        4
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isNumber()
+                ) /* type: double */
+            
+                && (
+                
+                        context->argument(
+                        2
+                        ).isNumber()
+                ) /* type: double */
+            
+                && (
+                
+                        context->argument(
+                        3
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        3
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        3
+                        ).isNull()
+                ) /* type: RVector */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RTranslation: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap3 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        3
+                        )
+                    );
+                    if (ap3 == NULL) {
+                           return REcmaHelper::throwError("RTranslation: Argument 3 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a3 = 
+                    *ap3;
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RTranslation
+                    * cppResult =
+                    new
+                    RTranslation
+                    (
+                    a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
     {
        return REcmaHelper::throwError(
        QString::fromLatin1("RTranslation(): no matching constructor found."),
