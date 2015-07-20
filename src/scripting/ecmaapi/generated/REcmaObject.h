@@ -97,6 +97,9 @@
         isSelectedForPropertyEditing
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasCustomProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getCustomProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

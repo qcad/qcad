@@ -566,6 +566,16 @@
             );
         
     
+      void setPaintOffset(
+                const RVector & offset
+            );
+        
+    
+      RVector getPaintOffset(
+                
+            );
+        
+    
             // methods of 2nd level base class RGraphicsView:
             
       void clearCaches(

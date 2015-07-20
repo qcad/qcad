@@ -67,6 +67,12 @@
         getReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        moveReferencePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         recomputeDefinitionPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

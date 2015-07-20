@@ -468,6 +468,18 @@
         
     
     
+      void setPaintOffset(
+                const RVector & offset
+            );
+        
+    
+    
+      RVector getPaintOffset(
+                
+            );
+        
+    
+    
       double getPointSize(
                 double pSize
             );

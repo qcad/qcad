@@ -233,6 +233,12 @@
         ;static  QScriptValue
         getColorCorrectionOverride
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPaintOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPaintOffset
+        (QScriptContext* context, QScriptEngine* engine) 
         ;
 
     // properties:

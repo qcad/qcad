@@ -84,6 +84,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getReferencePoints, "getReferencePoints");
             
+            REcmaHelper::registerFunction(&engine, proto, moveReferencePoint, "moveReferencePoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimPoints, "getDimPoints");
+            
             REcmaHelper::registerFunction(&engine, proto, recomputeDefinitionPoint, "recomputeDefinitionPoint");
             
             REcmaHelper::registerFunction(&engine, proto, rotate, "rotate");
@@ -687,6 +691,152 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimRotatedData::getReferencePoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimRotatedData::moveReferencePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimRotatedData::moveReferencePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::moveReferencePoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimRotatedData* self = 
+                        getSelf("moveReferencePoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimRotatedData: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimRotatedData: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->moveReferencePoint(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.moveReferencePoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimRotatedData::moveReferencePoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimRotatedData::getDimPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimRotatedData::getDimPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::getDimPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimRotatedData* self = 
+                        getSelf("getDimPoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getDimPoints();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.getDimPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimRotatedData::getDimPoints", context, engine);
             return result;
         }
          QScriptValue

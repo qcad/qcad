@@ -240,6 +240,9 @@
         getCeil
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        containsFuzzy
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getMinimum
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
