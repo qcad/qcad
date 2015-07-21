@@ -53,6 +53,9 @@
         init
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

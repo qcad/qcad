@@ -249,16 +249,11 @@
     <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RView</name></argument>&gt;</argument_list></name></type> <name>queryView</name><parameter_list>(<param><decl><type><name><name>RView</name>::<name>Id</name></name></type> <name>viewId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RView</name></argument>&gt;</argument_list></name></type> <name>queryView</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>viewName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 
-    <comment type="line">//RTransaction setCurrentLayer(RLayer::Id layerId);</comment>
-    <comment type="line">//RTransaction setCurrentLayer(const QString&amp; layerName);</comment>
-    <comment type="line">//void setCurrentLayer(RTransaction&amp; transaction, RLayer::Id layerId);</comment>
-    <comment type="line">//void setCurrentLayer(RTransaction&amp; transaction, const QString&amp; layerName);</comment>
     <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name><name>RLayer</name>::<name>Id</name></name></type> <name>getCurrentLayerId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function><type><name>virtual</name> <name><name>RView</name>::<name>Id</name></name></type> <name>getCurrentViewId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <comment type="line">//return (RView::Id) getVariable("CurrentView").toInt();</comment>
         <return>return <expr><name>currentViewId</name></expr>;</return>
     }</block></function>
 
@@ -282,7 +277,6 @@
     }</block></function>
 
     <function><type><name>virtual</name> <name>void</name></type> <name>setCurrentBlock</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <block>{
-        <comment type="line">//setVariable("CurrentBlock", blockId);</comment>
         <expr_stmt><expr><name>currentBlockId</name> = <name>blockId</name></expr>;</expr_stmt>
     }</block></function>
 
@@ -295,20 +289,10 @@
     }</block></function>
 
     <function><type><name>virtual</name> <name><name>RBlock</name>::<name>Id</name></name></type> <name>getCurrentBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <comment type="line">//return (RBlock::Id) getVariable("CurrentBlock").toInt();</comment>
         <return>return <expr><name>currentBlockId</name></expr>;</return>
     }</block></function>
 
-<comment type="line">//    virtual void setSelectedBlock(RBlock::Id blockId) {</comment>
-<comment type="line">//        selectedBlockId = blockId;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    virtual RBlock::Id getSelectedBlockId() const {</comment>
-<comment type="line">//        return selectedBlockId;</comment>
-<comment type="line">//    }</comment>
-
     <function><type><name>void</name></type> <name>setCurrentView</name><parameter_list>(<param><decl><type><name><name>RView</name>::<name>Id</name></name></type> <name>viewId</name></decl></param>)</parameter_list> <block>{
-        <comment type="line">//setVariable("CurrentView", viewId);</comment>
         <expr_stmt><expr><name>currentViewId</name> = <name>viewId</name></expr>;</expr_stmt>
     }</block></function>
 
@@ -536,25 +520,6 @@
     }</block></function>
 
     <comment type="block">/**
-     * \return The ID of the last used transaction group.
-     */</comment>
-<comment type="line">//    virtual int getLastTransactionGroup() {</comment>
-<comment type="line">//        return lastTransactionGroup;</comment>
-<comment type="line">//    }</comment>
-
-    <comment type="block">/**
-     * Sets the ID of the last created transaction. This is called
-     * when a transaction is undone or redone (the last transaction
-     * id indicates where we are in the transaction stack).
-     * The default implementation sets the variable "LastTransaction".
-     */</comment>
-<comment type="line">//    virtual void setLastTransactionGroup(int transactionGroup) {</comment>
-<comment type="line">//        lastTransactionGroup = transactionGroup;</comment>
-
-<comment type="line">//        setModified(true);</comment>
-<comment type="line">//    }</comment>
-
-    <comment type="block">/**
      * Saves the given transaction. Transactions need to be stored
      * for undo / redo functionality.
      */</comment>
@@ -653,10 +618,8 @@
     <decl_stmt><decl><type><name>RColor</name></type> <name>currentColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>currentLineweight</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>currentLinetypeId</name></decl>;</decl_stmt>
-    <comment type="line">//RLayer::Id currentLayerId;</comment>
     <decl_stmt><decl><type><name><name>RView</name>::<name>Id</name></name></type> <name>currentViewId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>currentBlockId</name></decl>;</decl_stmt>
-    <comment type="line">//RBlock::Id selectedBlockId;</comment>
 
     <decl_stmt><decl><type><name>int</name></type> <name>lastTransactionId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>lastTransactionGroup</name></decl>;</decl_stmt>

@@ -76,6 +76,8 @@ BlockDialog.prototype.show = function() {
 
     var text = leBlockName.text.trim();
     if (!isNull(this.block)) {
+        this.dialog.destroy();
+        EAction.activateMainWindow();
         this.block.setName(text);
         return this.block;
     }

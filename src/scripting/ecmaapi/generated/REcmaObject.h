@@ -103,6 +103,9 @@
         getCustomProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCustomBoolProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setCustomProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

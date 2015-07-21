@@ -55,6 +55,10 @@
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>ObjectBlock</name></name></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>virtual</name> <name>RBlock</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function><type><name>QString</name></type> <name>getName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

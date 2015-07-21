@@ -403,6 +403,18 @@ QVariant RObject::getCustomProperty(const QString& title, const QString& key, co
     return vm.value(key, defaultValue);
 }
 
+bool RObject::getCustomBoolProperty(const QString& title, const QString& key, bool defaultValue) {
+    QVariant ret = getCustomProperty(title, key, defaultValue);
+    if (ret.type()==QVariant::Bool) {
+        return ret.toBool();
+    }
+    if (ret.type()==QVariant::String) {
+        QString s = ret.toString().toLower();
+        return s=="true" || s=="1";
+    }
+    return defaultValue;
+}
+
 /**
  * Sets a custom property with the given name.
  */
