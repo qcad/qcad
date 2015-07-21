@@ -299,6 +299,14 @@
         <return>return <expr><name>currentBlockId</name></expr>;</return>
     }</block></function>
 
+<comment type="line">//    virtual void setSelectedBlock(RBlock::Id blockId) {</comment>
+<comment type="line">//        selectedBlockId = blockId;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    virtual RBlock::Id getSelectedBlockId() const {</comment>
+<comment type="line">//        return selectedBlockId;</comment>
+<comment type="line">//    }</comment>
+
     <function><type><name>void</name></type> <name>setCurrentView</name><parameter_list>(<param><decl><type><name><name>RView</name>::<name>Id</name></name></type> <name>viewId</name></decl></param>)</parameter_list> <block>{
         <comment type="line">//setVariable("CurrentView", viewId);</comment>
         <expr_stmt><expr><name>currentViewId</name> = <name>viewId</name></expr>;</expr_stmt>
@@ -648,6 +656,7 @@
     <comment type="line">//RLayer::Id currentLayerId;</comment>
     <decl_stmt><decl><type><name><name>RView</name>::<name>Id</name></name></type> <name>currentViewId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>currentBlockId</name></decl>;</decl_stmt>
+    <comment type="line">//RBlock::Id selectedBlockId;</comment>
 
     <decl_stmt><decl><type><name>int</name></type> <name>lastTransactionId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>lastTransactionGroup</name></decl>;</decl_stmt>

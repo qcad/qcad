@@ -54,6 +54,10 @@ public:
 
     static void init();
 
+    virtual RS::EntityType getType() const {
+        return RS::ObjectBlock;
+    }
+
     virtual RBlock* clone() const;
 
     QString getName() const {

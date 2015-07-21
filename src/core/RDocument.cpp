@@ -1270,9 +1270,14 @@ QSet<RObject::Id> RDocument::queryPropertyEditorObjects() {
     QSet<RObject::Id> objectIds = querySelectedEntities();
 
     if (RSettings::isNextVersionEnabled()) {
-        // no entities selected: expose layer properties:
+        // no entities selected:
         if (objectIds.isEmpty()) {
+            // expose properties of current layer:
             objectIds.insert(getCurrentLayerId());
+
+            // expose properties of selected block:
+            RBlock::Id blockId = getCurrentBlockId();
+            objectIds.insert(blockId);
         }
     }
 

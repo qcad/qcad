@@ -248,6 +248,10 @@ public:
     void setCurrentBlock(const QString& blockName);
     RBlock::Id getCurrentBlockId() const;
 
+//    void setSelectedBlock(RBlock::Id blockId);
+//    void setSelectedBlock(const QString& blockName);
+//    RBlock::Id getSelectedBlockId() const;
+
     QSharedPointer<RView> queryCurrentView();
     void setCurrentView(RView::Id viewId);
     void setCurrentView(const QString& viewName);

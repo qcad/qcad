@@ -712,6 +712,8 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("Objects") : qsTr("Object");
     case RS.ObjectUnknown:
         return plural ? qsTr("Unknown Objects") : qsTr("Unknown Object");
+    case RS.ObjectBlock:
+        return plural ? qsTr("Blocks") : qsTr("Block");
     case RS.ObjectLayer:
         return plural ? qsTr("Layers") : qsTr("Layer");
     case RS.ObjectLinetype:

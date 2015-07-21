@@ -131,6 +131,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("ObjectBlock",
+    QScriptValue(RS::ObjectBlock),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("ObjectLayer",
     QScriptValue(RS::ObjectLayer),
     QScriptValue::ReadOnly);

@@ -17,6 +17,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <enum name="EntityType">
       <value name="ObjectAll" />
       <value name="ObjectUnknown" />
+      <value name="ObjectBlock" />
       <value name="ObjectLayer" />
       <value name="ObjectLinetype" />
       <value name="ObjectView" />

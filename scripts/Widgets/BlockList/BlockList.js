@@ -292,8 +292,10 @@ RBlockListQt.prototype.blockActivated = function() {
         return;
     }
 
+    var blockName = item.text(BlockList.colName);
+
     // prevent removal or insertion of current block:
-    var insertable = currentBlock.getName()!=item.text(BlockList.colName) && !item.text(BlockList.colName).startsWith("*");
+    var insertable = currentBlock.getName().toLowerCase()!==blockName.toLowerCase() && !blockName.startsWith("*");
     this.enableActions(insertable);
 };
 

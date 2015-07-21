@@ -76,6 +76,8 @@ public:
     enum EntityType {
         ObjectAll,
         ObjectUnknown,      /**< Unknown object */
+
+        ObjectBlock,
         ObjectLayer,
         ObjectLinetype,
         ObjectView,
