@@ -247,11 +247,19 @@ void RGraphicsViewQt::mousePressEvent(QMouseEvent* event) {
 }
 
 void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
+    static int ignoreTimeThreshold = RSettings::getIntValue("GraphicsView/IgnoreTimeThreshold", 150);
+    static int ignoreDeltaThreshold = RSettings::getIntValue("GraphicsView/IgnoreDeltaThreshold", 100);
+
     if (event==NULL || scene==NULL) {
         return;
     }
     RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
-    if (mouseClickTimer.elapsed()<200) {
+
+    // if mouse press and mouse release happend within a short time span and the
+    // mouse movement was small, use the mouse press location
+    // otherwise use mouse release location to define point:
+    if (mouseClickTimer.elapsed()<ignoreTimeThreshold &&
+        e.getScreenPosition().getDistanceTo(mousePressScreenPosition) < ignoreDeltaThreshold) {
         e.setScreenPosition(mousePressScreenPosition);
         e.setModelPosition(mousePressModelPosition);
     }
