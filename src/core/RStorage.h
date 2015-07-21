@@ -248,16 +248,11 @@ public:
     virtual QSharedPointer<RView> queryView(RView::Id viewId) const = 0;
     virtual QSharedPointer<RView> queryView(const QString& viewName) const = 0;
 
-    //RTransaction setCurrentLayer(RLayer::Id layerId);
-    //RTransaction setCurrentLayer(const QString& layerName);
-    //void setCurrentLayer(RTransaction& transaction, RLayer::Id layerId);
-    //void setCurrentLayer(RTransaction& transaction, const QString& layerName);
     void setCurrentLayer(RLayer::Id layerId, RTransaction* transaction=NULL);
     void setCurrentLayer(const QString& layerName, RTransaction* transaction=NULL);
 
     virtual RLayer::Id getCurrentLayerId() const;
     virtual RView::Id getCurrentViewId() const {
-        //return (RView::Id) getVariable("CurrentView").toInt();
         return currentViewId;
     }
 
@@ -281,7 +276,6 @@ public:
     }
 
     virtual void setCurrentBlock(RBlock::Id blockId) {
-        //setVariable("CurrentBlock", blockId);
         currentBlockId = blockId;
     }
 
@@ -294,12 +288,10 @@ public:
     }
 
     virtual RBlock::Id getCurrentBlockId() const {
-        //return (RBlock::Id) getVariable("CurrentBlock").toInt();
         return currentBlockId;
     }
 
     void setCurrentView(RView::Id viewId) {
-        //setVariable("CurrentView", viewId);
         currentViewId = viewId;
     }
 
@@ -527,25 +519,6 @@ public:
     }
 
     /**
-     * \return The ID of the last used transaction group.
-     */
-//    virtual int getLastTransactionGroup() {
-//        return lastTransactionGroup;
-//    }
-
-    /**
-     * Sets the ID of the last created transaction. This is called
-     * when a transaction is undone or redone (the last transaction
-     * id indicates where we are in the transaction stack).
-     * The default implementation sets the variable "LastTransaction".
-     */
-//    virtual void setLastTransactionGroup(int transactionGroup) {
-//        lastTransactionGroup = transactionGroup;
-
-//        setModified(true);
-//    }
-
-    /**
      * Saves the given transaction. Transactions need to be stored
      * for undo / redo functionality.
      */
@@ -644,7 +617,6 @@ private:
     RColor currentColor;
     RLineweight::Lineweight currentLineweight;
     RLinetype::Id currentLinetypeId;
-    //RLayer::Id currentLayerId;
     RView::Id currentViewId;
     RBlock::Id currentBlockId;
 
