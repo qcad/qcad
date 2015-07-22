@@ -175,7 +175,7 @@ function isVector(obj) {
  * \return true if the given object is a valid RVector object.
  */
 function isValidVector(obj) {
-    return (isVector(obj) && obj.isValid());
+    return (isVector(obj) && obj.isValid() && isNumber(obj.x) && isNumber(obj.y));
 }
 
 /**
