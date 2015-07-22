@@ -237,7 +237,7 @@ RBlockListQt.prototype.itemColumnClickedSlot = function(item, column) {
     }
 
     var doc = this.di.getDocument();
-    var block = doc.queryBlock(item.text(BlockList.colName));
+    var block = doc.queryBlock(this.getBlockName(item));
     if (block.isNull()) {
         return;
     }
@@ -289,11 +289,18 @@ RBlockListQt.prototype.blockActivated = function() {
         return;
     }
 
-    var blockName = item.text(BlockList.colName);
+    var blockName = this.getBlockName(item);
 
     // prevent removal or insertion of current block:
     var insertable = currentBlock.getName().toLowerCase()!==blockName.toLowerCase() && !blockName.startsWith("*");
     this.enableActions(insertable);
+};
+
+/**
+ * \return The block name for the given tree widget item.
+ */
+RBlockListQt.prototype.getBlockName = function(item) {
+    return item.text(BlockList.colName);
 };
 
 /**

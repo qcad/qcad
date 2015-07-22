@@ -49,6 +49,11 @@ RemoveBlock.prototype.beginEvent = function() {
 
     var block = this.getDocument().queryBlock(item.text(BlockList.colName));
 
+    if (isNull(block)) {
+        this.terminate();
+        return;
+    }
+
     var op = new RDeleteObjectOperation(block);
     op.setText(this.getToolTitle());
     var di = this.getDocumentInterface();
