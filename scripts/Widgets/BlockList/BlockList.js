@@ -69,7 +69,6 @@ function RBlockListQt(parent, addListener, showHeader) {
         adapter.blocksCleared.connect(this, "clearBlocks");
     }
 
-    //this.itemSelectionChanged.connect(this, "blockActivated");
     this.itemDoubleClicked.connect(this, "editBlock");
     this.itemColumnClicked.connect(this, "itemColumnClickedSlot");
     this.basePath = includeBasePath;
@@ -113,8 +112,6 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
 
     var block;
     
-    //var currentRow = this.currentRow;
-    //var currentItem = this.currentItem();
     var pos = this.verticalScrollBar().sliderPosition;
     this.clear();
     if (isNull(documentInterface)) {
@@ -128,7 +125,6 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
 
     var currentBlockId = doc.getCurrentBlockId();
     var currentItem = undefined;
-    //var result = doc.queryAllBlocks();
     for (var i=0; i<blockNames.length; ++i) {
         var blockName = blockNames[i];
         block = doc.queryBlock(blockName);
@@ -148,25 +144,12 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
         }
 
         var item = this.getBlockItem(block);
-                //new QTreeWidgetItem();
-//        item.setText(BlockList.colName, blockName);
-//        var iconName =
-            //this.basePath + "/blockstatus_%1.svg"
-            //    .arg(Number(id==currentBlockId));
-//                    this.basePath + "/blockstatus_%1%2.svg"
-//                        .arg(Number(block.isFrozen()))
-//                        .arg(Number(id==currentBlockId));
-//        item.setIcon(BlockList.colVisible, new QIcon(iconName));
-//        this.updateItemIcons(item, block);
         this.addTopLevelItem(item);
 
         if (currentBlockId===block.getId()) {
-            //this.setCurrentItem(item);
             currentItem = item;
         }
-        //this.addItem(item);
     }
-    //this.sortItems(0, Qt.AscendingOrder);
 
     block = doc.queryCurrentBlock();
     if (!block.isNull()) {
@@ -180,12 +163,6 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
         this.setCurrentItem(currentItem);
     }
 
-    //if (currentRow!=-1 && !isNull(this.item(currentRow))) {
-    //if (!isNull(currentItem)) {
-        //this.currentRow = currentRow;
-        //this.setCurrentItem(currentItem);
-        //this.item(currentRow).setSelected(true);
-    //}
     this.blockActivated();
 };
 
@@ -198,14 +175,9 @@ RBlockListQt.prototype.getBlockItem = function(block) {
 
     item.setText(BlockList.colName, name);
 
-    //var iconName = LayerListPro.includeBasePath + "/Layer.svg";
-    //item.setIcon(this.colName, new QIcon(iconName));
     item.setData(BlockList.colName, Qt.UserRole, name);
 
     this.updateItemIcons(item, block);
-
-    //item.setIcon(BlockList.colName, RColor.getIcon(layer.getColor(), new QSize(this.iconSize.width(), this.iconSize.height()/2)));
-    //item.setData(BlockList.colName, Qt.UserRole+1, layer.isProtected());
 
     return item;
 };
