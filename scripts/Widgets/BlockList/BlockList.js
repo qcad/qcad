@@ -236,9 +236,6 @@ RBlockListQt.prototype.itemColumnClickedSlot = function(item, column) {
         return;
     }
 
-    qDebug(column);
-    qDebug(BlockList.colName);
-
     var doc = this.di.getDocument();
     var block = doc.queryBlock(item.text(BlockList.colName));
     if (block.isNull()) {
