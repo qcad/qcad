@@ -36,6 +36,8 @@ IsoProjectTest11.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ArcToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ArcToolsPanel::ArcCPAButton');
+    this.setToolOption('ArcCPA/Direction', 'Clockwise');
+    this.updateToolOptions();
     this.setZoom(12.413102687059721, new RVector(2.139, 2.60251, 0, true));
     var p = new RVector(20.095569, 9.723177);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -123,6 +125,9 @@ IsoProjectTest11.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::SplineToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SplineToolsPanel::SplineControlPointsButton');
+    this.setToolOption('SplineControlPoints/Degree', '3');
+    this.setToolOption('SplineControlPoints/Closed', 'true');
+    this.updateToolOptions();
     this.setZoom(12.413102687059721, new RVector(2.139, 2.60251, 0, true));
     var p = new RVector(12.361806, 8.353657);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
