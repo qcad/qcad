@@ -44,7 +44,7 @@ RenameBlock.prototype.beginEvent = function() {
 
     var dlg = new BlockDialog(this.getDocument(), block);
     var newBlock = dlg.show();
-    if (!newBlock) {
+    if (isNull(newBlock)) {
         this.terminate();
         return;
     }

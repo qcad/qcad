@@ -104,6 +104,10 @@ RBlockListQt.prototype.filter = function(block) {
     return true;
 };
 
+RBlockListQt.prototype.sortBlockNames = function(blockNames) {
+    blockNames.sort();
+};
+
 /**
  * Called when blocks are addded, edited or deleted. Updates the block list.
  */
@@ -121,7 +125,7 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
     var doc = documentInterface.getDocument();
 
     var blockNames = doc.getBlockNames();
-    blockNames.sort();
+    this.sortBlockNames(blockNames);
 
     var currentBlockId = doc.getCurrentBlockId();
     var currentItem = undefined;
