@@ -80,6 +80,8 @@ DimAngularTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setZoom(4.825046040515654, new RVector(10.9233, 14.2943, 0) );
+
+    /*
     var p = new RVector(37.780916, 29.435869);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
@@ -92,6 +94,8 @@ DimAngularTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setZoom(4.825046040515654, new RVector(10.9233, 14.2943, 0) );
+    */
+
     var p = new RVector(33.221374, 53.684342);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
